@@ -219,12 +219,13 @@ are not affected.
 ## Weekly Roundups
 
 Weekly roundups are generated entirely by `RoundupGeneratorBackgroundService`, a background
-service running inside `TechHub.Api`. It fires every Monday at 08:00 UTC and writes the
-completed roundup directly to the `content_items` table (`collection_name = 'roundups'`).
+service running inside `TechHub.Api`. It fires every Monday at 08:00 UTC and writes
+section-specific roundups directly to the `content_items` table (`collection_name = 'roundups'`).
+Each section roundup is generated sequentially to avoid AI throttling.
 
 ### Roundup Pipeline
 
-1. **Article loading** — Queries `content_items` directly using section boolean columns
+1. **Article loading** — Queries `content_items` directly using `primary_section_name`
    and `ai_metadata`, filtered by `created_at` within the target week
 2. **Relevance filtering** — Per section: always includes all `high`-relevance articles; fills up
    to `MinArticlesPerSection` with `medium` then `low` articles if the high count is below the minimum
@@ -232,9 +233,9 @@ completed roundup directly to the `content_items` table (`collection_name = 'rou
 4. **Step 1/5** — AI creates news-style narrative stories per section
 5. **Step 2/5** — AI adds continuity by comparing with the previous week's roundup
 6. **Step 3/5** — AI condenses the content paragraph-by-paragraph
-7. **Step 4/5** — AI generates metadata: `title`, `description`, `tags`, `introduction`
+7. **Step 4/5** — AI generates metadata: `title`, `tags`, `introduction`
 8. **Step 5/5** — Table of contents is built from `##`/`###` headers (pure C#)
-9. **DB write** — Upserts into `content_items` + `content_tags_expanded`
+9. **DB write** — Upserts one roundup per section into `content_items` + `content_tags_expanded`
 
 Writing style guidelines (`docs/writing-style-guidelines.md`) are injected into every AI step
 prompt to ensure consistent tone and style throughout the roundup.

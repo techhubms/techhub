@@ -136,7 +136,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     public async Task ContentDetailPage_HasMetaDescription()
     {
         // Act
-        var detailUrl = await NavigateToFirstInternalContentAsync("/all/roundups");
+        var detailUrl = await NavigateToFirstInternalContentAsync("/github-copilot/roundups");
 
         // Assert
         var description = await GetMetaContentAsync("name", "description");
@@ -148,7 +148,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     public async Task ContentDetailPage_HasArticleOpenGraphType()
     {
         // Act
-        await NavigateToFirstInternalContentAsync("/all/roundups");
+        await NavigateToFirstInternalContentAsync("/github-copilot/roundups");
 
         // Assert
         var ogType = await GetMetaContentAsync("property", "og:type");
@@ -159,7 +159,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     public async Task ContentDetailPage_HasOpenGraphTitleMatchingPageTitle()
     {
         // Act
-        await NavigateToFirstInternalContentAsync("/all/roundups");
+        await NavigateToFirstInternalContentAsync("/github-copilot/roundups");
 
         // Assert - Read og:title and document.title atomically in a single JS evaluation.
         // Reading them in two separate calls (GetMetaContentAsync then TitleAsync) creates a
@@ -186,7 +186,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     public async Task ContentDetailPage_HasArticleJsonLd()
     {
         // Act
-        await NavigateToFirstInternalContentAsync("/all/roundups");
+        await NavigateToFirstInternalContentAsync("/github-copilot/roundups");
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("Article");
@@ -197,7 +197,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     public async Task ContentDetailPage_HasBreadcrumbJsonLd()
     {
         // Act
-        await NavigateToFirstInternalContentAsync("/all/roundups");
+        await NavigateToFirstInternalContentAsync("/github-copilot/roundups");
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("BreadcrumbList");
@@ -208,7 +208,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     public async Task ContentDetailPage_HasTwitterCardSummary()
     {
         // Act
-        await NavigateToFirstInternalContentAsync("/all/roundups");
+        await NavigateToFirstInternalContentAsync("/github-copilot/roundups");
 
         // Assert
         var twitterCard = await GetMetaContentAsync("name", "twitter:card");
@@ -219,7 +219,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     public async Task ContentDetailPage_ArticlePublishedTimePresent()
     {
         // Act
-        await NavigateToFirstInternalContentAsync("/all/roundups");
+        await NavigateToFirstInternalContentAsync("/github-copilot/roundups");
 
         // Assert
         var publishedTime = await GetMetaContentAsync("property", "article:published_time");

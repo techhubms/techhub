@@ -11,6 +11,14 @@ public class TagCountsRequest
     public DateTimeOffset? DateTo { get; }
     public string SectionName { get; }
     public string CollectionName { get; }
+
+    /// <summary>
+    /// Optional: Multiple collection names to filter by (e.g., when content type filter has multiple types active).
+    /// When provided and CollectionName is "all", restricts tag counts to items in these collections.
+    /// Takes precedence over CollectionName for filtering when non-empty.
+    /// </summary>
+    public IReadOnlyList<string>? Collections { get; }
+
     public int MaxTags { get; }
     public int MinUses { get; }
 
@@ -42,7 +50,8 @@ public class TagCountsRequest
         DateTimeOffset? dateTo = null,
         IReadOnlyList<string>? tags = null,
         IReadOnlyList<string>? tagsToCount = null,
-        string? searchQuery = null)
+        string? searchQuery = null,
+        IReadOnlyList<string>? collections = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
@@ -69,6 +78,7 @@ public class TagCountsRequest
 
         SectionName = sectionName;
         CollectionName = collectionName;
+        Collections = collections;
         MinUses = minUses;
         MaxTags = maxTags;
         DateFrom = dateFrom;
@@ -98,6 +108,14 @@ public class TagCountsRequest
 
         parts.Add($"s:{SectionName}");
         parts.Add($"c:{CollectionName}");
+
+        if (Collections is { Count: > 0 })
+        {
+            var sortedCollections = Collections
+                .Select(c => c.ToLowerInvariant())
+                .OrderBy(c => c, StringComparer.OrdinalIgnoreCase);
+            parts.Add($"cols:{string.Join(",", sortedCollections)}");
+        }
 
         parts.Add($"max:{MaxTags}");
 

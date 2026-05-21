@@ -1417,4 +1417,136 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         item.Should().NotBeNull();
         item!.HasProcessedUrl.Should().BeTrue();
     }
+
+    [Fact]
+    public async Task GetContentItemsPaged_WithSectionFilter_ReturnsOnlySectionItems()
+    {
+        // Arrange — seed one AI item and one Azure-only item
+        const string AiSlug = "section-filter-ai-item";
+        const string AzureSlug = "section-filter-azure-item";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, is_azure, sections_bitmask, content_hash)
+                  VALUES
+                    (@AiSlug, 'blogs', 'Section Filter AI Item', '# AI', 'AI excerpt',
+                     1700000000, 'ai', 'https://example.com/section-filter-ai',
+                     'Author', 'Test Feed', ',ai,', TRUE, FALSE, 1, 'secfilterhash1'),
+                    (@AzureSlug, 'blogs', 'Section Filter Azure Item', '# Azure', 'Azure excerpt',
+                     1700000000, 'azure', 'https://example.com/section-filter-azure',
+                     'Author', 'Test Feed', ',azure,', FALSE, TRUE, 2, 'secfilterhash2')
+                  ON CONFLICT (collection_name, Slug) DO NOTHING",
+                new { AiSlug, AzureSlug });
+        }
+
+        // Act — filter by AI section
+        var response = await _client.GetAsync(
+            "/api/admin/content-items?sectionName=ai",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
+            TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().Contain(i => i.Slug == AiSlug);
+        result.Items.Should().NotContain(i => i.Slug == AzureSlug);
+    }
+
+    [Fact]
+    public async Task GetContentItemsPaged_WithPrimarySectionOnly_ExcludesSecondarySectionItems()
+    {
+        // Arrange — seed an item that belongs to both AI and Azure sections,
+        // but has Azure as primary. With primarySectionOnly it should NOT appear in AI results.
+        const string MultiSlug = "primary-section-only-multi";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, is_azure, sections_bitmask, content_hash)
+                  VALUES
+                    (@Slug, 'blogs', 'Primary Section Only Test', '# Multi', 'Multi excerpt',
+                     1700000000, 'azure', 'https://example.com/primary-section-only-multi',
+                     'Author', 'Test Feed', ',ai,azure,', TRUE, TRUE, 3, 'primarysechash1')
+                  ON CONFLICT (collection_name, Slug) DO NOTHING",
+                new { Slug = MultiSlug });
+        }
+
+        // Act 1 — without primarySectionOnly: item should appear in AI results (is_ai = TRUE)
+        var allResponse = await _client.GetAsync(
+            $"/api/admin/content-items?search={Uri.EscapeDataString(MultiSlug)}&sectionName=ai",
+            TestContext.Current.CancellationToken);
+        var allResult = await allResponse.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
+            TestContext.Current.CancellationToken);
+        allResult!.Items.Should().Contain(i => i.Slug == MultiSlug,
+            "item has is_ai=true so it should appear in all-sections AI filter");
+
+        // Act 2 — with primarySectionOnly: item should NOT appear (primary is azure, not ai)
+        var primaryOnlyResponse = await _client.GetAsync(
+            $"/api/admin/content-items?search={Uri.EscapeDataString(MultiSlug)}&sectionName=ai&primarySectionOnly=true",
+            TestContext.Current.CancellationToken);
+        var primaryOnlyResult = await primaryOnlyResponse.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
+            TestContext.Current.CancellationToken);
+        primaryOnlyResult!.Items.Should().NotContain(i => i.Slug == MultiSlug,
+            "item's primary section is azure, not ai, so it should be excluded");
+    }
+
+    [Fact]
+    public async Task GetProcessedUrls_WithSectionFilter_ReturnsOnlySectionItems()
+    {
+        // Arrange — seed two content items in different sections, each with a processed URL
+        const string AiSlug = "pu-section-filter-ai";
+        const string AzureSlug = "pu-section-filter-azure";
+        const string AiUrl = "https://example.com/pu-section-filter-ai";
+        const string AzureUrl = "https://example.com/pu-section-filter-azure";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, is_azure, sections_bitmask, content_hash)
+                  VALUES
+                    (@AiSlug, 'blogs', 'PU Section AI', '# AI', 'AI',
+                     1700000000, 'ai', @AiUrl, 'Author', 'Test Feed',
+                     ',ai,', TRUE, FALSE, 1, 'pusecfilterhash1'),
+                    (@AzureSlug, 'blogs', 'PU Section Azure', '# Azure', 'Azure',
+                     1700000000, 'azure', @AzureUrl, 'Author', 'Test Feed',
+                     ',azure,', FALSE, TRUE, 2, 'pusecfilterhash2')
+                  ON CONFLICT (collection_name, Slug) DO NOTHING",
+                new { AiSlug, AzureSlug, AiUrl, AzureUrl });
+
+            await connection.ExecuteAsync(
+                @"INSERT INTO processed_urls (external_url, status, collection_name, Slug)
+                  VALUES
+                    (@AiUrl, 'succeeded', 'blogs', @AiSlug),
+                    (@AzureUrl, 'succeeded', 'blogs', @AzureSlug)
+                  ON CONFLICT (external_url) DO NOTHING",
+                new { AiSlug, AzureSlug, AiUrl, AzureUrl });
+        }
+
+        // Act — filter processed URLs by AI section
+        var response = await _client.GetAsync(
+            "/api/admin/processed-urls?sectionName=ai",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
+            TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().Contain(i => i.ExternalUrl == AiUrl);
+        result.Items.Should().NotContain(i => i.ExternalUrl == AzureUrl);
+    }
 }

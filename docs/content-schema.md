@@ -85,7 +85,7 @@ If content is tagged `github-copilot` it should also include `ai` (unless it's p
 | `blogs` | Blog posts (links externally) |
 | `community` | Community posts (links externally) |
 | `videos` | YouTube videos (internal pages at `/section/videos/slug`) |
-| `roundups` | TechHub-authored roundups (internal at `/all/roundups/slug`) |
+| `roundups` | TechHub-authored section roundups (internal at `/{section}/roundups/{slug}`) |
 
 External-linking collections (`news`, `blogs`, `community`) use `external_url` for navigation. Internal collections (`videos`, `roundups`) show content on TechHub pages.
 

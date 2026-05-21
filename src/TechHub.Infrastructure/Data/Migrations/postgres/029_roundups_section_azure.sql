@@ -1,0 +1,3556 @@
+-- Migration 029: Roundup INSERTs for section 'azure'
+-- Generated: 2026-05-21 from localhost database (AI-regenerated metadata).
+-- Safe to re-run: ON CONFLICT DO UPDATE overwrites all fields with source-of-truth values.
+
+-- ── content_items ─────────────────────────────────────────────────────────────────
+-- weekly-azure-roundup-2026-05-11
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-05-11', 'roundups', 'Weekly Azure Roundup: VM refresh, migrations, and AI guardrails',
+    'Azure updates this week leaned toward two big themes: modernizing long-lived infrastructure without breaking production, and putting clearer guardrails around the way teams build and run AI-powered systems on the platform. Between new VM families, new migration paths into zones and scale sets, cost model changes on reservations, and a growing set of tools for governed integration and agent operations, the message was consistent: keep what works, but make it easier to evolve. That connects directly to last week''s throughline of controlled transitions and safer-by-default operations, where Azure kept removing implicit behavior and replacing it with explicit, automatable paths platform teams can standardize.
+<!--excerpt_end-->
+## Azure Virtual Machines: new Intel Xeon 6 families and safer paths to higher availability
+Azure Compute had a busy week that combined new capacity with pragmatic migration tooling. Microsoft announced general availability of the Dlsv7, Dsv7, and Esv7 VM series based on Intel Xeon 6 processors, positioning them for general purpose and memory-optimized workloads that need higher scale options alongside improved networking and storage. The announcement calls out Azure Boost as part of the platform improvements and highlights support for modern disk options such as Premium SSD v2 and Ultra Disk, which matters if you are balancing predictable IOPS/throughput with cost. This also lines up with last week''s FinOps and performance tuning angle (Cosmos DB cost/perf and Blob smart tier GA): Azure keeps pairing "new capability" with "here is how to run it efficiently."
+On the resiliency side, two public previews focus on reducing the friction of moving off older deployment patterns. The first preview enables migration from Availability Sets to Virtual Machine Scale Sets (Flexible). Instead of requiring a rebuild, you can perform controlled, per-VM moves using the Azure portal or automation paths (CLI, PowerShell, REST), which is useful when you need to shift incrementally while keeping risk contained. That "incremental, reversible modernization" framing is the same operational posture as last week''s guidance across networking and identity: make change explicit, testable, and standardizable rather than a big-bang cutover.
+The second preview targets one of the most common blockers to adopting Availability Zones: existing regional (non-zonal) VMs. Azure is previewing an in-place migration that moves regional VMs and VMSS Flexible instances into availability zones while preserving resource IDs, names, disks, NICs, and IPs. The workflow is intentionally explicit (deallocate, update, start) so you can plan maintenance windows and validate dependencies, and the post documents preview limitations so you can decide where it is safe to test first. If you are doing this in environments that are simultaneously tightening network posture (like last week''s "private subnets by default" change), the practical lesson is to treat zone migration as part of a broader dependency review (egress, DNS, and private endpoint reachability) rather than a pure compute move.
+- [Announcing General Availability of Azure Dl/D/Esv7-series VMs based on Intel Xeon 6 processors](https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-dl-d-esv7-series-vms/ba-p/4516907)
+- [Public Preview: Migrate Availability Sets to Virtual Machine Scale Sets](https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-migrate-availability-sets-to-virtual-machine/ba-p/4517061)
+- [Public Preview: Migrate your regional virtual machines to availability zones](https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-migrate-your-regional-virtual-machines-to/ba-p/4517298)
+## Azure cost planning: Reserved VM Instances retirement guidance and what to do before July 2026
+Alongside feature work, Azure signaled a meaningful purchasing change: Azure Reserved Virtual Machine Instances will no longer be available for new purchase or renewal for select VM series starting July 1, 2026. The transition guide focuses on the practical steps teams need now, including how to identify which existing reservations are affected and how to choose a path based on workload reality. Coming right after last week''s run of "small notices become real work" items (like protocol retirement timelines and SDK lifecycle changes), this is another heads-up where the calendar matters as much as the technology.
+For some teams, the best move will be switching to the Azure savings plan for compute to retain discount coverage with more flexibility. For others, the guide frames modernization as the moment to reassess the underlying VM series or architecture rather than renewing, while noting that renewal before the cutoff may still be an option depending on your situation. The key takeaway is operational: treat this as a planning item for finance and engineering together, because reservation strategy, VM family choices, and modernization timelines will need to line up well before mid-2026. If you are already planning moves like Availability Set -> VMSS Flexible or regional -> zonal migrations, this retirement effectively becomes another input into sequencing (when to migrate, when to re-commit spend, and what "steady state" you want to reserve against).
+- [Retired Azure Reserved Virtual Machine Instances Transition Guide](https://techcommunity.microsoft.com/t5/azure-compute-blog/retired-azure-reserved-virtual-machine-instances-transition/ba-p/4516505)
+## Azure Container Registry: ACR-to-ACR pull-through caching for registry hierarchies
+Azure Container Registry expanded Artifact Cache with a capability that fits how many orgs structure environments: you can now use another ACR as an upstream source. That effectively enables ACR-to-ACR pull-through caching, which is useful for image promotion patterns (for example, pulling from a central registry into a regional or environment-specific registry) and for building registry hierarchies where downstream registries can cache what they need without constantly reaching across network boundaries.
+The walkthrough goes deep on the real setup details that typically cause friction: supported combinations of networking and authentication, using a user-assigned managed identity, and configuring the right RBAC roles (and where ABAC considerations may apply). It also calls out Private Link scenarios, which is often the deciding factor for enterprises that keep registries off the public internet. That continues last week''s secure-by-default identity and networking direction: fewer reusable credentials, more managed identities, and more private connectivity as the baseline. In practice, if you''re adopting last week''s private subnet defaults (and making egress explicit via NAT Gateway where needed), registry hierarchy and caching can reduce cross-network pulls and help keep "what needs internet access" tightly scoped.
+- [Use Azure Container Registry as an Upstream Source for Artifact Cache](https://techcommunity.microsoft.com/t5/azure-compute-blog/use-azure-container-registry-as-an-upstream-source-for-artifact/ba-p/4517102)
+## Azure integration: modernize to Logic Apps Standard with a migration agent and new Oracle in-process connectivity
+Logic Apps Standard got two updates that complement each other: one aimed at modernization workflows, and another aimed at expanding what those workflows can do once they arrive.
+For teams moving from BizTalk Server or other integration platforms, Microsoft introduced the open-source Logic Apps Migration Agent. The workflow is intentionally stage-gated and AI-assisted, but with human review checkpoints so teams can validate mappings and behavior before committing changes. The tooling integrates with VS Code and GitHub Copilot, which matters because modernization projects usually stall on developer ergonomics (how quickly you can iterate, review, and correct large sets of converted artifacts). This lands cleanly after last week''s integration change-management note (Service Bus SBMP retirement for BizTalk 2020 customers): instead of treating protocol and adapter changes as one-off fixes, Azure is pushing a more repeatable "move to the supported platform path, then keep iterating" approach.
+On the connectivity front, Logic Apps Standard added a public preview Oracle Database built-in connector that runs in-process in single-tenant workflows. The key operational detail is that it removes the need for a gateway when you already have network connectivity, which can simplify deployments in environments using VNET integration or Hybrid Logic Apps patterns. The announcement lays out supported actions, configuration options, current limitations, and troubleshooting guidance so you can decide whether the connector is ready for a given workload. It is also consistent with last week''s private-first posture: when teams already invest in private connectivity and managed identity patterns, "in-process + your network" connectors tend to fit better than architectures that depend on extra gateway infrastructure and long-lived shared secrets.
+- [Bringing all your Integration workloads to Logic Apps Standard](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/bringing-all-your-integration-workloads-to-logic-apps-standard/ba-p/4517262)
+- [Announcing the public preview of Oracle Database built-in connector for Azure Logic Apps Standard](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-public-preview-of-oracle-database-built-in/ba-p/4516714)
+## Azure AI governance and operations: landing zones for agents and MCP-based access to Azure Resource Manager
+Azure Architecture and Azure management updates both tackled the same problem from different angles: teams are building more AI agents, but they need consistent control, policy, and safe operational access. This is a natural continuation of last week''s Azure AI architecture coverage, which emphasized that production AI is mostly "platform plumbing" (identity, networking, evaluation, monitoring) wrapped around models. The difference this week is that the spotlight shifts from app reference designs (like the drone inspection pipeline) to governance patterns for agents and agent-driven operations.
+A new reference architecture addresses "agent sprawl" with a multi-region AI agent landing zone on Azure. The design layers Azure API Management AI Gateway, Azure AI Foundry Control Plane, and Microsoft Agent 365 so you can centralize oversight across policy, safety controls, and evaluation while still allowing teams to ship. It also brings in identity and operational structure through components like Microsoft Entra Agent ID and uses Azure DevOps pipelines for provisioning, which makes the architecture feel closer to an adoptable platform blueprint than a conceptual diagram. If your platform team has been standardizing private endpoints, managed identities, and policy-as-code the way last week''s roundup suggested, this landing zone approach is the AI-agent equivalent of those same paved-path ideas.
+In parallel, Azure introduced a public preview Azure Resource Manager MCP Server (Model Context Protocol server). It is positioned as a remote MCP server that gives AI agents tool-based access to ARM operations, including translating natural language into Azure Resource Graph queries and supporting ARM template deployments directly from VS Code. For developers experimenting with agent-driven ops, the practical value is having a defined tool boundary for what an agent can do, plus the ability to align that access with governance mechanisms such as Azure Policy. Read together with last week''s messaging about removing implicit behavior and locking down credential sprawl, this is another "make the interface explicit" move: agent actions become tool calls you can scope, audit, and constrain instead of ad-hoc scripts running with broad permissions.
+- [Governing Agent Sprawl: A Multi-Region AI Agent Landing Zone on Azure (Reference Architecture)](https://techcommunity.microsoft.com/t5/azure-architecture-blog/governing-agent-sprawl-a-multi-region-ai-agent-landing-zone-on/ba-p/4516036)
+- [Introducing the Azure Resource Manager MCP Server!](https://techcommunity.microsoft.com/t5/azure-governance-and-management/introducing-the-azure-resource-manager-mcp-server/ba-p/4517521)
+## Other Azure News
+Azure High Performance Computing shared a deep dive into how Azure keeps large, synchronous AI training jobs running despite routine network faults, describing the Fairwater AI supercomputer''s use of Multipath Reliable Connection (MRC), a two-tier multi-plane topology, and static SRv6 source routing. The post also points to broader ecosystem work through the OCP MRC specification and related open-source libraries and plugins. Coming after last week''s focus on private networking reliability (and the idea that networking and DNS are Tier-0 dependencies), this is the same story at a different scale: AI workloads are increasingly network-bound, so Azure is investing in explicit reliability mechanisms in the fabric rather than assuming the network will behave.
+- [Building resilient networks for AI supercomputers](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/building-resilient-networks-for-ai-supercomputers/ba-p/4516919)',
+    'Azure updates this week leaned toward two big themes: modernizing long-lived infrastructure without breaking production, and putting clearer guardrails around the way teams build and run AI-powered systems on the platform. Between new VM families, new migration paths into zones and scale sets, cost model changes on reservations, and a growing set of tools for governed integration and agent operations, the message was consistent: keep what works, but make it easier to evolve. That connects directly to last week''s throughline of controlled transitions and safer-by-default operations, where Azure kept removing implicit behavior and replacing it with explicit, automatable paths platform teams can standardize.',
+    1778482800, 'azure', '/azure/roundups/weekly-azure-roundup-2026-05-11', 'TechHub',
+    'TechHub', 'F7454F709F806BE06BE5C4C2C1EE8269BEDE8A877E796DB4D24A19337E23AE36', ',Microsoft Azure,Azure Virtual Machines,Intel Xeon 6,Dsv7,Esv7,Availability Zones,Virtual Machine Scale Sets,Reserved VM Instances,Azure Savings Plan For Compute,Azure Container Registry,Artifact Cache,Private Link,Azure Logic Apps Standard,BizTalk Server Migration,AI Agent Governance,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-05-04
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-05-04', 'roundups', 'Weekly Azure Roundup: Sovereign Ops, Secure Access, SRE Tooling',
+    'Building on last week''s "day-two readiness" thread (standard workflows, controlled transitions, and evidence-based troubleshooting), Azure’s story this week was about tightening control as Azure expands into more constrained environments. On one end, Azure Local and landing zone guidance leaned into disconnected and sovereign operations, while core platform services like Blob Storage, Azure Monitor, and AKS picked up practical updates that help teams scale securely, observe more precisely, and ship faster.
+<!--excerpt_end-->
+## Azure Local and landing zones for sovereign and disconnected environments
+Azure Local took a clear step toward larger, more flexible sovereign deployments, with Azure Local 2604 reaching GA as the first feature update of CY 2026. The headline is disaggregated deployments: instead of tightly coupling compute and storage, you can now attach SAN storage, including Fibre Channel support, which matters for customers standardizing on established storage stacks and needing to scale or refresh compute and storage independently. Microsoft also pushed hard on identity for regulated and disconnected scenarios by introducing GA Local Identity backed by Azure Key Vault, so Azure Local can be provisioned without relying on Microsoft Active Directory dependencies. That combination (SAN-based disaggregation plus Key Vault-backed local identity) is directly aimed at sites that cannot depend on continuous connectivity or centralized directory services, and it mirrors last week''s recurring goal: remove brittle dependencies (directory, secrets, manual runbooks) that tend to surface during incidents and cutovers.
+In parallel, governance guidance caught up. Azure Landing Zones (ALZ) added a new "Local" management group, positioning it as a clean place to organize Azure Local resources and to support disconnected-operations exit planning (called out as Azure Local disconnected operations, ALDO). For teams using Sovereign Landing Zone (SLZ), built-in policy initiatives were refreshed and mapped to L1/L2/L3 control tiers, with emphasis on residency and encryption requirements (including Customer-Managed Keys (CMK) and Confidential Computing-related controls). Put together, the platform changes and the governance updates form a more coherent path: deploy Azure Local at sovereign scale, then apply management group structure and policy guardrails that reflect how regulated environments actually operate, extending last week''s "policy remediation over tickets" theme into the sovereign footprint.
+Microsoft’s broader sovereign private cloud announcement rounded out the picture by highlighting that Azure Local deployments can now scale to thousands of servers within a single sovereign environment. The message here is less about a single feature and more about the operational envelope: mission-critical resiliency, disconnected operations, and the ability to run GPU-backed AI inference and analytics on customer-controlled infrastructure while still using Azure-style management and RBAC patterns. For architects, the practical takeaway is that Azure Local is being positioned not just for edge clusters, but for very large, isolated regional footprints with modern workload requirements, which sets context for this week''s AKS AI guidance as "production patterns, but under stricter constraints."
+- [Azure Local expands to sovereign-scale infrastructure with disaggregated deployments](https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-local-expands-to-sovereign-scale-infrastructure-with/ba-p/4514338)
+- [New Local Management Group for ALZ & Updated Sovereign Policies for SLZ](https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156)
+- [Azure Local now allows organizations to run larger workloads](https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/)
+## Azure Blob Storage security and access: SFTP host keys and prefix-scoped SAS
+Blob Storage had two updates that both land squarely in the day-to-day reality of secure access. First, the SFTP endpoint host key change means teams that pin SSH trusted host keys need to update clients (or automation) to avoid sudden connection failures. The guidance focused on responding systematically: update known_hosts/trusted host key stores, then use Azure Resource Graph to discover which storage accounts have SFTP enabled, and Log Analytics queries (KQL) to identify SSH key-based clients so you can prioritize which integrations will break first. That inventory-and-evidence approach lines up with last week''s incident-response framing (collect signals first, then change safely), and it matches the broader theme that "identity and access wiring" is often what turns a routine platform change into an outage.
+Second, Azure Blob Storage made prefix-scoped access for User Delegation SAS generally available in all regions. Instead of issuing a SAS that covers an entire container, you can scope the token to a virtual directory (prefix) within that container, which is a straightforward least-privilege win for multi-tenant layouts and "one container, many teams" patterns. This echoes last week''s direction toward tighter, auditable scopes (managed identities per connector, wildcard roles for constrained patterns, and policy-driven governance) by giving storage teams a practical middle ground between "one container per tenant" sprawl and overly broad tokens. The announcement reinforced the recommended access model (Microsoft Entra ID plus RBAC/ABAC) and showed how to express the directory scope through REST and .NET SDK parameters (including fields like `sr=d` and `sdd`). For developers building upload portals, data exchange drops, or per-customer paths, this reduces the need to mint separate containers just to keep SAS scopes tight.
+- [Update host keys to use SFTP on Azure Blob Storage](https://techcommunity.microsoft.com/t5/azure-paas-blog/update-host-keys-to-use-sftp-on-azure-blob-storage/ba-p/4515483)
+- [Prefix-scoped access for User Delegation SAS is now generally available for Azure Blob Storage](https://techcommunity.microsoft.com/t5/azure-storage-blog/prefix-scoped-access-for-user-delegation-sas-is-now-generally/ba-p/4516010)
+## AKS for AI workloads and network observability: reference architectures and GA filtering
+AKS guidance this week leaned into two production pain points: running GPU-heavy AI systems reliably and keeping network telemetry useful (and affordable) at scale. This builds directly on last week''s AKS operations arc (Gateway API migration planning, one-command backups, and evidence-driven network investigations) by shifting from "how to operate the cluster" to "how to run demanding workloads on it without losing control of ingress, identity, and observability."
+A new diffusion-model reference architecture laid out how to structure a cluster for mixed compute needs by separating CPU and GPU lanes, then choosing a dispatch pattern based on your workload shape. For simpler flows, Kubernetes-native dispatch can work, while queue-based patterns (Azure Service Bus plus KEDA) provide better control when you need buffering, back-pressure, or burst handling. The architecture also emphasized production plumbing that often gets skipped in AI demos: secure ingress, durable storage for generated outputs and model caches, and identity patterns like Microsoft Entra Workload ID paired with Azure Key Vault for secret and credential management. For observability, it called out combined application and GPU telemetry using tools like Application Insights and Azure Managed Prometheus so you can correlate request-level behavior with accelerator saturation and scheduling effects, reinforcing last week''s point that "deployed" is not the same as "ready for cutover" when real traffic and dependencies show up.
+On the networking side, Advanced Container Networking Services (ACNS) observability features for AKS moved to GA with capabilities designed to reduce noise while preserving detail where it matters. Last week introduced the Container Network Insights Agent as an advisory, read-only way to pull together CoreDNS, policies, Cilium/Hubble flows, and host signals into an auditable report. This week complements that "investigate precisely" story with "collect sanely": on-node container network metrics filtering is now available, along with container network log filtering and 30-second flow log aggregation. That gives platform teams a lever to control telemetry volume without fully turning off high-cardinality signals. Logs land in Log Analytics under the `ContainerNetworkLogs` table, and the design supports exporting to external tools like Splunk or Datadog when Log Analytics is not the final destination. Under the hood, the announcement referenced a Cilium/Hubble-based model and surfaced Kubernetes custom resources (CRDs) such as `ContainerNetworkMetric` and `ContainerNetworkLog`, which is useful because it frames network observability as declarative cluster configuration rather than a one-off agent tweak.
+Together, these updates show Azure’s direction for AKS: provide opinionated patterns for AI productionization, then back them with more tunable, Kubernetes-native observability controls so teams can run larger fleets without drowning in logs, while staying aligned with the migration-and-deprecation clocks called out last week (ingress controllers and log ingestion).
+- [Running Diffusion Models at Scale on AKS](https://techcommunity.microsoft.com/t5/azure-architecture-blog/running-diffusion-models-at-scale-on-aks/ba-p/4513687)
+- [High-Fidelity Network Observability at Scale— ACNS Metrics Filtering and Log Aggregation Now GA](https://techcommunity.microsoft.com/t5/azure-networking-blog/high-fidelity-network-observability-at-scale-acns-metrics/ba-p/4516508)
+## Reliability engineering in Azure Monitor: SLIs and SLOs in public preview
+Azure Monitor introduced public preview support for Service Level Indicators (SLIs) and Service Level Objectives (SLOs), pulling more of the SRE workflow into native Azure tooling. Last week, Azure SRE Agent expanded into first-party Log Analytics and Application Insights connectors so investigations can run KQL directly through MCP-backed tools, keeping identity scopes tight and actions read-only. This week moves the workflow one step earlier in the lifecycle: define what "good" looks like (SLIs/SLOs), then let error budgets and burn rates drive when you page and what you investigate.
+The preview focuses on practical mechanics: author SLIs directly, establish baselines, track error budgets, and alert using burn-rate logic so teams get notified when they are spending their budget too quickly rather than reacting only after an outage is obvious. The emphasis on "Service Group" level reporting is important for teams that operate systems composed of multiple services and want a combined reliability view instead of piecemeal per-resource alerts.
+The implementation detail to note is that this builds on Azure Monitor metrics stored in an Azure Monitor Workspace, which ties into how teams already centralize metrics for scenarios like Managed Prometheus and OpenTelemetry pipelines. For developers and operators, the near-term value is less about new charts and more about turning reliability targets into first-class configuration, then letting error-budget math drive alerting and escalation, which fits the broader "reduce toil through standard workflows" storyline from last week.
+- [Azure Monitor Service Level Indicators (SLI) (Public Preview)](https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-service-level-indicators-sli/ba-p/4507445)
+## Azure Functions and Service Bus: deeper troubleshooting for trigger reliability
+A detailed troubleshooting guide for Azure Functions Service Bus triggers focused on the real failure modes teams see in production, especially when using PeekLock processing. This connects cleanly to last week''s Service Bus scaling pattern (avoiding hidden ceilings like session lock affinity) by zooming in on the other side of the same reliability problem: once you choose a messaging pattern, you still need deterministic trigger behavior under load, retries, and transient auth/network issues.
+The write-up walked through diagnosing connection and authentication failures (including Managed Identity and Azure RBAC considerations), lock loss during message handling, dead-letter queue (DLQ) behavior, and the kinds of issues that create duplicate processing. It also covered scaling dynamics (including target-based scaling), sessions, and lower-level AMQP or network problems that can look like intermittent trigger flakiness.
+What makes this useful is the emphasis on how to connect configuration and diagnostics. It points developers to tune and validate behavior through `host.json`, then verify hypotheses using Azure diagnostics and Application Insights, rather than guessing based on symptoms. If you run Functions as part of an event-driven system, the practical outcome is faster root cause isolation: you can distinguish "we are not receiving messages" from "we are receiving but failing to settle locks" from "we are processing twice due to retries and timeouts", and then choose fixes that match the underlying cause.
+- [How to Troubleshoot Azure Functions Service Bus Trigger Issues](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-service-bus-trigger-issues/ba-p/4514006)
+## Kubernetes-native database platforms: Crossplane with Azure Database for PostgreSQL
+A Kubernetes-first pattern for building an internal DBaaS on Azure showed how Crossplane can provision and manage Azure Database for PostgreSQL Flexible Server while keeping developer workflows inside Kubernetes. It lands on the same operational pressure point called out last week in the Azure networking section: DNS and Private Link wiring often decides reliability. Here, the design leans into that reality instead of treating it as an afterthought, using private networking via Azure Private Endpoint, service discovery using Azure Private DNS, and DNS-based read/write endpoints so applications can connect without embedding failover logic everywhere.
+For HA/DR, the design described a multi-region active-passive setup using replicas with manual promotion, which is a common choice when teams want clear operational control during regional incidents rather than automatic cross-region failover surprises. It also highlighted using Azure Traffic Manager in the overall topology to route clients appropriately. For platform teams, the main implication is that Crossplane can act as the control plane for database lifecycle (provisioning, configuration, and standardization) while Azure PostgreSQL remains the managed data plane, giving you a consistent Kubernetes API surface without taking on the burden of running PostgreSQL clusters yourself. This also pairs naturally with last week''s PostgreSQL "run it well today vs what''s next" split by showing a concrete platform approach you can apply to Flexible Server now, even as HorizonDB messaging develops.
+- [Building an Enterprise-Grade SQL Platform on Kubernetes using Crossplane and Azure PostgreSQL](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-enterprise-grade-sql-platform-on-kubernetes-using/ba-p/4515635)
+## Other Azure News
+Azure Developer CLI (azd) shipped five releases in April 2026, with notable improvements for teams standardizing deployments through `azure.yaml`. This is a continuation of last week''s azd thread (a single `azd update` regardless of install method, plus stable vs daily channels) by reinforcing the same operational goal: make developer tooling upgrades predictable so environment drift does not become another hidden reliability tax. Multi-language hooks now cover Python, JavaScript/TypeScript, and .NET, the extension framework was enhanced, and Copilot-assisted troubleshooting was improved. The release notes also called out security and reliability fixes, including MSI code-signing verification, plus ongoing enhancements around Bicep, updates, and Key Vault secret resolution.
+John Savill’s May 1, 2026 Azure update rounded up a broad set of platform changes, including AKS networking enhancements (notably WireGuard in-transit encryption), Azure Front Door WAF HTTP DDoS protections, Azure Elastic SAN updates, and PostgreSQL cascading read replicas. On the AI platform side, it flagged Microsoft Agent Framework 1.0 reaching GA and the retirement of Prompt flow, which is worth tracking if you have agent workflows built on Azure’s current tooling.
+- [Azure Developer CLI (azd) – April 2026](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-april-2026/)
+- [Azure Update 1st May 2026](https://www.youtube.com/watch?v=FqYQSLI6vuk)',
+    'Building on last week''s "day-two readiness" thread (standard workflows, controlled transitions, and evidence-based troubleshooting), Azure’s story this week was about tightening control as Azure expands into more constrained environments. On one end, Azure Local and landing zone guidance leaned into disconnected and sovereign operations, while core platform services like Blob Storage, Azure Monitor, and AKS picked up practical updates that help teams scale securely, observe more precisely, and ship faster.',
+    1777878000, 'azure', '/azure/roundups/weekly-azure-roundup-2026-05-04', 'TechHub',
+    'TechHub', '48173EEC38E4FBF7E5D1F6A1F4C49427535005698CA89A47E70889D7574466A6', ',Azure Local,Azure Landing Zones,Sovereign Landing Zone,Disconnected Operations,Azure Key Vault,Azure Blob Storage,SFTP,User Delegation SAS,AKS,Advanced Container Networking Services,Cilium,Log Analytics,Azure Monitor,SLI/SLO,Azure Functions,Azure Service Bus,Crossplane,Azure Database For PostgreSQL Flexible Server,Private Link,Azure Developer CLI,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-04-27
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-04-27', 'roundups', 'Weekly Azure Roundup: Safer Defaults, Explicit Egress, and Ops',
+    'Azure updates this week centered on making common deployments safer by default while smoothing the path to modern patterns in networking, identity, and platform operations. Building on last week''s focus on controlled transitions and day-two readiness, the throughline is the same: remove implicit behavior (or long-lived credentials) that causes brittle operations, then replace it with explicit, testable patterns that platform teams can standardize in landing zones and paved paths. Alongside that shift, Azure shipped practical GA features for monitoring and storage, published migration guidance for long-lived integrations, and shared real-world build notes that show what production looks like when you combine private networking, managed identity, and automation.
+<!--excerpt_end-->
+## Secure-by-default networking and identity (private subnets, Private Link, managed identities)
+After last week''s private networking reliability lessons (especially "DNS is Tier-0" for private-first designs), Azure is now tightening one of the most common network assumptions: newly created Virtual Network subnets default to private subnets when using API version 2025-07-01+. If you relied on implicit default outbound access (DOA) from a subnet, that behavior no longer shows up automatically, so outbound connectivity needs to be an explicit design choice. In practice, that usually means adding a NAT Gateway (StandardV2) and wiring it to the subnet(s) that need internet egress, then verifying configuration via the `defaultOutboundAccess` property (and updating templates/CLI automation accordingly). The upside is predictable egress and fewer surprise "public by accident" paths, but it does mean teams should review landing zone templates and any scripts that assume outbound just works (and validate DNS forwarding and private endpoint resolution at the same time, since private-by-default subnetting often lands in the same hub-spoke builds).
+That same "remove reusable secrets and shrink exposed surface area" theme (which showed up last week with managed identity adoption in ARO, UAMI-based App Service deployments, and Arc onboarding roles) carried through in Microsoft''s broader guidance. Microsoft reiterated a security posture aimed at making opportunistic attacks harder: stop distributing reusable credentials by defaulting to Microsoft Entra ID managed identities and federated credentials, reduce public exposure with private networking patterns like Private Link and private endpoints, and enforce secure defaults through platform engineering paved paths backed by policy-as-code. The practical takeaway for platform teams is to treat identity and network controls as something you bake into golden paths (and deny by policy when teams go off-road), rather than something you document and hope everyone remembers.
+On the storage side, Azure Files over SMB now supports Managed Identity authentication generally availability, enabling keyless access to Azure Files using Entra ID instead of storage keys or shared secrets. This closes a long-standing gap for Windows and SMB-based workloads that want to avoid key rotation overhead and secret sprawl. It also connects cleanly with last week''s identity direction: instead of broad storage keys shared across apps, you can scope access via Azure RBAC and rotate less operational risk into the platform. The GA release also calls out how AKS Workload Identity can provide pod-level identity (a theme we covered last week in the ARO Workload Identity GA discussion), which pairs well with Azure Files access when you want per-workload permissions using Azure RBAC rather than cluster-wide credentials, and it includes a simplified Azure portal setup experience to get the feature enabled correctly.
+- [Private subnets by default in Azure Virtual Networks: What changed and how to use NAT Gateway](https://techcommunity.microsoft.com/t5/azure-networking-blog/private-subnets-by-default-in-azure-virtual-networks-what/ba-p/4513778)
+- [Making opportunistic cyberattacks harder by design](https://www.microsoft.com/en-us/security/blog/2026/04/20/making-opportunistic-cyberattacks-harder-by-design/)
+- [Secure, Keyless Application Access with Managed Identities - Now GA in Azure Files SMB](https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-keyless-application-access-with-managed-identities-now-ga/ba-p/4513053)
+## AKS App Routing evolves: Gateway API mode with Istio-managed gateways (preview)
+Last week, AKS operations content leaned into "observe first, then automate safely" (for example, request tracing across Istio/Envoy and Application Insights). This week, AKS App Routing is shifting from an ingress-centric story toward the Kubernetes Gateway API, and Microsoft is now previewing an "AKS App Routing Gateway API mode" that uses Istio-managed Envoy gateways. The key distinction is that this mode focuses on managing north-south traffic (the gateway) through Gateway API resources, rather than turning on a full Istio service mesh with sidecars across workloads. For teams that want standardized traffic management at the edge without committing to mesh-wide operational overhead, this is a meaningful middle ground, and it pairs naturally with last week''s tracing approach if you already rely on Envoy telemetry patterns at the boundary.
+Migration is the part that matters, and the guidance gets concrete: if you are coming from NGINX Ingress Controller or the older App Routing approach, you can use tooling like `ingress2gateway` to translate existing Ingress resources into Gateway API equivalents, then iterate on policies and routing behavior. The preview also comes with real limitations you need to plan around right now, especially around automation for DNS and TLS. That lands directly in the same bucket as last week''s private DNS and "managed dataplane contracts" guidance: if your current setup depends on end-to-end automation (for example ExternalDNS plus cert automation), expect to validate what is and is not wired up in this mode today, and be ready to run some parts manually or with custom controllers until the gaps close.
+- [AKS App Routing''s Next Chapter: Gateway API with Istio](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aks-app-routing-s-next-chapter-gateway-api-with-istio/ba-p/4512729)
+## Azure Monitor Pipeline GA: centralized telemetry ingestion for scale and hybrid
+Last week highlighted two ends of the ops spectrum: richer correlation for AKS (Istio + App Insights) and more automated response loops via Azure SRE Agent consuming Azure Monitor alerts. Azure Monitor Pipeline becoming generally available fits as the missing middle layer: if telemetry pipelines sprawl because every team solves ingestion differently, a centralized ingestion front door makes it easier to standardize what gets in, how it is buffered, and how it is normalized before downstream automation depends on it.
+Azure Monitor Pipeline acts as a centralized ingestion layer in front of Azure Monitor, designed for high-volume and hybrid scenarios where you need controlled buffering, backfill, and scalable processing without building your own ingestion service. Architecturally, it leans on Kubernetes-based horizontal scaling and adds persistent buffering so bursts and downstream interruptions do not automatically turn into data loss. It also supports pre-cloud filtering (reducing noise and cost before data lands in the cloud) and automated schema mapping, which matters when you''re normalizing telemetry from heterogeneous sources (including OpenTelemetry). For security-sensitive environments, the pipeline story includes mutual TLS (mTLS) as part of the ingestion posture, and the output can feed the wider security and ops toolchain, including scenarios that connect into Microsoft Sentinel workflows (which is the same ecosystem where teams often want those SRE Agent-style alert investigations to land).
+- [Azure Monitor Pipeline: A Modern Approach to Telemetry Ingestion at Scale](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-monitor-pipeline-a-modern-approach-to-telemetry-ingestion/ba-p/4513980)
+## Messaging change management: Service Bus SBMP retirement and BizTalk 2020 migration steps
+Last week called out that "small notices become real work" (for example, Node.js support timelines in the Azure SDK). This week''s Service Bus notice is the same category, but with higher blast radius for long-lived integrations: Azure Service Bus will retire SBMP on September 30, 2026. For BizTalk Server 2020 customers using the SB-Messaging adapter, the recommended path is to move to AMQP, and Microsoft is explicitly calling out a hotfix (KB5091375) you should request to make the switch.
+The important work is not just applying the hotfix. Teams should validate key end-to-end scenarios (send/receive patterns, batching, retry semantics, error handling, and any operational runbooks that assume SBMP-era behaviors) well ahead of the deadline. If you have custom code or downstream consumers using older Service Bus SDK behaviors, use this window to align on AMQP-compatible client libraries and test under realistic load and failure conditions. This also lines up with last week''s broader platform roundup note that Service Bus NSP support keeps appearing, reinforcing a wider pattern: messaging platforms are steadily moving toward more explicit perimeter controls and more modern protocol/client expectations, and migrations get easier when you treat them like planned transitions rather than emergency swaps.
+- [Service Bus SBMP Retirement: What BizTalk Server 2020 Customers Need to Know](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/service-bus-sbmp-retirement-what-biztalk-server-2020-customers/ba-p/4513155)
+## Azure Virtual Desktop in Extended Zones: production patterns for images, GPUs, and private-only networking
+Last week extended the "sovereign/edge direction" with Azure Local disconnected operations, and this week adds a concrete "edge-adjacent Azure" example from the Perth Azure Extended Zone. A production Azure Virtual Desktop (AVD) deployment write-up put real operational detail behind what it takes to run close to users while still staying inside Azure''s control plane patterns. The deployment uses GPU-backed session hosts, then treats image engineering as a first-class pipeline using Azure Image Builder and Azure Compute Gallery with replication to keep image rollout consistent across locations.
+Networking is deliberately private-only, leaning on Private Link patterns rather than public endpoints, which lines up with both last week''s private DNS/Private Endpoint guidance and this week''s secure-by-default subnet changes. Operationally, the deployment includes an interesting user-driven deallocation pattern: session hosts can be deallocated based on user activity by combining the Azure Instance Metadata Service (IMDS) with Azure Automation, reducing idle cost while keeping control logic inside Azure-native tooling. Managed identity shows up here too, reinforcing the "no reusable creds in automation" posture that ran through last week''s ARO/App Service/Arc stories, and the post notes GitHub Actions as part of the overall engineering flow, which is a useful reference for teams building repeatable AVD environments.
+- [Azure Virtual Desktop in the Perth Azure Extended Zone: A Real-World Production Deployment](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-virtual-desktop-in-the-perth-azure-extended-zone-a-real/ba-p/4508550)
+## Storage cost controls: Blob/ADLS smart tier GA
+Last week included a deeper Cosmos DB cost/performance tuning walkthrough, reinforcing that cost control is increasingly about operational defaults and continuous optimization, not one-time sizing. In that same FinOps spirit, Azure Blob Storage and Azure Data Lake Storage now support smart tier generally availability, aimed at teams who want lifecycle-like optimization without hand-maintaining tiering rules for every dataset. Smart tier automatically moves objects between hot, cool, and cold tiers based on access patterns, and the GA details the mechanics that tend to trip people up, like which operations reset tiering behavior and how enablement differs between new and existing accounts (with specific notes for zonal storage accounts).
+The billing model matters for forecasting: beyond the underlying storage and access costs of each tier, smart tier includes a monitoring fee, so teams should validate that the cost of monitoring and transitions is lower than what they would otherwise pay for consistently hot storage (or for overly conservative lifecycle policies). This is most useful when you have large, variable-access datasets where "unknown future usage" is the default state.
+- [Optimize object storage costs automatically with smart tier-now generally available](https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/)
+## Azure SDK and AI client updates: security fix and breaking changes to watch
+Last week flagged platform change management via SDK lifecycle timelines (Node.js 20.x support ending in the Azure SDK for JavaScript). This week reinforces the same operational reality from two angles: security patch urgency and breaking-change hygiene. The April 2026 Azure SDK releases included both a security item and a set of AI-related client changes that will affect application code. On the security side, there is a Cosmos DB Java remote code execution fix tied to CWE-502 (deserialization of untrusted data). Even if you are not actively changing Cosmos DB usage, this is the kind of patch you want to pull in quickly and then verify against your dependency graph (especially if you shade SDKs or lock versions across multiple services), and it pairs naturally with last week''s "controlled transitions" guidance since rushed patching is where incompatible upgrades tend to sneak in.
+On the AI side, the Azure.AI.Projects library (AI Foundry) shipped 2.0.0 with breaking namespace and type changes, which is a heads-up for teams upgrading from earlier versions that may have preview-era API shapes in production code. Azure AI Agents 2.0.0 also reached GA, signaling more stability for agent-oriented builds, but you should still treat the upgrade like a normal API migration: update references, re-run compile-time checks, and validate agent behavior in staging since type-level changes can mask subtle runtime differences in configuration and tool invocation.
+- [Azure SDK Release (April 2026)](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2026/)
+## Azure AI architecture in the field: drone inspection reference design blending CV and reasoning
+Last week, the private networking article was framed explicitly around "Enterprise AI workloads on Azure" and the operational dependencies that come with Private Endpoints (OpenAI, AI Search, Key Vault, Storage) in hub-spoke networks. This week''s drone inspection reference architecture is a good complement because it shows the application-layer side of the same reality: an end-to-end design that assumes multiple data stores, orchestration, monitoring, and security controls, not just a model call.
+A new Azure reference architecture for industrial drone inspections showed how teams are starting to separate "deterministic vision" from "reasoning and narrative" in production AI systems. The design pairs computer vision components (Azure AI Vision and/or Azure Machine Learning) for consistent detection and measurement with Azure OpenAI for higher-level reasoning, summarization, and explanation, then adds evaluation loops in Azure AI Foundry to measure output quality before results land in operational reporting.
+The architecture is end-to-end, not just model selection. It uses Azure Functions for orchestration, Blob Storage for data, Cosmos DB as a system of record, and Power BI for reporting, while layering in security controls across Entra ID, Key Vault, encryption, monitoring, and DevSecOps practices, plus Microsoft Defender for Cloud for posture management. For teams building similar pipelines, the value is in the pattern: keep the safety-critical detection path as deterministic as possible, then use LLM reasoning where it adds interpretation and workflow acceleration, and evaluate it continuously so quality regressions show up before they hit users.
+- [Modernizing Industrial Safety and Inspection with AI-Driven Drone Automation](https://techcommunity.microsoft.com/t5/azure-architecture-blog/modernizing-industrial-safety-and-inspection-with-ai-driven/ba-p/4514284)
+## Other Azure News
+Azure introduced a new database modernization program focused on AI readiness, combining expert help, partner engagement, and cost options like the Savings Plan for Databases, with a message aimed at moving estates toward services like Azure SQL Managed Instance while reducing migration friction. In context of last week''s "modernize without rewrites" theme (including Fabric migration tooling and shortcut transformations), this reads as another attempt to turn modernization into a repeatable program rather than a one-off project, especially for teams that want AI-adjacent capabilities without replatforming everything at once.
+- [Introducing Azure Accelerate for Databases: Modernize your data for AI with experts and investments](https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-for-databases-modernize-your-data-for-ai-with-experts-and-investments/)
+John Savill''s weekly Azure update pulled together a wide mix of platform changes to track, including retirement notices (AKS Ubuntu 22.04 and Azure Functions v3 Linux Consumption), monitoring and auth updates (Azure Monitor Pipelines and Application Insights Entra ID authentication), data platform updates (Cosmos DB features and PostgreSQL Flexible Server Premium SSD v2), and storage additions like Azure NetApp Files ransomware protection and Azure Elastic SAN autoscaling, plus a quick scan of newly mentioned AI model releases. It lines up with last week''s roundup pattern of "track the cross-service changes that quietly reshape defaults" (for example Service Bus NSP and networking/ops updates), with Azure Monitor Pipeline now showing up as a concrete GA item rather than just a concept to watch.
+- [Azure Update - 24th April 2026](https://www.youtube.com/watch?v=AxxFqiUImV4)',
+    'Azure updates this week centered on making common deployments safer by default while smoothing the path to modern patterns in networking, identity, and platform operations. Building on last week''s focus on controlled transitions and day-two readiness, the throughline is the same: remove implicit behavior (or long-lived credentials) that causes brittle operations, then replace it with explicit, testable patterns that platform teams can standardize in landing zones and paved paths. Alongside that shift, Azure shipped practical GA features for monitoring and storage, published migration guidance for long-lived integrations, and shared real-world build notes that show what production looks like when you combine private networking, managed identity, and automation.',
+    1777273200, 'azure', '/azure/roundups/weekly-azure-roundup-2026-04-27', 'TechHub',
+    'TechHub', '5445ECA4A9B21F1E61FF2398E59173DD86DF4885790ADC4F6A1344CA9C0C39E6', ',Microsoft Azure,Azure Virtual Network,Private Subnets,NAT Gateway,Azure Private Link,Private Endpoints,Microsoft Entra ID,Managed Identity,Azure Files,AKS,Kubernetes Gateway API,Istio,Azure Monitor Pipeline,Azure Service Bus,Azure Blob Storage Smart Tier,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-04-20
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-04-20', 'roundups', 'Weekly Azure Roundup: AKS Ops, DNS Reliability, and Fabric CI/CD',
+    'Azure updates this week leaned into operational work: new ingress, backups, and incident-response building blocks for Kubernetes; deeper looks at private DNS and packet visibility; and Fabric progress on migration gaps plus automation hooks. The theme was reducing toil through standard workflows (one-command setups, self-updating CLIs, policy remediation) and more evidence-based troubleshooting and cutovers. It continues last week''s "day-two readiness" thread: fewer brittle secrets and manual steps, more controlled transitions (ingress migration clocks, log ingestion deprecations), and clearer acknowledgement that DNS and telemetry wiring often decide reliability.
+<!--excerpt_end-->
+## AKS platform operations: ingress shifts, backups, and AI-assisted investigations
+AKS ingress is moving toward Kubernetes Gateway API, with the AKS App Routing add-on as the entry point. Building on last week''s AKS/Istio direction (mesh-aware tracing, evidence-based troubleshooting), this preview reuses an Istio-managed Envoy gateway stack in a *gateway-only* shape: "App Routing Gateway API" replaces the NGINX Ingress API path with an Istio-managed Envoy gateway, explicitly **not** a full mesh (no sidecars, no workload Istio CRDs). The platform model is simpler: creating a `Gateway` auto-provisions the Envoy deployment plus a `LoadBalancer` service, HPA (2-5 replicas, 80% CPU default), and PDB. The split between `GatewayClass`/`Gateway` and `HTTPRoute` also lets platform teams own gateway infrastructure while app teams own routes, which reduces shared-Ingress contention.
+The preview is framed against deadlines: Ingress NGINX retirement is **March 2026**, with extended support for NGINX-based AKS App Routing until **November 2026**. Migration guidance includes parallel controllers, manifest conversion via `kubernetes-sigs/ingress2gateway` v1.0.0, and careful cutover steps (Gateway "programmed" condition, `Host` header tests to the new external IP before DNS, lowering DNS TTL early, keeping old ingress 24-48 hours for rollback). The preview is not feature-complete: current App Routing DNS/TLS automation (Azure DNS + Key Vault cert integration) is not available yet in Gateway API mode, so teams need manual TLS/DNS or alternatives like ExternalDNS for Gateway API. That gap matters given last week''s "DNS is Tier-0" warning: moving ingress is often easier than moving DNS and TLS plumbing. There is also a strategic constraint: this mode is mutually exclusive with the AKS Istio service mesh add-on, so clusters choose "gateway-only" or full mesh.
+AKS backup enablement also gained a more automation-friendly entry point, consistent with last week''s emphasis on repeatable baselines. A single command, `az dataprotection enable-backup trigger --datasource-type AzureKubernetesService --datasource-id <aks-arm-id>`, orchestrates validation and setup: backup RG selection/creation, AKS Backup Extension install, storage account provision/reuse, vault/policy provision/reuse, Trusted Access config, and backup instance creation. Presets (Week/Month/DisasterRecovery/Custom) standardize retention defaults while still supporting enterprise wiring via JSON config (existing vault/policy IDs, tags, RG control).
+For on-call work, AKS networking troubleshooting is getting more "agentic" but remains evidence-driven. Following last week''s "observe first, automate safely" theme, the **Container Network Insights Agent** (public preview) correlates signals across CoreDNS, service routing, NetworkPolicy/CiliumNetworkPolicy, Cilium/Hubble flows, and host kernel telemetry (ring buffers, packet counters, SoftIRQ distribution, socket buffer utilization). It integrates through the AKS MCP server to run diagnostics via `kubectl`, Cilium, and Hubble within defined boundaries, producing an auditable report tied to pass/fail evidence. It is advisory-only (no changes), uses read-only/minimal RBAC, and may deploy a temporary debug DaemonSet for host visibility. Preview regions are limited (Central US, East US, East US 2, UK South, West US 2), and full capability requires Cilium plus Advanced Container Networking Services. Customers also bring their own Azure OpenAI resource for model configuration and residency control.
+Finally, AKS migration guidance reiterated a reliability point consistent with last week''s broader framing: "it deployed" is not the same as "ready for cutover." Guidance focuses on what breaks under real traffic (memory limits, region configuration gaps, broken bindings to messaging/ingestion, stale endpoint mappings) and treats cutover as a coordinated dependency transition across compute, networking, storage, messaging, analytics connectivity, and background jobs. It also stresses rehearsing DR/failback mechanics (not only DNS reversal) and running smoke tests that exercise real integrations and background workloads under production-like constraints.
+- [AKS App Routing''s Next Chapter: Gateway API with Istio](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aks-app-routing-s-next-chapter-gateway-api-with-istio/ba-p/4512729)
+- [Announcing One‑Command Backup Configuration for AKS with Azure Backup](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-one-command-backup-configuration-for-aks-with-azure-backup/ba-p/4511852)
+- [''Introducing the Container Network Insights Agent for AKS: Now in Public Preview''](https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-the-container-network-insights-agent-for-aks-now-in/ba-p/4512197)
+- [Production Cutover in Cloud-Native Migrations](https://techcommunity.microsoft.com/t5/azure-migration-and/production-cutover-in-cloud-native-migrations/ba-p/4509924)
+## Observability and incident response automation: SRE Agent connectors and log ingestion migrations
+Azure SRE Agent got a usability boost for investigations, extending last week''s "Azure Monitor in Azure SRE Agent" story from alert ingestion and merging into faster evidence gathering. New first-party connectors for **Log Analytics** and **Application Insights** let the agent run **KQL directly via MCP-backed tools** instead of shelling out to `az monitor`. Setup also handles RBAC when saving the connector (Log Analytics Reader + Monitoring Reader at the target RG), and queries use native monitor-namespace MCP tools like `monitor_workspace_log_query`, `monitor_resource_log_query`, plus discovery helpers. The model stays read-only (no changes to retention/settings) and can use different managed identities per connector, continuing last week''s move away from over-permissioned automation identities.
+Azure Monitor log ingestion is also moving off the legacy HTTP Data Collector API, similar to this week''s ingress retirement clock. With deprecation set for **September 2026**, the outlined migration path is moving Logic Apps from the Data Collector connector (workspace ID/key) to an HTTP action calling **Logs Ingestion API**, backed by **DCEs** and **DCRs**. Practical issues are already showing up: Logic Apps can "succeed" while data does not land in new custom tables, and new Data Collector API connections may fail with 403. The new pattern includes schema definition via sample upload (JSON array), optional `TimeGenerated` via DCR transformation, ingestion URL built from DCE base + DCR immutable ID + stream name, and assigning the Logic App managed identity **Monitoring Metrics Publisher** on the DCR. Success returns 204, which is useful for validating pipelines.
+- [''New in Azure SRE Agent: Log Analytics and Application Insights Connectors''](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-in-azure-sre-agent-log-analytics-and-application-insights/ba-p/4509649)
+- [Migrate Logic Apps from HTTP Data Collector API to Azure Monitor Log Ingestion API](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/migrate-data-ingestion-from-data-collector-to-log-ingestion/ba-p/4510493)
+## Azure networking and hybrid connectivity: Private DNS fallback, ExpressRoute to MVE, and packet mirroring
+Hybrid and Private Link-heavy designs keep hitting the same DNS failure mode, continuing last week''s hub-spoke postmortem: a linked private DNS zone returns authoritative `NXDOMAIN` for a Private Link name when the needed record is missing (DR failovers, partial replication, cross-boundary layouts, multi-region). The fix highlighted is enabling `resolutionPolicy = NxDomainRedirect` on the private DNS zone''s VNet link (portal: "Enable fallback to internet"). Azure DNS then retries public recursive resolution only when the private zone returns `NXDOMAIN`, letting apps resolve the public endpoint again when it exists and is reachable. This is a scoped resolution change (not access), but it can prevent partial DNS inconsistency from turning into an outage, especially when public fallback is part of the intended DR posture.
+A connectivity walkthrough covers wiring Azure ExpressRoute into **Megaport Virtual Edge (MVE)** with a **Cisco 8000v** NVA. It is configuration-focused: two VXCs (primary/secondary), distinct VLAN IDs per path, matching VLAN between Megaport and ExpressRoute Private Peering, /30s per path, and Cisco IOS subinterfaces with `encapsulation dot1Q <vlan>` plus eBGP neighbor configuration (example Azure ASN 12076). It also highlights validation steps (ICMP to Azure peer IPs) and common troubleshooting (ARP issues).
+Azure Virtual Network TAP (VTAP) also got attention as an option when flow logs are not enough, complementing last week''s observability guidance. In public preview in select regions, VTAP mirrors full traffic (including payload) for selected NICs and sends it to a collector using VXLAN over UDP **4789**. The demo shows Wireshark decoding encapsulated flows and notes that the destination NIC can be in the same or a peered VNet, which can help centralize inspection tooling away from application subnets.
+- [Enabling fallback to internet for Azure Private DNS Zones in hybrid architectures](https://techcommunity.microsoft.com/t5/azure-networking-blog/enabling-fallback-to-internet-for-azure-private-dns-zones-in/ba-p/4511131)
+- [Connecting an ExpressRoute circuit to Megaport Virtual Edge](https://techcommunity.microsoft.com/t5/azure-networking-blog/connecting-an-expressroute-circuit-to-megaport-virtual-edge/ba-p/4510770)
+- [A demonstration of Virtual Network TAP](https://techcommunity.microsoft.com/t5/azure-networking-blog/a-demonstration-of-virtual-network-tap/ba-p/4479136)
+## Data services: Fabric schema safety, migration parity, and the next wave of PostgreSQL
+Fabric''s data plane continues closing gaps that show up in CI/CD and migrations, building on last week''s themes around modernizing without rewrites and reducing glue code. A practical GA update in Fabric Data Warehouse is that some `ALTER TABLE` operations now work inside **explicit transactions** (`BEGIN TRAN ... COMMIT`). Previously, `ALTER TABLE` under snapshot isolation failed, which forced non-atomic schema changes and increased partial-deploy risk. Supported operations include adding nullable columns, dropping columns, adding/dropping NOT ENFORCED constraints (PK/UNIQUE/FK), multiple `ALTER TABLE` statements in one transaction, and altering distributed temp tables. Exclusions include adding non-nullable columns and `ALTER COLUMN`.
+Fabric SQL Database improved migration compatibility with a preview: full support for Azure SQL Database collation sets at database creation time. It is configured in the **creation payload** (`NewSqlDatabaseCreationPayload`) via the Fabric REST API (and wrappers like Fabric CLI/PowerShell). This reduces surprises for multilingual and collation-sensitive workloads (ORDER BY, LIKE, equality, case/accent sensitivity), though it does not change collation for replicated data in the SQL analytics endpoint.
+Fabric Data Factory guidance focused on when to move from Azure Data Factory and what changes for developers. The stance is incremental: ADF remains supported, but new work lands in Fabric Data Factory''s SaaS authoring and workspace model. Differentiators include Fabric-native **Mirroring** into OneLake for low-latency replication (continuous inserts/updates/deletes) and **Copy Jobs** for config-first bulk and incremental movement (watermarking, CDC, built-in SCD Type 2). For pro-dev flows, managed **Airflow Jobs** and **dbt Jobs** are first-class alongside pipelines and Dataflows Gen2, with an AI integration thread via MCP (Copy Jobs exposed as MCP endpoints and the open-source `microsoft/DataFactory.MCP` server). This mirrors what is happening in operations (AKS, SRE Agent): standardized tool interfaces with guardrails and clearer auditability.
+Managed PostgreSQL messaging also hints at a split between "run Postgres well today" and "what''s next." One video covers practical Azure Database for PostgreSQL mechanics (HA/failover, read replicas, backup/restore, elastic clusters) plus cost/perf notes like AMD SKUs. Another "sneak peek" introduces **Azure HorizonDB**, a managed PostgreSQL option aimed at very large scale with decoupled compute and storage, replica scaling over shared storage, and multi-zone commit behavior. It is also positioned as "AI-native," with vector indexing and SQL AI functions plus Azure AI Foundry integration and VS Code-centric provisioning/query adaptation.
+- [ALTER TABLE inside explicit transactions in Fabric Data Warehouse (Generally Available)](https://blog.fabric.microsoft.com/en-US/blog/alter-table-inside-explicit-transactions-in-fabric-data-warehouse-generally-available/)
+- [Announcing Full Collation Support for SQL Databases in Microsoft Fabric (Preview)](https://blog.fabric.microsoft.microsoft.com/en-US/blog/announcing-full-collation-support-for-sql-databases-in-microsoft-fabric-preview/)
+- [Answers to common questions about Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/answers-to-common-questions-about-fabric-data-factory/)
+- [''PostgreSQL Like a Pro: Performance and resilience with Azure Database for PostgreSQL''](https://www.youtube.com/watch?v=jZHWptNT71I)
+- [''PostgreSQL Like a Pro: Build mission-critical apps at any scale with Azure HorizonDB''](https://www.youtube.com/watch?v=-iG5a0O5_wk)
+## App and messaging services: Web PubSub wildcard roles and Service Bus request/reply scaling
+Azure Web PubSub expanded auth in a way that matters for high-cardinality group patterns and matches last week''s least-privilege and identity direction. **Wildcard group roles** let backends grant permissions like `webpubsub.joinLeaveGroups.room/*` and `webpubsub.sendToGroups.room/*` instead of issuing tokens with long lists of per-group roles (for example, repeating `webpubsub.sendToGroup.room123`). This reduces token size and simplifies issuance logic for bots and monitoring systems that need broad access across dynamic group namespaces. Guidance is practical: keep literal roles for strict end-user isolation, and use wildcard roles when broad access is intentional and audited.
+A Service Bus architecture write-up addressed a scaling trap in sync-over-async gateways: using **Service Bus Sessions** for request/reply correlation can create instance affinity because one gateway instance holds the session lock and must receive the reply. An alternative keeps gateways stateless by routing replies through a topic with **SQL Filter** subscriptions on a custom property like `CorrelationId`. Each request creates a dynamic subscription matching that value; the worker replies to a shared topic with the property; the broker delivers to the right gateway instance without session locks. The trade-off is managing dynamic subscriptions, but it is packaged as a Spring Boot starter for Java gateway teams. It also fits last week''s broader Service Bus evolution: safer defaults and boundary controls, plus application patterns that avoid hidden scaling ceilings.
+- [''Introducing Wildcard Roles in Azure Web PubSub: simpler, smarter permissions for real-time apps''](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-wildcard-roles-in-azure-web-pubsub-simpler-smarter/ba-p/4509524)
+- [Scaling Sync-over-Async Edge Gateways by Bypassing Azure Service Bus Sessions](https://techcommunity.microsoft.com/t5/azure-architecture/architecture-pattern-scaling-sync-over-async-edge-gateways-by/m-p/4510919#M832)
+## Other Azure News
+Azure Virtual Desktop updates mixed new support with production lessons. App attach now supports Windows Server 2025 and Windows Server 2022 session hosts, extending dynamic app delivery (MSIX/AppX/App-V) to server-based pools and helping reduce golden-image sprawl as App-V Server components approach end of support (April 2026). A real-world AVD deployment in the Perth Azure Extended Zone showed the engineering behind private-only, GPU-backed personal desktops (NVadsA10 v5): IaC-driven Azure Image Builder, Compute Gallery replication where builds stay in the parent region, and a one-time REST API step to associate a user-assigned managed identity to the gallery for Extended Zone replication when portal support lags. That managed identity detail matches last week''s push toward clearer scoping and auditing for identities. It also included cost control via IMDS + Azure Automation webhook ("Stop My VDI") so users can deallocate without portal access, paired with "Start VM on Connect" RBAC.
+Operationally, there was a reminder that Azure Run Command lets you run commands across VM Scale Set instances without RDP/SSH, aligning with last week''s "standardize the baseline, reduce snowflake access" theme. Constraints still apply (VM Agent ready, outbound 443 for results, 4096-byte output limit, one run at a time per VM, 90-minute max). VMSS mode matters: Uniform supports `az vmss run-command invoke` by instance ID, while Flexible typically requires iterating VMs and calling `az vm run-command invoke`.
+Hybrid SQL governance automation appeared via an Azure Policy (DeployIfNotExists) pattern enforcing Arc-enabled SQL Server extension `LicenseType` ("Paid", "PAYG", "LicenseOnly"), plus scripts for assignments and remediation across management groups/subscriptions. This aligns with last week''s Arc least-privilege onboarding and the broader move from tickets and tribal knowledge to repeatable policy. PAYG has a caveat: policy sets `ConsentToRecurringPAYG`, and once set it cannot be removed even if you switch away, so consent is effectively one-way.
+Azure Developer CLI got a small but useful update consistent with last week''s `azd` reproducibility theme: `azd update` (azd 1.23.x) updates regardless of install method (winget/Chocolatey/Homebrew/script), and supports switching stable vs daily via `--channel`.
+The broader update feed and cost content emphasized operational planning: mentions included StandardV2 NAT Gateway for AKS outbound, Azure Monitor OpenTelemetry for AKS, Bastion MI graphical session recording, ASR NVMe controller support, storage security/tiering changes, and retirements (Azure Batch HBv2/HC/NP; Azure Managed Grafana Basic). Cost guidance reiterated that AI-heavy cost optimization needs continuous visibility, guardrails, rightsizing, and recurring reviews, consistent with last week''s FinOps tone. Fabric Eventhouse added a preview Capacity Scheduler for hourly minimum capacity baselines across a 7-day grid while keeping autoscale, to align predictable ingestion/query windows with cost control.
+- [App attach in Azure Virtual Desktop now supports Windows Server 2025 and Windows Server 2022](https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/app-attach-in-azure-virtual-desktop-now-supports-windows-server/ba-p/4511729)
+- [''Azure Virtual Desktop in the Perth Azure Extended Zone: A Real‑World Production Deployment''](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-virtual-desktop-in-the-perth-azure-extended-zone-a-real/ba-p/4508550)
+- [Running Commands Across VM Scale Set Instances Without RDP/SSH Using Azure CLI Run Command](https://techcommunity.microsoft.com/t5/azure/running-commands-across-vm-scale-set-instances-without-rdp-ssh/m-p/4511577#M22490)
+- [Automating Arc-enabled SQL Server license type configuration with Azure Policy](https://techcommunity.microsoft.com/t5/azure-arc-blog/automating-arc-enabled-sql-server-license-type-configuration/ba-p/4500326)
+- [SQL Server enabled by Azure Arc Overview](https://techcommunity.microsoft.com/t5/azure-arc-blog/sql-server-enabled-by-azure-arc-overview/ba-p/4496399)
+- [Stop juggling package managers—just run `azd update`](https://devblogs.microsoft.com/azure-sdk/azd-update/)
+- [Azure Update 16th April 2026](https://www.youtube.com/watch?v=WjvN_XjMr6U)
+- [''Cloud Cost Optimization: Principles that still matter''](https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/)
+- [''Azure Cost Estimation: Navigate Database Pricing''](https://www.youtube.com/watch?v=fZVa-kYJ2i8)
+- [''Capacity Scheduler: Smarter capacity control for Eventhouse (Preview)''](https://blog.fabric.microsoft.com/en-US/blog/capacity-scheduler-smarter-capacity-control-for-eventhouse-preview/)
+- [Building a Scalable IoT Platform for Facility Management with Azure Serverless Services](https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-scalable-iot-platform-for-facility-management-with/ba-p/4495263)',
+    'Azure updates this week leaned into operational work: new ingress, backups, and incident-response building blocks for Kubernetes; deeper looks at private DNS and packet visibility; and Fabric progress on migration gaps plus automation hooks. The theme was reducing toil through standard workflows (one-command setups, self-updating CLIs, policy remediation) and more evidence-based troubleshooting and cutovers. It continues last week''s "day-two readiness" thread: fewer brittle secrets and manual steps, more controlled transitions (ingress migration clocks, log ingestion deprecations), and clearer acknowledgement that DNS and telemetry wiring often decide reliability.',
+    1776668400, 'azure', '/azure/roundups/weekly-azure-roundup-2026-04-20', 'TechHub',
+    'TechHub', '9429BE58EB3F6AE8FED3AAB3C67DF074BB2DA32C378173B82FB32CD237C26362', ',Microsoft Azure,AKS,Kubernetes Gateway API,AKS App Routing,Istio,Envoy,Azure Backup,Azure Data Protection,Azure Monitor,Azure SRE Agent,Log Analytics,Application Insights,Logs Ingestion API,Data Collection Rules,Azure Private DNS,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-04-13
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-04-13', 'roundups', 'Weekly Azure Roundup: Managed Identity, Observability, DNS',
+    'Azure''s updates this week leaned toward making production operations less brittle, continuing last week''s theme of controlled transitions and day-two readiness. Identity continues shifting away from long-lived secrets, ops tooling continues emphasizing "observe first, automate safely," and app hosting continues smoothing runtime upgrades and practical deployment paths. Architecture guidance stayed grounded in scale realities: DNS as a hard dependency in private-first designs and DR choices aligned to real RTO/RPO needs.
+<!--excerpt_end-->
+## Managed identities and least-privilege automation across Azure platforms
+Azure Red Hat OpenShift (ARO) reached an identity/governance milestone: Azure Managed Identities (for platform/operators) and Microsoft Entra Workload Identity (for pods/apps) are now GA. It fits last week''s identity/governance thread by moving ARO components off one broadly permissioned service principal and onto multiple user-assigned managed identities, each mapped to dedicated built-in ARO roles so RBAC can be scoped per component. Provisioning is supported via portal (including an all-in-one flow), ARM/Bicep, and `az aro` CLI (Azure CLI 2.84.0+). For workloads, Workload Identity uses OIDC federation to map a Kubernetes service account to a user-assigned managed identity so pods can request short-lived tokens for narrowly scoped access (Key Vault, Storage, Azure SQL) without in-cluster secrets. A key transition note remains: legacy service-principal clusters cannot migrate in-place. You need a new managed-identity cluster and then migrate workloads.
+The same move away from secrets shows up in App Service CI/CD guidance. A walkthrough shows deploying to Azure Web Apps from Azure DevOps using an ARM service connection authenticated via a user-assigned managed identity (UAMI). The flow is simple: assign Website Contributor on the app (or resource group), create the service connection with UAMI auth, and verify who deployed via App Service audit logs (AppServiceAuditLogs), where the initiator is the UAMI object ID. It also notes that setup-time interactive sign-in may appear in logs, so "who set it up" can differ from "which identity deployed."
+Hybrid onboarding got a similar least-privilege update with a new Azure Arc onboarding role for Ansible. It matches last week''s "standardize the baseline" message by letting teams onboard Arc-enabled servers through existing Ansible playbooks with more tightly scoped permissions, which helps with fleet-scale onboarding.
+- [Azure Red Hat OpenShift: Managed Identity and Workload Identity now generally available](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-managed-identity-and-workload-identity/ba-p/4504940)
+- [Deploying to Azure Web App from Azure DevOps Using UAMI](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-to-azure-web-app-from-azure-devops-using-uami/ba-p/4509800)
+- [Simplify Azure Arc Server Onboarding with Ansible and the New Onboarding Role](https://techcommunity.microsoft.com/t5/azure-arc-blog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new-onboarding-role/ba-p/4509481)
+## Kubernetes and App Service operations: tracing, alert automation, and simpler deployments
+AKS troubleshooting got a service-mesh tracing pattern that reinforces last week''s "constraints plus observability" message. The guide correlates Istio/Envoy access logs with Application Insights using W3C Trace Context. It enables Istio Telemetry in the managed Istio system namespace, then uses EnvoyFilter resources (inbound/outbound) to emit structured JSON logs to stdout so they land in Log Analytics (ContainerLogV2). The practical win is correlation: parse the `traceparent` header from Envoy logs, extract the 32-hex trace id, and match it to App Insights `operation_Id` via KQL to follow one request across mesh hops and app telemetry without adding another tracing stack.
+For incident response, Azure SRE Agent''s Azure Monitor integration continued last week''s day-two focus. It ingests fired alerts through the Azure Alerts Management REST API ("Get all alerts"), handles multiple alert types, and routes matches into Incident Response Plans in "review" or "autonomous" mode. The demo (AKS Node.js app failing Redis auth due to a bad secret) shows polling every 60s, acknowledging alerts, investigating logs, fixing the secret by retrieving the right Redis key, rolling pods, and resolving. A key nuance is merging: repeated firings from the same rule merge into one active thread (7-day window) rather than creating new incidents, which interacts with whether a rule uses auto-resolve. The advice to keep auto-resolve OFF for persistent failures (bad creds, CrashLoopBackOff-like issues) matters if you want one investigation per ongoing problem.
+App Service got two developer-facing improvements that reduce friction at opposite ends of the workflow, building on last week''s hosting direction. PHP 8.5 is now supported on App Service for Linux in all public regions, including better fatal error backtraces and language features like the pipe operator (`|>`). For quick deployment, App Service for Linux now offers a simpler zip deployment flow in Kudu/SCM: drag-and-drop a zip, preview contents, choose whether to run a server-side build, and track Upload/Build/Deployment progress with logs and runtime log links. It targets quick tests and initial setup, while still pointing teams to CI/CD for repeatability.
+- [Service Mesh-Aware Request Tracing in AKS with Istio and Application Insights](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/service-mesh-aware-request-tracing-in-aks-with-istio-and/ba-p/4509928)
+- [Azure Monitor in Azure SRE Agent: Autonomous Alert Investigation and Intelligent Merging](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-monitor-in-azure-sre-agent-autonomous-alert-investigation/ba-p/4509069)
+- [PHP 8.5 is now available on Azure App Service for Linux](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/php-8-5-is-now-available-on-azure-app-service-for-linux/ba-p/4510254)
+- [A simpler way to deploy your code to Azure App Service for Linux](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-simpler-way-to-deploy-your-code-to-azure-app-service-for-linux/ba-p/4510240)
+## Reliability and private networking: DNS pitfalls, multi-region choices, and Key Vault continuity
+A hub-spoke incident write-up reinforced a point that extends last week''s private networking items: DNS is Tier-0, especially with custom hub DNS, centralized egress (firewall/NVA), Private Endpoints (OpenAI, AI Search, Key Vault, Storage), and Azure Container Apps (ACA) with internal ingress. The symptoms looked like inconsistent platform behavior (ACA startup/scaling issues, Terraform stalls, endpoint reachability gaps, secret/auth problems) but came down to DNS gaps: custom resolvers not forwarding to 168.63.129.16, missing conditional forwarders for privatelink zones (`privatelink.openai.azure.com`, `privatelink.vaultcore.azure.net`, `privatelink.search.windows.net`, `privatelink.blob.core.windows.net`), incomplete private DNS zone links across VNets/subscriptions, and missed ACA internal ingress DNS needs (private DNS zone for the environment domain plus wildcard/apex records pointing to the static IP). As with last week''s DNS reconciliation pattern, remediation required no application changes, only consistent zone management and correct forwarding/linking.
+Azure multi-region resilience guidance continues last week''s reliability framing by focusing on matching patterns to requirements: Availability Zones for in-region HA, regional BCDR across paired or non-paired regions based on capacity/latency/residency, and active/active when you can handle the operational complexity. It reinforces that regional failover is often customer-orchestrated, so testing failover/failback and aligning data replication/consistency are still on you. It distinguishes Azure Site Recovery (VM mobility/failover) from Azure Backup (restore-based protection) and points to the Resiliency agent in Azure Copilot (preview) as emerging tooling for coverage gaps and drills.
+Key Vault continuity got a practical warning that fits last week''s "do not assume day-2 is handled" theme. Paired-region replication improves survivability but does not guarantee continuity for applications that need writes during outages. During Microsoft-managed regional failover, the vault becomes read-only (reads and crypto ops continue, but writes/updates/rotation/cert renewal stop). If you need rotation and deterministic failover/testing, the recommended pattern is multiple independent vaults across regions with customer-managed replication and failover, supported by Terraform reference architectures including event-based sync (variants for private-endpoint-only regulated environments vs simpler public setups).
+- [Private DNS and Hub–Spoke Networking for Enterprise AI Workloads on Azure](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/private-dns-and-hub-spoke-networking-for-enterprise-ai-workloads/ba-p/4508835)
+- [Choosing the Right Multi-Region Resilience Pattern on Azure](https://techcommunity.microsoft.com/t5/reliability-and-resiliency-in/modern-azure-resilience-with-mark-russinovich/ba-p/4508967)
+- [Azure Key Vault Replication: Why Paired Regions Alone Don’t Guarantee Business Continuity](https://techcommunity.microsoft.com/t5/azure/azure-key-vault-replication-why-paired-regions-alone-don-t/m-p/4508945#M22479)
+## Other Azure News
+Provisioning workflows continue to standardize around repeatability, echoing last week''s deterministic dev/test and predictable rollout theme. An Azure Developer CLI guide walks through the `azd` loop (`azd init`, `azd auth login`, `azd up`, `azd show`, `azd down --force --purge`) and the project structure (`azure.yaml`, `infra/`, `.azure/`) so teams can move from local code to reproducible deployments without portal-driven glue.
+- [AZD for Beginners: A Practical Introduction to Azure Developer CLI](https://techcommunity.microsoft.com/t5/microsoft-developer-community/azd-for-beginners-a-practical-introduction-to-azure-developer/ba-p/4503747)
+JavaScript teams got a dependency planning notice that fits last week''s "small notices become real work" reminder. The Azure SDK for JavaScript ends support for Node.js 20.x after July 9, 2026, and newer releases will require Node.js 22.x in `package.json` engines. If CI uses `engine-strict=true`, installs will fail once you adopt those SDK versions, so plan Node upgrades or be ready to pin packages.
+- [Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript](https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-20-x-in-the-azure-sdk-for-javascript/)
+Essential Machine Management (public preview) in Compute Infrastructure Hub pulls more machine operations into subscription-level baselines, aligning with last week''s governance-by-default and runbook/observability emphasis. It is an "enroll once per subscription" bundle that enables VM Insights plus recommended alerts, Update Manager, Change Tracking and Inventory, Machine Configuration, and a security baseline policy for Azure VMs and Arc-enabled servers, with pricing depending on Arc coverage/licensing.
+- [Announcing Public Preview for Essential Machine Management](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721)
+For constrained environments, Azure Local Disconnected Operations described running Azure Local fully air-gapped while still supporting VMs, Kubernetes (AKS), and selected Arc-enabled services. It extends last week''s sovereign/edge direction (Azure Local modular datacenters, Foundry Local on-site inference) with more operational detail on what "run disconnected" involves.
+- [Azure Local Disconnected Operations: Running Sovereign Cloud, Productivity, and AI in Air‑Gapped Environments](https://www.thomasmaurer.ch/2026/04/azure-local-disconnected-operations-running-sovereign-cloud-productivity-and-ai-in-air-gapped-environments/)
+This week''s broader platform roundup continued last week''s messaging/governance theme. Service Bus NSP support appears again, reinforcing "perimeter plus transition mode" as a cross-service pattern to track. The roundup also included AKS networking/ops updates (CNI overlay CIDR expansion, disabling HTTP proxy, observability improvements), a new Azure Functions MCP resource trigger, ARO NVIDIA GPU support, Network Watcher rule impact analysis, Azure Migrate Azure Files assessment, and PostgreSQL updates (maintenance notifications, PgBouncer 1.25.1).
+- [Azure Update 10th April 2026](https://www.youtube.com/watch?v=pQ9em70ZHd4)
+Cosmos DB cost/performance tuning got a longer optimization walkthrough aligned with last week''s FinOps framing: RU budgeting, throughput choice (manual vs autoscale), account throughput limits, reserved capacity, and how partition keys, document shape, and indexing affect RU use and hot partitions. A short companion video is linked, but it adds little detail beyond the main walkthrough.
+- [Cosmos DB Optimization](https://www.youtube.com/watch?v=RbH5F_3w47E)
+- [Cosmos DB Optimization #cosmosdb #database](https://www.youtube.com/shorts/dD2qVO_xnb8)
+Fabric updates continued last week''s "modernize without rewrites" and "reduce glue code" storyline. Shortcut transformations in OneLake/Lakehouse are now GA for turning shortcut files (CSV/Parquet/JSON) into managed Delta tables with continuous sync and schema inference/evolution without ETL pipelines. SQL database in Fabric also added a Migration Assistant (preview) using DACPAC schema migration plus Fabric Copy Jobs (optional Data Gateway) for data moves, including compatibility checks and Copilot fix suggestions.
+- [Shortcut transformations: Turn files into Delta tables without pipelines (Generally Available)](https://blog.fabric.microsoft.com/en-US/blog/shortcut-transformations-and-turn-files-into-delta-tables-without-pipelines-generally-available/)
+- [Introducing Migration assistant for SQL database in Fabric (Preview)](https://blog.fabric.microsoft.com/en-US/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/)
+For IIS behind Azure Application Gateway, a troubleshooting guide focused on preventing false Unhealthy probe states (and 502/504s) by using a dedicated `/health` endpoint returning 200 anonymously, avoiding redirects/auth, keeping it fast and dependency-free (even static content), and matching probe TLS/host header settings (including "Pick host name from backend" to avoid SNI/CN mismatch). It matches last week''s "design around managed dataplane behaviors" lesson: with App Gateway, probe behavior is part of the contract, and small mismatches can look like random outages until probes are made deterministic.
+- [Designing Reliable Health Check Endpoints for IIS Behind Azure Application Gateway](https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-reliable-health-check-endpoints-for-iis-behind-azure/ba-p/4507938)',
+    'Azure''s updates this week leaned toward making production operations less brittle, continuing last week''s theme of controlled transitions and day-two readiness. Identity continues shifting away from long-lived secrets, ops tooling continues emphasizing "observe first, automate safely," and app hosting continues smoothing runtime upgrades and practical deployment paths. Architecture guidance stayed grounded in scale realities: DNS as a hard dependency in private-first designs and DR choices aligned to real RTO/RPO needs.',
+    1776063600, 'azure', '/azure/roundups/weekly-azure-roundup-2026-04-13', 'TechHub',
+    'TechHub', '4B3DB577FD03653D8C6E6F150770FF95E1E00264AA8728211925ACAD1CB0FD60', ',Microsoft Azure,Azure Managed Identities,Microsoft Entra Workload Identity,Azure Red Hat OpenShift,AKS,Istio,Azure Monitor,Application Insights,Azure App Service,Azure Arc,Private DNS,Private Endpoints,Azure Key Vault,Azure Developer CLI,Azure Application Gateway,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-04-06
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-04-06', 'roundups', 'Weekly Azure Roundup: Guardrails, Capacity Planning, and Events',
+    'This week’s Azure items focused on operational guardrails: tighter network boundaries for PaaS, capacity/resiliency planning for IaaS, and event-driven patterns that reduce glue code while improving observability. Microsoft also continued pushing "modernize without rewrites" paths by moving pipelines into Fabric, making durable orchestration easier to consume, and improving local dev/test workflows with emulators and usage logs. It continues last week’s "controlled transitions" framing: adopt new primitives in phases, with "observe first, enforce later" and better day-2 visibility.
+<!--excerpt_end-->
+## Secure boundaries and governance for Azure services
+The private-by-default and guardrail thread from last week continued here. Azure Service Bus now has Network Security Perimeter (NSP) generally available, which adds a perimeter layer so you can associate PaaS resources to a logical boundary and manage ingress/egress rules centrally. Rollout starts in Transition mode (observe/log without blocking) to inventory real traffic, then moves to Enforced mode where outside-perimeter access is denied by default and only allowed via explicit rules (inbound by IP ranges or subscriptions; outbound by FQDNs). For Service Bus with customer-managed keys, allowing PaaS-to-PaaS inside the perimeter can keep Key Vault working without per-resource exceptions while still logging for audit and troubleshooting, which matches last week’s "sequence prerequisites, then enforce" approach.
+Azure Landing Zone (ALZ) subscription vending guidance also continued the "guardrails by default" theme and complements last week’s point that migrations go better when identity/network prerequisites and operational baselines are treated as first-class work. The overview treats subscriptions as the core governance boundary, with automated creation via approval + IaC pipelines (often JSON/YAML in source control, provisioned via Terraform). The baseline (management group placement, billing scope via aliases, budgets, provider registrations, RBAC/custom roles) turns subscription creation into a repeatable, auditable workflow and helps avoid provider-registration surprises later.
+- [Announcing general availability of Network Security Perimeter for Azure Service Bus](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-network-security-perimeter/ba-p/4508179)
+- [Subscription Vending in Azure: An Implementation Overview](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/subscription-vending-in-azure-an-implementation-overview/ba-p/4506350)
+## Compute, networking, and reliability: designing for constraints (capacity, limits, and failure modes)
+A recurring reminder is that "it deployed" does not mean it will scale or restart reliably, which fits last week’s AKS theme around safer rollouts and ingress modernization. On AKS, a concrete scaling failure shows up when using AGIC with a single Azure Application Gateway fronting many apps: App Gateway has a hard limit of 100 backend pools, and common AGIC patterns consume one pool per Kubernetes Service referenced by an Ingress. Apply a 1:1:1 Deployment/Service/Ingress pattern 101 times and AGIC can hit `ApplicationGatewayBackendAddressPoolLimitReached`. Kubernetes objects may still apply successfully, so onboarding looks fine until routing for new apps fails because App Gateway reconciliation cannot complete. Mitigations focus on choosing an ingress architecture that fits service limits (and noting current gaps like private-frontend limitations in some newer controller paths), reinforcing last week’s "modernize, but design around managed dataplane limits" point.
+For VM reliability, Azure On-Demand Capacity Reservations (ODCRs) are positioned for workloads that must start during capacity pressure, which is another "predictable ops" lever. Key points include: quota headroom does not guarantee physical capacity, Reserved Instances/Savings Plans do not improve start likelihood, and ODCR billing continues even when VMs are stopped because you are reserving capacity. A practical workflow for protecting existing running VMs is to create a Capacity Reservation Group and a reservation with quantity 0, associate VMs (even if temporarily overassociated), then increase reservation quantity to match running instances, which is often easier because those VMs already occupy host capacity.
+Azure Compute also introduced a preview performance/reliability control: ephemeral OS disk with full caching for VM/VMSS. Ephemeral OS disks keep writes local, but reads can still depend on a remote base image; full caching asynchronously pulls the full OS image locally after boot so all OS IO becomes local once caching completes. It fits stateless scale-out services that want consistent OS-disk read latency, with an explicit tradeoff: local storage use is about 2x OS disk size to store the cached image. This matches the broader predictability theme: reduce variance in exchange for explicit capacity planning.
+Reliability guidance also pushed more explicit fault planning. A fault-types taxonomy frames Azure failures across partial region faults and management-plane degradations (ARM, Managed Identity) that can break deployment/recovery even while apps still serve traffic. It helps teams design with IaaS building blocks (VMSS across zones, storage redundancy like ZRS/GRS, Backup/Site Recovery) plus detection/runbooks that do not assume a clean region up/down switch, which lines up with last week’s guardrails and health-signal approach.
+- [AKS with AGIC hits Azure Application Gateway backend pool limit (100): reproduction and mitigations](https://techcommunity.microsoft.com/t5/azure-architecture-blog/aks-cluster-with-agic-hits-the-azure-application-gateway-backend/ba-p/4508201)
+- [Demystifying On-Demand Capacity Reservations](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/demystifying-on-demand-capacity-reservations/ba-p/4504806)
+- [Public Preview: Ephemeral OS Disk with full caching for VM/VMSS](https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-ephemeral-os-disk-with-full-caching-for-vm-vmss/ba-p/4500191)
+- [Proactive Reliability Series - Article 1: Fault Types in Azure](https://techcommunity.microsoft.com/t5/azure-architecture-blog/proactive-reliability-series-article-1-fault-types-in-azure/ba-p/4507006)
+- [Azure IaaS: Keep critical applications running with built-in resiliency at scale](https://azure.microsoft.com/en-us/blog/azure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale/)
+## Event-driven integration patterns: from infrastructure drift to payments and durable workflows
+Event Grid showed up in two practical patterns, building on last week’s "ingest once, route to many" direction. The first is infrastructure hygiene: keeping Private DNS accurate for Azure Container Instances in private VNets when container group IPs drift after updates/recreates. The approach avoids polling by subscribing to ARM lifecycle events (for example, `Microsoft.Resources.ResourceWriteSuccess` and `...ResourceDeleteSuccess`), triggering an Event Grid-driven Azure Function (Python), and reconciling forward A and reverse PTR records in Azure Private DNS. Key design details include parsing the ARM resource ID from the Event Grid `subject`, keeping the handler stateless and idempotent (Event Grid is at-least-once), and reconciling DNS to actual ACI state. A drift-tracker observer covers edge cases (manual edits, partial failures, delete/recreate races), and the RBAC breakdown (Reader on ACI RG, Private DNS Zone Contributor on zones, etc.) supports least-privilege deployments. It echoes last week’s private networking lessons: DNS and identity alignment often determine whether "private" works in practice.
+The second pattern is business integration: Stripe’s Event Destinations can push payment events directly into Azure via the Event Grid partner integration, which avoids custom webhook hosting. Once in Event Grid, events can route to Functions/Logic Apps, Event Hubs, Service Bus, or Microsoft Fabric Real-Time Intelligence via Event Grid namespaces feeding Eventstreams/KQL. That flexibility matches last week’s mixed-pattern advice: standardize intake while choosing the downstream service per consumer.
+Durable Task Scheduler (DTS) Consumption SKU is now GA, providing a managed durable orchestration backend for long-lived workflows and agent-like sessions without managing storage or capacity. Consumption billing is per "actions dispatched," limits are explicit (up to ~500 actions/sec, 30 days history retention), and ops tooling is stronger with a built-in dashboard for orchestration history, filtering, and management actions (pause/resume/terminate/raise events), secured with Entra ID + Azure RBAC. DTS is positioned as "any compute": it can back Durable Functions (including Flex Consumption), run with Azure Container Apps, or be used via Durable Task SDKs (.NET, Python, Java, JavaScript). This continues last week’s "reduce bespoke plumbing" theme by standardizing durable state/orchestration behind a managed control plane.
+- [Detecting ACI IP Drift and Auto-Updating Private DNS (A + PTR) with Event Grid + Azure Functions](https://techcommunity.microsoft.com/t5/azure-architecture/detecting-aci-ip-drift-and-auto-updating-private-dns-a-ptr-with/m-p/4507667#M830)
+- [Powering Event Driven Payments with Stripe and Azure Event Grid](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/powering-event-driven-payments-with-stripe-and-azure-event-grid/ba-p/4507094)
+- [The Durable Task Scheduler Consumption SKU is now Generally Available](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-durable-task-scheduler-consumption-sku-is-now-generally/ba-p/4506682)
+## Data modernization across Azure and Fabric: migration, real-time feeds, and database features
+Fabric and Azure data tooling continued converging around two practical needs: move existing assets forward without rewrites, and get operational data into analytics faster with fewer moving parts. This continues last week’s Fabric theme: assessment-first migrations, triggers disabled by default after migration, and real-time ingestion patterns that reduce glue while improving visibility.
+There is now an in-product preview experience to upgrade Azure Data Factory (ADF) and Synapse pipelines into Fabric Data Factory. It starts with assessment (supported vs unsupported activities), then migrates selected pipelines by mounting the current factory into a Fabric workspace and converting linked services into Fabric connections. A key safety default remains: migrated pipelines arrive with triggers disabled, so teams can validate before schedules run, which matches last week’s "validate, then cut over" rhythm.
+For real-time analytics, Fabric Eventstreams "DeltaFlow" (preview) targets streaming Azure SQL Database changes (CDC-style inserts/updates/deletes) into analytics-ready tables. The focus is lowering operational overhead through automatic schema registration, destination table creation, and schema evolution when the SQL source changes. For teams maintaining DIY CDC-to-lakehouse pipelines, schema drift is often the failure point, and DeltaFlow is positioned to reduce that risk.
+SQL Server 2025 is also adding native regex functions in T-SQL, based on Google’s RE2 engine. That lets more validation/extraction/search logic move into SQL instead of app code, CLR, or complex LIKE/PATINDEX patterns, while requiring awareness that behavior matches RE2 rather than backtracking engines. It aligns with the broader "SQL ergonomics + downstream analytics" direction referenced last week.
+- [Modernize your ADF pipelines to unlock Fabric](https://blog.fabric.microsoft.com/en-US/blog/modernize-your-adf-pipelines-to-unlock-fabric/)
+- [Turn Azure SQL Database changes into real-time analytics with Fabric Eventstreams DeltaFlow (Data Exposed)](https://www.youtube.com/watch?v=63awEoYxEGg)
+- [Native Regex in SQL Server 2025 | Data Exposed: MVP Edition](https://www.youtube.com/watch?v=7-9uAZ8FgCE)
+## Developer experience: local testing, PaaS direction, and usage observability
+This week’s developer experience items reinforce the recent direction: make workflows repeatable (local test harnesses, fewer hidden dependencies) and add visibility for scaled operations.
+Spring Cloud Azure published an emulator-first testing pattern for CI: run Azurite (Blob) and the Service Bus emulator (with required SQL backing store) via Spring Boot Docker Compose integration or Testcontainers. It goes past basics with real-world considerations such as BOM pinning (example uses Spring Cloud Azure 7.1.0), `@ServiceConnection` wiring, readiness timeouts for Service Bus + SQL Edge startup, Awaitility retries, and coverage for messaging clients (ServiceBusTemplate / ServiceBusSenderClient) plus Stream binder flows (manual checkpointing via `AzureHeaders.CHECKPOINTER`). In the context of last week’s standardization theme, this is the dev/test equivalent: fewer environment-specific workarounds and more deterministic validation.
+Azure App Service published a planning-oriented direction update: Premium v4 is the newer premium tier with more CPU/memory options and improved price/perf while keeping deployment slots and zone resiliency; Managed Instance remains for Windows apps needing more isolation/private networking/OS customization while staying in the App Service model. Microsoft also highlighted alignment with modern patterns like .NET Aspire distributed apps and AI-backed web/API front ends.
+Playwright Workspaces added Browser Activity Logs, recording each cloud browser session (Created -> Active -> Completed/Failed) with traceability and cost fields such as session ID/name, start/end and billable time, source type (test run vs automation tool), source IDs, browser/OS, and creator identity. For scaled cloud browser usage, it provides "who ran what, when, and what it cost" without stitching external logs, which matches last week’s observability thread.
+- [Writing Azure service-related unit tests with Docker using Spring Cloud Azure](https://devblogs.microsoft.com/azure-sdk/writing-azure-service-related-unit-tests-with-docker-using-spring-cloud-azure/)
+- [Continued Investment in Azure App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/continued-investment-in-azure-app-service/ba-p/4507398)
+- [Gain Visibility into Cloud Browser Usage with Browser Activity Logs in Playwright Workspaces](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/gain-visibility-into-cloud-browser-usage-with-browser-activity/ba-p/4506706)
+## Other Azure News
+Operational troubleshooting and observability got two runbook-friendly additions, continuing last week’s point that day-2 needs should be first-class. Azure CycleCloud Workspace for Slurm now has a blueprint (plus repo) for centralizing Slurm/CycleCloud/OS logs into Azure Monitor Logs using AMA + DCRs, with separate tables per source and VMSS association patterns. Logic Apps also added an automation path to revoke OAuth for API Connections by calling ARM `revokeConnectionKeys`, which is useful for incident response and credential rotation when RBAC is scoped correctly (custom roles for least privilege). This fits last week’s identity/governance focus: security often depends on tested "revoke + rotate" automation.
+- [Centralized Log Management for CycleCloud Workspace for Slurm with Azure Monitor Logs](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/simplify-troubleshooting-at-scale-centralized-log-management-for/ba-p/4470658)
+- [How to revoke connection OAuth programmatically in Logic Apps](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-revoke-connection-oauth-programmatically-in-logic-apps/ba-p/4506825)
+Migration planning and economics showed up alongside hands-on troubleshooting. One article argues for involving FinOps earlier in AWS->Azure migrations: plan like-for-like, stabilize spend, then apply levers like Dev/Test pricing, Hybrid Benefit (including 180-day overlap), and Reservations once workloads settle, which matches last week’s "assessment first, phased optimization" pattern. Another post tackles Azure Migrate’s `MachineWithSameBiosIdAndFqdnAlreadyExists` error from mixing credential-based discovery with later agent registration, and shows how to realign the Mobility Agent to the original HostId/ResourceID identity so replication continues, which is a reminder that identity/registration details often drive migration timelines.
+- [AWS to Azure Migration — From the Cloud Economics & FinOps Lens](https://techcommunity.microsoft.com/t5/azure-migration-and/aws-to-azure-migration-from-the-cloud-economics-finops-lens/ba-p/4506746)
+- [Resolving MachineWithSameBiosIdAndFqdnAlreadyExists During Azure Migrate Mobility Agent Registration](https://techcommunity.microsoft.com/t5/azure-migration-and/resolving-machinewithsamebiosidandfqdnalreadyexists-during-azure/ba-p/4492307)
+Azure also published new material for specialized scenarios. A DPDK 25.11 performance write-up (and report) highlights what drives predictable throughput for packet workloads: Accelerated Networking, Azure Boost where available, NUMA alignment, hugepages, vCPU pinning, and queue/thread mapping. For sovereign/disconnected deployments, Microsoft described work with Armada to run Azure Local on modular datacenters, pairing an Azure-consistent control plane with edge networking and positioning Foundry Local for on-site inference when public-cloud connectivity is not reliable. It matches last week’s hybrid/sovereign framing: connectivity and control-plane reachability are primary design inputs.
+- [DPDK 25.11 Performance on Azure for High-Speed Packet Workloads](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dpdk-25-11-performance-on-azure-for-high-speed-packet-workloads/ba-p/4424905)
+- [Building sovereign AI at the edge: Microsoft and Armada collaborate to deliver Azure Local on Galleon modular datacenters](https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/)
+A couple of broad platform and storage/AI-data notes are useful for roadmap awareness. John Savill’s weekly Azure Update touched compute (ephemeral OS disk caching), config/edge (App Configuration + Front Door), storage (user delegation SAS expansions), and a Cosmos DB for PostgreSQL retirement callout that should trigger dependency checks, which matches last week’s reminder that small notices become real work once you inventory. A Komprise + Azure Storage piece outlines migrating and tiering unstructured data into Blob Storage with governance and ransomware-resilience controls (immutability/object lock/versioning/backup), aiming to make curated datasets easier to feed into AI pipelines. It fits the broader idea that durable storage controls and data hygiene are prerequisites for reliable AI/analytics use.
+- [Azure Update 3rd April 2026](https://www.youtube.com/watch?v=x8ULC4uDQos)
+- [Unlocking AI-Ready Unstructured Data at Scale with Komprise and Azure](https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-ai-ready-unstructured-data-at-scale-with-komprise-and/ba-p/4507422)',
+    'This week’s Azure items focused on operational guardrails: tighter network boundaries for PaaS, capacity/resiliency planning for IaaS, and event-driven patterns that reduce glue code while improving observability. Microsoft also continued pushing "modernize without rewrites" paths by moving pipelines into Fabric, making durable orchestration easier to consume, and improving local dev/test workflows with emulators and usage logs. It continues last week’s "controlled transitions" framing: adopt new primitives in phases, with "observe first, enforce later" and better day-2 visibility.',
+    1775458800, 'azure', '/azure/roundups/weekly-azure-roundup-2026-04-06', 'TechHub',
+    'TechHub', '57B02C019AB1BC4AD03969F67A554CE67B76966671B7DD935EE8800649EF21B4', ',Azure Service Bus,Network Security Perimeter,Azure Landing Zone,Subscription Vending,AKS,Azure Application Gateway,On Demand Capacity Reservations,Ephemeral OS Disk,Azure Event Grid,Durable Task Scheduler,Microsoft Fabric,Azure Data Factory,Azure SQL Database,Azure App Service,Azure Monitor Logs,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-03-30
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-03-30', 'roundups', 'Weekly Azure Roundup: Predictable Ops and Fabric-First Pipelines',
+    'Azure updates leaned into making platform operations more predictable (containers, networking, observability) and smoothing paths into Microsoft Fabric as teams standardize on it for pipelines, warehousing, and real-time analytics. Much of the change was plumbing (identity, private connectivity, bulk APIs, monitoring) aimed at making migrations and day-2 operations less fragile. This continues last week''s "controlled transitions" framing: swap components in phases and invest in guardrails (identity, networking prerequisites, health, runbooks) that keep changes routine.
+<!--excerpt_end-->
+## AKS, GitOps, and App Containerization Workflows
+AKS and Kubernetes tooling stayed focused on safer operations and standardized delivery. Building on last week''s ingress modernization thread (moving off Ingress NGINX toward Application Gateway for Containers, and reducing in-cluster plumbing), this week''s GitOps additions push the same direction: repeatable, auditable changes with less bespoke cluster setup.
+The new Argo CD extension is in public preview for AKS and Azure Arc-enabled Kubernetes, providing an Azure-integrated packaging of Argo CD with Microsoft Entra ID SSO and Workload Identity federation for Azure resource access (ACR, Azure DevOps). That reduces reliance on long-lived secrets in Git, and it echoes last week''s AGC prerequisites (workload identity for ALB controller): across ingress and GitOps, Azure''s preferred path is federation over service principal secrets. The extension is also aimed at fleet patterns (ApplicationSet, hub-and-spoke multi-cluster GitOps, HA) with a more controlled patching model, and Azure Portal management is expected soon after the initial CLI-based onboarding.
+For app modernization, Microsoft introduced Containerization Assist as open-source tools/guidance to help teams move existing apps to containers through assess -> transform -> operationalize phases. It matches the sequencing pattern highlighted last week across AKS and Fabric migrations: assess first, then phased cutover, with an emphasis on repeatability (standard validation and deployment patterns across Kubernetes and Azure container platforms). A separate guide for AI agent solutions argued for containers as the default packaging for agent prototypes that need to become shareable services, shown via a multi-agent FastAPI app deployed to Azure Container Apps using `azd up` (Bicep provisioning, ACR build/push, Cosmos DB, managed HTTPS endpoint). This contrasts managed agent runtimes vs "bring your own container" when you need custom server behavior (SSE/WebSockets, Git ops, custom UI, bespoke orchestration) and complements last week''s Container Apps migration write-up by reinforcing "containerize once, deploy consistently."
+The weekly Azure update video bundled AKS operational items pointing toward more controlled networking and upgrades: more network logs/filtering, fleet cross-cluster networking, managed GPU metrics, meshless Istio routing options, blue-green agent pool upgrades, and an AKS networking AI agent concept for diagnosing network behavior, plus Arc-enabled Kubernetes recommended alerts for hybrid monitoring. Combined with last week''s traffic-layer changes (AGC) and resiliency runbooks (Front Door fallbacks), the through-line is more observability and safer rollout primitives so teams can validate changes incrementally.
+- [Announcing Public Preview of Argo CD extension on AKS and Azure Arc enabled Kubernetes clusters](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-public-preview-of-argo-cd-extension-on-aks-and-azure/ba-p/4504497)
+- [''Containerization Assist: open-source tooling to accelerate app containerization''](https://www.youtube.com/watch?v=vKS6Uq-LLNs)
+- [Containerization Assist - Simplifying Modern App Delivery](https://www.youtube.com/shorts/e9fniCosMDY)
+- [Hosted Containers and AI Agent Solutions](https://techcommunity.microsoft.com/t5/microsoft-developer-community/hosted-containers-and-ai-agent-solutions/ba-p/4500627)
+- [Azure Update 27th March 2026](https://www.youtube.com/watch?v=rz-7PWle174)
+## Microsoft Fabric Data Factory & Dataflow Gen2: Performance, Automation, and Migration Paths
+Fabric''s integration surface saw updates that reduce friction in authoring/refresh performance, operational visibility, and programmatic lifecycle management. These changes read as follow-through on last week''s Fabric modernization posture (migration assistants, safer defaults like triggers disabled post-migration, and more day-2 controls), now extended with performance work and monitoring at scale.
+Dataflow Gen2 updates from FabCon Atlanta 2026 combined GA improvements and previews. GA items include Modern Query Evaluator (better refresh performance/predictability for complex Power Query M) and Preview Only Steps (iterate faster by keeping sampling/filters out of production refresh). For promotion, Variable Libraries (GA) and Relative References (GA) reduce hard-coded workspace bindings; scheduled runs now accept parameter values (GA) so one definition covers multiple scenarios. Ops additions include email alerts for failed refreshes (GA) and expanded destinations (GA) including ADLS Gen2 and Lakehouse Files, plus schema-aware targeting for supported destinations.
+Automation accelerated, extending last week''s agent-assisted ops thread (Data Factory MCP Server preview) into bulk and runtime primitives. A Save As API supports bulk migration from Dataflow Gen1 to Gen2, and an Execute Query (Streaming) API (preview) enables on-demand Power Query execution without full refresh, useful for debugging and event-driven patterns. The Data Factory MCP Server (preview) exposes Dataflow Gen2 and pipeline operations as MCP tools so assistants can drive create/test/deploy locally (positioned as running on your machine so credentials stay local).
+Migration tooling is also becoming more assessment-first inside Azure Data Factory and Azure Synapse. Like last week''s assistants (ADF/Synapse, Spark, SQL migrations), these flows classify pipelines as "Ready / Needs review / Coming soon / Unsupported," export CSV reports, and require mapping Linked Services to Fabric Connections. Triggers stay disabled after migration by default so teams can validate before re-enabling schedules, preserving a "parallel validate, then cut over" rhythm.
+For performance and monitoring, Copy job added Auto-partitioning (preview) for large SQL-oriented sources by selecting partition columns/boundaries for parallel reads in watermark-based incremental scenarios. Lakehouse writes were sped up by disabling V-Order by default during ingestion (with an option to re-enable). Workspace Monitoring (preview) now streams Copy job run logs into a Monitoring Eventhouse automatically, making run/mapping diagnostics queryable via KQL/SQL and enabling Power BI dashboard templates. This aligns with last week''s traceability/ops readiness push in data movement: "what happened in this run?" should be answerable without custom logging.
+Legacy ETL is also addressed: "Invoke SSIS Package" (preview) lets Fabric pipelines run SSIS packages stored in OneLake without Azure-SSIS IR, with parameter/property overrides for environment deployments. For secure access, Fabric VNET Data Gateway reached GA for certificate-based auth and proxy support, common blockers in locked-down networks. Admin cleanup improves with Connection Recency (preview), adding "Last linked to items" and "Last credentials used" to connection metadata, making cleanup and credential rotation more explicit. This is an admin counterpart to last week''s governance theme.
+- [A wave of new Dataflow Gen2 capabilities at FabCon Atlanta 2026](https://blog.fabric.microsoft.com/en-US/blog/a-wave-of-new-dataflow-gen2-capabilities-at-fabcon-atlanta-2026/)
+- [Upgrade your Synapse pipelines to Microsoft Fabric with confidence (Preview)](https://blog.fabric.microsoft.com/en-US/blog/upgrade-your-synapse-pipelines-to-microsoft-fabric-with-confidence-preview/)
+- [New migration experience from Azure Data Factory to Fabric (Preview)](https://blog.fabric.microsoft.com/en-US/blog/new-migration-experience-from-azure-data-factory-to-fabric-preview/)
+- [Higher Performance with Copy job in Fabric Data Factory Auto Partitioning (Preview)](https://blog.fabric.microsoft.com/en-US/blog/higher-performance-with-copy-job-in-fabric-data-factory-auto-partitioning-preview/)
+- [Gain full visibility into your Copy jobs with Workspace Monitoring in Microsoft Fabric (Preview)](https://blog.fabric.microsoft.com/en-US/blog/gain-full-visibility-into-your-copy-jobs-with-workspace-monitoring-in-microsoft-fabric-preview/)
+- [Invoke SSIS Package Activity in Microsoft Fabric Data Factory (Preview)](https://blog.fabric.microsoft.com/en-US/blog/invoke-ssis-package-activity-in-microsoft-fabric-preview/)
+- [Certificate and Proxy Support for VNET Data Gateway (Generally Available)](https://blog.fabric.microsoft.com/en-US/blog/certificate-and-proxy-support-for-vnet-data-gateway-generally-available/)
+- [Connection Recency for improved audit and management (Preview)](https://blog.fabric.microsoft.com/en-US/blog/connection-recency-for-improved-audit-and-management-preview/)
+## Fabric APIs, Private Connectivity, and Java Integration
+Fabric''s developer surface expanded across workspace-scale automation, private networking posture, and supported integration for common runtimes. This builds on last week''s OneLake/Fabric governance and platform-controls emphasis (OAP expansion, workspace firewalls, connect-without-copying patterns): once teams standardize on Fabric, they need repeatable deployment mechanics and private-by-default setups for regulated environments.
+For CI/CD and automation, Bulk Import/Export Item Definitions APIs (preview) enable exporting/importing item definitions (JSON manifests with Base64 "parts") across many items, supporting workspace cloning, backups, scanning, and deployment pipelines. They use long-running operations (202 + polling via `/operations/{operationId}`) and include constraints teams must plan around: 128 MB payload limits, rate limiting/backoff (429 guidance), item coverage limited to what Git integration/definitions APIs support, and permission nuances (exports only include items where the caller has both read and write). For promotion pipelines, this is the missing bulk primitive complementing single-item create/update flows, aligning with last week''s "migrations at scale" storyline.
+On networking/compliance, tenant-level Private Link support for Fabric API for GraphQL is now GA, keeping GraphQL traffic private and compatible with "Block Public Internet Access" tenants without rebuilding APIs. Limitations matter: Workspace Monitoring-based API monitoring/logging is not supported in this Private Link setup, and service principals cannot create saved credentials for source auth, so headless automation may need alternate patterns. This reflects the broader tradeoff: private endpoints reduce exposure, but teams must design around visibility and automation gaps.
+For app integration, the Microsoft JDBC Driver for Fabric Data Engineering is now GA, providing a supported JDBC 4.2 path for Java apps/tools to run Spark SQL against Lakehouse data via Fabric Livy APIs. It supports JDK 11/17/21, Entra ID auth (interactive, client creds, cert-based, access tokens), and production features (pooling/health recovery, HikariCP integration, retries/circuit breaker behavior, async result prefetching, proxy support, logging). For Java teams, this makes Fabric behave more like a standard JDBC target rather than a one-off integration.
+- [Microsoft Fabric Bulk Import/Export Item Definitions APIs (Preview)](https://blog.fabric.microsoft.com/en-US/blog/public-apis-bulk-import-and-export-items-definition-preview/)
+- [Tenant level private link support for Microsoft Fabric API for GraphQL (Generally Available)](https://blog.fabric.microsoft.com/en-US/blog/34710/)
+- [Microsoft JDBC Driver for Microsoft Fabric Data Engineering (Generally Available)](https://blog.fabric.microsoft.com/en-US/blog/microsoft-jdbc-driver-for-microsoft-fabric-data-engineering-generally-available/)
+## Streaming and Real-Time Messaging: MQTT, Kafka, and Fabric Eventing
+Azure''s managed streaming updates split between IoT-native MQTT ingestion and Kafka-compatible ingestion, with Fabric increasingly positioned as a downstream target. This continues last week''s Fabric real-time push (Eventstreams DeltaFlow for CDC, more Eventhouse monitoring templates): the story is converging on ingest once, route to multiple targets, with Fabric RTI as a default alongside ADX and Event Hubs.
+For IoT backends, the March 2026 Event Grid MQTT Broker update covered GA features (MQTT v3.1.1/v5.0, TCP/WebSockets, HTTP Publish over HTTPS, retained messages, LWT) and upcoming previews (shared subscriptions, larger packets, higher egress throughput, autoscale, IPv6, bulk onboarding APIs). Auth options include Entra ID/OIDC JWT, X.509/mTLS, and webhook custom auth, and it highlights assigned client identifiers for auditing/diagnostics in regulated identity scenarios. Architecturally, it supports direct routing into Microsoft Fabric Eventstreams (RTI) without requiring Event Hubs as a middle layer, alongside targets like ADX, Functions, Logic Apps, and Event Hubs. As Fabric RTI matures (last week''s DeltaFlow; this week''s UI improvements), Azure is reducing required "middle hops" for common pipelines.
+In parallel, an Event Hubs analysis reiterated Kafka-compatible ingestion via Event Hubs'' Kafka endpoint with tier guidance: Standard for common ingestion; Premium/Dedicated for Kafka transactions/exactly-once semantics and Kafka Streams, plus geo-replication options including RPO=0. It also reinforced Event Hubs as an ingestion hub that can land to ADLS via Capture and feed Fabric for near-real-time analytics, fitting a mixed pattern: direct-to-Fabric for some flows (MQTT Broker -> Eventstreams) and Event Hubs as buffer/compatibility for others.
+Within Fabric, Eventstream authoring improved: Activator rule creation/management can now be done inside the Eventstream UI (preview), enabling conditions and actions without switching to Activator, while still allowing deeper testing and history in Activator. This matches Fabric''s broader trend toward fewer context switches and more built-in operational primitives.
+- [''Azure Messaging: What’s New (March 2026) — Event Grid MQTT Broker''](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/azure-event-grid-mqtt-broker-enterprise-grade-messaging-for-the/ba-p/4504246)
+- [''"No-Ops" Kafka Experience: Why Event Hubs is Your Default Destination for Streaming on Azure''](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/quot-no-ops-quot-kafka-experience-why-event-hubs-is-your-default/ba-p/4481501)
+- [Configure and manage Activator rules directly in Eventstream (Preview)](https://blog.fabric.microsoft.com/en-US/blog/configure-and-manage-activator-rules-directly-in-eventstream-preview/)
+## Private Networking and Data Movement in Locked-Down Environments
+A recurring pattern is "keep it private, keep it workable," especially where public endpoints are disallowed. These items extend last week''s hybrid/governance guidance (Azure Local evaluation, Arc patterns, security foundations) with concrete failure modes and fixes for private endpoints and isolated networks.
+Azure Maps added Private Endpoint support in public preview, allowing Maps traffic to stay on private IPs inside a VNet via Private Link. The key change is using the account-scoped endpoint format `https://{maps-account-client-id}.{location}.account.maps.azure.com`, resolvable privately via the Private DNS zone `privatelink.account.maps.azure.com`. For many apps this is a small configuration change, but often the difference between meeting production policy or being blocked.
+An Azure Storage guide tackled a hard topology: syncing blobs between two storage accounts with public access disabled, private endpoints only, no shared private DNS zones, and no shared VNet connectivity. Server-side copy can fail with `403 - CannotVerifyCopySource`. The recommended approach is running AzCopy from a VM in the *target* environment, aligning DNS by adding A records in the target private DNS zone mapping both source and target `*.blob.core.windows.net` hostnames to their private endpoint IPs, and authenticating with managed identity + data-plane RBAC (Storage Blob Data Reader on source, Contributor on target). It includes PowerShell automation (install, per-container `azcopy sync` with `--compare-hash=MD5` and `--include-directory-stub=true`, plus CSV validation reports). It reinforces a recurring operational lesson: if DNS/identity are not aligned, private-only designs fail in ways diagrams do not reveal.
+A hybrid/sovereign-cloud networking overview rounded this out with tradeoffs (ExpressRoute vs S2S VPN), routing and latency considerations, and Azure Arc connectivity in constrained networks, including Arc with Private Link, Azure Firewall explicit proxy (preview), and Arc Gateway for centralized egress control. It pairs with last week''s VPN Gateway BGP timer mismatch note: in sovereign/hybrid setups, defaults and control-plane behaviors (timers, DNS, proxying) often drive reliability more than app code.
+- [Azure Maps Adds Support to Private Endpoints (Preview)](https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-adds-support-to-private-endpoints-preview/ba-p/4505743)
+- [Synchronizing Azure Storage Across Isolated Private Endpoint Networks](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/synchronizing-azure-storage-across-isolated-private-endpoint/ba-p/4504564)
+- [Azure Hybrid Networking for Sovereign Cloud](https://www.thomasmaurer.ch/2026/03/azure-hybrid-networking-for-sovereign-cloud/)
+## Developer Libraries, Serverless Messaging Patterns, and Observability
+The March 2026 Azure SDK release includes changes that affect real code paths. Azure.Identity 1.19.0 for .NET can reference certs from the platform certificate store using `cert:/StoreLocation/StoreName/Thumbprint`, reducing the need to ship cert files. Rust Cosmos DB SDK updates add multi-region writes, transactional batch, and fault injection, plus breaking changes (new `CosmosClientBuilder`, new stream-based query iteration) and removal of `wasm32-unknown-unknown` support. Azure.AI.ContentUnderstanding 1.0.0 reached GA for .NET/JS/Python with stronger typing to reduce parsing boilerplate.
+A practical Azure Functions guide showed how to avoid "retry the whole batch" behavior for Service Bus batch triggers by using per-message settlement: disable auto completion and explicitly complete/abandon/dead-letter/defer via `ServiceBusMessageActions` (examples for .NET isolated worker, Node.js/TypeScript, Python). For workloads where one poison message causes repeated reprocessing and duplicate side effects, this configuration change improves reliability and cost under failure. It fits last week''s resilience thread: gains often come from explicit, granular failure handling rather than default retries.
+For observability, Azure Monitor added a portal workflow to copy dashboards from "Dashboards with Grafana" into Azure Managed Grafana without exporting/importing JSON. This eases graduating from portal dashboards to Managed Grafana features (alerting, reporting, plugins, automation), extending last week''s observability theme (standardized diagnostic settings, Grafana/Entra auth patterns) by reducing migration friction. On the Fabric side, a monitoring guide for Fabric Data Warehouse pulled together DMVs (live), Query Insights (historical), SQL Pool Insights (pressure/throttling), and the Capacity Metrics app, including a repeatable way to correlate capacity spikes to a specific SQL statement via Operation ID -> `distributed_statement_id` and then analyze regressions via `query_hash`. It reinforces the day-2 story: after migration, teams still need to explain cost and performance behavior.
+- [Azure SDK Release (March 2026)](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-march-2026/)
+- [Partial failure handling for Azure Functions Service Bus batch triggers with per-message settlement](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/take-control-of-every-message-partial-failure-handling-for/ba-p/4504893)
+- [Copy dashboards from Dashboards with Grafana to Azure Managed Grafana](https://techcommunity.microsoft.com/t5/azure-observability-blog/copy-dashboards-from-dashboards-with-grafana-to-azure-managed/ba-p/4505710)
+- [Mastering monitoring in Microsoft Fabric Data Warehouse](https://blog.fabric.microsoft.com/en-US/blog/mastering-monitoring-in-microsoft-fabric-data-warehouse/)
+## Other Azure News
+Fabric capacity management added Capacity overage (preview): admins can opt in per capacity and set a 24-hour overage billing cap so workloads continue through compute spikes instead of hitting deeper throttling, with overage billed at 3x PAYG rates. This pairs with upcoming visibility updates in the Capacity Metrics app and capacity events in Real-Time Hub, and connects back to last week''s Warehouse controls (Custom SQL Pools preview, ongoing work to reduce ingestion/statistics slowdowns). Fabric is adding knobs and telemetry needed to keep shared capacity predictable as usage grows.
+Azure Storage users got a shortcut for periodic reporting: Blob Inventory manifests include `summary.objectCount` and `summary.totalObjectSize`, allowing total blob count and size reporting without processing full CSV/Parquet exports. This complements last week''s "make day-2 easier" theme by reducing bespoke processing for routine ops questions.
+Fabric RTI expanded into vertical scenarios. An industrial analytics integration describes Fusion Data Hub landing OT historian/edge telemetry into Fabric Eventhouse/KQL databases (handling late data, gaps, normalization). A partner workload preview, Capital Markets DataHub, describes an industry-specific Fabric workload built on the Extensibility Toolkit and public REST APIs, focused on connectors, canonical models, reconciliation, entitlements, and Azure AI Foundry integration. This continues last week''s extensibility storyline (self-service workload publishing GA): Fabric is pairing platform primitives with packaged vertical workloads and partner experiences.
+Azure VMware Solution shared a deep dive into an autonomous self-healing loop for certain NSX/vCenter control-plane failures, emphasizing dependency graphs, policy-gated remediation, idempotent/checkpointed playbooks, verification-based closure, and an append-only incident ledger. The theme matches last week''s resilience items (Front Door durable config recovery, ACR deep health-based failover): deeper signals plus controlled remediation rather than shallow probes or manual runbooks alone.
+Cosmos DB users got a date: Azure Cosmos DB Conf 2026 is a free 5-hour live stream on April 28 with sessions on distributed app architecture and performance tuning, plus Azure DocumentDB and the open source DocumentDB project. SQL developers also got a recap video from SQLCon/FabCon covering the SQL family, AI direction for SQL (including a SQL Developers Certification), and the Fabric Database Hub experience, another signal of how tightly Azure databases and Fabric''s analytics layer are being positioned together week to week.
+- [Introducing capacity overage flexibility when you need it most (Preview)](https://blog.fabric.microsoft.com/en-US/blog/introducing-capacity-overage-preview-flexibility-when-you-need-it-most/)
+- [How to get total blob count and total capacity with Azure Blob Inventory](https://techcommunity.microsoft.com/t5/azure-paas-blog/how-to-get-blob-total-blob-count-and-total-capacity-with-blob/ba-p/4485643)
+- [''Industrial Analytics delivered at-scale: Powered by Fabric Real-Time Intelligence and Fusion Data Hub''](https://blog.fabric.microsoft.com/en-US/blog/industrial-analytics-delivered-at-scale-powered-by-fabric-real-time-intelligence-and-fusion-data-hub/)
+- [''Capital Markets DataHub workload (Preview) in Microsoft Fabric: connectors, canonical model, reconciliation, and Azure AI Foundry integration''](https://blog.fabric.microsoft.com/en-US/blog/unlocking-financial-insights-with-capital-markets-datahub-workload-a-partner-led-innovation-in-microsoft-fabric-preview/)
+- [Autonomous Self-Healing for Azure VMware Solution Private Clouds](https://techcommunity.microsoft.com/t5/azure-migration-and/autonomous-self-healing-for-azure-vmware-solution-private-clouds/ba-p/4506374)
+- [Azure Cosmos DB Conf 2026 | Live Stream](https://www.youtube.com/watch?v=OdPFriVuKtU)
+- [What''s New in Microsoft SQL at SQLCon/FabCon | Data Exposed](https://www.youtube.com/watch?v=9YN_7_yx7bs)',
+    'Azure updates leaned into making platform operations more predictable (containers, networking, observability) and smoothing paths into Microsoft Fabric as teams standardize on it for pipelines, warehousing, and real-time analytics. Much of the change was plumbing (identity, private connectivity, bulk APIs, monitoring) aimed at making migrations and day-2 operations less fragile. This continues last week''s "controlled transitions" framing: swap components in phases and invest in guardrails (identity, networking prerequisites, health, runbooks) that keep changes routine.',
+    1774854000, 'azure', '/azure/roundups/weekly-azure-roundup-2026-03-30', 'TechHub',
+    'TechHub', 'E60C36C367D852849807D3B8CD2809E81A59EB7E9AF18D4E347495EB94B2EEC1', ',Microsoft Azure,AKS,Azure Arc,Argo CD,GitOps,Workload Identity,Azure Container Apps,Microsoft Fabric,Fabric Data Factory,Dataflow Gen2,OneLake,Private Link,Event Grid MQTT Broker,Azure Event Hubs,Azure Monitor,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-03-23
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-03-23', 'roundups', 'Weekly Azure Roundup: Resilient Routing and Fabric-First Data Moves',
+    'This week''s Azure story split into two lines: keeping platforms resilient as infrastructure evolves (edge routing, registries, ingress, DR, monitoring, hybrid networking), and modernizing data estates into Fabric/OneLake where migration assistants, governance, and real-time pipelines are becoming standard building blocks. It continues last week''s "controlled transitions" framing: change traffic layers, registry behavior, or data platforms in phases, with clearer signals and fewer surprise support boundaries.
+<!--excerpt_end-->
+## AKS ingress modernization: moving off Ingress NGINX to Application Gateway for Containers (AGC)
+Ingress NGINX now has explicit support boundaries: upstream ingress-nginx is best-effort until March 2026, then stops shipping releases, bug fixes, and security patches. AKS Application Routing gets only critical security patches until November 2026 (no new features or general fixes). Azure''s recommended replacement is Application Gateway for Containers (AGC), a managed L7 load balancer for AKS (GA late 2024) with WAF support added November 2025. Architecturally, AGC moves the traffic engine out of the cluster: the data plane/control resource lives in Azure (frontends, delegated subnet association, auto-generated FQDNs), while an in-cluster ALB Controller watches Gateway API objects (Gateway/HTTPRoute) and AGC policy CRDs and programs the Azure-side gateway.
+Migration guidance emphasizes phased adoption: AGC supports both Gateway API (preferred) and legacy Ingress API, enabling incremental cutover while aiming to land on Gateway/HTTPRoute. It outlines two operating models: "Bring Your Own" (platform teams manage the Azure AGC resource with IaC and configure the controller with a fixed resource ID) and controller-managed provisioning (Kubernetes ApplicationLoadBalancer CR drives Azure-side lifecycle), which is simpler to start but more coupled to cluster objects.
+Some teams will hit prerequisites: AGC requires Azure CNI or Azure CNI Overlay, so Kubenet clusters may need a network plugin migration, and workload identity must be enabled for controller auth. This mirrors last week''s "dependency-first" sequencing: networking and identity often need to be correct before higher-level platform changes behave predictably. Benefits are practical: less node resource use (data plane outside cluster), fewer ingress proxy patch chores, faster convergence during scale events by routing to pod IPs via EndpointSlice, and integrated WAF that may simplify "WAF in front of AKS" designs.
+Microsoft''s AGC Migration Utility (Jan 2026) is positioned as the first step: run in "files mode" (manifests directory) or "cluster mode" (reads live Ingress), generate Gateway API YAML plus a coverage report, and use report categories (completed/warning/not-supported/error) to find NGINX annotation dependencies that need redesign. The recommended flow: install/configure AGC + ALB Controller, generate resources for BYO (AGC resource ID) or managed (subnet ID), validate in non-prod, run NGINX and AGC in parallel, DNS cutover to AGC frontend FQDN, then decommission the old controller to avoid multiple reconcilers. The guidance is explicit about what cannot be automated: NGINX snippets and Lua do not translate cleanly, TLS and DNS cutover require manual validation/updates, and GitOps pipelines may need refactoring because kinds and manifests change when moving from Ingress to Gateway API.
+- [After Ingress NGINX: Migrating to Application Gateway for Containers](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/after-ingress-nginx-migrating-to-application-gateway-for/ba-p/4503110)
+## Edge and routing resiliency: Azure Front Door patterns and Front Door’s faster RTO work
+October 2025''s Front Door incidents are shaping Azure guidance: treat "global edge routing is unavailable" as a real failure mode, not only origin-region outages. It aligns with last week''s day-2 readiness theme: design for diagnosability and runbook-driven failover when the control plane is unhealthy. Field lessons describe DNS-steered fallback patterns where Azure Traffic Manager in "Always Serve" mode is the escape hatch when AFD control plane or DNS resolution fails. A common trade-off is WAF consistency during failover: if policy must remain consistent, teams often keep a regional Application Gateway (WAF) path ready, sometimes requiring a runbook step to switch an AppGW IP config to public because Traffic Manager targets must be public. For stricter uptime targets (and heavy CDN dependence), a multi-CDN pattern (AFD + Akamai, for example) reduces single-provider edge dependency, with advice like keeping a small steady-state split (for example, 90/10) to keep caches warm and avoid cache-miss storms during cutover.
+Front Door engineering updates also aim to reduce recovery time after edge restarts. Part 2 focuses on bounding RTO at scale by changing config recovery: durable per-tenant translated config artifacts (FlatBuffers memory-mapped from disk) persist across restarts; per-tenant validation occurs on load; and only failing tenant entries are evicted and retranslated instead of invalidating everything. The second lever is scaling recovery by active tenants using ML-informed lazy loading: workers preload predicted warm tenants per edge site while keeping hostmaps for correctness so cold tenants load on first request. Timelines are concrete: config propagation reduced from ~45 minutes to ~20 minutes (target ~15 minutes by end of April 2026), RTO targeting <10 minutes worst case by April 2026, and a "micro-cellular" tenant isolation redesign targeted for June 2026. For critical services behind AFD, the takeaway is to (1) implement tested DNS failover runbooks and plan for cache-miss surges, and (2) track Front Door recovery behavior so SLO expectations match platform reality.
+- [Resiliency Patterns for Azure Front Door: Field Lessons](https://techcommunity.microsoft.com/t5/azure-architecture-blog/resiliency-patterns-for-azure-front-door-field-lessons/ba-p/4501252)
+- [Azure Front Door Resiliency (Part 2): Faster recovery (RTO) via durable config cache and ML-driven lazy loading](https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-front-door-resiliency-series-part-2-faster-recovery-rto/ba-p/4503091)
+## Container supply chain reliability: health-aware ACR geo-replication failover
+This continues last week''s ACR thread: after adding deeper health monitoring and Service Health communication so teams can correlate CI/CD and pull failures, ACR is now using that signal to change routing during regional issues.
+ACR geo-replication now fails over based on whether a region can serve end-to-end registry operations, not just whether a proxy returns 200 OK. Previously, the global endpoint (for example, `contoso.azurecr.io`) relied on Traffic Manager performance routing with shallow probes, which could keep sending traffic to a "green" reverse proxy while dependencies (storage, auth, caching, metadata) were degraded, causing pulls and pushes to return 500s despite green probes.
+ACR now wires Health Monitor into Traffic Manager via a deep health endpoint that rolls up dependency health and marks replicas unhealthy when they cannot serve real registry requests. Operationally important, this is evaluated per registry, not as a blanket region flag. Health Monitor checks the registry''s actual backing resources in that region (including feature-specific dependencies like metadata search), so one registry may reroute while another stays local.
+For DevOps teams, the change is transparent (no hostname/config changes), but behavior is still DNS-based and measured in minutes: probe cadence (~30s), failure thresholds, TTLs, and client DNS caching matter. It reinforces two active-active realities: replication is eventual (so immediate cross-region pulls after push can return not-found, and retries help), and pushes during failover can fail mid-operation if DNS re-resolution occurs, so publish steps should be idempotent and retryable. The practical result is fewer manual interventions (like `az acr replication update`) during regional issues and fewer "it''s up but pulls fail" incidents.
+- [Health-Aware Failover for Azure Container Registry Geo-Replication](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/health-aware-failover-for-azure-container-registry-geo/ba-p/4501730)
+## Azure compute for GPU workloads: NCv6 refresh and GA transition
+Azure''s NCv6 GPU VM family is moving from preview toward GA in coming weeks, shifting to SLA-backed production readiness and changing available sizes. NCv6 uses NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs with Intel Xeon 6 "Granite Rapids" 6900P-series CPUs, targeting graphics/VDI, CAD/CAE, and generative AI inference.
+The refreshed lineup expands from three preview sizes to seven sizes across two sub-families (General Purpose, Compute Optimized) and adds fractional GPU options (1/2 and 1/4 GPU). Those fractional SKUs help right-size inference endpoints and interactive visualization where full GPUs are unnecessary, scaling down vCPU, memory, temp disk/NVMe, and networking accordingly. In the context of last week''s guidance on placing inference where networking and isolation allow it (including isolated AKS patterns and managed GPU node pools preview), smaller shapes can also help place GPU closer to constrained workloads without full-GPU cost. Some top-end shapes increase vCPU counts (for example, 288 vs 256) to align with the CPU architecture and improve high-end VDI. GA regions start with West US 2 and Southeast Asia, with more planned across Q3 2026 (East US, West Europe, East US 2, North Europe, South Central US, Germany West Central, West US, Korea Central). Teams testing preview sizes should plan for shape changes as new sizes replace prior preview offerings.
+- [Azure NCv6 Virtual Machines: Enhancements and GA Transition](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-virtual-machines-enhancements-and-ga-transition/ba-p/4503578)
+## Microsoft Fabric + OneLake modernization: migrations, governance, real-time pipelines, and platform controls
+Fabric updates this week focused on making modernization repeatable: assess-first migration assistants, safer cutover defaults, expanded governance/security, and more ready-to-use building blocks for real-time and monitoring. It mirrors last week''s migration posture (move in slices, parallel validation, controlled cutovers) with more platform defaults that support phased transitions.
+Migration assistants expanded across common Azure data-estate entry points. For Azure Data Factory and Synapse, public-preview assistants assess compatibility, convert pipelines into Fabric Data Factory equivalents (including linked services -> Fabric connections), and intentionally disable triggers after migration so teams can validate without accidentally starting schedules/events. Synapse Spark migrations similarly move artifacts (Spark pools, notebooks, jobs) into Fabric Data Engineering and map lake databases via OneLake shortcuts without moving data, so you can validate in parallel before cutover. On SQL, Fabric is pushing guided in-portal migration for SQL Server into SQL database in Fabric (preview), combining schema checks, remediation guidance (including Copilot help), and data copy in one flow. The broader roundup also reiterates DACPAC schema import and compatibility improvements (expanded compatibility levels, more T-SQL, full-text search, more `ALTER DATABASE`) to reduce application changes.
+OneLake is becoming the connect-without-copying layer. Shortcuts and mirroring expand to more sources (SharePoint Lists preview, Azure Monitor mirroring via shortcuts preview, Dremio preview), while mirroring is GA for Oracle and SAP Datasphere. Shortcut transformations are GA (including conversion to Delta), and there is a preview Excel-to-Delta transformation to reduce notebook glue code. Governance and security are expanding alongside: workspace-level IP firewall rules GA; Outbound Access Protection (OAP) GA across more items (including shortcuts and mirrored databases). OneLake Security is expected to reach GA soon with a unified permission model (including RLS/CLS) intended to follow data across Spark, Power BI, and Fabric agent experiences, with APIs planned so third-party engines can integrate with OneLake enforcement instead of rebuilding auth.
+For real-time patterns, Fabric Eventstreams adds DeltaFlow (preview) to turn Debezium-style CDC feeds from operational databases (Azure SQL DB/MI, SQL Server on Azure VMs, PostgreSQL) into analytics-ready streaming tables. Eventstreams can handle schema registration, flatten CDC payloads into table-shaped outputs, enrich with CDC metadata, manage schema evolution, and auto-create/update destination tables. This helps teams route to Eventhouse and query with KQL without maintaining custom CDC connectors and transforms. Visualization also advanced: Maps GA in Real-Time Intelligence adds ontology-based modeling through Fabric IQ, new geospatial connections (Planetary Computer Pro imagery, WMS/WMTS raster), and scheduled refresh for vector tile sets. Eventhouse gets built-in workspace monitoring dashboard templates so teams can start with prebuilt KQL and visuals for Eventhouse and Power BI semantic model operations (DirectQuery, XMLA), then customize.
+Fabric Data Factory''s FabCon recap delivered more platform controls: OAP to restrict pipeline/dataflow/copy destinations; Key Vault integration for the VNet Gateway GA; on-prem gateway auto-updates; broader identity support (GA service principal + workspace identity across activities); and Copy Job improvements (connectors, incremental copy options including more watermark types and query extraction, truncate-on-full-copy to avoid duplicates). Two developer-facing additions stand out: Copy Job audit columns (row-level metadata like extraction time, job/run IDs, incremental window bounds for lineage/compliance), and a Fabric Data Factory MCP Server (preview) exposing Data Factory operations (pipelines, dataflows, Power Query M author/exec, gateway discovery/health) to MCP-compatible tools like GitHub Copilot and Claude, continuing last week''s agent-assisted ops thread.
+Warehouse updates include Custom SQL Pools (preview) to isolate compute by allocating multiple pools as percentages and routing workloads via Application Name or regex, which helps when ad-hoc analysis competes with reporting and ETL. The SQL engine continues reducing ingestion-related slowdowns via proactive and incremental stats refresh, moving stats updates to background policies and updating histograms incrementally for large append-heavy tables to avoid compile-time stalls; Microsoft says most workspaces saw compilation-time stats updates cut in half by March 2026. Finally, Fabric Extensibility self-service workload publishing is GA for ISVs: upload/validate packages and share with up to 20 customer tenants pre-certification, with name reservation and automated manifest/security validation to tighten pilot-to-Workload-Hub paths.
+- [From Azure Synapse and Azure Data Factory to Microsoft Fabric: The Next-Gen Analytics Leap](https://blog.fabric.microsoft.com/en-US/blog/from-azure-synapse-and-azure-data-factory-to-microsoft-fabric-the-next-gen-analytics-leap/)
+- [Introducing Migration Assistant for SQL database in Fabric (Preview)](https://www.youtube.com/watch?v=iyNiU7trims)
+- [What’s new and improved for SQL database in Fabric (Generally Available)](https://blog.fabric.microsoft.com/en-US/blog/whats-new-and-improved-for-sql-database-in-fabric-generally-available/)
+- [Building real-time, event-driven applications with Database CDC feeds and Fabric Eventstreams DeltaFlow (Preview)](https://blog.fabric.microsoft.com/en-US/blog/building-real-time-event-driven-applications-with-database-cdc-feeds-and-fabric-eventstreams-deltaflow-preview/)
+- [Maps in Microsoft Fabric (Generally Available)](https://blog.fabric.microsoft.com/en-US/blog/maps-in-microsoft-fabric-generally-available/)
+- [FabCon and SQLCon 2026: What’s new in Microsoft OneLake](https://blog.fabric.microsoft.com/en-US/blog/fabcon-and-sqlcon-2026-whats-new-in-microsoft-onelake/)
+- [Fabric Data Factory at FabCon Atlanta: Built for modern data integration](https://blog.fabric.microsoft.com/en-US/blog/fabric-data-factory-at-fabcon-atlanta-built-for-modern-data-integration/)
+- [Audit columns in Copy job in Fabric Data Factory—Every row is traceable for data lineage and compliance](https://blog.fabric.microsoft.com/en-US/blog/audit-columns-in-copy-job-in-fabric-data-factory-every-row-is-traceable-for-data-lineage-and-compliance/)
+- [Custom SQL Pools for Fabric Data Warehouse (Preview)](https://blog.fabric.microsoft.com/en-US/blog/custom-sql-pools-for-fabric-data-warehouse-preview/)
+- [Proactive and incremental statistics refresh for Fabric Data Warehouse and SQL Analytics Endpoint](https://blog.fabric.microsoft.com/en-US/blog/proactive-and-incremental-statistics-refresh-for-fabric-data-warehouse-and-sql-analytics-endpoint/)
+- [Workspace Monitoring dashboard templates in Microsoft Fabric Eventhouse](https://blog.fabric.microsoft.com/en-US/blog/workspace-monitoring-dashboard-templates-in-microsoft-fabric-eventhouse/)
+- [Advancing Databases for the Next Generation of Applications](https://blog.fabric.microsoft.com/en-US/blog/advancing-databases-for-the-next-generation-of-applications/)
+- [Fabric Extensibility: Self-Service Workload Publishing is now generally available](https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-self-service-workload-publishing-generally-available/)
+## Other Azure News
+Platform migrations showed up in a practical "here is the mapping and CLI" form, building on last week''s Heroku exit guidance (App Service for rehost, Container Apps for container-native ops). This week''s post is the Container Apps "show your work" version, including the kinds of failure modes (provider registration, secret ordering) that tend to show up during phased cutovers.
+- [Heroku Entered Maintenance Mode — Migrating a Node.js + Redis App to Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/heroku-entered-maintenance-mode-here-s-your-next-move/ba-p/4504021)
+Observability and DR guidance focused on making large estates manageable and failover-ready, connecting to last week''s context-aware operations theme (SRE Agent needs scoped resources/logs/knowledge; Managed Grafana Entra auth for least privilege). One post outlines bulk remediation (PowerShell + Azure CLI) to standardize Azure Monitor diagnostic settings across large numbers of resources into one Log Analytics Workspace, which helps when consolidation is complicated by per-resource settings and the lack of historical log migration. A DR guide ties region selection (service parity, SKU availability, latency benchmarking, cost modeling) to execution steps like Terraform IaC, runbooks, and recurring DR drills, and it calls out diagnostics and logging as part of failover design.
+- [Centralized Monitoring in Azure: Automating Diagnostic Settings Across All Resources](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/centralized-monitoring-in-azure-automating-diagnostic-settings-across-all-resources/ba-p/4504027)
+- [Designing an Azure Disaster Recovery Strategy for Enterprise Workloads](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/designing-an-azure-disaster-recovery-strategy-for-enterprise-workloads/ba-p/4504142)
+Hybrid networking got a concrete troubleshooting note: Azure VPN Gateway uses fixed BGP timers (60s keepalive / 180s hold) and will not negotiate down to aggressive customer timers. If your SD-WAN/CPE uses 10/30, sessions can flap when the CPE hold timer expires before Azure sends a keepalive. Align timers to Azure defaults (or higher) rather than trying to approximate BFD with aggressive settings. It complements last week''s reminder that "persistent routes" do not override Azure SDN routing: control-plane behavior can be the real limiter.
+- [Azure VPN Gateway BGP timer mismatches: why aggressive CPE timers cause session flaps](https://techcommunity.microsoft.com/t5/azure-networking/my-first-techcommunity-post-azure-vpn-gateway-bgp-timer/m-p/4503580#M776)
+Database platform direction pushed PostgreSQL modernization through developer workflows: an AI-assisted Oracle-to-PostgreSQL migration tool (preview) via the PostgreSQL VS Code extension, plus broader positioning for Azure Database for PostgreSQL (Citus elastic clusters, SSD v2, Entra auth, private endpoints) and an early look at HorizonDB (private preview) for very high-scale PostgreSQL-compatible workloads. It reinforces last week''s "Postgres as bridge" theme and complements last week''s VS Code database workflow improvements by keeping migration work inside the editor.
+- [From legacy to leadership: How PostgreSQL on Azure powers enterprise agility and innovation](https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/)
+Governance guidance reinforced that production-grade metadata needs security and automation foundations (private endpoints, app registrations, Key Vault), and recommends iterative wins like early PII classification scans before expanding into full data products and lineage. It matches last week''s governance/compliance thread: make security controls repeatable and automatable so they do not get renegotiated each migration wave.
+- [Purview Data Governance: Why It Feels Hard and Why It’s Worth It](https://zure.com/blog/purview-data-governance-why-it-feels-hard-and-why-its-worth-it)
+Hybrid/edge evaluation content offered pragmatic ways to test Azure Local before buying hardware: use Azure Jumpstart LocalBox as a cloud-hosted sandbox or a nested Hyper-V HomeLab locally, then move to a certified-hardware PoC via the Azure Local Solutions Catalog. It extends last week''s hybrid and edge storyline (Azure Local LENS workbook; Arc server reporting and VM app deployment preview) with a lower-friction way to stand up a representative environment early.
+- [How to Evaluate, Test, and Demo Azure Local](https://www.thomasmaurer.ch/2026/03/how-to-evaluate-test-and-demo-azure-local/)
+The weekly video roundup remains a useful checklist for retirements and cross-service changes: AKS node OS/image retirements, compute SKU retirements, identity/security updates, and ongoing Azure AI Foundry/model catalog changes. It fits this week''s deprecation-driven ingress migration and last week''s "watch small contract changes" compute API note: timelines and defaults shifting under stable workloads create real operations work.
+- [Azure Update 20th March 2026](https://www.youtube.com/watch?v=jkpcFAYJjvM)',
+    'This week''s Azure story split into two lines: keeping platforms resilient as infrastructure evolves (edge routing, registries, ingress, DR, monitoring, hybrid networking), and modernizing data estates into Fabric/OneLake where migration assistants, governance, and real-time pipelines are becoming standard building blocks. It continues last week''s "controlled transitions" framing: change traffic layers, registry behavior, or data platforms in phases, with clearer signals and fewer surprise support boundaries.',
+    1774252800, 'azure', '/azure/roundups/weekly-azure-roundup-2026-03-23', 'TechHub',
+    'TechHub', '775E26D08220CA1F455FFEBA0B7F136B9C578C84E9EF561B0C277B52AA447C86', ',Microsoft Azure,AKS,Application Gateway For Containers,Gateway API,Azure Front Door,Azure Traffic Manager,Azure Container Registry,Geo Replication,Azure Monitor,Log Analytics,Disaster Recovery,Azure VPN Gateway,BGP,Microsoft Fabric,OneLake,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-03-16
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-03-16', 'roundups', 'Weekly Azure Roundup: Day-2 Ops, Secure Compute, Hybrid Control',
+    'Azure stories clustered around day-2 reality: better operational signal across container and hybrid estates, tighter compute security without breaking automation, and platform moves like leaving Heroku or running AI inference on-cluster. The framing across these posts is mostly about controlled transitions instead of all-at-once rewrites.
+<!--excerpt_end-->
+## SRE, incident response, and observability getting more “context-aware”
+Building on last week’s platform engineering thread, Azure reliability tooling this week emphasized that AI-assisted operations only work when grounded in your environment. Azure SRE Agent’s onboarding flow reflects that. Provisioning the runtime (managed identity, Application Insights, Log Analytics) is straightforward, but the UI pushes you to attach context so answers are not generic. That includes connecting code (health probes, auth flows, history), logs with known schemas, incident sources, scoped Azure resources, and team knowledge files. The walkthrough is clear about outcomes: deployment-state summaries via Azure CLI plus logs, diagnosing 401s with app-specific checks, generating/triaging Azure Monitor incidents, finding RBAC/Log Analytics permission gaps, and classifying GitHub issues. It ends with a practical “done” definition: the agent can handle a live incident with app-specific, data-backed guidance. (It also notes SRE Agent GA as of March 10, 2026, with creation at sre.azure.com.)
+Azure Managed Grafana 12 shipped investigation and access-control improvements. The main change is current-user Entra auth for supported Azure data sources (Azure Monitor, Azure Data Explorer, Azure Monitor Managed Service for Prometheus), so queries can run under the signed-in user’s permissions instead of a shared identity. This supports least privilege and auditing while still supporting Managed Identity and Service Principal for automation. Logs exploration also improves with a faster Explore flow and a query builder for iterating Azure Monitor Logs queries without writing KQL from scratch, plus a higher record limit (up to 30,000 per query). Metrics querying improves for Prometheus + OpenTelemetry users with better OTLP/histogram support and an OTel mode to reduce difficult label joins.
+- [What It Takes to Give SRE Agent a Useful Starting Point](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-it-takes-to-give-sre-agent-a-useful-starting-point/ba-p/4500343)
+- [''Azure Managed Grafana 12: New Authentication, Faster Log Analysis, Enhanced Monitoring''](https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-managed-grafana-12/ba-p/4500673)
+## Cloud-native operations: isolated AKS inference and clearer container supply signals
+Following last week’s hybrid/disconnected focus (Arc Gateway for Kubernetes GA, sovereign-cloud governance training), teams running AI inference under strict network controls got a blueprint for air-gapped AKS. The constraint is straightforward: with no egress (no public LBs, NAT, public IPs on node subnets, and subnet design blocking default outbound), common LLM images fail because they download weights at startup. The guide offers two patterns: build “fat” images with weights baked in and push to private ACR (example uses `az acr build` and `HF_TOKEN`), or pre-download artifacts outside the cluster and expose them via private storage (for example, Azure Files over NFS) mounted into vLLM/NIM pods. It also highlights ACR artifact cache to stage upstream images so deployments do not depend on public registries. For GPUs, it points to a managed GPU node pool preview (prereqs preinstalled and lifecycle-managed) as an operations simplifier, with NVIDIA GPU Operator air-gapped mode as the alternative for tighter version control. Validation stays operational: internal service IPs, calling an OpenAI-compatible `/v1/chat/completions` endpoint from inside the private network, and verifying the model identifier matches baked/mounted artifacts.
+Azure Container Registry also added proactive health monitoring to help separate “our pipeline broke” from “the registry is degraded.” ACR now runs SLI-based auto-detection across auth/push/pull and emits Azure Service Health events when a region is degraded. Events include tracking IDs, impacted regions/resources, and mitigation status (automated remediation vs engineer response). The practical benefit is faster correlation when CI/CD fails or Kubernetes pulls time out, and it integrates with standard paging via Service Health alert rules/action groups (PagerDuty/Opsgenie/ServiceNow/webhooks), with ARM/Bicep guidance for standardizing alerting.
+Microsoft’s KubeCon Europe 2026 lineup post is not a product change, but it shows where Azure’s cloud-native guidance is trending: AI agents for platform operations (HolmesGPT), shared GPU inference scheduling (including Kueue), multi-cloud inference patterns, and staples like Istio/networking, OpenTelemetry, supply chain tooling (Notary/ORAS/Ratify), confidential containers, Terraform operations, and fleet management.
+- [Deploying AI Inferencing in Isolated Azure Kubernetes Service (AKS) Clusters](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ai-inferencing-in-air-gapped-environments/ba-p/4498594)
+- [Proactive Health Monitoring and Auto-Communication Now Available for Azure Container Registry](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-health-monitoring-and-auto-communication-now-available/ba-p/4501378)
+- [''Microsoft Azure at KubeCon Europe 2026: Sessions, Demos, and AI Innovations''](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-europe-2026-amsterdam-nl-march-23-26/ba-p/4500716)
+## Compute security and contracts: Confidential VM workflows, plus an API response change to watch
+This continues last week’s compliance/governance thread (sovereign/hybrid controls, policy-as-code thinking), but with a compute-primitives focus: repeatable Confidential VM workflows, plus a small API contract change that can still break automation.
+The Confidential VM custom image workflow shows how to build a hardened Windows golden image once, publish via Azure Compute Gallery for versioned/cross-region rollout, then choose disk encryption posture at deployment time. One image can serve PMK and CMK because encryption is applied via OS disk configuration (`SecurityEncryptionType`) and, for CMK, a Disk Encryption Set wired to Key Vault/Managed HSM. It also calls out a pipeline constraint: to publish an image supporting Confidential security types, you must use a Source VHD, so you export a generalized OS disk to a storage-account VHD before creating an image version. The guide covers common time sinks like Sysprep failures due to BitLocker (decrypt and retry) and includes PowerShell for `-SecurityType "ConfidentialVM"`, Secure Boot, vTPM, and confidential OS encryption on Gen2 Windows Server 2022 Azure Edition images.
+Azure Migrate guidance extends this into a private, governed runbook: private endpoints for Azure Migrate and staging storage, Private DNS zones, ExpressRoute/S2S VPN, Disk Encryption Sets with CMK, and attestation-gated key release via Managed HSM so keys release only after the VM proves it booted in an expected confidential state. Planning details include supported SKUs across AMD SEV-SNP and Intel TDX (for example, DCasv6/ECasv6 and DCesv6/ECesv6), Gen2 + UEFI + Secure Boot + vTPM requirements, disk compatibility constraints (including a noted <=128 GB OS disk limit for full confidential disk encryption support, with workarounds), and OS support caveats. The runbook is structured as nine phases from appliance setup through test migration, cutover, and post-migration policy enforcement, with day-2 governance via Azure Policy, Azure Monitor, and Defender for Cloud (optionally Sentinel).
+Azure Compute also flagged a REST API contract change: with `api-version=2025-11-01`, VM/VMSS responses will always return a non-null `properties.securityProfile.securityType`. If you omit or send null on create/update, responses return `"Standard"`. Explicit `"TrustedLaunch"` and `"ConfidentialVM"` stay the same. Provisioning behavior does not change, but tooling that treats `null` as distinct must update to treat `"Standard"` as the default for the new API version.
+- [Building Reusable Custom Images for Azure Confidential VMs Using Azure Compute Gallery](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-reusable-custom-images-for-azure-confidential-vms-using/ba-p/4500880)
+- [Migrating On-prem Windows & Linux VMs to Azure Confidential Virtual Machines via Azure Migrate](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-on-prem-windows-linux-vms-to-azure-confidential/ba-p/4500898)
+- [''Azure Compute API 2025-11-01: securityType Field Now Always Non-Null in VM Responses''](https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387)
+## App platform and API patterns: Heroku exits, and APIM as a BFF without another microservice
+This week’s “controlled transition” framing echoes last week’s migration guides (container runtime shifts, ExpressRoute gateway migration): sequence changes so teams can keep shipping while platforms move. Heroku migration guidance continues to sharpen into a move-in-slices playbook. Azure App Service is framed as the closest landing zone for Heroku-style apps/APIs, with Azure Container Apps for teams ready for containers with serverless traits like scale-to-zero. It calls out continuity for common languages (.NET/Java/Node.js/Python) and Docker, then recommends incremental modernization: rehost first, then evolve toward microservices and event-driven patterns using Dapr and KEDA. For data, Azure Database for PostgreSQL is positioned as the natural step for Heroku Postgres users, aligning with last week’s Postgres-as-bridge trend. Delivery centers on GitHub integration and GitHub Actions, with operations via Azure Monitor and Azure SRE Agent, and AI feature delivery via Azure AI Foundry (Microsoft Foundry), including MCP tool-calling once apps stabilize.
+A separate guide shows implementing the BFF / Curated API pattern directly in Azure API Management policies, avoiding a separate aggregation service when the main need is fan-out plus response shaping. The examples use `<wait for="all">` with parallel `<send-request>`, store results in variables, then build a combined payload with policy expressions (C#-style) and `JObject` (Newtonsoft.Json), returning via `<return-response>`. It also covers semantics (200 when all succeed; consider 206/207 for partial success) and a practical cutoff: if orchestration logic gets too complex or divergent, a coded BFF (Functions or Container Apps) is easier to maintain.
+- [A Practical Path Forward for Heroku Customers with Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-practical-path-forward-for-heroku-customers-with-azure/ba-p/4501797)
+- [Implementing the Backend-for-Frontend (BFF) Pattern with Azure API Management](https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-the-backend-for-frontend-bff-curated-api-pattern/ba-p/4499880)
+## Other Azure News
+The MSSQL extension v1.40 for VS Code added workflow updates: Edit Data (grid edits in-editor), better object search for large schemas, DACPAC export/import for packaging and promoting schema, and flat file (.csv/.txt) import for quick loads. This reduces trips to SSMS/Azure Data Studio and supports the “move in slices” migration theme by making schema/data validation and repeatable promotion easier during platform transitions.
+- [''Next-Level SQL in VS Code: Edit Data, DACPAC Import/Export, and New Features''](https://www.youtube.com/watch?v=JhyBSthgFys)
+Storage cost/billing guidance covered what changed and how to avoid surprises. Standard HDD managed disks (S4/S6/S70/S80) now bill transactions using a 16 KiB I/O unit (with hourly caps and a per-I/O cap for large sequential I/O on S70/S80), so workloads using larger I/Os may see higher transaction counts. It also reiterates that Standard HDD OS disks retire in September 2028, so OS disk migration planning should be on the roadmap. This complements last week’s Managed Disks operations angle (instant access incremental snapshots) by making reliability and cost behavior easier to plan for.
+- [Understanding the Standard HDD I/O Unit Size Update in Azure](https://techcommunity.microsoft.com/t5/azure-storage-blog/understanding-the-standard-hdd-i-o-unit-size-update-and-what-it/ba-p/4499128)
+- [Stop Burning Money in Azure Storage](https://techcommunity.microsoft.com/t5/azure-architecture-blog/stop-burning-money-in-azure-storage/ba-p/4500208)
+Hybrid/edge updates leaned into fleet visibility and incremental capabilities, continuing last week’s Arc Gateway GA and sovereign-governance labs. The Azure Local LENS Workbook provides an importable Azure Monitor Workbook JSON for fleet views across Azure Local estates, with drill-downs and trend/compliance perspectives. Azure Arc-enabled servers had a forum recap highlighting workbook reporting starting points (including a GitHub-hosted Software Assurance Benefits dashboard), a private preview for VM Applications for third-party app deployment/patching via Arc, and Windows Server 2016 ESU enablement via Arc with a call for portal feedback.
+- [''Azure Local LENS Workbook: Fleet-Level Insights at a Glance''](https://www.thomasmaurer.ch/2026/03/azure-local-lens-workbook-fleet-level-insights-at-a-glance/)
+- [''Azure Arc Server February 2026 Forum: Reporting, VM App Deployment, and ESU Announcements''](https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-feb-2026-forum-recap/ba-p/4501793)
+Networking troubleshooting content offered a hybrid-migration reminder: guest OS persistent routes on an Azure VM do not replace Azure SDN routing. It’s a useful last-mile counterpart to last week’s ExpressRoute migration guidance and helps avoid silent routing surprises. The checklist focuses on effective routes (Network Watcher), subnet-level UDRs to enforce paths, and on-prem firewall ACL/NAT and return routes that include the new Azure address space, especially when the next hop is an on-prem device like a Cisco ASA behind S2S VPN.
+- [Troubleshooting Persistent Routing from Azure VM to On-Premises via Site-to-Site VPN](https://techcommunity.microsoft.com/t5/azure-networking/azure-vm-persistent-route-setup/m-p/4502007#M773)
+Developer onboarding resources were refreshed with a Visual Studio Dev Essentials walkthrough as a free program that aggregates tools and cloud offers in one dashboard. It highlights Visual Studio Community, VS Code, Azure Free Account credits/free services, Azure DevOps, and related downloads/training for quick learning and prototyping setup.
+- [''Visual Studio Dev Essentials: Unlocking Free Tools and Cloud Credits for Developers''](https://devblogs.microsoft.com/visualstudio/visual-studio-dev-essentials-free-practical-tools-for-every-developer/)',
+    'Azure stories clustered around day-2 reality: better operational signal across container and hybrid estates, tighter compute security without breaking automation, and platform moves like leaving Heroku or running AI inference on-cluster. The framing across these posts is mostly about controlled transitions instead of all-at-once rewrites.',
+    1773648000, 'azure', '/azure/roundups/weekly-azure-roundup-2026-03-16', 'TechHub',
+    'TechHub', '3AF3922A17D315B6BB98FD21743C68F56E0513DBDECEC6732EB4348AEF613466', ',Microsoft Azure,AKS,Azure Arc,Azure Local,Observability,Azure Monitor,Azure Managed Grafana,Application Insights,Log Analytics,Azure Container Registry,Confidential VMs,Azure Compute Gallery,Azure Migrate,Azure API Management,Azure App Service,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-03-09
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-03-09', 'roundups', 'Weekly Azure Roundup: GA Data Platforms, Hybrid, and Migrations',
+    'This week’s Azure section covers new general availability releases, migration guides, platform engineering changes, and features for secure and real-time data platforms.
+<!--excerpt_end-->
+## Azure Databricks and Real-Time Data Platforms
+Azure Databricks Lakebase is now generally available, providing a Postgres-compatible, serverless data platform for analytics, operational, and AI workloads. State management, real-time feature serving, and agent memory are supported. Postgres migrations are straightforward, and new AI models (Grok 4.0, Qwen3.5, GPT-5.x) are now supported. AI Foundry simplifies advanced model connections and analytics.
+- [Azure Databricks Lakebase: General Availability for Real-Time and AI-Driven Applications](https://techcommunity.microsoft.com/t5/azure-databricks/azure-databricks-lakebase-is-now-generally-available/ba-p/4498779)
+- [Azure Update 6th March 2026](/ai/videos/azure-update-6th-march-2026)
+## Azure Logic Apps and Integration Modernization
+Azure Logic Apps enhancements include higher API Management limits, easier migration, SAP workflow support, AKS hybrid deployment, and advanced cost management and monitoring controls. The BizTalk migration tool allows orchestrations to convert easily to Logic Apps. Tutorials cover external configuration, state management, and host migration. These changes make logic-driven automation more accessible for enterprise teams.
+- [Logic Apps Aviators Newsletter - March 2026](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-march-2026/ba-p/4498260)
+- [Migrating the BizTalk Aggregator Pattern to Azure Logic Apps Standard](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/implementing-migrating-the-biztalk-server-aggregator-pattern-to/ba-p/4495107)
+## Hybrid and Sovereign Cloud Capabilities
+Azure''s hybrid cloud now has new training (Sovereign Cloud MicroHack) for governance, RBAC, encryption, and confidential settings, available as GitHub lab challenges. Azure Arc Gateway for Kubernetes streamlines network operations for regulatory workloads. Both updates help customers meet compliance rules across disconnected or connected environments.
+- [Announcing the Public Release of the Sovereign Cloud MicroHack](https://www.thomasmaurer.ch/2026/03/announcing-the-public-release-of-the-sovereign-cloud-microhack/)
+- [Azure Arc Gateway for Kubernetes Now Generally Available](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4498561)
+- [Azure Update 6th March 2026](/ai/videos/azure-update-6th-march-2026)
+## Migration Guides for Azure Networking and Container Workloads
+Guides are available for moving from AKS Virtual Nodes to Helm-managed Container Instances, covering steps like add-on disablement, resource clean-up, and new deployment configurations. There’s also new help for ExpressRoute Gateway migration, with focus on public IP SKU changes and best practices for minimal disruption and validation.
+- [How to Migrate from Legacy Virtual Nodes to Next-Generation Virtual Nodes on Azure Container Instances](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-to-the-next-generation-of-virtual-nodes-on-azure/ba-p/4496565)
+- [ExpressRoute Gateway Backend Migration: Basic to Standard Public IP SKU](https://techcommunity.microsoft.com/t5/azure-networking-blog/expressroute-gateway-microsoft-initiated-migration/ba-p/4497689)
+## Platform Engineering, AI-Driven Infrastructure, and Compliance
+This week, analysis covers how AI-driven IaC (infrastructure as code) and policy enforcement streamline compliance and resource management. Using Copilot and other agents, teams can generate and validate infrastructure, create diagrams, and automate compliance checks in development and operations. Platforms like Copilot Spaces and Skills help with modular agent tooling, and policy-as-code systems keep cloud management auditable.
+- [Platform Engineering for the Agentic AI Era](https://devblogs.microsoft.com/all-things-azure/platform-engineering-for-the-agentic-ai-era/)
+## Location and Networking APIs
+The Azure Maps Geocode Autocomplete API is generally available, offering multi-language structured address suggestions and serving as a Bing Maps Autosuggest replacement. Documentation and migration samples provide everything needed for integration and localized applications.
+- [Announcing the General Availability of the Azure Maps Geocode Autocomplete API](https://techcommunity.microsoft.com/t5/azure-maps-blog/announcing-the-general-availability-of-the-azure-maps-geocode/ba-p/4499242)
+## Azure Managed Disks and Developer Productivity
+Managed Disks now support instant access incremental snapshots, improving restore speed and reducing downtime in premium and ultra-tier environments. New API parameters allow granular configuration and more efficient cost control for disk usage.
+- [Instant Access Incremental Snapshots: Restore Azure Disks Instantly](https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/)
+The Azure Developer CLI (azd) adds support for direct slot swaps with a single command, helping achieve zero-downtime releases and improved CI/CD automation.
+- [Azure Developer CLI (azd): One Command to Swap Azure App Service Slots](https://devblogs.microsoft.com/azure-sdk/azd-appservice-swap/)
+## Other Azure News
+Azure IaaS Resource Center adds new best practices, sample architectures, and migration resources for reliable and scalable environments, including networking, redundancy, GPU scaling, and cost optimization.
+- [Azure IaaS: Building Resilient and Scalable Cloud Infrastructure for the AI Era](https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/)
+Microsoft Fabric’s new Execute Query API (public preview) automates Power Query transformations from REST or Spark endpoints, making pipeline development and hybrid analytics easier.
+- [Execute Power Query Programmatically in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/execute-power-query-programmatically-in-microsoft-fabric/)
+A how-to explains real-time, secure streaming into Fabric using Eventstream connectors and Azure VNets, VPN, or ExpressRoute, designed for regulated scenarios.
+- [Powering Secure Private Network Streaming to Microsoft Fabric with Eventstream Connectors (Preview)](https://blog.fabric.microsoft.com/en-US/blog/powering-secure-private-network-streaming-to-fabric-with-eventstream-connectors-preview/)
+Netstar’s service migration to Drasi with Azure SQL and EventHub improved real-time fleet tracking and alerts. Event-driven integration cut manual processes and enabled faster reactions, continuing a recent trend toward continuous monitoring with Azure platform tools.
+- [How Netstar Streamlined Fleet Monitoring and Reduced Custom Integrations with Drasi](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/how-netstar-streamlined-fleet-monitoring-and-reduced-custom/ba-p/4499592)',
+    'This week’s Azure section covers new general availability releases, migration guides, platform engineering changes, and features for secure and real-time data platforms.',
+    1773043200, 'azure', '/azure/roundups/weekly-azure-roundup-2026-03-09', 'TechHub',
+    'TechHub', 'AC7539E7C0D925A4C24186B15AB3DD994906AA8326B7F2E5610D8B1781CBBFA5', ',Microsoft Azure,Azure Databricks,Lakebase,PostgreSQL,Serverless,Real Time Analytics,Azure Logic Apps,BizTalk Migration,Azure Arc,Kubernetes,AKS,ExpressRoute,Azure Maps,Managed Disks,Azure Developer CLI,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-03-02
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-03-02', 'roundups', 'Weekly Azure Roundup: SDKs, Sovereign Cloud, and Data Updates',
+    'Azure provides new features for developers and organizations, including SDK releases, confidential compute, sovereign infrastructure, enhanced data services, and expanded workflows for hybrid/multi-cloud operations.
+<!--excerpt_end-->
+## Azure SDK and Developer Tooling Updates
+The February Azure SDK update brings features for .NET, Python, JavaScript, and Go including better dependency injection, configuration, OpenTelemetry tracing, and certificate rotation. Management libraries add support for new hardware and service stacks. Azure Developer CLI introduces JMESPath queries, deployment slots, better remote build integration, and error messaging. The template gallery adds new automation blueprints for Blazor, EventHub triggers, MCP servers, agents, and AI gateways.
+- [Azure SDK Release Notes – February 2026 Highlights](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2026/)
+- [Azure Developer CLI (azd) – February 2026 Release: JMESPath, Deployment Slots & More](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2026/)
+## Confidential Compute, Sovereign Cloud, and Secure Operations
+Azure Intel® TDX Confidential VMs are now available for production workloads, offering hardware-enforced isolation, enhanced attestation, and high performance. Sovereign Cloud expansions (Azure Local, Foundry Local) allow policy control, disconnected operations, and compliance-friendly AI in private or air-gapped environments. Organizations can host large language models and productivity services fully isolated from public networks.
+- [General Availability of Azure Intel® TDX Confidential VMs](https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-general-availability-of-azure-intel-tdx-confidential/ba-p/4495693)
+- [Microsoft Sovereign Cloud Enables Disconnected Operations for Secure AI and Cloud Workloads](https://blogs.microsoft.com/blog/2026/02/24/microsoft-sovereign-cloud-adds-governance-productivity-and-support-for-large-ai-models-securely-running-even-when-completely-disconnected/)
+- [Microsoft Sovereign Cloud: Disconnected Operations for Azure, AI, and Productivity Workloads](http://aka.ms/MicrosoftSovereignCloudDisconnectedBlog)
+- [Microsoft Expands Sovereign Cloud Capabilities for AI and Productivity Workloads](https://www.linkedin.com/posts/satyanadella_microsoft-sovereign-cloud-adds-governance-activity-7432023992305319936-BGKK)
+## Microsoft Fabric and Data Engineering
+Fabric gets broad platform updates, including a VS Code extension, Git integration, modular notebooks, automation improvements, and tenant-wide security features (Customer Managed Keys, identity controls). Adaptive engines, connector expansion, and parallel CSV reading increase performance and reliability for data pipelines. Developers can find influencer spotlights, resources, and community examples covering Power BI, Spark, lakehouse, and analytics optimization.
+- [Fabric February 2026 Feature Summary](https://blog.fabric.microsoft.com/en-US/blog/fabric-february-2026-feature-summary/)
+- [Fabric Influencers Spotlight: Microsoft Fabric Community Highlights (February 2026)](https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-february-2026/)
+- [One View to Rule Them All: Exploring OneLake Catalog in Microsoft Fabric](/ml/videos/one-view-to-rule-them-all-exploring-onelake-catalog-in-microsoft-fabric)
+## SQL Platform for AI and Modern Analytics
+Microsoft SQL and Fabric platforms provide new vector and semantic search features, RAG integration, and real-time mirroring with OneLake. Developers gain T-SQL extensions for similarity and ranking, governance with Purview and row-level security, and AI-powered T-SQL authoring with Copilot. Guides cover migration, dataset creation, and SQL Pool configuration.
+- [Preparing Your Data Platform for the AI Revolution: Microsoft SQL and Fabric](https://blog.fabric.microsoft.com/en-US/blog/something-big-is-happening-is-your-data-platform-ready/)
+- [Smarter Queries Start Here: Vector Search in SQL Server & Azure SQL DB](/ai/videos/smarter-queries-start-here-vector-search-in-sql-server-and-azure-sql-db)
+## Multi-Cloud Database Integration: Oracle Database@Azure
+Oracle Database@Azure is now generally available in Amsterdam, bringing full support for Oracle database services on Azure. Migration does not require code changes, and the platform offers compliance-ready options with technical webinars for planning, licensing, and best practices.
+- [Run Oracle Databases Your Way on Oracle Database@Azure – Technical Webinar Series Announced](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/introducing-run-oracle-your-way-on-oracle-database-azure-a-new/ba-p/4496593)
+- [Oracle Database@Azure Now Live in West Europe: Enterprise Databases in Azure Amsterdam Region](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-is-now-generally-available-in-west-europe/ba-p/4497632)
+## MCP Server Integration and Agentic Workflows
+New guides detail the integration of MCP servers with Azure SRE Agent and third-party tools like Datadog, Atlassian Rovo, and PagerDuty. Instructions include setup, authentication, troubleshooting, scenario coverage, and custom extension with subagents. Azure Logic Apps and Functions add wizards and templates for easy MCP server automation, and Python packages get extended CLI and CI/CD support.
+- [Integrating Atlassian Rovo MCP Server with Azure SRE Agent](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-atlassian-rovo-mcp-server-in-azure-sre-agent/ba-p/4497122)
+- [Integrating Datadog MCP Server with Azure SRE Agent for Enhanced Observability](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-datadog-mcp-server-in-azure-sre-agent/ba-p/4497123)
+- [Integrate PagerDuty MCP Server with Azure SRE Agent for Automated Incident Management](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-pagerduty-mcp-server-in-azure-sre-agent/ba-p/4497124)
+- [Use the New Logic Apps MCP Server Wizard to Configure MCP Servers Easily](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/stop-writing-plumbing-use-the-new-logic-apps-mcp-server-wizard/ba-p/4496702)
+- [Building Interactive MCP Apps with the Azure Functions MCP Extension](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-mcp-apps-with-azure-functions-mcp-extension/ba-p/4496536)
+- [Improved Python (PyPi/uvx) Support in Azure MCP Server](https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-better-python-support/)
+## Application Hosting, Background Workloads, and Persistent SSL in Azure
+Updates for Azure Functions in Container Apps streamline background job and event-driven scenarios, with unified monitoring and Python integrations. Java developers get detailed self-signed certificate management guides for Linux-based Azure Functions, covering deployment and renewal outside restricted directories.
+- [Rethinking Background Workloads with Azure Functions on Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/rethinking-background-workloads-with-azure-functions-on-azure/ba-p/4496861)
+- [Best Practice: Using Self-Signed Certificates with Java on Azure Functions (Linux)](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/best-practice-using-self-signed-certificates-with-java-on-azure/ba-p/4496900)
+## Networking Updates: Scalable ExpressRoute Gateway
+A new ExpressRoute Gateway SKU delivers dynamic scaling, higher bandwidth, and multi-cloud redundancy. Video guides and technical content help teams migrate and maximize bandwidth.
+- [Overview of the New Scalable ExpressRoute Gateway SKU](/azure/videos/overview-of-the-new-scalable-expressroute-gateway-sku)
+- [Scalable ExpressRoute Gateway: New SKU Deep Dive](/azure/videos/scalable-expressroute-gateway-new-sku-deep-dive)
+## API Management, Observability, and Registry Scaling
+Azure API Management sets new service caps, aligning scaling strategies. Azure Monitor improves secure ingestion, Kubernetes pod placement, and automated log transformations with prebuilt KQL templates. Azure Container Registry Premium increases max size to 100 TiB and adds performance/monitoring enhancements for large ML pipelines.
+- [Azure API Management: 2026 Service Limit Updates for All Tiers](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/new-azure-api-management-service-limits/ba-p/4497574)
+- [New Public Preview Features in Azure Monitor Pipeline: Secure Ingestion, Pod Placement, and Data Transformations](https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-new-public-preview-capabilities-in-azure-monitor/ba-p/4488904)
+- [Azure Container Registry Premium SKU Increases Storage to 100 TiB](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-premium-sku-now-supports-100-tib/ba-p/4497651)
+## Azure Local, Provisioning, and Migration Workflows
+New central provisioning for Azure Local (using Azure Arc, ARM templates, and FIDO Onboarding) is now in public preview to simplify supply chain management for distributed applications. Migration guides cover VM transfer from VMware/Hyper-V to Azure Local without third-party tools, including synchronized cutover strategies for less downtime.
+- [Public Preview: Simplified Machine Provisioning for Azure Local via Azure Arc](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-public-preview-simplified-machine-provisioning-for/ba-p/4496811)
+- [Migrating VMs from VMware or Hyper-V to Azure Local with Azure Migrate](/azure/videos/migrating-vms-from-vmware-or-hyper-v-to-azure-local-with-azure-migrate)
+## Other Azure News
+Recent developer tooling fixes target hosting and integration workflows, following last week''s focus on OpenClaw deployment, OneLake/Databricks cross-integration, and troubleshooting. Security enhancements target vulnerability and compliance issues.
+- [Azure Update 27th February 2026: Latest Cloud Announcements and Tools](/github-copilot/videos/azure-update-27th-february-2026-latest-cloud-announcements-and-tools)
+- [Hosting OpenClaw on Azure App Service: Full Guide](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/you-can-host-openclaw-on-azure-app-service-here-s-how/ba-p/4496563)
+- [Exploring Azure Face API: Facial Landmark Detection and Real-Time Analysis with C#](https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-azure-face-api-facial-landmark-detection-and-real-time/ba-p/4495335)
+- [Agent 365 and Agent ID Overview](/ai/videos/agent-365-and-agent-id-overview)
+- [Processing CDC Streams Using Microsoft Fabric Eventstreams SQL](https://blog.fabric.microsoft.com/en-US/blog/processing-cdc-streams-using-fabric-eventstreams-sql/)
+- [How to Access a Shared OneDrive Folder in Azure Logic Apps](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-access-a-shared-onedrive-folder-in-azure-logic-apps/ba-p/4484962)
+- [Zero-Copy Access to OneLake Data in Azure Databricks (Preview)](https://blog.fabric.microsoft.com/en-US/blog/zero-copy-access-to-onelake-data-in-azure-databricks-preview/)
+- [How to Troubleshoot Azure Functions Not Visible in Azure Portal](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-not-visible-in-azure-portal/ba-p/4495873)',
+    'Azure provides new features for developers and organizations, including SDK releases, confidential compute, sovereign infrastructure, enhanced data services, and expanded workflows for hybrid/multi-cloud operations.',
+    1772438400, 'azure', '/azure/roundups/weekly-azure-roundup-2026-03-02', 'TechHub',
+    'TechHub', 'CF40C5763DD6EEBAE0FD341929B28DC1038CAFF5AD29B242E4215712D685A557', ',Microsoft Azure,Azure SDK,Azure Developer CLI,OpenTelemetry,Confidential Computing,Intel TDX,Microsoft Sovereign Cloud,Azure Local,Azure Arc,Microsoft Fabric,OneLake,Azure SQL,Vector Search,Oracle Database@Azure,Azure Functions,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-02-23
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-02-23', 'roundups', 'Weekly Azure Roundup: Resilience, Migration, and AI Infrastructure',
+    'Azure introduces new updates in infrastructure, platform integration, migration planning, and enterprise feature support. New releases offer better resiliency, continuity in operations, high-performance AI training, improved container management, cost tracking, and developer experience. Migration support and platform modernization guide teams moving to more robust, secure, and scalable Azure solutions.
+<!--excerpt_end-->
+## Cloud Reliability, Resiliency, and Recoverability
+A new hands-on Azure guide explains strategies to improve reliability and recoverability, using best practices from Cloud Adoption and Well-Architected Frameworks. Topics include instrumentation (Azure Monitor), chaos testing, governance, isolation, redundancy, scaling, and traffic management. The Azure Copilot Resiliency Agent supports environment checks and automated remediation. Recovery processes use Backup, Site Recovery, and scripted runbooks. Security tips and a 30-day resilience checklist help teams deploy resilient cloud systems.
+This continues the operational reliability focus, agent-based management, and automation practices discussed previously.
+- [Azure Reliability, Resiliency, and Recoverability: Building Cloud Continuity by Design](https://azure.microsoft.com/en-us/blog/azure-reliability-resiliency-and-recoverability-build-continuity-by-design/)
+## Azure Kubernetes Service and Container Routing
+The latest documentation guides organizations moving from self-hosted Nginx Ingress on AKS to the managed AKS App Routing add-on, which is supported through 2026. The approach keeps downtime low, manages resource and DNS changes, and highlights differences after migration (such as TLS and configuration). Azure supports transition with platform-specific enhancements, and teams are advised to prepare for Istio and Gateway API solutions in the future.
+This step-by-step migration support aligns with networking and routing updates released for AKS last week.
+- [Seamless Migration from Self-Hosted Nginx Ingress to Azure AKS App Routing Add-On](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/seamless-migrations-from-self-hosted-nginx-ingress-to-the-aks/ba-p/4495630)
+## Enterprise Workflow Integration: Azure Logic Apps and SAP
+Technical guides now cover connecting Azure Logic Apps with SAP. The content walks through scalable workflow designs, schema and error management, CSV and XML transformation, calling SAP RFCs, automating alerts, and handling remedial scenarios. AI validation features extend quality assurance, and BizTalk migration guidance supports building reliable hybrid systems, moving from legacy orchestrations to modern cloud-based and AI-checked patterns.
+This follows earlier BizTalk migration guidance and highlights stepwise integration with SAP.
+- [Logic Apps Agentic Workflows with SAP - End-to-End Integration Patterns](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-agentic-workflows-with-sap-part-1-infrastructure/ba-p/4491906)
+- [Integrating Azure Logic Apps with SAP: Infrastructure and Workflow Contracts (Part 1)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agentic-logic-apps-integration-with-sap-part-1-infrastructure/ba-p/4491906)
+## Azure AI Infrastructure and Performance
+Azure has been validated as the first NVIDIA Exemplar Cloud for GB300 (Blackwell) and H100 systems. This status certifies high performance and reliability for training next-generation language models, including access to ND GPU clusters, InfiniBand networking, and optimized software, which can help teams scale to large model workloads with predictable results.
+This validation supports recent improvements in Azure’s AI and analytics infrastructure, ensuring organizations can handle demanding and advanced workloads.
+- [Azure Achieves NVIDIA Exemplar Cloud Status for Next-Generation AI Performance](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-recognized-as-an-nvidia-cloud-exemplar-setting-the-bar-for/ba-p/4495747)
+## Site Reliability Engineering and DevOps Automation in Azure
+The Azure SRE Agent now provides tools for investigating Log Analytics in Private Link-enabled environments with Azure Functions, VNet integration, managed identity, and Entra ID authentication. Guides on incident workflows include using the CLI, RBAC, and building custom monitors for SSL certificates. Documentation extends to risk evaluation, reporting, and Elasticsearch MCP server integration for secure automation and conversational log review.
+This expands the SRE Agent’s feature set noted in past roundups, making secure cloud automation and monitoring more accessible.
+- [How Azure SRE Agent Can Investigate Resources in a Private Network](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-azure-sre-agent-can-investigate-resources-in-a-private/ba-p/4494911)
+- [Building a Custom SSL Certificate Monitor with Azure SRE Agent and Python](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-a-custom-ssl-certificate-monitor-with-azure-sre-agent-from/ba-p/4495832)
+- [Get started with Elasticsearch MCP server in Azure SRE Agent](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-elasticsearch-mcp-server-in-azure-sre-agent/ba-p/4492896)
+## Migration and Modernization: Cloud Workload Transitions
+Migration guides cover AWS-to-Azure workload moves and strategies for transitioning large enterprise SharePoint Online environments. The AWS guide provides a phased migration checklist, with best practices and tools for validation. Enterprise SharePoint migration emphasizes clean up, compatibility, compliance, governance, and rollout. Azure Arc updates unify the migration process for SQL Server, with built-in assessment, provisioning, and Copilot-assisted guidance.
+These guides reinforce last week’s migration and modernization topics, focusing on structured and low-risk transitions.
+- [Migrating Workloads from AWS to Azure: A Structured Approach for Cloud Architects](https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-workloads-from-aws-to-azure-a-structured-approach-for/ba-p/4495227)
+- [Migrating to SharePoint Online: Lessons Learned from Large Enterprises](https://dellenny.com/migrating-to-sharepoint-online-lessons-learned-from-large-enterprises/)
+- [SQL Server Migration Made Easy with Azure Arc](/azure/videos/sql-server-migration-made-easy-with-azure-arc)
+## Azure Managed Disk and Storage Enhancements
+Azure Migrate now offers recommendations for using Premium SSD v2, Ultra, and ZRS disks—giving customers options to improve performance, cost efficiency, and data recovery. Snapshot access now simplifies backup workflows. Container Registry gains private preview of geo-replicated regional endpoints for better control, failover, and reliability in distributed or Kubernetes environments.
+These improvements add flexibility and support regional rollouts, following on from last week’s disk and storage innovations.
+- [Azure Migrate Adds Support for Premium SSD v2, Ultra, and ZRS Disks](https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-migrate-now-supporting-premium-ssd-v2-ultra-and-zrs-disks/ba-p/4495332)
+- [Regional Endpoints for Geo-Replicated Azure Container Registries (Private Preview)](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/regional-endpoints-for-geo-replicated-azure-container-registries/ba-p/4496186)
+## Azure Virtual Desktop: Lifecycle Management and Connectivity
+Azure Virtual Desktop receives guidance on session host retirement, including managing identity cleanup, automated decommissioning, and autoscale event handling. UDP RDP Shortpath over Private Link is now generally available, offering lower latency, higher performance, and simplified secure access for AVD sessions.
+These updates enhance gov/cloud network policy management, as covered in recent networking guides.
+- [Practical Framework for AVD Host Decommissioning Governance](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/improper-avd-host-decommissioning-a-practical-governance/m/p/4495437#M14006)
+- [Enabling UDP RDP Shortpath Over Private Link for Azure Virtual Desktop](https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/rdp-shortpath-udp-over-private-link-is-now-generally-available/ba-p/4494644)
+## Azure Virtual Machine Scale Sets and Networking
+Automatic zone balancing for VMSS (public preview) distributes VMs evenly across zones, reducing manual balancing and increasing availability. NAT Gateway v2 introduces zone redundancy, IPv6 capabilities, enhanced performance, and improved log features for network diagnostics. Existing guides help teams plan costs and scale effectively.
+Recent VM and networking advances are continued here, supporting reliable and cloud-native networking tools.
+- [Public Preview: Automatic Zone Balance for Azure Virtual Machine Scale Sets](https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-automatic-zone-balance-for-virtual-machine-scale/ba-p/4494476)
+- [NAT Gateway v2 Overview](/azure/videos/nat-gateway-v2-overview)
+## Azure API Management for Enterprise AI and Multi-Region Deployments
+Uniper’s Unified AI Gateway using Azure API Management illustrates centralized governance over generative AI services, offering dynamic routing, authentication, and streamlined onboarding. Pairing API Management with Azure Front Door supports multi-region, active-active deployments, enabling global endpoints, failover, and policy enforcement.
+These API and governance models expand on centralized and resilient patterns noted in last week’s cloud and AI integration updates.
+- [Azure API Management Unified AI Gateway Design Pattern for Enterprise AI Governance](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-api-management-unified-ai-gateway-design-pattern/ba-p/4495436)
+- [Using Azure API Management with Azure Front Door for Multi-Region, Active-Active Architectures](https://techcommunity.microsoft.com/t5/microsoft-developer-community/using-azure-api-management-with-azure-front-door-for-global/ba-p/4492384)
+## Microsoft Fabric Analytics, Security, and Identity
+Fabric SQL Database use cases are highlighted for analytics, metadata, logging, OLTP, and modernization tasks. Snowflake key-pair authentication is now offered for passwordless access. Billing changes clarify costs for AI Functions and Services, and OneLake shortcuts support workspace/service principal identity, reducing reliance on user credentials.
+These features strengthen integration, security, and governance released in recent Microsoft Fabric reports.
+- [Fabric SQL Database Use Cases Within Analytics Solutions](/ml/videos/fabric-sql-database-use-cases-within-analytics-solutions)
+- [General Availability: Snowflake Key-Pair Authentication in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/snowflake-key-pair-authentication-generally-available/)
+- [Billing Updates: Dedicated Operations for Fabric AI Functions and Services](https://blog.fabric.microsoft.com/en-US/blog/billing-updates-new-operations-for-fabric-ai-functions-and-ai-services/)
+- [OneLake SharePoint and OneDrive Shortcuts Now Support Workspace and Service Principal Identities](https://blog.fabric.microsoft.com/en-US/blog/onelake-sharepoint-and-onedrive-shortcuts-now-support-workspace-and-service-principal-identities-generally-available/)
+## Azure Network Troubleshooting and Sovereignty Solutions
+A new case study investigates virtual network routing flows, clarifying how unexpected VNet-to-vWAN connections can form. A video guide explains how Azure and Azure Local meet sovereignty, compliance, data residency, and hybrid control requirements for regulated workloads.
+These materials extend previous practical troubleshooting and compliance strategy coverage for Azure networks.
+- [Azure VNet-to-vWAN Routing Mystery: How Does On-Premises Traffic Flow Without Direct Connection?](https://techcommunity.microsoft.com/t5/azure-networking/help-how-is-vnet-traffic-reaching-vwan-on-prem-when-the-vnet-isn/m/p/4495408#M767)
+- [Meeting Sovereignty Requirements with Azure and Azure Local](/azure/videos/meeting-sovereignty-requirements-with-azure-and-azure-local)
+## Other Azure News
+Developer tooling gains JMESPath query abilities in Azure CLI (azd v1.23.4 and above), making JSON filtering and transformation easier. Additional updates cover managed identity, API integration, zone-redundant storage for compliance and high-availability, plus guides for migration and troubleshooting.
+As always, these updates reinforce commitment to developer experience and platform resilience.
+- [JMESPath Query Support in Azure Developer CLI JSON Output](https://devblogs.microsoft.com/azure-sdk/azd-jmespath-query-support/)
+- [Azure Update 20th February 2026](/dotnet/videos/azure-update-20th-february-2026)
+- [Azure Migrate Adds Support for Premium SSD v2, Ultra, and ZRS Disks](https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-migrate-now-supporting-premium-ssd-v2-ultra-and-zrs-disks/ba-p/4495332)
+- [General Availability: Snowflake Key-Pair Authentication in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/snowflake-key-pair-authentication-generally-available/)
+- [Azure VNet-to-vWAN Routing Mystery: How Does On-Premises Traffic Flow Without Direct Connection?](https://techcommunity.microsoft.com/t5/azure-networking/help-how-is-vnet-traffic-reaching-vwan-on-prem-when-the-vnet-isn/m/p/4495408#M767)
+- [Migrating Workloads from AWS to Azure: A Structured Approach for Cloud Architects](https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-workloads-from-aws-to-azure-a-structured-approach-for/ba-p/4495227)
+- [Migrating to SharePoint Online: Lessons Learned from Large Enterprises](https://dellenny.com/migrating-to-sharepoint-online-lessons-learned-from-large-enterprises/)',
+    'Azure introduces new updates in infrastructure, platform integration, migration planning, and enterprise feature support. New releases offer better resiliency, continuity in operations, high-performance AI training, improved container management, cost tracking, and developer experience. Migration support and platform modernization guide teams moving to more robust, secure, and scalable Azure solutions.',
+    1771833600, 'azure', '/azure/roundups/weekly-azure-roundup-2026-02-23', 'TechHub',
+    'TechHub', 'F9EAFC3433AA775F8488148A7592E22CCF04280B1751D1CA78E0C288A9B2177E', ',Microsoft Azure,Azure Well Architected Framework,Azure Monitor,Azure Copilot,Azure Backup,Azure Site Recovery,AKS,Nginx Ingress,Azure App Routing,Azure Logic Apps,SAP Integration,Azure SRE Agent,Azure Arc,Azure Migrate,Azure Virtual Desktop,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-02-16
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-02-16', 'roundups', 'Weekly Azure Roundup: Fabric SQL, OpenTelemetry, and Agent Ops',
+    'Recent Azure news includes new guides and updates for data platforms, security, workflow automation, and migration tools. Azure is continuing to add support for industry standards, integrate closely with Fabric and Databricks, provide Logic Apps and infrastructure enhancements, and improve compliance, networking, and platform reliability.
+<!--excerpt_end-->
+## Microsoft Fabric: Unified Data, Governance, and AI-Ready SQL
+Fabric’s new SQL Database is SaaS-native, exposing operational tables as Delta for instant analytics in OneLake. Enhanced Copilot features now in the SQL endpoint and Query Editor let you run queries in plain English and troubleshoot schemas. The OneLake Catalog centralizes data discovery, while sensitivity labels and other enterprise options automate regulatory compliance. New CI/CD features (SqlPackage, Terraform, CLI) promote repeatable deployments. SQLCon and FabCon hype the growing ecosystem through technical deep dives.
+- [SQL Database in Microsoft Fabric: SaaS-Native, AI-Ready Platform](https://blog.fabric.microsoft.com/en-US/blog/sql-database-in-fabric-built-for-saas-ready-for-ai/)
+- [OneLake Catalog: Unified Data Discovery and Governance in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-the-trusted-catalog-for-organizations-worldwide/)
+- [Automating Data Governance in Microsoft Fabric with Default Domain Labels](https://blog.fabric.microsoft.com/en-US/blog/governance-on-autopilot-the-power-of-default-domain-labels-in-fabric-generally-available/)
+- [Five Reasons to Attend SQLCon: A Deep Dive Into SQL Server, Azure SQL, and Microsoft Fabric](https://blog.fabric.microsoft.com/en-us/blog/32624)
+## Cloud Observability and OpenTelemetry: From SRE Automation to Migration Guidance
+Application Insights SDK 3.x for .NET now makes it easier to use OpenTelemetry, helping with observability in both legacy and new apps. The Azure SRE Agent with Model Context Protocol (MCP) keeps building agent-based automation for Databricks compliance and incident response. New SCOM-to-Azure Monitor migration tools create compatible analysis reports and ARM templates, supporting the move to more automated, modern monitoring.
+- [Application Insights SDK 3.x for .NET: Easier Migration to OpenTelemetry](https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-application-insights-sdk-3-x-for-net/ba-p/4493988)
+- [Automate Databricks Compliance and Incident Response with Azure SRE Agent and Model Context Protocol](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-driven-azure-sre-for-databricks/ba-p/4494630)
+- [Azure WAF Compliance with MCP-Driven SRE Agent](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-waf-compliance-with-mcp-driven-sre-agent/ba-p/4494687)
+- [Accelerating SCOM to Azure Monitor Migrations with Automated Analysis and ARM Template Generation](https://techcommunity.microsoft.com/t5/azure-observability-blog/accelerating-scom-to-azure-monitor-migrations-with-automated/ba-p/4493593)
+## Azure Data Engineering: Cosmos DB, BizTalk Migration, Logic Apps Hybrid
+A new Pantone case study details an AI agent app running on Cosmos DB, leveraging vector search and orchestration for chatbot scalability.
+The BizTalk Migration Starter toolkit helps teams move from legacy BizTalk to Logic Apps. New Logic Apps features (e.g., Arc-enabled AKS, Jumpstart templates) provide hybrid and multi-cloud deployment paths, streamlining a broad range of operations.
+- [The Data Behind Pantone''s Agentic AI: Building on Azure Cosmos DB](https://azure.microsoft.com/en-us/blog/the-data-behind-the-design-how-pantone-built-agentic-ai-with-an-ai-ready-database/)
+- [BizTalk Migration Starter: Open Source Toolkit for Migrating BizTalk Applications to Azure Logic Apps](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/a-biztalk-migration-tool-from-orchestrations-to-logic-apps/ba-p/4494876)
+- [Deploying Hybrid Logic Apps with Azure Arc on AKS Using Jumpstart Templates](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-arc-jumpstart-template-for-hybrid-logic-apps-deployment/ba-p/4493996)
+## Agentic Cloud Operations and Azure Copilot
+Azure Copilot is rolling out production-ready agent-based cloud management, moving beyond previous automation to centralize resource discovery, enforce policy, and automate compliance—all through a user-friendly portal and with RBAC and BYOS flexibility.
+- [Agentic Cloud Operations with Azure Copilot: Transforming Cloud Management with AI-Driven Agents](https://azure.microsoft.com/en-us/blog/agentic-cloud-operations-a-new-way-to-run-the-cloud/)
+## AKS Networking and Cloud Native Security
+AKS upgrades now bring nftables support (for scaling and Project Calico integration) and confidential VMs on Azure Government Cloud, improving security for zero-trust and regulated scenarios.
+- [Scaling AKS Networking with nftables and Project Calico](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-iptables-scaling-aks-networking-with-nftables-and-project/ba-p/4494467)
+- [DCasv6 and ECasv6 Confidential Virtual Machines in Azure Government Cloud](https://techcommunity.microsoft.com/t5/azure-confidential-computing/dcasv6-and-ecasv6-confidential-vms-in-azure-government-cloud/ba-p/4494604)
+## Azure Monitor and Observability Pipeline
+Azure Monitor introduces new pipeline transformation features and AI-based workflows for App Service, supporting web agent hosting, OpenAI integration, and improved operations.
+- [Public Preview: Azure Monitor Pipeline Transformations](https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-azure-monitor-pipeline-transformations/ba-p/4491980)
+- [From Local MCP Server to Hosted Web Agent: AI-Powered App Service Observability on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-local-mcp-server-to-hosted-web-agent-app-service/ba-p/4493241)
+## Azure Data Studio Retirement and VS Code Migration
+Azure Data Studio will reach end of life on February 28. Guidance now explains SQL developer migration to the VS Code MSSQL Extension, helping teams retain backup and workflow tools.
+- [Azure Data Studio Retirement: Transitioning SQL Development to VS Code](/azure-data-studio-retirement-transitioning-sql-development-to-vs-code)
+## Azure Virtual Desktop and Networking Policy Changes
+The “Default Outbound Access” feature in Azure networking will be retired for new VNets, requiring users to define NAT and outbound policies for Azure Virtual Desktop deployments. Updated troubleshooting for SSO (macOS and Windows 11 25H2) and RDP client connection issues is covered.
+- [Azure Network Changes: Default Outbound Access Removal and Implications for Azure Virtual Desktop](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-s-default-outbound-access-changes-guidance-for-azure/m-p/4494462#M14000)
+- [SSO Issues on Azure Virtual Desktop for macOS Clients After Windows 11 25H2 Update](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/macos-sso-no-longer-fully-functional-on-avd-win11-25h2/m-p/4494544#M14001)
+- [Troubleshooting AVD Client Connection Issues in Windows App vs Web Client](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/your-computer-was-unable-to-connect-to-the-remote-computer/m-p/4494411#M13999)
+## Azure Platform Updates
+This week’s Azure Update details further modernization improvements: AKS now supports Kubernetes 1.34, additional disk backup, SQL secondary replicas, wider AI/Databricks support, the Thailand South region, and Entra identity updates—contributing to platform reliability and regional extension.
+- [Azure Update - Friday the 13th February 2026](/azure-update-friday-the-13th-february-2026)
+## Other Azure News
+Azure Developer CLI (`azd`) now supports deployment slots for App Service, making repeatable deployments easier and boosting productivity. CLI reliability updates have also rolled out.
+- [Deploy to Azure App Service Deployment Slots with azd](https://devblogs.microsoft.com/azure-sdk/azd-app-service-slot/)
+Recent compliance automation (manual update for Data Gateway, new FinOps Toolkit, Sovereign and banking landing zone architectures) helps organizations streamline governance and deployment across regulated industries.
+- [Manual Update Feature for On-Premises Data Gateway (Public Preview)](https://blog.fabric.microsoft.com/en-US/blog/manual-update-for-on-premises-data-gateway-public-preview/)
+- [What’s New in FinOps Toolkit 13: January 2026 Feature Updates](https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-13-january-2026/ba-p/4493090)
+- [Deploy VMs on Azure Local with Portal, CLI & Bicep (IaC)](https://www.thomasmaurer.ch/2026/02/deploy-vms-on-azure-local-with-portal-cli-bicep-iac/)
+- [Sovereign Landing Zones for Microsoft Azure: Architecture and Compliance Explained](https://www.thomasmaurer.ch/2026/02/sovereign-landing-zones-for-microsoft-azure-slz-explained/)
+- [Azure Landing Zone for Indian Banks: Regulatory-Ready Architecture and Compliance](https://techcommunity.microsoft.com/t5/azure-migration-and/azure-landing-zone-and-compliance-for-banks-indian-banks/ba-p/4491951)
+Modern SharePoint architecture guidance is now available, carrying forward best practices for governance automation, Microsoft 365 integration, and secure, scalable sites.
+- [Modern SharePoint Architecture: Best Practices for Scalable Intranets in 2026](https://dellenny.com/modern-sharepoint-architecture-best-practices-for-scalable-intranets-in-2026/)
+Microsoft is publishing new work on using high-temperature superconductors to increase datacenter energy efficiency—adding to ongoing initiatives for energy savings as the platform scales.
+- [How High-Temperature Superconductors Could Revolutionize Power Delivery in Microsoft Datacenters](https://azure.microsoft.com/en-us/blog/can-high-temperature-superconductors-transform-the-power-infrastructure-of-datacenters/)
+Guidance is out for addressing webhook authentication issues with Azure Event Grid, ACS, and Dynamics 365, supporting secure integration and event management.
+- [Resolving Azure Event Grid Entra Authentication Issues for ACS and Dynamics 365 Webhooks](https://techcommunity.microsoft.com/t5/azure/how-to-fix-azure-event-grid-entra-authentication-issue-for-acs/m-p/4494308#M22430)',
+    'Recent Azure news includes new guides and updates for data platforms, security, workflow automation, and migration tools. Azure is continuing to add support for industry standards, integrate closely with Fabric and Databricks, provide Logic Apps and infrastructure enhancements, and improve compliance, networking, and platform reliability.',
+    1771228800, 'azure', '/azure/roundups/weekly-azure-roundup-2026-02-16', 'TechHub',
+    'TechHub', '79FE88B1CBBEFF00388B780228687BD8705FC6DE4FB3A29782B493C2B919DFFC', ',Microsoft Azure,Microsoft Fabric,Azure SQL,OneLake,Delta Lake,Databricks,OpenTelemetry,Application Insights,Azure Monitor,AKS,Logic Apps,Azure Copilot,Azure Virtual Desktop,Azure Developer CLI,Compliance And Governance,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-02-09
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-02-09', 'roundups', 'Weekly Azure Roundup: Resiliency, AKS Observability, and Fabric',
+    'New Azure releases strengthen infrastructure, automation, security, and developer experience.
+<!--excerpt_end-->
+## Cloud Architecture, Resource Management, and Resiliency
+John Savill’s "Azure State of the Union 2026" covers practical guidance for cloud design: managing capacity, right-sizing VMs, scaling, configuring zones, governance, automation, and basic security. Infrastructure as Code, policy enforcement, and multi-region deployment are included. For specialized workloads, a six-layer Citrix VDI reference highlights Global VNet Peering, Azure NetApp Files, FSLogix Cloud Cache, and Azure Front Door for backup and disaster recovery.
+- [Azure State of the Union 2026](/azure-state-of-the-union-2026)
+- [Building Resilient Multi-Region Citrix VDI Workloads on Azure: A Six-Layer Framework](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/proactive-resiliency-in-azure-for-specialized-workload-i-e/ba-p/4492260)
+## Kubernetes and Container Solutions
+The Retina 1.0 release adds network monitoring for K8s clusters on Linux or Windows, integrating with tools like eBPF, Prometheus, Grafana, and Azure Monitor. Plug-in support and Helm ease troubleshooting at the network level (like packet and DNS issues) across platforms (AKS, EKS, and more). A detailed AKS reference shows how to build multi-region clusters covering routing, geo-storage, security, and automated deployment. Azure Container Registry (ACR) tenant migration guidance continues last week’s focus on multi-tenant transition.
+- [Retina 1.0 Released: Kubernetes Network Observability with Azure Monitor Integration](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/retina-1-0-is-now-available/ba-p/4489003)
+- [Reference Architecture for Highly Available Multi-Region Azure Kubernetes Service (AKS)](https://techcommunity.microsoft.com/t5/azure-architecture-blog/reference-architecture-for-highly-available-multi-region-azure/ba-p/4490479)
+- [Migrating Azure Container Registry (ACR) Between Azure AD Tenants: Step-by-Step Process](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/aks-tenant-migration-considerations-and-approach/ba-p/4415198)
+## Real-Time Analytics and Data Engineering
+OneLake and Snowflake now offer native Iceberg table interoperability, supporting fast two-way analytics integration. New Eventstream connectors expand to HTTP, MongoDB CDC, and weather feeds, with users now able to code streams with SQL Operators, adjust schemas, and improve pipeline security. Integration with SAP creates new options for real-time monitoring workflows. These enhancements complement last week''s event handling and on-premises gateway updates.
+- [Microsoft OneLake and Snowflake Interoperability Now Generally Available](https://blog.fabric.microsoft.com/en-US/blog/microsoft-onelake-and-snowflake-interoperability-is-now-generally-available/)
+- [What''s New in Fabric Eventstream: July–December 2025 Updates](https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-eventstream-july-december-2025-updates/)
+- [Unlock Real-Time Insights from SAP with Fabric Real-Time Intelligence](https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-insights-from-sap-with-fabric-real-time-intelligence/)
+## AI-Ready Databases and Developer Integration
+Azure PostgreSQL now adds a Visual Studio Code provisioning tool, supports secure Entra ID logins, and connects to Azure Monitor for better tracking. Copilot integration allows for natural language SQL, easy debugging, and LLM queries using Foundry and MCP, so teams can build AI, search, and analytics solutions faster. Upgraded SKUs, cluster support, and PostgreSQL 18 add power and flexibility. Nasdaq’s Boardvantage demonstrates secure AI-powered document workflows using these features.
+- [PostgreSQL on Azure Supercharged for AI-Driven Applications](https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/)
+## Enterprise Data Warehousing and Migration
+Migrating from Synapse SQL Pools to Microsoft Fabric Data Warehouse is supported by new tests that show big cost and speed gains for large datasets (>10TB). Migration help includes stepwise guides, best practices, and validation tools. Community events (FabCon Atlanta, SQLCon) provide direct advice and early product information.
+- [Microsoft Fabric Data Warehouse vs Azure Synapse: ESG Validation and Migration Guidance](https://blog.fabric.microsoft.com/en-US/blog/a-turning-point-for-enterprise-data-warehousing/)
+- [FabCon Atlanta—Data Warehouse Edition: Explore the Future of Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/33276/)
+## Platform Automation, Security, and Networking
+Azure Automated VM Recovery improves uptime by finding and fixing more types of failures and adding monitoring tags. Azure NetApp Files’ Elastic Zone-Redundant configuration adds live sync and failover for NFS/SMB, boosting resiliency. NAT Gateway (StandardV2) now supports outbound flow logging, making monitoring easier. Microsoft will soon offer MANA hardware adapters for all VM types, boosting throughput and simplifying upgrades.
+- [Azure Automated Virtual Machine Recovery: Minimizing Downtime](https://techcommunity.microsoft.com/t5/azure-compute-blog/azure-automated-virtual-machine-recovery-minimizing-downtime/ba-p/4483166)
+- [Enhanced Storage Resiliency with Azure NetApp Files Elastic Zone-Redundant Service](https://azure.microsoft.com/en-us/blog/enhanced-storage-resiliency-with-azure-netapp-files-elastic-zone-redundant-service/)
+- [Unlock Outbound Traffic Insights with Azure StandardV2 NAT Gateway Flow Logs](https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-outbound-traffic-insights-with-azure-standardv2-nat/ba-p/4493138)
+- [Announcing Microsoft Azure Network Adapter (MANA) Support for Existing VM SKUs](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-microsoft-azure-network-adapter-mana-support-for/ba-p/4493279)
+## Developer Experience and Workflow Enhancements
+The Azure CLI Windows MSI installer now upgrades faster and is more reliable, fixing earlier issues and decreasing setup times by 23%. Dev containers auto-load azd extensions for better onboarding. A recap video reviews Application Gateway changes, VM updates, new container options, and Databricks announcements, offering a quick summary for developers.
+- [Azure CLI Windows MSI Upgrade Failures and Performance Fixes: Root Causes and Solutions](https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-windows-msi-upgrade-issue-root-cause-mitigation-and/ba-p/4491691)
+- [Auto-install `azd` Extensions in Dev Containers](https://devblogs.microsoft.com/azure-sdk/azd-devcontainer-extensions/)
+- [Azure Update - 6th February 2026](/azure-update-6th-february-2026)
+## AI Platform Foundations and Hub-and-Spoke Architectures
+A new enterprise reference deployment shows how to prepare Azure for large-scale AI by using hub-and-spoke landing zones, RBAC, compliance standards, shared services, and API networks. Recommendations for Bicep/Terraform, secure network design, and automation are given for system engineers.
+- [Building an Enterprise-Ready Azure AI Hub-and-Spoke Landing Zone](https://techcommunity.microsoft.com/t5/azure-architecture-blog/architecting-an-azure-ai-hub-and-spoke-landing-zone-for-multi/ba-p/4491161)
+## Data Integration, Storage, and Backup
+A deep dive into blob storage explains each tier (Hot, Cool, Cold, Archive), covering best practices for data retention, lifecycle automation, and recovery steps for architects and IT operations.
+- [Azure Blob Tiering: Clarity, Truths, and Practical Guidance for Architects](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-blob-tiering-clarity-truths-and-practical-guidance-for/ba-p/4493156)
+## Azure Databricks and Analytics Platform
+Azure Databricks Serverless Workspaces have reached general availability, offering managed compute, instant setup, role separation, and workspace management. Classic workspaces remain supported for custom deployments. Catalog mirroring support for private endpoint scenarios is also GA, giving regulated customers a secure way to sync data between clusters/services.
+- [Serverless Workspaces Now Generally Available in Azure Databricks](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-generally-available-in-azure/ba-p/4491314)
+- [Mirroring Azure Databricks Catalogs Behind Private Endpoints Now Generally Available](https://blog.fabric.microsoft.com/en-US/blog/mirroring-azure-databricks-catalogs-from-azure-databricks-workspaces-behind-private-endpoints-generally-available/)
+## High-Performance Computing and Observability
+A step-by-step integration shows how to export ReFrame HPC metrics to Azure Log Analytics (using Bicep and JSON), enabling broad monitoring and analysis through Kusto queries. Another piece outlines how to connect the Azure SRE Agent to Dynatrace MCP for detailed monitoring, root cause, and vulnerability tracking.
+- [Centralizing Cluster Performance Metrics with ReFrame HPC and Azure Log Analytics](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/centralized-cluster-performance-metrics-with-reframe-hpc-and/ba-p/4488077)
+- [Integrate Azure SRE Agent with Dynatrace MCP for Observability](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-dynatrace-mcp-server-in-azure-sre-agent/ba-p/4492363)
+## Microsoft Fabric Data Warehouse
+Two articles outline Microsoft Fabric Data Warehouse’s performance, cost, and migration path (compared to Synapse), as well as practical help for deployment at FabCon Atlanta. These explain optimization tips for developers planning a move.
+- [Microsoft Fabric Data Warehouse vs Azure Synapse: ESG Validation and Migration Guidance](https://blog.fabric.microsoft.com/en-US/blog/a-turning-point-for-enterprise-data-warehousing/)
+- [FabCon Atlanta—Data Warehouse Edition: Explore the Future of Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/33276/)
+## Other Azure News
+Developer tool updates include improved CLI installers, extension support in containers, and video recaps addressing VM, security, container, and Databricks changes—these maintain last week’s CLI and workflow focus.
+- [Azure CLI Windows MSI Upgrade Failures and Performance Fixes: Root Causes and Solutions](https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-windows-msi-upgrade-issue-root-cause-mitigation-and/ba-p/4491691)
+- [Auto-install `azd` Extensions in Dev Containers](https://devblogs.microsoft.com/azure-sdk/azd-devcontainer-extensions/)
+- [Azure Update - 6th February 2026](/azure-update-6th-february-2026)
+Security updates include storage redundancy, new NAT flow logs, and automated VM recoveries to enhance resilience and meet compliance.
+- [Enhanced Storage Resiliency with Azure NetApp Files Elastic Zone-Redundant Service](https://azure.microsoft.com/en-us/blog/enhanced-storage-resiliency-with-azure-netapp-files-elastic-zone-redundant-service/)
+- [Unlock Outbound Traffic Insights with Azure StandardV2 NAT Gateway Flow Logs](https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-outbound-traffic-insights-with-azure-standardv2-nat/ba-p/4493138)
+- [Azure Automated Virtual Machine Recovery: Minimizing Downtime](https://techcommunity.microsoft.com/t5/azure-compute-blog/azure-automated-virtual-machine-recovery-minimizing-downtime/ba-p/4483166)
+Migration and troubleshooting resources for ACR and CLI support efficient platform changes.
+- [Migrating Azure Container Registry (ACR) Between Azure AD Tenants: Step-by-Step Process](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/aks-tenant-migration-considerations-and-approach/ba-p/4415198)
+- [Azure CLI Windows MSI Upgrade Failures and Performance Fixes: Root Causes and Solutions](https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-windows-msi-upgrade-issue-root-cause-mitigation-and/ba-p/4491691)',
+    'New Azure releases strengthen infrastructure, automation, security, and developer experience.',
+    1770624000, 'azure', '/azure/roundups/weekly-azure-roundup-2026-02-09', 'TechHub',
+    'TechHub', '24F95B5612545511E5B4A7BEE22089C2D51D2311151F384895445BB7D184EE2A', ',Microsoft Azure,Azure Architecture,Resiliency,Landing Zones,Hub And Spoke,AKS,Kubernetes Observability,Azure Monitor,Retina,Azure Container Registry,Microsoft Fabric,OneLake,Apache Iceberg,Azure Database For PostgreSQL,Azure Databricks,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-02-02
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-02-02', 'roundups', 'Weekly Azure Roundup: Fabric governance, AKS routing, new VMs',
+    'Azure’s recent changes introduce enhancements in data engineering, platform automation, developer tooling, high-availability infrastructure, cloud hardware, and troubleshooting resources.
+<!--excerpt_end-->
+## Microsoft Fabric Platform: Advancements Across Data, Security, and Integration
+The latest Fabric feature summary brings new data engineering and governance updates. AI-based semantic model summaries make OneLake Catalog navigation easier, while new organizational structures and configuration features improve overall governance. GitHub integration now supports explicit data residency and branch-based commits. A preview of the Fabric Python SDK streamlines programmatic workspace management.
+Security improvements include new role APIs, item-level controls, and immutable logs for compliance. The Lakehouse engine now supports Spark session sharing for better concurrency, while VS Code notebooks gain multi-workspace sync and secure connections. Materialized Lake Views now support create/replace, and Data Warehouse automation gets improved stats, result caching, and more flexible statements. Real-Time Intelligence adds in-VNet streaming, MQTT v3, weather APIs, and Copilot-powered KQL. Data Factory introduces incremental copy and hybrid data connectors.
+These changes enhance developer workflows, automation, security, and compliance—supporting both low-code and code-first teams.
+- [Microsoft Fabric January 2026 Feature Summary](https://blog.fabric.microsoft.com/en-US/blog/fabric-january-2026-feature-summary/)
+## Microsoft Fabric Community, Certification, and Identity Governance
+The Fabric Influencers Spotlight (Jan) provides best practices and sample workflows, such as building surrogate keys for Data Warehouses, Power BI modeling techniques, write-back patterns, and integration guides. Applied ML concepts, security models for OneLake, and streaming operations round out the guides. Updates also highlight new certifications and architecture resources.
+Workspace identity quotas are now easier to manage. Admins can raise the default cap and adjust limits via the portal or REST API, making large deployments and governance more streamlined.
+- [Fabric Influencers Spotlight January 2026](https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-january-2026/)
+- [Managing Fabric Identities Limits: Tenant Control and Governance](https://blog.fabric.microsoft.com/en-US/blog/take-control-of-fabric-identities-limit-for-your-tenant-generally-available/)
+## Azure Kubernetes and Traffic Management: Automation, Migration, and Multi-Region Patterns
+A new AKS multi-region architecture proof-of-concept demonstrates integrating External DNS with Azure Traffic Manager. Service annotations in AKS allow DNS endpoint profiles to be managed automatically. This supports blue-green, weighted, or failover routing—improving automation for global cloud workloads.
+Migration guides for deprecated AKS Ingress NGINX controllers are now available. Moving to Gateway API and Application Gateway for Containers is recommended as support for NGINX ends in March 2026. The steps emphasize manifest inventory, YAML conversion, and phased rollout for compliance.
+- [Integrating External DNS with Azure Traffic Manager for Kubernetes Multi-Region Deployments](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/exploring-traffic-manager-integration-for-external-dns/ba-p/4485690)
+- [From Ingress to Gateway API: Migrating Kubernetes Edge in Azure with Application Gateway for Containers](https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-ingress-to-gateway-api-a-pragmatic-path-forward-and-why-it/ba-p/4489779)
+## Azure Developer Tooling and SDK Updates
+The Azure Developer CLI (azd) January 2026 release enhances configuration and performance processes. New improvements include streamlined config commands, multi-tenant authentication, credential checks, and container build fallback scenarios. Infrastructure tools like Bicep and Terraform are now auto-detected, and file-based caching increases speed for deployment workflows. Deprecated login commands and App Service integrations have been removed. A growing catalog of community templates and SDKs in .NET, Go, Java, and Python support more scenarios, including experimental AI Foundry and new model support in Azure AI Search.
+- [Azure Developer CLI (azd) – January 2026: Configuration & Performance](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-january-2026/)
+- [Azure SDK January 2026 Release Highlights](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-january-2026/)
+## Azure Cloud Infrastructure and AI Hardware
+Azure has released Da/Ea/Fasv7-series VMs with AMD’s 5th Gen EPYC "Turin" CPUs, offering up to 35% more CPU performance, 4.5 GHz burst speeds, and up to 160 vCPUs per VM. These updates add more compute, storage, and networking power with improved security features and integrated HSM. Documentation and region info are available for planning adoption.
+A technical deep dive provides insight into Microsoft’s approach to building AI infrastructure from silicon through datacenter design, with a focus on reliability and future-readiness.
+- [Announcing General Availability of Azure Da/Ea/Fasv7-series VMs based on AMD ‘Turin’ processors](https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-da-ea-fasv7-series-vms/ba-p/4488627)
+- [Silicon to Systems: How Microsoft Engineers AI Infrastructure from the Ground Up](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/silicon-to-systems-how-microsoft-engineers-ai-infrastructure/ba-p/4489525)
+## Updates in Azure High Availability, Security, Monitoring, and Developer Operations
+Azure NetApp Files now has Elastic ZRS for replicating storage volumes synchronously across Availability Zones. This helps SAP, Kubernetes, and compliance workloads achieve higher availability with shared QoS and automated deployments.
+The Azure Local LENS Workbook offers large-scale operational insight for fleet management (AKS, Azure Local). This update supports compliance planning and smoother fleet operations.
+API Management gets new capabilities for customizing Retry-After headers, so developers can offer better try-again advice in API responses. This builds on recent support for troubleshooting and robust operation.
+- [Azure NetApp Files Elastic ZRS: Simplifying Multi-AZ File Storage High Availability](https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-netapp-files-elastic-zrs-service-level-file-storage-high/ba-p/4484235)
+- [Azure Local LENS Workbook: Proactive Operations for Large-Scale Azure Local Deployments](https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-local-lens-workbook-deep-insights-at-scale-in-minutes/ba-p/4490608)
+- [Transforming Retry-After Headers in Azure APIM: A Step-by-Step Guide](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transforming-retry-after-headers-in-azure-apim-a-step-by-step/ba-p/4489762)
+## Developer Troubleshooting and Migration Resources
+Recent fixes and guides address issues such as persistent crashes for ServerDiscoveryService.exe in Azure Migrate (Windows Server 2022, .NET 8) and test discovery problems in Logic Apps’ VS Code test framework (from MSTest versioning). Practical troubleshooting steps are provided to help teams maintain smooth devops workflows.
+- [ServerDiscoveryService.exe Crash Bug in Azure Migrate Physical Server Discovery](https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-physical-server-discovery-serverdiscoveryservice/m-p/4490238#M733)
+- [Fixing Disappearing Logic Apps Standard Test Framework Tests in VS Code](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/automated-test-framework-missing-tests-in-test-explorer/ba-p/4490186)
+## Other Azure News
+Azure App Testing now requires a minimum of 10 users per engine and 10 minutes per load test. Review test configurations for cost efficiency.
+A step-by-step tutorial walks through deploying MoltBot, an AI assistant, to Azure Container Apps. It covers secure devops, troubleshooting, and log setup—all foundational for secure cloud-based AI deployment.
+Data Exposed previews SQL Server 2025 features like REST API endpoints, vector support, and new AI tools for search and analytics.
+A video-based Azure training course shares introductory tips, resource optimization practices, labs, certification prep, and Copilot chat setup.
+- [Understanding Minimum Usage Charges in Azure App Testing Load Tests](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/minimum-usage-in-azure-app-testing/ba-p/4490658)
+- [Deploying MoltBot: 24/7 Personal AI Assistant on Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploy-moltbot-to-azure-container-apps-your-24-7-ai-assistant-in/ba-p/4490611)
+- [REST APIs, Vectors, and AI in SQL Server 2025](/ai/videos/rest-apis-vectors-and-ai-in-sql-server-2025)
+- [Learn Azure in 2026](/azure/videos/learn-azure-in-2026)',
+    'Azure’s recent changes introduce enhancements in data engineering, platform automation, developer tooling, high-availability infrastructure, cloud hardware, and troubleshooting resources.',
+    1770019200, 'azure', '/azure/roundups/weekly-azure-roundup-2026-02-02', 'TechHub',
+    'TechHub', '134AB26CF29A50FFB856A09151F96669AD908CCBE58F9D3245A13828199D0E38', ',Microsoft Azure,Microsoft Fabric,OneLake,Data Factory,Real Time Intelligence,AKS,Azure Traffic Manager,ExternalDNS,Gateway API,Application Gateway For Containers,Azure Developer CLI,Azure SDK,Azure NetApp Files,Azure API Management,Azure Container Apps,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-01-26
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-01-26', 'roundups', 'Weekly Azure Roundup: AKS tuning, Fabric pipelines, and IaC',
+    'Azure’s current updates offer improvements in networking, infrastructure automation, data engineering, operations, and developer productivity. These include enhanced reliability for Kubernetes and storage, automation features, better analytics, and tools for modern developer workflows.
+<!--excerpt_end-->
+## Azure Kubernetes Service (AKS) and Infrastructure Automation
+Guides for AKS cover how to scale, secure, and improve cluster performance. One walk-through investigates DNS scaling using Cilium, NodeLocal DNSCache, and FQDN policy to address latency in large workloads and documents troubleshooting for outbound traffic. Another resource explains optimizing AKS node pools with Crossplane, including notes on version compatibility and automation. Java users can use the Azure Performance Diagnostics Tool v5.0 to monitor JVM metrics—useful for faster debugging on Kubernetes.
+- [Scaling DNS on AKS with Cilium: NodeLocal DNSCache, LRP, and FQDN Policies](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/scaling-dns-on-aks-with-cilium-nodelocal-dnscache-lrp-and-fqdn/ba-p/4486323)
+- [Parallel AKS Node Pool Creation with Crossplane: A Version Compatibility Journey](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/parallel-aks-node-pool-creation-with-crossplane-a-version/ba-p/4477936)
+- [Automated Java Performance Diagnostics in Kubernetes using Azure SRE Agent](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/automated-java-performance-diagnostics-in-kubernetes-using-azure/ba-p/4488027)
+## Microsoft Fabric Data Integration, Real-Time Intelligence, and Analytics
+New features in Fabric include full pipelines for retail analytics using Delta Lake, Debezium, and Azure Event Hubs, showing automated change tracking and partition management. Data Factory now adds incremental copy/CDC, more connectors, flexible replication, and adjustable mapping for schema changes. A preview integration with Cribl Stream allows for fast telemetry routing and visualization.
+- [Scalable Data Ingestion for Retail: Dynamic Partitioning and Source Detection with Microsoft Fabric](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/a-technical-implementation-guide-for-multi-store-retail/ba-p/4488418)
+- [Enhancements to Microsoft Fabric Data Factory Copy Job: Incremental Copy and Change Data Capture](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-movement-across-multiple-clouds-with-copy-job-enhancements-on-incremental-copy-and-change-data-capture/)
+- [Integrating Cribl with Microsoft Fabric Real-Time Intelligence (Preview)](https://blog.fabric.microsoft.com/en-US/blog/expanding-real-time-intelligence-data-sources-with-cribl-source-preview/)
+## Azure Storage: AI-Centric Platform Evolution
+The Azure Storage service’s updated roadmap outlines shifts toward scalable, AI-focused workloads. This includes changes for blob storage, deep integration with AMLFS, and options for GPU-based operations (benefiting agents or LLMs). Elastic SAN and ACStor provide orchestration and combined file/block sharing for demanding deployments. Resiliency improvements span disks and files, while sustainability and smart tiering features are also being expanded.
+- [The Future of Azure Storage: AI-Optimized Innovations for 2026](https://azure.microsoft.com/en-us/blog/beyond-boundaries-the-future-of-azure-storage-in-2026/)
+## Azure Automation, SRE, and Incident Management
+Recent guides describe how to automate with Azure SRE Agents. You can connect SRE Agents with MCP for fine-grained roles and permission, scheduled compliance/security checks, and send automated reports via Teams or GitHub. Incident management integrates with ServiceNow to streamline triage and root cause processes, and work notes are now automated with AI summaries.
+- [How to Connect Azure SRE Agent to Azure MCP](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-connect-azure-sre-agent-to-azure-mcp/ba-p/4488905)
+- [Proactive Cloud Ops with SRE Agent: Scheduled Checks for Azure Optimization](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-cloud-ops-with-sre-agent-scheduled-checks-for-cloud/ba-p/4487261)
+- [Connect Azure SRE Agent to ServiceNow: End-to-End Incident Response](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/connect-azure-sre-agent-to-servicenow-end-to-end-incident/ba-p/4487824)
+## Azure Verified Modules, Infrastructure as Code, and Platform Foundations
+Azure Verified Modules (AVM) for Platform Landing Zone with Bicep are now generally available, featuring modular IaC support for governance, network, and management. AVM adds Deployment Stacks, parameter files, policy control, and clear docs for migrations—continuing the platform update cycle.
+- [Azure Verified Modules for Platform Landing Zone with Bicep Now Generally Available](https://techcommunity.microsoft.com/t5/azure-tools-blog/release-of-bicep-azure-verified-modules-for-platform-landing/ba-p/4487932)
+## Developer Tools, Testing Services, and Workflow Improvements
+Developers now have access to the Azure Playwright Testing Service (Preview) for scalable UI/API automated tests. The preview includes workspaces, secret handling, CI integration, and reporting tools. Playwright Workspaces v2.0 add report views, artifact handling, and data retention controls to help with workflow governance and collaboration—building on ongoing improvements in SQL and CI pipelines.
+- [Running Playwright Tests at Scale with Azure Playwright Testing Service (Preview)](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-playwright-testing-service-preview-run-playwright-tests-on/ba-p/4487103)
+- [Reporting Features Now Available in Playwright Workspaces on Azure](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-reporting-in-playwright-workspaces/ba-p/4487059)
+## Memory Reliability and Hardware Efficiency for Azure Infrastructure
+Azure launches RAIDDR, an open-source tool for improving reliability in modern memory (like LPDDR5X), and ELC for adaptive CPU power management, increasing data center energy savings while optimizing latency and performance. Both areas advance last week’s focus on infrastructure sustainability.
+- [RAIDDR: Redefining Memory Reliability for Hyperscale Azure Infrastructure](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/raiddr-redefining-memory-reliability/ba-p/4487951)
+- [Improving Efficiency through Adaptive CPU Uncore Power Management](https://techcommunity.microsoft.com/t5/azure-compute-blog/improving-efficiency-through-adaptive-cpu-uncore-power/ba-p/4486456)
+## Application and Container Networking, Security, and Cache Optimization
+Guides for Azure Container Apps show secure integration with virtual networks and firewall routing for policy enforcement, monitoring, and compliance. Redis tips include scripts for listing key lifetimes, statistics, and tuning, assisting teams with troubleshooting and scaling.
+- [Advanced Container Apps Networking: VNet Integration and Centralized Firewall Traffic Logging](https://techcommunity.microsoft.com/t5/azure/advanced-container-apps-networking-vnet-integration-and/m-p/4488713#M22417)
+- [Troubleshooting Azure Redis: Key TTL and Size Analysis with Bash and Lua](https://techcommunity.microsoft.com/t5/azure-paas-blog/redis-keys-statistics/ba-p/4486079)
+## Azure Arc Server and Hybrid Cloud Updates
+The Azure Arc Server recap covers improved management, zero-downtime patching, TPM rollout, and SQL hybrid workflows, maintaining last week’s focus on secure hybrid and multi-cloud management.
+- [Azure Arc Server Jan 2026 Forum Recap](https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-jan-2026-forum-recap/ba-p/4487829)
+## Microsoft Data Platform Ecosystem
+SQLCon and FabCon announcements outline conference topics, training, and product updates for SQL Server, Azure SQL, Fabric, and AI-powered data management. These events extend previous coverage on data platform feedback and innovation.
+- [Five Reasons to Attend SQLCon: Deep SQL, Microsoft Fabric, and AI Insights in Atlanta](https://blog.fabric.microsoft.com/en-US/blog/32624/)
+## Other Azure News
+Developer-focused updates enhance debugging, performance, and workflow management. New filters for Azure Boards (now in private preview) let backlog and Kanban boards filter by custom fields, supporting better UI and management options.
+- [Azure Weekly Update: AKS Deployment, NAT Gateway, Load Testing, GitHub Copilot SDK (23 Jan 2026)](/github-copilot/videos/azure-weekly-update-aks-deployment-nat-gateway-load-testing-github-copilot-sdk-23-jan-2026)
+- [Azure Boards Adds Custom Field Filters in Private Preview](https://devblogs.microsoft.com/devops/azure-boards-additional-field-filters-private-preview/)',
+    'Azure’s current updates offer improvements in networking, infrastructure automation, data engineering, operations, and developer productivity. These include enhanced reliability for Kubernetes and storage, automation features, better analytics, and tools for modern developer workflows.',
+    1769414400, 'azure', '/azure/roundups/weekly-azure-roundup-2026-01-26', 'TechHub',
+    'TechHub', '09C3C6005B20B0454BC95D5894E9D4DDF608B7F05909FCC37297F8F0448B62F7', ',Azure,AKS,Cilium,Crossplane,Kubernetes DNS,Microsoft Fabric,Data Factory,Change Data Capture,Delta Lake,Azure Event Hubs,Azure Storage,Bicep,Azure Verified Modules,Azure Arc,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-01-19
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-01-19', 'roundups', 'Weekly Azure Roundup: SQL Tools, AKS Identity, and Storage Access',
+    'The Azure platform continues adding modern developer tools, updated security features, cloud storage improvements, and better support for hybrid and analytics workflows. Both developers and DevOps teams can expect new capabilities for daily operations and flexible architecture. New platform updates underline Microsoft’s effort toward automation, compliance, and sustainability with practical details for implementation.
+<!--excerpt_end-->
+## Azure SQL and Developer Tooling Modernization
+Microsoft provided a roadmap for SQL Server, Azure SQL, and the latest developer tools. SQL Server Management Studio (SSMS) will migrate to a new Visual Studio base, now including dark mode, Arm64 builds, Fabric support, and built-in Copilot assistance. The VS Code Microsoft SQL extension includes Copilot Ask, Agent tools, and better schema and container workflows, with a unified Azure SQL experience in the portal and Fabric. VS Code now supports SDK-style SQL projects, coming soon to SSMS, and there are planned improvements across CI/CD, drivers, SDKs, CLIs, and APIs. Community input is encouraged to help prioritize features.
+- [How the Microsoft SQL Team is Advancing SQL Tools and Developer Experiences](https://blog.fabric.microsoft.com/en-US/blog/how-the-microsoft-sql-team-is-investing-in-sql-tools-and-experiences/)
+## Azure DevOps and Repository Management
+Azure Repos has a new preview with productivity, clarity, and organization updates. Teams using TFVC check-in policies should update repositories, and navigation and notification for pull requests have been reinforced. Pull request templates enable better organization with nested branch folder support. Azure DevOps MCP Server provides local tools for repo inspection and bridges between VS Code and Copilot. API improvements will simplify policy scanning, and new features aim to make PR management easier and keep repositories in good shape.
+- [Recent and Upcoming Improvements in Azure Repos](https://devblogs.microsoft.com/devops/whats-new-with-azure-repos/)
+## Azure Kubernetes Service: Advanced Identity & Networking
+AKS rolls out Identity Bindings, providing RBAC-based multi-cluster managed identity with no practical limits on identities, and centralized authorization for simplified, secure cloud operations that suit Infrastructure as Code deployments. Full guides cover integration with Key Vault.
+The new Static Egress Gateway feature allows for controlled, multiple outbound IPs on AKS using dedicated node pools and CRDs, supporting both public and private traffic scenarios in compliance-heavy and multi-tenant environments.
+- [Identity Bindings: Simplifying Multi-Cluster Managed Identity in AKS](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/identity-bindings-a-cleaner-model-for-multi-cluster-identity-in/ba-p/4478282)
+- [Static Egress Gateway in AKS: The Native Way to Control Multiple Outbound IPs](https://techcommunity.microsoft.com/t5/azure-architecture-blog/static-egress-gateway-in-aks-the-native-way-to-control-multiple/ba-p/4484179)
+## AI and Analytics with Azure NetApp Files
+Azure NetApp Files now supports an object REST API for S3-compatible data workflows, joining its file protocol support for hybrid analytics and advanced AI/HPC use cases. Integration improves with Databricks, Spark, and Fabric OneLake. Security is enforced per bucket with individual certifications.
+A new release (v1.1.0) of the VS Code extension includes support for tenants and subscriptions, AI-driven automation, and code generation tools for instant language-specific storage mounts.
+- [Unlocking Advanced Data Analytics & AI with Azure NetApp Files Object REST API](https://techcommunity.microsoft.com/t5/azure-architecture-blog/unlocking-advanced-data-analytics-ai-with-azure-netapp-files/ba-p/4486098)
+- [What''s New with Azure NetApp Files VS Code Extension](https://techcommunity.microsoft.com/t5/azure-architecture-blog/what-s-new-with-azure-netapp-files-vs-code-extension/ba-p/4485989)
+## Secure and Flexible Cloud Storage Access
+User Delegation SAS (Shared Access Signatures) is now public preview for Azure Tables, Files, and Queues, adding to Blob support. This means SAS tokens can be assigned to a specific Microsoft Entra ID identity, regulated by RBAC. With SDK, PowerShell, and CLI support, it’s now safer and easier to provide time-limited access to both internal and partner services.
+- [Public Preview: User Delegation SAS for Azure Tables, Files, and Queues](https://techcommunity.microsoft.com/t5/azure-storage-blog/announcing-public-preview-of-user-delegation-sas-for-azure/ba-p/4485693)
+## Integrating REST APIs with AI Agents
+Easy MCP is an open source tool that makes REST APIs available to AI agents using Model Context Protocol. OpenAPI-based APIs can be translated for GitHub Copilot and similar tools without modifying original API code. Features include auto-discovery, fast onboarding with the Azure Developer CLI, and workflows for App Service/API Management.
+- [Easy MCP: Exposing REST APIs to AI Agents with Azure App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/app-service-easy-mcp-add-ai-agent-capabilities-to-your-existing/ba-p/4484513)
+## Automated Hybrid, File Sync, and Messaging Workflows
+Azure File Sync integrates with Azure Arc, managed identities, and passwordless authentication, launches in four more regions, and as of January 2026, removes per-server fees for Arc-connected servers with current agents—advancing hybrid file storage solutions.
+A practical walkthrough covers automated PostgreSQL deployment on Azure VMs with NetApp Files using Terraform, ARM, and PowerShell. It explains secure networking, NFS, and multiple environment deployment for scenarios like AI/ML and high-availability.
+Azure Service Bus Emulator has added Administration Client support, allowing for management of queues and topics through code, and improves reliability for local development and automated testing.
+- [Azure File Sync: Azure Arc Integration, Additional Regions, and Secure Syncing](https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-file-sync-azure-arc-integration-additional-regions-and/ba-p/4486050)
+- [Deploying Production-Ready PostgreSQL on Azure VMs with Azure NetApp Files Using IaC](https://techcommunity.microsoft.com/t5/azure-architecture-blog/deploy-postgresql-on-azure-vms-with-azure-netapp-files/ba-p/4486114)
+- [Introducing Administration Client Support for the Azure Service Bus Emulator](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/introducing-administration-client-support-for-the-azure-service/ba-p/4486433)
+## Azure Platform and Service Updates
+AKS now supports Ubuntu 24.02 nodes, Cosmos DB can now mirror with Fabric and supports more private access options, and Azure Virtual Desktop introduces regional host pools (preview) for improved availability and compliance. The Azure Arc portal update improves onboarding and handling of multi-cloud environments.
+The new Cloud Hardware Emissions Methodology tracks Azure hardware through its lifecycle, supporting teams working on cloud sustainability and reporting.
+- [Azure Update - 16th January 2026](/azure/videos/azure-update-16th-january-2026)
+- [Azure Virtual Desktop Regional Host Pools Public Preview](https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598)
+- [Azure Arc Portal Update: Streamlined Onboarding and Management at Scale](https://techcommunity.microsoft.com/t5/azure-migration-and/azure-arc-portal-update-simplifying-onboarding-and-management-at/ba-p/4477355)
+- [Advancing Embodied Carbon Measurement at Scale for Microsoft Azure Hardware](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/advancing-embodied-carbon-measurement-at-scale-for-microsoft/ba-p/4485784)
+## Other Azure News
+Azure’s storage and network engineering now use DCQCN-based congestion control for more than 85% of storage traffic, minimizing latency, CPU load, and reducing packet loss on RDMA workloads. Insights and network best practices are available.
+A guide for Microsoft Fabric Eventstream breaks down Capacity Unit costs for ingesting, processing, and output, helping teams estimate and plan for analytics costs.
+- [Scaling DCQCN-Based Congestion Control for RDMA in Azure Storage Networks](https://techcommunity.microsoft.com/t5/azure-networking-blog/data-center-quantized-congestion-notification-scaling-congestion/ba-p/4468417)
+- [Understanding Fabric Eventstream Pricing](https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/)
+*These enhancements build on previous improvements in Oracle Database@Azure, CAD tool testing, and Data Warehouse upgrades, marking steady steps in Azure SQL tools, integrated repositories, hybrid management, automation, and platform security.*',
+    'The Azure platform continues adding modern developer tools, updated security features, cloud storage improvements, and better support for hybrid and analytics workflows. Both developers and DevOps teams can expect new capabilities for daily operations and flexible architecture. New platform updates underline Microsoft’s effort toward automation, compliance, and sustainability with practical details for implementation.',
+    1768809600, 'azure', '/azure/roundups/weekly-azure-roundup-2026-01-19', 'TechHub',
+    'TechHub', '5010212632AC56834AD67911C2AEFC235639DD8F7F22EAA1605AA72A3FF564BD', ',Microsoft Azure,Azure SQL,SQL Server,SSMS,VS Code,GitHub Copilot,Azure DevOps,Azure Repos,AKS,Managed Identity,RBAC,Azure Storage,User Delegation SAS,Azure NetApp Files,Azure Arc,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-01-12
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-01-12', 'roundups', 'Weekly Azure Roundup: Automation, HPC Upgrades, and Cost Control',
+    'Recent Azure releases focus on improving developer experiences, automating workflows, expanding high-performance computing, and refining cost controls. Updates range from Logic Apps automation to Oracle Database@Azure extensions, better HPC monitoring, and data platform features.
+<!--excerpt_end-->
+## Azure Logic Apps: AI-Powered Automation, Migration, and Agentic Workflows
+The January Aviators Newsletter details new Logic Apps improvements. BizTalk Server 2020 is set as the last release, with support until 2030, incentivizing migration to Logic Apps, and providing new tools for artifact reuse and migration.
+New AI connectors add support for document intelligence, semantic search, and enhanced RAG workflows. The Data Mapper Test Executor allows CI/CD validation of data mapping, streamlining automated migration and data backup.
+Practical workshops let developers assemble agentic automation solutions using Copilot Studio MCP servers and Logic Apps’ Agent Loop. Community resources cover error handling and SAP integration, positioning Logic Apps as the preferred option for BizTalk migration.
+- [Logic Apps Aviators Newsletter - January 2026](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-january-2026/ba-p/4482877)
+- [Upcoming Free Workshops: Agentic Azure Logic Apps & Copilot Studio Integration](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/upcoming-agentic-azure-logic-apps-workshops/ba-p/4484526)
+## Azure CycleCloud and HPC Workflows: Monitoring, Security, and High-Performance File Distribution
+CycleCloud 2025.12.01 for Slurm introduces improved HPC management and monitoring. Prometheus agent and Managed Grafana support automated dashboards for clusters. New scripts simplify deployment, and added metrics such as memory, thermal, and power usage provide deeper insights.
+Security upgrades include Entra ID single sign-on via OpenID Connect, with MFA and access roles for both CycleCloud and Open OnDemand. Expanded ARM64 support and new operating system compatibility increase flexibility.
+The “mpi-stage” file broadcast tool accelerates file distribution across large GPU containers, addressing performance bottlenecks in cluster operations.
+- [Azure CycleCloud Workspace for Slurm 2025.12.01: Monitoring, Security, and HPC Enhancements](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-azure-cyclecloud-workspace-for-slurm-version-2025-12/ba-p/4481953)
+- [mpi-stage: High-Performance File Distribution for HPC Clusters](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/mpi-stage-high-performance-file-distribution-for-hpc-clusters/ba-p/4484366)
+## Azure Platform and Data Services Updates
+Azure expands Oracle Database@Azure to West Europe and Brazil Southeast, supporting regulated and high-performance workloads with Exadata, low-latency deployment, and flexible licensing.
+Siemens NX can now be deployed on Azure virtual machines with AMD Radeon V710 GPUs, maximizing cost-effectiveness, global scale availability, and secure engineering environments.
+Microsoft Fabric Data Warehousing releases cluster-aware features, upsert operations, identity columns, and new migration tools, all aimed to improve data security, handling, and migration processes.
+The January platform update covers AKS-native calculators, expanded Premium SSDv2 disk support, Service Bus geo-replication, guidance for retiring resource providers and templates, and infrastructure modernization.
+- [Oracle Database@Azure Expands to West Europe and Brazil Southeast](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/global-expansion-now-available-in-west-europe-netherlands/ba-p/4479671)
+- [Deploying Siemens NX on Azure NVads V710 v5-Series with AMD Radeon GPUs](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-v710-v5-series-amd-radeon-gpu-validation-of-siemens-cad-nx/ba-p/4483791)
+- [Azure Update - 9th January 2026](/azure/videos/azure-update-9th-january-2026)
+- [Major Innovations in Microsoft Fabric Data Warehousing: 2025 Overview](/azure/videos/major-innovations-in-microsoft-fabric-data-warehousing-2025-overview)
+## Cloud-Native Architecture: AI, Mapping, and Real-Time Workflows
+New resources include a walkthrough of AI features for Azure Managed PostgreSQL, covering semantic search, embedding generation, and Copilot code support within VS Code and Foundry.
+A game backend case study details how to use Azure Web PubSub for scalable, real-time online RPG event processing, replacing polling with event-driven architectures for improved reliability.
+A feature on Azure Maps clarifies the differences between view and routing coordinates to help avoid mapping and navigation bugs.
+SharePoint architects get a new guide for flat site collections and navigation, tied into Azure AD, Power Platform, and Purview governance best practices.
+- [Exploring AI Features in Azure Managed PostgreSQL](/ai/videos/exploring-ai-features-in-azure-managed-postgresql)
+- [Building scalable, cost-effective real-time multiplayer games with Azure Web PubSub](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-scalable-cost-effective-real-time-multiplayer-games/ba-p/4483584)
+- [Azure Maps: Understanding View vs. Routing Coordinates](https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532)
+- [Designing a Future-Proof SharePoint Information Architecture](https://dellenny.com/how-to-design-a-future-proof-sharepoint-information-architecture/)
+## Datacenter Innovation and High-Scale AI Readiness
+Azure partners with NVIDIA to upgrade datacenter architecture for large-scale Rubin platform work, including new storage networks, advanced cooling systems, modular rollout, fast resource management, and NVLink/ConnectX-9 networking.
+These improvements support faster model training, improved hardware utilization, and more efficient orchestration for AI, ML, and HPC workloads.
+- [How Azure Datacenter Strategy Powers NVIDIA Rubin Platform Deployments](https://azure.microsoft.com/en-us/blog/microsofts-strategic-ai-datacenter-planning-enables-seamless-large-scale-nvidia-rubin-deployments/)
+## Azure Cost Estimation and Management Tools
+A new guide outlines strategies for estimating and optimizing Azure costs using built-in calculators, Advisor, Copilot, and management portals. Steps include linking architecture decisions to budget forecasts and maintaining monitoring for ongoing efficiency.
+Interactive AMA sessions provide answers on cloud pricing and management for practical cost control, reinforcing Azure’s support for financial management and modernization.
+- [Azure Cost Estimation: Your Strategic Guide to Cloud Pricing](https://www.thomasmaurer.ch/2026/01/azure-cost-estimation-your-strategic-guide-to-cloud-pricing/)
+- [Live AMA: Demystifying Azure Pricing (AM Session)](https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-am-session/ec-p/4483196#M665)
+- [Live AMA: Demystifying Azure Pricing (PM Session)](https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-pm-session/ec-p/4483198#M666)
+## Other Azure News
+There is an ongoing discussion regarding platform-driven VM redeployments on North Europe v6 series due to host OS and firmware maintenance, reminding teams to monitor service health and mitigate potential workload disruptions.
+- [Frequent Platform-Initiated Azure VM Redeployments (v6 Series) in North Europe](https://techcommunity.microsoft.com/t5/azure-compute/frequent-platform-initiated-vm-redeployments-v6-in-north-europe/m-p/4484455#M837)',
+    'Recent Azure releases focus on improving developer experiences, automating workflows, expanding high-performance computing, and refining cost controls. Updates range from Logic Apps automation to Oracle Database@Azure extensions, better HPC monitoring, and data platform features.',
+    1768204800, 'azure', '/azure/roundups/weekly-azure-roundup-2026-01-12', 'TechHub',
+    'TechHub', '5297838E134EBEF0853E63CF1E48CF7DC7BEA0123A20A65B6668FE84F048C4F4', ',Azure Logic Apps,BizTalk Server Migration,Copilot Studio,AI Connectors,RAG Workflows,Azure CycleCloud,Slurm,Prometheus,Managed Grafana,Entra ID,Azure HPC,Oracle Database@Azure,Microsoft Fabric Data Warehousing,Azure Web PubSub,Azure Cost Management,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2026-01-05
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2026-01-05', 'roundups', 'Weekly Azure Roundup: Resilience Playbooks and AI Load Testing',
+    'Azure news this week focuses on new resources for disaster recovery, data migration, cloud backup, and automated test creation. Step-by-step guides support business continuity, resilience, and innovation in Azure environments.
+<!--excerpt_end-->
+## Guides for Resilience, Migration, and Data Protection on Azure
+Developers have three new guides for improving business continuity, streamlining analytics migrations, and automating data backup in Azure. The disaster recovery tutorial covers Azure Databricks and Microsoft Fabric, with instructions for using Terraform and CI/CD to replicate critical data services like ADLS, Key Vault, and SQL. Those working with Databricks get a Python solution for automating Databricks failover, while Power BI and Fabric users benefit from geo-redundancy and cross-region features aligned with SLAs.
+Expanding on last week’s Azure Databricks best practices around security and data management, these guides extend to backup and restoration workflows and support compliance standards. Power BI and Fabric’s redundancy features build on earlier themes of reliability, automation, and ease of recovery.
+For teams modernizing analytics, there is a recipe for migrating from Tableau to Power BI on Microsoft Fabric. The step-by-step migration focuses on a “semantic layer first” design—meaning that business logic is centralized for less duplication and easier governance. The guide covers everything from asset mapping and workspace setup to AI integration with Power BI Copilot and ML notebooks, and includes best practices on security, naming, and model design to help ensure long-term analytics maintainability.
+An additional resource describes automating backup and restore for Azure Cosmos DB and Databricks, with support for self-service restores using Apache Spark. This supports scenarios like point-in-time recovery, test environment deployment, or compliance reporting. Restores can be executed before deployment or to quickly roll back production, and pipelined with CI/CD for easy workflows. Documentation and example cases make these features accessible for different organizations.
+All three guides expand last week’s focus on cloud data security and automation, now addressing everything from scheduled failover to migration playbooks and one-click database recovery.
+- [Disaster Recovery Strategies for Azure Databricks and Microsoft Fabric](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-fabric-disaster-recovery-the-better-together/ba-p/4481323)
+- [Tableau to Power BI Migration: A Semantic Layer-First Architecture for Microsoft Fabric](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/tableau-to-power-bi-migration-semantic-layer-first-approach-for/ba-p/4481009)
+- [How to Ensure Seamless Data Recovery and Deployment in Microsoft Azure](https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-ensure-seamless-data-recovery-and-deployment-in-microsoft/ba-p/4478395)
+## AI-Assisted Load Testing and Performance Workflows
+A new set of AI-enabled tools for Azure App Testing allows teams to create load tests automatically. By using an Edge or Chrome browser extension, user sessions are captured and converted into JMeter scripts with the help of AI, including labeling, parameterization, and dynamic correlation. Scripts are fully editable for custom needs and can be used directly with Azure Load Testing for realistic test runs at scale. Version 4.0 focuses on minimizing manual work and supporting realistic performance engineering through feedback-driven improvement.
+This extends recent updates introducing AI-powered load generators in Azure. The new tools further support automated performance scenarios and make integration into existing DevOps workflows easier.
+- [Streamline Load Testing with AI-Assisted Authoring in Azure App Testing](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-app-testing/ba-p/4480652)
+## Other Azure News
+The Azure SRE Agent Community Hub is now live, providing SREs and cloud app developers with a central place to trade strategies, problem-solving tips, and updates. It includes forums, a dedicated blog, and the latest product information, all designed to foster knowledge sharing for those developing reliability automation on Azure.
+This resource addresses recent requests for spaces to exchange practical knowledge and build collective experience with Azure reliability tools. It reflects two recent weeks of emphasis on site reliability engineering and agent-based automation.
+- [Welcome to the Azure SRE Agent Community Hub](https://techcommunity.microsoft.com/t5/azure-sre-agent/welcome-to-azure-sre-agent-community-hub/m-p/4481822#M1)',
+    'Azure news this week focuses on new resources for disaster recovery, data migration, cloud backup, and automated test creation. Step-by-step guides support business continuity, resilience, and innovation in Azure environments.',
+    1767600000, 'azure', '/azure/roundups/weekly-azure-roundup-2026-01-05', 'TechHub',
+    'TechHub', 'C41A7DCA499414CA2F8D9A05A82E80F95B75461FF357F3D3643984E131B35A50', ',Microsoft Azure,Azure Databricks,Microsoft Fabric,Disaster Recovery,Business Continuity,Terraform,CI/CD,Azure Data Lake Storage,Azure Key Vault,Azure SQL,Power BI,Cosmos DB,Apache Spark,Azure Load Testing,JMeter,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-12-29
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-12-29', 'roundups', 'Weekly Azure Roundup: SRE automation, secrets, and AI load tests',
+    'Azure’s recent changes prioritize automation, reliability, and up-to-date security. This section features updated guides for SRE operations, secure secrets handling in Databricks, and new options for AI-based load testing. These releases are aimed at helping teams adopt proven patterns for safer and more effective operations.
+<!--excerpt_end-->
+## Azure SRE Agent: Autonomous Reliability and Orchestration
+A new technical guide details setting up the Azure SRE Agent to help with automated incident recovery for .NET 9 APIs hosted on Azure. Teams can connect telemetry with Azure Monitor and Application Insights, then configure sub-agents (such as AvgResponseTime and DeploymentHealthCheck) to watch for indicators and trigger automated rollbacks, issue creation, and incident alerts via Teams or email. Code samples and configuration steps are provided to make it easier to combine deployment, monitoring, and incident response in one platform.
+- [Fix It Before They Feel It: Proactive Reliability with Azure SRE Agent](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/fix-it-before-they-feel-it-higher-reliability-with-proactive/ba-p/4480444)
+Following last week''s SRE update, this new guidance explains how to customize SRE automation for full production use. The documentation covers integration with alert handling services like PagerDuty and ServiceNow, and provides technical steps for context-driven engineering—demonstrating Azure’s approach to comprehensive toolchain orchestration and system reliability. These improvements reflect Azure’s ongoing commitment to hands-on, practical SRE automation.
+- [Context Engineering Lessons from Building Azure SRE Agent](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/context-engineering-lessons-from-building-azure-sre-agent/ba-p/4481200)
+## Securing Azure Databricks: Key Vault Integration
+This guidance shows how to connect Azure Key Vault with Databricks for secure secret management, ensuring credentials are never hardcoded and can be accessed only at runtime. The walkthrough includes registering Azure AD applications, granting Key Vault permissions, and using Python code (with `ClientSecretCredential` and `SecretClient`) to retrieve secrets during Databricks jobs. This process enables teams to manage secrets safely and efficiently, supporting compliant and reliable data workflows for ML and ETL processes. The solution extends secure management to both Azure databases and Databricks, supporting robust security without interfering with the development process.
+- [Securely Managing Database Connection Strings in Azure Databricks with Key Vault](https://techcommunity.microsoft.com/t5/microsoft-developer-community/data-security-azure-key-vault-in-data-bricks/ba-p/4479785)
+This update continues Azure’s trend of publishing actionable security guidance, broadening secure identity and secret practices into modern data engineering and automation.
+## AI-powered Load Test Generation in Azure Load Testing
+Azure Load Testing now uses AI to speed up JMeter script creation. With a browser extension for Edge or Chrome, developers can record user interactions and upload the session to Azure Load Testing. AI then annotates scripts, applies wait times, and manages dynamic values, producing load tests that better reflect real-world user actions. Teams get the option to review, edit, or download these scripts, giving them greater control and quality over the results. This solution helps teams catch performance issues earlier, and provides consistent load testing for scaling applications.
+- [AI-assisted load test authoring in Azure Load Testing](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-load-testing/ba-p/4480652)
+This feature expands Azure’s focus on workflow automation and developer tools. While previous releases emphasized reliability automation for SRE, this update adds AI-driven enhancements to performance and test engineering, further supporting DevOps efficiency.',
+    'Azure’s recent changes prioritize automation, reliability, and up-to-date security. This section features updated guides for SRE operations, secure secrets handling in Databricks, and new options for AI-based load testing. These releases are aimed at helping teams adopt proven patterns for safer and more effective operations.',
+    1766995200, 'azure', '/azure/roundups/weekly-azure-roundup-2025-12-29', 'TechHub',
+    'TechHub', 'F4B7F4FD87B59649AA5A5DA2751C3E7054E8A361FC55E25CA835028D977735E1', ',Microsoft Azure,Azure SRE Agent,Site Reliability Engineering,Azure Monitor,Application Insights,Incident Management,PagerDuty,ServiceNow,Azure Databricks,Azure Key Vault,Microsoft Entra ID,Secrets Management,Azure Load Testing,Apache JMeter,DevOps,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-12-22
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-12-22', 'roundups', 'Weekly Azure Roundup: Faster Networking, Resilient Messaging',
+    'Azure networking gains 400 Gbps ExpressRoute and improved VPN Gateway throughput, while Azure Service Bus Premium adds geo-replication GA. BizTalk Server end-of-support (2030) prompts migration guidance to Logic Apps.
+<!--excerpt_end-->
+## Azure Networking, Resiliency, and Security Enhancements
+This week’s networking improvements include 400 Gbps ExpressRoute options for high-demand workloads, increased VPN Gateway throughput, larger Virtual WAN and Route Server scaling, new forced tunneling and DNS Security rules, and automated failover scoring through ExpressRoute Resiliency Insights. A Copilot-based chatbot helps with networking troubleshooting.
+Updates to Azure Front Door clarify new deployment procedures (configuration validation, rapid rollback, edge resilience validation) and future enhancement plans around safety and isolation. Note also the upcoming deprecation of Docker Content Trust for Azure Container Registry, with planned migration to the Notary Project.
+- [Azure Networking 2025: Powering Cloud Innovation and AI at Global Scale](https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-2025-powering-cloud-innovation-and-ai-at-global/ba-p/4479390)
+- [Azure Front Door: Hardening Configuration Resiliency After October Outages](https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-front-door-implementing-lessons-learned-following-october/ba-p/4479416)
+- [Azure Policy: Required Actions for Docker Content Trust Deprecation in Azure Container Registry](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-policy-required-actions-for-docker-content-trust/ba-p/4478951)
+## Migration, Modernization, and Strategic Guidance
+Support for BizTalk Server ends in 2030; teams should migrate to Logic Apps and Integration Services. Existing mainframe connections remain supported through Host Integration Server, and tooling is available to help with these transitions.
+Guidance for Oracle Database@Azure addresses deeper integrations and AI enablement, while Storage Account replication changes (LRS to GZRS) require planned downtime—see official resources for planning.
+- [Microsoft BizTalk Server Product Lifecycle Update: Modernization and Migration Guidance](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/microsoft-biztalk-server-product-lifecycle-update/ba-p/4478559)
+- [Modernizing Oracle Workloads with Oracle Database@Azure and AI Solutions](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-hits-the-road-with-oracle-ai-world-tour-2026/ba-p/4477598)
+- [Minimizing Downtime When Migrating Azure Storage Account Replication](https://techcommunity.microsoft.com/t5/azure/understanding-storage-account-replication-downtime/m-p/4479787#M22386)
+## Developer Tools, Language Ecosystems, and Hands-On Guides
+The December release of the Azure Developer CLI (v1.22.x) enhances extension management, distributed tracing, and resource management. The release supports easier onboarding and new agent-style extensions are in planning.
+Updated guidance covers building and deploying MCP servers with Python, using Azure services for authorization, networking, and observability. Azure’s year-end Python review discusses top packages and workflow trends for Python developers.
+- [Azure Developer CLI (azd) December 2025: Extensions, Foundry, and Pipeline Updates](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-december-2025/)
+- [Building and Deploying MCP Servers with Python and Azure](https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-mcp-servers-with-python-and-azure/ba-p/4479402)
+- [Python on Azure: 2025 Year in Review – Trends, Learning, and Future Directions](/azure/videos/python-on-azure-2025-year-in-review-trends-learning-and-future-directions)
+## Messaging Patterns, Data Engineering, and Microsoft Fabric Features
+Azure Service Bus Premium supports active geo-replication for improved continuity. Developers benefit from workflow patterns—sessions, scheduling, retries, and dead-letter handling—for robust agent backends. SQL Telemetry on Microsoft Fabric highlights new analytics options, with autoscaling, data quality tools, and real-time analytics. Fabric adds support for DATE_BUCKET() and Eventstream SQL operator, providing improved time-series and event-based workflows.
+- [Announcing General Availability of Geo-Replication for Azure Service Bus Premium](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-geo-replication-for-azure/ba-p/4413164)
+- [Enterprise Messaging Patterns for Agentic AI Backends with Azure Service Bus](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/message-brokers-as-the-cornerstone-of-the-next-generation-of/ba-p/4478088)
+- [Building a Petabyte-Scale Data Platform with Microsoft Fabric and SQL Telemetry](https://blog.fabric.microsoft.com/en-US/blog/sql-telemetry-intelligence-how-we-built-a-petabyte-scale-data-platform-with-fabric/)
+- [Flexible Time-Based Reporting with DATE_BUCKET() in Microsoft Fabric Data Warehouse](https://blog.fabric.microsoft.com/en-US/blog/date_bucket-function-in-fabric-data-warehouse/)
+- [Fabric Eventstream SQL Operator: Real-Time Data Processing in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/fabric-eventstream-sql-operator-your-tool-kit-to-real-time-data-processing-in-fabric-real-time-intelligence/)
+- [Microsoft Fabric Influencers Spotlight: December 2025 Highlights](https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-december-2025/)
+## Schema Management and Change-Driven Architecture
+A new Azure schema language, JSON Structure, offers advanced typing, contract enforcement, and multi-language support. VS Code extensions and related tools simplify schema management. Drasi provides options for event-driven to change-driven migration, helping manage database change projections for phased modernization.
+- [JSON Structure: A Next-Gen Schema Language for Messaging on Azure](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/json-structure-a-json-schema-language-you-ll-love/ba-p/4476852)
+- [Event-Driven to Change-Driven: Low-cost Dependency Inversion](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/event-driven-to-change-driven-low-cost-dependency-inversion/ba-p/4478948)
+## Other Azure News
+Developers can now manage Azure NetApp Files from VS Code using an extension with AI-powered features. The Azure Update for December 19th covers improvements for Service Bus triggers, NetApp ransomware protection, data platform enhancements, and more. Azure Arc monthly forum brings upgrades for agent automation and Linux support. There are also troubleshooting guides for Azure Virtual Desktop and Data Gateway releases. Microsoft continues contributions to Fedora Linux and now offers GitHub Enterprise Cloud data residency in Japan. SQL Server and Azure SQL year-in-review posts track overall advancement in the data ecosystem.
+- [Streamline Azure NetApp Files Management Directly from VS Code](https://techcommunity.microsoft.com/t5/azure-architecture-blog/streamline-azure-netapp-files-management-right-from-your-ide/ba-p/4478122)
+- [Azure Update - 19th December 2025: Service Improvements, AI, and Security News](/ai/videos/azure-update-19th-december-2025-service-improvements-ai-and-security-news)
+- [Azure Arc Monthly Forum Recap – November 2025](https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127)
+- [Troubleshooting User Session Issues in Azure Virtual Desktop (Pooled Host Pools)](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-pooled-sessions-ending-unexpectedly-and/m-p/4478548#M13967)
+- [On-Premises Data Gateway December 2025 Release: Manual Update Preview and Power BI Desktop Compatibility](https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-december-2025-release/)
+- [Microsoft’s Contributions to Fedora Linux: Cloud Delivery, Security, and Azure Integration](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/building-bridges-microsoft-s-participation-in-the-fedora-linux/ba-p/4478461)
+- [GitHub Enterprise Cloud Data Residency Now Available in Japan](https://github.blog/changelog/2025-12-18-github-enterprise-cloud-data-residency-in-japan-is-generally-available)
+- [2025 SQL Year in Review: SQL Server, Azure SQL, and Fabric Updates](https://blog.fabric.microsoft.com/en-US/blog/2025-year-in-review-whats-new-across-sql-server-azure-sql-and-sql-database-in-fabric/)',
+    'Azure networking gains 400 Gbps ExpressRoute and improved VPN Gateway throughput, while Azure Service Bus Premium adds geo-replication GA. BizTalk Server end-of-support (2030) prompts migration guidance to Logic Apps.',
+    1766390400, 'azure', '/azure/roundups/weekly-azure-roundup-2025-12-22', 'TechHub',
+    'TechHub', 'A8B34D0B493A5BE9F51721E34466421AD797CB7C422EA4465EFD83A770338005', ',Microsoft Azure,ExpressRoute,VPN Gateway,Azure Virtual WAN,Azure Route Server,Forced Tunneling,Azure DNS Security,Azure Front Door,Azure Container Registry,Notary Project,Azure Service Bus,Geo Replication,Azure Logic Apps,Azure Developer CLI,Microsoft Fabric,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-12-15
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-12-15', 'roundups', 'Weekly Azure Roundup: Fabric GA, ACA Deployments, and SRE',
+    'This week, Azure published updates and general availability announcements aimed at simplifying developer workflows in cloud-native, analytics, and modernization projects. Improvements include new data services, deployment capabilities, and better integration for unified analytics and automation.
+<!--excerpt_end-->
+## Microsoft Fabric and SQL Data Platform
+SQL Database in Microsoft Fabric is now generally available, providing a more integrated experience with Azure data services and greater workflow visibility. Lakehouse schemas address challenges in organizing large datasets, particularly for teams adjusting from schema-less data lakes.
+General availability of SSIS 2025 enables secure migration to the cloud, while updated tooling streamlines transitions to optimized architectures, continuing the series of migration and modernization resources.
+- [What''s New and Generally Available in SQL Database in Microsoft Fabric](/azure/videos/whats-new-and-generally-available-in-sql-database-in-microsoft-fabric)
+- [The Evolution of SSIS: SQL Server Integration Services 2025 General Availability and Microsoft Fabric Integration](https://blog.fabric.microsoft.com/en-US/blog/the-evolution-of-sql-server-integration-services-ssis-ssis-2025-generally-available/)
+- [Lakehouse Schemas Now Generally Available in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/lakehouse-schemas-generally-available/)
+## Azure Container Apps: Deployment, Autoscaling, and Capacity Management
+Azure Container Apps (ACA) gains additional resources for blue-green deployments using the CLI, with support from Bicep and CI/CD automation. Updated workload profiles, including ‘Flex’, support cost-effectiveness and resource optimization for cloud-native applications.
+- [Blue-Green Deployment in Azure Container Apps with Azure Developer CLI](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-blue-green-aca-deployment/)
+- [Capacity Planning with Azure Container Apps Workload Profiles](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capacity-planning-with-azure-container-apps-workload-profiles/ba-p/4477085)
+## Azure Storage: AI Capabilities and Migration Tools
+Recent Azure Storage updates focus on enabling ML, analytics, and migration for the enterprise. The platform now offers improved scaling, integration with OpenAI/RAG, and Smart Tiering for cost management. Managed Lustre and Elastic SAN support help bridge data science workflows and storage infrastructure. Enhancements to migration tooling and identity-driven management round out the improvements.
+- [Azure Storage Innovations: Foundation for AI-Powered Data Transformation](https://azure.microsoft.com/en-us/blog/azure-storage-innovations-unlocking-the-future-of-data/)
+## Observability, Reliability, and DevOps on Azure
+Azure’s SRE Agent now delivers enhanced .NET telemetry collection and automated incident rollback, moving beyond log collection into proactive reliability management. Private Preview of Azure Managed Prometheus extends monitoring to VMs and VMSS, while new integrations with Azure Monitor and Grafana add more options for metric analysis.
+- [Proactive .NET Reliability with Azure SRE Agent](/azure/videos/proactive-net-reliability-with-azure-sre-agent)
+- [Private Preview: Azure Managed Prometheus for VM & VMSS Monitoring](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/private-preview-azure-managed-prometheus-on-vm-vmss/ba-p/4473472)
+## Microsoft Fabric Extensibility and Logic Apps: Integration and Testability
+The Fabric Extensibility Toolkit has been updated to simplify validation and publishing workflows for partners. Logic Apps now support MCP server hosting and a new Data Mapper Test Executor, expanding testable automation and transformation capabilities across integrated workflows.
+- [Microsoft Fabric Extensibility Toolkit: Streamlining Workload Publishing for Partners](https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-publishing-workloads-announcements/)
+- [Using Logic Apps as Model Context Protocol (MCP) Servers for AI Applications](/ai/videos/using-logic-apps-as-model-context-protocol-mcp-servers-for-ai-applications)
+- [Data Mapper Test Executor in Logic Apps Standard Test Framework](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/data-mapper-test-executor-a-new-addition-to-logic-apps-standard/ba-p/4472440)
+## AI Agent Backend Development with Model Context Protocol on Azure Functions
+Guides this week show how to spin up Node.js MCP servers on Azure Functions with Anthropic SDK integration, HTTP streaming, and CI/CD automation. These posts take MCP agents from prototype to real-world use.
+- [Host Your Node.js MCP Server on Azure Functions in 3 Simple Steps](https://devblogs.microsoft.com/blog/host-your-node-js-mcp-server-on-azure-functions-in-3-simple-steps)
+## Migration, Modernization, and End-to-End Developer Guides
+New step-by-step resources for app migration cover assessment, design, security, and cost considerations. Azure Data Factory migration and no-code ASP.NET modernization demos align with ongoing cloud-native modernization efforts, now supporting even faster cloud onboarding and improvement.
+- [Key Considerations for Modernizing and Migrating Custom Applications to Azure](https://techcommunity.microsoft.com/t5/azure-migration-and/key-considerations-for-modernizing-and-migrating-custom/ba-p/4476580)
+- [Assessing Your Azure Data Factory for Migration to Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/assessing-your-azure-data-factory-for-migration-to-fabric-data-factory/)
+- [No-code Modernization for ASP.NET with Managed Instance on Azure App Service](/azure/videos/no-code-modernization-for-aspnet-with-managed-instance-on-azure-app-service)
+## Other Azure News
+General Azure updates continue to stress platform resilience, compliance, and ongoing operational support. This week includes Azure Batch access deprecation, Application Gateway v2 with FIPS certification, and Azure Files Premium redundancy improvements. Azure-wide collaboration and IoT updates, along with new learning initiatives, sustain a focus on team enablement.
+The updated .NET-to-Dataverse guide provides code samples for API use and identity management, supporting recent practices for secure application integration.
+- [Azure Update - 12th December 2025](/azure/videos/azure-update-12th-december-2025)
+- [How to Connect .NET Applications to Dataverse Using Microsoft.PowerPlatform.Dataverse.Client](https://techcommunity.microsoft.com/t5/web-development/connect-net-4-6-2-to-dataverse-using-the-dataverse-plugin/m-p/4476310#M682)
+A new case study from Swiggy highlights using Fabric for real-time analytics, including demand forecasting and optimizing delivery, illustrating the value of up-to-date operational intelligence.
+- [Real-time Intelligence with Microsoft Fabric at Swiggy](https://news.microsoft.com/source/asia/features/real-time-intelligence-how-indias-swiggy-serves-millions-with-microsoft-fabric/)
+Azure Arc Server Forum returns with technical talks on hybrid cloud management, supporting the community with ongoing learning opportunities.
+- [Azure Arc Server Forum: 2026 Schedule and Participation Updates](https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-forum-2026-updates/ba-p/4476227)
+A review of Azure Session Host deployment practices advises using Key Vault and Managed Identity for credential management, avoiding exposure through logs or scripts.
+- [Challenges with Custom Script Extensions Authentication in Azure Session Host Configuration](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/custom-script-extensions-and-session-host-configuration/m-p/4476435#M13956)
+The Cloud Accelerate Factory program expands its hands-on support for Azure migration projects, designed to accelerate team success in cloud transitions.
+- [Cloud Accelerate Factory: Accelerate Azure Adoption with Expert Guidance](https://www.thomasmaurer.ch/2025/12/cloud-accelerate-factory-accelerate-cloud-adoption-with-expert-guidance/)',
+    'This week, Azure published updates and general availability announcements aimed at simplifying developer workflows in cloud-native, analytics, and modernization projects. Improvements include new data services, deployment capabilities, and better integration for unified analytics and automation.',
+    1765785600, 'azure', '/azure/roundups/weekly-azure-roundup-2025-12-15', 'TechHub',
+    'TechHub', '8F7A8CB20B054ED5E81D2C0C5846A842702DCEFF6EE3099664CEAA7AE337547A', ',Microsoft Azure,Microsoft Fabric,SQL Database in Microsoft Fabric,Lakehouse,SSIS 2025,Azure Container Apps,Blue Green Deployment,Bicep,CI/CD,Azure Storage,RAG,Azure SRE Agent,Azure Managed Prometheus,Azure Monitor,Azure Functions,MCP,Logic Apps,Azure Arc,Managed Identity,Azure Key Vault,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-12-08
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-12-08', 'roundups', 'Weekly Azure Roundup: Networking, Compute, Fabric, and Hybrid',
+    'This week''s releases cover networking, compute, serverless functions, workflow automation, data engineering, migration, and hybrid infrastructure.
+<!--excerpt_end-->
+## Azure Networking: Security, Resiliency, and Scale
+Azure Networking introduced Standard NAT Gateway V2 with zone redundancy and IPv6 for improved outbound connections. DNS Security Policy enables domain-level blocking of threats. New features like Private Link Direct Connect and JWT validation in Application Gateway give cloud-based workloads more flexibility and security. eBPF-based networking for AKS, WAF for containers, and the Bastion browser-based SSH/RDP improve cluster management. Upgrades to ExpressRoute, VPN, and Private Link add capacity and resilience for demanding applications, such as AI clusters.
+- [Azure Networking Updates: Security, Resilience, and AI-Driven Scale](https://azure.microsoft.com/en-us/blog/unlocking-the-future-azure-networking-updates-on-security-reliability-and-high-availability-2/)
+- [Azure Networking: Latest Updates for Security, Reliability, and AI/ML Workloads](https://azure.microsoft.com/en-us/blog/azure-networking-updates-on-security-reliability-and-high-availability/)
+## Azure Compute Platform: Performance and Automation Enhancements
+Ignite 2025 featured new compute products, including Direct Virtualization (for near bare-metal speed, especially for NVMe and GPU), and larger containers for resource-intensive deployments. Further, features such as VM state automation via Scheduled Actions and streamlined image management boost global operations. Additions like instance mix for VM Scale Sets and zoning for image galleries help manage costs and resilience.
+- [Scaling Azure Compute for Performance: Innovations from Ignite 2025](https://techcommunity.microsoft.com/t5/azure-compute-blog/scaling-azure-compute-for-performance/ba-p/4474662)
+## Serverless Improvements: Python on Azure Functions
+Azure Functions has switched to using uvloop with Python 3.13+, increasing performance by up to 4.8% for asynchronous workloads. No code changes are required, and Flex Consumption offers improved reliability for serverless and multi-cloud automation scenarios.
+- [Faster Azure Functions Python with uvloop](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-azure-functions-python-with-uvloop/ba-p/4455323)
+- [Boosting Python Performance on Azure Functions with uvloop](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-python-on-azure-functions-with-uvloop/ba-p/4455323)
+## Azure Logic Apps: AI Connectors and Integration Services
+Azure Logic Apps Standard now includes built-in connectors for Azure OpenAI, AI Search, Document Intelligence, and Operations, accessible with a minimal setup. These integrations support agent-centric automations and intelligent document workflows. The December newsletter outlines new XML, migration, error-handling, and AI workflow features for improved automation.
+- [General Availability of AI and RAG Connectors in Azure Logic Apps Standard](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-ai-rag-connectors-in-logic/ba-p/4474337)
+- [Logic Apps Aviators Newsletter - December 2025](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-december-2025/ba-p/4474048)
+## Microsoft Fabric: Data Engineering, Automation, and Analytics Integration
+Fabric users can now expose Lakehouse materialized views as GraphQL APIs for fast analytics integration. Other new tools improve automation for pipeline deployments, cross-cloud analytics using BigQuery and data transfer, and make it simpler to analyze documents from OneDrive/SharePoint without extra copies. CDC and data ingestion are now easier to set up across multiple systems.
+- [Exposing Lakehouse Materialized Views via GraphQL APIs in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/exposing-lakehouse-materialized-views-to-applications-in-minutes-with-graphql-apis-in-microsoft-fabric/)
+- [Automating Warehouse and SQL Endpoint Deployment in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/bridging-the-gap-automate-warehouse-sql-endpoint-deployment-in-microsoft-fabric/)
+- [Announcing Staging for Mirroring for Google BigQuery (Preview)](https://blog.fabric.microsoft.com/en-US/blog/announcing-staging-for-mirroring-for-google-bigquery-in-microsoft-fabricmirroring-for-gbq-staging-blog/)
+- [Integrating OneDrive and SharePoint Documents into OneLake Analytics with Shortcuts](https://blog.fabric.microsoft.com/en-US/blog/turning-everyday-documents-from-sharepoint-and-onedrive-into-analytics-ready-data-with-onelake-shortcuts/)
+- [Simplifying Data Ingestion with Copy job – Replicate data from Dataverse through Fabric to multiple destinations](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-replicate-data-from-dataverse-through-fabric-to-multiple-destinations/)
+## Cloud-Native and Migration: Observability, Reliability, and Landing Zone Automation
+A new guide provides details on using Azure Databricks'' logging and system tables for full-stack monitoring. Reliability engineering topics now include using entropy concepts for SLAs and chaos testing. Azure Migrate supports secure landing zone creation, while step-by-step material is available for greenfield and brownfield API migrations from Amazon API Gateway to Azure.
+- [End-to-End Observability for Azure Databricks: Infrastructure and Application Logging Strategies](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/end-to-end-observability-for-azure-databricks-from/ba-p/4475692)
+- [Cloud as a War Against Entropy: Practical Reliability Patterns for Azure Architects](https://techcommunity.microsoft.com/t5/azure-architecture-blog/cloud-as-a-war-against-entropy/ba-p/4474111)
+- [Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate](/videos/reimagine-migration-agentic-platform-landing-zone-with-azure-migrate-video)
+- [Migrating from Amazon API Gateway to Azure API Management: Technical Guide](https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-from-amazon-api-gateway-to-azure-api-management/ba-p/4471524)
+## Azure Arc, Hybrid, and Local Infrastructure
+Azure Local can now be deployed within customer-owned data centers or edge locations to support compliance and intermittent connectivity scenarios. New features include integration with GPUs, Azure Migrate, analytics, and generative AI, while Arc Site Manager and GCP connector extend cross-cloud orchestration. There is a new guide for managing Azure Local updates, and Arc now provides governance and security for hybrid clusters.
+- [Extending Azure: AI-Powered Innovation, Resiliency, and Control](https://azure.microsoft.com/en-us/blog/new-options-for-ai-powered-innovation-resiliency-and-control-with-microsoft-azure/)
+- [Manage Azure Local Updates](https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/)
+- [Azure Arc: Extending Azure for Hybrid and Multi-Cloud Management](/azure/videos/azure-arc-extending-azure-for-hybrid-and-multi-cloud-management)
+## Other Azure News
+Further platform news this week includes detailed Load Balancer metrics, resumable SFTP for Azure Blob, PostgreSQL updates, and expanded Databricks workspace options. Additional support for confidential ledgers, Mistral Large 3 in Foundry, and the retirement of Azure ML SDK v1 (with migration guides) round out the update. New steps explain how to integrate Amazon S3/VPC with Entra ID for analytics in Microsoft Fabric. The Azure Resource Graph GET/LIST API is now GA, supporting scalable resource management, and SQL Server Management Studio 22 adds migration workflow improvements. Azure SRE Agent now enables proactive, scheduled checks feeding into incident workflows. Windows 2025 accessibility updates add enhanced dictation, voice, and magnification capabilities. There’s also a guide for deploying Bun + Hono + Vite JavaScript stacks on Azure Linux Web App.
+- [Azure Update - 5th December 2025: New Features, Metrics, and Services](/ai/videos/azure-update-5th-december-2025-new-features-metrics-and-services)
+Learn how to enable audit-friendly, secure analytics in Microsoft Fabric with service principal authentication for VPC-protected S3 buckets.
+- [Securely Access VPC-Protected Amazon S3 Buckets in Microsoft Fabric Using Entra Integration](https://blog.fabric.microsoft.com/en-US/blog/securely-access-vpc-protected-amazon-s3-buckets-in-microsoft-fabric-with-entra-integration-preview/)
+Azure Resource Graph GET/LIST APIs support efficient scaling for resource queries and automation.
+- [General Availability of Azure Resource Graph GET/LIST API Released](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-general-availability-for-azure-resource-graph-arg-get/ba-p/4474188)
+SQL Server Management Studio 22 is now generally available with workflow and hybrid management enhancements.
+- [What''s New in SQL Server Management Studio 22 GA](/azure/videos/whats-new-in-sql-server-management-studio-22-ga)
+Scheduled monitoring from the Azure SRE Agent improves compliance and incident detection and works alongside OpenTelemetry tooling.
+- [Automated Proactive Monitoring with Azure SRE Agent Scheduled Tasks](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-monitoring-made-simple-with-azure-sre-agent/ba-p/4471205)
+A year-in-review showcases accessibility innovations for Windows—including updates to dictation, voice access, Narrator, and screen magnification.
+- [2025 Accessibility Innovations in Windows: Year in Review](https://blogs.windows.com/windowsexperience/2025/12/03/2025-a-year-in-recap-windows-accessibility/)
+Deployment tips for alternative JavaScript stacks (Bun + Hono + Vite) for Azure Linux Web Apps.
+- [Deploying a Bun + Hono + Vite App to Azure Linux Web App](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-a-bun-hono-vite-app-to-azure-app-service/ba-p/4475356)',
+    'This week''s releases cover networking, compute, serverless functions, workflow automation, data engineering, migration, and hybrid infrastructure.',
+    1765180800, 'azure', '/azure/roundups/weekly-azure-roundup-2025-12-08', 'TechHub',
+    'TechHub', '132EC6BB165A4E7AC7D4427DAEEC791F31C8B124263E8234EAA471848491960E', ',Microsoft Azure,Azure Networking,NAT Gateway,Application Gateway,Azure Private Link,ExpressRoute,AKS,Azure Compute,Virtual Machines,Azure Functions,Python,Azure Logic Apps,Microsoft Fabric,Azure Arc,Azure Migrate,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-12-01
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-12-01', 'roundups', 'Weekly Azure Roundup: Hybrid AI, Observability, and Cloud Native',
+    'Azure’s newest releases maintain ongoing investment in cloud-native tools, AI-enhanced platforms, and modernization support. Ignite 2025 sessions illustrate Azure’s aim for easier multi-cloud deployment, real-time analytics, robust design, and secure hybrid integration. Updated features, public previews, and migration guides confirm the platform’s focus on scalable, intelligent workloads.
+<!--excerpt_end-->
+## Azure Cloud Native Development and Compute Innovations
+Azure’s latest cycle builds on familiar themes—greater scalability and cross-platform capability. Multi-cloud management via Container Instances and improved serverless containers reinforce Azure’s pattern of accessible orchestration, extending the direction found in previous work such as the RADIUS project.
+Advancements in eBPF-based networking and confidential container groups offer secured, fast workload isolation, matching compliance features discussed recently.
+The public preview of Azure NCv6 GPU VMs boosts AI infrastructure, emphasizing support for visual and simulation workloads that tie back to the push toward efficient, multi-modal cloud operations. The DADS V7, V4L, and Cobalt 200 compute upgrades improve elasticity and reliability, reflecting feedback from recent user benchmarking efforts.
+- [Cloud Native Innovations with Mark Russinovich: Ignite 2025 Breakout](/azure/videos/cloud-native-innovations-with-mark-russinovich-ignite-2025-breakout)
+- [Azure NCv6 Public Preview: Unified Platform for Converged AI & Visual Computing](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-public-preview-the-new-unified-platform-for-converged/ba-p/4472704)
+- [Powering Modern Cloud Workloads with Azure Compute](/ai/videos/powering-modern-cloud-workloads-with-azure-compute)
+## Observability, Automation, and Operational Resilience
+Azure SRE Agent expands last week’s observability guidance, adding support for metrics across clouds. New integrations with external monitoring and MCP server capabilities support OpenTelemetry-based metrics for a variety of languages, reinforcing the standardization drive.
+Collaborative incident response features, like integration with PagerDuty and Hawkeye, increase operational resilience—ongoing themes in Azure’s diagnostic improvements.
+Copilot now works within Azure Monitor, providing live insights for cost and troubleshooting—an extension of last week’s new dashboards and query options. Support for Grafana and Prompt QL moves workflows closer to real-time for distributed Kubernetes environments.
+- [Azure SRE Agent: Enhancing Observability and Multi-Cloud Incident Management](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719)
+- [Unlock Cloud-Scale Observability and Optimization with Azure Monitor](/ai/videos/unlock-cloud-scale-observability-and-optimization-with-azure-monitor)
+## Data Platform Updates: Microsoft Fabric, SQL, and Data Integration
+Microsoft Fabric continues to build out its analytics platform, with hands-on demos and new features like in-place analytics for cloud backups and expanded OneLake support. General availability of Copy Job Activity and Data Virtualization for SQL are among several orchestration and compliance updates. Support for large object types, variable libraries, and improved workflow automation now caters to developer requests, as reflected in recent simplification efforts.
+Logic Apps now process XML directly, aiding legacy-to-cloud modernization as explored previously.
+- [SQL Database in Microsoft Fabric: Unified Platform for AI Apps and Analytics](/ai/videos/sql-database-in-microsoft-fabric-unified-platform-for-ai-apps-and-analytics)
+- [Copy Job Activity Now Generally Available in Microsoft Fabric Data Factory Pipelines](https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/)
+- [Data Virtualization and External Tables in Fabric SQL Databases (Preview)](https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/)
+- [Large Object Data Support in Microsoft Fabric Data Warehouse and SQL Analytics Endpoint](https://blog.fabric.microsoft.com/en-US/blog/large-string-and-binary-values-in-fabric-data-warehouse-and-sql-analytics-endpoint-for-mirrored-items-general-availability/)
+- [Managing Environment Configuration in Microsoft Fabric with Variable Libraries](https://blog.fabric.microsoft.com/en-US/blog/manage-environment-configuration-in-fabric-user-data-functions-with-variable-libraries/)
+- [Querying Database Backups in Microsoft Fabric: In-Place Analytics Without ETL](https://blog.fabric.microsoft.com/en-US/blog/30438/)
+- [General Availability of XML Parse and Compose Actions for Azure Logic Apps](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-xml-parse-and-compose/ba-p/4470825)
+## Edge and Hybrid AI: Azure Local, Deployment Automation, and Lenovo Partnership
+Hybrid and regulated cloud options expand further, with Microsoft introducing Private Sovereign Cloud, NVIDIA RTX acceleration, and integrated partner solutions. Case studies with Lenovo and LOCA illustrate fast, automated deployment supporting data sovereignty, building on last week’s modernization examples.
+Orchestration for AKS, migration, and custom model deployment all support practical multi-environment event-driven design.
+- [What’s New in Azure Local: Portfolio Enhancements & Edge AI Innovations](/ai/videos/whats-new-in-azure-local-portfolio-enhancements-and-edge-ai-innovations)
+- [Simplifying Azure Local Deployments with Lenovo ThinkAgile MX and LOCA](/azure/videos/simplifying-azure-local-deployments-with-lenovo-thinkagile-mx-and-loca)
+- [Powering Hybrid AI with Azure Local and Lenovo: Ignite 2025 Deep Dive](/ai/videos/powering-hybrid-ai-with-azure-local-and-lenovo-ignite-2025-deep-dive)
+## Logic Apps, Integration, and Workflow Automation
+Logic Apps further develop agentic workflow patterns, extending the Model Context Protocol (MCP) highlighted last week. Guides for HL7 and BizTalk migration support teams in updating old processes to modern, cloud-based flows.
+Features for cloning workflows and upgrading support ongoing modernization work, making transitions manageable and less risky. Demonstrations confirm Azure’s focus on developer-centered integration and tool improvement.
+- [The Future of Integration: Agentic Workflows and AI-Driven Patterns with Azure Logic Apps](/ai/videos/the-future-of-integration-agentic-workflows-and-ai-driven-patterns-with-azure-logic-apps)
+- [Announcing Public Preview: HL7 Connector for Azure Logic Apps (Standard & Hybrid)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-hl7-connector-for-azure-logic-apps-standard-and/ba-p/4470690)
+- [Clone a Consumption Logic App to a Standard Workflow](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/clone-a-consumption-logic-app-to-a-standard-workflow/ba-p/4471175)
+## Resiliency, Backup, and Secure Cloud Architecture
+The “resilience by design” approach continues, providing updated frameworks for secure architectures and backup best practices. New guides for VM, Kubernetes, and microservice protection use Azure Recovery Services, Defender automation, and immutable storage to address shared responsibility and rapid response—building on established priorities.
+- [Resilience by Design: Secure, Scalable, AI-Ready Cloud with Azure](/ai/videos/resilience-by-design-secure-scalable-ai-ready-cloud-with-azure)
+- [Resiliency and Recovery with Azure Backup and Site Recovery](/azure/videos/resiliency-and-recovery-with-azure-backup-and-site-recovery)
+## Modernization, Migration, and Partner Solutions
+Modernization remains a strong topic, with session guides on retail, finance, and public sector migration following last week’s best practices. These updates further Azure’s support for organizations planning IT renewals using AI-powered platforms and detailed adoption guidance.
+- [Sam’s Club: Modernizing Retail Mission-Critical Apps with Azure](/azure/videos/sams-club-modernizing-retail-mission-critical-apps-with-azure)
+- [Levi’s Global IT Transformation: Migration and Modernization with Azure](/ai/videos/levis-global-it-transformation-migration-and-modernization-with-azure)
+- [Migration Lessons from Microsoft Federal''s RISE with SAP Deployment](/ai/videos/migration-lessons-from-microsoft-federals-rise-with-sap-deployment)
+- [Modernize on-premises VMware environments with Azure VMware Solution](/ai/videos/modernize-on-premises-vmware-environments-with-azure-vmware-solution)
+- [Accelerating Migration and Modernization in Financial Services with Microsoft Cloud Accelerate Factory](/ai/videos/accelerating-migration-and-modernization-in-financial-services-with-microsoft-cloud-accelerate-factory)
+- [Migration & Modernization Strategies for Partners: Azure-Focused Growth at MS Ignite 2025](/ai/videos/migration-and-modernization-strategies-for-partners-azure-focused-growth-at-ms-ignite-2025)
+## Azure IaaS, Infrastructure Optimization, and Cost Management
+Optimization continues to be a focus, with new advice for Azure IaaS using Azure Boost, Compute Fleet, Ultra Disk, and blob storage tiering strategies. Networking upgrades and scaling for App Gateway and ExpressRoute are ongoing, supporting a transition to more cost-effective and higher-performance operations.
+Updated resources link back to Copilot’s cost and reservation management, giving practical steps for reducing spend on infrastructure.
+- [Azure IaaS Best Practices to Enhance Performance and Scale](/azure/videos/azure-iaas-best-practices-to-enhance-performance-and-scale)
+- [Driving Efficiency and Cost Optimization for Azure IaaS Deployments](/azure/videos/driving-efficiency-and-cost-optimization-for-azure-iaas-deployments)
+- [Drive Cost Efficiency and Elevate Azure ROI with Strategic Architecture | BRK216](/ai/videos/drive-cost-efficiency-and-elevate-azure-roi-with-strategic-architecture-brk216)
+- [Optimizing Data Analytics Costs with Azure Reservations for Microsoft Fabric](https://techcommunity.microsoft.com/t5/finops-blog/streamline-analytics-spend-on-microsoft-fabric-with-azure/ba-p/4472670)
+## Security, AI Governance, and Endpoint Management
+Improved security policies, integrated device management, and AI governance build on last week’s new baselines and detection features. Intune, Defender for Cloud, and new endpoint management options allow for streamlined policy enforcement and automation.
+Guides for API Management in Copilot and other AI scenarios continue to support secure and traceable integration, reflecting recent efforts to build stronger governance structures.
+- [What''s New in Microsoft Intune: AI-Driven Endpoint Security and IT Empowerment](/ai/videos/whats-new-in-microsoft-intune-ai-driven-endpoint-security-and-it-empowerment)
+- [Govern AI Agents with Azure API Management: Secure, Monitor, and Scale AI Workloads](/ai/videos/govern-ai-agents-with-azure-api-management-secure-monitor-and-scale-ai-workloads)
+## Other Azure News
+Updates this week address optimized Linux deployments, eBPF instrumentation, and improved image security, offering practical guides for sysadmins working on Azure deployments.
+- [Optimizing Linux Deployments: Performance and Security on Azure](/azure/videos/optimizing-linux-deployments-performance-and-security-on-azure)
+Advances in agentic platforms, including Copilot and AKS Automatic features, further automate compliance and improve developer experience.
+- [Scale Smarter: Azure Infrastructure for the Agentic Era](/ai/videos/scale-smarter-azure-infrastructure-for-the-agentic-era)
+Ongoing integration with Citrix Cloud builds on last week’s coverage of workplace modernization and hybrid optimization for remote work environments.
+- [Optimizing Azure Investments with Citrix: Security, Cost, and Experience](/azure/videos/optimizing-azure-investments-with-citrix-security-cost-and-experience)
+A historical session featuring Mark Russinovich and Scott Hanselman explores computing from Altair 8800 to Azure, illustrating the ongoing context of platform modernization.
+- [Connecting Computing Eras: From Altair 8800 to Azure Cloud Architecture](/azure/videos/connecting-computing-eras-from-altair-8800-to-azure-cloud-architecture)
+Updates on IoT devices and retail showcase Azure’s evolving role in secure analytics and smart device management.
+- [Scaling Innovation in Smart Eyewear and Connected Retail with Azure and AI](/ai/videos/scaling-innovation-in-smart-eyewear-and-connected-retail-with-azure-and-ai)',
+    'Azure’s newest releases maintain ongoing investment in cloud-native tools, AI-enhanced platforms, and modernization support. Ignite 2025 sessions illustrate Azure’s aim for easier multi-cloud deployment, real-time analytics, robust design, and secure hybrid integration. Updated features, public previews, and migration guides confirm the platform’s focus on scalable, intelligent workloads.',
+    1764576000, 'azure', '/azure/roundups/weekly-azure-roundup-2025-12-01', 'TechHub',
+    'TechHub', '42BFF639E1435C7A11846313D60CC512BFC1895B77AC1634BE13306FA602669C', ',Microsoft Azure,Azure Container Instances,Serverless Containers,Confidential Containers,Ebpf,Azure NCv6 GPU VMs,Azure Monitor,Azure SRE Agent,OpenTelemetry,Kubernetes,Microsoft Fabric,OneLake,Azure Logic Apps,Azure Local,Azure API Management,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-11-17
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-11-17', 'roundups', 'Weekly Azure Roundup: .NET 10, AKS ops, Fabric, and observability',
+    'Azure announcements include new guidance for .NET apps, expanded data platforms, improved monitoring, workflow automation, and continuing advancements to the platform stack. Developers can access new resources for container orchestration (AKS), multi-cloud data systems, cost management, and modernization with enhanced support for open standards and diagnostics.
+<!--excerpt_end-->
+## .NET- and AI-Native Cloud Development on Azure
+Recent updates reinforce .NET and Azure integration, with new guides for Aspire 13, ASP.NET Core 10, .NET MAUI 10, and modern language support. The .NET 10 and Azure convergence continues to drive event-driven and AI-enabled architectures using Container Apps, AKS, and Azure Functions.
+The focus on updating legacy .NET workloads carries into this week, using efficient migration strategies and new mesh patterns for API scalability. The built-in Model Context Protocol (MCP) support with Visual Studio 2026 deepens the connection between DevOps and developer experience. Azure App Service brings improved pipeline integration, diagnostics, and security features for .NET teams.
+- [Azure Keynote: Cloud Innovation with .NET](/ai/videos/azure-keynote-cloud-innovation-with-net)
+- [Modernizing .NET Applications for the Cloud](/azure/videos/modernizing-net-applications-for-the-cloud)
+- [Building Remote MCP Servers with .NET and Azure](/ai/videos/building-remote-mcp-servers-with-net-and-azure)
+- [Azure MCP Server Now Built-In with Visual Studio 2026: Agentic Cloud Automation for Developers](https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-visual-studio-2026-a-new-era-for-agentic-workflows/)
+- [What''s New in Azure App Service for .NET Developers](/azure/videos/whats-new-in-azure-app-service-for-net-developers)
+## Azure Kubernetes Service (AKS), Networking, and Container Platform Advances
+AKS maintains its focus on multi-tenancy, security, and workload isolation, with fresh resources for architecture, cost tracking, and RBAC setup. Namespace showback and autoscaling help operationalize large clusters, building on the need for granular controls.
+Azure networking advances—like Virtual Network Manager and improved WAN routing—further mesh networking and security for distributed services. IPv6 walkthroughs round out guidance for modernization.
+- [Building Enterprise-Grade Shared AKS Clusters: A Guide to Multi-Tenant Kubernetes Architecture](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-enterprise-grade-shared-aks-clusters-a-guide-to-multi/ba/p/4468563)
+- [Unlocking Direct Spoke Communication with Azure Virtual Network Manager and Virtual WAN](https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-virtual-network-manager-azure-virtual-wan/ba-p/4469991)
+- [Delivering Web Applications Over IPv6 Using Azure Networking Services](https://techcommunity.microsoft.com/t5/azure-networking-blog/delivering-web-applications-over-ipv6/ba-p/4469638)
+## Data and Storage Platform Releases: Microsoft Fabric, SQL, and Azure Storage
+Microsoft Fabric Warehouse Snapshots have moved to general availability, supporting reproducible analytics and ML projects. SQLCon presents hybrid and AI-driven data management strategies, with more information on SQL Server, Azure SQL, and T-SQL Copilot.
+The public preview of Dell PowerScale on Azure strengthens unstructured data and disaster recovery support. Azure Storage now offers enhanced region replication and improved geo-redundancy, supporting compliance and durability for distributed workloads.
+- [Warehouse Snapshots Now Generally Available in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/warehouse-snapshots-in-microsoft-fabric-freeze-data-unlock-reliable-reporting/)
+- [Announcing SQLCon: The Microsoft SQL Community Conference](https://blog.fabric.microsoft.com/en-US/blog/its-time-announcing-the-microsoft-sql-community-conference/)
+- [Public Preview: Azure Native Dell PowerScale Now Available](https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-of-azure-native-dell-powerscale/ba-p/4470120)
+- [Priority Replication Now Generally Available for Azure GRS and Object Replication](https://techcommunity.microsoft.com/t5/azure-storage-blog/priority-replication-for-geo-redundant-storage-and-object/ba-p/4468607)
+## Observability, Monitoring, and Agentic Tooling
+Azure Monitor adds public preview support for PromQL query-based metric alerts, aligning with broader adoption of standards-driven monitoring. The Azure Copilot Observability Agent now enables AI-guided cloud investigations, supporting improved AI-powered diagnostics. The adoption of OpenTelemetry sidecar extensions continues to grow for PHP, Python, Node.js, and .NET environments.
+- [Public Preview: Query-Based Metric Alerts Now in Azure Monitor](https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469290)
+- [Azure Copilot Observability Agent: AI-Driven Investigations for Cloud Operations](https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4467360)
+- [OTEL Sidecar Extension Cheat-Sheet on Azure App Service for Linux: PHP, Python, Node.js, .NET](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-iii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469589)
+- [Part I: OTEL Sidecar Extension on Azure App Service for Linux – PHP Integration Guide](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-i-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469514)
+- [Elastic APM Setup with OTEL Sidecar Extension on Azure App Service for Linux](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-ii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469576)
+## Cost Optimization, Migration Guidance, and Cloud Economics
+Databricks cost optimization content provides practical guidance for resource management, echoing recent updates to cloud migration and cost tracking tools. Azure Migrate’s enhancements now support improved mapping and phased application planning. Updated pricing calculators and model guides help teams plan and manage costs for dynamic workloads.
+- [Azure Databricks Cost Optimization: A Practical Guide](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235)
+- [Migrate or Modernize Applications Using Azure Migrate: New Features and Application-Aware Approaches](https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587)
+- [Azure Cost Estimation: Practical Strategies and Tools Explained](/azure/videos/azure-cost-estimation-practical-strategies-and-tools-explained)
+- [Azure Pricing Models Explained: Pay-As-You-Go, Reserved, and Spot Instances](https://dellenny.com/azure-pricing-models-explained-pay-as-you-go-reserved-and-spot-instances/)
+- [Using the Azure Pricing Calculator for Accurate Cloud Cost Estimates](https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/)
+## Platform Updates, Node.js, Python, and Storage Ecosystem Expansions
+Latest platform news includes Node.js 24 LTS on Azure App Service, new deployment tooling for Python, and updates to existing GitHub Actions pipelines. Azure NetApp Files upgraded scaling and backup features, and AKS node improvements make it easier to run the latest .NET 10 workloads.
+- [Node.js 24 Now Available on Azure App Service for Linux](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/node-js-24-is-now-available-on-azure-app-service-for-linux/ba/p/4468801)
+- [What’s New for Python on Azure App Service for Linux: pyproject.toml, uv, and Modern Deployments](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-for-python-on-app-service-for-linux-pyproject-toml-uv/ba-p/4468903)
+- [Accelerating HPC and EDA Innovation with Azure NetApp Files Enhancements](https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-hpc-and-eda-with-powerful-azure-netapp-files/ba-p/4469739)
+- [Azure Update - 14th November 2025](/ai/videos/azure-update-14th-november-2025)
+## Event Highlights: Ignite 2025, Conferences, and Learning Resources
+Event coverage this week expands on previous Ignite previews, featuring guides for customizing event schedules and promoting greater community engagement on the Azure platform.
+- [Top Microsoft Ignite 2025 Sessions for Azure Developers: AI, Copilot, and Fabric](https://techcommunity.microsoft.com/t5/azure-events/build-your-ignite-schedule-top-sessions-for-developers/ba-p/4469064)
+- [Your Guide to Azure Compute at Microsoft Ignite 2025](https://techcommunity.microsoft.com/t5/azure-compute-blog/your-guide-to-azure-compute-at-microsoft-ignite-2025/ba-p/4468633)
+- [Announcing SQLCon: The Microsoft SQL Community Conference](https://blog.fabric.microsoft.com/en-US/blog/its-time-announcing-the-microsoft-sql-community-conference/)
+## Other Azure News
+Automation, platform modernization, and migration planning remain in focus, with tools and resources designed to make transitioning to Azure approachable. Security, compliance, and troubleshooting features—such as WinRE for Azure Arc and SLAs—reinforce platform improvements and readiness for resilient deployments.
+- [Announcing BizTalk Server 2020 Cumulative Update 7: Platform Support and Upgrade Guidance](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba/p/4469100)
+- [Provisioning SQL Server 2025 Databases to Kubernetes with Pure Storage Snapshots](/azure/videos/provisioning-sql-server-2025-databases-to-kubernetes-with-pure-storage-snapshots)
+- [Modernizing WPF Map Functionality with Azure Maps: A Practical Migration Path](https://techcommunity.microsoft.com/t5/azure-maps-blog/guest-blog-modernizing-your-wpf-app-maps-functionality-with/ba/p/4468755)
+- [Strengthen Server Resilience: Enabling WinRE for Windows Server with Azure Arc](https://www.thomasmaurer.ch/2025/11/strengthen-server-resilience-windows-recovery-environment-winre-for-windows-server-with-azure-arc/)
+- [Migrate or Modernize Applications Using Azure Migrate: New Features and Application-Aware Approaches](https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587)
+- [Accelerate Cloud Migration with Wave Planning in Azure Migrate](https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-cloud-migration-with-wave-planning-in-azure-migrate/ba-p/4467959)
+- [Calculating Expiry and Retention Days for Azure Blob Storage Using Inventory and Synapse](https://techcommunity.microsoft.com/t5/azure-paas-blog/deriving-expiry-days-and-remaining-retention-days-for-blobs/ba-p/4466586)
+- [Understanding Azure SLAs: What 99.9% Really Means](https://dellenny.com/understanding-azure-slas-what-99-9-really-means/)
+- [Azure Governance Tools: Policies, Blueprints, and RBAC Explained](https://dellenny.com/azure-governance-tools-policies-blueprints-and-role-based-access-control-rbac/)
+- [Intermittent Access Issue: Azure Function App Fails to Retrieve Key Vault Secrets via Private Endpoint](https://techcommunity.microsoft.com/t5/azure-infrastructure/intermittent-access-issue-between-azure-function-app-and-key/m-p/4468948#M316)
+- [Deploying AI Solutions with Azure AI Landing Zones](/ai/videos/deploying-ai-solutions-with-azure-ai-landing-zones)
+- [Top 5 Cloud Design Principles for Architects](/azure/videos/top-5-cloud-design-principles-for-architects)
+- [Microsoft Announces Fairwater Datacenter: Building an AI Superfactory with Azure](https://www.linkedin.com/posts/satyanadella_today-we-announced-our-new-fairwater-datacenter-activity-7394420047294648321-RQ77)
+- [Sovereign and Adaptive Cloud: Microsoft Ignite 2025 Highlights](https://www.thomasmaurer.ch/2025/11/driving-impact-in-the-era-of-ai-sovereign-cloud-adaptive-cloud-at-microsoft-ignite-2025/)
+- [Join Microsoft at SC25: HPC and AI Innovations in St. Louis](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935)',
+    'Azure announcements include new guidance for .NET apps, expanded data platforms, improved monitoring, workflow automation, and continuing advancements to the platform stack. Developers can access new resources for container orchestration (AKS), multi-cloud data systems, cost management, and modernization with enhanced support for open standards and diagnostics.',
+    1763366400, 'azure', '/azure/roundups/weekly-azure-roundup-2025-11-17', 'TechHub',
+    'TechHub', 'DEA78886540AB5D1788240A38BB36CE51FF9049E5E2BC083F8E1E1E445040205', ',Microsoft Azure,.NET 10,ASP.NET Core 10,.NET MAUI 10,AKS,Azure Functions,Azure Container Apps,Azure App Service,Microsoft Fabric,Azure SQL,Azure Storage,Azure Monitor,OpenTelemetry,Azure Migrate,Azure Cost Management,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-11-10
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-11-10', 'roundups', 'Weekly Azure Roundup: Faster AI, Safer Containers, Hybrid Control',
+    'The latest Azure updates reflect improvements in performance, greater infrastructure flexibility, additional security and governance features, and developer workflow enhancements. These changes span compute, networking, containers, hybrid cloud architecture, data management, process automation, security, and designer tools.
+<!--excerpt_end-->
+## Azure Compute, Networking, and Performance Engineering
+Azure and NVIDIA achieved 1.1 million tokens/sec on ND GB300 v racks, continuing infrastructure improvements. Analysis of HBv5-series VMs presents benchmark data and workload advice. Azure Kubernetes Service now offers eBPF host routing via Cilium, and ACNS introduces metrics filtering to simplify observability and control costs. Firewall, NSG, and VXLAN management guides support networking best practices.
+- [Azure and NVIDIA Set Industry Record: 1.1M Tokens/sec on ND GB300 v Rack](https://www.linkedin.com/posts/satyanadella_breaking-the-million-token-barrier-activity-7391283043765952512-guP3)
+- [Performance and Scalability of Azure HBv5-series Virtual Machines](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-and-scalability-of-azure-hbv5-series-virtual/ba-p/4467230)
+- [High-Performance AI Networking on AKS: eBPF Host Routing with Azure CNI Powered by Cilium](https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-ebpf-host-routing-high-performance-ai-networking/ba-p/4468216)
+- [Reduce Metrics Noise and Costs with Container Network Metrics Filtering in ACNS for AKS](https://techcommunity.microsoft.com/t5/azure-networking-blog/cut-the-noise-cost-with-container-network-metrics-filtering-in/ba-p/4468221)
+- [Efficient Azure Firewall and NSG Rule Management with Terraform and CSV](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/manage-azure-firewall-rules-nsg-rules-using-terraform-resource/ba-p/4467764)
+- [Extending Layer-2 Networks Over Layer-3 IP with VXLAN: MTU, Overlay, and BFD Best Practices](https://techcommunity.microsoft.com/t5/azure-networking-blog/extending-layer-2-vxlan-networks-over-layer-3-ip-network/ba-p/4466406)
+## Azure Containers: Scale, Security, and Developer Workflow
+Azure Container Instances now support up to 31 vCPUs and 240GB RAM, enabling larger analytics and AI workloads. Azure Container Registry’s Attribute-Based Access Control (ABAC) reaches general availability, allowing more detailed permissions management. The Azure Developer CLI receives layered infrastructure updates for smoother deployment. Dapr and OpenCV/Python app tutorials improve microservice reliability and enable practical cloud-native DevOps.
+- [General Availability of Larger Container Sizes on Azure Container Instances](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-larger-container-sizes-on/ba/p/4463863)
+- [Azure Container Registry Now Supports Entra ABAC for Repository and Namespace Permissions](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-repository-permissions-with-attribute/ba-p/4467182)
+- [Azure Developer CLI: Azure Container Apps Dev-to-Prod Deployment with Layered Infrastructure](https://devblogs.microsoft.com/devops/azure-developer-cli-azure-container-apps-dev-to-prod-deployment-with-layered-infrastructure/)
+- [Simplifying Microservice Reliability with Dapr](https://techcommunity.microsoft.com/t5/microsoft-developer-community/simplifying-microservice-reliability-with-dapr/ba/p/4468296)
+- [Deploying a Low-Light Image Enhancer (Python + OpenCV) on Azure App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/low-light-image-enhancer-python-opencv-on-azure-app-service/ba-p/4466837)
+## Hybrid, Sovereign, and Enterprise Cloud with Azure Local and Sovereign Cloud
+EU data residency options for Azure AI, open-source model compatibility on NVIDIA GPUs, and Copilot processing in-country further support regulated sectors. Azure Local and Arc offer SDN, network, and security management for hybrid clusters, as well as resource bridging for disaster recovery. Azure Key Vault now manages clusters without Active Directory. The Local Well-Architected Review framework, now generally available, provides operational guidance and checklists for local environments. Sovereign Landing Zones automation helps partners meet regulatory requirements.
+- [Microsoft Expands Sovereign Cloud Capabilities with New Services and AI Integration](https://azure.microsoft.com/en-us/blog/microsoft-strengthens-sovereign-cloud-capabilities-with-new-services/)
+- [General Availability of Software Defined Networking (SDN) on Azure Local with Azure Arc](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-software-defined-networking/ba-p/4467579)
+- [Azure Local Well-Architected Framework and Review Assessment](https://www.thomasmaurer.ch/2025/11/azure-local-well-architected-framework-and-review-assessment/)
+- [Announcing Local Identity with Azure Key Vault: AD-Free Cluster Deployment and Management](https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-local-identity-with-azure-key-vault-in-build-2510/ba-p/4467939)
+## Azure Storage, Data, and Observability
+Azure Ultra Disk gains reduced latency, instant snapshots, and per-GiB billing, continuing the focus on optimization. Silk SDS and Echo allow automated storage solutions with more flexibility for development and testing. NetApp Files cache volumes offer improved data sharing for chip design workflows. Microsoft Fabric Data Warehouse now features OPENROWSET for simple ingestion and transformation, while Log Analytics introduces advanced query diagnostics for troubleshooting.
+- [The New Era of Azure Ultra Disk: Next-Gen Mission-Critical Block Storage](https://azure.microsoft.com/en-us/blog/the-new-era-of-azure-ultra-disk-experience-the-next-generation-of-mission-critical-block-storage/)
+- [Enhancing Azure Data Management with Silk Software-Defined Storage and Silk Echo for AI](https://techcommunity.microsoft.com/t5/azure-storage-blog/take-data-management-to-the-next-level-with-silk-software/ba/p/4464760)
+- [Boosting Hybrid Cloud Data Efficiency for EDA with Azure NetApp Files Cache Volumes](https://techcommunity.microsoft.com/t5/azure-architecture-blog/boosting-hybrid-cloud-data-efficiency-for-eda-the-power-of-azure/ba-p/4467790)
+- [Efficient Data Ingestion in Microsoft Fabric Data Warehouse with OPENROWSET](https://blog.fabric.microsoft.com/en-US/blog/ingest-files-into-your-fabric-data-warehouse-using-the-openrowset-function/)
+- [Enhanced Query Diagnostics in Azure Log Analytics](https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-the-enhanced-query-diagnostics-in-azure-log/ba-p/4466993)
+## Integration, Eventing, and Automation Ecosystem
+Updates for Logic Apps introduce improved document chunking, AI agents, and webhook authentication features, supporting continued workflow and automation enhancements. The RabbitMQ connector and new monitoring solutions help create unified integrations for hybrid and AI-powered environments. Guidance for Kafka lag monitoring increases observability, while the NSG Flow Logs migration checklist assists with transitioning to VNet Flow Logs.
+- [Logic Apps Aviators Newsletter - November 2025](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-november-2025/ba-p/4466366)
+- [Advanced Kafka Lag Monitoring Techniques for Azure Event Hubs](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/beyond-basics-tracking-kafka-lag-in-azure-event-hubs/ba-p/4457797)
+- [Azure VNet Flow Logs Migration and Traffic Analytics with Terraform](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-vnet-flow-logs-with-terraform-the-complete-migration-and/ba-p/4468225)
+## Security, Identity, and Compliance
+Azure Container Registry ABAC reaches general availability, supporting fine-grained permissions for zero-trust and supply chain integrity. Privacy and compliance guides clarify best practices, while Entra ID coverage continues to support legacy migrations and cloud-native identity management.
+- [Azure Container Registry Now Supports Entra ABAC for Repository and Namespace Permissions](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-repository-permissions-with-attribute/ba-p/4467182)
+- [How Microsoft Azure Ensures Data Privacy and Global Compliance](https://dellenny.com/how-microsoft-azure-ensures-data-privacy-and-global-compliance-secure-cloud-solutions/)
+- [Identity in Azure: Understanding Azure AD, Authentication, and Authorization](https://dellenny.com/identity-in-azure-understanding-azure-ad-authentication-and-authorization/)
+## Deployment, Migration, and Architecture Best Practices
+Deployment guides detail ways to implement third-party firewalls in Landing Zones, helping organizations achieve high availability and advanced security. Azure VMware Solution Gen 2 migration series continues, providing steps and operational advice for smooth transitions and regulatory compliance.
+- [Deploying Third-Party Firewalls in Azure Landing Zones: Design, Configuration, and Best Practices](https://techcommunity.microsoft.com/t5/azure-networking-blog/deploying-third-party-firewalls-in-azure-landing-zones-design/ba-p/4458972)
+- [Migrate & Modernize Your VMware Platform Using Azure VMware Solution Gen 2](https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872)
+## Other Azure News
+Azure Weekly Update covers new tools, VM and DevOps improvements, and a preview of Eventhouse KQL Database’s entity diagram for managing schemas. Instructions for Dev Box Catalog deployment using Terraform and GitHub support creating repeatable virtual workstations. App Service Managed Certificates now work for non-public sites, broadening support. Guides for troubleshooting Azure Virtual Desktop sign-in issues after tenant migration assist with practical authentication problems.
+- [Azure Weekly Update: November 7, 2025](/azure/videos/azure-weekly-update-november-7-2025)
+- [Entity Diagram in Eventhouse KQL Database (Preview)](https://blog.fabric.microsoft.com/en-US/blog/entity-diagram-in-eventhouse-kql-database-preview/)
+- [Deploying and Syncing Microsoft Dev Box Catalogs with GitHub using Terraform](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-dev-box-catalogs-and-synchronizing-with-github-using/ba-p/4467739)
+- [October 2025 Update: App Service Managed Certificates Support for Non-Publicly Accessible Sites](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/follow-up-to-important-changes-to-app-service-managed/ba-p/4466120)
+- [Troubleshooting Azure Virtual Desktop Sign-In Failures After Tenant Migration](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/troubleshooting-azure-virtual-desktop-sign-in-failures-after/ba-p/4467953)',
+    'The latest Azure updates reflect improvements in performance, greater infrastructure flexibility, additional security and governance features, and developer workflow enhancements. These changes span compute, networking, containers, hybrid cloud architecture, data management, process automation, security, and designer tools.',
+    1762761600, 'azure', '/azure/roundups/weekly-azure-roundup-2025-11-10', 'TechHub',
+    'TechHub', '89D8834F9E4493D907B48094A26956DB95F15D27D7DECA2A86B54061C2C72E16', ',Microsoft Azure,AKS,Ebpf,Cilium,Azure Container Instances,Azure Container Registry,Entra ID,ABAC,Azure Arc,Azure Local,Azure Key Vault,Azure Ultra Disk,Microsoft Fabric,Azure Log Analytics,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-11-03
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-11-03', 'roundups', 'Weekly Azure Roundup: Fabric, App Service Runtimes, and Cost Control',
+    'Azure updates this week covered analytics, application hosting, hybrid edge features, budgeting strategies, security, and infrastructure management. Microsoft Fabric improved analytics and integration for data engineers, while the Azure SDK, runtimes, and storage features all focused on reliability and cloud-native development. Cost management, migration, and new security features remain central topics as cloud architectures expand.
+<!--excerpt_end-->
+## Microsoft Fabric: Analytics, Capacity, and Developer Experience
+Microsoft Fabric now includes additional resources related to analytics capacity and integration, continuing the theme of real-time analytics and connectivity from last week. New diagnostic and performance tools build on previous Eventhouse Endpoint work, with added Spark partitioning and storage management. Enhanced security features such as Outbound Access Protection and Private Link support more detailed data access control. Documentation updates, reservation guidance, and MVP tutorials help with cost management and onboarding. A new open-source Fabric Core extension for VS Code adds improved Git integration and cloud extensibility, while updated Data Factory Copy jobs support wider data file types for easier onboarding and ingestion.
+- [Overload to Optimal: Tuning Microsoft Fabric Capacity](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/overload-to-optimal-tuning-microsoft-fabric-capacity/ba-p/4464639)
+- [Microsoft Fabric October 2025 Feature Summary: Security, Data Engineering, Integration Enhancements](https://blog.fabric.microsoft.com/en-US/blog/fabric-october-2025feature-summary/)
+- [Building Event-Driven Apps with Fabric Real-Time Intelligence and SQL](/ai/videos/building-event-driven-apps-with-fabric-real-time-intelligence-and-sql)
+- [Optimize Savings with Microsoft Fabric Reservations](/azure/videos/optimize-savings-with-microsoft-fabric-reservations)
+- [Announcing the Open-Source Release of Microsoft Fabric Extension for Visual Studio Code](https://blog.fabric.microsoft.com/en-US/blog/announcing-the-open-source-release-of-microsoft-fabric-extension-for-vs-code/)
+- [Simplifying Data Ingestion with Copy Job: Enhanced File Format Support in Microsoft Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-more-file-formats-with-enhancements/)
+## Azure Application Platform: Runtime, Sidecars, and Storage
+Azure App Service for Linux now supports Python 3.14, continuing recent efforts to streamline multi-version management and automation. The move to Ubuntu LTS on Azure App Service improves reliability and patching. Migration tools guide dependencies for these changes. The release of sidecar templates for Linux App Service enables easy incorporation of telemetry and monitoring, supporting microservice architectures. The Azure NetApp Files VS Code extension introduces AI-powered provisioning, integrating Copilot and supporting multi-subscription management for enhanced cloud development.
+- [Python 3.14 Now Available on Azure App Service for Linux](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/python-3-14-is-now-available-on-azure-app-service-for-linux/ba-p/4465404)
+- [Ubuntu-Based Runtimes Coming to Azure App Service for Linux](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ubuntu-powered-runtimes-on-azure-app-service-for-linux-leaner/ba-p/4465414)
+- [Add Sidecars to Azure App Service for Linux—via GitHub Actions or Azure Pipelines](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/add-sidecars-to-azure-app-service-for-linux-via-github-actions/ba-p/4465419)
+- [Accelerating Cloud-Native Development with AI-Powered Azure NetApp Files VS Code Extension](https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-cloud-native-development-with-ai-powered-azure/ba-p/4464852)
+## Azure Local and Hybrid Cloud: Edge, Security, and Integrated Management
+The Azure Local 2510 update introduces Software Defined Networking and Network Security Groups, expanding on previous improvements in segmentation and virtual machine security. Rack-aware clusters and improved local identity management respond to operational needs identified in earlier updates. Well-Architected Review support now includes Azure Local for consistent assessments. These enhancements build on best practices in migration and distributed management.
+- [Azure Local 2510 Release: New Features for Edge, Security, and Hybrid Cloud](https://www.thomasmaurer.ch/2025/10/azure-local-2510-release-and-new-preview-features/)
+- [Azure Local Overview: Hybrid Cloud, Edge, and Sovereign Scenarios](https://www.thomasmaurer.ch/2025/10/new-video-azure-local-overview/)
+## Azure Reserved VM Instances and Shared Capacity
+Additional reserved instance resources continue to expand on budgeting and allocation management. Updates include better forecasting and monitoring for workloads, with shared capacity reservation features supporting more granular scaling and cost control, especially for GPU use.
+- [Optimize Azure Costs with Reserved Instances](https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/)
+- [Streamline Cloud Spend with Azure Reserved VM Instances](https://techcommunity.microsoft.com/t5/azure-compute-blog/streamline-cloud-spend-with-azure-reserved-vm-instances/ba-p/4464773)
+- [Optimize Azure Costs with Reserved VM Instances](/azure/videos/optimize-azure-costs-with-reserved-vm-instances)
+- [Understanding Shared Capacity Reservations in Azure](/azure/videos/understanding-shared-capacity-reservations-in-azure)
+## Azure Core Developer and Platform Updates
+The October 2025 Azure SDK release brings enhanced tools for .NET, Python, Java, JavaScript, Go, and C++. New agent orchestration APIs and AI Foundry for .NET continue recent advances for multi-agent and GenAI workloads. Azure AI Search now includes nested vector queries and reranking, while managed identity and token updates improve authentication options. Experimental tools for offline packages and recommendation systems deliver increased flexibility and reuse.
+- [Azure SDK Release Highlights – October 2025](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-october-2025/)
+## Azure Cloud-Native and Kubernetes
+Microsoft’s presence at KubeCon NA 2025 focuses on distributed AI, workflow automation, and multicluster management. Recent demonstrations of tools like KAITO, KubeFleet, and HolmesGPT provide more resources for robust cloud-native development, with an emphasis on security and supply chain integrity.
+- [Microsoft Azure at KubeCon North America 2025: AI and Cloud Native Insights](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-north-america-2025-atlanta-ga-nov-10/ba-p/4464324)
+## Azure Platform: Operations, Incidents, Security, and Migration
+A range of operational updates address infrastructure reliability and automation. Azure Front Door now comes with WAF CAPTCHA and improved outage monitoring. Node.js 20 retirement for Azure Functions moves forward migration planning. ASM NFS migration and instant restore features enhance backup and dev/test workflows. Resources continue to address PostgreSQL Flexible Server and Azure Migrate for Azure Local, along with static IP workflow support and RHEL software reservation for Linux VM management.
+- [Azure Update - 31st October 2025](/azure/videos/azure-update-31st-october-2025)
+- [Azure Migrate Expands Capabilities to Accelerate Migration to Azure Local](https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-migrate-expands-capabilities-to-accelerate-migration-to/ba-p/4464789)
+- [Red Hat Enterprise Linux Software Reservations Now Available on Azure](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-software-reservations-now-available/ba-p/4463214)
+## Other Azure News
+Developer tools updates support improved reliability for Power BI and Microsoft Fabric, with the October 2025 on-premises data gateway release improving networking and compatibility.
+- [On-Premises Data Gateway October 2025 Release Overview](https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-october-2025-release/)
+The Azure Failure Prediction & Detection (AFPD) update provides advances in automated alerting and diagnostics. VM Watch and automation now improve incident root cause analysis.
+- [Azure Failure Prediction & Detection (AFPD): Preventing Downtime with Proactive Reliability](https://techcommunity.microsoft.com/t5/azure-compute-blog/revolutionizing-reliability-introducing-the-azure-failure/ba-p/4464883)
+Cost management articles highlight maximization of Azure’s free tier and explain core services and pricing, supporting the ongoing theme of resource and budget optimization.
+- [Learning Azure for Free: Maximizing Azure Free Tier and Cost Management](https://dellenny.com/azure-free-tier-cost-management-learn-azure-without-spending-a-dime/)
+- [Top 10 Azure Services Everyone Should Know (2025 Edition)](https://dellenny.com/top-10-azure-services-everyone-should-know-2025-edition/)
+Resource management guides, including detailed ARM explanations, help teams organize subscriptions, management groups, and resource groups, building on recent template and compliance discussions.
+- [Azure Resource Manager (ARM): The Backbone of Cloud Resource Management](https://dellenny.com/azure-resource-manager-arm-streamline-and-secure-cloud-resource-management/)
+- [Understanding Azure Resource Organization: Management Groups, Subscriptions, and Resource Groups](https://dellenny.com/how-azure-organizes-resources-subscriptions-resource-groups-and-management-groups-explained/)
+- [Understanding Azure Resource Organization: Management Groups, Subscriptions, and Resource Groups](https://techcommunity.microsoft.com/t5/azure/how-azure-organizes-resources-subscriptions-resource-groups-and/m-p/4466168#M22300)
+Migration playbooks, including moving from AD to Entra ID and multi-region deployment strategies, provide step-by-step support for identity modernization and improved resilience.
+- [Changing User Source of Authority from AD to Entra ID](/azure/videos/changing-user-source-of-authority-from-ad-to-entra-id)
+- [Multi-region Expansion Strategies for Azure Deployments in Financial Services](https://devblogs.microsoft.com/all-things-azure/multi-region-expansion-for-azure-deployments/)
+Infrastructure articles cover certificate renewal and global Azure architecture for foundational understanding and secure deployment.
+- [The Complete Guide to Renewing an Expired Certificate in Microsoft HPC Pack 2019 (Single Head Node)](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/the-complete-guide-to-renewing-an-expired-certificate-in/ba-p/4465444)
+- [Global Infrastructure 101: Understanding Data Centers, Regions, and Availability Zones in Azure](https://dellenny.com/global-infrastructure-101-understanding-data-centers-regions-availability-zones-in-azure/)
+- [What Is Microsoft Azure? A Beginner’s Guide to the Azure Ecosystem](https://dellenny.com/what-is-microsoft-azure-a-beginners-guide-to-the-azure-ecosystem/)',
+    'Azure updates this week covered analytics, application hosting, hybrid edge features, budgeting strategies, security, and infrastructure management. Microsoft Fabric improved analytics and integration for data engineers, while the Azure SDK, runtimes, and storage features all focused on reliability and cloud-native development. Cost management, migration, and new security features remain central topics as cloud architectures expand.',
+    1762156800, 'azure', '/azure/roundups/weekly-azure-roundup-2025-11-03', 'TechHub',
+    'TechHub', '8839CE72F1011A68528FC16B9505E2778574C0F37748D0054D6232C9AEA5323A', ',Microsoft Fabric,Azure App Service,Azure Local,Azure SDK,Azure AI Search,Azure Functions,Azure Front Door,Web Application Firewall,Private Link,Managed Identity,Azure Reserved VM Instances,Cost Management,Azure Migrate,Kubernetes,Azure Resource Manager,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-10-27
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-10-27', 'roundups', 'Weekly Azure Roundup: Serverless speed, Fabric updates, hybrid ops',
+    'Azure this week introduces new platform features, broader integration, and guides for modern cloud-native and hybrid resource management. Recent improvements include better performance for Azure Functions Python, expanded Fabric support, and upgrades in real-time analytics for efficiency and monitoring. New developer tools and more advanced resource management improve productivity and governance. Step-by-step resources for distributed tracing, architecture, and automation help teams optimize operations. Other releases simplify integration, supplement security, and support hybrid/multi-cloud deployments for reliability and modernization.
+<!--excerpt_end-->
+## Azure Functions Python Performance and Integration
+Furthering last week’s improvements, Azure Functions Python adopts orjson for faster JSON handling. Serverless applications show reduced latency (by 40-50%) across HTTP/Event Hub/Service Bus triggers. Automated upgrades for Python strengthen high-throughput workloads, and advice is available for managing multi-version compatibility and validating production environments.
+- [Scaling Azure Functions Python with orjson](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/scaling-azure-functions-python-with-orjson/ba-p/4445780)
+## Advanced Cloud Observability: Distributed Tracing for Azure Microservices
+A new guide on distributed tracing supports deeper monitoring, building on recent OpenTelemetry API integrations. Readers get best practices for trace propagation and improved correlation in Application Insights and KQL, helping technical teams achieve visibility and scalable monitoring.
+- [Distributed Tracing Patterns for Microservices in Azure](https://dellenny.com/follow-the-thread-distributed-tracing-patterns-for-microservices-in-azure/)
+## Cloud Reliability: Load Testing in Azure Chaos Studio
+Resilience and capacity planning continue with Azure Chaos Studio’s new guide for running live load tests, supporting real-time log monitoring. Instructions encourage effective autoscaling and retry analysis, following last week’s automation enhancements for Fabric and Azure.
+- [Running Load Tests as Part of Azure Chaos Studio Experiments](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/running-a-load-test-within-a-chaos-experiment/ba-p/4463344)
+## Migration Preparedness: Azure Relay IP and DNS Changes
+Building on last week’s hybrid management topics, the Azure Relay update provides migration scripts for upcoming IP and DNS changes. Features for updating firewall and allow lists improve cloud/hybrid infrastructure readiness, connecting with previous guidance on Fabric Managed Endpoints and Azure Arc security.
+- [Preparing for Azure Relay IP Address and DNS Changes](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/upcoming-changes-to-azure-relay-ip-addresses-and-dns-support/ba-p/4463597)
+## Fabric Platform: Real-Time Analytics, Data Engineering, and Community Highlights
+Microsoft Fabric expands capabilities with the Eventhouse Endpoint, enabling real-time analytics on Lakehouse tables, schema sync, and simple dashboards using KQL/Python. Comparisons between virtualization and materialization reflect recent data engineering discussions, while enhanced dashboards add value for managing SQL resources.
+Community highlights continue to bring attention to MVPs and new tutorials, sustaining last week’s momentum for practical platform empowerment.
+- [Unlock Real-Time Intelligence with the Eventhouse Endpoint for Lakehouse](https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-intelligence-with-the-eventhouse-endpoint-for-lakehouse/)
+- [External Data Materialization Strategies in Fabric Data Warehouse](https://blog.fabric.microsoft.com/en-US/blog/external-data-materialization-in-fabric-data-warehouse/)
+- [Enhanced Performance Dashboard for SQL Databases in Microsoft Fabric](/azure/videos/enhanced-performance-dashboard-for-sql-databases-in-microsoft-fabric)
+- [Fabric Influencers Spotlight October 2025: Microsoft Fabric Community Highlights](https://blog.fabric.microsoft.com/en-US/blog/29208/)
+## Microsoft Fabric Data Engineering: Secure Connectivity and API Compatibility
+Hybrid integration expands as Fabric introduces Managed Private Endpoints for safe Spark compute to on-premises and network-isolated databases, plus API support for allowlisting. OneLake APIs gain broader compatibility with Blob/ADLS protocols, supporting easier migration and integration in line with earlier API updates.
+- [Securely Accessing On-Premises Data with Microsoft Fabric Managed Private Endpoints](https://blog.fabric.microsoft.com/en-US/blog/securely-accessing-on-premises-data-with-fabric-data-engineering-workloads/)
+- [OneLake APIs: Bring Your Apps and Build New Ones with Familiar Blob and ADLS APIs](https://blog.fabric.microsoft.com/en-US/blog/onelake-apis-bring-your-apps-and-build-new-ones-with-familiar-blob-and-adls-apis/)
+## Azure Resource Management and Automation
+Automation for cloud resource management moves forward, highlighted by new Azure Resource Graph and PowerShell guides. Readers find patterns for batch queries and Skip Token pagination, helping teams manage large inventories and maintain better oversight.
+- [Mastering Azure Resource Graph: Skip Token and Batching Techniques for Scalable Cloud Queries](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/mastering-azure-queries-skip-token-and-batching-for-scale/ba-p/4463387)
+## Architecture Patterns and Decision Making
+New guides for established architecture patterns and choices introduce reusable checklists and best practices, supporting teams in making reliable decisions and keeping solution builds consistent.
+- [How Great Engineers Make Architectural Decisions — ADRs, Trade-offs, and an ATAM-Lite Checklist](https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-great-engineers-make-architectural-decisions-adrs-trade-offs/ba-p/4463013)
+## RabbitMQ Connector for Azure Logic Apps
+Integration options improve with the public preview of RabbitMQ Connector for Logic Apps, offering capabilities for event-driven workflow including direct publishing, triggering, and queue management. These resources support automation patterns for hybrid deployment scenarios.
+- [Introducing the RabbitMQ Connector for Azure Logic Apps (Public Preview)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-the-rabbitmq-connector-public-preview/ba-p/4462627)
+- [Introducing RabbitMQ Connector for Azure Logic Apps (Public Preview)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-rabbitmq-connector-public-preview/ba-p/4462627)
+## Azure API Management: Native Service Bus Integration
+Azure API Management now includes native Service Bus publishing with managed identities and RBAC, transforming API calls into Service Bus messages and supporting event-driven and decoupled architecture patterns.
+- [Introducing Native Service Bus Message Publishing from Azure API Management](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-native-service-bus-message-publishing-from-azure-api/ba-p/4462644)
+## Other Azure News
+Recent releases span developer tool integration, operational guidance, and hybrid security. Updates for SSMS 22 improve both web and desktop SQL workloads, while live Azure Developer CLI sessions spotlight multi-agent orchestration and ongoing community support.
+New security tools and hybrid features help administrators audit and enable Windows Recovery Environment on remote machines. Migration, cost management, and troubleshooting resources now include guides on Azure Storage Mover GA, Copy Job tutorials, and well-architected templates—furthering the theme of cost-effective modernization.
+- [SSMS 22 Meets Fabric Data Warehouse: Evolving the Developer Experiences](https://blog.fabric.microsoft.com/en-US/blog/ssms-22-meets-fabric-data-warehouse-evolving-the-developer-experiences/)
+- [AMA Spotlight: Build Smarter with Azure Developer CLI ''AZD''](https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-spotlight-build-smarter-with-azure-developer-cli-azd/ba-p/4462308)
+- [Audit and Enable Windows Recovery Environment (WinRE) via Azure Arc Policies](https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-audit-and-enable-windows-recovery-environment/ba-p/4462939)
+- [Securely Accessing On-Premises Data with Microsoft Fabric Managed Private Endpoints](https://blog.fabric.microsoft.com/en-US/blog/securely-accessing-on-premises-data-with-fabric-data-engineering-workloads/)
+- [Fully Managed Cloud-to-Cloud Transfers with Azure Storage Mover](https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/)
+- [Step-by-Step: Using Copy Job to Move Data Across Tenants in Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-copy-data-across-tenants-using-copy-job-in-fabric-data-factory/)
+- [Optimize Azure Local Deployments with the Well-Architected Review Assessment](https://techcommunity.microsoft.com/t5/azure-architecture-blog/optimize-azure-local-using-insights-from-a-well-architected/ba-p/4458433)
+- [Understanding Azure Availability Zone Mappings for Subscriptions](/azure/videos/understanding-azure-availability-zone-mappings-for-subscriptions)
+- [Azure Managed Redis Deep Dive](/azure/videos/azure-managed-redis-deep-dive)
+- [Azure Pricing Calculator: Estimate Smarter, Plan Confidently](https://www.thomasmaurer.ch/2025/10/azure-pricing-calculator-estimate-smarter-plan-confidently/)
+- [Driving Change with Migration to Azure SQL Managed Instance](https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/)
+- [Capacity Usage Now Enabled for Test Capability in Fabric User Data Functions](https://blog.fabric.microsoft.com/en-US/blog/capacity-usage-enabled-date-for-test-capability-in-user-data-functions/)
+- [Azure Weekly Update: Python 3.13 Functions, AKS Linux 3.0, Storage Mover, and More (24th October 2025)](/azure/videos/azure-weekly-update-python-313-functions-aks-linux-30-storage-mover-and-more-24th-october-2025)',
+    'Azure this week introduces new platform features, broader integration, and guides for modern cloud-native and hybrid resource management. Recent improvements include better performance for Azure Functions Python, expanded Fabric support, and upgrades in real-time analytics for efficiency and monitoring. New developer tools and more advanced resource management improve productivity and governance. Step-by-step resources for distributed tracing, architecture, and automation help teams optimize operations. Other releases simplify integration, supplement security, and support hybrid/multi-cloud deployments for reliability and modernization.',
+    1761552000, 'azure', '/azure/roundups/weekly-azure-roundup-2025-10-27', 'TechHub',
+    'TechHub', 'D3B34A7F143E88754F3A535B3C906711E25BA698EDCECA4EEDAAAF6AA3C1D680', ',Microsoft Azure,Azure Functions,Python,Orjson,Serverless,Azure Monitor,Application Insights,OpenTelemetry,Kusto Query Language,Azure Chaos Studio,Microsoft Fabric,OneLake,Azure Resource Graph,Azure Logic Apps,Azure API Management,Azure Service Bus,Azure Arc,Managed Private Endpoints,Azure Storage Mover,Azure SQL Managed Instance,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-10-20
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-10-20', 'roundups', 'Weekly Azure Roundup: Data, Containers, and Cloud Operations',
+    'This week’s Azure content highlights improved open-source infrastructure, automation features, hybrid data innovation, and operational enhancements that impact everything from CLI tools to platform-level services.
+<!--excerpt_end-->
+## Open-Source and AI Infrastructure on Azure
+Microsoft focuses on open standards and aspects of collaborative hardware and software infrastructure design at the OCP Global Summit. Recent releases include new network fabrics, hardware resistant to quantum security threats, and carbon tracking features, continuing Azure’s commitment to sustainable, reliable cloud systems.
+- [Microsoft Advances Open-Source Infrastructure for Frontier-Scale AI](https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/)
+- [Next Generation HXU: Doubling Cooling Power for the AI Era](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/next-generation-hxu-doubling-cooling-power-for-the-ai-era/ba-p/4460953)
+## Azure Developer CLI and Container Ecosystem
+The October 2025 update for Azure Developer CLI introduces layered provisioning, clear service dependencies, and a cleaner separation between publishing images and app deployment. New extension and template management continues the focus on workflow improvement and build-to-deploy efficiency.
+CLI enhancements also support hosting the MCP server and transitioning workloads from Functions to Container Apps, improving productivity through better workflow tools.
+- [Azure Developer CLI (azd) October 2025: Layered Provisioning, Service Dependencies, and More](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2025/)
+- [Hosting Remote MCP Server on Azure Container Apps Using HTTP Transport](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/hosting-remote-mcp-server-on-azure-container-apps-aca-using/ba-p/4459263)
+- [Transition to Azure Functions V2 on Azure Container Apps: Migration Guide and Feature Overview](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transition-to-azure-functions-v2-on-azure-container-apps/ba-p/4457258)
+## Microsoft Fabric, Delta Lake, and Unified Data Engineering
+New features in Fabric include Shortcut Transformations for Parquet and JSON, job-level bursting for parallel performance, enhanced diagnostics, and a preview of OneLake Table APIs for deeper interoperability. These updates simplify ingestion and analytics and strengthen support for open standards.
+- [Simplifying Parquet & JSON Data Ingestion with Microsoft Fabric Shortcut Transformations](https://blog.fabric.microsoft.com/en-US/blog/from-files-to-delta-tables-parquet-json-data-ingestion-simplified-with-shortcut-transformations/)
+- [Introducing the Job-Level Bursting Switch in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/introducing-the-job-level-bursting-switch-in-microsoft-fabric/)
+- [Gain End-to-End Visibility into Data Activity Using OneLake Diagnostics](https://blog.fabric.microsoft.com/en-US/blog/gain-end-to-end-visibility-into-data-activity-using-onelake-diagnostics/)
+- [Previewing OneLake Table APIs for Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/now-in-preview-onelake-table-apis/)
+- [Sourcing Schema-Driven Events from EventHub into Fabric Eventstreams (Preview)](https://blog.fabric.microsoft.com/en-US/blog/sourcing-schema-driven-events-from-eventhub-into-fabric-eventstreams-preview/)
+## Hybrid Data, AI, and Integration: SAP BDC, Databricks, NetApp Files
+SAP BDC Connect now links Azure Databricks and enables real-time analytics. The Unity Catalog and Delta Sharing features support data governance and compliance. Azure NetApp Files’ Object REST API enables unified file, block, and object workflows for analytics, building on improvements to data engineering efficiency.
+- [SAP Business Data Cloud Connect for Azure Databricks: General Availability Announcement](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/sap-business-data-cloud-connect-with-azure-databricks-is-now/ba-p/4459490)
+- [How Azure NetApp Files Object REST API Powers Azure Data and AI Solutions](https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-azure-netapp-files-object-rest-api-powers-azure-and-isv-data/ba/p/4459545)
+## Oracle Database@Azure: AI Integration, Global Reach, Real-Time Analytics
+New options for Oracle Database@Azure—such as Base, Exadata, Autonomous, and AI Lakehouse—expand support for hybrid data and AI workflows. Other updates include native mirroring, managed replication, and integration with Copilot and Azure AI Foundry for improved automation and productivity.
+- [Oracle Database@Azure Advances at Oracle AI World 2025: Integration, AI, and Security Enhancements](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-at-oracle-ai-world-2025-powering-the-next/ba-p/4460749)
+- [New Features and Global Expansion for Oracle Database@Azure: Unlocking Hybrid Data and AI Innovation](https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/)
+## AKS and Cloud-Native Scaling and Optimization
+AKS adds a workflow guide for using low-priority pods, making it easy to scale quickly and manage capacity with buffer pods—leveraging YAML patterns with Prometheus and Grafana monitoring for improved reliability and performance.
+- [Leveraging Low Priority Pods for Rapid Scaling in AKS](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/leveraging-low-priority-pods-for-rapid-scaling-in-aks/ba-p/4461670)
+## Platform Updates: Virtualization, Optimization, and More
+Azure VMs now offer preview capabilities for turning off multi-threading and tuning processor cores, providing more control over high-performance and analytics workloads. Ephemeral OS disk support accelerates provisioning in Azure Virtual Desktop. Capacity Reservation management expands, supporting disaster recovery, and extended Windows 10 security updates are available for compliance.
+- [Public Preview: VM Customization in Azure Enables Disabling Multithreading and Constrained Cores](https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-public-preview-of-vm-customization-in-azure-disable/ba-p/4462417)
+- [Ephemeral OS Disk Support Now in Public Preview on Azure Virtual Desktop](https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-ephemeral-os-disk-support-on-azure-virtual/ba-p/4460172)
+- [Public Preview: Sharing Capacity Reservation Groups Across Azure Subscriptions](https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-for-sharing-capacity-reservation-groups-now/ba/p/4461834)
+- [Windows 10 Extended Security Updates for Azure Virtual Desktop](https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/windows-10-extended-security-updates-for-azure-virtual-desktop/ba-p/4459715)
+## Storage, Data Governance, and Automation
+Azure Storage Discovery, with integrated Copilot support, is now generally available for analytics and cost tracking. Azure Storage Actions broaden automation and policy enforcement, and Azure Migrate introduces recommendations to help teams manage storage efficiently during transitions.
+- [Unlock Insights with Azure Storage Discovery and Copilot Integration](https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/)
+- [Beyond Basics: Practical Scenarios with Azure Storage Actions](https://techcommunity.microsoft.com/t5/azure-storage-blog/beyond-basics-practical-scenarios-with-azure-storage-actions/ba/p/4447151)
+- [Unlock Cost Savings with Utilization-Based Storage Recommendations in Azure Migrate](https://techcommunity.microsoft.com/t5/azure-migration-and/unlock-cost-savings-with-utilization-based-storage/ba/p/4461634)
+## Analytics, Spark, and Real-Time Data Engineering
+Azure Synapse Runtime for Apache Spark 3.5 is generally available, supporting the migration from earlier versions and providing documentation for analytics and machine learning platform upgrades.
+- [Azure Synapse Runtime for Apache Spark 3.5 Now Generally Available](https://blog.fabric.microsoft.com/en-US/blog/general-availability-azure-synapse-runtime-for-apache-spark-3-5/)
+## API Management, Sustainability, and Compliance
+Azure API Management’s new carbon-aware routing preview lets teams track API impact and route calls to regions with a lower carbon footprint, supporting environmental goals and compliance requirements.
+- [Environmental Sustainability Features in Azure API Management: Minimizing API Infrastructure Carbon Impact](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/building-environmental-aware-api-platforms-with-azure-api/ba-p/4458308)
+## Migration, Digital Sovereignty, and Developer Environments
+Azure’s digital sovereignty guidance for Switzerland, along with strategies for persistent hybrid developer environments, provides a foundation for regulatory compliance and practical development workflows using Dev Box and Codespaces.
+- [How Microsoft is Addressing Digital Sovereignty in Switzerland](https://www.thomasmaurer.ch/2025/10/how-microsoft-is-addressing-digital-sovereignty-in-switzerland/)
+- [Beyond the Desktop: The Future of Development with Microsoft Dev Box and GitHub Codespaces](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-the-desktop-the-future-of-development-with-microsoft-dev/ba/p/4459483)
+## Developer Tutorials and Guidance
+Available resources include deployment strategies for Azure Linux Web Apps and introductory material for quantum development on Azure.
+- [Deployment and Build Strategies for Azure Linux Web Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deployment-and-build-from-azure-linux-based-web-app/ba/p/4461950)
+- [Jump Starting Quantum Computing on Azure](https://techcommunity.microsoft.com/t5/azure-compute-blog/jump-starting-quantum-computing-on-azure/ba/p/4459053)
+## Other Azure News
+This week’s Azure Weekly Update covers releases for serverless compute, storage, security, migration, SAP-Databricks integration, and new GPT models.
+- [Azure Weekly Update: October 17, 2025](/ai/videos/azure-weekly-update-october-17-2025)
+New EDA benchmarking shows Azure NetApp Files can meet scale and performance targets for HPC workloads.
+- [Validating Scalable EDA Storage Performance: Azure NetApp Files and SPECstorage Solution 2020](https://techcommunity.microsoft.com/t5/azure-architecture-blog/validating-scalable-eda-storage-performance-azure-netapp-files/ba/p/4459517)',
+    'This week’s Azure content highlights improved open-source infrastructure, automation features, hybrid data innovation, and operational enhancements that impact everything from CLI tools to platform-level services.',
+    1760943600, 'azure', '/azure/roundups/weekly-azure-roundup-2025-10-20', 'TechHub',
+    'TechHub', 'D96BFF2F922C0FA9B6473A95A47DFE276CCFF952886A478472E72E7C9EA6CDB9', ',Microsoft Azure,Azure Developer CLI,Azure Container Apps,Azure Functions,AKS,Microsoft Fabric,OneLake,Delta Lake,Azure Databricks,Azure NetApp Files,Oracle Database@Azure,Azure Storage,Azure API Management,Azure Virtual Desktop,Azure Synapse Analytics,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-10-13
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-10-13', 'roundups', 'Weekly Azure Roundup: Blackwell GPU scale, Fabric, and hybrid ops',
+    'Azure’s updates include new infrastructure support for AI workloads, improved data engineering and monitoring, cost optimization features, expanded hybrid networking, and additional region deployments in Asia. GPU clusters received expansion for demanding models, while updates for Logic Apps, data integration, governance, and developer tools provide blueprints for hybrid and evolving cloud workloads.
+<!--excerpt_end-->
+## Azure GB300 NVL72 Supercluster and Expansion in Asia
+The GB300 NVL72 supercluster officially supports OpenAI workloads with over 4,600 Blackwell Ultra GPUs, enabling training for very large models. ND GB300 v6 instances and orchestration tools continue progress from earlier hybrid and edge integration efforts. Azure''s reach expands in Asia (Malaysia, Indonesia, India, Taiwan), furthering region-specific compliance and availability.
+- [Microsoft Azure Launches GB300 NVL72 Supercluster for OpenAI Workloads](https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/)
+- [Microsoft Expands Azure Cloud and AI Infrastructure Across Asia](https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-asia/)
+## Azure Logic Apps Advances
+Logic Apps expands event-driven cloud automation with the Aviators Newsletter, previewing MCP server adoption. Python Code Interpreter support reinforces ongoing improvements to agent workflows, while Copilot Studio enhancements and expert guides remain focused on hybrid migration, secure governance, and Teams automation.
+- [Logic Apps Aviators Newsletter - October 25](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-october-25/ba/p/4458456)
+## Data Engineering, Integration, and Warehouse Developments
+Guides highlight secure cloud architecture and Fabric integration, including the Medallion Architecture for Databricks with managed identities and Key Vault. Fabric migration tooling further supports Synapse Analytics transitions. New JSONL management and concurrency features add ML workload flexibility, and Delta Lake compaction helps cut operational costs, continuing automation improvements.
+- [Secure Medallion Architecture Pattern on Azure Databricks (Part I)](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-medallion-architecture-pattern-on-azure-databricks-part-i/ba/p/4459268)
+- [Enterprise-Scale Data Integration with Azure Data Factory, SQL Managed Instance, and SSIS](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-data-factory-sql-managed-instance-and-ssis-implementation/ba/p/4459525)
+- [Migration Assistant for Fabric Data Warehouse: General Availability Announced](https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-migration-assistant-for-fabric-data-warehouse/)
+- [Query and Ingest JSONL Files in Fabric Data Warehouse and SQL Endpoint](https://blog.fabric.microsoft.com/en-US/blog/query-and-ingest-jsonl-files-in-data-warehouse-and-sql-endpoint-for-lakehouse-general-availability/)
+- [Understanding Locking and DDL Blocking in Microsoft Fabric Data Warehouse](https://blog.fabric.microsoft.com/en-US/blog/locking-and-ddl-blocking-behavior-in-microsoft-fabric-data-warehouse-what-you-need-to-know/)
+- [Resolving Write Conflicts in Microsoft Fabric Data Warehouse](https://blog.fabric.microsoft.com/en-US/blog/concurrency-control-and-conflict-resolution-in-microsoft-fabric-data-warehouse/)
+- [Introducing Optimized Compaction in Fabric Spark](https://blog.fabric.microsoft.com/en-US/blog/announcing-optimized-compaction-in-fabric-spark/)
+## Governance, Security, and Landing Zones
+Updates on landing zones and AMBA-ALZ patterns support improved cloud governance and compliance. Guides for deploying enterprise-scale landing zones use recent Azure AI advances for centralized policy automation and monitoring. AMBA-ALZ pattern upgrades bolster policy and RBAC. Tutorials on Azure Arc, including secure onboarding for air-gapped setups, address priorities for multicloud and hybrid deployments.
+- [Building an Azure Enterprise-Scale Landing Zone: Foundation for Cloud Governance](https://dellenny.com/azure-enterprise-scale-landing-zone-building-a-future-ready-cloud-foundation/)
+- [AMBA-ALZ Pattern: Recent Enhancements to Built-in Policies and Role-Based Access in Azure](https://techcommunity.microsoft.com/t5/azure-governance-and-management/amba-alz-pattern-learn-about-the-latest-and-greatest/ba/p/4458320)
+- [Architectural Patterns and Secure Onboarding for Azure Arc in Air-Gapped Environments](https://techcommunity.microsoft.com/t5/azure-arc-blog/addressing-air-gap-requirements-through-secure-azure-arc/ba/p/4458748)
+## Serverless Compute: Functions vs Container Apps
+Comparison guides for Functions and Container Apps help developers choose between serverless options for microservices and event-driven apps, continuing last week’s support for containerization and workflow redesign.
+- [Azure Functions vs Azure Container Apps: Choosing Your Serverless Compute Option](https://dellenny.com/azure-functions-vs-azure-container-apps-choosing-your-serverless-compute/)
+## Monitoring, Metrics, and Alerts
+Azure Monitor Workspaces launch resource-scope queries in public preview, providing finer RBAC and dashboard options. Expanded Prometheus/Grafana support and region-scoped endpoints continue earlier monitoring and analytics improvements. Azure Storage alerts and metrics offer centralized alerting for more efficient operations.
+- [Announcing Resource-Scope Query for Azure Monitor Workspaces](https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-resource-scope-query-for-azure-monitor-workspaces/ba/p/4460567)
+- [Introducing Cross Resource Metrics and Alerts Support for Azure Storage](https://techcommunity.microsoft.com/t5/azure-storage-blog/introducing-cross-resource-metrics-and-alerts-support-for-azure/ba/p/4459193)
+## Migration Planning, Azure Migrate, and VM Sizing
+Updates to Azure Migrate improve cost modeling and migration workflows for B-Series and Cobalt 100 ARM64 VMs, and add support for Customer Agreement pricing. These changes help hybrid and dev/test environments with rightsizing and automated migration options.
+- [Azure Migrate Adds Support for Microsoft Customer Agreement Pricing](https://techcommunity.microsoft.com/t5/azure-migration-and/empower-your-migration-decisions-with-negotiated-agreements-ea/ba/p/4459425)
+- [Cut migration costs with B-Series and Cobalt 100 VM support in Azure Migrate](https://techcommunity.microsoft.com/t5/azure-migration-and/cut-migration-costs-with-b-series-and-cobalt-100-vm-support-in/ba/p/4460285)
+## Hybrid Networking and Disaster Recovery
+A new video guides connecting Azure VNets to AWS, GCP, Oracle, and other clouds, extending previous coverage of hybrid/cloud edge developments. Disaster recovery documentation using Azure Site Recovery and VMware helps teams prepare backup and failover strategies for reliable operations.
+- [Hybrid Cloud Networking: Connecting Azure, AWS, GCP, and More](/azure/videos/hybrid-cloud-networking-connecting-azure-aws-gcp-and-more)
+- [Replicating VMware Workloads to Azure with Azure Site Recovery for Disaster Recovery](https://techcommunity.microsoft.com/t5/azure/replicate-workload-from-vmware-to-azure-using-azure-site/m-p/4460851#M22268)
+## Other Azure News
+Recent SQL database upgrades in Microsoft Fabric (Copilot, virtualization) continue changes in analytics and Power BI. Visual Studio subscription advice for Azure Dev/Test Benefit helps developers optimize workflow costs. Cost control reports advance FinOps resources. John Savill’s Azure update pulls together monitoring, AKS automation, and Copilot news for quick review. The Azure Pricing Calculator and tutorial help users plan and estimate resources. Azure CycleCloud’s academic HPC improvements build on previous work for cloud-based research and scaling.
+- [SQL Database Enhancements in Microsoft Fabric: Copilot, Data Virtualization, and More](/ai/videos/sql-database-enhancements-in-microsoft-fabric-copilot-data-virtualization-and-more)
+- [Understanding the Azure Dev/Test Benefit for Visual Studio Subscribers](https://devblogs.microsoft.com/visualstudio/visual-studio-dev-test-benefit-explained/)
+- [5 Azure Mistakes That Are Costing Businesses Thousands](https://dellenny.com/5-azure-mistakes-that-are-costing-businesses-thousands/)
+- [Azure Update - 10th October 2025](/ai/videos/azure-update-10th-october-2025)
+- [Azure Pricing Calculator: Estimate Smarter, Plan Confidently](/azure/videos/azure-pricing-calculator-estimate-smarter-plan-confidently)
+- [Future-Proofing Academic Research: HPC Workflows and Secure Enclaves with Azure CycleCloud](/azure/videos/future-proofing-academic-research-hpc-workflows-and-secure-enclaves-with-azure-cyclecloud)',
+    'Azure’s updates include new infrastructure support for AI workloads, improved data engineering and monitoring, cost optimization features, expanded hybrid networking, and additional region deployments in Asia. GPU clusters received expansion for demanding models, while updates for Logic Apps, data integration, governance, and developer tools provide blueprints for hybrid and evolving cloud workloads.',
+    1760338800, 'azure', '/azure/roundups/weekly-azure-roundup-2025-10-13', 'TechHub',
+    'TechHub', '41ECF6B2B549ECFF8FF1B8721BDA5D890DD0C4B5B22AC829C73817713AF9CDD0', ',Microsoft Azure,NVIDIA GB300,Blackwell Ultra GPUs,Azure AI Infrastructure,Azure Regions,Azure Logic Apps,Microsoft Fabric,Azure Databricks,Azure Data Factory,Delta Lake,Azure Landing Zones,Azure Arc,Azure Monitor Workspaces,Azure Migrate,Azure Site Recovery,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-10-06
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-10-06', 'roundups', 'Weekly Azure Roundup: Fabric Security, Multicloud Data, and Ops',
+    'Azure’s latest updates bring expanded automation in Microsoft Fabric, more secure data integrations, new open-source tools, improved CLI features, and fresh platform guidance. Service changes focus on lower costs and multicloud flexibility, with continued developer empowerment and adaptable platforms.
+<!--excerpt_end-->
+## Microsoft Fabric: Data Integration, Networking, and Automation
+Fabric’s Virtual Network Data Gateway is now generally available for Pipelines, Dataflow Gen2, and Copy Job, strengthening private networking options. Copy Job adds new connectors, advanced Change Data Capture (CDC for Snowflake), and a Variables Library—pushing hybrid orchestration forward. Data Factory has been updated with support for Workspace Identity, Private Link, Key Vault, and expanded automation. Fabric Mirroring for Azure SQL Managed Instance reaches GA, enabling mirrored data for analytics and AI in new scenarios. Workspace-level Private Link is also GA, increasing control for data science and ML teams. The updated On-premises Data Gateway improves BigQuery mirroring and compatibility with Power BI Desktop.
+- [Virtual Network Data Gateway Now Generally Available for Fabric Pipeline, Dataflow Gen2, and Copy Job](https://blog.fabric.microsoft.com/en-US/blog/virtual-network-data-gateway-support-for-fabric-pipeline-dataflow-gen2-fast-copy-and-copy-job-is-now-generally-available/)
+- [Enhancements to Copy Job for Data Ingestion in Microsoft Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-connection-parameterization-expanded-cdc-and-connectors/)
+- [Mission-Critical Data Integration: New Security and Automation in Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/mission-critical-data-integration-whats-new-in-fabric-data-factory/)
+- [Fabric Mirroring for Azure SQL Managed Instance Now Generally Available](https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/)
+- [Workspace-Level Private Link in Microsoft Fabric Now Generally Available](https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-workspace-level-private-link-in-microsoft-fabric/)
+- [On-premises Data Gateway September 2025 Release: New Features & Power BI Desktop Compatibility](https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-september-2025-release/)
+## Advanced Connectivity, Mirroring, and Cross-Cloud Features in Fabric Data Factory
+Fabric Data Factory introduces new connectors (AWS RDS Oracle, PostgreSQL 2.0, Databricks Delta Lake, Cassandra) for cross-cloud integration, better observability, and improved error management. Security upgrades include Entra ID authentication and TLS 1.3. Real-time Oracle Mirroring launches in preview, providing direct BI and ML query access and marking continued multicloud expansion.
+- [Cross-Cloud Data Movement with Best-in-Class Connectivity in Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/cross-cloud-data-movement-with-best-in-class-connectivity-whats-new-and-whats-next/)
+- [Enhancements in Microsoft Fabric Data Factory Connectors for Enterprise-Scale Data Integration](https://blog.fabric.microsoft.com/en-US/blog/unlocking-seamless-data-integration-with-the-latest-fabric-data-factory-connector-innovations/)
+- [Mirroring Oracle Data into Microsoft Fabric: Real-Time Integration without ETL](https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-oracle-in-microsoft-fabric-preview/)
+## Fabric CLI and Secure Data Movement for Fabric
+Fabric CLI v1.1.0 is open source, offering new features like JSON output, workspace context selection, and folder organization for automation. Copy Job integration with Virtual Network Data Gateway supports compliance and private endpoint deployments, aligning with recent security improvements for data pipelines.
+- [Fabric CLI Goes Open Source with AI-Ready Features in v1.1.0](https://blog.fabric.microsoft.com/en-US/blog/fabric-cli-open-source-ai-ready-and-more-powerful/)
+- [Secure Data Movement in Microsoft Fabric with Copy Job and VNET Data Gateway](https://blog.fabric.microsoft.com/en-US/blog/secure-your-data-movement-with-copy-job-and-virtual-network-data-gateway/)
+## Azure Platform Updates, Service Announcements, and Cost Optimization
+October’s Azure Update shares upcoming service retirements plus new features for Compute Gallery, SQL Database, and Traffic Manager. Guidance supports planning for lifecycle and resilience. The Azure Essentials guide offers practical advice on optimizing cloud and AI costs based on previous frameworks (CAF/WAF) and governance.
+- [Azure Update - October 2025 Announcements and Retirements](/ai/videos/azure-update-october-2025-announcements-and-retirements)
+- [Maximizing Cost Efficiency with Azure Essentials for Cloud and AI Investments](https://techcommunity.microsoft.com/t5/azure-governance-and-management/cloud-and-ai-cost-efficiency-a-strategic-imperative-for-long/ba/p/4455955)
+## Azure Containerization and Storage Updates
+Guides explain Azure Container Storage v2 and provide platform choices among AKS, App Service, and Azure Container Apps, supporting broader orchestration and deployment approaches. Note: Storage v2 requires redeployment for changes, with no direct migration path—continuing infrastructure planning updates.
+- [Choosing the Right Azure Containerisation Strategy: AKS, App Service, or Container Apps?](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/choosing-the-right-azure-containerisation-strategy-aks-app/ba/p/4456645)
+- [Azure Container Storage v2 Overview](/azure/videos/azure-container-storage-v2-overview)
+## Governance, Policy as Code, and Developer Security
+Azure AI Landing Zones now integrate policy automation with Azure Policy, EPAC, and DevOps workflows, supporting compliance and repeatable infrastructure-as-code deployments with Bicep/ARM and centralized Entra ID. SystemData walkthroughs support streamlined auditing; SSSD and Entra ID integration help secure cloud-native Linux HPC clusters, reinforcing last week’s login and identity improvements.
+- [Building a Secure and Compliant Azure AI Landing Zone: Policy Framework & Best Practices](https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-secure-and-compliant-azure-ai-landing-zone-policy/ba/p/4457165)
+- [How to Identify Who Created an Azure Resource Using SystemData](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/who-created-this-azure-resource-here-s-how-to-find-out/ba/p/4458470)
+- [Implementing SSSD with Microsoft Entra ID for Azure Linux HPC Clusters](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/use-entra-ids-to-run-jobs-on-your-hpc-cluster/ba/p/4457932)
+## Analytics, Monitoring, and Database Features
+Fabric SQL DB’s point-in-time restore window expands to 35 days, further improving data resilience. New memory metrics, spillover visualization, and detailed query drilldowns help developers with troubleshooting and support Azure’s ongoing commitment to performance transparency.
+- [Extending Point-in-Time Retention in Fabric SQL DB: From 7 to 35 Days](https://blog.fabric.microsoft.com/en-US/blog/extending-point-in-time-retention-in-fabric-sql-db-from-7-to-35-days/)
+- [Introducing Memory Consumption Metrics for SQL Database in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/memory-consumption-metrics-now-available-for-fabric-sql-database/)
+## Edge, Hybrid, and Multicloud Azure Developments
+Azure Local is now generally available for government users, continuing support for compliant deployment. Oracle Database@Azure expands coverage for Oracle Database 19c and adds new regional support. Oracle AI World sessions and the Hybrid Cloud Playbook focus on multicloud deployments and architecture. HPE’s integration for SQL Server 2025 increases analytics and hybrid capability for Arc-enabled scenarios.
+- [Azure Local Now Generally Available for Government Cloud Customers](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-azure-local-on-microsoft/ba/p/4458013)
+- [Oracle Database 19c Now Supported on Exadata Exascale with Oracle Database@Azure and New UAE Regions](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-now-supports-oracle-database-19c-on/ba/p/4458643)
+- [Microsoft at Oracle AI World 2025: AI, Multicloud, and Data Transformation with Azure](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-is-headed-to-oracle-ai-world-2025-in-las-vegas/ba/p/4457390)
+- [The Hybrid Cloud Playbook: Mastering Azure Stack](https://dellenny.com/the-hybrid-cloud-playbook-mastering-azure-stack/)
+- [HPE Solutions and Azure Edge Architecture for AI-Ready SQL Server 2025 Workloads](/ai/videos/hpe-solutions-and-azure-edge-architecture-for-ai-ready-sql-server-2025-workloads)
+## Event-Driven Architectures and Automation
+Azure Event Grid introduces OAuth 2.0/JWT authentication and better MQTT support. Updates advance security for IoT and event-driven systems, including factory monitoring and SCADA/IoT integration.
+- [What''s New in Azure Event Grid: Security, MQTT, and Smart Factory Integration](https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/what-s-new-in-azure-event-grid/ba/p/4458299)
+## Open-Source Initiatives and Developer Community
+Microsoft continues open source progress with kernel contributions, CNCF involvement, and Model Context Protocol expansion—following up on events at All Things Open 2025 and emphasizing sustainable developer tooling and community participation.
+- [Microsoft''s Role in Open-Source Sustainability: From Kernel to Copilot at All Things Open 2025](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/the-open-source-paradox-how-microsoft-is-giving-back/ba/p/4458630)
+## SharePoint Embedded and SaaS Content Management
+Guides for SharePoint Embedded continue last week’s news about integrating API-driven Microsoft 365 services, with secure and compliant content management for SaaS and ISVs.
+- [Unlocking the Power of SharePoint Embedded: A Developer-Focused Approach to Content Management](https://dellenny.com/unlocking-the-power-of-sharepoint-embedded-a-modern-approach-to-content-management/)
+## Developer Workflow and Troubleshooting
+New recommendations for exclusion logic in Azure Storage Actions and PowerShell troubleshooting simplify developer workflows. Updated guides on RBAC and authentication help teams adopt better security practices for automation scripts.
+- [How to Use Exclude Prefix for Smarter Blob Management in Azure Storage Actions](https://techcommunity.microsoft.com/t5/azure-paas-blog/exclude-prefix-in-azure-storage-action-smarter-blob-management/ba/p/4440075)
+- [Resolving AuthorizationPermissionMismatch for Set-AzStorageBlobContent in PowerShell](https://techcommunity.microsoft.com/t5/azure-storage/differences-between-powershell-and-browser-when-upload-file/m-p/4458068#M574)
+## Community Contributions and Technical Spotlights
+Microsoft Fabric’s influencer spotlight for September offers best practices on Power BI, scaling data science, and CI/CD troubleshooting—extending last week’s focus on successful analytics and deployment guidance.
+- [September 2025 Microsoft Fabric Influencers Spotlight](https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-september-2025/)
+## Azure HPC, Event Management, and Workflow Integration
+Cloud-native HPC expands at the HPC Roundtable 2025, in line with ongoing hybrid orchestration improvements and AMD VM news. Event SaaS solutions leveraging Azure for identity management and automation increase developer and operational productivity, supporting startups and ISVs.
+- [Exploring HPC and AI Innovation with Microsoft and AMD at the HPC Roundtable 2025](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/explore-hpc-ai-innovation-microsoft-amd-at-hpc-roundtable-2025/ba/p/4457974)
+- [Transforming Event Management with InEvent and Microsoft Azure](https://www.microsoft.com/en-us/startups/blog/building-effortless-events-how-inevent-and-microsoft-for-startups-are-transforming-event-management/)',
+    'Azure’s latest updates bring expanded automation in Microsoft Fabric, more secure data integrations, new open-source tools, improved CLI features, and fresh platform guidance. Service changes focus on lower costs and multicloud flexibility, with continued developer empowerment and adaptable platforms.',
+    1759734000, 'azure', '/azure/roundups/weekly-azure-roundup-2025-10-06', 'TechHub',
+    'TechHub', 'F5BE1F9B9A4B619CD6C0C7908023AA6F6A7ECB6E1EDADB36ECEBA0B59E20B317', ',Microsoft Fabric,Fabric Data Factory,Virtual Network Data Gateway,Private Link,Entra ID,Azure Key Vault,Copy Job,Change Data Capture,Fabric Mirroring,Azure SQL Managed Instance,Fabric CLI,Azure Policy,EPAC,Azure Event Grid,Azure Container Apps,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-09-29
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-09-29', 'roundups', 'Weekly Azure Roundup: Hybrid connectivity, IaC Copilot, Fabric growth',
+    'Azure’s latest updates include architecture, modernization, automation, observability, security, and developer productivity, oriented toward scalable migration, hybrid cloud, and improved developer experiences.
+<!--excerpt_end-->
+## Azure Landing Zones and Multi-Region Architecture
+Updated Azure AI Landing Zone resources guide organizations on modular and secure AI deployments, covering subscription management, RBAC, policy enforcement, zero trust, and expansion planning. Multi-region architecture lessons cover infrastructure-as-code, resiliency, disaster recovery, and regional failover strategies—helping larger organizations deploy securely and reliably, in line with ongoing migration topics.
+- [Azure AI Landing Zone: Enterprise-Scale, Secure, and Governed AI Deployment Architecture](https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-azure-landing-zone-shared-capabilities-and-models-to-enable/ba/p/4455951)
+- [Architecting Multi-Region Solutions in Azure: Practical Lessons Learned](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/architecting-multi-region-solution-in-azure-lessons-learned/ba/p/4415554)
+## Infrastructure as Code and Automation Advances
+Azure now features Copilot-driven code generation for Terraform, a unified VS Code extension, and policy validation—supporting better cross-stack management for Azure and Microsoft 365 environments. HPC guides demonstrate automated SLURM cluster deployments with CycleCloud and Hammerspace, showing how natural language and AI can streamline infrastructure as code.
+- [Accelerating Infrastructure as Code: New Terraform Enhancements for Azure](https://techcommunity.microsoft.com/t5/azure-tools-blog/accelerating-infrastructure-as-code-introducing-game-changing/ba-p/4457341)
+- [Simplifying HPC Deployments with Azure CycleCloud and Hammerspace](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/cyclecloud-hammerspace/ba/p/4457043)
+## Agentic AI-Powered Modernization and Migration
+GitHub Copilot''s modernization agents for Java (with .NET in preview) automate code analysis, migration, and artifact generation. Azure Migrate adds agentless discovery, dependency mapping, and guided database migration for PostgreSQL, SQL Server, and Oracle. The Azure Accelerate program helps organizations with large migration projects, reinforcing earlier themes of automation and reduced manual effort.
+- [Accelerating Application Migration and Modernization with Agentic AI Tools in Azure](https://azure.microsoft.com/en-us/blog/accelerate-migration-and-modernization-with-agentic-ai/)
+- [Discover and Assess PostgreSQL Databases for Azure Migration Using Azure Migrate](https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-postgresql-databases-for-migration-to-azure/ba/p/4456108)
+## Azure Arc Gateway, Arc for Azure Local, and Hybrid Cloud Connectivity
+Azure Arc Gateway and Arc Gateway for Azure Local reach general availability, providing streamlined outbound endpoint setup for Arc-enabled and edge deployments. Built-in proxy routing improves secure agent communication, echoing ongoing investments in hybrid and mixed environment management.
+- [General Availability of Azure Arc Gateway for Arc-Enabled Servers](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba/p/4456356)
+- [Announcing the General Availability of Arc Gateway for Azure Local](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-arc-gateway-for-azure/ba/p/4456256)
+## Microsoft Fabric: Data Integration, Orchestration, and Developer Tooling
+Microsoft Fabric advances mirroring, adding support for BigQuery (preview) and Oracle for zero-ETL data access. Power BI and chat analytics expand, and Fabric SQL Database receives Copilot-powered query management, VS Code/SSMS support, application lifecycle management (via REST), backup and monitoring tools, and security updates. Fabric VS Code extension and Extensibility Toolkit are now generally available, streamlining app creation and workspace automation. Data Factory introduces new orchestration features, with Copilot assisting expression writing. Workspace admins gain direct per-workspace workload assignment for improved ingestion and quality oversight.
+These updates build on recent ecosystem improvements and previews, moving Fabric further toward open administration and orchestration tools.
+- [Mirroring in Microsoft Fabric: New Sources, Zero-ETL Data Unification, and AI-Powered Insights](https://blog.fabric.microsoft.com/en-US/blog/whats-new-to-mirroring-new-sources-and-capabilities-for-all-your-zero-etl-needs/)
+- [Mirroring for Google BigQuery in Microsoft Fabric: Public Preview Overview](https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-mirroring-for-google-bigquery-in-microsoft-fabric/)
+- [Introducing the Microsoft Fabric Extensibility Toolkit](https://blog.fabric.microsoft.com/en-US/blog/introducing-the-microsoft-fabric-extensibility-toolkit/)
+- [Microsoft Fabric VS Code Extension: New Features and General Availability](https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-microsoft-fabric-extension-for-vs-code/)
+- [Unlocking Enterprise-Ready SQL Database Features in Microsoft Fabric: ALM, Backups, and Copilot Enhancements](https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ready-sql-database-in-microsoft-fabric-auditing-backup-copilot-more/)
+- [Innovations in Fabric Data Factory Orchestration Announced at Fabric Conference Europe 2025](https://blog.fabric.microsoft.com/en-US/blog/announcing-new-innovations-for-fabric-data-factory-orchestration-at-fabric-conference-europe-2025/)
+- [Microsoft Fabric Update: Workspace Admins Gain Direct Workload Assignment](https://blog.fabric.microsoft.com/en-US/blog/new-in-microsoft-fabric-empowering-workspace-admins-with-direct-workload-assignment/)
+- [MSSQL Extension for VS Code Adds Fabric Integration and Database Provisioning](https://blog.fabric.microsoft.com/en-US/blog/mssql-extension-for-vs-code-fabric-integration-public-preview/)
+## Azure Platform Updates, Observability, and Security
+The September 26, 2025 Azure update covers service retirements, new AKS Fleet Manager and Insights, logging enhancements, new App Gateway features, and Azure Files Premium backup. Database administrators benefit from added backup and migration tools. Azure Monitor Logs integrates with Fabric Eventstream for streamlined operations data ingest, and App Gateway logs move to resource-focused tables, improving compliance and monitoring. Grafana now helps track Container Apps.
+Security features expand with Azure Integrated HSM in public preview, providing hardware-backed cryptography for trusted VMs and easier FIPS compliance. These updates underscore ongoing monitoring, centralized logging, and confidential compute improvements.
+- [Azure Update - 26th September 2025: Service Retirements, New Features, and GitHub Copilot Highlights](/ai/videos/azure-update-26th-september-2025-service-retirements-new-features-and-github-copilot-highlights)
+- [Unlocking Real-Time Operational Intelligence: Azure Monitor Logs Integration in Fabric via Eventstream](https://blog.fabric.microsoft.com/en-US/blog/unlocking-real-time-operational-intelligence-azure-monitor-logs-integration-in-fabric-via-eventstream/)
+- [Enhanced Logging for Azure Application Gateway: Resource-Specific Tables, DCR, and Cost Optimization](https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-visibility-flexibility-and-cost-efficiency-with/ba/p/4456707)
+- [Announcing Azure Container Apps Azure Monitor Dashboards with Grafana (Public Preview)](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-azure-container-apps-azure/ba/p/4450958)
+- [Microsoft Azure Introduces Azure Integrated HSM: Secure Hardware-Backed Cryptography for Virtual Machines](https://techcommunity.microsoft.com/t5/azure-compute-blog/microsoft-azure-introduces-azure-integrated-hsm-a-key-cache-for/ba/p/4456283)
+- [General Availability of Azure Backup Vaulted Support for Azure Files Premium (SSD) Shares](https://techcommunity.microsoft.com/t5/azure-storage-blog/general-availability-of-azure-backup-vaulted-support-for-azure/ba/p/4455307)
+## Azure Maps Geocode Autocomplete API
+The Azure Maps Geocode Autocomplete API enters public preview, delivering real-time, ranked autocomplete for addresses and places, with multilingual results, filtering options, and metadata enrichment. It replaces Bing Maps Autosuggest to support more user-friendly location experiences for applications such as store locators and rideshares. Official migration guides are available.
+- [Introducing the Azure Maps Geocode Autocomplete API](https://techcommunity.microsoft.com/t5/azure-maps-blog/introducing-the-azure-maps-geocode-autocomplete-api/ba/p/4455784)
+- [Introducing the Azure Maps Geocode Autocomplete API](https://techcommunity.microsoft.com/t5/azure-maps-blog/introducing-the-azure-maps-geocode-autocomplete-api/ba/p/4455780)
+## Other Azure News
+Developer tooling updates include forums for Azure Automation feedback and bug reporting, highlighting practical workflow priorities and building on recent onboarding resources.
+- [Azure Automation: User Requests, Feature Suggestions, and Bug Reports](https://techcommunity.microsoft.com/t5/azure/azure-automation-feature-improvements-and-bugs/m-p/4456195#M22242)
+A deep-dive guide for Azure Database for PostgreSQL Flexible Server covers deployment, tuning, authentication, high availability, encryption, and cost optimization practices.
+- [Azure Database for PostgreSQL: Flexible Server Deep Dive](/azure/videos/azure-database-for-postgresql-flexible-server-deep-dive)
+A Rust SDK workshop demonstrates secure secret management and authentication for memory-safe cloud-native apps on Azure.
+- [Building Secure Applications with Azure SDK for Rust](/azure/videos/building-secure-applications-with-azure-sdk-for-rust)
+Analysis of Azure API Management Developer Tier highlights self-hosted gateway capabilities, premium features, and cost considerations for dev/testing environments.
+- [Exploring Developer Tier APIM with Self-hosted Gateway for Greater Flexibility](https://techcommunity.microsoft.com/t5/azure-paas-blog/developer-tier-apim-self-hosted-gateway/ba/p/4457556)
+Azure Native Pure Storage Cloud delivers integrated block storage for hybrid migrations, providing a native Azure experience and aiding VMware transitions.
+- [Azure Native Pure Storage Cloud: Integrating Enterprise Block Storage with Azure](https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and/ba/p/4456246)
+Playwright Testing adds managed, parallel browser sessions on Azure, improving reliability for large test suites in CI/CD.
+- [Scaling Playwright End-to-End Tests with Azure Playwright Testing](https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/)
+Updated Azure Hybrid Benefit guides for Linux VMs offer strategies for cost savings through license management.
+- [Unlock Cloud Savings for Linux VMs with the Azure Hybrid Benefit](https://www.thomasmaurer.ch/2025/09/unlock-cloud-savings-for-linux-vms-with-the-azure-hybrid-benefit/)
+Cobalt 100 VMs offer energy-efficient, Arm-based compute for analytics, media, AI workloads, and are now widely available.
+- [How Azure Cobalt 100 VMs are Powering Real-World Solutions and Boosting Performance](https://azure.microsoft.com/en-us/blog/how-azure-cobalt-100-vms-are-powering-real-world-solutions-delivering-performance-and-efficiency-results/)
+Microsoft Fabric Maps provide integrated geospatial intelligence with no-code visualization for applications such as fleet management and live analytics.
+- [Maps in Microsoft Fabric – Geospatial Insights for Real-Time Operations](https://blog.fabric.microsoft.com/en-US/blog/introducing-maps-in-fabric-geospatial-insights-for-everyone/)
+Azure’s global network sees improvements through hollow core fiber partnerships, increasing reliability and reducing latency for high-performance workloads.
+- [Microsoft Azure Accelerates Hollow Core Fiber (HCF) Production with Corning and Heraeus](https://techcommunity.microsoft.com/t5/azure-networking-blog/microsoft-azure-scales-hollow-core-fiber-hcf-production-through/ba/p/4455953)
+Microsoft Ignite 2025 promotes community collaboration, bringing workshops and best practices to Azure and AI/data topics.
+- [Azure Community Highlights at Microsoft Ignite 2025](https://techcommunity.microsoft.com/t5/azure-events/your-guide-to-azure-community-activations-at-microsoft-ignite/ba/p/4455501)',
+    'Azure’s latest updates include architecture, modernization, automation, observability, security, and developer productivity, oriented toward scalable migration, hybrid cloud, and improved developer experiences.',
+    1759129200, 'azure', '/azure/roundups/weekly-azure-roundup-2025-09-29', 'TechHub',
+    'TechHub', '651C9AEA07D1028A15B0F9BD097CBC446D889B45F67DB8CC6A0312ED13230719', ',Microsoft Azure,Azure Arc,Hybrid Cloud,Azure Landing Zones,Zero Trust,IaC,Terraform,GitHub Copilot,Azure Migrate,Microsoft Fabric,Power BI,Azure Monitor,AKS,Azure Application Gateway,Azure Integrated HSM,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-09-22
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-09-22', 'roundups', 'Weekly Azure Roundup: Fabric Growth, AKS Automation, Observability',
+    'Azure’s platform continues to improve with updates in automation, developer productivity, data storage, and AI, including secure Kubernetes, scalable cloud tools, and observability. Microsoft Fabric, AKS, and infrastructure platforms show ongoing progress.
+<!--excerpt_end-->
+## Microsoft Fabric Ecosystem: Data, AI, and ISV Innovations
+Fabric’s September summary highlights advancements in unified data/AI engineering and analytics. The open-source release of Fabric CLI continues automation efforts, while enhanced Terraform and VS Code integrations support better tool management.
+Python workflow upgrades (GA for functions, notebook improvements) boost access to data engineering features. Governance through Purview and new APIs adds management options.
+AI/ML functionalities, including wrangling and Copilot, improve productivity. Data Factory, Dataflow Gen2, and pipeline features now offer better scalability, echoing previous enterprise improvements.
+Security updates such as Private Link and workspace identities advance Azure’s compliance goals. Fabric Data Warehouse scales SQL/data workloads with AI migration support.
+ISV updates at FabCon Europe extend analytics, Spark orchestration, OneLake, and graph/geospatial features, rounding out last week’s integration coverage.
+- [Microsoft Fabric September 2025 Feature Summary: Data, AI, Engineering and Governance Enhancements](https://blog.fabric.microsoft.com/en-US/blog/september-2025-fabric-feature-summary/)
+- [Unifying Data Estates with Microsoft Fabric Data Factory: AI, Integration, and Innovation](https://blog.fabric.microsoft.com/en-US/blog/unify-your-data-estate-for-the-era-of-ai-with-fabric-data-factory/)
+- [Introducing Fabric Data Warehouse: Next-Generation Cloud Data Warehousing](https://blog.fabric.microsoft.com/en-US/blog/welcome-to-fabric-data-warehouse/)
+- [The Power of ISVs: Unleashing Innovation in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/the-power-of-isvs-unleashing-innovation-in-microsoft-fabric/)
+## Azure Kubernetes Service & Container Workflows: Automation, Security, and Performance
+AKS Automatic is now generally available, following last week’s work on container resilience and zone redundancy. It automates cluster operations, scaling, and security, and uses Azure Linux for compliance and vulnerability management.
+Azure Container Storage v2.0.0 offers faster persistent storage for AI/ML and databases, builds on previous previews, and stays open-source and free for developers.
+WireGuard in AKS preview adds built-in pod encryption using Cilium, extending earlier work in VM and network isolation.
+- [AKS Automatic with Azure Linux: Streamlining Kubernetes Operations](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/aks-automatic-with-azure-linux/ba/p/4454284)
+- [Announcing the General Availability of Azure Kubernetes Service (AKS) Automatic](https://azure.microsoft.com/en-us/blog/azure-kubernetes-service-automatic-fast-and-frictionless-kubernetes-for-all/)
+- [Accelerating AI and Databases with Azure Container Storage v2.0: 7x Faster, Open Source, and Free](https://azure.microsoft.com/en-us/blog/accelerating-ai-and-databases-with-azure-container-storage-now-7-times-faster-and-open-source/)
+- [Introducing WireGuard In-Transit Encryption for Azure Kubernetes Service (Public Preview)](https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-wireguard-in-transit-encryption-for-aks-public/ba/p/4421057)
+## Azure Platform Infrastructure: Confidential Computing, Observability, and Networking
+New confidential DCasv6/ECasv6 VMs provide stronger VM security with hardware root-of-trust and AKS integration, building on last week’s confidential AI infrastructure updates.
+Azure Monitor’s Prometheus now features native Grafana dashboards for easier container observability and streamlined DevOps workflows, building on earlier monitoring solutions.
+Centralized logging patterns offer scalable observability for cloud-native applications, continuing last week’s event analysis focus. Azure Networking portfolio consolidation streamlines service selection for improved platform user experience.
+- [GA: DCasv6 and ECasv6 Confidential VMs with 4th Gen AMD EPYC for Azure](https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba/p/4451460)
+- [Azure Monitor’s Native Grafana Dashboards: Simplified Observability for Prometheus Workloads](https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-managed-service-for-prometheus-now-includes-native/ba/p/4454254)
+- [Centralized Logging in Azure: Proven Observability Patterns for Modern Apps](https://dellenny.com/centralized-logging-in-azure-proven-observability-patterns-for-modern-apps/)
+- [Azure Networking Portfolio Consolidation: Simplifying Service Discovery and Management](https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-portfolio-consolidation/ba/p/4454248)
+## Azure Cloud Migration, Modernization, and Hybrid Management
+"Migrate and Modernize Summit" showcases agentic AI and Accelerate capabilities for automated migrations, building on previous guides for cost optimization and security. Azure Migrate adds better analytics and hybrid management best practices.
+AI-based dependency assessment, expanded IaC/Arc support, Private Link, and scanning assist secure migration and modernization. Additional articles review savings for Linux VMs via Hybrid Benefit, ManageX for academic workloads, and cost reduction strategies, extending similar themes from prior automation updates.
+- [Accelerate and Simplify Cloud Transformation with New Agentic AI Solutions](https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-and-simplify-cloud-transformation-with-new-agentic-ai/ba/p/4454873)
+- [AI-Powered Migration and Modernization with Azure Essentials, Azure Migrate, and GitHub Copilot](https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-powered-migration-modernization-secure-resilient-and-ready/ba/p/4454849)
+- [Azure Migrate: Connected Experiences for Efficient Cloud Modernization](https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba/p/4454927)
+- [Unlocking Cloud Savings for Linux VMs with Azure Hybrid Benefit](/azure/videos/unlocking-cloud-savings-for-linux-vms-with-azure-hybrid-benefit)
+- [Future-Proofing Academic Research: Secure AI Computing Workflows with Terawe ManageX on Azure](/future-proofing-academic-research-secure-ai-computing-workloads-with-terawe-managex-on-azure)
+- [How to Cut Your Azure Bill in Half Without Losing Performance](https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/)
+## Azure Platform Foundation: Essential Updates and Emerging Developer Tools
+Ongoing foundational updates follow last week’s VM releases and service transition announcements. AKS is moving away from Azure Linux 2.0, requiring transition planning.
+The new open-source Image Customizer for Azure Linux improves automation and secure image management for DevOps, extending on previous deployment toolkit advancements.
+Azure Monitor Health Models convert telemetry into health signals, reducing alert fatigue and helping operations staff respond proactively. Beginner guides for the Azure Free Tier and developer toolkits continue last week’s onboarding content.
+Infrastructure highlights from Microsoft’s Fairwater AI datacenter demonstrate ongoing modernization and resiliency themes covered in prior security stories.
+- [Azure Update - 19th September 2025](/azure/videos/azure-update-19th-september-2025)
+- [Introducing Image Customizer for Azure Linux](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/introducing-image-customizer-for-azure-linux/ba/p/4454859)
+- [Inside the World’s Most Powerful AI Datacenter: Microsoft’s Fairwater Facility](https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/)
+- [Understanding Azure Monitor Health Models](/azure/videos/understanding-azure-monitor-health-models)
+- [How to Update proxyAddresses for a Cloud-Only Entra ID User](https://techcommunity.microsoft.com/t5/azure/how-to-update-the-proxyaddresses-of-a-cloud-only-entra-id-user/m-p/4454763#M22217)
+- [Top 7 Azure Services You Didn’t Know You Needed](https://dellenny.com/top-7-azure-services-you-didnt-know-you-needed/)
+- [Azure for Beginners: How to Launch Your First Cloud Project in 30 Minutes](https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/)',
+    'Azure’s platform continues to improve with updates in automation, developer productivity, data storage, and AI, including secure Kubernetes, scalable cloud tools, and observability. Microsoft Fabric, AKS, and infrastructure platforms show ongoing progress.',
+    1758524400, 'azure', '/azure/roundups/weekly-azure-roundup-2025-09-22', 'TechHub',
+    'TechHub', '4C337578313EFD52FEC44B4FABD0290435F33AE0A08C00B10B5084C8BEF1FEC9', ',Microsoft Azure,Microsoft Fabric,Fabric CLI,Terraform,VS Code,Microsoft Purview,AKS,AKS Automatic,Azure Linux,Azure Container Storage,WireGuard,Confidential VMs,Azure Monitor,Prometheus,Grafana,Azure Migrate,Azure Arc,Private Link,Microsoft Entra ID,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-09-15
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-09-15', 'roundups', 'Weekly Azure Roundup: VMs, Entra auth, agents, and resilience',
+    'This week’s Azure news covers new VM sizes and hardware, improved storage and authentication, automation with Logic Apps, data integration, monitoring, migration, and network security. These updates strengthen Azure’s capacity for modern, secure, efficient cloud deployments.
+<!--excerpt_end-->
+## Azure Virtual Machines and Infrastructure
+Microsoft previewed Azure Dasv7, Easv7, and Fasv7 VMs using 5th Gen AMD EPYC “Turin” processors, offering up to 35% improved CPU performance, high memory and storage throughput, NVMe, Azure Boost, advanced networking, and FIPS 140-3 compliance. D192 sizes join Dsv6/Ddsv6-series, supporting 192 vCPUs and 768 GiB RAM for intensive analytic and scientific workloads. These updates enhance efficiency and security, supporting expanded workload types.
+- [Announcing Preview of New Azure Dasv7, Easv7, and Fasv7-Series VMs Based on 5th Gen AMD EPYC™ ‘Turin’ Processors](https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-preview-of-new-azure-dasv7-easv7-fasv7-series-vms/ba-p/4448360)
+- [Azure D192 Sizes Now Available in Dsv6 and Ddsv6-Series VMs](https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-d192-sizes-in-the-azure/ba-p/4451427)
+## Azure Storage, File Shares, and Authentication
+Azure Storage APIs now accept Microsoft Entra ID and RBAC, replacing older SAS/account-key access for better security and standardized error codes. Azure also introduces file share-centric management, making file shares top-level resources—simplifying set up, scaling, and billing, while improving security and isolation.
+These features build on previous improvements in resource management and more granular control—continuing Azure’s modernization.
+- [Azure Storage APIs Gain Microsoft Entra ID and RBAC Support](https://devblogs.microsoft.com/azure-sdk/azure-storage-apis-gain-entra-id-and-rbac-support/)
+- [Introducing a File Share-Centric Management Model for Azure Files](https://techcommunity.microsoft.com/t5/azure-storage-blog/simplifying-file-share-management-and-control-for-azure-files/ba-p/4452634)
+- [Understanding the New File Share Resource Type in Azure](/azure/videos/understanding-the-new-file-share-resource-type-in-azure)
+## Azure Logic Apps Automation and Agentic Integrations
+Logic Apps now support multi-agent orchestration and a Python code interpreter via Azure Container Apps, enabling advanced automation and data analysis. Foundry Agent Service links conversational agents to both Microsoft and third-party AI models. Improved Entra ID integration boosts session security. MCP server public preview with API Center or HTTP/Easy Auth registration makes workflow and API management simple and extensible.
+These improvements continue the focus on scalable automation, practical agent modularity, and expanded governance.
+- [Azure Logic Apps: Multi-Agentic Business Process Automation Platform Enhancements](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-logic-apps-ushering-in-the-era-of-multi-agentic-business/ba-p/4452275)
+- [Python Code Interpreter for Logic Apps: Execute Python in Workflows Using Azure Container Apps](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcement-python-code-interpreter-in-logic-apps-is-now-in/ba-p/4452239)
+- [Build Modular Agents with Logic Apps MCP Servers (Public Preview)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-logic-apps-mcp-servers-public-preview/ba-p/4450419)
+- [Building MCP Servers with Azure Logic Apps: Demo Collection](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-mcp-demos/ba-p/4452175)
+## Azure Databricks and Microsoft Fabric Integration
+Articles explore eight ways to integrate Azure Databricks with Microsoft Fabric, including Power BI connectors, Delta Sharing, pipeline orchestration, publishing jobs, and direct Lakehouse writes. General Availability of Automatic Identity Management (AIM) automates Entra ID user and group setup for compliant analytics at large scale.
+This supports seamless analytics and unified data management, following continuous platform integration.
+- [Comprehensive Methods for Integrating Azure Databricks with Microsoft Fabric](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/approaches-to-integrating-azure-databricks-with-microsoft-fabric/ba-p/4453643)
+- [General Availability of Automatic Identity Management (AIM) for Entra ID on Azure Databricks](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/general-availability-automatic-identity-management-aim-for-entra/ba-p/4452206)
+## Monitoring, Observability, and Container Platform Resilience
+Azure Monitor’s Container Insights now supports high scale mode for larger clusters, with better log rates, streamlined upgrades, and minimal setup. Azure Container Registry defaults to zone redundancy in availability-zone regions, improving resilience without extra configuration or cost; management tools are being updated accordingly.
+These updates extend last week’s work on VM reliability and SRE agent features, with strengthened cloud reliability.
+- [General Availability of High Scale Mode in Azure Monitor Container Insights](https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-high-scale-mode-in-azure-monitor-container/ba-p/4452199)
+- [Zone Redundancy Now Default for Azure Container Registry in Availability Zone Regions](https://techcommunity.microsoft.com/t5/microsoft-developer-community/zone-redundancy-is-now-enabled-by-default-in-azure-container/ba-p/4450618)
+## Enterprise App Services, Licensing, and Cost Optimization
+Azure App Service now lets users Bring Your Own License (BYOL) for JBoss EAP applications, allowing organizations to reuse existing Red Hat licenses and avoid pay-as-you-go costs—streamlining compliance and migration.
+This follows Azure App Service’s evolution toward flexible licensing and hybrid cloud support for complex enterprise workloads.
+- [Bring Your Own License (BYOL) Now Available for JBoss EAP on Azure App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bring-your-own-license-byol-support-for-jboss-eap-on-azure-app/ba-p/4452152)
+## Azure Application Gateway and Network Isolation
+Application Gateway now enables private-only deployment and separate control/data planes, improving isolation and compliance. Guides cover migration steps, subnet assignment, and NSG integration for secure app delivery.
+These features complement last week’s advice on hybrid network security and migration architecture.
+- [Application Gateway Network Isolation: New Architecture Deep Dive](/azure/videos/application-gateway-network-isolation-new-architecture-deep-dive)
+- [Application Gateway Network Isolation Explained](/azure/videos/application-gateway-network-isolation-explained)
+## Developer-Focused Architecture, Integration Patterns, and Migration
+The Microsoft Fabric Migration Guide offers in-depth data warehouse migration strategies. A technical session shows how SQL Server 2025 and Pure Storage FlashArray can take REST API-based snapshot backups with metadata tags from T-SQL. New Azure Policy definitions enable auditing of policy inheritance for API Management, boosting security and reliable deployment.
+These articles deepen migration and governance topics featured previously.
+- [Microsoft Fabric Migration Guide: Best Practices for Data Warehouse Migration](https://blog.fabric.microsoft.com/en-US/blog/migrating-to-fabric-data-warehouse-guide-now-available/)
+- [Building a Snapshot Backup Catalog with SQL Server 2025 and Pure Storage FlashArray](/azure/videos/building-a-snapshot-backup-catalog-with-sql-server-2025-and-pure-storage-flasharray)
+- [Enforcing and Auditing Policy Inheritance in Azure API Management](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enforce-or-audit-policy-inheritance-in-api-management/ba-p/4452204)
+## Intelligent Workflows, Microservices Patterns, and Well-Architected AI
+The n8n engine is now supported in Azure Container Apps, integrating Azure OpenAI for agentic workflows—enabling routing, summarization, and content creation. New guidance on Azure Well-Architected Framework for AI covers reliability, security, efficiency, and DevOps practices. A guide for the sidecar pattern covers logging, monitoring, and state management in AKS, Azure Container Apps, and Service Fabric.
+Consistent with last week’s automation and architecture guidance, these resources assist designers of robust Azure-based microservices and AI solutions.
+- [Building Agentic Workflows with n8n and Azure Container Apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agentic-workflows-with-n8n-and-azure-container-apps/ba-p/4452362)
+- [Designing AI Workloads with the Azure Well-Architected Framework](https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-ai-workloads-with-the-azure-well-architected-framework/ba-p/4452252)
+- [Riding in Tandem: Unlocking the Sidecar Pattern in Azure Microservices](https://dellenny.com/riding-in-tandem-unlocking-the-sidecar-pattern-in-azure-microservices/)
+## Other Azure News
+OneLake File Explorer v1.0.14.0 improves temp file handling, crash detection, and upgrades to .NET 8, increasing reliability and security for data management in Microsoft Fabric and Lakehouse deployments.
+Following previous improvements, these updates enhance robust data workflows for Microsoft Fabric users.
+- [OneLake File Explorer 1.0.14.0: Enhanced Integration with Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/onelake-file-explorer-smarter-more-reliable-and-seamlessly-integrated/)
+The latest Azure Update shares new service features, VM SKUs, updates in databases, migration tools, and retirement details for Playwright Testing—including certification resource links for ongoing learning.
+Regular briefings help developers stay up-to-date and support skill development.
+- [Azure Update: Announcements and Service Changes (12 September 2025)](/azure/videos/azure-update-announcements-and-service-changes-12-september-2025)',
+    'This week’s Azure news covers new VM sizes and hardware, improved storage and authentication, automation with Logic Apps, data integration, monitoring, migration, and network security. These updates strengthen Azure’s capacity for modern, secure, efficient cloud deployments.',
+    1757919600, 'azure', '/azure/roundups/weekly-azure-roundup-2025-09-15', 'TechHub',
+    'TechHub', '2DA8C5CF726CAB850E0E3DF3FAC31369B9DC203469F0717F0582FEFE7728D69C', ',Microsoft Azure,Azure Virtual Machines,AMD EPYC Turin,Azure Boost,FIPS 140 3,Azure Storage,Azure Files,Microsoft Entra ID,Azure RBAC,Azure Logic Apps,Azure Container Apps,MCP,Azure Databricks,Microsoft Fabric,Azure Monitor,Container Insights,Azure Container Registry,Azure App Service,JBoss EAP,Azure Application Gateway,Azure API Management,Azure Policy,Azure Well Architected Framework,Azure OpenAI,AKS,OneLake,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-09-08
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-09-08', 'roundups', 'Weekly Azure Roundup: Fabric data, App Service v4, secure VMs',
+    'Azure’s platform continues to evolve, with updates that enhance developer workflows, analytics, automation, security, and integration. Improvements range across analytics engines, application hosting, platform extensibility, infrastructure automation, and developer tools—helping teams with hybrid, cross-cloud, and modernization scenarios.
+<!--excerpt_end-->
+## Microsoft Fabric: Analytics, Eventstreams, and Data Integration
+Microsoft Fabric made several analytics improvements. OneLake now provides unified storage with virtualization, making governance and compliance less complex. Shortcuts to external data, live database mirroring, and on-the-fly data transformations all reduce the complexity of traditional ETL. Azure Purview integration simplifies compliance, and new support for open formats prepares the platform for future advances. Live data can now be used directly in AI chat applications. Customer stories from Lumen and IFS highlight these improvements.
+Detailed updates in the Fabric Warehouse August 2025 recap include JSON Lines support, better job management, and new AzCopy migration scenarios. CI/CD and automation are getting easier, and multi-scheduler notebooks drive advanced analytics.
+Security features expand with new workspace-level Private Link support (preview), enhanced migration controls, and more admin history. Copilot’s schema suggestions and new orchestration capabilities embed AI into data processes. Documentation and best practice materials support these changes.
+The Schema Registry (preview) for Fabric Eventstreams enforces Avro-based contracts, strengthens type safety, and bolsters event ingestion. Versioning and diagnostics offer better governance, setting the stage for EventHub integration and real-time data mesh architectures—building on previous announcements about event processing.
+- [OneLake: your foundation for an AI-ready data estate](https://blog.fabric.microsoft.com/en-US/blog/onelake-your-foundation-for-an-ai-ready-data-estate/)
+- [What’s New in Fabric Warehouse: August 2025 Recap](https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-august-2025/)
+- [Introducing Schema Registry for Type-Safe Pipelines in Microsoft Fabric Eventstreams](https://blog.fabric.microsoft.com/en-US/blog/schema-registry-creating-type-safe-pipelines-using-schemas-and-eventstreams-preview/)
+- [Accelerating Data Ingestion from SQL to Fabric with Fast Copy in Dataflow](https://blog.fabric.microsoft.com/en-US/blog/accelerating-data-movement-by-using-fast-copy-to-unlock-performance-and-efficiency-during-data-ingestion-from-sql-database-in-fabric/)
+- [SQL Database in Fabric: What''s New and Improved (Data Exposed Public Preview)](/azure/videos/sql-database-in-fabric-whats-new-and-improved-data-exposed-public-preview)
+## Azure App Service: New Premium Hosting, Self-Service Scaling, and Platform Extensibility
+Azure App Service Premium v4 is generally available, featuring AMD Dadsv6/Eadsv6 hardware and NVMe storage for up to 58% more throughput. This upgrade brings added scaling options, monitoring tools, and improved multi-tenancy support for both Windows and Linux environments. Developers now have easier configuration, redundancy, and pricing.
+A public preview of self-service quota management lets teams view and adjust most usage limits from the Azure portal, with visualizations and region/SKU filtering. Automation and logging enhancements are on the way.
+Teams Phone Extensibility (TPE) and Azure Communication Services are now generally available, making it easier to add custom voice and telephony solutions within Teams—including AI voice applications. These features simplify compliance, monitoring, and integration for organizations and independent software vendors.
+These improvements build on last week’s developments in application hosting, hybrid configurations, and a smoother onboarding process for cloud resources.
+- [General Availability of Premium v4 for Azure App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-premium-v4-for-azure-app/ba-p/4446204)
+- [Public Preview: Self-Service Quota Management for Azure App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-the-new-app-service-quota-self/ba-p/4450415)
+- [General Availability of Teams Phone Extensibility with Azure Communication Services](https://techcommunity.microsoft.com/t5/azure-communication-services/general-availability-of-teams-phone-extensibility/ba-p/4446092)
+## Infrastructure Automation, Security, and Management
+Azure now offers in-place Trusted Launch upgrades for VMs and scale sets in general availability, supporting Secure Boot, virtual TPM, and boot integrity without redeployment. These features align with benchmarks such as Azure Security Benchmark and FedRAMP. Guidance is available for testing, rolling back, and auditing deployments.
+The Azure SRE Agent continues to move toward general availability, with permission management, Azure CLI/Kubernetes integration, and developer feedback processes. Updates on billing and licensing keep the focus on resource optimization and platform reliability.
+Automation updates are designed to help teams diagnose and recover from incidents more quickly.
+- [Upgrade Azure VMs with Trusted Launch: In-Place Security Enhancement Now Available](https://techcommunity.microsoft.com/t5/azure-compute-blog/increase-security-for-azure-vms-trusted-launch-in-place-upgrade/ba-p/4440584)
+- [Enterprise-Ready and Extensible: Update on the Azure SRE Agent Preview](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/enterprise-ready-and-extensible-update-on-the-azure-sre-agent/ba-p/4444299)
+## Azure Logic Apps and Integration Services
+The Logic Apps Aviators Newsletter for September 2025 highlights the latest improvements. The Data Mapper is now generally available, with a new VS Code extension and CI/CD integration in Deployment Center. Logic Apps also support hybrid deployment on Rancher K3s—including on-premises and edge hosting. Community resources offer guidance on DevOps integration, SAP migration from BizTalk, and Azure OpenAI integration with adaptive automation.
+These updates continue recent advancements in scalable automation, hybrid cloud integration, and developer tooling for cloud-connected business processes.
+- [Logic Apps Aviators Newsletter – September 25, 2025](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-september-25/ba-p/4450195)
+- [Azure Update - 5th September 2025](/azure/videos/azure-update-5th-september-2025)
+## Azure VMware Solution, Service Discovery, and Migration Guidance
+Broadcom’s new licensing policy for Azure VMware Solution requires direct BYOL for VMware Cloud Foundation deployments after November 2025. Workflows do not change, but teams should update their procurement and deployment strategies.
+Last week’s region, storage, and compliance updates for AVS provide additional context about these changes and the complexity of VMware workload management.
+A new guide describes service discovery in Azure, covering AKS, App Service, Service Fabric, and Container Apps. Developers learn about dynamic API-based service resolution, managed identities, and service mesh patterns.
+Another resource walks teams through migrating from AWS Application Load Balancer to Azure Application Gateway using infrastructure-as-code, SSL/TLS, and detailed validation—minimizing downtime and complementing earlier cloud networking and capacity planning guides.
+- [Broadcom VMware Licensing Changes Impacting Azure VMware Solution Customers](https://techcommunity.microsoft.com/t5/azure-migration-and/broadcom-vmware-licensing-changes-what-azure-vmware-solution/ba-p/4448784)
+- [Service Discovery in Azure: Dynamically Finding Service Instances](https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/)
+- [Migrating from AWS Application Load Balancer to Azure Application Gateway](https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-application-load-balancer-from-aws-to-azure/ba-p/4439880)
+## Other Azure News
+The new Azure Local Training Program provides self-paced resources for Azure Local, covering deployment, Arc integration, monitoring, and billing for users of all experience levels—building on last week’s focus on Azure learning.
+Guides for creating custom Microsoft Teams apps and tabs cover Power Platform integration and Node.js/React/Azure AD-based solutions.
+New SharePoint documentation addresses troubleshooting search issues and managing sprawl while encouraging effective collaboration, echoing last week''s operational guidance.
+Microsoft Cost Management updates include role improvements, pricing calculator updates, log filtering, and better support for storage migrations, continuing efforts to improve cost transparency and management.
+- [Azure Local Training Program: Self-Paced Cloud Management Skills](https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-azure-local-training-empowering-you-to-succeed/ba-p/4447957)
+- [Creating Custom Microsoft Teams Apps and Tabs](https://dellenny.com/creating-custom-microsoft-teams-apps-and-tabs/)
+- [Troubleshooting SharePoint Search Result Issues](https://dellenny.com/what-to-do-when-sharepoint-search-doesnt-return-the-right-results/)
+- [Avoiding SharePoint Sprawl Without Killing Collaboration](https://dellenny.com/avoiding-sharepoint-sprawl-without-killing-collaboration/)
+- [Microsoft Cost Management Updates: July & August 2025](https://azure.microsoft.com/en-us/blog/microsoft-cost-management-updates-july-august-2025/)',
+    'Azure’s platform continues to evolve, with updates that enhance developer workflows, analytics, automation, security, and integration. Improvements range across analytics engines, application hosting, platform extensibility, infrastructure automation, and developer tools—helping teams with hybrid, cross-cloud, and modernization scenarios.',
+    1757314800, 'azure', '/azure/roundups/weekly-azure-roundup-2025-09-08', 'TechHub',
+    'TechHub', 'B4FC3E8D9135FBE6773170EF564968EC20914111A540B3A1F5EFE98B4FA90435', ',Microsoft Azure,Microsoft Fabric,OneLake,Azure Purview,Data Integration,Eventstreams,Schema Registry,Azure App Service,Premium V4,Azure Communication Services,Teams Phone Extensibility,Trusted Launch,Azure Logic Apps,Azure VMware Solution,Microsoft Cost Management,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-09-01
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-09-01', 'roundups', 'Weekly Azure Roundup: AKS Networking, Hybrid Ops, and FinOps',
+    'Azure updates this week focus on infrastructure, developer tools, practical cloud deployment, and operational improvements. Highlights include advances in Kubernetes networking, hybrid management, automated data pipeline tooling, and new resource organization features. Several GA releases illustrate Azure’s commitment to scalable and secure operations.
+<!--excerpt_end-->
+## Application Gateway and Container Networking in Azure Kubernetes Service
+Azure CNI Overlay and AGIC for AKS (now GA) enable Kubernetes clusters to use overlay-assigned pod IPs for scalable ingress, sidestepping VNet IP constraints. These upgrades facilitate streamlined operations and policy enforcement, integrating with NSGs and Azure Firewall. Deployment guides, versioning, and subnet design advice help teams move beyond kubenet, enhancing reliability and security for containerized and AI workloads.
+- [Container Networking with Azure Application Gateway for Containers (AGC): Overlay vs. Flat AKS](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/container-networking-with-azure-application-gateway-for/ba-p/4449941)
+- [General Availability: Azure CNI Overlay for Application Gateway for Containers and AGIC](https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-cni-overlay-for-application-gateway-for-containers-and/ba-p/4449350)
+- [Azure Weekly Update – 29th August 2025](/ai/videos/azure-weekly-update-29th-august-2025)
+## Microsoft Fabric: Data Engineering, Analytics, and Machine Learning Enhancements
+Fabric’s August summary details new automation and analytics features—including a redesigned pipeline interface, OpenAPI REST specs, cross-tenant DevOps, Spark scaling, and diagnostics updates. Real-time notebooks, DataFrame support, secure ML endpoints, transparency tools, SQL enhancements, and enhanced Data Factory UI provide developers with refined control and automation, continuing recent progress in data pipeline design and workspace security.
+- [August 2025 Microsoft Fabric Feature Summary: Data Engineering, ML, and Platform Enhancements](https://blog.fabric.microsoft.com/en-US/blog/august-2025-fabric-feature-summary/)
+- [Copy Job Activity Now in Preview for Microsoft Fabric Data Factory Pipelines](https://blog.fabric.microsoft.com/en-US/blog/now-in-public-preview-copy-job-activity-in-pipelines/)
+## Azure Logic Apps: Deployment, Hybrid Integration, and Automated Workflows
+Logic Apps Standard now support automated deployment from source control using Deployment Center and VS Code, with scripting and rollback functionality. Step-by-step guides show how to run Logic Apps on K3s for edge and hybrid integration, and how to automate log analytics workflows utilizing Azure OpenAI for reporting. These resources increase Azure’s flexibility for hybrid and automated solutions.
+- [Automating Azure Logic Apps Deployments with Deployment Center and VS Code](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-setup-cd-in-azure-logic-apps-standard-with-deployment/ba-p/4449013)
+- [Deploying Hybrid Azure Logic Apps on K3s for Lightweight, On-Premises Integration](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/hybrid-logic-apps-deployment-on-rancher-k3s-kubernetes-cluster/ba-p/4448557)
+- [Automate Log Analytics Workflows with Azure Logic Apps and Azure OpenAI](https://techcommunity.microsoft.com/t5/azure-observability-blog/automate-your-log-analytics-workflows-with-ai-and-logic-apps/ba-p/4442803)
+## Azure Service Groups: Streamlined Resource Organization
+Azure Service Groups offer hierarchically organized resources—an upgrade from traditional resource groups—enabling better management, monitoring, and permission assignment. Setup instructions, best practice advice, and permission examples help architects organize large or multi-team environments with granular governance.
+- [Azure Service Groups: Flexible Resource Organization Explained](/azure/videos/azure-service-groups-flexible-resource-organization-explained)
+- [Azure Service Groups Quick Overview](/azure/videos/azure-service-groups-quick-overview)
+## Secure Configuration and Access Management across Hybrid Estates
+Azure Machine Configuration packages now support System Assigned Identity as GA, removing reliance on SAS tokens and manual identity management. Managed identities (with RBAC) simplify secure onboarding, compliance, and configuration package access in Blob Storage. Guides include PowerShell automation and role assignment procedures.
+- [System-Assigned Identity-based Access for Azure Machine Configuration Packages Now Generally Available](https://techcommunity.microsoft.com/t5/azure-governance-and-management/system-assigned-identity-based-access-for-machine-configuration/ba-p/4446603)
+## Azure VMware Solution: Expanded Regions, Storage, and Compliance
+Azure VMware Solution is live in 35+ regions, adding VCF private clouds, portable subscriptions, DISA IL5 compliance, and NetApp Files/Elastic SAN integration. Expanded regions, improved migration, flexible billing, and quick learning options support both regulated and enterprise environments.
+- [Announcing More Azure VMware Solution Enhancements](https://techcommunity.microsoft.com/t5/azure-migration-and/announcing-more-azure-vmware-solution-enhancements/ba-p/4447103)
+## Organizing, Monitoring, and Optimizing Azure Resource Usage and Costs
+Coverage includes Azure RHEL billing migration to vCPU pricing and relevant cost tracking guidance. Tutorials for backup auditing show how to identify and remove orphaned backups, reducing storage expenditures. Additional content reviews Capacity Reservations vs. Reserved Instances and reliability planning (including Availability Zones and gateway options).
+- [Azure Red Hat Enterprise Linux Billing Meter ID Migration: What You Need to Know](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-billing-meter-id-updates-on-azure/ba-p/4449348)
+- [Mine Your Azure Backup Data to Identify Hidden Costs](https://techcommunity.microsoft.com/t5/azure/mine-your-azure-backup-data-it-could-save-you/m-p/4448003#M22143)
+- [Designing for Certainty: How Azure Capacity Reservations Safeguard Mission‑Critical Workloads](https://techcommunity.microsoft.com/t5/azure-governance-and-management/designing-for-certainty-how-azure-capacity-reservations/m-p/4447901#M347)
+- [Azure Top 3 Reliability Actions](/azure/videos/azure-top-3-reliability-actions)
+## Service Mesh and Advanced Architecture Patterns in AKS
+A service mesh guide covers best practices for Istio, OSM, and Azure integrations. Topics include discovery, traffic routing, mTLS/cert management, RBAC, monitoring, CI/CD policy automation, and deployment approaches for robust microservices management.
+- [Service Mesh Architecture Pattern in Azure: Managing Microservices Communication, Security, and Observability](https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/)
+## Developer Tutorials and Integration Scenarios
+Articles demonstrate Azure Static Web Apps with Azure Functions for dynamic image workflows (including CLI and troubleshooting tips) and secure simulation data management for Siemens Teamcenter SPDM on Azure CycleCloud with Slurm, showing how to deploy scalable HPC solutions.
+- [Connecting Azure Static Web Apps with Azure Functions for Dynamic Images](https://techcommunity.microsoft.com/t5/apps-on-azure/what-s-the-secret-sauce-for-getting-functions-api-to-work-with/m-p/4448430#M1359)
+- [Implementing Siemens Teamcenter Simulation Process Data Management on Azure CycleCloud with Slurm](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/teamcenter-simulation-process-data-management-architecture-on/ba-p/4449316)
+## AI, GPU, and Scientific Workloads on Azure
+A review of Azure’s AI infrastructure highlights how NVIDIA GPUs support healthcare analytics and content creation, using AKS pipelines, BioNeMo, and compliance tools for cloud-based AI and HPC workloads.
+- [Transforming Scientific Discovery with Microsoft Azure and NVIDIA](https://azure.microsoft.com/en-us/blog/transforming-scientific-discovery-with-microsoft-azure-and-nvidia/)
+## Other Azure News
+Azure Communication Services is generally available for Azure Government, offering secure chat and video functionality for public sector needs.
+- [Azure Communication Services Now Generally Available in Azure Government](https://techcommunity.microsoft.com/t5/azure-communication-services/azure-communication-services-is-now-generally-available-in-azure/ba-p/4448034)
+Azure clarified how provider-managed subscriptions work to help organizations delegate management but maintain cost visibility, with tips on governance and RBAC.
+- [Provider-Managed Azure Subscriptions: Cost Control and Commitment Clarity](https://techcommunity.microsoft.com/t5/finops-blog/provider-managed-azure-subscriptions-cost-control-and-commitment/ba-p/4448688)',
+    'Azure updates this week focus on infrastructure, developer tools, practical cloud deployment, and operational improvements. Highlights include advances in Kubernetes networking, hybrid management, automated data pipeline tooling, and new resource organization features. Several GA releases illustrate Azure’s commitment to scalable and secure operations.',
+    1756710000, 'azure', '/azure/roundups/weekly-azure-roundup-2025-09-01', 'TechHub',
+    'TechHub', 'F02F7B3E929B5C10B0764B31440423004EEE50B6518ED10407AE1F00CB9FB6F6', ',Microsoft Azure,AKS,Azure CNI Overlay,Application Gateway Ingress Controller,Application Gateway For Containers,Service Mesh,Istio,Azure Logic Apps,Microsoft Fabric,Azure Machine Configuration,Managed Identities,Azure VMware Solution,FinOps,Azure Backup,Azure Communication Services,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-08-25
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-08-25', 'roundups', 'Weekly Azure Roundup: Governance, Serverless AI, and Data Security',
+    'Azure’s recent updates introduce new resource management options, deeper AI features, upgraded tooling, and security improvements. The latest previews and releases make it easier to manage core infrastructure, automate developer workflows, and secure data at scale—continuing to build on recent governance, migration, and optimization guidance.
+<!--excerpt_end-->
+## Azure Service Groups and Advanced Resource Management
+Azure Service Groups are now in public preview, allowing resource grouping for targeted monitoring and health checks at the tenant level. These containers function separately from traditional RBAC or policy scopes, making it easier to group resources for app-centric monitoring or detailed cost analysis via the REST API, portal, and Azure Monitor health model.
+- [Announcing Public Preview for Azure Service Groups](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572)
+## MCP Server Hosting and Azure Functions Flex Consumption
+Developers can now deploy remote MCP servers as fully serverless applications using Azure Functions Flex Consumption (early preview), supporting Python, Node.js, and .NET SDKs. Integration options include the Azure MCP Extension or your own SDK, with deployment managed via Azure CLI, local debugging, and API Management extensions. The model allows flexible scaling and cost management, and early adopter feedback will help refine it further.
+This development supports a shift towards truly cloud-native, serverless MCP deployments, following recent expansions to MCP integration and IDE support.
+- [Early Preview: Host Your Own Remote MCP Server on Azure Functions](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-early-preview-byo-remote-mcp-server-on-azure/ba-p/4445317)
+## Azure SDK: AI Libraries, Observability, and Data Movement
+The August Azure SDK update covers releases and betas for several programming languages. New AI libraries for JavaScript and Python are now generally available and integrate with Azure AI Foundry and Azure OpenAI Services. .NET’s updated Storage Data Movement library addresses migration and file transfer pain points, and new Management, Monitor, and Metrics tools are being introduced for Carbon Optimization, Recovery Services, Rust language support, browser automation, and storage management. Migration documentation supports smoother setup and better cost visibility.
+These SDK improvements build on previous enhancements, supporting interoperability, AI integration, and ongoing cross-language support.
+- [Azure SDK Release Highlights for August 2025](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-august-2025/)
+## Enterprise AI/ML Security and Scalability with Azure Application Gateway
+An in-depth analysis outlines best practices for using Azure Application Gateway as a secure entry point for AI/ML services, including OpenAI, Cognitive Services, and custom APIs. The article covers routing, TLS/mTLS, web application firewalls, logging, observability, and integration practices. Adaptive load routing and planned features aim to support demanding workloads.
+- [Scaling Enterprise AI/ML: Azure Application Gateway as the Intelligent Access Layer](https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-enterprise-ai-ml-with-confidence-azure-application/ba-p/4445691)
+## Microsoft Fabric: Workspace Security, Metric Insights, and Data Orchestration
+Microsoft Fabric now offers workspace-level Private Link (preview), allowing granular network isolation per workspace. The Fabric Capacity Metrics App preview introduces an Item History page for deeper evaluation of compute trends and resource planning.
+Fabric Data Factory Copy Jobs now support multiple schedulers, reducing duplication and simplifying integration with CI/CD and pipelines. New OpenAPI spec generation features make it easier to integrate function APIs with other systems.
+These features expand on recent security, orchestration, and automation enhancements in Fabric, showing a stronger focus on precise management and developer automation.
+- [Microsoft Fabric Introduces Workspace-Level Private Link (Preview)](https://blog.fabric.microsoft.com/en-US/blog/fabric-workspace-level-private-link-preview/)
+- [Preview of Item History Page in Microsoft Fabric Capacity Metrics App](https://blog.fabric.microsoft.com/en-US/blog/26307/)
+- [Simplifying Data Ingestion with Copy Job: Multiple Scheduler Support in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/)
+- [OpenAPI Specification Generation in Fabric User Data Functions](https://blog.fabric.microsoft.com/en-US/blog/openapi-specification-code-generation-now-available-in-fabric-user-data-functions/)
+## Elastic SAN, Storage Best Practices, and Data Protection
+Azure Elastic SAN now features integrated backup through Azure Backup and Commvault, currently in preview. Azure Backup provides lifecycle-managed snapshots, while Commvault enables rapid cross-region restore and protection. Both are designed for VM-oriented protection and meet cost/retention needs with detailed setup guidance.
+A comprehensive Azure Storage guide covers product fundamentals, security, cost, and best practices for Blob, File, Queue, Table, Disk, and Elastic SAN services—continuing the ongoing evolution of storage solutions.
+- [Enhance Your Data Protection Strategy with Azure Elastic SAN’s Newest Backup Options](https://techcommunity.microsoft.com/t5/azure-storage-blog/enhance-your-data-protection-strategy-with-azure-elastic-san-s/ba-p/4443607)
+- [Azure Storage: Fundamentals, Services, and Community Best Practices](https://techcommunity.microsoft.com/t5/azure/azure-storage/m-p/4447460#M22137)
+## SQL and Data Connectivity in Microsoft Fabric and Power BI
+A new video walks through Fabric SQL database setup, OneLake and Purview management, service selection, and live analytics integration, offering practical insights for Fabric’s SQL and pricing. The on-premises Data Gateway August release introduces Entra ID authentication for PostgreSQL, improving security and supporting more secure cloud analytics.
+These advances align with earlier efforts to unify and secure data connectivity across the Microsoft ecosystem.
+- [SQL Database in Microsoft Fabric](/azure/videos/sql-database-in-microsoft-fabric)
+- [On-premises Data Gateway August 2025 Release: Entra ID Support for PostgreSQL](https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-august-2025-release/)
+## Developer Experience and Tooling: Azure Developer CLI (azd)
+The August 2025 release of the Azure Developer CLI enhances reliability, adds documentation, and expands template options. Enhancements cover PowerShell support, .NET Aspire detection, Visual Studio fixes, and improved workflows for environment and deployment management. Documentation now covers configuration, CI/CD, and progression from local builds to production. A template library further assists teams with deployments involving monitoring, AI, and data integration.
+These updates continue last week’s improvements for development toolchains and automation on Azure.
+- [Azure Developer CLI (azd) August 2025 Release Overview](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-august-2025/)
+## Azure Platform Updates: Infrastructure, Serverless, and Security Enhancements
+Recent Azure updates include new VM options, improved diagnostics, and flexible deployment solutions. New DC EC esv6 VMs support specialized workloads, AKS now offers integrated Azure Bastion for easier remote access, serverless Functions can now scale with Flex Consumption, and Application Gateway receives maxSurge for zero-downtime updates. Storage improvements clarify Azure Files Premium cost, add Blob Storage regional archiving, and enhance NetApp Files logging and cool access settings. Log Analytics now supports up to 100M results per query, and deprecated workflows (Sentinel/Defender in China, CNAME certs) are announced.
+These enhancements build on work to make Azure’s platform more robust, adaptable, and cost-efficient.
+- [Azure Update - 22nd August 2025](/azure/videos/azure-update-22nd-august-2025)
+## Other Azure News
+Azure File Sync now leverages managed identities, moving away from credential-based management for stronger security and simpler operations, with migration tutorials and PowerShell scripts provided.
+Microsoft’s open source journey entry shares their contributions from the Linux kernel to global-scale AI—including AKS, Dapr, Radius, and published best practices.
+A new entry in Azure Essentials covers saving costs with Azure Hybrid Benefit, giving users details on licensing, rights, and migration planning tools.
+These updates underline Azure’s focus on managed identities, open source partnership, and actionable cost management advice—consistent with last week''s directions.
+- [Azure File Sync Managed Identity: Enhanced Security and Simplified Operations](/azure/videos/azure-file-sync-managed-identity-enhanced-security-and-simplified-operations)
+- [Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale](https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/)
+- [Your Guide to Saving with Azure Hybrid Benefit](/azure/videos/your-guide-to-saving-with-azure-hybrid-benefit)',
+    'Azure’s recent updates introduce new resource management options, deeper AI features, upgraded tooling, and security improvements. The latest previews and releases make it easier to manage core infrastructure, automate developer workflows, and secure data at scale—continuing to build on recent governance, migration, and optimization guidance.',
+    1756105200, 'azure', '/azure/roundups/weekly-azure-roundup-2025-08-25', 'TechHub',
+    'TechHub', '9C31F48E36049E2F440A96662B2CAFF0F83560E8F3DCEA2E650549F0CAC671B6', ',Microsoft Azure,Azure Service Groups,Azure Monitor,Azure Functions,Flex Consumption,MCP Server,Azure SDK,Azure AI Foundry,Azure OpenAI,Azure Application Gateway,Microsoft Fabric,Private Link,Azure Elastic SAN,Azure Backup,Azure Developer CLI,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-08-18
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-08-18', 'roundups', 'Weekly Azure Roundup: AKS, security hardening, and data ops',
+    'Azure rolled out a diverse set of improvements this week, including updates to hybrid and container management, security, storage, databases, the marketplace, and analytics. The focus remains on operational efficiency, cost management, compliance, and stronger developer tooling. The Azure Marketplace continues to see rapid growth, and security and DevOps features are maturing, giving teams more reliable options for running cloud-native workloads.
+<!--excerpt_end-->
+## Advancements in Container Management and Hybrid Cloud
+Microsoft secured a top position in Gartner’s 2025 Magic Quadrant for container management for the third straight year. AKS Automatic makes cluster management straightforward, while AKS integrates with GitHub Actions, Azure DevOps, and Copilot-powered manifests. Features like GPU-optimization, flexible billing, and improved Arc controls continue Azure’s hybrid, AI-enabled direction.
+- [Microsoft Recognized as a Leader in the 2025 Gartner Magic Quadrant for Container Management](https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-container-management/)
+## Security Innovations and Open Source Transparency
+Azure Linux with OS Guard, announced at Build 2025, builds in kernel-level security and includes software bill of materials (SBOM), Trusted Launch, and compliance standards (FedRAMP, FIPS 140-3). The Community Edition allows lightweight experimentation, boosting open-source transparency and security.
+- [Azure Linux with OS Guard: Enhancing Container Host Security with Code Integrity and Open Source Transparency](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-with-os-guard-immutable-container-host-with-code/ba-p/4437473)
+## Storage Innovation: Azure Files Provisioned V2
+Azure Files Provisioned v2 for SSD offers granular management and real-time scaling of IOPS, throughput, and capacity—making it easier and more affordable to meet changing business needs. This builds on earlier analytics improvements and assumes users will want to both scale efficiently and control costs.
+- [Lower Costs and Boost Flexibility with Azure Files Provisioned v2 for SSD](https://techcommunity.microsoft.com/t5/azure-storage-blog/lower-costs-and-boost-flexibility-with-azure-files-provisioned/ba-p/4443621)
+- [Unlocking Flexibility with Azure Files Provisioned V2](https://techcommunity.microsoft.com/t5/itops-talk-blog/unlocking-flexibility-with-azure-files-provisioned-v2/ba-p/4443628)
+## Infrastructure-as-Code and DevOps Integration
+The new Terraform MSGraph provider and VSCode extension, now in preview, allow teams to automate management of all Microsoft Graph resources—joining together AzureRM, AzAPI, and MSGraph for more consistent onboarding and modular operations across clouds.
+- [Announcing Public Preview of the Terraform MSGraph Provider and Microsoft Terraform VSCode Extension](https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-msgraph-provider-public-preview-and-the-microsoft/ba-p/4443614)
+## Data Platform Enhancements and Extended Security Support
+Microsoft Fabric now enables workspace-level identity authentication (via Entra ID) and customer-managed encryption keys, delivering stronger compliance. There’s expanded support for PostgreSQL and MySQL, plus cgroup v2 now available for SQL Server on Linux, signaling Azure’s ongoing investment in hybrid database reliability and security.
+- [Introducing Support for Workspace Identity Authentication in Fabric Connectors](https://blog.fabric.microsoft.com/en-US/blog/announcing-support-for-workspace-identity-authentication-in-new-fabric-connectors-and-for-dataflow-gen2/)
+- [Customer-Managed Keys for Microsoft Fabric Workspaces Now in Public Preview](https://blog.fabric.microsoft.com/en-US/blog/customer-managed-keys-for-fabric-workspaces-available-in-all-public-regions-now-preview/)
+- [Azure Database for PostgreSQL Extended Support: Stay Secure at Every Upgrade Stage](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/azure-postgresql-extended-support-stay-secure-at-every-stage-of/ba-p/4442283)
+- [Extended Support for Azure Database for MySQL: What You Need to Know](https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/announcing-extended-support-for-azure-database-for-mysql/ba-p/4442924)
+- [SQL Server on Linux Now Supports cgroup v2](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-on-linux-now-supports-cgroup-v2/ba-p/4433523)
+## Microsoft Intune and Endpoint Management
+Microsoft Intune keeps expanding endpoint management capabilities. Integration with Entra ID and Defender supports Zero Trust, while the new IntuneDebug PowerShell module gives IT admins more effective troubleshooting tools for compliance and deployment.
+- [Exploring Microsoft Intune: Manage and Secure your Devices and Apps](https://techcommunity.microsoft.com/t5/events/exploring-microsoft-intune-manage-and-secure-your-devices-and/ec-p/4441982#M9)
+- [Gpresult-Like Tool for Intune Policy Troubleshooting](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/gpresult-like-tool-for-intune/ba-p/4437008)
+## Azure API Management and Microservices Architecture
+Azure API management has improved gateway routing and policy controls, making it easier to handle microservices. Workspace models and updated gateway limits support scalability and central management—building off last week’s enhancements.
+- [API Gateway Pattern in Azure: Managing APIs and Routing Requests to Microservices](https://dellenny.com/api-gateway-pattern-in-azure-managing-apis-and-routing-requests-to-microservices/)
+- [Azure API Management Workspaces Breaking Changes Update: Built-in Gateway & Tier Support](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/update-to-api-management-workspaces-breaking-changes-built-in/ba-p/4443668)
+## Real-Time Analytics and Data Integration
+Azure Databricks now connects with Power Platform for real-time analytics and write-back scenarios, and AzCopy enables secure, protected transfers to OneLake. Data Factory now supports more flexible partial updates for MongoDB, helping teams manage data more smoothly.
+- [Interactive Write-back from Power BI to Azure Databricks with Power Platform Connector](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/closing-the-loop-interactive-write-back-from-power-bi-to-azure/ba-p/4442999)
+- [Load Data from Network-Protected Azure Storage Accounts to Microsoft OneLake with AzCopy](https://blog.fabric.microsoft.com/en-US/blog/load-data-from-network-protected-azure-storage-accounts-to-microsoft-onelake-with-azcopy/)
+- [Partial Updates in MongoDB via Azure Data Factory Data Flow: Nested Field Modification](https://techcommunity.microsoft.com/t5/azure-data-factory/help-with-partial-mongodb-update-via-azure-data-factory-data/m-p/4443596#M937)
+## Major Updates in Monitoring, Performance, and Migration
+Azure has enabled automatic agent upgrades for Arc-enabled servers, tripled SQL Managed Instance log rates (Business Critical tier), and expanded observability for Oracle Database. OneLake introduces easier capacity pricing, and parallel BCP migration support for Sybase ASE mirrors ongoing improvements in migration tooling.
+- [Higher Log Rate Enhancement in Azure SQL Managed Instance''s Business Critical Tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/higher-log-rate-for-business-critical-service-tier-in-azure-sql/ba-p/4444127)
+- [Expanding Global Reach and Enhanced Observability with Oracle Database@Azure](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650)
+- [Public Preview: Auto Agent Upgrade for Azure Arc-Enabled Servers](https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-auto-agent-upgrade-for-azure-arc-enabled-servers/ba-p/4442556)
+- [Simplified OneLake Capacity Costs: Updated Proxy Consumption Rates in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/onelake-costs-simplified-lowering-capacity-utilization-when-accessing-onelake/)
+- [Azure Update - 15th August 2025](/azure/videos/azure-update-15th-august-2025)
+- [Windows Server Datacenter: Azure Edition Preview Build 26461 in Azure](https://techcommunity.microsoft.com/t5/windows-server-insiders/windows-server-datacenter-azure-edition-preview-build-26461-now/m-p/4442961#M4197)
+- [Accelerating SAP Sybase ASE to Azure SQL Migration Using SSMA and Parallel BCP](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/sap-sybase-ase-to-azure-sql-migration-using-ssma-and-bcp/ba-p/4436624)
+## Cloud-Native Networking and Observability
+AKS now offers private pod subnets without overlay networking—helping preserve IP space and simplify hybrid deployments. Micronaut is now integrated for sending native Java metrics, logs, and traces to Azure Monitor, meeting growing demand for open source observability.
+- [Private Pod Subnets in AKS Without Overlay Networking](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/private-pod-subnets-in-aks-without-overlay-networking/ba-p/4442510)
+- [Sending Metrics, Logs, and Traces from Micronaut Native Image Applications to Azure Monitor](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/send-signals-from-micronaut-native-image-applications-to-azure/ba-p/4443735)
+## Azure Marketplace and Partner Ecosystem Expansion
+The Azure Marketplace added more than 200 new solutions covering generative AI, analytics, and compliance. Admin and identity solutions are now easier to purchase, demonstrating how Marketplace continues to address real enterprise challenges.
+- [New Offerings in Azure Marketplace: July 23-31, 2025](https://techcommunity.microsoft.com/t5/marketplace-blog/new-in-azure-marketplace-july-23-31-2025/ba-p/4431277)
+- [Transactable Partner Solutions: Apptividad and CoreView in Azure Marketplace](https://techcommunity.microsoft.com/t5/marketplace-blog/apptividad-and-coreview-offer-transactable-partner-solutions-in/ba-p/4431278)
+## Logic Apps, App Testing, and API Integration
+Logic Apps Data Mapper has reached general availability, now with improved developer experience and better VS Code support. The new Playwright Workspaces guide covers both local and cloud testing, aiming for more reliable automation and artifact management.
+- [General Availability: Enhanced Data Mapper Experience in Logic Apps (Standard)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/general-availability-enhanced-data-mapper-experience-in-logic/ba-p/4442296)
+- [End-to-End Azure App Testing with Playwright Workspaces: Local and Cloud Workflows](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-testing-playwright-workspaces-for-local-to-cloud-test/ba-p/4442711)
+## AI Infrastructure and Open Data Integration
+Azure Storage remains central to large AI and LLM training projects, with new features like Scaled Accounts and Blobfuse2 supporting high-volume and secure workflows. Tutorials make it easier for teams to try these capabilities right away.
+- [How Azure Storage Powers AI Workloads: Behind the Scenes with OpenAI, Blobfuse & More](https://techcommunity.microsoft.com/t5/itops-talk-blog/how-azure-storage-powers-ai-workloads-behind-the-scenes-with/ba-p/4442540)
+## Other Azure News
+Development tooling improvements are ongoing, following last week’s CLI and naming convention updates.
+- [Azure Update - 15th August 2025](/azure/videos/azure-update-15th-august-2025)
+- [New Offerings in Azure Marketplace: July 23-31, 2025](https://techcommunity.microsoft.com/t5/marketplace-blog/new-in-azure-marketplace-july-23-31-2025/ba-p/4431277)
+- [General Availability: Enhanced Data Mapper Experience in Logic Apps (Standard)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/general-availability-enhanced-data-mapper-experience-in-logic/ba-p/4442296)
+Security is maturing as well, with new compliance and vulnerability management features.
+- [Azure Linux with OS Guard: Enhancing Container Host Security with Code Integrity and Open Source Transparency](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-with-os-guard-immutable-container-host-with-code/ba-p/4437473)
+- [Extended Support for Azure Database for MySQL: What You Need to Know](https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/announcing-extended-support-for-azure-database-for-mysql/ba-p/4442924)
+Migration and troubleshooting guides continue to help teams adopt best practices.
+- [Accelerating SAP Sybase ASE to Azure SQL Migration Using SSMA and Parallel BCP](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/sap-sybase-ase-to-azure-sql-migration-using-ssma-and-bcp/ba-p/4436624)
+- [Troubleshooting Azure Stack HCI Local Cluster Deployment: Network Configuration Error](https://techcommunity.microsoft.com/t5/azure-stack/error-no-file/m-p/4443115#M277)',
+    'Azure rolled out a diverse set of improvements this week, including updates to hybrid and container management, security, storage, databases, the marketplace, and analytics. The focus remains on operational efficiency, cost management, compliance, and stronger developer tooling. The Azure Marketplace continues to see rapid growth, and security and DevOps features are maturing, giving teams more reliable options for running cloud-native workloads.',
+    1755500400, 'azure', '/azure/roundups/weekly-azure-roundup-2025-08-18', 'TechHub',
+    'TechHub', 'D750346A03326D115917F6E575A01D7E03B73A899747D09DEB7BF91A5F4528AF', ',Microsoft Azure,AKS,Azure Arc,Hybrid Cloud,Container Management,Azure Linux,OS Guard,SBOM,FedRAMP,Azure Files,Terraform,Microsoft Graph,Microsoft Fabric,Azure API Management,Azure Monitor,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-08-11
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-08-11', 'roundups', 'Weekly Azure Roundup: Testing, MCP Agents, AKS, and Data Ops',
+    'Azure’s stream of updates spanned DevOps, AI, Kubernetes, data, security, and developer experience, emphasizing unified application testing, extensible agent-orchestration, and enterprise-grade management.
+<!--excerpt_end-->
+## Unified Application Testing: AI-Powered Load and E2E in Azure
+Azure App Testing centralizes scalable load and E2E browser test orchestration (Playwright, JMeter, Locust), enabling parallel, cross-browser validation directly in VS Code and the cloud. AI-powered automation with Copilot integrates issue remediation and accelerates feedback, while migration paths ensure continuity from existing test solutions.
+- [Azure App Testing: Unified AI-Driven Load and E2E Testing in the Cloud](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-azure-app-testing-scalable-end-to-end-app-validation/ba-p/4440496)
+## Advancements Across Kubernetes and Container Workloads
+At KubeCon India 2025, Azure Kubernetes Service (AKS) rolled out Model Context Protocol servers for AI-native operations, Layer-7 policies for zero-trust networking, enhanced encryption, and Node Auto-Provisioning, automating governance and scaling. These build on last week’s governance improvements and now enable “plug-and-play” AI and agent workflows within clusters.
+- [Azure Innovations and AKS Advancements Showcased at KubeCon India 2025](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-india-2025-hyderabad-india-6-7-august-2025/ba-p/4440439)
+## AI Ecosystem: Azure AI Foundry, GPT-5, and Agentic Workflows
+Azure AI Foundry now features Deep Research Agents, GP-image-1 fidelity controls, streaming, enhanced SDKs, pay-as-you-go compute, and prompt shields. Managed agent monitoring, observable red teaming, and browser automation tools enable rapid, secure multi-agent deployment. GPT-5 is now accessible for streamlined, advanced AI in enterprise apps.
+- [What’s New in Azure AI Foundry: July 2025 Releases and Updates](https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-july-2025/)
+## Enterprise Data Management and Platform Evolution
+Azure Qumulo provides exabyte-scale file systems; Fabric Warehouse upgrades include AI migration assistants and Databricks Unity Catalog support. New orchestration and fine-grained security empower fast, compliant analytics—streamlining hybrid management for massive data estates.
+- [How Microsoft Azure and Qumulo Enable Cloud-Native File Systems for Enterprise Data Management](https://techcommunity.microsoft.com/t5/azure-storage-blog/how-microsoft-azure-and-qumulo-deliver-a-truly-cloud-native-file/ba-p/4426321)
+- [What’s New in Fabric Warehouse – July 2025: AI, Performance, and Modern Data Engineering](https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-july-2025/)
+## Agentic AI, Integration, and the Model Context Protocol (MCP)
+With MCP now integrated in Azure OpenAI Service and API Management v2, AI agents achieve secure, standardized orchestration across APIs and platforms, reducing complexity. Azure AI Studio and API Management simplify MCP service management, underpinning multi-agent and plug-and-play scenarios in production.
+- [How Azure OpenAI Service Empowers MCP-Enabled AI Integrations](https://dellenny.com/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for-ai/)
+## Storage, Monitoring, and Log Management Modernized
+Azure Storage Discovery enables centralized analytics and compliance across millions of blobs. Azure Monitor Auxiliary Logs and Network Security Perimeter now GA, with price reductions and robust compliance. These expand operational insights while lowering total cost for deep telemetry collection.
+- [Introducing Azure Storage Discovery: Enterprise-Wide Insights for Azure Blob Storage](https://azure.microsoft.com/en-us/blog/introducing-azure-storage-discovery-transform-data-management-with-storage-insights/)
+## Networking and Security: Connectivity and Protection
+Inbound IPv6 GA for App Service supports dual-stack deployments. Improvements for DNSSEC, WAF for containers, and real-time AKS connectivity troubleshooting strengthen hybrid and container security, aligning with evolving regulatory and operational demands.
+- [General Availability of Inbound IPv6 Support for Azure App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-app-service-inbound-ipv6/ba-p/4423358)
+## Modern Cloud Operations: Identity, Cost Management, and Developer Flows
+Entra ID and Connect enhancements support cloud-native group governance, tenant isolation, and hybrid provisioning. FinOps Toolkit 12 brings incremental reporting and Power BI dashboards aligned with the latest FOCUS standards. Developer flows improve through Bicep extension support, modular secrets, and streamlined resource naming.
+- [What’s New in FinOps Toolkit 12 – July 2025](https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-12-july-2025/ba-p/4438562)
+## Real-World Workflows, Troubleshooting, and Community Knowledge
+Field-driven guidance covers scaling SQL DBs with ADF, deploying LangChain apps with Azure OpenAI, image error troubleshooting, and hybrid VPN/ExpressRoute best practices—lowering daily friction for Azure adoption.
+- [Scaling Azure SQL Databases with ADF: Upgrading and Downgrading via API](https://www.reddit.com/r/AZURE/comments/1mjtpn1/adf_scale_up_and_scale_down_azure_sql_database/)
+## Data Platform Flexibility and Analytics Personalization
+Fabric decouples semantic models from mirrored artifacts, enables warehouse- and SQL-level collation, and expands multilingual and iterative analytics, streamlining BI and data science workflows.
+- [Decoupling Semantic Models from Mirrored Artifacts in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/25332/)',
+    'Azure’s stream of updates spanned DevOps, AI, Kubernetes, data, security, and developer experience, emphasizing unified application testing, extensible agent-orchestration, and enterprise-grade management.',
+    1754895600, 'azure', '/azure/roundups/weekly-azure-roundup-2025-08-11', 'TechHub',
+    'TechHub', 'F8DE3FD1ADF6352F13E25BB7504BD45557E2E4D7CE1D2C0F43A8EF2017A49C70', ',Microsoft Azure,Azure App Testing,Playwright,JMeter,Locust,AKS,MCP,Azure AI Foundry,Azure OpenAI Service,Azure API Management,GPT 5,Microsoft Fabric,Fabric Warehouse,Azure Monitor,Azure App Service,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-08-04
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-08-04', 'roundups', 'Weekly Azure Roundup: Dev Summit, agents, Fabric, and identity',
+    'Azure’s week featured major event prep (Azure Dev Summit 2025), surging earnings, deep upgrades across cloud/AI, and hands-on content for developer and enterprise teams. New releases in data, agent orchestration, developer tooling, and secure identity management all signal Microsoft’s ongoing ambition for Azure as the developer’s AI-first, enterprise-scale cloud.
+<!--excerpt_end-->
+## Flagship Events and Financial Momentum
+Azure Dev Summit was announced for October, with sessions previewing advanced agent, .NET Aspire, and cloud-native tooling. Concurrently, Microsoft’s FY25 results showed Azure’s annual revenue hitting $75B, a 34% leap—confirming strong enterprise AI/cloud adoption and ongoing platform investment.
+- [Join us at Azure Dev Summit 2025: Explore AI, .NET, and Cloud Innovation in Lisbon](https://devblogs.microsoft.com/blog/join-us-at-azure-dev-summit-2025)
+- [Microsoft Cloud and AI Strength Fuels Q4 2025 Financial Results](https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q4/press-release-webcast)
+- [Microsoft Cloud and AI Strength Drives Strong Q4 and Fiscal Year 2025 Results](https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/)
+## Data Integration, Analytics, and Developer Productivity Upgrades
+Microsoft Fabric’s July update delivered tighter Copilot Studio integration (AI-driven agents for business data), advanced analytics, and new data governance tools. Autoscale billing for Spark reached GA, enabling cost-efficient, on-demand scaling. New features simplify data ingestion (Eventhouse wizard), JSON Lines support, and modernization of database migration and hybrid file sync for smoother cloud adoption.
+- [Fabric July 2025 Feature Summary](https://blog.fabric.microsoft.com/en-US/blog/fabric-july-2025-feature-summary/)
+- [Autoscale Billing for Spark in Microsoft Fabric Now Generally Available](https://blog.fabric.microsoft.com/en-US/blog/now-generally-available-autoscale-billing-for-spark-in-microsoft-fabric/)
+- [Get Data into Fabric Eventhouse with No-Code Ingestion Wizard](/azure/videos/get-data-into-fabric-eventhouse-with-no-code-ingestion-wizard)
+- [JSON Lines Support in OPENROWSET for Fabric Data Warehouse and Lakehouse SQL Endpoints (Preview)](https://blog.fabric.microsoft.com/en-US/blog/public-preview-json-lines-support-in-openrowset-for-fabric-data-warehouse-and-lakehouse-sql-endpoints/)
+- [Data Integration with Microsoft Fabric: Unifying Your Data Universe](https://dellenny.com/data-integration-with-microsoft-fabric-unifying-your-data-universe/)
+- [A Complete Guide to Azure Database Migration Strategies, Tools, and Best Practices](https://dellenny.com/a-complete-guide-to-azure-database-migration-strategies-tools-and-best-practices/)
+- [Comprehensive Guide to Seamless File Synchronization Between On-Premises Servers and Azure](https://techcommunity.microsoft.com/t5/blog/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C-%DA%A9%D8%A7%D9%85%D9%84-%D8%B1%D8%A7%D9%87-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%DB%8C-%D9%87%D9%85%DA%AF%D8%A7%D9%85-%D8%B3%D8%A7%D8%B2%DB%8C-%DB%8C%DA%A9%D9%BE%D8%A7%D8%B1%DA%86%D9%87-%D9%81%D8%A7%DB%8C%D9%84-%D9%87%D8%A7-%D8%A8%DB%8C%D9%86-%D8%B3%D8%B1%D9%88%D8%B1%D9%87%D8%A7%DB%8C/ba-p/4437661)
+## AI Agent Orchestration, Agentic Tooling, and Governance Advancements
+Azure AI Foundry Agent Service and private MCP registries simplify agent workflow orchestration, compliance, and internal governance—operationalizing last week’s emerging multi-agent patterns. Best practices for building agent-ready APIs and registering agents within Azure’s ecosystem now support robust, production-scale AI app delivery.
+- [Unlocking Innovation with Azure AI Foundry Agent Service](https://techcommunity.microsoft.com/t5/azure/unlocking-innovation-with-azure-ai-foundry-agent-service/m-p/4438322#M22030)
+- [Building Agent-Ready Tools with API Center and API Management](/ai/videos/building-agent-ready-tools-with-api-center-and-api-management)
+- [Unlocking Your Agents'' Potential with Model Context Protocol in Azure AI Foundry](/ai/videos/unlocking-your-agents-potential-with-model-context-protocol-in-azure-ai-foundry)
+- [Build. Secure. Launch Your Private MCP Registry with Azure API Center.](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/build-secure-launch-your-private-mcp-registry-with-azure-api/ba-p/4438016)
+## Developer Tooling: CLI, SDKs, and Automation Modernize Workflows
+Azure Developer CLI (azd), SDKs, and automation services (PowerShell 7.4/Python 3.10 in Automation) saw major releases—adding project validation, OpenID Connect CI/CD integration, SDK parity, and runtime flexibility for modern operational scripts.
+- [Azure Developer CLI (azd) July 2025 Release: New Features, Enhancements, and Community Updates](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-july-2025/)
+- [Azure SDK Release Highlights and Updates for July 2025](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-july-2025/)
+- [Azure Automation Introduces PowerShell 7.4, Python 3.10, and New Runtime Environment](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-automation-general-availability-of-powershell-7-4-python-3/ba-p/4437732)
+## Security, Identity, and Access: Practical Guidance
+Federated identity with Entra ID, JWT-based authentication, and updated guidance on App Service managed certificates all help teams modernize and secure their authentication and credentialing workflows, critical for cloud-native and hybrid scenarios.
+- [Federated Identity in Azure: Seamless Access with External Identity Providers](https://dellenny.com/federated-identity-in-azure-seamless-access-with-external-identity-providers/)
+- [Token-Based Authentication in Azure Using JWT for Stateless Security](https://dellenny.com/token-based-authentication-in-azure-using-jwt-for-stateless-security/)
+- [Important Changes to App Service Managed Certificates: Is Your Certificate Affected?](https://www.reddit.com/r/AZURE/comments/1mccg6l/important_changes_to_app_service_managed/)
+## Real-World Practices and Operational Guidance
+Hands-on content addressed architectural decisions (Functions vs. Logic Apps vs. Power Automate), hybrid storage and networking, and tagging best practices. Azure SQL Hyperscale added geo-replica support, and NVAs for hybrid routing solved common architectural hurdles.
+- [Azure Functions vs Logic Apps vs Power Automate: When to Use What?](https://techcommunity.microsoft.com/t5/azure/azure-functions-vs-logic-apps-vs-power-automate-when-to-use-what/m-p/4438720#M22035)
+- [10 Creative Use Cases for Azure Communication Services](https://techcommunity.microsoft.com/t5/azure-communication-services/10-things-you-might-not-know-you-could-do-with-azure/ba-p/4438775)
+- [Implementing the Cache-Aside (Lazy Loading) Pattern in Azure](https://dellenny.com/cache-aside-lazy-loading-load-data-into-a-cache-on-demand-in-azure/)
+- [Boosting Performance with the Materialized View Pattern in Azure](https://dellenny.com/boosting-performance-with-the-materialized-view-pattern-in-azure/)
+- [Multiple geo-replicas for Azure SQL Hyperscale | Data Exposed](/azure/videos/multiple-geo-replicas-for-azure-sql-hyperscale-data-exposed)
+- [Implementing NVA for Internet Egress and Inter-Subnet Routing in Azure Hub-Spoke Topology](https://www.reddit.com/r/AZURE/comments/1mgm8gy/nva_and_vnet_routing/)
+- [Azure Tag Best Practice: Staging Tags Before Server Onboarding](https://www.reddit.com/r/AZURE/comments/1mbrt66/azure_tag_best_practice/)
+## Architecture, Automation, and Planning
+Technical guides for app/data backups, Bicep for Entra ID, and blob conversions highlight steady progress toward unified, declarative operations and multi-cloud readiness.
+- [Ansys Minerva Simulation & Process Data Management Architecture on Azure](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ansys-minerva-simulation-process-data-management-architecture-on/ba-p/4432098)
+- [Announcing GA of Bicep Templates for Microsoft Entra ID Resources](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-ga-of-bicep-templates-support-for-microsoft-entra-id/ba-p/4437163)
+- [Converting Page or Append Blobs to Block Blobs with Azure Data Factory](https://techcommunity.microsoft.com/t5/azure-paas-blog/converting-page-or-append-blobs-to-block-blobs-with-adf/ba-p/4433723)
+- [Are Snapshots Suitable for One-Time Backup in Azure?](https://www.reddit.com/r/AZURE/comments/1mc7qn1/are_snapshots_suitable_for_a_one_time_backup/)
+## Platform Updates and Governance
+August 2025’s platform update brought maintenance options, improved disk scaling, authentication upgrades for Power BI/Postgres, new feature retirements, and proactive recommendations—supporting smoother resource management and long-term modernization.
+- [Azure Updates: August 2025 Highlights](/azure/videos/azure-updates-august-2025-highlights)',
+    'Azure’s week featured major event prep (Azure Dev Summit 2025), surging earnings, deep upgrades across cloud/AI, and hands-on content for developer and enterprise teams. New releases in data, agent orchestration, developer tooling, and secure identity management all signal Microsoft’s ongoing ambition for Azure as the developer’s AI-first, enterprise-scale cloud.',
+    1754290800, 'azure', '/azure/roundups/weekly-azure-roundup-2025-08-04', 'TechHub',
+    'TechHub', 'E8AFE6C833CD2575830635B77C08521CE2A35A811AF7EB8538CBB7D1864BE1AB', ',Microsoft Azure,Azure Dev Summit,Microsoft Fabric,Copilot Studio,Azure AI Foundry,Agent Service,MCP,Azure API Center,Azure API Management,Azure Developer CLI,Azure SDK,Azure Automation,Microsoft Entra ID,JWT,Azure SQL Hyperscale,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-07-28
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-07-28', 'roundups', 'Weekly Azure Roundup: Reliability, Signing, and DevOps Pipelines',
+    'Azure is evolving for more robust, automated, developer-centric cloud management. Recent launches target VM reliability, secure code signing, and streamlined deployment and modernization workflows.
+<!--excerpt_end-->
+## Reliability, Monitoring, and Real-Time Operations
+Project Flash now allows precise, context-rich Azure VM availability monitoring integrated with Azure Event Grid for real-time notifications. This enhancement sharpens root cause analysis and supports proactive outage response, offering new metrics for teams managing large-scale production clouds.
+- [Project Flash: Enhancing Azure Virtual Machine Availability Monitoring](https://azure.microsoft.com/en-us/blog/project-flash-update-advancing-azure-virtual-machine-availability-monitoring-2/)
+## Secure, Cost-Efficient, and Automated Code Signing
+Azure Trusted Signing is now the preferred approach for certificate lifecycle management in code signing, shifting operations from local certificates to secure, temporary cloud signatures. The guide outlines setup, automation, identity checks, and throughput considerations, reinforcing industry-best security while acknowledging current limitations.
+- [A Practical Guide to Setting up Microsoft Azure Trusted Signing for Code Signing Certificates](https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing)
+## Architectural Patterns: Scalability, Event Sourcing, and CQRS
+Azure’s latest architectural guides demystify scaling with VM Scale Sets, App Service Plans, and queue-based leveling, letting teams build stateless, autoscaled apps efficiently. Event sourcing and CQRS are broken down with Azure-native patterns—integrating Functions, Cosmos DB, and Service Bus for auditable, resilient, and easily maintained distributed systems.
+- [Scalability Patterns in the Cloud: AWS & Azure Approaches](https://dellenny.com/scalability-patterns-in-the-cloud-aws-azure-approaches/)
+- [Mastering Event Sourcing in Azure: Storing System State as a Sequence of Events](https://dellenny.com/mastering-event-sourcing-in-azure-storing-system-state-as-a-sequence-of-events/)
+- [Leveraging CQRS in Azure: Separating Read and Write Operations for Performance and Scalability](https://dellenny.com/leveraging-cqrs-in-azure-separating-read-and-write-operations-for-performance-and-scalability/)
+## Modern DevOps and Deployment Optimization
+Azure Developer CLI (azd), conditional Bicep, and GitHub Actions drive ‘build once, deploy everywhere’ pipelines. Fabric Data Warehouse migrations and Eventstream service empower real-time analytics and smart operations, lowering friction for database admins and accelerating analytics solutions.
+- [Azure Developer CLI: Build Once, Deploy Everywhere from Dev to Prod with One Click](https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-one-click/)
+- [Fabric Data Warehouse Migration Assistant: Better, Faster, More Reliable](https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-migration-assistant-better-faster-more-reliable/)
+- [From Signals to Insights: Building a Real-Time Streaming Data Platform with Fabric Eventstream](https://blog.fabric.microsoft.com/en-US/blog/from-signals-to-insights-building-a-real-time-streaming-data-platform-with-fabric-eventstream/)
+## Container Services and Operational Responsibility
+Azure’s container services are now easier to choose and align with operational needs: clear guidance distinguishes when to use ACI (serverless), ACA (PaaS), or AKS (managed Kubernetes), reinforced with practical security and hybrid cloud deployment advice.
+- [Azure Container Options: Operational Responsibility and Choosing the Right Service](https://devblogs.microsoft.com/all-things-azure/azure-container-options-matching-services-to-operational-responsibility/)
+## Continuous Platform Evolution and Known Issues
+Feature updates improved networking, analytics, and encrypted storage. Community coverage of ARM template limitations and dynamic deployment chains highlights where scripting is necessary for strict ordering, echoing persistent challenges in resource provisioning.
+- [Azure Update – 25th July 2025: Latest Service Announcements and Enhancements](/azure/videos/azure-update-25th-july-2025-latest-service-announcements-and-enhancements)
+- [Implementing dependsOn Chain Inside Looped Resources in ARM Templates for Azure Backup](https://www.reddit.com/r/azuredevops/comments/1m6d7gm/implementing_dependson_chain_inside_looped/)
+## Resilience and Availability Patterns
+Blueprints for resilient Azure applications were issued, complete with failover automation, health monitoring, retry logic, and systematic observability using Traffic Manager, Application Insights, and Polly. These patterns tie into last week’s focus on enterprise availability and scaling pain points.
+- [Building Resilient Applications: Availability & Resilience Patterns in AWS and Azure](https://dellenny.com/building-resilient-applications-availability-resilience-patterns-in-aws-and-azure/)',
+    'Azure is evolving for more robust, automated, developer-centric cloud management. Recent launches target VM reliability, secure code signing, and streamlined deployment and modernization workflows.',
+    1753686000, 'azure', '/azure/roundups/weekly-azure-roundup-2025-07-28', 'TechHub',
+    'TechHub', 'EC121BC67010BC397943DFA4A4FCB6F866D23A0CC06E414AB1CCD7AD7BFB4CD8', ',Microsoft Azure,Azure Virtual Machines,Project Flash,Azure Event Grid,Monitoring,Reliability Engineering,Azure Trusted Signing,Code Signing,Certificate Lifecycle Management,Azure Developer CLI,Bicep,GitHub Actions,Azure Functions,Azure Cosmos DB,Azure Service Bus,AKS,Azure Container Apps,Azure Container Instances,Microsoft Fabric,Fabric Data Warehouse,Fabric Eventstream,ARM Templates,Traffic Manager,Application Insights,Polly,CQRS,Event Sourcing,VM Scale Sets,App Service Plans,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-07-21
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-07-21', 'roundups', 'Weekly Azure Roundup: Databricks Native, AI Compliance, Platform Upgrades',
+    'Azure’s momentum this week is fueled by stronger analytics integration, AI governance, certified compliance, robust platform updates, and active community problem solving.
+<!--excerpt_end-->
+## Analytics, AI, and Performance Synergy
+Azure Databricks, now fully native, outperforms AWS equivalents and integrates tightly with Power BI, Purview, Copilot Studio, and Azure AI Foundry. New autoscaling, data governance, and seamless multicloud support make it easy to automate analytics, CI/CD, and AI workload management at scale.
+- [Databricks Runs Best on Azure: Performance, Integration, and AI Synergy](https://azure.microsoft.com/en-us/blog/databricks-runs-best-on-azure/)
+## AI Governance and Compliance
+Azure AI Foundry Models and Security Copilot are ISO/IEC 42001:2023 certified, simplifying compliance for regulated industries and reinforcing responsible AI deployment throughout the development lifecycle.
+- [Microsoft Azure AI Foundry Models and Security Copilot Achieve ISO/IEC 42001:2023 Certification](https://azure.microsoft.com/en-us/blog/microsoft-azure-ai-foundry-models-and-microsoft-security-copilot-achieve-iso-iec-420012023-certification/)
+## Platform Updates, Resilience, and Scaling
+The July Azure platform update introduces PowerShell Durable Functions (stateful orchestration), Functions with Kafka triggers, AKS auto-provisioning, improved NFS, geo-replication, security, and backup policies. The AI Speaker Recognition retirement signals workflow updates. These combine to enhance scalability, reliability, and automation.
+- [Azure Update – 18th July 2025: New Services, Features & Retirements](/ai/videos/azure-update-18th-july-2025-new-services-features-and-retirements)
+## DevOps and Migration Pain Points
+Community feedback highlights Azure DevOps test case result visibility limitations, TFS-to-Azure DevOps migration challenges (re: Teams and Areas structure), and ARM resource limits for Data Factory deployments. Practical scripts, process customizations, and deployment segmentation help teams overcome migration and automation hurdles.
+- [Test Plan: How to Get the Latest ''Test Case Result'' for All Test Cases in Azure DevOps](https://www.reddit.com/r/azuredevops/comments/1m26lp7/test_plan_or_test_suite_how_to_get_the_last_test/)
+- [Challenges Migrating Teams and Areas Structure from TFS to Azure DevOps](https://www.reddit.com/r/azuredevops/comments/1m32qpm/teams_vs_areas/)
+- [Workaround for Azure ARM 800 Resource Limit When Deploying Data Factory](https://www.reddit.com/r/azuredevops/comments/1m30btw/workaround_for_azure_arm_800_resource_limit_while/)',
+    'Azure’s momentum this week is fueled by stronger analytics integration, AI governance, certified compliance, robust platform updates, and active community problem solving.',
+    1753081200, 'azure', '/azure/roundups/weekly-azure-roundup-2025-07-21', 'TechHub',
+    'TechHub', 'C2FA120B143E8DE69A900A926EAF9B11E2147DFF554B6F51D272C86AB0A2E664', ',Microsoft Azure,Azure Databricks,Power BI,Microsoft Purview,Copilot Studio,Azure AI Foundry,Microsoft Security Copilot,ISO/IEC 42001:2023,Azure Functions,Durable Functions,Apache Kafka,AKS,Azure DevOps,Azure Resource Manager,Azure Data Factory,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-07-14
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-07-14', 'roundups', 'Weekly Azure Roundup: Accelerate Support, Agents, and Safer Ops',
+    'Azure is accelerating unified support for cloud, automation, and AI. The rollout of Azure Accelerate, impressive agentic research advances, and robust automation/security updates set the tone for a frictionless, integrated platform experience.
+<!--excerpt_end-->
+## Unified Cloud Transformation with Azure Accelerate
+Azure Accelerate consolidates Microsoft’s support programs, providing technical coaching and flexible funding for over 30 Azure services. The Cloud Accelerate Factory offers hands-on help from exploration through enterprise deployment, compressing project schedules and simplifying learning. Organizations get quicker upskilling, strategic guidance, and tangible productivity gains—continuing last week’s push for standard, streamlined onboarding.
+- [Introducing Azure Accelerate: Expert Support and Investments for Your Cloud and AI Transformation](https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-fueling-transformation-with-experts-and-investments-across-your-cloud-and-ai-journey/)
+## Agentic Research and Biosensing Applications
+Azure AI Foundry’s Deep Research Agent Service (public preview) enables programmable, connected web-scale agents for research, compliance, and reporting—chainable with code and API hooks. In biosensing, developers now integrate BCI devices with agents and Azure orchestration for adaptive AI assistants, using multimodal signals for context-specific feedback. The real-time blend of cognitive monitoring, reasoning models, and serverless events unlocks new ground for digital health and performance tech.
+Last week’s emphasis on Azure AI Foundry’s lifecycle and agent platform sets perfect context for these applied advances.
+- [Introducing Deep Research in Azure AI Foundry Agent Service](https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/)
+- [Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service](https://devblogs.microsoft.com/all-things-azure/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents/)
+## Security, Automation, and Migration Updates
+Azure Update features improved security: Trusted Launch for VM Scale Sets, firewall control, and network policy enforcement. Automation adds new runtimes (PowerShell 7.4, Python 3.10) and Azure Files tightens RBAC for governance. Storage Mover now eases AWS S3-to-Blob migrations, including validation and parameterization. The catalog expands with new AI models and highlights enhanced file migration and automation capabilities.
+Stories of data modernization and SDK upgrades from last week are extended here, with more focus on incremental, user-centric improvements.
+- [Azure Update - 11th July 2025](/ai/videos/azure-update-11th-july-2025)
+- [Multi-Cloud Storage Migration with Azure Storage Mover](/azure/videos/multi-cloud-storage-migration-with-azure-storage-mover)',
+    'Azure is accelerating unified support for cloud, automation, and AI. The rollout of Azure Accelerate, impressive agentic research advances, and robust automation/security updates set the tone for a frictionless, integrated platform experience.',
+    1752476400, 'azure', '/azure/roundups/weekly-azure-roundup-2025-07-14', 'TechHub',
+    'TechHub', '4750526F1FCCC5A0662D1E3D4A7E7ED334EFAB36AC0E926D9987989BFB30CE20', ',Microsoft Azure,Azure Accelerate,Cloud Accelerate Factory,Azure AI Foundry,Deep Research Agent Service,Agentic AI,Serverless,Azure Update,Trusted Launch,VM Scale Sets,Azure Firewall,Network Policy,Azure Automation,Azure Files,RBAC,Azure Storage Mover,AWS S3,Azure Blob Storage,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();
+-- weekly-azure-roundup-2025-07-07
+INSERT INTO content_items (
+    slug, collection_name, title, content, excerpt,
+    date_epoch, primary_section_name, external_url, author,
+    feed_name, content_hash, tags_csv,
+    is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+    is_ml, is_security, sections_bitmask
+) VALUES (
+    'weekly-azure-roundup-2025-07-07', 'roundups', 'Weekly Azure Roundup: AI Foundry Agents, Hybrid, and Data Upgrades',
+    'Azure’s July updates reflect sweeping improvements in services, extensibility, and security designed for modern AI- and data-driven cloud applications. Major announcements emphasize modernization, platform openness, and simplified pathways to secure, scalable workloads.
+<!--excerpt_end-->
+## Platform and AI Services Modernize
+July’s Azure Updates span secure hybrid deployments (Azure App Service on Stack Hub 25R1), firewall/DNS security, and encryption-in-transit for Azure Files NFS. Azure SQL Database adds streamlined auditing and Hyperscale migration; Cosmos DB now supports refined PostgreSQL pathways. Azure Monitor’s enhanced Metrics Query Editor streamlines diagnostics and visualization. These upgrades meet modern security, scalability, and agility benchmarks.
+Azure AI Foundry’s GA Agent Service (now with MCP support) simplifies model integration and agent deployment, introduces new foundation models (with advanced reasoning, video, and lightweight variants), and enables unified agent lifecycle management with improved SDKs and VS Code tooling. The release bolsters deployability, safety, and compliance for regulated AI scenarios.
+- [Azure Updates: Key Announcements for July 2025](/azure/videos/azure-updates-key-announcements-for-july-2025)
+- [What’s New in Azure AI Foundry: June 2025 Major Model Releases, Agent Service GA, and Developer Tools](https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/)
+## Performance, Extensibility, and Workflow Automation
+Recent performance improvements in Azure Files—including metadata caching, SMB Multi-Channel on Linux, and directory leasing—bring lower latency and higher concurrency, favoring heavy-access and enterprise workloads.
+The Azure Developer CLI (azd) extensions framework (alpha) introduces modular, scriptable command add-ons for CI/CD, DevOps, and AI, supporting personalized and reusable CLI workflows. Open extensibility signals a move toward richer, community-driven automation and integrations.
+- [Azure Files Performance Upgrade](/azure/videos/azure-files-performance-upgrade)
+- [Exploring Azure Developer CLI (azd) Extensions: Customizing Your Azure Development Workflow](https://devblogs.microsoft.com/azure-sdk/azd-extension-framework/)
+## Secure, Scalable AI and Cloud-Native Data
+A Forrester study underscores Azure’s leadership in secure, compliant generative AI platform offerings, notably through unified data services and strong risk controls—streamlining adoption for enterprises.
+For stateful data use cases, PostgreSQL on Azure Kubernetes Service now leverages fast storage (local NVMe or Premium SSD v2) and CloudNativePG operator for streamlined HA and backup. AI deployment, meanwhile, is further simplified by new Terraform + Vault guides, enabling automated, policy-driven infrastructure and secret management for production AI.
+- [Building Secure, Scalable Generative AI in the Cloud with Microsoft Azure](https://azure.microsoft.com/en-us/blog/building-secure-scalable-ai-in-the-cloud-with-microsoft-azure/)
+- [Running High-Performance PostgreSQL on Azure Kubernetes Service](https://azure.microsoft.com/en-us/blog/running-high-performance-postgresql-on-azure-kubernetes-service/)
+- [Automating Secure and Scalable AI Deployments on Azure with HashiCorp](https://devblogs.microsoft.com/all-things-azure/automating-secure-and-scalable-ai-deployments-on-azure-with-hashicorp/)
+## SDK and Library Highlights
+The Azure SDK’s June 2025 update brought cross-language leaps: GA for stateful AI agents, robust identity management, Cosmos DB JS SDK improvements (higher throughput, hybrid search), and numerous new and updated libraries across .NET, Python, Java, JS, and Go—simplifying resource management and AI/cloud integration workflows.
+- [Azure SDK Release Highlights for June 2025](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-june-2025/)',
+    'Azure’s July updates reflect sweeping improvements in services, extensibility, and security designed for modern AI- and data-driven cloud applications. Major announcements emphasize modernization, platform openness, and simplified pathways to secure, scalable workloads.',
+    1751871600, 'azure', '/azure/roundups/weekly-azure-roundup-2025-07-07', 'TechHub',
+    'TechHub', 'E18A36244BEC60D877C1BE581FD85A2AC16E7A7249D07FDD5AA65C1DBE8859DA', ',Microsoft Azure,Azure AI Foundry,Agent Service,MCP,Azure App Service,Azure Stack Hub,Azure Firewall,Azure DNS,Azure Files,Azure SQL Database,Azure Cosmos DB,Azure Monitor,Azure Developer CLI,Terraform,HashiCorp Vault,Azure,Roundups,',
+    false, true, false, false, false,
+    false, false, 2
+)
+ON CONFLICT (collection_name, slug) DO UPDATE SET
+    title                = EXCLUDED.title,
+    content              = EXCLUDED.content,
+    excerpt              = EXCLUDED.excerpt,
+    date_epoch           = EXCLUDED.date_epoch,
+    primary_section_name = EXCLUDED.primary_section_name,
+    external_url         = EXCLUDED.external_url,
+    tags_csv             = EXCLUDED.tags_csv,
+    content_hash         = EXCLUDED.content_hash,
+    is_ai                = EXCLUDED.is_ai,
+    is_azure             = EXCLUDED.is_azure,
+    is_dotnet            = EXCLUDED.is_dotnet,
+    is_devops            = EXCLUDED.is_devops,
+    is_github_copilot    = EXCLUDED.is_github_copilot,
+    is_ml                = EXCLUDED.is_ml,
+    is_security          = EXCLUDED.is_security,
+    sections_bitmask     = EXCLUDED.sections_bitmask,
+    updated_at           = NOW();

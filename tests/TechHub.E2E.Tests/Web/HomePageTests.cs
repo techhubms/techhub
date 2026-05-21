@@ -16,30 +16,29 @@ public class HomePageTests : PlaywrightTestBase
         // Act
         await Page.GotoRelativeAsync("/");
 
-        // Assert - Look for "Latest Roundup" heading in sidebar
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Latest Roundup");
+        // Assert - Look for "Latest Roundups" heading in sidebar
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Latest Roundups");
     }
 
     [Fact]
-    public async Task HomePage_LatestRoundupSection_ShouldDisplay_FeaturedRoundupWithTitleAndDate()
+    public async Task HomePage_LatestRoundupSection_ShouldDisplay_RoundupLinksPerSection()
     {
         // Act
         await Page.GotoRelativeAsync("/");
 
-        // Assert - Should display latest roundup section (should be exactly 1)
-        var latestRoundupSection = Page.Locator(".latest-roundup");
-        await latestRoundupSection.AssertElementVisibleAsync();
+        // Assert - Should display latest roundups section
+        var latestRoundupsSection = Page.Locator(".latest-roundups");
+        await latestRoundupsSection.AssertElementVisibleAsync();
 
-        // Should have one featured roundup link
-        var roundupLink = Page.Locator(".latest-roundup a.sidebar-featured-link");
-        await roundupLink.AssertElementVisibleAsync();
+        // Should have at least one roundup list item
+        var roundupLinks = Page.Locator(".latest-roundups a.sidebar-content-button");
+        var count = await roundupLinks.CountAsync();
+        count.Should().BeGreaterThan(0, "homepage should display at least one per-section roundup link");
 
-        // Link should have title and date
-        var roundupTitle = Page.Locator(".latest-roundup .sidebar-featured-title");
-        await roundupTitle.AssertElementVisibleAsync();
-
-        var roundupDate = Page.Locator(".latest-roundup .sidebar-featured-date");
-        await roundupDate.AssertElementVisibleAsync();
+        // Each link should have a title and section label
+        var firstLink = roundupLinks.First;
+        await firstLink.Locator(".sidebar-content-button-title").AssertElementVisibleAsync();
+        await firstLink.Locator(".sidebar-item-section").AssertElementVisibleAsync();
     }
 
     [Fact]

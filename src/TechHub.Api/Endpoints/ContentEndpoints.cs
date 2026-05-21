@@ -412,6 +412,7 @@ public static class ContentEndpoints
         [FromQuery] string? from = null,
         [FromQuery] string? to = null,
         [FromQuery] string? q = null,
+        [FromQuery] string? types = null,
         IContentRepository contentRepository = default!,
         IOptions<TagCloudOptions> tagCloudOptions = default!,
         CancellationToken cancellationToken = default)
@@ -516,6 +517,25 @@ public static class ContentEndpoints
             parsedTagsToCount = tagsToCount.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).ToList();
         }
 
+        // Parse types filter (for multi-collection filtering when collection is "all")
+        string[]? collectionsFilter = null;
+        if (isAllCollection && !string.IsNullOrWhiteSpace(types))
+        {
+            var validCollectionNames = section.Collections
+                .Where(c => !c.IsCustom)
+                .Select(c => c.Name)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+            collectionsFilter = types.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .Where(t => validCollectionNames.Contains(t))
+                .ToArray();
+
+            if (collectionsFilter.Length == 0)
+            {
+                collectionsFilter = null;
+            }
+        }
+
         // Get top N tag counts from repository - repository will handle "all" as no filter
         var tagCounts = await contentRepository.GetTagCountsAsync(
             new TagCountsRequest(
@@ -527,7 +547,8 @@ public static class ContentEndpoints
                 dateTo: dateTo,
                 tags: selectedTags,
                 tagsToCount: parsedTagsToCount,
-                searchQuery: string.IsNullOrWhiteSpace(q) ? null : q.Trim()
+                searchQuery: string.IsNullOrWhiteSpace(q) ? null : q.Trim(),
+                collections: collectionsFilter
             ),
             cancellationToken);
 

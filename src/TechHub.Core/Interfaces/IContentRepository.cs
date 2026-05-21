@@ -142,6 +142,8 @@ public interface IContentRepository
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken ct = default);
 
     /// <summary>

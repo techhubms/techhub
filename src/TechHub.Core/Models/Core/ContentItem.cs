@@ -217,11 +217,6 @@ public record ContentItem
             return externalUrl;
         }
 
-        if (normalizedCollection == "roundups")
-        {
-            return $"/all/roundups/{normalizedSlug}";
-        }
-
         if (!string.IsNullOrWhiteSpace(primarySectionName))
         {
             return $"/{primarySectionName.ToLowerInvariant()}/{normalizedCollection}/{normalizedSlug}";
