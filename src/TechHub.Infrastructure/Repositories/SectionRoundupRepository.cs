@@ -195,6 +195,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     public async Task<bool> RoundupExistsAsync(string sectionName, string slug, CancellationToken ct = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+        sectionName = sectionName.ToLowerInvariant().Trim();
         var count = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
             @"SELECT COUNT(*)
               FROM content_items
@@ -215,6 +216,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     public async Task<string?> GetPreviousRoundupContentAsync(string sectionName, DateOnly weekStart, CancellationToken ct = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+        sectionName = sectionName.ToLowerInvariant().Trim();
         var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
             OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
         var weekStartDt = weekStart.ToDateTime(TimeOnly.MinValue);
@@ -253,6 +255,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentNullException.ThrowIfNull(tags);
+        sectionName = sectionName.ToLowerInvariant().Trim();
 
         var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
             OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");

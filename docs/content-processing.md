@@ -233,7 +233,7 @@ Each section roundup is generated sequentially to avoid AI throttling.
 4. **Step 1/5** — AI creates news-style narrative stories per section
 5. **Step 2/5** — AI adds continuity by comparing with the previous week's roundup
 6. **Step 3/5** — AI condenses the content paragraph-by-paragraph
-7. **Step 4/5** — AI generates metadata: `title`, `description`, `tags`, `introduction`
+7. **Step 4/5** — AI generates metadata: `title`, `tags`, `introduction`
 8. **Step 5/5** — Table of contents is built from `##`/`###` headers (pure C#)
 9. **DB write** — Upserts one roundup per section into `content_items` + `content_tags_expanded`
 

@@ -46,15 +46,15 @@ internal sealed class RoundupMetadataGenerator
         string writingGuidelines,
         CancellationToken ct)
     {
-        var sectionTitle = _settings.Content.Sections.TryGetValue(sectionName, out var sc)
-            ? sc.Title
+        var sectionTag = _settings.Content.Sections.TryGetValue(sectionName, out var sc)
+            ? sc.Tag
             : sectionName;
 
         var systemMessage = _systemPrompt.Value
             .Replace("{WritingStyleGuidelines}", writingGuidelines, StringComparison.Ordinal);
 
         var userMessage = string.Create(CultureInfo.InvariantCulture,
-            $"Generate metadata for the {sectionTitle} section roundup covering {weekDescription} based on this condensed content:\n\n" +
+            $"Generate metadata for the {sectionTag} section roundup covering {weekDescription} based on this condensed content:\n\n" +
             $"{condensedContent}\n\nReturn only JSON with fields: title, tags, introduction");
 
         for (var attempt = 0; attempt < _options.MaxRetries; attempt++)
@@ -82,9 +82,9 @@ internal sealed class RoundupMetadataGenerator
         _logger.LogWarning("Step 4: Metadata generation failed after retries, using fallback metadata");
         return new RoundupMetadataAi
         {
-            Title = string.Create(CultureInfo.InvariantCulture, $"Weekly {sectionTitle} Roundup"),
-            Tags = [sectionTitle, "Roundups"],
-            Introduction = string.Create(CultureInfo.InvariantCulture, $"Welcome to this week's {sectionTitle} roundup covering {weekDescription}.")
+            Title = string.Create(CultureInfo.InvariantCulture, $"Weekly {sectionTag} Roundup"),
+            Tags = [sectionTag, "Roundups"],
+            Introduction = string.Create(CultureInfo.InvariantCulture, $"Welcome to this week's {sectionTag} roundup covering {weekDescription}.")
         };
     }
 

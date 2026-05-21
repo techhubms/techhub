@@ -396,8 +396,16 @@ public class TechHubApiClient : ITechHubApiClient
             return [];
         }
 
+        return await GetLatestRoundupPerSectionAsync(allSections, cancellationToken);
+    }
+
+    /// <inheritdoc />
+    public virtual async Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(
+        IEnumerable<Section> sections,
+        CancellationToken cancellationToken = default)
+    {
         var roundups = new List<ContentItem>();
-        foreach (var section in allSections.Where(s =>
+        foreach (var section in sections.Where(s =>
             !s.Name.Equals("all", StringComparison.OrdinalIgnoreCase) &&
             s.Collections.Any(c => c.Name.Equals("roundups", StringComparison.OrdinalIgnoreCase))))
         {

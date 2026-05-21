@@ -114,6 +114,12 @@ internal interface ITechHubApiClient
     Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Get the latest roundup per section using a pre-fetched sections list.
+    /// Avoids an extra /api/sections round-trip when sections are already available.
+    /// </summary>
+    Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(IEnumerable<Section> sections, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Get GitHub Copilot features with their linked content.
     /// GET /api/ghc-features
     /// </summary>

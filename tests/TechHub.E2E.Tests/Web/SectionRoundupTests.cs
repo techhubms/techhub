@@ -60,7 +60,8 @@ public class SectionRoundupTests : PlaywrightTestBase
 
         // Assert — link should include the section and roundups in path
         firstCardHref.Should().NotBeNullOrEmpty("should find at least one roundup card");
-        firstCardHref.Should().MatchRegex(
+        var firstCardHrefValue = firstCardHref!;
+        firstCardHrefValue.Should().MatchRegex(
             @"^/[a-z\-]+/roundups/",
             $"roundup card href should be /{sectionName}/roundups/{{slug}}");
     }
@@ -89,9 +90,10 @@ public class SectionRoundupTests : PlaywrightTestBase
         }
 
         firstCardHref.Should().NotBeNullOrEmpty();
+        var firstCardHrefValue = firstCardHref!;
 
         // Act — navigate to the roundup detail page
-        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}{firstCardHref}");
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}{firstCardHrefValue}");
 
         // Assert — URL must include the section (not /all/) and roundups
         Page.Url.Should().Contain("/roundups/", "detail page URL should include 'roundups'");

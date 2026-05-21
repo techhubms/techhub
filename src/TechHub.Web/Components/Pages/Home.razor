@@ -175,7 +175,7 @@ sections = await sectionsTask;
 latestItems = await latestItemsTask;
 
 // Fetch latest roundup per section (requires sections to determine which have roundups)
-latestRoundups = await ApiClient.GetLatestRoundupPerSectionAsync();
+latestRoundups = await ApiClient.GetLatestRoundupPerSectionAsync(sections ?? [], CancellationToken.None);
 }
 catch (Exception ex)
 {

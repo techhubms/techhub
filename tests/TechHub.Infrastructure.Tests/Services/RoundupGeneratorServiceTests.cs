@@ -37,7 +37,7 @@ public class RoundupGeneratorServiceTests
                     Title = "GitHub Copilot",
                     Description = "GitHub Copilot section",
                     Url = "/github-copilot",
-                    Tag = "github-copilot",
+                    Tag = "GitHub Copilot",
                     Order = 1,
                     Collections = new Dictionary<string, CollectionConfig>
                     {
@@ -46,10 +46,10 @@ public class RoundupGeneratorServiceTests
                 },
                 ["ai"] = new()
                 {
-                    Title = "AI",
+                    Title = "Artificial Intelligence",
                     Description = "AI section",
                     Url = "/ai",
-                    Tag = "ai",
+                    Tag = "AI",
                     Order = 2,
                     Collections = new Dictionary<string, CollectionConfig>
                     {
@@ -58,10 +58,10 @@ public class RoundupGeneratorServiceTests
                 },
                 ["azure"] = new()
                 {
-                    Title = "Azure",
+                    Title = "Microsoft Azure",
                     Description = "Azure section",
                     Url = "/azure",
-                    Tag = "azure",
+                    Tag = "Azure",
                     Order = 3,
                     Collections = new Dictionary<string, CollectionConfig>
                     {

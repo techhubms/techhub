@@ -14,9 +14,9 @@ public class TechHubApiClientTests
     public async Task GetLatestRoundupPerSectionAsync_ReturnsOneRoundupPerSection_InSectionOrder()
     {
         // Arrange
-        var responses = new Dictionary<string, HttpResponseMessage>(StringComparer.OrdinalIgnoreCase)
+        var responses = new Dictionary<string, Func<HttpResponseMessage>>(StringComparer.OrdinalIgnoreCase)
         {
-            ["/api/sections"] = CreateJsonResponse(
+            ["/api/sections"] = () => CreateJsonResponse(
                 new[]
                 {
                     new Section("all", "All", "All", "/all", "All",
@@ -32,11 +32,11 @@ public class TechHubApiClientTests
                         new Collection("roundups", "Roundups", "/azure/roundups", "Roundups", "Roundups")
                     ])
                 }),
-            ["/api/sections/ai/collections/roundups/items?take=1"] = CreateJsonResponse(
+            ["/api/sections/ai/collections/roundups/items?take=1"] = () => CreateJsonResponse(
                 new CollectionItemsResponse(
                     [CreateRoundup("weekly-ai-roundup-2025-05-26", "ai", 1748217600)],
                     1)),
-            ["/api/sections/azure/collections/roundups/items?take=1"] = CreateJsonResponse(
+            ["/api/sections/azure/collections/roundups/items?take=1"] = () => CreateJsonResponse(
                 new CollectionItemsResponse(
                     [CreateRoundup("weekly-azure-roundup-2025-06-02", "azure", 1748822400)],
                     1))
@@ -62,9 +62,9 @@ public class TechHubApiClientTests
     public async Task GetLatestRoundupPerSectionAsync_SkipsSectionsWithoutRoundupsCollection()
     {
         // Arrange — "dotnet" section has no roundups collection
-        var responses = new Dictionary<string, HttpResponseMessage>(StringComparer.OrdinalIgnoreCase)
+        var responses = new Dictionary<string, Func<HttpResponseMessage>>(StringComparer.OrdinalIgnoreCase)
         {
-            ["/api/sections"] = CreateJsonResponse(
+            ["/api/sections"] = () => CreateJsonResponse(
                 new[]
                 {
                     new Section("dotnet", ".NET", ".NET", "/dotnet", ".NET",
@@ -76,7 +76,7 @@ public class TechHubApiClientTests
                         new Collection("roundups", "Roundups", "/github-copilot/roundups", "Roundups", "Roundups")
                     ])
                 }),
-            ["/api/sections/github-copilot/collections/roundups/items?take=1"] = CreateJsonResponse(
+            ["/api/sections/github-copilot/collections/roundups/items?take=1"] = () => CreateJsonResponse(
                 new CollectionItemsResponse(
                     [CreateRoundup("weekly-github-copilot-roundup-2025-06-09", "github-copilot", 1749427200)],
                     1))
@@ -122,9 +122,9 @@ public class TechHubApiClientTests
 
     private sealed class StubHandler : HttpMessageHandler
     {
-        private readonly IReadOnlyDictionary<string, HttpResponseMessage> _responses;
+        private readonly IReadOnlyDictionary<string, Func<HttpResponseMessage>> _responses;
 
-        public StubHandler(IReadOnlyDictionary<string, HttpResponseMessage> responses)
+        public StubHandler(IReadOnlyDictionary<string, Func<HttpResponseMessage>> responses)
         {
             ArgumentNullException.ThrowIfNull(responses);
             _responses = responses;
@@ -133,9 +133,9 @@ public class TechHubApiClientTests
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var key = request.RequestUri?.PathAndQuery ?? string.Empty;
-            if (_responses.TryGetValue(key, out var response))
+            if (_responses.TryGetValue(key, out var factory))
             {
-                return Task.FromResult(response);
+                return Task.FromResult(factory());
             }
 
             return Task.FromResult(new HttpResponseMessage(HttpStatusCode.NotFound));
