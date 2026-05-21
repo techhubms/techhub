@@ -203,7 +203,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         }
 
         lp.Report($"Step 4/5 ({sectionName}): Generating metadata");
-        var metadata = await _metadataGenerator.GenerateAsync(condensedContent, weekDescription, writingGuidelines, ct);
+        var metadata = await _metadataGenerator.GenerateAsync(condensedContent, sectionName, weekDescription, writingGuidelines, ct);
 
         lp.Report($"Step 5/5 ({sectionName}): Building final content");
         var tableOfContents = RoundupContentBuilder.BuildTableOfContents(condensedContent);
@@ -213,7 +213,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         lp.Report($"Writing roundup to database for section '{sectionName}'");
         var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, filtered.Keys);
         var normalizedTags = TagNormalizer.NormalizeTags(tagsWithSections);
-        await _roundupRepo.WriteRoundupAsync(sectionName, slug, publishDate, metadata.Title, metadata.Description, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
+        await _roundupRepo.WriteRoundupAsync(sectionName, slug, publishDate, metadata.Title, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
 
         lp.Report($"Roundup for section '{sectionName}' in week {weekStart}\u2013{weekEnd} written successfully (slug={slug})");
         return RoundupGenerationOutcome.Generated(slug);

@@ -47,10 +47,10 @@ public interface ISectionRoundupRepository
         string slug,
         DateOnly publishDate,
         string title,
-        string description,
         string content,
         string introduction,
         IReadOnlyList<string> tags,
         long? jobId = null,
         CancellationToken ct = default);
 }
+

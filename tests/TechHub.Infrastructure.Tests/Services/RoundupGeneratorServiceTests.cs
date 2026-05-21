@@ -114,6 +114,7 @@ public class RoundupGeneratorServiceTests
         var metadataGenerator = new RoundupMetadataGenerator(
             aiHelper,
             options,
+            appSettingsOptions,
             NullLogger<RoundupMetadataGenerator>.Instance);
 
         var contentFixerMock = new Mock<IContentFixerService>();
@@ -228,7 +229,6 @@ public class RoundupGeneratorServiceTests
             It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
             It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
             It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
-            It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
             It.IsAny<IReadOnlyList<string>>(),
             It.IsAny<long?>(),
             It.IsAny<CancellationToken>()), Times.Once);
@@ -275,7 +275,6 @@ public class RoundupGeneratorServiceTests
             It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<string>(),
-            It.IsAny<string>(),
             It.IsAny<IReadOnlyList<string>>(),
             It.IsAny<long?>(),
             It.IsAny<CancellationToken>()), Times.Once);
@@ -284,7 +283,6 @@ public class RoundupGeneratorServiceTests
             "azure",
             "weekly-azure-roundup-2025-05-26",
             It.IsAny<DateOnly>(),
-            It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<string>(),
@@ -422,7 +420,6 @@ public class RoundupGeneratorServiceTests
             It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<string>(),
-            It.IsAny<string>(),
             It.Is<IReadOnlyList<string>>(tags =>
                 tags.Contains("AI") &&
                 tags.Contains("ML") &&
@@ -473,7 +470,6 @@ public class RoundupGeneratorServiceTests
             It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<string>(),
-            It.IsAny<string>(),
             It.Is<IReadOnlyList<string>>(tags =>
                 tags.Contains("AI") &&
                 tags.Contains("Kubernetes")),
@@ -484,7 +480,6 @@ public class RoundupGeneratorServiceTests
             "azure",
             It.IsAny<string>(),
             It.IsAny<DateOnly>(),
-            It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<string>(),
@@ -595,8 +590,7 @@ public class RoundupGeneratorServiceTests
             It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<DateOnly>(),
-            It.Is<string>(title => title.Contains("Weekly AI and Tech News Roundup")),
-            It.IsAny<string>(),
+            It.Is<string>(title => title.Contains("Weekly AI Roundup")),
             It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<IReadOnlyList<string>>(),
@@ -638,7 +632,7 @@ public class RoundupGeneratorServiceTests
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
             It.IsAny<string>(),
             It.IsAny<string>(), It.IsAny<DateOnly>(), It.IsAny<string>(),
-            It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(),
+            It.IsAny<string>(), It.IsAny<string>(),
             It.IsAny<IReadOnlyList<string>>(), It.IsAny<long?>(),
             It.IsAny<CancellationToken>()), Times.Never);
     }
@@ -675,7 +669,7 @@ public class RoundupGeneratorServiceTests
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
             It.IsAny<string>(),
             It.IsAny<string>(), It.IsAny<DateOnly>(), It.IsAny<string>(),
-            It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(),
+            It.IsAny<string>(), It.IsAny<string>(),
             It.IsAny<IReadOnlyList<string>>(), It.IsAny<long?>(),
             It.IsAny<CancellationToken>()), Times.Never);
     }
@@ -715,7 +709,6 @@ public class RoundupGeneratorServiceTests
             It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<DateOnly>(),
-            It.IsAny<string>(),
             It.IsAny<string>(),
             It.Is<string>(content =>
                 content.Contains("## AI") &&

@@ -179,12 +179,41 @@ Write-Host "  AI Deployment: $aiDeployment" -ForegroundColor Gray
 Write-Host ""
 Write-Host "Fetching secrets from Key Vault '$KeyVaultName'..." -ForegroundColor Cyan
 
-$aiApiKey = az keyvault secret show --vault-name $KeyVaultName --name techhub-prod-ai-api-key --query "value" --output tsv
+$currentIp = (Invoke-RestMethod -Uri "https://api.ipify.org" -TimeoutSec 10).Trim()
+Write-Host "  Current public IP: $currentIp" -ForegroundColor Gray
+Write-Host "  Adding IP to Key Vault firewall..." -ForegroundColor Gray
 
-Write-Host "  AI API Key:       $('*' * 8)...(fetched)" -ForegroundColor Gray
+az keyvault network-rule add --name $KeyVaultName --ip-address $currentIp --only-show-errors | Out-Null
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "  [WARN] Could not add IP to Key Vault firewall — will try fetch anyway" -ForegroundColor Yellow
+}
+else {
+    Write-Host "  Waiting for firewall rule to propagate..." -ForegroundColor Gray
+    Start-Sleep -Seconds 10
+}
+
+$aiApiKey = $null
+try {
+    $aiApiKey = az keyvault secret show --vault-name $KeyVaultName --name techhub-prod-ai-api-key --query "value" --output tsv --only-show-errors 2>&1
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "  [FAIL] Failed to fetch AI API key from Key Vault" -ForegroundColor Red
+        Write-Host $aiApiKey -ForegroundColor Red
+        exit 1
+    }
+    $aiApiKey = ($aiApiKey | Where-Object { $_ -is [string] -and $_ -notmatch '^\s*WARNING' }) -join ""
+    Write-Host "  AI API Key:       $('*' * 8)...(fetched)" -ForegroundColor Gray
+}
+finally {
+    Write-Host "  Removing IP from Key Vault firewall..." -ForegroundColor Gray
+    az keyvault network-rule remove --name $KeyVaultName --ip-address $currentIp --only-show-errors | Out-Null
+}
 
 # --- Helper to set a secret ---
 function Set-Secret($project, $key, $value) {
+    if ([string]::IsNullOrWhiteSpace($value)) {
+        Write-Host "  [WARN] $key — value is empty, skipping" -ForegroundColor Yellow
+        return
+    }
     if (-not $Force) {
         $existing = dotnet user-secrets list --project $project 2>&1 | Select-String -Pattern "^$([regex]::Escape($key)) = "
         if ($existing) {

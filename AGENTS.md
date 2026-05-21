@@ -31,7 +31,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 ### 🚫 Never Do
 
 - **Never apply migrations manually to the database** and always have the application run them on startup only
-- **Never use `| head`, `| tail`, `Select-Object -Last`** (blocks output)
+- **Never cap or truncate or redirect command output** — no `| head`, `| tail`, `head -c`, `Select-Object -First/Last`, `Select-String`, `-First`, `-Last`, `Out-String -Width`, or any other mechanism that cuts off or changes output. Hidden output hides errors, prompts, and critical information from both the agent and the user. Also only use `2>$1` if we really need to redirect the error stream to something else, not as the last part of a command.
 - **Never paste scripts into terminal** (save as file first)
 - **Never commit secrets or API keys**
 - **Never hardcode section/collection data**

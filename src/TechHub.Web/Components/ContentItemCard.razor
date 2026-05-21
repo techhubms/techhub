@@ -157,6 +157,8 @@
             queryParams["from"] = from.ToString();
         if (query.TryGetValue("to", out var to) && !string.IsNullOrEmpty(to))
             queryParams["to"] = to.ToString();
+        if (query.TryGetValue("types", out var types) && !string.IsNullOrEmpty(types))
+            queryParams["types"] = types.ToString();
 
         var basePath = uri.GetLeftPart(UriPartial.Path);
         var newUrl = Navigation.GetUriWithQueryParameters(basePath, queryParams);

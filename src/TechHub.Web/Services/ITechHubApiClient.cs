@@ -79,6 +79,7 @@ internal interface ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         string? searchQuery = null,
+        string? contentTypes = null,
         CancellationToken cancellationToken = default);
 
     // ================================================================
@@ -139,6 +140,7 @@ internal interface ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         string? searchQuery = null,
+        string? contentTypes = null,
         CancellationToken cancellationToken = default);
 
     // ================================================================
@@ -363,6 +365,8 @@ internal interface ITechHubApiClient
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -452,6 +456,8 @@ internal interface ITechHubApiClient
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken cancellationToken = default);
 
     /// <summary>

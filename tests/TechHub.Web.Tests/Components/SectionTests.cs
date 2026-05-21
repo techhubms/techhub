@@ -72,6 +72,7 @@ public class SectionTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync([]);
 
@@ -150,6 +151,7 @@ public class SectionTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),

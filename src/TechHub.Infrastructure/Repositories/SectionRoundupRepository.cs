@@ -245,7 +245,6 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         string slug,
         DateOnly publishDate,
         string title,
-        string description,
         string content,
         string introduction,
         IReadOnlyList<string> tags,
@@ -279,14 +278,6 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         var computedHash = Convert.ToHexString(
             SHA256.HashData(Encoding.UTF8.GetBytes(content)));
 
-        var aiMetadataJson = JsonSerializer.Serialize(new
-        {
-            roundup_summary = description,
-            key_topics = tags,
-            roundup_relevance = "high",
-            topic_type = "news"
-        }, _jsonOptions);
-
         if (_connection.State != ConnectionState.Open)
         {
             _connection.Open();
@@ -301,19 +292,18 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                     (slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
-                      is_ml, is_security, sections_bitmask, content_hash, ai_metadata)
+                      is_ml, is_security, sections_bitmask, content_hash)
                    VALUES
                     (@Slug, 'roundups', @Title, @Content, @Excerpt, @DateEpoch,
                      @SectionName, @ExternalUrl, 'TechHub', 'TechHub',
                      @TagsCsv, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
-                     @IsMl, @IsSecurity, @Bitmask, @ContentHash, @AiMetadata::jsonb)
+                     @IsMl, @IsSecurity, @Bitmask, @ContentHash)
                    ON CONFLICT (collection_name, slug) DO UPDATE SET
                     title            = EXCLUDED.title,
                     content          = EXCLUDED.content,
                     excerpt          = EXCLUDED.excerpt,
                     tags_csv         = EXCLUDED.tags_csv,
                     content_hash     = EXCLUDED.content_hash,
-                    ai_metadata      = EXCLUDED.ai_metadata,
                     updated_at       = NOW()",
                 new
                 {
@@ -333,8 +323,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                     IsMl = sectionFlags.IsMl,
                     IsSecurity = sectionFlags.IsSecurity,
                     Bitmask = sectionFlags.Bitmask,
-                    ContentHash = computedHash,
-                    AiMetadata = aiMetadataJson
+                    ContentHash = computedHash
                 },
                 transaction: transaction,
                 cancellationToken: ct));
