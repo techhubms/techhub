@@ -762,6 +762,7 @@ $apiEnvVars = @(
 $webEnvVars = @(
     "ASPNETCORE_ENVIRONMENT=Staging",
     "APPLICATIONINSIGHTS_CONNECTION_STRING=$appInsightsConnString",
+    "GoogleAnalytics__MeasurementId=",
     "OTEL_SERVICE_NAME=techhub-web",
     "ApiBaseUrl=https://$apiPrFqdn",
     "TECHHUB_TMP=/tmp/techhub",

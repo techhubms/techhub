@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="84" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2026-05-21" time="19:51:15">
+  <environment user-domain="" user="runner" nunit-version="2.5.8.0" cwd="/tmp/workspace/techhubms/techhub" machine-name="runnervmrw5os" clr-version="8.0.26" platform="Linux" os-version="6.17.0-1013-azure" />
+  <culture-info current-culture="" current-uiculture="" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="2.2656" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="/tmp/workspace/techhubms/techhub/tests/powershell/Add-AppInsightsAnnotation.Tests.ps1" executed="True" result="Success" success="True" time="0.7639" asserts="0" description="/tmp/workspace/techhubms/techhub/tests/powershell/Add-AppInsightsAnnotation.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Add-AppInsightsAnnotation" executed="True" result="Success" success="True" time="0.381" asserts="0" description="Add-AppInsightsAnnotation">
+            <results>
+              <test-suite type="TestFixture" name="Add-AppInsightsAnnotation.Script structure" executed="True" result="Success" success="True" time="0.2036" asserts="0" description="Add-AppInsightsAnnotation.Script structure">
+                <results>
+                  <test-case description="Should exist as a PowerShell script" name="Add-AppInsightsAnnotation.Script structure.Should exist as a PowerShell script" time="0.1122" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a valid script block" name="Add-AppInsightsAnnotation.Script structure.Should have a valid script block" time="0.043" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should set ErrorActionPreference to Stop" name="Add-AppInsightsAnnotation.Script structure.Should set ErrorActionPreference to Stop" time="0.0099" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should set StrictMode" name="Add-AppInsightsAnnotation.Script structure.Should set StrictMode" time="0.0083" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Add-AppInsightsAnnotation.Parameters" executed="True" result="Success" success="True" time="0.3267" asserts="0" description="Add-AppInsightsAnnotation.Parameters">
+                <results>
+                  <test-case description="Should have a mandatory SubscriptionId parameter" name="Add-AppInsightsAnnotation.Parameters.Should have a mandatory SubscriptionId parameter" time="0.0305" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a mandatory ResourceGroupName parameter" name="Add-AppInsightsAnnotation.Parameters.Should have a mandatory ResourceGroupName parameter" time="0.0074" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a mandatory AppInsightsName parameter" name="Add-AppInsightsAnnotation.Parameters.Should have a mandatory AppInsightsName parameter" time="0.0074" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a mandatory AnnotationId parameter" name="Add-AppInsightsAnnotation.Parameters.Should have a mandatory AnnotationId parameter" time="0.0073" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a mandatory ReleaseName parameter" name="Add-AppInsightsAnnotation.Parameters.Should have a mandatory ReleaseName parameter" time="0.0199" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a mandatory Commit parameter" name="Add-AppInsightsAnnotation.Parameters.Should have a mandatory Commit parameter" time="0.0102" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a mandatory DeployedBy parameter" name="Add-AppInsightsAnnotation.Parameters.Should have a mandatory DeployedBy parameter" time="0.0075" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a mandatory RunUrl parameter" name="Add-AppInsightsAnnotation.Parameters.Should have a mandatory RunUrl parameter" time="0.0097" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have an optional WorkspaceDirectory parameter with a default value" name="Add-AppInsightsAnnotation.Parameters.Should have an optional WorkspaceDirectory parameter with a default value" time="0.014" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Add-AppInsightsAnnotation.Implementation" executed="True" result="Success" success="True" time="0.3655" asserts="0" description="Add-AppInsightsAnnotation.Implementation">
+                <results>
+                  <test-case description="Should build the Azure management API URL with all required path components" name="Add-AppInsightsAnnotation.Implementation.Should build the Azure management API URL with all required path components" time="0.0139" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should include Category field in the annotation body" name="Add-AppInsightsAnnotation.Implementation.Should include Category field in the annotation body" time="0.0078" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should handle az rest failure via exit code check" name="Add-AppInsightsAnnotation.Implementation.Should handle az rest failure via exit code check" time="0.0085" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/tmp/workspace/techhubms/techhub/tests/powershell/Manage-EntraId.Tests.ps1" executed="True" result="Success" success="True" time="0.5436" asserts="0" description="/tmp/workspace/techhubms/techhub/tests/powershell/Manage-EntraId.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Manage-EntraId" executed="True" result="Success" success="True" time="0.4589" asserts="0" description="Manage-EntraId">
+            <results>
+              <test-suite type="TestFixture" name="Manage-EntraId.Script structure" executed="True" result="Success" success="True" time="0.0437" asserts="0" description="Manage-EntraId.Script structure">
+                <results>
+                  <test-case description="Should exist as a PowerShell script" name="Manage-EntraId.Script structure.Should exist as a PowerShell script" time="0.007" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a valid script block" name="Manage-EntraId.Script structure.Should have a valid script block" time="0.014" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should set ErrorActionPreference to Stop" name="Manage-EntraId.Script structure.Should set ErrorActionPreference to Stop" time="0.0084" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should set StrictMode" name="Manage-EntraId.Script structure.Should set StrictMode" time="0.0079" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Manage-EntraId.Parameters" executed="True" result="Success" success="True" time="0.1773" asserts="0" description="Manage-EntraId.Parameters">
+                <results>
+                  <test-case description="Should have a mandatory Environment parameter" name="Manage-EntraId.Parameters.Should have a mandatory Environment parameter" time="0.0104" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should validate Environment to localhost, staging, and production" name="Manage-EntraId.Parameters.Should validate Environment to localhost, staging, and production" time="0.051" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have an optional DisplayName parameter" name="Manage-EntraId.Parameters.Should have an optional DisplayName parameter" time="0.008" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a WebPort parameter defaulting to 5003" name="Manage-EntraId.Parameters.Should have a WebPort parameter defaulting to 5003" time="0.0109" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a SecretExpiryDays parameter" name="Manage-EntraId.Parameters.Should have a SecretExpiryDays parameter" time="0.0075" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a SkipUserAssignment switch parameter" name="Manage-EntraId.Parameters.Should have a SkipUserAssignment switch parameter" time="0.0142" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a RemoveExpired switch parameter" name="Manage-EntraId.Parameters.Should have a RemoveExpired switch parameter" time="0.0076" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a GitHubSecretName parameter defaulting to AZURE_AD_CLIENT_SECRET" name="Manage-EntraId.Parameters.Should have a GitHubSecretName parameter defaulting to AZURE_AD_CLIENT_SECRET" time="0.0076" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have an optional GitHubRepo parameter" name="Manage-EntraId.Parameters.Should have an optional GitHubRepo parameter" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Manage-EntraId.Idempotent app registration" executed="True" result="Success" success="True" time="0.1989" asserts="0" description="Manage-EntraId.Idempotent app registration">
+                <results>
+                  <test-case description="Should check for existing app registrations before creating" name="Manage-EntraId.Idempotent app registration.Should check for existing app registrations before creating" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should reuse existing app registration when found" name="Manage-EntraId.Idempotent app registration.Should reuse existing app registration when found" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should only create a new app registration when none exists" name="Manage-EntraId.Idempotent app registration.Should only create a new app registration when none exists" time="0.0065" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Manage-EntraId.Secret management" executed="True" result="Success" success="True" time="0.2865" asserts="0" description="Manage-EntraId.Secret management">
+                <results>
+                  <test-case description="Should always use append mode for secrets (no invalidation)" name="Manage-EntraId.Secret management.Should always use append mode for secrets (no invalidation)" time="0.0222" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should list existing credentials" name="Manage-EntraId.Secret management.Should list existing credentials" time="0.0137" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should create secrets with a descriptive display name including date" name="Manage-EntraId.Secret management.Should create secrets with a descriptive display name including date" time="0.0129" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should note that previous secrets remain valid" name="Manage-EntraId.Secret management.Should note that previous secrets remain valid" time="0.0166" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should support removing only expired secrets" name="Manage-EntraId.Secret management.Should support removing only expired secrets" time="0.0121" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Manage-EntraId.Redirect URIs per environment" executed="True" result="Success" success="True" time="0.341" asserts="0" description="Manage-EntraId.Redirect URIs per environment">
+                <results>
+                  <test-case description="Should configure localhost redirect URI with port" name="Manage-EntraId.Redirect URIs per environment.Should configure localhost redirect URI with port" time="0.0123" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should configure staging redirect URI" name="Manage-EntraId.Redirect URIs per environment.Should configure staging redirect URI" time="0.0122" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should configure production redirect URIs for both domains" name="Manage-EntraId.Redirect URIs per environment.Should configure production redirect URIs for both domains" time="0.0166" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Manage-EntraId.Security requirements" executed="True" result="Success" success="True" time="0.419" asserts="0" description="Manage-EntraId.Security requirements">
+                <results>
+                  <test-case description="Should check Azure CLI authentication before proceeding" name="Manage-EntraId.Security requirements.Should check Azure CLI authentication before proceeding" time="0.0126" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should check GitHub CLI for staging/production" name="Manage-EntraId.Security requirements.Should check GitHub CLI for staging/production" time="0.0125" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should create service principal with assignment required" name="Manage-EntraId.Security requirements.Should create service principal with assignment required" time="0.0124" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should use single-tenant audience" name="Manage-EntraId.Security requirements.Should use single-tenant audience" time="0.0084" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should expose an Admin.Access API scope" name="Manage-EntraId.Security requirements.Should expose an Admin.Access API scope" time="0.0069" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should clean up temporary files used for JSON payloads" name="Manage-EntraId.Security requirements.Should clean up temporary files used for JSON payloads" time="0.0114" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Manage-EntraId.Secret delivery" executed="True" result="Success" success="True" time="0.4531" asserts="0" description="Manage-EntraId.Secret delivery">
+                <results>
+                  <test-case description="Should print secrets to console for localhost" name="Manage-EntraId.Secret delivery.Should print secrets to console for localhost" time="0.0072" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should push secrets to GitHub for staging/production" name="Manage-EntraId.Secret delivery.Should push secrets to GitHub for staging/production" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should use environment-scoped GitHub secrets" name="Manage-EntraId.Secret delivery.Should use environment-scoped GitHub secrets" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should push the three GitHub secrets (TenantId, ClientId, ClientSecret)" name="Manage-EntraId.Secret delivery.Should push the three GitHub secrets (TenantId, ClientId, ClientSecret)" time="0.0083" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/tmp/workspace/techhubms/techhub/tests/powershell/Restore-Database.Tests.ps1" executed="True" result="Success" success="True" time="0.1917" asserts="0" description="/tmp/workspace/techhubms/techhub/tests/powershell/Restore-Database.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Restore-Database" executed="True" result="Success" success="True" time="0.1578" asserts="0" description="Restore-Database">
+            <results>
+              <test-suite type="TestFixture" name="Restore-Database.Script structure" executed="True" result="Success" success="True" time="0.0389" asserts="0" description="Restore-Database.Script structure">
+                <results>
+                  <test-case description="Should exist as a PowerShell script" name="Restore-Database.Script structure.Should exist as a PowerShell script" time="0.0062" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a valid script block" name="Restore-Database.Script structure.Should have a valid script block" time="0.0112" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should set ErrorActionPreference to Stop" name="Restore-Database.Script structure.Should set ErrorActionPreference to Stop" time="0.0076" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should set StrictMode" name="Restore-Database.Script structure.Should set StrictMode" time="0.0076" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Restore-Database.Parameters" executed="True" result="Success" success="True" time="0.1162" asserts="0" description="Restore-Database.Parameters">
+                <results>
+                  <test-case description="Should have a mandatory Target parameter" name="Restore-Database.Parameters.Should have a mandatory Target parameter" time="0.0143" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should validate Target to local only (staging removed — permanent staging DB deleted)" name="Restore-Database.Parameters.Should validate Target to local only (staging removed — permanent staging DB deleted)" time="0.0106" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have an optional ProductionConnectionString parameter" name="Restore-Database.Parameters.Should have an optional ProductionConnectionString parameter" time="0.0063" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have an optional TargetConnectionString parameter" name="Restore-Database.Parameters.Should have an optional TargetConnectionString parameter" time="0.0062" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a SkipDump switch parameter" name="Restore-Database.Parameters.Should have a SkipDump switch parameter" time="0.0084" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a SkipRestore switch parameter" name="Restore-Database.Parameters.Should have a SkipRestore switch parameter" time="0.0075" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a TablesOnly switch parameter" name="Restore-Database.Parameters.Should have a TablesOnly switch parameter" time="0.0064" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Restore-Database.Staging target removed" executed="True" result="Success" success="True" time="0.1348" asserts="0" description="Restore-Database.Staging target removed">
+                <results>
+                  <test-case description="Should not reference psql-techhub-staging (permanent staging DB was deleted)" name="Restore-Database.Staging target removed.Should not reference psql-techhub-staging (permanent staging DB was deleted)" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should not reference ca-techhub-api-staging or ca-techhub-web-staging (permanent staging apps deleted)" name="Restore-Database.Staging target removed.Should not reference ca-techhub-api-staging or ca-techhub-web-staging (permanent staging apps deleted)" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should still drop and recreate database for local target" name="Restore-Database.Staging target removed.Should still drop and recreate database for local target" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Restore-Database.Local restore behavior" executed="True" result="Success" success="True" time="0.1528" asserts="0" description="Restore-Database.Local restore behavior">
+                <results>
+                  <test-case description="Should stop local docker compose services before restore" name="Restore-Database.Local restore behavior.Should stop local docker compose services before restore" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should reset local database password after restore" name="Restore-Database.Local restore behavior.Should reset local database password after restore" time="0.0086" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/tmp/workspace/techhubms/techhub/tests/powershell/Sync-KeyVaultSecrets.Tests.ps1" executed="True" result="Success" success="True" time="0.7664" asserts="0" description="/tmp/workspace/techhubms/techhub/tests/powershell/Sync-KeyVaultSecrets.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Sync-KeyVaultSecrets" executed="True" result="Success" success="True" time="0.7308" asserts="0" description="Sync-KeyVaultSecrets">
+            <results>
+              <test-suite type="TestFixture" name="Sync-KeyVaultSecrets.Script structure" executed="True" result="Success" success="True" time="0.2527" asserts="0" description="Sync-KeyVaultSecrets.Script structure">
+                <results>
+                  <test-case description="Should exist as a PowerShell script" name="Sync-KeyVaultSecrets.Script structure.Should exist as a PowerShell script" time="0.1448" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should have a valid script block" name="Sync-KeyVaultSecrets.Script structure.Should have a valid script block" time="0.0286" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should set ErrorActionPreference to Stop" name="Sync-KeyVaultSecrets.Script structure.Should set ErrorActionPreference to Stop" time="0.0236" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should set StrictMode" name="Sync-KeyVaultSecrets.Script structure.Should set StrictMode" time="0.0508" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Sync-KeyVaultSecrets.Parameters" executed="True" result="Success" success="True" time="0.32" asserts="0" description="Sync-KeyVaultSecrets.Parameters">
+                <results>
+                  <test-case description="Should have a KeyVaultName parameter defaulting to kv-techhub-prod" name="Sync-KeyVaultSecrets.Parameters.Should have a KeyVaultName parameter defaulting to kv-techhub-prod" time="0.0287" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should not have a PostgresHost parameter (connection string managed by Bicep)" name="Sync-KeyVaultSecrets.Parameters.Should not have a PostgresHost parameter (connection string managed by Bicep)" time="0.0264" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Sync-KeyVaultSecrets.Key Vault firewall IP management" executed="True" result="Success" success="True" time="0.6231" asserts="0" description="Sync-KeyVaultSecrets.Key Vault firewall IP management">
+                <results>
+                  <test-case description="Should call Invoke-RestMethod to detect the current IP" name="Sync-KeyVaultSecrets.Key Vault firewall IP management.Should call Invoke-RestMethod to detect the current IP" time="0.0249" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should reference checkip.amazonaws.com for IP detection" name="Sync-KeyVaultSecrets.Key Vault firewall IP management.Should reference checkip.amazonaws.com for IP detection" time="0.023" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should add the current IP to the Key Vault firewall before writing secrets" name="Sync-KeyVaultSecrets.Key Vault firewall IP management.Should add the current IP to the Key Vault firewall before writing secrets" time="0.0263" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should use fallback IP providers if the primary one fails" name="Sync-KeyVaultSecrets.Key Vault firewall IP management.Should use fallback IP providers if the primary one fails" time="0.0265" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should validate the IP response is a valid IPv4 address" name="Sync-KeyVaultSecrets.Key Vault firewall IP management.Should validate the IP response is a valid IPv4 address" time="0.037" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should remove the current IP from the Key Vault firewall in a finally block" name="Sync-KeyVaultSecrets.Key Vault firewall IP management.Should remove the current IP from the Key Vault firewall in a finally block" time="0.0579" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should only remove the IP if it was added by this script" name="Sync-KeyVaultSecrets.Key Vault firewall IP management.Should only remove the IP if it was added by this script" time="0.0615" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should not throw if IP removal fails in the finally block" name="Sync-KeyVaultSecrets.Key Vault firewall IP management.Should not throw if IP removal fails in the finally block" time="0.0411" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Sync-KeyVaultSecrets.Secret writing" executed="True" result="Success" success="True" time="0.7266" asserts="0" description="Sync-KeyVaultSecrets.Secret writing">
+                <results>
+                  <test-case description="Should not write the database connection string secret (replaced by managed identity auth)" name="Sync-KeyVaultSecrets.Secret writing.Should not write the database connection string secret (replaced by managed identity auth)" time="0.0262" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should not write the AI API key secret (replaced by Cognitive Services OpenAI User RBAC)" name="Sync-KeyVaultSecrets.Secret writing.Should not write the AI API key secret (replaced by Cognitive Services OpenAI User RBAC)" time="0.024" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should write the AAD client secret" name="Sync-KeyVaultSecrets.Secret writing.Should write the AAD client secret" time="0.0219" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Should use a temp file to write secret values (prevents exposure in process args)" name="Sync-KeyVaultSecrets.Secret writing.Should use a temp file to write secret values (prevents exposure in process args)" time="0.0272" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
