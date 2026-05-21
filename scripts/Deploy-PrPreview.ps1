@@ -661,22 +661,21 @@ $ghcrToken = az keyvault secret show `
     --vault-name $prodKeyVaultName `
     --name 'techhub-github-registry-token' `
     --query value -o tsv 2>$null
-$ghcrTokenSource = 'Key Vault'
-
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($ghcrToken)) {
-    if (-not [string]::IsNullOrWhiteSpace($env:GHCR_PAT)) {
+    $allowGhcrPatFallback = -not [string]::IsNullOrWhiteSpace($env:ALLOW_GHCR_PAT_FALLBACK) -and
+        $env:ALLOW_GHCR_PAT_FALLBACK.Trim().ToLowerInvariant() -eq 'true'
+    if ($allowGhcrPatFallback -and -not [string]::IsNullOrWhiteSpace($env:GHCR_PAT)) {
         $ghcrToken = $env:GHCR_PAT
-        $ghcrTokenSource = 'GHCR_PAT environment variable'
         Write-Warn "Key Vault secret 'techhub-github-registry-token' not available; using GHCR_PAT fallback for this deploy."
     }
     else {
         Write-Fail "Could not resolve GitHub registry token for ghcr.io image pulls."
         Write-Detail "Preferred: set Key Vault secret 'techhub-github-registry-token' in '$prodKeyVaultName'."
-        Write-Detail "Bootstrap fallback: set environment variable GHCR_PAT (read:packages scope)."
+        Write-Detail "Bootstrap fallback: set ALLOW_GHCR_PAT_FALLBACK=true and GHCR_PAT (read:packages scope)."
         exit 1
     }
 }
-Write-Ok "GitHub registry token resolved from $ghcrTokenSource"
+Write-Ok "GitHub registry token resolved"
 
 # Build a passwordless PostgreSQL connection string.
 # The username is the managed identity display name as registered in the Entra admin.
