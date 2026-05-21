@@ -9,8 +9,9 @@
     - PostgreSQL Flexible Server (created via PITR from production)
     - Container Apps (ca-techhub-api-pr-{number} and ca-techhub-web-pr-{number})
 
-    The PR apps share the production Container Apps Environment, VNet, and monitoring —
-    but get their own isolated database.
+    The PR apps share the production Container Apps Environment and VNet,
+    but get their own isolated database. Application telemetry export is disabled
+    for PR previews to avoid polluting production monitoring data.
 
     On deploy, a PR-specific Postgres instance is provisioned using Azure Point-in-Time
     Restore (PITR) from the production server. This creates an independent copy with
@@ -73,7 +74,6 @@ Set-StrictMode -Version Latest
 $prodRG = 'rg-techhub-prod'
 $prodEnvName = 'cae-techhub-prod'
 $prodIdentityName = 'id-techhub-prod'
-$prodAppInsightsName = 'appi-techhub-prod'
 $prodKeyVaultName = 'kv-techhub-prod'
 $ghcrTokenSecretName = 'techhub-github-registry-token'
 
@@ -676,19 +676,9 @@ if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($envId)) {
 }
 Write-Ok "Container Apps Environment: $envId"
 
-# Get Application Insights connection string
-$appInsightsConnString = az monitor app-insights component show `
-    --app $prodAppInsightsName `
-    --resource-group $prodRG `
-    --query connectionString -o tsv 2>$null
-
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($appInsightsConnString)) {
-    Write-Warn "Could not retrieve AppInsights connection string — proceeding without telemetry"
-    $appInsightsConnString = ""
-}
-else {
-    Write-Ok "Application Insights: retrieved connection string"
-}
+# Do not export PR preview telemetry to production monitoring.
+$appInsightsConnString = ""
+Write-Ok "Application Insights export disabled for PR preview environments"
 
 # Resolve GitHub registry token for Container Apps image pulls.
 # Preferred source is Key Vault secret; fallback supports first-run bootstrap before that secret exists.
