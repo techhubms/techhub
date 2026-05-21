@@ -47,10 +47,11 @@
             OnDateRangeChanged="HandleDateRangeChanged" />
         </MobileSidebarPanel>
         <MobileSidebarPanel Label="Tags" Icon="tags" HasActiveFilter="@(selectedTags.Count > 0)">
-        <SidebarTagCloud SectionName="@SectionName" CollectionName="@EffectiveCollectionName"
+        <SidebarTagCloud SectionName="@SectionName" CollectionName="@EffectiveTagCloudCollectionName"
             Title="Popular Tags" NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
             FromDate="@fromDateString" ToDate="@toDateString"
             SearchQuery="@searchQuery"
+            ContentTypes="@ActiveContentTypesParam"
             OnSelectionChanged="HandleTagSelectionChanged" />
         </MobileSidebarPanel>
         </MobileSidebarToolbar>
@@ -129,6 +130,16 @@
     /// Collection routes use the actual collection name, same as normal /section/collection pages.
     /// </summary>
     private string EffectiveCollectionName => CollectionName ?? "all";
+
+    /// <summary>
+    /// The effective collection name for the tag cloud.
+    /// When a single content type filter is active, scope tag counts to that collection
+    /// so counts match the visible content grid results.
+    /// </summary>
+    private string EffectiveTagCloudCollectionName =>
+        activeContentTypes.Count == 1
+            ? activeContentTypes.First()
+            : EffectiveCollectionName;
 
     /// <summary>
     /// The content types to pass to the API for filtering.
@@ -312,6 +323,10 @@
         {
             var parsed = TypesParam.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             activeContentTypes = new HashSet<string>(parsed, StringComparer.OrdinalIgnoreCase);
+        }
+        else
+        {
+            activeContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         }
     }
 

@@ -84,9 +84,7 @@ public static class SitemapEndpoints
         // Items where LinksExternally() == true (news/blogs/community) are excluded at the DB query level.
         foreach (var item in contentItems)
         {
-            var path = item.CollectionName == "roundups"
-                ? $"/all/roundups/{item.Slug}"
-                : $"/{item.PrimarySectionName}/{item.CollectionName}/{item.Slug}";
+            var path = $"/{item.PrimarySectionName}/{item.CollectionName}/{item.Slug}";
 
             var lastMod = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch)
                 .ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);

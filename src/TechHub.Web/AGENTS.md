@@ -214,7 +214,7 @@ User-facing RSS feeds served by the Web frontend (proxied from internal API):
 | URL | Description |
 |---|---|
 | `/all/feed.xml` | All content across all sections |
-| `/all/roundups/feed.xml` | All roundups |
+| `/{sectionName}/roundups/feed.xml` | Roundups for a specific section |
 | `/{sectionName}/feed.xml` | Section-specific content |
 
 ## Mobile Navigation

@@ -148,6 +148,49 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
             "All video items (including those tracked in ghc_feature_content and vscode_update_items) have collection_name='videos'");
     }
 
+    /// <summary>
+    /// Test: SearchAsync with a specific section filter automatically excludes 'all' primary-section roundups
+    /// Why: Legacy all-section roundups (primary_section_name='all') should not appear when
+    ///      browsing a specific section — only section-specific content should show.
+    ///      The sections_bitmask includes all section bits for 'all' roundups so they would
+    ///      otherwise match, but primary_section_name='all' means they belong to no single section.
+    /// </summary>
+    [Fact]
+    public async Task SearchAsync_WithSectionFilter_ExcludesAllPrimarySectionItems()
+    {
+        // Arrange — TestCollections has 3 roundups: 2 with primary_section='github-copilot', 1 with primary_section='all'
+        // The 'all' roundup has sections_bitmask with all bits set, so it matches the github-copilot bitmask.
+        var sectionRequest = new SearchRequest(
+            take: 50,
+            sections: new[] { "github-copilot" },
+            collections: new[] { "roundups" },
+            tags: Array.Empty<string>());
+
+        var allSectionRequest = new SearchRequest(
+            take: 50,
+            sections: new[] { "all" },
+            collections: new[] { "roundups" },
+            tags: Array.Empty<string>());
+
+        // Act
+        var sectionResults = await Repository.SearchAsync(sectionRequest, TestContext.Current.CancellationToken);
+        var allResults = await Repository.SearchAsync(allSectionRequest, TestContext.Current.CancellationToken);
+
+        // Assert — section-specific: only the 2 github-copilot roundups, 'all' roundup excluded
+        sectionResults.Items.Should().HaveCount(RoundupsCount - 1,
+            "section filter should exclude the legacy 'all' roundup even though its bitmask includes github-copilot");
+        sectionResults.Items.Should().NotContain(
+            i => i.PrimarySectionName == "all",
+            "items with primary_section_name='all' must be excluded when a specific section is filtered");
+        sectionResults.Items.Should().OnlyContain(
+            i => i.PrimarySectionName == "github-copilot",
+            "only github-copilot section-specific roundups should remain");
+
+        // Assert — 'all' section: all 3 roundups visible (no section filter applied)
+        allResults.Items.Should().HaveCount(RoundupsCount,
+            "querying /all/roundups should return all roundups including the cross-section ones");
+    }
+
     #endregion
 
     #region SearchAsync Tests - Section Filtering

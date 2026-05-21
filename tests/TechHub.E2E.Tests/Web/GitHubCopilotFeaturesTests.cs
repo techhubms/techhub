@@ -531,12 +531,20 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Expand the first entry to reveal plan badges in the detail section
+        // The first entry auto-expands on page load (expandedFeatureId = firstFeature.Slug).
+        // Only click to expand if it isn't already expanded — clicking an already-expanded
+        // entry would collapse it, causing the plan-badge assertions below to fail because
+        // the detail section would no longer be visible (source of flakiness).
         var firstEntry = Page.Locator(".features-timeline-entry").First;
-        var header = firstEntry.Locator(".features-timeline-header");
-        await header.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(firstEntry).ToHaveClassAsync(
-                new Regex("expanded")));
+        var firstCard = firstEntry.Locator(".features-timeline-card");
+        await Page.WaitForBlazorReadyAsync();
+        var ariaExpanded = await firstCard.GetAttributeAsync("aria-expanded");
+        if (ariaExpanded != "true")
+        {
+            var header = firstEntry.Locator(".features-timeline-header");
+            await header.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(firstCard).ToHaveAttributeAsync("aria-expanded", "true"));
+        }
 
         // Assert - Plan badges should be present and have tier-specific color classes (badge-plan-*)
         var planBadges = firstEntry.Locator(".badge-plan");

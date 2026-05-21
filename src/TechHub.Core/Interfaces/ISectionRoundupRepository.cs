@@ -29,13 +29,13 @@ public interface ISectionRoundupRepository
     /// <summary>
     /// Checks whether a roundup with the given slug already exists in the database.
     /// </summary>
-    Task<bool> RoundupExistsAsync(string slug, CancellationToken ct = default);
+    Task<bool> RoundupExistsAsync(string sectionName, string slug, CancellationToken ct = default);
 
     /// <summary>
     /// Loads the content of the most recent roundup published before the given week start date.
     /// Returns <c>null</c> if no previous roundup exists.
     /// </summary>
-    Task<string?> GetPreviousRoundupContentAsync(DateOnly weekStart, CancellationToken ct = default);
+    Task<string?> GetPreviousRoundupContentAsync(string sectionName, DateOnly weekStart, CancellationToken ct = default);
 
     /// <summary>
     /// Writes a generated roundup to <c>content_items</c>, <c>content_tags_expanded</c>,
@@ -43,13 +43,14 @@ public interface ISectionRoundupRepository
     /// Uses an upsert so re-running for the same week updates the existing record.
     /// </summary>
     Task WriteRoundupAsync(
+        string sectionName,
         string slug,
         DateOnly publishDate,
         string title,
-        string description,
         string content,
         string introduction,
         IReadOnlyList<string> tags,
         long? jobId = null,
         CancellationToken ct = default);
 }
+

@@ -207,10 +207,12 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
 
                 if (outcome.Result == RoundupGenerationResult.Generated)
                 {
-                    _logger.LogInformation("Roundup generated successfully for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
+                    _logger.LogInformation(
+                        "Roundup generation completed successfully for week {WeekStart}–{WeekEnd}. Generated {GeneratedCount} section roundups.",
+                        weekStart, weekEnd, outcome.GeneratedCount);
 
-                    await jobRepo.AppendLogAsync(jobId, "Roundup generated successfully.", runToken);
-                    await jobRepo.CompleteAsync(jobId, feedsProcessed: 0, itemsAdded: 1, itemsSkipped: 0, errorCount: 0,
+                    await jobRepo.AppendLogAsync(jobId, $"Roundup generation completed successfully. Generated {outcome.GeneratedCount} section roundups.", runToken);
+                    await jobRepo.CompleteAsync(jobId, feedsProcessed: 0, itemsAdded: outcome.GeneratedCount, itemsSkipped: 0, errorCount: 0,
                         transcriptsSucceeded: 0, transcriptsFailed: 0,
                         logOutput: null, ct: runToken);
 

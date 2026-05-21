@@ -1,6 +1,9 @@
+using System.Data;
 using System.Net;
 using System.Net.Http.Json;
+using Dapper;
 using FluentAssertions;
+using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.TestUtilities;
 
@@ -13,11 +16,13 @@ namespace TechHub.Api.Tests.Endpoints;
 public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
 {
     private readonly HttpClient _client;
+    private readonly TechHubIntegrationTestApiFactory _factory;
 
     public ContentEndpointsTests(TechHubIntegrationTestApiFactory factory)
     {
         ArgumentNullException.ThrowIfNull(factory);
 
+        _factory = factory;
         _client = factory.CreateClient();
     }
 
@@ -56,11 +61,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         aiSection.Description.Should().Be("Your gateway to the AI revolution. From breakthrough announcements to practical tutorials, explore how artificial intelligence is reshaping the way we work and create.");
         aiSection.Url.Should().Be("/ai");
         aiSection.Name.Should().Be("ai");
-        aiSection.Collections.Should().HaveCount(8);
+        aiSection.Collections.Should().HaveCount(9);
         aiSection.Collections.Should().Contain(c => c.Name == "news");
         aiSection.Collections.Should().Contain(c => c.Name == "blogs");
         aiSection.Collections.Should().Contain(c => c.Name == "videos");
         aiSection.Collections.Should().Contain(c => c.Name == "community");
+        aiSection.Collections.Should().Contain(c => c.Name == "roundups");
         aiSection.Collections.Should().Contain(c => c.Name == "genai-basics");
         aiSection.Collections.Should().Contain(c => c.Name == "genai-advanced");
         aiSection.Collections.Should().Contain(c => c.Name == "genai-applied");
@@ -80,7 +86,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         section.Should().NotBeNull();
         section!.Name.Should().Be("ai");
         section.Title.Should().Be("Artificial Intelligence");
-        section.Collections.Should().HaveCount(8);
+        section.Collections.Should().HaveCount(9);
     }
 
     [Fact]
@@ -128,11 +134,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         var collections = await response.Content.ReadFromJsonAsync<List<Collection>>(TestContext.Current.CancellationToken);
         collections.Should().NotBeNull();
-        collections!.Should().HaveCount(11);
+        collections!.Should().HaveCount(12);
         collections.Should().Contain(c => c.Name == "news");
         collections.Should().Contain(c => c.Name == "blogs");
         collections.Should().Contain(c => c.Name == "videos");
         collections.Should().Contain(c => c.Name == "community");
+        collections.Should().Contain(c => c.Name == "roundups");
         collections.Should().Contain(c => c.Name == "features");
         collections.Should().Contain(c => c.Name == "vscode-updates");
         collections.Should().Contain(c => c.Name == "levels-of-enlightenment");
@@ -1176,7 +1183,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_WithValidSlug_ReturnsContentWithRenderedHtml()
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
+        var itemsResponse = await _client.GetAsync("/api/sections/github-copilot/collections/roundups/items", TestContext.Current.CancellationToken);
         var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
@@ -1185,7 +1192,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var slug = testItem.Slug;
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{slug}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/github-copilot/collections/roundups/{slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -1232,12 +1239,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_IncludesMetadata()
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
+        var itemsResponse = await _client.GetAsync("/api/sections/github-copilot/collections/roundups/items", TestContext.Current.CancellationToken);
         var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var testItem = items!.First();
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/github-copilot/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -1259,12 +1266,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_ReturnsDetailForInternalContent()
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
+        var itemsResponse = await _client.GetAsync("/api/sections/github-copilot/collections/roundups/items", TestContext.Current.CancellationToken);
         var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var testItem = items!.First();
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/github-copilot/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -1700,6 +1707,124 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Assert - Path traversal resolved by HTTP framework before routing; 400 or 404 both acceptable
         response.StatusCode.Should().BeOneOf(HttpStatusCode.BadRequest, HttpStatusCode.NotFound);
+    }
+
+    #endregion
+
+    #region Cross-Section Item Exclusion Tests
+
+    [Fact]
+    public async Task GetCollectionTags_TagCloudCount_ExcludesCrossSectionItems_WhenSectionSpecified()
+    {
+        // This test verifies the fix for the tag count mismatch bug:
+        // A cross-section item (primary_section_name='all') appears in ALL section tag clouds
+        // via the sections_bitmask, but is excluded from section-specific content results
+        // by the primary_section_name != 'all' filter. Without the fix, clicking a tag
+        // that shows count N would show fewer than N items on the filtered page.
+        //
+        // After the fix, BuildTagCountFilters excludes cross-section items when a specific
+        // section is requested, making tag counts consistent with filtered content results.
+
+        const string CrossSectionSlug = "tc-cross-section-ghc-tag-count";
+        const string GhcOnlySlug = "tc-ghc-only-tag-count";
+        const string CrossSectionUrl = "https://example.com/tc-cross-section-ghc-tag-count";
+        const string GhcOnlyUrl = "https://example.com/tc-ghc-only-tag-count";
+        // Unique tag word unlikely to exist in any real test data
+        const string UniqueTagWord = "ghcxsectagexclusiontest";
+        const long TestDateEpoch = 1700000000L; // 2023-11-14, well within any date range with lastDays=0
+
+        // Arrange — seed one cross-section item (primary_section_name='all', bitmask=127)
+        // and one GHC-specific item (primary_section_name='github-copilot', bitmask=16)
+        // Both tagged with the unique test tag.
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                     is_ml, is_security, sections_bitmask, content_hash)
+                  VALUES
+                    (@CrossSlug, 'blogs', 'TC Cross Section Item', '# Cross', 'Cross excerpt',
+                     @Epoch, 'all', @CrossUrl, 'Author', 'Test Feed',
+                     @TagsCsv, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 127, 'tccrossxsechash'),
+                    (@GhcSlug, 'blogs', 'TC GHC Only Item', '# GHC', 'GHC excerpt',
+                     @Epoch, 'github-copilot', @GhcUrl, 'Author', 'Test Feed',
+                     @TagsCsv, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, 16, 'tcghconlyhash')
+                  ON CONFLICT (collection_name, slug) DO NOTHING",
+                new
+                {
+                    CrossSlug = CrossSectionSlug,
+                    GhcSlug = GhcOnlySlug,
+                    CrossUrl = CrossSectionUrl,
+                    GhcUrl = GhcOnlyUrl,
+                    TagsCsv = $",{UniqueTagWord},",
+                    Epoch = TestDateEpoch
+                });
+
+            // Seed content_tags_expanded rows for both items
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_tags_expanded
+                    (collection_name, slug, tag_word, tag_display, is_full_tag,
+                     date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                     is_ml, is_security, sections_bitmask)
+                  VALUES
+                    ('blogs', @CrossSlug, @TagWord, @TagDisplay, TRUE,
+                     @Epoch, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 127),
+                    ('blogs', @GhcSlug, @TagWord, @TagDisplay, TRUE,
+                     @Epoch, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, 16)
+                  ON CONFLICT DO NOTHING",
+                new
+                {
+                    CrossSlug = CrossSectionSlug,
+                    GhcSlug = GhcOnlySlug,
+                    TagWord = UniqueTagWord,
+                    TagDisplay = UniqueTagWord,
+                    Epoch = TestDateEpoch
+                });
+        }
+
+        // Act 1 — get the tag cloud count for the unique tag in the github-copilot section
+        // lastDays=0 disables date filtering so both seeded items are in scope
+        var tagCloudResponse = await _client.GetAsync(
+            $"/api/sections/github-copilot/collections/all/tags?tagsToCount={Uri.EscapeDataString(UniqueTagWord)}&lastDays=0",
+            TestContext.Current.CancellationToken);
+        tagCloudResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var tagCloud = await tagCloudResponse.Content.ReadFromJsonAsync<List<TagCloudItem>>(
+            TestContext.Current.CancellationToken);
+        tagCloud.Should().NotBeNull();
+
+        var testTagEntry = tagCloud!.FirstOrDefault(t =>
+            t.Tag.Equals(UniqueTagWord, StringComparison.OrdinalIgnoreCase));
+        testTagEntry.Should().NotBeNull(
+            $"tag '{UniqueTagWord}' should appear in the tag cloud for github-copilot section");
+
+        // Assert 1 — tag cloud count should be 1 (cross-section item excluded)
+        testTagEntry!.Count.Should().Be(1,
+            "cross-section items (primary_section_name='all') should be excluded from " +
+            "section-specific tag cloud counts, matching what the items endpoint returns");
+
+        // Act 2 — get content items filtered by the unique tag in the github-copilot section
+        var itemsResponse = await _client.GetAsync(
+            $"/api/sections/github-copilot/collections/all/items?tags={Uri.EscapeDataString(UniqueTagWord)}&lastDays=0",
+            TestContext.Current.CancellationToken);
+        itemsResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var items = await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(
+            TestContext.Current.CancellationToken);
+        items.Should().NotBeNull();
+
+        // Assert 2 — items count matches tag cloud count (both = 1)
+        items!.TotalCount.Should().Be(1,
+            "content items query excludes primary_section_name='all' items; " +
+            "tag cloud count must match this to avoid misleading counts in the UI");
+        items.Items.Should().Contain(i => i.Slug == GhcOnlySlug,
+            "the GHC-specific item should be returned");
+        items.Items.Should().NotContain(i => i.Slug == CrossSectionSlug,
+            "the cross-section item should be excluded");
     }
 
     #endregion

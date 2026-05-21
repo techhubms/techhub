@@ -43,7 +43,7 @@ Examples:
 
 - `/ai/videos/my-article`
 - `/github-copilot/roundups/june-2026-digest`
-- `/all/roundups/{slug}` — roundups always use the `all` section
+- `/{section}/roundups/{slug}` — roundups use their owning section path
 
 Special pages sit outside this structure: `/`, `/about`, `/admin`, `/not-found`.
 
@@ -427,7 +427,7 @@ After the auth and rate-limiting phase, requests reach the registered endpoints:
 
 When `SectionCollection.razor` or `ContentItem.razor` render, they also validate section/collection existence via `SectionCache` in `OnInitializedAsync` and redirect to `/not-found` for invalid combinations.
 
-**Explicit `MapGet` endpoints**: `/all/feed.xml`, `/{section}/feed.xml`, `/all/roundups/feed.xml` (RSS proxy to API), `/sitemap.xml` (sitemap proxy), `/version` (deployment probe), `/admin/logout` (`MapPost`).
+**Explicit `MapGet` endpoints**: `/all/feed.xml`, `/{section}/feed.xml`, `/{section}/roundups/feed.xml` (RSS proxy to API), `/sitemap.xml` (sitemap proxy), `/version` (deployment probe), `/admin/logout` (`MapPost`).
 
 **`MapControllers`** - the MicrosoftIdentity OIDC controller (`/MicrosoftIdentity/Account/SignIn`, `/SignOut`) registered via `AddMicrosoftIdentityUI`.
 

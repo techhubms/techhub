@@ -16,13 +16,13 @@ Returns all content from all sections, sorted by publication date (newest first)
 
 **Use Case**: Subscribe to all Tech Hub content in a single feed.
 
-### Roundups Feed
+### Section Roundups Feed
 
-**URL**: `/all/roundups/feed.xml`
+**URL**: `/{sectionName}/roundups/feed.xml`
 
-Returns only weekly content roundups, sorted by publication date (newest first), limited to 50 most recent items.
+Returns weekly roundups for a specific section, sorted by publication date (newest first), limited to 50 most recent items.
 
-**Use Case**: Subscribe to weekly curated content summaries.
+**Use Case**: Subscribe to weekly curated summaries for one section.
 
 ### Section Feeds
 
@@ -141,10 +141,10 @@ The Blazor Web application provides proxy endpoints that serve RSS feeds from th
 Get RSS feed for all content across all sections.
 **Discovery Link**: Available on Home page
 
-### GET /all/roundups/feed.xml
+### GET /{sectionName}/roundups/feed.xml
 
-Get RSS feed specifically for weekly roundups collection.
-**Discovery Link**: Roundups page or Footer
+Get RSS feed specifically for weekly roundups in a section (e.g. `/ai/roundups/feed.xml`).
+**Discovery Link**: Section roundup pages
 
 ### GET /{sectionName}/feed.xml
 

@@ -39,12 +39,13 @@ internal sealed class RoundupNarrativeEnhancer
     /// </summary>
     public async Task<string> EnhanceAsync(
         string step3Content,
+        string sectionName,
         DateOnly weekStart,
         string writingGuidelines,
         LoggingProgress lp,
         CancellationToken ct)
     {
-        var previousRoundupContent = await _roundupRepo.GetPreviousRoundupContentAsync(weekStart, ct);
+        var previousRoundupContent = await _roundupRepo.GetPreviousRoundupContentAsync(sectionName, weekStart, ct);
 
         if (string.IsNullOrWhiteSpace(previousRoundupContent))
         {
@@ -55,45 +56,24 @@ internal sealed class RoundupNarrativeEnhancer
         var systemMessage = _systemPrompt.Value
             .Replace("{WritingStyleGuidelines}", writingGuidelines, StringComparison.Ordinal);
 
-        var sectionContents = RoundupAiHelper.ParseSections(step3Content);
-        var responses = new List<string>();
+        // Resolve display name (e.g. "ai" → "AI") for labelling the AI prompt.
+        var displayName = _settings.Content.Sections.TryGetValue(sectionName, out var sectionConfig)
+            ? sectionConfig.Title
+            : sectionName;
 
-        foreach (var (sectionSlug, sectionConfig) in _settings.Content.Sections
-            .OrderBy(s => s.Value.Order))
-        {
-            if (sectionSlug.Equals("all", StringComparison.OrdinalIgnoreCase))
-            {
-                continue;
-            }
+        lp.Report($"Processing ongoing narrative for section {displayName}");
 
-            var displayName = sectionConfig.Title;
+        // Both contents are already scoped to the correct section:
+        // - step3Content was generated for this section only
+        // - previousRoundupContent was fetched with GetPreviousRoundupContentAsync(sectionName, ...)
+        var userMessage =
+            $"PREVIOUS WEEK'S {displayName} SECTION:\n{previousRoundupContent}\n\n---\n\n" +
+            $"CURRENT WEEK'S {displayName} SECTION CONTENT TO ENHANCE:\n{step3Content}";
 
-            if (!sectionContents.TryGetValue(displayName, out var currentSection))
-            {
-                continue;
-            }
+        var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 2 - " + displayName, ct);
 
-            var previousSection = RoundupAiHelper.ExtractSectionFromContent(previousRoundupContent, displayName);
+        await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds), ct);
 
-            if (string.IsNullOrWhiteSpace(previousSection))
-            {
-                lp.Report($"No previous section for {displayName}, using current");
-                responses.Add(currentSection);
-                continue;
-            }
-
-            lp.Report($"Processing ongoing narrative for section {displayName}");
-
-            var userMessage =
-                $"PREVIOUS WEEK'S {displayName} SECTION:\n{previousSection}\n\n---\n\n" +
-                $"CURRENT WEEK'S {displayName} SECTION CONTENT TO ENHANCE:\n{currentSection}";
-
-            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 2 - " + displayName, ct);
-            responses.Add(response ?? currentSection);
-
-            await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds), ct);
-        }
-
-        return string.Join("\n\n", responses);
+        return response ?? step3Content;
     }
 }
