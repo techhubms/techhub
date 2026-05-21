@@ -654,19 +654,29 @@ else {
     Write-Ok "Application Insights: retrieved connection string"
 }
 
-# Read GitHub registry token from Key Vault (needed for Container Apps to pull from ghcr.io)
+# Resolve GitHub registry token for Container Apps image pulls.
+# Preferred source is Key Vault secret; fallback supports first-run bootstrap before that secret exists.
 Write-Detail "Reading GitHub registry token from Key Vault..."
 $ghcrToken = az keyvault secret show `
     --vault-name $prodKeyVaultName `
     --name 'techhub-github-registry-token' `
     --query value -o tsv 2>$null
+$ghcrTokenSource = 'Key Vault'
 
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($ghcrToken)) {
-    Write-Fail "Could not read 'techhub-github-registry-token' from Key Vault '$prodKeyVaultName'"
-    Write-Detail "Store the GitHub PAT (read:packages scope) in Key Vault before deploying PR previews."
-    exit 1
+    if (-not [string]::IsNullOrWhiteSpace($env:GHCR_PAT)) {
+        $ghcrToken = $env:GHCR_PAT
+        $ghcrTokenSource = 'GHCR_PAT environment variable'
+        Write-Warn "Key Vault secret 'techhub-github-registry-token' not available; using GHCR_PAT fallback for this deploy."
+    }
+    else {
+        Write-Fail "Could not resolve GitHub registry token for ghcr.io image pulls."
+        Write-Detail "Preferred: set Key Vault secret 'techhub-github-registry-token' in '$prodKeyVaultName'."
+        Write-Detail "Bootstrap fallback: set environment variable GHCR_PAT (read:packages scope)."
+        exit 1
+    }
 }
-Write-Ok "GitHub registry token retrieved from Key Vault"
+Write-Ok "GitHub registry token resolved from $ghcrTokenSource"
 
 # Build a passwordless PostgreSQL connection string.
 # The username is the managed identity display name as registered in the Entra admin.
