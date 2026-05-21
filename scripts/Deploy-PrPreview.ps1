@@ -34,7 +34,7 @@
 
 .PARAMETER GithubRegistryAuthUsername
     GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account
-    that owns the 'techhub-github-registry-token' PAT stored in Key Vault. Defaults to GithubRegistryUsername.
+    that owns the GHCR_PAT secret configured in GitHub. Defaults to GithubRegistryUsername.
 
 .EXAMPLE
     ./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action deploy -Tag "pr-42-20250101120000"
@@ -74,8 +74,6 @@ Set-StrictMode -Version Latest
 $prodRG = 'rg-techhub-prod'
 $prodEnvName = 'cae-techhub-prod'
 $prodIdentityName = 'id-techhub-prod'
-$prodKeyVaultName = 'kv-techhub-prod'
-$ghcrTokenSecretName = 'techhub-github-registry-token'
 
 # Production server (source for PITR database clone)
 $prodPostgresServer = 'psql-techhub-prod'
@@ -131,41 +129,6 @@ function Write-Fail {
 function Write-Detail {
     param([string]$Message)
     Write-Host "   $Message" -ForegroundColor Gray
-}
-
-function Set-KeyVaultSecretFromValue {
-    param(
-        [Parameter(Mandatory = $true)][string]$VaultName,
-        [Parameter(Mandatory = $true)][string]$SecretName,
-        [Parameter(Mandatory = $true)][string]$Value,
-        [Parameter(Mandatory = $false)][ref]$FailureDetail
-    )
-
-    $tmpFile = New-TemporaryFile
-    try {
-        [System.IO.File]::WriteAllText($tmpFile.FullName, $Value)
-        $setOutput = az keyvault secret set `
-            --vault-name $VaultName `
-            --name $SecretName `
-            --file $tmpFile.FullName `
-            --output none 2>&1
-        if ($LASTEXITCODE -eq 0) {
-            return $true
-        }
-
-        if ($null -ne $FailureDetail) {
-            $FailureDetail.Value = $setOutput
-        }
-        return $false
-    }
-    finally {
-        try {
-            Remove-Item $tmpFile.FullName -Force -ErrorAction Stop
-        }
-        catch {
-            Write-Warn "Temporary secret file cleanup failed: $($tmpFile.FullName) ($($_.Exception.Message))"
-        }
-    }
 }
 
 function Get-ContainerAppExists {
@@ -680,40 +643,11 @@ Write-Ok "Container Apps Environment: $envId"
 $appInsightsConnString = ""
 Write-Ok "Application Insights export disabled for PR preview environments"
 
-# Resolve GitHub registry token for Container Apps image pulls.
-# Preferred source is Key Vault secret; fallback supports first-run bootstrap before that secret exists.
-Write-Detail "Reading GitHub registry token from Key Vault..."
-$ghcrToken = az keyvault secret show `
-    --vault-name $prodKeyVaultName `
-    --name $ghcrTokenSecretName `
-    --query value -o tsv 2>$null
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($ghcrToken)) {
-    $allowGhcrPatFallback = -not [string]::IsNullOrWhiteSpace($env:ALLOW_GHCR_PAT_FALLBACK) -and
-        $env:ALLOW_GHCR_PAT_FALLBACK.Trim().ToLowerInvariant() -eq 'true'
-    if ($allowGhcrPatFallback -and -not [string]::IsNullOrWhiteSpace($env:GHCR_PAT)) {
-        $ghcrToken = $env:GHCR_PAT
-        Write-Warn "Key Vault secret '$ghcrTokenSecretName' not available; using GHCR_PAT fallback for this deploy."
-        $kvSecretSyncError = $null
-        if (Set-KeyVaultSecretFromValue `
-            -VaultName $prodKeyVaultName `
-            -SecretName $ghcrTokenSecretName `
-            -Value $ghcrToken `
-            -FailureDetail ([ref]$kvSecretSyncError)) {
-            Write-Ok "Key Vault secret '$ghcrTokenSecretName' updated from GHCR_PAT fallback"
-        }
-        else {
-            Write-Warn "Could not update Key Vault secret '$ghcrTokenSecretName' from GHCR_PAT fallback; next deploy may still require fallback."
-            if (-not [string]::IsNullOrWhiteSpace($kvSecretSyncError)) {
-                Write-Detail "$kvSecretSyncError"
-            }
-        }
-    }
-    else {
-        Write-Fail "Could not resolve GitHub registry token for ghcr.io image pulls."
-        Write-Detail "Preferred: set Key Vault secret '$ghcrTokenSecretName' in '$prodKeyVaultName'."
-        Write-Detail "Bootstrap fallback: set ALLOW_GHCR_PAT_FALLBACK=true and GHCR_PAT (read:packages scope)."
-        exit 1
-    }
+# Resolve GitHub registry token for Container Apps image pulls from GitHub Actions secret.
+$ghcrToken = $env:GHCR_PAT
+if ([string]::IsNullOrWhiteSpace($ghcrToken)) {
+    Write-Fail "GHCR_PAT is not set. Configure a GitHub secret with read:packages scope."
+    exit 1
 }
 Write-Ok "GitHub registry token resolved"
 

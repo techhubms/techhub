@@ -594,7 +594,6 @@ jobs:
         shell: pwsh
         env:
           ADMIN_IP_ADDRESSES: ${{ secrets.ADMIN_IP_ADDRESSES }}
-          ALLOW_GHCR_PAT_FALLBACK: ${{ vars.ALLOW_GHCR_PAT_FALLBACK }}
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
         run: |
           ./scripts/Deploy-PrPreview.ps1 `
