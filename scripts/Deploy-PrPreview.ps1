@@ -34,7 +34,8 @@
 
 .PARAMETER GithubRegistryAuthUsername
     GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account
-    that owns the GHCR_PAT secret configured in GitHub. Defaults to GithubRegistryUsername.
+    that owns the GHCR_PAT secret configured in GitHub. Defaults to the value of
+    GithubRegistryUsername.
 
 .EXAMPLE
     ./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action deploy -Tag "pr-42-20250101120000"
