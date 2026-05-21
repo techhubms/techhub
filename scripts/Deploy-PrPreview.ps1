@@ -132,6 +132,28 @@ function Write-Detail {
     Write-Host "   $Message" -ForegroundColor Gray
 }
 
+function Set-KeyVaultSecretFromValue {
+    param(
+        [Parameter(Mandatory = $true)][string]$VaultName,
+        [Parameter(Mandatory = $true)][string]$SecretName,
+        [Parameter(Mandatory = $true)][string]$Value
+    )
+
+    $tmpFile = [System.IO.Path]::GetTempFileName()
+    try {
+        [System.IO.File]::WriteAllText($tmpFile, $Value)
+        az keyvault secret set `
+            --vault-name $VaultName `
+            --name $SecretName `
+            --file $tmpFile `
+            --output none
+        return $LASTEXITCODE -eq 0
+    }
+    finally {
+        Remove-Item $tmpFile -Force -ErrorAction SilentlyContinue
+    }
+}
+
 function Get-ContainerAppExists {
     param([string]$Name, [string]$ResourceGroup)
     $result = az containerapp list --resource-group $ResourceGroup --query "[?name=='$Name'].name | [0]" -o tsv 2>$null
@@ -667,6 +689,12 @@ if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($ghcrToken)) {
     if ($allowGhcrPatFallback -and -not [string]::IsNullOrWhiteSpace($env:GHCR_PAT)) {
         $ghcrToken = $env:GHCR_PAT
         Write-Warn "Key Vault secret 'techhub-github-registry-token' not available; using GHCR_PAT fallback for this deploy."
+        if (Set-KeyVaultSecretFromValue -VaultName $prodKeyVaultName -SecretName 'techhub-github-registry-token' -Value $ghcrToken) {
+            Write-Ok "Key Vault secret 'techhub-github-registry-token' updated from GHCR_PAT fallback"
+        }
+        else {
+            Write-Warn "Could not update Key Vault secret 'techhub-github-registry-token' from GHCR_PAT fallback"
+        }
     }
     else {
         Write-Fail "Could not resolve GitHub registry token for ghcr.io image pulls."
