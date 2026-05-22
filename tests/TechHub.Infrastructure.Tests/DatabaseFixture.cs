@@ -6,7 +6,6 @@ using TechHub.Core.Logging;
 using TechHub.Infrastructure.Data;
 using TechHub.TestUtilities;
 using Testcontainers.PostgreSql;
-using Xunit;
 
 namespace TechHub.Infrastructure.Tests;
 

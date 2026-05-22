@@ -1,7 +1,6 @@
 using System.Net;
 using System.Xml.Linq;
 using FluentAssertions;
-using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Endpoints;
 
@@ -200,5 +199,4 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
             item.Element("description")?.Value.Should().NotBeNull();
         });
     }
-
 }

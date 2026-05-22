@@ -1,7 +1,6 @@
 using System.Net;
 using System.Xml.Linq;
 using FluentAssertions;
-using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Endpoints;
 

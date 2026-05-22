@@ -116,14 +116,13 @@ Write-Host "===============================================================" -Fo
 
 Write-Step "Validating prerequisites"
 
-# Check Azure CLI login
-$account = az account show -o json 2>&1
-if ($LASTEXITCODE -ne 0) {
-    Write-Fail "Not logged in to Azure CLI. Run 'az login' first."
+# Check Azure PowerShell login
+$context = Get-AzContext -ErrorAction SilentlyContinue
+if (-not $context) {
+    Write-Fail "Not logged in to Azure PowerShell. Run 'Connect-AzAccount' first."
     exit 1
 }
-$accountInfo = $account | ConvertFrom-Json
-Write-Ok "Azure CLI authenticated (subscription: $($accountInfo.name))"
+Write-Ok "Azure PowerShell authenticated (subscription: $($context.Subscription.Name))"
 
 # Check template files exist
 if (-not (Test-Path $templateFile)) {
@@ -206,12 +205,14 @@ Write-Step "Image tag: $ImageTag"
 if ($Mode -in @('validate', 'whatif', 'deploy')) {
     Write-Step "Validating Bicep template"
 
-    az deployment sub validate `
-        --location $Location `
-        --template-file $templateFile `
-        --parameters $paramsFile
+    $validationErrors = Test-AzDeployment `
+        -Location $Location `
+        -TemplateFile $templateFile `
+        -TemplateParameterFile $paramsFile `
+        -SkipTemplateParameterPrompt
 
-    if ($LASTEXITCODE -ne 0) {
+    if ($validationErrors) {
+        $validationErrors | ForEach-Object { Write-Fail $_.Message }
         Write-Fail "Template validation failed"
         exit 1
     }
@@ -222,13 +223,15 @@ if ($Mode -in @('validate', 'whatif', 'deploy')) {
 if ($Mode -eq 'whatif') {
     Write-Step "Running What-If analysis"
 
-    az deployment sub what-if `
-        --location $Location `
-        --template-file $templateFile `
-        --parameters $paramsFile
-
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "What-If analysis failed"
+    try {
+        New-AzDeployment `
+            -Location $Location `
+            -TemplateFile $templateFile `
+            -TemplateParameterFile $paramsFile `
+            -SkipTemplateParameterPrompt `
+            -WhatIf
+    } catch {
+        Write-Fail "What-If analysis failed: $_"
         exit 1
     }
     Write-Ok "What-If analysis completed"
@@ -240,16 +243,23 @@ if ($Mode -eq 'deploy') {
     # Container Apps are skipped (deployApps=false) so the Key Vault exists before we write secrets.
     Write-Step "Phase 1: Deploying base infrastructure"
 
-    az deployment sub create `
-        --name "$deploymentName-infra" `
-        --location $Location `
-        --template-file $templateFile `
-        --parameters $paramsFile `
-        --parameters deployApps=false
-
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Phase 1 infrastructure deployment failed"
+    # New-AzDeployment -Verbose streams one line per resource as it completes, giving
+    # continuous progress output instead of the silent wait from az deployment sub create.
+    $savedVerbose = $VerbosePreference
+    $VerbosePreference = 'Continue'
+    try {
+        New-AzDeployment `
+            -Name "$deploymentName-infra" `
+            -Location $Location `
+            -TemplateFile $templateFile `
+            -TemplateParameterFile $paramsFile `
+            -TemplateParameterObject @{ deployApps = $false } `
+            -SkipTemplateParameterPrompt
+    } catch {
+        Write-Fail "Phase 1 infrastructure deployment failed: $_"
         exit 1
+    } finally {
+        $VerbosePreference = $savedVerbose
     }
     Write-Ok "Base infrastructure deployed successfully"
 
@@ -273,15 +283,20 @@ if ($Mode -eq 'deploy') {
     # Phase 2: Container Apps — registry token + app secrets are now in the Key Vault.
     Write-Step "Phase 2: Deploying Container Apps"
 
-    az deployment sub create `
-        --name "$deploymentName-apps" `
-        --location $Location `
-        --template-file $templateFile `
-        --parameters $paramsFile
-
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Phase 2 Container Apps deployment failed"
+    $savedVerbose = $VerbosePreference
+    $VerbosePreference = 'Continue'
+    try {
+        New-AzDeployment `
+            -Name "$deploymentName-apps" `
+            -Location $Location `
+            -TemplateFile $templateFile `
+            -TemplateParameterFile $paramsFile `
+            -SkipTemplateParameterPrompt
+    } catch {
+        Write-Fail "Phase 2 Container Apps deployment failed: $_"
         exit 1
+    } finally {
+        $VerbosePreference = $savedVerbose
     }
     Write-Ok "Container Apps deployed successfully"
 }

@@ -8,17 +8,26 @@ endpoint.
 ## Topology
 
 ```text
-Admin IP (firewall allowlisted)
+Internet
     │
-    ▼
+    ├── Web frontend (ca-techhub-web-prod) — public ingress (external: true)
+    │       HTTPS on tech.hub.ms, tech.xebia.ms (wildcard TLS from kv-techhub-prod)
+    │
+    └── Admin IP (allowlisted for Key Vault + PostgreSQL)
+
 Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
-    └── snet-container-apps (10.2.0.0/23) — Container Apps Environment (prod + PR previews)
+    └── snet-container-apps (10.2.0.0/23) — Container Apps Environment (internal: false)
+         │
+         ├── ca-techhub-web-prod   [external: true]  ← reachable from internet
+         │
+         ├── ca-techhub-api-prod   [external: false] ← internal only, NOT reachable from internet
+         │       (Web frontend calls API over the internal Container Apps environment network)
          │
          ├── Key Vault service endpoint (Microsoft.KeyVault)
          │       → Container Apps reach kv-techhub-prod over Microsoft backbone
          │
          ├── PostgreSQL firewall rule (10.2.0.0–10.2.1.255)
-         │       → Container Apps reach psql-techhub-prod over public internet
+         │       → Container Apps reach psql-techhub-prod over public internet (source IP in subnet)
          │
          └── AI Foundry — open public access, Entra token auth (Cognitive Services OpenAI User RBAC)
 ```
@@ -32,7 +41,24 @@ Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
 There is a single subnet: `snet-container-apps` (`10.2.0.0/23`), delegated to
 `Microsoft.App/environments`. No private endpoints or hub-spoke peering.
 
-## IP Firewall Rules
+## Container Apps Ingress
+
+The Container Apps Environment (`cae-techhub-prod`) is deployed with `internal: false`, meaning
+it has a public IP. However, each Container App controls its own ingress independently.
+
+| App | Ingress | Reachable from internet | Notes |
+|-----|---------|------------------------|-------|
+| `ca-techhub-web-prod` | `external: true` | **Yes** | Custom domains (`tech.hub.ms`, `tech.xebia.ms`); wildcard TLS from Key Vault |
+| `ca-techhub-api-prod` | `external: false` | **No** | Internal only; the Web frontend calls the API over the internal Container Apps environment network |
+
+The API backend is intentionally not publicly accessible. No path to the API exists from the
+internet — not via the custom domains, not via the default Container Apps FQDN. The Web Blazor
+frontend calls the API exclusively over the internal environment network (server-side rendering
+and SSR API calls stay within the Container Apps environment).
+
+CORS policy is configured on the API app and restricts allowed origins to the configured
+`primaryHosts` (i.e. `tech.hub.ms`, `tech.xebia.ms`), so even if the API were made external,
+cross-origin browser requests from unexpected origins would be blocked.
 
 Admin access to Azure resources is controlled via per-resource IP firewall rules using the
 `ADMIN_IP_ADDRESSES` environment variable (supports multiple comma-separated IPs).

@@ -10,7 +10,6 @@ using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Data;
 using TechHub.TestUtilities;
 using Testcontainers.PostgreSql;
-using Xunit;
 
 namespace TechHub.Api.Tests;
 
