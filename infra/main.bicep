@@ -16,9 +16,6 @@ param appInsightsName string = 'appi-techhub-prod'
 @description('Key Vault name (stores wildcard certs, app secrets, and GitHub registry token)')
 param keyVaultName string = 'kv-techhub-prod'
 
-@description('Azure AD object IDs for Key Vault administrators')
-param keyVaultAdminObjectIds array = []
-
 @description('Container Apps Environment name')
 param containerAppsEnvName string = 'cae-techhub-prod'
 
@@ -182,7 +179,6 @@ module keyVault './modules/keyVault.bicep' = {
   params: {
     location: location
     vaultName: keyVaultName
-    adminObjectIds: keyVaultAdminObjectIds
     logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
     adminIpAddresses: adminIpList
     containerAppsSubnetId: network.outputs.containerAppsSubnetId
@@ -300,19 +296,6 @@ module openAiUserRoleProd './modules/openAiUserRole.bicep' = {
   }
   dependsOn: [openai]
 }
-
-// Grant Cognitive Services OpenAI User to each developer in keyVaultAdminObjectIds so they
-// can call the AI Foundry API from their local machine after 'az login'.
-module openAiUserRoleDevs './modules/openAiUserRole.bicep' = [for (objectId, i) in keyVaultAdminObjectIds: {
-  scope: resourceGroup
-  name: 'openAiUserRole-developer-${i}'
-  params: {
-    openAiName: openAiName
-    principalId: objectId
-    principalType: 'User'
-  }
-  dependsOn: [openai]
-}]
 
 // API Container App
 module apiApp './modules/api.bicep' = if (deployApps) {
