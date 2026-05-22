@@ -201,6 +201,33 @@ module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
   dependsOn: [keyVault]
 }
 
+// Shared managed identity for PR preview Container Apps.
+// All PR environments reuse this single identity — no per-PR identity lifecycle needed.
+// infrastructure.bicep owns this resource; Deploy-PrPreview.ps1 only reads it.
+var prIdentityName = 'id-techhub-pr'
+
+module prIdentity './modules/identity.bicep' = {
+  scope: resourceGroup
+  name: 'pr-identity-${deploymentSuffix}'
+  params: {
+    location: location
+    identityName: prIdentityName
+    tags: union(commonTags, { env: 'pr' })
+  }
+}
+
+// Grant Key Vault Secrets User to the shared PR identity so PR Container Apps can
+// resolve the ghcr-token KV secret reference for image pull authentication.
+module kvSecretsUserRolePr './modules/kvSecretsUserRole.bicep' = {
+  scope: resourceGroup
+  name: 'kvSecretsUserRole-pr-${deploymentSuffix}'
+  params: {
+    keyVaultName: keyVaultName
+    principalId: prIdentity.outputs.identityPrincipalId
+  }
+  dependsOn: [keyVault]
+}
+
 // PostgreSQL Flexible Server
 module postgres './modules/postgres.bicep' = {
   scope: resourceGroup

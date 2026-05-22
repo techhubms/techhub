@@ -35,6 +35,18 @@ param aiCategorizationEndpoint string = ''
 @description('Azure AI Foundry deployment name')
 param aiCategorizationDeploymentName string = ''
 
+@description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
+param aspNetCoreEnvironment string = 'Production'
+
+@description('When false, disables scheduled background jobs (ContentProcessor, RoundupGenerator). Set to false for PR preview environments.')
+param enableBackgroundJobs bool = true
+
+@description('Minimum replica count. Use 0 to enable scale-to-zero for PR preview environments.')
+param minReplicas int = 1
+
+@description('Maximum replica count.')
+param maxReplicas int = 3
+
 @description('Tags applied to the Container App')
 param tags object = {}
 
@@ -46,10 +58,20 @@ var corsEnvVars = [for (fqdn, i) in webFqdns: {
   name: 'Cors__AllowedOrigins__${i}'
   value: 'https://${fqdn}'
 }]
+var backgroundJobEnvVars = enableBackgroundJobs ? [] : [
+  {
+    name: 'ContentProcessor__Enabled'
+    value: 'false'
+  }
+  {
+    name: 'RoundupGenerator__Enabled'
+    value: 'false'
+  }
+]
 var staticEnvVars = [
   {
     name: 'ASPNETCORE_ENVIRONMENT'
-    value: 'Production'
+    value: aspNetCoreEnvironment
   }
   {
     name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
@@ -152,7 +174,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
             cpu: json('0.25')
             memory: '0.5Gi'
           }
-          env: concat(staticEnvVars, corsEnvVars)
+          env: concat(staticEnvVars, corsEnvVars, backgroundJobEnvVars)
           probes: [
             {
               type: 'startup'
@@ -192,8 +214,8 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
         }
       ]
       scale: {
-        minReplicas: 1
-        maxReplicas: 3
+        minReplicas: minReplicas
+        maxReplicas: maxReplicas
         cooldownPeriod: 300
         pollingInterval: 30
         rules: [

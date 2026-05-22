@@ -144,7 +144,7 @@ The production AI Foundry account (`oai-techhub-prod`) is publicly accessible.
 
 **Local development**: After `az login`, `DefaultAzureCredential` uses your user token
 automatically. Ensure your Azure AD object ID is listed in `keyVaultAdminObjectIds` in
-`infra/parameters/prod.bicepparam` and redeploy infrastructure to get the RBAC assignment.
+`infra/parameters/prod-infrastructure.bicepparam` and redeploy infrastructure to get the RBAC assignment.
 Find your object ID with: `az ad signed-in-user show --query id -o tsv`
 
 ## Deploy Order

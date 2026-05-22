@@ -145,7 +145,7 @@ No ACR — images on ghcr.io (private packages, registry credentials in Key Vaul
 
 ---
 
-### `infra/parameters/prod.bicepparam`
+### `infra/parameters/prod-infrastructure.bicepparam`
 
 **Remove:**
 

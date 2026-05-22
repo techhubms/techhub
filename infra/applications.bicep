@@ -56,6 +56,12 @@ param githubRegistryUsername string = 'techhubms'
 @description('GitHub username of the PAT owner for ghcr.io authentication')
 param githubRegistryAuthUsername string = githubRegistryUsername
 
+@description('Application Insights connection string override. Default (@existing) reads the value from the existing Azure resource. Set to empty string to disable telemetry (e.g. for PR preview environments).')
+param appInsightsConnectionString string = '@existing'
+
+@description('Google Analytics Measurement ID (e.g. G-XXXXXXXXXX). Set to empty string to disable GA telemetry for PR preview environments.')
+param googleAnalyticsMeasurementId string = 'G-95LLB67KJV'
+
 @description('Common tags applied to all resources managed by this template')
 param commonTags object = {
   owner: 'techhub-maintainer'
@@ -132,6 +138,9 @@ var keyVaultUri = 'https://${keyVaultName}${environment().suffixes.keyvaultDns}/
 var aadClientSecretSecretName = 'techhub-prod-aad-client-secret'
 var dbConnectionString = 'Host=${postgresServer.properties.fullyQualifiedDomainName};Database=${postgresDatabase.name};Username=${prodIdentityName};SSL Mode=Require'
 var allCustomDomains = [for entry in items(wildcardCertNames): '*.${entry.key}']
+// Resolve App Insights connection string: use override when provided, otherwise read from existing resource.
+// Pass '@existing' (default) to use the Azure resource value; pass '' to disable telemetry for PR environments.
+var effectiveAppInsightsConnStr = appInsightsConnectionString == '@existing' ? appInsights.properties.ConnectionString : appInsightsConnectionString
 
 // ============================================================================
 // Wildcard certificates
@@ -174,7 +183,7 @@ module apiApp './modules/api.bicep' = {
     githubRegistryAuthUsername: githubRegistryAuthUsername
     identityId: managedIdentity.id
     imageTag: apiImageTag
-    appInsightsConnectionString: appInsights.properties.ConnectionString
+    appInsightsConnectionString: effectiveAppInsightsConnStr
     keyVaultUri: keyVaultUri
     dbConnectionString: dbConnectionString
     webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnvResource.properties.defaultDomain}']
@@ -199,7 +208,7 @@ module webApp './modules/web.bicep' = {
     identityId: managedIdentity.id
     imageTag: webImageTag
     apiBaseUrl: apiApp.outputs.fqdn
-    appInsightsConnectionString: appInsights.properties.ConnectionString
+    appInsightsConnectionString: effectiveAppInsightsConnStr
     customDomains: allCustomDomains
     primaryHosts: primaryHosts
     wildcardCertificateIds: wildcardCertIds
@@ -207,6 +216,7 @@ module webApp './modules/web.bicep' = {
     aadClientSecretSecretName: aadClientSecretSecretName
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
+    googleAnalyticsMeasurementId: googleAnalyticsMeasurementId
     tags: prodTags
   }
 }

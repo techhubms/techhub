@@ -141,24 +141,27 @@ PowerShell automation scripts for development and maintenance tasks:
   - Deploys to Azure Container Apps
   - Default 'dev' tag for local builds, git SHA in CI
   - Smoke tests and automatic production rollback
-- **`data/`** - Data files for scripts
-
 See [scripts/AGENTS.md](../scripts/AGENTS.md) for scripting guidelines and patterns.
 
 ### Infrastructure (`infra/`)
 
 Azure infrastructure as code (Bicep templates) for Azure Container Apps deployment:
 
-- **`main.bicep`** - Main infrastructure orchestration template
+- **`infrastructure.bicep`** - Phase 1: base infrastructure (identity, networking, KV, postgres, Container Apps Environment)
+- **`applications.bicep`** - Phase 2: production Container App deployments (API + Web)
+- **`pr-applications.bicep`** - PR preview Container App deployments (scale-to-zero, telemetry disabled)
 - **`parameters/`** - Environment-specific parameter files:
-  - `staging.bicepparam` - Staging environment
-  - `prod.bicepparam` - Production environment
+  - `prod-infrastructure.bicepparam` - Production infrastructure parameters
+  - `prod-applications.bicepparam` - Production application deployment parameters
 - **`modules/`** - Reusable Bicep modules:
   - `containerApps.bicep` - Container Apps Environment
   - `api.bicep` - TechHub API Container App
   - `web.bicep` - TechHub Web Container App
   - `monitoring.bicep` - Application Insights + Log Analytics
-  - `registry.bicep` - Azure Container Registry
+  - `postgres.bicep` - PostgreSQL Flexible Server
+  - `keyVault.bicep` - Key Vault
+  - `identity.bicep` - User-assigned managed identity
+  - `network.bicep` - VNet and subnets
 
 Deployment is managed via PowerShell scripts (`scripts/Deploy-Infrastructure.ps1` and `scripts/Deploy-Application.ps1`) which are called by GitHub Actions workflows. Scripts can also be run locally for testing.
 
