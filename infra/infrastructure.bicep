@@ -1,8 +1,10 @@
 targetScope = 'subscription'
 
-// Infrastructure as Code for Tech Hub Azure resources.
-// Single production environment in rg-techhub-prod.
-// PR previews run in the same Container Apps Environment as production.
+// Phase 1: Base infrastructure for Tech Hub production.
+// Deploys networking, identity, Key Vault, PostgreSQL, OpenAI, monitoring,
+// Container Apps Environment, and governance resources.
+// Run this before applications.bicep — it creates the Key Vault that must
+// exist before application secrets can be synced.
 
 @description('Azure region for resources')
 param location string = 'swedencentral'
@@ -19,24 +21,6 @@ param keyVaultName string = 'kv-techhub-prod'
 @description('Container Apps Environment name')
 param containerAppsEnvName string = 'cae-techhub-prod'
 
-@description('API Container App name')
-param apiAppName string = 'ca-techhub-api-prod'
-
-@description('Web Container App name')
-param webAppName string = 'ca-techhub-web-prod'
-
-@description('API Docker image tag (yyyyMMddHHmmss format)')
-param apiImageTag string = ''
-
-@description('Web Docker image tag (yyyyMMddHHmmss format)')
-param webImageTag string = ''
-
-@description('Azure AD tenant ID for admin dashboard authentication (public Entra identifier)')
-param azureAdTenantId string = ''
-
-@description('Azure AD client ID for admin dashboard authentication (public Entra identifier)')
-param azureAdClientId string = ''
-
 @description('VNet name')
 param vnetName string = 'vnet-techhub-prod'
 
@@ -52,11 +36,8 @@ param containerAppsSubnetStartIp string = '10.2.0.0'
 @description('Last IP of the Container Apps subnet (for PostgreSQL firewall rule — Bicep cannot parse CIDR)')
 param containerAppsSubnetEndIp string = '10.2.1.255'
 
-@description('Primary host names for the web app (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Used for app configuration (CORS, canonical URLs). Leave empty to use default Container Apps FQDN.')
+@description('Primary host names for the web app. Used for Application Insights availability tests.')
 param primaryHosts string[] = []
-
-@description('Wildcard certificate names in Key Vault, keyed by base domain (e.g. { "hub.ms": "wildcard-hub-ms" }). Wildcard custom domain bindings (*.hub.ms) are derived from these keys.')
-param wildcardCertNames object = {}
 
 @description('PostgreSQL server name')
 param postgresServerName string = 'psql-techhub-prod'
@@ -74,7 +55,7 @@ param openAiName string = 'oai-techhub-prod'
 @description('Azure AI Foundry model capacity (TPM in thousands)')
 param openAiModelCapacity int = 100
 
-@description('Comma-separated admin IP addresses for PostgreSQL and Key Vault firewall rules (e.g. "1.2.3.4,5.6.7.8")')
+@description('Comma-separated admin IP addresses for PostgreSQL and Key Vault firewall rules')
 @minLength(7)
 param adminIpAddresses string
 
@@ -93,20 +74,11 @@ param allowedLocations string[] = ['swedencentral', 'westeurope', 'global']
 @description('Tag name required on resource groups (enforced by Azure Policy)')
 param requiredResourceGroupTagName string = 'owner'
 
-@description('DNS zone name for ACME challenge delegation (used by certbot-dns-azure for wildcard cert renewal)')
+@description('DNS zone name for ACME challenge delegation')
 param acmeDnsZoneName string = 'acme.hub.ms'
 
 @description('Domains that need ACME-delegated wildcard certificate renewal')
 param acmeDelegatedDomains string[] = ['hub.ms', 'xebia.ms']
-
-@description('When false, skips Container App deployments (wildcardCerts, apiApp, webApp). Set to false on first deploy to create the Key Vault before syncing secrets, then run again with the default true to deploy Container Apps.')
-param deployApps bool = true
-
-@description('GitHub organization username for ghcr.io registry (used as the image namespace: ghcr.io/{githubRegistryUsername}/...)')
-param githubRegistryUsername string = 'techhubms'
-
-@description('GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account that created techhub-github-registry-token in Key Vault. Defaults to githubRegistryUsername.')
-param githubRegistryAuthUsername string = githubRegistryUsername
 
 @description('Common tags applied to all resources managed by this template')
 param commonTags object = {
@@ -115,14 +87,13 @@ param commonTags object = {
   managedBy: 'bicep'
 }
 
-@description('UTC timestamp used to make nested deployment names unique per run. utcNow() can only be used as a parameter default value. Prevents DeploymentActive conflicts when a long-running deployment (e.g. wildcard cert provisioning) is still in progress when CI re-runs.')
+@description('UTC timestamp used to make nested deployment names unique per run.')
 param deploymentTimestamp string = utcNow()
 
 // Tags for all prod resources
 var prodTags = union(commonTags, { env: 'prod' })
 
-// Short unique hash derived from the run timestamp. Appended to all nested module `name` values
-// so that each CD run creates fresh deployment records and never collides with an in-progress one.
+// Short unique hash per run — appended to all nested module `name` values to prevent DeploymentActive conflicts
 var deploymentSuffix = uniqueString(deploymentTimestamp)
 
 // Parse comma-separated admin IPs into a trimmed, filtered array
@@ -139,7 +110,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
 // and the passwordless connection string so they always stay in sync.
 var prodIdentityName = 'id-techhub-prod'
 
-// User-Assigned Managed Identity (used by Container Apps to access Key Vault)
+// User-Assigned Managed Identity (used by Container Apps to access Key Vault and PostgreSQL)
 module identity './modules/identity.bicep' = {
   scope: resourceGroup
   name: 'identity-${deploymentSuffix}'
@@ -179,7 +150,7 @@ module monitoring './modules/monitoring.bicep' = {
   }
 }
 
-// Key Vault (absorbed from shared RG — stores wildcard certs, app secrets, GitHub registry token)
+// Key Vault (stores wildcard certs, app secrets, GitHub registry token)
 module keyVault './modules/keyVault.bicep' = {
   scope: resourceGroup
   name: 'keyVault-${deploymentSuffix}'
@@ -193,7 +164,7 @@ module keyVault './modules/keyVault.bicep' = {
   }
 }
 
-// Azure AI Foundry (OpenAI) — Container Apps access over public internet (no private endpoint)
+// Azure AI Foundry (OpenAI)
 module openai './modules/openai.bicep' = {
   scope: resourceGroup
   name: 'openai-${deploymentSuffix}'
@@ -219,43 +190,7 @@ module containerAppsEnv './modules/containerApps.bicep' = {
   }
 }
 
-// Wildcard certificates from Key Vault → Container Apps Environment
-// The managed identity needs Key Vault Secrets User on the prod KV.
-module wildcardCerts './modules/wildcardCertificates.bicep' = if (!empty(wildcardCertNames) && deployApps) {
-  scope: resourceGroup
-  name: 'wildcardCerts-${deploymentSuffix}'
-  params: {
-    location: location
-    containerAppsEnvironmentName: containerAppsEnvName
-    keyVaultName: keyVaultName
-    wildcardCertNames: wildcardCertNames
-    identityId: identity.outputs.identityId
-    identityPrincipalId: identity.outputs.identityPrincipalId
-  }
-  dependsOn: [containerAppsEnv, keyVault]
-}
-
-// Build a map of base domain → certificate resource ID for the web module.
-// BCP318 warnings are safe: the !empty() && deployApps guard ensures outputs are only accessed when the module deployed.
-#disable-next-line BCP318
-var _certDomains = (!empty(wildcardCertNames) && deployApps) ? wildcardCerts.outputs.certDomains : []
-#disable-next-line BCP318
-var _certIds = (!empty(wildcardCertNames) && deployApps) ? wildcardCerts.outputs.certIds : []
-var wildcardCertIds = toObject(_certDomains, domain => domain, domain => _certIds[indexOf(_certDomains, domain)])
-
-// Wildcard custom domain bindings (*.hub.ms, *.xebia.ms) derived from wildcardCertNames keys.
-var allCustomDomains = [for entry in items(wildcardCertNames): '*.${entry.key}']
-
-// Key Vault URI used for Container App KV-reference secrets.
-var keyVaultUri = 'https://${keyVaultName}${environment().suffixes.keyvaultDns}/'
-var aadClientSecretSecretName = 'techhub-prod-aad-client-secret'
-
-// Passwordless PostgreSQL connection string — the app authenticates with a managed identity token
-// (Database:UseEntraAuth=true) so no password is required. The FQDN is resolved from the server output.
-var dbConnectionString = 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${prodIdentityName};SSL Mode=Require'
-
-// Grant Key Vault Secrets User to the managed identity on the prod Key Vault.
-// Required for Container App KV-reference secrets (AAD client secret, ghcr.io token).
+// Grant Key Vault Secrets User to the managed identity on the prod Key Vault
 module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
   scope: resourceGroup
   name: 'kvSecretsUserRole-${deploymentSuffix}'
@@ -266,7 +201,7 @@ module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
   dependsOn: [keyVault]
 }
 
-// PostgreSQL Flexible Server (no private endpoint — firewall allows admin IPs + Container Apps subnet)
+// PostgreSQL Flexible Server
 module postgres './modules/postgres.bicep' = {
   scope: resourceGroup
   name: 'postgres-${deploymentSuffix}'
@@ -282,17 +217,13 @@ module postgres './modules/postgres.bicep' = {
     adminIpAddresses: adminIpList
     containerAppsSubnetStartIp: containerAppsSubnetStartIp
     containerAppsSubnetEndIp: containerAppsSubnetEndIp
-    // Register the prod managed identity as the Entra admin so the Container App can
-    // authenticate with a managed identity token instead of a password.
     entraAdminObjectId: identity.outputs.identityPrincipalId
     entraAdminName: prodIdentityName
     tags: prodTags
   }
 }
 
-// Grant Cognitive Services OpenAI User to the prod managed identity on the AI Foundry account.
-// This allows the Container App to call the AI Foundry API using a managed identity token
-// instead of an API key.
+// Grant Cognitive Services OpenAI User to the prod managed identity
 module openAiUserRoleProd './modules/openAiUserRole.bicep' = {
   scope: resourceGroup
   name: 'openAiUserRole-${deploymentSuffix}'
@@ -304,60 +235,7 @@ module openAiUserRoleProd './modules/openAiUserRole.bicep' = {
   dependsOn: [openai]
 }
 
-// API Container App
-module apiApp './modules/api.bicep' = if (deployApps) {
-  scope: resourceGroup
-  name: 'api-${deploymentSuffix}'
-  params: {
-    location: location
-    containerAppName: apiAppName
-    containerAppsEnvironmentId: containerAppsEnv.outputs.environmentId
-    githubRegistryUsername: githubRegistryUsername
-    githubRegistryAuthUsername: githubRegistryAuthUsername
-    identityId: identity.outputs.identityId
-    imageTag: apiImageTag
-    appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
-    keyVaultUri: keyVaultUri
-    dbConnectionString: dbConnectionString
-    webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
-    azureAdTenantId: azureAdTenantId
-    azureAdClientId: azureAdClientId
-    aiCategorizationEndpoint: openai.outputs.openAiEndpoint
-    aiCategorizationDeploymentName: openai.outputs.deploymentName
-    tags: prodTags
-  }
-  dependsOn: [kvSecretsUserRole]
-}
-
-// Web Container App
-module webApp './modules/web.bicep' = if (deployApps) {
-  scope: resourceGroup
-  name: 'web-${deploymentSuffix}'
-  params: {
-    location: location
-    containerAppName: webAppName
-    containerAppsEnvironmentId: containerAppsEnv.outputs.environmentId
-    githubRegistryUsername: githubRegistryUsername
-    githubRegistryAuthUsername: githubRegistryAuthUsername
-    identityId: identity.outputs.identityId
-    imageTag: webImageTag
-    // BCP318: apiApp is conditional on deployApps; webApp shares the same condition so apiApp is always non-null here.
-    #disable-next-line BCP318
-    apiBaseUrl: apiApp.outputs.fqdn
-    appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
-    customDomains: allCustomDomains
-    primaryHosts: primaryHosts
-    wildcardCertificateIds: wildcardCertIds
-    keyVaultUri: keyVaultUri
-    aadClientSecretSecretName: aadClientSecretSecretName
-    azureAdTenantId: azureAdTenantId
-    azureAdClientId: azureAdClientId
-    tags: prodTags
-  }
-  dependsOn: [kvSecretsUserRole]
-}
-
-// Shared action group — email notifications for operational alerts (absorbed from shared RG)
+// Shared action group — email notifications for operational alerts
 module actionGroup './modules/actionGroup.bicep' = {
   scope: resourceGroup
   name: 'actionGroup-${deploymentSuffix}'
@@ -367,7 +245,7 @@ module actionGroup './modules/actionGroup.bicep' = {
   }
 }
 
-// Operational alerts — use the action group created above
+// Operational alerts
 module alerts './modules/alerts.bicep' = {
   scope: resourceGroup
   name: 'alerts-${deploymentSuffix}'
@@ -383,7 +261,7 @@ module alerts './modules/alerts.bicep' = {
   }
 }
 
-// Public DNS zone for ACME challenge delegation (absorbed from shared RG)
+// Public DNS zone for ACME challenge delegation
 module acmeDnsZone './modules/acmeDnsZone.bicep' = {
   scope: resourceGroup
   name: 'acmeDnsZone-${deploymentSuffix}'
@@ -393,7 +271,7 @@ module acmeDnsZone './modules/acmeDnsZone.bicep' = {
   }
 }
 
-// Subscription cost budget aligned to billing cycle, with 80 / 100 / 120% email alerts.
+// Subscription cost budget
 module budget './modules/budget.bicep' = {
   name: 'budget-${deploymentSuffix}'
   params: {
@@ -403,7 +281,7 @@ module budget './modules/budget.bicep' = {
   }
 }
 
-// Subscription-level Azure Policy assignments (governance baseline).
+// Subscription-level Azure Policy assignments
 module policyAssignments './modules/policy.bicep' = {
   name: 'policy-${deploymentSuffix}'
   params: {
@@ -414,10 +292,6 @@ module policyAssignments './modules/policy.bicep' = {
 
 // Outputs
 output resourceGroupName string = resourceGroup.name
-#disable-next-line BCP318
-output apiUrl string = deployApps ? 'https://${apiApp.outputs.fqdn}' : ''
-#disable-next-line BCP318
-output webUrl string = deployApps ? 'https://${webApp.outputs.fqdn}' : ''
 output appInsightsName string = monitoring.outputs.appInsightsName
 output keyVaultName string = keyVaultName
 output openAiEndpoint string = openai.outputs.openAiEndpoint
@@ -427,4 +301,3 @@ output postgresServerFqdn string = postgres.outputs.serverFqdn
 output postgresDatabaseName string = postgres.outputs.databaseName
 output acmeDnsZoneName string = acmeDnsZone.outputs.zoneName
 output acmeDnsNameServers string[] = acmeDnsZone.outputs.nameServers
-output actionGroupId string = actionGroup.outputs.actionGroupId

@@ -59,9 +59,10 @@ $workspaceRoot = if (Test-Path (Join-Path $PSScriptRoot "../infra")) {
     $PSScriptRoot
 }
 
-$templateFile      = Join-Path $workspaceRoot "infra/main.bicep"
-$paramsFile        = Join-Path $workspaceRoot "infra/parameters/prod.bicepparam"
-$paramsFilePhase1  = Join-Path $workspaceRoot "infra/parameters/prod-phase1.bicepparam"
+$infraTemplateFile = Join-Path $workspaceRoot "infra/infrastructure.bicep"
+$infraParamsFile   = Join-Path $workspaceRoot "infra/parameters/prod-infrastructure.bicepparam"
+$appsTemplateFile  = Join-Path $workspaceRoot "infra/applications.bicep"
+$appsParamsFile    = Join-Path $workspaceRoot "infra/parameters/prod-applications.bicepparam"
 $resourceGroup     = "rg-techhub-prod"
 
 # ============================================================================
@@ -104,8 +105,8 @@ Write-Host "  TechHub Infrastructure Deployment" -ForegroundColor White
 Write-Host "  Resource Group : $resourceGroup" -ForegroundColor Gray
 Write-Host "  Mode        : $Mode" -ForegroundColor Gray
 Write-Host "  Location    : $Location" -ForegroundColor Gray
-Write-Host "  Template    : infra/main.bicep" -ForegroundColor Gray
-Write-Host "  Parameters  : infra/parameters/prod.bicepparam" -ForegroundColor Gray
+  Write-Host "  Phase 1     : infra/infrastructure.bicep" -ForegroundColor Gray
+  Write-Host "  Phase 2     : infra/applications.bicep" -ForegroundColor Gray
 if ($ImageTag) {
     Write-Host "  Image Tag   : $ImageTag" -ForegroundColor Gray
 }
@@ -126,13 +127,11 @@ if (-not $context) {
 Write-Ok "Azure PowerShell authenticated (subscription: $($context.Subscription.Name))"
 
 # Check template files exist
-if (-not (Test-Path $templateFile)) {
-    Write-Fail "Template file not found: $templateFile"
-    exit 1
-}
-if (-not (Test-Path $paramsFile)) {
-    Write-Fail "Parameters file not found: $paramsFile"
-    exit 1
+foreach ($f in @($infraTemplateFile, $infraParamsFile, $appsTemplateFile, $appsParamsFile)) {
+    if (-not (Test-Path $f)) {
+        Write-Fail "File not found: $f"
+        exit 1
+    }
 }
 Write-Ok "Template files found"
 
@@ -204,56 +203,63 @@ Write-Step "Image tag: $ImageTag"
 
 # Step 1: Validate
 if ($Mode -in @('validate', 'whatif', 'deploy')) {
-    Write-Step "Validating Bicep template"
+    Write-Step "Validating Bicep templates"
 
-    $validationErrors = Test-AzDeployment `
-        -Location $Location `
-        -TemplateFile $templateFile `
-        -TemplateParameterFile $paramsFile `
-        -SkipTemplateParameterPrompt
-
-    if ($validationErrors) {
-        $validationErrors | ForEach-Object { Write-Fail $_.Message }
-        Write-Fail "Template validation failed"
-        exit 1
+    foreach ($pair in @(
+        @{ Template = $infraTemplateFile; Params = $infraParamsFile; Label = 'infrastructure' }
+        @{ Template = $appsTemplateFile;  Params = $appsParamsFile;  Label = 'applications'  }
+    )) {
+        $validationErrors = Test-AzDeployment `
+            -Location $Location `
+            -TemplateFile $pair.Template `
+            -TemplateParameterFile $pair.Params `
+            -SkipTemplateParameterPrompt
+        if ($validationErrors) {
+            $validationErrors | ForEach-Object { Write-Fail $_.Message }
+            Write-Fail "$($pair.Label) template validation failed"
+            exit 1
+        }
+        Write-Ok "$($pair.Label) template validation passed"
     }
-    Write-Ok "Template validation passed"
 }
 
 # Step 2: What-If (skipped in deploy mode — adds ~1-2 min overhead with no benefit in CI)
 if ($Mode -eq 'whatif') {
-    Write-Step "Running What-If analysis"
-
-    try {
-        New-AzDeployment `
-            -Location $Location `
-            -TemplateFile $templateFile `
-            -TemplateParameterFile $paramsFile `
-            -SkipTemplateParameterPrompt `
-            -WhatIf
-    } catch {
-        Write-Fail "What-If analysis failed: $_"
-        exit 1
+    foreach ($pair in @(
+        @{ Template = $infraTemplateFile; Params = $infraParamsFile; Label = 'infrastructure' }
+        @{ Template = $appsTemplateFile;  Params = $appsParamsFile;  Label = 'applications'  }
+    )) {
+        Write-Step "Running What-If: $($pair.Label)"
+        try {
+            New-AzDeployment `
+                -Location $Location `
+                -TemplateFile $pair.Template `
+                -TemplateParameterFile $pair.Params `
+                -SkipTemplateParameterPrompt `
+                -WhatIf
+        } catch {
+            Write-Fail "What-If failed for $($pair.Label): $_"
+            exit 1
+        }
+        Write-Ok "$($pair.Label) What-If completed"
     }
-    Write-Ok "What-If analysis completed"
 }
 
 # Step 3: Deploy (two-phase to handle fresh environments where the Key Vault does not yet exist)
 if ($Mode -eq 'deploy') {
-    # Phase 1: Base infrastructure — VNet, Key Vault, PostgreSQL, identity, Container Apps Environment.
-    # Container Apps are skipped (deployApps=false) so the Key Vault exists before we write secrets.
+    # Phase 1: infrastructure.bicep — VNet, Key Vault, PostgreSQL, identity, Container Apps Environment.
+    # Deploys before secrets are synced so the Key Vault exists when Sync-KeyVaultSecrets.ps1 runs.
     Write-Step "Phase 1: Deploying base infrastructure"
 
-    # New-AzDeployment -Verbose streams one line per resource as it completes, giving
-    # continuous progress output instead of the silent wait from az deployment sub create.
+    # New-AzDeployment -Verbose streams one line per resource as it completes.
     $savedVerbose = $VerbosePreference
     $VerbosePreference = 'Continue'
     try {
         New-AzDeployment `
             -Name "$deploymentName-infra" `
             -Location $Location `
-            -TemplateFile $templateFile `
-            -TemplateParameterFile $paramsFilePhase1 `
+            -TemplateFile $infraTemplateFile `
+            -TemplateParameterFile $infraParamsFile `
             -SkipTemplateParameterPrompt
     } catch {
         Write-Fail "Phase 1 infrastructure deployment failed: $_"
@@ -280,7 +286,7 @@ if ($Mode -eq 'deploy') {
     }
     Write-Ok "Secrets synced"
 
-    # Phase 2: Container Apps — registry token + app secrets are now in the Key Vault.
+    # Phase 2: applications.bicep — Container Apps with secrets already in Key Vault.
     Write-Step "Phase 2: Deploying Container Apps"
 
     $savedVerbose = $VerbosePreference
@@ -289,8 +295,8 @@ if ($Mode -eq 'deploy') {
         New-AzDeployment `
             -Name "$deploymentName-apps" `
             -Location $Location `
-            -TemplateFile $templateFile `
-            -TemplateParameterFile $paramsFile `
+            -TemplateFile $appsTemplateFile `
+            -TemplateParameterFile $appsParamsFile `
             -SkipTemplateParameterPrompt
     } catch {
         Write-Fail "Phase 2 Container Apps deployment failed: $_"
