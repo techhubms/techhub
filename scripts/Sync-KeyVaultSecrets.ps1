@@ -25,7 +25,7 @@
 
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
-        2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_REGISTRY_TOKEN,
+        2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_PAT,
            WILDCARD_CERT_HUB_MS, WILDCARD_CERT_XEBIA_MS
         3. ./scripts/Sync-KeyVaultSecrets.ps1
 

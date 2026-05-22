@@ -261,9 +261,11 @@ if ($Mode -eq 'deploy') {
     # the app uses managed identity token auth (Entra) for both PostgreSQL and AI Foundry.
     Write-Step "Syncing application secrets to Key Vault"
     $syncScript = Join-Path $PSScriptRoot 'Sync-KeyVaultSecrets.ps1'
-    & $syncScript
-    if ($LASTEXITCODE -ne 0) {
+    try {
+        & $syncScript
+    } catch {
         Write-Fail "Secret sync failed — aborting deployment to prevent a crash-looping revision."
+        Write-Fail $_
         exit 1
     }
     Write-Ok "Secrets synced"
@@ -292,6 +294,10 @@ Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  Infrastructure $($Mode.ToUpper()) Complete" -ForegroundColor Green
 Write-Host "  Resource Group  : $resourceGroup" -ForegroundColor Gray
-Write-Host "  Deployment   : $deploymentName" -ForegroundColor Gray
+if ($Mode -eq 'deploy') {
+    Write-Host "  Deployments     : $deploymentName-infra, $deploymentName-apps" -ForegroundColor Gray
+} else {
+    Write-Host "  Deployment      : $deploymentName" -ForegroundColor Gray
+}
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host ""
