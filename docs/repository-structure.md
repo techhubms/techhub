@@ -152,7 +152,8 @@ Azure infrastructure as code (Bicep templates) for Azure Container Apps deployme
 - **`main.bicep`** - Main infrastructure orchestration template
 - **`parameters/`** - Environment-specific parameter files:
   - `staging.bicepparam` - Staging environment
-  - `prod.bicepparam` - Production environment
+  - `prod-infrastructure.bicepparam` - Production infrastructure parameters
+  - `prod-applications.bicepparam` - Production application deployment parameters
 - **`modules/`** - Reusable Bicep modules:
   - `containerApps.bicep` - Container Apps Environment
   - `api.bicep` - TechHub API Container App

@@ -80,7 +80,7 @@ $prodIdentityName = 'id-techhub-prod'
 $prodPostgresServer = 'psql-techhub-prod'
 
 # Container Apps subnet range (used for PostgreSQL firewall rule).
-# These must match the containerAppsSubnetStartIp/EndIp values in infra/parameters/prod.bicepparam.
+# These must match the containerAppsSubnetStartIp/EndIp values in infra/parameters/prod-infrastructure.bicepparam.
 # Update both places if the Container Apps subnet CIDR ever changes.
 $containerAppsSubnetStartIp = '10.2.0.0'
 $containerAppsSubnetEndIp = '10.2.1.255'
