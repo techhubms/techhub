@@ -269,6 +269,33 @@ if ($Mode -eq 'deploy') {
     }
     Write-Ok "Base infrastructure deployed successfully"
 
+    # Clean up any stale PostgreSQL firewall rules left over from previous infrastructure iterations.
+    # Bicep uses incremental deployments — renaming a rule resource creates the new rule but leaves
+    # the old one as an orphan. The rules below were replaced by 'allow-nat-gateway' in PR #425.
+    Write-Step "Cleaning up stale PostgreSQL firewall rules"
+    $postgresServer = "psql-techhub-prod"
+    $staleRules = @("allow-container-apps-subnet", "allow-container-apps-static-ip")
+    foreach ($ruleName in $staleRules) {
+        try {
+            $rule = Get-AzPostgreSqlFlexibleServerFirewallRule `
+                -ResourceGroupName $resourceGroup `
+                -ServerName $postgresServer `
+                -Name $ruleName `
+                -ErrorAction SilentlyContinue
+            if ($rule) {
+                Remove-AzPostgreSqlFlexibleServerFirewallRule `
+                    -ResourceGroupName $resourceGroup `
+                    -ServerName $postgresServer `
+                    -Name $ruleName
+                Write-Ok "Deleted stale rule: $ruleName"
+            } else {
+                Write-Detail "Rule not present (already clean): $ruleName"
+            }
+        } catch {
+            Write-Warn "Could not check/remove rule '$ruleName': $_"
+        }
+    }
+
     # Sync secrets now that the Key Vault exists.
     # Container Apps reference secrets via keyVaultUrl; they are fetched when the
     # revision starts, so writing them before Phase 2 ensures they are available

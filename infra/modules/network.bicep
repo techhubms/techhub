@@ -16,6 +16,15 @@ param containerAppsSubnetPrefix string = '10.0.0.0/23'
 @description('Tags applied to networking resources')
 param tags object = {}
 
+@description('''
+Availability zones for the NAT Gateway and its public IP.
+  - ['1'] (default) — pin to a single zone; use when the existing resource was created zonal
+    (zones are immutable on public IPs — must match the existing resource to avoid deployment errors).
+  - [] — non-zonal / regional; works in regions without availability zone support.
+  Pass an explicit value to override the default for new or zone-redundant deployments.
+''')
+param natGatewayZones array = ['1']
+
 // NAT Gateway public IP — provides a stable, predictable outbound IP for Container Apps.
 // Without a NAT Gateway, Container Apps uses a large shared pool of ephemeral Azure
 // infrastructure SNAT IPs (~150+ IPs) that change unpredictably and cannot be allowlisted
@@ -28,7 +37,7 @@ resource natGatewayPublicIp 'Microsoft.Network/publicIPAddresses@2025-01-01' = {
     name: 'Standard'
     tier: 'Regional'
   }
-  zones: ['1']
+  zones: natGatewayZones
   properties: {
     publicIPAllocationMethod: 'Static'
     publicIPAddressVersion: 'IPv4'
@@ -43,7 +52,7 @@ resource natGateway 'Microsoft.Network/natGateways@2025-01-01' = {
   sku: {
     name: 'Standard'
   }
-  zones: ['1']
+  zones: natGatewayZones
   properties: {
     idleTimeoutInMinutes: 10
     publicIpAddresses: [
