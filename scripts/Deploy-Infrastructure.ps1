@@ -59,9 +59,10 @@ $workspaceRoot = if (Test-Path (Join-Path $PSScriptRoot "../infra")) {
     $PSScriptRoot
 }
 
-$templateFile = Join-Path $workspaceRoot "infra/main.bicep"
-$paramsFile   = Join-Path $workspaceRoot "infra/parameters/prod.bicepparam"
-$resourceGroup = "rg-techhub-prod"
+$templateFile      = Join-Path $workspaceRoot "infra/main.bicep"
+$paramsFile        = Join-Path $workspaceRoot "infra/parameters/prod.bicepparam"
+$paramsFilePhase1  = Join-Path $workspaceRoot "infra/parameters/prod-phase1.bicepparam"
+$resourceGroup     = "rg-techhub-prod"
 
 # ============================================================================
 # HELPERS
@@ -252,8 +253,7 @@ if ($Mode -eq 'deploy') {
             -Name "$deploymentName-infra" `
             -Location $Location `
             -TemplateFile $templateFile `
-            -TemplateParameterFile $paramsFile `
-            -TemplateParameterObject @{ deployApps = $false } `
+            -TemplateParameterFile $paramsFilePhase1 `
             -SkipTemplateParameterPrompt
     } catch {
         Write-Fail "Phase 1 infrastructure deployment failed: $_"
