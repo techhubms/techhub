@@ -1,10 +1,10 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Tears down all active PR preview environments in the staging resource group.
+    Tears down all active PR preview environments in the production resource group.
 
 .DESCRIPTION
-    Scans rg-techhub-staging for active PR preview environments by listing:
+    Scans rg-techhub-prod for active PR preview environments by listing:
     - Container Apps matching ca-techhub-api-pr-{N}
     - PostgreSQL Flexible Servers matching psql-techhub-pr-{N}
 
@@ -18,9 +18,6 @@
 .PARAMETER DryRun
     List discovered environments without deleting them.
 
-.PARAMETER RegistryName
-    Azure Container Registry name (without .azurecr.io). Defaults to 'crtechhubms'.
-
 .EXAMPLE
     ./scripts/Teardown-PrEnvironments.ps1
     Tear down all active PR environments.
@@ -31,15 +28,13 @@
 #>
 
 param(
-    [switch]$DryRun,
-
-    [string]$RegistryName = 'crtechhubms'
+    [switch]$DryRun
 )
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
-$stagingRG = 'rg-techhub-staging'
+$prodRG = 'rg-techhub-prod'
 
 $scriptDir = $PSScriptRoot
 $deployScript = Join-Path $scriptDir 'Deploy-PrPreview.ps1'
@@ -81,7 +76,7 @@ function Write-Detail {
 Write-Host ''
 Write-Host '===============================================================' -ForegroundColor DarkCyan
 Write-Host '  TechHub PR Environment Teardown' -ForegroundColor White
-Write-Host "  Resource Group : $stagingRG" -ForegroundColor Gray
+Write-Host "  Resource Group : $prodRG" -ForegroundColor Gray
 if ($DryRun) {
     Write-Host '  Mode           : DRY RUN (no changes)' -ForegroundColor Yellow
 }
@@ -108,13 +103,13 @@ Write-Ok "Azure CLI authenticated (subscription: $($accountInfo.name))"
 # DISCOVER
 # ============================================================================
 
-Write-Step "Scanning $stagingRG for active PR environments"
+Write-Step "Scanning $prodRG for active PR environments"
 
 $prNumbers = [System.Collections.Generic.SortedSet[int]]::new()
 
 # Discover from Container Apps (ca-techhub-api-pr-{N})
 $caApps = az containerapp list `
-    --resource-group $stagingRG `
+    --resource-group $prodRG `
     --query "[?starts_with(name, 'ca-techhub-api-pr-')].name" -o tsv 2>$null
 
 if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($caApps)) {
@@ -129,7 +124,7 @@ Write-Detail "Container Apps found  : $($prNumbers.Count) PR(s)"
 # Discover from PostgreSQL servers (psql-techhub-pr-{N})
 # Catches orphaned databases with no matching Container App
 $pgServers = az postgres flexible-server list `
-    --resource-group $stagingRG `
+    --resource-group $prodRG `
     --query "[?starts_with(name, 'psql-techhub-pr-')].name" -o tsv 2>$null
 
 if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($pgServers)) {
@@ -143,7 +138,7 @@ Write-Detail "After Postgres scan    : $($prNumbers.Count) unique PR(s)"
 
 if ($prNumbers.Count -eq 0) {
     Write-Host ''
-    Write-Ok "No active PR environments found in $stagingRG — nothing to do."
+    Write-Ok "No active PR environments found in $prodRG — nothing to do."
     exit 0
 }
 
@@ -165,7 +160,7 @@ $failures = [System.Collections.Generic.List[int]]::new()
 foreach ($prNum in $prNumbers) {
     Write-Host ''
     Write-Host "━━━ Tearing down PR #$prNum ━━━" -ForegroundColor Cyan
-    & $deployScript -PrNumber $prNum -Action teardown -RegistryName $RegistryName
+    & $deployScript -PrNumber $prNum -Action teardown
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to teardown PR #$prNum"
         $failures.Add($prNum)

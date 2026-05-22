@@ -37,11 +37,11 @@ jobs:
         id: discover
         shell: pwsh
         run: |
-          $stagingRG = 'rg-techhub-staging'
+          $prodRG = 'rg-techhub-prod'
           $prNumbers = [System.Collections.Generic.SortedSet[int]]::new()
 
           $caApps = az containerapp list `
-            --resource-group $stagingRG `
+            --resource-group $prodRG `
             --query "[?starts_with(name, 'ca-techhub-api-pr-')].name" -o tsv 2>$null
           if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($caApps)) {
             foreach ($app in ($caApps -split "`n")) {
@@ -51,7 +51,7 @@ jobs:
 
           # Also scan PostgreSQL servers — catches orphaned DBs with no matching Container App
           $pgServers = az postgres flexible-server list `
-            --resource-group $stagingRG `
+            --resource-group $prodRG `
             --query "[?starts_with(name, 'psql-techhub-pr-')].name" -o tsv 2>$null
           if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($pgServers)) {
             foreach ($server in ($pgServers -split "`n")) {
