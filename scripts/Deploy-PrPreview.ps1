@@ -420,9 +420,15 @@ Write-Step "Configuring PostgreSQL firewall rules for $prPostgresServer"
 $containerAppsStaticIp = az containerapp env show `
     --name $prodEnvName `
     --resource-group $prodRG `
-    --query properties.staticIp -o tsv 2>$null
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($containerAppsStaticIp)) {
-    Write-Fail "Could not retrieve Container Apps Environment static IP"
+    --query properties.staticIp -o tsv 2>&1
+if ($LASTEXITCODE -ne 0) {
+    $containerAppsStaticIpError = ($containerAppsStaticIp | Out-String).Trim()
+    Write-Fail "Could not retrieve Container Apps Environment static IP for env '$prodEnvName' in resource group '$prodRG'. Azure CLI error: $containerAppsStaticIpError"
+    exit 1
+}
+$containerAppsStaticIp = ($containerAppsStaticIp | Out-String).Trim()
+if ([string]::IsNullOrWhiteSpace($containerAppsStaticIp)) {
+    Write-Fail "Could not retrieve Container Apps Environment static IP for env '$prodEnvName' in resource group '$prodRG': the Azure CLI command returned an empty value."
     exit 1
 }
 Write-Ok "Container Apps static IP: $containerAppsStaticIp"
