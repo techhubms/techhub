@@ -11,6 +11,9 @@
 
     Secrets written:
         techhub-prod-aad-client-secret      — Entra client secret
+        techhub-github-registry-token       — GHCR PAT for pulling container images
+        wildcard-hub-ms                     — Wildcard TLS certificate for *.hub.ms
+        wildcard-xebia-ms                   — Wildcard TLS certificate for *.xebia.ms
 
     Secrets no longer written (replaced by managed identity / RBAC):
         techhub-prod-db-connection-string   — removed; app uses Entra token auth (Database:UseEntraAuth=true)
@@ -22,7 +25,8 @@
 
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
-        2. Set env vars: AZURE_AD_CLIENT_SECRET
+        2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_REGISTRY_TOKEN,
+           WILDCARD_CERT_HUB_MS, WILDCARD_CERT_XEBIA_MS
         3. ./scripts/Sync-KeyVaultSecrets.ps1
 
     Fail-fast behaviour: if a secret value is empty AND the secret does not yet
@@ -91,7 +95,10 @@ function Set-KvSecret {
 }
 
 # --- Collect values from env ---
-$aadClientSecret = $env:AZURE_AD_CLIENT_SECRET
+$aadClientSecret  = $env:AZURE_AD_CLIENT_SECRET
+$ghcrToken        = $env:GHCR_REGISTRY_TOKEN
+$wildcardHubMs    = $env:WILDCARD_CERT_HUB_MS
+$wildcardXebiaMs  = $env:WILDCARD_CERT_XEBIA_MS
 
 # --- Temporarily add this machine's IP to the Key Vault firewall ---
 # Key Vault is IP-restricted. GitHub Actions runners have dynamic IPs that are not in the
@@ -182,6 +189,9 @@ try {
     }
 
     Set-KvSecret -Name "techhub-prod-aad-client-secret" -Value $aadClientSecret -Description 'Entra client secret'
+    Set-KvSecret -Name "techhub-github-registry-token"  -Value $ghcrToken        -Description 'GitHub Container Registry PAT'
+    Set-KvSecret -Name "wildcard-hub-ms"                -Value $wildcardHubMs    -Description 'Wildcard TLS certificate (*.hub.ms)'
+    Set-KvSecret -Name "wildcard-xebia-ms"              -Value $wildcardXebiaMs  -Description 'Wildcard TLS certificate (*.xebia.ms)'
 
     Write-Host ""
     Write-Host "All secrets synchronised into '$($KeyVaultName)'." -ForegroundColor Green

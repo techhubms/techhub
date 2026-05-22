@@ -150,6 +150,24 @@ Describe "Sync-KeyVaultSecrets" {
             $content | Should -Match "aad-client-secret"
         }
 
+        It "Should write the GitHub Container Registry PAT" {
+            $content = Get-Content $scriptPath -Raw
+            $content | Should -Match "techhub-github-registry-token"
+            $content | Should -Match "GHCR_REGISTRY_TOKEN"
+        }
+
+        It "Should write the wildcard-hub-ms TLS certificate" {
+            $content = Get-Content $scriptPath -Raw
+            $content | Should -Match "wildcard-hub-ms"
+            $content | Should -Match "WILDCARD_CERT_HUB_MS"
+        }
+
+        It "Should write the wildcard-xebia-ms TLS certificate" {
+            $content = Get-Content $scriptPath -Raw
+            $content | Should -Match "wildcard-xebia-ms"
+            $content | Should -Match "WILDCARD_CERT_XEBIA_MS"
+        }
+
         It "Should use a temp file to write secret values (prevents exposure in process args)" {
             $content = Get-Content $scriptPath -Raw
             $content | Should -Match "GetTempFileName"
