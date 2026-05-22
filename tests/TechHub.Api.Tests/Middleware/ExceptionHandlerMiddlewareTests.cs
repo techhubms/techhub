@@ -1,6 +1,5 @@
 using System.Net;
 using FluentAssertions;
-using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Middleware;
 

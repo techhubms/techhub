@@ -9,7 +9,6 @@ using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
-using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Endpoints;
 
