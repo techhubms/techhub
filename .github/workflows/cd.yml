@@ -513,11 +513,39 @@ jobs:
             -Tag "${{ steps.tag.outputs.image-tag }}" `
             -SkipDeploy
 
-  # ────────────────────────────────────────────
-  # Deploy to Production (infra + app in one shot)
-  # Uses GitHub environment protection for approval
-  # Followed by E2E tests (without performance tests) to validate the deployment.
-  # ────────────────────────────────────────────
+      - name: Clean up old production images (keep last 2)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ORG="techhubms"
+
+          for PKG in techhub-api techhub-web; do
+            echo "Cleaning up old production images for ${PKG} (keeping last 2)..."
+
+            # List production versions: tagged, no pr- prefix, sorted newest-first, skip first 2
+            OLD_IDS=$(gh api "/orgs/${ORG}/packages/container/${PKG}/versions?per_page=100" \
+              --jq '[.[] | select(
+                  (.metadata.container.tags | length) > 0 and
+                  (any(.metadata.container.tags[]; startswith("pr-")) | not)
+                )] | sort_by(.created_at) | reverse | .[2:] | .[].id' \
+              2>/dev/null || true)
+
+            if [ -z "$OLD_IDS" ]; then
+              echo "  Nothing to clean up for ${PKG}"
+              continue
+            fi
+
+            while IFS= read -r VERSION_ID; do
+              echo "  Deleting old version ${VERSION_ID}..."
+              gh api --method DELETE \
+                "/orgs/${ORG}/packages/container/${PKG}/versions/${VERSION_ID}" \
+                --silent \
+              && echo "  [OK] Deleted ${VERSION_ID}" \
+              || echo "  [WARN] Failed to delete ${VERSION_ID}"
+            done <<< "$OLD_IDS"
+          done
+
+
 
   deploy-production:
     name: Deploy to Production

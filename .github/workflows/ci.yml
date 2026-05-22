@@ -560,19 +560,6 @@ jobs:
             -Tag "${{ steps.tag.outputs.image-tag }}" `
             -SkipDeploy
 
-      - name: Enforce private visibility on GHCR packages
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          for PKG in techhub-api techhub-web; do
-            echo "Setting ${PKG} to private..."
-            gh api --method PATCH \
-              "/orgs/techhubms/packages/container/${PKG}" \
-              -f "visibility=private" \
-              --silent \
-            && echo "  [OK] ${PKG} is private" \
-            || echo "  [WARN] Could not update visibility for ${PKG} — set it manually in GitHub Settings > Packages"
-          done
 
   pr-preview-deploy:
     name: Deploy PR Preview
