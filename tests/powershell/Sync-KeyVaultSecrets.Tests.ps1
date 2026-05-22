@@ -153,7 +153,7 @@ Describe "Sync-KeyVaultSecrets" {
         It "Should write the GitHub Container Registry PAT" {
             $content = Get-Content $scriptPath -Raw
             $content | Should -Match "techhub-github-registry-token"
-            $content | Should -Match "GHCR_REGISTRY_TOKEN"
+            $content | Should -Match "GHCR_PAT"
         }
 
         It "Should write the wildcard-hub-ms TLS certificate" {

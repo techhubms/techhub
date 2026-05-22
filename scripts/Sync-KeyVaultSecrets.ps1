@@ -96,7 +96,7 @@ function Set-KvSecret {
 
 # --- Collect values from env ---
 $aadClientSecret  = $env:AZURE_AD_CLIENT_SECRET
-$ghcrToken        = $env:GHCR_REGISTRY_TOKEN
+$ghcrToken        = $env:GHCR_PAT
 $wildcardHubMs    = $env:WILDCARD_CERT_HUB_MS
 $wildcardXebiaMs  = $env:WILDCARD_CERT_XEBIA_MS
 
