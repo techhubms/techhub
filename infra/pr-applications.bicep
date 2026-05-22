@@ -22,9 +22,6 @@ param containerAppsEnvName string = 'cae-techhub-prod'
 @description('Key Vault name (shared with production — holds the GitHub registry token).')
 param keyVaultName string = 'kv-techhub-prod'
 
-@description('Per-PR managed identity name (must already exist before this deployment).')
-param prIdentityName string
-
 @description('GitHub Container Registry organization/namespace for image names.')
 param githubRegistryUsername string = 'techhubms'
 
@@ -34,11 +31,14 @@ param githubRegistryAuthUsername string = githubRegistryUsername
 @description('UTC timestamp used to make nested deployment names unique per run.')
 param deploymentTimestamp string = utcNow()
 
-var deploymentSuffix = uniqueString(deploymentTimestamp)
+// Include prNumber so two PRs deployed in the same second get distinct nested deployment names.
+var deploymentSuffix = uniqueString(deploymentTimestamp, string(prNumber))
 
 var apiAppName = 'ca-techhub-api-pr-${prNumber}'
 var webAppName = 'ca-techhub-web-pr-${prNumber}'
 var keyVaultUri = 'https://${keyVaultName}${environment().suffixes.keyvaultDns}/'
+// Shared PR identity — created once by infrastructure.bicep, reused by all PR environments.
+var prIdentityName = 'id-techhub-pr'
 
 // ============================================================================
 // Existing resource references

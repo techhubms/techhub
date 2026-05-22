@@ -526,7 +526,7 @@ $deploymentOutput = az deployment group create `
         imageTag=$Tag `
         githubRegistryUsername=$GithubRegistryUsername `
         githubRegistryAuthUsername=$GithubRegistryAuthUsername `
-    --output json 2>&1
+    --output json
 
 if ($LASTEXITCODE -ne 0) {
     Write-Fail "Bicep deployment failed (exit code $LASTEXITCODE)"
@@ -534,7 +534,7 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
-$deploymentResult = $deploymentOutput | ConvertFrom-Json -ErrorAction SilentlyContinue
+$deploymentResult = $deploymentOutput | ConvertFrom-Json
 $webFqdn = $deploymentResult.properties.outputs.webFqdn.value
 
 if ([string]::IsNullOrWhiteSpace($webFqdn)) {
