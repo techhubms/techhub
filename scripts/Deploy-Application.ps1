@@ -125,6 +125,23 @@ function Write-Detail {
     Write-Host "   $Message" -ForegroundColor Gray
 }
 
+function Invoke-DockerPush {
+    param(
+        [string]$ImageRef,
+        [int]$MaxAttempts = 3,
+        [int]$RetryDelaySecs = 15
+    )
+    for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
+        docker push $ImageRef
+        if ($LASTEXITCODE -eq 0) { return $true }
+        if ($attempt -lt $MaxAttempts) {
+            Write-Warn "Push failed (attempt $attempt/$MaxAttempts) — retrying in ${RetryDelaySecs}s (known GHCR transient issue)"
+            Start-Sleep -Seconds $RetryDelaySecs
+        }
+    }
+    return $false
+}
+
 # ============================================================================
 # BANNER
 # ============================================================================
@@ -238,18 +255,16 @@ if (-not $SkipPush) {
 
     # Push API
     Write-Detail "Pushing API image..."
-    docker push "$($apiImage):$Tag"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to push API image (tag: $Tag)"
+    if (-not (Invoke-DockerPush "$($apiImage):$Tag")) {
+        Write-Fail "Failed to push API image after 3 attempts (tag: $Tag)"
         exit 1
     }
     Write-Ok "API image pushed"
 
     # Push Web
     Write-Detail "Pushing Web image..."
-    docker push "$($webImage):$Tag"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to push Web image (tag: $Tag)"
+    if (-not (Invoke-DockerPush "$($webImage):$Tag")) {
+        Write-Fail "Failed to push Web image after 3 attempts (tag: $Tag)"
         exit 1
     }
     Write-Ok "Web image pushed"

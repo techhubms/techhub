@@ -560,6 +560,20 @@ jobs:
             -Tag "${{ steps.tag.outputs.image-tag }}" `
             -SkipDeploy
 
+      - name: Enforce private visibility on GHCR packages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for PKG in techhub-api techhub-web; do
+            echo "Setting ${PKG} to private..."
+            gh api --method PATCH \
+              "/orgs/techhubms/packages/container/${PKG}" \
+              -f "visibility=private" \
+              --silent \
+            && echo "  [OK] ${PKG} is private" \
+            || echo "  [WARN] Could not update visibility for ${PKG} — set it manually in GitHub Settings > Packages"
+          done
+
   pr-preview-deploy:
     name: Deploy PR Preview
     runs-on: ubuntu-latest
@@ -748,3 +762,32 @@ jobs:
           else
             gh pr comment "$PR_NUMBER" --body-file /tmp/pr-preview-removed.md
           fi
+
+      - name: Delete PR preview images from GHCR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_NUMBER="${{ github.event.pull_request.number }}"
+          ORG="techhubms"
+
+          for PKG in techhub-api techhub-web; do
+            echo "Deleting images tagged pr-${PR_NUMBER}-* from ${PKG}..."
+
+            VERSION_IDS=$(gh api "/orgs/${ORG}/packages/container/${PKG}/versions?per_page=100" \
+              --jq "[.[] | select(any(.metadata.container.tags[]; startswith(\"pr-${PR_NUMBER}-\"))) | .id] | .[]" \
+              2>/dev/null || true)
+
+            if [ -z "$VERSION_IDS" ]; then
+              echo "  No images found for PR #${PR_NUMBER} in ${PKG}"
+              continue
+            fi
+
+            while IFS= read -r VERSION_ID; do
+              echo "  Deleting version ${VERSION_ID}..."
+              gh api --method DELETE \
+                "/orgs/${ORG}/packages/container/${PKG}/versions/${VERSION_ID}" \
+                --silent \
+              && echo "  [OK] Deleted ${VERSION_ID}" \
+              || echo "  [WARN] Failed to delete ${VERSION_ID}"
+            done <<< "$VERSION_IDS"
+          done
