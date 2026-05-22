@@ -42,11 +42,18 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
               }
             }
           ]
-          // Key Vault service endpoint — allows Container Apps to reach Key Vault
-          // over the Microsoft backbone without a private endpoint.
+          // Service endpoints — allows Container Apps to reach Azure services
+          // over the Microsoft backbone without private endpoints.
+          // Microsoft.KeyVault: Key Vault traffic uses private backbone.
+          // Microsoft.DBforPostgreSQL: PostgreSQL traffic uses private backbone so the
+          //   PostgreSQL firewall rule (subnet IP range 10.2.0.0–10.2.1.255) matches
+          //   the source IP instead of the NAT gateway's public IP.
           serviceEndpoints: [
             {
               service: 'Microsoft.KeyVault'
+            }
+            {
+              service: 'Microsoft.DBforPostgreSQL'
             }
           ]
         }
