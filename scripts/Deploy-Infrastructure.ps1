@@ -180,22 +180,6 @@ if (-not $env:AZURE_AD_CLIENT_SECRET) {
     [Environment]::SetEnvironmentVariable('AZURE_AD_CLIENT_SECRET', "")
 }
 
-# Sync application secrets into Key Vault before deployment.
-# Container Apps reference secrets via keyVaultUrl; they must exist before
-# the new revision starts.
-# Note: Database connection string and AI API key are no longer stored as KV secrets —
-# the app uses managed identity token auth (Entra) for both PostgreSQL and AI Foundry.
-if ($Mode -eq 'deploy') {
-    Write-Step "Syncing application secrets to Key Vault"
-    $syncScript = Join-Path $PSScriptRoot 'Sync-KeyVaultSecrets.ps1'
-    & $syncScript
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Secret sync failed — aborting deployment to prevent a crash-looping revision."
-        exit 1
-    }
-    Write-Ok "Secrets synced"
-}
-
 # ============================================================================
 # DEPLOYMENT
 # ============================================================================
@@ -250,21 +234,56 @@ if ($Mode -eq 'whatif') {
     Write-Ok "What-If analysis completed"
 }
 
-# Step 3: Deploy
+# Step 3: Deploy (two-phase to handle fresh environments where the Key Vault does not yet exist)
 if ($Mode -eq 'deploy') {
-    Write-Step "Deploying infrastructure ($deploymentName)"
+    # Phase 1: Base infrastructure — VNet, Key Vault, PostgreSQL, identity, Container Apps Environment.
+    # Container Apps are skipped (deployApps=false) so the Key Vault exists before we write secrets.
+    Write-Step "Phase 1: Deploying base infrastructure"
 
     az deployment sub create `
-        --name $deploymentName `
+        --name "$deploymentName-infra" `
+        --location $Location `
+        --template-file $templateFile `
+        --parameters $paramsFile `
+        --parameters deployApps=false
+
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Phase 1 infrastructure deployment failed"
+        exit 1
+    }
+    Write-Ok "Base infrastructure deployed successfully"
+
+    # Sync secrets now that the Key Vault exists.
+    # Container Apps reference secrets via keyVaultUrl; they are fetched when the
+    # revision starts, so writing them before Phase 2 ensures they are available
+    # as soon as the revision begins pulling the image.
+    # Note: Database connection string and AI API key are no longer stored as KV secrets —
+    # the app uses managed identity token auth (Entra) for both PostgreSQL and AI Foundry.
+    Write-Step "Syncing application secrets to Key Vault"
+    $syncScript = Join-Path $PSScriptRoot 'Sync-KeyVaultSecrets.ps1'
+    try {
+        & $syncScript
+    } catch {
+        Write-Fail "Secret sync failed — aborting deployment to prevent a crash-looping revision."
+        Write-Fail $_
+        exit 1
+    }
+    Write-Ok "Secrets synced"
+
+    # Phase 2: Container Apps — registry token + app secrets are now in the Key Vault.
+    Write-Step "Phase 2: Deploying Container Apps"
+
+    az deployment sub create `
+        --name "$deploymentName-apps" `
         --location $Location `
         --template-file $templateFile `
         --parameters $paramsFile
 
     if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Deployment failed"
+        Write-Fail "Phase 2 Container Apps deployment failed"
         exit 1
     }
-    Write-Ok "Infrastructure deployed successfully"
+    Write-Ok "Container Apps deployed successfully"
 }
 
 # ============================================================================
@@ -275,6 +294,10 @@ Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  Infrastructure $($Mode.ToUpper()) Complete" -ForegroundColor Green
 Write-Host "  Resource Group  : $resourceGroup" -ForegroundColor Gray
-Write-Host "  Deployment   : $deploymentName" -ForegroundColor Gray
+if ($Mode -eq 'deploy') {
+    Write-Host "  Deployments     : $deploymentName-infra, $deploymentName-apps" -ForegroundColor Gray
+} else {
+    Write-Host "  Deployment      : $deploymentName" -ForegroundColor Gray
+}
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host ""

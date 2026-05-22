@@ -7,10 +7,6 @@ param webImageTag = readEnvironmentVariable('WEB_IMAGE_TAG')
 param resourceGroupName = 'rg-techhub-prod'
 param appInsightsName = 'appi-techhub-prod'
 param keyVaultName = 'kv-techhub-prod'
-// Add Azure AD object IDs here for Key Vault admin access AND AI Foundry RBAC (Cognitive Services OpenAI User).
-// Developers listed here can call AI Foundry from their local machine after 'az login'.
-// Find yours with: az ad signed-in-user show --query id -o tsv
-param keyVaultAdminObjectIds = []
 param containerAppsEnvName = 'cae-techhub-prod'
 param apiAppName = 'ca-techhub-api-prod'
 param webAppName = 'ca-techhub-web-prod'
