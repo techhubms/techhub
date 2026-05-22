@@ -102,6 +102,9 @@ param acmeDnsZoneName string = 'acme.hub.ms'
 @description('Domains that need ACME-delegated wildcard certificate renewal')
 param acmeDelegatedDomains string[] = ['hub.ms', 'xebia.ms']
 
+@description('When false, skips Container App deployments (wildcardCerts, apiApp, webApp). Set to false on first deploy to create the Key Vault before syncing secrets, then run again with the default true to deploy Container Apps.')
+param deployApps bool = true
+
 @description('GitHub organization username for ghcr.io registry (used as the image namespace: ghcr.io/{githubRegistryUsername}/...)')
 param githubRegistryUsername string = 'techhubms'
 
@@ -215,7 +218,7 @@ module containerAppsEnv './modules/containerApps.bicep' = {
 
 // Wildcard certificates from Key Vault → Container Apps Environment
 // The managed identity needs Key Vault Secrets User on the prod KV.
-module wildcardCerts './modules/wildcardCertificates.bicep' = if (!empty(wildcardCertNames)) {
+module wildcardCerts './modules/wildcardCertificates.bicep' = if (!empty(wildcardCertNames) && deployApps) {
   scope: resourceGroup
   name: 'wildcardCerts-prod'
   params: {
@@ -230,11 +233,11 @@ module wildcardCerts './modules/wildcardCertificates.bicep' = if (!empty(wildcar
 }
 
 // Build a map of base domain → certificate resource ID for the web module.
-// BCP318 warnings are safe: the !empty() guard ensures outputs are only accessed when the module deployed.
+// BCP318 warnings are safe: the !empty() && deployApps guard ensures outputs are only accessed when the module deployed.
 #disable-next-line BCP318
-var _certDomains = !empty(wildcardCertNames) ? wildcardCerts.outputs.certDomains : []
+var _certDomains = (!empty(wildcardCertNames) && deployApps) ? wildcardCerts.outputs.certDomains : []
 #disable-next-line BCP318
-var _certIds = !empty(wildcardCertNames) ? wildcardCerts.outputs.certIds : []
+var _certIds = (!empty(wildcardCertNames) && deployApps) ? wildcardCerts.outputs.certIds : []
 var wildcardCertIds = toObject(_certDomains, domain => domain, domain => _certIds[indexOf(_certDomains, domain)])
 
 // Wildcard custom domain bindings (*.hub.ms, *.xebia.ms) derived from wildcardCertNames keys.
@@ -312,7 +315,7 @@ module openAiUserRoleDevs './modules/openAiUserRole.bicep' = [for (objectId, i) 
 }]
 
 // API Container App
-module apiApp './modules/api.bicep' = {
+module apiApp './modules/api.bicep' = if (deployApps) {
   scope: resourceGroup
   name: 'api-deployment'
   params: {
@@ -337,7 +340,7 @@ module apiApp './modules/api.bicep' = {
 }
 
 // Web Container App
-module webApp './modules/web.bicep' = {
+module webApp './modules/web.bicep' = if (deployApps) {
   scope: resourceGroup
   name: 'web-deployment'
   params: {
@@ -348,6 +351,8 @@ module webApp './modules/web.bicep' = {
     githubRegistryAuthUsername: githubRegistryAuthUsername
     identityId: identity.outputs.identityId
     imageTag: webImageTag
+    // BCP318: apiApp is conditional on deployApps; webApp shares the same condition so apiApp is always non-null here.
+    #disable-next-line BCP318
     apiBaseUrl: apiApp.outputs.fqdn
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
     customDomains: allCustomDomains
@@ -419,8 +424,10 @@ module policyAssignments './modules/policy.bicep' = {
 
 // Outputs
 output resourceGroupName string = resourceGroup.name
-output apiUrl string = 'https://${apiApp.outputs.fqdn}'
-output webUrl string = 'https://${webApp.outputs.fqdn}'
+#disable-next-line BCP318
+output apiUrl string = deployApps ? 'https://${apiApp.outputs.fqdn}' : ''
+#disable-next-line BCP318
+output webUrl string = deployApps ? 'https://${webApp.outputs.fqdn}' : ''
 output appInsightsName string = monitoring.outputs.appInsightsName
 output keyVaultName string = keyVaultName
 output openAiEndpoint string = openai.outputs.openAiEndpoint
