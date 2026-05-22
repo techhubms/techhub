@@ -35,7 +35,10 @@
     exists in Key Vault, an empty value causes it to be skipped (existing value
     is left unchanged — useful for re-deploying without re-specifying stable secrets).
 
-    Requires the caller to have the 'Key Vault Secrets Officer' role on the vault.
+    Requires the caller to have both:
+      - 'Key Vault Contributor' (ARM management-plane — needed to add/remove network firewall rules)
+      - 'Key Vault Secrets Officer' (data-plane — needed to read/write secrets)
+    Or simply 'Key Vault Administrator' which covers both.
 
 .PARAMETER KeyVaultName
     Production Key Vault name. Defaults to 'kv-techhub-prod'.
