@@ -1,28 +1,30 @@
 param location string
 param containerAppName string
 param containerAppsEnvironmentId string
-param containerRegistryName string
-param acrPullIdentityId string
+
+@description('GitHub Container Registry organization/namespace for image names (e.g. techhubms → ghcr.io/techhubms/...)')
+param githubRegistryUsername string
+
+@description('GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account that created the PAT stored in Key Vault.')
+param githubRegistryAuthUsername string = githubRegistryUsername
+
+@description('User-assigned managed identity resource ID (used to access Key Vault secrets)')
+param identityId string
+
+@description('Client ID of the user-assigned managed identity. Required for DefaultAzureCredential to select the correct identity when multiple are available.')
+param identityClientId string
+
 param imageTag string
 param appInsightsConnectionString string
-
-@description('Environment name (staging, prod) - maps to ASPNETCORE_ENVIRONMENT')
-@allowed(['staging', 'prod'])
-param environmentName string
-
-var aspnetEnvironment = environmentName == 'prod' ? 'Production' : 'Staging'
 
 @description('FQDNs for the web frontend (used for CORS and BaseUrl configuration)')
 param webFqdns string[] = []
 
-@description('Key Vault URI (e.g. https://kv-techhub-shared.vault.azure.net/) — used to resolve KV secret references')
+@description('Key Vault URI (e.g. https://kv-techhub-prod.vault.azure.net/) — used to resolve KV secret references')
 param keyVaultUri string
 
-@description('Key Vault secret name holding the full PostgreSQL connection string')
-param dbConnectionSecretName string
-
-@description('Key Vault secret name holding the AI Foundry API key')
-param aiApiKeySecretName string
+@description('Full PostgreSQL connection string (passwordless — app uses managed identity token)')
+param dbConnectionString string
 
 @description('Azure AD tenant ID (not a secret — public Entra identifier)')
 param azureAdTenantId string = ''
@@ -36,10 +38,22 @@ param aiCategorizationEndpoint string = ''
 @description('Azure AI Foundry deployment name')
 param aiCategorizationDeploymentName string = ''
 
+@description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
+param aspNetCoreEnvironment string = 'Production'
+
+@description('When false, disables scheduled background jobs (ContentProcessor, RoundupGenerator). Set to false for PR preview environments.')
+param enableBackgroundJobs bool = true
+
+@description('Minimum replica count. Use 0 to enable scale-to-zero for PR preview environments.')
+param minReplicas int = 1
+
+@description('Maximum replica count.')
+param maxReplicas int = 3
+
 @description('Tags applied to the Container App')
 param tags object = {}
 
-var imageReference = '${containerRegistryName}.azurecr.io/techhub-api:${imageTag}'
+var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-api:${imageTag}'
 var revisionSuffix = 'api-${imageTag}'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
 var corsOrigins = union(['https://*.azurecontainerapps.io'], customOrigins)
@@ -47,10 +61,20 @@ var corsEnvVars = [for (fqdn, i) in webFqdns: {
   name: 'Cors__AllowedOrigins__${i}'
   value: 'https://${fqdn}'
 }]
+var backgroundJobEnvVars = enableBackgroundJobs ? [] : [
+  {
+    name: 'ContentProcessor__Enabled'
+    value: 'false'
+  }
+  {
+    name: 'RoundupGenerator__Enabled'
+    value: 'false'
+  }
+]
 var staticEnvVars = [
   {
     name: 'ASPNETCORE_ENVIRONMENT'
-    value: aspnetEnvironment
+    value: aspNetCoreEnvironment
   }
   {
     name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
@@ -61,12 +85,23 @@ var staticEnvVars = [
     value: 'techhub-api'
   }
   {
+    // Required for DefaultAzureCredential / ManagedIdentityCredential to select the correct
+    // user-assigned managed identity. Without this, IMDS returns HTTP 400 when multiple
+    // identities exist or when the managed identity endpoint requires an explicit client_id.
+    name: 'AZURE_CLIENT_ID'
+    value: identityClientId
+  }
+  {
     name: 'Database__Provider'
     value: 'PostgreSQL'
   }
   {
     name: 'Database__ConnectionString'
-    secretRef: 'db-connection-string'
+    value: dbConnectionString
+  }
+  {
+    name: 'Database__UseEntraAuth'
+    value: 'true'
   }
   {
     name: 'AppSettings__BaseUrl'
@@ -92,10 +127,6 @@ var staticEnvVars = [
     name: 'AiCategorization__DeploymentName'
     value: aiCategorizationDeploymentName
   }
-  {
-    name: 'AiCategorization__ApiKey'
-    secretRef: 'ai-categorization-api-key'
-  }
 ]
 
 resource api 'Microsoft.App/containerApps@2025-07-01' = {
@@ -105,7 +136,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '${acrPullIdentityId}': {}
+      '${identityId}': {}
     }
   }
   properties: {
@@ -126,22 +157,20 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
       }
       registries: [
         {
-          server: '${containerRegistryName}.azurecr.io'
-          identity: acrPullIdentityId
+          // Pull images from GitHub Container Registry using a PAT stored in Key Vault.
+          // username must match the PAT owner (githubRegistryAuthUsername), which may differ
+          // from the image namespace (githubRegistryUsername / the org).
+          server: 'ghcr.io'
+          username: githubRegistryAuthUsername
+          passwordSecretRef: 'ghcr-token'
         }
       ]
       secrets: [
-        // Container App references Key Vault secrets at revision start via the managed identity.
-        // Rotate secrets by updating Key Vault + restarting the revision — no redeploy required.
+        // GitHub Container Registry PAT for image pulls (read:packages scope)
         {
-          name: 'db-connection-string'
-          keyVaultUrl: '${keyVaultUri}secrets/${dbConnectionSecretName}'
-          identity: acrPullIdentityId
-        }
-        {
-          name: 'ai-categorization-api-key'
-          keyVaultUrl: '${keyVaultUri}secrets/${aiApiKeySecretName}'
-          identity: acrPullIdentityId
+          name: 'ghcr-token'
+          keyVaultUrl: '${keyVaultUri}secrets/techhub-github-registry-token'
+          identity: identityId
         }
       ]
     }
@@ -155,7 +184,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
             cpu: json('0.25')
             memory: '0.5Gi'
           }
-          env: concat(staticEnvVars, corsEnvVars)
+          env: concat(staticEnvVars, corsEnvVars, backgroundJobEnvVars)
           probes: [
             {
               type: 'startup'
@@ -195,8 +224,8 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
         }
       ]
       scale: {
-        minReplicas: environmentName == 'staging' ? 0 : 1
-        maxReplicas: environmentName == 'staging' ? 2 : 3
+        minReplicas: minReplicas
+        maxReplicas: maxReplicas
         cooldownPeriod: 300
         pollingInterval: 30
         rules: [

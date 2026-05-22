@@ -16,6 +16,24 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public sealed class SectionRoundupRepository : ISectionRoundupRepository
 {
+    private const int AiBit = 1 << 0;
+    private const int AzureBit = 1 << 1;
+    private const int DotnetBit = 1 << 2;
+    private const int DevopsBit = 1 << 3;
+    private const int GhcBit = 1 << 4;
+    private const int MlBit = 1 << 5;
+    private const int SecurityBit = 1 << 6;
+    private static readonly Dictionary<string, int> _sectionBits = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["ai"] = AiBit,
+        ["azure"] = AzureBit,
+        ["dotnet"] = DotnetBit,
+        ["devops"] = DevopsBit,
+        ["github-copilot"] = GhcBit,
+        ["ml"] = MlBit,
+        ["security"] = SecurityBit
+    };
+
     private readonly IDbConnection _connection;
     private readonly ILogger<SectionRoundupRepository> _logger;
 
@@ -174,19 +192,31 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     // ── ISectionRoundupRepository additional methods ──────────────────────────
 
     /// <inheritdoc />
-    public async Task<bool> RoundupExistsAsync(string slug, CancellationToken ct = default)
+    public async Task<bool> RoundupExistsAsync(string sectionName, string slug, CancellationToken ct = default)
     {
+        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+        sectionName = sectionName.ToLowerInvariant().Trim();
         var count = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
-            "SELECT COUNT(*) FROM content_items WHERE collection_name = 'roundups' AND slug = @Slug",
-            new { Slug = slug },
+            @"SELECT COUNT(*)
+              FROM content_items
+              WHERE collection_name = 'roundups'
+                AND slug = @Slug
+                AND primary_section_name = @SectionName",
+            new
+            {
+                Slug = slug,
+                SectionName = sectionName
+            },
             cancellationToken: ct));
 
         return count > 0;
     }
 
     /// <inheritdoc />
-    public async Task<string?> GetPreviousRoundupContentAsync(DateOnly weekStart, CancellationToken ct = default)
+    public async Task<string?> GetPreviousRoundupContentAsync(string sectionName, DateOnly weekStart, CancellationToken ct = default)
     {
+        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+        sectionName = sectionName.ToLowerInvariant().Trim();
         var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
             OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
         var weekStartDt = weekStart.ToDateTime(TimeOnly.MinValue);
@@ -197,10 +227,15 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             @"SELECT content
               FROM content_items
               WHERE collection_name = 'roundups'
+                AND primary_section_name = @SectionName
                 AND date_epoch < @WeekStartEpoch
               ORDER BY date_epoch DESC
               LIMIT 1",
-            new { WeekStartEpoch = weekStartEpoch },
+            new
+            {
+                SectionName = sectionName,
+                WeekStartEpoch = weekStartEpoch
+            },
             cancellationToken: ct));
 
         return content;
@@ -208,17 +243,19 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
 
     /// <inheritdoc />
     public async Task WriteRoundupAsync(
+        string sectionName,
         string slug,
         DateOnly publishDate,
         string title,
-        string description,
         string content,
         string introduction,
         IReadOnlyList<string> tags,
         long? jobId = null,
         CancellationToken ct = default)
     {
+        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentNullException.ThrowIfNull(tags);
+        sectionName = sectionName.ToLowerInvariant().Trim();
 
         var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
             OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
@@ -228,7 +265,8 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         var publishUtc = TimeZoneInfo.ConvertTimeToUtc(publishDt, brusselsZone);
         var dateEpoch = (long)publishUtc.Subtract(DateTime.UnixEpoch).TotalSeconds;
 
-        var externalUrl = string.Create(CultureInfo.InvariantCulture, $"/all/roundups/{slug}");
+        var externalUrl = string.Create(CultureInfo.InvariantCulture, $"/{sectionName}/roundups/{slug}");
+        var sectionFlags = BuildSectionFlags(sectionName);
 
         // Ensure collection-name tag is always present.
         const string CollectionTag = "Roundups";
@@ -242,14 +280,6 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
 
         var computedHash = Convert.ToHexString(
             SHA256.HashData(Encoding.UTF8.GetBytes(content)));
-
-        var aiMetadataJson = JsonSerializer.Serialize(new
-        {
-            roundup_summary = description,
-            key_topics = tags,
-            roundup_relevance = "high",
-            topic_type = "news"
-        }, _jsonOptions);
 
         if (_connection.State != ConnectionState.Open)
         {
@@ -265,31 +295,38 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                     (slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
-                     is_ml, is_security, sections_bitmask, content_hash, ai_metadata)
-                  VALUES
+                      is_ml, is_security, sections_bitmask, content_hash)
+                   VALUES
                     (@Slug, 'roundups', @Title, @Content, @Excerpt, @DateEpoch,
-                     'github-copilot', @ExternalUrl, 'TechHub', 'TechHub',
-                     @TagsCsv, TRUE, TRUE, TRUE, TRUE, TRUE,
-                     TRUE, TRUE, 127, @ContentHash, @AiMetadata::jsonb)
-                  ON CONFLICT (collection_name, slug) DO UPDATE SET
+                     @SectionName, @ExternalUrl, 'TechHub', 'TechHub',
+                     @TagsCsv, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
+                     @IsMl, @IsSecurity, @Bitmask, @ContentHash)
+                   ON CONFLICT (collection_name, slug) DO UPDATE SET
                     title            = EXCLUDED.title,
                     content          = EXCLUDED.content,
                     excerpt          = EXCLUDED.excerpt,
                     tags_csv         = EXCLUDED.tags_csv,
                     content_hash     = EXCLUDED.content_hash,
-                    ai_metadata      = EXCLUDED.ai_metadata,
                     updated_at       = NOW()",
                 new
                 {
                     Slug = slug,
+                    SectionName = sectionName,
                     Title = title,
                     Content = content,
                     Excerpt = introduction,
                     DateEpoch = dateEpoch,
                     ExternalUrl = externalUrl,
                     TagsCsv = tagsCsv,
-                    ContentHash = computedHash,
-                    AiMetadata = aiMetadataJson
+                    IsAi = sectionFlags.IsAi,
+                    IsAzure = sectionFlags.IsAzure,
+                    IsDotnet = sectionFlags.IsDotnet,
+                    IsDevops = sectionFlags.IsDevops,
+                    IsGhc = sectionFlags.IsGhc,
+                    IsMl = sectionFlags.IsMl,
+                    IsSecurity = sectionFlags.IsSecurity,
+                    Bitmask = sectionFlags.Bitmask,
+                    ContentHash = computedHash
                 },
                 transaction: transaction,
                 cancellationToken: ct));
@@ -327,8 +364,14 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             {
                 var tagRows = ContentItemWriteRepository.BuildTagWords(
                     allTags, "roundups", slug, dateEpoch,
-                    isAi: true, isAzure: true, isDotnet: true, isDevops: true,
-                    isGhc: true, isMl: true, isSecurity: true, bitmask: 127);
+                    isAi: sectionFlags.IsAi,
+                    isAzure: sectionFlags.IsAzure,
+                    isDotnet: sectionFlags.IsDotnet,
+                    isDevops: sectionFlags.IsDevops,
+                    isGhc: sectionFlags.IsGhc,
+                    isMl: sectionFlags.IsMl,
+                    isSecurity: sectionFlags.IsSecurity,
+                    bitmask: sectionFlags.Bitmask);
 
                 foreach (var row in tagRows)
                 {
@@ -356,4 +399,29 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             throw;
         }
     }
+
+    private static SectionFlags BuildSectionFlags(string sectionName)
+    {
+        var normalized = sectionName.ToLowerInvariant();
+        var bitmask = _sectionBits.TryGetValue(normalized, out var sectionBit) ? sectionBit : 0;
+        var isAi = (bitmask & AiBit) != 0;
+        var isAzure = (bitmask & AzureBit) != 0;
+        var isDotnet = (bitmask & DotnetBit) != 0;
+        var isDevops = (bitmask & DevopsBit) != 0;
+        var isGhc = (bitmask & GhcBit) != 0;
+        var isMl = (bitmask & MlBit) != 0;
+        var isSecurity = (bitmask & SecurityBit) != 0;
+
+        return new SectionFlags(isAi, isAzure, isDotnet, isDevops, isGhc, isMl, isSecurity, bitmask);
+    }
+
+    private sealed record SectionFlags(
+        bool IsAi,
+        bool IsAzure,
+        bool IsDotnet,
+        bool IsDevops,
+        bool IsGhc,
+        bool IsMl,
+        bool IsSecurity,
+        int Bitmask);
 }

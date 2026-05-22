@@ -39,6 +39,8 @@ public interface IProcessedUrlRepository
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken ct = default);
 
     /// <summary>Deletes a processed URL record, its associated content item, and expanded tags so it can be retried on the next run.</summary>

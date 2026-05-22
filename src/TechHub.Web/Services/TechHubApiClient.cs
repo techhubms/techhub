@@ -244,6 +244,7 @@ public class TechHubApiClient : ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         string? searchQuery = null,
+        string? contentTypes = null,
         CancellationToken cancellationToken = default)
     {
         sectionName = sectionName.Sanitize();
@@ -295,6 +296,12 @@ public class TechHubApiClient : ITechHubApiClient
             if (!string.IsNullOrWhiteSpace(searchQuery))
             {
                 queryParams.Add($"q={Uri.EscapeDataString(searchQuery)}");
+            }
+
+            // Content type filter (multi-collection filtering when on "all" collection)
+            if (!string.IsNullOrWhiteSpace(contentTypes))
+            {
+                queryParams.Add($"types={Uri.EscapeDataString(contentTypes)}");
             }
 
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
@@ -377,26 +384,51 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get the latest roundup (for homepage sidebar)
+    /// Get the latest roundup per section (for homepage sidebar).
+    /// Returns one roundup per section (in section order), for all sections that have a roundups collection.
     /// </summary>
-    public virtual async Task<ContentItem?> GetLatestRoundupAsync(
+    public virtual async Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(
         CancellationToken cancellationToken = default)
     {
-        try
+        var allSections = await GetAllSectionsAsync(cancellationToken);
+        if (allSections is null)
         {
-            var result = await GetCollectionItemsAsync(
-                "all",
-                "roundups",
-                take: 1,
-                cancellationToken: cancellationToken);
+            return [];
+        }
 
-            return result?.Items.Count > 0 ? result.Items[0] : null;
-        }
-        catch (HttpRequestException ex)
+        return await GetLatestRoundupPerSectionAsync(allSections, cancellationToken);
+    }
+
+    /// <inheritdoc />
+    public virtual async Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(
+        IEnumerable<Section> sections,
+        CancellationToken cancellationToken = default)
+    {
+        var roundups = new List<ContentItem>();
+        foreach (var section in sections.Where(s =>
+            !s.Name.Equals("all", StringComparison.OrdinalIgnoreCase) &&
+            s.Collections.Any(c => c.Name.Equals("roundups", StringComparison.OrdinalIgnoreCase))))
         {
-            _logger.LogError(ex, "Failed to fetch latest roundup");
-            throw;
+            try
+            {
+                var result = await GetCollectionItemsAsync(
+                    section.Name,
+                    "roundups",
+                    take: 1,
+                    cancellationToken: cancellationToken);
+
+                if (result is not null && result.Items.Count > 0)
+                {
+                    roundups.Add(result.Items[0]);
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                _logger.LogDebug(ex, "Failed to fetch latest roundup for section {SectionName}", section.Name);
+            }
         }
+
+        return roundups;
     }
 
     /// <summary>
@@ -435,12 +467,13 @@ public class TechHubApiClient : ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         string? searchQuery = null,
+        string? contentTypes = null,
         CancellationToken cancellationToken = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
 
-        return await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, selectedTags, tagsToCount, fromDate, toDate, searchQuery, cancellationToken);
+        return await GetCollectionTagsAsync(sectionName, collectionName, maxTags, minUses, lastDays, selectedTags, tagsToCount, fromDate, toDate, searchQuery, contentTypes, cancellationToken);
     }
 
     // ================================================================
@@ -1033,6 +1066,8 @@ public class TechHubApiClient : ITechHubApiClient
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken cancellationToken = default)
     {
         try
@@ -1061,6 +1096,15 @@ public class TechHubApiClient : ITechHubApiClient
             if (jobId.HasValue)
             {
                 query += $"&jobId={jobId.Value}";
+            }
+
+            if (!string.IsNullOrEmpty(sectionName))
+            {
+                query += $"&sectionName={Uri.EscapeDataString(sectionName)}";
+                if (primarySectionOnly)
+                {
+                    query += "&primarySectionOnly=true";
+                }
             }
 
             var result = await _httpClient.GetFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
@@ -1349,6 +1393,8 @@ public class TechHubApiClient : ITechHubApiClient
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken cancellationToken = default)
     {
         try
@@ -1367,6 +1413,15 @@ public class TechHubApiClient : ITechHubApiClient
             if (!string.IsNullOrEmpty(feedName))
             {
                 query += $"&feedName={Uri.EscapeDataString(feedName)}";
+            }
+
+            if (!string.IsNullOrEmpty(sectionName))
+            {
+                query += $"&sectionName={Uri.EscapeDataString(sectionName)}";
+                if (primarySectionOnly)
+                {
+                    query += "&primarySectionOnly=true";
+                }
             }
 
             var result = await _httpClient.GetFromJsonAsync<PagedResult<ContentItemListItem>>(

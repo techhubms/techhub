@@ -4,26 +4,27 @@
     Builds, pushes, and deploys TechHub application containers.
 
 .DESCRIPTION
-    Builds Docker images for the API and Web applications, pushes them to Azure Container Registry,
-    and deploys them to Azure Container Apps. Supports staging and production environments.
+    Builds Docker images for the API and Web applications, pushes them to GitHub Container
+    Registry (ghcr.io), and deploys them to Azure Container Apps (production).
 
     When run locally, images are tagged with a UTC datetime (yyyyMMddHHmmss) by default for
     human-readable versioning. The same format is used in GitHub Actions CI.
 
-.PARAMETER Environment
-    Target environment: staging or production.
-
 .PARAMETER Tag
     Docker image tag. Defaults to UTC datetime (yyyyMMddHHmmss) for human-readable versioning.
 
-.PARAMETER RegistryName
-    Azure Container Registry name (without .azurecr.io). Defaults to 'crtechhubms'.
+.PARAMETER GithubRegistryUsername
+    GitHub organization username for ghcr.io. Defaults to 'techhubms'.
+
+.PARAMETER GithubRegistryAuthUsername
+    GitHub username of the PAT owner used to authenticate with ghcr.io. Required when GHCR_PAT
+    is used locally and GITHUB_ACTOR is not set. In CI, GITHUB_ACTOR is used automatically.
 
 .PARAMETER SkipBuild
     Skip building Docker images (use existing images in the registry).
 
 .PARAMETER SkipPush
-    Skip pushing images to ACR. Useful for local-only testing with docker compose.
+    Skip pushing images to ghcr.io. Useful for local-only testing with docker compose.
 
 .PARAMETER SkipDeploy
     Skip deploying to Container Apps (build and push only).
@@ -32,36 +33,31 @@
     Skip running smoke tests after deployment.
 
 .EXAMPLE
-    ./scripts/Deploy-Application.ps1 -Environment staging
-    Build with 'dev' tag, push, and deploy to staging.
+    ./scripts/Deploy-Application.ps1
+    Build with datetime tag, push to ghcr.io, and deploy to production.
 
 .EXAMPLE
-    ./scripts/Deploy-Application.ps1 -Environment staging -Tag "v1.0.0"
-    Build with specific tag, push, and deploy to staging.
+    ./scripts/Deploy-Application.ps1 -Tag "20260501120000"
+    Build with specific tag, push, and deploy to production.
 
 .EXAMPLE
-    ./scripts/Deploy-Application.ps1 -Environment staging -SkipDeploy
+    ./scripts/Deploy-Application.ps1 -SkipDeploy
     Build and push images only (no container app update).
 
 .EXAMPLE
-    ./scripts/Deploy-Application.ps1 -Environment staging -SkipBuild -SkipPush
-    Deploy previously pushed images to staging (build and push happened earlier).
-
-.EXAMPLE
-    ./scripts/Deploy-Application.ps1 -Environment production -Tag "abc123def" -SkipBuild -SkipPush
-    Deploy a specific previously-built tag to production.
+    ./scripts/Deploy-Application.ps1 -SkipBuild -SkipPush
+    Deploy previously pushed images to production (build and push happened earlier).
 #>
 
 param(
-    [Parameter(Mandatory = $true)]
-    [ValidateSet('staging', 'production')]
-    [string]$Environment,
-
     [Parameter(Mandatory = $false)]
     [string]$Tag,
 
     [Parameter(Mandatory = $false)]
-    [string]$RegistryName = 'crtechhubms',
+    [string]$GithubRegistryUsername = 'techhubms',
+
+    [Parameter(Mandatory = $false)]
+    [string]$GithubRegistryAuthUsername = '',
 
     [switch]$SkipBuild,
     [switch]$SkipPush,
@@ -91,16 +87,13 @@ if (-not $Tag) {
     $Tag = Get-Date -Format 'yyyyMMddHHmmss'
 }
 
-# Environment suffix mapping (staging -> staging, production -> prod)
-$envSuffix = if ($Environment -eq 'production') { 'prod' } else { $Environment }
-
 # Resource names
-$registryServer = "$($RegistryName).azurecr.io"
-$apiImage = "$registryServer/techhub-api"
-$webImage = "$registryServer/techhub-web"
-$apiAppName = "ca-techhub-api-$envSuffix"
-$webAppName = "ca-techhub-web-$envSuffix"
-$resourceGroup = "rg-techhub-$envSuffix"
+$registryServer = "ghcr.io"
+$apiImage = "$registryServer/$GithubRegistryUsername/techhub-api"
+$webImage = "$registryServer/$GithubRegistryUsername/techhub-web"
+$apiAppName = "ca-techhub-api-prod"
+$webAppName = "ca-techhub-web-prod"
+$resourceGroup = "rg-techhub-prod"
 
 # ============================================================================
 # HELPERS
@@ -132,6 +125,23 @@ function Write-Detail {
     Write-Host "   $Message" -ForegroundColor Gray
 }
 
+function Invoke-DockerPush {
+    param(
+        [string]$ImageRef,
+        [int]$MaxAttempts = 3,
+        [int]$RetryDelaySecs = 15
+    )
+    for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
+        docker push $ImageRef
+        if ($LASTEXITCODE -eq 0) { return $true }
+        if ($attempt -lt $MaxAttempts) {
+            Write-Warn "Push failed (attempt $attempt/$MaxAttempts) — retrying in ${RetryDelaySecs}s (known GHCR transient issue)"
+            Start-Sleep -Seconds $RetryDelaySecs
+        }
+    }
+    return $false
+}
+
 # ============================================================================
 # BANNER
 # ============================================================================
@@ -139,7 +149,6 @@ function Write-Detail {
 Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  TechHub Application Deployment" -ForegroundColor White
-Write-Host "  Environment         : $Environment" -ForegroundColor Gray
 Write-Host "  Tag                 : $Tag" -ForegroundColor Gray
 Write-Host "  Registry            : $registryServer" -ForegroundColor Gray
 Write-Host "  Source              : $(if ($isCI) { 'CI (GitHub Actions)' } else { 'Local' })" -ForegroundColor Gray
@@ -152,23 +161,50 @@ Write-Host "===============================================================" -Fo
 
 Write-Step "Validating prerequisites"
 
-# Check Azure CLI login
-$account = az account show -o json 2>&1
-if ($LASTEXITCODE -ne 0) {
-    Write-Fail "Not logged in to Azure CLI. Run 'az login' first."
-    exit 1
-}
-$accountInfo = $account | ConvertFrom-Json
-Write-Ok "Azure CLI authenticated (subscription: $($accountInfo.name))"
-
 if (-not $SkipPush) {
-    Write-Step "Authenticating with Azure Container Registry"
-    az acr login --name $RegistryName
+    # Authenticate with GitHub Container Registry
+    # In CI: use GITHUB_TOKEN. Locally: use GHCR_PAT or GITHUB_TOKEN.
+    $ghcrToken = if ($env:GITHUB_TOKEN) { $env:GITHUB_TOKEN } else { $env:GHCR_PAT }
+    if (-not $ghcrToken) {
+        Write-Fail "Neither GITHUB_TOKEN nor GHCR_PAT is set. Cannot authenticate with ghcr.io."
+        Write-Detail "In CI: GITHUB_TOKEN is available automatically."
+        Write-Detail "Locally: set GHCR_PAT to a GitHub PAT with write:packages scope."
+        exit 1
+    }
+
+    Write-Step "Authenticating with GitHub Container Registry"
+    # When GITHUB_TOKEN is used (CI), Docker username must match the workflow actor (token owner).
+    # When GHCR_PAT is used (local), the PAT owner must be supplied via GithubRegistryAuthUsername
+    # (or GITHUB_ACTOR if set). The org/namespace (GithubRegistryUsername) is NOT the token owner
+    # and will cause a 401 if used for auth.
+    $loginUsername = if ($env:GITHUB_ACTOR) {
+        $env:GITHUB_ACTOR
+    }
+    elseif (-not [string]::IsNullOrWhiteSpace($GithubRegistryAuthUsername)) {
+        $GithubRegistryAuthUsername
+    }
+    else {
+        Write-Fail "Cannot determine ghcr.io login username: GITHUB_ACTOR is not set and -GithubRegistryAuthUsername was not provided."
+        Write-Detail "Locally: set GHCR_PAT and pass -GithubRegistryAuthUsername <your-github-username>."
+        exit 1
+    }
+    $ghcrToken | docker login ghcr.io --username $loginUsername --password-stdin
     if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to authenticate with ACR '$RegistryName'"
+        Write-Fail "Failed to authenticate with ghcr.io"
         exit 1
     }
     Write-Ok "Authenticated with $registryServer"
+}
+
+if (-not $SkipDeploy) {
+    # Check Azure CLI login
+    $account = az account show -o json 2>&1
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Not logged in to Azure CLI. Run 'az login' first."
+        exit 1
+    }
+    $accountInfo = $account | ConvertFrom-Json
+    Write-Ok "Azure CLI authenticated (subscription: $($accountInfo.name))"
 }
 
 # ============================================================================
@@ -215,22 +251,20 @@ else {
 # ============================================================================
 
 if (-not $SkipPush) {
-    Write-Step "Pushing images to ACR"
+    Write-Step "Pushing images to ghcr.io"
 
     # Push API
     Write-Detail "Pushing API image..."
-    docker push "$($apiImage):$Tag"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to push API image (tag: $Tag)"
+    if (-not (Invoke-DockerPush "$($apiImage):$Tag")) {
+        Write-Fail "Failed to push API image after 3 attempts (tag: $Tag)"
         exit 1
     }
     Write-Ok "API image pushed"
 
     # Push Web
     Write-Detail "Pushing Web image..."
-    docker push "$($webImage):$Tag"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to push Web image (tag: $Tag)"
+    if (-not (Invoke-DockerPush "$($webImage):$Tag")) {
+        Write-Fail "Failed to push Web image after 3 attempts (tag: $Tag)"
         exit 1
     }
     Write-Ok "Web image pushed"
@@ -244,26 +278,24 @@ else {
 # ============================================================================
 
 if (-not $SkipDeploy) {
-    if ($Environment -eq 'production') {
-        # Save current production images for rollback
-        $previousApiImage = az containerapp show `
-            --name $apiAppName `
-            --resource-group $resourceGroup `
-            --query "properties.template.containers[0].image" `
-            -o tsv 2>$null
-        $previousWebImage = az containerapp show `
-            --name $webAppName `
-            --resource-group $resourceGroup `
-            --query "properties.template.containers[0].image" `
-            -o tsv 2>$null
+    # Save current production images for rollback
+    $previousApiImage = az containerapp show `
+        --name $apiAppName `
+        --resource-group $resourceGroup `
+        --query "properties.template.containers[0].image" `
+        -o tsv 2>$null
+    $previousWebImage = az containerapp show `
+        --name $webAppName `
+        --resource-group $resourceGroup `
+        --query "properties.template.containers[0].image" `
+        -o tsv 2>$null
 
-        if ($previousApiImage) {
-            Write-Detail "Previous API image: $previousApiImage"
-            Write-Detail "Previous Web image: $previousWebImage"
-        }
+    if ($previousApiImage) {
+        Write-Detail "Previous API image: $previousApiImage"
+        Write-Detail "Previous Web image: $previousWebImage"
     }
 
-    Write-Step "Deploying to $Environment (tag: $Tag)"
+    Write-Step "Deploying to production (tag: $Tag)"
 
     # Update API container app (revision suffix matches Bicep convention: api-{tag})
     Write-Detail "Deploying API..."
@@ -340,8 +372,6 @@ if (-not $SkipDeploy) {
     }
 
     # Verify sticky sessions are still enabled after the update.
-    # az containerapp update can transiently clear ingress settings during revision activation.
-    # Without sticky sessions, Blazor Server SignalR circuits break on multi-replica deployments.
     Write-Step "Verifying sticky sessions on Web Container App"
     $stickySetTimeoutSeconds = 90
     $stickySetRetryDelaySeconds = 5
@@ -397,15 +427,13 @@ if (-not $SkipDeploy) {
     Write-Ok "Sticky sessions confirmed active (affinity=sticky)"
 
     # Delegate version wait and smoke tests to the shared script.
-    # On PR/staging the version endpoint also confirms API readiness (Kestrel is blocked
-    # on section-cache load until the API responds, so /version == full chain healthy).
     $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
     $waitArgs = @('-WebFqdn', $webFqdn, '-Tag', $Tag)
     if ($SkipSmokeTests) { $waitArgs += '-SkipSmokeTests' }
     & (Join-Path $scriptDir 'Wait-ForLiveVersion.ps1') @waitArgs
     if ($LASTEXITCODE -ne 0) {
-        # Rollback on failure (production only)
-        if ($Environment -eq 'production' -and $previousApiImage -and $previousWebImage) {
+        # Rollback on failure
+        if ($previousApiImage -and $previousWebImage) {
             Write-Step "Rolling back to previous version"
             az containerapp update `
                 --name $apiAppName `
@@ -431,7 +459,6 @@ else {
 Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  Application Deployment Complete" -ForegroundColor Green
-Write-Host "  Environment          : $Environment" -ForegroundColor Gray
 Write-Host "  Tag                  : $Tag" -ForegroundColor Gray
 Write-Host "  API image            : $($apiImage):$Tag" -ForegroundColor Gray
 Write-Host "  Web image            : $($webImage):$Tag" -ForegroundColor Gray

@@ -1,19 +1,21 @@
 param location string
 param containerAppName string
 param containerAppsEnvironmentId string
-param containerRegistryName string
-param acrPullIdentityId string
+
+@description('GitHub Container Registry organization/namespace for image names (e.g. techhubms → ghcr.io/techhubms/...)')
+param githubRegistryUsername string
+
+@description('GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account that created the PAT stored in Key Vault.')
+param githubRegistryAuthUsername string = githubRegistryUsername
+
+@description('User-assigned managed identity resource ID (used to access Key Vault secrets)')
+param identityId string
+
 param imageTag string
 param apiBaseUrl string
 param appInsightsConnectionString string
 
-@description('Environment name (staging, prod) - maps to ASPNETCORE_ENVIRONMENT')
-@allowed(['staging', 'prod'])
-param environmentName string
-
-var aspnetEnvironment = environmentName == 'prod' ? 'Production' : 'Staging'
-
-@description('Optional custom domains (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
+@description('Optional custom domains (e.g. ["*.hub.ms", "*.xebia.ms"]). Leave empty to skip.')
 param customDomains string[] = []
 
 @description('Primary host names for the SubdomainRedirectMiddleware configuration')
@@ -22,11 +24,11 @@ param primaryHosts string[] = []
 @description('Key Vault certificate resource IDs for wildcard TLS (mapped by base domain, e.g. { "hub.ms": "cert-resource-id" }). When provided, domains use SniEnabled binding with these certs instead of managed certificates.')
 param wildcardCertificateIds object = {}
 
-@description('Key Vault URI (e.g. https://kv-techhub-shared.vault.azure.net/) — used to resolve KV secret references')
+@description('Key Vault URI (e.g. https://kv-techhub-prod.vault.azure.net/) — used to resolve KV secret references')
 param keyVaultUri string
 
 @description('Key Vault secret name holding the Azure AD client secret')
-param aadClientSecretSecretName string
+param aadClientSecretSecretName string = 'techhub-prod-aad-client-secret'
 
 @description('Azure AD tenant ID (not a secret — public Entra identifier)')
 param azureAdTenantId string = ''
@@ -34,17 +36,32 @@ param azureAdTenantId string = ''
 @description('Azure AD client ID (not a secret — public Entra identifier)')
 param azureAdClientId string = ''
 
+@description('Google Analytics Measurement ID (e.g. G-XXXXXXXXXX). Pass empty string to disable GA telemetry (PR preview environments).')
+param googleAnalyticsMeasurementId string = ''
+
 @description('Tags applied to the Container App')
 param tags object = {}
 
-var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
+@description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
+param aspNetCoreEnvironment string = 'Production'
+
+@description('Minimum replica count. Use 0 to enable scale-to-zero for PR preview environments.')
+param minReplicas int = 1
+
+@description('Maximum replica count.')
+param maxReplicas int = 2
+
+var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-web:${imageTag}'
 var revisionSuffix = 'web-${imageTag}'
+// When scale-to-zero is enabled the API may cold-start while the Web is also starting up.
+// Give extra startup probe tolerance so the Web is not killed before the API is ready.
+var startupProbeFailureThreshold = minReplicas == 0 ? 40 : 12
 
 // Environment variables: static config + dynamic shortcuts/primary hosts from Bicep params
 var staticEnvVars = [
   {
     name: 'ASPNETCORE_ENVIRONMENT'
-    value: aspnetEnvironment
+    value: aspNetCoreEnvironment
   }
   {
     name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
@@ -78,6 +95,10 @@ var staticEnvVars = [
     name: 'AzureAd__Scopes'
     value: empty(azureAdClientId) ? '' : 'api://${azureAdClientId}/Admin.Access'
   }
+  {
+    name: 'GoogleAnalytics__MeasurementId'
+    value: googleAnalyticsMeasurementId
+  }
 ]
 // AzureAd__ClientSecret is only needed when AAD is enabled (azureAdClientId is set).
 // When AAD is disabled the KV reference is omitted entirely — the revision would crash-loop
@@ -103,7 +124,7 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '${acrPullIdentityId}': {}
+      '${identityId}': {}
     }
   }
   properties: {
@@ -126,21 +147,35 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
       }
       registries: [
         {
-          server: '${containerRegistryName}.azurecr.io'
-          identity: acrPullIdentityId
+          // Pull images from GitHub Container Registry using a PAT stored in Key Vault.
+          // username must match the PAT owner (githubRegistryAuthUsername), which may differ
+          // from the image namespace (githubRegistryUsername / the org).
+          server: 'ghcr.io'
+          username: githubRegistryAuthUsername
+          passwordSecretRef: 'ghcr-token'
         }
       ]
-      secrets: empty(azureAdClientId)
-        ? []
-        : [
-            // Container App references the Key Vault secret at revision start via the managed identity.
-            // Rotate by updating Key Vault + restarting the revision — no redeploy required.
-            {
-              name: 'azure-ad-client-secret'
-              keyVaultUrl: '${keyVaultUri}secrets/${aadClientSecretSecretName}'
-              identity: acrPullIdentityId
-            }
-          ]
+      secrets: concat(
+        [
+          // GitHub Container Registry PAT for image pulls (read:packages scope)
+          {
+            name: 'ghcr-token'
+            keyVaultUrl: '${keyVaultUri}secrets/techhub-github-registry-token'
+            identity: identityId
+          }
+        ],
+        empty(azureAdClientId)
+          ? []
+          : [
+              // Container App references the Key Vault secret at revision start via the managed identity.
+              // Rotate by updating Key Vault + restarting the revision — no redeploy required.
+              {
+                name: 'azure-ad-client-secret'
+                keyVaultUrl: '${keyVaultUri}secrets/${aadClientSecretSecretName}'
+                identity: identityId
+              }
+            ]
+      )
     }
     template: {
       revisionSuffix: revisionSuffix
@@ -163,7 +198,7 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
               }
               initialDelaySeconds: 3
               periodSeconds: 5
-              failureThreshold: 12  // 3s + 12×5s = 63s max startup
+              failureThreshold: startupProbeFailureThreshold  // 12×5=60s prod; 40×5=200s for scale-to-zero (API cold-start)
               timeoutSeconds: 5
             }
             {
@@ -192,8 +227,8 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
         }
       ]
       scale: {
-        minReplicas: environmentName == 'staging' ? 0 : 1
-        maxReplicas: 2
+        minReplicas: minReplicas
+        maxReplicas: maxReplicas
         cooldownPeriod: 300
         pollingInterval: 30
         rules: [

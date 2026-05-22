@@ -31,8 +31,7 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02
       name: 'PerGB2018'
     }
     retentionInDays: 30
-    // Ingestion disabled: app telemetry uses AMPLS private path
-    publicNetworkAccessForIngestion: 'Disabled'
+    publicNetworkAccessForIngestion: 'Enabled'
     // Query enabled: allows portal and admin access (protected by RBAC)
     publicNetworkAccessForQuery: 'Enabled'
     workspaceCapping: {

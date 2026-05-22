@@ -79,6 +79,7 @@ internal interface ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         string? searchQuery = null,
+        string? contentTypes = null,
         CancellationToken cancellationToken = default);
 
     // ================================================================
@@ -107,9 +108,16 @@ internal interface ITechHubApiClient
         CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get the latest roundup item (for homepage sidebar).
+    /// Get the latest roundup per section (for homepage sidebar).
+    /// Returns one roundup per section (in section order).
     /// </summary>
-    Task<ContentItem?> GetLatestRoundupAsync(CancellationToken cancellationToken = default);
+    Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the latest roundup per section using a pre-fetched sections list.
+    /// Avoids an extra /api/sections round-trip when sections are already available.
+    /// </summary>
+    Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(IEnumerable<Section> sections, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Get GitHub Copilot features with their linked content.
@@ -138,6 +146,7 @@ internal interface ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         string? searchQuery = null,
+        string? contentTypes = null,
         CancellationToken cancellationToken = default);
 
     // ================================================================
@@ -362,6 +371,8 @@ internal interface ITechHubApiClient
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -451,6 +462,8 @@ internal interface ITechHubApiClient
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken cancellationToken = default);
 
     /// <summary>

@@ -405,7 +405,9 @@ public static partial class AdminEndpoints
         string? search = null,
         string? feedName = null,
         string? collectionName = null,
-        long? jobId = null)
+        long? jobId = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false)
     {
         page = Math.Max(1, page);
         pageSize = Math.Clamp(pageSize, 1, 500);
@@ -413,6 +415,7 @@ public static partial class AdminEndpoints
         search = search?.Trim().Sanitize();
         feedName = feedName?.Trim().Sanitize();
         collectionName = collectionName?.Trim().Sanitize();
+        sectionName = sectionName?.Trim().Sanitize();
 
         // Validate status filter
         if (!string.IsNullOrEmpty(status) && status is not "succeeded" and not "skipped" and not "failed")
@@ -421,7 +424,7 @@ public static partial class AdminEndpoints
         }
 
         var offset = (page - 1) * pageSize;
-        var result = await repo.GetPagedAsync(offset, pageSize, status, search, feedName, collectionName, jobId, ct);
+        var result = await repo.GetPagedAsync(offset, pageSize, status, search, feedName, collectionName, jobId, sectionName, primarySectionOnly, ct);
         return Results.Ok(result);
     }
 
@@ -941,16 +944,19 @@ public static partial class AdminEndpoints
         int pageSize = 100,
         string? search = null,
         string? collectionName = null,
-        string? feedName = null)
+        string? feedName = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false)
     {
         page = Math.Max(1, page);
         pageSize = Math.Clamp(pageSize, 1, 500);
         search = search?.Trim().Sanitize();
         collectionName = collectionName?.Trim().Sanitize();
         feedName = feedName?.Trim().Sanitize();
+        sectionName = sectionName?.Trim().Sanitize();
 
         var offset = (page - 1) * pageSize;
-        var result = await contentRepo.GetContentItemsPagedAsync(offset, pageSize, search, collectionName, feedName, ct);
+        var result = await contentRepo.GetContentItemsPagedAsync(offset, pageSize, search, collectionName, feedName, sectionName, primarySectionOnly, ct);
         return Results.Ok(result);
     }
 

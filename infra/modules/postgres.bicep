@@ -42,6 +42,15 @@ param geoRedundantBackup bool = false
 @description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
 param adminIpAddresses string[] = []
 
+@description('Public IP of the NAT Gateway attached to the Container Apps subnet. All Container Apps outbound traffic uses this IP when connecting to PostgreSQL public endpoint. Leave empty to skip.')
+param containerAppsNatGatewayIp string = ''
+
+@description('Entra (AAD) object ID of the principal to register as the Active Directory administrator. Leave empty to skip Entra admin setup.')
+param entraAdminObjectId string = ''
+
+@description('Display name of the Entra (AAD) administrator principal (e.g. managed identity name). Required when entraAdminObjectId is provided.')
+param entraAdminName string = ''
+
 @description('Tags applied to the PostgreSQL server')
 param tags object = {}
 
@@ -59,7 +68,10 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
     authConfig: {
-      activeDirectoryAuth: 'Disabled'
+      // Enable both password (for infrastructure management) and Entra ID auth.
+      // Applications use Entra tokens (Database:UseEntraAuth=true); password remains
+      // available for admin access and emergency scenarios.
+      activeDirectoryAuth: !empty(entraAdminObjectId) ? 'Enabled' : 'Disabled'
       passwordAuth: 'Enabled'
     }
     dataEncryption: {
@@ -84,7 +96,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
+      publicNetworkAccess: (!empty(adminIpAddresses) || !empty(containerAppsNatGatewayIp)) ? 'Enabled' : 'Disabled'
     }
   }
 }
@@ -98,6 +110,37 @@ resource adminFirewallRules 'Microsoft.DBforPostgreSQL/flexibleServers/firewallR
     endIpAddress: ip
   }
 }]
+
+// Firewall rule: allow the NAT Gateway public IP so Container Apps can reach PostgreSQL.
+// VNet-integrated Container Apps route all outbound traffic through the NAT Gateway attached
+// to the Container Apps subnet. Without a NAT Gateway, containers use a large shared pool
+// of ephemeral Azure SNAT IPs (~150+) that cannot be predicted or allowlisted.
+resource containerAppsNatGatewayFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsNatGatewayIp)) {
+  parent: postgresServer
+  name: 'allow-nat-gateway'
+  properties: {
+    startIpAddress: containerAppsNatGatewayIp
+    endIpAddress: containerAppsNatGatewayIp
+  }
+}
+
+// Entra ID (AAD) administrator for the PostgreSQL server.
+// When set, applications can authenticate with a managed identity token instead of a password.
+// The entraAdminObjectId is the AAD object ID of the principal (e.g. a user-assigned managed identity).
+// dependsOn firewall rules: ensures the server has finished applying network changes before we
+// attempt the Entra admin operation — avoids AadAuthOperationCannotBePerformedWhenServerIsNotAccessible
+// which occurs when the server is still in 'Updating' state after the parent resource update.
+resource entraAdmin 'Microsoft.DBforPostgreSQL/flexibleServers/administrators@2024-08-01' = if (!empty(entraAdminObjectId)) {
+  parent: postgresServer
+  // The resource name must be the AAD object ID (GUID) of the principal.
+  name: entraAdminObjectId
+  properties: {
+    principalName: entraAdminName
+    principalType: 'ServicePrincipal'
+    tenantId: subscription().tenantId
+  }
+  dependsOn: [adminFirewallRules, containerAppsNatGatewayFirewallRule]
+}
 
 // Database
 resource database 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2024-08-01' = {

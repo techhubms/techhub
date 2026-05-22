@@ -142,7 +142,10 @@ public class LoadMoreButtonTests : PlaywrightTestBase
             // finished loading), we're done — no click needed.
             var isEnd = await Page.EvaluateAsync<bool>(
                 "() => document.querySelector('.end-of-content') !== null");
-            if (isEnd) break;
+            if (isEnd)
+            {
+                break;
+            }
 
             var countBefore = await Page.Locator(".card").CountAsync();
 
@@ -157,7 +160,11 @@ public class LoadMoreButtonTests : PlaywrightTestBase
                 // Already done? (count grew or end-of-content appeared since loop started)
                 var alreadyDone = await Page.EvaluateAsync<bool>(
                     $"() => document.querySelectorAll('.card').length > {countBefore} || document.querySelector('.end-of-content') !== null");
-                if (alreadyDone) { batchCompleted = true; break; }
+                if (alreadyDone)
+                {
+                    batchCompleted = true;
+                    break;
+                }
 
                 // Click only when the button is enabled (not mid-load, not removed yet)
                 var buttonEnabled = await Page.EvaluateAsync<bool>(

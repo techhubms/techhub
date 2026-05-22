@@ -137,26 +137,27 @@ public class RssTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task HomePage_HasRoundupsFeedLink()
+    public async Task HomePage_DoesNotHaveRoundupsFeedLink()
     {
-        // Arrange
+        // Arrange — the per-section roundup refactor removed the global roundups RSS
+        // link from the home page. Verify it is gone.
 
         // Act
         await Page.GotoAndWaitForBlazorAsync(BaseUrl);
 
-        // Assert - Check for Roundups RSS link in sidebar
+        // Assert - No "RSS Feed - Roundups" link should exist on the home page
         var roundupsRssLink = Page.Locator("a:has-text('RSS Feed - Roundups')");
-        await roundupsRssLink.AssertElementVisibleAsync();
-        await roundupsRssLink.AssertHrefEqualsAsync("/all/roundups/feed.xml");
+        var count = await roundupsRssLink.CountAsync();
+        count.Should().Be(0, "home page should not have a global roundups RSS link after per-section roundup migration");
     }
 
-    [Fact]
-    public async Task RssFeed_CollectionFeeds_ReturnValidXml()
+    [Theory]
+    [InlineData("github-copilot")]
+    [InlineData("ai")]
+    public async Task RssFeed_SectionRoundupFeed_ReturnsValidXml(string sectionName)
     {
-        // Arrange
-
-        // Act - Test roundups collection feed via web proxy
-        var response = await Page.APIGetAsync($"{BaseUrl}/all/roundups/feed.xml");
+        // Act - Test section roundups collection feed via web proxy
+        var response = await Page.APIGetAsync($"{BaseUrl}/{sectionName}/roundups/feed.xml");
 
         // Assert
         response.Status.Should().Be(200);

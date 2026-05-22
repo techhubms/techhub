@@ -1,10 +1,10 @@
 using Bunit;
 using FluentAssertions;
+using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.TestUtilities.Builders;
 using TechHub.Web.Components;
-using TechHub.Web.Services;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -586,6 +586,75 @@ public class ContentItemCardTests : BunitContext
         // Assert - Badge link should use the current section since "news" exists in "ai"
         var badge = cut.Find(".badge-purple");
         badge.GetAttribute("href").Should().Be("/ai/news");
+    }
+
+    [Fact]
+    public void ContentItemCard_HandleTagClick_PreservesTypesQueryParam()
+    {
+        // Arrange - Set initial URL with types=roundups
+        var navMan = Services.GetRequiredService<NavigationManager>();
+        navMan.NavigateTo("http://localhost/ai?from=2026-02-20&to=2026-05-21&types=roundups");
+
+        var item = A.ContentItem
+            .WithTitle("Weekly Roundup")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("roundups")
+            .WithPrimarySectionName("ai")
+            .WithTags("Copilot Usage Metrics API", "GitHub Copilot")
+            .WithExternalUrl("https://example.com/roundup")
+            .Build();
+
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.SectionName, "ai")
+            .Add(p => p.ShowCollectionBadge, false));
+
+        // Act - Click the first tag badge
+        var tagButton = cut.Find(".badge-tag");
+        tagButton.Click();
+
+        // Assert - URL should contain the tag AND preserve types
+        var currentUri = navMan.Uri;
+        currentUri.Should().Contain("tags=copilot%20usage%20metrics%20api",
+            "tag should be added to URL (lowercase, space as %20)");
+        currentUri.Should().Contain("types=roundups",
+            "types query parameter should be preserved after tag click");
+        currentUri.Should().Contain("from=2026-02-20",
+            "from date should be preserved after tag click");
+        currentUri.Should().Contain("to=2026-05-21",
+            "to date should be preserved after tag click");
+    }
+
+    [Fact]
+    public void ContentItemCard_HandleTagClick_WorksWithoutTypesParam()
+    {
+        // Arrange - URL without types parameter
+        var navMan = Services.GetRequiredService<NavigationManager>();
+        navMan.NavigateTo("http://localhost/ai?from=2026-01-01");
+
+        var item = A.ContentItem
+            .WithTitle("News Item")
+            .WithDate(DateTime.Parse("2024-01-15"))
+            .WithCollectionName("news")
+            .WithPrimarySectionName("ai")
+            .WithTags("azure", "cloud")
+            .WithExternalUrl("https://example.com/news")
+            .Build();
+
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.SectionName, "ai")
+            .Add(p => p.ShowCollectionBadge, false));
+
+        // Act - Click the first tag badge
+        var tagButton = cut.Find(".badge-tag");
+        tagButton.Click();
+
+        // Assert - URL should have tag but no types parameter
+        var currentUri = navMan.Uri;
+        currentUri.Should().Contain("tags=azure");
+        currentUri.Should().NotContain("types=",
+            "types should not appear when it wasn't in the original URL");
     }
 }
 

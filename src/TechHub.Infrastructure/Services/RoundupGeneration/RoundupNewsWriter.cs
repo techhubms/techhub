@@ -52,16 +52,11 @@ internal sealed class RoundupNewsWriter
 
         var responses = new List<string>();
 
-        foreach (var (sectionSlug, sectionConfig) in _settings.Content.Sections
-            .OrderBy(s => s.Value.Order))
+        foreach (var (sectionSlug, articles) in filtered)
         {
-            if (sectionSlug.Equals("all", StringComparison.OrdinalIgnoreCase))
+            if (!_settings.Content.Sections.TryGetValue(sectionSlug, out var sectionConfig))
             {
-                continue;
-            }
-
-            if (!filtered.TryGetValue(sectionSlug, out var articles))
-            {
+                _logger.LogWarning("Step 1: Section {Section} not found in config, skipping", sectionSlug);
                 continue;
             }
 

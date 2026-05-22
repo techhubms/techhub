@@ -112,7 +112,7 @@ The sitemap is available at `GET /sitemap.xml` on the web domain (proxied from `
 
 Content items from the database where `collection NOT IN ('news', 'blogs', 'community')`. These collections link externally and have no detail page on the site. Only collections with real detail pages (`videos`, `roundups`, custom collections) are included. Each entry includes a `<lastmod>` date derived from the item's `DateEpoch`.
 
-URL routing for dynamic entries follows the same rules as the site navigation: `roundups` items always route to `/all/roundups/{slug}`; all other items use `/{primarySection}/{collection}/{slug}`.
+URL routing for dynamic entries follows the same rules as the site navigation: internal content (including `roundups`) routes to `/{primarySection}/{collection}/{slug}`.
 
 The dynamic items are cached in memory under the key `"sitemap:items"` with `CacheItemPriority.NeverRemove`.
 

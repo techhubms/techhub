@@ -667,10 +667,37 @@ public sealed class ContentRepository : IContentRepository
             {
                 filters.Add($"(sections_bitmask & {bitmask}) > 0");
             }
+
+            // Exclude cross-section items (primary_section_name = 'all') to match the content
+            // items query, which also excludes them when browsing a specific section.
+            // Without this, the tag cloud counts items that are hidden from the filtered view.
+            // NOTE: Must qualify outer columns with 'content_tags_expanded.' to prevent PostgreSQL
+            // from resolving them against ci_excl (the subquery's own table), which would make
+            // the subquery non-correlated (ci_excl.col = ci_excl.col is always true).
+            filters.Add(@"NOT EXISTS (
+                SELECT 1 FROM content_items ci_excl
+                WHERE ci_excl.collection_name = content_tags_expanded.collection_name
+                  AND ci_excl.slug = content_tags_expanded.slug
+                  AND ci_excl.primary_section_name = 'all')");
         }
 
-        // Collection filter
-        if (!string.IsNullOrWhiteSpace(request.CollectionName) &&
+        // Collection filter — supports both single CollectionName and multi-collection Collections list
+        if (request.Collections is { Count: > 0 })
+        {
+            // Multi-collection filter (from content type filter with multiple types active)
+            if (request.Collections.Count == 1)
+            {
+                filters.Add("collection_name = @collectionName");
+                parameters.Add("collectionName", request.Collections[0].ToLowerInvariant().Trim());
+            }
+            else
+            {
+                filters.Add($"collection_name {dialect.GetListFilterClause("collections", request.Collections.Count)}");
+                var normalizedCollections = request.Collections.Select(c => c.ToLowerInvariant().Trim());
+                parameters.Add("collections", dialect.ConvertListParameter(normalizedCollections));
+            }
+        }
+        else if (!string.IsNullOrWhiteSpace(request.CollectionName) &&
             !request.CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             filters.Add("collection_name = @collectionName");
@@ -1111,6 +1138,13 @@ public sealed class ContentRepository : IContentRepository
                 parameters.Add("author", request.Author);
             }
 
+            // When filtering by a specific section, exclude cross-section items
+            // (primary_section_name='all') — they have no single-section home.
+            if (hasSections)
+            {
+                sql.Append(" AND c.primary_section_name != 'all'");
+            }
+
             if (hasQuery)
             {
                 sql.Append(CultureInfo.InvariantCulture, $@"
@@ -1196,6 +1230,13 @@ public sealed class ContentRepository : IContentRepository
             {
                 whereClauses.Add("c.date_epoch <= @toDate");
                 parameters.Add("toDate", ((DateTimeOffset)request.DateTo.Value).ToUnixTimeSeconds());
+            }
+
+            // When filtering by a specific section, exclude cross-section items
+            // (primary_section_name='all') — they have no single-section home.
+            if (hasSections)
+            {
+                whereClauses.Add("c.primary_section_name != 'all'");
             }
 
             if (whereClauses.Count > 0)
@@ -1365,6 +1406,13 @@ public sealed class ContentRepository : IContentRepository
             whereClauses.Add("c.date_epoch <= @toDate");
         }
 
+        // When filtering by a specific section (not the virtual 'all'), exclude cross-section items
+        // (primary_section_name='all') — they have no single-section home.
+        if (hasSections && !request.Sections!.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase)))
+        {
+            whereClauses.Add("c.primary_section_name != 'all'");
+        }
+
         if (whereClauses.Count > 0)
         {
             countSql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
@@ -1416,6 +1464,13 @@ public sealed class ContentRepository : IContentRepository
         if (request.DateTo.HasValue)
         {
             sql.Append(" AND c.date_epoch <= @toDate");
+        }
+
+        // When filtering by a specific section (not the virtual 'all'), exclude cross-section items
+        // (primary_section_name='all') — they have no single-section home.
+        if (hasSections && !request.Sections!.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase)))
+        {
+            sql.Append(" AND c.primary_section_name != 'all'");
         }
     }
 
@@ -1663,6 +1718,8 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken ct = default)
     {
         var whereClauses = new List<string>();
@@ -1684,6 +1741,28 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         {
             whereClauses.Add("ci.feed_name = @FeedName");
             parameters.Add("FeedName", feedName);
+        }
+
+        if (!string.IsNullOrWhiteSpace(sectionName))
+        {
+            if (primarySectionOnly)
+            {
+                whereClauses.Add("ci.primary_section_name = @SectionName");
+            }
+            else
+            {
+                var col = SectionSlugToColumn(sectionName);
+                if (col != null)
+                {
+                    whereClauses.Add($"ci.{col} = TRUE");
+                }
+                else
+                {
+                    whereClauses.Add("ci.primary_section_name = @SectionName");
+                }
+            }
+
+            parameters.Add("SectionName", sectionName);
         }
 
         var whereStr = whereClauses.Count > 0
@@ -1733,6 +1812,18 @@ LIMIT @Limit OFFSET @Offset";
             TotalCount = totalCount
         };
     }
+
+    private static string? SectionSlugToColumn(string sectionSlug) => sectionSlug switch
+    {
+        "ai" => "is_ai",
+        "azure" => "is_azure",
+        "dotnet" => "is_dotnet",
+        "devops" => "is_devops",
+        "github-copilot" => "is_github_copilot",
+        "ml" => "is_ml",
+        "security" => "is_security",
+        _ => null
+    };
 
     /// <inheritdoc/>
     public async Task<bool> DeleteContentItemAsync(string collectionName, string slug, CancellationToken ct = default)
@@ -1831,12 +1922,6 @@ LIMIT @Limit OFFSET @Offset";
         if (hasValidExternalUrl)
         {
             redirectUrl = row.ExternalUrl!;
-        }
-        else if (row.CollectionName == "roundups")
-        {
-            // Roundups are only accessible via /all/roundups/ — they don't exist under
-            // individual section paths (mirrors ContentItem.GetHref() logic).
-            redirectUrl = $"/all/roundups/{row.Slug}";
         }
         else
         {

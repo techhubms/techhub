@@ -38,34 +38,15 @@ Describe "Sync-KeyVaultSecrets" {
             $paramBlock = $ast.ParamBlock
         }
 
-        It "Should have a mandatory Environment parameter" {
-            $param = $paramBlock.Parameters | Where-Object { $_.Name.VariablePath.UserPath -eq "Environment" }
-            $param | Should -Not -BeNullOrEmpty
-            $mandatory = $param.Attributes | Where-Object {
-                $_.TypeName.Name -eq "Parameter" -and
-                ($_.NamedArguments | Where-Object { $_.ArgumentName -eq "Mandatory" -and $_.Argument.Extent.Text -eq '$true' })
-            }
-            $mandatory | Should -Not -BeNullOrEmpty
-        }
-
-        It "Should validate Environment to staging and prod" {
-            $param = $paramBlock.Parameters | Where-Object { $_.Name.VariablePath.UserPath -eq "Environment" }
-            $validateSet = $param.Attributes | Where-Object { $_.TypeName.Name -eq "ValidateSet" }
-            $validateSet | Should -Not -BeNullOrEmpty
-            $values = $validateSet.PositionalArguments | ForEach-Object { $_.Value }
-            $values | Should -Contain "staging"
-            $values | Should -Contain "prod"
-        }
-
-        It "Should have a KeyVaultName parameter defaulting to kv-techhub-shared" {
+        It "Should have a KeyVaultName parameter defaulting to kv-techhub-prod" {
             $param = $paramBlock.Parameters | Where-Object { $_.Name.VariablePath.UserPath -eq "KeyVaultName" }
             $param | Should -Not -BeNullOrEmpty
-            $param.DefaultValue.Value | Should -Be "kv-techhub-shared"
+            $param.DefaultValue.Value | Should -Be "kv-techhub-prod"
         }
 
-        It "Should have an optional PostgresHost parameter" {
+        It "Should not have a PostgresHost parameter (connection string managed by Bicep)" {
             $param = $paramBlock.Parameters | Where-Object { $_.Name.VariablePath.UserPath -eq "PostgresHost" }
-            $param | Should -Not -BeNullOrEmpty
+            $param | Should -BeNullOrEmpty
         }
     }
 
@@ -154,19 +135,37 @@ Describe "Sync-KeyVaultSecrets" {
     }
 
     Context "Secret writing" {
-        It "Should write the database connection string secret" {
+        It "Should not write the database connection string secret (replaced by managed identity auth)" {
             $content = Get-Content $scriptPath -Raw
-            $content | Should -Match "db-connection-string"
+            $content | Should -Not -Match 'Set-KvSecret\s+-Name\s+[''"]?techhub-prod-db-connection-string[''"]?'
         }
 
-        It "Should write the AI API key secret" {
+        It "Should not write the AI API key secret (replaced by Cognitive Services OpenAI User RBAC)" {
             $content = Get-Content $scriptPath -Raw
-            $content | Should -Match "ai-api-key"
+            $content | Should -Not -Match 'Set-KvSecret\s+-Name\s+[''"]?techhub-prod-ai-api-key[''"]?'
         }
 
         It "Should write the AAD client secret" {
             $content = Get-Content $scriptPath -Raw
             $content | Should -Match "aad-client-secret"
+        }
+
+        It "Should write the GitHub Container Registry PAT" {
+            $content = Get-Content $scriptPath -Raw
+            $content | Should -Match "techhub-github-registry-token"
+            $content | Should -Match "GHCR_PAT"
+        }
+
+        It "Should write the wildcard-hub-ms TLS certificate" {
+            $content = Get-Content $scriptPath -Raw
+            $content | Should -Match "wildcard-hub-ms"
+            $content | Should -Match "WILDCARD_CERT_HUB_MS"
+        }
+
+        It "Should write the wildcard-xebia-ms TLS certificate" {
+            $content = Get-Content $scriptPath -Raw
+            $content | Should -Match "wildcard-xebia-ms"
+            $content | Should -Match "WILDCARD_CERT_XEBIA_MS"
         }
 
         It "Should use a temp file to write secret values (prevents exposure in process args)" {
