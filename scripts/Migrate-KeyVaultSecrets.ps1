@@ -201,8 +201,12 @@ Write-Host "  Target : $TargetKeyVaultName" -ForegroundColor Gray
 Write-Host ""
 Write-Host "  Next steps:" -ForegroundColor Gray
 Write-Host "  1. Store the GitHub PAT in the target Key Vault:" -ForegroundColor Gray
+Write-Host "     # Write the PAT via a temp file so it never appears in shell history:" -ForegroundColor Gray
+Write-Host "     `$tmp = [System.IO.Path]::GetTempFileName()" -ForegroundColor Gray
+Write-Host "     [System.IO.File]::WriteAllText(`$tmp, '<PAT>')" -ForegroundColor Gray
 Write-Host "     az keyvault secret set --vault-name $($TargetKeyVaultName) ``" -ForegroundColor Gray
-Write-Host "       --name techhub-github-registry-token --value <PAT>" -ForegroundColor Gray
+Write-Host "       --name techhub-github-registry-token --file `$tmp" -ForegroundColor Gray
+Write-Host "     Remove-Item `$tmp -Force" -ForegroundColor Gray
 Write-Host "  2. Deploy production infrastructure: ./scripts/Deploy-Infrastructure.ps1 -Mode deploy" -ForegroundColor Gray
 Write-Host "  3. Verify production health: https://tech.hub.ms/" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan

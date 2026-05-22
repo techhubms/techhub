@@ -41,6 +41,8 @@ jobs:
       - name: Find latest GHCR image tag for PR
         id: find-tag
         shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           $prNumber = '${{ inputs.pr_number }}'
           $tagPrefix = "pr-${prNumber}-"
