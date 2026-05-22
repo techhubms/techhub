@@ -17,6 +17,7 @@ infra/**/*.json
 **/.logs/
 trivy-test.sarif
 coverage.xml
+testResults.xml
 .tmp
 
 # .NET Build outputs

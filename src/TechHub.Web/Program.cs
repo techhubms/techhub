@@ -354,8 +354,24 @@ using (var scope = app.Services.CreateScope())
     var sectionCache = scope.ServiceProvider.GetRequiredService<SectionCache>();
     var heroBannerCache = scope.ServiceProvider.GetRequiredService<HeroBannerCache>();
 
-    var sections = await apiClient.GetAllSectionsAsync();
-    sectionCache.Initialize(sections?.ToList() ?? []);
+    try
+    {
+        var sections = await apiClient.GetAllSectionsAsync();
+        sectionCache.Initialize(sections?.ToList() ?? []);
+    }
+    catch (HttpRequestException ex)
+    {
+        // Non-fatal: SectionCacheRefreshService will populate the cache once the API is ready
+        var startupLog = scope.ServiceProvider.GetRequiredService<ILogger<SectionCache>>();
+        startupLog.LogWarning(ex, "Failed to pre-load SectionCache at startup, will retry on next background refresh");
+        sectionCache.Initialize([]);
+    }
+    catch (TaskCanceledException ex)
+    {
+        var startupLog = scope.ServiceProvider.GetRequiredService<ILogger<SectionCache>>();
+        startupLog.LogWarning(ex, "Failed to pre-load SectionCache at startup (timeout), will retry on next background refresh");
+        sectionCache.Initialize([]);
+    }
 
     try
     {

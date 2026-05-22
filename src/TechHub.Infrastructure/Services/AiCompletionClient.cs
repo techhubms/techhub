@@ -3,6 +3,8 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using Azure.Core;
+using Azure.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -11,10 +13,24 @@ using TechHub.Core.Interfaces;
 namespace TechHub.Infrastructure.Services;
 
 /// <summary>
-/// Typed HTTP client that sends chat completion requests to Azure OpenAI.
+/// Typed HTTP client that sends chat completion requests to Azure AI Foundry (OpenAI).
+/// Authenticates using a managed identity token (Entra ID) via <see cref="DefaultAzureCredential"/>
+/// with the <c>https://cognitiveservices.azure.com/.default</c> scope.
+/// In production, the Container App's user-assigned managed identity is granted the
+/// <c>Cognitive Services OpenAI User</c> role on the AI Foundry account.
+/// Locally, developers use <c>az login</c> and are granted the same RBAC role.
 /// </summary>
 public sealed class AiCompletionClient : IAiCompletionClient
 {
+    // Azure Cognitive Services token scope for Azure AI Foundry (OpenAI) inference.
+    private static readonly string[] _cognitiveServicesScope =
+        ["https://cognitiveservices.azure.com/.default"];
+
+    // DefaultAzureCredential is thread-safe and reusable; share a single instance.
+    // In production: picks up the Container App's user-assigned managed identity.
+    // Locally: uses 'az login' credentials after the developer is granted the RBAC role.
+    private static readonly DefaultAzureCredential _sharedCredential = new();
+
     private readonly HttpClient _httpClient;
     private readonly AiCategorizationOptions _options;
     private readonly ILogger<AiCompletionClient> _logger;
@@ -41,7 +57,13 @@ public sealed class AiCompletionClient : IAiCompletionClient
             string.Create(CultureInfo.InvariantCulture,
                 $"{_options.Endpoint.TrimEnd('/')}/openai/deployments/{_options.DeploymentName}/chat/completions?api-version={_options.ApiVersion}"));
 
-        request.Headers.Add("api-key", _options.ApiKey);
+        // Acquire a managed identity / user token for the Cognitive Services scope.
+        // DefaultAzureCredential caches the token internally and refreshes it before expiry,
+        // so this call is cheap on subsequent requests.
+        var tokenRequestContext = new TokenRequestContext(_cognitiveServicesScope);
+        var accessToken = await _sharedCredential.GetTokenAsync(tokenRequestContext, ct);
+        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken.Token);
+
         request.Content = new StringContent(jsonBody, Encoding.UTF8, new MediaTypeHeaderValue("application/json"));
 
         using var response = await _httpClient.SendAsync(request, ct);

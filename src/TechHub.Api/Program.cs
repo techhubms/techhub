@@ -95,10 +95,15 @@ builder.Services.Configure<ContentOptions>(builder.Configuration.GetSection("App
 var connectionString = builder.Configuration["Database:ConnectionString"]
     ?? throw new InvalidOperationException("Database:ConnectionString is required. Configure it in appsettings.json.");
 
+// When running with a managed identity (e.g. PR preview containers that use a per-PR
+// user-assigned identity), acquire PostgreSQL access tokens via DefaultAzureCredential
+// instead of a password. Set Database:UseEntraAuth=true to opt in.
+var useEntraAuth = builder.Configuration.GetValue<bool>("Database:UseEntraAuth");
+
 // Register NpgsqlDataSource as singleton — it manages the connection pool internally.
 // All connections are acquired from this pool via OpenConnection/OpenConnectionAsync.
 // DI owns the lifetime and disposes the data source on application shutdown.
-builder.Services.AddSingleton(_ => NpgsqlDataSource.Create(connectionString));
+builder.Services.AddSingleton(_ => NpgsqlDataSourceFactory.Create(connectionString, useEntraAuth));
 
 builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
 builder.Services.AddSingleton<IDbConnectionFactory>(sp =>

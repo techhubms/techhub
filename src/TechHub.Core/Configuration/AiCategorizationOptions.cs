@@ -11,9 +11,6 @@ public class AiCategorizationOptions
     /// <summary>Azure OpenAI endpoint URL (e.g. https://oai-techhub-prod.openai.azure.com/).</summary>
     public string Endpoint { get; init; } = string.Empty;
 
-    /// <summary>Azure OpenAI API key.</summary>
-    public string ApiKey { get; init; } = string.Empty;
-
     /// <summary>Azure OpenAI deployment name (e.g. gpt-4.1).</summary>
     public string DeploymentName { get; init; } = string.Empty;
 

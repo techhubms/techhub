@@ -74,8 +74,10 @@ scripts/
 
 ### Infrastructure
 
-- **Deploy-Infrastructure.ps1**: Azure Bicep deployment (shared/staging/production, validate/whatif/deploy modes)
-- **Deploy-Application.ps1**: Docker build → ACR push → Container Apps deploy. Supports `-SkipBuild`, `-SkipPush`, `-SkipDeploy`, `-SkipSmokeTests`. Production validates staging health first + auto-rollback.
+- **Deploy-Infrastructure.ps1**: Azure Bicep deployment for production (validate/whatif/deploy modes). Removed shared/staging environments.
+- **Deploy-Application.ps1**: Docker build → ghcr.io push → Container Apps deploy. Supports `-SkipBuild`, `-SkipPush`, `-SkipDeploy`, `-SkipSmokeTests`. Auto-rollback on health-check failure.
+- **Deploy-PrPreview.ps1**: PR preview environment lifecycle (deploy/teardown). Creates PITR clone of prod PostgreSQL in prod RG. Uses ghcr.io images.
+- **Migrate-KeyVaultSecrets.ps1**: One-time migration script to copy secrets from `kv-techhub-shared` to `kv-techhub-prod`.
 
 ## Testing
 

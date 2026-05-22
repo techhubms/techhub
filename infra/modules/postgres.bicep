@@ -42,6 +42,18 @@ param geoRedundantBackup bool = false
 @description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
 param adminIpAddresses string[] = []
 
+@description('First IP of the Container Apps subnet (for firewall rule allowing Container Apps to reach PostgreSQL). Leave empty to skip.')
+param containerAppsSubnetStartIp string = ''
+
+@description('Last IP of the Container Apps subnet (for firewall rule allowing Container Apps to reach PostgreSQL). Leave empty to skip.')
+param containerAppsSubnetEndIp string = ''
+
+@description('Entra (AAD) object ID of the principal to register as the Active Directory administrator. Leave empty to skip Entra admin setup.')
+param entraAdminObjectId string = ''
+
+@description('Display name of the Entra (AAD) administrator principal (e.g. managed identity name). Required when entraAdminObjectId is provided.')
+param entraAdminName string = ''
+
 @description('Tags applied to the PostgreSQL server')
 param tags object = {}
 
@@ -59,7 +71,10 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
     authConfig: {
-      activeDirectoryAuth: 'Disabled'
+      // Enable both password (for infrastructure management) and Entra ID auth.
+      // Applications use Entra tokens (Database:UseEntraAuth=true); password remains
+      // available for admin access and emergency scenarios.
+      activeDirectoryAuth: !empty(entraAdminObjectId) ? 'Enabled' : 'Disabled'
       passwordAuth: 'Enabled'
     }
     dataEncryption: {
@@ -84,7 +99,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
+      publicNetworkAccess: (!empty(adminIpAddresses) || !empty(containerAppsSubnetStartIp)) ? 'Enabled' : 'Disabled'
     }
   }
 }
@@ -98,6 +113,31 @@ resource adminFirewallRules 'Microsoft.DBforPostgreSQL/flexibleServers/firewallR
     endIpAddress: ip
   }
 }]
+
+// Firewall rule: allow Container Apps subnet IP range so Container Apps can reach PostgreSQL
+// without a private endpoint. Uses explicit start/end IPs because Bicep cannot parse CIDR.
+resource containerAppsSubnetFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsSubnetStartIp) && !empty(containerAppsSubnetEndIp)) {
+  parent: postgresServer
+  name: 'allow-container-apps-subnet'
+  properties: {
+    startIpAddress: containerAppsSubnetStartIp
+    endIpAddress: containerAppsSubnetEndIp
+  }
+}
+
+// Entra ID (AAD) administrator for the PostgreSQL server.
+// When set, applications can authenticate with a managed identity token instead of a password.
+// The entraAdminObjectId is the AAD object ID of the principal (e.g. a user-assigned managed identity).
+resource entraAdmin 'Microsoft.DBforPostgreSQL/flexibleServers/administrators@2024-08-01' = if (!empty(entraAdminObjectId)) {
+  parent: postgresServer
+  // The resource name must be the AAD object ID (GUID) of the principal.
+  name: entraAdminObjectId
+  properties: {
+    principalName: entraAdminName
+    principalType: 'ServicePrincipal'
+    tenantId: subscription().tenantId
+  }
+}
 
 // Database
 resource database 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2024-08-01' = {

@@ -7,8 +7,11 @@ param adminObjectIds string[] = []
 @description('Log Analytics Workspace ID for audit logging (optional)')
 param logAnalyticsWorkspaceId string = ''
 
-@description('Admin IP addresses for firewall rules (app traffic uses the private endpoint)')
+@description('Admin IP addresses for firewall rules')
 param adminIpAddresses string[]
+
+@description('Container Apps subnet resource ID (service endpoint grants VNet access without a private endpoint)')
+param containerAppsSubnetId string
 
 @description('Tags applied to the Key Vault')
 param tags object = {}
@@ -32,6 +35,14 @@ resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
       defaultAction: 'Deny'
       bypass: 'None'
       ipRules: [for ip in adminIpAddresses: { value: ip }]
+      // VNet service endpoint on the Container Apps subnet allows Container Apps to
+      // reach Key Vault over the Microsoft backbone (no private endpoint required).
+      virtualNetworkRules: [
+        {
+          id: containerAppsSubnetId
+          ignoreMissingVnetServiceEndpoint: false
+        }
+      ]
     }
   }
 }
