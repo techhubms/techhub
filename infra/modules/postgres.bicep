@@ -42,11 +42,8 @@ param geoRedundantBackup bool = false
 @description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
 param adminIpAddresses string[] = []
 
-@description('First IP of the Container Apps subnet (for firewall rule allowing Container Apps to reach PostgreSQL). Leave empty to skip.')
-param containerAppsSubnetStartIp string = ''
-
-@description('Last IP of the Container Apps subnet (for firewall rule allowing Container Apps to reach PostgreSQL). Leave empty to skip.')
-param containerAppsSubnetEndIp string = ''
+@description('Static outbound IP of the Container Apps Environment (load balancer SNAT IP). Container Apps uses this IP when connecting to PostgreSQL public endpoint. Leave empty to skip.')
+param containerAppsStaticIp string = ''
 
 @description('Entra (AAD) object ID of the principal to register as the Active Directory administrator. Leave empty to skip Entra admin setup.')
 param entraAdminObjectId string = ''
@@ -99,7 +96,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      publicNetworkAccess: (!empty(adminIpAddresses) || !empty(containerAppsSubnetStartIp)) ? 'Enabled' : 'Disabled'
+      publicNetworkAccess: (!empty(adminIpAddresses) || !empty(containerAppsStaticIp)) ? 'Enabled' : 'Disabled'
     }
   }
 }
@@ -114,14 +111,16 @@ resource adminFirewallRules 'Microsoft.DBforPostgreSQL/flexibleServers/firewallR
   }
 }]
 
-// Firewall rule: allow Container Apps subnet IP range so Container Apps can reach PostgreSQL
-// without a private endpoint. Uses explicit start/end IPs because Bicep cannot parse CIDR.
-resource containerAppsSubnetFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsSubnetStartIp) && !empty(containerAppsSubnetEndIp)) {
+// Firewall rule: allow the Container Apps Environment's static outbound IP.
+// VNet-integrated Container Apps use Azure SNAT (load balancer frontend IP) for outbound
+// connections to public endpoints. The VNet subnet IP range (10.x.x.x) is NOT the source IP
+// — it is SNAT'd to the Container Apps Environment's staticIp before leaving Azure.
+resource containerAppsStaticIpFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsStaticIp)) {
   parent: postgresServer
-  name: 'allow-container-apps-subnet'
+  name: 'allow-container-apps-static-ip'
   properties: {
-    startIpAddress: containerAppsSubnetStartIp
-    endIpAddress: containerAppsSubnetEndIp
+    startIpAddress: containerAppsStaticIp
+    endIpAddress: containerAppsStaticIp
   }
 }
 
@@ -140,7 +139,7 @@ resource entraAdmin 'Microsoft.DBforPostgreSQL/flexibleServers/administrators@20
     principalType: 'ServicePrincipal'
     tenantId: subscription().tenantId
   }
-  dependsOn: [adminFirewallRules, containerAppsSubnetFirewallRule]
+  dependsOn: [adminFirewallRules, containerAppsStaticIpFirewallRule]
 }
 
 // Database

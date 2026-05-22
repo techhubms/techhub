@@ -30,12 +30,6 @@ param addressSpacePrefix string = '10.2.0.0/16'
 @description('Container Apps subnet prefix')
 param containerAppsSubnetPrefix string = '10.2.0.0/23'
 
-@description('First IP of the Container Apps subnet (for PostgreSQL firewall rule — Bicep cannot parse CIDR)')
-param containerAppsSubnetStartIp string = '10.2.0.0'
-
-@description('Last IP of the Container Apps subnet (for PostgreSQL firewall rule — Bicep cannot parse CIDR)')
-param containerAppsSubnetEndIp string = '10.2.1.255'
-
 @description('Primary host names for the web app. Used for Application Insights availability tests.')
 param primaryHosts string[] = []
 
@@ -242,8 +236,10 @@ module postgres './modules/postgres.bicep' = {
     backupRetentionDays: 21
     geoRedundantBackup: true
     adminIpAddresses: adminIpList
-    containerAppsSubnetStartIp: containerAppsSubnetStartIp
-    containerAppsSubnetEndIp: containerAppsSubnetEndIp
+    // Container Apps uses Azure SNAT with the environment's static IP as the outbound source
+    // IP when connecting to PostgreSQL's public endpoint. The VNet subnet IPs (10.x.x.x) are
+    // NOT the source IP seen by PostgreSQL — they are SNAT'd to the load balancer frontend IP.
+    containerAppsStaticIp: containerAppsEnv.outputs.staticIp
     entraAdminObjectId: identity.outputs.identityPrincipalId
     entraAdminName: prodIdentityName
     tags: prodTags
