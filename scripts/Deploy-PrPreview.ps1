@@ -422,7 +422,7 @@ Write-Step "Configuring PostgreSQL firewall rules for $prPostgresServer"
 $natGatewayIp = az network public-ip show `
     --name $natGatewayPublicIpName `
     --resource-group $prodRG `
-    --query properties.ipAddress -o tsv 2>$null
+    --query ipAddress -o tsv 2>$null
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($natGatewayIp)) {
     Write-Fail "Could not retrieve NAT Gateway public IP from '$natGatewayPublicIpName' in '$prodRG'"
     exit 1
