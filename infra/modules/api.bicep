@@ -11,6 +11,9 @@ param githubRegistryAuthUsername string = githubRegistryUsername
 @description('User-assigned managed identity resource ID (used to access Key Vault secrets)')
 param identityId string
 
+@description('Client ID of the user-assigned managed identity. Required for DefaultAzureCredential to select the correct identity when multiple are available.')
+param identityClientId string
+
 param imageTag string
 param appInsightsConnectionString string
 
@@ -80,6 +83,13 @@ var staticEnvVars = [
   {
     name: 'OTEL_SERVICE_NAME'
     value: 'techhub-api'
+  }
+  {
+    // Required for DefaultAzureCredential / ManagedIdentityCredential to select the correct
+    // user-assigned managed identity. Without this, IMDS returns HTTP 400 when multiple
+    // identities exist or when the managed identity endpoint requires an explicit client_id.
+    name: 'AZURE_CLIENT_ID'
+    value: identityClientId
   }
   {
     name: 'Database__Provider'

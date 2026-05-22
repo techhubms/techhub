@@ -42,8 +42,8 @@ param geoRedundantBackup bool = false
 @description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
 param adminIpAddresses string[] = []
 
-@description('Static outbound IP of the Container Apps Environment (load balancer SNAT IP). Container Apps uses this IP when connecting to PostgreSQL public endpoint. Leave empty to skip.')
-param containerAppsStaticIp string = ''
+@description('Public IP of the NAT Gateway attached to the Container Apps subnet. All Container Apps outbound traffic uses this IP when connecting to PostgreSQL public endpoint. Leave empty to skip.')
+param containerAppsNatGatewayIp string = ''
 
 @description('Entra (AAD) object ID of the principal to register as the Active Directory administrator. Leave empty to skip Entra admin setup.')
 param entraAdminObjectId string = ''
@@ -96,7 +96,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      publicNetworkAccess: (!empty(adminIpAddresses) || !empty(containerAppsStaticIp)) ? 'Enabled' : 'Disabled'
+      publicNetworkAccess: (!empty(adminIpAddresses) || !empty(containerAppsNatGatewayIp)) ? 'Enabled' : 'Disabled'
     }
   }
 }
@@ -111,16 +111,16 @@ resource adminFirewallRules 'Microsoft.DBforPostgreSQL/flexibleServers/firewallR
   }
 }]
 
-// Firewall rule: allow the Container Apps Environment's static outbound IP.
-// VNet-integrated Container Apps use Azure SNAT (load balancer frontend IP) for outbound
-// connections to public endpoints. The VNet subnet IP range (10.x.x.x) is NOT the source IP
-// — it is SNAT'd to the Container Apps Environment's staticIp before leaving Azure.
-resource containerAppsStaticIpFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsStaticIp)) {
+// Firewall rule: allow the NAT Gateway public IP so Container Apps can reach PostgreSQL.
+// VNet-integrated Container Apps route all outbound traffic through the NAT Gateway attached
+// to the Container Apps subnet. Without a NAT Gateway, containers use a large shared pool
+// of ephemeral Azure SNAT IPs (~150+) that cannot be predicted or allowlisted.
+resource containerAppsNatGatewayFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsNatGatewayIp)) {
   parent: postgresServer
-  name: 'allow-container-apps-static-ip'
+  name: 'allow-nat-gateway'
   properties: {
-    startIpAddress: containerAppsStaticIp
-    endIpAddress: containerAppsStaticIp
+    startIpAddress: containerAppsNatGatewayIp
+    endIpAddress: containerAppsNatGatewayIp
   }
 }
 
@@ -139,7 +139,7 @@ resource entraAdmin 'Microsoft.DBforPostgreSQL/flexibleServers/administrators@20
     principalType: 'ServicePrincipal'
     tenantId: subscription().tenantId
   }
-  dependsOn: [adminFirewallRules, containerAppsStaticIpFirewallRule]
+  dependsOn: [adminFirewallRules, containerAppsNatGatewayFirewallRule]
 }
 
 // Database

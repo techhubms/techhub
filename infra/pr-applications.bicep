@@ -79,6 +79,7 @@ module apiApp './modules/api.bicep' = {
     githubRegistryUsername: githubRegistryUsername
     githubRegistryAuthUsername: githubRegistryAuthUsername
     identityId: prManagedIdentity.id
+    identityClientId: prManagedIdentity.properties.clientId
     imageTag: imageTag
     appInsightsConnectionString: '' // disabled — PR telemetry must not reach production dashboards
     keyVaultUri: keyVaultUri

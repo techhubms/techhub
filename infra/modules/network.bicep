@@ -16,6 +16,44 @@ param containerAppsSubnetPrefix string = '10.0.0.0/23'
 @description('Tags applied to networking resources')
 param tags object = {}
 
+// NAT Gateway public IP — provides a stable, predictable outbound IP for Container Apps.
+// Without a NAT Gateway, Container Apps uses a large shared pool of ephemeral Azure
+// infrastructure SNAT IPs (~150+ IPs) that change unpredictably and cannot be allowlisted
+// in PostgreSQL firewall rules. The NAT Gateway gives a single fixed outbound IP.
+resource natGatewayPublicIp 'Microsoft.Network/publicIPAddresses@2025-01-01' = {
+  name: replace(vnetName, 'vnet-', 'pip-nat-')
+  location: location
+  tags: tags
+  sku: {
+    name: 'Standard'
+    tier: 'Regional'
+  }
+  zones: ['1']
+  properties: {
+    publicIPAllocationMethod: 'Static'
+    publicIPAddressVersion: 'IPv4'
+  }
+}
+
+// NAT Gateway — routes all outbound Container Apps traffic through the stable public IP above.
+resource natGateway 'Microsoft.Network/natGateways@2025-01-01' = {
+  name: replace(vnetName, 'vnet-', 'natgw-')
+  location: location
+  tags: tags
+  sku: {
+    name: 'Standard'
+  }
+  zones: ['1']
+  properties: {
+    idleTimeoutInMinutes: 10
+    publicIpAddresses: [
+      {
+        id: natGatewayPublicIp.id
+      }
+    ]
+  }
+}
+
 // Virtual Network with a single Container Apps subnet.
 // Key Vault uses a VNet service endpoint on this subnet (no private endpoint needed).
 resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
@@ -34,6 +72,9 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
         name: containerAppsSubnetName
         properties: {
           addressPrefix: containerAppsSubnetPrefix
+          natGateway: {
+            id: natGateway.id
+          }
           delegations: [
             {
               name: 'Microsoft.App.environments'
@@ -62,3 +103,6 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
 output vnetId string = vnet.id
 output vnetName string = vnet.name
 output containerAppsSubnetId string = vnet.properties.subnets[0].id
+// Public IP used by the NAT Gateway — must be allowlisted in PostgreSQL firewall rules
+// so Container Apps can reach PostgreSQL over the public internet.
+output natGatewayPublicIp string = natGatewayPublicIp.properties.ipAddress

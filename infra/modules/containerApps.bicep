@@ -60,7 +60,3 @@ resource diagnosticSettings 'Microsoft.Insights/diagnosticSettings@2021-05-01-pr
 
 output environmentId string = containerAppsEnvironment.id
 output defaultDomain string = containerAppsEnvironment.properties.defaultDomain
-// The static IP is the load balancer frontend IP used for both inbound traffic and outbound
-// SNAT when containers connect to public endpoints (e.g. PostgreSQL public endpoint).
-// Add this IP to any firewall that Container Apps must reach over the public internet.
-output staticIp string = containerAppsEnvironment.properties.staticIp
