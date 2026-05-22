@@ -140,7 +140,7 @@ No ACR — images on ghcr.io (private packages, registry credentials in Key Vaul
 - Update `sharedKeyVaultUri` → `keyVaultUri` (local KV, same deployment)
 - Update `wildcardCerts` module: KV is now in same RG (remove `sharedResourceGroupName`)
 - Update `actionGroupId`: now from local `actionGroup.outputs.actionGroupId`
-- Pass `containerAppsStartIp` / `containerAppsEndIp` to `postgres` module for subnet firewall rule
+- Pass `containerAppsStaticIp: containerAppsEnv.outputs.staticIp` to `postgres` module for outbound SNAT firewall rule
 - Pass `containerAppsSubnetId` to `keyVault` module for VNet service endpoint
 
 ---
@@ -192,24 +192,26 @@ No ACR — images on ghcr.io (private packages, registry credentials in Key Vaul
 
 **Add params:**
 
-- `containerAppsStartIp string = ''` — e.g. `'10.2.0.0'`
-- `containerAppsEndIp string = ''` — e.g. `'10.2.1.255'`
+- `containerAppsStaticIp string = ''` — e.g. `'135.116.37.183'` (Container Apps Environment static IP)
 
 **Add firewall rule:**
 
 ```bicep
-resource containerAppsFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsStartIp)) {
+resource containerAppsStaticIpFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsStaticIp)) {
   parent: postgresServer
-  name: 'allow-container-apps-subnet'
+  name: 'allow-container-apps-static-ip'
   properties: {
-    startIpAddress: containerAppsStartIp
-    endIpAddress: containerAppsEndIp
+    startIpAddress: containerAppsStaticIp
+    endIpAddress: containerAppsStaticIp
   }
 }
 ```
 
-Use explicit start/end IP params rather than CIDR parsing — Bicep has no native CIDR-to-range conversion. For `10.2.0.0/23`: start = `10.2.0.0`, end = `10.2.1.255`.
-
+> **SNAT note:** VNet-integrated Container Apps without a NAT gateway use the Container Apps
+> Environment's **static IP** (load balancer SNAT) as the outbound source IP when connecting
+> to public internet endpoints like PostgreSQL. The VNet subnet range (10.2.0.0/23) is NOT
+> the source IP seen by PostgreSQL — it is SNAT'd to the load balancer frontend IP. The static
+> IP is obtained from `containerAppsEnv.outputs.staticIp` and passed to the postgres module.
 > **Security note:** This grants network access to all Container Apps in the environment (including PR previews). This is acceptable because PR previews use their own PITR-cloned database — they never have credentials for `psql-techhub-prod`. The firewall rule provides network-level access, but authentication still requires the correct connection string (stored only in Key Vault secrets accessible to the prod Container App).
 
 ---

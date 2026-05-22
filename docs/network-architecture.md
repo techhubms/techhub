@@ -26,8 +26,9 @@ Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
          ├── Key Vault service endpoint (Microsoft.KeyVault)
          │       → Container Apps reach kv-techhub-prod over Microsoft backbone
          │
-         ├── PostgreSQL firewall rule (10.2.0.0–10.2.1.255)
-         │       → Container Apps reach psql-techhub-prod over public internet (source IP in subnet)
+         ├── PostgreSQL firewall rule (Container Apps static IP / SNAT source)
+         │       → Container Apps reach psql-techhub-prod over public internet
+         │       → Source IP is the CAE static IP (load balancer SNAT), NOT the VNet subnet range
          │
          └── AI Foundry — open public access, Entra token auth (Cognitive Services OpenAI User RBAC)
 ```
@@ -66,7 +67,7 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 | Resource | Firewall Mechanism | Access |
 |----------|-------------------|--------|
 | Key Vault | `networkAcls.ipRules` + VNet service endpoint | Admin IPs + Container Apps subnet; default deny |
-| PostgreSQL | Per-IP/range firewall rules | Admin IPs + Container Apps subnet (10.2.0.0–10.2.1.255); default deny |
+| PostgreSQL | Per-IP/range firewall rules | Admin IPs + Container Apps Environment static IP (SNAT outbound); default deny |
 | Log Analytics | Public ingestion + query enabled | RBAC-protected |
 | App Insights | Public ingestion + query enabled | RBAC-protected; browser JS SDK over public internet |
 | AI Foundry | Public access open | Entra token (Cognitive Services OpenAI User RBAC); no IP restriction needed |
@@ -115,9 +116,12 @@ created via PITR from the production backup — both in `rg-techhub-prod`.
 
 - **Production**: `psql-techhub-prod` — permanent, public access with firewall rules; both password auth (for admin/emergency use) and Entra ID auth enabled
 - **PR environments**: `psql-techhub-pr-{N}` — ephemeral, created via Point-in-Time Restore; Entra-only auth
-- **Public access**: Enabled with firewall rules for admin IPs and Container Apps subnet
-- **Firewall**: Admin IP rules + Container Apps subnet range (10.2.0.0–10.2.1.255)
-- **Container Apps** reach PostgreSQL over the public internet (source IP is in the CA subnet range)
+- **Public access**: Enabled with firewall rules for admin IPs and the Container Apps Environment static IP
+- **Firewall**: Admin IP rules + Container Apps Environment static outbound IP (SNAT)
+- **Container Apps** reach PostgreSQL over the public internet; the source IP is the
+  Container Apps Environment's **static IP** (load balancer SNAT) — NOT the VNet subnet range.
+  VNet-integrated Container Apps without a NAT gateway use the environment's load balancer
+  frontend IP for outbound SNAT to public endpoints.
 - **Admin** reaches PostgreSQL via IP-allowlisted public access
 
 > **Authentication**: The `id-techhub-prod` user-assigned managed identity is registered as the

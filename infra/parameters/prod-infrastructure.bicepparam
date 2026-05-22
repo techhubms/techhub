@@ -9,11 +9,6 @@ param containerAppsEnvName = 'cae-techhub-prod'
 param vnetName = 'vnet-techhub-prod'
 param addressSpacePrefix = '10.2.0.0/16'
 param containerAppsSubnetPrefix = '10.2.0.0/23'
-// Container Apps subnet IP range for PostgreSQL firewall rule (Bicep cannot parse CIDR).
-// These must match containerAppsSubnetPrefix = '10.2.0.0/23'. Update all three if the subnet changes.
-// Also update the matching constants in scripts/Deploy-PrPreview.ps1 if the subnet changes.
-param containerAppsSubnetStartIp = '10.2.0.0'
-param containerAppsSubnetEndIp = '10.2.1.255'
 // Availability tests — same hosts as the production web app
 param primaryHosts = ['tech.hub.ms', 'tech.xebia.ms']
 // PostgreSQL configuration

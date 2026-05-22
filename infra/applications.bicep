@@ -146,26 +146,28 @@ var effectiveAppInsightsConnStr = appInsightsConnectionString == '@existing' ? a
 // Wildcard certificates
 // ============================================================================
 
-module wildcardCerts './modules/wildcardCertificates.bicep' = if (!empty(wildcardCertNames)) {
-  scope: resourceGroup
-  name: 'wildcardCerts-${deploymentSuffix}'
-  params: {
-    location: location
-    containerAppsEnvironmentName: containerAppsEnvName
-    keyVaultName: keyVaultName
-    wildcardCertNames: wildcardCertNames
-    identityId: managedIdentity.id
-    identityPrincipalId: managedIdentity.properties.principalId
-    deploymentSuffix: deploymentSuffix
-  }
-}
+// Reference existing wildcard certificates via `existing` — do NOT re-deploy them.
+//
+// Background: re-deploying Microsoft.App/managedEnvironments/certificates via Bicep on every
+// CD run triggers an idempotent ARM PUT on the Azure Container Apps cert provider. When the
+// cert already exists the provider starts an async re-import operation that never signals
+// completion, causing ARM to poll indefinitely and the deployment to hang.
+//
+// Certificates are created once (initial environment setup) and renewed via
+// infra/modules/wildcardCertificates.bicep run separately after cert rotation.
+// See docs/wildcard-certificates.md for the renewal process.
+var certEntries = items(wildcardCertNames)
+resource existingCerts 'Microsoft.App/managedEnvironments/certificates@2025-07-01' existing = [for entry in certEntries: {
+  parent: containerAppsEnvResource
+  name: 'wildcard-${replace(entry.key, '.', '-')}'
+}]
 
-// Build a map of base domain → certificate resource ID for the web module
-#disable-next-line BCP318
-var _certDomains = !empty(wildcardCertNames) ? wildcardCerts.outputs.certDomains : []
-#disable-next-line BCP318
-var _certIds = !empty(wildcardCertNames) ? wildcardCerts.outputs.certIds : []
-var wildcardCertIds = toObject(_certDomains, domain => domain, domain => _certIds[indexOf(_certDomains, domain)])
+// Build cert ID lookup: { 'hub.ms': '/subscriptions/.../certificates/wildcard-hub-ms', ... }
+var wildcardCertIdPairs = [for (entry, i) in certEntries: {
+  key: entry.key
+  value: existingCerts[i].id
+}]
+var wildcardCertIds = !empty(certEntries) ? toObject(wildcardCertIdPairs, item => item.key, item => item.value) : {}
 
 // ============================================================================
 // Container Apps

@@ -79,11 +79,10 @@ $prodIdentityName = 'id-techhub-prod'
 # Production server (source for PITR database clone)
 $prodPostgresServer = 'psql-techhub-prod'
 
-# Container Apps subnet range (used for PostgreSQL firewall rule).
-# These must match the containerAppsSubnetStartIp/EndIp values in infra/parameters/prod-infrastructure.bicepparam.
-# Update both places if the Container Apps subnet CIDR ever changes.
-$containerAppsSubnetStartIp = '10.2.0.0'
-$containerAppsSubnetEndIp = '10.2.1.255'
+# Container Apps subnet range (no longer used — see containerAppsStaticIp below).
+# Container Apps uses Azure SNAT (load balancer static IP) not the VNet subnet IPs as the
+# outbound source when connecting to PostgreSQL. The static IP is fetched dynamically from
+# the Container Apps environment at deploy time.
 
 # PR-specific resource names
 $prPostgresServer = "psql-techhub-pr-$PrNumber"
@@ -412,8 +411,27 @@ else {
 
 # Add firewall rules for the PR PostgreSQL server.
 # Admin IPs: allow explicit admin access.
-# Container Apps subnet: allow all Container Apps in the prod environment to reach the PR database.
+# Container Apps static IP: the prod environment's load balancer SNAT IP — used as the source
+# IP for all outbound connections from Container Apps to PostgreSQL's public endpoint.
 Write-Step "Configuring PostgreSQL firewall rules for $prPostgresServer"
+
+# Fetch the Container Apps Environment's static outbound IP.
+# This is the SNAT source IP seen by PostgreSQL, not the VNet subnet IP range (10.x.x.x).
+$containerAppsStaticIp = az containerapp env show `
+    --name $prodEnvName `
+    --resource-group $prodRG `
+    --query properties.staticIp -o tsv 2>&1
+if ($LASTEXITCODE -ne 0) {
+    $containerAppsStaticIpError = ($containerAppsStaticIp | Out-String).Trim()
+    Write-Fail "Could not retrieve Container Apps Environment static IP for env '$prodEnvName' in resource group '$prodRG'. Azure CLI error: $containerAppsStaticIpError"
+    exit 1
+}
+$containerAppsStaticIp = ($containerAppsStaticIp | Out-String).Trim()
+if ([string]::IsNullOrWhiteSpace($containerAppsStaticIp)) {
+    Write-Fail "Could not retrieve Container Apps Environment static IP for env '$prodEnvName' in resource group '$prodRG': the Azure CLI command returned an empty value."
+    exit 1
+}
+Write-Ok "Container Apps static IP: $containerAppsStaticIp"
 
 # Parse admin IPs from env var
 $adminIps = @($env:ADMIN_IP_ADDRESSES -split ',' | ForEach-Object { $_.Trim() } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
@@ -454,49 +472,66 @@ foreach ($ip in $adminIps) {
     $ruleIndex++
 }
 
-# Container Apps subnet rule (idempotent)
-$containerAppsSubnetRuleName = 'allow-container-apps-subnet'
-$existingContainerAppsSubnetRuleJson = az postgres flexible-server firewall-rule list `
+# Container Apps static IP rule (idempotent)
+$containerAppsStaticIpRuleName = 'allow-container-apps-static-ip'
+
+# Clean up any old subnet-range rule from before the SNAT fix (safe to delete, it was ineffective)
+$oldSubnetRuleName = 'allow-container-apps-subnet'
+$oldSubnetRuleJson = az postgres flexible-server firewall-rule list `
     --resource-group $prodRG `
     --name $prPostgresServer `
-    --query "[?name=='$containerAppsSubnetRuleName'] | [0]" `
+    --query "[?name=='$oldSubnetRuleName'] | [0]" `
     --output json 2>$null
-$existingContainerAppsSubnetRule = $null
-if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingContainerAppsSubnetRuleJson) -and $existingContainerAppsSubnetRuleJson -ne 'null') {
-    $existingContainerAppsSubnetRule = $existingContainerAppsSubnetRuleJson | ConvertFrom-Json
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($oldSubnetRuleJson) -and $oldSubnetRuleJson -ne 'null') {
+    Write-Detail "Removing old (ineffective) Container Apps subnet firewall rule..."
+    az postgres flexible-server firewall-rule delete `
+        --resource-group $prodRG `
+        --name $prPostgresServer `
+        --rule-name $oldSubnetRuleName `
+        --yes 2>$null | Out-Null
 }
 
-if ($existingContainerAppsSubnetRule -and
-    $existingContainerAppsSubnetRule.startIpAddress -eq $containerAppsSubnetStartIp -and
-    $existingContainerAppsSubnetRule.endIpAddress -eq $containerAppsSubnetEndIp) {
-    Write-Ok "Container Apps subnet firewall rule already configured"
+$existingContainerAppsStaticIpRuleJson = az postgres flexible-server firewall-rule list `
+    --resource-group $prodRG `
+    --name $prPostgresServer `
+    --query "[?name=='$containerAppsStaticIpRuleName'] | [0]" `
+    --output json 2>$null
+$existingContainerAppsStaticIpRule = $null
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingContainerAppsStaticIpRuleJson) -and $existingContainerAppsStaticIpRuleJson -ne 'null') {
+    $existingContainerAppsStaticIpRule = $existingContainerAppsStaticIpRuleJson | ConvertFrom-Json
+}
+
+if ($existingContainerAppsStaticIpRule -and
+    $existingContainerAppsStaticIpRule.startIpAddress -eq $containerAppsStaticIp -and
+    $existingContainerAppsStaticIpRule.endIpAddress -eq $containerAppsStaticIp) {
+    Write-Ok "Container Apps static IP firewall rule already configured"
 }
 else {
-    if ($existingContainerAppsSubnetRule) {
-        Write-Detail "Replacing stale Container Apps subnet firewall rule..."
+    if ($existingContainerAppsStaticIpRule) {
+        Write-Detail "Replacing stale Container Apps static IP firewall rule..."
         az postgres flexible-server firewall-rule delete `
             --resource-group $prodRG `
             --name $prPostgresServer `
-            --rule-name $containerAppsSubnetRuleName `
+            --rule-name $containerAppsStaticIpRuleName `
             --yes 2>$null | Out-Null
         if ($LASTEXITCODE -ne 0) {
-            Write-Fail "Failed to remove existing Container Apps subnet firewall rule"
+            Write-Fail "Failed to remove existing Container Apps static IP firewall rule"
             exit 1
         }
     }
 
-    Write-Detail "Adding Container Apps subnet firewall rule ($containerAppsSubnetStartIp - $containerAppsSubnetEndIp)..."
+    Write-Detail "Adding Container Apps static IP firewall rule ($containerAppsStaticIp)..."
     az postgres flexible-server firewall-rule create `
         --resource-group $prodRG `
         --name $prPostgresServer `
-        --rule-name $containerAppsSubnetRuleName `
-        --start-ip-address $containerAppsSubnetStartIp `
-        --end-ip-address $containerAppsSubnetEndIp
+        --rule-name $containerAppsStaticIpRuleName `
+        --start-ip-address $containerAppsStaticIp `
+        --end-ip-address $containerAppsStaticIp
     if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to add Container Apps subnet firewall rule"
+        Write-Fail "Failed to add Container Apps static IP firewall rule"
         exit 1
     }
-    Write-Ok "Container Apps subnet firewall rule added"
+    Write-Ok "Container Apps static IP firewall rule added"
 }
 
 # ============================================================================
