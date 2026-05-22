@@ -117,7 +117,7 @@ Write-Host "===============================================================" -Fo
 Write-Step "Validating prerequisites"
 
 # Check Azure PowerShell login
-$context = Get-AzContext
+$context = Get-AzContext -ErrorAction SilentlyContinue
 if (-not $context) {
     Write-Fail "Not logged in to Azure PowerShell. Run 'Connect-AzAccount' first."
     exit 1
@@ -245,6 +245,7 @@ if ($Mode -eq 'deploy') {
 
     # New-AzDeployment -Verbose streams one line per resource as it completes, giving
     # continuous progress output instead of the silent wait from az deployment sub create.
+    $savedVerbose = $VerbosePreference
     $VerbosePreference = 'Continue'
     try {
         New-AzDeployment `
@@ -255,11 +256,11 @@ if ($Mode -eq 'deploy') {
             -TemplateParameterObject @{ deployApps = $false } `
             -SkipTemplateParameterPrompt
     } catch {
-        $VerbosePreference = 'SilentlyContinue'
         Write-Fail "Phase 1 infrastructure deployment failed: $_"
         exit 1
+    } finally {
+        $VerbosePreference = $savedVerbose
     }
-    $VerbosePreference = 'SilentlyContinue'
     Write-Ok "Base infrastructure deployed successfully"
 
     # Sync secrets now that the Key Vault exists.
@@ -282,6 +283,7 @@ if ($Mode -eq 'deploy') {
     # Phase 2: Container Apps — registry token + app secrets are now in the Key Vault.
     Write-Step "Phase 2: Deploying Container Apps"
 
+    $savedVerbose = $VerbosePreference
     $VerbosePreference = 'Continue'
     try {
         New-AzDeployment `
@@ -291,11 +293,11 @@ if ($Mode -eq 'deploy') {
             -TemplateParameterFile $paramsFile `
             -SkipTemplateParameterPrompt
     } catch {
-        $VerbosePreference = 'SilentlyContinue'
         Write-Fail "Phase 2 Container Apps deployment failed: $_"
         exit 1
+    } finally {
+        $VerbosePreference = $savedVerbose
     }
-    $VerbosePreference = 'SilentlyContinue'
     Write-Ok "Container Apps deployed successfully"
 }
 
