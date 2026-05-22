@@ -236,10 +236,9 @@ module postgres './modules/postgres.bicep' = {
     backupRetentionDays: 21
     geoRedundantBackup: true
     adminIpAddresses: adminIpList
-    // Container Apps uses Azure SNAT with the environment's static IP as the outbound source
-    // IP when connecting to PostgreSQL's public endpoint. The VNet subnet IPs (10.x.x.x) are
-    // NOT the source IP seen by PostgreSQL — they are SNAT'd to the load balancer frontend IP.
-    containerAppsStaticIp: containerAppsEnv.outputs.staticIp
+    // Container Apps routes outbound traffic through the NAT Gateway, which has a single
+    // stable public IP. PostgreSQL's firewall must allowlist this IP.
+    containerAppsNatGatewayIp: network.outputs.natGatewayPublicIp
     entraAdminObjectId: identity.outputs.identityPrincipalId
     entraAdminName: prodIdentityName
     tags: prodTags

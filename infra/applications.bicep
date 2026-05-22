@@ -184,6 +184,7 @@ module apiApp './modules/api.bicep' = {
     githubRegistryUsername: githubRegistryUsername
     githubRegistryAuthUsername: githubRegistryAuthUsername
     identityId: managedIdentity.id
+    identityClientId: managedIdentity.properties.clientId
     imageTag: apiImageTag
     appInsightsConnectionString: effectiveAppInsightsConnStr
     keyVaultUri: keyVaultUri
