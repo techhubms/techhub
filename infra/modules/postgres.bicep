@@ -128,6 +128,9 @@ resource containerAppsSubnetFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServ
 // Entra ID (AAD) administrator for the PostgreSQL server.
 // When set, applications can authenticate with a managed identity token instead of a password.
 // The entraAdminObjectId is the AAD object ID of the principal (e.g. a user-assigned managed identity).
+// dependsOn firewall rules: ensures the server has finished applying network changes before we
+// attempt the Entra admin operation — avoids AadAuthOperationCannotBePerformedWhenServerIsNotAccessible
+// which occurs when the server is still in 'Updating' state after the parent resource update.
 resource entraAdmin 'Microsoft.DBforPostgreSQL/flexibleServers/administrators@2024-08-01' = if (!empty(entraAdminObjectId)) {
   parent: postgresServer
   // The resource name must be the AAD object ID (GUID) of the principal.
@@ -137,6 +140,7 @@ resource entraAdmin 'Microsoft.DBforPostgreSQL/flexibleServers/administrators@20
     principalType: 'ServicePrincipal'
     tenantId: subscription().tenantId
   }
+  dependsOn: [adminFirewallRules, containerAppsSubnetFirewallRule]
 }
 
 // Database
