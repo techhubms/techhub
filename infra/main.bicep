@@ -115,8 +115,15 @@ param commonTags object = {
   managedBy: 'bicep'
 }
 
+@description('UTC timestamp used to make nested deployment names unique per run. utcNow() can only be used as a parameter default value. Prevents DeploymentActive conflicts when a long-running deployment (e.g. wildcard cert provisioning) is still in progress when CI re-runs.')
+param deploymentTimestamp string = utcNow()
+
 // Tags for all prod resources
 var prodTags = union(commonTags, { env: 'prod' })
+
+// Short unique hash derived from the run timestamp. Appended to all nested module `name` values
+// so that each CD run creates fresh deployment records and never collides with an in-progress one.
+var deploymentSuffix = uniqueString(deploymentTimestamp)
 
 // Parse comma-separated admin IPs into a trimmed, filtered array
 var adminIpList = [for ip in filter(split(adminIpAddresses, ','), entry => !empty(trim(entry))): trim(ip)]
@@ -135,7 +142,7 @@ var prodIdentityName = 'id-techhub-prod'
 // User-Assigned Managed Identity (used by Container Apps to access Key Vault)
 module identity './modules/identity.bicep' = {
   scope: resourceGroup
-  name: 'identity-deployment'
+  name: 'identity-${deploymentSuffix}'
   params: {
     location: location
     identityName: prodIdentityName
@@ -146,7 +153,7 @@ module identity './modules/identity.bicep' = {
 // Networking (VNet + Container Apps subnet with Key Vault service endpoint)
 module network './modules/network.bicep' = {
   scope: resourceGroup
-  name: 'network-deployment'
+  name: 'network-${deploymentSuffix}'
   params: {
     location: location
     vnetName: vnetName
@@ -159,7 +166,7 @@ module network './modules/network.bicep' = {
 // Monitoring (Application Insights + Log Analytics)
 module monitoring './modules/monitoring.bicep' = {
   scope: resourceGroup
-  name: 'monitoring-deployment'
+  name: 'monitoring-${deploymentSuffix}'
   params: {
     location: location
     appInsightsName: appInsightsName
@@ -175,7 +182,7 @@ module monitoring './modules/monitoring.bicep' = {
 // Key Vault (absorbed from shared RG — stores wildcard certs, app secrets, GitHub registry token)
 module keyVault './modules/keyVault.bicep' = {
   scope: resourceGroup
-  name: 'keyVault-deployment'
+  name: 'keyVault-${deploymentSuffix}'
   params: {
     location: location
     vaultName: keyVaultName
@@ -189,7 +196,7 @@ module keyVault './modules/keyVault.bicep' = {
 // Azure AI Foundry (OpenAI) — Container Apps access over public internet (no private endpoint)
 module openai './modules/openai.bicep' = {
   scope: resourceGroup
-  name: 'openai-deployment'
+  name: 'openai-${deploymentSuffix}'
   params: {
     location: location
     openAiName: openAiName
@@ -201,7 +208,7 @@ module openai './modules/openai.bicep' = {
 // Container Apps Environment (VNet-integrated)
 module containerAppsEnv './modules/containerApps.bicep' = {
   scope: resourceGroup
-  name: 'containerAppsEnv-deployment'
+  name: 'containerAppsEnv-${deploymentSuffix}'
   params: {
     location: location
     environmentName: containerAppsEnvName
@@ -216,7 +223,7 @@ module containerAppsEnv './modules/containerApps.bicep' = {
 // The managed identity needs Key Vault Secrets User on the prod KV.
 module wildcardCerts './modules/wildcardCertificates.bicep' = if (!empty(wildcardCertNames) && deployApps) {
   scope: resourceGroup
-  name: 'wildcardCerts-prod'
+  name: 'wildcardCerts-${deploymentSuffix}'
   params: {
     location: location
     containerAppsEnvironmentName: containerAppsEnvName
@@ -251,7 +258,7 @@ var dbConnectionString = 'Host=${postgres.outputs.serverFqdn};Database=${postgre
 // Required for Container App KV-reference secrets (AAD client secret, ghcr.io token).
 module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
   scope: resourceGroup
-  name: 'kvSecretsUserRole-prod'
+  name: 'kvSecretsUserRole-${deploymentSuffix}'
   params: {
     keyVaultName: keyVaultName
     principalId: identity.outputs.identityPrincipalId
@@ -262,7 +269,7 @@ module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
 // PostgreSQL Flexible Server (no private endpoint — firewall allows admin IPs + Container Apps subnet)
 module postgres './modules/postgres.bicep' = {
   scope: resourceGroup
-  name: 'postgres-deployment'
+  name: 'postgres-${deploymentSuffix}'
   params: {
     location: location
     serverName: postgresServerName
@@ -288,7 +295,7 @@ module postgres './modules/postgres.bicep' = {
 // instead of an API key.
 module openAiUserRoleProd './modules/openAiUserRole.bicep' = {
   scope: resourceGroup
-  name: 'openAiUserRole-prod-identity'
+  name: 'openAiUserRole-${deploymentSuffix}'
   params: {
     openAiName: openAiName
     principalId: identity.outputs.identityPrincipalId
@@ -300,7 +307,7 @@ module openAiUserRoleProd './modules/openAiUserRole.bicep' = {
 // API Container App
 module apiApp './modules/api.bicep' = if (deployApps) {
   scope: resourceGroup
-  name: 'api-deployment'
+  name: 'api-${deploymentSuffix}'
   params: {
     location: location
     containerAppName: apiAppName
@@ -325,7 +332,7 @@ module apiApp './modules/api.bicep' = if (deployApps) {
 // Web Container App
 module webApp './modules/web.bicep' = if (deployApps) {
   scope: resourceGroup
-  name: 'web-deployment'
+  name: 'web-${deploymentSuffix}'
   params: {
     location: location
     containerAppName: webAppName
@@ -353,7 +360,7 @@ module webApp './modules/web.bicep' = if (deployApps) {
 // Shared action group — email notifications for operational alerts (absorbed from shared RG)
 module actionGroup './modules/actionGroup.bicep' = {
   scope: resourceGroup
-  name: 'actionGroup-deployment'
+  name: 'actionGroup-${deploymentSuffix}'
   params: {
     emailAddress: alertEmailAddress
     tags: prodTags
@@ -363,7 +370,7 @@ module actionGroup './modules/actionGroup.bicep' = {
 // Operational alerts — use the action group created above
 module alerts './modules/alerts.bicep' = {
   scope: resourceGroup
-  name: 'alerts-deployment'
+  name: 'alerts-${deploymentSuffix}'
   params: {
     location: location
     environmentName: 'prod'
@@ -379,7 +386,7 @@ module alerts './modules/alerts.bicep' = {
 // Public DNS zone for ACME challenge delegation (absorbed from shared RG)
 module acmeDnsZone './modules/acmeDnsZone.bicep' = {
   scope: resourceGroup
-  name: 'acmeDnsZone-deployment'
+  name: 'acmeDnsZone-${deploymentSuffix}'
   params: {
     zoneName: acmeDnsZoneName
     delegatedDomains: acmeDelegatedDomains
@@ -388,7 +395,7 @@ module acmeDnsZone './modules/acmeDnsZone.bicep' = {
 
 // Subscription cost budget aligned to billing cycle, with 80 / 100 / 120% email alerts.
 module budget './modules/budget.bicep' = {
-  name: 'budget-deployment'
+  name: 'budget-${deploymentSuffix}'
   params: {
     amount: monthlyBudgetAmount
     contactEmails: [alertEmailAddress]
@@ -398,7 +405,7 @@ module budget './modules/budget.bicep' = {
 
 // Subscription-level Azure Policy assignments (governance baseline).
 module policyAssignments './modules/policy.bicep' = {
-  name: 'policy-deployment'
+  name: 'policy-${deploymentSuffix}'
   params: {
     allowedLocations: allowedLocations
     requiredTagName: requiredResourceGroupTagName
