@@ -88,19 +88,12 @@ $containerAppsSubnetEndIp = '10.2.1.255'
 # PR-specific resource names
 $prPostgresServer = "psql-techhub-pr-$PrNumber"
 $prPostgresDb = 'techhub'
-$prManagedIdentityName = "id-techhub-pr-$PrNumber"
-
-# Seconds to wait after creating the per-PR managed identity for its service principal
-# to propagate through Entra ID before registering it as a PostgreSQL Entra admin.
-$entraIdPropagationDelaySecs = 15
+# Shared managed identity — created once by infrastructure.bicep, reused by all PR environments.
+$prManagedIdentityName = 'id-techhub-pr'
 
 # PR-specific Container App names
 $apiAppName = "ca-techhub-api-pr-$PrNumber"
 $webAppName = "ca-techhub-web-pr-$PrNumber"
-
-$registryServer = "ghcr.io"
-$apiImage = "$registryServer/$GithubRegistryUsername/techhub-api:$Tag"
-$webImage = "$registryServer/$GithubRegistryUsername/techhub-web:$Tag"
 
 # ============================================================================
 # HELPERS
@@ -142,80 +135,6 @@ function Get-PostgresServerExists {
     param([string]$Name, [string]$ResourceGroup)
     $result = az postgres flexible-server list --resource-group $ResourceGroup --query "[?name=='$Name'].name | [0]" -o tsv 2>$null
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
-}
-
-function Set-WebStartupProbe {
-    <#
-    .SYNOPSIS
-        Configures a startup probe on the Web Container App via ARM REST PATCH.
-
-        The Web's Program.cs blocks Kestrel startup while pre-loading the section cache
-        from the API. Without an explicit startup probe, Container Apps injects a default
-        TCP liveness probe (failureThreshold=3, periodSeconds=10) that kills the container
-        after ~30s — before the API cold-starts (~15-30s) and responds.
-
-        Defining a startup probe also disables the auto-injected TCP liveness probe for the
-        duration of startup. This allows both apps to stay at minReplicas=0 without the Web
-        being killed while it waits for the API to scale from zero.
-
-        Probes are configured via az rest PATCH (partial ARM update) because az containerapp
-        create/update have no individual probe CLI flags — only --yaml, which requires the
-        full container spec and YAML serialisation tooling.
-
-        ACA probe limits: failureThreshold 1-10, periodSeconds 1-240, initialDelaySeconds 1-60.
-        initialDelaySeconds=5 + failureThreshold=10 × periodSeconds=20 → 205s ≈ 3.4 min.
-    #>
-    param([string]$AppName, [string]$ResourceGroup)
-
-    $webApp = az containerapp show --name $AppName --resource-group $ResourceGroup -o json 2>$null |
-        ConvertFrom-Json -ErrorAction SilentlyContinue
-    if (-not $webApp) {
-        Write-Fail "Could not retrieve Web Container App spec — cannot configure startup probe"
-        exit 1
-    }
-
-    $subId = az account show --query id -o tsv 2>$null
-    $container = $webApp.properties.template.containers[0]
-
-    # Preserve all existing non-Startup probes, then add ours.
-    $existingProbes = @()
-    if ($container.PSObject.Properties['probes'] -ne $null) {
-        $existingProbes = @($container.probes | Where-Object { $_.type -ne 'Startup' })
-    }
-
-    $startupProbe = [PSCustomObject]@{
-        type                = 'Startup'
-        httpGet             = [PSCustomObject]@{ path = '/alive'; port = 8080 }
-        initialDelaySeconds = 5
-        periodSeconds       = 20
-        failureThreshold    = 10   # ACA max is 10; 5 + 10×20 = 205s ≈ 3.4-min tolerance
-    }
-
-    $container | Add-Member -NotePropertyName 'probes' -NotePropertyValue (@($existingProbes) + @($startupProbe)) -Force
-
-    $patchBody = [PSCustomObject]@{
-        properties = [PSCustomObject]@{
-            template = [PSCustomObject]@{
-                containers = @($container)
-            }
-        }
-    } | ConvertTo-Json -Depth 20 -Compress
-
-    $patchFile = Join-Path ([System.IO.Path]::GetTempPath()) "web-probe-patch-$AppName.json"
-    $patchBody | Set-Content $patchFile -Encoding utf8
-
-    $apiUrl = "https://management.azure.com/subscriptions/$subId/resourceGroups/$ResourceGroup" +
-              "/providers/Microsoft.App/containerApps/$($AppName)?api-version=2024-03-01"
-    az rest --method PATCH --url $apiUrl --body "@$patchFile" --output none
-
-    Remove-Item $patchFile -ErrorAction SilentlyContinue
-
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Startup probe REST PATCH failed (exit code $LASTEXITCODE)"
-        exit 1
-    }
-
-    Write-Ok "Startup probe configured (initialDelaySeconds=5, failureThreshold=10, periodSeconds=20 → ~3.4 min tolerance)"
 }
 
 function Write-ContainerAppDiagnostics {
@@ -371,28 +290,6 @@ if ($Action -eq 'teardown') {
         Write-Warn "$prPostgresServer not found — already removed or never deployed"
     }
 
-    # Delete the per-PR managed identity
-    $prIdentityExists = az identity list `
-        --resource-group $prodRG `
-        --query "[?name=='$prManagedIdentityName'].id | [0]" `
-        --output tsv 2>$null
-    if (-not [string]::IsNullOrWhiteSpace($prIdentityExists)) {
-        Write-Detail "Deleting per-PR managed identity $prManagedIdentityName..."
-        az identity delete `
-            --name $prManagedIdentityName `
-            --resource-group $prodRG
-        if ($LASTEXITCODE -ne 0) {
-            Write-Warn "Failed to delete managed identity $prManagedIdentityName — continuing"
-        }
-        else {
-            Write-Ok "Deleted managed identity $prManagedIdentityName"
-            $deletedAny = $true
-        }
-    }
-    else {
-        Write-Warn "$prManagedIdentityName not found — already removed or never created"
-    }
-
     if ($deletedAny) {
         Write-Ok "PR preview environment for PR #$PrNumber removed successfully"
     }
@@ -447,38 +344,21 @@ else {
 }
 
 # ============================================================================
-# CREATE PER-PR MANAGED IDENTITY AND CONFIGURE ENTRA AUTH ON PITR SERVER
+# CONFIGURE ENTRA AUTH ON PITR SERVER USING SHARED PR IDENTITY
 # ============================================================================
 
-Write-Step "Provisioning per-PR managed identity: $prManagedIdentityName"
+Write-Step "Configuring Entra auth on $prPostgresServer"
 
-# Check whether the identity already exists — redeploys for the same PR should be idempotent.
-$prIdentityJsonText = az identity list `
+# Resolve the shared PR identity's principal ID (created once by infrastructure.bicep)
+$prIdentityPrincipalId = az identity show `
+    --name $prManagedIdentityName `
     --resource-group $prodRG `
-    --query "[?name=='$prManagedIdentityName'] | [0]" `
-    --output json 2>$null
-$prIdentityJson = $null
-if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($prIdentityJsonText) -and $prIdentityJsonText -ne 'null') {
-    $prIdentityJson = $prIdentityJsonText | ConvertFrom-Json
+    --query principalId -o tsv 2>$null
+if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($prIdentityPrincipalId)) {
+    Write-Fail "Shared PR managed identity '$prManagedIdentityName' not found in '$prodRG'. Ensure infrastructure.bicep has been deployed."
+    exit 1
 }
-
-if ($LASTEXITCODE -eq 0 -and $null -ne $prIdentityJson -and $prIdentityJson.id) {
-    Write-Ok "Managed identity already exists: $prManagedIdentityName (reusing)"
-}
-else {
-    $prIdentityJson = az identity create `
-        --name $prManagedIdentityName `
-        --resource-group $prodRG `
-        --output json | ConvertFrom-Json
-    if ($LASTEXITCODE -ne 0 -or $null -eq $prIdentityJson) {
-        Write-Fail "Failed to create managed identity '$prManagedIdentityName'"
-        exit 1
-    }
-    Write-Ok "Managed identity created: $prManagedIdentityName"
-}
-$prIdentityId = $prIdentityJson.id
-$prIdentityPrincipalId = $prIdentityJson.principalId
-Write-Ok "Managed identity ready: $prManagedIdentityName (principal: $prIdentityPrincipalId)"
+Write-Ok "Shared PR managed identity: $prManagedIdentityName (principal: $prIdentityPrincipalId)"
 
 # Enable Entra-only authentication on the PR PostgreSQL server so no shared password is needed.
 # The PITR-restored server inherits production's password auth; switch it to Entra auth.
@@ -494,11 +374,8 @@ if ($LASTEXITCODE -ne 0) {
 }
 Write-Ok "Entra auth enabled on $prPostgresServer (password auth disabled)"
 
-# Register the PR managed identity as an Entra administrator on the PITR server.
-# This grants the identity the azure_pg_admin role needed to connect and run migrations.
-# Azure requires a short propagation delay before the identity principal is resolvable.
-Write-Detail "Waiting for managed identity to propagate in Entra ID..."
-Start-Sleep -Seconds $entraIdPropagationDelaySecs
+# Register the shared PR managed identity as Entra admin on the PITR server.
+# No propagation delay needed — the identity already exists in Entra ID.
 Write-Detail "Setting PR managed identity as Entra admin on $prPostgresServer..."
 
 # Check if the admin is already registered — redeploys for the same PR should be idempotent.
@@ -623,43 +500,12 @@ else {
 }
 
 # ============================================================================
-# DEPLOY — Query production infrastructure
+# DEPLOY — Container Apps via Bicep
 # ============================================================================
 
-Write-Step "Querying production infrastructure"
+Write-Step "Deploying Container Apps via Bicep"
 
-# Get Container Apps Environment ID
-$envId = az containerapp env show `
-    --name $prodEnvName `
-    --resource-group $prodRG `
-    --query id -o tsv 2>$null
-
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($envId)) {
-    Write-Fail "Could not find production Container Apps Environment '$prodEnvName' in '$prodRG'"
-    exit 1
-}
-Write-Ok "Container Apps Environment: $envId"
-
-# Do not export PR preview telemetry to production monitoring.
-$appInsightsConnString = ""
-Write-Ok "Application Insights export disabled for PR preview environments"
-
-# Resolve GitHub registry token for Container Apps image pulls from GitHub Actions secret.
-$ghcrToken = $env:GHCR_PAT
-if ([string]::IsNullOrWhiteSpace($ghcrToken)) {
-    Write-Fail "GHCR_PAT is not set. Configure a GitHub secret with read:packages scope."
-    exit 1
-}
-Write-Ok "GitHub registry token resolved"
-
-# Build a passwordless PostgreSQL connection string.
-# The username is the managed identity display name as registered in the Entra admin.
-# The app fetches an Azure AD token at runtime via ManagedIdentityCredential.
-$prPostgresFqdn = "$prPostgresServer.postgres.database.azure.com"
-$dbConnectionString = "Host=$prPostgresFqdn;Database=$prPostgresDb;Username=$prManagedIdentityName;SSL Mode=Require"
-Write-Ok "PostgreSQL: $prPostgresFqdn"
-
-# Get the Container Apps Environment default domain (to compute expected FQDNs)
+# Get the Container Apps Environment default domain for GITHUB_OUTPUT.
 $envDefaultDomain = az containerapp env show `
     --name $prodEnvName `
     --resource-group $prodRG `
@@ -671,289 +517,34 @@ if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($envDefaultDomain)) {
 }
 Write-Ok "Environment default domain: $envDefaultDomain"
 
-# Pre-compute expected FQDNs (used for CORS and ApiBaseUrl)
-$apiPrFqdn = "$apiAppName.internal.$envDefaultDomain"
-$webPrFqdn = "$webAppName.$envDefaultDomain"
-
-Write-Detail "Expected API FQDN (internal): $apiPrFqdn"
-Write-Detail "Expected Web FQDN:             $webPrFqdn"
-
-# Shared environment variable lists (used in both create and update paths)
-$apiEnvVars = @(
-    "ASPNETCORE_ENVIRONMENT=Staging",
-    "APPLICATIONINSIGHTS_CONNECTION_STRING=$appInsightsConnString",
-    "OTEL_SERVICE_NAME=techhub-api",
-    "Database__Provider=PostgreSQL",
-    "Database__ConnectionString=secretref:db-connection-string",
-    "Database__UseEntraAuth=true",
-    "AppSettings__BaseUrl=https://$webPrFqdn",
-    "TECHHUB_TMP=/tmp/techhub",
-    "Cors__AllowedOrigins__0=https://$webPrFqdn",
-    # Disable scheduled background jobs in PR environments.
-    "ContentProcessor__Enabled=false",
-    "RoundupGenerator__Enabled=false"
-)
-
-$webEnvVars = @(
-    "ASPNETCORE_ENVIRONMENT=Staging",
-    "APPLICATIONINSIGHTS_CONNECTION_STRING=$appInsightsConnString",
-    "GoogleAnalytics__MeasurementId=",
-    "OTEL_SERVICE_NAME=techhub-web",
-    "ApiBaseUrl=https://$apiPrFqdn",
-    "TECHHUB_TMP=/tmp/techhub",
-    "DEPLOY_IMAGE_TAG=$Tag"
-)
-
-# ============================================================================
-# DEPLOY API CONTAINER APP
-# ============================================================================
-
-Write-Step "Deploying API Container App: $apiAppName"
-
-$apiExists = Get-ContainerAppExists -Name $apiAppName -ResourceGroup $prodRG
-
-if ($apiExists) {
-    Write-Detail "Updating existing $apiAppName (image + env vars + secrets)..."
-
-    az containerapp secret set `
-        --name $apiAppName `
-        --resource-group $prodRG `
-        --secrets "db-connection-string=$dbConnectionString" 2>$null | Out-Null
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to update API Container App secrets"
-        exit 1
-    }
-
-    az containerapp update `
-        --name $apiAppName `
-        --resource-group $prodRG `
-        --image $apiImage `
-        --min-replicas 0 `
-        --max-replicas 1 `
-        --replace-env-vars @apiEnvVars
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to update API Container App"
-        exit 1
-    }
-
-    # Ensure this app only has the PR identity to avoid ambiguous DefaultAzureCredential selection.
-    $apiIdentityStateJson = az containerapp identity show `
-        --name $apiAppName `
-        --resource-group $prodRG `
-        --output json 2>$null
-    if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($apiIdentityStateJson)) {
-        $apiIdentityState = $apiIdentityStateJson | ConvertFrom-Json
-        $assignedIdentityIds = @()
-        if ($apiIdentityState.PSObject.Properties.Name -contains 'userAssignedIdentities' -and $apiIdentityState.userAssignedIdentities) {
-            $assignedIdentityIds = @($apiIdentityState.userAssignedIdentities.PSObject.Properties.Name)
-        }
-
-        foreach ($assignedIdentityId in $assignedIdentityIds) {
-            if ($assignedIdentityId -ne $prIdentityId) {
-                Write-Detail "Removing stale managed identity from ${apiAppName}: $assignedIdentityId"
-                az containerapp identity remove `
-                    --name $apiAppName `
-                    --resource-group $prodRG `
-                    --user-assigned $assignedIdentityId | Out-Null
-                if ($LASTEXITCODE -ne 0) {
-                    Write-Fail "Failed to remove stale managed identity from $apiAppName"
-                    exit 1
-                }
-            }
-        }
-    }
-
-    # Ensure the PR identity is assigned (idempotent — safe to re-run)
-    az containerapp identity assign `
-        --name $apiAppName `
-        --resource-group $prodRG `
-        --user-assigned $prIdentityId | Out-Null
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to assign PR managed identity to $apiAppName"
-        exit 1
-    }
-}
-else {
-    Write-Detail "Creating new $apiAppName..."
-
-    az containerapp create `
-        --name $apiAppName `
-        --resource-group $prodRG `
-        --environment $envId `
-        --image $apiImage `
-        --ingress internal `
-        --target-port 8080 `
-        --transport http `
-        --registry-server $registryServer `
-        --registry-username $GithubRegistryAuthUsername `
-        --registry-password $ghcrToken `
-        --user-assigned $prIdentityId `
-        --cpu 0.5 `
-        --memory 1Gi `
-        --min-replicas 0 `
-        --max-replicas 1 `
-        --secrets "db-connection-string=$dbConnectionString" `
-        --env-vars @apiEnvVars
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to create API Container App"
-        exit 1
-    }
-}
-
-Write-Ok "API Container App deployed: $apiAppName"
-
-# Set the Container Apps-level ingress CORS policy
-Write-Detail "Updating API ingress CORS policy..."
-az containerapp ingress cors update `
-    --name $apiAppName `
+$templateFile = Join-Path $PSScriptRoot '../infra/pr-applications.bicep'
+$deploymentOutput = az deployment group create `
     --resource-group $prodRG `
-    --allowed-origins "https://$webPrFqdn" "https://*.azurecontainerapps.io" `
-    --allowed-methods GET POST PUT DELETE OPTIONS `
-    --allowed-headers "*" `
-    --allow-credentials false
+    --template-file $templateFile `
+    --parameters `
+        prNumber=$PrNumber `
+        imageTag=$Tag `
+        githubRegistryUsername=$GithubRegistryUsername `
+        githubRegistryAuthUsername=$GithubRegistryAuthUsername `
+    --output json 2>&1
+
 if ($LASTEXITCODE -ne 0) {
-    Write-Warn "CORS ingress update failed — web app may have cross-origin issues"
-}
-else {
-    Write-Ok "CORS ingress policy updated"
-}
-
-# Retrieve the actual API FQDN (may differ from computed)
-$actualApiPrFqdn = az containerapp show `
-    --name $apiAppName `
-    --resource-group $prodRG `
-    --query properties.configuration.ingress.fqdn -o tsv 2>$null
-if (-not [string]::IsNullOrWhiteSpace($actualApiPrFqdn)) {
-    $apiPrFqdn = $actualApiPrFqdn
-    $webEnvVars = $webEnvVars | ForEach-Object { $_ -replace "^ApiBaseUrl=.*", "ApiBaseUrl=https://$apiPrFqdn" }
-    Write-Detail "Actual API FQDN: $apiPrFqdn"
-}
-
-# ============================================================================
-# DEPLOY WEB CONTAINER APP
-# ============================================================================
-
-Write-Step "Deploying Web Container App: $webAppName"
-
-$webExists = Get-ContainerAppExists -Name $webAppName -ResourceGroup $prodRG
-
-if ($webExists) {
-    Write-Detail "Updating existing $webAppName (image + env vars)..."
-
-    az containerapp update `
-        --name $webAppName `
-        --resource-group $prodRG `
-        --image $webImage `
-        --min-replicas 0 `
-        --max-replicas 1 `
-        --replace-env-vars @webEnvVars
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to update Web Container App"
-        exit 1
-    }
-}
-else {
-    Write-Detail "Creating new $webAppName..."
-
-    az containerapp create `
-        --name $webAppName `
-        --resource-group $prodRG `
-        --environment $envId `
-        --image $webImage `
-        --ingress external `
-        --target-port 8080 `
-        --transport auto `
-        --registry-server $registryServer `
-        --registry-username $GithubRegistryAuthUsername `
-        --registry-password $ghcrToken `
-        --cpu 0.5 `
-        --memory 1Gi `
-        --min-replicas 0 `
-        --max-replicas 1 `
-        --env-vars @webEnvVars
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to create Web Container App"
-        exit 1
-    }
-}
-
-Write-Ok "Web Container App deployed: $webAppName"
-
-# Configure a startup probe on the Web so it is not killed while waiting for the API to
-# cold-start. The Web's Program.cs blocks Kestrel startup on an API call (section cache
-# pre-load). Without a startup probe, Container Apps' default TCP liveness probe kills the
-# container after ~30s. The startup probe gives ~3.4 min tolerance to pass /alive.
-Write-Step "Configuring startup probe on Web Container App"
-Set-WebStartupProbe -AppName $webAppName -ResourceGroup $prodRG
-
-# Enable sticky sessions for Blazor Server — required for SignalR circuit to work correctly.
-Write-Step "Enabling sticky sessions on Web Container App"
-$stickySetTimeoutSeconds = 90
-$stickySetRetryDelaySeconds = 5
-$stickySetDeadline = (Get-Date).AddSeconds($stickySetTimeoutSeconds)
-$stickySessionsEnabled = $false
-while ((Get-Date) -lt $stickySetDeadline) {
-    $stickySetOutput = az containerapp ingress sticky-sessions set `
-        --name $webAppName `
-        --resource-group $prodRG `
-        --affinity sticky 2>&1
-    if ($LASTEXITCODE -eq 0) {
-        $stickySessionsEnabled = $true
-        break
-    }
-
-    $stickySetOutputText = ($stickySetOutput | Out-String).Trim()
-    if ($stickySetOutputText -match 'ContainerAppOperationInProgress') {
-        Write-Warn "Container App operation still in progress while enabling sticky sessions — retrying in $($stickySetRetryDelaySeconds)s"
-        Start-Sleep -Seconds $stickySetRetryDelaySeconds
-        continue
-    }
-
-    Write-Fail "Failed to enable sticky sessions — Blazor SignalR will not work correctly (exit code $LASTEXITCODE)"
-    if (-not [string]::IsNullOrWhiteSpace($stickySetOutputText)) {
-        Write-Detail $stickySetOutputText
-    }
+    Write-Fail "Bicep deployment failed (exit code $LASTEXITCODE)"
+    Write-Host $deploymentOutput
     exit 1
 }
-if (-not $stickySessionsEnabled) {
-    Write-Fail "Failed to enable sticky sessions within $($stickySetTimeoutSeconds)s because the Container App stayed busy"
-    exit 1
-}
-Write-Ok "Sticky sessions set — waiting for propagation..."
 
-# Poll until the ingress affinity is confirmed as 'sticky'.
-$stickyDeadline = (Get-Date).AddSeconds(60)
-$stickyConfirmed = $false
-while ((Get-Date) -lt $stickyDeadline) {
-    $affinity = az containerapp show `
-        --name $webAppName `
-        --resource-group $prodRG `
-        --query "properties.configuration.ingress.stickySessions.affinity" `
-        -o tsv 2>$null
-    if ($affinity -eq 'sticky') {
-        $stickyConfirmed = $true
-        break
-    }
-    Start-Sleep -Seconds 5
-}
-if (-not $stickyConfirmed) {
-    Write-Fail "Sticky sessions did not propagate within 60s — Blazor SignalR will not work correctly"
-    exit 1
-}
-Write-Ok "Sticky sessions confirmed active (affinity=sticky)"
-
-# Get the actual web FQDN
-$webFqdn = az containerapp show `
-    --name $webAppName `
-    --resource-group $prodRG `
-    --query properties.configuration.ingress.fqdn -o tsv 2>$null
+$deploymentResult = $deploymentOutput | ConvertFrom-Json -ErrorAction SilentlyContinue
+$webFqdn = $deploymentResult.properties.outputs.webFqdn.value
 
 if ([string]::IsNullOrWhiteSpace($webFqdn)) {
-    Write-Fail "Could not retrieve Web Container App FQDN"
+    Write-Fail "Could not read webFqdn from deployment output"
     exit 1
 }
 
-Write-Ok "Web FQDN: $webFqdn"
+Write-Ok "API Container App : $apiAppName"
+Write-Ok "Web Container App : $webAppName"
+Write-Ok "Web FQDN          : $webFqdn"
 
 # Write output for GitHub Actions
 if ($env:GITHUB_OUTPUT) {

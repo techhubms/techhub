@@ -27,3 +27,8 @@ param azureAdTenantId = '3d4d17ea-1ae4-4705-947e-51369c5a5f79'
 param azureAdClientId = '6f993c39-347a-49a2-a854-836d07358905'
 // GitHub Container Registry
 param githubRegistryUsername = 'techhubms'
+// Telemetry — set to empty string in PR preview environments to prevent data from
+// appearing in production dashboards.
+param googleAnalyticsMeasurementId = 'G-95LLB67KJV'
+// appInsightsConnectionString is left at its default ('@existing') so the deploy
+// script reads the live connection string from the Azure resource at deployment time.

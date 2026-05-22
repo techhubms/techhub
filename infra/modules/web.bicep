@@ -28,7 +28,7 @@ param wildcardCertificateIds object = {}
 param keyVaultUri string
 
 @description('Key Vault secret name holding the Azure AD client secret')
-param aadClientSecretSecretName string
+param aadClientSecretSecretName string = 'techhub-prod-aad-client-secret'
 
 @description('Azure AD tenant ID (not a secret — public Entra identifier)')
 param azureAdTenantId string = ''
@@ -36,17 +36,32 @@ param azureAdTenantId string = ''
 @description('Azure AD client ID (not a secret — public Entra identifier)')
 param azureAdClientId string = ''
 
+@description('Google Analytics Measurement ID (e.g. G-XXXXXXXXXX). Pass empty string to disable GA telemetry (PR preview environments).')
+param googleAnalyticsMeasurementId string = ''
+
 @description('Tags applied to the Container App')
 param tags object = {}
 
+@description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
+param aspNetCoreEnvironment string = 'Production'
+
+@description('Minimum replica count. Use 0 to enable scale-to-zero for PR preview environments.')
+param minReplicas int = 1
+
+@description('Maximum replica count.')
+param maxReplicas int = 2
+
 var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-web:${imageTag}'
 var revisionSuffix = 'web-${imageTag}'
+// When scale-to-zero is enabled the API may cold-start while the Web is also starting up.
+// Give extra startup probe tolerance so the Web is not killed before the API is ready.
+var startupProbeFailureThreshold = minReplicas == 0 ? 40 : 12
 
 // Environment variables: static config + dynamic shortcuts/primary hosts from Bicep params
 var staticEnvVars = [
   {
     name: 'ASPNETCORE_ENVIRONMENT'
-    value: 'Production'
+    value: aspNetCoreEnvironment
   }
   {
     name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
@@ -79,6 +94,10 @@ var staticEnvVars = [
   {
     name: 'AzureAd__Scopes'
     value: empty(azureAdClientId) ? '' : 'api://${azureAdClientId}/Admin.Access'
+  }
+  {
+    name: 'GoogleAnalytics__MeasurementId'
+    value: googleAnalyticsMeasurementId
   }
 ]
 // AzureAd__ClientSecret is only needed when AAD is enabled (azureAdClientId is set).
@@ -179,7 +198,7 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
               }
               initialDelaySeconds: 3
               periodSeconds: 5
-              failureThreshold: 12  // 3s + 12×5s = 63s max startup
+              failureThreshold: startupProbeFailureThreshold  // 12×5=60s prod; 40×5=200s for scale-to-zero (API cold-start)
               timeoutSeconds: 5
             }
             {
@@ -208,8 +227,8 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
         }
       ]
       scale: {
-        minReplicas: 1
-        maxReplicas: 2
+        minReplicas: minReplicas
+        maxReplicas: maxReplicas
         cooldownPeriod: 300
         pollingInterval: 30
         rules: [
