@@ -100,7 +100,7 @@ function Write-Detail {
 Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  TechHub Infrastructure Deployment" -ForegroundColor White
-Write-Host "  Environment : production" -ForegroundColor Gray
+Write-Host "  Resource Group : $resourceGroup" -ForegroundColor Gray
 Write-Host "  Mode        : $Mode" -ForegroundColor Gray
 Write-Host "  Location    : $Location" -ForegroundColor Gray
 Write-Host "  Template    : infra/main.bicep" -ForegroundColor Gray
@@ -169,10 +169,13 @@ else {
     Write-Ok "POSTGRES_ADMIN_PASSWORD is set"
 }
 
-# AZURE_AD_CLIENT_SECRET — optional, admin authentication disabled if not set
+# AZURE_AD_CLIENT_SECRET — optional; used by Sync-KeyVaultSecrets to update the
+# techhub-prod-aad-client-secret in Key Vault. If not set, the existing Key Vault
+# secret is reused (deploy succeeds). If it has never been written, Sync-KeyVaultSecrets
+# will fail with a clear error — set AZURE_AD_CLIENT_SECRET to write it for the first time.
 if (-not $env:AZURE_AD_CLIENT_SECRET) {
     if ($Mode -eq 'deploy') {
-        Write-Warn "AZURE_AD_CLIENT_SECRET is not set — admin authentication will be disabled"
+        Write-Warn "AZURE_AD_CLIENT_SECRET is not set — existing Key Vault secret will be reused (run will fail if the secret has never been written)"
     }
     [Environment]::SetEnvironmentVariable('AZURE_AD_CLIENT_SECRET', "")
 }
@@ -271,7 +274,7 @@ if ($Mode -eq 'deploy') {
 Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  Infrastructure $($Mode.ToUpper()) Complete" -ForegroundColor Green
-Write-Host "  Environment  : production" -ForegroundColor Gray
+Write-Host "  Resource Group  : $resourceGroup" -ForegroundColor Gray
 Write-Host "  Deployment   : $deploymentName" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host ""
