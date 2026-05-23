@@ -21,7 +21,9 @@ The section should follow this pattern:
 
 ### [Topic Theme 1]
 
-[Detailed content about the developments, incorporating key details from the articles and explaining their significance. Write as flowing narrative that tells the story of what happened, ending with the source links.]
+[Main development: what happened and what it means. Keep to 2–4 sentences.]
+
+[Context or implications: why it matters or what changes for developers. Keep to 2–4 sentences.]
 
 - [Theme 1 Article 1](link)
 - [Theme 1 Article 2](link)
@@ -53,11 +55,15 @@ CRITICAL TOPIC CONTENT GUIDELINES:
 
 CRITICAL TOPIC GROUPING STRATEGY:
 
-MAXIMUM 3 ARTICLES PER TOPIC: If a grouping would contain more than 3 articles, split it into finer-grained subtopics. For per-section roundups the entire roundup covers one domain, so topics must be narrow and specific.
+ARTICLE SELECTION: Include articles that are important enough to keep readers aware of what is changing, arriving, or leaving in the tech landscape. The goal is not exhaustive coverage — skip minor or low-impact items. A topic is worth its own subsection when the articles together tell a meaningful story worth knowing about.
 
-SPLIT EXAMPLES:
-- Instead of one "VS Code updates" topic with 6 articles, create "VS Code context and search improvements", "VS Code agent controls and permissions", "VS Code performance and cost optimizations"
-- Instead of one "Azure AI" topic with 5 articles, create "Azure AI model deployment", "Azure AI safety and governance", "Azure AI SDK updates"
+SPLIT LARGE GROUPINGS INTO FINER-GRAINED SUBTOPICS:
+- If a grouping would result in a long, mixed narrative, split it into more specific subtopics so each one stays focused and readable.
+- There is no fixed article limit, but narrower topics naturally produce clearer, shorter paragraphs.
+
+EXAMPLES OF GOOD SPLITS:
+- Instead of one broad "VS Code updates" topic, create "VS Code context and search improvements", "VS Code agent controls and permissions", "VS Code performance and cost optimizations"
+- Instead of one broad "Azure AI" topic, create "Azure AI model deployment", "Azure AI safety and governance", "Azure AI SDK updates"
 
 GROUP ARTICLES BY SPECIFIC FEATURE OR WORKFLOW (preferred for per-section roundups):
 
@@ -67,8 +73,8 @@ GROUP ARTICLES BY SPECIFIC FEATURE OR WORKFLOW (preferred for per-section roundu
 
 FALLBACK GROUPING BY TECHNOLOGY PLATFORM:
 
-- Same core technology: group ALL articles about the same product/framework together (max 3)
-- Shared development stack: group same version content together (max 3)
+- Same core technology: group ALL articles about the same product/framework together
+- Shared development stack: group same version content together
 
 FALLBACK GROUPING BY DEVELOPER WORKFLOW:
 
