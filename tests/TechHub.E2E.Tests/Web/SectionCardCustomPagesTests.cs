@@ -97,23 +97,20 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             targetId.Should().NotBeNullOrWhiteSpace("expand button should have data-expand-target attribute");
 
             var targetContainer = Page.Locator($"#{targetId}");
+            // Use a specific locator so both the click and the assertion target the same
+            // button regardless of positional shifts during Blazor re-renders.
+            var specificButton = Page.Locator($"button.badge-expandable[data-expand-target='{targetId}']");
 
             // Verify container is initially hidden
             var isHidden = await targetContainer.IsHiddenAsync();
             isHidden.Should().BeTrue("custom pages container should be initially hidden");
 
-            // Click to expand — retry the [click + visibility check] block to
-            // survive the Blazor Server hydration race where @onclick may not
-            // be attached yet.
-            await expandButton.ClickAndExpectAsync(async () =>
-            {
-                await Assertions.Expect(targetContainer).ToBeVisibleAsync();
-            });
-
-            // Button with this specific target ID should be removed after clicking
-            var specificButton = Page.Locator($".badge-expandable[data-expand-target='{targetId}']");
-            var specificButtonCount = await specificButton.CountAsync();
-            specificButtonCount.Should().Be(0, "the clicked expand button should be removed after clicking");
+            // Click to expand — assert the button disappears rather than ToBeVisibleAsync
+            // on the display:contents span (which can have a zero bounding box in some
+            // Playwright/Chrome configurations, causing intermittent timeouts).
+            // Blazor removes the button from the DOM when isExpanded becomes true (@if (!isExpanded)).
+            await specificButton.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(specificButton).ToHaveCountAsync(0));
 
             // Total button count should decrease by 1. Use Playwright's retry assertion
             // rather than a raw CountAsync() to survive the Blazor re-render window
@@ -150,9 +147,12 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var firstVisibleCustom = sectionCardContainer.Locator(".section-collections > .badge-custom").First;
             var firstVisibleText = await firstVisibleCustom.TextContentAsync();
 
-            // Expand to see all custom pages
-            await expandButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync());
+            // Expand to see all custom pages — assert the button disappears (Blazor removes
+            // it inside @if (!isExpanded)) rather than ToBeVisibleAsync on the display:contents
+            // span, which can have a zero bounding box in some Playwright/Chrome configurations.
+            var specificExpandButton = Page.Locator($"button.badge-expandable[data-expand-target='{targetId}']");
+            await specificExpandButton.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(specificExpandButton).ToHaveCountAsync(0));
 
             // Get all custom page badges (visible + hidden) in display order
             var allCustomBadges = new List<string>
@@ -203,8 +203,9 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             // Act - Click expand button should not navigate
             var initialUrl = Page.Url;
             var targetId2 = await expandButton.GetAttributeAsync("data-expand-target");
-            await expandButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page.Locator($"#{targetId2}")).ToBeVisibleAsync());
+            var specificExpandButton2 = Page.Locator($"button.badge-expandable[data-expand-target='{targetId2}']");
+            await specificExpandButton2.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(specificExpandButton2).ToHaveCountAsync(0));
 
             // Assert - Should still be on homepage
             Page.Url.Should().Be(initialUrl, "clicking expand button should not navigate away from homepage");
@@ -258,9 +259,12 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var expandButton = expandButtons.First;
             var targetId = await expandButton.GetAttributeAsync("data-expand-target");
 
-            // Expand to reveal hidden custom pages
-            await expandButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync());
+            // Expand to reveal hidden custom pages — assert the button disappears (Blazor removes
+            // it inside @if (!isExpanded)) rather than ToBeVisibleAsync on the display:contents
+            // span, which can have a zero bounding box in some Playwright/Chrome configurations.
+            var specificExpandButton = Page.Locator($"button.badge-expandable[data-expand-target='{targetId}']");
+            await specificExpandButton.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(specificExpandButton).ToHaveCountAsync(0));
 
             var targetContainer = Page.Locator($"#{targetId}");
             var hiddenBadges = targetContainer.Locator(".badge-custom");
@@ -326,8 +330,19 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             // Act - Click expand button
             var expandButton = expandButtons.First;
             var targetId = await expandButton.GetAttributeAsync("data-expand-target");
-            await expandButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync());
+
+            // Use a specific locator for this button so the assertion targets the exact
+            // button that was clicked, not the positional .First which could shift.
+            // Assert ToHaveCountAsync(0) instead of ToBeVisibleAsync on the expanded span:
+            // the span uses display:contents which can report a zero bounding box in some
+            // Playwright/Chrome configurations, causing ToBeVisibleAsync to time out even
+            // after `hidden` is removed. The expand button is inside @if (!isExpanded) and
+            // is removed from the DOM once Blazor processes the click — checking its count
+            // drops to 0 is an unambiguous signal that the expand was processed.
+            // This pattern mirrors TagFilteringTests.cs line ~745.
+            var specificExpandButton = Page.Locator($"button.badge-expandable[data-expand-target='{targetId}']");
+            await specificExpandButton.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(specificExpandButton).ToHaveCountAsync(0));
 
             // Assert — circuit must still be active after an interactive action.
             // If sticky sessions are broken, a user interaction can route to a different
