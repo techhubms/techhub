@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
 using TechHub.Web.Components.Pages;
-using TechHub.Web.Services;
 
 namespace TechHub.Web.Tests.Components.Pages;
 
@@ -102,5 +101,38 @@ public class SectionCollectionTests : BunitContext
         buttons[1].TextContent.Should().Contain("Search");
         buttons[2].TextContent.Should().Contain("Date");
         buttons[3].TextContent.Should().Contain("Tags");
+    }
+
+    /// <summary>
+    /// When types URL parameter is set and then cleared (e.g., tag click drops types),
+    /// the Content filter indicator should be removed.
+    /// Regression test for: ParseTypesFromUrl not clearing activeContentTypes.
+    /// </summary>
+    [Fact]
+    public void SectionCollection_TypesCleared_ContentFilterNoLongerActive()
+    {
+        // Arrange — navigate to URL with types=articles (Content filter active)
+        var navMan = Services.GetRequiredService<NavigationManager>();
+        navMan.NavigateTo("/all/all?types=articles");
+
+        var cut = Render<SectionCollection>(parameters => parameters
+            .Add(p => p.SectionName, "all")
+            .Add(p => p.CollectionName, "all"));
+
+        // Verify Content button has "has-active-filter" class
+        var buttons = cut.FindAll(".sidebar-toolbar-btn");
+        buttons[0].TextContent.Should().Contain("Content");
+        buttons[0].ClassList.Should().Contain("has-active-filter",
+            "Content filter button should show active indicator when types is set");
+
+        // Act — navigate to URL without types (simulates URL losing types param)
+        navMan.NavigateTo("/all/all");
+        cut.Render();
+
+        // Assert — Content filter should no longer be active
+        buttons = cut.FindAll(".sidebar-toolbar-btn");
+        buttons[0].TextContent.Should().Contain("Content");
+        buttons[0].ClassList.Should().NotContain("has-active-filter",
+            "Content filter should not show active indicator after types param is cleared");
     }
 }

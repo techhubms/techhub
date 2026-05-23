@@ -46,6 +46,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -84,6 +85,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -115,6 +117,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
@@ -155,6 +158,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
@@ -203,6 +207,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -241,6 +246,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -273,6 +279,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<List<string>?>(),
                 It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
@@ -309,6 +316,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .Returns(Task.FromException<IReadOnlyList<TagCloudItem>?>(
                 new HttpRequestException("API error")));
@@ -339,6 +347,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -358,6 +367,7 @@ public class SidebarTagCloudTests : BunitContext
             It.IsAny<int?>(),
             It.IsAny<List<string>?>(),
             It.IsAny<List<string>?>(),
+            It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
@@ -381,6 +391,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -400,6 +411,7 @@ public class SidebarTagCloudTests : BunitContext
             It.IsAny<int?>(),
             It.IsAny<List<string>?>(),
             It.IsAny<List<string>?>(),
+            It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
@@ -431,6 +443,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 "test query",
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(combinedTagsForSearch);
 
@@ -478,6 +491,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.Is<List<string>?>(tags => tags != null && tags.Contains(".net")),
                 "2024-01-01",
                 "2024-12-31",
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(combinedTagsInRange);
@@ -529,6 +543,7 @@ public class SidebarTagCloudTests : BunitContext
                 "2024-01-01",
                 "2024-12-31",
                 "test",
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(combinedTagsWithFilters);
 
@@ -589,6 +604,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(combinedTags);
 
@@ -644,6 +660,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(popularTags);
 
@@ -659,6 +676,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(selectedTagWithZeroCount);
 
@@ -671,6 +689,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<int?>(),
                 null, // No selected tags
                 null,
+                It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
@@ -736,6 +755,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
@@ -754,6 +774,7 @@ public class SidebarTagCloudTests : BunitContext
             null, // lastDays must be null — API applies 90-day default
             It.IsAny<List<string>?>(),
             It.IsAny<List<string>?>(),
+            It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
@@ -799,6 +820,7 @@ public class SidebarTagCloudTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(apiResponse);
 
@@ -826,6 +848,7 @@ public class SidebarTagCloudTests : BunitContext
             It.IsAny<int?>(),
             It.IsAny<List<string>?>(),
             It.Is<List<string>?>(t => t != null && t.SequenceEqual(contentItemTags)),
+            It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
@@ -866,6 +889,149 @@ public class SidebarTagCloudTests : BunitContext
             It.IsAny<string?>(),
             It.IsAny<string?>(),
             It.IsAny<string?>(),
+            It.IsAny<string?>(),
             It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public void SidebarTagCloud_ContentTypes_PassesToApiCall()
+    {
+        // Arrange — when content type filter has 2 of 3 types active, ContentTypes is set
+        var tags = CreateTestTagCloud();
+        _mockApiClient.Setup(x => x.GetTagCloudAsync(
+                "ai",
+                "all",
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync(tags);
+
+        // Act
+        var cut = Render<SidebarTagCloud>(parameters => parameters
+            .Add(p => p.SectionName, "ai")
+            .Add(p => p.CollectionName, "all")
+            .Add(p => p.ContentTypes, "articles,roundups"));
+
+        // Assert — verify API was called with the contentTypes parameter
+        cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
+        _mockApiClient.Verify(x => x.GetTagCloudAsync(
+            "ai",
+            "all",
+            It.IsAny<int?>(),
+            It.IsAny<int?>(),
+            It.IsAny<int?>(),
+            It.IsAny<List<string>?>(),
+            It.IsAny<List<string>?>(),
+            It.IsAny<string?>(),
+            It.IsAny<string?>(),
+            It.IsAny<string?>(),
+            "articles,roundups",
+            It.IsAny<CancellationToken>()), Times.AtLeastOnce);
+    }
+
+    [Fact]
+    public void SidebarTagCloud_ContentTypesChange_ReloadsTagCloud()
+    {
+        // Arrange
+        var tags = CreateTestTagCloud();
+        _mockApiClient.Setup(x => x.GetTagCloudAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync(tags);
+
+        // Act — render with initial types
+        var cut = Render<SidebarTagCloud>(parameters => parameters
+            .Add(p => p.SectionName, "ai")
+            .Add(p => p.CollectionName, "all")
+            .Add(p => p.ContentTypes, "articles,roundups,news"));
+
+        cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
+
+        // Clear invocations to track new calls
+        _mockApiClient.Invocations.Clear();
+
+        // Act — change content types (simulates user deselecting one type)
+        cut.Render(parameters => parameters
+            .Add(p => p.SectionName, "ai")
+            .Add(p => p.CollectionName, "all")
+            .Add(p => p.ContentTypes, "articles,roundups"));
+
+        // Assert — should reload with new content types
+        cut.WaitForAssertion(() =>
+        {
+            _mockApiClient.Verify(x => x.GetTagCloudAsync(
+                "ai",
+                "all",
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                "articles,roundups",
+                It.IsAny<CancellationToken>()), Times.AtLeastOnce);
+        });
+    }
+
+    [Fact]
+    public void SidebarTagCloud_NullContentTypes_DoesNotPassTypesToApi()
+    {
+        // Arrange — when all types are active or no filter, ContentTypes is null
+        var tags = CreateTestTagCloud();
+        _mockApiClient.Setup(x => x.GetTagCloudAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync(tags);
+
+        // Act
+        var cut = Render<SidebarTagCloud>(parameters => parameters
+            .Add(p => p.SectionName, "ai")
+            .Add(p => p.CollectionName, "all")
+            .Add(p => p.ContentTypes, (string?)null));
+
+        // Assert — should call with null contentTypes
+        cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
+        _mockApiClient.Verify(x => x.GetTagCloudAsync(
+            "ai",
+            "all",
+            It.IsAny<int?>(),
+            It.IsAny<int?>(),
+            It.IsAny<int?>(),
+            It.IsAny<List<string>?>(),
+            It.IsAny<List<string>?>(),
+            It.IsAny<string?>(),
+            It.IsAny<string?>(),
+            It.IsAny<string?>(),
+            (string?)null,
+            It.IsAny<CancellationToken>()), Times.AtLeastOnce);
     }
 }

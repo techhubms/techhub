@@ -29,15 +29,22 @@ public sealed class RoundupGenerationOutcome
     public RoundupGenerationResult Result { get; }
 
     /// <summary>The slug of the generated roundup, or <c>null</c> when no roundup was created.</summary>
-    public string? Slug { get; }
+    public string? Slug => Slugs.Count > 0 ? Slugs[0] : null;
 
-    private RoundupGenerationOutcome(RoundupGenerationResult result, string? slug = null)
+    /// <summary>All generated roundup slugs for the run (one per section when applicable).</summary>
+    public IReadOnlyList<string> Slugs { get; }
+
+    /// <summary>Number of roundups generated in the run.</summary>
+    public int GeneratedCount => Slugs.Count;
+
+    private RoundupGenerationOutcome(RoundupGenerationResult result, IReadOnlyList<string>? slugs = null)
     {
         Result = result;
-        Slug = slug;
+        Slugs = slugs ?? [];
     }
 
-    public static RoundupGenerationOutcome Generated(string slug) => new(RoundupGenerationResult.Generated, slug);
+    public static RoundupGenerationOutcome Generated(string slug) => new(RoundupGenerationResult.Generated, [slug]);
+    public static RoundupGenerationOutcome Generated(IReadOnlyList<string> slugs) => new(RoundupGenerationResult.Generated, slugs);
     public static RoundupGenerationOutcome AlreadyExists => new(RoundupGenerationResult.AlreadyExists);
     public static RoundupGenerationOutcome NoArticles => new(RoundupGenerationResult.NoArticles);
     public static RoundupGenerationOutcome NoArticlesAfterFiltering => new(RoundupGenerationResult.NoArticlesAfterFiltering);

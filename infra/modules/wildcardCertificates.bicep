@@ -4,11 +4,8 @@ param location string
 @description('Container Apps Environment name')
 param containerAppsEnvironmentName string
 
-@description('Key Vault name (in shared resource group)')
+@description('Key Vault name (in the same resource group)')
 param keyVaultName string
-
-@description('Shared resource group name')
-param sharedResourceGroupName string
 
 @description('Wildcard certificate names in Key Vault, keyed by base domain (e.g. { "hub.ms": "wildcard-hub-ms" })')
 param wildcardCertNames object
@@ -19,11 +16,13 @@ param identityId string
 @description('Principal ID of the managed identity (for RBAC assignment)')
 param identityPrincipalId string
 
-// Grant Key Vault Secrets User to the managed identity on the shared Key Vault
+@description('Unique suffix (derived from utcNow in the parent template) to make nested deployment names unique per run.')
+param deploymentSuffix string
+
+// Grant Key Vault Secrets User to the managed identity on the Key Vault
 // (needed to read certificate secrets from Key Vault)
 module kvSecretsRole 'kvSecretsUserRole.bicep' = {
-  name: 'kvSecretsRole-deployment'
-  scope: resourceGroup(sharedResourceGroupName)
+  name: 'kvSecretsRole-wc-${deploymentSuffix}'
   params: {
     keyVaultName: keyVaultName
     principalId: identityPrincipalId
@@ -34,7 +33,7 @@ module kvSecretsRole 'kvSecretsUserRole.bicep' = {
 // Each entry maps a base domain to a Key Vault certificate name.
 var certEntries = items(wildcardCertNames)
 module certDeployments 'wildcardCert.bicep' = [for entry in certEntries: {
-  name: 'wildcardCert-${replace(entry.key, '.', '-')}'
+  name: 'wildcardCert-${replace(entry.key, '.', '-')}-${deploymentSuffix}'
   params: {
     location: location
     containerAppsEnvironmentName: containerAppsEnvironmentName

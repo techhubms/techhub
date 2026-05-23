@@ -53,6 +53,26 @@
             </select>
         </div>
         <div class="admin-filter-group">
+            <label class="admin-label" for="sectionFilter">Section</label>
+            <select id="sectionFilter" class="admin-input" @bind="_sectionFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All sections</option>
+                <option value="ai">AI</option>
+                <option value="azure">Azure</option>
+                <option value="dotnet">.NET</option>
+                <option value="devops">DevOps</option>
+                <option value="github-copilot">GitHub Copilot</option>
+                <option value="ml">ML</option>
+                <option value="security">Security</option>
+            </select>
+            @if (!string.IsNullOrEmpty(_sectionFilter))
+            {
+                <label class="admin-checkbox-label">
+                    <input type="checkbox" @bind="_primarySectionOnly" @bind:after="ApplyFiltersAsync" />
+                    Primary section only
+                </label>
+            }
+        </div>
+        <div class="admin-filter-group">
             <label class="admin-label" for="collectionFilter">Collection</label>
             <select id="collectionFilter" class="admin-input" @bind="_collectionFilter" @bind:after="ApplyFiltersAsync">
                 <option value="">All collections</option>
@@ -60,6 +80,7 @@
                 <option value="blogs">blogs</option>
                 <option value="videos">videos</option>
                 <option value="community">community</option>
+                <option value="roundups">roundups</option>
             </select>
         </div>
     </div>
@@ -174,6 +195,8 @@
     private string _searchFilter = string.Empty;
     private string _collectionFilter = string.Empty;
     private string _feedNameFilter = string.Empty;
+    private string _sectionFilter = string.Empty;
+    private bool _primarySectionOnly;
 
     // Debounce timer for text input filters
     private CancellationTokenSource? _debounce;
@@ -237,7 +260,9 @@
                 PageSize,
                 string.IsNullOrEmpty(_searchFilter) ? null : _searchFilter,
                 string.IsNullOrEmpty(_collectionFilter) ? null : _collectionFilter,
-                string.IsNullOrEmpty(_feedNameFilter) ? null : _feedNameFilter);
+                string.IsNullOrEmpty(_feedNameFilter) ? null : _feedNameFilter,
+                string.IsNullOrEmpty(_sectionFilter) ? null : _sectionFilter,
+                _primarySectionOnly);
 
             UpdatePagination();
         }

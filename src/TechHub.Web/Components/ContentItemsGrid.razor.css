@@ -122,7 +122,7 @@
   gap: var(--spacing-2);
   padding: var(--spacing-2) var(--spacing-6);
   background: transparent;
-  color: var(--color-text-link);
+  color: var(--color-purple-medium);
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-md);
   font-size: 0.95rem;
@@ -132,8 +132,8 @@
 }
 
 .load-more-btn:hover:not(:disabled) {
-  background: var(--color-bg-subtle);
-  border-color: var(--color-text-link);
+  background: var(--color-purple-bg-subtle);
+  border-color: var(--color-purple-medium);
 }
 
 .load-more-btn:disabled {

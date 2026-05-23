@@ -191,11 +191,12 @@ public class ContentTypeFilterTests : PlaywrightTestBase
     [Fact]
     public async Task ContentTypeFilter_WhenAllTypesReactivated_RemovesTypesParamFromUrl()
     {
-        // Arrange - Navigate with one type deselected (videos is missing, so it's inactive)
-        await Page.GotoRelativeAsync("/ai/all?types=news,blogs,community");
+        // Arrange - Navigate with one type deselected (videos is missing, so it's inactive).
+        // The AI section now has 5 non-custom collections: roundups, news, blogs, videos, community.
+        await Page.GotoRelativeAsync("/ai/all?types=news,blogs,community,roundups");
         await WaitForContentTypeFilterReadyAsync();
 
-        // Act - Clicking Videos re-activates all 4 types, which should clear the URL param
+        // Act - Clicking Videos re-activates all 5 types, which should clear the URL param
         await ContentTypeButton(Videos).ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).Not.ToHaveURLAsync(
                 new Regex(@".*types=.*")));

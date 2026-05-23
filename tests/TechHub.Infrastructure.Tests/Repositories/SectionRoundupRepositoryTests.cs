@@ -329,4 +329,61 @@ public class SectionRoundupRepositoryTests
                 CreatedAt = ts
             });
     }
+
+    // ── WriteRoundupAsync ─────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task WriteRoundupAsync_InsertsContentItemAndProcessedUrlAndTagsExpanded()
+    {
+        // Arrange
+        var sectionName = "ai";
+        var slug = "weekly-ai-roundup-2025-04-07";
+        var publishDate = new DateOnly(2025, 4, 7);
+        var tags = new List<string> { "AI", "GitHub Copilot", "Roundups" };
+
+        // Act
+        await _sut.WriteRoundupAsync(
+            sectionName, slug, publishDate,
+            title: "Test Roundup Title",
+            content: "## AI\n\nTest content.",
+            introduction: "Welcome to the roundup.",
+            tags: tags,
+            ct: CancellationToken.None);
+
+        // Assert — content_items
+        var item = await _fixture.Connection.QueryFirstOrDefaultAsync<dynamic>(
+            "SELECT title, excerpt, tags_csv, primary_section_name, collection_name FROM content_items WHERE slug = @Slug AND collection_name = 'roundups'",
+            new { Slug = slug });
+        ((object?)item).Should().NotBeNull("content_items row should exist after WriteRoundupAsync");
+        ((string)item!.title).Should().Be("Test Roundup Title");
+        ((string)item.excerpt).Should().Be("Welcome to the roundup.");
+        ((string)item.tags_csv).Should().Contain(",AI,");
+        ((string)item.primary_section_name).Should().Be("ai");
+
+        // Assert — processed_urls
+        var processedUrl = await _fixture.Connection.QueryFirstOrDefaultAsync<dynamic>(
+            "SELECT status, slug, reason FROM processed_urls WHERE external_url = @Url",
+            new { Url = $"/ai/roundups/{slug}" });
+        ((object?)processedUrl).Should().NotBeNull("processed_urls row should exist after WriteRoundupAsync");
+        ((string)processedUrl!.status).Should().Be("succeeded");
+        ((string)processedUrl.slug).Should().Be(slug);
+        ((string)processedUrl.reason).Should().Be("roundup-generated");
+
+        // Assert — content_tags_expanded
+        var tagCount = await _fixture.Connection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM content_tags_expanded WHERE slug = @Slug AND collection_name = 'roundups'",
+            new { Slug = slug });
+        tagCount.Should().BeGreaterThan(0);
+
+        // Verify tag expansion: "GitHub Copilot" should produce full tag + word entries
+        var githubCopilotFull = await _fixture.Connection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM content_tags_expanded WHERE slug = @Slug AND tag_word = 'github copilot' AND is_full_tag = true",
+            new { Slug = slug });
+        githubCopilotFull.Should().Be(1);
+
+        var githubWord = await _fixture.Connection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM content_tags_expanded WHERE slug = @Slug AND tag_word = 'github' AND is_full_tag = false",
+            new { Slug = slug });
+        githubWord.Should().Be(1);
+    }
 }

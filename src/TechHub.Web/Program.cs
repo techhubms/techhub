@@ -354,8 +354,24 @@ using (var scope = app.Services.CreateScope())
     var sectionCache = scope.ServiceProvider.GetRequiredService<SectionCache>();
     var heroBannerCache = scope.ServiceProvider.GetRequiredService<HeroBannerCache>();
 
-    var sections = await apiClient.GetAllSectionsAsync();
-    sectionCache.Initialize(sections?.ToList() ?? []);
+    try
+    {
+        var sections = await apiClient.GetAllSectionsAsync();
+        sectionCache.Initialize(sections?.ToList() ?? []);
+    }
+    catch (HttpRequestException ex)
+    {
+        // Non-fatal: SectionCacheRefreshService will populate the cache once the API is ready
+        var startupLog = scope.ServiceProvider.GetRequiredService<ILogger<SectionCache>>();
+        startupLog.LogWarning(ex, "Failed to pre-load SectionCache at startup, will retry on next background refresh");
+        sectionCache.Initialize([]);
+    }
+    catch (TaskCanceledException ex)
+    {
+        var startupLog = scope.ServiceProvider.GetRequiredService<ILogger<SectionCache>>();
+        startupLog.LogWarning(ex, "Failed to pre-load SectionCache at startup (timeout), will retry on next background refresh");
+        sectionCache.Initialize([]);
+    }
 
     try
     {
@@ -507,14 +523,18 @@ app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken
 .ExcludeFromDescription()
 .RequireRateLimiting("web-rss");
 
-// Special handling for /all/roundups/feed.xml before general section route
-app.MapGet("/all/roundups/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
+app.MapGet("/{sectionName}/roundups/feed.xml", async (string sectionName, TechHubApiClient apiClient, CancellationToken ct) =>
 {
-    var xml = await apiClient.GetCollectionRssFeedAsync("roundups", "all", ct);
+    if (!RouteParameterValidator.IsValidNameSegment(sectionName))
+    {
+        return Results.BadRequest("Invalid section name format.");
+    }
+
+    var xml = await apiClient.GetCollectionRssFeedAsync("roundups", sectionName, ct);
     return Results.Content(xml, "application/rss+xml; charset=utf-8");
 })
 .WithName("GetRoundupsRssFeed")
-.WithSummary("RSS feed for roundups collection")
+.WithSummary("RSS feed for section roundups collection")
 .ExcludeFromDescription()
 .RequireRateLimiting("web-rss");
 

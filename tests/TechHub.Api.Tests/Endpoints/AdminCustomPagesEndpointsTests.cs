@@ -2,7 +2,6 @@ using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
 using TechHub.Core.Models.Admin;
-using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Endpoints;
 

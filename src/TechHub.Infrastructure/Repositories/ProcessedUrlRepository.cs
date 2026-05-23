@@ -170,14 +170,18 @@ ON CONFLICT (external_url) DO UPDATE SET
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
+        string? sectionName = null,
+        bool primarySectionOnly = false,
         CancellationToken ct = default)
     {
-        var where = BuildWhereClause(status, search, feedName, collectionName, jobId);
-        var parameters = BuildParameters(status, search, feedName, collectionName, jobId);
+        var where = BuildWhereClause(status, search, feedName, collectionName, jobId, sectionName, primarySectionOnly);
+        var parameters = BuildParameters(status, search, feedName, collectionName, jobId, sectionName);
+        var join = BuildSectionJoin(sectionName);
 
         var countSql = $@"
 SELECT COUNT(*)
 FROM processed_urls p
+{join}
 {where}";
 
         var totalCount = await _connection.ExecuteScalarAsync<int>(
@@ -196,6 +200,7 @@ SELECT p.external_url AS ExternalUrl,
        p.processed_at AS ProcessedAt,
        p.updated_at AS UpdatedAt
 FROM processed_urls p
+{join}
 {where}
 ORDER BY p.processed_at DESC
 LIMIT @Limit OFFSET @Offset";
@@ -396,7 +401,18 @@ WHERE status = 'failed'
         }
     }
 
-    private static string BuildWhereClause(string? status, string? search, string? feedName, string? collectionName, long? jobId = null)
+    private static string BuildSectionJoin(string? sectionName)
+    {
+        if (string.IsNullOrEmpty(sectionName))
+        {
+            return string.Empty;
+        }
+
+        // Join to content_items to allow section filtering; failed/skipped items without a matching row are excluded.
+        return "INNER JOIN content_items ci ON ci.collection_name = p.collection_name AND ci.slug = p.slug";
+    }
+
+    private static string BuildWhereClause(string? status, string? search, string? feedName, string? collectionName, long? jobId, string? sectionName = null, bool primarySectionOnly = false)
     {
         var conditions = new List<string>();
 
@@ -425,14 +441,32 @@ WHERE status = 'failed'
             conditions.Add("p.job_id = @JobId");
         }
 
-        // No subcollection_name column on content_items — filtering handled by dedicated lookup tables
+        if (!string.IsNullOrEmpty(sectionName))
+        {
+            if (primarySectionOnly)
+            {
+                conditions.Add("ci.primary_section_name = @SectionName");
+            }
+            else
+            {
+                var col = SectionSlugToColumn(sectionName);
+                if (col != null)
+                {
+                    conditions.Add($"ci.{col} = TRUE");
+                }
+                else
+                {
+                    conditions.Add("ci.primary_section_name = @SectionName");
+                }
+            }
+        }
 
         return conditions.Count > 0
             ? "WHERE " + string.Join(" AND ", conditions)
             : string.Empty;
     }
 
-    private static DynamicParameters BuildParameters(string? status, string? search, string? feedName, string? collectionName, long? jobId = null)
+    private static DynamicParameters BuildParameters(string? status, string? search, string? feedName, string? collectionName, long? jobId, string? sectionName = null)
     {
         var parameters = new DynamicParameters();
 
@@ -461,6 +495,23 @@ WHERE status = 'failed'
             parameters.Add("JobId", jobId.Value);
         }
 
+        if (!string.IsNullOrEmpty(sectionName))
+        {
+            parameters.Add("SectionName", sectionName);
+        }
+
         return parameters;
     }
+
+    private static string? SectionSlugToColumn(string sectionSlug) => sectionSlug switch
+    {
+        "ai" => "is_ai",
+        "azure" => "is_azure",
+        "dotnet" => "is_dotnet",
+        "devops" => "is_devops",
+        "github-copilot" => "is_github_copilot",
+        "ml" => "is_ml",
+        "security" => "is_security",
+        _ => null
+    };
 }

@@ -126,6 +126,14 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
     [Parameter]
     public string? SearchQuery { get; set; }
 
+    /// <summary>
+    /// Optional content type filter for multi-collection filtering.
+    /// When provided (e.g., "articles,roundups"), restricts tag counts to items in these collections.
+    /// Used when content type filter has multiple (but not all) types active.
+    /// </summary>
+    [Parameter]
+    public string? ContentTypes { get; set; }
+
     private IReadOnlyList<TagCloudItem>? _tags;
     private HashSet<string> _selectedTagsInternal = new();
     private bool _isLoading = true;
@@ -135,6 +143,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
     private string? _previousFromDate;
     private string? _previousToDate;
     private string? _previousSearchQuery;
+    private string? _previousContentTypes;
     private string? _previousSectionName;
     private string? _previousCollectionName;
     private PersistingComponentStateSubscription? _persistSubscription;
@@ -156,6 +165,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
         _previousFromDate = FromDate;
         _previousToDate = ToDate;
         _previousSearchQuery = SearchQuery;
+        _previousContentTypes = ContentTypes;
         _previousSectionName = SectionName;
         _previousCollectionName = CollectionName;
 
@@ -216,8 +226,16 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
             _previousSearchQuery = SearchQuery;
         }
 
-        // Reload tag cloud if selected tags, dates, search, or scope have changed
-        if (scopeChanged || datesChanged || searchChanged || !_selectedTagsInternal.SetEquals(_previousSelectedTags))
+        // Check if content types changed
+        var contentTypesChanged = _previousContentTypes != ContentTypes;
+        if (contentTypesChanged)
+        {
+            Logger.LogDebug("Content types changed. Types: {Types}", ContentTypes.Sanitize());
+            _previousContentTypes = ContentTypes;
+        }
+
+        // Reload tag cloud if selected tags, dates, search, content types, or scope have changed
+        if (scopeChanged || datesChanged || searchChanged || contentTypesChanged || !_selectedTagsInternal.SetEquals(_previousSelectedTags))
         {
             Logger.LogDebug("Filters changed, reloading tag cloud. Previous tags: [{Previous}], Current: [{Current}]",
                 string.Join(", ", _previousSelectedTags).Sanitize(),
@@ -338,7 +356,8 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
                 tagsToCount: filterTags, // Include selected tags in results
                 fromDate: FromDate,
                 toDate: ToDate,
-                searchQuery: SearchQuery);
+                searchQuery: SearchQuery,
+                contentTypes: ContentTypes);
 
             // Reorder: selected tags first, then remaining popular tags
             if (_selectedTagsInternal.Count > 0 && tags != null && tags.Count > 0)

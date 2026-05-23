@@ -44,8 +44,8 @@
   margin-top: var(--spacing-2);
 }
 
-/* Spacing between latest roundup and the first panel on desktop */
-.latest-roundup + .sidebar-panel > :first-child {
+/* Spacing between latest roundups and the first panel on desktop */
+.latest-roundups + .sidebar-panel > :first-child {
   margin-top: var(--spacing-2);
 }
 
@@ -188,7 +188,7 @@ html.sidebar-collapsed .sidebar > *:not(.sidebar-toggle) {
     margin-top: var(--spacing-4);
   }
 
-  .latest-roundup + .sidebar-panel > :first-child {
+  .latest-roundups + .sidebar-panel > :first-child {
     margin-top: var(--spacing-4);
   }
 }
@@ -227,9 +227,9 @@ html.sidebar-collapsed .sidebar > *:not(.sidebar-toggle) {
     order: -1;
   }
 
-  /* Push latest-roundup below toolbar panels on mobile/tablet so opened panels
-     appear directly under their toggle buttons, not after the roundup */
-  .sidebar-toolbar > .latest-roundup {
+  /* Push latest-roundups below toolbar panels on mobile/tablet so opened panels
+     appear directly under their toggle buttons, not after the roundups */
+  .sidebar-toolbar > .latest-roundups {
     order: 1;
   }
 
@@ -331,7 +331,7 @@ html.sidebar-collapsed .sidebar > *:not(.sidebar-toggle) {
   /* Reset inter-panel and roundup spacing on mobile (only one visible at a time,
      spacing is handled by margin-bottom on toolbar buttons and always-visible content) */
   .sidebar-panel + .sidebar-panel > :first-child,
-  .latest-roundup + .sidebar-panel > :first-child {
+  .latest-roundups + .sidebar-panel > :first-child {
     margin-top: 0;
   }
 

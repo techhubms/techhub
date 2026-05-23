@@ -16,6 +16,7 @@ on:
 permissions:
   contents: read
   id-token: write
+  packages: write
   pull-requests: write
   security-events: write
 
@@ -547,20 +548,18 @@ jobs:
         id: tag
         run: echo "image-tag=pr-${{ github.event.pull_request.number }}-$(date -u +'%Y%m%d%H%M%S')" >> "$GITHUB_OUTPUT"
 
-      - name: Azure Login
-        uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
-        with:
-          client-id: ${{ vars.AZURE_CLIENT_ID }}
-          tenant-id: ${{ vars.AZURE_TENANT_ID }}
-          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      - name: Log in to GitHub Container Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io --username "${{ github.actor }}" --password-stdin
 
       - name: Build and push images
         shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ./scripts/Deploy-Application.ps1 `
-            -Environment staging `
             -Tag "${{ steps.tag.outputs.image-tag }}" `
             -SkipDeploy
+
 
   pr-preview-deploy:
     name: Deploy PR Preview
@@ -595,7 +594,8 @@ jobs:
         id: deploy
         shell: pwsh
         env:
-          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
+          ADMIN_IP_ADDRESSES: ${{ secrets.ADMIN_IP_ADDRESSES }}
+          GHCR_PAT: ${{ secrets.GHCR_PAT }}
         run: |
           ./scripts/Deploy-PrPreview.ps1 `
             -PrNumber ${{ github.event.pull_request.number }} `
@@ -623,7 +623,7 @@ jobs:
           | **Commit** | \`${SHORT_SHA}\` |
 
           > [!NOTE]
-          > The environment uses an isolated PostgreSQL database (cloned from production via PITR) and runs in the staging Azure Container Apps Environment.
+          > The environment uses an isolated PostgreSQL database (cloned from production via PITR) and runs in the production Azure Container Apps Environment.
           > It will be automatically removed when this PR is closed.
           EOF
 
@@ -749,3 +749,32 @@ jobs:
           else
             gh pr comment "$PR_NUMBER" --body-file /tmp/pr-preview-removed.md
           fi
+
+      - name: Delete PR preview images from GHCR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_NUMBER="${{ github.event.pull_request.number }}"
+          ORG="techhubms"
+
+          for PKG in techhub-api techhub-web; do
+            echo "Deleting images tagged pr-${PR_NUMBER}-* from ${PKG}..."
+
+            VERSION_IDS=$(gh api "/orgs/${ORG}/packages/container/${PKG}/versions?per_page=100" \
+              --jq "[.[] | select(any(.metadata.container.tags[]; startswith(\"pr-${PR_NUMBER}-\"))) | .id] | .[]" \
+              2>/dev/null || true)
+
+            if [ -z "$VERSION_IDS" ]; then
+              echo "  No images found for PR #${PR_NUMBER} in ${PKG}"
+              continue
+            fi
+
+            while IFS= read -r VERSION_ID; do
+              echo "  Deleting version ${VERSION_ID}..."
+              gh api --method DELETE \
+                "/orgs/${ORG}/packages/container/${PKG}/versions/${VERSION_ID}" \
+                --silent \
+              && echo "  [OK] Deleted ${VERSION_ID}" \
+              || echo "  [WARN] Failed to delete ${VERSION_ID}"
+            done <<< "$VERSION_IDS"
+          done
