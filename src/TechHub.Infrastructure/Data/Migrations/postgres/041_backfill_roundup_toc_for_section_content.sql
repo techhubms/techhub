@@ -56,11 +56,10 @@ built_toc AS (
     GROUP BY te.collection_name, te.slug
 )
 UPDATE content_items ci
-SET content = regexp_replace(
+SET content = replace(
         ci.content,
-        '(?s)(<!--excerpt_end-->\\s*)',
-        E'\\1## This Week''s Overview\\n\\n' || bt.toc_text || E'\\n\\n',
-        'n'
+        '<!--excerpt_end-->',
+        E'<!--excerpt_end-->\n\n## This Week''s Overview\n\n' || bt.toc_text || E'\n\n'
     ),
     updated_at = NOW()
 FROM built_toc bt
