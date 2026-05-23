@@ -54,7 +54,7 @@ resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-
     criteria: {
       allOf: [
         {
-          query: 'requests\n| where success == false\n| where resultCode != "0"\n| where resultCode != "499"\n| summarize failedCount = count()'
+          query: 'requests\n| where success == false\n| where resultCode != "0"\n| where resultCode != "499"'
           timeAggregation: 'Count'
           operator: 'GreaterThan'
           threshold: 10
