@@ -10,7 +10,8 @@
 
 WITH targets AS (
     SELECT
-        ci.id,
+        ci.collection_name,
+        ci.slug,
         ci.content,
         split_part(ci.content, '<!--excerpt_end-->', 2) AS body_after_intro
     FROM content_items ci
@@ -21,7 +22,8 @@ WITH targets AS (
 ),
 lines AS (
     SELECT
-        t.id,
+        t.collection_name,
+        t.slug,
         l.ordinality,
         l.line
     FROM targets t
@@ -29,7 +31,8 @@ lines AS (
 ),
 toc_entries AS (
     SELECT
-        l.id,
+        l.collection_name,
+        l.slug,
         l.ordinality,
         CASE
             WHEN l.line LIKE '## %' THEN
@@ -46,10 +49,11 @@ toc_entries AS (
 ),
 built_toc AS (
     SELECT
-        te.id,
+        te.collection_name,
+        te.slug,
         string_agg(te.toc_line, E'\n' ORDER BY te.ordinality) AS toc_text
     FROM toc_entries te
-    GROUP BY te.id
+    GROUP BY te.collection_name, te.slug
 )
 UPDATE content_items ci
 SET content = regexp_replace(
@@ -60,6 +64,7 @@ SET content = regexp_replace(
     ),
     updated_at = NOW()
 FROM built_toc bt
-WHERE ci.id = bt.id
+WHERE ci.collection_name = bt.collection_name
+  AND ci.slug = bt.slug
   AND bt.toc_text IS NOT NULL
   AND bt.toc_text <> '';
