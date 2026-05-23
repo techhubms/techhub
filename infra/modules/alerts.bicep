@@ -33,37 +33,41 @@ param tags object = {}
 var severityHigh = 1
 var severityMedium = 2
 
-// --- Application Insights: failed request rate ---
-resource failedRequestsAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
+// --- Application Insights: failed request rate (log query, noise-filtered) ---
+// Excludes:
+//   ResultCode=0  — client-aborted Blazor SignalR circuits and bot connections that
+//                   drop the WebSocket before the server can respond. Always client-side.
+//   HTTP 499      — client closed the connection before the server finished responding.
+//                   Unactionable; spikes during outages are captured by availability tests.
+resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-preview' = {
   name: 'alert-${environmentName}-failed-requests'
-  location: 'global'
+  location: location
   tags: tags
   properties: {
-    description: 'Fires when failed HTTP requests exceed 10 in 15 minutes.'
+    displayName: 'Failed HTTP requests (${environmentName})'
+    description: 'Fires when actionable failed requests exceed 10 in 15 minutes. Excludes ResultCode=0 (client-aborted) and HTTP 499 (client disconnect).'
     severity: severityHigh
     enabled: true
-    scopes: [appInsightsId]
     evaluationFrequency: 'PT5M'
     windowSize: 'PT15M'
+    scopes: [logAnalyticsWorkspaceId]
     criteria: {
-      'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
       allOf: [
         {
-          name: 'FailedRequests'
-          metricNamespace: 'microsoft.insights/components'
-          metricName: 'requests/failed'
+          query: 'requests\n| where success == false\n| where resultCode != "0"\n| where resultCode != "499"\n| summarize failedCount = count()'
+          timeAggregation: 'Count'
           operator: 'GreaterThan'
           threshold: 10
-          timeAggregation: 'Count'
-          criterionType: 'StaticThresholdCriterion'
+          failingPeriods: {
+            numberOfEvaluationPeriods: 1
+            minFailingPeriodsToAlert: 1
+          }
         }
       ]
     }
-    actions: [
-      {
-        actionGroupId: actionGroupId
-      }
-    ]
+    actions: {
+      actionGroups: [actionGroupId]
+    }
   }
 }
 
