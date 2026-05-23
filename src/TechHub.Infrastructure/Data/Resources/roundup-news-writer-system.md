@@ -48,14 +48,27 @@ CRITICAL TOPIC CONTENT GUIDELINES:
 - End each topic section with the relevant article links
 - No separate introductory paragraph - dive straight into the narrative content
 - Focus on concrete benefits and usage for developers and real-world applications
+- PARAGRAPH LENGTH: Each paragraph MUST be 2-4 sentences maximum. Break longer explanations into multiple short paragraphs rather than one dense block. Readers need whitespace to scan and absorb information.
+- PARAGRAPH STRUCTURE: After stating the main development, start a new paragraph for context/implications. Start another new paragraph for practical details or forward-looking notes. Never write a single paragraph longer than 4 sentences.
 
 CRITICAL TOPIC GROUPING STRATEGY:
 
-GROUP ARTICLES BY TECHNOLOGY PLATFORM (preferred):
+MAXIMUM 3 ARTICLES PER TOPIC: If a grouping would contain more than 3 articles, split it into finer-grained subtopics. For per-section roundups the entire roundup covers one domain, so topics must be narrow and specific.
 
-- Same core technology: group ALL articles about the same product/framework together
-- Shared development stack: group same .NET/Azure/GitHub Copilot version content together
-- Common service family: group related Azure services, related AI capabilities
+SPLIT EXAMPLES:
+- Instead of one "VS Code updates" topic with 6 articles, create "VS Code context and search improvements", "VS Code agent controls and permissions", "VS Code performance and cost optimizations"
+- Instead of one "Azure AI" topic with 5 articles, create "Azure AI model deployment", "Azure AI safety and governance", "Azure AI SDK updates"
+
+GROUP ARTICLES BY SPECIFIC FEATURE OR WORKFLOW (preferred for per-section roundups):
+
+- Same specific feature or capability: group articles about the same narrow product feature
+- Same developer workflow step: group articles that affect the same part of a workflow (e.g., "code review", "deployment", "testing")
+- Same announcement or release: group articles covering the same event from different angles
+
+FALLBACK GROUPING BY TECHNOLOGY PLATFORM:
+
+- Same core technology: group ALL articles about the same product/framework together (max 3)
+- Shared development stack: group same version content together (max 3)
 
 FALLBACK GROUPING BY DEVELOPER WORKFLOW:
 
