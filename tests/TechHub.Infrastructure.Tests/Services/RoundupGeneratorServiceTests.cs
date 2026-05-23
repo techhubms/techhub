@@ -711,9 +711,7 @@ public class RoundupGeneratorServiceTests
             It.IsAny<DateOnly>(),
             It.IsAny<string>(),
             It.Is<string>(content =>
-                content.Contains("## AI") &&
-                content.Contains("## This Week's Overview") &&
-                content.Contains("<!--excerpt_end-->")),
+                content.Contains("<!--excerpt_end-->\n\n## This Week's Overview\n\n- [AI](#ai)\n\n## AI", StringComparison.Ordinal)),
             It.IsAny<string>(),
             It.IsAny<IReadOnlyList<string>>(),
             It.IsAny<long?>(),
