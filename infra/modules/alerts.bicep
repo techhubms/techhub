@@ -1,12 +1,12 @@
 // Operational alerts for an environment. Targets:
-// - App Insights: elevated exception rate + failed request rate
+// - App Insights: elevated exception rate + failed request count
 // - Postgres Flexible Server: CPU saturation + connection count
 // - AI Foundry (Cognitive Services account): client errors (429/5xx)
 // - Container Apps: replica restart storms
 //
 // All alerts notify the shared action group.
 
-@description('Azure region (for metric alerts that support regions; log alerts use global)')
+@description('Azure region for all alert resources (metric alerts and log query alerts)')
 param location string = resourceGroup().location
 
 @description('Environment name (staging, prod)')
@@ -33,7 +33,7 @@ param tags object = {}
 var severityHigh = 1
 var severityMedium = 2
 
-// --- Application Insights: failed request rate (log query, noise-filtered) ---
+// --- Application Insights: failed request count (log query, noise-filtered) ---
 // Excludes:
 //   ResultCode=0  — client-aborted Blazor SignalR circuits and bot connections that
 //                   drop the WebSocket before the server can respond. Always client-side.
