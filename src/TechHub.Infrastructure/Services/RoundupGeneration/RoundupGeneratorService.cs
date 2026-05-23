@@ -159,8 +159,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         var filteredSectionArticles = _relevanceFilter.FilterSection(sectionName, sectionArticles, lp);
         if (filteredSectionArticles.Count == 0)
         {
-            _logger.LogWarning("No articles remain after relevance filtering for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
-            return RoundupGenerationOutcome.NoArticlesAfterFiltering;
+            _logger.LogInformation("No articles remain after relevance filtering for section {SectionName} in week {WeekStart}–{WeekEnd} — generating brief 'nothing notable' roundup", sectionName, weekStart, weekEnd);
         }
 
         lp.Report($"After relevance filtering for section '{sectionName}': {filteredSectionArticles.Count} articles");

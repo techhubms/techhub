@@ -55,7 +55,9 @@ CRITICAL TOPIC CONTENT GUIDELINES:
 
 CRITICAL TOPIC GROUPING STRATEGY:
 
-ARTICLE SELECTION: Include articles that are important enough to keep readers aware of what is changing, arriving, or leaving in the tech landscape. The goal is not exhaustive coverage — skip minor or low-impact items. A topic is worth its own subsection when the articles together tell a meaningful story worth knowing about.
+ARTICLE SELECTION: Include articles that are important enough to keep readers aware of what is changing, arriving, or leaving in the tech landscape. The goal is not exhaustive coverage, but err on the side of including rather than excluding — minor or low-impact items should only be skipped when there are more important topics to cover. A topic is worth its own subsection when the articles together tell a meaningful story worth knowing about.
+
+EMPTY OR QUIET SECTIONS: If a section has no articles listed, write a brief 1-2 sentence note stating that there was nothing notable to report for this section this week. Do not leave sections empty or skip them — always produce a ## section header and a short "quiet week" note so readers know the section was checked.
 
 SPLIT LARGE GROUPINGS INTO FINER-GRAINED SUBTOPICS:
 - If a grouping would result in a long, mixed narrative, split it into more specific subtopics so each one stays focused and readable.
