@@ -5,6 +5,27 @@
 // glitches caused by the server round-trip delay.
 // Server-side Math.Clamp in the C# code-behind serves as a fallback.
 
+// Tracks the instance ID of the most recent initClamping call.
+// Used by reset() to avoid clobbering a newer instance's ready state when
+// Blazor Server delivers DisposeAsync's reset() after the new component's
+// initClamping() due to concurrent async execution.
+let _activeInstanceId = null;
+
+/**
+ * Called by DateRangeSlider.DisposeAsync to clear the ready flag.
+ * Only resets when instanceId matches the active initClamping instance;
+ * a stale reset from a disposed component is ignored if a newer one has
+ * already initialized.
+ *
+ * @param {number} instanceId - The instance ID assigned in C# (passed via ElementReference)
+ */
+export function reset(instanceId) {
+    if (_activeInstanceId === instanceId) {
+        _activeInstanceId = null;
+        window.__dateRangeSliderReady = false;
+    }
+}
+
 /**
  * Initialize client-side clamping for a dual-handle slider.
  * Uses a capture-phase event listener on the container so it fires
@@ -12,12 +33,14 @@
  * This ensures Blazor receives already-clamped values.
  *
  * @param {HTMLElement} container - The .slider-container element (passed via ElementReference)
+ * @param {number} instanceId - Per-instance ID generated in C# to guard against stale reset() calls
  */
-export function reset() {
-    window.__dateRangeSliderReady = false;
-}
+export function initClamping(container, instanceId) {
+    // Record this instance as the active one before any work.
+    // A subsequent reset(oldId) call for a disposed predecessor will be a no-op
+    // because oldId !== instanceId.
+    _activeInstanceId = instanceId;
 
-export function initClamping(container) {
     // Signal that initialization is in progress. Cleared on all exit paths so
     // markScriptsReady knows whether to wait for this component.
     window.__dateRangeSliderReady = false;

@@ -37,7 +37,7 @@ describe('date-range-slider.js', () => {
         const mod = await getModule();
         const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
-        mod.initClamping(null);
+        mod.initClamping(null, 1);
 
         expect(warn).toHaveBeenCalledWith(
             '[DateRangeSlider] #date-range-slider element not available, skipping clamping init'
@@ -49,7 +49,7 @@ describe('date-range-slider.js', () => {
         const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
         const emptyContainer = document.createElement('div');
-        mod.initClamping(emptyContainer);
+        mod.initClamping(emptyContainer, 1);
 
         expect(warn).toHaveBeenCalledWith(
             '[DateRangeSlider] Could not find slider elements for clamping'
@@ -58,7 +58,7 @@ describe('date-range-slider.js', () => {
 
     it('should clamp from-slider to not exceed to-slider', async () => {
         const mod = await getModule();
-        mod.initClamping(container);
+        mod.initClamping(container, 1);
 
         const fromSlider = container.querySelector('.slider-from');
         const toSlider = container.querySelector('.slider-to');
@@ -76,7 +76,7 @@ describe('date-range-slider.js', () => {
 
     it('should clamp to-slider to not go below from-slider', async () => {
         const mod = await getModule();
-        mod.initClamping(container);
+        mod.initClamping(container, 1);
 
         const fromSlider = container.querySelector('.slider-from');
         const toSlider = container.querySelector('.slider-to');
@@ -94,7 +94,7 @@ describe('date-range-slider.js', () => {
 
     it('should allow from-slider value equal to to-slider value', async () => {
         const mod = await getModule();
-        mod.initClamping(container);
+        mod.initClamping(container, 1);
 
         const fromSlider = container.querySelector('.slider-from');
         const toSlider = container.querySelector('.slider-to');
@@ -111,7 +111,7 @@ describe('date-range-slider.js', () => {
 
     it('should update fill element position on input', async () => {
         const mod = await getModule();
-        mod.initClamping(container);
+        mod.initClamping(container, 1);
 
         const fromSlider = container.querySelector('.slider-from');
         const fill = container.querySelector('.slider-fill');
@@ -129,7 +129,7 @@ describe('date-range-slider.js', () => {
 
     it('should update fill when to-slider changes', async () => {
         const mod = await getModule();
-        mod.initClamping(container);
+        mod.initClamping(container, 1);
 
         const toSlider = container.querySelector('.slider-to');
         const fill = container.querySelector('.slider-fill');
@@ -146,7 +146,7 @@ describe('date-range-slider.js', () => {
 
     it('should not clamp when values are within range', async () => {
         const mod = await getModule();
-        mod.initClamping(container);
+        mod.initClamping(container, 1);
 
         const fromSlider = container.querySelector('.slider-from');
         const toSlider = container.querySelector('.slider-to');
@@ -159,5 +159,63 @@ describe('date-range-slider.js', () => {
 
         expect(fromSlider.value).toBe('30');
         expect(toSlider.value).toBe('70');
+    });
+
+    describe('reset / __dateRangeSliderReady lifecycle', () => {
+        it('reset with matching instanceId clears __dateRangeSliderReady', async () => {
+            const mod = await getModule();
+            mod.initClamping(container, 1);
+            expect(window.__dateRangeSliderReady).toBe(true);
+
+            mod.reset(1);
+            expect(window.__dateRangeSliderReady).toBe(false);
+        });
+
+        it('reset with stale instanceId is a no-op (race condition guard)', async () => {
+            // Simulates the CI race: new initClamping(2) arrives before old reset(1).
+            // reset(1) must not clobber the new instance's ready state.
+            const mod = await getModule();
+
+            // New component initialises first (arrives before old dispose)
+            mod.initClamping(container, 2);
+            expect(window.__dateRangeSliderReady).toBe(true);
+
+            // Old component's reset arrives late — should be ignored
+            mod.reset(1);
+            expect(window.__dateRangeSliderReady).toBe(true);
+        });
+
+        it('reset with own instanceId clears ready after normal dispose order', async () => {
+            // Normal order: old reset(1) before new initClamping(2)
+            const mod = await getModule();
+
+            mod.initClamping(container, 1);
+            expect(window.__dateRangeSliderReady).toBe(true);
+
+            // Old component disposes first (correct order)
+            mod.reset(1);
+            expect(window.__dateRangeSliderReady).toBe(false);
+
+            // New component initialises after reset — should set ready
+            mod.initClamping(container, 2);
+            expect(window.__dateRangeSliderReady).toBe(true);
+        });
+
+        it('initClamping sets __dateRangeSliderReady true on success', async () => {
+            const mod = await getModule();
+            window.__dateRangeSliderReady = false;
+
+            mod.initClamping(container, 1);
+            expect(window.__dateRangeSliderReady).toBe(true);
+        });
+
+        it('initClamping sets __dateRangeSliderReady true even when container is null', async () => {
+            const mod = await getModule();
+            vi.spyOn(console, 'warn').mockImplementation(() => {});
+            window.__dateRangeSliderReady = false;
+
+            mod.initClamping(null, 1);
+            expect(window.__dateRangeSliderReady).toBe(true);
+        });
     });
 });

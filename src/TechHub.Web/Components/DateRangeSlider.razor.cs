@@ -82,6 +82,13 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
     private ElementReference _sliderContainer;
     private IJSObjectReference? _jsModule;
 
+    // Per-instance ID used to guard against stale reset() calls overtaking a newer
+    // initClamping() when Blazor Server delivers JS interop messages out of order
+    // (DisposeAsync and OnAfterRenderAsync can execute concurrently on the server,
+    // so their JS calls may arrive at the browser in any order).
+    private static int _nextInstanceId;
+    private readonly int _instanceId = System.Threading.Interlocked.Increment(ref _nextInstanceId);
+
     /// <summary>
     /// The current "from" date based on slider position.
     /// </summary>
@@ -149,7 +156,7 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
         {
             try
             {
-                await _jsModule!.InvokeVoidAsync("initClamping", _sliderContainer);
+                await _jsModule!.InvokeVoidAsync("initClamping", _sliderContainer, _instanceId);
                 return;
             }
             catch (JSException ex) when (ex.Message.Contains("Cannot read properties of null", StringComparison.Ordinal))
@@ -390,7 +397,9 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
             {
                 // Reset the ready flag so markScriptsReady defers on the next
                 // navigation until the new instance finishes initClamping.
-                await _jsModule.InvokeVoidAsync("reset");
+                // Pass _instanceId so that a stale reset() from a disposed predecessor
+                // is ignored if a newer initClamping() has already run (see date-range-slider.js).
+                await _jsModule.InvokeVoidAsync("reset", _instanceId);
                 await _jsModule.DisposeAsync();
             }
             catch (JSDisconnectedException)
