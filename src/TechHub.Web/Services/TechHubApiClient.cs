@@ -817,6 +817,26 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
+    /// Delete an existing roundup and re-run generation for its week.
+    /// POST /api/admin/roundup/regenerate
+    /// </summary>
+    public virtual async Task RegenerateRoundupAsync(string collectionName, string slug, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Triggering roundup regeneration for {CollectionName}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
+            var url = $"/api/admin/roundup/regenerate?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}";
+            using var response = await _httpClient.PostAsync(url, null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to trigger roundup regeneration");
+            throw;
+        }
+    }
+
+    /// <summary>
     /// Trigger a bulk content fix run.
     /// POST /api/admin/content-fixer/trigger
     /// </summary>

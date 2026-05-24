@@ -44,8 +44,8 @@ For each paragraph you encounter:
 
 STRUCTURE PRESERVATION:
 
-- Keep ALL section headers (##) exactly as provided
-- Keep ALL topic headers (###) exactly as provided
+- Keep ALL topic headers (##) exactly as provided
+- Keep ALL subtopic headers (###) exactly as provided
 - Maintain the exact same organization and flow
 - Preserve all article groupings (don't merge separate groups)
 - Keep all article links in their original positions

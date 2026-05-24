@@ -88,6 +88,58 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         response.StatusCode.Should().Be(HttpStatusCode.Accepted);
     }
 
+    [Fact]
+    public async Task RegenerateRoundup_WithValidSlug_ReturnsAccepted()
+    {
+        // Act — no existing item to delete; the endpoint is idempotent on missing items
+        var response = await _client.PostAsync(
+            "/api/admin/roundup/regenerate?collection=roundups&slug=weekly-ai-roundup-2026-05-18",
+            null,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.Accepted);
+    }
+
+    [Fact]
+    public async Task RegenerateRoundup_WithInvalidSlug_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.PostAsync(
+            "/api/admin/roundup/regenerate?collection=roundups&slug=not-a-roundup-slug",
+            null,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task RegenerateRoundup_WithWrongCollection_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.PostAsync(
+            "/api/admin/roundup/regenerate?collection=blogs&slug=weekly-ai-roundup-2026-05-18",
+            null,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task RegenerateRoundup_WithMissingParams_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.PostAsync(
+            "/api/admin/roundup/regenerate",
+            null,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
     // ── RSS Feed CRUD Endpoints ──────────────────────────────────────────────
 
     [Fact]

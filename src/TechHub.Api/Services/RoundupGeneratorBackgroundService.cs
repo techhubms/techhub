@@ -30,6 +30,12 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
     private volatile CancellationTokenSource? _runCts;
 #pragma warning restore CA2213
 
+    // Set by TriggerRegenerateRun to override the default "previous week" date range.
+    // Consumed atomically in RunOnceAsync so at most one regeneration override is active.
+    private WeekOverride? _weekOverride;
+
+    private sealed record WeekOverride(DateOnly WeekStart, DateOnly WeekEnd);
+
     public RoundupGeneratorBackgroundService(
         IServiceProvider serviceProvider,
         IOptions<RoundupGeneratorOptions> options,
@@ -60,6 +66,24 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
         else
         {
             _logger.LogInformation("Manual roundup trigger requested but a run is already queued");
+        }
+    }
+
+    /// <summary>
+    /// Signals the background loop to regenerate a specific roundup, bypassing the "already exists" check.
+    /// The caller must have already deleted the existing content item before calling this.
+    /// Returns immediately; the actual run happens asynchronously in the background.
+    /// </summary>
+    public void TriggerRegenerateRun(DateOnly weekStart, DateOnly weekEnd)
+    {
+        Interlocked.Exchange(ref _weekOverride, new WeekOverride(weekStart, weekEnd));
+        if (_manualTrigger.TrySetResult(true))
+        {
+            _logger.LogInformation("Manual roundup regeneration triggered for week {WeekStart}\u2013{WeekEnd}", weekStart, weekEnd);
+        }
+        else
+        {
+            _logger.LogInformation("Manual roundup regeneration requested but a run is already queued");
         }
     }
 
@@ -163,14 +187,25 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
 
             try
             {
-                // Generate roundup for the previous week (Monday–Sunday).
-                var today = DateOnly.FromDateTime(DateTime.UtcNow);
-                var daysSinceMonday = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
-                var thisWeekMonday = today.AddDays(-daysSinceMonday);
+                // Use override dates (from admin regenerate) if available, otherwise fall back to the previous week.
+                var weekOverride = Interlocked.Exchange(ref _weekOverride, null);
+                DateOnly weekStart, weekEnd;
+                if (weekOverride is not null)
+                {
+                    weekStart = weekOverride.WeekStart;
+                    weekEnd = weekOverride.WeekEnd;
+                }
+                else
+                {
+                    // Generate roundup for the previous week (Monday–Sunday).
+                    var today = DateOnly.FromDateTime(DateTime.UtcNow);
+                    var daysSinceMonday = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
+                    var thisWeekMonday = today.AddDays(-daysSinceMonday);
 
-                // Previous week: the Monday before this week's Monday.
-                var weekStart = thisWeekMonday.AddDays(-7);
-                var weekEnd = weekStart.AddDays(6);
+                    // Previous week: the Monday before this week's Monday.
+                    weekStart = thisWeekMonday.AddDays(-7);
+                    weekEnd = weekStart.AddDays(6);
+                }
 
                 _logger.LogInformation(
                     "Running roundup generation for week {WeekStart}–{WeekEnd} (job {JobId})",

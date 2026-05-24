@@ -288,6 +288,12 @@ internal interface ITechHubApiClient
     Task TriggerRoundupGenerationAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Delete an existing roundup and re-run generation for its week.
+    /// POST /api/admin/roundup/regenerate
+    /// </summary>
+    Task RegenerateRoundupAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Trigger a bulk content fix run (tags, authors, markdown, AI metadata backfill).
     /// POST /api/admin/content-fixer/trigger
     /// </summary>

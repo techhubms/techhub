@@ -242,19 +242,26 @@
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
-        // Parse jobId from query string (e.g. /admin/processed-urls?jobId=123)
-        var uri = new Uri(Navigation.Uri);
-        var queryParams = System.Web.HttpUtility.ParseQueryString(uri.Query);
-        if (long.TryParse(queryParams["jobId"], out var jobId))
+        // Restore filters from query string
+        var qs = System.Web.HttpUtility.ParseQueryString(new Uri(Navigation.Uri).Query);
+        _statusFilter = qs["status"] ?? string.Empty;
+        _searchFilter = qs["q"] ?? string.Empty;
+        _feedNameFilter = qs["feed"] ?? string.Empty;
+        _sectionFilter = qs["section"] ?? string.Empty;
+        _primarySectionOnly = qs["primaryOnly"] == "true";
+        _collectionFilter = qs["collection"] ?? string.Empty;
+        if (long.TryParse(qs["jobId"], out var jobId))
         {
             _jobIdFilter = jobId;
             _jobIdFilterText = jobId.ToString();
         }
+        if (int.TryParse(qs["page"], out var page) && page > 1)
+            _currentPage = page;
 
         // Load feed names for dropdown filter
         await LoadFeedNamesAsync();
 
-        if (_jobIdFilter == null && ApplicationState.TryTakeFromJson<PagedResult<ProcessedUrlListItem>>("admin-processed-urls", out var restored) && restored != null)
+        if (ApplicationState.TryTakeFromJson<PagedResult<ProcessedUrlListItem>>("admin-processed-urls", out var restored) && restored != null)
         {
             _result = restored;
             _loading = false;
@@ -273,6 +280,22 @@
             ApplicationState.PersistAsJson("admin-processed-urls", _result);
         }
         return Task.CompletedTask;
+    }
+
+    private void UpdateQueryString()
+    {
+        var uri = Navigation.GetUriWithQueryParameters(new Dictionary<string, object?>
+        {
+            ["status"] = string.IsNullOrEmpty(_statusFilter) ? null : (object)_statusFilter,
+            ["q"] = string.IsNullOrEmpty(_searchFilter) ? null : (object)_searchFilter,
+            ["feed"] = string.IsNullOrEmpty(_feedNameFilter) ? null : (object)_feedNameFilter,
+            ["section"] = string.IsNullOrEmpty(_sectionFilter) ? null : (object)_sectionFilter,
+            ["primaryOnly"] = (_primarySectionOnly && !string.IsNullOrEmpty(_sectionFilter)) ? (object)"true" : null,
+            ["collection"] = string.IsNullOrEmpty(_collectionFilter) ? null : (object)_collectionFilter,
+            ["jobId"] = _jobIdFilter.HasValue ? (object)_jobIdFilter.Value : null,
+            ["page"] = _currentPage > 1 ? (object)_currentPage : null,
+        });
+        Navigation.NavigateTo(uri, forceLoad: false, replace: true);
     }
 
     public void Dispose()
@@ -354,7 +377,7 @@
         _jobIdFilter = null;
         _jobIdFilterText = string.Empty;
         _currentPage = 1;
-        Navigation.NavigateTo("/admin/processed-urls", replace: true);
+        UpdateQueryString();
         await LoadDataAsync();
     }
 
@@ -391,6 +414,7 @@
         }
 
         _currentPage = 1;
+        UpdateQueryString();
         await LoadDataAsync();
     }
 
@@ -411,6 +435,7 @@
         }
 
         _currentPage = 1;
+        UpdateQueryString();
         await LoadDataAsync();
     }
 
@@ -425,6 +450,7 @@
         if (_currentPage > 1)
         {
             _currentPage--;
+            UpdateQueryString();
             await LoadDataAsync();
         }
     }
@@ -434,6 +460,7 @@
         if (_currentPage < _totalPages)
         {
             _currentPage++;
+            UpdateQueryString();
             await LoadDataAsync();
         }
     }

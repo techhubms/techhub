@@ -35,9 +35,7 @@ ENHANCEMENT GUIDELINES:
 - Maintain the existing narrative flow while adding continuity
 - Place connections naturally within existing content
 - Keep all existing article titles and links exactly as provided
-- BREVITY: Add at most 1 sentence of narrative connection per topic subsection. Do not inflate paragraphs - a short "Building on last week's X..." clause or sentence is sufficient
-- NEVER expand a short paragraph into a long one by adding extensive "last week" context
-- If a paragraph is already 4 sentences, weave the connection into an existing sentence rather than adding a new one
+- BREVITY: Add at most 1 sentence of narrative connection per ### subsection. When a ## section has no ### subsections, add at most 1 connection for the entire ## section — do not stack multiple "last week" references in the same block. A short "Building on last week's X..." clause woven into an existing sentence is sufficient.
 
 WHAT NOT TO CHANGE:
 

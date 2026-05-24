@@ -1,6 +1,7 @@
 @page "/admin/content-items"
 @layout AdminLayout
 @rendermode InteractiveServer
+@using TechHub.Core.Logging
 @using TechHub.Core.Models
 @using TechHub.Core.Models.Admin
 @using TechHub.Core.Models.ContentProcessing
@@ -9,6 +10,7 @@
 @inject ITechHubApiClient Api
 @inject ILogger<AdminContentItems> Logger
 @inject PersistentComponentState ApplicationState
+@inject NavigationManager Navigation
 @inherits PageComponentBase
 
 <PageTitle>Content Items — TechHub Admin</PageTitle>
@@ -146,6 +148,15 @@
                                 <button class="admin-link-btn"
                                         @onclick="() => OpenContentItemEditorAsync(item.CollectionName, item.Slug)"
                                         title="Edit content item">Edit</button>
+                                @if (item.CollectionName == "roundups")
+                                {
+                                    <button class="admin-link-btn"
+                                            @onclick="() => RegenerateRoundupAsync(item.CollectionName, item.Slug)"
+                                            disabled="@(_regeneratingSlug == item.Slug)"
+                                            title="Delete and regenerate this roundup via AI">
+                                        @(_regeneratingSlug == item.Slug ? "Regenerating…" : "Regenerate")
+                                    </button>
+                                }
                                 <button class="admin-link-btn admin-link-btn-danger"
                                         @onclick="() => DeleteItemAsync(item.CollectionName, item.Slug)"
                                         title="Delete content item and associated processed URL">Delete</button>
@@ -211,12 +222,25 @@
     // Add content modal
     private bool _addContentOpen;
 
+    // Regenerating roundup slug (null when idle)
+    private string? _regeneratingSlug;
+
     // Feed name dropdown options
     private IReadOnlyList<string>? _feedNames;
 
     protected override async Task OnInitializedAsync()
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        // Restore filters from query string
+        var qs = System.Web.HttpUtility.ParseQueryString(new Uri(Navigation.Uri).Query);
+        _searchFilter = qs["q"] ?? string.Empty;
+        _feedNameFilter = qs["feed"] ?? string.Empty;
+        _sectionFilter = qs["section"] ?? string.Empty;
+        _primarySectionOnly = qs["primaryOnly"] == "true";
+        _collectionFilter = qs["collection"] ?? string.Empty;
+        if (int.TryParse(qs["page"], out var page) && page > 1)
+            _currentPage = page;
 
         // Load feed names for dropdown filter
         await LoadFeedNamesAsync();
@@ -239,6 +263,20 @@
             ApplicationState.PersistAsJson("admin-content-items", _result);
         }
         return Task.CompletedTask;
+    }
+
+    private void UpdateQueryString()
+    {
+        var uri = Navigation.GetUriWithQueryParameters(new Dictionary<string, object?>
+        {
+            ["q"] = string.IsNullOrEmpty(_searchFilter) ? null : (object)_searchFilter,
+            ["feed"] = string.IsNullOrEmpty(_feedNameFilter) ? null : (object)_feedNameFilter,
+            ["section"] = string.IsNullOrEmpty(_sectionFilter) ? null : (object)_sectionFilter,
+            ["primaryOnly"] = (_primarySectionOnly && !string.IsNullOrEmpty(_sectionFilter)) ? (object)"true" : null,
+            ["collection"] = string.IsNullOrEmpty(_collectionFilter) ? null : (object)_collectionFilter,
+            ["page"] = _currentPage > 1 ? (object)_currentPage : null,
+        });
+        Navigation.NavigateTo(uri, forceLoad: false, replace: true);
     }
 
     public void Dispose()
@@ -323,6 +361,7 @@
         }
 
         _currentPage = 1;
+        UpdateQueryString();
         await LoadDataAsync();
     }
 
@@ -337,6 +376,7 @@
         if (_currentPage > 1)
         {
             _currentPage--;
+            UpdateQueryString();
             await LoadDataAsync();
         }
     }
@@ -346,6 +386,7 @@
         if (_currentPage < _totalPages)
         {
             _currentPage++;
+            UpdateQueryString();
             await LoadDataAsync();
         }
     }
@@ -428,5 +469,27 @@
         _message = "Content item added successfully.";
         _messageIsError = false;
         await LoadDataAsync();
+    }
+
+    private async Task RegenerateRoundupAsync(string collectionName, string slug)
+    {
+        _message = null;
+        _regeneratingSlug = slug;
+
+        try
+        {
+            await Api.RegenerateRoundupAsync(collectionName, slug);
+            _message = $"Roundup regeneration triggered for {slug.Sanitize()} — check the dashboard for progress.";
+            _messageIsError = false;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to trigger roundup regeneration: {ex.Message}";
+            _messageIsError = true;
+        }
+        finally
+        {
+            _regeneratingSlug = null;
+        }
     }
 }
