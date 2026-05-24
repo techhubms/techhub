@@ -90,10 +90,6 @@ public class RoundupGeneratorServiceTests
             options,
             NullLogger<RoundupAiHelper>.Instance);
 
-        var relevanceFilter = new RoundupRelevanceFilter(
-            options,
-            appSettingsOptions);
-
         var newsWriter = new RoundupNewsWriter(
             aiHelper,
             appSettingsOptions,
@@ -120,16 +116,25 @@ public class RoundupGeneratorServiceTests
         var contentFixerMock = new Mock<IContentFixerService>();
         contentFixerMock.Setup(s => s.RepairMarkdown(It.IsAny<string>())).Returns((string c) => c);
 
+        _roundupRepo
+            .Setup(r => r.GetArticlesForSectionForWeekAsync(
+                It.IsAny<string>(),
+                It.IsAny<DateOnly>(),
+                It.IsAny<DateOnly>(),
+                It.IsAny<CancellationToken>()))
+            .Returns((string sectionName, DateOnly weekStart, DateOnly weekEnd, CancellationToken ct) =>
+                GetSectionArticlesFromWholeWeekAsync(sectionName, weekStart, weekEnd, ct));
+
         return new RoundupGeneratorService(
             _roundupRepo.Object,
             contentFixerMock.Object,
             _aiCategorizationService.Object,
             _writeRepo.Object,
-            relevanceFilter,
             newsWriter,
             narrativeEnhancer,
             condenser,
             metadataGenerator,
+            appSettingsOptions,
             options,
             NullLogger<RoundupGeneratorService>.Instance);
     }
@@ -187,16 +192,59 @@ public class RoundupGeneratorServiceTests
     }
 
     [Fact]
-    public async Task GenerateAsync_WhenNoArticlesAfterFiltering_GeneratesQuietWeekRoundup()
+    public async Task GenerateAsync_UsesSectionScopedRepositoryQueries()
     {
-        // Arrange — articles exist but all have unknown relevance so they are filtered out
+        // Arrange
+        var uniqueWeekStart = new DateOnly(2025, 2, 17);
+        var uniqueWeekEnd = new DateOnly(2025, 2, 23);
+
+        var sut = CreateSut();
+
+        _roundupRepo
+            .Setup(r => r.GetArticlesForWeekAsync(uniqueWeekStart, uniqueWeekEnd, It.IsAny<CancellationToken>()))
+            .Throws(new Xunit.Sdk.XunitException("GenerateAsync should not call GetArticlesForWeekAsync"));
+
+        _roundupRepo
+            .Setup(r => r.GetArticlesForSectionForWeekAsync(
+                It.IsAny<string>(),
+                uniqueWeekStart,
+                uniqueWeekEnd,
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync((string sectionName, DateOnly _, DateOnly _, CancellationToken _) =>
+                string.Equals(sectionName, "ai", StringComparison.OrdinalIgnoreCase)
+                    ? BuildArticles("ai", 4, "high")
+                    : []);
+
+        SetupAiForAllSteps(
+            step3Content: "## AI\n\nAI updates.\n\n- [Article 0](https://example.com/0)",
+            step4Content: "## AI\n\nAI updates.\n\n- [Article 0](https://example.com/0)",
+            step6Content: "## AI\n\nAI updates.\n\n- [Article 0](https://example.com/0)",
+            step7Metadata: "{\"title\": \"AI Roundup\", \"tags\": [\"AI\"], \"description\": \"Test.\", \"introduction\": \"Intro.\"}"
+        );
+
+        // Act
+        var result = await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Result.Should().Be(RoundupGenerationResult.Generated);
+        _roundupRepo.Verify(r => r.GetArticlesForSectionForWeekAsync(
+            It.IsAny<string>(),
+            uniqueWeekStart,
+            uniqueWeekEnd,
+            It.IsAny<CancellationToken>()), Times.AtLeastOnce);
+    }
+
+    [Fact]
+    public async Task GenerateAsync_WhenArticlesHaveUnknownRelevance_GeneratesRoundup()
+    {
+        // Arrange — articles with unknown relevance should still be sent to AI generation
         var uniqueWeekStart = new DateOnly(2025, 3, 3);
         var uniqueWeekEnd = new DateOnly(2025, 3, 9);
         var uniqueSlug = "weekly-ai-roundup-2025-03-10";
 
         var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
         {
-            ["ai"] = BuildArticles("ai", 3, "none") // "none" is not a known relevance level — filter returns empty
+            ["ai"] = BuildArticles("ai", 3, "none")
         };
 
         _roundupRepo
@@ -339,7 +387,7 @@ public class RoundupGeneratorServiceTests
     // ── Relevance Filtering ───────────────────────────────────────────────────
 
     [Fact]
-    public async Task GenerateAsync_WithOnlyHighArticles_UsesHighRelevanceOnly()
+    public async Task GenerateAsync_WithOnlyHighArticles_IncludesAllSectionArticles()
     {
         // Arrange — section has 12 high articles (above MinArticlesPerSection=10)
         var uniqueWeekStart = new DateOnly(2025, 6, 2);
@@ -368,7 +416,7 @@ public class RoundupGeneratorServiceTests
         // Act — call GenerateAsync (it will fail after step 1 due to incomplete mocking, but that's OK)
         await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
 
-        // Assert — first AI call (step 1) user message should contain exactly 12 articles (all high, no medium)
+        // Assert — first AI call (step 1) user message should contain all section articles (no pre-filtering)
         capturedMessages.Should().NotBeEmpty();
         var messageBody = System.Text.Json.JsonDocument.Parse(capturedMessages[0]);
         var userContent = messageBody.RootElement
@@ -376,13 +424,13 @@ public class RoundupGeneratorServiceTests
             .GetProperty("content")
             .GetString();
 
-        // 12 high articles = 12 "ARTICLE:" entries; medium articles are excluded
+        // 12 high + 5 medium = 17 total
         var articleCount = CountOccurrences(userContent ?? "", "ARTICLE:");
-        articleCount.Should().Be(12, "filtering should include only high when count >= MinArticlesPerSection");
+        articleCount.Should().Be(17, "all section articles should be passed to AI without relevance pre-filtering");
     }
 
     [Fact]
-    public async Task GenerateAsync_WithFewHighArticles_IncludesMediumArticlesRankedByImportance()
+    public async Task GenerateAsync_WithFewHighArticles_StillIncludesAllArticles()
     {
         // Arrange — section has only 3 high articles (below MinArticlesPerSection=10)
         var uniqueWeekStart = new DateOnly(2025, 6, 9);
@@ -411,7 +459,7 @@ public class RoundupGeneratorServiceTests
         // Act
         await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
 
-        // Assert — should contain 10 articles total (3 high + 7 medium to reach MinArticlesPerSection=10)
+        // Assert — should contain all 15 articles total
         capturedMessages2.Should().NotBeEmpty();
         var doc = System.Text.Json.JsonDocument.Parse(capturedMessages2[0]);
         var userContent = doc.RootElement
@@ -420,7 +468,7 @@ public class RoundupGeneratorServiceTests
             .GetString();
 
         var articleCount = CountOccurrences(userContent ?? "", "ARTICLE:");
-        articleCount.Should().Be(10, "3 high + 7 medium = 10, filling up to MinArticlesPerSection=10");
+        articleCount.Should().Be(15, "all section articles should be sent to AI");
     }
 
     // ── Tag Expansion for Roundups ────────────────────────────────────────────
@@ -839,6 +887,26 @@ public class RoundupGeneratorServiceTests
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────────
+
+    private async Task<IReadOnlyList<RoundupArticle>> GetSectionArticlesFromWholeWeekAsync(
+        string sectionName,
+        DateOnly weekStart,
+        DateOnly weekEnd,
+        CancellationToken ct)
+    {
+        var all = await _roundupRepo.Object.GetArticlesForWeekAsync(weekStart, weekEnd, ct);
+        if (all is null)
+        {
+            return [];
+        }
+
+        if (all.TryGetValue(sectionName, out var sectionArticles))
+        {
+            return sectionArticles;
+        }
+
+        return [];
+    }
 
     private static IReadOnlyList<RoundupArticle> BuildArticles(
         string section,

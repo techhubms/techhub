@@ -73,6 +73,10 @@ EMPTY OR QUIET SECTIONS: If a section has no articles listed, write a brief 1-2 
 GROUPING STRATEGY:
 - Use separate ## topics when items are thematically distinct across different products, unrelated concerns, or separate developer workflows.
 - Use ## + ### when items share an overall theme but cover distinct sub-topics within it. Keep the broad ## heading and break the sub-topics into ### subheadings.
+- For each ## topic, choose ONE grouping axis and keep it consistent:
+  - Technology axis: one technology with multiple updates/subtopics, OR
+  - Capability axis: one cross-technology capability area (for example testing) with related updates.
+- Do NOT mix grouping axes in a single ## topic. Avoid combining multiple unrelated technologies and multiple unrelated concerns under one heading.
 
 OTHER NEWS SECTION (## Other [Section Name] News):
 

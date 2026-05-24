@@ -48,8 +48,27 @@ internal static class RoundupContentBuilder
 
     private static string BuildAnchor(string title)
     {
-        // Matches Markdig AutoIdentifiers: lowercase, keep alphanumeric/space/dash/period, replace non-alnum with dash.
-        var clean = new string(title.Where(c => char.IsLetterOrDigit(c) || c == ' ' || c == '-' || c == '.').ToArray());
-        return new string(clean.ToLowerInvariant().Select(c => char.IsLetterOrDigit(c) || c == '.' ? c : '-').ToArray());
+        // Match markdown heading identifiers used by the renderer:
+        // keep alphanumeric chars, convert separators to '-', drop punctuation, collapse repeated dashes.
+        var chars = new List<char>(title.Length);
+        var previousWasDash = false;
+
+        foreach (var c in title.ToLowerInvariant())
+        {
+            if (char.IsLetterOrDigit(c))
+            {
+                chars.Add(c);
+                previousWasDash = false;
+                continue;
+            }
+
+            if ((char.IsWhiteSpace(c) || c == '-' || c == '_') && !previousWasDash)
+            {
+                chars.Add('-');
+                previousWasDash = true;
+            }
+        }
+
+        return new string(chars.ToArray()).Trim('-');
     }
 }
