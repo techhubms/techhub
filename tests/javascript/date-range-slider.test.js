@@ -209,7 +209,7 @@ describe('date-range-slider.js', () => {
             expect(window.__dateRangeSliderReady).toBe(true);
         });
 
-        it('initClamping sets __dateRangeSliderReady true even when container is null', async () => {
+        it('initClamping sets __dateRangeSliderReady true as graceful fallback when container is null', async () => {
             const mod = await getModule();
             vi.spyOn(console, 'warn').mockImplementation(() => {});
             window.__dateRangeSliderReady = false;
