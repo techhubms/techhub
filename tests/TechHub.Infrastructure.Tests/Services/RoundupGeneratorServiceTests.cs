@@ -186,6 +186,51 @@ public class RoundupGeneratorServiceTests
         _aiClient.VerifyNoOtherCalls();
     }
 
+    [Fact]
+    public async Task GenerateAsync_WhenNoArticlesAfterFiltering_GeneratesQuietWeekRoundup()
+    {
+        // Arrange — articles exist but all have unknown relevance so they are filtered out
+        var uniqueWeekStart = new DateOnly(2025, 3, 3);
+        var uniqueWeekEnd = new DateOnly(2025, 3, 9);
+        var uniqueSlug = "weekly-ai-roundup-2025-03-10";
+
+        var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
+        {
+            ["ai"] = BuildArticles("ai", 3, "none") // "none" is not a known relevance level — filter returns empty
+        };
+
+        _roundupRepo
+            .Setup(r => r.GetArticlesForWeekAsync(uniqueWeekStart, uniqueWeekEnd, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(articles);
+
+        SetupAiForAllSteps(
+            step3Content: "## Artificial Intelligence\n\nNothing notable to report in AI this week.",
+            step4Content: "## Artificial Intelligence\n\nNothing notable to report in AI this week.",
+            step6Content: "## Artificial Intelligence\n\nNothing notable to report in AI this week.",
+            step7Metadata: "{\"title\": \"AI Roundup\", \"tags\": [\"AI\"], \"description\": \"Quiet week.\", \"introduction\": \"Nothing notable this week.\"}"
+        );
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
+
+        // Assert — should generate a roundup (even a brief one), NOT skip
+        result.Result.Should().Be(RoundupGenerationResult.Generated);
+        result.Slug.Should().Be(uniqueSlug);
+
+        _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(),
+            It.Is<string>(s => s == uniqueSlug),
+            It.IsAny<DateOnly>(),
+            It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
+            It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
+            It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
+            It.IsAny<IReadOnlyList<string>>(),
+            It.IsAny<long?>(),
+            It.IsAny<CancellationToken>()), Times.Once);
+    }
+
     // ── Full Pipeline ─────────────────────────────────────────────────────────
 
     [Fact]

@@ -36,6 +36,10 @@ public static partial class AdminEndpoints
             .WithName("TriggerRoundupGeneration")
             .WithSummary("Trigger an immediate roundup generation run");
 
+        group.MapPost("/roundup/regenerate", RegenerateRoundupAsync)
+            .WithName("RegenerateRoundup")
+            .WithSummary("Delete an existing roundup and re-run generation for its week");
+
         group.MapPost("/content-fixer/trigger", TriggerContentFixerAsync)
             .WithName("TriggerContentFixer")
             .WithSummary("Trigger a bulk content fix run (tags, authors, markdown)");
@@ -235,6 +239,45 @@ public static partial class AdminEndpoints
     {
         roundupService.TriggerImmediateRun();
         return Results.Accepted("/api/admin/processing/jobs", new { message = "Roundup generation triggered" });
+    }
+
+    private static async Task<IResult> RegenerateRoundupAsync(
+        IContentRepository contentRepo,
+        RoundupGeneratorBackgroundService roundupService,
+        CancellationToken ct,
+        string? collection = null,
+        string? slug = null)
+    {
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
+        {
+            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
+        }
+
+        collection = collection.Trim().Sanitize();
+        slug = slug.Trim().Sanitize();
+
+        if (!string.Equals(collection, "roundups", StringComparison.OrdinalIgnoreCase))
+        {
+            return Results.BadRequest("Regeneration is only supported for the 'roundups' collection.");
+        }
+
+        var match = RoundupSlugRegex().Match(slug);
+        if (!match.Success || !DateOnly.TryParse(match.Groups[2].Value, out var publishDate))
+        {
+            return Results.BadRequest("The slug does not match the expected roundup format 'weekly-{section}-roundup-YYYY-MM-DD'.");
+        }
+
+        // publishDate is the Monday after the week ends (weekEnd + 1 day).
+        var weekEnd = publishDate.AddDays(-1);
+        var weekStart = weekEnd.AddDays(-6);
+
+        // Delete the existing roundup so the generator produces a fresh one.
+        // Ignore the return value — if it didn't exist, generation will simply create it.
+        await contentRepo.DeleteContentItemAsync(collection, slug, ct);
+        contentRepo.InvalidateCachedData();
+
+        roundupService.TriggerRegenerateRun(weekStart, weekEnd);
+        return Results.Accepted("/api/admin/processing/jobs", new { message = $"Roundup regeneration triggered for week {weekStart}\u2013{weekEnd}" });
     }
 
     private static IResult TriggerContentFixerAsync(
@@ -1170,4 +1213,7 @@ public static partial class AdminEndpoints
 
     [GeneratedRegex(@"<title[^>]*>(.*?)</title>", RegexOptions.IgnoreCase | RegexOptions.Singleline)]
     private static partial Regex TitleRegex();
+
+    [GeneratedRegex(@"^weekly-(.+)-roundup-(\d{4}-\d{2}-\d{2})$")]
+    private static partial Regex RoundupSlugRegex();
 }

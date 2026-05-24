@@ -8,6 +8,7 @@
 @inject ITechHubApiClient Api
 @inject PersistentComponentState ApplicationState
 @inject ILogger<AdminReviews> Logger
+@inject NavigationManager Navigation
 @inherits PageComponentBase
 
 <PageTitle>Content Reviews — TechHub Admin</PageTitle>
@@ -322,6 +323,11 @@
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
+        // Restore filters from query string
+        var qs = System.Web.HttpUtility.ParseQueryString(new Uri(Navigation.Uri).Query);
+        if (qs["status"] is { } status)
+            _statusFilter = status;
+
         if (ApplicationState.TryTakeFromJson<IReadOnlyList<ContentReview>>("admin-reviews", out var restored) && restored != null)
         {
             _reviews = restored;
@@ -359,6 +365,15 @@
             ApplicationState.PersistAsJson("admin-reviews", _reviews);
         }
         return Task.CompletedTask;
+    }
+
+    private void UpdateQueryString()
+    {
+        var uri = Navigation.GetUriWithQueryParameters(new Dictionary<string, object?>
+        {
+            ["status"] = string.IsNullOrEmpty(_statusFilter) ? null : (object)_statusFilter,
+        });
+        Navigation.NavigateTo(uri, forceLoad: false, replace: true);
     }
 
     public void Dispose()
@@ -411,6 +426,7 @@
 
     private async Task ApplyFilterAsync()
     {
+        UpdateQueryString();
         await LoadDataAsync();
     }
 

@@ -89,9 +89,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         articlesBySection = await BackfillMissingAiMetadataAsync(articlesBySection, lp, ct);
 
         var generatedSlugs = new List<string>();
-        var skippedExistsCount = 0;
         var failedGenerationCount = 0;
-        var skippedAfterFilteringCount = 0;
 
         foreach (var sectionName in articlesBySection.Keys)
         {
@@ -104,13 +102,9 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     generatedSlugs.AddRange(sectionResult.Slugs);
                     break;
                 case RoundupGenerationResult.AlreadyExists:
-                    skippedExistsCount++;
                     break;
                 case RoundupGenerationResult.ContentGenerationFailed:
                     failedGenerationCount++;
-                    break;
-                case RoundupGenerationResult.NoArticlesAfterFiltering:
-                    skippedAfterFilteringCount++;
                     break;
             }
         }
@@ -125,17 +119,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
             return RoundupGenerationOutcome.ContentGenerationFailed;
         }
 
-        if (skippedExistsCount > 0 && skippedExistsCount == articlesBySection.Count)
-        {
-            return RoundupGenerationOutcome.AlreadyExists;
-        }
-
-        if (skippedAfterFilteringCount > 0 && skippedAfterFilteringCount == articlesBySection.Count)
-        {
-            return RoundupGenerationOutcome.NoArticlesAfterFiltering;
-        }
-
-        return RoundupGenerationOutcome.NoArticlesAfterFiltering;
+        return RoundupGenerationOutcome.AlreadyExists;
     }
 
     private async Task<RoundupGenerationOutcome> GenerateSectionRoundupAsync(
@@ -159,8 +143,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         var filteredSectionArticles = _relevanceFilter.FilterSection(sectionName, sectionArticles, lp);
         if (filteredSectionArticles.Count == 0)
         {
-            _logger.LogWarning("No articles remain after relevance filtering for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
-            return RoundupGenerationOutcome.NoArticlesAfterFiltering;
+            _logger.LogInformation("No articles remain after relevance filtering for section {SectionName} in week {WeekStart}–{WeekEnd} — generating brief 'nothing notable' roundup", sectionName, weekStart, weekEnd);
         }
 
         lp.Report($"After relevance filtering for section '{sectionName}': {filteredSectionArticles.Count} articles");

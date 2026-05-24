@@ -9,6 +9,7 @@
 @inject ITechHubApiClient Api
 @inject ILogger<AdminVscodeUpdates> Logger
 @inject PersistentComponentState ApplicationState
+@inject NavigationManager Navigation
 @inherits PageComponentBase
 
 <PageTitle>VS Code Updates — TechHub Admin</PageTitle>
@@ -193,6 +194,12 @@
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
+        // Restore filters from query string
+        var qs = System.Web.HttpUtility.ParseQueryString(new Uri(Navigation.Uri).Query);
+        _searchFilter = qs["q"] ?? string.Empty;
+        if (int.TryParse(qs["page"], out var page) && page > 1)
+            _currentPage = page;
+
         if (ApplicationState.TryTakeFromJson<(List<VscodeUpdateListItem>, int)>("admin-vscode-updates", out var persisted))
         {
             (_items, _totalCount) = persisted;
@@ -208,6 +215,16 @@
     {
         ApplicationState.PersistAsJson("admin-vscode-updates", (_items, _totalCount));
         return Task.CompletedTask;
+    }
+
+    private void UpdateQueryString()
+    {
+        var uri = Navigation.GetUriWithQueryParameters(new Dictionary<string, object?>
+        {
+            ["q"] = string.IsNullOrEmpty(_searchFilter) ? null : (object)_searchFilter,
+            ["page"] = _currentPage > 1 ? (object)_currentPage : null,
+        });
+        Navigation.NavigateTo(uri, forceLoad: false, replace: true);
     }
 
     public void Dispose()
@@ -283,6 +300,7 @@
         }
 
         _currentPage = 1;
+        UpdateQueryString();
         await LoadDataAsync();
     }
 
@@ -297,6 +315,7 @@
         if (_currentPage > 1)
         {
             _currentPage--;
+            UpdateQueryString();
             await LoadDataAsync();
         }
     }
@@ -306,6 +325,7 @@
         if (_currentPage < _totalPages)
         {
             _currentPage++;
+            UpdateQueryString();
             await LoadDataAsync();
         }
     }
