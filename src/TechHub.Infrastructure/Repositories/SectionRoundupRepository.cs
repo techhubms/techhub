@@ -137,6 +137,8 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
 
         var normalizedSection = sectionName.ToLowerInvariant().Trim();
+        // Safe by construction: these SQL fragments are fixed literals chosen from known section slugs.
+        // No user input is interpolated into the SQL text.
         var sectionFilter = normalizedSection switch
         {
             "ai" => "ci.is_ai = TRUE",
@@ -146,8 +148,13 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             "github-copilot" => "ci.is_github_copilot = TRUE",
             "ml" => "ci.is_ml = TRUE",
             "security" => "ci.is_security = TRUE",
-            _ => "FALSE"
+            _ => null
         };
+
+        if (sectionFilter is null)
+        {
+            return [];
+        }
 
         var sql = string.Create(CultureInfo.InvariantCulture, $"""
             SELECT
