@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
@@ -24,11 +25,11 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
     private readonly IContentFixerService _contentFixer;
     private readonly IAiCategorizationService _aiService;
     private readonly IContentItemWriteRepository _writeRepo;
-    private readonly RoundupRelevanceFilter _relevanceFilter;
     private readonly RoundupNewsWriter _newsWriter;
     private readonly RoundupNarrativeEnhancer _narrativeEnhancer;
     private readonly RoundupCondenser _condenser;
     private readonly RoundupMetadataGenerator _metadataGenerator;
+    private readonly AppSettings _settings;
     private readonly RoundupGeneratorOptions _options;
     private readonly ILogger<RoundupGeneratorService> _logger;
 
@@ -37,11 +38,11 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         IContentFixerService contentFixer,
         IAiCategorizationService aiService,
         IContentItemWriteRepository writeRepo,
-        RoundupRelevanceFilter relevanceFilter,
         RoundupNewsWriter newsWriter,
         RoundupNarrativeEnhancer narrativeEnhancer,
         RoundupCondenser condenser,
         RoundupMetadataGenerator metadataGenerator,
+        IOptions<AppSettings> settings,
         RoundupGeneratorOptions options,
         ILogger<RoundupGeneratorService> logger)
     {
@@ -49,11 +50,11 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         ArgumentNullException.ThrowIfNull(contentFixer);
         ArgumentNullException.ThrowIfNull(aiService);
         ArgumentNullException.ThrowIfNull(writeRepo);
-        ArgumentNullException.ThrowIfNull(relevanceFilter);
         ArgumentNullException.ThrowIfNull(newsWriter);
         ArgumentNullException.ThrowIfNull(narrativeEnhancer);
         ArgumentNullException.ThrowIfNull(condenser);
         ArgumentNullException.ThrowIfNull(metadataGenerator);
+        ArgumentNullException.ThrowIfNull(settings);
         ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
@@ -61,11 +62,11 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         _contentFixer = contentFixer;
         _aiService = aiService;
         _writeRepo = writeRepo;
-        _relevanceFilter = relevanceFilter;
         _newsWriter = newsWriter;
         _narrativeEnhancer = narrativeEnhancer;
         _condenser = condenser;
         _metadataGenerator = metadataGenerator;
+        _settings = settings.Value;
         _options = options;
         _logger = logger;
     }
@@ -75,27 +76,43 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
     {
         var lp = new LoggingProgress(_logger, progress);
 
-        var articlesBySection = await _roundupRepo.GetArticlesForWeekAsync(weekStart, weekEnd, ct);
-        var totalArticles = articlesBySection.Values.Sum(a => a.Count);
-        lp.Report($"Loaded {totalArticles} articles across {articlesBySection.Count} sections");
-
-        if (articlesBySection.Count == 0)
-        {
-            _logger.LogWarning("No articles found for week {WeekStart}–{WeekEnd}, skipping roundup generation", weekStart, weekEnd);
-            return RoundupGenerationOutcome.NoArticles;
-        }
-
-        // On-the-fly AI metadata backfill: categorize any items missing ai_metadata
-        articlesBySection = await BackfillMissingAiMetadataAsync(articlesBySection, lp, ct);
-
         var generatedSlugs = new List<string>();
         var failedGenerationCount = 0;
+        var sectionsWithArticlesCount = 0;
+        var totalArticles = 0;
 
-        foreach (var sectionName in articlesBySection.Keys)
+        var sectionSlugs = _settings.Content.Sections
+            .OrderBy(kvp => kvp.Value.Order)
+            .Select(kvp => kvp.Key)
+            .Where(k => !string.Equals(k, "all", StringComparison.OrdinalIgnoreCase));
+
+        foreach (var sectionName in sectionSlugs)
         {
             ct.ThrowIfCancellationRequested();
 
-            var sectionResult = await GenerateSectionRoundupAsync(sectionName, articlesBySection[sectionName], weekStart, weekEnd, jobId, lp, ct);
+            var sectionArticles = await _roundupRepo.GetArticlesForSectionForWeekAsync(sectionName, weekStart, weekEnd, ct);
+            lp.Report($"Loaded {sectionArticles.Count} articles for section '{sectionName}'");
+
+            if (sectionArticles.Count == 0)
+            {
+                continue;
+            }
+
+            sectionsWithArticlesCount++;
+            totalArticles += sectionArticles.Count;
+
+            // On-the-fly AI metadata backfill: categorize any items missing ai_metadata.
+            var sectionArticlesBySection = new Dictionary<string, IReadOnlyList<RoundupArticle>>(StringComparer.OrdinalIgnoreCase)
+            {
+                [sectionName] = sectionArticles
+            };
+
+            var enrichedSectionArticlesBySection = await BackfillMissingAiMetadataAsync(sectionArticlesBySection, lp, ct);
+            var enrichedSectionArticles = enrichedSectionArticlesBySection.TryGetValue(sectionName, out var enriched)
+                ? enriched
+                : sectionArticles;
+
+            var sectionResult = await GenerateSectionRoundupAsync(sectionName, enrichedSectionArticles, weekStart, weekEnd, jobId, lp, ct);
             switch (sectionResult.Result)
             {
                 case RoundupGenerationResult.Generated:
@@ -107,6 +124,14 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     failedGenerationCount++;
                     break;
             }
+        }
+
+        lp.Report($"Loaded {totalArticles} articles across {sectionsWithArticlesCount} sections");
+
+        if (sectionsWithArticlesCount == 0)
+        {
+            _logger.LogWarning("No articles found for week {WeekStart}–{WeekEnd}, skipping roundup generation", weekStart, weekEnd);
+            return RoundupGenerationOutcome.NoArticles;
         }
 
         if (generatedSlugs.Count > 0)
@@ -140,16 +165,10 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
             return RoundupGenerationOutcome.AlreadyExists;
         }
 
-        var filteredSectionArticles = _relevanceFilter.FilterSection(sectionName, sectionArticles, lp);
-        if (filteredSectionArticles.Count == 0)
+        lp.Report($"Using {sectionArticles.Count} articles for section '{sectionName}'");
+        var sectionArticlesBySection = new Dictionary<string, IReadOnlyList<RoundupArticle>>(StringComparer.OrdinalIgnoreCase)
         {
-            _logger.LogInformation("No articles remain after relevance filtering for section {SectionName} in week {WeekStart}–{WeekEnd} — generating brief 'nothing notable' roundup", sectionName, weekStart, weekEnd);
-        }
-
-        lp.Report($"After relevance filtering for section '{sectionName}': {filteredSectionArticles.Count} articles");
-        var filtered = new Dictionary<string, IReadOnlyList<RoundupArticle>>(StringComparer.OrdinalIgnoreCase)
-        {
-            [sectionName] = filteredSectionArticles
+            [sectionName] = sectionArticles
         };
 
         var weekDescription = string.Create(CultureInfo.InvariantCulture,
@@ -158,7 +177,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         var writingGuidelines = _writingGuidelines.Value;
 
         lp.Report($"Step 1/5 ({sectionName}): Creating news-like stories");
-        var sectionStories = await _newsWriter.WriteAsync(filtered, weekDescription, writingGuidelines, lp, ct);
+        var sectionStories = await _newsWriter.WriteAsync(sectionArticlesBySection, weekDescription, writingGuidelines, lp, ct);
         if (string.IsNullOrWhiteSpace(sectionStories))
         {
             _logger.LogError("Step 1 produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
@@ -194,7 +213,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         fullContent = _contentFixer.RepairMarkdown(fullContent);
 
         lp.Report($"Writing roundup to database for section '{sectionName}'");
-        var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, filtered.Keys);
+        var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, sectionArticlesBySection.Keys);
         var normalizedTags = TagNormalizer.NormalizeTags(tagsWithSections);
         await _roundupRepo.WriteRoundupAsync(sectionName, slug, publishDate, metadata.Title, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
 

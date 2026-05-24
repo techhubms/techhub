@@ -194,6 +194,28 @@ public class SectionRoundupRepositoryTests
     }
 
     [Fact]
+    public async Task GetArticlesForSectionForWeekAsync_FiltersBySectionFlag()
+    {
+        // Arrange — primary section is azure, but item is also marked devops via section flags
+        await SeedContentItemAsync("devops-flagged", "news", "DevOps Flagged",
+            "https://example.com/devops-flagged", sections: ["azure", "devops"],
+            relevance: "medium",
+            createdAt: new DateTime(2025, 3, 27, 10, 0, 0, DateTimeKind.Utc));
+
+        await SeedContentItemAsync("azure-only", "news", "Azure Only",
+            "https://example.com/azure-only", sections: ["azure"],
+            relevance: "medium",
+            createdAt: new DateTime(2025, 3, 27, 11, 0, 0, DateTimeKind.Utc));
+
+        // Act
+        var devopsArticles = await _sut.GetArticlesForSectionForWeekAsync("devops", _weekStart, _weekEnd, CancellationToken.None);
+
+        // Assert — selection is based on is_devops, not primary_section_name
+        devopsArticles.Should().Contain(a => a.Slug == "devops-flagged");
+        devopsArticles.Should().NotContain(a => a.Slug == "azure-only");
+    }
+
+    [Fact]
     public async Task GetArticlesForWeekAsync_ExcludesRoundups()
     {
         // Arrange — insert a roundup in the same week

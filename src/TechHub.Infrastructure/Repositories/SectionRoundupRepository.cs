@@ -127,6 +127,64 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             kvp => (IReadOnlyList<RoundupArticle>)kvp.Value);
     }
 
+    /// <inheritdoc />
+    public async Task<IReadOnlyList<RoundupArticle>> GetArticlesForSectionForWeekAsync(
+        string sectionName,
+        DateOnly weekStart,
+        DateOnly weekEnd,
+        CancellationToken ct = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+
+        var normalizedSection = sectionName.ToLowerInvariant().Trim();
+        var sectionFilter = normalizedSection switch
+        {
+            "ai" => "ci.is_ai = TRUE",
+            "azure" => "ci.is_azure = TRUE",
+            "dotnet" => "ci.is_dotnet = TRUE",
+            "devops" => "ci.is_devops = TRUE",
+            "github-copilot" => "ci.is_github_copilot = TRUE",
+            "ml" => "ci.is_ml = TRUE",
+            "security" => "ci.is_security = TRUE",
+            _ => "FALSE"
+        };
+
+        var sql = string.Create(CultureInfo.InvariantCulture, $"""
+            SELECT
+                @SectionName            AS SectionName,
+                ci.title                AS Title,
+                ci.external_url         AS ExternalUrl,
+                ci.slug                 AS Slug,
+                ci.collection_name      AS CollectionName,
+                ci.ai_metadata          AS AiMetadataJson,
+                ci.content              AS Content,
+                ci.feed_name            AS FeedName,
+                ci.date_epoch           AS DateEpoch
+            FROM content_items ci
+            WHERE ci.created_at >= @WeekStart
+              AND ci.created_at < @WeekEndExclusive
+              AND ci.collection_name != 'roundups'
+              AND {sectionFilter}
+            ORDER BY ci.created_at DESC
+            """);
+
+        var rows = await _connection.QueryAsync<RoundupRow>(new CommandDefinition(
+            sql,
+            new
+            {
+                SectionName = normalizedSection,
+                WeekStart = weekStart.ToDateTime(TimeOnly.MinValue),
+                WeekEndExclusive = weekEnd.AddDays(1).ToDateTime(TimeOnly.MinValue)
+            },
+            cancellationToken: ct));
+
+        return rows
+            .Select(ParseRow)
+            .Where(a => a is not null)
+            .Cast<RoundupArticle>()
+            .ToList();
+    }
+
     private RoundupArticle? ParseRow(RoundupRow row)
     {
         RoundupAiMetadata? meta = null;

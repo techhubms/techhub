@@ -27,6 +27,20 @@ public interface ISectionRoundupRepository
         CancellationToken ct = default);
 
     /// <summary>
+    /// Returns all articles from <c>content_items</c> created during the given week that belong to a specific section flag
+    /// (for example <c>is_devops</c> for "devops"), ordered by creation time.
+    /// </summary>
+    /// <param name="sectionName">Section slug (for example "devops").</param>
+    /// <param name="weekStart">Monday of the ISO week.</param>
+    /// <param name="weekEnd">Sunday of the ISO week (inclusive).</param>
+    /// <param name="ct">Cancellation token.</param>
+    Task<IReadOnlyList<RoundupArticle>> GetArticlesForSectionForWeekAsync(
+        string sectionName,
+        DateOnly weekStart,
+        DateOnly weekEnd,
+        CancellationToken ct = default);
+
+    /// <summary>
     /// Checks whether a roundup with the given slug already exists in the database.
     /// </summary>
     Task<bool> RoundupExistsAsync(string sectionName, string slug, CancellationToken ct = default);
@@ -53,4 +67,3 @@ public interface ISectionRoundupRepository
         long? jobId = null,
         CancellationToken ct = default);
 }
-
