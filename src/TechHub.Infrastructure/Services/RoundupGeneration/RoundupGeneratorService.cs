@@ -89,9 +89,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         articlesBySection = await BackfillMissingAiMetadataAsync(articlesBySection, lp, ct);
 
         var generatedSlugs = new List<string>();
-        var skippedExistsCount = 0;
         var failedGenerationCount = 0;
-        var skippedAfterFilteringCount = 0;
 
         foreach (var sectionName in articlesBySection.Keys)
         {
@@ -104,13 +102,9 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     generatedSlugs.AddRange(sectionResult.Slugs);
                     break;
                 case RoundupGenerationResult.AlreadyExists:
-                    skippedExistsCount++;
                     break;
                 case RoundupGenerationResult.ContentGenerationFailed:
                     failedGenerationCount++;
-                    break;
-                case RoundupGenerationResult.NoArticlesAfterFiltering:
-                    skippedAfterFilteringCount++;
                     break;
             }
         }
@@ -125,17 +119,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
             return RoundupGenerationOutcome.ContentGenerationFailed;
         }
 
-        if (skippedExistsCount > 0 && skippedExistsCount == articlesBySection.Count)
-        {
-            return RoundupGenerationOutcome.AlreadyExists;
-        }
-
-        if (skippedAfterFilteringCount > 0 && skippedAfterFilteringCount == articlesBySection.Count)
-        {
-            return RoundupGenerationOutcome.NoArticlesAfterFiltering;
-        }
-
-        return RoundupGenerationOutcome.NoArticlesAfterFiltering;
+        return RoundupGenerationOutcome.AlreadyExists;
     }
 
     private async Task<RoundupGenerationOutcome> GenerateSectionRoundupAsync(

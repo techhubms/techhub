@@ -86,7 +86,7 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
     // initClamping() when Blazor Server delivers JS interop messages out of order
     // (DisposeAsync and OnAfterRenderAsync can execute concurrently on the server,
     // so their JS calls may arrive at the browser in any order).
-    private static int _nextInstanceId = 0;
+    private static int _nextInstanceId;
     private readonly int _instanceId = System.Threading.Interlocked.Increment(ref _nextInstanceId);
 
     /// <summary>
