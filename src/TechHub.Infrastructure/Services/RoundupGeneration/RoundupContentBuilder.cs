@@ -62,13 +62,10 @@ internal static class RoundupContentBuilder
                 continue;
             }
 
-            if (char.IsWhiteSpace(c) || c == '-' || c == '_')
+            if ((char.IsWhiteSpace(c) || c == '-' || c == '_') && !previousWasDash)
             {
-                if (!previousWasDash)
-                {
-                    chars.Add('-');
-                    previousWasDash = true;
-                }
+                chars.Add('-');
+                previousWasDash = true;
             }
         }
 

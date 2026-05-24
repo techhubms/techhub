@@ -137,26 +137,12 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
 
         var normalizedSection = sectionName.ToLowerInvariant().Trim();
-        // Safe by construction: these SQL fragments are fixed literals chosen from known section slugs.
-        // No user input is interpolated into the SQL text.
-        var sectionFilter = normalizedSection switch
-        {
-            "ai" => "ci.is_ai = TRUE",
-            "azure" => "ci.is_azure = TRUE",
-            "dotnet" => "ci.is_dotnet = TRUE",
-            "devops" => "ci.is_devops = TRUE",
-            "github-copilot" => "ci.is_github_copilot = TRUE",
-            "ml" => "ci.is_ml = TRUE",
-            "security" => "ci.is_security = TRUE",
-            _ => null
-        };
-
-        if (sectionFilter is null)
+        if (!_sectionBits.TryGetValue(normalizedSection, out var sectionBit))
         {
             return [];
         }
 
-        var sql = string.Create(CultureInfo.InvariantCulture, $"""
+        const string Sql = """
             SELECT
                 @SectionName            AS SectionName,
                 ci.title                AS Title,
@@ -171,15 +157,16 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             WHERE ci.created_at >= @WeekStart
               AND ci.created_at < @WeekEndExclusive
               AND ci.collection_name != 'roundups'
-              AND {sectionFilter}
+              AND (ci.sections_bitmask & @SectionBit) > 0
             ORDER BY ci.created_at DESC
-            """);
+            """;
 
         var rows = await _connection.QueryAsync<RoundupRow>(new CommandDefinition(
-            sql,
+            Sql,
             new
             {
                 SectionName = normalizedSection,
+                SectionBit = sectionBit,
                 WeekStart = weekStart.ToDateTime(TimeOnly.MinValue),
                 WeekEndExclusive = weekEnd.AddDays(1).ToDateTime(TimeOnly.MinValue)
             },
