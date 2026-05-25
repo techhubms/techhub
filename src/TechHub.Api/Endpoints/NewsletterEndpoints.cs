@@ -231,7 +231,7 @@ public static class NewsletterEndpoints
         NewsletterBackgroundService backgroundService,
         [FromQuery] string? roundupSlug = null)
     {
-        email = email.Trim().Sanitize();
+        email = (email ?? string.Empty).Trim().Sanitize();
         roundupSlug = roundupSlug?.Trim().Sanitize();
         if (!IsValidEmail(email))
         {
@@ -269,7 +269,7 @@ public static class NewsletterEndpoints
         sections is null
             ? []
             : sections
-                .Select(s => (s ?? string.Empty).Sanitize().Trim())
+                .Select(s => (s ?? string.Empty).Trim().Sanitize())
                 .Where(s => !string.IsNullOrWhiteSpace(s))
                 .ToList();
 }
