@@ -17,7 +17,7 @@
         </div>
         <div class="admin-actions">
             <button class="btn" @onclick="TriggerSendAsync" disabled="@_sending">@(_sending ? "Triggering…" : "▶ Send Newsletter")</button>
-            <button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button>
+            <button class="btn-secondary" @onclick="RefreshAsync" disabled="@_loading">@(_loading ? "Refreshing…" : "⟳ Refresh")</button>
         </div>
     </div>
 
@@ -88,7 +88,7 @@
         </table>
     </div>
 
-    <h2 class="admin-section-title" style="margin-top:24px;">Send log</h2>
+    <h2 class="admin-section-title admin-newsletter-send-log-heading">Send log</h2>
     <div class="admin-jobs-table-wrapper">
         <table class="admin-table">
             <thead>
@@ -155,6 +155,7 @@
     private string? _confirmedFilter;
     private string? _testEmail;
     private bool _sending;
+    private bool _loading;
     private string? _message;
     private bool _isError;
     private NewsletterSubscriber? _editing;
@@ -182,8 +183,27 @@
 
     private async Task RefreshAsync()
     {
-        _subscribers = await Api.GetNewsletterSubscribersAsync(pageSize: 500);
-        _sendLog = await Api.GetNewsletterSendLogAsync();
+        _loading = true;
+        _message = null;
+
+        try
+        {
+            _subscribers = await Api.GetNewsletterSubscribersAsync(pageSize: 500);
+            _sendLog = await Api.GetNewsletterSendLogAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to refresh newsletter data: {ex.Message}";
+            _isError = true;
+        }
+        finally
+        {
+            _loading = false;
+        }
     }
 
     private async Task TriggerSendAsync()
@@ -269,9 +289,24 @@
 
         var weekly = ParseSections(_editWeekly);
         var daily = ParseSections(_editDaily);
-        await Api.UpdateNewsletterSubscriberAsync(_editing.Id, _editDisplayName, weekly, daily);
-        _editing = null;
-        await RefreshAsync();
+
+        try
+        {
+            await Api.UpdateNewsletterSubscriberAsync(_editing.Id, _editDisplayName, weekly, daily);
+            _editing = null;
+            await RefreshAsync();
+            _message = "Subscriber updated.";
+            _isError = false;
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to update subscriber: {ex.Message}";
+            _isError = true;
+        }
     }
 
     private static IReadOnlyList<string> ParseSections(string? value) =>

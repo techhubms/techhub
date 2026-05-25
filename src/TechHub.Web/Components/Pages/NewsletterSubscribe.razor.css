@@ -1,0 +1,19 @@
+.newsletter-subscribe-form-grid {
+    max-width: 800px;
+}
+
+.newsletter-subscribe-checkbox-label {
+    display: block;
+}
+
+.newsletter-subscribe-daily-heading {
+    margin-top: var(--spacing-4);
+}
+
+.newsletter-subscribe-actions {
+    margin-top: var(--spacing-4);
+}
+
+.newsletter-subscribe-alert {
+    margin-top: var(--spacing-3);
+}

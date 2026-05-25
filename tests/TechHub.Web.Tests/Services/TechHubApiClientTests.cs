@@ -117,7 +117,7 @@ public class TechHubApiClientTests
 
         handler.LastRequest.Should().NotBeNull();
         handler.LastRequest!.RequestUri!.PathAndQuery.Should().Be("/api/newsletter/subscribe");
-        var payload = JsonDocument.Parse(await handler.LastRequest.Content!.ReadAsStringAsync(TestContext.Current.CancellationToken));
+        using var payload = JsonDocument.Parse(await handler.LastRequest.Content!.ReadAsStringAsync(TestContext.Current.CancellationToken));
         payload.RootElement.GetProperty("email").GetString().Should().Be("user@example.com");
         payload.RootElement.GetProperty("displayName").GetString().Should().Be("DisplayName");
         payload.RootElement.GetProperty("weeklySections")[0].GetString().Should().Be("ai");

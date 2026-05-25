@@ -4,6 +4,7 @@ using Microsoft.Extensions.Options;
 using TechHub.Api.Services;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 using TechHub.Infrastructure.Services.Newsletter;
@@ -101,13 +102,16 @@ public static class NewsletterEndpoints
         INewsletterSubscriberRepository subscriberRepository,
         CancellationToken ct)
     {
-        if (string.IsNullOrWhiteSpace(request.Email) || !IsValidEmail(request.Email))
+        var email = request.Email?.Trim().Sanitize() ?? string.Empty;
+        var displayName = request.DisplayName?.Trim().Sanitize();
+        var weekly = SanitizeRequestedSections(request.WeeklySections);
+        var daily = SanitizeRequestedSections(request.DailySections);
+
+        if (string.IsNullOrWhiteSpace(email) || !IsValidEmail(email))
         {
             return Results.BadRequest("A valid email address is required.");
         }
 
-        var weekly = request.WeeklySections ?? [];
-        var daily = request.DailySections ?? [];
         if (weekly.Count == 0 && daily.Count == 0)
         {
             return Results.BadRequest("Select at least one weekly or daily section.");
@@ -126,8 +130,8 @@ public static class NewsletterEndpoints
         }
 
         var id = await subscriberRepository.UpsertSubscriberAsync(
-            request.Email,
-            request.DisplayName,
+            email,
+            displayName,
             normalizedWeekly,
             normalizedDaily,
             ct);
@@ -141,7 +145,9 @@ public static class NewsletterEndpoints
         INewsletterSubscriberRepository subscriberRepository,
         CancellationToken ct)
     {
-        if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.Token))
+        var email = request.Email?.Trim().Sanitize() ?? string.Empty;
+        var token = request.Token?.Trim().Sanitize() ?? string.Empty;
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(token))
         {
             return Results.BadRequest("Email and token are required.");
         }
@@ -152,12 +158,12 @@ public static class NewsletterEndpoints
             return Results.BadRequest("Unsubscribe is not configured.");
         }
 
-        if (!NewsletterService.IsValidUnsubscribeToken(request.Email, request.Token, secret))
+        if (!NewsletterService.IsValidUnsubscribeToken(email, token, secret))
         {
             return Results.BadRequest("Invalid unsubscribe token.");
         }
 
-        var updated = await subscriberRepository.UnsubscribeAsync(request.Email, ct);
+        var updated = await subscriberRepository.UnsubscribeAsync(email, ct);
         return updated
             ? Results.Ok(new { message = "Unsubscribed" })
             : Results.NotFound(new { message = "Subscription not found" });
@@ -171,6 +177,7 @@ public static class NewsletterEndpoints
         [FromQuery] string? search = null,
         [FromQuery] bool? confirmed = null)
     {
+        search = search?.Trim().Sanitize();
         var subscribers = await subscriberRepository.GetSubscribersAsync(page, pageSize, search, confirmed, ct);
         return Results.Ok(subscribers);
     }
@@ -181,11 +188,15 @@ public static class NewsletterEndpoints
         INewsletterSubscriberRepository subscriberRepository,
         CancellationToken ct)
     {
+        var displayName = request.DisplayName?.Trim().Sanitize();
+        var weeklySections = SanitizeRequestedSections(request.WeeklySections);
+        var dailySections = SanitizeRequestedSections(request.DailySections);
+
         var updated = await subscriberRepository.UpdateSubscriberAsync(
             id,
-            request.DisplayName,
-            request.WeeklySections ?? [],
-            request.DailySections ?? [],
+            displayName,
+            weeklySections,
+            dailySections,
             ct);
 
         return updated ? Results.Ok() : Results.NotFound();
@@ -220,12 +231,14 @@ public static class NewsletterEndpoints
         NewsletterBackgroundService backgroundService,
         [FromQuery] string? roundupSlug = null)
     {
+        email = email.Trim().Sanitize();
+        roundupSlug = roundupSlug?.Trim().Sanitize();
         if (!IsValidEmail(email))
         {
             return Results.BadRequest("A valid email address is required.");
         }
 
-        backgroundService.TriggerTestSend(email.Trim(), roundupSlug);
+        backgroundService.TriggerTestSend(email, roundupSlug);
         return Results.Accepted("/api/admin/newsletter/send-log", new { message = "Newsletter test send triggered" });
     }
 
@@ -251,4 +264,12 @@ public static class NewsletterEndpoints
             .Where(validSections.Contains)
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .ToList();
+
+    private static List<string> SanitizeRequestedSections(IReadOnlyList<string>? sections) =>
+        sections is null
+            ? []
+            : sections
+                .Select(s => (s ?? string.Empty).Sanitize().Trim())
+                .Where(s => !string.IsNullOrWhiteSpace(s))
+                .ToList();
 }

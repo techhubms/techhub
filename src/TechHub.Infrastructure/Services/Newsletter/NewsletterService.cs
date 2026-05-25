@@ -92,8 +92,12 @@ public sealed class NewsletterService : INewsletterService
                 }
             }
 
-            var status = successful > 0 ? "sent" : "failed";
-            var error = successful > 0 ? null : "Delivery failed for all subscribers";
+            var status = successful == subscribers.Count ? "sent" : successful > 0 ? "partial" : "failed";
+            var error = successful == subscribers.Count
+                ? null
+                : successful > 0
+                    ? $"Delivered to {successful} of {subscribers.Count} subscribers"
+                    : "Delivery failed for all subscribers";
             await _subscriberRepository.LogSendAsync(SendKind, roundupSlug, successful, status, error, ct);
             return successful > 0;
         }
@@ -179,8 +183,12 @@ public sealed class NewsletterService : INewsletterService
             }
         }
 
-        var sendStatus = sent > 0 ? "sent" : "failed";
-        var sendError = sent > 0 ? null : "Delivery failed for all subscribers";
+        var sendStatus = sent == dailySubscribers.Count ? "sent" : sent > 0 ? "partial" : "failed";
+        var sendError = sent == dailySubscribers.Count
+            ? null
+            : sent > 0
+                ? $"Delivered to {sent} of {dailySubscribers.Count} subscribers"
+                : "Delivery failed for all subscribers";
         await _subscriberRepository.LogSendAsync(SendKind, targetKey, sent, sendStatus, sendError, ct);
         return sent > 0;
     }
@@ -552,6 +560,10 @@ public sealed class NewsletterService : INewsletterService
         }
         catch (Exception ex) when (ex is TimeZoneNotFoundException or InvalidTimeZoneException)
         {
+            _logger.LogWarning(
+                ex,
+                "Invalid DailyDigestTimeZoneId '{TimeZoneId}'. Falling back to UTC.",
+                _options.DailyDigestTimeZoneId);
             tz = TimeZoneInfo.Utc;
         }
 

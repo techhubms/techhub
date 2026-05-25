@@ -65,6 +65,7 @@ param tags object = {}
 
 var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-api:${imageTag}'
 var revisionSuffix = 'api-${imageTag}'
+var hasAcsConnectionString = !empty(acsConnectionString)
 var newsletterWebsiteBaseUrl = !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
 var corsOrigins = union(['https://*.azurecontainerapps.io'], customOrigins)
@@ -90,6 +91,14 @@ var newsletterSecretEnvVars = empty(newsletterUnsubscribeSecretName)
         secretRef: 'newsletter-unsubscribe-secret'
       }
     ]
+var newsletterAcsSecretEnvVars = hasAcsConnectionString
+  ? [
+      {
+        name: 'Newsletter__ConnectionString'
+        secretRef: 'acs-connection-string'
+      }
+    ]
+  : []
 var newsletterSecrets = empty(newsletterUnsubscribeSecretName)
   ? []
   : [
@@ -99,6 +108,14 @@ var newsletterSecrets = empty(newsletterUnsubscribeSecretName)
         identity: identityId
       }
     ]
+var newsletterAcsSecrets = hasAcsConnectionString
+  ? [
+      {
+        name: 'acs-connection-string'
+        value: acsConnectionString
+      }
+    ]
+  : []
 var staticEnvVars = [
   {
     name: 'ASPNETCORE_ENVIRONMENT'
@@ -163,10 +180,6 @@ var staticEnvVars = [
     name: 'Newsletter__SenderAddress'
     value: newsletterSenderAddress
   }
-  {
-    name: 'Newsletter__ConnectionString'
-    secretRef: 'acs-connection-string'
-  }
 ]
 
 resource api 'Microsoft.App/containerApps@2025-07-01' = {
@@ -212,11 +225,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
           keyVaultUrl: '${keyVaultUri}secrets/techhub-github-registry-token'
           identity: identityId
         }
-        {
-          name: 'acs-connection-string'
-          value: acsConnectionString
-        }
-      ], newsletterSecrets)
+      ], newsletterAcsSecrets, newsletterSecrets)
     }
     template: {
       revisionSuffix: revisionSuffix
@@ -228,7 +237,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
             cpu: json('0.25')
             memory: '0.5Gi'
           }
-          env: concat(staticEnvVars, newsletterSecretEnvVars, corsEnvVars, backgroundJobEnvVars)
+          env: concat(staticEnvVars, newsletterAcsSecretEnvVars, newsletterSecretEnvVars, corsEnvVars, backgroundJobEnvVars)
           probes: [
             {
               type: 'startup'

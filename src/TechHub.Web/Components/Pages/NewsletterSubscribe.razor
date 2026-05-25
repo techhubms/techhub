@@ -13,7 +13,7 @@
             <h1 class="content-title">Subscribe to TechHub newsletters</h1>
         </header>
 
-        <div class="admin-form-grid" style="max-width:800px;">
+        <div class="admin-form-grid newsletter-subscribe-form-grid">
             <div class="admin-form-group">
                 <label class="admin-label">Email</label>
                 <input class="admin-input" @bind="_email" />
@@ -27,28 +27,28 @@
         <h2 class="admin-section-title">Weekly roundup per section</h2>
         @foreach (var sec in _sections)
         {
-            <label class="admin-label" style="display:block;">
+            <label class="admin-label newsletter-subscribe-checkbox-label">
                 <input type="checkbox" checked="@_weeklySelections.Contains(sec.Name)" @onchange="(e) => Toggle(_weeklySelections, sec.Name, e)" />
                 @sec.Title
             </label>
         }
 
-        <h2 class="admin-section-title" style="margin-top:20px;">Daily overview per section (9:00)</h2>
+        <h2 class="admin-section-title newsletter-subscribe-daily-heading">Daily overview per section (9:00)</h2>
         @foreach (var sec in _sections)
         {
-            <label class="admin-label" style="display:block;">
+            <label class="admin-label newsletter-subscribe-checkbox-label">
                 <input type="checkbox" checked="@_dailySelections.Contains(sec.Name)" @onchange="(e) => Toggle(_dailySelections, sec.Name, e)" />
                 @sec.Title
             </label>
         }
 
-        <div style="margin-top:20px;">
+        <div class="newsletter-subscribe-actions">
             <button class="btn" @onclick="SubscribeAsync">Subscribe</button>
         </div>
 
         @if (!string.IsNullOrWhiteSpace(_message))
         {
-            <div class="admin-alert @(_error ? "admin-alert-error" : "admin-alert-success")" style="margin-top:16px;">@_message</div>
+            <div class="admin-alert newsletter-subscribe-alert @(_error ? "admin-alert-error" : "admin-alert-success")">@_message</div>
         }
     </article>
 </main>
