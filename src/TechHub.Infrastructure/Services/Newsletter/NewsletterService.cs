@@ -120,6 +120,11 @@ public sealed class NewsletterService : INewsletterService
             return false;
         }
 
+        if (!IsUnsubscribeSecretConfigured("test email"))
+        {
+            return false;
+        }
+
         var sectionLinksHtml = BuildSectionLinksHtml(roundup);
         var fullRoundupUrl = BuildAbsoluteUrl($"/{roundup.SectionName}/roundups/{roundup.Slug}");
         var unsubscribeUrl = BuildUnsubscribeUrl(recipientEmail);
@@ -134,6 +139,11 @@ public sealed class NewsletterService : INewsletterService
         const string SendKind = "daily-overview";
 
         if (await _subscriberRepository.HasBeenSentAsync(SendKind, targetKey, ct))
+        {
+            return false;
+        }
+
+        if (!IsUnsubscribeSecretConfigured("daily overview"))
         {
             return false;
         }
@@ -243,6 +253,11 @@ public sealed class NewsletterService : INewsletterService
             var expectedToken = BuildUnsubscribeToken(email, secret);
             var expectedBytes = WebEncoders.Base64UrlDecode(expectedToken);
             var tokenBytes = WebEncoders.Base64UrlDecode(token);
+            if (expectedBytes.Length != tokenBytes.Length)
+            {
+                return false;
+            }
+
             return CryptographicOperations.FixedTimeEquals(expectedBytes, tokenBytes);
         }
         catch (FormatException)
@@ -509,6 +524,17 @@ public sealed class NewsletterService : INewsletterService
     {
         var token = BuildUnsubscribeToken(email, _options.UnsubscribeSecret);
         return BuildAbsoluteUrl($"/newsletter/unsubscribe?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}");
+    }
+
+    private bool IsUnsubscribeSecretConfigured(string operationName)
+    {
+        if (!string.IsNullOrWhiteSpace(_options.UnsubscribeSecret))
+        {
+            return true;
+        }
+
+        _logger.LogError("Newsletter unsubscribe secret is not configured; skipping {OperationName}", operationName);
+        return false;
     }
 
     private static string LoadTemplate()

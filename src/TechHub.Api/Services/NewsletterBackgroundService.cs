@@ -169,7 +169,7 @@ public sealed class NewsletterBackgroundService : BackgroundService
         await newsletterService.SendTestEmailAsync(slug, recipientEmail, ct);
     }
 
-    private static TimeZoneInfo ResolveTimeZone(string configuredId)
+    private TimeZoneInfo ResolveTimeZone(string configuredId)
     {
         if (!string.IsNullOrWhiteSpace(configuredId))
         {
@@ -177,11 +177,13 @@ public sealed class NewsletterBackgroundService : BackgroundService
             {
                 return TimeZoneInfo.FindSystemTimeZoneById(configuredId);
             }
-            catch (TimeZoneNotFoundException)
+            catch (TimeZoneNotFoundException ex)
             {
+                _logger.LogWarning(ex, "Invalid DailyDigestTimeZoneId '{TimeZoneId}'. Falling back to UTC.", configuredId);
             }
-            catch (InvalidTimeZoneException)
+            catch (InvalidTimeZoneException ex)
             {
+                _logger.LogWarning(ex, "Invalid DailyDigestTimeZoneId '{TimeZoneId}'. Falling back to UTC.", configuredId);
             }
         }
 

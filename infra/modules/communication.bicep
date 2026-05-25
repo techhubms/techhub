@@ -34,5 +34,6 @@ resource communicationService 'Microsoft.Communication/communicationServices@202
   }
 }
 
+@secure()
 output communicationServiceConnectionString string = listKeys(communicationService.id, '2026-03-18').primaryConnectionString
 output senderAddress string = 'DoNotReply@${domain.properties.mailFromSenderDomain}'

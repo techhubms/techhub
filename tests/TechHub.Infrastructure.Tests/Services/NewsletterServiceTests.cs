@@ -59,6 +59,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     {
         const string Slug = "daily-item-newsletter-test-2026-05-20";
         var day = new DateOnly(2026, 5, 20);
+        await CleanupDailyOverviewTestDataAsync();
 
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO content_items
@@ -103,6 +104,44 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     }
 
     [Fact]
+    public async Task SendDailyOverviewAsync_WhenUnsubscribeSecretMissing_ReturnsFalseWithoutSending()
+    {
+        const string Slug = "daily-item-newsletter-test-2026-05-21";
+        var day = new DateOnly(2026, 5, 21);
+        await CleanupDailyOverviewTestDataAsync();
+
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name, tags_csv,
+                 sections_bitmask, content_hash, is_ai, created_at)
+            VALUES
+                (@Slug, 'blogs', 'Daily AI Item', 'Body', 'Excerpt', 1747785600,
+                 'ai', '/ai/all-2', 'TechHub', 'TechHub', ',AI,',
+                 1, 'hash-daily-newsletter-test-2', TRUE, '2026-05-21T12:00:00Z')
+            ON CONFLICT (collection_name, slug) DO NOTHING
+            """, new { Slug });
+
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES ('confirmed-daily@example.com', TRUE, NOW(), '{"weeklySections":[],"dailySections":["ai"]}'::jsonb)
+            """);
+
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var contentRepository = new Mock<IContentRepository>(MockBehavior.Strict);
+        contentRepository
+            .Setup(x => x.GetAllSectionsAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync([CreateSection("ai")]);
+
+        var sut = CreateService(contentRepository.Object, emailSender.Object, unsubscribeSecret: " ");
+
+        var sent = await sut.SendDailyOverviewAsync(day, TestContext.Current.CancellationToken);
+
+        sent.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Fact]
     public async Task SendRoundupNewsletterAsync_WhenUnsubscribeSecretMissing_LogsFailedStatus()
     {
         await SeedRoundupAsync("weekly-ai-roundup-2026-05-25");
@@ -121,6 +160,28 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         var status = await _fixture.Connection.ExecuteScalarAsync<string?>(
             "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = 'weekly-ai-roundup-2026-05-25'");
         status.Should().Be("failed");
+    }
+
+    [Fact]
+    public async Task SendTestEmailAsync_WhenUnsubscribeSecretMissing_ReturnsFalseWithoutSending()
+    {
+        await SeedRoundupAsync("weekly-ai-roundup-2026-05-26");
+
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: " ");
+
+        var sent = await sut.SendTestEmailAsync("weekly-ai-roundup-2026-05-26", "test@example.com", TestContext.Current.CancellationToken);
+
+        sent.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Fact]
+    public void IsValidUnsubscribeToken_WithDifferentDecodedLength_ReturnsFalse()
+    {
+        var isValid = NewsletterService.IsValidUnsubscribeToken("test@example.com", "AQ", "test-secret");
+
+        isValid.Should().BeFalse();
     }
 
     private NewsletterService CreateService(
@@ -155,6 +216,22 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             "/ai",
             "AI",
             [new Collection("blogs", "Blogs", "/ai/blogs", "Blogs", "Blogs")]);
+
+    private async Task CleanupDailyOverviewTestDataAsync()
+    {
+        await _fixture.Connection.ExecuteAsync("""
+            DELETE FROM newsletter_send_log
+            WHERE send_kind = 'daily-overview'
+              AND target_key IN ('2026-05-20', '2026-05-21');
+
+            DELETE FROM newsletter_subscribers
+            WHERE email IN ('confirmed@example.com', 'unconfirmed@example.com', 'confirmed-daily@example.com');
+
+            DELETE FROM content_items
+            WHERE collection_name = 'blogs'
+              AND slug IN ('daily-item-newsletter-test-2026-05-20', 'daily-item-newsletter-test-2026-05-21');
+            """);
+    }
 
     private async Task SeedRoundupAsync(string slug)
     {
