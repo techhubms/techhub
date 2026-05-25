@@ -46,17 +46,17 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
     [Fact]
     public async Task Unsubscribe_WithValidToken_ReturnsOk()
     {
-        const string email = "unsubscribe-me@example.com";
+        const string Email = "unsubscribe-me@example.com";
 
         await _client.PostAsJsonAsync(
             "/api/newsletter/subscribe",
-            new { Email = email, WeeklySections = new[] { "dotnet" }, DailySections = Array.Empty<string>() },
+            new { Email = Email, WeeklySections = new[] { "dotnet" }, DailySections = Array.Empty<string>() },
             TestContext.Current.CancellationToken);
 
-        var token = NewsletterService.BuildUnsubscribeToken(email, "integration-test-secret");
+        var token = NewsletterService.BuildUnsubscribeToken(Email, "integration-test-secret");
         var response = await _client.PostAsJsonAsync(
             "/api/newsletter/unsubscribe",
-            new { Email = email, Token = token },
+            new { Email = Email, Token = token },
             TestContext.Current.CancellationToken);
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -65,7 +65,7 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
         var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
         var unsubscribed = await connection.ExecuteScalarAsync<bool>(
             "SELECT unsubscribed_at IS NOT NULL FROM newsletter_subscribers WHERE email = @Email",
-            new { Email = email });
+            new { Email });
         unsubscribed.Should().BeTrue();
     }
 

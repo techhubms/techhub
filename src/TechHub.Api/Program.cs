@@ -1,11 +1,11 @@
 using System.Data;
 using System.Net;
 using System.Threading.RateLimiting;
+using Azure.Communication.Email;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
-using Azure.Communication.Email;
 using Npgsql;
 using Polly;
 using TechHub.Api.Endpoints;
@@ -271,6 +271,7 @@ builder.Services.AddSingleton(sp =>
         : options.ConnectionString;
     return new EmailClient(connectionString);
 });
+builder.Services.AddScoped<IEmailSender, AcsEmailSender>();
 builder.Services.AddRoundupGeneration();
 builder.Services.AddSingleton<RoundupGeneratorBackgroundService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<RoundupGeneratorBackgroundService>());

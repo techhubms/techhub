@@ -1,4 +1,3 @@
-using Dapper;
 using FluentAssertions;
 using TechHub.Infrastructure.Repositories;
 
@@ -6,13 +5,11 @@ namespace TechHub.Infrastructure.Tests.Repositories;
 
 public class NewsletterSubscriberRepositoryTests : IClassFixture<DatabaseFixture<NewsletterSubscriberRepositoryTests>>
 {
-    private readonly DatabaseFixture<NewsletterSubscriberRepositoryTests> _fixture;
     private readonly NewsletterSubscriberRepository _sut;
 
     public NewsletterSubscriberRepositoryTests(DatabaseFixture<NewsletterSubscriberRepositoryTests> fixture)
     {
         ArgumentNullException.ThrowIfNull(fixture);
-        _fixture = fixture;
         _sut = new NewsletterSubscriberRepository(fixture.Connection);
     }
 

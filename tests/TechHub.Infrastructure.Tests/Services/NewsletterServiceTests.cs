@@ -7,7 +7,6 @@ using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services.Newsletter;
-using Azure.Communication.Email;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
@@ -40,7 +39,11 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             VALUES ('not-a-valid-email-address', TRUE, NOW(), '{"weeklySections":["ai"],"dailySections":[]}'::jsonb)
             """);
 
-        var sut = CreateService();
+        var emailSender = new Mock<IEmailSender>();
+        emailSender.Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(false);
+
+        var sut = CreateService(emailSender.Object);
 
         var sent = await sut.SendRoundupNewsletterAsync("weekly-ai-roundup-2026-05-18", TestContext.Current.CancellationToken);
 
@@ -50,7 +53,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         status.Should().Be("failed");
     }
 
-    private NewsletterService CreateService()
+    private NewsletterService CreateService(IEmailSender? emailSender = null)
     {
         var options = Options.Create(new NewsletterOptions
         {
@@ -61,12 +64,13 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         });
 
         var contentRepository = new Mock<IContentRepository>(MockBehavior.Loose).Object;
+        emailSender ??= new Mock<IEmailSender>().Object;
         return new NewsletterService(
             _fixture.Connection,
             new NewsletterSubscriberRepository(_fixture.Connection),
             contentRepository,
             options,
-            new EmailClient(options.Value.ConnectionString),
+            emailSender,
             NullLogger<NewsletterService>.Instance);
     }
 

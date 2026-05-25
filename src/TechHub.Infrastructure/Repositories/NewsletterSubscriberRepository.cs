@@ -36,7 +36,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
         var normalizedEmail = email.Trim().ToLowerInvariant();
         var preferences = SerializePreferences(weeklySections, dailySections);
 
-        const string sql = """
+        const string Sql = """
             INSERT INTO newsletter_subscribers
                 (email, display_name, is_confirmed, confirmed_at, preferences, unsubscribed_at)
             VALUES
@@ -52,7 +52,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
             """;
 
         return await _connection.ExecuteScalarAsync<long>(new CommandDefinition(
-            sql,
+            Sql,
             new
             {
                 Email = normalizedEmail,
@@ -66,7 +66,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
     {
         ArgumentNullException.ThrowIfNull(email);
 
-        const string sql = """
+        const string Sql = """
             UPDATE newsletter_subscribers
             SET unsubscribed_at = NOW()
             WHERE lower(email) = lower(@Email)
@@ -74,7 +74,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
             """;
 
         var affected = await _connection.ExecuteAsync(new CommandDefinition(
-            sql,
+            Sql,
             new { Email = email.Trim() },
             cancellationToken: ct));
 
@@ -88,7 +88,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
     {
         ArgumentNullException.ThrowIfNull(sectionName);
 
-        const string sql = """
+        const string Sql = """
             SELECT
                 id AS Id,
                 email AS Email,
@@ -105,7 +105,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
             """;
 
         var rows = await _connection.QueryAsync<SubscriberRow>(new CommandDefinition(
-            sql,
+            Sql,
             new
             {
                 PreferenceNode = weekly ? "weeklySections" : "dailySections",
@@ -174,7 +174,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
         IReadOnlyList<string> dailySections,
         CancellationToken ct = default)
     {
-        const string sql = """
+        const string Sql = """
             UPDATE newsletter_subscribers
             SET display_name = @DisplayName,
                 preferences = CAST(@Preferences AS jsonb)
@@ -183,7 +183,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
             """;
 
         var affected = await _connection.ExecuteAsync(new CommandDefinition(
-            sql,
+            Sql,
             new
             {
                 Id = id,
@@ -197,9 +197,9 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
 
     public async Task<bool> DeleteSubscriberAsync(long id, CancellationToken ct = default)
     {
-        const string sql = "DELETE FROM newsletter_subscribers WHERE id = @Id";
+        const string Sql = "DELETE FROM newsletter_subscribers WHERE id = @Id";
         var affected = await _connection.ExecuteAsync(new CommandDefinition(
-            sql,
+            Sql,
             new { Id = id },
             cancellationToken: ct));
         return affected > 0;
@@ -210,7 +210,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
         ArgumentNullException.ThrowIfNull(sendKind);
         ArgumentNullException.ThrowIfNull(targetKey);
 
-        const string sql = """
+        const string Sql = """
             SELECT EXISTS (
                 SELECT 1
                 FROM newsletter_send_log
@@ -221,7 +221,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
             """;
 
         return await _connection.ExecuteScalarAsync<bool>(new CommandDefinition(
-            sql,
+            Sql,
             new { SendKind = sendKind, TargetKey = targetKey },
             cancellationToken: ct));
     }
@@ -238,7 +238,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
         ArgumentNullException.ThrowIfNull(targetKey);
         ArgumentNullException.ThrowIfNull(status);
 
-        const string sql = """
+        const string Sql = """
             INSERT INTO newsletter_send_log
                 (send_kind, target_key, recipient_count, status, error_message)
             VALUES
@@ -252,7 +252,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
             """;
 
         await _connection.ExecuteAsync(new CommandDefinition(
-            sql,
+            Sql,
             new
             {
                 SendKind = sendKind,
@@ -266,7 +266,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
 
     public async Task<IReadOnlyList<NewsletterSendLogEntry>> GetSendLogAsync(int count = 100, CancellationToken ct = default)
     {
-        const string sql = """
+        const string Sql = """
             SELECT
                 id AS Id,
                 send_kind AS SendKind,
@@ -281,7 +281,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
             """;
 
         var rows = await _connection.QueryAsync<NewsletterSendLogEntry>(new CommandDefinition(
-            sql,
+            Sql,
             new { Count = Math.Clamp(count, 1, 500) },
             cancellationToken: ct));
         return rows.ToList();
@@ -289,7 +289,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
 
     public async Task<NewsletterDailyReportStats> GetDailyReportStatsAsync(CancellationToken ct = default)
     {
-        const string sql = """
+        const string Sql = """
             SELECT
                 (SELECT COUNT(*) FROM content_items WHERE created_at >= NOW() - INTERVAL '24 hours') AS NewContentItemsLast24Hours,
                 (SELECT COUNT(*) FROM processed_urls WHERE status = 'failed' AND updated_at >= NOW() - INTERVAL '24 hours') AS FailedProcessedUrlsLast24Hours,
@@ -299,7 +299,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
                 (SELECT COUNT(*) FROM newsletter_subscribers WHERE is_confirmed = FALSE AND unsubscribed_at IS NULL) AS UnconfirmedSubscribers
             """;
 
-        return await _connection.QuerySingleAsync<NewsletterDailyReportStats>(new CommandDefinition(sql, cancellationToken: ct));
+        return await _connection.QuerySingleAsync<NewsletterDailyReportStats>(new CommandDefinition(Sql, cancellationToken: ct));
     }
 
     private static NewsletterSubscriber MapSubscriber(SubscriberRow row)

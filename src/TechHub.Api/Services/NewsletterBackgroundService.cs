@@ -104,7 +104,7 @@ public sealed class NewsletterBackgroundService : BackgroundService
         var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
         var newsletterService = scope.ServiceProvider.GetRequiredService<INewsletterService>();
 
-        const string sql = """
+        const string Sql = """
             SELECT DISTINCT ON (primary_section_name)
                 slug
             FROM content_items
@@ -114,7 +114,7 @@ public sealed class NewsletterBackgroundService : BackgroundService
             ORDER BY primary_section_name, date_epoch DESC
             """;
 
-        var slugs = await connection.QueryAsync<string>(new CommandDefinition(sql, cancellationToken: ct));
+        var slugs = await connection.QueryAsync<string>(new CommandDefinition(Sql, cancellationToken: ct));
         foreach (var slug in slugs)
         {
             await newsletterService.SendRoundupNewsletterAsync(slug, ct);
@@ -146,14 +146,14 @@ public sealed class NewsletterBackgroundService : BackgroundService
         var slug = roundupSlug;
         if (string.IsNullOrWhiteSpace(slug))
         {
-            const string sql = """
+            const string Sql = """
                 SELECT slug
                 FROM content_items
                 WHERE collection_name = 'roundups'
                 ORDER BY date_epoch DESC
                 LIMIT 1
                 """;
-            slug = await connection.ExecuteScalarAsync<string?>(new CommandDefinition(sql, cancellationToken: ct));
+            slug = await connection.ExecuteScalarAsync<string?>(new CommandDefinition(Sql, cancellationToken: ct));
         }
 
         if (string.IsNullOrWhiteSpace(slug))

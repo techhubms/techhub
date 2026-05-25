@@ -179,7 +179,7 @@
 
     private async Task RefreshAsync()
     {
-        _subscribers = await Api.GetNewsletterSubscribersAsync();
+        _subscribers = await Api.GetNewsletterSubscribersAsync(pageSize: 500);
         _sendLog = await Api.GetNewsletterSendLogAsync();
     }
 
@@ -211,9 +211,17 @@
             return;
         }
 
-        await Api.TriggerNewsletterTestSendAsync(_testEmail.Trim());
-        _message = "Test send triggered.";
-        _isError = false;
+        try
+        {
+            await Api.TriggerNewsletterTestSendAsync(_testEmail.Trim());
+            _message = "Test send triggered.";
+            _isError = false;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = ex.Message;
+            _isError = true;
+        }
     }
 
     private async Task DeleteAsync(long id)

@@ -8,10 +8,9 @@ using System.Text;
 using Dapper;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Azure;
-using Azure.Communication.Email;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 
 namespace TechHub.Infrastructure.Services.Newsletter;
@@ -24,7 +23,7 @@ public sealed class NewsletterService : INewsletterService
     private readonly INewsletterSubscriberRepository _subscriberRepository;
     private readonly IContentRepository _contentRepository;
     private readonly NewsletterOptions _options;
-    private readonly EmailClient _emailClient;
+    private readonly IEmailSender _emailSender;
     private readonly ILogger<NewsletterService> _logger;
     private readonly string _htmlTemplate;
 
@@ -33,21 +32,21 @@ public sealed class NewsletterService : INewsletterService
         INewsletterSubscriberRepository subscriberRepository,
         IContentRepository contentRepository,
         IOptions<NewsletterOptions> options,
-        EmailClient emailClient,
+        IEmailSender emailSender,
         ILogger<NewsletterService> logger)
     {
         ArgumentNullException.ThrowIfNull(connection);
         ArgumentNullException.ThrowIfNull(subscriberRepository);
         ArgumentNullException.ThrowIfNull(contentRepository);
         ArgumentNullException.ThrowIfNull(options);
-        ArgumentNullException.ThrowIfNull(emailClient);
+        ArgumentNullException.ThrowIfNull(emailSender);
         ArgumentNullException.ThrowIfNull(logger);
 
         _connection = connection;
         _subscriberRepository = subscriberRepository;
         _contentRepository = contentRepository;
         _options = options.Value;
-        _emailClient = emailClient;
+        _emailSender = emailSender;
         _logger = logger;
         _htmlTemplate = LoadTemplate();
     }
@@ -62,8 +61,8 @@ public sealed class NewsletterService : INewsletterService
             return false;
         }
 
-        const string sendKind = "weekly-roundup";
-        if (await _subscriberRepository.HasBeenSentAsync(sendKind, roundupSlug, ct))
+        const string SendKind = "weekly-roundup";
+        if (await _subscriberRepository.HasBeenSentAsync(SendKind, roundupSlug, ct))
         {
             return false;
         }
@@ -71,7 +70,7 @@ public sealed class NewsletterService : INewsletterService
         var subscribers = await _subscriberRepository.GetActiveSubscribersAsync(roundup.SectionName, weekly: true, ct);
         if (subscribers.Count == 0)
         {
-            await _subscriberRepository.LogSendAsync(sendKind, roundupSlug, 0, "sent", null, ct);
+            await _subscriberRepository.LogSendAsync(SendKind, roundupSlug, 0, "sent", null, ct);
             return true;
         }
 
@@ -92,12 +91,14 @@ public sealed class NewsletterService : INewsletterService
                 }
             }
 
-            await _subscriberRepository.LogSendAsync(sendKind, roundupSlug, successful, "sent", null, ct);
+            var status = successful > 0 ? "sent" : "failed";
+            var error = successful > 0 ? null : "Delivery failed for all subscribers";
+            await _subscriberRepository.LogSendAsync(SendKind, roundupSlug, successful, status, error, ct);
             return successful > 0;
         }
         catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
         {
-            await _subscriberRepository.LogSendAsync(sendKind, roundupSlug, 0, "failed", ex.Message, ct);
+            await _subscriberRepository.LogSendAsync(SendKind, roundupSlug, 0, "failed", ex.Message, ct);
             _logger.LogError(ex, "Failed sending roundup newsletter for {RoundupSlug}", roundupSlug);
             return false;
         }
@@ -125,9 +126,9 @@ public sealed class NewsletterService : INewsletterService
     public async Task<bool> SendDailyOverviewAsync(DateOnly day, CancellationToken ct = default)
     {
         var targetKey = day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-        const string sendKind = "daily-overview";
+        const string SendKind = "daily-overview";
 
-        if (await _subscriberRepository.HasBeenSentAsync(sendKind, targetKey, ct))
+        if (await _subscriberRepository.HasBeenSentAsync(SendKind, targetKey, ct))
         {
             return false;
         }
@@ -138,19 +139,31 @@ public sealed class NewsletterService : INewsletterService
             .Select(s => s.Name)
             .ToList();
 
-        var start = day.ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc);
-        var end = day.AddDays(1).ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc);
+        var (start, end) = GetDayUtcWindow(day);
         var itemsBySection = new Dictionary<string, IReadOnlyList<DailyItemRow>>(StringComparer.OrdinalIgnoreCase);
         foreach (var section in sectionNames)
         {
             itemsBySection[section] = await GetDailyItemsForSectionAsync(section, start, end, ct);
         }
 
-        var subscribers = await _subscriberRepository.GetSubscribersAsync(page: 1, pageSize: 5000, ct: ct);
-        var dailySubscribers = subscribers.Where(s => s.DailySections.Count > 0).ToList();
+        var dailySubscribers = new List<NewsletterSubscriber>();
+        var page = 1;
+        const int BatchSize = 500;
+        while (true)
+        {
+            var batch = await _subscriberRepository.GetSubscribersAsync(page: page, pageSize: BatchSize, ct: ct);
+            dailySubscribers.AddRange(batch.Where(s => s.DailySections.Count > 0));
+            if (batch.Count < BatchSize)
+            {
+                break;
+            }
+
+            page++;
+        }
+
         if (dailySubscribers.Count == 0)
         {
-            await _subscriberRepository.LogSendAsync(sendKind, targetKey, 0, "sent", null, ct);
+            await _subscriberRepository.LogSendAsync(SendKind, targetKey, 0, "sent", null, ct);
             return true;
         }
 
@@ -169,7 +182,9 @@ public sealed class NewsletterService : INewsletterService
             }
         }
 
-        await _subscriberRepository.LogSendAsync(sendKind, targetKey, sent, "sent", null, ct);
+        var sendStatus = sent > 0 ? "sent" : "failed";
+        var sendError = sent > 0 ? null : "Delivery failed for all subscribers";
+        await _subscriberRepository.LogSendAsync(SendKind, targetKey, sent, sendStatus, sendError, ct);
         return sent > 0;
     }
 
@@ -181,8 +196,8 @@ public sealed class NewsletterService : INewsletterService
         }
 
         var targetKey = day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-        const string sendKind = "admin-status";
-        if (await _subscriberRepository.HasBeenSentAsync(sendKind, targetKey, ct))
+        const string SendKind = "admin-status";
+        if (await _subscriberRepository.HasBeenSentAsync(SendKind, targetKey, ct))
         {
             return false;
         }
@@ -192,7 +207,7 @@ public sealed class NewsletterService : INewsletterService
         var text = BuildAdminStatusText(day, stats);
 
         var sent = await SendEmailAsync(_options.AdminReportEmailAddress, $"TechHub Daily Status Report — {targetKey}", html, text, ct);
-        await _subscriberRepository.LogSendAsync(sendKind, targetKey, sent ? 1 : 0, sent ? "sent" : "failed", sent ? null : "Unable to send admin status report", ct);
+        await _subscriberRepository.LogSendAsync(SendKind, targetKey, sent ? 1 : 0, sent ? "sent" : "failed", sent ? null : "Unable to send admin status report", ct);
         return sent;
     }
 
@@ -214,39 +229,25 @@ public sealed class NewsletterService : INewsletterService
             return false;
         }
 
-        var expected = BuildUnsubscribeToken(email, secret);
-        return string.Equals(expected, token, StringComparison.Ordinal);
-    }
-
-    private async Task<bool> SendEmailAsync(string recipientEmail, string subject, string html, string plainText, CancellationToken ct)
-    {
-        if (string.IsNullOrWhiteSpace(_options.ConnectionString) || string.IsNullOrWhiteSpace(_options.SenderAddress))
+        try
         {
-            _logger.LogWarning("Newsletter email skipped because Newsletter:ConnectionString or Newsletter:SenderAddress is not configured");
+            var expectedToken = BuildUnsubscribeToken(email, secret);
+            var expectedBytes = WebEncoders.Base64UrlDecode(expectedToken);
+            var tokenBytes = WebEncoders.Base64UrlDecode(token);
+            return CryptographicOperations.FixedTimeEquals(expectedBytes, tokenBytes);
+        }
+        catch (FormatException)
+        {
             return false;
         }
-
-        var emailMessage = new EmailMessage(
-            senderAddress: _options.SenderAddress,
-            content: new EmailContent(subject)
-            {
-                Html = html,
-                PlainText = plainText
-            },
-            recipients: new EmailRecipients([new EmailAddress(recipientEmail)]));
-
-        await _emailClient.SendAsync(WaitUntil.Completed, emailMessage, ct);
-        if (_options.SendDelayMs > 0)
-        {
-            await Task.Delay(_options.SendDelayMs, ct);
-        }
-
-        return true;
     }
+
+    private Task<bool> SendEmailAsync(string recipientEmail, string subject, string html, string plainText, CancellationToken ct) =>
+        _emailSender.SendAsync(recipientEmail, subject, html, plainText, ct);
 
     private async Task<RoundupRow?> GetRoundupBySlugAsync(string roundupSlug, CancellationToken ct)
     {
-        const string sql = """
+        const string Sql = """
             SELECT
                 slug AS Slug,
                 title AS Title,
@@ -260,7 +261,7 @@ public sealed class NewsletterService : INewsletterService
             """;
 
         return await _connection.QuerySingleOrDefaultAsync<RoundupRow>(new CommandDefinition(
-            sql,
+            Sql,
             new { Slug = roundupSlug.Trim() },
             cancellationToken: ct));
     }
@@ -271,7 +272,7 @@ public sealed class NewsletterService : INewsletterService
         DateTime endUtc,
         CancellationToken ct)
     {
-        const string sql = """
+        const string Sql = """
             SELECT
                 slug AS Slug,
                 title AS Title,
@@ -286,7 +287,7 @@ public sealed class NewsletterService : INewsletterService
             """;
 
         var rows = await _connection.QueryAsync<DailyItemRow>(new CommandDefinition(
-            sql,
+            Sql,
             new
             {
                 SectionName = sectionName,
@@ -492,8 +493,8 @@ public sealed class NewsletterService : INewsletterService
     private static string LoadTemplate()
     {
         var assembly = Assembly.GetExecutingAssembly();
-        const string resourceName = "TechHub.Infrastructure.Data.Resources.newsletter-roundup-template.html";
-        using var stream = assembly.GetManifestResourceStream(resourceName);
+        const string ResourceName = "TechHub.Infrastructure.Data.Resources.newsletter-roundup-template.html";
+        using var stream = assembly.GetManifestResourceStream(ResourceName);
         if (stream is null)
         {
             return "{Title}<br/>{Introduction}<br/>{SectionLinks}<br/><a href=\"{FullRoundupUrl}\">Read</a><br/><a href=\"{UnsubscribeUrl}\">Unsubscribe</a>";
@@ -518,6 +519,25 @@ public sealed class NewsletterService : INewsletterService
         public string Title { get; init; } = string.Empty;
         public string CollectionName { get; init; } = string.Empty;
     }
+
+    private (DateTime startUtc, DateTime endUtc) GetDayUtcWindow(DateOnly day)
+    {
+        TimeZoneInfo tz;
+        try
+        {
+            tz = string.IsNullOrWhiteSpace(_options.DailyDigestTimeZoneId)
+                ? TimeZoneInfo.Utc
+                : TimeZoneInfo.FindSystemTimeZoneById(_options.DailyDigestTimeZoneId);
+        }
+        catch (Exception ex) when (ex is TimeZoneNotFoundException or InvalidTimeZoneException)
+        {
+            tz = TimeZoneInfo.Utc;
+        }
+
+        var localStart = day.ToDateTime(TimeOnly.MinValue);
+        var localEnd = day.AddDays(1).ToDateTime(TimeOnly.MinValue);
+        return (TimeZoneInfo.ConvertTimeToUtc(localStart, tz), TimeZoneInfo.ConvertTimeToUtc(localEnd, tz));
+    }
 }
 
 internal static class WebEncoders
@@ -526,5 +546,17 @@ internal static class WebEncoders
     {
         var base64 = Convert.ToBase64String(data);
         return base64.TrimEnd('=').Replace('+', '-').Replace('/', '_');
+    }
+
+    public static byte[] Base64UrlDecode(string value)
+    {
+        var s = value.Replace('-', '+').Replace('_', '/');
+        s = (s.Length % 4) switch
+        {
+            2 => s + "==",
+            3 => s + "=",
+            _ => s
+        };
+        return Convert.FromBase64String(s);
     }
 }
