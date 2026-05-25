@@ -48,7 +48,7 @@ public sealed class AcsEmailSender : IEmailSender
         var operation = await _emailClient.SendAsync(WaitUntil.Completed, emailMessage, ct);
         if (operation.Value.Status != EmailSendStatus.Succeeded)
         {
-            _logger.LogWarning("Newsletter email to {RecipientEmail} completed with non-success status {Status}", recipientEmail, operation.Value.Status);
+            _logger.LogWarning("Newsletter email delivery completed with non-success status {Status}", operation.Value.Status);
             return false;
         }
 
