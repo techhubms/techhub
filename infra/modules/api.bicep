@@ -65,6 +65,7 @@ param tags object = {}
 
 var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-api:${imageTag}'
 var revisionSuffix = 'api-${imageTag}'
+var newsletterWebsiteBaseUrl = !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
 var corsOrigins = union(['https://*.azurecontainerapps.io'], customOrigins)
 var corsEnvVars = [for (fqdn, i) in webFqdns: {
@@ -132,11 +133,11 @@ var staticEnvVars = [
   }
   {
     name: 'AppSettings__BaseUrl'
-    value: !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
+    value: newsletterWebsiteBaseUrl
   }
   {
     name: 'Newsletter__WebsiteBaseUrl'
-    value: !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
+    value: newsletterWebsiteBaseUrl
   }
   {
     name: 'TECHHUB_TMP'
