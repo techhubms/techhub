@@ -90,4 +90,26 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
             new { Id = id });
         count.Should().Be(0);
     }
+
+    [Fact]
+    public async Task Subscribe_WithOnlyInvalidSections_ReturnsBadRequest()
+    {
+        var response = await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new
+            {
+                Email = "invalid-sections@example.com",
+                WeeklySections = new[] { "not-a-section" },
+                DailySections = Array.Empty<string>()
+            },
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        var count = await connection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM newsletter_subscribers WHERE email = 'invalid-sections@example.com'");
+        count.Should().Be(0);
+    }
 }

@@ -102,14 +102,38 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         recipientCount.Should().Be(1);
     }
 
-    private NewsletterService CreateService(IContentRepository? contentRepository = null, IEmailSender? emailSender = null)
+    [Fact]
+    public async Task SendRoundupNewsletterAsync_WhenUnsubscribeSecretMissing_LogsFailedStatus()
+    {
+        await SeedRoundupAsync("weekly-ai-roundup-2026-05-25");
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES ('configured@example.com', TRUE, NOW(), '{"weeklySections":["ai"],"dailySections":[]}'::jsonb)
+            """);
+
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: " ");
+
+        var sent = await sut.SendRoundupNewsletterAsync("weekly-ai-roundup-2026-05-25", TestContext.Current.CancellationToken);
+
+        sent.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+        var status = await _fixture.Connection.ExecuteScalarAsync<string?>(
+            "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = 'weekly-ai-roundup-2026-05-25'");
+        status.Should().Be("failed");
+    }
+
+    private NewsletterService CreateService(
+        IContentRepository? contentRepository = null,
+        IEmailSender? emailSender = null,
+        string unsubscribeSecret = "test-secret")
     {
         var options = Options.Create(new NewsletterOptions
         {
             ConnectionString = "endpoint=https://invalid.communication.azure.com/;accesskey=invalid",
             SenderAddress = "DoNotReply@example.azurecomm.net",
             WebsiteBaseUrl = "https://tech.hub.ms",
-            UnsubscribeSecret = "test-secret"
+            UnsubscribeSecret = unsubscribeSecret
         });
 
         contentRepository ??= new Mock<IContentRepository>(MockBehavior.Loose).Object;

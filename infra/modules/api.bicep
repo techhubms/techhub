@@ -205,7 +205,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
           passwordSecretRef: 'ghcr-token'
         }
       ]
-      secrets: [
+      secrets: concat([
         // GitHub Container Registry PAT for image pulls (read:packages scope)
         {
           name: 'ghcr-token'
@@ -216,7 +216,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
           name: 'acs-connection-string'
           value: acsConnectionString
         }
-      ] + newsletterSecrets
+      ], newsletterSecrets)
     }
     template: {
       revisionSuffix: revisionSuffix

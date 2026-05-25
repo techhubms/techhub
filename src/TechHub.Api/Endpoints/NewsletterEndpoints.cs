@@ -4,6 +4,8 @@ using Microsoft.Extensions.Options;
 using TechHub.Api.Services;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models;
+using TechHub.Core.Models.Admin;
 using TechHub.Infrastructure.Services.Newsletter;
 
 namespace TechHub.Api.Endpoints;
@@ -17,13 +19,25 @@ public static class NewsletterEndpoints
             .RequireRateLimiting("api-public");
 
         publicGroup.MapGet("/sections", GetNewsletterSectionsAsync)
-            .WithName("GetNewsletterSections");
+            .WithName("GetNewsletterSections")
+            .WithSummary("Get newsletter sections")
+            .WithDescription("Returns all newsletter-eligible sections except the synthetic 'all' section.")
+            .Produces<IReadOnlyList<Section>>(StatusCodes.Status200OK);
 
         publicGroup.MapPost("/subscribe", SubscribeAsync)
-            .WithName("NewsletterSubscribe");
+            .WithName("NewsletterSubscribe")
+            .WithSummary("Subscribe to newsletters")
+            .WithDescription("Creates or updates a newsletter subscription for the requested weekly and daily sections.")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status400BadRequest);
 
         publicGroup.MapPost("/unsubscribe", UnsubscribeAsync)
-            .WithName("NewsletterUnsubscribe");
+            .WithName("NewsletterUnsubscribe")
+            .WithSummary("Unsubscribe from newsletters")
+            .WithDescription("Unsubscribes an email address when a valid unsubscribe token is supplied.")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
 
         var adminGroup = app.MapGroup("/api/admin/newsletter")
             .WithTags("Admin")
@@ -31,22 +45,43 @@ public static class NewsletterEndpoints
             .RequireRateLimiting("api-admin");
 
         adminGroup.MapGet("/subscribers", GetSubscribersAsync)
-            .WithName("GetNewsletterSubscribers");
+            .WithName("GetNewsletterSubscribers")
+            .WithSummary("Get newsletter subscribers")
+            .WithDescription("Returns newsletter subscribers for the admin dashboard with optional paging and filters.")
+            .Produces<IReadOnlyList<NewsletterSubscriber>>(StatusCodes.Status200OK);
 
         adminGroup.MapPut("/subscribers/{id:long}", UpdateSubscriberAsync)
-            .WithName("UpdateNewsletterSubscriber");
+            .WithName("UpdateNewsletterSubscriber")
+            .WithSummary("Update a newsletter subscriber")
+            .WithDescription("Updates display name and section preferences for an existing newsletter subscriber.")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
 
         adminGroup.MapDelete("/subscribers/{id:long}", DeleteSubscriberAsync)
-            .WithName("DeleteNewsletterSubscriber");
+            .WithName("DeleteNewsletterSubscriber")
+            .WithSummary("Delete a newsletter subscriber")
+            .WithDescription("Deletes a newsletter subscriber from the admin dashboard.")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
 
         adminGroup.MapGet("/send-log", GetSendLogAsync)
-            .WithName("GetNewsletterSendLog");
+            .WithName("GetNewsletterSendLog")
+            .WithSummary("Get newsletter send log")
+            .WithDescription("Returns the most recent newsletter send log entries for admin troubleshooting.")
+            .Produces<IReadOnlyList<NewsletterSendLogEntry>>(StatusCodes.Status200OK);
 
         adminGroup.MapPost("/trigger", TriggerNewsletterAsync)
-            .WithName("TriggerNewsletter");
+            .WithName("TriggerNewsletter")
+            .WithSummary("Trigger newsletter sending")
+            .WithDescription("Triggers an immediate newsletter processing run.")
+            .Produces(StatusCodes.Status202Accepted);
 
         adminGroup.MapPost("/test-send", TestSendNewsletterAsync)
-            .WithName("TestSendNewsletter");
+            .WithName("TestSendNewsletter")
+            .WithSummary("Trigger a newsletter test send")
+            .WithDescription("Triggers a test roundup email to a specific recipient.")
+            .Produces(StatusCodes.Status202Accepted)
+            .Produces(StatusCodes.Status400BadRequest);
 
         return app;
     }
@@ -62,6 +97,7 @@ public static class NewsletterEndpoints
 
     private static async Task<IResult> SubscribeAsync(
         NewsletterSubscribeRequest request,
+        IContentRepository contentRepository,
         INewsletterSubscriberRepository subscriberRepository,
         CancellationToken ct)
     {
@@ -77,11 +113,23 @@ public static class NewsletterEndpoints
             return Results.BadRequest("Select at least one weekly or daily section.");
         }
 
+        var validSections = (await contentRepository.GetAllSectionsAsync(ct))
+            .Where(s => !string.Equals(s.Name, "all", StringComparison.OrdinalIgnoreCase))
+            .Select(s => s.Name.Trim().ToLowerInvariant())
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+        var normalizedWeekly = NormalizeRequestedSections(weekly, validSections);
+        var normalizedDaily = NormalizeRequestedSections(daily, validSections);
+        if (normalizedWeekly.Count == 0 && normalizedDaily.Count == 0)
+        {
+            return Results.BadRequest("Select at least one valid weekly or daily section.");
+        }
+
         var id = await subscriberRepository.UpsertSubscriberAsync(
             request.Email,
             request.DisplayName,
-            weekly,
-            daily,
+            normalizedWeekly,
+            normalizedDaily,
             ct);
 
         return Results.Ok(new { id, message = "Subscribed" });
@@ -193,4 +241,14 @@ public static class NewsletterEndpoints
             return false;
         }
     }
+
+    private static List<string> NormalizeRequestedSections(
+        IReadOnlyList<string> requestedSections,
+        HashSet<string> validSections) =>
+        requestedSections
+            .Where(s => !string.IsNullOrWhiteSpace(s))
+            .Select(s => s.Trim().ToLowerInvariant())
+            .Where(validSections.Contains)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
 }

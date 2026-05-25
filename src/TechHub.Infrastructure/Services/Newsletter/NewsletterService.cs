@@ -212,6 +212,10 @@ public sealed class NewsletterService : INewsletterService
     {
         ArgumentNullException.ThrowIfNull(email);
         ArgumentNullException.ThrowIfNull(secret);
+        if (string.IsNullOrWhiteSpace(secret))
+        {
+            throw new ArgumentException("Newsletter unsubscribe secret is required.", nameof(secret));
+        }
 
         var normalizedEmail = email.Trim().ToLowerInvariant();
         using var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(secret));

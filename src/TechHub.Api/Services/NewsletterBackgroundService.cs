@@ -55,22 +55,26 @@ public sealed class NewsletterBackgroundService : BackgroundService
         var checkInterval = TimeSpan.FromMinutes(Math.Max(1, _options.CheckIntervalMinutes));
         _logger.LogInformation("NewsletterBackgroundService started with interval {CheckIntervalMinutes} minute(s)", checkInterval.TotalMinutes);
 
+        using var timer = new PeriodicTimer(checkInterval);
+        var timerTask = timer.WaitForNextTickAsync(stoppingToken).AsTask();
+
         while (!stoppingToken.IsCancellationRequested)
         {
             var manualTask = _manualTrigger.Task;
-            var delayTask = Task.Delay(checkInterval, stoppingToken);
-            await Task.WhenAny(manualTask, delayTask);
+            var completed = await Task.WhenAny(manualTask, timerTask);
             if (stoppingToken.IsCancellationRequested)
             {
                 break;
             }
 
-            if (manualTask.IsCompleted)
+            if (completed == manualTask)
             {
                 _manualTrigger = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
                 await RunManualAsync(stoppingToken);
                 continue;
             }
+
+            timerTask = timer.WaitForNextTickAsync(stoppingToken).AsTask();
 
             if (!_options.ScheduledSendEnabled)
             {

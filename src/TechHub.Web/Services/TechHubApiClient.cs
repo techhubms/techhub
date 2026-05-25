@@ -745,14 +745,32 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    /// <summary>
+    /// Get all newsletter sections.
+    /// GET /api/newsletter/sections
+    /// </summary>
     public virtual async Task<IReadOnlyList<Section>?> GetNewsletterSectionsAsync(CancellationToken cancellationToken = default)
     {
-        var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<Section>>(
-            "/api/newsletter/sections",
-            cancellationToken);
-        return result;
+        try
+        {
+            _logger.LogDebug("Fetching newsletter sections");
+            var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<Section>>(
+                "/api/newsletter/sections",
+                cancellationToken);
+            _logger.LogDebug("Successfully fetched {Count} newsletter sections", result?.Count ?? 0);
+            return result;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch newsletter sections");
+            throw;
+        }
     }
 
+    /// <summary>
+    /// Subscribe an email address to weekly and daily newsletters.
+    /// POST /api/newsletter/subscribe
+    /// </summary>
     public virtual async Task SubscribeNewsletterAsync(
         string email,
         string? displayName,
@@ -760,23 +778,58 @@ public class TechHubApiClient : ITechHubApiClient
         IReadOnlyList<string> dailySections,
         CancellationToken cancellationToken = default)
     {
-        var payload = new
-        {
-            Email = email,
-            DisplayName = displayName,
-            WeeklySections = weeklySections,
-            DailySections = dailySections
-        };
+        email = email.Sanitize();
+        displayName = string.IsNullOrWhiteSpace(displayName) ? null : displayName.Sanitize();
+        weeklySections = SanitizeValues(weeklySections);
+        dailySections = SanitizeValues(dailySections);
 
-        using var response = await _httpClient.PostAsJsonAsync("/api/newsletter/subscribe", payload, cancellationToken);
-        response.EnsureSuccessStatusCode();
+        try
+        {
+            _logger.LogInformation(
+                "Subscribing newsletter recipient {Email} ({WeeklyCount} weekly, {DailyCount} daily)",
+                email,
+                weeklySections.Count,
+                dailySections.Count);
+
+            var payload = new
+            {
+                Email = email,
+                DisplayName = displayName,
+                WeeklySections = weeklySections,
+                DailySections = dailySections
+            };
+
+            using var response = await _httpClient.PostAsJsonAsync("/api/newsletter/subscribe", payload, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to subscribe newsletter recipient {Email}", email);
+            throw;
+        }
     }
 
+    /// <summary>
+    /// Unsubscribe an email address from newsletters.
+    /// POST /api/newsletter/unsubscribe
+    /// </summary>
     public virtual async Task UnsubscribeNewsletterAsync(string email, string token, CancellationToken cancellationToken = default)
     {
-        var payload = new { Email = email, Token = token };
-        using var response = await _httpClient.PostAsJsonAsync("/api/newsletter/unsubscribe", payload, cancellationToken);
-        response.EnsureSuccessStatusCode();
+        email = email.Sanitize();
+        token = token.Sanitize();
+
+        try
+        {
+            _logger.LogInformation("Unsubscribing newsletter recipient {Email}", email);
+            var payload = new { Email = email, Token = token };
+            using var response = await _httpClient.PostAsJsonAsync("/api/newsletter/unsubscribe", payload, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to unsubscribe newsletter recipient {Email}", email);
+            throw;
+        }
     }
 
     // ================================================================
@@ -852,17 +905,38 @@ public class TechHubApiClient : ITechHubApiClient
 
     public virtual async Task TriggerNewsletterAsync(CancellationToken cancellationToken = default)
     {
-        using var response = await _httpClient.PostAsync("/api/admin/newsletter/trigger", null, cancellationToken);
-        response.EnsureSuccessStatusCode();
+        try
+        {
+            _logger.LogInformation("Triggering newsletter run");
+            using var response = await _httpClient.PostAsync("/api/admin/newsletter/trigger", null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to trigger newsletter run");
+            throw;
+        }
     }
 
     public virtual async Task TriggerNewsletterTestSendAsync(string email, string? roundupSlug = null, CancellationToken cancellationToken = default)
     {
-        var url = string.IsNullOrWhiteSpace(roundupSlug)
-            ? $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}"
-            : $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}&roundupSlug={Uri.EscapeDataString(roundupSlug)}";
-        using var response = await _httpClient.PostAsync(url, null, cancellationToken);
-        response.EnsureSuccessStatusCode();
+        email = email.Sanitize();
+        roundupSlug = string.IsNullOrWhiteSpace(roundupSlug) ? null : roundupSlug.Sanitize();
+
+        try
+        {
+            _logger.LogInformation("Triggering newsletter test send to {Email} for roundup {RoundupSlug}", email, roundupSlug ?? "(latest)");
+            var url = string.IsNullOrWhiteSpace(roundupSlug)
+                ? $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}"
+                : $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}&roundupSlug={Uri.EscapeDataString(roundupSlug)}";
+            using var response = await _httpClient.PostAsync(url, null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to trigger newsletter test send to {Email}", email);
+            throw;
+        }
     }
 
     /// <summary>
@@ -979,25 +1053,43 @@ public class TechHubApiClient : ITechHubApiClient
         bool? confirmed = null,
         CancellationToken cancellationToken = default)
     {
-        var query = new List<string>
-        {
-            $"page={page}",
-            $"pageSize={pageSize}"
-        };
+        search = string.IsNullOrWhiteSpace(search) ? null : search.Sanitize();
 
-        if (!string.IsNullOrWhiteSpace(search))
+        try
         {
-            query.Add($"search={Uri.EscapeDataString(search)}");
+            _logger.LogDebug(
+                "Fetching newsletter subscribers page {Page} size {PageSize} confirmed {Confirmed} search {Search}",
+                page,
+                pageSize,
+                confirmed,
+                search ?? string.Empty);
+
+            var query = new List<string>
+            {
+                $"page={page}",
+                $"pageSize={pageSize}"
+            };
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                query.Add($"search={Uri.EscapeDataString(search)}");
+            }
+
+            if (confirmed.HasValue)
+            {
+                query.Add($"confirmed={confirmed.Value.ToString().ToLowerInvariant()}");
+            }
+
+            var url = $"/api/admin/newsletter/subscribers?{string.Join("&", query)}";
+            var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<NewsletterSubscriber>>(url, cancellationToken);
+            _logger.LogDebug("Successfully fetched {Count} newsletter subscribers", result?.Count ?? 0);
+            return result ?? [];
         }
-
-        if (confirmed.HasValue)
+        catch (HttpRequestException ex)
         {
-            query.Add($"confirmed={confirmed.Value.ToString().ToLowerInvariant()}");
+            _logger.LogError(ex, "Failed to fetch newsletter subscribers");
+            throw;
         }
-
-        var url = $"/api/admin/newsletter/subscribers?{string.Join("&", query)}";
-        var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<NewsletterSubscriber>>(url, cancellationToken);
-        return result ?? [];
     }
 
     public virtual async Task UpdateNewsletterSubscriberAsync(
@@ -1007,29 +1099,64 @@ public class TechHubApiClient : ITechHubApiClient
         IReadOnlyList<string> dailySections,
         CancellationToken cancellationToken = default)
     {
-        var payload = new
+        displayName = string.IsNullOrWhiteSpace(displayName) ? null : displayName.Sanitize();
+        weeklySections = SanitizeValues(weeklySections);
+        dailySections = SanitizeValues(dailySections);
+
+        try
         {
-            DisplayName = displayName,
-            WeeklySections = weeklySections,
-            DailySections = dailySections
-        };
-        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/newsletter/subscribers/{id}", payload, cancellationToken);
-        response.EnsureSuccessStatusCode();
+            _logger.LogInformation("Updating newsletter subscriber {SubscriberId}", id);
+            var payload = new
+            {
+                DisplayName = displayName,
+                WeeklySections = weeklySections,
+                DailySections = dailySections
+            };
+            using var response = await _httpClient.PutAsJsonAsync($"/api/admin/newsletter/subscribers/{id}", payload, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update newsletter subscriber {SubscriberId}", id);
+            throw;
+        }
     }
 
     public virtual async Task DeleteNewsletterSubscriberAsync(long id, CancellationToken cancellationToken = default)
     {
-        using var response = await _httpClient.DeleteAsync($"/api/admin/newsletter/subscribers/{id}", cancellationToken);
-        response.EnsureSuccessStatusCode();
+        try
+        {
+            _logger.LogInformation("Deleting newsletter subscriber {SubscriberId}", id);
+            using var response = await _httpClient.DeleteAsync($"/api/admin/newsletter/subscribers/{id}", cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to delete newsletter subscriber {SubscriberId}", id);
+            throw;
+        }
     }
 
     public virtual async Task<IReadOnlyList<NewsletterSendLogEntry>> GetNewsletterSendLogAsync(int count = 100, CancellationToken cancellationToken = default)
     {
-        var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<NewsletterSendLogEntry>>(
-            $"/api/admin/newsletter/send-log?count={count}",
-            cancellationToken);
-        return result ?? [];
+        try
+        {
+            _logger.LogDebug("Fetching newsletter send log ({Count} entries)", count);
+            var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<NewsletterSendLogEntry>>(
+                $"/api/admin/newsletter/send-log?count={count}",
+                cancellationToken);
+            _logger.LogDebug("Successfully fetched {Count} newsletter send log entries", result?.Count ?? 0);
+            return result ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch newsletter send log");
+            throw;
+        }
     }
+
+    private static List<string> SanitizeValues(IReadOnlyList<string> values) =>
+        values.Select(v => v.Sanitize()).ToList();
 
     // ================================================================
     // RSS Feed config methods
