@@ -786,8 +786,7 @@ public class TechHubApiClient : ITechHubApiClient
         try
         {
             _logger.LogInformation(
-                "Subscribing newsletter recipient {Email} ({WeeklyCount} weekly, {DailyCount} daily)",
-                email,
+                "Subscribing newsletter recipient ({WeeklyCount} weekly, {DailyCount} daily)",
                 weeklySections.Count,
                 dailySections.Count);
 
@@ -804,7 +803,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to subscribe newsletter recipient {Email}", email);
+            _logger.LogError(ex, "Failed to subscribe newsletter recipient");
             throw;
         }
     }
@@ -820,14 +819,14 @@ public class TechHubApiClient : ITechHubApiClient
 
         try
         {
-            _logger.LogInformation("Unsubscribing newsletter recipient {Email}", email);
+            _logger.LogInformation("Unsubscribing newsletter recipient");
             var payload = new { Email = email, Token = token };
             using var response = await _httpClient.PostAsJsonAsync("/api/newsletter/unsubscribe", payload, cancellationToken);
             response.EnsureSuccessStatusCode();
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to unsubscribe newsletter recipient {Email}", email);
+            _logger.LogError(ex, "Failed to unsubscribe newsletter recipient");
             throw;
         }
     }
@@ -925,7 +924,7 @@ public class TechHubApiClient : ITechHubApiClient
 
         try
         {
-            _logger.LogInformation("Triggering newsletter test send to {Email} for roundup {RoundupSlug}", email, roundupSlug ?? "(latest)");
+            _logger.LogInformation("Triggering newsletter test send for roundup {RoundupSlug}", roundupSlug ?? "(latest)");
             var url = string.IsNullOrWhiteSpace(roundupSlug)
                 ? $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}"
                 : $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}&roundupSlug={Uri.EscapeDataString(roundupSlug)}";
@@ -934,7 +933,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to trigger newsletter test send to {Email}", email);
+            _logger.LogError(ex, "Failed to trigger newsletter test send");
             throw;
         }
     }

@@ -189,7 +189,7 @@ public class TechHubApiClientTests
         }
     }
 
-    private sealed class CapturingHandler : HttpMessageHandler, IDisposable
+    private sealed class CapturingHandler : HttpMessageHandler
     {
         public HttpRequestMessage? LastRequest { get; private set; }
 
