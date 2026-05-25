@@ -2,17 +2,16 @@
    Sidebar RSS Links Component
    
    Renders RSS feed subscription links with icons.
-   Supports single or multiple RSS feeds.
+   Supports single or multiple RSS feeds, and an optional newsletter button.
    
    Usage:
-     Single feed (section pages):
+     Section pages (RSS only):
        <SidebarRssLinks Links="@(new[] { new RssLink("RSS Feed", "/ai/feed.xml") })" />
      
-      Homepage feed links:
-        <SidebarRssLinks Links="@(new[] {
-            new RssLink("RSS Feed - All Content", "/all/feed.xml")
-        })" />
-   ============================================================================ *@
+     Homepage with newsletter modal button:
+       <SidebarRssLinks Links="@links" OnNewsletterClick="@OpenModal" />
+       where links contains: new RssLink("Newsletter", null)
+============================================================================ *@
 
 <div class="sidebar-section">
     <h2 class="sidebar-h2">Subscribe</h2>
@@ -20,20 +19,20 @@
         @foreach (var link in Links)
         {
             <li>
-                <a href="@link.Url" target="_blank" rel="noopener noreferrer" class="sidebar-link-button">
-                    @if (link.Icon != null)
-                    {
-                        @link.Icon
-                    }
-                    else
-                    {
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path
-                                d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z" />
-                        </svg>
-                    }
-                    @link.Title
-                </a>
+                @if (link.Url is null && OnNewsletterClick.HasDelegate)
+                {
+                    <button type="button" class="sidebar-link-button" @onclick="OnNewsletterClick">
+                        @GetIcon(link)
+                        @link.Title
+                    </button>
+                }
+                else if (link.Url is not null)
+                {
+                    <a href="@link.Url" target="_blank" rel="noopener noreferrer" class="sidebar-link-button">
+                        @GetIcon(link)
+                        @link.Title
+                    </a>
+                }
             </li>
         }
     </ul>
@@ -43,5 +42,30 @@
     [Parameter, EditorRequired]
     public required IEnumerable<RssLink> Links { get; set; }
 
-    public record RssLink(string Title, string Url, RenderFragment? Icon = null);
+    /// <summary>
+    /// Callback invoked when a newsletter link (Url = null) is clicked.
+    /// Used to open the NewsletterModal from the parent page.
+    /// </summary>
+    [Parameter]
+    public EventCallback OnNewsletterClick { get; set; }
+
+    public record RssLink(string Title, string? Url, RenderFragment? Icon = null);
+
+    private static RenderFragment DefaultRssIcon => @<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z" />
+    </svg>;
+
+    private static RenderFragment NewsletterIcon => @<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+    </svg>;
+
+    private static RenderFragment GetIcon(RssLink link)
+    {
+        if (link.Icon is not null)
+        {
+            return link.Icon;
+        }
+
+        return link.Url is null ? NewsletterIcon : DefaultRssIcon;
+    }
 }

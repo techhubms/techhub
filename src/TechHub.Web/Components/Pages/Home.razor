@@ -12,6 +12,8 @@
     ContentType="SeoMetaTags.SeoContentType.Website"
     RssFeedUrl="/all/feed.xml" />
 
+<NewsletterModal @ref="_newsletterModal" />
+
 <main class="page-with-sidebar">
     @* Sidebar (Left Column) *@
     <aside class="sidebar">
@@ -83,7 +85,7 @@
         </MobileSidebarPanel>
         </MobileSidebarToolbar>
         <div class="sidebar-desktop-only">
-        <SidebarRssLinks Links="@rssLinks" />
+        <SidebarRssLinks Links="@rssLinks" OnNewsletterClick="@OpenNewsletterModal" />
         </div>
     </aside>
 
@@ -109,22 +111,19 @@
     [Inject] public required PersistentComponentState ApplicationState { get; set; }
 
     private PersistingComponentStateSubscription? _persistSubscription;
+    private NewsletterModal? _newsletterModal;
 
     private static readonly SidebarRssLinks.RssLink[] rssLinks =
     [
         new("RSS Feed - All Content", "/all/feed.xml"),
-        new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
+        new("Newsletter", null)
     ];
 
     private IEnumerable<TechHub.Core.Models.Section>? sections;
     private IEnumerable<TechHub.Core.Models.ContentItem>? latestRoundups;
     private IEnumerable<TechHub.Core.Models.ContentItem>? latestItems;
 
-    private static RenderFragment GetNewsletterIcon() => @<svg width="16" height="16" viewBox="0 0 24 24"
-            fill="currentColor" aria-hidden="true">
-            <path
-                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-    </svg>;
+    private void OpenNewsletterModal() => _newsletterModal?.Open();
 
     private string GetItemSectionTitle(string sectionName)
     {

@@ -1,0 +1,201 @@
+/* NewsletterModal.razor.css — scoped styles for newsletter subscription modal */
+
+.newsletter-backdrop {
+    position: fixed;
+    inset: 0;
+    background: var(--color-black-backdrop);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: var(--spacing-2);
+}
+
+.newsletter-modal {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: min(480px, 100%);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-2) var(--spacing-3);
+    border-bottom: 1px solid var(--color-border-default);
+    gap: var(--spacing-2);
+}
+
+.newsletter-modal-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.newsletter-modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    padding: 0 var(--spacing-1);
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast);
+
+    &:hover {
+        color: var(--color-text-primary);
+    }
+}
+
+.newsletter-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--spacing-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+/* Coming-soon notice */
+
+.newsletter-coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-2);
+    text-align: center;
+    padding: var(--spacing-3) 0;
+}
+
+.newsletter-coming-soon-icon {
+    color: var(--color-purple-medium);
+    opacity: 0.8;
+}
+
+.newsletter-coming-soon-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-emphasis);
+    margin: 0;
+}
+
+.newsletter-coming-soon-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+    max-width: 320px;
+}
+
+/* Form */
+
+.newsletter-intro {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.newsletter-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.newsletter-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.newsletter-email-input {
+    width: 100%;
+    padding: var(--spacing-1) var(--spacing-2);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-default);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-family-base);
+    box-sizing: border-box;
+    transition: border-color var(--transition-fast);
+
+    &:focus {
+        outline: none;
+        border-color: var(--color-purple-medium);
+        box-shadow: 0 0 0 2px var(--color-purple-bg-subtle);
+    }
+}
+
+/* Topics fieldset */
+
+.newsletter-topics-fieldset {
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2);
+    background: var(--color-bg-emphasis);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.newsletter-topics-fieldset legend {
+    padding: 0 var(--spacing-1);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.newsletter-topic-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    padding: var(--spacing-1) var(--spacing-1);
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-fast);
+
+    &:hover {
+        background: var(--color-bg-hover-subtle);
+    }
+
+    input[type="checkbox"] {
+        accent-color: var(--color-purple-medium);
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+}
+
+.newsletter-topic-all {
+    font-weight: var(--font-weight-medium);
+}
+
+.newsletter-topic-desc {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.newsletter-topics-divider {
+    height: 1px;
+    background: var(--color-border-default);
+    margin: var(--spacing-1) 0;
+}
+
+/* Footer */
+
+.newsletter-modal-footer {
+    display: flex;
+    gap: var(--spacing-1);
+    padding-top: var(--spacing-2);
+}

@@ -15,6 +15,7 @@ using TechHub.Core.Models;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
+using TechHub.Web.Configuration;
 using TechHub.Web.Middleware;
 using TechHub.Web.Services;
 using TechHub.Web.Telemetry;
@@ -163,6 +164,10 @@ builder.Services.AddScoped<ContentGridStateCache>();
 
 // Domain-based branding (tech.xebia.ms vs tech.hub.ms)
 builder.Services.AddScoped<BrandingService>();
+
+// Newsletter subscription settings (Mailchimp interest groups per topic)
+builder.Services.Configure<NewsletterSettings>(
+    builder.Configuration.GetSection(NewsletterSettings.SectionName));
 
 // Configure SignalR for Blazor Server with increased timeouts for reliability
 builder.Services.AddSignalR(options =>

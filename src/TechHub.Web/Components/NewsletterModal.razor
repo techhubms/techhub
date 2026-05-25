@@ -1,0 +1,214 @@
+@using Microsoft.Extensions.Options
+@using TechHub.Web.Configuration
+@inject IOptions<NewsletterSettings> NewsletterOptions
+
+@*
+    NewsletterModal — Topic-selection newsletter subscription modal.
+
+    Shows checkboxes for each configured Mailchimp interest group (topic).
+    When NewsletterSettings.Enabled is false, displays a "coming soon" notice instead.
+
+    Form submits directly to Mailchimp's list-manage endpoint in a new tab (target="_blank")
+    to avoid CORS restrictions on the free plan.
+
+    Usage (open from a sidebar button):
+      <NewsletterModal @ref="_newsletterModal" />
+      ...
+      <button @onclick="() => _newsletterModal?.Open()">Newsletter</button>
+
+    With a pre-selected topic (section pages):
+      <NewsletterModal @ref="_newsletterModal" PreSelectedTopic="github-copilot" />
+*@
+
+@if (_isOpen)
+{
+    <div class="newsletter-backdrop"
+         @onclick="Close"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="newsletter-modal-title">
+        <div class="newsletter-modal" @onclick:stopPropagation>
+            <div class="newsletter-modal-header">
+                <h2 id="newsletter-modal-title" class="newsletter-modal-title">Subscribe to Newsletter</h2>
+                <button type="button" class="newsletter-modal-close" @onclick="Close" aria-label="Close">×</button>
+            </div>
+
+            <div class="newsletter-modal-body">
+                @if (!_settings.Enabled)
+                {
+                    <div class="newsletter-coming-soon">
+                        <svg class="newsletter-coming-soon-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                        <p class="newsletter-coming-soon-title">Newsletter coming soon!</p>
+                        <p class="newsletter-coming-soon-text">
+                            We&apos;re setting up topic-based newsletters so you can subscribe to exactly what interests you.
+                            Check back soon, or follow our RSS feeds in the meantime.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <p class="newsletter-intro">
+                        Choose the topics you want to receive updates about. You&apos;ll get a single weekly digest covering only your selected topics.
+                    </p>
+
+                    <form method="post"
+                          action="@_settings.FormActionUrl"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          @onsubmit="HandleSubmit">
+
+                        @* Mailchimp required hidden fields *@
+                        <input type="hidden" name="u" value="@_settings.UserId" />
+                        <input type="hidden" name="id" value="@_settings.ListId" />
+
+                        @* Mailchimp anti-bot honeypot field — must be empty *@
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="@($"b_{_settings.UserId}_{_settings.ListId}")" tabindex="-1" value="" autocomplete="off" />
+                        </div>
+
+                        <div class="newsletter-form-group">
+                            <label for="newsletter-email" class="newsletter-label">Email address</label>
+                            <input id="newsletter-email"
+                                   type="email"
+                                   name="EMAIL"
+                                   class="newsletter-email-input"
+                                   placeholder="you@example.com"
+                                   required
+                                   @bind="_email"
+                                   @bind:event="oninput" />
+                        </div>
+
+                        <fieldset class="newsletter-topics-fieldset">
+                            <legend class="newsletter-label">Topics</legend>
+
+                            @* Subscribe to all convenience option *@
+                            <label class="newsletter-topic-label newsletter-topic-all">
+                                <input type="checkbox"
+                                       @bind="_subscribeToAll"
+                                       @bind:after="HandleSubscribeToAllChanged" />
+                                <strong>All topics</strong>
+                                <span class="newsletter-topic-desc">Receive updates for every topic</span>
+                            </label>
+
+                            <div class="newsletter-topics-divider"></div>
+
+                            @foreach (var (slug, topic) in _settings.Topics)
+                            {
+                                var isChecked = _selectedTopics.Contains(slug);
+                                <label class="newsletter-topic-label">
+                                    @* Mailchimp group checkbox: name format is group[GroupId][GroupValue] *@
+                                    <input type="checkbox"
+                                           name="@($"group[{topic.GroupId}][{topic.GroupValue}]")"
+                                           value="@topic.GroupValue"
+                                           checked="@isChecked"
+                                           @onchange="@(e => HandleTopicChanged(slug, (bool)(e.Value ?? false)))" />
+                                    <span>@topic.Label</span>
+                                </label>
+                            }
+                        </fieldset>
+
+                        <div class="newsletter-modal-footer">
+                            <button type="submit"
+                                    class="btn"
+                                    disabled="@(!CanSubmit)">
+                                Subscribe
+                            </button>
+                            <button type="button" class="btn-secondary" @onclick="Close">Cancel</button>
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    /// <summary>
+    /// Optional section slug to pre-select when the modal opens (e.g. "github-copilot").
+    /// Ignored if the slug is not in the configured topics.
+    /// </summary>
+    [Parameter]
+    public string? PreSelectedTopic { get; set; }
+
+    private NewsletterSettings _settings = new();
+    private bool _isOpen;
+    private string _email = string.Empty;
+    private bool _subscribeToAll;
+    private readonly HashSet<string> _selectedTopics = new(StringComparer.OrdinalIgnoreCase);
+
+    private bool CanSubmit =>
+        !string.IsNullOrWhiteSpace(_email)
+        && _email.Contains('@')
+        && _selectedTopics.Count > 0;
+
+    protected override void OnInitialized()
+    {
+        _settings = NewsletterOptions.Value;
+    }
+
+    /// <summary>
+    /// Opens the modal. Call this from a parent component's button @onclick handler.
+    /// </summary>
+    public void Open()
+    {
+        _email = string.Empty;
+        _subscribeToAll = false;
+        _selectedTopics.Clear();
+
+        // Pre-select the section topic if provided and configured
+        if (!string.IsNullOrEmpty(PreSelectedTopic)
+            && _settings.Topics.ContainsKey(PreSelectedTopic))
+        {
+            _selectedTopics.Add(PreSelectedTopic);
+        }
+
+        _isOpen = true;
+        StateHasChanged();
+    }
+
+    private void Close()
+    {
+        _isOpen = false;
+    }
+
+    private void HandleSubscribeToAllChanged()
+    {
+        if (_subscribeToAll)
+        {
+            foreach (var slug in _settings.Topics.Keys)
+            {
+                _selectedTopics.Add(slug);
+            }
+        }
+        else
+        {
+            _selectedTopics.Clear();
+        }
+    }
+
+    private void HandleTopicChanged(string slug, bool isChecked)
+    {
+        if (isChecked)
+        {
+            _selectedTopics.Add(slug);
+        }
+        else
+        {
+            _selectedTopics.Remove(slug);
+            // Uncheck "all" if any individual topic is deselected
+            _subscribeToAll = false;
+        }
+
+        // Auto-check "all" when every topic is individually selected
+        _subscribeToAll = _selectedTopics.Count == _settings.Topics.Count;
+    }
+
+    private void HandleSubmit()
+    {
+        // The form submits natively via target="_blank" to Mailchimp.
+        // Close the modal after the browser opens the new tab.
+        _isOpen = false;
+    }
+}

@@ -17,6 +17,8 @@
     Breadcrumbs="@GetBreadcrumbs()"
     RssFeedUrl="@($"/{SectionName}/feed.xml")" />
 
+<NewsletterModal @ref="_newsletterModal" PreSelectedTopic="@SectionName" />
+
 <main class="page-with-sidebar">
     <aside class="sidebar">
         <SidebarToggle />
@@ -56,7 +58,9 @@
         </MobileSidebarPanel>
         </MobileSidebarToolbar>
         <div class="sidebar-desktop-only">
-        <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
+        <SidebarRssLinks
+            Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml"), new SidebarRssLinks.RssLink("Newsletter", null) })"
+            OnNewsletterClick="@OpenNewsletterModal" />
         </div>
     </aside>
 
@@ -76,6 +80,9 @@
 @code {
     [Parameter]
     public string SectionName { get; set; } = null!;
+
+    private NewsletterModal? _newsletterModal;
+    private void OpenNewsletterModal() => _newsletterModal?.Open();
 
     [Parameter]
     public string? CollectionName { get; set; }
