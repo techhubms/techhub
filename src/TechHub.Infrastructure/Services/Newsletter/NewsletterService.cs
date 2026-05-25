@@ -120,7 +120,7 @@ public sealed class NewsletterService : INewsletterService
             return false;
         }
 
-        if (!IsUnsubscribeSecretConfigured("test email"))
+        if (!IsUnsubscribeSecretConfigured("test-email"))
         {
             return false;
         }
@@ -143,7 +143,7 @@ public sealed class NewsletterService : INewsletterService
             return false;
         }
 
-        if (!IsUnsubscribeSecretConfigured("daily overview"))
+        if (!IsUnsubscribeSecretConfigured("daily-overview"))
         {
             return false;
         }

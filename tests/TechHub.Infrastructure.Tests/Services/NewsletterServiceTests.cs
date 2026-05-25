@@ -14,6 +14,7 @@ namespace TechHub.Infrastructure.Tests.Services;
 public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterServiceTests>>
 {
     private readonly DatabaseFixture<NewsletterServiceTests> _fixture;
+    private const string ShortDecodedToken = "AQ";
 
     public NewsletterServiceTests(DatabaseFixture<NewsletterServiceTests> fixture)
     {
@@ -103,8 +104,10 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         recipientCount.Should().Be(1);
     }
 
-    [Fact]
-    public async Task SendDailyOverviewAsync_WhenUnsubscribeSecretMissing_ReturnsFalseWithoutSending()
+    [Theory]
+    [InlineData("")]
+    [InlineData(" ")]
+    public async Task SendDailyOverviewAsync_WhenUnsubscribeSecretMissing_ReturnsFalseWithoutSending(string unsubscribeSecret)
     {
         const string Slug = "daily-item-newsletter-test-2026-05-21";
         var day = new DateOnly(2026, 5, 21);
@@ -133,7 +136,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             .Setup(x => x.GetAllSectionsAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync([CreateSection("ai")]);
 
-        var sut = CreateService(contentRepository.Object, emailSender.Object, unsubscribeSecret: " ");
+        var sut = CreateService(contentRepository.Object, emailSender.Object, unsubscribeSecret: unsubscribeSecret);
 
         var sent = await sut.SendDailyOverviewAsync(day, TestContext.Current.CancellationToken);
 
@@ -162,13 +165,15 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         status.Should().Be("failed");
     }
 
-    [Fact]
-    public async Task SendTestEmailAsync_WhenUnsubscribeSecretMissing_ReturnsFalseWithoutSending()
+    [Theory]
+    [InlineData("")]
+    [InlineData(" ")]
+    public async Task SendTestEmailAsync_WhenUnsubscribeSecretMissing_ReturnsFalseWithoutSending(string unsubscribeSecret)
     {
         await SeedRoundupAsync("weekly-ai-roundup-2026-05-26");
 
         var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
-        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: " ");
+        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: unsubscribeSecret);
 
         var sent = await sut.SendTestEmailAsync("weekly-ai-roundup-2026-05-26", "test@example.com", TestContext.Current.CancellationToken);
 
@@ -179,7 +184,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     [Fact]
     public void IsValidUnsubscribeToken_WithDifferentDecodedLength_ReturnsFalse()
     {
-        var isValid = NewsletterService.IsValidUnsubscribeToken("test@example.com", "AQ", "test-secret");
+        var isValid = NewsletterService.IsValidUnsubscribeToken("test@example.com", ShortDecodedToken, "test-secret");
 
         isValid.Should().BeFalse();
     }
