@@ -12,6 +12,7 @@ using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
+using TechHub.Infrastructure.Services.RoundupGeneration;
 
 namespace TechHub.Infrastructure.Services.Newsletter;
 
@@ -140,11 +141,7 @@ public sealed class NewsletterService : INewsletterService
             .ToList();
 
         var (start, end) = GetDayUtcWindow(day);
-        var itemsBySection = new Dictionary<string, IReadOnlyList<DailyItemRow>>(StringComparer.OrdinalIgnoreCase);
-        foreach (var section in sectionNames)
-        {
-            itemsBySection[section] = await GetDailyItemsForSectionAsync(section, start, end, ct);
-        }
+        var itemsBySection = await GetDailyItemsBySectionAsync(sectionNames, start, end, ct);
 
         var dailySubscribers = new List<NewsletterSubscriber>();
         var page = 1;
@@ -152,7 +149,7 @@ public sealed class NewsletterService : INewsletterService
         while (true)
         {
             var batch = await _subscriberRepository.GetSubscribersAsync(page: page, pageSize: BatchSize, ct: ct);
-            dailySubscribers.AddRange(batch.Where(s => s.DailySections.Count > 0));
+            dailySubscribers.AddRange(batch.Where(s => s.IsConfirmed && s.DailySections.Count > 0));
             if (batch.Count < BatchSize)
             {
                 break;
@@ -266,36 +263,72 @@ public sealed class NewsletterService : INewsletterService
             cancellationToken: ct));
     }
 
-    private async Task<IReadOnlyList<DailyItemRow>> GetDailyItemsForSectionAsync(
-        string sectionName,
+    private async Task<IReadOnlyDictionary<string, IReadOnlyList<DailyItemRow>>> GetDailyItemsBySectionAsync(
+        IReadOnlyList<string> sectionNames,
         DateTime startUtc,
         DateTime endUtc,
         CancellationToken ct)
     {
+        var result = sectionNames.ToDictionary(
+            sectionName => sectionName,
+            _ => (IReadOnlyList<DailyItemRow>)[],
+            StringComparer.OrdinalIgnoreCase);
+
+        if (sectionNames.Count == 0)
+        {
+            return result;
+        }
+
         const string Sql = """
+            WITH ranked AS (
+                SELECT
+                    slug AS Slug,
+                    title AS Title,
+                    collection_name AS CollectionName,
+                    primary_section_name AS SectionName,
+                    ROW_NUMBER() OVER (
+                        PARTITION BY primary_section_name
+                        ORDER BY created_at DESC
+                    ) AS RowNumber
+                FROM content_items
+                WHERE primary_section_name = ANY(@SectionNames)
+                  AND created_at >= @StartUtc
+                  AND created_at < @EndUtc
+                  AND collection_name <> 'roundups'
+            )
             SELECT
-                slug AS Slug,
-                title AS Title,
-                collection_name AS CollectionName
-            FROM content_items
-            WHERE primary_section_name = @SectionName
-              AND created_at >= @StartUtc
-              AND created_at < @EndUtc
-              AND collection_name <> 'roundups'
-            ORDER BY created_at DESC
-            LIMIT 100
+                Slug,
+                Title,
+                CollectionName,
+                SectionName
+            FROM ranked
+            WHERE RowNumber <= @PerSectionLimit
             """;
 
-        var rows = await _connection.QueryAsync<DailyItemRow>(new CommandDefinition(
+        var rows = await _connection.QueryAsync<DailyItemBySectionRow>(new CommandDefinition(
             Sql,
             new
             {
-                SectionName = sectionName,
+                SectionNames = sectionNames,
                 StartUtc = startUtc,
-                EndUtc = endUtc
+                EndUtc = endUtc,
+                PerSectionLimit = 100
             },
             cancellationToken: ct));
-        return rows.ToList();
+
+        foreach (var group in rows.GroupBy(row => row.SectionName, StringComparer.OrdinalIgnoreCase))
+        {
+            result[group.Key] = group
+                .Select(row => new DailyItemRow
+                {
+                    Slug = row.Slug,
+                    Title = row.Title,
+                    CollectionName = row.CollectionName
+                })
+                .ToList();
+        }
+
+        return result;
     }
 
     private string BuildSectionLinksHtml(RoundupRow roundup)
@@ -312,7 +345,7 @@ public sealed class NewsletterService : INewsletterService
         sb.Append("<ul style=\"padding-left:18px;margin:0;\">");
         foreach (var header in headers)
         {
-            var href = $"{baseRoundupUrl}#{BuildAnchor(header)}";
+            var href = $"{baseRoundupUrl}#{RoundupContentBuilder.BuildAnchor(header)}";
             sb.Append("<li style=\"margin:0 0 8px 0;\">");
             sb.Append($"<a href=\"{WebUtility.HtmlEncode(href)}\" style=\"color:#2563eb;text-decoration:none;\">");
             sb.Append(WebUtility.HtmlEncode(header));
@@ -466,30 +499,6 @@ public sealed class NewsletterService : INewsletterService
         return BuildAbsoluteUrl($"/newsletter/unsubscribe?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}");
     }
 
-    private static string BuildAnchor(string title)
-    {
-        var chars = new List<char>(title.Length);
-        var previousWasDash = false;
-
-        foreach (var c in title.ToLowerInvariant())
-        {
-            if (char.IsLetterOrDigit(c))
-            {
-                chars.Add(c);
-                previousWasDash = false;
-                continue;
-            }
-
-            if ((char.IsWhiteSpace(c) || c == '-' || c == '_') && !previousWasDash)
-            {
-                chars.Add('-');
-                previousWasDash = true;
-            }
-        }
-
-        return new string(chars.ToArray()).Trim('-');
-    }
-
     private static string LoadTemplate()
     {
         var assembly = Assembly.GetExecutingAssembly();
@@ -518,6 +527,14 @@ public sealed class NewsletterService : INewsletterService
         public string Slug { get; init; } = string.Empty;
         public string Title { get; init; } = string.Empty;
         public string CollectionName { get; init; } = string.Empty;
+    }
+
+    private sealed class DailyItemBySectionRow
+    {
+        public string Slug { get; init; } = string.Empty;
+        public string Title { get; init; } = string.Empty;
+        public string CollectionName { get; init; } = string.Empty;
+        public string SectionName { get; init; } = string.Empty;
     }
 
     private (DateTime startUtc, DateTime endUtc) GetDayUtcWindow(DateOnly day)

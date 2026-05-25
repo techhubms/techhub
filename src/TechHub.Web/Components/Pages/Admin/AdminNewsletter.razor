@@ -48,10 +48,13 @@
         <div class="admin-alert @(_isError ? "admin-alert-error" : "admin-alert-success")">@_message</div>
     }
 
+    @{
+        var filteredSubscribers = FilteredSubscribers;
+    }
     <div class="admin-stats-grid">
-        <div class="admin-stat-card"><div class="admin-stat-value">@FilteredSubscribers.Count</div><div class="admin-stat-label">Filtered</div></div>
-        <div class="admin-stat-card"><div class="admin-stat-value">@FilteredSubscribers.Count(s => s.IsConfirmed)</div><div class="admin-stat-label">Confirmed</div></div>
-        <div class="admin-stat-card"><div class="admin-stat-value">@FilteredSubscribers.Count(s => !s.IsConfirmed)</div><div class="admin-stat-label">Unconfirmed</div></div>
+        <div class="admin-stat-card"><div class="admin-stat-value">@filteredSubscribers.Count</div><div class="admin-stat-label">Filtered</div></div>
+        <div class="admin-stat-card"><div class="admin-stat-value">@filteredSubscribers.Count(s => s.IsConfirmed)</div><div class="admin-stat-label">Confirmed</div></div>
+        <div class="admin-stat-card"><div class="admin-stat-value">@filteredSubscribers.Count(s => !s.IsConfirmed)</div><div class="admin-stat-label">Unconfirmed</div></div>
     </div>
 
     <div class="admin-jobs-table-wrapper">
@@ -67,7 +70,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var subscriber in FilteredSubscribers)
+                @foreach (var subscriber in filteredSubscribers)
                 {
                     <tr>
                         <td class="admin-cell-mono">@subscriber.Email</td>
@@ -226,8 +229,22 @@
 
     private async Task DeleteAsync(long id)
     {
-        await Api.DeleteNewsletterSubscriberAsync(id);
-        await RefreshAsync();
+        try
+        {
+            await Api.DeleteNewsletterSubscriberAsync(id);
+            await RefreshAsync();
+            _message = "Subscriber deleted.";
+            _isError = false;
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = ex.Message;
+            _isError = true;
+        }
     }
 
     private void StartEdit(NewsletterSubscriber subscriber)

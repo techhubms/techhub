@@ -64,9 +64,14 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _sections = await Api.GetNewsletterSectionsAsync() ?? SectionCache.Sections
-            .Where(s => !string.Equals(s.Name, "all", StringComparison.OrdinalIgnoreCase))
-            .ToList();
+        try
+        {
+            _sections = await Api.GetNewsletterSectionsAsync() ?? GetFallbackSections();
+        }
+        catch (HttpRequestException)
+        {
+            _sections = GetFallbackSections();
+        }
     }
 
     private async Task SubscribeAsync()
@@ -101,4 +106,9 @@
             selections.Remove(sectionName);
         }
     }
+
+    private IReadOnlyList<Section> GetFallbackSections() =>
+        SectionCache.Sections
+            .Where(s => !string.Equals(s.Name, "all", StringComparison.OrdinalIgnoreCase))
+            .ToList();
 }

@@ -45,6 +45,9 @@ param acsConnectionString string = ''
 @description('Newsletter sender address')
 param newsletterSenderAddress string = ''
 
+@description('Key Vault secret name for Newsletter__UnsubscribeSecret. Leave empty to disable Key Vault binding.')
+param newsletterUnsubscribeSecretName string = ''
+
 @description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
 param aspNetCoreEnvironment string = 'Production'
 
@@ -78,6 +81,23 @@ var backgroundJobEnvVars = enableBackgroundJobs ? [] : [
     value: 'false'
   }
 ]
+var newsletterSecretEnvVars = empty(newsletterUnsubscribeSecretName)
+  ? []
+  : [
+      {
+        name: 'Newsletter__UnsubscribeSecret'
+        secretRef: 'newsletter-unsubscribe-secret'
+      }
+    ]
+var newsletterSecrets = empty(newsletterUnsubscribeSecretName)
+  ? []
+  : [
+      {
+        name: 'newsletter-unsubscribe-secret'
+        keyVaultUrl: '${keyVaultUri}secrets/${newsletterUnsubscribeSecretName}'
+        identity: identityId
+      }
+    ]
 var staticEnvVars = [
   {
     name: 'ASPNETCORE_ENVIRONMENT'
@@ -112,6 +132,10 @@ var staticEnvVars = [
   }
   {
     name: 'AppSettings__BaseUrl'
+    value: !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
+  }
+  {
+    name: 'Newsletter__WebsiteBaseUrl'
     value: !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
   }
   {
@@ -191,7 +215,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
           name: 'acs-connection-string'
           value: acsConnectionString
         }
-      ]
+      ] + newsletterSecrets
     }
     template: {
       revisionSuffix: revisionSuffix
@@ -203,7 +227,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
             cpu: json('0.25')
             memory: '0.5Gi'
           }
-          env: concat(staticEnvVars, corsEnvVars, backgroundJobEnvVars)
+          env: concat(staticEnvVars, newsletterSecretEnvVars, corsEnvVars, backgroundJobEnvVars)
           probes: [
             {
               type: 'startup'
