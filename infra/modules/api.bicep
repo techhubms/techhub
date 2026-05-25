@@ -38,6 +38,13 @@ param aiCategorizationEndpoint string = ''
 @description('Azure AI Foundry deployment name')
 param aiCategorizationDeploymentName string = ''
 
+@secure()
+@description('Azure Communication Services connection string')
+param acsConnectionString string = ''
+
+@description('Newsletter sender address')
+param newsletterSenderAddress string = ''
+
 @description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
 param aspNetCoreEnvironment string = 'Production'
 
@@ -127,6 +134,14 @@ var staticEnvVars = [
     name: 'AiCategorization__DeploymentName'
     value: aiCategorizationDeploymentName
   }
+  {
+    name: 'Newsletter__SenderAddress'
+    value: newsletterSenderAddress
+  }
+  {
+    name: 'Newsletter__ConnectionString'
+    secretRef: 'acs-connection-string'
+  }
 ]
 
 resource api 'Microsoft.App/containerApps@2025-07-01' = {
@@ -171,6 +186,10 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
           name: 'ghcr-token'
           keyVaultUrl: '${keyVaultUri}secrets/techhub-github-registry-token'
           identity: identityId
+        }
+        {
+          name: 'acs-connection-string'
+          value: acsConnectionString
         }
       ]
     }

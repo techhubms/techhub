@@ -56,6 +56,12 @@ param githubRegistryUsername string = 'techhubms'
 @description('GitHub username of the PAT owner for ghcr.io authentication')
 param githubRegistryAuthUsername string = githubRegistryUsername
 
+@description('Email Communication Service name')
+param emailServiceName string = 'es-techhub-prod'
+
+@description('Communication Service name')
+param communicationServiceName string = 'acs-techhub-prod'
+
 @description('Application Insights connection string override. Default (@existing) reads the value from the existing Azure resource. Set to empty string to disable telemetry (e.g. for PR preview environments).')
 param appInsightsConnectionString string = '@existing'
 
@@ -173,6 +179,16 @@ var wildcardCertIds = !empty(certEntries) ? toObject(wildcardCertIdPairs, item =
 // Container Apps
 // ============================================================================
 
+module communication './modules/communication.bicep' = {
+  scope: resourceGroup
+  name: 'communication-${deploymentSuffix}'
+  params: {
+    emailServiceName: emailServiceName
+    communicationServiceName: communicationServiceName
+    tags: prodTags
+  }
+}
+
 // API Container App
 module apiApp './modules/api.bicep' = {
   scope: resourceGroup
@@ -194,6 +210,8 @@ module apiApp './modules/api.bicep' = {
     azureAdClientId: azureAdClientId
     aiCategorizationEndpoint: openAiAccount.properties.endpoint
     aiCategorizationDeploymentName: openAiModelDeployment.name
+    acsConnectionString: communication.outputs.communicationServiceConnectionString
+    newsletterSenderAddress: communication.outputs.senderAddress
     tags: prodTags
   }
 }

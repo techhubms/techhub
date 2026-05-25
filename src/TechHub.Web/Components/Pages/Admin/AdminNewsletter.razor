@@ -1,0 +1,259 @@
+@page "/admin/newsletter"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@inject ITechHubApiClient Api
+@inherits PageComponentBase
+
+<PageTitle>Newsletter — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Newsletter</h1>
+            <p class="admin-page-subtitle">Manage subscribers, remove bot signups, and trigger sends</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn" @onclick="TriggerSendAsync" disabled="@_sending">@(_sending ? "Triggering…" : "▶ Send Newsletter")</button>
+            <button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    <div class="admin-filters">
+        <div class="admin-filter-group">
+            <label class="admin-label" for="subscriberSearch">Search</label>
+            <input id="subscriberSearch" class="admin-input" @bind="_search" @bind:event="oninput" />
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="confirmedFilter">Confirmed</label>
+            <select id="confirmedFilter" class="admin-input" @bind="_confirmedFilter">
+                <option value="">All</option>
+                <option value="true">Confirmed</option>
+                <option value="false">Unconfirmed</option>
+            </select>
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="testEmail">Test send email</label>
+            <input id="testEmail" class="admin-input" @bind="_testEmail" />
+        </div>
+        <div class="admin-filter-group">
+            <button class="btn-secondary" @onclick="TriggerTestSendAsync" disabled="@string.IsNullOrWhiteSpace(_testEmail)">▶ Test Send</button>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(_message))
+    {
+        <div class="admin-alert @(_isError ? "admin-alert-error" : "admin-alert-success")">@_message</div>
+    }
+
+    <div class="admin-stats-grid">
+        <div class="admin-stat-card"><div class="admin-stat-value">@FilteredSubscribers.Count</div><div class="admin-stat-label">Filtered</div></div>
+        <div class="admin-stat-card"><div class="admin-stat-value">@FilteredSubscribers.Count(s => s.IsConfirmed)</div><div class="admin-stat-label">Confirmed</div></div>
+        <div class="admin-stat-card"><div class="admin-stat-value">@FilteredSubscribers.Count(s => !s.IsConfirmed)</div><div class="admin-stat-label">Unconfirmed</div></div>
+    </div>
+
+    <div class="admin-jobs-table-wrapper">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Weekly sections</th>
+                    <th>Daily sections</th>
+                    <th>Confirmed</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var subscriber in FilteredSubscribers)
+                {
+                    <tr>
+                        <td class="admin-cell-mono">@subscriber.Email</td>
+                        <td>@subscriber.DisplayName</td>
+                        <td>@string.Join(", ", subscriber.WeeklySections)</td>
+                        <td>@string.Join(", ", subscriber.DailySections)</td>
+                        <td>@(subscriber.IsConfirmed ? "✓" : "✗")</td>
+                        <td>
+                            <button class="admin-link-btn" @onclick="() => StartEdit(subscriber)">Edit</button>
+                            <button class="admin-link-btn admin-link-btn-danger" @onclick="() => DeleteAsync(subscriber.Id)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="admin-section-title" style="margin-top:24px;">Send log</h2>
+    <div class="admin-jobs-table-wrapper">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>When</th>
+                    <th>Kind</th>
+                    <th>Target</th>
+                    <th>Recipients</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var log in _sendLog)
+                {
+                    <tr>
+                        <td class="admin-cell-mono">@log.SentAt.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@log.SendKind</td>
+                        <td class="admin-cell-mono">@log.TargetKey</td>
+                        <td>@log.RecipientCount</td>
+                        <td>@log.Status</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@if (_editing is not null)
+{
+    <div class="admin-modal-backdrop" @onclick="CancelEdit">
+        <div class="admin-modal" @onclick:stopPropagation>
+            <div class="admin-modal-header">
+                <h2 class="admin-modal-title">Edit subscriber</h2>
+                <button class="admin-modal-close" @onclick="CancelEdit">×</button>
+            </div>
+            <div class="admin-modal-body">
+                <div class="admin-form-grid">
+                    <div class="admin-form-group">
+                        <label class="admin-label">Display name</label>
+                        <input class="admin-input" @bind="_editDisplayName" />
+                    </div>
+                    <div class="admin-form-group">
+                        <label class="admin-label">Weekly sections (comma separated)</label>
+                        <input class="admin-input" @bind="_editWeekly" />
+                    </div>
+                    <div class="admin-form-group">
+                        <label class="admin-label">Daily sections (comma separated)</label>
+                        <input class="admin-input" @bind="_editDaily" />
+                    </div>
+                </div>
+            </div>
+            <div class="admin-modal-footer">
+                <button class="btn" @onclick="SaveEditAsync">Save</button>
+                <button class="btn-secondary" @onclick="CancelEdit">Cancel</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private IReadOnlyList<NewsletterSubscriber> _subscribers = [];
+    private IReadOnlyList<NewsletterSendLogEntry> _sendLog = [];
+    private string? _search;
+    private string? _confirmedFilter;
+    private string? _testEmail;
+    private bool _sending;
+    private string? _message;
+    private bool _isError;
+    private NewsletterSubscriber? _editing;
+    private string? _editDisplayName;
+    private string _editWeekly = string.Empty;
+    private string _editDaily = string.Empty;
+
+    private IReadOnlyList<NewsletterSubscriber> FilteredSubscribers =>
+        _subscribers
+            .Where(s => string.IsNullOrWhiteSpace(_search)
+                || s.Email.Contains(_search, StringComparison.OrdinalIgnoreCase)
+                || (s.DisplayName?.Contains(_search, StringComparison.OrdinalIgnoreCase) ?? false))
+            .Where(s => _confirmedFilter switch
+            {
+                "true" => s.IsConfirmed,
+                "false" => !s.IsConfirmed,
+                _ => true
+            })
+            .ToList();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshAsync();
+    }
+
+    private async Task RefreshAsync()
+    {
+        _subscribers = await Api.GetNewsletterSubscribersAsync();
+        _sendLog = await Api.GetNewsletterSendLogAsync();
+    }
+
+    private async Task TriggerSendAsync()
+    {
+        try
+        {
+            _sending = true;
+            _message = null;
+            await Api.TriggerNewsletterAsync();
+            _message = "Newsletter send triggered.";
+            _isError = false;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = ex.Message;
+            _isError = true;
+        }
+        finally
+        {
+            _sending = false;
+        }
+    }
+
+    private async Task TriggerTestSendAsync()
+    {
+        if (string.IsNullOrWhiteSpace(_testEmail))
+        {
+            return;
+        }
+
+        await Api.TriggerNewsletterTestSendAsync(_testEmail.Trim());
+        _message = "Test send triggered.";
+        _isError = false;
+    }
+
+    private async Task DeleteAsync(long id)
+    {
+        await Api.DeleteNewsletterSubscriberAsync(id);
+        await RefreshAsync();
+    }
+
+    private void StartEdit(NewsletterSubscriber subscriber)
+    {
+        _editing = subscriber;
+        _editDisplayName = subscriber.DisplayName;
+        _editWeekly = string.Join(", ", subscriber.WeeklySections);
+        _editDaily = string.Join(", ", subscriber.DailySections);
+    }
+
+    private void CancelEdit()
+    {
+        _editing = null;
+    }
+
+    private async Task SaveEditAsync()
+    {
+        if (_editing is null)
+        {
+            return;
+        }
+
+        var weekly = ParseSections(_editWeekly);
+        var daily = ParseSections(_editDaily);
+        await Api.UpdateNewsletterSubscriberAsync(_editing.Id, _editDisplayName, weekly, daily);
+        _editing = null;
+        await RefreshAsync();
+    }
+
+    private static IReadOnlyList<string> ParseSections(string? value) =>
+        string.IsNullOrWhiteSpace(value)
+            ? []
+            : value.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .Select(x => x.ToLowerInvariant())
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .ToList();
+}

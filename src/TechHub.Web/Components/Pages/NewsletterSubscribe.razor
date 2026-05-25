@@ -1,0 +1,104 @@
+@page "/newsletter/subscribe"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@inject ITechHubApiClient Api
+@inject SectionCache SectionCache
+@inherits PageComponentBase
+
+<PageTitle>Newsletter Subscribe — TechHub</PageTitle>
+
+<main class="content-page">
+    <article class="content-detail">
+        <header class="content-header">
+            <h1 class="content-title">Subscribe to TechHub newsletters</h1>
+        </header>
+
+        <div class="admin-form-grid" style="max-width:800px;">
+            <div class="admin-form-group">
+                <label class="admin-label">Email</label>
+                <input class="admin-input" @bind="_email" />
+            </div>
+            <div class="admin-form-group">
+                <label class="admin-label">Display name (optional)</label>
+                <input class="admin-input" @bind="_displayName" />
+            </div>
+        </div>
+
+        <h2 class="admin-section-title">Weekly roundup per section</h2>
+        @foreach (var section in _sections)
+        {
+            <label class="admin-label" style="display:block;">
+                <input type="checkbox" checked="@_weeklySelections.Contains(section.Name)" @onchange="(e) => Toggle(_weeklySelections, section.Name, e)" />
+                @section.Title
+            </label>
+        }
+
+        <h2 class="admin-section-title" style="margin-top:20px;">Daily overview per section (9:00)</h2>
+        @foreach (var section in _sections)
+        {
+            <label class="admin-label" style="display:block;">
+                <input type="checkbox" checked="@_dailySelections.Contains(section.Name)" @onchange="(e) => Toggle(_dailySelections, section.Name, e)" />
+                @section.Title
+            </label>
+        }
+
+        <div style="margin-top:20px;">
+            <button class="btn" @onclick="SubscribeAsync">Subscribe</button>
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(_message))
+        {
+            <div class="admin-alert @(_error ? "admin-alert-error" : "admin-alert-success")" style="margin-top:16px;">@_message</div>
+        }
+    </article>
+</main>
+
+@code {
+    private IReadOnlyList<Section> _sections = [];
+    private string _email = string.Empty;
+    private string? _displayName;
+    private readonly HashSet<string> _weeklySelections = new(StringComparer.OrdinalIgnoreCase);
+    private readonly HashSet<string> _dailySelections = new(StringComparer.OrdinalIgnoreCase);
+    private string? _message;
+    private bool _error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _sections = await Api.GetNewsletterSectionsAsync() ?? SectionCache.Sections
+            .Where(s => !string.Equals(s.Name, "all", StringComparison.OrdinalIgnoreCase))
+            .ToList();
+    }
+
+    private async Task SubscribeAsync()
+    {
+        try
+        {
+            await Api.SubscribeNewsletterAsync(
+                _email,
+                _displayName,
+                _weeklySelections.ToList(),
+                _dailySelections.ToList());
+
+            _message = "Subscription saved. Thanks for subscribing!";
+            _error = false;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = ex.Message;
+            _error = true;
+        }
+    }
+
+    private static void Toggle(HashSet<string> selections, string sectionName, ChangeEventArgs e)
+    {
+        var isChecked = e.Value as bool? == true;
+        if (isChecked)
+        {
+            selections.Add(sectionName);
+        }
+        else
+        {
+            selections.Remove(sectionName);
+        }
+    }
+}

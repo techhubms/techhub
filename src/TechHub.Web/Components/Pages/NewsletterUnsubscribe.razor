@@ -1,0 +1,65 @@
+@page "/newsletter/unsubscribe"
+@using TechHub.Web.Services
+@inject ITechHubApiClient Api
+@inherits PageComponentBase
+
+<PageTitle>Newsletter Unsubscribe — TechHub</PageTitle>
+
+<main class="content-page">
+    <article class="content-detail">
+        <header class="content-header">
+            <h1 class="content-title">Newsletter Unsubscribe</h1>
+        </header>
+
+        @if (_loading)
+        {
+            <p>Processing your unsubscribe request…</p>
+        }
+        else
+        {
+            <p>@_message</p>
+        }
+    </article>
+</main>
+
+@code {
+    [SupplyParameterFromQuery(Name = "email")]
+    public string? Email { get; set; }
+
+    [SupplyParameterFromQuery(Name = "token")]
+    public string? Token { get; set; }
+
+    private bool _loading = true;
+    private string _message = "Something went wrong while unsubscribing.";
+    private bool _handled;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (_handled)
+        {
+            return;
+        }
+
+        _handled = true;
+        if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Token))
+        {
+            _message = "Invalid unsubscribe link.";
+            _loading = false;
+            return;
+        }
+
+        try
+        {
+            await Api.UnsubscribeNewsletterAsync(Email, Token);
+            _message = "You've been unsubscribed from the TechHub newsletter.";
+        }
+        catch (HttpRequestException)
+        {
+            _message = "Invalid or expired unsubscribe link.";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+}

@@ -272,6 +272,14 @@ internal interface ITechHubApiClient
         CancellationToken cancellationToken = default);
 
     // ================================================================
+    // Newsletter endpoints
+    // ================================================================
+
+    Task<IReadOnlyList<Section>?> GetNewsletterSectionsAsync(CancellationToken cancellationToken = default);
+    Task SubscribeNewsletterAsync(string email, string? displayName, IReadOnlyList<string> weeklySections, IReadOnlyList<string> dailySections, CancellationToken cancellationToken = default);
+    Task UnsubscribeNewsletterAsync(string email, string token, CancellationToken cancellationToken = default);
+
+    // ================================================================
     // Admin endpoints
     // ================================================================
 
@@ -286,6 +294,8 @@ internal interface ITechHubApiClient
     /// POST /api/admin/roundup/trigger
     /// </summary>
     Task TriggerRoundupGenerationAsync(CancellationToken cancellationToken = default);
+    Task TriggerNewsletterAsync(CancellationToken cancellationToken = default);
+    Task TriggerNewsletterTestSendAsync(string email, string? roundupSlug = null, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Delete an existing roundup and re-run generation for its week.
@@ -320,6 +330,19 @@ internal interface ITechHubApiClient
     Task<ContentProcessingJob?> GetProcessingJobByIdAsync(
         long id,
         CancellationToken cancellationToken = default);
+
+    Task<IReadOnlyList<NewsletterSubscriber>> GetNewsletterSubscribersAsync(
+        int page = 1,
+        int pageSize = 200,
+        string? search = null,
+        bool? confirmed = null,
+        CancellationToken cancellationToken = default);
+
+    Task UpdateNewsletterSubscriberAsync(long id, string? displayName, IReadOnlyList<string> weeklySections, IReadOnlyList<string> dailySections, CancellationToken cancellationToken = default);
+
+    Task DeleteNewsletterSubscriberAsync(long id, CancellationToken cancellationToken = default);
+
+    Task<IReadOnlyList<NewsletterSendLogEntry>> GetNewsletterSendLogAsync(int count = 100, CancellationToken cancellationToken = default);
 
     // ================================================================
     // RSS Feed config endpoints

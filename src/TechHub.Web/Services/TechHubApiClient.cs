@@ -745,6 +745,40 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    public virtual async Task<IReadOnlyList<Section>?> GetNewsletterSectionsAsync(CancellationToken cancellationToken = default)
+    {
+        var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<Section>>(
+            "/api/newsletter/sections",
+            cancellationToken);
+        return result;
+    }
+
+    public virtual async Task SubscribeNewsletterAsync(
+        string email,
+        string? displayName,
+        IReadOnlyList<string> weeklySections,
+        IReadOnlyList<string> dailySections,
+        CancellationToken cancellationToken = default)
+    {
+        var payload = new
+        {
+            Email = email,
+            DisplayName = displayName,
+            WeeklySections = weeklySections,
+            DailySections = dailySections
+        };
+
+        using var response = await _httpClient.PostAsJsonAsync("/api/newsletter/subscribe", payload, cancellationToken);
+        response.EnsureSuccessStatusCode();
+    }
+
+    public virtual async Task UnsubscribeNewsletterAsync(string email, string token, CancellationToken cancellationToken = default)
+    {
+        var payload = new { Email = email, Token = token };
+        using var response = await _httpClient.PostAsJsonAsync("/api/newsletter/unsubscribe", payload, cancellationToken);
+        response.EnsureSuccessStatusCode();
+    }
+
     // ================================================================
     // Helper methods
     // ================================================================
@@ -814,6 +848,21 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogError(ex, "Failed to trigger roundup generation");
             throw;
         }
+    }
+
+    public virtual async Task TriggerNewsletterAsync(CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsync("/api/admin/newsletter/trigger", null, cancellationToken);
+        response.EnsureSuccessStatusCode();
+    }
+
+    public virtual async Task TriggerNewsletterTestSendAsync(string email, string? roundupSlug = null, CancellationToken cancellationToken = default)
+    {
+        var url = string.IsNullOrWhiteSpace(roundupSlug)
+            ? $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}"
+            : $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}&roundupSlug={Uri.EscapeDataString(roundupSlug)}";
+        using var response = await _httpClient.PostAsync(url, null, cancellationToken);
+        response.EnsureSuccessStatusCode();
     }
 
     /// <summary>
@@ -921,6 +970,65 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogError(ex, "Failed to fetch processing job {JobId}", id);
             throw;
         }
+    }
+
+    public virtual async Task<IReadOnlyList<NewsletterSubscriber>> GetNewsletterSubscribersAsync(
+        int page = 1,
+        int pageSize = 200,
+        string? search = null,
+        bool? confirmed = null,
+        CancellationToken cancellationToken = default)
+    {
+        var query = new List<string>
+        {
+            $"page={page}",
+            $"pageSize={pageSize}"
+        };
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            query.Add($"search={Uri.EscapeDataString(search)}");
+        }
+
+        if (confirmed.HasValue)
+        {
+            query.Add($"confirmed={confirmed.Value.ToString().ToLowerInvariant()}");
+        }
+
+        var url = $"/api/admin/newsletter/subscribers?{string.Join("&", query)}";
+        var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<NewsletterSubscriber>>(url, cancellationToken);
+        return result ?? [];
+    }
+
+    public virtual async Task UpdateNewsletterSubscriberAsync(
+        long id,
+        string? displayName,
+        IReadOnlyList<string> weeklySections,
+        IReadOnlyList<string> dailySections,
+        CancellationToken cancellationToken = default)
+    {
+        var payload = new
+        {
+            DisplayName = displayName,
+            WeeklySections = weeklySections,
+            DailySections = dailySections
+        };
+        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/newsletter/subscribers/{id}", payload, cancellationToken);
+        response.EnsureSuccessStatusCode();
+    }
+
+    public virtual async Task DeleteNewsletterSubscriberAsync(long id, CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/newsletter/subscribers/{id}", cancellationToken);
+        response.EnsureSuccessStatusCode();
+    }
+
+    public virtual async Task<IReadOnlyList<NewsletterSendLogEntry>> GetNewsletterSendLogAsync(int count = 100, CancellationToken cancellationToken = default)
+    {
+        var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<NewsletterSendLogEntry>>(
+            $"/api/admin/newsletter/send-log?count={count}",
+            cancellationToken);
+        return result ?? [];
     }
 
     // ================================================================
