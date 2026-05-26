@@ -68,12 +68,53 @@ public class LoadMoreButtonTests : PlaywrightTestBase
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
-        var loadMoreBtn = Page.Locator(".load-more-btn:not([disabled])");
-        await loadMoreBtn.ClickAndExpectAsync(async () =>
+        // Under slow3g the Blazor SignalR circuit may briefly disconnect, causing a single
+        // ClickAsync to be silently dropped. We use a short-poll retry: click once, wait 5 s
+        // for the DOM to update, then re-click if it hasn't. Each re-click is safe because
+        // the Load More button is disabled while a batch is in-flight.
+        var batchCompleted = false;
+        var deadline = System.Diagnostics.Stopwatch.StartNew();
+        while (!batchCompleted && deadline.ElapsedMilliseconds < BlazorHelpers.E2ETimeout)
         {
-            await Page.WaitForConditionAsync(
+            // Already done? (count grew or end-of-content appeared since loop started)
+            var alreadyDone = await Page.EvaluateAsync<bool>(
                 $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
-        });
+            if (alreadyDone)
+            {
+                batchCompleted = true;
+                break;
+            }
+
+            // Click only when the button is enabled (not mid-load, not removed yet)
+            var buttonEnabled = await Page.EvaluateAsync<bool>(
+                "() => { var b = document.querySelector('.load-more-btn'); return b !== null && !b.disabled; }");
+            if (buttonEnabled)
+            {
+                try
+                {
+                    await Page.Locator(".load-more-btn").ClickAsync();
+                }
+                catch (PlaywrightException)
+                {
+                    // Button became disabled/disappeared between JS check and click — safe to retry
+                }
+            }
+
+            // Give Blazor up to 5 s to respond; re-poll (and re-click) if it hasn't yet
+            try
+            {
+                await Page.WaitForConditionAsync(
+                    $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null",
+                    new PageWaitForFunctionOptions { Timeout = PerBatchLoadTimeoutMs });
+                batchCompleted = true;
+            }
+            catch (TimeoutException)
+            {
+                // No response yet — outer while-loop will re-click if the button is available
+            }
+        }
+
+        batchCompleted.Should().BeTrue($"Load more click should take effect within {BlazorHelpers.E2ETimeout}ms");
 
         var newCount = await Page.Locator(".card").CountAsync();
         newCount.Should().BeGreaterThan(initialCount,
