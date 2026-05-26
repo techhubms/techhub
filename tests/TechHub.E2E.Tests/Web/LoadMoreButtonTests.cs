@@ -68,12 +68,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
-        var loadMoreBtn = Page.Locator(".load-more-btn:not([disabled])");
-        await loadMoreBtn.ClickAndExpectAsync(async () =>
-        {
-            await Page.WaitForConditionAsync(
-                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
-        });
+        await ClickAndWaitForBatchAsync(initialCount, "Load more click");
 
         var newCount = await Page.Locator(".card").CountAsync();
         newCount.Should().BeGreaterThan(initialCount,
@@ -149,53 +144,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
 
             var countBefore = await Page.Locator(".card").CountAsync();
 
-            // Under slow3g the Blazor SignalR circuit may briefly disconnect, causing a single
-            // ClickAsync to be silently dropped. We use a short-poll retry: click once, wait 5 s
-            // for the DOM to update, then re-click if it hasn't. Each re-click is safe because
-            // the Load More button is disabled while a batch is in-flight.
-            var batchCompleted = false;
-            var deadline = System.Diagnostics.Stopwatch.StartNew();
-            while (!batchCompleted && deadline.ElapsedMilliseconds < BlazorHelpers.E2ETimeout)
-            {
-                // Already done? (count grew or end-of-content appeared since loop started)
-                var alreadyDone = await Page.EvaluateAsync<bool>(
-                    $"() => document.querySelectorAll('.card').length > {countBefore} || document.querySelector('.end-of-content') !== null");
-                if (alreadyDone)
-                {
-                    batchCompleted = true;
-                    break;
-                }
-
-                // Click only when the button is enabled (not mid-load, not removed yet)
-                var buttonEnabled = await Page.EvaluateAsync<bool>(
-                    "() => { var b = document.querySelector('.load-more-btn'); return b !== null && !b.disabled; }");
-                if (buttonEnabled)
-                {
-                    try
-                    {
-                        await Page.Locator(".load-more-btn").ClickAsync();
-                    }
-                    catch (PlaywrightException)
-                    {
-                        // Button became disabled/disappeared between JS check and click — safe to retry
-                    }
-                }
-
-                // Give Blazor up to 5 s to respond; re-poll (and re-click) if it hasn't yet
-                try
-                {
-                    await Page.WaitForConditionAsync(
-                        $"() => document.querySelectorAll('.card').length > {countBefore} || document.querySelector('.end-of-content') !== null",
-                        new PageWaitForFunctionOptions { Timeout = PerBatchLoadTimeoutMs });
-                    batchCompleted = true;
-                }
-                catch (TimeoutException)
-                {
-                    // No response yet — outer while-loop will re-click if the button is available
-                }
-            }
-
-            batchCompleted.Should().BeTrue($"batch {i + 1} should load within {BlazorHelpers.E2ETimeout}ms");
+            await ClickAndWaitForBatchAsync(countBefore, $"batch {i + 1}");
         }
 
         var endOfContent = Page.Locator(".end-of-content");
@@ -302,4 +251,73 @@ public class LoadMoreButtonTests : PlaywrightTestBase
             (object)500.0,
             onTimeout: "() => JSON.stringify({scrollY: window.scrollY, savedPositions: window.__savedScrollPositions})");
     }
+
+    // ============================================================================
+    // HELPERS
+    // ============================================================================
+
+    /// <summary>
+    /// Clicks the Load more button and waits for the batch to complete (card count
+    /// increases or .end-of-content appears), retrying if Blazor's SignalR circuit
+    /// drops the first click. Each retry is safe: the button is disabled while a
+    /// batch is in-flight, so clicking it more than once never loads a duplicate batch.
+    /// </summary>
+    /// <param name="countBefore">Card count before this batch.</param>
+    /// <param name="batchLabel">Short label used in the assertion failure message.</param>
+    private async Task ClickAndWaitForBatchAsync(int countBefore, string batchLabel)
+    {
+        var batchCompleted = false;
+        var deadline = System.Diagnostics.Stopwatch.StartNew();
+        while (!batchCompleted && deadline.ElapsedMilliseconds < BlazorHelpers.E2ETimeout)
+        {
+            // Already done? (count grew or end-of-content appeared since loop started)
+            var alreadyDone = await Page.EvaluateAsync<bool>(
+                $"() => document.querySelectorAll('.card').length > {countBefore} || document.querySelector('.end-of-content') !== null");
+            if (alreadyDone)
+            {
+                batchCompleted = true;
+                break;
+            }
+
+            // Click only when the button is enabled (not mid-load, not removed yet)
+            var buttonEnabled = await Page.EvaluateAsync<bool>(
+                "() => { var b = document.querySelector('.load-more-btn'); return b !== null && !b.disabled; }");
+            if (buttonEnabled)
+            {
+                try
+                {
+                    await Page.Locator(".load-more-btn").ClickAsync();
+                }
+                catch (PlaywrightException ex) when (IsTransientClickException(ex))
+                {
+                    // Button became disabled/disappeared between JS check and click — safe to retry
+                }
+            }
+
+            // Give Blazor up to 5 s to respond; re-poll (and re-click) if it hasn't yet
+            try
+            {
+                await Page.WaitForConditionAsync(
+                    $"() => document.querySelectorAll('.card').length > {countBefore} || document.querySelector('.end-of-content') !== null",
+                    new PageWaitForFunctionOptions { Timeout = PerBatchLoadTimeoutMs });
+                batchCompleted = true;
+            }
+            catch (TimeoutException)
+            {
+                // No response yet — outer while-loop will re-click if the button is available
+            }
+        }
+
+        batchCompleted.Should().BeTrue($"{batchLabel} should load within {BlazorHelpers.E2ETimeout}ms");
+    }
+
+    /// <summary>
+    /// Returns true for PlaywrightExceptions that represent a transient button state
+    /// (disabled or detached between the JS enabled-check and the actual click).
+    /// All other exceptions are treated as real failures and should be rethrown.
+    /// </summary>
+    private static bool IsTransientClickException(PlaywrightException ex) =>
+        ex.Message.Contains("disabled", StringComparison.OrdinalIgnoreCase) ||
+        ex.Message.Contains("detached", StringComparison.OrdinalIgnoreCase) ||
+        ex.Message.Contains("not attached", StringComparison.OrdinalIgnoreCase);
 }
