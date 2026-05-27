@@ -104,8 +104,10 @@ export async function initMermaid() {
     try {
         // Load library only once. loadScript handles per-URL retries with exponential
         // backoff and transparently falls back to the next CDN if the primary fails.
+        // retries:1 caps worst-case load time at 2 CDNs × (2×10 s + 0.5 s) ≈ 41 s,
+        // safely within the 60 s E2ETimeout (default retries:2 would reach 63 s).
         if (!loaded.mermaid) {
-            await loadScript(CDN.mermaid.cdnUrls ?? CDN.mermaid.cdnUrl);
+            await loadScript(CDN.mermaid.cdnUrls ?? CDN.mermaid.cdnUrl, { retries: 1 });
             loaded.mermaid = true;
 
             const config = {
