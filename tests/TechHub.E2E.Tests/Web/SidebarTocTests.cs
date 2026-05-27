@@ -316,8 +316,10 @@ public class SidebarTocTests : PlaywrightTestBase
         // - SRI integrity errors for highlight.js (CDN resources that work despite errors)
         // - Ad-blocker related errors (ERR_CONNECTION_REFUSED, ERR_ADDRESS_INVALID - blocked by DNS-level ad blockers)
         // - Permissions policy violations for features not enabled (e.g. compute-pressure used by third-party scripts)
-        // - Blazor SignalR WebSocket 404s during rolling deployments: when a new revision is
+        // - Blazor SignalR WebSocket failures during rolling deployments: when a new revision is
         //   deployed while the test runs, the old circuit ID is gone and Blazor briefly reconnects.
+        //   These errors surface as "_blazor" 404s OR as "WebSocket failed to connect" / "sticky sessions"
+        //   messages emitted by the Blazor transport layer (no "_blazor" URL present in those).
         //   The deployment script verifies sticky sessions and waits for the new version before
         //   E2E tests run, but this filter acts as defense-in-depth for residual race conditions.
         var significantErrors = consoleErrors
@@ -326,7 +328,7 @@ public class SidebarTocTests : PlaywrightTestBase
             .Where(e => !e.Contains("ERR_ADDRESS_INVALID"))
             .Where(e => !e.Contains("ERR_NAME_NOT_RESOLVED"))
             .Where(e => !e.Contains("Permissions policy violation"))
-            .Where(e => !(e.Contains("_blazor") && (e.Contains("404") || e.Contains("WebSocket failed to connect") || e.Contains("sticky sessions"))))
+            .Where(e => !(e.Contains("WebSocket failed to connect") || e.Contains("sticky sessions") || (e.Contains("_blazor") && e.Contains("404"))))
             .ToList();
 
         significantErrors.Should().BeEmpty($"Expected no console errors on {url}, but found: {string.Join(", ", significantErrors)}");
