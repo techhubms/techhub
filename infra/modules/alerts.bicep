@@ -39,6 +39,8 @@ var severityMedium = 2
 //                   drop the WebSocket before the server can respond. Always client-side.
 //   HTTP 499      — client closed the connection before the server finished responding.
 //                   Unactionable; spikes during outages are captured by availability tests.
+// Scoped to the App Insights resource (not the Log Analytics workspace) so that the
+// 'requests' table is always available during ARM KQL schema validation.
 resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-preview' = {
   name: 'alert-${environmentName}-failed-requests'
   location: location
@@ -50,7 +52,7 @@ resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-
     enabled: true
     evaluationFrequency: 'PT5M'
     windowSize: 'PT15M'
-    scopes: [logAnalyticsWorkspaceId]
+    scopes: [appInsightsId]
     criteria: {
       allOf: [
         {
