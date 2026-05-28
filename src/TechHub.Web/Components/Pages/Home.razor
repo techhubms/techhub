@@ -37,7 +37,7 @@
                                target="@roundup.GetTarget()"
                                rel="@roundup.GetRel()"
                                aria-label="@roundup.GetAriaLabel()">
-                                <span class="sidebar-content-button-title">@roundup.Title</span>
+                                <span class="sidebar-content-button-title">@StripRoundupPrefix(roundup.Title)</span>
                                 <span class="sidebar-content-button-meta">
                                     <span class="sidebar-item-section">@GetItemSectionTitle(roundup.PrimarySectionName)</span>
                                     <span class="sidebar-content-button-meta-separator">•</span>
@@ -217,4 +217,10 @@ ErrorService.HandleError(ex, Navigation, Logger);
     }
 
     private static string FormatDateShort(long epochSeconds) => DateHelper.FormatDateRelative(epochSeconds);
+
+    private static string StripRoundupPrefix(string title)
+    {
+        var colonIndex = title.IndexOf(": ", StringComparison.Ordinal);
+        return colonIndex >= 0 ? title[(colonIndex + 2)..] : title;
+    }
 }
