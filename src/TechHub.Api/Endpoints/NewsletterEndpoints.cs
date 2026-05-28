@@ -40,6 +40,14 @@ public static class NewsletterEndpoints
             .Produces(StatusCodes.Status400BadRequest)
             .Produces(StatusCodes.Status404NotFound);
 
+        publicGroup.MapGet("/confirm", ConfirmAsync)
+            .WithName("NewsletterConfirm")
+            .WithSummary("Confirm a newsletter subscription")
+            .WithDescription("Confirms a pending newsletter subscription using the token sent by email.")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
         var adminGroup = app.MapGroup("/api/admin/newsletter")
             .WithTags("Admin")
             .RequireAuthorization("AdminOnly")
@@ -100,6 +108,7 @@ public static class NewsletterEndpoints
         NewsletterSubscribeRequest request,
         IContentRepository contentRepository,
         INewsletterSubscriberRepository subscriberRepository,
+        INewsletterService newsletterService,
         CancellationToken ct)
     {
         var email = request.Email?.Trim().Sanitize() ?? string.Empty;
@@ -129,14 +138,39 @@ public static class NewsletterEndpoints
             return Results.BadRequest("Select at least one valid weekly or daily section.");
         }
 
-        var id = await subscriberRepository.UpsertSubscriberAsync(
+        var (id, needsConfirmation) = await subscriberRepository.UpsertSubscriberAsync(
             email,
             displayName,
             normalizedWeekly,
             normalizedDaily,
             ct);
 
-        return Results.Ok(new { id, message = "Subscribed" });
+        if (needsConfirmation)
+        {
+            await newsletterService.SendConfirmationEmailAsync(email, ct);
+        }
+
+        return Results.Ok(new { id, needsConfirmation, message = needsConfirmation ? "Check your inbox to confirm your subscription." : "Subscribed" });
+    }
+
+    private static async Task<IResult> ConfirmAsync(
+        [FromQuery] string? email,
+        [FromQuery] string? token,
+        INewsletterService newsletterService,
+        CancellationToken ct)
+    {
+        email = email?.Trim().Sanitize() ?? string.Empty;
+        token = token?.Trim().Sanitize() ?? string.Empty;
+
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(token))
+        {
+            return Results.BadRequest("Email and token are required.");
+        }
+
+        var confirmed = await newsletterService.ConfirmSubscriberAsync(email, token, ct);
+        return confirmed
+            ? Results.Ok(new { message = "Your subscription is confirmed." })
+            : Results.BadRequest("Invalid or expired confirmation link.");
     }
 
     private static async Task<IResult> UnsubscribeAsync(

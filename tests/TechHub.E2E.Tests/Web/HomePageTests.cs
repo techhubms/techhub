@@ -51,9 +51,10 @@ public class HomePageTests : PlaywrightTestBase
         var newsletterLink = Page.Locator("a:has-text('newsletter')");
         await newsletterLink.AssertElementVisibleAsync();
 
-        // Should link to mailchimp
+        // Should link to internal subscribe page (href check)
         var href = await newsletterLink.GetHrefAsync();
-        href.Should().Contain("mailchi.mp");
+        href.Should().Contain("/newsletter/subscribe",
+            "newsletter link should point to the internal subscribe page, not an external URL");
     }
 
     // General Sidebar Tests

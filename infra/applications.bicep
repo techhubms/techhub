@@ -56,17 +56,14 @@ param githubRegistryUsername string = 'techhubms'
 @description('GitHub username of the PAT owner for ghcr.io authentication')
 param githubRegistryAuthUsername string = githubRegistryUsername
 
-@description('Email Communication Service name')
-param emailServiceName string = 'es-techhub-prod'
-
-@description('Communication Service name')
-param communicationServiceName string = 'acs-techhub-prod'
-
 @description('Application Insights connection string override. Default (@existing) reads the value from the existing Azure resource. Set to empty string to disable telemetry (e.g. for PR preview environments).')
 param appInsightsConnectionString string = '@existing'
 
 @description('Google Analytics Measurement ID (e.g. G-XXXXXXXXXX). Set to empty string to disable GA telemetry for PR preview environments.')
 param googleAnalyticsMeasurementId string = 'G-95LLB67KJV'
+
+@description('Key Vault secret name for Newsletter ACS endpoint URL. Populated by Deploy-Infrastructure.ps1 via Sync-KeyVaultSecrets.ps1.')
+param acsEndpointSecretName string = 'techhub-prod-newsletter-acs-endpoint'
 
 @description('Common tags applied to all resources managed by this template')
 param commonTags object = {
@@ -179,16 +176,6 @@ var wildcardCertIds = !empty(certEntries) ? toObject(wildcardCertIdPairs, item =
 // Container Apps
 // ============================================================================
 
-module communication './modules/communication.bicep' = {
-  scope: resourceGroup
-  name: 'communication-${deploymentSuffix}'
-  params: {
-    emailServiceName: emailServiceName
-    communicationServiceName: communicationServiceName
-    tags: prodTags
-  }
-}
-
 // API Container App
 module apiApp './modules/api.bicep' = {
   scope: resourceGroup
@@ -210,8 +197,8 @@ module apiApp './modules/api.bicep' = {
     azureAdClientId: azureAdClientId
     aiCategorizationEndpoint: openAiAccount.properties.endpoint
     aiCategorizationDeploymentName: openAiModelDeployment.name
-    acsConnectionString: communication.outputs.communicationServiceConnectionString
-    newsletterSenderAddress: communication.outputs.senderAddress
+    acsEndpointSecretName: acsEndpointSecretName
+    acsSenderAddressSecretName: 'techhub-prod-acs-sender-address'
     tags: prodTags
   }
 }

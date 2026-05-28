@@ -117,11 +117,13 @@ public sealed class NewsletterService : INewsletterService
         var roundup = await GetRoundupBySlugAsync(roundupSlug, ct);
         if (roundup is null)
         {
+            await _subscriberRepository.LogSendAsync("test-send", roundupSlug, 0, "failed", $"Roundup '{roundupSlug}' not found", ct);
             return false;
         }
 
         if (!IsUnsubscribeSecretConfigured("test-email"))
         {
+            await _subscriberRepository.LogSendAsync("test-send", roundupSlug, 0, "failed", "Unsubscribe secret is not configured", ct);
             return false;
         }
 
@@ -130,7 +132,15 @@ public sealed class NewsletterService : INewsletterService
         var unsubscribeUrl = BuildUnsubscribeUrl(recipientEmail);
         var html = RenderRoundupTemplate(roundup.Title, roundup.Introduction, sectionLinksHtml, fullRoundupUrl, unsubscribeUrl);
         var text = BuildRoundupPlainText(roundup, fullRoundupUrl, unsubscribeUrl);
-        return await SendEmailAsync(recipientEmail, $"[Test] {roundup.Title}", html, text, ct);
+        var sent = await SendEmailAsync(recipientEmail, $"[Test] {roundup.Title}", html, text, ct);
+        await _subscriberRepository.LogSendAsync(
+            "test-send",
+            roundupSlug,
+            sent ? 1 : 0,
+            sent ? "sent" : "failed",
+            sent ? null : $"Delivery failed to {recipientEmail}",
+            ct);
+        return sent;
     }
 
     public async Task<bool> SendDailyOverviewAsync(DateOnly day, CancellationToken ct = default)
@@ -226,6 +236,56 @@ public sealed class NewsletterService : INewsletterService
         return sent;
     }
 
+    public async Task<bool> SendConfirmationEmailAsync(string email, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+
+        if (string.IsNullOrWhiteSpace(_options.UnsubscribeSecret))
+        {
+            _logger.LogError("Newsletter unsubscribe secret is not configured; skipping confirmation email");
+            return false;
+        }
+
+        var confirmUrl = BuildConfirmUrl(email);
+        var html = $"""
+            <html><body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
+              <h2>Confirm your TechHub newsletter subscription</h2>
+              <p>Click the button below to confirm your subscription. If you did not sign up, you can safely ignore this email.</p>
+              <p><a href="{WebUtility.HtmlEncode(confirmUrl)}" style="display:inline-block;padding:10px 20px;background:#7c3aed;color:#fff;text-decoration:none;border-radius:6px;">Confirm subscription</a></p>
+              <p style="color:#6b7280;font-size:0.875rem;">Or copy this link into your browser:<br>{WebUtility.HtmlEncode(confirmUrl)}</p>
+            </body></html>
+            """;
+        var text = $"""
+            Confirm your TechHub newsletter subscription
+
+            Click the link below to confirm your subscription.
+            If you did not sign up, you can safely ignore this email.
+
+            {confirmUrl}
+            """;
+
+        return await SendEmailAsync(email, "Confirm your TechHub newsletter subscription", html, text, ct);
+    }
+
+    public async Task<bool> ConfirmSubscriberAsync(string email, string token, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+        ArgumentNullException.ThrowIfNull(token);
+
+        var secret = _options.UnsubscribeSecret;
+        if (string.IsNullOrWhiteSpace(secret))
+        {
+            return false;
+        }
+
+        if (!IsValidConfirmToken(email, token, secret))
+        {
+            return false;
+        }
+
+        return await _subscriberRepository.ConfirmSubscriberAsync(email, ct);
+    }
+
     public static string BuildUnsubscribeToken(string email, string secret)
     {
         ArgumentNullException.ThrowIfNull(email);
@@ -239,6 +299,46 @@ public sealed class NewsletterService : INewsletterService
         using var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(secret));
         var hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(normalizedEmail));
         return WebEncoders.Base64UrlEncode(hash);
+    }
+
+    public static string BuildConfirmToken(string email, string secret)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+        ArgumentNullException.ThrowIfNull(secret);
+        if (string.IsNullOrWhiteSpace(secret))
+        {
+            throw new ArgumentException("Newsletter secret is required.", nameof(secret));
+        }
+
+        var normalizedEmail = email.Trim().ToLowerInvariant();
+        using var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(secret));
+        var hash = hmac.ComputeHash(Encoding.UTF8.GetBytes("confirm:" + normalizedEmail));
+        return WebEncoders.Base64UrlEncode(hash);
+    }
+
+    public static bool IsValidConfirmToken(string email, string token, string secret)
+    {
+        if (string.IsNullOrWhiteSpace(token))
+        {
+            return false;
+        }
+
+        try
+        {
+            var expectedToken = BuildConfirmToken(email, secret);
+            var expectedBytes = WebEncoders.Base64UrlDecode(expectedToken);
+            var tokenBytes = WebEncoders.Base64UrlDecode(token);
+            if (expectedBytes.Length != tokenBytes.Length)
+            {
+                return false;
+            }
+
+            return CryptographicOperations.FixedTimeEquals(expectedBytes, tokenBytes);
+        }
+        catch (FormatException)
+        {
+            return false;
+        }
     }
 
     public static bool IsValidUnsubscribeToken(string email, string token, string secret)
@@ -524,6 +624,12 @@ public sealed class NewsletterService : INewsletterService
     {
         var token = BuildUnsubscribeToken(email, _options.UnsubscribeSecret);
         return BuildAbsoluteUrl($"/newsletter/unsubscribe?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}");
+    }
+
+    private string BuildConfirmUrl(string email)
+    {
+        var token = BuildConfirmToken(email, _options.UnsubscribeSecret);
+        return BuildAbsoluteUrl($"/newsletter/confirm?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}");
     }
 
     private bool IsUnsubscribeSecretConfigured(string operationName)

@@ -1,0 +1,65 @@
+@page "/newsletter/confirm"
+@using TechHub.Web.Services
+@inject ITechHubApiClient Api
+@inherits PageComponentBase
+
+<PageTitle>Newsletter Confirm — TechHub</PageTitle>
+
+<main class="content-page">
+    <article class="content-detail">
+        <header class="content-header">
+            <h1 class="content-title">Newsletter Subscription</h1>
+        </header>
+
+        @if (_loading)
+        {
+            <p>Confirming your subscription…</p>
+        }
+        else
+        {
+            <p>@_message</p>
+        }
+    </article>
+</main>
+
+@code {
+    [SupplyParameterFromQuery(Name = "email")]
+    public string? Email { get; set; }
+
+    [SupplyParameterFromQuery(Name = "token")]
+    public string? Token { get; set; }
+
+    private bool _loading = true;
+    private string _message = "Something went wrong while confirming your subscription.";
+    private bool _handled;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (_handled)
+        {
+            return;
+        }
+
+        _handled = true;
+        if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Token))
+        {
+            _message = "Invalid confirmation link.";
+            _loading = false;
+            return;
+        }
+
+        try
+        {
+            await Api.ConfirmNewsletterAsync(Email, Token);
+            _message = "Your subscription is confirmed. Welcome to TechHub newsletters!";
+        }
+        catch (HttpRequestException)
+        {
+            _message = "Invalid or expired confirmation link.";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+}

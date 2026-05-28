@@ -17,7 +17,7 @@
     - GoDaddy CNAME records configured (see docs/wildcard-certificates.md)
 
 .PARAMETER KeyVaultName
-    Azure Key Vault name. Defaults to 'kv-techhub-shared'.
+    Azure Key Vault name. Defaults to 'kv-techhub-prod'.
 
 .PARAMETER ResourceGroup
     Resource group containing the ACME DNS zone. Defaults to 'rg-techhub-shared'.
@@ -48,7 +48,7 @@ param(
     [string]$Email,
 
     [Parameter(Mandatory = $false)]
-    [string]$KeyVaultName = 'kv-techhub-shared',
+    [string]$KeyVaultName = 'kv-techhub-prod',
 
     [Parameter(Mandatory = $false)]
     [string]$ResourceGroup = 'rg-techhub-shared',

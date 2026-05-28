@@ -38,12 +38,11 @@ param aiCategorizationEndpoint string = ''
 @description('Azure AI Foundry deployment name')
 param aiCategorizationDeploymentName string = ''
 
-@secure()
-@description('Azure Communication Services connection string')
-param acsConnectionString string = ''
+@description('Key Vault secret name for Newsletter ACS endpoint URL. Leave empty to disable.')
+param acsEndpointSecretName string = ''
 
-@description('Newsletter sender address')
-param newsletterSenderAddress string = ''
+@description('Key Vault secret name for Newsletter sender address. Leave empty to disable.')
+param acsSenderAddressSecretName string = ''
 
 @description('Key Vault secret name for Newsletter__UnsubscribeSecret. Leave empty to disable Key Vault binding.')
 param newsletterUnsubscribeSecretName string = ''
@@ -65,7 +64,8 @@ param tags object = {}
 
 var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-api:${imageTag}'
 var revisionSuffix = 'api-${imageTag}'
-var hasAcsConnectionString = !empty(acsConnectionString)
+var hasAcsEndpoint = !empty(acsEndpointSecretName)
+var hasAcsSenderAddress = !empty(acsSenderAddressSecretName)
 var newsletterWebsiteBaseUrl = !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
 var corsOrigins = union(['https://*.azurecontainerapps.io'], customOrigins)
@@ -91,11 +91,19 @@ var newsletterSecretEnvVars = empty(newsletterUnsubscribeSecretName)
         secretRef: 'newsletter-unsubscribe-secret'
       }
     ]
-var newsletterAcsSecretEnvVars = hasAcsConnectionString
+var newsletterAcsEnvVars = hasAcsEndpoint
   ? [
       {
-        name: 'Newsletter__ConnectionString'
-        secretRef: 'acs-connection-string'
+        name: 'Newsletter__Endpoint'
+        secretRef: 'newsletter-acs-endpoint'
+      }
+    ]
+  : []
+var newsletterSenderEnvVars = hasAcsSenderAddress
+  ? [
+      {
+        name: 'Newsletter__SenderAddress'
+        secretRef: 'acs-sender-address'
       }
     ]
   : []
@@ -108,11 +116,23 @@ var newsletterSecrets = empty(newsletterUnsubscribeSecretName)
         identity: identityId
       }
     ]
-var newsletterAcsSecrets = hasAcsConnectionString
+
+var newsletterAcsSecrets = hasAcsEndpoint
   ? [
       {
-        name: 'acs-connection-string'
-        value: acsConnectionString
+        name: 'newsletter-acs-endpoint'
+        keyVaultUrl: '${keyVaultUri}secrets/${acsEndpointSecretName}'
+        identity: identityId
+      }
+    ]
+  : []
+
+var newsletterSenderSecrets = hasAcsSenderAddress
+  ? [
+      {
+        name: 'acs-sender-address'
+        keyVaultUrl: '${keyVaultUri}secrets/${acsSenderAddressSecretName}'
+        identity: identityId
       }
     ]
   : []
@@ -176,10 +196,6 @@ var staticEnvVars = [
     name: 'AiCategorization__DeploymentName'
     value: aiCategorizationDeploymentName
   }
-  {
-    name: 'Newsletter__SenderAddress'
-    value: newsletterSenderAddress
-  }
 ]
 
 resource api 'Microsoft.App/containerApps@2025-07-01' = {
@@ -225,7 +241,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
           keyVaultUrl: '${keyVaultUri}secrets/techhub-github-registry-token'
           identity: identityId
         }
-      ], newsletterAcsSecrets, newsletterSecrets)
+      ], newsletterSenderSecrets, newsletterAcsSecrets, newsletterSecrets)
     }
     template: {
       revisionSuffix: revisionSuffix
@@ -237,7 +253,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
             cpu: json('0.25')
             memory: '0.5Gi'
           }
-          env: concat(staticEnvVars, newsletterAcsSecretEnvVars, newsletterSecretEnvVars, corsEnvVars, backgroundJobEnvVars)
+          env: concat(staticEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars, backgroundJobEnvVars)
           probes: [
             {
               type: 'startup'

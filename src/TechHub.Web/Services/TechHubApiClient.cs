@@ -831,6 +831,25 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    public virtual async Task ConfirmNewsletterAsync(string email, string token, CancellationToken cancellationToken = default)
+    {
+        email = email.Sanitize();
+        token = token.Sanitize();
+
+        try
+        {
+            _logger.LogInformation("Confirming newsletter subscription");
+            var url = $"/api/newsletter/confirm?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}";
+            using var response = await _httpClient.GetAsync(url, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to confirm newsletter subscription");
+            throw;
+        }
+    }
+
     // ================================================================
     // Helper methods
     // ================================================================

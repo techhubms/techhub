@@ -110,7 +110,6 @@ created via Point-in-Time Restore (PITR) from the production database.
 
 ```powershell
 # Deploy PR #42 preview environment (Azure login required)
-$env:POSTGRES_ADMIN_PASSWORD = "<production-password>"
 ./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action deploy -Tag "pr-42-dev"
 
 # Remove the PR #42 preview environment
@@ -164,7 +163,7 @@ Every deployment runs the full Bicep template. ARM is idempotent and only redepl
 
 1. **Deploy Shared Infrastructure** - Deploys shared resources (ACR) via `Deploy-Infrastructure.ps1`
 
-2. **Build & Push** - Calls `Deploy-Application.ps1 -SkipDeploy` to build Docker images and push to ACR
+2. **Build & Push** - Calls `Build-Images.ps1` to build Docker images and push to ghcr.io
    - Waits for shared infrastructure (ACR) to be ready first
    - Tags images with commit SHA and `latest`
    - Images are built once and reused for production
@@ -205,10 +204,14 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 
 **Environments**:
 
-**Shared Resources** (one-time setup):
+**Production**:
 
-- Resource Group: `rg-techhub-shared`
-- Container Registry: `crtechhub` (used by all environments)
+- Resource Group: `rg-techhub-prod`
+- API App: `ca-techhub-api-prod`
+- Web App: `ca-techhub-web-prod`
+- Azure OpenAI: `oai-techhub-prod`
+- Key Vault: `kv-techhub-prod`
+- **Manual approval required** via GitHub Environments
 
 **Staging (PR-env infrastructure)**:
 
@@ -219,13 +222,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 - Azure OpenAI: `oai-techhub-staging` (used by PR environments)
 - VNet, monitoring, and networking are shared across PR environments
 
-**Production**:
-
-- Resource Group: `rg-techhub-prod`
-- API App: `ca-techhub-api-prod`
-- Web App: `ca-techhub-web-prod`
-- Azure OpenAI: `oai-techhub-prod` (production workloads)
-- **Manual approval required** via GitHub Environments
+**Container Images**: Pushed to `ghcr.io` (GitHub Container Registry). The same image built and tested in a PR preview is deployed directly to production — no rebuild.
 
 **Rollback Strategy**:
 
@@ -241,7 +238,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 **Features**:
 
 - Multi-stage build for optimization
-- .NET 9.0 runtime
+- .NET 10 runtime
 - Runs on port 8080
 - Non-root user for security
 - Includes curl for health checks
@@ -253,7 +250,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 **Features**:
 
 - Multi-stage build for optimization
-- .NET 9.0 runtime
+- .NET 10 runtime
 - Runs on port 8080
 - Non-root user for security
 - Includes curl for health checks
@@ -295,14 +292,13 @@ Configure these in GitHub repository settings → Secrets and variables → Acti
 | `AZURE_CLIENT_ID` | Application (client) ID of `sp-techhubms` |
 | `AZURE_TENANT_ID` | Azure Active Directory tenant ID |
 | `AZURE_SUBSCRIPTION_ID` | Azure subscription ID |
+| `ADMIN_IP_ADDRESSES` | Comma-separated IPs allowed through PostgreSQL and Key Vault firewalls |
 
-`Setup-OidcAuthentication.ps1` sets these automatically from the current Azure CLI session.
+`Setup-OidcAuthentication.ps1` sets the Azure identity variables automatically from the current Azure CLI session.
 
 ### Repository Secrets
 
-Configure these in GitHub repository settings → Secrets and variables → Actions → Repository secrets:
-
-- `ADMIN_IP_ADDRESSES` - Comma-separated IP addresses allowed through PostgreSQL and Key Vault firewalls
+No repository-level secrets are required. All sensitive values are either injected via OIDC or scoped to GitHub environments.
 
 ### Environment Secrets
 
@@ -310,8 +306,8 @@ Configure these per-environment in GitHub repository settings → Environments �
 
 | Secret | Staging | Production | Notes |
 |--------|---------|------------|-------|
-| `POSTGRES_ADMIN_PASSWORD` | - | Required | Production DB password - set manually, stored in 1Password |
-| `AZURE_AD_CLIENT_SECRET` | - | Required | Entra ID client secret - set via `Manage-EntraId.ps1 -Environment prod` |
+| `POSTGRES_ADMIN_PASSWORD` | - | Required | Production DB admin password. `Deploy-Infrastructure.ps1` reads this from Key Vault automatically if not set; only needed explicitly in CI or on first deploy before Key Vault is populated. |
+| `AZURE_AD_CLIENT_SECRET` | - | Required | Entra ID client secret for user authentication - set via `Manage-EntraId.ps1 -Environment prod` |
 
 > **Tenant ID, Client ID, and AI key are not GitHub secrets.** `Deploy-Infrastructure.ps1` resolves the tenant ID from the active Azure CLI session, the client ID by looking up the app registration by name (`TechHub Staging` / `TechHub Production`), and the AI key directly from the Azure Cognitive Services account. Only values that cannot be read from Azure need to live as GitHub secrets.
 
@@ -341,37 +337,23 @@ Both deployment scripts can be run locally, making it easy to test without trigg
 **Infrastructure deployment**:
 
 ```powershell
-# Preview staging changes (safe — no modifications)
-./scripts/Deploy-Infrastructure.ps1 -Environment staging -Mode whatif
+# Preview what would change
+./scripts/Deploy-Infrastructure.ps1 -Mode whatif
 
-# Deploy shared resources (ACR)
-./scripts/Deploy-Infrastructure.ps1 -Environment shared -Mode deploy
-
-# Deploy staging infrastructure
-$env:POSTGRES_ADMIN_PASSWORD = "<password>"
-./scripts/Deploy-Infrastructure.ps1 -Environment staging -Mode deploy
-
-# Deploy production infrastructure
-./scripts/Deploy-Infrastructure.ps1 -Environment production -Mode deploy
+# Deploy production infrastructure (reads ADMIN_IP_ADDRESSES from GitHub variable,
+# POSTGRES_ADMIN_PASSWORD from Key Vault automatically)
+./scripts/Deploy-Infrastructure.ps1 -Mode deploy
 ```
 
 **Application deployment**:
 
 ```powershell
-# Build, push, and deploy to staging (images tagged 'dev' by default)
-./scripts/Deploy-Application.ps1 -Environment staging
+# Deploy Container Apps with a specific image tag (fully standalone)
+./scripts/Deploy-Applications.ps1 -Mode deploy -ImageTag "20260501120000"
 
-# Build and push only (no container app update)
-./scripts/Deploy-Application.ps1 -Environment staging -SkipDeploy
-
-# Deploy a specific tag
-./scripts/Deploy-Application.ps1 -Environment staging -Tag "v1.0.0"
-
-# Deploy previously pushed images (skip build and push)
-./scripts/Deploy-Application.ps1 -Environment staging -Tag "dev" -SkipBuild -SkipPush
+# Fast image-only update (no Bicep evaluation)
+./scripts/Deploy-Application.ps1 -Tag "20260501120000"
 ```
-
-When run locally, images default to the `dev` tag to distinguish them from CI-produced images.
 
 ### First-Time Deployment (Brand New Environment)
 

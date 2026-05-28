@@ -51,6 +51,8 @@ public partial class UrlNormalizationMiddleware
         "version",
         // OIDC callback path — must pass through to UseAuthentication, never treated as content.
         "signin-oidc",
+        // Newsletter subscription/unsubscription pages.
+        "newsletter",
     };
 
     // Sections that have been permanently renamed. When a path starts with an old section name,

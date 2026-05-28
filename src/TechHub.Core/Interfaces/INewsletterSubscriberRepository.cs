@@ -5,7 +5,7 @@ namespace TechHub.Core.Interfaces;
 
 public interface INewsletterSubscriberRepository
 {
-    Task<long> UpsertSubscriberAsync(
+    Task<(long Id, bool NeedsConfirmation)> UpsertSubscriberAsync(
         string email,
         string? displayName,
         IReadOnlyList<string> weeklySections,
@@ -13,6 +13,8 @@ public interface INewsletterSubscriberRepository
         CancellationToken ct = default);
 
     Task<bool> UnsubscribeAsync(string email, CancellationToken ct = default);
+
+    Task<bool> ConfirmSubscriberAsync(string email, CancellationToken ct = default);
 
     Task<IReadOnlyList<NewsletterSubscriber>> GetActiveSubscribersAsync(
         string sectionName,

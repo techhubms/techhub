@@ -5,7 +5,7 @@ public sealed class NewsletterOptions
     public const string SectionName = "Newsletter";
 
     public bool ScheduledSendEnabled { get; init; }
-    public string ConnectionString { get; init; } = string.Empty;
+    public string Endpoint { get; init; } = string.Empty;
     public string SenderAddress { get; init; } = string.Empty;
     public string WebsiteBaseUrl { get; init; } = string.Empty;
     public int CheckIntervalMinutes { get; init; } = 30;

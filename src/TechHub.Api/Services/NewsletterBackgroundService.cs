@@ -76,7 +76,7 @@ public sealed class NewsletterBackgroundService : BackgroundService
 
             timerTask = timer.WaitForNextTickAsync(stoppingToken).AsTask();
 
-            if (!_options.ScheduledSendEnabled)
+            if (!await IsEnabledAsync(stoppingToken))
             {
                 continue;
             }
@@ -96,6 +96,12 @@ public sealed class NewsletterBackgroundService : BackgroundService
         if (!string.IsNullOrWhiteSpace(testEmail))
         {
             await RunTestSendAsync(testEmail, testSlug, ct);
+            return;
+        }
+
+        if (!_options.ScheduledSendEnabled)
+        {
+            _logger.LogInformation("Newsletter manual send skipped because ScheduledSendEnabled is false");
             return;
         }
 
@@ -141,6 +147,22 @@ public sealed class NewsletterBackgroundService : BackgroundService
         await newsletterService.SendAdminStatusReportAsync(day, ct);
     }
 
+    private async Task<bool> IsEnabledAsync(CancellationToken ct)
+    {
+        // If disabled via environment variable (Newsletter__ScheduledSendEnabled=false), skip the
+        // database round-trip. This is the mechanism used in PR preview environments to prevent
+        // scheduled runs on a PITR-restored database where the setting is enabled=true.
+        // Manual admin-triggered runs bypass this method entirely and always execute.
+        if (!_options.ScheduledSendEnabled)
+        {
+            return false;
+        }
+
+        await using var scope = _serviceProvider.CreateAsyncScope();
+        var repo = scope.ServiceProvider.GetRequiredService<IBackgroundJobSettingRepository>();
+        return await repo.IsEnabledAsync(NewsletterOptions.SectionName, ct);
+    }
+
     private async Task RunTestSendAsync(string recipientEmail, string? roundupSlug, CancellationToken ct)
     {
         await using var scope = _serviceProvider.CreateAsyncScope();
@@ -166,7 +188,16 @@ public sealed class NewsletterBackgroundService : BackgroundService
             return;
         }
 
-        await newsletterService.SendTestEmailAsync(slug, recipientEmail, ct);
+        _logger.LogInformation("Running newsletter test send to {RecipientEmail} for roundup {Slug}", recipientEmail, slug);
+        var sent = await newsletterService.SendTestEmailAsync(slug, recipientEmail, ct);
+        if (sent)
+        {
+            _logger.LogInformation("Newsletter test send succeeded for {RecipientEmail}", recipientEmail);
+        }
+        else
+        {
+            _logger.LogWarning("Newsletter test send failed for {RecipientEmail} — check configuration (ACS endpoint, sender address, unsubscribe secret) and that roundup {Slug} exists", recipientEmail, slug);
+        }
     }
 
     private TimeZoneInfo ResolveTimeZone(string configuredId)

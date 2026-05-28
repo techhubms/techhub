@@ -30,9 +30,9 @@ public sealed class AcsEmailSender : IEmailSender
 
     public async Task<bool> SendAsync(string recipientEmail, string subject, string html, string plainText, CancellationToken ct = default)
     {
-        if (string.IsNullOrWhiteSpace(_options.ConnectionString) || string.IsNullOrWhiteSpace(_options.SenderAddress))
+        if (string.IsNullOrWhiteSpace(_options.Endpoint) || string.IsNullOrWhiteSpace(_options.SenderAddress))
         {
-            _logger.LogWarning("Newsletter email skipped because Newsletter:ConnectionString or Newsletter:SenderAddress is not configured");
+            _logger.LogWarning("Newsletter email skipped because Newsletter:Endpoint or Newsletter:SenderAddress is not configured");
             return false;
         }
 

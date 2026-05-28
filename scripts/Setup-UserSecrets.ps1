@@ -13,23 +13,27 @@
     development uses the correct redirect URIs and token audience. A new client
     secret is created on the app registration (appended — old secrets remain valid).
 
-    AI and YouTube secrets are fetched from the production Container App env vars
-    and Key Vault, since those services are shared across environments.
+    AI configuration (endpoint, deployment name) is fetched from the production Container App.
+    AI auth uses DefaultAzureCredential (az login) — no API key needed or stored.
+    Newsletter ACS endpoint and unsubscribe secret are fetched from the Container App and Key Vault.
 
     Requires:
-        - Azure CLI (`az`) authenticated with access to rg-techhub-prod, kv-techhub-shared,
+        - Azure CLI (`az`) authenticated with access to rg-techhub-prod, kv-techhub-prod,
           and the Entra ID tenant (to read/write app registrations)
-        - Key Vault Secrets User/Officer role on kv-techhub-shared
+        - Key Vault Secrets User/Officer role on kv-techhub-prod (for newsletter secret only)
         - Localhost app registration must exist (run Manage-EntraId.ps1 -Environment localhost first)
 
     User secrets populated per project:
 
     TechHub.Api (techhub-api):
-        AzureAd:TenantId               — Entra ID tenant (from current Azure CLI session)
-        AzureAd:ClientId               — Localhost app registration client ID
-        AiCategorization:Endpoint       — Azure OpenAI endpoint URL (production)
-        AiCategorization:DeploymentName — Azure OpenAI deployment name (production)
-        AiCategorization:ApiKey         — Azure OpenAI API key (from Key Vault)
+        AzureAd:TenantId                — Entra ID tenant (from current Azure CLI session)
+        AzureAd:ClientId                — Localhost app registration client ID
+        AiCategorization:Endpoint        — Azure OpenAI endpoint URL (production)
+        AiCategorization:DeploymentName  — Azure OpenAI deployment name (production)
+        Newsletter:Endpoint              — ACS email endpoint URL (production)
+        Newsletter:SenderAddress         — ACS sender address (production)
+        Newsletter:UnsubscribeSecret     — HMAC secret for unsubscribe URLs (from Key Vault)
+        Newsletter:WebsiteBaseUrl        — https://localhost:5003
 
     TechHub.Web (techhub-web):
         AzureAd:TenantId               — Entra ID tenant (from current Azure CLI session)
@@ -41,7 +45,7 @@
     Overwrite existing secrets (default: skip already-set values).
 
 .PARAMETER KeyVaultName
-    Key Vault name. Defaults to 'kv-techhub-shared'.
+    Key Vault name. Defaults to 'kv-techhub-prod'.
 
 .PARAMETER AppDisplayName
     Display name of the localhost app registration. Defaults to 'TechHub Local Dev'.
@@ -59,7 +63,7 @@ param(
     [switch]$Force,
 
     [Parameter(Mandatory = $false)]
-    [string]$KeyVaultName = 'kv-techhub-shared',
+    [string]$KeyVaultName = 'kv-techhub-prod',
 
     [Parameter(Mandatory = $false)]
     [string]$AppDisplayName = 'TechHub Local Dev',
@@ -165,15 +169,26 @@ $apiEnvVarsJson = $apiEnvVarsOutput | Where-Object { $_ -is [string] -and $_ -no
 $apiEnvVars = $apiEnvVarsJson | ConvertFrom-Json
 
 function Get-EnvVar($envVars, $name) {
-    $entry = $envVars | Where-Object { $_.name -eq $name }
+    $entry = $envVars | Where-Object { $_.name -eq $name } | Select-Object -First 1
+    if ($null -eq $entry) { return $null }
+    # Secret-ref env vars have no 'value' property — return null for those
+    if (-not ($entry.PSObject.Properties.Name -contains 'value')) { return $null }
     return $entry.value
 }
 
 $aiEndpoint = Get-EnvVar $apiEnvVars 'AiCategorization__Endpoint'
 $aiDeployment = Get-EnvVar $apiEnvVars 'AiCategorization__DeploymentName'
+$newsletterSenderAddress = Get-EnvVar $apiEnvVars 'Newsletter__SenderAddress'
+$newsletterEndpoint = Get-EnvVar $apiEnvVars 'Newsletter__Endpoint'
 
-Write-Host "  AI Endpoint:   $aiEndpoint" -ForegroundColor Gray
-Write-Host "  AI Deployment: $aiDeployment" -ForegroundColor Gray
+Write-Host "  AI Endpoint:       $aiEndpoint" -ForegroundColor Gray
+Write-Host "  AI Deployment:     $aiDeployment" -ForegroundColor Gray
+Write-Host "  Newsletter Sender: $newsletterSenderAddress" -ForegroundColor Gray
+if ([string]::IsNullOrWhiteSpace($newsletterEndpoint)) {
+    Write-Host "  [WARN] Newsletter endpoint not found in Container App (deploy infrastructure first)" -ForegroundColor Yellow
+} else {
+    Write-Host "  Newsletter Endpoint: $newsletterEndpoint" -ForegroundColor Gray
+}
 
 # --- Fetch secrets from Key Vault ---
 Write-Host ""
@@ -201,16 +216,17 @@ if (-not [string]::IsNullOrWhiteSpace($currentIp)) {
     }
 }
 
-$aiApiKey = $null
+$newsletterUnsubscribeSecret = $null
 try {
-    $aiApiKey = az keyvault secret show --vault-name $KeyVaultName --name techhub-prod-ai-api-key --query "value" --output tsv --only-show-errors 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        Write-Host "  [FAIL] Failed to fetch AI API key from Key Vault" -ForegroundColor Red
-        Write-Host $aiApiKey -ForegroundColor Red
-        exit 1
+    $newsletterUnsubscribeSecret = az keyvault secret show --vault-name $KeyVaultName --name techhub-prod-newsletter-unsubscribe-secret --query "value" --output tsv --only-show-errors 2>&1
+    if ($LASTEXITCODE -eq 0) {
+        $newsletterUnsubscribeSecret = ($newsletterUnsubscribeSecret | Where-Object { $_ -is [string] -and $_ -notmatch '^\s*WARNING' }) -join ""
+        Write-Host "  Newsletter Secret: $('*' * 8)...(fetched)" -ForegroundColor Gray
     }
-    $aiApiKey = ($aiApiKey | Where-Object { $_ -is [string] -and $_ -notmatch '^\s*WARNING' }) -join ""
-    Write-Host "  AI API Key:       $('*' * 8)...(fetched)" -ForegroundColor Gray
+    else {
+        Write-Host "  [WARN] Newsletter unsubscribe secret not found in Key Vault (deploy infrastructure first)" -ForegroundColor Yellow
+        $newsletterUnsubscribeSecret = $null
+    }
 }
 finally {
     if (-not [string]::IsNullOrWhiteSpace($currentIp)) {
@@ -251,7 +267,10 @@ Set-Secret $apiProject "AzureAd:TenantId" $tenantId
 Set-Secret $apiProject "AzureAd:ClientId" $clientId
 Set-Secret $apiProject "AiCategorization:Endpoint" $aiEndpoint
 Set-Secret $apiProject "AiCategorization:DeploymentName" $aiDeployment
-Set-Secret $apiProject "AiCategorization:ApiKey" $aiApiKey
+Set-Secret $apiProject "Newsletter:Endpoint" $newsletterEndpoint
+Set-Secret $apiProject "Newsletter:SenderAddress" $newsletterSenderAddress
+Set-Secret $apiProject "Newsletter:UnsubscribeSecret" $newsletterUnsubscribeSecret
+# Newsletter:WebsiteBaseUrl is already set in appsettings.Development.json
 
 # --- TechHub.Web secrets ---
 Write-Host ""
@@ -270,7 +289,8 @@ Write-Host ""
 Write-Host "Done. All secrets populated." -ForegroundColor Green
 Write-Host ""
 Write-Host "  AzureAd values use the localhost app registration ('$AppDisplayName')." -ForegroundColor Gray
-Write-Host "  AI and YouTube values use production." -ForegroundColor Gray
+Write-Host "  AI endpoint/deployment and Newsletter values use production." -ForegroundColor Gray
+Write-Host "  AI auth uses DefaultAzureCredential (az login) — no API key stored." -ForegroundColor Gray
 if ($clientSecret) {
     Write-Host "  Client secret created on app registration (appended — old secrets remain valid)." -ForegroundColor Gray
 }

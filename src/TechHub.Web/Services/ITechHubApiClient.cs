@@ -293,6 +293,12 @@ internal interface ITechHubApiClient
     /// </summary>
     Task UnsubscribeNewsletterAsync(string email, string token, CancellationToken cancellationToken = default);
 
+    /// <summary>
+    /// Confirm a newsletter subscription via the link sent by email.
+    /// GET /api/newsletter/confirm
+    /// </summary>
+    Task ConfirmNewsletterAsync(string email, string token, CancellationToken cancellationToken = default);
+
     // ================================================================
     // Admin endpoints
     // ================================================================

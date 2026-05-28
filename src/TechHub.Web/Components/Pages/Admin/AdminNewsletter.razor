@@ -39,6 +39,7 @@
             <input id="testEmail" class="admin-input" @bind="_testEmail" />
         </div>
         <div class="admin-filter-group">
+            <label class="admin-label">&nbsp;</label>
             <button class="btn-secondary" @onclick="TriggerTestSendAsync" disabled="@string.IsNullOrWhiteSpace(_testEmail)">▶ Test Send</button>
         </div>
     </div>

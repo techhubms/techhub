@@ -196,7 +196,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     {
         var options = Options.Create(new NewsletterOptions
         {
-            ConnectionString = "endpoint=https://invalid.communication.azure.com/;accesskey=invalid",
+            Endpoint = "https://invalid.communication.azure.com/",
             SenderAddress = "DoNotReply@example.azurecomm.net",
             WebsiteBaseUrl = "https://tech.hub.ms",
             UnsubscribeSecret = unsubscribeSecret

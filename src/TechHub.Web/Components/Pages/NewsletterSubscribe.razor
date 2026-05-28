@@ -7,50 +7,61 @@
 
 <PageTitle>Newsletter Subscribe — TechHub</PageTitle>
 
-<main class="content-page">
-    <article class="content-detail">
-        <header class="content-header">
-            <h1 class="content-title">Subscribe to TechHub newsletters</h1>
-        </header>
+<main class="page-without-sidebar">
+    <section>
+        <h1 id="skiptohere" class="page-h1">Subscribe to TechHub newsletters</h1>
+        <p class="subscribe-intro">Choose which newsletters you want to receive. Weekly roundups deliver a curated summary every week; daily overviews arrive each morning at 9:00.</p>
 
-        <div class="admin-form-grid newsletter-subscribe-form-grid">
-            <div class="admin-form-group">
-                <label class="admin-label">Email</label>
-                <input class="admin-input" @bind="_email" />
+        <div class="subscribe-fields">
+            <div class="subscribe-field">
+                <label class="subscribe-label" for="subscribe-email">Email</label>
+                <input id="subscribe-email" class="subscribe-input" type="email" placeholder="you@example.com" @bind="_email" />
             </div>
-            <div class="admin-form-group">
-                <label class="admin-label">Display name (optional)</label>
-                <input class="admin-input" @bind="_displayName" />
+            <div class="subscribe-field">
+                <label class="subscribe-label" for="subscribe-name">Display name <span class="subscribe-optional">(optional)</span></label>
+                <input id="subscribe-name" class="subscribe-input" type="text" placeholder="Your name" @bind="_displayName" />
             </div>
         </div>
 
-        <h2 class="admin-section-title">Weekly roundup per section</h2>
-        @foreach (var sec in _sections)
-        {
-            <label class="admin-label newsletter-subscribe-checkbox-label">
-                <input type="checkbox" checked="@_weeklySelections.Contains(sec.Name)" @onchange="(e) => Toggle(_weeklySelections, sec.Name, e)" />
-                @sec.Title
-            </label>
-        }
+        <div class="subscribe-groups">
+        <div class="subscribe-group">
+            <h2 class="subscribe-group-title">Weekly roundup per section</h2>
+            <p class="subscribe-group-description">A curated summary of the week's most important content, delivered every week.</p>
+            <div class="subscribe-checkboxes">
+                @foreach (var sec in _sections)
+                {
+                    <label class="subscribe-checkbox-label">
+                        <input type="checkbox" checked="@_weeklySelections.Contains(sec.Name)" @onchange="(e) => Toggle(_weeklySelections, sec.Name, e)" />
+                        @sec.Title
+                    </label>
+                }
+            </div>
+        </div>
 
-        <h2 class="admin-section-title newsletter-subscribe-daily-heading">Daily overview per section (9:00)</h2>
-        @foreach (var sec in _sections)
-        {
-            <label class="admin-label newsletter-subscribe-checkbox-label">
-                <input type="checkbox" checked="@_dailySelections.Contains(sec.Name)" @onchange="(e) => Toggle(_dailySelections, sec.Name, e)" />
-                @sec.Title
-            </label>
-        }
+        <div class="subscribe-group">
+            <h2 class="subscribe-group-title">Daily overview per section <span class="subscribe-group-meta">(every morning at 9:00)</span></h2>
+            <p class="subscribe-group-description">A brief overview of new content published in the last 24 hours, delivered each morning.</p>
+            <div class="subscribe-checkboxes">
+                @foreach (var sec in _sections)
+                {
+                    <label class="subscribe-checkbox-label">
+                        <input type="checkbox" checked="@_dailySelections.Contains(sec.Name)" @onchange="(e) => Toggle(_dailySelections, sec.Name, e)" />
+                        @sec.Title
+                    </label>
+                }
+            </div>
+        </div>
+        </div>
 
-        <div class="newsletter-subscribe-actions">
+        <div class="subscribe-actions">
             <button class="btn" @onclick="SubscribeAsync">Subscribe</button>
         </div>
 
         @if (!string.IsNullOrWhiteSpace(_message))
         {
-            <div class="admin-alert newsletter-subscribe-alert @(_error ? "admin-alert-error" : "admin-alert-success")">@_message</div>
+            <div class="subscribe-alert @(_error ? "subscribe-alert-error" : "subscribe-alert-success")">@_message</div>
         }
-    </article>
+    </section>
 </main>
 
 @code {
@@ -84,7 +95,7 @@
                 _weeklySelections.ToList(),
                 _dailySelections.ToList());
 
-            _message = "Subscription saved. Thanks for subscribing!";
+            _message = "Almost there! Check your inbox for a confirmation email and click the link to activate your subscription.";
             _error = false;
         }
         catch (HttpRequestException ex)

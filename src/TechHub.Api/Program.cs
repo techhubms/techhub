@@ -1,7 +1,6 @@
 using System.Data;
 using System.Net;
 using System.Threading.RateLimiting;
-using Azure.Communication.Email;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Options;
@@ -263,14 +262,7 @@ builder.Services.Configure<NewsletterOptions>(
 builder.Services.AddScoped<ISectionRoundupRepository, SectionRoundupRepository>();
 builder.Services.AddScoped<INewsletterSubscriberRepository, NewsletterSubscriberRepository>();
 builder.Services.AddScoped<INewsletterService, NewsletterService>();
-builder.Services.AddSingleton(sp =>
-{
-    var options = sp.GetRequiredService<IOptions<NewsletterOptions>>().Value;
-    var connectionString = string.IsNullOrWhiteSpace(options.ConnectionString)
-        ? "endpoint=https://invalid.communication.azure.com/;accesskey=invalid"
-        : options.ConnectionString;
-    return new EmailClient(connectionString);
-});
+builder.Services.AddAcsEmailClient();
 builder.Services.AddScoped<IEmailSender, AcsEmailSender>();
 builder.Services.AddRoundupGeneration();
 builder.Services.AddSingleton<RoundupGeneratorBackgroundService>();

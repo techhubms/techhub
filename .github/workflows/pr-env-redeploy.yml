@@ -70,7 +70,7 @@ jobs:
         id: deploy
         shell: pwsh
         env:
-          ADMIN_IP_ADDRESSES: ${{ secrets.ADMIN_IP_ADDRESSES }}
+          ADMIN_IP_ADDRESSES: ${{ vars.ADMIN_IP_ADDRESSES }}
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
         run: |
           ./scripts/Deploy-PrPreview.ps1 `

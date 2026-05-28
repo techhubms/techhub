@@ -29,4 +29,24 @@
     <ProjectReference Include="..\TechHub.TestUtilities\TechHub.TestUtilities.csproj" />
   </ItemGroup>
 
+  <!-- Copy TestCollections fixtures so TestCollectionsSeeder can find them next to TechHub.TestUtilities.dll -->
+  <ItemGroup>
+    <Content Include="..\TechHub.TestUtilities\TestCollections\**\*.md"
+             Link="TestCollections\%(RecursiveDir)%(Filename)%(Extension)"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\TechHub.TestUtilities\TestCollections\**\*.json"
+             Link="TestCollections\%(RecursiveDir)%(Filename)%(Extension)"
+             CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- Explicit copy target as a safety net for clean builds -->
+  <Target Name="CopyTestCollectionsToOutput" AfterTargets="Build">
+    <ItemGroup>
+      <_TestCollectionFiles Include="..\TechHub.TestUtilities\TestCollections\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_TestCollectionFiles)"
+          DestinationFolder="$(OutputPath)TestCollections\%(RecursiveDir)"
+          SkipUnchangedFiles="true" />
+  </Target>
+
 </Project>

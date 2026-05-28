@@ -12,6 +12,8 @@
     Secrets written:
         techhub-prod-aad-client-secret      — Entra client secret
         techhub-github-registry-token       — GHCR PAT for pulling container images
+        techhub-prod-newsletter-acs-endpoint — ACS email endpoint URL
+        techhub-prod-postgres-admin-password — PostgreSQL admin password (for re-deploys without re-specifying)
         wildcard-hub-ms                     — Wildcard TLS certificate for *.hub.ms
         wildcard-xebia-ms                   — Wildcard TLS certificate for *.xebia.ms
 
@@ -25,8 +27,8 @@
 
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
-        2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_PAT,
-           WILDCARD_CERT_HUB_MS, WILDCARD_CERT_XEBIA_MS
+        2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_PAT, NEWSLETTER_ACS_ENDPOINT,
+           POSTGRES_ADMIN_PASSWORD, WILDCARD_CERT_HUB_MS, WILDCARD_CERT_XEBIA_MS
         3. ./scripts/Sync-KeyVaultSecrets.ps1
 
     Fail-fast behaviour: if a secret value is empty AND the secret does not yet
@@ -55,7 +57,7 @@ Set-StrictMode -Version Latest
 function Set-KvSecret {
     param(
         [Parameter(Mandatory = $true)][string]$Name,
-        [Parameter(Mandatory = $true)][string]$Value,
+        [Parameter(Mandatory = $true)][AllowEmptyString()][string]$Value,
         [Parameter(Mandatory = $true)][string]$Description
     )
 
@@ -63,11 +65,10 @@ function Set-KvSecret {
         # Value is empty — check whether the secret already exists in Key Vault.
         # If it does, leave it as-is (stable secrets don't need to be re-specified on every deploy).
         # If it doesn't, fail fast so the crash-loop caused by a missing KV reference is caught here.
-        $existing = az keyvault secret show `
-            --vault-name $KeyVaultName `
-            --name $Name `
-            --query id --output tsv 2>$null
-        if ($LASTEXITCODE -eq 0 -and $existing) {
+        # Use ARM management-plane API to check existence (works even without data-plane RBAC).
+        $armUrl = "https://management.azure.com/subscriptions/$((az account show --query id -o tsv))/resourceGroups/rg-techhub-prod/providers/Microsoft.KeyVault/vaults/$KeyVaultName/secrets/${Name}?api-version=2022-07-01"
+        $armResult = az rest --method get --url $armUrl 2>$null
+        if ($LASTEXITCODE -eq 0 -and $armResult) {
             Write-Host "   [SKIP] $($Description): no new value provided — existing secret kept." -ForegroundColor Gray
             return
         }
@@ -98,10 +99,12 @@ function Set-KvSecret {
 }
 
 # --- Collect values from env ---
-$aadClientSecret  = $env:AZURE_AD_CLIENT_SECRET
-$ghcrToken        = $env:GHCR_PAT
-$wildcardHubMs    = $env:WILDCARD_CERT_HUB_MS
-$wildcardXebiaMs  = $env:WILDCARD_CERT_XEBIA_MS
+$aadClientSecret       = $env:AZURE_AD_CLIENT_SECRET
+$ghcrToken             = $env:GHCR_PAT
+$newsletterAcsEndpoint = $env:NEWSLETTER_ACS_ENDPOINT
+$postgresAdminPassword = $env:POSTGRES_ADMIN_PASSWORD
+$wildcardHubMs         = $env:WILDCARD_CERT_HUB_MS
+$wildcardXebiaMs       = $env:WILDCARD_CERT_XEBIA_MS
 
 # --- Temporarily add this machine's IP to the Key Vault firewall ---
 # Key Vault is IP-restricted. GitHub Actions runners have dynamic IPs that are not in the
@@ -191,10 +194,12 @@ try {
         Write-Host "   IP $currentIp is already permitted by Key Vault '$($KeyVaultName)' firewall." -ForegroundColor Gray
     }
 
-    Set-KvSecret -Name "techhub-prod-aad-client-secret" -Value $aadClientSecret -Description 'Entra client secret'
-    Set-KvSecret -Name "techhub-github-registry-token"  -Value $ghcrToken        -Description 'GitHub Container Registry PAT'
-    Set-KvSecret -Name "wildcard-hub-ms"                -Value $wildcardHubMs    -Description 'Wildcard TLS certificate (*.hub.ms)'
-    Set-KvSecret -Name "wildcard-xebia-ms"              -Value $wildcardXebiaMs  -Description 'Wildcard TLS certificate (*.xebia.ms)'
+    Set-KvSecret -Name "techhub-prod-aad-client-secret"       -Value $aadClientSecret       -Description 'Entra client secret'
+    Set-KvSecret -Name "techhub-github-registry-token"        -Value $ghcrToken             -Description 'GitHub Container Registry PAT'
+    Set-KvSecret -Name "techhub-prod-newsletter-acs-endpoint" -Value $newsletterAcsEndpoint -Description 'ACS email endpoint URL'
+    Set-KvSecret -Name "techhub-prod-postgres-admin-password" -Value $postgresAdminPassword -Description 'PostgreSQL admin password'
+    Set-KvSecret -Name "wildcard-hub-ms"                      -Value $wildcardHubMs         -Description 'Wildcard TLS certificate (*.hub.ms)'
+    Set-KvSecret -Name "wildcard-xebia-ms"                    -Value $wildcardXebiaMs       -Description 'Wildcard TLS certificate (*.xebia.ms)'
 
     Write-Host ""
     Write-Host "All secrets synchronised into '$($KeyVaultName)'." -ForegroundColor Green

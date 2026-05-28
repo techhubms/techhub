@@ -34,6 +34,6 @@ resource communicationService 'Microsoft.Communication/communicationServices@202
   }
 }
 
-@secure()
-output communicationServiceConnectionString string = listKeys(communicationService.id, '2026-03-18').primaryConnectionString
+output communicationServiceEndpoint string = 'https://${communicationService.name}.communication.azure.com/'
+output communicationServiceId string = communicationService.id
 output senderAddress string = 'DoNotReply@${domain.properties.mailFromSenderDomain}'

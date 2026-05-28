@@ -98,7 +98,7 @@ See [tests/AGENTS.md](../tests/AGENTS.md) for testing strategies, TDD workflow, 
   - Database connection strings
   - Service settings and feature flags
 - **`Directory.Build.props`** - MSBuild properties for all projects
-- **`TechHub.slnx`** - Solution file (XML-based .NET 9+ format)
+- **`TechHub.slnx`** - Solution file (XML-based .NET 10+ format)
 - **`docker-compose.yml`** - Multi-container Docker configuration
 - **`package.json`** - Node.js dependencies (markdownlint, etc.)
 - **`.editorconfig`** - Code style and formatting rules
@@ -132,15 +132,16 @@ PowerShell automation scripts for development and maintenance tasks:
   - Target: `local` (Docker Compose) or `staging` (Azure)
   - Crucial step to populate data in non-production environments
   - Requires PostgreSQL client tools and VPN access to production
-- **`Deploy-Infrastructure.ps1`** - Azure infrastructure deployment (Bicep)
-  - Supports shared, staging, and production environments
+- **`Deploy-Infrastructure.ps1`** - Phase 1 Azure infrastructure deployment (Bicep)
+  - Deploys networking, identity, Key Vault, PostgreSQL, ACS, monitoring
   - Modes: validate, whatif, deploy
-  - Pre-flight checks (soft-deleted AI purge, ACR pull roles)
-- **`Deploy-Application.ps1`** - Container image build, push, and deployment
-  - Builds and pushes Docker images to ACR (API and Web in production)
-  - Deploys to Azure Container Apps
-  - Default 'dev' tag for local builds, git SHA in CI
-  - Smoke tests and automatic production rollback
+  - Auto-resolves `ADMIN_IP_ADDRESSES` from GitHub variable and `POSTGRES_ADMIN_PASSWORD` from Key Vault
+- **`Deploy-Applications.ps1`** - Phase 2 Container Apps deployment (Bicep, fully standalone)
+  - Requires `-ImageTag`; no infrastructure output dependencies
+  - Modes: validate, whatif, deploy
+- **`Deploy-Application.ps1`** - Fast image-only update via `az containerapp update`
+  - Smoke tests and automatic rollback
+  - Requires `-Tag`; used for code-only deploys (skips full Bicep evaluation)
 See [scripts/AGENTS.md](../scripts/AGENTS.md) for scripting guidelines and patterns.
 
 ### Infrastructure (`infra/`)

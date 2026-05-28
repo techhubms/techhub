@@ -24,7 +24,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
         _connection = connection;
     }
 
-    public async Task<long> UpsertSubscriberAsync(
+    public async Task<(long Id, bool NeedsConfirmation)> UpsertSubscriberAsync(
         string email,
         string? displayName,
         IReadOnlyList<string> weeklySections,
@@ -40,18 +40,16 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
             INSERT INTO newsletter_subscribers
                 (email, display_name, is_confirmed, confirmed_at, preferences, unsubscribed_at)
             VALUES
-                (@Email, @DisplayName, TRUE, NOW(), CAST(@Preferences AS jsonb), NULL)
+                (@Email, @DisplayName, FALSE, NULL, CAST(@Preferences AS jsonb), NULL)
             ON CONFLICT (lower(email)) WHERE unsubscribed_at IS NULL
             DO UPDATE SET
                 display_name = EXCLUDED.display_name,
-                is_confirmed = TRUE,
-                confirmed_at = COALESCE(newsletter_subscribers.confirmed_at, NOW()),
                 preferences = EXCLUDED.preferences,
                 unsubscribed_at = NULL
-            RETURNING id
+            RETURNING id, is_confirmed AS IsConfirmed
             """;
 
-        return await _connection.ExecuteScalarAsync<long>(new CommandDefinition(
+        var row = await _connection.QuerySingleAsync<(long Id, bool IsConfirmed)>(new CommandDefinition(
             Sql,
             new
             {
@@ -60,6 +58,29 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
                 Preferences = preferences
             },
             cancellationToken: ct));
+
+        return (row.Id, !row.IsConfirmed);
+    }
+
+    public async Task<bool> ConfirmSubscriberAsync(string email, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+
+        const string Sql = """
+            UPDATE newsletter_subscribers
+            SET is_confirmed = TRUE,
+                confirmed_at = NOW()
+            WHERE lower(email) = lower(@Email)
+              AND is_confirmed = FALSE
+              AND unsubscribed_at IS NULL
+            """;
+
+        var affected = await _connection.ExecuteAsync(new CommandDefinition(
+            Sql,
+            new { Email = email.Trim() },
+            cancellationToken: ct));
+
+        return affected > 0;
     }
 
     public async Task<bool> UnsubscribeAsync(string email, CancellationToken ct = default)

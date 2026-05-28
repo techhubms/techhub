@@ -770,6 +770,8 @@ public class UrlNormalizationMiddlewareTests
     [InlineData("/admin/users")]
     [InlineData("/admin/content/edit")]
     [InlineData("/error/details")]
+    [InlineData("/newsletter/subscribe")]
+    [InlineData("/newsletter/unsubscribe")]
     public async Task MultiSegment_KnownNonSectionPages_PassThrough(string path)
     {
         var cache = A.SectionCache.WithSections("ai").Build();

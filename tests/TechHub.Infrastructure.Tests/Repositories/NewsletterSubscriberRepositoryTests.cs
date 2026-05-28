@@ -23,6 +23,9 @@ public class NewsletterSubscriberRepositoryTests : IClassFixture<DatabaseFixture
             ["ai"],
             TestContext.Current.CancellationToken);
 
+        // New subscribers require email confirmation before appearing in active queries
+        await _sut.ConfirmSubscriberAsync("subscriber@example.com", TestContext.Current.CancellationToken);
+
         var weekly = await _sut.GetActiveSubscribersAsync("ai", weekly: true, TestContext.Current.CancellationToken);
         var daily = await _sut.GetActiveSubscribersAsync("ai", weekly: false, TestContext.Current.CancellationToken);
 

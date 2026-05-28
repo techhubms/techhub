@@ -335,13 +335,18 @@ if (-not $SkipDump -and -not $ProductionConnectionString) {
         if ($serverFqdn -and $LASTEXITCODE -eq 0) {
             Write-Host "   Production server: $serverFqdn" -ForegroundColor Yellow
 
-            # Try to fetch password from GitHub secret POSTGRES_PROD_PW
+            # Try to fetch password from Key Vault
             $adminPassword = $null
-            $ghPw = gh secret view POSTGRES_PROD_PW --json value -q ".value" 2>$null
-            if ($ghPw -and $LASTEXITCODE -eq 0) {
-                $adminPassword = $ghPw.Trim()
-                Write-Ok "Retrieved production password from GitHub secret POSTGRES_PROD_PW"
-            }
+            try {
+                $kvPw = (az keyvault secret show `
+                    --vault-name kv-techhub-prod `
+                    --name techhub-prod-postgres-admin-password `
+                    --query value -o tsv 2>$null)
+                if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($kvPw)) {
+                    $adminPassword = $kvPw.Trim()
+                    Write-Ok "Retrieved production password from Key Vault"
+                }
+            } catch {}
 
             if (-not $adminPassword) {
                 # Fall back to interactive prompt
