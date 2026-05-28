@@ -1,7 +1,7 @@
 @description('Azure Communication Services resource name')
 param communicationServiceName string
 
-@description('Principal ID to grant Azure Communication Services Data Contributor role')
+@description('Principal ID to grant Contributor role on the ACS resource (scoped to the ACS resource; enables email sending via managed identity)')
 param principalId string
 
 @description('Principal type: ServicePrincipal (managed identity) or User')

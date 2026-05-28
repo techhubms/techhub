@@ -98,9 +98,9 @@
             _message = "Almost there! Check your inbox for a confirmation email and click the link to activate your subscription.";
             _error = false;
         }
-        catch (HttpRequestException ex)
+        catch (HttpRequestException)
         {
-            _message = ex.Message;
+            _message = "Subscription failed. Please check your details and try again.";
             _error = true;
         }
     }

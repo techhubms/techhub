@@ -180,7 +180,7 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
     }
 
     [Fact]
-    public async Task ManagePreferences_GetWithInvalidToken_ReturnsUnauthorized()
+    public async Task ManagePreferences_GetWithInvalidToken_ReturnsNotFound()
     {
         const string Email = "manage-badtoken@example.com";
 

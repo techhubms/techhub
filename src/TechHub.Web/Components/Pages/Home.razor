@@ -114,7 +114,8 @@
     private long? recentCount;
     private long? totalCount;
 
-    private static readonly TimeZoneInfo BrusselsTz = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+    private static readonly TimeZoneInfo BrusselsTz =
+        TimeZoneInfo.TryFindSystemTimeZoneById("Europe/Brussels", out var tz) ? tz : TimeZoneInfo.Utc;
     private static string WeekAgoDate => TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTz)
         .AddDays(-7).ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
 

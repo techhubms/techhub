@@ -164,9 +164,9 @@
             _linkSent = true;
             _message = null;
         }
-        catch (HttpRequestException ex)
+        catch (HttpRequestException)
         {
-            _message = ex.Message;
+            _message = "Failed to send the management link. Please try again.";
             _error = true;
         }
     }
@@ -197,9 +197,9 @@
             _message = "Preferences saved.";
             _error = false;
         }
-        catch (HttpRequestException ex)
+        catch (HttpRequestException)
         {
-            _message = ex.Message;
+            _message = "Failed to save preferences. Please try again.";
             _error = true;
         }
     }
