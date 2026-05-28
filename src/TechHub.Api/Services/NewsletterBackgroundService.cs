@@ -182,22 +182,22 @@ public sealed class NewsletterBackgroundService : BackgroundService
         bool sent;
         if (string.Equals(kind, "daily", StringComparison.OrdinalIgnoreCase))
         {
-            _logger.LogInformation("Running newsletter test daily send to {RecipientEmail} for sections: {Sections}", recipientEmail, string.Join(", ", sections));
+            _logger.LogInformation("Running newsletter test daily send for sections: {Sections}", string.Join(", ", sections));
             sent = await newsletterService.SendTestDailyEmailAsync(sections, recipientEmail, ct);
         }
         else
         {
-            _logger.LogInformation("Running newsletter test weekly send to {RecipientEmail} for sections: {Sections}", recipientEmail, string.Join(", ", sections));
+            _logger.LogInformation("Running newsletter test weekly send for sections: {Sections}", string.Join(", ", sections));
             sent = await newsletterService.SendTestWeeklyAsync(sections, recipientEmail, ct);
         }
 
         if (sent)
         {
-            _logger.LogInformation("Newsletter test {Kind} send succeeded for {RecipientEmail}", kind, recipientEmail);
+            _logger.LogInformation("Newsletter test {Kind} send succeeded", kind);
         }
         else
         {
-            _logger.LogWarning("Newsletter test {Kind} send failed for {RecipientEmail} — check ACS configuration and that roundups exist for the selected sections", kind, recipientEmail);
+            _logger.LogWarning("Newsletter test {Kind} send failed — check ACS configuration and that roundups exist for the selected sections", kind);
         }
     }
 

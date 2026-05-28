@@ -125,7 +125,7 @@
                 @foreach (var log in _sendLog)
                 {
                     <tr>
-                        <td class="admin-cell-mono">@log.SentAt.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td class="admin-cell-mono">@DateHelper.FormatTimestamp(log.SentAt)</td>
                         <td>@log.SendKind</td>
                         <td class="admin-cell-mono">@log.TargetKey</td>
                         <td>@log.RecipientCount</td>
@@ -173,7 +173,7 @@
     private IReadOnlyList<NewsletterSubscriber> _subscribers = [];
     private IReadOnlyList<NewsletterSendLogEntry> _sendLog = [];
     private IReadOnlyList<Section> _sections = [];
-    private HashSet<string> _testSections = [];
+    private readonly HashSet<string> _testSections = [];
     private string? _search;
     private string? _confirmedFilter;
     private string? _testEmail;

@@ -259,7 +259,7 @@ public sealed class NewsletterService : INewsletterService
         {
             foreach (var slug in newSlugs)
             {
-                var (expected, actual) = slugStats[slug];
+                var actual = slugStats[slug].Actual;
                 var status = actual > 0 ? "partial" : "failed";
                 await _subscriberRepository.LogSendAsync("weekly-roundup", slug, actual, status, ex.Message, ct);
             }
@@ -965,7 +965,7 @@ public sealed class NewsletterService : INewsletterService
                 sb.Append("<ul style=\"margin:0 0 8px 0;padding-left:20px;\">");
                 foreach (var item in items)
                 {
-                    var filteredUrl = BuildAbsoluteUrl($"/{section}/all?types={Uri.EscapeDataString(item.CollectionName)}&search={Uri.EscapeDataString(item.Title)}");
+                    var filteredUrl = BuildAbsoluteUrl($"/{section}/all?types={Uri.EscapeDataString(item.CollectionName)}&search={Uri.EscapeDataString(item.Title)}&from={day:yyyy-MM-dd}&to={day:yyyy-MM-dd}");
                     sb.Append("<li style=\"margin-bottom:6px;font-size:16px;line-height:1.5;\">");
                     sb.Append($"<a href=\"{WebUtility.HtmlEncode(filteredUrl)}\" style=\"color:#2563eb;text-decoration:none;\">{WebUtility.HtmlEncode(item.Title)}</a>");
                     sb.Append($" <span style=\"color:#6b7280;font-size:14px;\">({WebUtility.HtmlEncode(item.CollectionName)})</span>");
@@ -1016,7 +1016,7 @@ public sealed class NewsletterService : INewsletterService
             {
                 foreach (var item in items)
                 {
-                    var filteredUrl = BuildAbsoluteUrl($"/{section}/all?types={Uri.EscapeDataString(item.CollectionName)}&search={Uri.EscapeDataString(item.Title)}");
+                    var filteredUrl = BuildAbsoluteUrl($"/{section}/all?types={Uri.EscapeDataString(item.CollectionName)}&search={Uri.EscapeDataString(item.Title)}&from={day:yyyy-MM-dd}&to={day:yyyy-MM-dd}");
                     sb.AppendLine($"- {item.Title} ({item.CollectionName})");
                     sb.AppendLine($"  {filteredUrl}");
                 }

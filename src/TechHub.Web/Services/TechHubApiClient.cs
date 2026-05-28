@@ -855,7 +855,7 @@ public class TechHubApiClient : ITechHubApiClient
         email = email.Sanitize();
         try
         {
-            _logger.LogInformation("Requesting newsletter management link for {Email}", email);
+            _logger.LogInformation("Requesting newsletter management link");
             var url = $"/api/newsletter/manage/request?email={Uri.EscapeDataString(email)}";
             using var response = await _httpClient.PostAsync(url, null, cancellationToken);
             response.EnsureSuccessStatusCode();
@@ -903,7 +903,7 @@ public class TechHubApiClient : ITechHubApiClient
         dailySections = SanitizeValues(dailySections);
         try
         {
-            _logger.LogInformation("Updating newsletter manage preferences for {Email}", email);
+            _logger.LogInformation("Updating newsletter manage preferences");
             using var response = await _httpClient.PutAsJsonAsync("/api/newsletter/manage", new
             {
                 email,
