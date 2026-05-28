@@ -850,6 +850,77 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    public virtual async Task RequestNewsletterManageLinkAsync(string email, CancellationToken cancellationToken = default)
+    {
+        email = email.Sanitize();
+        try
+        {
+            _logger.LogInformation("Requesting newsletter management link for {Email}", email);
+            var url = $"/api/newsletter/manage/request?email={Uri.EscapeDataString(email)}";
+            using var response = await _httpClient.PostAsync(url, null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to request newsletter management link");
+            throw;
+        }
+    }
+
+    public virtual async Task<NewsletterSubscriber?> GetNewsletterManagePreferencesAsync(string email, string token, CancellationToken cancellationToken = default)
+    {
+        email = email.Sanitize();
+        token = token.Sanitize();
+        try
+        {
+            var url = $"/api/newsletter/manage?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}";
+            var result = await _httpClient.GetFromJsonAsync<NewsletterSubscriber>(url, cancellationToken);
+            return result;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return null;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch newsletter manage preferences");
+            throw;
+        }
+    }
+
+    public virtual async Task UpdateNewsletterManagePreferencesAsync(
+        string email,
+        string token,
+        string? displayName,
+        IReadOnlyList<string> weeklySections,
+        IReadOnlyList<string> dailySections,
+        CancellationToken cancellationToken = default)
+    {
+        email = email.Sanitize();
+        token = token.Sanitize();
+        displayName = string.IsNullOrWhiteSpace(displayName) ? null : displayName.Sanitize();
+        weeklySections = SanitizeValues(weeklySections);
+        dailySections = SanitizeValues(dailySections);
+        try
+        {
+            _logger.LogInformation("Updating newsletter manage preferences for {Email}", email);
+            using var response = await _httpClient.PutAsJsonAsync("/api/newsletter/manage", new
+            {
+                email,
+                token,
+                displayName,
+                weeklySections,
+                dailySections
+            }, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update newsletter manage preferences");
+            throw;
+        }
+    }
+
     // ================================================================
     // Helper methods
     // ================================================================
@@ -936,17 +1007,18 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
-    public virtual async Task TriggerNewsletterTestSendAsync(string email, string? roundupSlug = null, CancellationToken cancellationToken = default)
+    public virtual async Task TriggerNewsletterTestSendAsync(string email, IReadOnlyList<string> sections, string kind, CancellationToken cancellationToken = default)
     {
         email = email.Sanitize();
-        roundupSlug = string.IsNullOrWhiteSpace(roundupSlug) ? null : roundupSlug.Sanitize();
+        kind = string.Equals(kind?.Trim(), "daily", StringComparison.OrdinalIgnoreCase) ? "daily" : "weekly";
+        var sectionParams = string.Join("&", sections.Select(s => $"sections={Uri.EscapeDataString(s.Sanitize())}"));
+        var url = string.IsNullOrEmpty(sectionParams)
+            ? $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}&kind={kind}"
+            : $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}&kind={kind}&{sectionParams}";
 
         try
         {
-            _logger.LogInformation("Triggering newsletter test send for roundup {RoundupSlug}", roundupSlug ?? "(latest)");
-            var url = string.IsNullOrWhiteSpace(roundupSlug)
-                ? $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}"
-                : $"/api/admin/newsletter/test-send?email={Uri.EscapeDataString(email)}&roundupSlug={Uri.EscapeDataString(roundupSlug)}";
+            _logger.LogInformation("Triggering newsletter test {Kind} send for sections: {Sections}", kind, string.Join(", ", sections));
             using var response = await _httpClient.PostAsync(url, null, cancellationToken);
             response.EnsureSuccessStatusCode();
         }

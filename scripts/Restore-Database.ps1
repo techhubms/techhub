@@ -335,18 +335,77 @@ if (-not $SkipDump -and -not $ProductionConnectionString) {
         if ($serverFqdn -and $LASTEXITCODE -eq 0) {
             Write-Host "   Production server: $serverFqdn" -ForegroundColor Yellow
 
-            # Try to fetch password from Key Vault
+            # Try to fetch password from Key Vault.
+            # The Key Vault is IP-restricted, so temporarily add the current outbound IP
+            # if the first attempt fails (matching the pattern in Sync-KeyVaultSecrets.ps1).
             $adminPassword = $null
+            $kvVaultName = "kv-techhub-prod"
+            $kvSecretName = "techhub-prod-postgres-admin-password"
+            $kvIpWasAdded = $false
+            $kvAddedIpCidr = $null
             try {
+                # First attempt — IP may already be in the allow-list
                 $kvPw = (az keyvault secret show `
-                    --vault-name kv-techhub-prod `
-                    --name techhub-prod-postgres-admin-password `
+                    --vault-name $kvVaultName `
+                    --name $kvSecretName `
                     --query value -o tsv 2>$null)
+
+                if ($LASTEXITCODE -ne 0) {
+                    # Access denied — detect current outbound IP and add it to the KV firewall
+                    Write-Detail "Key Vault access restricted — detecting current IP to add firewall rule..."
+                    $currentIp = $null
+                    foreach ($ipProvider in @('https://checkip.amazonaws.com', 'https://api.ipify.org', 'https://icanhazip.com')) {
+                        try {
+                            $ipResponse = (Invoke-RestMethod -Uri $ipProvider -TimeoutSec 10).Trim()
+                            if ($ipResponse -match '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$') {
+                                $currentIp = $ipResponse
+                                break
+                            }
+                        } catch {}
+                    }
+
+                    if ($currentIp) {
+                        $kvAddedIpCidr = "$currentIp/32"
+                        Write-Detail "Adding $currentIp to Key Vault firewall..."
+                        az keyvault network-rule add `
+                            --name $kvVaultName `
+                            --ip-address $kvAddedIpCidr `
+                            --output none 2>$null
+                        if ($LASTEXITCODE -eq 0) {
+                            $kvIpWasAdded = $true
+                            Write-Detail "Waiting for firewall rule to propagate..."
+                            $kvElapsed = 0
+                            while ($kvElapsed -lt 60) {
+                                Start-Sleep -Seconds 5
+                                $kvElapsed += 5
+                                az keyvault secret list --vault-name $kvVaultName --query '[]' --output none 2>$null
+                                if ($LASTEXITCODE -eq 0) { break }
+                                Write-Detail "  Still propagating (${kvElapsed}s)..."
+                            }
+                            # Retry secret fetch after firewall rule is active
+                            $kvPw = (az keyvault secret show `
+                                --vault-name $kvVaultName `
+                                --name $kvSecretName `
+                                --query value -o tsv 2>$null)
+                        }
+                    }
+                }
+
                 if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($kvPw)) {
                     $adminPassword = $kvPw.Trim()
                     Write-Ok "Retrieved production password from Key Vault"
                 }
-            } catch {}
+            } catch {
+                Write-Detail "Key Vault fetch error: $($_.Exception.Message)"
+            } finally {
+                if ($kvIpWasAdded -and $kvAddedIpCidr) {
+                    Write-Detail "Removing temporary Key Vault firewall rule ($kvAddedIpCidr)..."
+                    az keyvault network-rule remove `
+                        --name $kvVaultName `
+                        --ip-address $kvAddedIpCidr `
+                        --output none 2>$null
+                }
+            }
 
             if (-not $adminPassword) {
                 # Fall back to interactive prompt

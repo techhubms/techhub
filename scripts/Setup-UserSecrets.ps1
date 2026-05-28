@@ -178,17 +178,9 @@ function Get-EnvVar($envVars, $name) {
 
 $aiEndpoint = Get-EnvVar $apiEnvVars 'AiCategorization__Endpoint'
 $aiDeployment = Get-EnvVar $apiEnvVars 'AiCategorization__DeploymentName'
-$newsletterSenderAddress = Get-EnvVar $apiEnvVars 'Newsletter__SenderAddress'
-$newsletterEndpoint = Get-EnvVar $apiEnvVars 'Newsletter__Endpoint'
 
-Write-Host "  AI Endpoint:       $aiEndpoint" -ForegroundColor Gray
-Write-Host "  AI Deployment:     $aiDeployment" -ForegroundColor Gray
-Write-Host "  Newsletter Sender: $newsletterSenderAddress" -ForegroundColor Gray
-if ([string]::IsNullOrWhiteSpace($newsletterEndpoint)) {
-    Write-Host "  [WARN] Newsletter endpoint not found in Container App (deploy infrastructure first)" -ForegroundColor Yellow
-} else {
-    Write-Host "  Newsletter Endpoint: $newsletterEndpoint" -ForegroundColor Gray
-}
+Write-Host "  AI Endpoint:   $aiEndpoint" -ForegroundColor Gray
+Write-Host "  AI Deployment: $aiDeployment" -ForegroundColor Gray
 
 # --- Fetch secrets from Key Vault ---
 Write-Host ""
@@ -216,17 +208,31 @@ if (-not [string]::IsNullOrWhiteSpace($currentIp)) {
     }
 }
 
-$newsletterUnsubscribeSecret = $null
-try {
-    $newsletterUnsubscribeSecret = az keyvault secret show --vault-name $KeyVaultName --name techhub-prod-newsletter-unsubscribe-secret --query "value" --output tsv --only-show-errors 2>&1
+function Get-KvSecret($name, $label) {
+    $value = az keyvault secret show --vault-name $KeyVaultName --name $name --query "value" --output tsv --only-show-errors 2>&1
     if ($LASTEXITCODE -eq 0) {
-        $newsletterUnsubscribeSecret = ($newsletterUnsubscribeSecret | Where-Object { $_ -is [string] -and $_ -notmatch '^\s*WARNING' }) -join ""
-        Write-Host "  Newsletter Secret: $('*' * 8)...(fetched)" -ForegroundColor Gray
+        $value = ($value | Where-Object { $_ -is [string] -and $_ -notmatch '^\s*WARNING' }) -join ""
+        if ($label -match 'Secret|Key|Password') {
+            Write-Host "  $label $('*' * 8)...(fetched)" -ForegroundColor Gray
+        }
+        else {
+            Write-Host "  $label $value" -ForegroundColor Gray
+        }
+        return $value
     }
     else {
-        Write-Host "  [WARN] Newsletter unsubscribe secret not found in Key Vault (deploy infrastructure first)" -ForegroundColor Yellow
-        $newsletterUnsubscribeSecret = $null
+        Write-Host "  [WARN] $label not found in Key Vault (deploy infrastructure first)" -ForegroundColor Yellow
+        return $null
     }
+}
+
+$newsletterEndpoint         = $null
+$newsletterSenderAddress    = $null
+$newsletterUnsubscribeSecret = $null
+try {
+    $newsletterEndpoint          = Get-KvSecret 'techhub-prod-newsletter-acs-endpoint'        'Newsletter Endpoint:  '
+    $newsletterSenderAddress     = Get-KvSecret 'techhub-prod-acs-sender-address'             'Newsletter Sender:    '
+    $newsletterUnsubscribeSecret = Get-KvSecret 'techhub-prod-newsletter-unsubscribe-secret'  'Newsletter Secret:    '
 }
 finally {
     if (-not [string]::IsNullOrWhiteSpace($currentIp)) {

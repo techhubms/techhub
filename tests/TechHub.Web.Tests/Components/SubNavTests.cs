@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
+using TechHub.Web.Services;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -15,6 +16,8 @@ public class SubNavTests : BunitContext
     public SubNavTests()
     {
         JSInterop.Mode = JSRuntimeMode.Loose;
+        // HomepageStatsState is injected by SubNav; provide an empty instance by default
+        Services.AddSingleton(new HomepageStatsState());
     }
 
     [Fact]
@@ -70,79 +73,10 @@ public class SubNavTests : BunitContext
         var cut = Render<SubNav>(parameters => parameters
             .Add(p => p.Sections, sections));
 
-        // Assert - Should render homepage subnav
-        var nav = cut.Find("nav.sub-nav.sub-nav-homepage");
+        // Assert - Should render homepage subnav (always sub-nav-homepage-visible now)
+        var nav = cut.Find("nav.sub-nav.sub-nav-homepage-visible");
         nav.Should().NotBeNull();
         nav.GetAttribute("aria-label").Should().Be("Site navigation");
-    }
-
-    [Fact]
-    public void SubNav_WithSections_DropdownToggle_ShowsHomeAsActiveLabel()
-    {
-        // Arrange
-        var sections = new List<Section>
-        {
-            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
-                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
-        };
-
-        // Act
-        var cut = Render<SubNav>(parameters => parameters
-            .Add(p => p.Sections, sections));
-
-        // Assert - Default active label should be "Home" (since bUnit's default URL is "/")
-        var toggleButton = cut.Find(".sub-nav-dropdown-toggle");
-        toggleButton.TextContent.Should().Contain("Home");
-    }
-
-    [Fact]
-    public void SubNav_WithSections_DropdownMenu_ContainsHomeAndAboutUs()
-    {
-        // Arrange
-        var sections = new List<Section>
-        {
-            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
-                [new Collection("news", "News", "/ai/news", "Latest news", "News")]),
-            new("github-copilot", "GitHub Copilot", "Copilot", "/github-copilot", "GitHub Copilot",
-                [new Collection("news", "News", "/github-copilot/news", "Latest news", "News")])
-        };
-
-        // Act - Render and open the dropdown
-        var cut = Render<SubNav>(parameters => parameters
-            .Add(p => p.Sections, sections));
-        cut.Find(".sub-nav-dropdown-toggle").Click();
-
-        // Assert - Should contain Home, sections, and About Us
-        var items = cut.FindAll(".sub-nav-dropdown-item");
-        items.Should().HaveCount(4, "Home + 2 sections + About Us");
-        items[0].TextContent.Trim().Should().Be("Home");
-        items[1].TextContent.Trim().Should().Be("Artificial Intelligence");
-        items[2].TextContent.Trim().Should().Be("GitHub Copilot");
-        items[3].TextContent.Trim().Should().Be("About Us");
-    }
-
-    [Fact]
-    public void SubNav_WithSections_OnHomepage_HomeIsActive()
-    {
-        // Arrange - bUnit default URL is "http://localhost/" which maps to Home
-        var sections = new List<Section>
-        {
-            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
-                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
-        };
-
-        // Act - Render and open dropdown
-        var cut = Render<SubNav>(parameters => parameters
-            .Add(p => p.Sections, sections));
-        cut.Find(".sub-nav-dropdown-toggle").Click();
-
-        // Assert - Home link should have active class
-        var homeLink = cut.Find(".sub-nav-dropdown-item[href='/']");
-        homeLink.ClassList.Should().Contain("active");
-
-        // About Us should NOT be active
-        var aboutLink = cut.Find(".sub-nav-dropdown-item[href='/about']");
-        aboutLink.ClassList.Should().NotContain("active");
     }
 
     [Fact]
@@ -256,5 +190,176 @@ public class SubNavTests : BunitContext
         // not by Blazor's NavigationManager, so we verify the JS call was made.
         JSInterop.Invocations.Should().Contain(i => i.Identifier == "TechHub.scrollToTopAndClearHash",
             "clicking the active link should scroll to top and clear the hash");
+    }
+
+    [Fact]
+    public void SubNav_WithHomepageStats_ShowsStatChips()
+    {
+        // Arrange
+        var statsState = Services.GetRequiredService<HomepageStatsState>();
+        statsState.Update(recentCount: 12, totalCount: 1337, weekAgoDate: "2025-01-01", sectionsCount: 5);
+
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections));
+
+        // Assert - stats chips should appear in the subnav
+        cut.Find(".stats-box").Should().NotBeNull(
+            "subnav should contain the stats box container");
+        cut.FindAll(".stat-chip").Should().HaveCountGreaterThan(0,
+            "stat chips should be rendered when stats are available");
+        cut.Markup.Should().Contain("1,337 items total",
+            "total count should be formatted with thousands separator");
+        cut.Markup.Should().Contain("5 sections",
+            "sections count should be shown");
+        cut.Markup.Should().Contain("12 new",
+            "recent count should be shown when > 0");
+        cut.Markup.Should().Contain("this week",
+            "recent label should include 'this week' text");
+    }
+
+    [Fact]
+    public void SubNav_WithHomepageStats_WhenNoRecentItems_HidesNewBadge()
+    {
+        // Arrange
+        var statsState = Services.GetRequiredService<HomepageStatsState>();
+        statsState.Update(recentCount: 0, totalCount: 500, weekAgoDate: "2025-01-01", sectionsCount: 3);
+
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections));
+
+        // Assert - "new this week" chip should NOT appear when recentCount is 0
+        cut.Markup.Should().NotContain("new this week",
+            "new-this-week chip should be hidden when recentCount is 0");
+        cut.Markup.Should().Contain("500 items total",
+            "total count should still appear");
+    }
+
+    [Fact]
+    public void SubNav_WithHomepageStats_WhenNoDataYet_HidesStatChips()
+    {
+        // Arrange - HomepageStatsState with no data (TotalCount is null)
+        // (Services already has an empty HomepageStatsState from constructor)
+
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections));
+
+        // Assert - stat chips should not appear when TotalCount is null
+        cut.FindAll(".stat-chip").Should().BeEmpty(
+            "stat chips should not render before stats are loaded");
+    }
+
+    [Fact]
+    public void SubNav_HomepageWithNewsletter_ShowsNewsletterButton()
+    {
+        // Arrange
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act — RSS is no longer shown in subnav (it moved to SectionBanner); only Newsletter
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.RssFeedUrl, "/rss/feed.xml")
+            .Add(p => p.ShowNewsletter, true));
+
+        // Assert - only Newsletter button is shown in the subnav; RSS is in the banner
+        cut.FindAll(".btn-subnav-newsletter").Should().HaveCount(1,
+            "Newsletter button should be shown in the homepage subnav");
+        cut.Markup.Should().NotContain("/rss/feed.xml",
+            "RSS link should not appear in the subnav (it moved to the section banner)");
+    }
+
+    [Fact]
+    public void SubNav_WithHideStats_DoesNotShowStatsBox()
+    {
+        // Arrange - stats are loaded but HideStats=true
+        var statsState = Services.GetRequiredService<HomepageStatsState>();
+        statsState.Update(recentCount: 5, totalCount: 999, weekAgoDate: "2025-01-01", sectionsCount: 4);
+
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.HideStats, true));
+
+        // Assert - stats box should not render when HideStats is true
+        cut.FindAll(".stats-box").Should().BeEmpty(
+            "stats box should be hidden when HideStats is true");
+        cut.FindAll(".stat-chip").Should().BeEmpty(
+            "stat chips should not render when HideStats is true");
+    }
+
+    [Fact]
+    public void SubNav_WithShowDiscord_ShowsDiscordButton()
+    {
+        // Arrange
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.ShowDiscord, true));
+
+        // Assert - Discord button should be rendered in the subnav
+        var discordLink = cut.Find("a.btn-subnav-discord");
+        discordLink.Should().NotBeNull("Discord button should render when ShowDiscord is true");
+        discordLink.GetAttribute("href").Should().Be("https://discord.gg/cURHV9TvFS",
+            "Discord link should point to the correct server URL");
+        discordLink.GetAttribute("target").Should().Be("_blank",
+            "Discord link should open in a new tab");
+    }
+
+    [Fact]
+    public void SubNav_WithShowHomepageButton_ShowsHomepageButton()
+    {
+        // Arrange
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.ShowHomepageButton, true));
+
+        // Assert - Homepage button should be rendered linking back to root
+        var homepageLink = cut.Find("a.btn-subnav[href='/']");
+        homepageLink.Should().NotBeNull("Homepage button should render when ShowHomepageButton is true");
+        homepageLink.TextContent.Trim().Should().Be("Homepage",
+            "Homepage button should display 'Homepage' as its label");
     }
 }

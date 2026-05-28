@@ -4,6 +4,7 @@ using System.Net.Http.Json;
 using Dapper;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
+using TechHub.Core.Models;
 using TechHub.Infrastructure.Services.Newsletter;
 
 namespace TechHub.Api.Tests.Endpoints;
@@ -111,5 +112,130 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
         var count = await connection.ExecuteScalarAsync<int>(
             "SELECT COUNT(*) FROM newsletter_subscribers WHERE email = 'invalid-sections@example.com'");
         count.Should().Be(0);
+    }
+
+    [Fact]
+    public async Task ManageRequest_WithValidEmail_ReturnsOk()
+    {
+        const string Email = "manage-request@example.com";
+
+        // Subscribe and confirm first so the manage-link email can be sent
+        await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email = Email, WeeklySections = new[] { "ai" }, DailySections = Array.Empty<string>() },
+            TestContext.Current.CancellationToken);
+
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        await connection.ExecuteAsync(
+            "UPDATE newsletter_subscribers SET is_confirmed = TRUE WHERE email = @Email",
+            new { Email });
+
+        var response = await _client.PostAsync(
+            $"/api/newsletter/manage/request?email={Uri.EscapeDataString(Email)}",
+            null,
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+    }
+
+    [Fact]
+    public async Task ManageRequest_WithUnknownEmail_ReturnsOk()
+    {
+        // Should return 200 regardless (don't leak whether email is subscribed)
+        var response = await _client.PostAsync(
+            "/api/newsletter/manage/request?email=nobody%40example.com",
+            null,
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+    }
+
+    [Fact]
+    public async Task ManagePreferences_GetWithValidToken_ReturnsSubscriberData()
+    {
+        const string Email = "manage-get@example.com";
+
+        await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email = Email, WeeklySections = new[] { "ai", "azure" }, DailySections = new[] { "ai" } },
+            TestContext.Current.CancellationToken);
+
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        await connection.ExecuteAsync(
+            "UPDATE newsletter_subscribers SET is_confirmed = TRUE WHERE email = @Email",
+            new { Email });
+
+        var token = NewsletterService.BuildUnsubscribeToken(Email, "integration-test-secret");
+        var response = await _client.GetAsync(
+            $"/api/newsletter/manage?email={Uri.EscapeDataString(Email)}&token={Uri.EscapeDataString(token)}",
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var subscriber = await response.Content.ReadFromJsonAsync<NewsletterSubscriber>(
+            TestContext.Current.CancellationToken);
+        subscriber.Should().NotBeNull();
+        subscriber!.Email.Should().Be(Email);
+    }
+
+    [Fact]
+    public async Task ManagePreferences_GetWithInvalidToken_ReturnsUnauthorized()
+    {
+        const string Email = "manage-badtoken@example.com";
+
+        await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email = Email, WeeklySections = new[] { "ai" }, DailySections = Array.Empty<string>() },
+            TestContext.Current.CancellationToken);
+
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        await connection.ExecuteAsync(
+            "UPDATE newsletter_subscribers SET is_confirmed = TRUE WHERE email = @Email",
+            new { Email });
+
+        var response = await _client.GetAsync(
+            $"/api/newsletter/manage?email={Uri.EscapeDataString(Email)}&token=wrong-token",
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task ManagePreferences_UpdateWithValidToken_PersistsChanges()
+    {
+        const string Email = "manage-update@example.com";
+
+        await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email = Email, WeeklySections = new[] { "ai" }, DailySections = Array.Empty<string>() },
+            TestContext.Current.CancellationToken);
+
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        await connection.ExecuteAsync(
+            "UPDATE newsletter_subscribers SET is_confirmed = TRUE WHERE email = @Email",
+            new { Email });
+
+        var token = NewsletterService.BuildUnsubscribeToken(Email, "integration-test-secret");
+        var response = await _client.PutAsJsonAsync(
+            "/api/newsletter/manage",
+            new
+            {
+                Email,
+                Token = token,
+                DisplayName = "Updated Name",
+                WeeklySections = new[] { "azure" },
+                DailySections = new[] { "dotnet" }
+            },
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var displayName = await connection.ExecuteScalarAsync<string>(
+            "SELECT display_name FROM newsletter_subscribers WHERE email = @Email",
+            new { Email });
+        displayName.Should().Be("Updated Name");
     }
 }

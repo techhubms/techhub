@@ -10,12 +10,13 @@
     Key Vault using Azure CLI, so the Bicep deploy can reference them.
 
     Secrets written:
-        techhub-prod-aad-client-secret      — Entra client secret
-        techhub-github-registry-token       — GHCR PAT for pulling container images
-        techhub-prod-newsletter-acs-endpoint — ACS email endpoint URL
-        techhub-prod-postgres-admin-password — PostgreSQL admin password (for re-deploys without re-specifying)
-        wildcard-hub-ms                     — Wildcard TLS certificate for *.hub.ms
-        wildcard-xebia-ms                   — Wildcard TLS certificate for *.xebia.ms
+        techhub-prod-aad-client-secret           — Entra client secret
+        techhub-github-registry-token            — GHCR PAT for pulling container images
+        techhub-prod-newsletter-acs-endpoint     — ACS email endpoint URL
+        techhub-prod-newsletter-unsubscribe-secret — HMAC secret for newsletter unsubscribe/confirm URLs
+        techhub-prod-postgres-admin-password     — PostgreSQL admin password (for re-deploys without re-specifying)
+        wildcard-hub-ms                          — Wildcard TLS certificate for *.hub.ms
+        wildcard-xebia-ms                        — Wildcard TLS certificate for *.xebia.ms
 
     Secrets no longer written (replaced by managed identity / RBAC):
         techhub-prod-db-connection-string   — removed; app uses Entra token auth (Database:UseEntraAuth=true)
@@ -27,7 +28,7 @@
 
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
-        2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_PAT, NEWSLETTER_ACS_ENDPOINT,
+        2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_PAT, NEWSLETTER_ACS_ENDPOINT, NEWSLETTER_UNSUBSCRIBE_SECRET,
            POSTGRES_ADMIN_PASSWORD, WILDCARD_CERT_HUB_MS, WILDCARD_CERT_XEBIA_MS
         3. ./scripts/Sync-KeyVaultSecrets.ps1
 
@@ -99,12 +100,13 @@ function Set-KvSecret {
 }
 
 # --- Collect values from env ---
-$aadClientSecret       = $env:AZURE_AD_CLIENT_SECRET
-$ghcrToken             = $env:GHCR_PAT
-$newsletterAcsEndpoint = $env:NEWSLETTER_ACS_ENDPOINT
-$postgresAdminPassword = $env:POSTGRES_ADMIN_PASSWORD
-$wildcardHubMs         = $env:WILDCARD_CERT_HUB_MS
-$wildcardXebiaMs       = $env:WILDCARD_CERT_XEBIA_MS
+$aadClientSecret              = $env:AZURE_AD_CLIENT_SECRET
+$ghcrToken                    = $env:GHCR_PAT
+$newsletterAcsEndpoint        = $env:NEWSLETTER_ACS_ENDPOINT
+$newsletterUnsubscribeSecret  = $env:NEWSLETTER_UNSUBSCRIBE_SECRET
+$postgresAdminPassword        = $env:POSTGRES_ADMIN_PASSWORD
+$wildcardHubMs                = $env:WILDCARD_CERT_HUB_MS
+$wildcardXebiaMs              = $env:WILDCARD_CERT_XEBIA_MS
 
 # --- Temporarily add this machine's IP to the Key Vault firewall ---
 # Key Vault is IP-restricted. GitHub Actions runners have dynamic IPs that are not in the
@@ -194,12 +196,13 @@ try {
         Write-Host "   IP $currentIp is already permitted by Key Vault '$($KeyVaultName)' firewall." -ForegroundColor Gray
     }
 
-    Set-KvSecret -Name "techhub-prod-aad-client-secret"       -Value $aadClientSecret       -Description 'Entra client secret'
-    Set-KvSecret -Name "techhub-github-registry-token"        -Value $ghcrToken             -Description 'GitHub Container Registry PAT'
-    Set-KvSecret -Name "techhub-prod-newsletter-acs-endpoint" -Value $newsletterAcsEndpoint -Description 'ACS email endpoint URL'
-    Set-KvSecret -Name "techhub-prod-postgres-admin-password" -Value $postgresAdminPassword -Description 'PostgreSQL admin password'
-    Set-KvSecret -Name "wildcard-hub-ms"                      -Value $wildcardHubMs         -Description 'Wildcard TLS certificate (*.hub.ms)'
-    Set-KvSecret -Name "wildcard-xebia-ms"                    -Value $wildcardXebiaMs       -Description 'Wildcard TLS certificate (*.xebia.ms)'
+    Set-KvSecret -Name "techhub-prod-aad-client-secret"              -Value $aadClientSecret             -Description 'Entra client secret'
+    Set-KvSecret -Name "techhub-github-registry-token"               -Value $ghcrToken                   -Description 'GitHub Container Registry PAT'
+    Set-KvSecret -Name "techhub-prod-newsletter-acs-endpoint"        -Value $newsletterAcsEndpoint       -Description 'ACS email endpoint URL'
+    Set-KvSecret -Name "techhub-prod-newsletter-unsubscribe-secret"  -Value $newsletterUnsubscribeSecret -Description 'HMAC secret for newsletter unsubscribe/confirm URLs'
+    Set-KvSecret -Name "techhub-prod-postgres-admin-password"        -Value $postgresAdminPassword       -Description 'PostgreSQL admin password'
+    Set-KvSecret -Name "wildcard-hub-ms"                             -Value $wildcardHubMs               -Description 'Wildcard TLS certificate (*.hub.ms)'
+    Set-KvSecret -Name "wildcard-xebia-ms"                           -Value $wildcardXebiaMs             -Description 'Wildcard TLS certificate (*.xebia.ms)'
 
     Write-Host ""
     Write-Host "All secrets synchronised into '$($KeyVaultName)'." -ForegroundColor Green

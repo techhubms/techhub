@@ -322,10 +322,28 @@ internal interface ITechHubApiClient
     Task TriggerNewsletterAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Trigger a newsletter test send to a specific recipient.
+    /// Trigger a newsletter test send to a specific recipient for the given sections.
     /// POST /api/admin/newsletter/test-send
     /// </summary>
-    Task TriggerNewsletterTestSendAsync(string email, string? roundupSlug = null, CancellationToken cancellationToken = default);
+    Task TriggerNewsletterTestSendAsync(string email, IReadOnlyList<string> sections, string kind, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Request a subscription management link to be sent to the given email.
+    /// POST /api/newsletter/manage/request
+    /// </summary>
+    Task RequestNewsletterManageLinkAsync(string email, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get subscriber preferences for self-management.
+    /// GET /api/newsletter/manage
+    /// </summary>
+    Task<NewsletterSubscriber?> GetNewsletterManagePreferencesAsync(string email, string token, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update subscriber preferences via self-management.
+    /// PUT /api/newsletter/manage
+    /// </summary>
+    Task UpdateNewsletterManagePreferencesAsync(string email, string token, string? displayName, IReadOnlyList<string> weeklySections, IReadOnlyList<string> dailySections, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Delete an existing roundup and re-run generation for its week.

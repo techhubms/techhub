@@ -48,6 +48,28 @@ public static class NewsletterEndpoints
             .Produces(StatusCodes.Status400BadRequest)
             .Produces(StatusCodes.Status404NotFound);
 
+        publicGroup.MapPost("/manage/request", RequestManageLinkAsync)
+            .WithName("NewsletterManageRequest")
+            .WithSummary("Request a subscription management link")
+            .WithDescription("Sends a management link to the subscriber's email if it is a known confirmed address.")
+            .Produces(StatusCodes.Status200OK);
+
+        publicGroup.MapGet("/manage", GetManagePreferencesAsync)
+            .WithName("GetNewsletterManagePreferences")
+            .WithSummary("Get subscriber preferences for self-management")
+            .WithDescription("Returns the subscriber's current preferences when a valid token is supplied.")
+            .Produces<NewsletterSubscriber>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
+        publicGroup.MapPut("/manage", UpdateManagePreferencesAsync)
+            .WithName("UpdateNewsletterManagePreferences")
+            .WithSummary("Update subscriber preferences via self-management")
+            .WithDescription("Updates display name and section preferences when a valid token is supplied.")
+            .Produces(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
         var adminGroup = app.MapGroup("/api/admin/newsletter")
             .WithTags("Admin")
             .RequireAuthorization("AdminOnly")
@@ -262,18 +284,90 @@ public static class NewsletterEndpoints
 
     private static IResult TestSendNewsletterAsync(
         [FromQuery] string email,
-        NewsletterBackgroundService backgroundService,
-        [FromQuery] string? roundupSlug = null)
+        [FromQuery] string[]? sections,
+        [FromQuery] string? kind,
+        NewsletterBackgroundService backgroundService)
     {
         email = (email ?? string.Empty).Trim().Sanitize();
-        roundupSlug = roundupSlug?.Trim().Sanitize();
         if (!IsValidEmail(email))
         {
             return Results.BadRequest("A valid email address is required.");
         }
 
-        backgroundService.TriggerTestSend(email, roundupSlug);
+        var normalizedKind = string.Equals(kind?.Trim(), "daily", StringComparison.OrdinalIgnoreCase) ? "daily" : "weekly";
+        var sectionList = (sections ?? []).Select(s => s.Trim().ToLowerInvariant()).Where(s => !string.IsNullOrWhiteSpace(s)).Distinct().ToList();
+        backgroundService.TriggerTestSend(email, sectionList, normalizedKind);
         return Results.Accepted("/api/admin/newsletter/send-log", new { message = "Newsletter test send triggered" });
+    }
+
+    private static async Task<IResult> RequestManageLinkAsync(
+        [FromQuery] string? email,
+        INewsletterService newsletterService,
+        CancellationToken ct)
+    {
+        email = (email ?? string.Empty).Trim().Sanitize();
+        if (string.IsNullOrWhiteSpace(email) || !IsValidEmail(email))
+        {
+            return Results.BadRequest("A valid email address is required.");
+        }
+
+        await newsletterService.SendManageLinkEmailAsync(email, ct);
+        return Results.Ok(new { message = "If this email is subscribed, a management link has been sent." });
+    }
+
+    private static async Task<IResult> GetManagePreferencesAsync(
+        [FromQuery] string? email,
+        [FromQuery] string? token,
+        INewsletterService newsletterService,
+        CancellationToken ct)
+    {
+        email = (email ?? string.Empty).Trim().Sanitize();
+        token = (token ?? string.Empty).Trim().Sanitize();
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(token))
+        {
+            return Results.BadRequest("Email and token are required.");
+        }
+
+        var subscriber = await newsletterService.GetSubscriberPreferencesAsync(email, token, ct);
+        return subscriber is null
+            ? Results.NotFound(new { message = "Subscription not found or invalid token." })
+            : Results.Ok(subscriber);
+    }
+
+    private static async Task<IResult> UpdateManagePreferencesAsync(
+        NewsletterManageUpdateRequest request,
+        IContentRepository contentRepository,
+        INewsletterService newsletterService,
+        CancellationToken ct)
+    {
+        var email = (request.Email ?? string.Empty).Trim().Sanitize();
+        var token = (request.Token ?? string.Empty).Trim().Sanitize();
+        var displayName = request.DisplayName?.Trim().Sanitize();
+        var weekly = SanitizeRequestedSections(request.WeeklySections);
+        var daily = SanitizeRequestedSections(request.DailySections);
+
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(token))
+        {
+            return Results.BadRequest("Email and token are required.");
+        }
+
+        if (weekly.Count == 0 && daily.Count == 0)
+        {
+            return Results.BadRequest("Select at least one weekly or daily section.");
+        }
+
+        var validSections = (await contentRepository.GetAllSectionsAsync(ct))
+            .Where(s => !string.Equals(s.Name, "all", StringComparison.OrdinalIgnoreCase))
+            .Select(s => s.Name.Trim().ToLowerInvariant())
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+        var normalizedWeekly = NormalizeRequestedSections(weekly, validSections);
+        var normalizedDaily = NormalizeRequestedSections(daily, validSections);
+
+        var updated = await newsletterService.UpdateSubscriberPreferencesAsync(email, token, displayName, normalizedWeekly, normalizedDaily, ct);
+        return updated
+            ? Results.Ok(new { message = "Preferences updated." })
+            : Results.NotFound(new { message = "Subscription not found or invalid token." });
     }
 
     private static bool IsValidEmail(string input)

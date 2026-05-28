@@ -37,6 +37,15 @@ public interface INewsletterSubscriberRepository
 
     Task<bool> DeleteSubscriberAsync(long id, CancellationToken ct = default);
 
+    Task<NewsletterSubscriber?> GetSubscriberByEmailAsync(string email, CancellationToken ct = default);
+
+    Task<bool> UpdateSubscriberByEmailAsync(
+        string email,
+        string? displayName,
+        IReadOnlyList<string> weeklySections,
+        IReadOnlyList<string> dailySections,
+        CancellationToken ct = default);
+
     Task<bool> HasBeenSentAsync(string sendKind, string targetKey, CancellationToken ct = default);
 
     Task LogSendAsync(

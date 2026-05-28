@@ -38,9 +38,29 @@
             <label class="admin-label" for="testEmail">Test send email</label>
             <input id="testEmail" class="admin-input" @bind="_testEmail" />
         </div>
+        @if (_sections.Count > 0)
+        {
+            <div class="admin-filter-group">
+                <label class="admin-label">Sections to include</label>
+                <div class="admin-checkbox-list">
+                    @foreach (var section in _sections)
+                    {
+                        <label class="admin-checkbox-item">
+                            <input type="checkbox"
+                                   checked="@_testSections.Contains(section.Name)"
+                                   @onchange="e => ToggleTestSection(section.Name, (bool)(e.Value ?? false))" />
+                            @section.Title
+                        </label>
+                    }
+                </div>
+            </div>
+        }
         <div class="admin-filter-group">
             <label class="admin-label">&nbsp;</label>
-            <button class="btn-secondary" @onclick="TriggerTestSendAsync" disabled="@string.IsNullOrWhiteSpace(_testEmail)">▶ Test Send</button>
+            <div style="display:flex;gap:0.5rem;">
+                <button class="btn-secondary" @onclick='() => TriggerTestSendAsync("weekly")' disabled="@(string.IsNullOrWhiteSpace(_testEmail) || _testSections.Count == 0)">▶ Test Weekly</button>
+                <button class="btn-secondary" @onclick='() => TriggerTestSendAsync("daily")' disabled="@(string.IsNullOrWhiteSpace(_testEmail) || _testSections.Count == 0)">▶ Test Daily</button>
+            </div>
         </div>
     </div>
 
@@ -152,6 +172,8 @@
 @code {
     private IReadOnlyList<NewsletterSubscriber> _subscribers = [];
     private IReadOnlyList<NewsletterSendLogEntry> _sendLog = [];
+    private IReadOnlyList<Section> _sections = [];
+    private HashSet<string> _testSections = [];
     private string? _search;
     private string? _confirmedFilter;
     private string? _testEmail;
@@ -191,6 +213,10 @@
         {
             _subscribers = await Api.GetNewsletterSubscribersAsync(pageSize: 500);
             _sendLog = await Api.GetNewsletterSendLogAsync();
+            if (_sections.Count == 0)
+            {
+                _sections = await Api.GetNewsletterSectionsAsync() ?? [];
+            }
         }
         catch (OperationCanceledException)
         {
@@ -228,7 +254,7 @@
         }
     }
 
-    private async Task TriggerTestSendAsync()
+    private async Task TriggerTestSendAsync(string kind)
     {
         if (string.IsNullOrWhiteSpace(_testEmail))
         {
@@ -237,14 +263,26 @@
 
         try
         {
-            await Api.TriggerNewsletterTestSendAsync(_testEmail.Trim());
-            _message = "Test send triggered.";
+            await Api.TriggerNewsletterTestSendAsync(_testEmail.Trim(), _testSections.ToList(), kind);
+            _message = $"Test {kind} send triggered.";
             _isError = false;
         }
         catch (HttpRequestException ex)
         {
             _message = ex.Message;
             _isError = true;
+        }
+    }
+
+    private void ToggleTestSection(string sectionName, bool isChecked)
+    {
+        if (isChecked)
+        {
+            _testSections.Add(sectionName);
+        }
+        else
+        {
+            _testSections.Remove(sectionName);
         }
     }
 

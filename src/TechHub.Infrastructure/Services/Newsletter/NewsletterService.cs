@@ -24,6 +24,7 @@ public sealed class NewsletterService : INewsletterService
     private readonly INewsletterSubscriberRepository _subscriberRepository;
     private readonly IContentRepository _contentRepository;
     private readonly NewsletterOptions _options;
+    private readonly AppSettings _appSettings;
     private readonly IEmailSender _emailSender;
     private readonly ILogger<NewsletterService> _logger;
     private readonly string _htmlTemplate;
@@ -33,6 +34,7 @@ public sealed class NewsletterService : INewsletterService
         INewsletterSubscriberRepository subscriberRepository,
         IContentRepository contentRepository,
         IOptions<NewsletterOptions> options,
+        IOptions<AppSettings> appSettings,
         IEmailSender emailSender,
         ILogger<NewsletterService> logger)
     {
@@ -40,6 +42,7 @@ public sealed class NewsletterService : INewsletterService
         ArgumentNullException.ThrowIfNull(subscriberRepository);
         ArgumentNullException.ThrowIfNull(contentRepository);
         ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(appSettings);
         ArgumentNullException.ThrowIfNull(emailSender);
         ArgumentNullException.ThrowIfNull(logger);
 
@@ -47,6 +50,7 @@ public sealed class NewsletterService : INewsletterService
         _subscriberRepository = subscriberRepository;
         _contentRepository = contentRepository;
         _options = options.Value;
+        _appSettings = appSettings.Value;
         _emailSender = emailSender;
         _logger = logger;
         _htmlTemplate = LoadTemplate();
@@ -84,8 +88,9 @@ public sealed class NewsletterService : INewsletterService
             foreach (var subscriber in subscribers)
             {
                 var unsubscribeUrl = BuildUnsubscribeUrl(subscriber.Email);
-                var html = RenderRoundupTemplate(roundup.Title, roundup.Introduction, sectionLinksHtml, fullRoundupUrl, unsubscribeUrl);
-                var text = BuildRoundupPlainText(roundup, fullRoundupUrl, unsubscribeUrl);
+                var manageUrl = BuildManageUrl(subscriber.Email, _options.UnsubscribeSecret);
+                var html = RenderRoundupTemplate(roundup.Title, roundup.Introduction, sectionLinksHtml, fullRoundupUrl, unsubscribeUrl, manageUrl);
+                var text = BuildRoundupPlainText(roundup, fullRoundupUrl, unsubscribeUrl, manageUrl);
                 if (await SendEmailAsync(subscriber.Email, roundup.Title, html, text, ct))
                 {
                     successful++;
@@ -114,33 +119,351 @@ public sealed class NewsletterService : INewsletterService
         ArgumentNullException.ThrowIfNull(roundupSlug);
         ArgumentNullException.ThrowIfNull(recipientEmail);
 
+        // Use a timestamp-unique key so each test send always creates a new log row
+        // (production sends use the slug alone — tests use slug@timestamp)
+        var logKey = $"{roundupSlug}@{DateTime.UtcNow:yyyyMMddHHmmss}";
+
         var roundup = await GetRoundupBySlugAsync(roundupSlug, ct);
         if (roundup is null)
         {
-            await _subscriberRepository.LogSendAsync("test-send", roundupSlug, 0, "failed", $"Roundup '{roundupSlug}' not found", ct);
+            await _subscriberRepository.LogSendAsync("test-send", logKey, 0, "failed", $"Roundup '{roundupSlug}' not found", ct);
             return false;
         }
 
         if (!IsUnsubscribeSecretConfigured("test-email"))
         {
-            await _subscriberRepository.LogSendAsync("test-send", roundupSlug, 0, "failed", "Unsubscribe secret is not configured", ct);
+            await _subscriberRepository.LogSendAsync("test-send", logKey, 0, "failed", "Unsubscribe secret is not configured", ct);
             return false;
         }
 
         var sectionLinksHtml = BuildSectionLinksHtml(roundup);
         var fullRoundupUrl = BuildAbsoluteUrl($"/{roundup.SectionName}/roundups/{roundup.Slug}");
         var unsubscribeUrl = BuildUnsubscribeUrl(recipientEmail);
-        var html = RenderRoundupTemplate(roundup.Title, roundup.Introduction, sectionLinksHtml, fullRoundupUrl, unsubscribeUrl);
-        var text = BuildRoundupPlainText(roundup, fullRoundupUrl, unsubscribeUrl);
+        var manageUrl = BuildManageUrl(recipientEmail, _options.UnsubscribeSecret);
+        var html = RenderRoundupTemplate(roundup.Title, roundup.Introduction, sectionLinksHtml, fullRoundupUrl, unsubscribeUrl, manageUrl);
+        var text = BuildRoundupPlainText(roundup, fullRoundupUrl, unsubscribeUrl, manageUrl);
         var sent = await SendEmailAsync(recipientEmail, $"[Test] {roundup.Title}", html, text, ct);
         await _subscriberRepository.LogSendAsync(
             "test-send",
-            roundupSlug,
+            logKey,
             sent ? 1 : 0,
             sent ? "sent" : "failed",
             sent ? null : $"Delivery failed to {recipientEmail}",
             ct);
         return sent;
+    }
+
+    public async Task<bool> SendCombinedWeeklyAsync(IReadOnlyList<string> roundupSlugs, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(roundupSlugs);
+        if (roundupSlugs.Count == 0)
+        {
+            return false;
+        }
+
+        if (!IsUnsubscribeSecretConfigured("combined-weekly"))
+        {
+            foreach (var slug in roundupSlugs)
+            {
+                await _subscriberRepository.LogSendAsync("weekly-roundup", slug, 0, "failed", "Unsubscribe secret is not configured", ct);
+            }
+
+            return false;
+        }
+
+        // Skip slugs that have already been sent
+        var newSlugs = new List<string>(roundupSlugs.Count);
+        foreach (var slug in roundupSlugs)
+        {
+            if (!await _subscriberRepository.HasBeenSentAsync("weekly-roundup", slug, ct))
+            {
+                newSlugs.Add(slug);
+            }
+        }
+
+        if (newSlugs.Count == 0)
+        {
+            return false;
+        }
+
+        // Load roundup content for each new slug
+        var roundups = new List<RoundupRow>(newSlugs.Count);
+        foreach (var slug in newSlugs)
+        {
+            var roundup = await GetRoundupBySlugAsync(slug, ct);
+            if (roundup is not null)
+            {
+                roundups.Add(roundup);
+            }
+        }
+
+        if (roundups.Count == 0)
+        {
+            return false;
+        }
+
+        // Collect all weekly subscribers across the relevant sections, deduplicated by email
+        var allSubscribers = new Dictionary<string, NewsletterSubscriber>(StringComparer.OrdinalIgnoreCase);
+        foreach (var roundup in roundups)
+        {
+            var sectionSubscribers = await _subscriberRepository.GetActiveSubscribersAsync(roundup.SectionName, weekly: true, ct);
+            foreach (var sub in sectionSubscribers)
+            {
+                allSubscribers.TryAdd(sub.Email, sub);
+            }
+        }
+
+        var roundupsBySection = roundups.ToDictionary(r => r.SectionName, StringComparer.OrdinalIgnoreCase);
+
+        // Track per-slug delivery counts: (expected recipients, successful sends)
+        var slugStats = newSlugs.ToDictionary(s => s, _ => (Expected: 0, Actual: 0), StringComparer.OrdinalIgnoreCase);
+
+        try
+        {
+            foreach (var subscriber in allSubscribers.Values)
+            {
+                // Find the roundups this subscriber cares about (intersection of their sections and new roundups)
+                var relevantRoundups = subscriber.WeeklySections
+                    .Where(s => roundupsBySection.ContainsKey(s))
+                    .Select(s => roundupsBySection[s])
+                    .ToList();
+
+                if (relevantRoundups.Count == 0)
+                {
+                    continue;
+                }
+
+                foreach (var r in relevantRoundups)
+                {
+                    slugStats[r.Slug] = (slugStats[r.Slug].Expected + 1, slugStats[r.Slug].Actual);
+                }
+
+                var unsubscribeUrl = BuildUnsubscribeUrl(subscriber.Email);
+                var manageUrl = BuildManageUrl(subscriber.Email, _options.UnsubscribeSecret);
+                var subject = relevantRoundups.Count == 1
+                    ? relevantRoundups[0].Title
+                    : $"TechHub Weekly Digest — {string.Join(", ", relevantRoundups.Select(r => GetSectionTitle(r.SectionName)))}";
+                var html = RenderCombinedWeeklyHtml(relevantRoundups, unsubscribeUrl, manageUrl);
+                var text = BuildCombinedWeeklyPlainText(relevantRoundups, unsubscribeUrl, manageUrl);
+
+                if (await SendEmailAsync(subscriber.Email, subject, html, text, ct))
+                {
+                    foreach (var r in relevantRoundups)
+                    {
+                        slugStats[r.Slug] = (slugStats[r.Slug].Expected, slugStats[r.Slug].Actual + 1);
+                    }
+                }
+            }
+        }
+        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+        {
+            foreach (var slug in newSlugs)
+            {
+                var (expected, actual) = slugStats[slug];
+                var status = actual > 0 ? "partial" : "failed";
+                await _subscriberRepository.LogSendAsync("weekly-roundup", slug, actual, status, ex.Message, ct);
+            }
+
+            _logger.LogError(ex, "Failed sending combined weekly newsletter");
+            return false;
+        }
+
+        // Log each slug with its individual delivery outcome
+        var anySent = false;
+        foreach (var slug in newSlugs)
+        {
+            var (expected, actual) = slugStats[slug];
+            if (expected == 0)
+            {
+                await _subscriberRepository.LogSendAsync("weekly-roundup", slug, 0, "sent", null, ct);
+                anySent = true;
+            }
+            else
+            {
+                var status = actual == expected ? "sent" : actual > 0 ? "partial" : "failed";
+                var error = actual < expected ? $"Delivered to {actual} of {expected} subscribers" : null;
+                await _subscriberRepository.LogSendAsync("weekly-roundup", slug, actual, status, error, ct);
+                if (actual > 0)
+                {
+                    anySent = true;
+                }
+            }
+        }
+
+        return anySent;
+    }
+
+    public async Task<bool> SendTestWeeklyAsync(IReadOnlyList<string> sections, string recipientEmail, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(sections);
+        ArgumentNullException.ThrowIfNull(recipientEmail);
+
+        if (sections.Count == 0)
+        {
+            return false;
+        }
+
+        if (!IsUnsubscribeSecretConfigured("test-weekly"))
+        {
+            return false;
+        }
+
+        const string Sql = """
+            SELECT slug
+            FROM content_items
+            WHERE collection_name = 'roundups'
+              AND primary_section_name = @Section
+            ORDER BY date_epoch DESC
+            LIMIT 1
+            """;
+
+        // Load the latest roundup for each requested section
+        var roundups = new List<RoundupRow>(sections.Count);
+        foreach (var section in sections)
+        {
+            var slug = await _connection.ExecuteScalarAsync<string?>(new CommandDefinition(Sql, new { Section = section }, cancellationToken: ct));
+            if (slug is null)
+            {
+                _logger.LogWarning("Newsletter test weekly: no roundup found for section {Section}", section);
+                continue;
+            }
+
+            var roundup = await GetRoundupBySlugAsync(slug, ct);
+            if (roundup is not null)
+            {
+                roundups.Add(roundup);
+            }
+        }
+
+        if (roundups.Count == 0)
+        {
+            return false;
+        }
+
+        var logKey = $"test-weekly@{DateTime.UtcNow:yyyyMMddHHmmss}";
+        var unsubscribeUrl = BuildUnsubscribeUrl(recipientEmail);
+        var manageUrl = BuildManageUrl(recipientEmail, _options.UnsubscribeSecret);
+        var subject = roundups.Count == 1
+            ? $"[Test] {roundups[0].Title}"
+            : $"[Test] TechHub Weekly Digest — {string.Join(", ", roundups.Select(r => GetSectionTitle(r.SectionName)))}";
+        var html = RenderCombinedWeeklyHtml(roundups, unsubscribeUrl, manageUrl);
+        var text = BuildCombinedWeeklyPlainText(roundups, unsubscribeUrl, manageUrl);
+        var sent = await SendEmailAsync(recipientEmail, subject, html, text, ct);
+        await _subscriberRepository.LogSendAsync(
+            "test-send",
+            logKey,
+            sent ? 1 : 0,
+            sent ? "sent" : "failed",
+            sent ? null : $"Delivery failed to {recipientEmail}",
+            ct);
+        return sent;
+    }
+
+    public async Task<bool> SendTestDailyEmailAsync(IReadOnlyList<string> sections, string recipientEmail, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(sections);
+        ArgumentNullException.ThrowIfNull(recipientEmail);
+
+        if (sections.Count == 0)
+        {
+            return false;
+        }
+
+        if (!IsUnsubscribeSecretConfigured("test-daily"))
+        {
+            return false;
+        }
+
+        var yesterday = DateOnly.FromDateTime(DateTime.UtcNow.AddDays(-1));
+        var (start, end) = GetDayUtcWindow(yesterday);
+        var sectionNames = sections.Select(s => s.Trim().ToLowerInvariant()).ToList();
+        var itemsBySection = await GetDailyItemsBySectionAsync(sectionNames, start, end, ct);
+        var html = BuildDailyOverviewHtml(yesterday, sectionNames, itemsBySection, recipientEmail);
+        var text = BuildDailyOverviewText(yesterday, sectionNames, itemsBySection, recipientEmail);
+        var logKey = $"daily-{yesterday:yyyyMMdd}@{DateTime.UtcNow:yyyyMMddHHmmss}";
+        var sent = await SendEmailAsync(recipientEmail, $"[Test] TechHub Daily Overview — {yesterday:yyyy-MM-dd}", html, text, ct);
+        await _subscriberRepository.LogSendAsync(
+            "test-daily",
+            logKey,
+            sent ? 1 : 0,
+            sent ? "sent" : "failed",
+            sent ? null : $"Delivery failed to {recipientEmail}",
+            ct);
+        return sent;
+    }
+
+    public async Task<bool> SendManageLinkEmailAsync(string email, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+
+        var secret = _options.UnsubscribeSecret;
+        if (string.IsNullOrWhiteSpace(secret))
+        {
+            _logger.LogError("Newsletter unsubscribe secret is not configured; skipping manage link email");
+            return false;
+        }
+
+        var subscriber = await _subscriberRepository.GetSubscriberByEmailAsync(email, ct);
+        if (subscriber is null)
+        {
+            // Don't reveal whether an email is subscribed — silently succeed
+            return true;
+        }
+
+        var manageUrl = BuildManageUrl(email, secret);
+        var html = $"""
+            <html><body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
+              <h2>Manage your TechHub newsletter subscription</h2>
+              <p>Click the button below to manage your subscription preferences.</p>
+              <p><a href="{WebUtility.HtmlEncode(manageUrl)}" style="display:inline-block;padding:10px 20px;background:#111827;color:#fff;text-decoration:none;border-radius:6px;">Manage subscription</a></p>
+              <p style="color:#6b7280;font-size:0.875rem;">Or copy this link into your browser:<br>{WebUtility.HtmlEncode(manageUrl)}</p>
+            </body></html>
+            """;
+        var text = $"""
+            Manage your TechHub newsletter subscription
+
+            Click the link below to manage your newsletter preferences.
+
+            {manageUrl}
+            """;
+
+        return await SendEmailAsync(email, "Manage your TechHub newsletter subscription", html, text, ct);
+    }
+
+    public async Task<NewsletterSubscriber?> GetSubscriberPreferencesAsync(string email, string token, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+        ArgumentNullException.ThrowIfNull(token);
+
+        var secret = _options.UnsubscribeSecret;
+        if (string.IsNullOrWhiteSpace(secret) || !IsValidUnsubscribeToken(email, token, secret))
+        {
+            return null;
+        }
+
+        return await _subscriberRepository.GetSubscriberByEmailAsync(email, ct);
+    }
+
+    public async Task<bool> UpdateSubscriberPreferencesAsync(
+        string email,
+        string token,
+        string? displayName,
+        IReadOnlyList<string> weeklySections,
+        IReadOnlyList<string> dailySections,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+        ArgumentNullException.ThrowIfNull(token);
+        ArgumentNullException.ThrowIfNull(weeklySections);
+        ArgumentNullException.ThrowIfNull(dailySections);
+
+        var secret = _options.UnsubscribeSecret;
+        if (string.IsNullOrWhiteSpace(secret) || !IsValidUnsubscribeToken(email, token, secret))
+        {
+            return false;
+        }
+
+        return await _subscriberRepository.UpdateSubscriberByEmailAsync(email, displayName, weeklySections, dailySections, ct);
     }
 
     public async Task<bool> SendDailyOverviewAsync(DateOnly day, CancellationToken ct = default)
@@ -483,15 +806,16 @@ public sealed class NewsletterService : INewsletterService
         return sb.ToString();
     }
 
-    private string RenderRoundupTemplate(string title, string introduction, string sectionLinks, string fullRoundupUrl, string unsubscribeUrl) =>
+    private string RenderRoundupTemplate(string title, string introduction, string sectionLinks, string fullRoundupUrl, string unsubscribeUrl, string manageUrl) =>
         _htmlTemplate
             .Replace("{Title}", WebUtility.HtmlEncode(title), StringComparison.Ordinal)
             .Replace("{Introduction}", WebUtility.HtmlEncode(introduction), StringComparison.Ordinal)
             .Replace("{SectionLinks}", sectionLinks, StringComparison.Ordinal)
             .Replace("{FullRoundupUrl}", WebUtility.HtmlEncode(fullRoundupUrl), StringComparison.Ordinal)
+            .Replace("{ManageUrl}", WebUtility.HtmlEncode(manageUrl), StringComparison.Ordinal)
             .Replace("{UnsubscribeUrl}", WebUtility.HtmlEncode(unsubscribeUrl), StringComparison.Ordinal);
 
-    private static string BuildRoundupPlainText(RoundupRow roundup, string fullRoundupUrl, string unsubscribeUrl) =>
+    private static string BuildRoundupPlainText(RoundupRow roundup, string fullRoundupUrl, string unsubscribeUrl, string manageUrl) =>
         string.Create(CultureInfo.InvariantCulture, $"""
             {roundup.Title}
 
@@ -499,8 +823,102 @@ public sealed class NewsletterService : INewsletterService
 
             Read the full roundup: {fullRoundupUrl}
 
+            Manage subscription: {manageUrl}
             Unsubscribe: {unsubscribeUrl}
             """);
+
+    private string RenderCombinedWeeklyHtml(IReadOnlyList<RoundupRow> roundups, string unsubscribeUrl, string manageUrl)
+    {
+        var sb = new StringBuilder();
+        sb.Append("""
+            <!DOCTYPE html>
+            <html lang="en">
+            <body style="margin:0;padding:0;background:#f5f7fb;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 12px;">
+                <tr>
+                  <td align="center">
+                    <table role="presentation" width="900" cellspacing="0" cellpadding="0" style="max-width:900px;background:#ffffff;border-radius:12px;overflow:hidden;">
+                      <tr>
+                        <td style="background:#111827;color:#ffffff;padding:20px 28px;font-size:20px;font-weight:700;">TechHub Weekly Digest</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:28px;">
+            """);
+
+        for (var i = 0; i < roundups.Count; i++)
+        {
+            var roundup = roundups[i];
+            var sectionTitle = GetSectionTitle(roundup.SectionName);
+            var fullRoundupUrl = BuildAbsoluteUrl($"/{roundup.SectionName}/roundups/{roundup.Slug}");
+            var sectionLinksHtml = BuildSectionLinksHtml(roundup);
+
+            if (i > 0)
+            {
+                sb.Append("<hr style=\"border:none;border-top:1px solid #e5e7eb;margin:28px 0;\" />");
+            }
+
+            sb.Append(CultureInfo.InvariantCulture, $"""
+                <div>
+                  <p style="margin:0 0 4px 0;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#6b7280;">{WebUtility.HtmlEncode(sectionTitle)}</p>
+                  <h2 style="margin:0 0 12px 0;font-size:22px;color:#111827;">{WebUtility.HtmlEncode(roundup.Title)}</h2>
+                  <p style="margin:0 0 16px 0;line-height:1.6;color:#374151;">{WebUtility.HtmlEncode(roundup.Introduction)}</p>
+                  <h3 style="margin:0 0 8px 0;font-size:15px;color:#111827;">📑 In this roundup</h3>
+                  <div style="margin:0 0 16px 0;">{sectionLinksHtml}</div>
+                  <p style="margin:0;">
+                    <a href="{WebUtility.HtmlEncode(fullRoundupUrl)}" style="display:inline-block;background:#111827;color:#ffffff;text-decoration:none;padding:10px 14px;border-radius:8px;font-size:14px;">Read the full {WebUtility.HtmlEncode(sectionTitle)} roundup →</a>
+                  </p>
+                </div>
+                """);
+        }
+
+        sb.Append(CultureInfo.InvariantCulture, $"""
+                          <p style="margin:28px 0 0 0;font-size:12px;color:#6b7280;border-top:1px solid #e5e7eb;padding-top:20px;">
+                            You received this because you subscribed to TechHub newsletters.<br />
+                            <a href="{WebUtility.HtmlEncode(manageUrl)}" style="color:#2563eb;">Manage subscription</a> &nbsp;·&nbsp;
+                            <a href="{WebUtility.HtmlEncode(unsubscribeUrl)}" style="color:#2563eb;">Unsubscribe</a>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </body>
+            </html>
+            """);
+
+        return sb.ToString();
+    }
+
+    private string BuildCombinedWeeklyPlainText(IReadOnlyList<RoundupRow> roundups, string unsubscribeUrl, string manageUrl)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("TechHub Weekly Digest");
+        sb.AppendLine(new string('=', 40));
+        sb.AppendLine();
+
+        foreach (var roundup in roundups)
+        {
+            var sectionTitle = GetSectionTitle(roundup.SectionName);
+            var fullRoundupUrl = BuildAbsoluteUrl($"/{roundup.SectionName}/roundups/{roundup.Slug}");
+            sb.AppendLine(sectionTitle);
+            sb.AppendLine(new string('-', sectionTitle.Length));
+            sb.AppendLine(roundup.Title);
+            sb.AppendLine();
+            sb.AppendLine(roundup.Introduction);
+            sb.AppendLine();
+            sb.Append("Read the full roundup: ");
+            sb.AppendLine(fullRoundupUrl);
+            sb.AppendLine();
+        }
+
+        sb.AppendLine($"Manage subscription: {manageUrl}");
+        sb.AppendLine($"Unsubscribe: {unsubscribeUrl}");
+        return sb.ToString();
+    }
+
+    private string GetSectionTitle(string slug) =>
+        _appSettings.Content.Sections.TryGetValue(slug, out var config) ? config.Title : slug;
 
     private string BuildDailyOverviewHtml(
         DateOnly day,
@@ -508,33 +926,49 @@ public sealed class NewsletterService : INewsletterService
         IReadOnlyDictionary<string, IReadOnlyList<DailyItemRow>> itemsBySection,
         string email)
     {
+        var unsubscribeUrl = BuildUnsubscribeUrl(email);
+        var manageUrl = BuildManageUrl(email, _options.UnsubscribeSecret);
+
         var sb = new StringBuilder();
-        sb.Append("<html><body style=\"font-family:Segoe UI,Arial,sans-serif;color:#1f2937;\">");
-        sb.Append($"<h2>TechHub Daily Overview — {day:yyyy-MM-dd}</h2>");
+        sb.Append($"""
+            <!DOCTYPE html>
+            <html lang="en">
+            <body style="margin:0;padding:0;background:#f5f7fb;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 12px;">
+                <tr>
+                  <td align="center">
+                    <table role="presentation" width="1100" cellspacing="0" cellpadding="0" style="max-width:1100px;background:#ffffff;border-radius:12px;overflow:hidden;">
+                      <tr>
+                        <td style="background:#111827;color:#ffffff;padding:20px 28px;font-size:20px;font-weight:700;">TechHub Daily Overview</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:28px;">
+                          <p style="margin:0 0 20px 0;font-size:15px;color:#6b7280;">{day:yyyy-MM-dd}</p>
+            """);
 
         if (sections.Count == 0)
         {
-            sb.Append("<p>No daily subscriptions are active.</p>");
+            sb.Append("<p style=\"color:#374151;\">No daily subscriptions are active.</p>");
         }
         else
         {
             foreach (var section in sections)
             {
                 var items = itemsBySection.TryGetValue(section, out var rows) ? rows : [];
-                sb.Append($"<h3>{WebUtility.HtmlEncode(section)}</h3>");
+                sb.Append($"<h3 style=\"margin:20px 0 8px 0;font-size:18px;font-weight:700;color:#111827;\">{WebUtility.HtmlEncode(GetSectionTitle(section))}</h3>");
                 if (items.Count == 0)
                 {
-                    sb.Append("<p>No new content items in the last 24 hours.</p>");
+                    sb.Append("<p style=\"margin:0 0 8px 0;color:#6b7280;\">No new content items in the last 24 hours.</p>");
                     continue;
                 }
 
-                sb.Append("<ul>");
+                sb.Append("<ul style=\"margin:0 0 8px 0;padding-left:20px;\">");
                 foreach (var item in items)
                 {
                     var filteredUrl = BuildAbsoluteUrl($"/{section}/all?types={Uri.EscapeDataString(item.CollectionName)}&search={Uri.EscapeDataString(item.Title)}");
-                    sb.Append("<li>");
+                    sb.Append("<li style=\"margin-bottom:6px;font-size:16px;line-height:1.5;\">");
                     sb.Append($"<a href=\"{WebUtility.HtmlEncode(filteredUrl)}\" style=\"color:#2563eb;text-decoration:none;\">{WebUtility.HtmlEncode(item.Title)}</a>");
-                    sb.Append($" <span style=\"color:#6b7280;\">({WebUtility.HtmlEncode(item.CollectionName)})</span>");
+                    sb.Append($" <span style=\"color:#6b7280;font-size:14px;\">({WebUtility.HtmlEncode(item.CollectionName)})</span>");
                     sb.Append("</li>");
                 }
 
@@ -542,8 +976,21 @@ public sealed class NewsletterService : INewsletterService
             }
         }
 
-        sb.Append($"<p><a href=\"{WebUtility.HtmlEncode(BuildUnsubscribeUrl(email))}\">Unsubscribe</a></p>");
-        sb.Append("</body></html>");
+        sb.Append($"""
+                          <p style="margin:28px 0 0 0;font-size:12px;color:#6b7280;border-top:1px solid #e5e7eb;padding-top:20px;">
+                            You received this because you subscribed to TechHub newsletters.<br />
+                            <a href="{WebUtility.HtmlEncode(manageUrl)}" style="color:#2563eb;">Manage subscription</a> &nbsp;·&nbsp;
+                            <a href="{WebUtility.HtmlEncode(unsubscribeUrl)}" style="color:#2563eb;">Unsubscribe</a>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </body>
+            </html>
+            """);
         return sb.ToString();
     }
 
@@ -559,7 +1006,7 @@ public sealed class NewsletterService : INewsletterService
 
         foreach (var section in sections)
         {
-            sb.AppendLine(section);
+            sb.AppendLine(GetSectionTitle(section));
             var items = itemsBySection.TryGetValue(section, out var rows) ? rows : [];
             if (items.Count == 0)
             {
@@ -578,6 +1025,7 @@ public sealed class NewsletterService : INewsletterService
             sb.AppendLine();
         }
 
+        sb.AppendLine($"Manage subscription: {BuildManageUrl(email, _options.UnsubscribeSecret)}");
         sb.AppendLine($"Unsubscribe: {BuildUnsubscribeUrl(email)}");
         return sb.ToString();
     }
@@ -611,7 +1059,8 @@ public sealed class NewsletterService : INewsletterService
 
     private string BuildAbsoluteUrl(string pathOrAbsolute)
     {
-        if (Uri.TryCreate(pathOrAbsolute, UriKind.Absolute, out var absolute))
+        if (Uri.TryCreate(pathOrAbsolute, UriKind.Absolute, out var absolute) &&
+            (absolute.Scheme == Uri.UriSchemeHttp || absolute.Scheme == Uri.UriSchemeHttps))
         {
             return absolute.ToString();
         }
@@ -624,6 +1073,12 @@ public sealed class NewsletterService : INewsletterService
     {
         var token = BuildUnsubscribeToken(email, _options.UnsubscribeSecret);
         return BuildAbsoluteUrl($"/newsletter/unsubscribe?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}");
+    }
+
+    private string BuildManageUrl(string email, string secret)
+    {
+        var token = BuildUnsubscribeToken(email, secret);
+        return BuildAbsoluteUrl($"/newsletter/manage?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}");
     }
 
     private string BuildConfirmUrl(string email)

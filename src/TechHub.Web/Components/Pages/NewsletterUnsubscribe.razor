@@ -5,21 +5,19 @@
 
 <PageTitle>Newsletter Unsubscribe — TechHub</PageTitle>
 
-<main class="content-page">
-    <article class="content-detail">
-        <header class="content-header">
-            <h1 class="content-title">Newsletter Unsubscribe</h1>
-        </header>
+<main class="page-without-sidebar">
+    <section>
+        <h1 id="skiptohere" class="page-h1">Newsletter Unsubscribe</h1>
 
         @if (_loading)
         {
-            <p>Processing your unsubscribe request…</p>
+            <p class="subscribe-intro">Processing your unsubscribe request…</p>
         }
         else
         {
-            <p>@_message</p>
+            <div class="subscribe-alert @(_success ? "subscribe-alert-success" : "subscribe-alert-error")">@_message</div>
         }
-    </article>
+    </section>
 </main>
 
 @code {
@@ -30,6 +28,7 @@
     public string? Token { get; set; }
 
     private bool _loading = true;
+    private bool _success;
     private string _message = "Something went wrong while unsubscribing.";
     private bool _handled;
 
@@ -52,6 +51,7 @@
         {
             await Api.UnsubscribeNewsletterAsync(Email, Token);
             _message = "You've been unsubscribed from the TechHub newsletter.";
+            _success = true;
         }
         catch (HttpRequestException)
         {

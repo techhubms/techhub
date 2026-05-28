@@ -137,11 +137,78 @@ public class TechHubApiClientTests
 
         await sut.TriggerNewsletterTestSendAsync(
             "user@example.com\r\n",
-            "weekly-ai-roundup-2025-06-09\r\n",
+            ["azure\r\n", "dotnet\r\n"],
+            "weekly",
             TestContext.Current.CancellationToken);
 
         handler.LastRequest.Should().NotBeNull();
-        handler.LastRequest!.RequestUri!.PathAndQuery.Should().Be("/api/admin/newsletter/test-send?email=user%40example.com&roundupSlug=weekly-ai-roundup-2025-06-09");
+        handler.LastRequest!.RequestUri!.PathAndQuery.Should().Be("/api/admin/newsletter/test-send?email=user%40example.com&kind=weekly&sections=azure&sections=dotnet");
+    }
+
+    [Fact]
+    public async Task RequestNewsletterManageLinkAsync_SanitizesQueryValues()
+    {
+        using var handler = new CapturingHandler();
+        using var httpClient = new HttpClient(handler)
+        {
+            BaseAddress = new Uri("https://localhost:5003")
+        };
+
+        var sut = new TechHubApiClient(httpClient, NullLogger<TechHubApiClient>.Instance);
+
+        await sut.RequestNewsletterManageLinkAsync("user@example.com\r\n", TestContext.Current.CancellationToken);
+
+        handler.LastRequest.Should().NotBeNull();
+        handler.LastRequest!.RequestUri!.PathAndQuery.Should().Be("/api/newsletter/manage/request?email=user%40example.com");
+    }
+
+    [Fact]
+    public async Task GetNewsletterManagePreferencesAsync_SanitizesQueryValues()
+    {
+        var subscriberJson = """{"id":1,"email":"user@example.com","displayName":null,"isConfirmed":true,"subscribedAt":"2026-01-01T00:00:00Z","confirmedAt":null,"weeklySections":[],"dailySections":[]}""";
+        using var handler = new CapturingHandler(responseBody: subscriberJson);
+        using var httpClient = new HttpClient(handler)
+        {
+            BaseAddress = new Uri("https://localhost:5003")
+        };
+
+        var sut = new TechHubApiClient(httpClient, NullLogger<TechHubApiClient>.Instance);
+
+        var result = await sut.GetNewsletterManagePreferencesAsync("user@example.com\r\n", "tok\r\nen", TestContext.Current.CancellationToken);
+
+        result.Should().NotBeNull();
+        result!.Email.Should().Be("user@example.com");
+        handler.LastRequest.Should().NotBeNull();
+        handler.LastRequest!.RequestUri!.PathAndQuery.Should().Be("/api/newsletter/manage?email=user%40example.com&token=token");
+    }
+
+    [Fact]
+    public async Task UpdateNewsletterManagePreferencesAsync_SanitizesPayloadValues()
+    {
+        using var handler = new CapturingHandler();
+        using var httpClient = new HttpClient(handler)
+        {
+            BaseAddress = new Uri("https://localhost:5003")
+        };
+
+        var sut = new TechHubApiClient(httpClient, NullLogger<TechHubApiClient>.Instance);
+
+        await sut.UpdateNewsletterManagePreferencesAsync(
+            "user@example.com\r\n",
+            "mytoken",
+            "Display\r\nName",
+            ["ai\r\n"],
+            ["dotnet\r\n"],
+            TestContext.Current.CancellationToken);
+
+        handler.LastRequest.Should().NotBeNull();
+        handler.LastRequest!.RequestUri!.PathAndQuery.Should().Be("/api/newsletter/manage");
+        using var payload = JsonDocument.Parse(await handler.LastRequest.Content!.ReadAsStringAsync(TestContext.Current.CancellationToken));
+        payload.RootElement.GetProperty("email").GetString().Should().Be("user@example.com");
+        payload.RootElement.GetProperty("token").GetString().Should().Be("mytoken");
+        payload.RootElement.GetProperty("displayName").GetString().Should().Be("DisplayName");
+        payload.RootElement.GetProperty("weeklySections")[0].GetString().Should().Be("ai");
+        payload.RootElement.GetProperty("dailySections")[0].GetString().Should().Be("dotnet");
     }
 
     private static ContentItem CreateRoundup(string slug, string sectionName, long dateEpoch) =>
@@ -191,6 +258,13 @@ public class TechHubApiClientTests
 
     private sealed class CapturingHandler : HttpMessageHandler
     {
+        private readonly string _responseBody;
+
+        public CapturingHandler(string responseBody = "[]")
+        {
+            _responseBody = responseBody;
+        }
+
         public HttpRequestMessage? LastRequest { get; private set; }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
@@ -198,7 +272,7 @@ public class TechHubApiClientTests
             LastRequest = await CloneRequestAsync(request, cancellationToken);
             return new HttpResponseMessage(HttpStatusCode.OK)
             {
-                Content = new StringContent("[]", Encoding.UTF8, "application/json")
+                Content = new StringContent(_responseBody, Encoding.UTF8, "application/json")
             };
         }
 

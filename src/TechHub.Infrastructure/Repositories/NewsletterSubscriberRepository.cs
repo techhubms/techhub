@@ -308,6 +308,64 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
         return rows.ToList();
     }
 
+    public async Task<NewsletterSubscriber?> GetSubscriberByEmailAsync(string email, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+
+        const string Sql = """
+            SELECT
+                id AS Id,
+                email AS Email,
+                display_name AS DisplayName,
+                is_confirmed AS IsConfirmed,
+                subscribed_at AS SubscribedAt,
+                confirmed_at AS ConfirmedAt,
+                preferences::text AS Preferences
+            FROM newsletter_subscribers
+            WHERE lower(email) = lower(@Email)
+              AND unsubscribed_at IS NULL
+            LIMIT 1
+            """;
+
+        var row = await _connection.QuerySingleOrDefaultAsync<SubscriberRow>(new CommandDefinition(
+            Sql,
+            new { Email = email.Trim() },
+            cancellationToken: ct));
+
+        return row is null ? null : MapSubscriber(row);
+    }
+
+    public async Task<bool> UpdateSubscriberByEmailAsync(
+        string email,
+        string? displayName,
+        IReadOnlyList<string> weeklySections,
+        IReadOnlyList<string> dailySections,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+
+        const string Sql = """
+            UPDATE newsletter_subscribers
+            SET display_name = @DisplayName,
+                preferences = CAST(@Preferences AS jsonb)
+            WHERE lower(email) = lower(@Email)
+              AND is_confirmed = TRUE
+              AND unsubscribed_at IS NULL
+            """;
+
+        var affected = await _connection.ExecuteAsync(new CommandDefinition(
+            Sql,
+            new
+            {
+                Email = email.Trim(),
+                DisplayName = string.IsNullOrWhiteSpace(displayName) ? null : displayName.Trim(),
+                Preferences = SerializePreferences(weeklySections, dailySections)
+            },
+            cancellationToken: ct));
+
+        return affected > 0;
+    }
+
     public async Task<NewsletterDailyReportStats> GetDailyReportStatsAsync(CancellationToken ct = default)
     {
         const string Sql = """

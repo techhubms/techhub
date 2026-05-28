@@ -15,7 +15,8 @@ public sealed class NewsletterBackgroundService : BackgroundService
 
     private volatile TaskCompletionSource<bool> _manualTrigger = new(TaskCreationOptions.RunContinuationsAsynchronously);
     private string? _pendingTestSendEmail;
-    private string? _pendingTestRoundupSlug;
+    private IReadOnlyList<string>? _pendingTestSections;
+    private string? _pendingTestSendKind;
 
     public NewsletterBackgroundService(
         IServiceProvider serviceProvider,
@@ -37,14 +38,16 @@ public sealed class NewsletterBackgroundService : BackgroundService
     public void TriggerImmediateRun()
     {
         _pendingTestSendEmail = null;
-        _pendingTestRoundupSlug = null;
+        _pendingTestSections = null;
+        _pendingTestSendKind = null;
         _manualTrigger.TrySetResult(true);
     }
 
-    public void TriggerTestSend(string recipientEmail, string? roundupSlug)
+    public void TriggerTestSend(string recipientEmail, IReadOnlyList<string> sections, string kind)
     {
         _pendingTestSendEmail = recipientEmail;
-        _pendingTestRoundupSlug = roundupSlug;
+        _pendingTestSections = sections;
+        _pendingTestSendKind = kind;
         _manualTrigger.TrySetResult(true);
     }
 
@@ -89,13 +92,15 @@ public sealed class NewsletterBackgroundService : BackgroundService
     private async Task RunManualAsync(CancellationToken ct)
     {
         var testEmail = _pendingTestSendEmail;
-        var testSlug = _pendingTestRoundupSlug;
+        var testSections = _pendingTestSections;
+        var testKind = _pendingTestSendKind;
         _pendingTestSendEmail = null;
-        _pendingTestRoundupSlug = null;
+        _pendingTestSections = null;
+        _pendingTestSendKind = null;
 
         if (!string.IsNullOrWhiteSpace(testEmail))
         {
-            await RunTestSendAsync(testEmail, testSlug, ct);
+            await RunTestSendAsync(testEmail, testSections ?? [], testKind ?? "weekly", ct);
             return;
         }
 
@@ -124,10 +129,10 @@ public sealed class NewsletterBackgroundService : BackgroundService
             ORDER BY primary_section_name, date_epoch DESC
             """;
 
-        var slugs = await connection.QueryAsync<string>(new CommandDefinition(Sql, cancellationToken: ct));
-        foreach (var slug in slugs)
+        var slugs = (await connection.QueryAsync<string>(new CommandDefinition(Sql, cancellationToken: ct))).AsList();
+        if (slugs.Count > 0)
         {
-            await newsletterService.SendRoundupNewsletterAsync(slug, ct);
+            await newsletterService.SendCombinedWeeklyAsync(slugs, ct);
         }
     }
 
@@ -163,40 +168,36 @@ public sealed class NewsletterBackgroundService : BackgroundService
         return await repo.IsEnabledAsync(NewsletterOptions.SectionName, ct);
     }
 
-    private async Task RunTestSendAsync(string recipientEmail, string? roundupSlug, CancellationToken ct)
+    private async Task RunTestSendAsync(string recipientEmail, IReadOnlyList<string> sections, string kind, CancellationToken ct)
     {
         await using var scope = _serviceProvider.CreateAsyncScope();
-        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
         var newsletterService = scope.ServiceProvider.GetRequiredService<INewsletterService>();
 
-        var slug = roundupSlug;
-        if (string.IsNullOrWhiteSpace(slug))
+        if (sections.Count == 0)
         {
-            const string Sql = """
-                SELECT slug
-                FROM content_items
-                WHERE collection_name = 'roundups'
-                ORDER BY date_epoch DESC
-                LIMIT 1
-                """;
-            slug = await connection.ExecuteScalarAsync<string?>(new CommandDefinition(Sql, cancellationToken: ct));
-        }
-
-        if (string.IsNullOrWhiteSpace(slug))
-        {
-            _logger.LogWarning("Newsletter test send requested but no roundup exists");
+            _logger.LogWarning("Newsletter test send requested but no sections were selected");
             return;
         }
 
-        _logger.LogInformation("Running newsletter test send to {RecipientEmail} for roundup {Slug}", recipientEmail, slug);
-        var sent = await newsletterService.SendTestEmailAsync(slug, recipientEmail, ct);
-        if (sent)
+        bool sent;
+        if (string.Equals(kind, "daily", StringComparison.OrdinalIgnoreCase))
         {
-            _logger.LogInformation("Newsletter test send succeeded for {RecipientEmail}", recipientEmail);
+            _logger.LogInformation("Running newsletter test daily send to {RecipientEmail} for sections: {Sections}", recipientEmail, string.Join(", ", sections));
+            sent = await newsletterService.SendTestDailyEmailAsync(sections, recipientEmail, ct);
         }
         else
         {
-            _logger.LogWarning("Newsletter test send failed for {RecipientEmail} — check configuration (ACS endpoint, sender address, unsubscribe secret) and that roundup {Slug} exists", recipientEmail, slug);
+            _logger.LogInformation("Running newsletter test weekly send to {RecipientEmail} for sections: {Sections}", recipientEmail, string.Join(", ", sections));
+            sent = await newsletterService.SendTestWeeklyAsync(sections, recipientEmail, ct);
+        }
+
+        if (sent)
+        {
+            _logger.LogInformation("Newsletter test {Kind} send succeeded for {RecipientEmail}", kind, recipientEmail);
+        }
+        else
+        {
+            _logger.LogWarning("Newsletter test {Kind} send failed for {RecipientEmail} — check ACS configuration and that roundups exist for the selected sections", kind, recipientEmail);
         }
     }
 

@@ -89,18 +89,16 @@ public class AboutPageTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task AboutPage_ShouldDisplay_DiscordSection()
+    public async Task AboutPage_ShouldDisplay_DiscordButton_InSubNav()
     {
         // Act
         await Page.GotoRelativeAsync("/about");
 
-        // Assert - Discord section should be visible with heading and invite link
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Discord", level: 2);
+        // Assert - Discord button is in the subnav (not a page content section)
+        var discordLink = Page.Locator("nav.sub-nav a[aria-label='Join our Discord server']");
+        await Assertions.Expect(discordLink).ToBeVisibleAsync();
 
-        var discordLink = Page.GetByRole(AriaRole.Link).Filter(new() { HasText = "Join our Discord server" });
-        await Assertions.Expect(discordLink.First).ToBeVisibleAsync();
-
-        var href = await discordLink.First.GetAttributeAsync("href");
+        var href = await discordLink.GetAttributeAsync("href");
         href.Should().Be("https://discord.gg/cURHV9TvFS");
     }
 

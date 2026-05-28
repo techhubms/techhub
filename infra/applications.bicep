@@ -199,6 +199,7 @@ module apiApp './modules/api.bicep' = {
     aiCategorizationDeploymentName: openAiModelDeployment.name
     acsEndpointSecretName: acsEndpointSecretName
     acsSenderAddressSecretName: 'techhub-prod-acs-sender-address'
+    newsletterUnsubscribeSecretName: 'techhub-prod-newsletter-unsubscribe-secret'
     tags: prodTags
   }
 }

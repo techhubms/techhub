@@ -5,21 +5,19 @@
 
 <PageTitle>Newsletter Confirm — TechHub</PageTitle>
 
-<main class="content-page">
-    <article class="content-detail">
-        <header class="content-header">
-            <h1 class="content-title">Newsletter Subscription</h1>
-        </header>
+<main class="page-without-sidebar">
+    <section>
+        <h1 id="skiptohere" class="page-h1">Newsletter Subscription</h1>
 
         @if (_loading)
         {
-            <p>Confirming your subscription…</p>
+            <p class="subscribe-intro">Confirming your subscription…</p>
         }
         else
         {
-            <p>@_message</p>
+            <div class="subscribe-alert @(_success ? "subscribe-alert-success" : "subscribe-alert-error")">@_message</div>
         }
-    </article>
+    </section>
 </main>
 
 @code {
@@ -30,6 +28,7 @@
     public string? Token { get; set; }
 
     private bool _loading = true;
+    private bool _success;
     private string _message = "Something went wrong while confirming your subscription.";
     private bool _handled;
 
@@ -52,6 +51,7 @@
         {
             await Api.ConfirmNewsletterAsync(Email, Token);
             _message = "Your subscription is confirmed. Welcome to TechHub newsletters!";
+            _success = true;
         }
         catch (HttpRequestException)
         {

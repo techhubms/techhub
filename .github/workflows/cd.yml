@@ -603,6 +603,7 @@ jobs:
           ADMIN_IP_ADDRESSES: ${{ vars.ADMIN_IP_ADDRESSES }}
           AZURE_AD_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
+          NEWSLETTER_UNSUBSCRIBE_SECRET: ${{ secrets.NEWSLETTER_UNSUBSCRIBE_SECRET }}
           WILDCARD_CERT_HUB_MS: ${{ secrets.WILDCARD_CERT_HUB_MS }}
           WILDCARD_CERT_XEBIA_MS: ${{ secrets.WILDCARD_CERT_XEBIA_MS }}
         run: |

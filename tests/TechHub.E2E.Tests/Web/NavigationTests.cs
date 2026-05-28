@@ -408,4 +408,32 @@ public class NavigationTests : PlaywrightTestBase
         internalHref!.Should().StartWith("/devops/",
             "Content cards in /devops/videos should link to /devops/{collection}/{slug}, not to another section");
     }
+
+    [Fact]
+    public async Task SwitchingSection_ViaSPANavigation_UpdatesContentGrid()
+    {
+        // Regression test: ContentItemsGrid did not refresh when switching sections via
+        // Blazor enhanced navigation (SPA-style). GridKey in SectionCollection.razor did not
+        // include SectionName, and ContentItemsGrid.OnParametersSetAsync did not track
+        // SectionName, so Blazor reused the component instance and never reloaded content.
+
+        // Arrange — navigate to GitHub Copilot section (full page load)
+        await Page.GotoRelativeAsync("/github-copilot");
+
+        // Wait for content grid to be visible and loaded
+        var h1 = Page.Locator("h1.page-h1");
+        await Assertions.Expect(h1).ToContainTextAsync("GitHub Copilot");
+        await Page.WaitForConditionAsync(
+            "() => document.querySelectorAll('.card').length > 0",
+            onTimeout: "() => document.querySelector('h1.page-h1')?.textContent");
+
+        // Act — click the Artificial Intelligence nav link (Blazor SPA / enhanced navigation,
+        // NOT a full page reload — this is the exact scenario the bug was triggered by)
+        var aiNavLink = Page.Locator(".nav-links a.nav-link", new() { HasTextString = "Artificial Intelligence" });
+        await aiNavLink.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/ai(\?.*)?$")));
+
+        // Assert — the content grid MUST refresh and show AI content, not GitHub Copilot content
+        await Assertions.Expect(h1).ToContainTextAsync("Artificial Intelligence");
+    }
 }

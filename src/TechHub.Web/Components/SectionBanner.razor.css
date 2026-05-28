@@ -135,6 +135,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: var(--spacing-2);
+}
+
+/* Title + RSS icon row — flex row so the icon sits directly right of the title */
+.banner-title-row {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing-2);
 }
 
 .section-banner-content .banner-title {
@@ -145,28 +153,29 @@
     line-height: var(--line-height-heading);
 }
 
-/* RSS icon link next to banner title - mobile only.
-   Positioned absolutely so the title stays visually centered. */
+/* RSS icon link — inline next to the title */
 .banner-rss-link {
-    display: none;
-    position: absolute;
-    right: var(--spacing-1);
-    top: 50%;
-    transform: translateY(-50%);
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
     color: var(--color-text-on-emphasis);
     opacity: 0.85;
-    transition: opacity var(--duration-fast) var(--easing-ease);
+    background: rgba(255, 255, 255, 0.2);
+    transition: opacity var(--duration-fast) var(--easing-ease),
+                background var(--duration-fast) var(--easing-ease);
     line-height: 1;
     border-radius: var(--radius-md);
     min-width: var(--touch-target-min-size);
     min-height: var(--touch-target-min-size);
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 6px;
+    margin-left: 0;
 }
 
 @media (hover: hover) {
     .banner-rss-link:hover {
         opacity: 1;
+        background: rgba(255, 255, 255, 0.25);
     }
 }
 
@@ -213,13 +222,25 @@
         margin-bottom: 0;
     }
 
-    .section-banner-content .banner-description {
-        font-size: var(--font-size-sm);
-        max-width: 70%;
+    .banner-title-row {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
 
     .banner-rss-link {
-        display: inline-flex;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .section-banner-content .banner-description {
+        font-size: var(--font-size-sm);
+        max-width: 70%;
     }
 }
 
