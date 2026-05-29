@@ -20,8 +20,7 @@ public class NewsletterTemplateResourceTests
         using var reader = new StreamReader(stream!);
         var template = reader.ReadToEnd();
 
-        template.Should().Contain("name=\"viewport\"");
-        template.Should().Contain("content=\"width=device-width, initial-scale=1.0\"");
+        template.Should().MatchRegex("<meta(?=[^>]*name=\"viewport\")(?=[^>]*content=\"width=device-width, initial-scale=1.0\")[^>]*>");
         template.Should().MatchRegex("<table(?=[^>]*role=\"presentation\")(?=[^>]*width=\"100%\")[^>]*>");
         template.Should().Contain("max-width:900px");
     }
