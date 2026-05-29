@@ -289,12 +289,13 @@ html.keyboard-nav .btn-subnav:focus-visible {
 }
 
 @media (max-width: 640px) {
-    /* On small mobile, show only icon + number — hide all label text */
-    .stat-chip-new-label {
+    /* On small mobile, keep "new" text and hide "this week" + total chip */
+    .stat-chip-new-label-suffix,
+    .stat-chip-total-label {
         display: none;
     }
 
-    .stat-chip-total-label {
+    .btn-subnav-stat-total {
         display: none;
     }
 }
