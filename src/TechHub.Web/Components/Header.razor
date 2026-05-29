@@ -8,10 +8,12 @@
    
    Usage (via MainLayout):
      With section name (section/collection/content pages):
-       <Header SectionName="ai" RssFeedUrl="/ai/feed.xml" />
+       <Header SectionName="ai" RssFeedUrl="/ai/feed.xml" ShowNewsletter="true" />
      
      With custom banner (home, about, not-found, error pages):
-       <Header CustomBannerTitle="Tech Hub" CustomBannerDescription="..." RssFeedUrl="/all/feed.xml" />
+       <Header CustomBannerTitle="Tech Hub" CustomBannerDescription="..." RssFeedUrl="/all/feed.xml" ShowNewsletter="true" />
+       <Header CustomBannerTitle="About Us" CustomBannerDescription="..." HideStats="true" ShowDiscord="true" />
+       <Header CustomBannerTitle="Newsletter" CustomBannerDescription="..." ShowHomepageButton="true" />
      
      Without section/banner (fallback):
        <Header />
@@ -26,7 +28,7 @@
         if (sectionData != null)
         {
             <SectionBanner Section="@sectionData" RssFeedUrl="@RssFeedUrl" />
-            <SubNav Section="@sectionData" />
+            <SubNav Section="@sectionData" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" />
         }
         else
         {
@@ -36,16 +38,19 @@
     else if (!string.IsNullOrEmpty(CustomBannerTitle))
     {
         <SectionBanner Title="@CustomBannerTitle" Description="@CustomBannerDescription" RssFeedUrl="@RssFeedUrl" />
-        <SubNav Sections="@SectionCache.Sections" />
+        @if (!HideSubNav)
+        {
+            <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomepageButton="@ShowHomepageButton" />
+        }
     }
     else if (ChildContent != null)
     {
         @ChildContent
-        <SubNav Sections="@SectionCache.Sections" />
+        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomepageButton="@ShowHomepageButton" />
     }
     else
     {
-        <SubNav Sections="@SectionCache.Sections" />
+        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomepageButton="@ShowHomepageButton" />
     }
 </header>
 
@@ -54,10 +59,40 @@
     public string? SectionName { get; set; }
 
     /// <summary>
-    /// Optional RSS feed URL. Passed through to SectionBanner for mobile RSS icon.
+    /// Optional RSS feed URL. Passed through to SectionBanner and SubNav.
     /// </summary>
     [Parameter]
     public string? RssFeedUrl { get; set; }
+
+    /// <summary>
+    /// When true, renders a Newsletter subscribe button in the SubNav action area.
+    /// </summary>
+    [Parameter]
+    public bool ShowNewsletter { get; set; }
+
+    /// <summary>
+    /// When true, hides the statistics box in the SubNav. Used on pages where stats are not relevant (e.g. About).
+    /// </summary>
+    [Parameter]
+    public bool HideStats { get; set; }
+
+    /// <summary>
+    /// When true, renders a Discord button in the SubNav. Used on the About page.
+    /// </summary>
+    [Parameter]
+    public bool ShowDiscord { get; set; }
+
+    /// <summary>
+    /// When true, renders a Homepage button in the SubNav. Used on the Newsletter page.
+    /// </summary>
+    [Parameter]
+    public bool ShowHomepageButton { get; set; }
+
+    /// <summary>
+    /// When true, hides the SubNav completely. Used on pages where navigation is not needed (e.g. Newsletter).
+    /// </summary>
+    [Parameter]
+    public bool HideSubNav { get; set; }
 
     /// <summary>
     /// Optional custom banner title (used by MainLayout for special pages like Home, About, etc.).

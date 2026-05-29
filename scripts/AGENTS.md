@@ -74,10 +74,21 @@ scripts/
 
 ### Infrastructure
 
-- **Deploy-Infrastructure.ps1**: Azure Bicep deployment for production (validate/whatif/deploy modes). Removed shared/staging environments.
-- **Deploy-Application.ps1**: Docker build → ghcr.io push → Container Apps deploy. Supports `-SkipBuild`, `-SkipPush`, `-SkipDeploy`, `-SkipSmokeTests`. Auto-rollback on health-check failure.
-- **Deploy-PrPreview.ps1**: PR preview environment lifecycle (deploy/teardown). Creates PITR clone of prod PostgreSQL in prod RG. Uses ghcr.io images.
+- **Deploy-Infrastructure.ps1**: Phase 1 Bicep deployment (validate/whatif/deploy). Deploys networking, identity, Key Vault, PostgreSQL, ACS, monitoring. **No image tag needed.**
+- **Deploy-Applications.ps1**: Phase 2 Bicep deployment (Container Apps declarative). Requires `-ImageTag`. Used when infra/scripts changed.
+- **Build-Images.ps1**: Docker build + push to ghcr.io. Supports `-SkipPush` for local testing. Used by CI build-and-push jobs.
+- **Deploy-Application.ps1**: `az containerapp update` with health checks, smoke tests, and auto-rollback. Requires `-Tag`. Used for **fast code-only deploys** (skips full Bicep evaluation).
+- **Deploy-PrPreview.ps1**: PR preview environment lifecycle (deploy/teardown). Creates PITR clone of prod PostgreSQL in prod RG. Uses ghcr.io images + `pr-applications.bicep`.
 - **Migrate-KeyVaultSecrets.ps1**: One-time migration script to copy secrets from `kv-techhub-shared` to `kv-techhub-prod`.
+
+### CD Pipeline Deployment Strategy
+
+The CD workflow detects whether `infra/` or `scripts/` changed since the last successful production deployment:
+
+| What changed | Deployment path | Duration |
+|---|---|---|
+| Infrastructure/scripts | `Deploy-Infrastructure.ps1` → `Deploy-Applications.ps1` (full Bicep) | ~10 min |
+| Code only (C#, tests, docs) | `Deploy-Application.ps1 -Tag <tag>` (fast image swap) | ~1 min |
 
 ## Testing
 

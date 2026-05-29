@@ -1,6 +1,6 @@
 # Wildcard Certificates
 
-Tech Hub uses **Let's Encrypt wildcard certificates** for `*.hub.ms` and `*.xebia.ms`, stored in Azure Key Vault (`kv-techhub-shared`). Renewal is automated via `certbot-dns-azure` using ACME DNS challenge delegation.
+Tech Hub uses **Let's Encrypt wildcard certificates** for `*.hub.ms` and `*.xebia.ms`, stored in Azure Key Vault (`kv-techhub-prod`). Renewal is automated via `certbot-dns-azure` using ACME DNS challenge delegation.
 
 ## Architecture
 
@@ -89,7 +89,7 @@ The script:
 2. Generates certbot-dns-azure configuration
 3. Runs certbot for each domain (`*.hub.ms` + `hub.ms`, `*.xebia.ms` + `xebia.ms`)
 4. Converts PEM certificates to PFX format
-5. Imports into Key Vault (`kv-techhub-shared`)
+5. Imports into Key Vault (`kv-techhub-prod`)
 6. Cleans up temporary files
 
 ### Dry run (test without issuing certificates)

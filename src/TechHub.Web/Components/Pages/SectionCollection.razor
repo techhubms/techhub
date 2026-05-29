@@ -55,9 +55,6 @@
             OnSelectionChanged="HandleTagSelectionChanged" />
         </MobileSidebarPanel>
         </MobileSidebarToolbar>
-        <div class="sidebar-desktop-only">
-        <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
-        </div>
     </aside>
 
     @if (section?.ShowHeroBanner == true)
@@ -163,9 +160,9 @@
     }
 
     /// <summary>
-    /// Key for the ContentItemsGrid component to force re-render on type changes.
+    /// Key for the ContentItemsGrid component to force re-render on section or type changes.
     /// </summary>
-    private string GridKey => $"{CollectionName}_{ActiveContentTypesParam}";
+    private string GridKey => $"{SectionName}_{CollectionName}_{ActiveContentTypesParam}";
 
     private string PageTitleText => IsAll
         ? $"{section?.Title ?? SectionName} - Tech Hub"

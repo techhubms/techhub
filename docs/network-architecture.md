@@ -18,6 +18,8 @@ Internet
 Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
     └── snet-container-apps (10.2.0.0/23) — Container Apps Environment (internal: false)
          │
+         ├── natgw-techhub-prod (NAT Gateway) — stable outbound IP via pip-nat-techhub-prod
+         │
          ├── ca-techhub-web-prod   [external: true]  ← reachable from internet
          │
          ├── ca-techhub-api-prod   [external: false] ← internal only, NOT reachable from internet
@@ -26,9 +28,9 @@ Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
          ├── Key Vault service endpoint (Microsoft.KeyVault)
          │       → Container Apps reach kv-techhub-prod over Microsoft backbone
          │
-         ├── PostgreSQL firewall rule (Container Apps static IP / SNAT source)
+         ├── PostgreSQL firewall rule (NAT Gateway public IP)
          │       → Container Apps reach psql-techhub-prod over public internet
-         │       → Source IP is the CAE static IP (load balancer SNAT), NOT the VNet subnet range
+         │       → Source IP is the NAT Gateway public IP (pip-nat-techhub-prod) — stable, single IP
          │
          └── AI Foundry — open public access, Entra token auth (Cognitive Services OpenAI User RBAC)
 ```
@@ -67,7 +69,7 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 | Resource | Firewall Mechanism | Access |
 |----------|-------------------|--------|
 | Key Vault | `networkAcls.ipRules` + VNet service endpoint | Admin IPs + Container Apps subnet; default deny |
-| PostgreSQL | Per-IP/range firewall rules | Admin IPs + Container Apps Environment static IP (SNAT outbound); default deny |
+| PostgreSQL | Per-IP/range firewall rules | Admin IPs + NAT Gateway public IP (`pip-nat-techhub-prod`); default deny |
 | Log Analytics | Public ingestion + query enabled | RBAC-protected |
 | App Insights | Public ingestion + query enabled | RBAC-protected; browser JS SDK over public internet |
 | AI Foundry | Public access open | Entra token (Cognitive Services OpenAI User RBAC); no IP restriction needed |
@@ -79,6 +81,10 @@ The production Key Vault (`kv-techhub-prod`) stores:
 - Wildcard TLS certificates for `*.hub.ms` and `*.xebia.ms`
 - AAD client secret (`techhub-prod-aad-client-secret`) for the admin dashboard
 - GitHub registry token (`techhub-github-registry-token`) for Container Apps pulling from ghcr.io
+- PostgreSQL admin password (`techhub-prod-postgres-admin-password`) for infrastructure management
+- Newsletter ACS endpoint URL (`techhub-prod-newsletter-acs-endpoint`) — written automatically by `Sync-KeyVaultSecrets.ps1` from infra deployment outputs
+- Newsletter ACS sender address (`techhub-prod-acs-sender-address`) — written directly by Bicep from the ACS domain output
+- Newsletter unsubscribe HMAC key (`techhub-prod-newsletter-unsubscribe-secret`) for signing unsubscribe/confirm links
 
 Security:
 
@@ -116,12 +122,13 @@ created via PITR from the production backup — both in `rg-techhub-prod`.
 
 - **Production**: `psql-techhub-prod` — permanent, public access with firewall rules; both password auth (for admin/emergency use) and Entra ID auth enabled
 - **PR environments**: `psql-techhub-pr-{N}` — ephemeral, created via Point-in-Time Restore; Entra-only auth
-- **Public access**: Enabled with firewall rules for admin IPs and the Container Apps Environment static IP
-- **Firewall**: Admin IP rules + Container Apps Environment static outbound IP (SNAT)
+- **Public access**: Enabled with firewall rules for admin IPs and the NAT Gateway public IP
+- **Firewall**: Admin IP rules + NAT Gateway public IP (`pip-nat-techhub-prod`)
 - **Container Apps** reach PostgreSQL over the public internet; the source IP is the
-  Container Apps Environment's **static IP** (load balancer SNAT) — NOT the VNet subnet range.
-  VNet-integrated Container Apps without a NAT gateway use the environment's load balancer
-  frontend IP for outbound SNAT to public endpoints.
+  **NAT Gateway public IP** (`pip-nat-techhub-prod`). The NAT Gateway is attached to the
+  Container Apps subnet and gives all outbound traffic a single, stable, predictable IP that
+  can be allowlisted in the PostgreSQL firewall. Without the NAT Gateway, Container Apps would
+  use a large pool of ephemeral Azure SNAT IPs (~150+) that cannot be predicted or allowlisted.
 - **Admin** reaches PostgreSQL via IP-allowlisted public access
 
 > **Authentication**: The `id-techhub-prod` user-assigned managed identity is registered as the
@@ -129,11 +136,25 @@ created via PITR from the production backup — both in `rg-techhub-prod`.
 > and acquires Azure AD tokens at runtime via `DefaultAzureCredential` —
 > no password in the connection string or Key Vault.
 >
-> **PR isolation**: Each PR gets a dedicated user-assigned managed identity
-> (`id-techhub-pr-{N}`) that is registered as the sole Entra admin on its own PITR server.
-> Password authentication is disabled on PR servers. A PR container cannot authenticate against
-> `psql-techhub-prod` because that server's Entra admin is `id-techhub-prod` — a completely
-> separate identity. No shared credentials exist.
+> **PR isolation**: All PR environments share one managed identity (`id-techhub-pr`), created
+> once by `infrastructure.bicep` and registered as the Entra admin on each ephemeral PITR server.
+> A PR container cannot authenticate against `psql-techhub-prod` because that server's Entra
+> admin is `id-techhub-prod` — a completely separate identity. No shared credentials exist.
+
+## Azure Communication Services (ACS)
+
+The production ACS account (`acs-techhub-prod`) and email service (`eml-techhub-prod`) handle
+outbound newsletter email delivery.
+
+- **Location**: global (data residency: Europe)
+- **Domain**: Azure-managed domain (`AzureManagedDomain`) — sender address is auto-generated by ACS (e.g. `DoNotReply@{guid}.azurecomm.net`)
+- **Authentication**: RBAC — `ACS Data Contributor` role assigned to `id-techhub-prod`;
+  the API acquires the token via `DefaultAzureCredential`. No ACS connection string or key is used.
+- **Endpoint URL**: Stored in Key Vault as `techhub-prod-newsletter-acs-endpoint`. The URL is
+  captured from the infrastructure Bicep output and synced to Key Vault by `Deploy-Infrastructure.ps1`
+  via `Sync-KeyVaultSecrets.ps1` after every infrastructure deployment.
+- **Sender address**: Stored in Key Vault as `techhub-prod-acs-sender-address`. Written directly
+  by the Bicep template from the ACS domain output — no manual input required.
 
 ## AI Foundry (OpenAI)
 
@@ -162,10 +183,12 @@ No shared or staging resource groups. PR preview environments are created on-dem
 
 ## Implementation Reference
 
-- Spoke VNet: [infra/modules/network.bicep](../infra/modules/network.bicep)
+- Spoke VNet + NAT Gateway: [infra/modules/network.bicep](../infra/modules/network.bicep)
 - Key Vault: [infra/modules/keyVault.bicep](../infra/modules/keyVault.bicep)
-- Log Analytics (per-env): [infra/modules/monitoring.bicep](../infra/modules/monitoring.bicep)
+- Log Analytics: [infra/modules/monitoring.bicep](../infra/modules/monitoring.bicep)
 - PostgreSQL: [infra/modules/postgres.bicep](../infra/modules/postgres.bicep)
 - Action Group: [infra/modules/actionGroup.bicep](../infra/modules/actionGroup.bicep)
 - AI Foundry: [infra/modules/openai.bicep](../infra/modules/openai.bicep)
-- Environment orchestration: [infra/main.bicep](../infra/main.bicep)
+- Azure Communication Services: [infra/modules/communication.bicep](../infra/modules/communication.bicep)
+- Infrastructure orchestration (Phase 1): [infra/infrastructure.bicep](../infra/infrastructure.bicep)
+- Application orchestration (Phase 2): [infra/applications.bicep](../infra/applications.bicep)

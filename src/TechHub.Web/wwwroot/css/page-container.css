@@ -70,6 +70,7 @@ html.sidebar-collapsed .page-with-sidebar {
 
 /* Standard page container without sidebar */
 .page-without-sidebar {
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: var(--spacing-3);

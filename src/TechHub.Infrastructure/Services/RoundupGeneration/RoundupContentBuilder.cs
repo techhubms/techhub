@@ -46,7 +46,7 @@ internal static class RoundupContentBuilder
     public static string BuildSlug(DateOnly publishDate, string sectionName) =>
         publishDate.ToString($"'weekly-{sectionName.ToLowerInvariant()}-roundup-'yyyy-MM-dd", CultureInfo.InvariantCulture);
 
-    private static string BuildAnchor(string title)
+    internal static string BuildAnchor(string title)
     {
         // Match markdown heading identifiers used by the renderer:
         // keep alphanumeric chars, convert separators to '-', drop punctuation, collapse repeated dashes.

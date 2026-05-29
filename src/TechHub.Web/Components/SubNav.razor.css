@@ -166,7 +166,7 @@
     background: transparent;
     color: var(--color-text-primary);
     text-decoration: none;
-    border: 1px solid transparent;
+    border: 1px solid var(--color-border-default);
     border-radius: var(--radius-md);
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-sm);
@@ -233,8 +233,7 @@ html.keyboard-nav .btn-subnav:focus-visible {
     opacity: 0.7;
 }
 
-/* Homepage SubNav: fully hidden on desktop,
-   only show the mobile dropdown on tablet/mobile */
+/* Homepage SubNav: hidden on desktop, shows mobile dropdown on tablet/mobile */
 .sub-nav-homepage {
     padding: 0;
     min-height: 0;
@@ -259,4 +258,109 @@ html.keyboard-nav .btn-subnav:focus-visible {
     .sub-nav-homepage .sub-nav-mobile {
         display: block;
     }
+}
+
+/* Homepage SubNav: stats box + Newsletter centered inline */
+
+/* Show the wrapper on mobile too for the homepage (overrides the mobile media query) */
+.sub-nav-homepage-visible .sub-nav-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-2);
+}
+
+/* Stat buttons: standalone button-style chips for stats */
+.btn-subnav-action.btn-subnav-stat-new {
+    color: var(--color-green-light);
+}
+
+@media (hover: hover) {
+    .btn-subnav-action.btn-subnav-stat-new:hover {
+        background: var(--color-green-light-bg);
+        color: var(--color-green-light);
+    }
+}
+
+@media (max-width: 1292px) {
+    .sub-nav-homepage-visible {
+        padding: var(--spacing-1);
+    }
+}
+
+@media (max-width: 640px) {
+    /* On small mobile, show only icon + number — hide all label text */
+    .stat-chip-new-label {
+        display: none;
+    }
+
+    .stat-chip-total-label {
+        display: none;
+    }
+}
+
+/* ============================================================================
+   Sub-Nav Action Buttons (RSS + Newsletter)
+   ============================================================================ */
+
+/* RSS + Newsletter action button style */
+.btn-subnav-action {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    padding: var(--spacing-1) var(--spacing-2);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+    .btn-subnav-action:hover {
+        border-color: var(--color-purple-bright);
+        color: var(--color-text-primary);
+        background: var(--color-bg-hover-subtle);
+        text-decoration: none;
+    }
+}
+
+.btn-subnav-newsletter {
+    border-color: var(--color-purple-bright);
+    color: var(--color-purple-bright);
+}
+
+@media (hover: hover) {
+    .btn-subnav-newsletter:hover {
+        background: var(--color-purple-dark);
+        color: var(--color-text-on-emphasis);
+        border-color: var(--color-purple-medium);
+    }
+}
+
+.btn-subnav-discord {
+    border-color: var(--color-purple-bright);
+    color: var(--color-purple-bright);
+}
+
+@media (hover: hover) {
+    .btn-subnav-discord:hover {
+        background: var(--color-purple-dark);
+        color: var(--color-text-on-emphasis);
+        border-color: var(--color-purple-medium);
+    }
+}
+
+/* Mobile dropdown action items (RSS, Newsletter) */
+.sub-nav-dropdown-action {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    color: var(--color-text-secondary);
+    border-top: 1px solid var(--color-border-default);
+    margin-top: var(--spacing-1);
 }

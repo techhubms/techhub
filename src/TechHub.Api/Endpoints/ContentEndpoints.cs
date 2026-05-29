@@ -342,6 +342,10 @@ public static class ContentEndpoints
             }
 
             dateTo = parsedTo;
+            if (dateTo.Value.TimeOfDay == TimeSpan.Zero)
+            {
+                dateTo = dateTo.Value.AddDays(1).AddSeconds(-1);
+            }
         }
 
         // Fall back to lastDays if from/to not specified, then to configured default
@@ -489,6 +493,10 @@ public static class ContentEndpoints
             }
 
             dateTo = parsedTo;
+            if (dateTo.Value.TimeOfDay == TimeSpan.Zero)
+            {
+                dateTo = dateTo.Value.AddDays(1).AddSeconds(-1);
+            }
         }
 
         // Fall back to lastDays if from/to not specified

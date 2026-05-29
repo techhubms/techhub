@@ -61,16 +61,21 @@
    Navigation Spinner
 
    Shown during Blazor enhanced navigation (link click → page load).
-   A 500ms JS delay before adding .active, plus a 150ms CSS fade-in, means the
-   spinner only becomes visible for navigations that take >650ms — i.e. never
-   on fast networks, always on 3G or slower.
+   A 1000ms JS delay before adding .active, plus a 150ms CSS fade-in, means the
+   spinner only becomes visible for navigations that take >1150ms — i.e. never
+   on fast networks, only on very slow connections.
 
    Structure: full-screen backdrop (.nav-spinner) + centered ring (.nav-spinner::after).
+
+   Note: No backdrop-filter blur — blur made the overlay look like a rendering
+   bug on mobile where the SignalR round-trip to call hideNavSpinner (via
+   markScriptsReady) arrives ~400ms after the render batch, leaving content
+   visible behind a blurred glass effect. A subtle tint is sufficient.
 ============================================================================ */
 
 .nav-spinner {
     position: fixed;
-    /* Offset top by the sticky header height so the blur doesn't cover the nav */
+    /* Offset top by the sticky header height so the overlay doesn't cover the nav */
     top: var(--main-nav-height);
     right: 0;
     bottom: 0;
@@ -78,10 +83,9 @@
     z-index: calc(var(--z-index-sticky) - 1); /* below header (1000), above content */
     pointer-events: none;
     opacity: 0;
-    /* Subtle dark tint + backdrop blur so the page is clearly "loading" */
-    background: rgba(13, 17, 23, 0.45);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    /* Subtle dark tint so the page is clearly "loading" */
+    background: rgba(13, 17, 23, 0.3);
+    transition: opacity var(--duration-fast) var(--easing-ease);
 }
 
 /* The actual spinning ring, centered in the viewport */
@@ -100,11 +104,7 @@
 }
 
 .nav-spinner.active {
-    animation: nav-spinner-fade-in var(--duration-fast) var(--easing-ease) forwards;
-}
-
-@keyframes nav-spinner-fade-in {
-    to { opacity: 1; }
+    opacity: 1;
 }
 
 @keyframes nav-spinner-spin {

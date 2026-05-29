@@ -10,6 +10,7 @@
 - **Always run tests after code changes**: `Run -Clean` or `Run -Clean -TestProject <name>`
 - **Always use -Clean to expose build warnings** so you can fix them
 - **Always fix all build warnings** (0 warnings policy enforced)
+- **Always use managed identities for Azure services** — Use `DefaultAzureCredential` instead of connection strings/API keys. See [infra/AGENTS.md](../infra/AGENTS.md#authentication-pattern-always-use-managed-identities) for infrastructure RBAC setup.
 - **Always use file-scoped namespaces** in all C# files
 - **Always simplify collection initialization**: Only when its a simple collection, don't wrap larger statements in `[]`
 - **Always write tests BEFORE or DURING implementation** (TDD)
