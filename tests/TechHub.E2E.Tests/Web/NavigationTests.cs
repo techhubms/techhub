@@ -333,6 +333,12 @@ public class NavigationTests : PlaywrightTestBase
         // via enhanced navigation (Blazor SPA-style link click, no full page reload).
         await Page.GotoRelativeAsync("/github-copilot/all");
 
+        // Capture counter before clicking so WaitForTocInitializedAsync only matches
+        // the toc-initialized signal fired by THIS navigation, not a stale one from
+        // the /github-copilot/all page-load (which fires its own toc-initialized with
+        // "no TOC found" when that page's initTocScrollSpy runs).
+        var counterBeforeClick = await Page.GetE2ECounterAsync();
+
         // Act - Navigate to handbook page (which has TOC) via the sub-nav link.
         // The sub-nav renders all custom pages including the handbook as visible links.
         var handbookLink = Page.Locator(".sub-nav a[href*='/github-copilot/handbook']").First;
@@ -348,7 +354,8 @@ public class NavigationTests : PlaywrightTestBase
 
         // Wait for scroll-spy to be initialized before clicking — without this, the click
         // fires before the handler is attached (race condition under full test suite load).
-        await Page.WaitForTocInitializedAsync();
+        // Pass counterBeforeClick so we only wait for the signal from THIS navigation.
+        await Page.WaitForTocInitializedAsync(counterBeforeClick);
 
         // Assert - TOC should be initialized and have links
         var tocLinks = tocElement.Locator("a[href*='#']");
