@@ -18,7 +18,7 @@
         CustomBannerDescription="@_customBannerDescription"
         HideStats="@_hideStats"
         ShowDiscord="@_showDiscord"
-        ShowHomepageButton="@_showHomepageButton"
+        IsHomepage="@_isHomepage"
         HideSubNav="@_hideSubNav" />
 
 @if (_isInvalid)
@@ -65,7 +65,7 @@ else
     private bool _showNewsletter;
     private bool _hideStats;
     private bool _showDiscord;
-    private bool _showHomepageButton;
+    private bool _isHomepage;
     private bool _hideSubNav;
     private bool _isInvalid;
     private TechHub.Core.Models.Section? _currentSection;
@@ -110,7 +110,7 @@ else
         _showNewsletter = false;
         _hideStats = false;
         _showDiscord = false;
-        _showHomepageButton = false;
+        _isHomepage = false;
         _hideSubNav = false;
 
         // Try to match first URL segment to a known section
@@ -166,6 +166,7 @@ else
                 _customBannerDescription = "Your source for Microsoft technology news, tutorials, and community content";
                 _currentRssFeedUrl = "/all/feed.xml";
                 _showNewsletter = true;
+                _isHomepage = true;
                 break;
             case "about":
                 _customBannerTitle = "About Us";
@@ -176,7 +177,6 @@ else
             case "newsletter":
                 _customBannerTitle = "Newsletter";
                 _customBannerDescription = "Subscribe to weekly roundups and daily overviews for your favourite sections";
-                _showHomepageButton = true;
                 break;
             case "not-found":
                 _customBannerTitle = "Not Found";

@@ -329,19 +329,6 @@ html.keyboard-nav .btn-subnav:focus-visible {
     }
 }
 
-.btn-subnav-newsletter {
-    border-color: var(--color-purple-bright);
-    color: var(--color-purple-bright);
-}
-
-@media (hover: hover) {
-    .btn-subnav-newsletter:hover {
-        background: var(--color-purple-dark);
-        color: var(--color-text-on-emphasis);
-        border-color: var(--color-purple-medium);
-    }
-}
-
 .btn-subnav-discord {
     border-color: var(--color-purple-bright);
     color: var(--color-purple-bright);

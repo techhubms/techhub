@@ -288,8 +288,10 @@ public class SubNavTests : BunitContext
             .Add(p => p.ShowNewsletter, true));
 
         // Assert - only Newsletter button is shown in the subnav; RSS is in the banner
-        cut.FindAll(".btn-subnav-newsletter").Should().HaveCount(1,
-            "Newsletter button should be shown in the homepage subnav");
+        var newsletterLink = cut.Find("a.btn-subnav[href='/newsletter/subscribe']");
+        newsletterLink.Should().NotBeNull("Newsletter button should be shown in the homepage subnav");
+        newsletterLink.ClassList.Should().NotContain("btn-subnav-newsletter",
+            "Newsletter button should not use the purple-accented btn-subnav-newsletter style");
         cut.Markup.Should().NotContain("/rss/feed.xml",
             "RSS link should not appear in the subnav (it moved to the section banner)");
     }
@@ -341,27 +343,5 @@ public class SubNavTests : BunitContext
             "Discord link should point to the correct server URL");
         discordLink.GetAttribute("target").Should().Be("_blank",
             "Discord link should open in a new tab");
-    }
-
-    [Fact]
-    public void SubNav_WithShowHomepageButton_ShowsHomepageButton()
-    {
-        // Arrange
-        var sections = new List<Section>
-        {
-            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
-                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
-        };
-
-        // Act
-        var cut = Render<SubNav>(parameters => parameters
-            .Add(p => p.Sections, sections)
-            .Add(p => p.ShowHomepageButton, true));
-
-        // Assert - Homepage button should be rendered linking back to root
-        var homepageLink = cut.Find("a.btn-subnav[href='/']");
-        homepageLink.Should().NotBeNull("Homepage button should render when ShowHomepageButton is true");
-        homepageLink.TextContent.Trim().Should().Be("Homepage",
-            "Homepage button should display 'Homepage' as its label");
     }
 }

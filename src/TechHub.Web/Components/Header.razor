@@ -13,7 +13,7 @@
      With custom banner (home, about, not-found, error pages):
        <Header CustomBannerTitle="Tech Hub" CustomBannerDescription="..." RssFeedUrl="/all/feed.xml" ShowNewsletter="true" />
        <Header CustomBannerTitle="About Us" CustomBannerDescription="..." HideStats="true" ShowDiscord="true" />
-       <Header CustomBannerTitle="Newsletter" CustomBannerDescription="..." ShowHomepageButton="true" />
+       <Header CustomBannerTitle="Newsletter" CustomBannerDescription="..." />
      
      Without section/banner (fallback):
        <Header />
@@ -37,20 +37,20 @@
     }
     else if (!string.IsNullOrEmpty(CustomBannerTitle))
     {
-        <SectionBanner Title="@CustomBannerTitle" Description="@CustomBannerDescription" RssFeedUrl="@RssFeedUrl" />
+        <SectionBanner Title="@CustomBannerTitle" Description="@CustomBannerDescription" RssFeedUrl="@RssFeedUrl" IsHomepage="@IsHomepage" />
         @if (!HideSubNav)
         {
-            <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomepageButton="@ShowHomepageButton" />
+            <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" />
         }
     }
     else if (ChildContent != null)
     {
         @ChildContent
-        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomepageButton="@ShowHomepageButton" />
+        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" />
     }
     else
     {
-        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomepageButton="@ShowHomepageButton" />
+        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" />
     }
 </header>
 
@@ -83,10 +83,10 @@
     public bool ShowDiscord { get; set; }
 
     /// <summary>
-    /// When true, renders a Homepage button in the SubNav. Used on the Newsletter page.
+    /// When true, renders the SectionBanner with homepage-specific styling and "Home" as the mobile title.
     /// </summary>
     [Parameter]
-    public bool ShowHomepageButton { get; set; }
+    public bool IsHomepage { get; set; }
 
     /// <summary>
     /// When true, hides the SubNav completely. Used on pages where navigation is not needed (e.g. Newsletter).
