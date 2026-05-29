@@ -295,7 +295,7 @@ html.keyboard-nav .btn-subnav:focus-visible {
         display: none;
     }
 
-    .btn-subnav-stat-total {
+    .btn-subnav-action.btn-subnav-stat-total {
         display: none;
     }
 }
