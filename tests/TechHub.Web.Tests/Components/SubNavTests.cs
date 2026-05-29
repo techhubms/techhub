@@ -450,6 +450,10 @@ public class SubNavTests : BunitContext
         var statIndex = children.FindIndex(el => el.ClassList.Contains("btn-subnav-stat-total"));
         var newsletterIndex = children.FindIndex(el => el.GetAttribute("href") == "/newsletter/subscribe");
 
+        homeIndex.Should().BeGreaterThanOrEqualTo(0, "Home button should be present in the sub-nav-wrapper");
+        statIndex.Should().BeGreaterThanOrEqualTo(0, "Total stat button should be present in the sub-nav-wrapper");
+        newsletterIndex.Should().BeGreaterThanOrEqualTo(0, "Newsletter button should be present in the sub-nav-wrapper");
+
         homeIndex.Should().BeLessThan(statIndex,
             "Home button should appear to the left (before) the stat chips");
         statIndex.Should().BeLessThan(newsletterIndex,

@@ -342,7 +342,9 @@ html.keyboard-nav .btn-subnav:focus-visible {
     }
 }
 
-/* Newsletter/Home nav button active state — overrides btn-subnav-action secondary color */
+/* Newsletter/Home nav button active state — overrides btn-subnav-action secondary color.
+   .btn-subnav-action is declared later in the file than .btn-subnav.active, so at equal
+   specificity it would win and reset the color. This rule restores the active appearance. */
 .btn-subnav-action.active {
     color: var(--color-text-on-emphasis);
     background: var(--color-purple-dark);
