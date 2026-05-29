@@ -72,7 +72,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
         emailSender
             .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .Callback<string, string, string, string, CancellationToken>((_, _, _, html, _) => htmlBody = html)
+            .Callback<string, string, string, string, CancellationToken>((_, _, html, _, _) => htmlBody = html)
             .ReturnsAsync(true);
 
         var sut = CreateService(emailSender: emailSender.Object);
@@ -81,7 +81,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
 
         sent.Should().BeTrue();
         htmlBody.Should().NotBeNull();
-        htmlBody.Should().Contain("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+        htmlBody.Should().Contain("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"");
         htmlBody.Should().Contain("width=\"100%\"");
         htmlBody.Should().Contain("max-width:900px");
     }
