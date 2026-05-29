@@ -49,8 +49,7 @@
 
         try
         {
-            await Api.ConfirmNewsletterAsync(Email, Token);
-            _message = "Your subscription is confirmed. Welcome to TechHub newsletters!";
+            _message = await Api.ConfirmNewsletterAsync(Email, Token);
             _success = true;
         }
         catch (HttpRequestException)
