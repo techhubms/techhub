@@ -2,6 +2,7 @@ using Bunit;
 using FluentAssertions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
@@ -13,11 +14,29 @@ namespace TechHub.Web.Tests.Components;
 /// </summary>
 public class SubNavTests : BunitContext
 {
+    private readonly Mock<ITechHubApiClient> _apiClientMock = new();
+
     public SubNavTests()
     {
         JSInterop.Mode = JSRuntimeMode.Loose;
         // HomepageStatsState is injected by SubNav; provide an empty instance by default
         Services.AddSingleton(new HomepageStatsState());
+        _apiClientMock
+            .Setup(x => x.GetCollectionItemsAsync(
+                "all",
+                "all",
+                1,
+                null,
+                null,
+                null,
+                null,
+                It.IsAny<string?>(),
+                null,
+                null,
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync((string _, string _, int? _, int? _, string? _, string? _, int? _, string? fromDate, string? _, string? _, CancellationToken _) =>
+                new CollectionItemsResponse([], fromDate is null ? 100 : 5));
+        Services.AddSingleton(_apiClientMock.Object);
     }
 
     [Fact]
@@ -71,7 +90,8 @@ public class SubNavTests : BunitContext
 
         // Act
         var cut = Render<SubNav>(parameters => parameters
-            .Add(p => p.Sections, sections));
+            .Add(p => p.Sections, sections)
+            .Add(p => p.ShowNewsletter, true));
 
         // Assert - Should render homepage subnav (always sub-nav-homepage-visible now)
         var nav = cut.Find("nav.sub-nav.sub-nav-homepage-visible");
@@ -425,7 +445,7 @@ public class SubNavTests : BunitContext
     }
 
     [Fact]
-    public void SubNav_HomeButtonRenderedBeforeStats()
+    public void SubNav_HomeAndNewsletterRenderedBeforeStats()
     {
         // Arrange - stats loaded so stat chips appear
         var statsState = Services.GetRequiredService<HomepageStatsState>();
@@ -443,7 +463,7 @@ public class SubNavTests : BunitContext
             .Add(p => p.ShowHomeButton, true)
             .Add(p => p.ShowNewsletter, true));
 
-        // Assert - Home appears before the stat chips in the DOM
+        // Assert - Home and Newsletter appear before the stat chips in the DOM
         var wrapper = cut.Find(".sub-nav-wrapper");
         var children = wrapper.Children.ToList();
         var homeIndex = children.FindIndex(el => el.GetAttribute("href") == "/");
@@ -456,7 +476,23 @@ public class SubNavTests : BunitContext
 
         homeIndex.Should().BeLessThan(statIndex,
             "Home button should appear to the left (before) the stat chips");
-        statIndex.Should().BeLessThan(newsletterIndex,
-            "Stat chips should appear between Home and Newsletter buttons");
+        newsletterIndex.Should().BeLessThan(statIndex,
+            "Newsletter button should appear directly after Home and before stat chips");
+    }
+
+    [Fact]
+    public void SubNav_WithEmptySectionsAndActions_FetchesAndShowsStats()
+    {
+        // Act - simulate refresh path where section cache is temporarily empty
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, Array.Empty<Section>())
+            .Add(p => p.ShowHomeButton, true)
+            .Add(p => p.ShowNewsletter, true));
+
+        // Assert - action buttons remain visible and stats are fetched/rendered
+        cut.Find("a.btn-subnav[href='/']").Should().NotBeNull();
+        cut.Find("a.btn-subnav[href='/newsletter/subscribe']").Should().NotBeNull();
+        cut.WaitForAssertion(() =>
+            cut.Find(".btn-subnav-stat-total").TextContent.Should().Contain("100 items total"));
     }
 }

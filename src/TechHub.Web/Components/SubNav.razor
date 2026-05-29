@@ -17,6 +17,7 @@
 @inject NavigationManager Navigation
 @inject IJSRuntime JS
 @inject HomepageStatsState HomepageStats
+@inject ITechHubApiClient ApiClient
 @implements IDisposable
 
 @if (Section != null)
@@ -86,7 +87,7 @@
         </div>
     </nav>
 }
-else if (Sections != null && Sections.Any())
+else if (Sections != null && HasHomepageContent)
 {
     @* Homepage SubNav: stat buttons + Newsletter; visible on desktop and mobile (no dropdown) *@
     <nav class="sub-nav sub-nav-homepage-visible" aria-label="Site navigation">
@@ -95,6 +96,13 @@ else if (Sections != null && Sections.Any())
             {
                 <a href="/" class="btn-subnav @(IsHomepageActive() ? "active" : "")" aria-label="Homepage">
                     Home
+                </a>
+            }
+            @if (ShowNewsletter)
+            {
+                <a href="/newsletter/subscribe" class="btn-subnav btn-subnav-action @(IsActive("/newsletter") ? "active" : "")" aria-label="Subscribe to newsletter">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
+                    Newsletter
                 </a>
             }
             @if (!HideStats && HomepageStats.TotalCount.HasValue)
@@ -107,13 +115,6 @@ else if (Sections != null && Sections.Any())
                 }
                 <a href="/all" class="btn-subnav btn-subnav-action btn-subnav-stat-total" aria-label="@HomepageStats.TotalCount items total">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg><span>@HomepageStats.TotalCount.Value.ToString("N0", System.Globalization.CultureInfo.InvariantCulture)<span class="stat-chip-total-label"> items total</span></span>
-                </a>
-            }
-            @if (ShowNewsletter)
-            {
-                <a href="/newsletter/subscribe" class="btn-subnav btn-subnav-action @(IsActive("/newsletter") ? "active" : "")" aria-label="Subscribe to newsletter">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
-                    Newsletter
                 </a>
             }
             @if (ShowDiscord)
@@ -169,7 +170,8 @@ else if (Sections != null && Sections.Any())
     [Parameter]
     public bool ShowDiscord { get; set; }
 
-    private bool HasActions => !string.IsNullOrEmpty(RssFeedUrl) || ShowNewsletter;
+    private bool HasHomepageActions => ShowHomeButton || ShowNewsletter || ShowDiscord || !string.IsNullOrEmpty(RssFeedUrl);
+    private bool HasHomepageContent => HasHomepageActions || (!HideStats && HomepageStats.TotalCount.HasValue);
 
     private bool dropdownOpen;
 
@@ -273,6 +275,29 @@ else if (Sections != null && Sections.Any())
     {
         Navigation.LocationChanged += OnLocationChanged;
         HomepageStats.OnChanged += OnHomepageStatsChanged;
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Section == null && Sections != null && HasHomepageActions && !HideStats && !HomepageStats.TotalCount.HasValue)
+        {
+            var recentItemsTask = ApiClient.GetCollectionItemsAsync("all", "all", take: 1, fromDate: GetWeekAgoDate());
+            var allItemsTask = ApiClient.GetCollectionItemsAsync("all", "all", take: 1);
+
+            var recentCount = (await recentItemsTask)?.TotalCount;
+            var totalCount = (await allItemsTask)?.TotalCount;
+
+            HomepageStats.Update(recentCount, totalCount, GetWeekAgoDate(), Sections.Count());
+        }
+    }
+
+    private static string GetWeekAgoDate()
+    {
+        var brussels = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+        return TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, brussels)
+            .Date
+            .AddDays(-7)
+            .ToString("yyyy-MM-dd");
     }
 
     private void OnHomepageStatsChanged()
