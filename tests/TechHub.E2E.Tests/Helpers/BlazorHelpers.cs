@@ -411,9 +411,19 @@ public static class BlazorHelpers
         gotoOptions.WaitUntil ??= WaitUntilState.DOMContentLoaded;
         gotoOptions.Timeout ??= E2ETimeout;
 
-        // Capture counter before navigation — full page load resets JS state,
-        // so counter will restart from 0. We wait for it to become > 0.
-        await page.GotoAsync(url, gotoOptions);
+        // Navigate with a single retry on timeout — handles cold-start scenarios in CI and
+        // PR-preview environments (e.g. Azure Container Apps scaled to zero) where the first
+        // request warms up the container and subsequent requests succeed within the timeout.
+        try
+        {
+            await page.GotoAsync(url, gotoOptions);
+        }
+        catch (TimeoutException)
+        {
+            // Retry once. If the server is unavailable (not just slow to start), the
+            // second attempt will also throw and the exception propagates as normal.
+            await page.GotoAsync(url, gotoOptions);
+        }
 
         // Wait for Blazor to be fully interactive (circuit established, scripts loaded).
         // WaitForBlazorReadyAsync correctly waits for __blazorServerReady/__blazorWasmReady
@@ -1161,14 +1171,18 @@ public static class BlazorHelpers
     /// <summary>
     /// Waits for the TOC scroll-spy to be initialized.
     /// Replaces manual WaitForConditionAsync("toc._tocScrollSpy.initialized") calls.
+    ///
+    /// Pass <paramref name="afterCounter"/> (from <see cref="GetE2ECounterAsync"/> captured
+    /// before the navigation that brought the TOC page into view) to avoid matching a
+    /// stale <c>toc-initialized</c> signal from an earlier navigation in the same test.
+    /// The default value of 0 matches any signal in history and is correct for tests that
+    /// navigate directly to the TOC page on a fresh browser page.
     /// </summary>
-    public static async Task WaitForTocInitializedAsync(this IPage page) =>
-        await page.WaitForConditionAsync(
-            @"() => {
-                const e = window.__e2e;
-                return e && e.history && e.history.some(h => h.label === 'toc-initialized');
-            }",
-            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+    /// <param name="page">The Playwright page</param>
+    /// <param name="afterCounter">Only match signals that fired after this counter value.
+    /// Defaults to 0 (any signal in history).</param>
+    public static Task WaitForTocInitializedAsync(this IPage page, int afterCounter = 0) =>
+        page.WaitForE2ESignalAsync(afterCounter, "toc-initialized");
 
     /// <summary>
     /// Scrolls an element into view using JavaScript's scrollIntoView API.
