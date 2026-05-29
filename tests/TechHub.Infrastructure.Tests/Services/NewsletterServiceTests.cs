@@ -56,6 +56,37 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     }
 
     [Fact]
+    public async Task SendRoundupNewsletterAsync_ShouldRenderResponsiveHtmlMarkers()
+    {
+        const string Slug = "weekly-ai-roundup-2026-06-03-responsive-markers";
+        const string Recipient = "responsive-markers@example.com";
+
+        await SeedRoundupAsync(Slug);
+        await _fixture.Connection.ExecuteAsync("""
+            DELETE FROM newsletter_subscribers WHERE email = @Email;
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES (@Email, TRUE, NOW(), '{"weeklySections":["ai"],"dailySections":[]}'::jsonb)
+            """, new { Email = Recipient });
+
+        string? htmlBody = null;
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        emailSender
+            .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Callback<string, string, string, string, CancellationToken>((_, _, _, html, _) => htmlBody = html)
+            .ReturnsAsync(true);
+
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        var sent = await sut.SendRoundupNewsletterAsync(Slug, TestContext.Current.CancellationToken);
+
+        sent.Should().BeTrue();
+        htmlBody.Should().NotBeNull();
+        htmlBody.Should().Contain("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+        htmlBody.Should().Contain("width=\"100%\"");
+        htmlBody.Should().Contain("max-width:900px");
+    }
+
+    [Fact]
     public async Task SendDailyOverviewAsync_SkipsUnconfirmedSubscribers()
     {
         const string Slug = "daily-item-newsletter-test-2026-05-20";

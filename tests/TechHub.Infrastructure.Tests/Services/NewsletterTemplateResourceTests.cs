@@ -8,11 +8,11 @@ public class NewsletterTemplateResourceTests
     [Fact]
     public void NewsletterRoundupTemplate_ShouldContainResponsiveLayoutMarkers()
     {
-        const string resourceFileName = "newsletter-roundup-template.html";
+        const string ResourceFileName = "newsletter-roundup-template.html";
         var resourceName = typeof(NewsletterService)
             .Assembly
             .GetManifestResourceNames()
-            .Single(name => name.EndsWith(resourceFileName, StringComparison.Ordinal));
+            .Single(name => name.EndsWith(ResourceFileName, StringComparison.Ordinal));
 
         using var stream = typeof(NewsletterService).Assembly.GetManifestResourceStream(resourceName);
         stream.Should().NotBeNull();
