@@ -1196,9 +1196,14 @@ public static class BlazorHelpers
         await page.WaitForConditionAsync(
             @"() => {
                 const toc = document.querySelector('[data-toc-scroll-spy]');
-                if (!toc) return true;
-                const links = toc.querySelectorAll('a[href^=""#""]');
-                return links.length > 0;
+                if (toc) {
+                    const links = toc.querySelectorAll('a[href^=""#""]');
+                    return links.length > 0;
+                }
+
+                // If no heading anchors exist, TOC is not applicable on this page.
+                const headings = document.querySelectorAll('h2[id], h3[id]');
+                return headings.length === 0;
             }");
     }
 
