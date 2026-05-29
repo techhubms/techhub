@@ -189,10 +189,13 @@ public static class NewsletterEndpoints
             return Results.BadRequest("Email and token are required.");
         }
 
-        var confirmed = await newsletterService.ConfirmSubscriberAsync(email, token, ct);
-        return confirmed
-            ? Results.Ok(new { message = "Your subscription is confirmed." })
-            : Results.BadRequest("Invalid or expired confirmation link.");
+        var result = await newsletterService.ConfirmSubscriberAsync(email, token, ct);
+        return result switch
+        {
+            ConfirmSubscriptionResult.Confirmed => Results.Ok(new { message = "Your subscription is confirmed." }),
+            ConfirmSubscriptionResult.AlreadyConfirmed => Results.Ok(new { message = "Your subscription has already been confirmed." }),
+            _ => Results.BadRequest("Invalid or expired confirmation link.")
+        };
     }
 
     private static async Task<IResult> UnsubscribeAsync(

@@ -14,7 +14,7 @@ public interface INewsletterSubscriberRepository
 
     Task<bool> UnsubscribeAsync(string email, CancellationToken ct = default);
 
-    Task<bool> ConfirmSubscriberAsync(string email, CancellationToken ct = default);
+    Task<ConfirmSubscriptionResult> ConfirmSubscriberAsync(string email, CancellationToken ct = default);
 
     Task<IReadOnlyList<NewsletterSubscriber>> GetActiveSubscribersAsync(
         string sectionName,

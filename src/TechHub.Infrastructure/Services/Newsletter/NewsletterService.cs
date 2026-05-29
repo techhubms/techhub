@@ -596,7 +596,7 @@ public sealed class NewsletterService : INewsletterService
         return await SendEmailAsync(email, "Confirm your TechHub newsletter subscription", html, text, ct);
     }
 
-    public async Task<bool> ConfirmSubscriberAsync(string email, string token, CancellationToken ct = default)
+    public async Task<ConfirmSubscriptionResult> ConfirmSubscriberAsync(string email, string token, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(email);
         ArgumentNullException.ThrowIfNull(token);
@@ -604,12 +604,12 @@ public sealed class NewsletterService : INewsletterService
         var secret = _options.UnsubscribeSecret;
         if (string.IsNullOrWhiteSpace(secret))
         {
-            return false;
+            return ConfirmSubscriptionResult.InvalidToken;
         }
 
         if (!IsValidConfirmToken(email, token, secret))
         {
-            return false;
+            return ConfirmSubscriptionResult.InvalidToken;
         }
 
         return await _subscriberRepository.ConfirmSubscriberAsync(email, ct);

@@ -831,7 +831,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
-    public virtual async Task ConfirmNewsletterAsync(string email, string token, CancellationToken cancellationToken = default)
+    public virtual async Task<string> ConfirmNewsletterAsync(string email, string token, CancellationToken cancellationToken = default)
     {
         email = email.Sanitize();
         token = token.Sanitize();
@@ -842,6 +842,8 @@ public class TechHubApiClient : ITechHubApiClient
             var url = $"/api/newsletter/confirm?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}";
             using var response = await _httpClient.GetAsync(url, cancellationToken);
             response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadFromJsonAsync<NewsletterConfirmResponse>(cancellationToken);
+            return result?.Message ?? "Your subscription is confirmed.";
         }
         catch (HttpRequestException ex)
         {
@@ -1509,6 +1511,11 @@ public class TechHubApiClient : ITechHubApiClient
     private sealed class DeletedCountResponse
     {
         public int Deleted { get; init; }
+    }
+
+    private sealed class NewsletterConfirmResponse
+    {
+        public string? Message { get; init; }
     }
 
     // ================================================================

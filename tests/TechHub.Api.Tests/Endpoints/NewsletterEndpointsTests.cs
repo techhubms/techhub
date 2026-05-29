@@ -115,6 +115,114 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
     }
 
     [Fact]
+    public async Task Confirm_WithValidToken_ReturnsOkConfirmed()
+    {
+        const string Email = "confirm-valid@example.com";
+
+        await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email = Email, WeeklySections = new[] { "ai" }, DailySections = Array.Empty<string>() },
+            TestContext.Current.CancellationToken);
+
+        var token = NewsletterService.BuildConfirmToken(Email, "integration-test-secret");
+        var response = await _client.GetAsync(
+            $"/api/newsletter/confirm?email={Uri.EscapeDataString(Email)}&token={Uri.EscapeDataString(token)}",
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var body = await response.Content.ReadFromJsonAsync<MessageResponse>(TestContext.Current.CancellationToken);
+        body!.Message.Should().Be("Your subscription is confirmed.");
+
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        var isConfirmed = await connection.ExecuteScalarAsync<bool>(
+            "SELECT is_confirmed FROM newsletter_subscribers WHERE email = @Email",
+            new { Email });
+        isConfirmed.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task Confirm_WhenAlreadyConfirmed_ReturnsOkWithAlreadyConfirmedMessage()
+    {
+        const string Email = "confirm-already@example.com";
+
+        await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email = Email, WeeklySections = new[] { "ai" }, DailySections = Array.Empty<string>() },
+            TestContext.Current.CancellationToken);
+
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        await connection.ExecuteAsync(
+            "UPDATE newsletter_subscribers SET is_confirmed = TRUE WHERE email = @Email",
+            new { Email });
+
+        var token = NewsletterService.BuildConfirmToken(Email, "integration-test-secret");
+        var response = await _client.GetAsync(
+            $"/api/newsletter/confirm?email={Uri.EscapeDataString(Email)}&token={Uri.EscapeDataString(token)}",
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var body = await response.Content.ReadFromJsonAsync<MessageResponse>(TestContext.Current.CancellationToken);
+        body!.Message.Should().Be("Your subscription has already been confirmed.");
+    }
+
+    [Fact]
+    public async Task Confirm_WithInvalidToken_ReturnsBadRequest()
+    {
+        const string Email = "confirm-badtoken@example.com";
+
+        await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email = Email, WeeklySections = new[] { "ai" }, DailySections = Array.Empty<string>() },
+            TestContext.Current.CancellationToken);
+
+        var response = await _client.GetAsync(
+            $"/api/newsletter/confirm?email={Uri.EscapeDataString(Email)}&token=invalid-token",
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task Subscribe_WhenSubscriberAlreadyConfirmed_DoesNotOverwritePreferences()
+    {
+        const string Email = "no-overwrite@example.com";
+
+        await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email = Email, WeeklySections = new[] { "ai" }, DailySections = Array.Empty<string>() },
+            TestContext.Current.CancellationToken);
+
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        await connection.ExecuteAsync(
+            "UPDATE newsletter_subscribers SET is_confirmed = TRUE WHERE email = @Email",
+            new { Email });
+
+        // Attacker re-subscribes with different preferences
+        var resubscribeResponse = await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email = Email, WeeklySections = new[] { "dotnet" }, DailySections = new[] { "azure" } },
+            TestContext.Current.CancellationToken);
+
+        resubscribeResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var prefs = await connection.QuerySingleAsync<(string Preferences, bool IsConfirmed)>(
+            "SELECT preferences::text AS Preferences, is_confirmed AS IsConfirmed FROM newsletter_subscribers WHERE email = @Email",
+            new { Email });
+
+        prefs.IsConfirmed.Should().BeTrue();
+        prefs.Preferences.Should().Contain("ai", "confirmed subscriber preferences must not be overwritten");
+        prefs.Preferences.Should().NotContain("dotnet");
+    }
+
+    private sealed class MessageResponse
+    {
+        public string? Message { get; init; }
+    }
+
+    [Fact]
     public async Task ManageRequest_WithValidEmail_ReturnsOk()
     {
         const string Email = "manage-request@example.com";
