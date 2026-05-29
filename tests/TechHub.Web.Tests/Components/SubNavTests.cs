@@ -209,15 +209,15 @@ public class SubNavTests : BunitContext
         var cut = Render<SubNav>(parameters => parameters
             .Add(p => p.Sections, sections));
 
-        // Assert - stats chips should appear in the subnav
-        cut.Find(".stats-box").Should().NotBeNull(
-            "subnav should contain the stats box container");
-        cut.FindAll(".stat-chip").Should().HaveCountGreaterThan(0,
-            "stat chips should be rendered when stats are available");
+        // Assert - stat action buttons should appear in the subnav
+        cut.Find(".btn-subnav-stat-new").Should().NotBeNull(
+            "new-this-week stat button should be rendered when recentCount > 0");
+        cut.Find(".btn-subnav-stat-total").Should().NotBeNull(
+            "total count stat button should be rendered when stats are available");
         cut.Markup.Should().Contain("1,337 items total",
             "total count should be formatted with thousands separator");
-        cut.Markup.Should().Contain("5 sections",
-            "sections count should be shown");
+        cut.Markup.Should().NotContain("5 sections",
+            "sections count is no longer shown in the subnav");
         cut.Markup.Should().Contain("12 new",
             "recent count should be shown when > 0");
         cut.Markup.Should().Contain("this week",
@@ -265,8 +265,10 @@ public class SubNavTests : BunitContext
             .Add(p => p.Sections, sections));
 
         // Assert - stat chips should not appear when TotalCount is null
-        cut.FindAll(".stat-chip").Should().BeEmpty(
-            "stat chips should not render before stats are loaded");
+        cut.FindAll(".btn-subnav-stat-new").Should().BeEmpty(
+            "new-this-week stat button should not render before stats are loaded");
+        cut.FindAll(".btn-subnav-stat-total").Should().BeEmpty(
+            "total count stat button should not render before stats are loaded");
     }
 
     [Fact]
@@ -311,10 +313,10 @@ public class SubNavTests : BunitContext
             .Add(p => p.HideStats, true));
 
         // Assert - stats box should not render when HideStats is true
-        cut.FindAll(".stats-box").Should().BeEmpty(
-            "stats box should be hidden when HideStats is true");
-        cut.FindAll(".stat-chip").Should().BeEmpty(
-            "stat chips should not render when HideStats is true");
+        cut.FindAll(".btn-subnav-stat-new").Should().BeEmpty(
+            "new-this-week stat button should be hidden when HideStats is true");
+        cut.FindAll(".btn-subnav-stat-total").Should().BeEmpty(
+            "total count stat button should not render when HideStats is true");
     }
 
     [Fact]
