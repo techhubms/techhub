@@ -271,16 +271,14 @@ html.keyboard-nav .btn-subnav:focus-visible {
 }
 
 /* Stat buttons: standalone button-style chips for stats */
-.btn-subnav-stat-new {
-    border-color: var(--color-purple-bright);
-    color: var(--color-purple-bright);
+.btn-subnav-action.btn-subnav-stat-new {
+    color: var(--color-green-light);
 }
 
 @media (hover: hover) {
-    .btn-subnav-stat-new:hover {
-        background: var(--color-purple-dark);
-        color: var(--color-text-on-emphasis);
-        border-color: var(--color-purple-medium);
+    .btn-subnav-action.btn-subnav-stat-new:hover {
+        background: var(--color-green-light-bg);
+        color: var(--color-green-light);
     }
 }
 
@@ -291,13 +289,12 @@ html.keyboard-nav .btn-subnav:focus-visible {
 }
 
 @media (max-width: 640px) {
-    /* On small mobile, only show the "new this week" button — hide total */
-    .btn-subnav-stat-total {
+    /* On small mobile, show only icon + number — hide all label text */
+    .stat-chip-new-label {
         display: none;
     }
 
-    /* Show only icon + number; hide the " this week" label text */
-    .stat-chip-new-label {
+    .stat-chip-total-label {
         display: none;
     }
 }

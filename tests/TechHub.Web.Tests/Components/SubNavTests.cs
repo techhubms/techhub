@@ -214,13 +214,13 @@ public class SubNavTests : BunitContext
             "new-this-week stat button should be rendered when recentCount > 0");
         cut.Find(".btn-subnav-stat-total").Should().NotBeNull(
             "total count stat button should be rendered when stats are available");
-        cut.Markup.Should().Contain("1,337 items total",
+        cut.Find(".btn-subnav-stat-total").TextContent.Should().Contain("1,337 items total",
             "total count should be formatted with thousands separator");
         cut.Markup.Should().NotContain("5 sections",
             "sections count is no longer shown in the subnav");
-        cut.Markup.Should().Contain("12 new",
+        cut.Find(".btn-subnav-stat-new").TextContent.Should().Contain("12 new",
             "recent count should be shown when > 0");
-        cut.Markup.Should().Contain("this week",
+        cut.Find(".btn-subnav-stat-new").TextContent.Should().Contain("this week",
             "recent label should include 'this week' text");
     }
 
