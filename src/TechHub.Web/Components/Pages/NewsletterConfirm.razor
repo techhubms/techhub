@@ -1,7 +1,10 @@
 @page "/newsletter/confirm"
 @using TechHub.Web.Services
 @inject ITechHubApiClient Api
+@implements IDisposable
 @inherits PageComponentBase
+
+@inject PersistentComponentState ApplicationState
 
 <PageTitle>Newsletter Confirm — TechHub</PageTitle>
 
@@ -30,16 +33,22 @@
     private bool _loading = true;
     private bool _success;
     private string _message = "Something went wrong while confirming your subscription.";
-    private bool _handled;
+    private PersistingComponentStateSubscription? _persistSubscription;
 
-    protected override async Task OnParametersSetAsync()
+    private const string StateKey = "newsletter-confirm-result";
+
+    protected override async Task OnInitializedAsync()
     {
-        if (_handled)
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<NewsletterConfirmResult>(StateKey, out var restored) && restored != null)
         {
+            _message = restored.Message;
+            _success = restored.Success;
+            _loading = false;
             return;
         }
 
-        _handled = true;
         if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Token))
         {
             _message = "Invalid confirmation link.";
@@ -49,8 +58,7 @@
 
         try
         {
-            await Api.ConfirmNewsletterAsync(Email, Token);
-            _message = "Your subscription is confirmed. Welcome to TechHub newsletters!";
+            _message = await Api.ConfirmNewsletterAsync(Email, Token);
             _success = true;
         }
         catch (HttpRequestException)
@@ -62,4 +70,18 @@
             _loading = false;
         }
     }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson(StateKey, new NewsletterConfirmResult(_message, _success));
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    private sealed record NewsletterConfirmResult(string Message, bool Success);
 }

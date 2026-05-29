@@ -296,8 +296,9 @@ internal interface ITechHubApiClient
     /// <summary>
     /// Confirm a newsletter subscription via the link sent by email.
     /// GET /api/newsletter/confirm
+    /// Returns the confirmation message from the API.
     /// </summary>
-    Task ConfirmNewsletterAsync(string email, string token, CancellationToken cancellationToken = default);
+    Task<string> ConfirmNewsletterAsync(string email, string token, CancellationToken cancellationToken = default);
 
     // ================================================================
     // Admin endpoints

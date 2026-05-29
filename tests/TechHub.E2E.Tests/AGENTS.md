@@ -84,7 +84,7 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scal
 | `ClickAndExpectAsync(assert)` | **The only click helper.** Waits for Blazor interactivity, clicks **once**, then asserts. Do NOT pass explicit `Timeout` in the assertion lambda — rely on the global `E2ETimeout` set via `Assertions.SetDefaultExpectTimeout`. If the URL changes after the assertion, automatically waits for Blazor to be ready on the new page. |
 | `ClickAndWaitForScrollAsync()` | Click + wait for `scroll-end` signal |
 | `ScrollToAndWaitForTocUpdateAsync()` | Scroll + wait for `toc-active-updated` signal |
-| `WaitForTocInitializedAsync()` | Wait for `toc-initialized` signal |
+| `WaitForTocInitializedAsync(afterCounter?)` | Wait for `toc-initialized` signal. Pass `afterCounter` (from `GetE2ECounterAsync()`) to scope to the current navigation and avoid stale matches from earlier page loads. |
 | `ScrollToPositionAsync(y)` | Scroll page to Y position (retries until page is tall enough) |
 | `FillBlazorInputAsync(query)` | Fill input + wait for URL query param update |
 | `WaitForConditionAsync(js, onTimeout?)` | Wait for JS condition (uses `E2ETimeout`; scales 10–60 s by network profile); optional `onTimeout` JS expression evaluated on timeout and appended to error message for diagnostics |

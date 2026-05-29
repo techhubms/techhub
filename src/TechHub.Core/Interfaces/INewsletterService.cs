@@ -12,7 +12,7 @@ public interface INewsletterService
     Task<bool> SendDailyOverviewAsync(DateOnly day, CancellationToken ct = default);
     Task<bool> SendAdminStatusReportAsync(DateOnly day, CancellationToken ct = default);
     Task<bool> SendConfirmationEmailAsync(string email, CancellationToken ct = default);
-    Task<bool> ConfirmSubscriberAsync(string email, string token, CancellationToken ct = default);
+    Task<ConfirmSubscriptionResult> ConfirmSubscriberAsync(string email, string token, CancellationToken ct = default);
     Task<bool> SendManageLinkEmailAsync(string email, CancellationToken ct = default);
     Task<NewsletterSubscriber?> GetSubscriberPreferencesAsync(string email, string token, CancellationToken ct = default);
     Task<bool> UpdateSubscriberPreferencesAsync(string email, string token, string? displayName, IReadOnlyList<string> weeklySections, IReadOnlyList<string> dailySections, CancellationToken ct = default);
