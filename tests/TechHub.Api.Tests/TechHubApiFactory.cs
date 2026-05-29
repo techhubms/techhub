@@ -54,7 +54,7 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IAsyncLif
 
     public TechHubIntegrationTestApiFactory()
     {
-        _container = new PostgreSqlBuilder("postgres:17-alpine")
+        _container = new PostgreSqlBuilder("postgres:17.5-alpine3.22")
             .WithDatabase("techhub_test")
             .WithUsername("test")
             .WithPassword("test")

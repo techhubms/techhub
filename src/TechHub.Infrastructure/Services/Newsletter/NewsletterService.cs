@@ -571,7 +571,13 @@ public sealed class NewsletterService : INewsletterService
 
         var confirmUrl = BuildConfirmUrl(email);
         var html = $"""
-            <html><body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </head>
+            <body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
               <h2>Confirm your TechHub newsletter subscription</h2>
               <p>Click the button below to confirm your subscription. If you did not sign up, you can safely ignore this email.</p>
               <p><a href="{WebUtility.HtmlEncode(confirmUrl)}" style="display:inline-block;padding:10px 20px;background:#7c3aed;color:#fff;text-decoration:none;border-radius:6px;">Confirm subscription</a></p>
@@ -833,11 +839,15 @@ public sealed class NewsletterService : INewsletterService
         sb.Append("""
             <!DOCTYPE html>
             <html lang="en">
+            <head>
+              <meta charset="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </head>
             <body style="margin:0;padding:0;background:#f5f7fb;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 12px;">
                 <tr>
                   <td align="center">
-                    <table role="presentation" width="900" cellspacing="0" cellpadding="0" style="max-width:900px;background:#ffffff;border-radius:12px;overflow:hidden;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:900px;background:#ffffff;border-radius:12px;overflow:hidden;">
                       <tr>
                         <td style="background:#111827;color:#ffffff;padding:20px 28px;font-size:20px;font-weight:700;">TechHub Weekly Digest</td>
                       </tr>
@@ -933,11 +943,15 @@ public sealed class NewsletterService : INewsletterService
         sb.Append($"""
             <!DOCTYPE html>
             <html lang="en">
+            <head>
+              <meta charset="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </head>
             <body style="margin:0;padding:0;background:#f5f7fb;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 12px;">
                 <tr>
                   <td align="center">
-                    <table role="presentation" width="1100" cellspacing="0" cellpadding="0" style="max-width:1100px;background:#ffffff;border-radius:12px;overflow:hidden;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:1100px;background:#ffffff;border-radius:12px;overflow:hidden;">
                       <tr>
                         <td style="background:#111827;color:#ffffff;padding:20px 28px;font-size:20px;font-weight:700;">TechHub Daily Overview</td>
                       </tr>
