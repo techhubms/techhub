@@ -245,6 +245,30 @@ public class SubNavTests : BunitContext
     }
 
     [Fact]
+    public void SubNav_WithHomepageStats_RendersMobileNewLabelHook()
+    {
+        // Arrange
+        var statsState = Services.GetRequiredService<HomepageStatsState>();
+        statsState.Update(recentCount: 12, totalCount: 1337, weekAgoDate: "2025-01-01", sectionsCount: 5);
+
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections));
+
+        // Assert - keep dedicated span for mobile "new" text while allowing "this week" to be hidden
+        cut.Find(".stat-chip-new-label").TextContent.Should().Contain("new",
+            "new chip should keep the 'new' text visible");
+        cut.Find(".stat-chip-new-label-suffix").TextContent.Should().Be(" this week",
+            "desktop suffix should remain available for larger breakpoints");
+    }
+
+    [Fact]
     public void SubNav_WithHomepageStats_WhenNoRecentItems_HidesNewBadge()
     {
         // Arrange
