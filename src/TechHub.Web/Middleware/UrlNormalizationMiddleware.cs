@@ -51,6 +51,8 @@ public partial class UrlNormalizationMiddleware
         "version",
         // OIDC callback path — must pass through to UseAuthentication, never treated as content.
         "signin-oidc",
+        // Newsletter subscription/unsubscription pages.
+        "newsletter",
     };
 
     // Sections that have been permanently renamed. When a path starts with an old section name,
@@ -307,7 +309,7 @@ public partial class UrlNormalizationMiddleware
 
             if (result != null)
             {
-                _logger.LogInformation("Legacy redirect: {Slug} ({Section}) -> {Url}", slug, sectionHint, result.Url);
+                _logger.LogInformation("Legacy redirect: {Slug} ({Section}) -> {Url}", slug.Replace('\r', ' ').Replace('\n', ' '), sectionHint?.Replace('\r', ' ').Replace('\n', ' '), result.Url);
                 Redirect(context, result.Url + context.Request.QueryString);
                 return true;
             }
@@ -323,7 +325,7 @@ public partial class UrlNormalizationMiddleware
         }
         catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
         {
-            _logger.LogWarning(ex, "Legacy lookup failed for {Slug} ({Section}); caller will apply fallback", slug, sectionHint);
+            _logger.LogWarning(ex, "Legacy lookup failed for {Slug} ({Section}); caller will apply fallback", slug.Replace('\r', ' ').Replace('\n', ' '), sectionHint?.Replace('\r', ' ').Replace('\n', ' '));
             return false;
         }
     }

@@ -161,6 +161,9 @@ builder.Services.AddScoped<ErrorService>();
 // Circuit-scoped cache for infinite scroll state (survives enhanced navigations for back-button support)
 builder.Services.AddScoped<ContentGridStateCache>();
 
+// Homepage stats (recent count, total count) shared between Home.razor and SubNav.razor
+builder.Services.AddScoped<HomepageStatsState>();
+
 // Domain-based branding (tech.xebia.ms vs tech.hub.ms)
 builder.Services.AddScoped<BrandingService>();
 

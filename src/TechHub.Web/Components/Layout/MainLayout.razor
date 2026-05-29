@@ -13,8 +13,13 @@
 
 <Header SectionName="@_currentSectionName"
         RssFeedUrl="@_currentRssFeedUrl"
+        ShowNewsletter="@_showNewsletter"
         CustomBannerTitle="@_customBannerTitle"
-        CustomBannerDescription="@_customBannerDescription" />
+        CustomBannerDescription="@_customBannerDescription"
+        HideStats="@_hideStats"
+        ShowDiscord="@_showDiscord"
+        ShowHomepageButton="@_showHomepageButton"
+        HideSubNav="@_hideSubNav" />
 
 @if (_isInvalid)
 {
@@ -57,16 +62,22 @@ else
     private string? _currentRssFeedUrl;
     private string? _customBannerTitle;
     private string? _customBannerDescription;
+    private bool _showNewsletter;
+    private bool _hideStats;
+    private bool _showDiscord;
+    private bool _showHomepageButton;
+    private bool _hideSubNav;
     private bool _isInvalid;
     private TechHub.Core.Models.Section? _currentSection;
 
     // Pages that are valid destinations but are NOT section names.
     private static readonly HashSet<string> KnownNonSectionPages = new(StringComparer.OrdinalIgnoreCase)
     {
-        "about",     // About.razor
-        "not-found", // NotFound.razor
-        "error",     // Error.razor (lowercased by LowercaseUrls)
-        "admin",     // Admin section (uses AdminLayout, not subject to section validation)
+        "about",      // About.razor
+        "not-found",  // NotFound.razor
+        "error",      // Error.razor (lowercased by LowercaseUrls)
+        "admin",      // Admin section (uses AdminLayout, not subject to section validation)
+        "newsletter", // NewsletterSubscribe.razor, NewsletterUnsubscribe.razor
     };
 
     protected override void OnInitialized()
@@ -96,6 +107,11 @@ else
         _customBannerTitle = null;
         _customBannerDescription = null;
         _currentSection = null;
+        _showNewsletter = false;
+        _hideStats = false;
+        _showDiscord = false;
+        _showHomepageButton = false;
+        _hideSubNav = false;
 
         // Try to match first URL segment to a known section
         if (!string.IsNullOrEmpty(firstSegment))
@@ -126,6 +142,7 @@ else
                 _currentSectionName = sectionData.Name;
                 _currentSection = sectionData;
                 _currentRssFeedUrl = $"/{sectionData.Name}/feed.xml";
+                _showNewsletter = true;
                 return;
             }
 
@@ -148,10 +165,18 @@ else
                 _customBannerTitle = Branding.BannerTitle;
                 _customBannerDescription = "Your source for Microsoft technology news, tutorials, and community content";
                 _currentRssFeedUrl = "/all/feed.xml";
+                _showNewsletter = true;
                 break;
             case "about":
                 _customBannerTitle = "About Us";
                 _customBannerDescription = "Meet the team behind your source for Microsoft technology content";
+                _hideStats = true;
+                _showDiscord = true;
+                break;
+            case "newsletter":
+                _customBannerTitle = "Newsletter";
+                _customBannerDescription = "Subscribe to weekly roundups and daily overviews for your favourite sections";
+                _showHomepageButton = true;
                 break;
             case "not-found":
                 _customBannerTitle = "Not Found";

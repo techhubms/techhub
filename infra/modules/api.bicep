@@ -38,6 +38,15 @@ param aiCategorizationEndpoint string = ''
 @description('Azure AI Foundry deployment name')
 param aiCategorizationDeploymentName string = ''
 
+@description('Key Vault secret name for Newsletter ACS endpoint URL. Leave empty to disable.')
+param acsEndpointSecretName string = ''
+
+@description('Key Vault secret name for Newsletter sender address. Leave empty to disable.')
+param acsSenderAddressSecretName string = ''
+
+@description('Key Vault secret name for Newsletter__UnsubscribeSecret. Leave empty to disable Key Vault binding.')
+param newsletterUnsubscribeSecretName string = ''
+
 @description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
 param aspNetCoreEnvironment string = 'Production'
 
@@ -55,6 +64,9 @@ param tags object = {}
 
 var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-api:${imageTag}'
 var revisionSuffix = 'api-${imageTag}'
+var hasAcsEndpoint = !empty(acsEndpointSecretName)
+var hasAcsSenderAddress = !empty(acsSenderAddressSecretName)
+var newsletterWebsiteBaseUrl = !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
 var corsOrigins = union(['https://*.azurecontainerapps.io'], customOrigins)
 var corsEnvVars = [for (fqdn, i) in webFqdns: {
@@ -71,6 +83,59 @@ var backgroundJobEnvVars = enableBackgroundJobs ? [] : [
     value: 'false'
   }
 ]
+var newsletterSecretEnvVars = empty(newsletterUnsubscribeSecretName)
+  ? []
+  : [
+      {
+        name: 'Newsletter__UnsubscribeSecret'
+        secretRef: 'newsletter-unsubscribe-secret'
+      }
+    ]
+var newsletterAcsEnvVars = hasAcsEndpoint
+  ? [
+      {
+        name: 'Newsletter__Endpoint'
+        secretRef: 'newsletter-acs-endpoint'
+      }
+    ]
+  : []
+var newsletterSenderEnvVars = hasAcsSenderAddress
+  ? [
+      {
+        name: 'Newsletter__SenderAddress'
+        secretRef: 'acs-sender-address'
+      }
+    ]
+  : []
+var newsletterSecrets = empty(newsletterUnsubscribeSecretName)
+  ? []
+  : [
+      {
+        name: 'newsletter-unsubscribe-secret'
+        keyVaultUrl: '${keyVaultUri}secrets/${newsletterUnsubscribeSecretName}'
+        identity: identityId
+      }
+    ]
+
+var newsletterAcsSecrets = hasAcsEndpoint
+  ? [
+      {
+        name: 'newsletter-acs-endpoint'
+        keyVaultUrl: '${keyVaultUri}secrets/${acsEndpointSecretName}'
+        identity: identityId
+      }
+    ]
+  : []
+
+var newsletterSenderSecrets = hasAcsSenderAddress
+  ? [
+      {
+        name: 'acs-sender-address'
+        keyVaultUrl: '${keyVaultUri}secrets/${acsSenderAddressSecretName}'
+        identity: identityId
+      }
+    ]
+  : []
 var staticEnvVars = [
   {
     name: 'ASPNETCORE_ENVIRONMENT'
@@ -105,7 +170,11 @@ var staticEnvVars = [
   }
   {
     name: 'AppSettings__BaseUrl'
-    value: !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
+    value: newsletterWebsiteBaseUrl
+  }
+  {
+    name: 'Newsletter__WebsiteBaseUrl'
+    value: newsletterWebsiteBaseUrl
   }
   {
     name: 'TECHHUB_TMP'
@@ -165,14 +234,14 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
           passwordSecretRef: 'ghcr-token'
         }
       ]
-      secrets: [
+      secrets: concat([
         // GitHub Container Registry PAT for image pulls (read:packages scope)
         {
           name: 'ghcr-token'
           keyVaultUrl: '${keyVaultUri}secrets/techhub-github-registry-token'
           identity: identityId
         }
-      ]
+      ], newsletterSenderSecrets, newsletterAcsSecrets, newsletterSecrets)
     }
     template: {
       revisionSuffix: revisionSuffix
@@ -184,7 +253,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
             cpu: json('0.25')
             memory: '0.5Gi'
           }
-          env: concat(staticEnvVars, corsEnvVars, backgroundJobEnvVars)
+          env: concat(staticEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars, backgroundJobEnvVars)
           probes: [
             {
               type: 'startup'

@@ -3,6 +3,12 @@
 @using TechHub.Web.Services
 @implements IDisposable
 @inherits PageComponentBase
+@inject ITechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<Home> Logger
+@inject PersistentComponentState ApplicationState
+@inject HomepageStatsState HomepageStats
 
 <PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
 
@@ -31,7 +37,7 @@
                                target="@roundup.GetTarget()"
                                rel="@roundup.GetRel()"
                                aria-label="@roundup.GetAriaLabel()">
-                                <span class="sidebar-content-button-title">@roundup.Title</span>
+                                <span class="sidebar-content-button-title">@StripRoundupPrefix(roundup.Title)</span>
                                 <span class="sidebar-content-button-meta">
                                     <span class="sidebar-item-section">@GetItemSectionTitle(roundup.PrimarySectionName)</span>
                                     <span class="sidebar-content-button-meta-separator">•</span>
@@ -82,9 +88,6 @@
             NavigationMode="TagCloudNavigationMode.Navigate" NavigationBaseUrl="/all" />
         </MobileSidebarPanel>
         </MobileSidebarToolbar>
-        <div class="sidebar-desktop-only">
-        <SidebarRssLinks Links="@rssLinks" />
-        </div>
     </aside>
 
     <section class="home-main-content">
@@ -102,29 +105,19 @@
 </main>
 
 @code {
-    [Inject] public required TechHubApiClient ApiClient { get; set; }
-    [Inject] public required NavigationManager Navigation { get; set; }
-    [Inject] public required ErrorService ErrorService { get; set; }
-    [Inject] public required ILogger<Home> Logger { get; set; }
-    [Inject] public required PersistentComponentState ApplicationState { get; set; }
 
     private PersistingComponentStateSubscription? _persistSubscription;
-
-    private static readonly SidebarRssLinks.RssLink[] rssLinks =
-    [
-        new("RSS Feed - All Content", "/all/feed.xml"),
-        new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
-    ];
 
     private IEnumerable<TechHub.Core.Models.Section>? sections;
     private IEnumerable<TechHub.Core.Models.ContentItem>? latestRoundups;
     private IEnumerable<TechHub.Core.Models.ContentItem>? latestItems;
+    private long? recentCount;
+    private long? totalCount;
 
-    private static RenderFragment GetNewsletterIcon() => @<svg width="16" height="16" viewBox="0 0 24 24"
-            fill="currentColor" aria-hidden="true">
-            <path
-                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-    </svg>;
+    private static readonly TimeZoneInfo BrusselsTz =
+        TimeZoneInfo.TryFindSystemTimeZoneById("Europe/Brussels", out var tz) ? tz : TimeZoneInfo.Utc;
+    private static string WeekAgoDate => TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTz)
+        .AddDays(-7).ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
 
     private string GetItemSectionTitle(string sectionName)
     {
@@ -160,6 +153,9 @@ protected override async Task OnInitializedAsync()
         sections = restored.Sections;
         latestRoundups = restored.LatestRoundups;
         latestItems = restored.LatestItems;
+        recentCount = restored.RecentCount;
+        totalCount = restored.TotalCount;
+        UpdateSubNavStats();
         return;
     }
 
@@ -168,14 +164,19 @@ try
 // Fetch all content in parallel - sections first, then roundups per section + latest items
 var sectionsTask = ApiClient.GetAllSectionsAsync();
 var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
+var recentItemsTask = ApiClient.GetCollectionItemsAsync("all", "all", take: 1, fromDate: WeekAgoDate);
+var allItemsTask = ApiClient.GetCollectionItemsAsync("all", "all", take: 1);
 
-await Task.WhenAll(sectionsTask, latestItemsTask);
+await Task.WhenAll(sectionsTask, latestItemsTask, recentItemsTask, allItemsTask);
 
 sections = await sectionsTask;
 latestItems = await latestItemsTask;
+recentCount = (await recentItemsTask)?.TotalCount;
+totalCount = (await allItemsTask)?.TotalCount;
 
 // Fetch latest roundup per section (requires sections to determine which have roundups)
 latestRoundups = await ApiClient.GetLatestRoundupPerSectionAsync(sections ?? [], CancellationToken.None);
+UpdateSubNavStats();
 }
 catch (Exception ex)
 {
@@ -189,7 +190,9 @@ ErrorService.HandleError(ex, Navigation, Logger);
         {
             Sections = sections?.ToList(),
             LatestRoundups = latestRoundups?.ToList(),
-            LatestItems = latestItems?.ToList()
+            LatestItems = latestItems?.ToList(),
+            RecentCount = recentCount,
+            TotalCount = totalCount
         });
         return Task.CompletedTask;
     }
@@ -199,6 +202,8 @@ ErrorService.HandleError(ex, Navigation, Logger);
         public List<TechHub.Core.Models.Section>? Sections { get; set; }
         public List<TechHub.Core.Models.ContentItem>? LatestRoundups { get; set; }
         public List<TechHub.Core.Models.ContentItem>? LatestItems { get; set; }
+        public long? RecentCount { get; set; }
+        public long? TotalCount { get; set; }
     }
 
     public void Dispose()
@@ -207,5 +212,16 @@ ErrorService.HandleError(ex, Navigation, Logger);
         GC.SuppressFinalize(this);
     }
 
+    private void UpdateSubNavStats()
+    {
+        HomepageStats.Update(recentCount, totalCount, WeekAgoDate, sections?.Count() ?? 0);
+    }
+
     private static string FormatDateShort(long epochSeconds) => DateHelper.FormatDateRelative(epochSeconds);
+
+    private static string StripRoundupPrefix(string title)
+    {
+        var colonIndex = title.IndexOf(": ", StringComparison.Ordinal);
+        return colonIndex >= 0 ? title[(colonIndex + 2)..] : title;
+    }
 }

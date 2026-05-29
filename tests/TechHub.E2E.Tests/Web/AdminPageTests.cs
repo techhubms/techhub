@@ -84,6 +84,17 @@ public class AdminPageTests : PlaywrightTestBase
     }
 
     [Fact]
+    public async Task AdminNewsletter_WithoutAuth_ShowsLoginForm()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/admin/newsletter");
+
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "TechHub Admin");
+    }
+
+    [Fact]
     public async Task AdminDashboard_WithoutAuth_StaysOnRequestedUrl()
     {
         // Act — navigate to /admin without auth

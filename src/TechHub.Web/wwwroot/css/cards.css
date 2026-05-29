@@ -26,10 +26,13 @@
   border: 1px solid var(--color-border-default);
   height: 100%;
   min-height: 265px;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
   cursor: pointer;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 @media (hover: hover) {
@@ -69,8 +72,11 @@
   box-shadow: var(--shadow-md);
   height: 100%;
   min-height: 265px;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 @media (hover: hover) {
@@ -84,17 +90,17 @@
    CARD GRIDS - Responsive grid layouts for cards
    ======================================================================= */
 
-/* Standard card grid - auto-fill with minimum 300px cards */
+/* Standard card grid - auto-fill with minimum 300px cards (capped to 100% on narrow viewports) */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: var(--spacing-3);
 }
 
 /* Compact card grid - smaller cards for dense layouts */
 .cards-grid-compact {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--spacing-3);
 }
 

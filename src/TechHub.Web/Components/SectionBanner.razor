@@ -10,19 +10,21 @@
 
 <div class="section-banner @CssClass @BackgroundClass">
     <div class="section-banner-content header-text-overlay">
-    <div class="banner-title">
-            <span class="banner-title-desktop">@DisplayTitle</span>
-            <span class="banner-title-mobile">@MobileTitle</span>
+    <div class="banner-title-row">
+            <div class="banner-title">
+                <span class="banner-title-desktop">@DisplayTitle</span>
+                <span class="banner-title-mobile">@MobileTitle</span>
+            </div>
+            @if (!string.IsNullOrEmpty(RssFeedUrl))
+            {
+                <a href="@RssFeedUrl" target="_blank" rel="noopener noreferrer" class="banner-rss-link" aria-label="RSS Feed">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg>
+                </a>
+            }
         </div>
         @if (!string.IsNullOrEmpty(DisplayDescription))
         {
             <p class="banner-description">@DisplayDescription</p>
-        }
-        @if (!string.IsNullOrEmpty(RssFeedUrl))
-        {
-            <a href="@RssFeedUrl" target="_blank" rel="noopener noreferrer" class="banner-rss-link" aria-label="RSS Feed">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg>
-            </a>
         }
     </div>
 </div>

@@ -272,6 +272,34 @@ internal interface ITechHubApiClient
         CancellationToken cancellationToken = default);
 
     // ================================================================
+    // Newsletter endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all newsletter sections.
+    /// GET /api/newsletter/sections
+    /// </summary>
+    Task<IReadOnlyList<Section>?> GetNewsletterSectionsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Subscribe an email address to weekly and daily newsletters.
+    /// POST /api/newsletter/subscribe
+    /// </summary>
+    Task SubscribeNewsletterAsync(string email, string? displayName, IReadOnlyList<string> weeklySections, IReadOnlyList<string> dailySections, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Unsubscribe an email address from newsletters.
+    /// POST /api/newsletter/unsubscribe
+    /// </summary>
+    Task UnsubscribeNewsletterAsync(string email, string token, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Confirm a newsletter subscription via the link sent by email.
+    /// GET /api/newsletter/confirm
+    /// </summary>
+    Task ConfirmNewsletterAsync(string email, string token, CancellationToken cancellationToken = default);
+
+    // ================================================================
     // Admin endpoints
     // ================================================================
 
@@ -286,6 +314,36 @@ internal interface ITechHubApiClient
     /// POST /api/admin/roundup/trigger
     /// </summary>
     Task TriggerRoundupGenerationAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Trigger an immediate newsletter processing run.
+    /// POST /api/admin/newsletter/trigger
+    /// </summary>
+    Task TriggerNewsletterAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Trigger a newsletter test send to a specific recipient for the given sections.
+    /// POST /api/admin/newsletter/test-send
+    /// </summary>
+    Task TriggerNewsletterTestSendAsync(string email, IReadOnlyList<string> sections, string kind, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Request a subscription management link to be sent to the given email.
+    /// POST /api/newsletter/manage/request
+    /// </summary>
+    Task RequestNewsletterManageLinkAsync(string email, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get subscriber preferences for self-management.
+    /// GET /api/newsletter/manage
+    /// </summary>
+    Task<NewsletterSubscriber?> GetNewsletterManagePreferencesAsync(string email, string token, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update subscriber preferences via self-management.
+    /// PUT /api/newsletter/manage
+    /// </summary>
+    Task UpdateNewsletterManagePreferencesAsync(string email, string token, string? displayName, IReadOnlyList<string> weeklySections, IReadOnlyList<string> dailySections, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Delete an existing roundup and re-run generation for its week.
@@ -320,6 +378,35 @@ internal interface ITechHubApiClient
     Task<ContentProcessingJob?> GetProcessingJobByIdAsync(
         long id,
         CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get newsletter subscribers for the admin dashboard.
+    /// GET /api/admin/newsletter/subscribers
+    /// </summary>
+    Task<IReadOnlyList<NewsletterSubscriber>> GetNewsletterSubscribersAsync(
+        int page = 1,
+        int pageSize = 200,
+        string? search = null,
+        bool? confirmed = null,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update an existing newsletter subscriber.
+    /// PUT /api/admin/newsletter/subscribers/{id}
+    /// </summary>
+    Task UpdateNewsletterSubscriberAsync(long id, string? displayName, IReadOnlyList<string> weeklySections, IReadOnlyList<string> dailySections, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a newsletter subscriber.
+    /// DELETE /api/admin/newsletter/subscribers/{id}
+    /// </summary>
+    Task DeleteNewsletterSubscriberAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get recent newsletter send log entries.
+    /// GET /api/admin/newsletter/send-log
+    /// </summary>
+    Task<IReadOnlyList<NewsletterSendLogEntry>> GetNewsletterSendLogAsync(int count = 100, CancellationToken cancellationToken = default);
 
     // ================================================================
     // RSS Feed config endpoints

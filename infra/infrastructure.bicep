@@ -74,6 +74,12 @@ param acmeDnsZoneName string = 'acme.hub.ms'
 @description('Domains that need ACME-delegated wildcard certificate renewal')
 param acmeDelegatedDomains string[] = ['hub.ms', 'xebia.ms']
 
+@description('Email Communication Service name')
+param emailServiceName string = 'eml-techhub-prod'
+
+@description('Communication Service name')
+param communicationServiceName string = 'acs-techhub-prod'
+
 @description('Common tags applied to all resources managed by this template')
 param commonTags object = {
   owner: 'techhub-maintainer'
@@ -293,6 +299,41 @@ module acmeDnsZone './modules/acmeDnsZone.bicep' = {
   }
 }
 
+// Azure Communication Services for email delivery
+module communication './modules/communication.bicep' = {
+  scope: resourceGroup
+  name: 'communication-${deploymentSuffix}'
+  params: {
+    emailServiceName: emailServiceName
+    communicationServiceName: communicationServiceName
+    tags: prodTags
+  }
+}
+
+// Grant API managed identity access to ACS for sending emails
+module acsDataContributorRole './modules/acsDataContributorRole.bicep' = {
+  scope: resourceGroup
+  name: 'acs-data-contributor-role-${deploymentSuffix}'
+  params: {
+    communicationServiceName: communicationServiceName
+    principalId: identity.outputs.identityPrincipalId
+    principalType: 'ServicePrincipal'
+  }
+  dependsOn: [communication]
+}
+
+// Store ACS sender address in Key Vault for Phase 2 consumption
+module acsSenderAddressSecret './modules/keyVaultSecret.bicep' = {
+  scope: resourceGroup
+  name: 'acs-sender-address-secret-${deploymentSuffix}'
+  params: {
+    keyVaultName: keyVaultName
+    secretName: 'techhub-prod-acs-sender-address'
+    secretValue: communication.outputs.senderAddress
+  }
+  dependsOn: [keyVault]
+}
+
 // Subscription cost budget
 module budget './modules/budget.bicep' = {
   name: 'budget-${deploymentSuffix}'
@@ -323,3 +364,4 @@ output postgresServerFqdn string = postgres.outputs.serverFqdn
 output postgresDatabaseName string = postgres.outputs.databaseName
 output acmeDnsZoneName string = acmeDnsZone.outputs.zoneName
 output acmeDnsNameServers string[] = acmeDnsZone.outputs.nameServers
+output acsEndpoint string = communication.outputs.communicationServiceEndpoint

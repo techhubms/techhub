@@ -218,7 +218,15 @@ if ($Action -eq 'deploy') {
     }
 
     if (-not $env:ADMIN_IP_ADDRESSES) {
-        Write-Fail "Environment variable ADMIN_IP_ADDRESSES is not set. Required for PR PostgreSQL firewall rules."
+        try {
+            $ghIps = (gh variable get ADMIN_IP_ADDRESSES --repo techhubms/techhub 2>$null)
+            if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($ghIps)) {
+                $env:ADMIN_IP_ADDRESSES = $ghIps.Trim()
+            }
+        } catch {}
+    }
+    if (-not $env:ADMIN_IP_ADDRESSES) {
+        Write-Fail "ADMIN_IP_ADDRESSES is not set and could not be read from GitHub variable."
         exit 1
     }
     Write-Ok "ADMIN_IP_ADDRESSES is set"

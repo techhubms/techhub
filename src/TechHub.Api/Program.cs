@@ -18,6 +18,7 @@ using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
 using TechHub.Infrastructure.Services.ContentProcessing;
+using TechHub.Infrastructure.Services.Newsletter;
 using TechHub.Infrastructure.Services.RoundupGeneration;
 using TechHub.ServiceDefaults;
 var builder = WebApplication.CreateBuilder(args);
@@ -256,10 +257,18 @@ builder.Services.AddHostedService(sp => sp.GetRequiredService<ContentFixerBackgr
 // ─── Roundup Generator Pipeline ──────────────────────────────────────────────
 builder.Services.Configure<RoundupGeneratorOptions>(
     builder.Configuration.GetSection(RoundupGeneratorOptions.SectionName));
+builder.Services.Configure<NewsletterOptions>(
+    builder.Configuration.GetSection(NewsletterOptions.SectionName));
 builder.Services.AddScoped<ISectionRoundupRepository, SectionRoundupRepository>();
+builder.Services.AddScoped<INewsletterSubscriberRepository, NewsletterSubscriberRepository>();
+builder.Services.AddScoped<INewsletterService, NewsletterService>();
+builder.Services.AddAcsEmailClient();
+builder.Services.AddScoped<IEmailSender, AcsEmailSender>();
 builder.Services.AddRoundupGeneration();
 builder.Services.AddSingleton<RoundupGeneratorBackgroundService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<RoundupGeneratorBackgroundService>());
+builder.Services.AddSingleton<NewsletterBackgroundService>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<NewsletterBackgroundService>());
 
 // Register startup background service that runs migrations and content sync
 // after Kestrel starts, so health endpoints are reachable during startup
@@ -465,6 +474,7 @@ app.MapSitemapEndpoints();
 app.MapAuthorEndpoints();
 app.MapGhcFeaturesEndpoints();
 app.MapAdminEndpoints();
+app.MapNewsletterEndpoints();
 
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();
