@@ -172,6 +172,11 @@ else if (Sections != null && HasHomepageContent)
 
     private bool HasHomepageActions => ShowHomeButton || ShowNewsletter || ShowDiscord || !string.IsNullOrEmpty(RssFeedUrl);
     private bool HasHomepageContent => HasHomepageActions || (!HideStats && HomepageStats.TotalCount.HasValue);
+    private bool ShouldFetchHomepageStats => Section == null
+                                             && Sections != null
+                                             && HasHomepageActions
+                                             && !HideStats
+                                             && !HomepageStats.TotalCount.HasValue;
 
     private bool dropdownOpen;
 
@@ -279,15 +284,18 @@ else if (Sections != null && HasHomepageContent)
 
     protected override async Task OnParametersSetAsync()
     {
-        if (Section == null && Sections != null && HasHomepageActions && !HideStats && !HomepageStats.TotalCount.HasValue)
+        if (ShouldFetchHomepageStats)
         {
-            var recentItemsTask = ApiClient.GetCollectionItemsAsync("all", "all", take: 1, fromDate: GetWeekAgoDate());
+            var weekAgoDate = GetWeekAgoDate();
+            var recentItemsTask = ApiClient.GetCollectionItemsAsync("all", "all", take: 1, fromDate: weekAgoDate);
             var allItemsTask = ApiClient.GetCollectionItemsAsync("all", "all", take: 1);
+
+            await Task.WhenAll(recentItemsTask, allItemsTask);
 
             var recentCount = (await recentItemsTask)?.TotalCount;
             var totalCount = (await allItemsTask)?.TotalCount;
 
-            HomepageStats.Update(recentCount, totalCount, GetWeekAgoDate(), Sections.Count());
+            HomepageStats.Update(recentCount, totalCount, weekAgoDate, Sections?.Count() ?? 0);
         }
     }
 
