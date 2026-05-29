@@ -92,8 +92,10 @@ public class DynamicTagCountsTests : PlaywrightTestBase
             }
 
             // Select a tag
+            var selectedCountBefore = await Page.Locator(".tag-cloud-item.selected").CountAsync();
             await enabledTags[0].ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
+                await Page.WaitForConditionAsync(
+                    $"() => document.querySelectorAll('.tag-cloud-item.selected').length > {selectedCountBefore}"));
             await WaitForTagCloudReadyAsync();
 
             // Check if any tags are now disabled
@@ -250,8 +252,10 @@ public class DynamicTagCountsTests : PlaywrightTestBase
                 break;
             }
 
+            var selectedCountBefore = await Page.Locator(".tag-cloud-item.selected").CountAsync();
             await enabledTags[0].ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
+                await Page.WaitForConditionAsync(
+                    $"() => document.querySelectorAll('.tag-cloud-item.selected').length > {selectedCountBefore}"));
             await WaitForTagCloudReadyAsync();
 
             var disabledCount = await Page.Locator(".tag-cloud-item.disabled").CountAsync();
