@@ -1181,8 +1181,26 @@ public static class BlazorHelpers
     /// <param name="page">The Playwright page</param>
     /// <param name="afterCounter">Only match signals that fired after this counter value.
     /// Defaults to 0 (any signal in history).</param>
-    public static Task WaitForTocInitializedAsync(this IPage page, int afterCounter = 0) =>
-        page.WaitForE2ESignalAsync(afterCounter, "toc-initialized");
+    public static async Task WaitForTocInitializedAsync(this IPage page, int afterCounter = 0)
+    {
+        // When running against environments that don't expose the __e2e signal bus
+        // (for example production domains), fall back to a DOM-based TOC readiness
+        // check so TOC tests don't hang on signal waits that can never resolve.
+        var hasE2ESignalBus = await page.EvaluateAsync<bool>("() => !!window.__e2e");
+        if (hasE2ESignalBus)
+        {
+            await page.WaitForE2ESignalAsync(afterCounter, "toc-initialized");
+            return;
+        }
+
+        await page.WaitForConditionAsync(
+            @"() => {
+                const toc = document.querySelector('[data-toc-scroll-spy]');
+                if (!toc) return true;
+                const links = toc.querySelectorAll('a[href^=""#""]');
+                return links.length > 0;
+            }");
+    }
 
     /// <summary>
     /// Scrolls an element into view using JavaScript's scrollIntoView API.
@@ -1290,4 +1308,3 @@ public class AssertionException : Exception
         ArgumentNullException.ThrowIfNull(message);
     }
 }
-
