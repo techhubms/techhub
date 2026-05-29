@@ -50,6 +50,13 @@
     [Parameter]
     public Section? Section { get; set; }
 
+    /// <summary>
+    /// When true, renders the banner with homepage-specific styling (home-banner CSS class)
+    /// and shows "Home" as the mobile title instead of the page title.
+    /// </summary>
+    [Parameter]
+    public bool IsHomepage { get; set; }
+
     // Computed properties - prefer Section data if available
     private string DisplayTitle => Section?.Title ?? Title ?? string.Empty;
     private string? DisplayDescription => Section?.Description ?? Description;
@@ -57,10 +64,10 @@
     ? $"section-banner-bg-{Section.Name}"
     : BackgroundCssClass ?? "section-banner-bg-none";
 
-    private string CssClass => Section == null && string.IsNullOrEmpty(BackgroundCssClass) ? "home-banner" : "";
+    private string CssClass => IsHomepage ? "home-banner" : "";
 
     /// <summary>
     /// Mobile title: shows "Home" for homepage, otherwise same as DisplayTitle.
     /// </summary>
-    private string MobileTitle => Section == null && string.IsNullOrEmpty(BackgroundCssClass) ? "Home" : DisplayTitle;
+    private string MobileTitle => IsHomepage ? "Home" : DisplayTitle;
 }
