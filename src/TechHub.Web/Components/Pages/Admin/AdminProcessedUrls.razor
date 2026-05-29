@@ -258,18 +258,19 @@
         if (int.TryParse(qs["page"], out var page) && page > 1)
             _currentPage = page;
 
-        // Load feed names for dropdown filter
-        await LoadFeedNamesAsync();
-
+        // Check persisted state BEFORE any await to prevent loading flash during
+        // prerender → interactive transition (the first await triggers a render).
         if (ApplicationState.TryTakeFromJson<PagedResult<ProcessedUrlListItem>>("admin-processed-urls", out var restored) && restored != null)
         {
             _result = restored;
             _loading = false;
             UpdatePagination();
+            await LoadFeedNamesAsync();
             await LoadFailedCountAsync();
             return;
         }
 
+        await LoadFeedNamesAsync();
         await LoadDataAsync();
     }
 

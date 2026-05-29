@@ -233,13 +233,15 @@ html.sidebar-collapsed .sidebar > *:not(.sidebar-toggle) {
     order: 1;
   }
 
-  /* Toolbar button bar */
+  /* Toolbar button bar — always rendered (even when empty) to reserve space
+     and prevent layout shift during Blazor interactive handoff */
   .sidebar-toolbar-buttons {
     display: flex;
     gap: var(--spacing-1);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    min-height: var(--touch-target-min-size);
   }
 
   .sidebar-toolbar-buttons::-webkit-scrollbar {

@@ -49,8 +49,8 @@ public class RssTests : PlaywrightTestBase
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
 
-        // Assert - Check for RSS link in sidebar (moved from banner)
-        var rssIconLink = Page.Locator(".sidebar-section a[href*='/feed.xml']");
+        // Assert - Check for RSS link in section banner
+        var rssIconLink = Page.Locator(".banner-rss-link");
         await rssIconLink.AssertElementVisibleAsync();
         await rssIconLink.AssertHrefEqualsAsync("/github-copilot/feed.xml");
     }
@@ -107,8 +107,8 @@ public class RssTests : PlaywrightTestBase
         // Arrange
         await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/azure");
 
-        // Act - Get RSS link from sidebar (moved from banner)
-        var rssIconLink = Page.Locator(".sidebar-section a[href*='/feed.xml']");
+        // Act - Get RSS link from section banner
+        var rssIconLink = Page.Locator(".banner-rss-link");
 
         // Assert - Verify the link is correct (but don't actually navigate to avoid downloading XML)
         await rssIconLink.AssertHrefEqualsAsync("/azure/feed.xml");

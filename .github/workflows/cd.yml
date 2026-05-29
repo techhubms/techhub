@@ -509,9 +509,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ./scripts/Deploy-Application.ps1 `
-            -Tag "${{ steps.tag.outputs.image-tag }}" `
-            -SkipDeploy
+          ./scripts/Build-Images.ps1 `
+            -Tag "${{ steps.tag.outputs.image-tag }}"
 
       - name: Clean up old production images (keep last 2)
         env:
@@ -560,6 +559,33 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Check for infrastructure changes
+        id: changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Get the SHA of the last successful production deployment
+          LAST_DEPLOY_SHA=$(gh api "repos/${{ github.repository }}/deployments?environment=production&per_page=10" \
+            --jq '[.[] | select(.payload.status == "success" or .status == "success")] | .[0].sha // empty' 2>/dev/null || echo "")
+
+          if [ -z "$LAST_DEPLOY_SHA" ]; then
+            echo "No previous successful deployment found — deploying full infrastructure"
+            echo "infra-changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Last successful deployment: $LAST_DEPLOY_SHA"
+            CHANGED=$(git diff --name-only "$LAST_DEPLOY_SHA" HEAD -- infra/ scripts/ || echo "forced")
+            if [ -n "$CHANGED" ]; then
+              echo "Infrastructure/scripts changes detected:"
+              echo "$CHANGED"
+              echo "infra-changed=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "No infrastructure changes — using fast deploy path"
+              echo "infra-changed=false" >> "$GITHUB_OUTPUT"
+            fi
+          fi
 
       - name: Azure Login
         uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
@@ -569,24 +595,44 @@ jobs:
           subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
           enable-AzPSSession: true
 
-      - name: Deploy production infrastructure and application
-        id: deploy
+      - name: Deploy infrastructure (Phase 1)
+        if: steps.changes.outputs.infra-changed == 'true'
         shell: pwsh
         env:
           POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
+          ADMIN_IP_ADDRESSES: ${{ vars.ADMIN_IP_ADDRESSES }}
           AZURE_AD_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
-          ADMIN_IP_ADDRESSES: ${{ secrets.ADMIN_IP_ADDRESSES }}
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
+          NEWSLETTER_UNSUBSCRIBE_SECRET: ${{ secrets.NEWSLETTER_UNSUBSCRIBE_SECRET }}
           WILDCARD_CERT_HUB_MS: ${{ secrets.WILDCARD_CERT_HUB_MS }}
           WILDCARD_CERT_XEBIA_MS: ${{ secrets.WILDCARD_CERT_XEBIA_MS }}
         run: |
-          ./scripts/Deploy-Infrastructure.ps1 `
+          ./scripts/Deploy-Infrastructure.ps1 -Mode deploy
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Deploy applications via Bicep (full deploy)
+        if: steps.changes.outputs.infra-changed == 'true'
+        id: deploy-bicep
+        shell: pwsh
+        run: |
+          ./scripts/Deploy-Applications.ps1 `
             -Mode deploy `
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-          # Use the known primary hostname (wildcard custom domains like *.hub.ms are not valid URLs)
-          "web-url=tech.hub.ms" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
+      - name: Deploy applications (fast image update)
+        if: steps.changes.outputs.infra-changed == 'false'
+        id: deploy-fast
+        shell: pwsh
+        run: |
+          ./scripts/Deploy-Application.ps1 `
+            -Tag "${{ needs.build-and-push.outputs.image-tag }}"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Set deployment output
+        id: deploy
+        run: |
+          echo "web-url=tech.hub.ms" >> "$GITHUB_OUTPUT"
 
       - name: Deployment summary
         run: |

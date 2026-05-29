@@ -138,6 +138,7 @@
     private int currentBatch = 1;
 
     // Change detection
+    private string previousSectionName = string.Empty;
     private string previousCollectionName = string.Empty;
     private List<string>? previousFilterTags;
     private string? previousSearchQuery;
@@ -161,6 +162,7 @@
 
     protected override async Task OnInitializedAsync()
     {
+        previousSectionName = SectionName;
         previousCollectionName = CollectionName;
         previousFilterTags = FilterTags?.ToList();
         previousSearchQuery = SearchQuery;
@@ -247,8 +249,9 @@
 
     protected override async Task OnParametersSetAsync()
     {
-        if (CollectionName != previousCollectionName || AuthorName != previousAuthorName)
+        if (SectionName != previousSectionName || CollectionName != previousCollectionName || AuthorName != previousAuthorName)
         {
+            previousSectionName = SectionName;
             previousCollectionName = CollectionName;
             previousAuthorName = AuthorName;
             previousContentTypes = ContentTypes;

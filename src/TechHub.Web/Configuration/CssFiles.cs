@@ -25,6 +25,7 @@ public static class CssFiles
         "css/page-container.css",
         "css/loading.css",
         "css/nav-helpers.css",
+        "css/newsletter.css",
         "css/admin.css"
     ];
 }

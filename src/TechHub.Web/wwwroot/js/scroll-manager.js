@@ -156,7 +156,7 @@ function showNavSpinner() {
         navSpinnerShowTimeout = null;
         const el = document.getElementById(NAV_SPINNER_ID);
         if (el) el.classList.add('active');
-    }, 500);
+    }, 1000);
     if (navSpinnerSafetyTimeout) clearTimeout(navSpinnerSafetyTimeout);
     navSpinnerSafetyTimeout = setTimeout(hideNavSpinner, 10_000);
 }

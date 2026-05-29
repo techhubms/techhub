@@ -1,0 +1,224 @@
+@page "/newsletter/manage"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@inject ITechHubApiClient Api
+@inject SectionCache SectionCache
+@inherits PageComponentBase
+
+<PageTitle>Manage Newsletter Subscription — TechHub</PageTitle>
+
+<main class="page-without-sidebar">
+    <section>
+        <h1 id="skiptohere" class="page-h1">Manage your newsletter subscription</h1>
+
+        @if (_preferences is null && !_tokenValid)
+        {
+            @if (!_linkSent)
+            {
+                <p class="subscribe-intro">Enter your email address and we'll send you a link to manage your subscription preferences.</p>
+                <div class="subscribe-fields">
+                    <div class="subscribe-field">
+                        <label class="subscribe-label" for="manage-email">Email</label>
+                        <input id="manage-email" class="subscribe-input" type="email" placeholder="you@example.com" @bind="_email" />
+                    </div>
+                </div>
+                <div class="subscribe-actions">
+                    <button class="btn" @onclick="RequestLinkAsync" disabled="@string.IsNullOrWhiteSpace(_email)">Send management link</button>
+                </div>
+            }
+            else
+            {
+                <div class="subscribe-alert subscribe-alert-success">Check your inbox — we've sent a management link to your email address.</div>
+            }
+        }
+        else if (_preferences is null && _tokenValid)
+        {
+            <div class="subscribe-alert subscribe-alert-error">Invalid or expired management link. Please request a new one.</div>
+            <div class="subscribe-actions">
+                <a class="btn-secondary" href="/newsletter/manage">Request a new link</a>
+            </div>
+        }
+        else if (_preferences is not null)
+        {
+            <p class="subscribe-intro">Update your subscription preferences below and click Save to apply the changes.</p>
+            <div class="subscribe-fields">
+                <div class="subscribe-field">
+                    <label class="subscribe-label" for="manage-name">Display name <span class="subscribe-optional">(optional)</span></label>
+                    <input id="manage-name" class="subscribe-input" type="text" @bind="_displayName" />
+                </div>
+            </div>
+
+            <div class="subscribe-groups">
+                <div class="subscribe-group">
+                    <h2 class="subscribe-group-title">Weekly roundup per section</h2>
+                    <p class="subscribe-group-description">A curated summary of the week's most important content, delivered every week.</p>
+                    <div class="subscribe-checkboxes">
+                        @foreach (var sec in _sections)
+                        {
+                            <label class="subscribe-checkbox-label">
+                                <input type="checkbox" checked="@_weeklySelections.Contains(sec.Name)" @onchange="(e) => Toggle(_weeklySelections, sec.Name, e)" />
+                                @sec.Title
+                            </label>
+                        }
+                    </div>
+                </div>
+
+                <div class="subscribe-group">
+                    <h2 class="subscribe-group-title">Daily overview per section <span class="subscribe-group-meta">(every morning at 9:00 CET/CEST)</span></h2>
+                    <p class="subscribe-group-description">A brief overview of new content published in the last 24 hours, delivered each morning.</p>
+                    <div class="subscribe-checkboxes">
+                        @foreach (var sec in _sections)
+                        {
+                            <label class="subscribe-checkbox-label">
+                                <input type="checkbox" checked="@_dailySelections.Contains(sec.Name)" @onchange="(e) => Toggle(_dailySelections, sec.Name, e)" />
+                                @sec.Title
+                            </label>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="subscribe-actions">
+                <button class="btn" @onclick="SaveAsync">Save preferences</button>
+                <a class="btn-secondary" href="/newsletter/unsubscribe?email=@Uri.EscapeDataString(Email ?? string.Empty)&token=@Uri.EscapeDataString(Token ?? string.Empty)">Unsubscribe</a>
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(_message))
+        {
+            <div class="subscribe-alert @(_error ? "subscribe-alert-error" : "subscribe-alert-success")">@_message</div>
+        }
+    </section>
+</main>
+
+@code {
+    [SupplyParameterFromQuery(Name = "email")]
+    public string? Email { get; set; }
+
+    [SupplyParameterFromQuery(Name = "token")]
+    public string? Token { get; set; }
+
+    private IReadOnlyList<Section> _sections = [];
+    private NewsletterSubscriber? _preferences;
+    private bool _tokenValid;
+    private bool _linkSent;
+    private string _email = string.Empty;
+    private string? _displayName;
+    private readonly HashSet<string> _weeklySelections = new(StringComparer.OrdinalIgnoreCase);
+    private readonly HashSet<string> _dailySelections = new(StringComparer.OrdinalIgnoreCase);
+    private string? _message;
+    private bool _error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _sections = await Api.GetNewsletterSectionsAsync() ?? GetFallbackSections();
+        }
+        catch (HttpRequestException)
+        {
+            _sections = GetFallbackSections();
+        }
+
+        if (!string.IsNullOrWhiteSpace(Email) && !string.IsNullOrWhiteSpace(Token))
+        {
+            _tokenValid = true;
+            try
+            {
+                _preferences = await Api.GetNewsletterManagePreferencesAsync(Email, Token);
+                if (_preferences is not null)
+                {
+                    _displayName = _preferences.DisplayName;
+                    foreach (var s in _preferences.WeeklySections)
+                    {
+                        _weeklySelections.Add(s);
+                    }
+
+                    foreach (var s in _preferences.DailySections)
+                    {
+                        _dailySelections.Add(s);
+                    }
+                }
+                else
+                {
+                    _tokenValid = false;
+                }
+            }
+            catch (HttpRequestException)
+            {
+                _tokenValid = false;
+            }
+        }
+    }
+
+    private async Task RequestLinkAsync()
+    {
+        if (string.IsNullOrWhiteSpace(_email))
+        {
+            return;
+        }
+
+        try
+        {
+            await Api.RequestNewsletterManageLinkAsync(_email.Trim());
+            _linkSent = true;
+            _message = null;
+        }
+        catch (HttpRequestException)
+        {
+            _message = "Failed to send the management link. Please try again.";
+            _error = true;
+        }
+    }
+
+    private async Task SaveAsync()
+    {
+        if (_preferences is null || string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Token))
+        {
+            return;
+        }
+
+        if (_weeklySelections.Count == 0 && _dailySelections.Count == 0)
+        {
+            _message = "Select at least one section to stay subscribed.";
+            _error = true;
+            return;
+        }
+
+        try
+        {
+            await Api.UpdateNewsletterManagePreferencesAsync(
+                Email,
+                Token,
+                _displayName,
+                _weeklySelections.ToList(),
+                _dailySelections.ToList());
+
+            _message = "Preferences saved.";
+            _error = false;
+        }
+        catch (HttpRequestException)
+        {
+            _message = "Failed to save preferences. Please try again.";
+            _error = true;
+        }
+    }
+
+    private static void Toggle(HashSet<string> selections, string sectionName, ChangeEventArgs e)
+    {
+        var isChecked = e.Value as bool? == true;
+        if (isChecked)
+        {
+            selections.Add(sectionName);
+        }
+        else
+        {
+            selections.Remove(sectionName);
+        }
+    }
+
+    private IReadOnlyList<Section> GetFallbackSections() =>
+        SectionCache.Sections
+            .Where(s => !string.Equals(s.Name, "all", StringComparison.OrdinalIgnoreCase))
+            .ToList();
+}

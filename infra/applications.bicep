@@ -62,6 +62,9 @@ param appInsightsConnectionString string = '@existing'
 @description('Google Analytics Measurement ID (e.g. G-XXXXXXXXXX). Set to empty string to disable GA telemetry for PR preview environments.')
 param googleAnalyticsMeasurementId string = 'G-95LLB67KJV'
 
+@description('Key Vault secret name for Newsletter ACS endpoint URL. Populated by Deploy-Infrastructure.ps1 via Sync-KeyVaultSecrets.ps1.')
+param acsEndpointSecretName string = 'techhub-prod-newsletter-acs-endpoint'
+
 @description('Common tags applied to all resources managed by this template')
 param commonTags object = {
   owner: 'techhub-maintainer'
@@ -194,6 +197,9 @@ module apiApp './modules/api.bicep' = {
     azureAdClientId: azureAdClientId
     aiCategorizationEndpoint: openAiAccount.properties.endpoint
     aiCategorizationDeploymentName: openAiModelDeployment.name
+    acsEndpointSecretName: acsEndpointSecretName
+    acsSenderAddressSecretName: 'techhub-prod-acs-sender-address'
+    newsletterUnsubscribeSecretName: 'techhub-prod-newsletter-unsubscribe-secret'
     tags: prodTags
   }
 }

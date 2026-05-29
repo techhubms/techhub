@@ -45,3 +45,33 @@ public sealed class ReviewFixedValueRequest
 {
     public string? FixedValue { get; init; }
 }
+
+public sealed class NewsletterSubscribeRequest
+{
+    public string? Email { get; init; }
+    public string? DisplayName { get; init; }
+    public IReadOnlyList<string>? WeeklySections { get; init; }
+    public IReadOnlyList<string>? DailySections { get; init; }
+}
+
+public sealed class NewsletterUnsubscribeRequest
+{
+    public string? Email { get; init; }
+    public string? Token { get; init; }
+}
+
+public sealed class NewsletterSubscriberUpdateRequest
+{
+    public string? DisplayName { get; init; }
+    public IReadOnlyList<string>? WeeklySections { get; init; }
+    public IReadOnlyList<string>? DailySections { get; init; }
+}
+
+public sealed class NewsletterManageUpdateRequest
+{
+    public string? Email { get; init; }
+    public string? Token { get; init; }
+    public string? DisplayName { get; init; }
+    public IReadOnlyList<string>? WeeklySections { get; init; }
+    public IReadOnlyList<string>? DailySections { get; init; }
+}

@@ -108,6 +108,9 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IAsyncLif
         // Override database configuration to use the Testcontainers PostgreSQL instance
         builder.UseSetting("Database:Provider", "PostgreSQL");
         builder.UseSetting("Database:ConnectionString", _container.GetConnectionString());
+        builder.UseSetting("Newsletter:UnsubscribeSecret", "integration-test-secret");
+        builder.UseSetting("Newsletter:ScheduledSendEnabled", "false");
+        builder.UseSetting("Newsletter:WebsiteBaseUrl", "https://localhost:5003");
 
         builder.ConfigureTestServices(services =>
         {

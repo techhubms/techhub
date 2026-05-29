@@ -737,6 +737,22 @@ select.admin-input {
     user-select: none;
 }
 
+.admin-checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-1) var(--spacing-3);
+}
+
+.admin-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    user-select: none;
+}
+
 /* ─── Result Summary & Pagination ─────────────────────────────────────────── */
 
 .admin-result-summary {
