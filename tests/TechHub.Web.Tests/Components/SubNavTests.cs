@@ -344,4 +344,115 @@ public class SubNavTests : BunitContext
         discordLink.GetAttribute("target").Should().Be("_blank",
             "Discord link should open in a new tab");
     }
+
+    [Fact]
+    public void SubNav_WithShowHomeButton_ShowsHomeButton()
+    {
+        // Arrange
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.ShowHomeButton, true));
+
+        // Assert - Home button should be rendered
+        var homeLink = cut.Find("a.btn-subnav[href='/']");
+        homeLink.Should().NotBeNull("Home button should be rendered when ShowHomeButton is true");
+        homeLink.TextContent.Trim().Should().Be("Home", "Home button should have 'Home' label");
+    }
+
+    [Fact]
+    public void SubNav_HomeButton_IsActiveOnHomepage()
+    {
+        // Arrange - navigate to homepage
+        var navMan = Services.GetRequiredService<NavigationManager>();
+        navMan.NavigateTo("/");
+
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.ShowHomeButton, true)
+            .Add(p => p.ShowNewsletter, true));
+
+        // Assert - Home button active, Newsletter button not active
+        var homeLink = cut.Find("a.btn-subnav[href='/']");
+        homeLink.ClassList.Should().Contain("active",
+            "Home button should be highlighted when on the homepage");
+
+        var newsletterLink = cut.Find("a.btn-subnav[href='/newsletter/subscribe']");
+        newsletterLink.ClassList.Should().NotContain("active",
+            "Newsletter button should not be highlighted on the homepage");
+    }
+
+    [Fact]
+    public void SubNav_NewsletterButton_IsActiveOnNewsletterPage()
+    {
+        // Arrange - navigate to a newsletter page
+        var navMan = Services.GetRequiredService<NavigationManager>();
+        navMan.NavigateTo("/newsletter/subscribe");
+
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.ShowHomeButton, true)
+            .Add(p => p.ShowNewsletter, true));
+
+        // Assert - Newsletter button active, Home button not active
+        var newsletterLink = cut.Find("a.btn-subnav[href='/newsletter/subscribe']");
+        newsletterLink.ClassList.Should().Contain("active",
+            "Newsletter button should be highlighted on any newsletter page");
+
+        var homeLink = cut.Find("a.btn-subnav[href='/']");
+        homeLink.ClassList.Should().NotContain("active",
+            "Home button should not be highlighted on a newsletter page");
+    }
+
+    [Fact]
+    public void SubNav_HomeButtonRenderedBeforeStats()
+    {
+        // Arrange - stats loaded so stat chips appear
+        var statsState = Services.GetRequiredService<HomepageStatsState>();
+        statsState.Update(recentCount: 5, totalCount: 100, weekAgoDate: "2025-01-01", sectionsCount: 2);
+
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.ShowHomeButton, true)
+            .Add(p => p.ShowNewsletter, true));
+
+        // Assert - Home appears before the stat chips in the DOM
+        var wrapper = cut.Find(".sub-nav-wrapper");
+        var children = wrapper.Children.ToList();
+        var homeIndex = children.FindIndex(el => el.GetAttribute("href") == "/");
+        var statIndex = children.FindIndex(el => el.ClassList.Contains("btn-subnav-stat-total"));
+        var newsletterIndex = children.FindIndex(el => el.GetAttribute("href") == "/newsletter/subscribe");
+
+        homeIndex.Should().BeLessThan(statIndex,
+            "Home button should appear to the left (before) the stat chips");
+        statIndex.Should().BeLessThan(newsletterIndex,
+            "Stat chips should appear between Home and Newsletter buttons");
+    }
 }

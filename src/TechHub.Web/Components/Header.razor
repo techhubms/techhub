@@ -40,17 +40,17 @@
         <SectionBanner Title="@CustomBannerTitle" Description="@CustomBannerDescription" RssFeedUrl="@RssFeedUrl" IsHomepage="@IsHomepage" />
         @if (!HideSubNav)
         {
-            <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" />
+            <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomeButton="@ShowHomeButton" />
         }
     }
     else if (ChildContent != null)
     {
         @ChildContent
-        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" />
+        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomeButton="@ShowHomeButton" />
     }
     else
     {
-        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" />
+        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomeButton="@ShowHomeButton" />
     }
 </header>
 
@@ -81,6 +81,12 @@
     /// </summary>
     [Parameter]
     public bool ShowDiscord { get; set; }
+
+    /// <summary>
+    /// When true, renders a "Home" button in the SubNav that is highlighted when on the homepage.
+    /// </summary>
+    [Parameter]
+    public bool ShowHomeButton { get; set; }
 
     /// <summary>
     /// When true, renders the SectionBanner with homepage-specific styling and "Home" as the mobile title.

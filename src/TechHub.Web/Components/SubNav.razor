@@ -91,6 +91,12 @@ else if (Sections != null && Sections.Any())
     @* Homepage SubNav: stat buttons + Newsletter; visible on desktop and mobile (no dropdown) *@
     <nav class="sub-nav sub-nav-homepage-visible" aria-label="Site navigation">
         <div class="sub-nav-wrapper">
+            @if (ShowHomeButton)
+            {
+                <a href="/" class="btn-subnav @(IsHomepageActive() ? "active" : "")" aria-label="Homepage">
+                    Home
+                </a>
+            }
             @if (!HideStats && HomepageStats.TotalCount.HasValue)
             {
                 @if (HomepageStats.RecentCount is > 0)
@@ -105,7 +111,7 @@ else if (Sections != null && Sections.Any())
             }
             @if (ShowNewsletter)
             {
-                <a href="/newsletter/subscribe" class="btn-subnav btn-subnav-action" aria-label="Subscribe to newsletter">
+                <a href="/newsletter/subscribe" class="btn-subnav btn-subnav-action @(IsActive("/newsletter") ? "active" : "")" aria-label="Subscribe to newsletter">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
                     Newsletter
                 </a>
@@ -137,6 +143,13 @@ else if (Sections != null && Sections.Any())
     /// </summary>
     [Parameter]
     public string? RssFeedUrl { get; set; }
+
+    /// <summary>
+    /// When true, renders a "Home" button to the left of the stats in the homepage-style SubNav.
+    /// The button is visually highlighted (active) when the user is on the homepage.
+    /// </summary>
+    [Parameter]
+    public bool ShowHomeButton { get; set; }
 
     /// <summary>
     /// When true, renders a Newsletter subscribe button in the action area.
@@ -278,6 +291,17 @@ else if (Sections != null && Sections.Any())
     {
         Navigation.LocationChanged -= OnLocationChanged;
         HomepageStats.OnChanged -= OnHomepageStatsChanged;
+    }
+
+    /// <summary>
+    /// Determines if the user is currently on the homepage (path is exactly "/").
+    /// Used specifically for the Home button active state; avoids the prefix-match
+    /// in IsActive which would match "/" against every URL.
+    /// </summary>
+    private bool IsHomepageActive()
+    {
+        var currentPath = new Uri(Navigation.Uri).AbsolutePath.TrimEnd('/');
+        return string.IsNullOrEmpty(currentPath);
     }
 
     /// <summary>

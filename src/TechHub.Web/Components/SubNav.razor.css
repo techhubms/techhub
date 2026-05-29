@@ -342,6 +342,21 @@ html.keyboard-nav .btn-subnav:focus-visible {
     }
 }
 
+/* Newsletter/Home nav button active state — overrides btn-subnav-action secondary color */
+.btn-subnav-action.active {
+    color: var(--color-text-on-emphasis);
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+}
+
+@media (hover: hover) {
+    .btn-subnav-action.active:hover {
+        background: var(--color-purple-medium);
+        color: var(--color-text-on-emphasis);
+        text-decoration: none;
+    }
+}
+
 /* Mobile dropdown action items (RSS, Newsletter) */
 .sub-nav-dropdown-action {
     display: flex;
