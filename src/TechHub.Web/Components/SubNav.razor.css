@@ -270,52 +270,18 @@ html.keyboard-nav .btn-subnav:focus-visible {
     gap: var(--spacing-2);
 }
 
-/* Stats box: bordered container wrapping all stats chips */
-.stats-box {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-2);
-    padding: var(--spacing-1) var(--spacing-2);
-    border: 1px solid var(--color-border-default);
-    border-radius: var(--radius-md);
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.stat-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-1);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-text-primary);
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-@media (hover: hover) {
-    a.stat-chip:hover {
-        color: var(--color-text-emphasis);
-        text-decoration: none;
-    }
-}
-
-.stat-chip-new {
+/* Stat buttons: standalone button-style chips for stats */
+.btn-subnav-stat-new {
+    border-color: var(--color-purple-bright);
     color: var(--color-purple-bright);
-    font-weight: var(--font-weight-semibold);
 }
 
 @media (hover: hover) {
-    a.stat-chip-new:hover {
-        color: var(--color-purple-medium);
-        text-decoration: none;
+    .btn-subnav-stat-new:hover {
+        background: var(--color-purple-dark);
+        color: var(--color-text-on-emphasis);
+        border-color: var(--color-purple-medium);
     }
-}
-
-.stat-sep {
-    color: var(--color-border-default);
-    font-size: var(--font-size-sm);
-    user-select: none;
 }
 
 @media (max-width: 1292px) {
@@ -325,13 +291,12 @@ html.keyboard-nav .btn-subnav:focus-visible {
 }
 
 @media (max-width: 640px) {
-    /* On small mobile, only show the "new this week" chip — hide total + sections */
-    .stat-chip:not(.stat-chip-new),
-    .stat-sep {
+    /* On small mobile, only show the "new this week" button — hide total */
+    .btn-subnav-stat-total {
         display: none;
     }
 
-    /* Show only icon + number; hide the " new this week" label text */
+    /* Show only icon + number; hide the " this week" label text */
     .stat-chip-new-label {
         display: none;
     }

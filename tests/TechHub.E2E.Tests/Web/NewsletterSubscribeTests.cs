@@ -44,7 +44,7 @@ public class NewsletterSubscribeTests : PlaywrightTestBase
 
         // Assert - section checkboxes for weekly and daily
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Weekly roundup per section");
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Daily overview per section (every morning at 9:00)");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Daily overview per section (every morning at 9:00 CET/CEST)");
 
         // At least one checkbox should be visible (requires sections to load)
         var checkboxCount = await Page.Locator("input[type='checkbox']").CountAsync();

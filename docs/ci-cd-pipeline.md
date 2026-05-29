@@ -27,8 +27,8 @@ Runs all quality checks and, when they pass, deploys and tears down PR preview e
 
 **Triggers**:
 
-- Push to `main` branch (CI + staging infrastructure + production deployment)
-- Manual dispatch (CI + staging infrastructure + production deployment)
+- Push to `main` branch (CI + production deployment)
+- Manual dispatch (CI + production deployment)
 
 Runs all quality checks and, when they pass, deploys to staging and production.
 
@@ -62,7 +62,7 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 **Concurrency Strategy**:
 
 - **No workflow-level concurrency group** — each push starts its own CI run immediately, so new commits are never blocked by older runs waiting for environment approval
-- **Deployment jobs use per-environment concurrency** (`deploy-staging`, `deploy-production`) to prevent conflicting deploys to the same environment
+- **Deployment jobs use per-environment concurrency** (`deploy-production`) to prevent conflicting deploys to the same environment
 - **PR preview jobs use per-PR concurrency** (`pr-preview-{N}`) — new pushes to an open PR cancel any in-progress preview deploy for that PR; each PR gets its own isolated database so there is no cross-PR interference
 - CI jobs are stateless and safe to run in parallel across commits
 
@@ -74,33 +74,32 @@ if unit tests, integration tests, lint, or security checks fail, no container is
 preview environment is created.
 
 When a pull request is opened or updated and the quality gate passes, a **fully isolated preview
-environment** is automatically deployed to the **staging Azure Container Apps Environment**.
+environment** is automatically deployed inside the **production resource group** (`rg-techhub-prod`),
+using the production Container Apps Environment (`cae-techhub-prod`).
 Each PR gets its own Container Apps (`ca-techhub-api-pr-{number}` and
 `ca-techhub-web-pr-{number}`) and its own **PostgreSQL Flexible Server** (`psql-techhub-pr-{number}`)
 created via Point-in-Time Restore (PITR) from the production database.
 
 **On PR opened / new commit pushed** (after quality gate passes):
 
-1. Docker images are built and pushed to ACR, tagged `pr-{number}-{timestamp}`
+1. Docker images are built and pushed to **ghcr.io**, tagged `pr-{number}-{timestamp}`
 2. A PR-specific PostgreSQL server is created via PITR from production (5–8 min)
-3. A private endpoint with DNS zone group is created for the PR Postgres (auto-registers the A record in the shared `privatelink.postgres.database.azure.com` DNS zone)
-4. PR-specific Container Apps are created or updated in the staging environment
-5. A comment is posted (or updated) on the PR with the direct Container Apps URL
-6. Playwright E2E tests run against the preview URL (`Category=Performance` excluded)
+3. PR-specific Container Apps are created or updated in the production environment (`cae-techhub-prod` in `rg-techhub-prod`)
+4. A comment is posted (or updated) on the PR with the direct Container Apps URL
+5. Playwright E2E tests run against the preview URL (`Category=Performance` excluded)
 
 **On PR closed**:
 
 1. The PR-specific Container Apps are deleted (no quality gate required)
-2. The PR-specific PostgreSQL private endpoint is deleted (DNS zone group auto-removes the A record)
-3. The PR-specific PostgreSQL server is deleted
-4. Docker images tagged for the PR are cleaned up from ACR
-5. The PR comment is updated to confirm the environment has been removed
+2. The PR-specific PostgreSQL server is deleted
+3. Docker images tagged for the PR are cleaned up from **ghcr.io**
+4. The PR comment is updated to confirm the environment has been removed
 
 **Key properties of PR preview environments**:
 
 - Each PR gets an **isolated PostgreSQL database** cloned from production via PITR
 - No shared database state — multiple PRs cannot interfere with each other
-- Reuse staging infrastructure (Container Apps Environment, VNet, monitoring)
+- Reuse production infrastructure (`rg-techhub-prod`, Container Apps Environment `cae-techhub-prod`)
 - Accessible via the default Azure Container Apps URL (no custom domain)
 - Multiple PRs run in parallel, each with a unique URL and isolated database
 - Concurrency per PR: new pushes cancel in-progress deploys for the same PR
@@ -125,60 +124,35 @@ created via Point-in-Time Restore (PITR) from the production database.
 - Scheduled daily at 21:00 UTC (22:00 CET / 23:00 CEST depending on DST)
 - Manual dispatch with optional `dry_run` flag
 
-Scans `rg-techhub-staging` for all active PR environments (Container Apps named
+Scans `rg-techhub-prod` for all active PR environments (Container Apps named
 `ca-techhub-api-pr-{N}` and PostgreSQL servers named `psql-techhub-pr-{N}`) and tears
 them all down. This eliminates the cost of idle PostgreSQL servers and catches **orphaned
 environments** that were not cleaned up when a PR was closed (e.g. due to a workflow failure).
 
 After teardown, the PR comment on each affected pull request is updated with a nightly
-teardown notice and links to the redeploy workflow.
-
-### Redeploy PR Environment
-
-**File**: [.github/workflows/pr-env-redeploy.yml](../.github/workflows/pr-env-redeploy.yml)
-
-**Triggers**:
-
-- Manual dispatch with required `pr_number` input
-
-Redeploys a PR environment without requiring a new commit. Looks up the most recently
-pushed image for the PR from ACR (`pr-{N}-{timestamp}` tags, ordered newest first) and
-runs `Deploy-PrPreview.ps1 -Action deploy` with that image. If no ACR image exists for
-the PR (e.g. images were pruned), the workflow fails with guidance to push a new commit.
-
-The Postgres server is re-provisioned via PITR if it was deleted by the nightly teardown (5–8 min).
+teardown notice.
 
 **Resuming after nightly teardown:**
 
 | You want to... | How |
 |---|---|
-| Continue testing the same code | Trigger **Redeploy PR Environment** with the PR number |
+| Continue testing the same code | Push an empty commit (or re-push the branch tip) — CI builds new images and deploys automatically |
 | Push new changes and redeploy | Push a commit — CI builds new images and deploys automatically |
 
 ### Main Branch Deployment Jobs
 
 Run only after the quality gate passes, and never on PRs.
 
-Every deployment runs the full Bicep template. ARM is idempotent and only redeploys resources whose desired state actually changed, so there is no need for change detection logic.
-
-1. **Deploy Shared Infrastructure** - Deploys shared resources (ACR) via `Deploy-Infrastructure.ps1`
-
-2. **Build & Push** - Calls `Build-Images.ps1` to build Docker images and push to ghcr.io
-   - Waits for shared infrastructure (ACR) to be ready first
-   - Tags images with commit SHA and `latest`
+1. **Build & Push** - Calls `Build-Images.ps1` to build Docker images and push to `ghcr.io`
+   - Tags images with a timestamp (`yyyyMMddHHmmss` format)
    - Images are built once and reused for production
 
-3. **Deploy Staging Infrastructure** - Deploys the staging/PR-env networking, monitoring, and Container Apps Environment
-   - Runs in **parallel with Build & Push** (both depend only on Deploy Shared Infrastructure)
-   - Runs `Deploy-Infrastructure.ps1 -Environment staging` — keeps the shared infrastructure ready for PR environments
-   - No permanent staging Container Apps are deployed (PR environments create their own)
-   - No staging smoke tests or E2E tests (those run in PR preview environments)
-
-4. **Deploy to Production** - Full infrastructure + application deployment
-   - Uses GitHub environment protection for approval
-   - Single `Deploy-Infrastructure.ps1` call with image tag
-   - Runs comprehensive smoke tests: `/alive`, `/health`, homepage, and a representative API call
-   - E2E tests are **not** run against production (they create/modify data — see below)
+2. **Deploy to Production** - Infrastructure + application deployment
+   - Uses GitHub environment protection (at least 1 required reviewer)
+   - Automatically detects whether `infra/` or `scripts/` files have changed since the last successful deploy:
+     - **Full deploy** (infrastructure changed): runs `Deploy-Infrastructure.ps1` (Phase 1: Bicep infra), then `Deploy-Applications.ps1` (Phase 2: Container Apps Bicep)
+     - **Fast update** (no infrastructure changes): runs `Deploy-Application.ps1` — updates Container App image tags only, no Bicep evaluation
+   - After deploy: E2E tests run against production (excluding `Category=Performance` and `Category=DevEnvironment`)
 
 ### Performance Tests
 
@@ -187,9 +161,9 @@ only be run locally. They are excluded by `--filter-not-trait "Category=Performa
 CI E2E runs.
 
 **Why local-only**: The performance tests connect directly to a PostgreSQL database containing
-a full production dataset (~4000+ content items). The production database is
-behind an Azure private endpoint and is not accessible from GitHub Actions runners. There is
-no publicly reachable database with real data available in CI.
+a full production dataset (~4000+ content items). The production database uses IP-based
+firewall rules (admin IPs and the NAT Gateway public IP) and is not accessible from GitHub
+Actions runners. There is no publicly reachable database with real data available in CI.
 
 **To run locally**:
 
@@ -207,20 +181,21 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 **Production**:
 
 - Resource Group: `rg-techhub-prod`
+- Container Apps Environment: `cae-techhub-prod` (shared by PR preview environments too)
 - API App: `ca-techhub-api-prod`
 - Web App: `ca-techhub-web-prod`
+- PostgreSQL: `psql-techhub-prod`
 - Azure OpenAI: `oai-techhub-prod`
 - Key Vault: `kv-techhub-prod`
+- ACS (email): `acs-techhub-prod`
 - **Manual approval required** via GitHub Environments
 
-**Staging (PR-env infrastructure)**:
+**PR preview environments** (created on-demand in `rg-techhub-prod`):
 
-- Resource Group: `rg-techhub-staging`
-- Container Apps Environment: `cae-techhub-staging` (shared by all PR environments)
-- No permanent staging Container Apps — each PR deploys its own
+- Container Apps Environment: `cae-techhub-prod` (shared with production)
+- Each PR gets its own Container Apps: `ca-techhub-api-pr-{N}`, `ca-techhub-web-pr-{N}`
 - Each PR gets its own PostgreSQL: `psql-techhub-pr-{N}` (created via PITR from production)
-- Azure OpenAI: `oai-techhub-staging` (used by PR environments)
-- VNet, monitoring, and networking are shared across PR environments
+- Shared managed identity: `id-techhub-pr` (created once by `infrastructure.bicep`)
 
 **Container Images**: Pushed to `ghcr.io` (GitHub Container Registry). The same image built and tested in a PR preview is deployed directly to production — no rebuild.
 
@@ -270,10 +245,10 @@ Four federated credentials on `sp-techhubms` cover every job in the pipeline:
 
 | Credential name | OIDC subject | Jobs covered |
 |---|---|---|
-| `techhub-environment-staging` | `repo:...:environment:staging` | `deploy-staging-infra`, `pr-preview-deploy`, `redeploy-pr-env` |
+| `techhub-environment-staging` | `repo:...:environment:staging` | `pr-preview-deploy` |
 | `techhub-environment-production` | `repo:...:environment:production` | `deploy-production` |
-| `techhub-ref-main` | `repo:...:ref:refs/heads/main` | `deploy-shared-infra`, `build-and-push`, `teardown-all-pr-envs` |
-| `techhub-pull-request` | `repo:...:pull_request` | `pr-preview-build-and-push`, `pr-preview-teardown` (includes Dependabot PRs) |
+| `techhub-ref-main` | `repo:...:ref:refs/heads/main` | `teardown-all-pr-envs` (nightly scheduled job) |
+| `techhub-pull-request` | `repo:...:pull_request` | `pr-preview-teardown` (includes Dependabot PRs) |
 
 The `pull_request` credential is what allows Dependabot PRs to get full preview environments - GitHub blocks repository secrets from Dependabot, but OIDC variables are accessible.
 
@@ -298,7 +273,11 @@ Configure these in GitHub repository settings → Secrets and variables → Acti
 
 ### Repository Secrets
 
-No repository-level secrets are required. All sensitive values are either injected via OIDC or scoped to GitHub environments.
+One repository-level secret is required (accessible to all environments and jobs):
+
+| Secret | Notes |
+|--------|-------|
+| `GHCR_PAT` | GitHub PAT with `write:packages` scope. Synced to Key Vault as `techhub-github-registry-token` by `Sync-KeyVaultSecrets.ps1` so Container Apps can pull images from `ghcr.io`. Also used locally to push images with `Build-Images.ps1`. |
 
 ### Environment Secrets
 
@@ -307,9 +286,12 @@ Configure these per-environment in GitHub repository settings → Environments �
 | Secret | Staging | Production | Notes |
 |--------|---------|------------|-------|
 | `POSTGRES_ADMIN_PASSWORD` | - | Required | Production DB admin password. `Deploy-Infrastructure.ps1` reads this from Key Vault automatically if not set; only needed explicitly in CI or on first deploy before Key Vault is populated. |
-| `AZURE_AD_CLIENT_SECRET` | - | Required | Entra ID client secret for user authentication - set via `Manage-EntraId.ps1 -Environment prod` |
+| `AZURE_AD_CLIENT_SECRET` | - | Required | Entra ID client secret for user authentication — set via `Manage-EntraId.ps1 -Environment prod`. |
+| `NEWSLETTER_UNSUBSCRIBE_SECRET` | - | Required | HMAC key used to sign newsletter unsubscribe and confirm links. Set once on initial deploy; `Sync-KeyVaultSecrets.ps1` preserves the existing Key Vault value on subsequent deploys if the env var is absent. |
+| `WILDCARD_CERT_HUB_MS` | - | Required | PFX certificate for the `*.hub.ms` wildcard TLS domain. Set once on initial deploy or at renewal time; skipped on re-deploy if already in Key Vault. |
+| `WILDCARD_CERT_XEBIA_MS` | - | Required | PFX certificate for the `*.xebia.ms` wildcard TLS domain. Set once on initial deploy or at renewal time; skipped on re-deploy if already in Key Vault. |
 
-> **Tenant ID, Client ID, and AI key are not GitHub secrets.** `Deploy-Infrastructure.ps1` resolves the tenant ID from the active Azure CLI session, the client ID by looking up the app registration by name (`TechHub Staging` / `TechHub Production`), and the AI key directly from the Azure Cognitive Services account. Only values that cannot be read from Azure need to live as GitHub secrets.
+> **Values resolved automatically — not needed as GitHub secrets:** Tenant ID and Client ID are resolved from the active Azure CLI session and app registration name. The AI key is read directly from the Azure Cognitive Services account. The ACS email endpoint (`NEWSLETTER_ACS_ENDPOINT`) is captured from infrastructure deployment outputs and written to Key Vault automatically — no manual input needed. Only values that Azure cannot provide at deploy time live as GitHub secrets.
 
 ## GitHub Environments
 
@@ -319,7 +301,7 @@ Create these environments in GitHub:
 
 - **Name**: `staging`
 - **Protection rules**: None (auto-deploy)
-- **Purpose**: Hosts PR-env infrastructure (Container Apps Environment, VNet, monitoring) and PR preview deployments
+- **Purpose**: Provides the OIDC federated credential subject (`environment:staging`) for `pr-preview-deploy`. PR environments are deployed into `rg-techhub-prod` — there are no separate staging Azure resources.
 
 ### Production Environment
 
@@ -341,7 +323,14 @@ Both deployment scripts can be run locally, making it easy to test without trigg
 ./scripts/Deploy-Infrastructure.ps1 -Mode whatif
 
 # Deploy production infrastructure (reads ADMIN_IP_ADDRESSES from GitHub variable,
-# POSTGRES_ADMIN_PASSWORD from Key Vault automatically)
+# POSTGRES_ADMIN_PASSWORD from Key Vault automatically).
+# On first deploy, also set the secrets that don't yet exist in Key Vault:
+#   $env:AZURE_AD_CLIENT_SECRET = '...'
+#   $env:GHCR_PAT = '...'
+#   $env:NEWSLETTER_UNSUBSCRIBE_SECRET = '...'
+#   $env:WILDCARD_CERT_HUB_MS = '...'
+#   $env:WILDCARD_CERT_XEBIA_MS = '...'
+# On re-deploys these are skipped automatically if already present in Key Vault.
 ./scripts/Deploy-Infrastructure.ps1 -Mode deploy
 ```
 
@@ -360,66 +349,35 @@ Both deployment scripts can be run locally, making it easy to test without trigg
 When deploying to a completely new Azure subscription for the first time:
 
 1. **Deploy Infrastructure** (initial setup)
-   - Go to GitHub Actions → "CI/CD Pipeline"
+   - Go to GitHub Actions → "CD Pipeline"
    - Click "Run workflow"
-   - This deploys shared infrastructure (ACR), staging infrastructure (VNet, monitoring, Container Apps Environment), builds images, and deploys to production
-   - Shared resources: `rg-techhub-shared` with container registry `crtechhub`
-   - Staging resources: `rg-techhub-staging` with Container Apps Environment, PostgreSQL, OpenAI, networking, and monitoring (used by PR environments)
+   - This builds images, deploys production infrastructure (`rg-techhub-prod`), and deploys the applications
+   - All resources live in a single resource group: `rg-techhub-prod`
 
 2. **Deploy Production** (when ready)
-   - After staging infrastructure succeeds, the production deployment awaits approval
-   - All CI checks run first, then staging infrastructure deploys, then after approval, production infrastructure and application deploy
-   - Creates separate Azure OpenAI `oai-techhub-prod` (independent from staging)
+   - The production deployment job awaits approval
+   - All CI checks run first, then images are built, then after approval, production infrastructure and application deploy
 
 **Note**: The Bicep templates use `imageTag = 'initial'` which deploys a Microsoft-provided placeholder ASP.NET app. The deployment workflow immediately replaces this with your actual application. This solves the chicken-and-egg problem of needing Container Apps to exist before images are built, but needing images to exist before Container Apps can be created.
 
-**Why Separate OpenAI Instances?**
-
-- **Test safely**: Try new model versions (e.g., GPT-5.3) in PR environments before production
-- **Independent quotas**: PR environment testing won't affect production rate limits
-- **Cost tracking**: See PR-env vs production AI costs separately
-- **Configuration testing**: Test new content filters, deployments, etc. without risk
-
-**Why a Shared Registry?** All environments (PR previews and production) use the same container registry. This ensures:
-
-- **Immutability**: The exact same tested image from the PR preview is deployed to production (no rebuild risk)
-- **Cost-effective**: No duplicate storage of images
-- **Simpler management**: Single source of truth for all container images
-
-### Automatic Staging Infrastructure Deployment
+### Automatic Production Deployment
 
 1. Push to `main` branch (or merge PR)
-2. Unified CI/CD workflow triggers automatically
+2. CD workflow triggers automatically
 3. All CI checks run (build, tests, lint, security)
 4. Quality gate validates all checks passed
-5. Docker images built once (tagged with commit SHA and `latest`)
-6. Images pushed to Azure Container Registry
-7. Staging infrastructure deployed (VNet, monitoring, Container Apps Environment)
-8. **Infrastructure ready** — PR environments can deploy into the staging Container Apps Environment
-
-### Manual Production Deployment
-
-1. **Verify PR E2E tests passed** — Every PR is E2E-tested in its own isolated preview environment before merge
-2. Go to GitHub Actions → "CI/CD Pipeline"
-3. Click "Run workflow"
-4. All CI checks run first, then images are built and pushed
-5. **Approval required** - Workflow will pause at the production deployment job
+5. Docker images built once (tagged with a timestamp)
+6. Images pushed to `ghcr.io`
+7. **Approval required** — Workflow pauses at the production deployment job
    - Designated approvers receive notification
-   - Review PR E2E results, commit details, changes
+   - Review commit details and changes
    - Approve or reject deployment
-6. After approval, deployment proceeds:
-   - Deploys production infrastructure and application
-   - Runs comprehensive smoke tests (`/alive`, `/health`, homepage, API call)
-   - Auto-rollback if any health check fails
-7. **Deployment complete** - Production is live with new version
-
-**Key Points**:
-
-- Production deployment **requires human approval** via GitHub Environments
-- E2E tests run in PR preview environments **before merge**, not against production
-- Production smoke tests are read-only and complete in under 30 seconds
-- Failed deployments trigger **automatic rollback** to previous version
-- All deployments are tagged with commit SHA for traceability
+8. After approval, deployment proceeds:
+   - Deploys production infrastructure (Phase 1 Bicep: VNet, KV, PostgreSQL, ACS, …) if changed
+   - Deploys production applications (Phase 2 Bicep: Container Apps) if changed
+   - Fast image-update path if only image tags changed
+   - E2E tests run against production (excluding `Category=Performance`, `Category=DevEnvironment`)
+9. **Deployment complete** — Production is live with new version
 
 ## Monitoring
 
