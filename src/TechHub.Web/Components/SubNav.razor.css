@@ -267,7 +267,7 @@ html.keyboard-nav .btn-subnav:focus-visible {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--spacing-2);
+    gap: var(--spacing-1);
 }
 
 /* Stat buttons: standalone button-style chips for stats */
