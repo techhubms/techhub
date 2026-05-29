@@ -8,11 +8,11 @@ public class NewsletterTemplateResourceTests
     [Fact]
     public void NewsletterRoundupTemplate_ShouldContainResponsiveLayoutMarkers()
     {
-        const string ResourceFileName = "newsletter-roundup-template.html";
+        const string resourceFileName = "newsletter-roundup-template.html";
         var resourceName = typeof(NewsletterService)
             .Assembly
             .GetManifestResourceNames()
-            .Single(name => name.EndsWith(ResourceFileName, StringComparison.Ordinal));
+            .Single(name => name.EndsWith(resourceFileName, StringComparison.Ordinal));
 
         using var stream = typeof(NewsletterService).Assembly.GetManifestResourceStream(resourceName);
         stream.Should().NotBeNull();
@@ -22,7 +22,7 @@ public class NewsletterTemplateResourceTests
 
         template.Should().Contain("name=\"viewport\"");
         template.Should().Contain("content=\"width=device-width, initial-scale=1.0\"");
-        template.Should().MatchRegex("<table[^>]*role=\"presentation\"[^>]*width=\"100%\"[^>]*>");
+        template.Should().MatchRegex("<table(?=[^>]*role=\"presentation\")(?=[^>]*width=\"100%\")[^>]*>");
         template.Should().Contain("max-width:900px");
     }
 }
