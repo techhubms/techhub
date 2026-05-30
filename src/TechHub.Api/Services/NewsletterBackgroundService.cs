@@ -104,12 +104,6 @@ public sealed class NewsletterBackgroundService : BackgroundService
             return;
         }
 
-        if (!_options.ScheduledSendEnabled)
-        {
-            _logger.LogInformation("Newsletter manual send skipped because ScheduledSendEnabled is false");
-            return;
-        }
-
         await SendLatestRoundupsAsync(ct);
     }
 
