@@ -142,11 +142,13 @@ public sealed class NewsletterBackgroundService : BackgroundService
             return;
         }
 
-        var latestEpoch = latestRoundups[0].DateEpoch;
-        if (!latestRoundups.All(r => r.DateEpoch == latestEpoch))
+        var roundupTimeZone = ResolveRoundupTimeZone();
+        var expectedMonday = GetExpectedRoundupMonday(DateTimeOffset.UtcNow, roundupTimeZone);
+        if (!latestRoundups.All(r => GetRoundupDate(r.DateEpoch, roundupTimeZone) == expectedMonday))
         {
             _logger.LogInformation(
-                "Skipping roundup newsletter send because not all sections have the latest roundup available yet");
+                "Skipping roundup newsletter send because latest section roundups do not match expected Monday {ExpectedMonday}",
+                expectedMonday);
             return;
         }
 
@@ -249,5 +251,23 @@ public sealed class NewsletterBackgroundService : BackgroundService
         }
 
         return TimeZoneInfo.Utc;
+    }
+
+    private static TimeZoneInfo ResolveRoundupTimeZone()
+    {
+        return TimeZoneInfo.FindSystemTimeZoneById(
+            OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
+    }
+
+    private static DateOnly GetExpectedRoundupMonday(DateTimeOffset utcNow, TimeZoneInfo roundupTimeZone)
+    {
+        var localDate = DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(utcNow, roundupTimeZone).Date);
+        var daysSinceMonday = ((int)localDate.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
+        return localDate.AddDays(-daysSinceMonday);
+    }
+
+    private static DateOnly GetRoundupDate(long dateEpoch, TimeZoneInfo roundupTimeZone)
+    {
+        return DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(DateTimeOffset.FromUnixTimeSeconds(dateEpoch), roundupTimeZone).Date);
     }
 }
