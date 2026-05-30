@@ -155,7 +155,10 @@ public sealed class NewsletterBackgroundService : BackgroundService
         var slugs = latestRoundups.Select(r => r.Slug).ToList();
         if (slugs.Count > 0)
         {
-            await newsletterService.SendCombinedWeeklyAsync(slugs, ct);
+            await newsletterService.SendCombinedWeeklyAsync(
+                slugs,
+                sendTargetKey: expectedMonday.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture),
+                ct);
         }
     }
 

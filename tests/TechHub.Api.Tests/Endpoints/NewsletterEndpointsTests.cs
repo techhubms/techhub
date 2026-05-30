@@ -104,13 +104,13 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
 
         var expectedMonday = GetExpectedRoundupMonday(DateTimeOffset.UtcNow, ResolveRoundupTimeZone());
         await SetLatestRoundupsEpochAsync(arrangeConnection, latestRoundups, ToRoundupEpoch(expectedMonday));
-        var roundupSlug = latestRoundups[0].Slug;
+        var roundupTargetKey = expectedMonday.ToString("yyyy-MM-dd");
 
         try
         {
             var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
                 "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-                new { TargetKey = roundupSlug });
+                new { TargetKey = roundupTargetKey });
 
             var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=roundup", null, TestContext.Current.CancellationToken);
             response.StatusCode.Should().Be(HttpStatusCode.Accepted);
@@ -123,7 +123,7 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
                 var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
                 var countAfter = await pollConnection.ExecuteScalarAsync<int>(
                     "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-                    new { TargetKey = roundupSlug });
+                    new { TargetKey = roundupTargetKey });
 
                 if (countAfter > countBefore)
                 {
@@ -208,7 +208,7 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
 
         var expectedMonday = GetExpectedRoundupMonday(DateTimeOffset.UtcNow, ResolveRoundupTimeZone());
         var nonMondayEpoch = ToRoundupEpoch(expectedMonday.AddYears(10).AddDays(1));
-        var targetSlug = latestRoundups[0].Slug;
+        var roundupTargetKey = expectedMonday.ToString("yyyy-MM-dd");
 
         await SetLatestRoundupsEpochAsync(arrangeConnection, latestRoundups, nonMondayEpoch);
 
@@ -216,7 +216,7 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
         {
             var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
                 "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-                new { TargetKey = targetSlug });
+                new { TargetKey = roundupTargetKey });
 
             var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=roundup", null, TestContext.Current.CancellationToken);
             response.StatusCode.Should().Be(HttpStatusCode.Accepted);
@@ -229,7 +229,7 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
                 var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
                 var countAfter = await pollConnection.ExecuteScalarAsync<int>(
                     "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-                    new { TargetKey = targetSlug });
+                    new { TargetKey = roundupTargetKey });
                 if (countAfter > countBefore)
                 {
                     wasSent = true;

@@ -153,7 +153,7 @@ public sealed class NewsletterService : INewsletterService
         return sent;
     }
 
-    public async Task<bool> SendCombinedWeeklyAsync(IReadOnlyList<string> roundupSlugs, CancellationToken ct = default)
+    public async Task<bool> SendCombinedWeeklyAsync(IReadOnlyList<string> roundupSlugs, string? sendTargetKey = null, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(roundupSlugs);
         if (roundupSlugs.Count == 0)
@@ -161,34 +161,9 @@ public sealed class NewsletterService : INewsletterService
             return false;
         }
 
-        if (!IsUnsubscribeSecretConfigured("combined-weekly"))
-        {
-            foreach (var slug in roundupSlugs)
-            {
-                await _subscriberRepository.LogSendAsync("weekly-roundup", slug, 0, "failed", "Unsubscribe secret is not configured", ct);
-            }
-
-            return false;
-        }
-
-        // Skip slugs that have already been sent
-        var newSlugs = new List<string>(roundupSlugs.Count);
+        // Load roundup content for each slug
+        var roundups = new List<RoundupRow>(roundupSlugs.Count);
         foreach (var slug in roundupSlugs)
-        {
-            if (!await _subscriberRepository.HasBeenSentAsync("weekly-roundup", slug, ct))
-            {
-                newSlugs.Add(slug);
-            }
-        }
-
-        if (newSlugs.Count == 0)
-        {
-            return false;
-        }
-
-        // Load roundup content for each new slug
-        var roundups = new List<RoundupRow>(newSlugs.Count);
-        foreach (var slug in newSlugs)
         {
             var roundup = await GetRoundupBySlugAsync(slug, ct);
             if (roundup is not null)
@@ -199,6 +174,21 @@ public sealed class NewsletterService : INewsletterService
 
         if (roundups.Count == 0)
         {
+            return false;
+        }
+
+        var targetKey = string.IsNullOrWhiteSpace(sendTargetKey)
+            ? $"batch:{string.Join(",", roundups.Select(r => r.Slug).OrderBy(s => s, StringComparer.OrdinalIgnoreCase))}"
+            : sendTargetKey.Trim();
+
+        if (await _subscriberRepository.HasBeenSentAsync("weekly-roundup", targetKey, ct))
+        {
+            return false;
+        }
+
+        if (!IsUnsubscribeSecretConfigured("combined-weekly"))
+        {
+            await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, 0, "failed", "Unsubscribe secret is not configured", ct);
             return false;
         }
 
@@ -215,8 +205,8 @@ public sealed class NewsletterService : INewsletterService
 
         var roundupsBySection = roundups.ToDictionary(r => r.SectionName, StringComparer.OrdinalIgnoreCase);
 
-        // Track per-slug delivery counts: (expected recipients, successful sends)
-        var slugStats = newSlugs.ToDictionary(s => s, _ => (Expected: 0, Actual: 0), StringComparer.OrdinalIgnoreCase);
+        var attempted = 0;
+        var successful = 0;
 
         try
         {
@@ -234,10 +224,7 @@ public sealed class NewsletterService : INewsletterService
                     continue;
                 }
 
-                foreach (var r in relevantRoundups)
-                {
-                    slugStats[r.Slug] = (slugStats[r.Slug].Expected + 1, slugStats[r.Slug].Actual);
-                }
+                attempted++;
 
                 var unsubscribeUrl = BuildUnsubscribeUrl(subscriber.Email);
                 var manageUrl = BuildManageUrl(subscriber.Email, _options.UnsubscribeSecret);
@@ -249,49 +236,24 @@ public sealed class NewsletterService : INewsletterService
 
                 if (await SendEmailAsync(subscriber.Email, subject, html, text, ct))
                 {
-                    foreach (var r in relevantRoundups)
-                    {
-                        slugStats[r.Slug] = (slugStats[r.Slug].Expected, slugStats[r.Slug].Actual + 1);
-                    }
+                    successful++;
                 }
             }
         }
         catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
         {
-            foreach (var slug in newSlugs)
-            {
-                var actual = slugStats[slug].Actual;
-                var status = actual > 0 ? "partial" : "failed";
-                await _subscriberRepository.LogSendAsync("weekly-roundup", slug, actual, status, ex.Message, ct);
-            }
-
+            var status = successful > 0 ? "partial" : "failed";
+            await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, successful, status, ex.Message, ct);
             _logger.LogError(ex, "Failed sending combined weekly newsletter");
             return false;
         }
 
-        // Log each slug with its individual delivery outcome
-        var anySent = false;
-        foreach (var slug in newSlugs)
-        {
-            var (expected, actual) = slugStats[slug];
-            if (expected == 0)
-            {
-                await _subscriberRepository.LogSendAsync("weekly-roundup", slug, 0, "sent", null, ct);
-                anySent = true;
-            }
-            else
-            {
-                var status = actual == expected ? "sent" : actual > 0 ? "partial" : "failed";
-                var error = actual < expected ? $"Delivered to {actual} of {expected} subscribers" : null;
-                await _subscriberRepository.LogSendAsync("weekly-roundup", slug, actual, status, error, ct);
-                if (actual > 0)
-                {
-                    anySent = true;
-                }
-            }
-        }
-
-        return anySent;
+        var sendStatus = attempted == 0 || successful == attempted ? "sent" : successful > 0 ? "partial" : "failed";
+        var sendError = attempted == 0 || successful == attempted
+            ? null
+            : $"Delivered to {successful} of {attempted} subscribers";
+        await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, successful, sendStatus, sendError, ct);
+        return attempted == 0 || successful > 0;
     }
 
     public async Task<bool> SendTestWeeklyAsync(IReadOnlyList<string> sections, string recipientEmail, CancellationToken ct = default)

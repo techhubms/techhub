@@ -224,16 +224,17 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     public async Task SendCombinedWeeklyAsync_WhenAllSlugsAlreadySent_ReturnsFalse()
     {
         const string Slug = "weekly-ai-roundup-2026-06-01-combined-skip";
+        const string TargetKey = "2026-06-01";
         await SeedRoundupAsync(Slug);
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO newsletter_send_log (send_kind, target_key, recipient_count, status)
-            VALUES ('weekly-roundup', @Slug, 0, 'sent')
+            VALUES ('weekly-roundup', @TargetKey, 0, 'sent')
             ON CONFLICT (send_kind, target_key) DO UPDATE SET status = 'sent'
-            """, new { Slug });
+            """, new { TargetKey });
 
         var sut = CreateService();
 
-        var sent = await sut.SendCombinedWeeklyAsync([Slug], TestContext.Current.CancellationToken);
+        var sent = await sut.SendCombinedWeeklyAsync([Slug], TargetKey, TestContext.Current.CancellationToken);
 
         sent.Should().BeFalse();
     }
@@ -243,6 +244,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     {
         const string AiSlug = "weekly-ai-roundup-2026-06-02-combined";
         const string DotnetSlug = "weekly-dotnet-roundup-2026-06-02-combined";
+        const string TargetKey = "2026-06-02";
 
         // Remove any weekly AI subscribers left by other tests so VerifyNoOtherCalls is reliable
         await _fixture.Connection.ExecuteAsync("""
@@ -278,7 +280,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
 
         var sut = CreateService(emailSender: emailSender.Object);
 
-        var sent = await sut.SendCombinedWeeklyAsync([AiSlug, DotnetSlug], TestContext.Current.CancellationToken);
+        var sent = await sut.SendCombinedWeeklyAsync([AiSlug, DotnetSlug], TargetKey, TestContext.Current.CancellationToken);
 
         sent.Should().BeTrue();
 
@@ -288,16 +290,15 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             Times.Once);
         emailSender.VerifyNoOtherCalls();
 
-        // Both slugs should be logged as sent
-        var aiStatus = await _fixture.Connection.ExecuteScalarAsync<string?>(
-            "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @Slug",
-            new { Slug = AiSlug });
-        var dotnetStatus = await _fixture.Connection.ExecuteScalarAsync<string?>(
-            "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @Slug",
-            new { Slug = DotnetSlug });
+        var status = await _fixture.Connection.ExecuteScalarAsync<string?>(
+            "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+            new { TargetKey });
+        var rowCount = await _fixture.Connection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+            new { TargetKey });
 
-        aiStatus.Should().Be("sent");
-        dotnetStatus.Should().Be("sent");
+        status.Should().Be("sent");
+        rowCount.Should().Be(1);
     }
 
     [Fact]
@@ -348,7 +349,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             .ReturnsAsync(true);
 
         var sut = CreateService(emailSender: emailSender.Object);
-        var sent = await sut.SendCombinedWeeklyAsync([DotnetSlug, AiSlug], TestContext.Current.CancellationToken);
+        var sent = await sut.SendCombinedWeeklyAsync([DotnetSlug, AiSlug], ct: TestContext.Current.CancellationToken);
 
         sent.Should().BeTrue();
         htmlBody.Should().NotBeNull();
