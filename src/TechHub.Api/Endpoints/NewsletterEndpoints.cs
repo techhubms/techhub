@@ -279,10 +279,13 @@ public static class NewsletterEndpoints
         return Results.Ok(log);
     }
 
-    private static IResult TriggerNewsletterAsync(NewsletterBackgroundService backgroundService)
+    private static IResult TriggerNewsletterAsync(
+        [FromQuery] string? kind,
+        NewsletterBackgroundService backgroundService)
     {
-        backgroundService.TriggerImmediateRun();
-        return Results.Accepted("/api/admin/newsletter/send-log", new { message = "Newsletter send triggered" });
+        var normalizedKind = string.Equals(kind?.Trim(), "daily", StringComparison.OrdinalIgnoreCase) ? "daily" : "roundup";
+        backgroundService.TriggerImmediateRun(normalizedKind);
+        return Results.Accepted("/api/admin/newsletter/send-log", new { message = $"Newsletter {normalizedKind} send triggered" });
     }
 
     private static IResult TestSendNewsletterAsync(

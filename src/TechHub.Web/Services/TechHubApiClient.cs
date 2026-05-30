@@ -994,12 +994,14 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
-    public virtual async Task TriggerNewsletterAsync(CancellationToken cancellationToken = default)
+    public virtual async Task TriggerNewsletterAsync(string kind = "roundup", CancellationToken cancellationToken = default)
     {
+        kind = string.Equals(kind?.Trim(), "daily", StringComparison.OrdinalIgnoreCase) ? "daily" : "roundup";
+
         try
         {
-            _logger.LogInformation("Triggering newsletter run");
-            using var response = await _httpClient.PostAsync("/api/admin/newsletter/trigger", null, cancellationToken);
+            _logger.LogInformation("Triggering newsletter {Kind} run", kind);
+            using var response = await _httpClient.PostAsync($"/api/admin/newsletter/trigger?kind={kind}", null, cancellationToken);
             response.EnsureSuccessStatusCode();
         }
         catch (HttpRequestException ex)

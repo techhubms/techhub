@@ -4,6 +4,8 @@ using System.Net.Http.Json;
 using Dapper;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Services.Newsletter;
 
@@ -114,7 +116,7 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
             "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
             new { TargetKey = roundupSlug! });
 
-        var response = await _client.PostAsync("/api/admin/newsletter/trigger", null, TestContext.Current.CancellationToken);
+        var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=roundup", null, TestContext.Current.CancellationToken);
         response.StatusCode.Should().Be(HttpStatusCode.Accepted);
 
         var timedOut = true;
@@ -135,6 +137,64 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
         }
 
         timedOut.Should().BeFalse("manual admin trigger should execute even when scheduled sends are disabled");
+    }
+
+    [Fact]
+    public async Task AdminTriggerNewsletter_DailyTriggerProcessesDailyOverviewSend()
+    {
+        await using var arrangeScope = _factory.Services.CreateAsyncScope();
+        var options = arrangeScope.ServiceProvider.GetRequiredService<IOptions<NewsletterOptions>>().Value;
+        var timeZone = ResolveTimeZone(options.DailyDigestTimeZoneId);
+        var localNow = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, timeZone);
+        var day = DateOnly.FromDateTime(localNow.DateTime.Date.AddDays(-1));
+        var dayStartUtc = day.ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc);
+
+        var arrangeConnection = arrangeScope.ServiceProvider.GetRequiredService<IDbConnection>();
+        await arrangeConnection.ExecuteAsync("""
+            DELETE FROM newsletter_subscribers WHERE email = 'daily-trigger@example.com';
+            DELETE FROM content_items WHERE collection_name = 'blogs' AND slug = 'daily-trigger-item';
+            """);
+        await arrangeConnection.ExecuteAsync("""
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES ('daily-trigger@example.com', TRUE, NOW(), '{"weeklySections":[],"dailySections":["ai"]}'::jsonb)
+            """);
+        await arrangeConnection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name, tags_csv,
+                 sections_bitmask, content_hash, is_ai, created_at)
+            VALUES
+                ('daily-trigger-item', 'blogs', 'Daily Trigger Item', 'Body', 'Excerpt', 0,
+                 'ai', '/ai/all', 'TechHub', 'TechHub', ',AI,',
+                 1, 'hash-daily-trigger-item', TRUE, @CreatedAt)
+            ON CONFLICT (collection_name, slug) DO UPDATE SET created_at = EXCLUDED.created_at
+            """, new { CreatedAt = dayStartUtc.AddHours(12) });
+
+        var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = @TargetKey",
+            new { TargetKey = day.ToString("yyyy-MM-dd") });
+
+        var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=daily", null, TestContext.Current.CancellationToken);
+        response.StatusCode.Should().Be(HttpStatusCode.Accepted);
+
+        var timedOut = true;
+        for (var attempt = 0; attempt < 25; attempt++)
+        {
+            await Task.Delay(200, TestContext.Current.CancellationToken);
+            await using var pollScope = _factory.Services.CreateAsyncScope();
+            var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
+            var countAfter = await pollConnection.ExecuteScalarAsync<int>(
+                "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = @TargetKey",
+                new { TargetKey = day.ToString("yyyy-MM-dd") });
+
+            if (countAfter > countBefore)
+            {
+                timedOut = false;
+                break;
+            }
+        }
+
+        timedOut.Should().BeFalse("manual admin daily trigger should execute daily overview send");
     }
 
     [Fact]
@@ -265,6 +325,25 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
     private sealed class MessageResponse
     {
         public string? Message { get; init; }
+    }
+
+    private static TimeZoneInfo ResolveTimeZone(string configuredId)
+    {
+        if (!string.IsNullOrWhiteSpace(configuredId))
+        {
+            try
+            {
+                return TimeZoneInfo.FindSystemTimeZoneById(configuredId);
+            }
+            catch (TimeZoneNotFoundException)
+            {
+            }
+            catch (InvalidTimeZoneException)
+            {
+            }
+        }
+
+        return TimeZoneInfo.Utc;
     }
 
     [Fact]

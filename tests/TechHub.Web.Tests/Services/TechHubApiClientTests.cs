@@ -146,6 +146,23 @@ public class TechHubApiClientTests
     }
 
     [Fact]
+    public async Task TriggerNewsletterAsync_NormalizesRequestedKind()
+    {
+        using var handler = new CapturingHandler();
+        using var httpClient = new HttpClient(handler)
+        {
+            BaseAddress = new Uri("https://localhost:5003")
+        };
+
+        var sut = new TechHubApiClient(httpClient, NullLogger<TechHubApiClient>.Instance);
+
+        await sut.TriggerNewsletterAsync("daily\r\n", TestContext.Current.CancellationToken);
+
+        handler.LastRequest.Should().NotBeNull();
+        handler.LastRequest!.RequestUri!.PathAndQuery.Should().Be("/api/admin/newsletter/trigger?kind=daily");
+    }
+
+    [Fact]
     public async Task RequestNewsletterManageLinkAsync_SanitizesQueryValues()
     {
         using var handler = new CapturingHandler();

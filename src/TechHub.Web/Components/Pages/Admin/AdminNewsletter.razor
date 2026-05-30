@@ -16,7 +16,8 @@
             <p class="admin-page-subtitle">Manage subscribers, remove bot signups, and trigger sends</p>
         </div>
         <div class="admin-actions">
-            <button class="btn" @onclick="TriggerSendAsync" disabled="@_sending">@(_sending ? "Triggering…" : "▶ Send Newsletter")</button>
+            <button class="btn" @onclick='() => TriggerSendAsync("roundup")' disabled="@_sending">@(_sending ? "Triggering…" : "▶ Send Roundup")</button>
+            <button class="btn" @onclick='() => TriggerSendAsync("daily")' disabled="@_sending">@(_sending ? "Triggering…" : "▶ Send Daily")</button>
             <button class="btn-secondary" @onclick="RefreshAsync" disabled="@_loading">@(_loading ? "Refreshing…" : "⟳ Refresh")</button>
         </div>
     </div>
@@ -233,14 +234,15 @@
         }
     }
 
-    private async Task TriggerSendAsync()
+    private async Task TriggerSendAsync(string kind)
     {
+        var normalizedKind = string.Equals(kind?.Trim(), "daily", StringComparison.OrdinalIgnoreCase) ? "daily" : "roundup";
         try
         {
             _sending = true;
             _message = null;
-            await Api.TriggerNewsletterAsync();
-            _message = "Newsletter send triggered.";
+            await Api.TriggerNewsletterAsync(normalizedKind);
+            _message = $"Newsletter {normalizedKind} send triggered.";
             _isError = false;
         }
         catch (HttpRequestException ex)

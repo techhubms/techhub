@@ -227,6 +227,7 @@ public sealed class NewsletterService : INewsletterService
                     .Where(s => roundupsBySection.ContainsKey(s))
                     .Select(s => roundupsBySection[s])
                     .ToList();
+                relevantRoundups = OrderRoundupsByWebsiteOrder(relevantRoundups);
 
                 if (relevantRoundups.Count == 0)
                 {
@@ -340,6 +341,8 @@ public sealed class NewsletterService : INewsletterService
             return false;
         }
 
+        roundups = OrderRoundupsByWebsiteOrder(roundups);
+
         var logKey = $"test-weekly@{DateTime.UtcNow:yyyyMMddHHmmss}";
         var unsubscribeUrl = BuildUnsubscribeUrl(recipientEmail);
         var manageUrl = BuildManageUrl(recipientEmail, _options.UnsubscribeSecret);
@@ -376,7 +379,7 @@ public sealed class NewsletterService : INewsletterService
 
         var yesterday = DateOnly.FromDateTime(DateTime.UtcNow.AddDays(-1));
         var (start, end) = GetDayUtcWindow(yesterday);
-        var sectionNames = sections.Select(s => s.Trim().ToLowerInvariant()).ToList();
+        var sectionNames = OrderSectionsByWebsiteOrder(sections);
         var itemsBySection = await GetDailyItemsBySectionAsync(sectionNames, start, end, ct);
         var html = BuildDailyOverviewHtml(yesterday, sectionNames, itemsBySection, recipientEmail);
         var text = BuildDailyOverviewText(yesterday, sectionNames, itemsBySection, recipientEmail);
@@ -517,6 +520,7 @@ public sealed class NewsletterService : INewsletterService
             var selectedSections = subscriber.DailySections
                 .Where(section => itemsBySection.ContainsKey(section))
                 .ToList();
+            selectedSections = OrderSectionsByWebsiteOrder(selectedSections);
 
             var html = BuildDailyOverviewHtml(day, selectedSections, itemsBySection, subscriber.Email);
             var text = BuildDailyOverviewText(day, selectedSections, itemsBySection, subscriber.Email);
@@ -929,6 +933,37 @@ public sealed class NewsletterService : INewsletterService
 
     private string GetSectionTitle(string slug) =>
         _appSettings.Content.Sections.TryGetValue(slug, out var config) ? config.Title : slug;
+
+    private List<string> OrderSectionsByWebsiteOrder(IEnumerable<string> sectionNames)
+    {
+        var sectionOrder = _appSettings.Content.Sections
+            .Where(kvp => !string.Equals(kvp.Key, "all", StringComparison.OrdinalIgnoreCase))
+            .ToDictionary(
+                kvp => kvp.Key,
+                kvp => kvp.Value.Order,
+                StringComparer.OrdinalIgnoreCase);
+
+        return sectionNames
+            .Where(s => !string.IsNullOrWhiteSpace(s))
+            .Select(s => s.Trim().ToLowerInvariant())
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .OrderBy(s => sectionOrder.TryGetValue(s, out var order) ? order : int.MaxValue)
+            .ThenBy(s => GetSectionTitle(s), StringComparer.OrdinalIgnoreCase)
+            .ToList();
+    }
+
+    private List<RoundupRow> OrderRoundupsByWebsiteOrder(IEnumerable<RoundupRow> roundups)
+    {
+        var orderedSections = OrderSectionsByWebsiteOrder(roundups.Select(r => r.SectionName));
+        var sectionIndex = orderedSections
+            .Select((section, index) => new { section, index })
+            .ToDictionary(x => x.section, x => x.index, StringComparer.OrdinalIgnoreCase);
+
+        return roundups
+            .OrderBy(r => sectionIndex.TryGetValue(r.SectionName, out var index) ? index : int.MaxValue)
+            .ThenBy(r => GetSectionTitle(r.SectionName), StringComparer.OrdinalIgnoreCase)
+            .ToList();
+    }
 
     private string BuildDailyOverviewHtml(
         DateOnly day,

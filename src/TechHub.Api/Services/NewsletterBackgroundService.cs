@@ -1,4 +1,5 @@
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using Dapper;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -17,6 +18,7 @@ public sealed class NewsletterBackgroundService : BackgroundService
     private string? _pendingTestSendEmail;
     private IReadOnlyList<string>? _pendingTestSections;
     private string? _pendingTestSendKind;
+    private string? _pendingManualKind;
 
     public NewsletterBackgroundService(
         IServiceProvider serviceProvider,
@@ -35,11 +37,12 @@ public sealed class NewsletterBackgroundService : BackgroundService
         _logger = logger;
     }
 
-    public void TriggerImmediateRun()
+    public void TriggerImmediateRun(string kind = "roundup")
     {
         _pendingTestSendEmail = null;
         _pendingTestSections = null;
         _pendingTestSendKind = null;
+        _pendingManualKind = kind;
         _manualTrigger.TrySetResult(true);
     }
 
@@ -104,6 +107,15 @@ public sealed class NewsletterBackgroundService : BackgroundService
             return;
         }
 
+        var manualKind = string.Equals(_pendingManualKind?.Trim(), "daily", StringComparison.OrdinalIgnoreCase) ? "daily" : "roundup";
+        _pendingManualKind = null;
+
+        if (string.Equals(manualKind, "daily", StringComparison.OrdinalIgnoreCase))
+        {
+            await SendDailyEmailsAsync(enforceHourGate: false, ct);
+            return;
+        }
+
         await SendLatestRoundupsAsync(ct);
     }
 
@@ -115,7 +127,8 @@ public sealed class NewsletterBackgroundService : BackgroundService
 
         const string Sql = """
             SELECT DISTINCT ON (primary_section_name)
-                slug
+                slug AS Slug,
+                date_epoch AS DateEpoch
             FROM content_items
             WHERE collection_name = 'roundups'
               AND primary_section_name IS NOT NULL
@@ -123,7 +136,20 @@ public sealed class NewsletterBackgroundService : BackgroundService
             ORDER BY primary_section_name, date_epoch DESC
             """;
 
-        var slugs = (await connection.QueryAsync<string>(new CommandDefinition(Sql, cancellationToken: ct))).AsList();
+        var latestRoundups = (await connection.QueryAsync<LatestSectionRoundupRow>(new CommandDefinition(Sql, cancellationToken: ct))).AsList();
+        if (latestRoundups.Count == 0)
+        {
+            return;
+        }
+
+        if (latestRoundups.Select(r => r.DateEpoch).Distinct().Count() != 1)
+        {
+            _logger.LogInformation(
+                "Skipping roundup newsletter send because not all sections have the latest roundup available yet");
+            return;
+        }
+
+        var slugs = latestRoundups.Select(r => r.Slug).ToList();
         if (slugs.Count > 0)
         {
             await newsletterService.SendCombinedWeeklyAsync(slugs, ct);
@@ -132,9 +158,14 @@ public sealed class NewsletterBackgroundService : BackgroundService
 
     private async Task SendScheduledDailyEmailsAsync(CancellationToken ct)
     {
+        await SendDailyEmailsAsync(enforceHourGate: true, ct);
+    }
+
+    private async Task SendDailyEmailsAsync(bool enforceHourGate, CancellationToken ct)
+    {
         var timeZone = ResolveTimeZone(_options.DailyDigestTimeZoneId);
         var localNow = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, timeZone);
-        if (localNow.Hour != _options.DailyDigestHourLocal)
+        if (enforceHourGate && localNow.Hour != _options.DailyDigestHourLocal)
         {
             return;
         }
@@ -145,6 +176,9 @@ public sealed class NewsletterBackgroundService : BackgroundService
         await newsletterService.SendDailyOverviewAsync(day, ct);
         await newsletterService.SendAdminStatusReportAsync(day, ct);
     }
+
+    [SuppressMessage("Performance", "CA1812", Justification = "Instantiated by Dapper materialization.")]
+    private sealed record LatestSectionRoundupRow(string Slug, long DateEpoch);
 
     private async Task<bool> IsEnabledAsync(CancellationToken ct)
     {
