@@ -142,7 +142,8 @@ public sealed class NewsletterBackgroundService : BackgroundService
             return;
         }
 
-        if (latestRoundups.Select(r => r.DateEpoch).Distinct().Count() != 1)
+        var latestEpoch = latestRoundups[0].DateEpoch;
+        if (!latestRoundups.All(r => r.DateEpoch == latestEpoch))
         {
             _logger.LogInformation(
                 "Skipping roundup newsletter send because not all sections have the latest roundup available yet");

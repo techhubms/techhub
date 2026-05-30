@@ -449,12 +449,15 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     }
 
     private static Section CreateSection(string name) =>
+        CreateSection(name, name.Equals("dotnet", StringComparison.OrdinalIgnoreCase) ? ".NET" : "AI");
+
+    private static Section CreateSection(string name, string title) =>
         new(
             name,
-            name.Equals("dotnet", StringComparison.OrdinalIgnoreCase) ? ".NET" : "AI",
+            title,
             $"{name} section",
             $"/{name}",
-            name.Equals("dotnet", StringComparison.OrdinalIgnoreCase) ? ".NET" : "AI",
+            title,
             [new Collection("blogs", "Blogs", $"/{name}/blogs", "Blogs", "Blogs")]);
 
     private async Task CleanupDailyOverviewTestDataAsync()
