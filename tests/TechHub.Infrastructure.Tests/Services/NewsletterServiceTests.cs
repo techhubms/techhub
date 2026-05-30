@@ -390,8 +390,14 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         string? htmlBody = null;
         var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
         emailSender
-            .Setup(s => s.SendAsync("daily-ordering@example.com", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .Callback<string, string, string, string, CancellationToken>((_, _, html, _, _) => htmlBody = html)
+            .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Callback<string, string, string, string, CancellationToken>((recipient, _, html, _, _) =>
+            {
+                if (string.Equals(recipient, "daily-ordering@example.com", StringComparison.OrdinalIgnoreCase))
+                {
+                    htmlBody = html;
+                }
+            })
             .ReturnsAsync(true);
 
         var contentRepository = new Mock<IContentRepository>(MockBehavior.Strict);
