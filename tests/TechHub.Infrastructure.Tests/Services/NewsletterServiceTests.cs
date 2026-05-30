@@ -361,6 +361,8 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     [Fact]
     public async Task SendDailyOverviewAsync_OrdersSectionsByWebsiteOrderInEmail()
     {
+        const string RecipientEmail = "daily-ordering@example.com";
+
         await _fixture.Connection.ExecuteAsync("""
             DELETE FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = '2026-05-22';
             DELETE FROM newsletter_subscribers WHERE email = 'daily-ordering@example.com';
@@ -393,7 +395,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .Callback<string, string, string, string, CancellationToken>((recipient, _, html, _, _) =>
             {
-                if (string.Equals(recipient, "daily-ordering@example.com", StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(recipient, RecipientEmail, StringComparison.Ordinal))
                 {
                     htmlBody = html;
                 }
