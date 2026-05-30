@@ -843,8 +843,8 @@ public sealed class NewsletterService : INewsletterService
               <meta charset="utf-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </head>
-            <body style="margin:0;padding:0;background:#f5f7fb;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 12px;">
+            <body style="margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
                 <tr>
                   <td align="center">
                     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:900px;background:#ffffff;border-radius:12px;overflow:hidden;">
@@ -947,8 +947,8 @@ public sealed class NewsletterService : INewsletterService
               <meta charset="utf-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </head>
-            <body style="margin:0;padding:0;background:#f5f7fb;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 12px;">
+            <body style="margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
                 <tr>
                   <td align="center">
                     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:1100px;background:#ffffff;border-radius:12px;overflow:hidden;">
