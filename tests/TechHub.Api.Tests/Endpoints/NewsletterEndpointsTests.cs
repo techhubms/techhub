@@ -93,6 +93,51 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
     }
 
     [Fact]
+    public async Task AdminTriggerNewsletter_WhenScheduledSendingDisabled_StillProcessesManualSend()
+    {
+        await using var arrangeScope = _factory.Services.CreateAsyncScope();
+        var arrangeConnection = arrangeScope.ServiceProvider.GetRequiredService<IDbConnection>();
+        var roundupSlug = await arrangeConnection.ExecuteScalarAsync<string?>(
+            """
+            SELECT slug
+            FROM content_items
+            WHERE collection_name = 'roundups'
+              AND primary_section_name IS NOT NULL
+              AND primary_section_name <> 'all'
+            ORDER BY date_epoch DESC
+            LIMIT 1
+            """);
+
+        roundupSlug.Should().NotBeNullOrWhiteSpace();
+
+        var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+            new { TargetKey = roundupSlug! });
+
+        var response = await _client.PostAsync("/api/admin/newsletter/trigger", null, TestContext.Current.CancellationToken);
+        response.StatusCode.Should().Be(HttpStatusCode.Accepted);
+
+        var timedOut = true;
+        for (var attempt = 0; attempt < 25; attempt++)
+        {
+            await Task.Delay(200, TestContext.Current.CancellationToken);
+            await using var pollScope = _factory.Services.CreateAsyncScope();
+            var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
+            var countAfter = await pollConnection.ExecuteScalarAsync<int>(
+                "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+                new { TargetKey = roundupSlug! });
+
+            if (countAfter > countBefore)
+            {
+                timedOut = false;
+                break;
+            }
+        }
+
+        timedOut.Should().BeFalse("manual admin trigger should execute even when scheduled sends are disabled");
+    }
+
+    [Fact]
     public async Task Subscribe_WithOnlyInvalidSections_ReturnsBadRequest()
     {
         var response = await _client.PostAsJsonAsync(
