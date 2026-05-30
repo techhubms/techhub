@@ -320,7 +320,7 @@ internal interface ITechHubApiClient
     /// Trigger an immediate newsletter processing run.
     /// POST /api/admin/newsletter/trigger
     /// </summary>
-    Task TriggerNewsletterAsync(CancellationToken cancellationToken = default);
+    Task TriggerNewsletterAsync(string kind = "roundup", CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Trigger a newsletter test send to a specific recipient for the given sections.

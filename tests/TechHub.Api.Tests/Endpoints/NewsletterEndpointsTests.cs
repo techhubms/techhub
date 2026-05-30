@@ -4,6 +4,8 @@ using System.Net.Http.Json;
 using Dapper;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Services.Newsletter;
 
@@ -97,24 +99,83 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
     {
         await using var arrangeScope = _factory.Services.CreateAsyncScope();
         var arrangeConnection = arrangeScope.ServiceProvider.GetRequiredService<IDbConnection>();
-        var roundupSlug = await arrangeConnection.ExecuteScalarAsync<string?>(
-            """
-            SELECT slug
-            FROM content_items
-            WHERE collection_name = 'roundups'
-              AND primary_section_name IS NOT NULL
-              AND primary_section_name <> 'all'
-            ORDER BY date_epoch DESC
-            LIMIT 1
-            """);
+        var latestRoundups = await LoadLatestSectionRoundupsAsync(arrangeConnection);
+        latestRoundups.Should().NotBeEmpty();
 
-        roundupSlug.Should().NotBeNullOrWhiteSpace();
+        var expectedMonday = GetExpectedRoundupMonday(DateTimeOffset.UtcNow, ResolveRoundupTimeZone());
+        await SetLatestRoundupsEpochAsync(arrangeConnection, latestRoundups, ToRoundupEpoch(expectedMonday));
+        var roundupTargetKey = expectedMonday.ToString("yyyy-MM-dd");
+
+        try
+        {
+            var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
+                "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+                new { TargetKey = roundupTargetKey });
+
+            var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=roundup", null, TestContext.Current.CancellationToken);
+            response.StatusCode.Should().Be(HttpStatusCode.Accepted);
+
+            var timedOut = true;
+            for (var attempt = 0; attempt < 25; attempt++)
+            {
+                await Task.Delay(200, TestContext.Current.CancellationToken);
+                await using var pollScope = _factory.Services.CreateAsyncScope();
+                var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
+                var countAfter = await pollConnection.ExecuteScalarAsync<int>(
+                    "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+                    new { TargetKey = roundupTargetKey });
+
+                if (countAfter > countBefore)
+                {
+                    timedOut = false;
+                    break;
+                }
+            }
+
+            timedOut.Should().BeFalse("manual admin trigger should execute even when scheduled sends are disabled");
+        }
+        finally
+        {
+            await RestoreLatestRoundupsEpochAsync(arrangeConnection, latestRoundups);
+        }
+    }
+
+    [Fact]
+    public async Task AdminTriggerNewsletter_DailyTriggerProcessesDailyOverviewSend()
+    {
+        await using var arrangeScope = _factory.Services.CreateAsyncScope();
+        var options = arrangeScope.ServiceProvider.GetRequiredService<IOptions<NewsletterOptions>>().Value;
+        var timeZone = ResolveTimeZone(options.DailyDigestTimeZoneId);
+        var localNow = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, timeZone);
+        var day = DateOnly.FromDateTime(localNow.DateTime.Date.AddDays(-1));
+        var dayStartUtc = day.ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc);
+
+        var arrangeConnection = arrangeScope.ServiceProvider.GetRequiredService<IDbConnection>();
+        await arrangeConnection.ExecuteAsync("""
+            DELETE FROM newsletter_subscribers WHERE email = 'daily-trigger@example.com';
+            DELETE FROM content_items WHERE collection_name = 'blogs' AND slug = 'daily-trigger-item';
+            """);
+        await arrangeConnection.ExecuteAsync("""
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES ('daily-trigger@example.com', TRUE, NOW(), '{"weeklySections":[],"dailySections":["ai"]}'::jsonb)
+            """);
+        await arrangeConnection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name, tags_csv,
+                 sections_bitmask, content_hash, is_ai, created_at)
+            VALUES
+                ('daily-trigger-item', 'blogs', 'Daily Trigger Item', 'Body', 'Excerpt', 0,
+                 'ai', '/ai/all', 'TechHub', 'TechHub', ',AI,',
+                 1, 'hash-daily-trigger-item', TRUE, @CreatedAt)
+            ON CONFLICT (collection_name, slug) DO UPDATE SET created_at = EXCLUDED.created_at
+            """, new { CreatedAt = dayStartUtc.AddHours(12) });
 
         var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
-            "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-            new { TargetKey = roundupSlug! });
+            "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = @TargetKey",
+            new { TargetKey = day.ToString("yyyy-MM-dd") });
 
-        var response = await _client.PostAsync("/api/admin/newsletter/trigger", null, TestContext.Current.CancellationToken);
+        var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=daily", null, TestContext.Current.CancellationToken);
         response.StatusCode.Should().Be(HttpStatusCode.Accepted);
 
         var timedOut = true;
@@ -124,8 +185,8 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
             await using var pollScope = _factory.Services.CreateAsyncScope();
             var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
             var countAfter = await pollConnection.ExecuteScalarAsync<int>(
-                "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-                new { TargetKey = roundupSlug! });
+                "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = @TargetKey",
+                new { TargetKey = day.ToString("yyyy-MM-dd") });
 
             if (countAfter > countBefore)
             {
@@ -134,7 +195,54 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
             }
         }
 
-        timedOut.Should().BeFalse("manual admin trigger should execute even when scheduled sends are disabled");
+        timedOut.Should().BeFalse("manual admin daily trigger should execute daily overview send");
+    }
+
+    [Fact]
+    public async Task AdminTriggerNewsletter_RoundupsNotOnExpectedMonday_SkipsSend()
+    {
+        await using var arrangeScope = _factory.Services.CreateAsyncScope();
+        var arrangeConnection = arrangeScope.ServiceProvider.GetRequiredService<IDbConnection>();
+        var latestRoundups = await LoadLatestSectionRoundupsAsync(arrangeConnection);
+        latestRoundups.Should().NotBeEmpty();
+
+        var expectedMonday = GetExpectedRoundupMonday(DateTimeOffset.UtcNow, ResolveRoundupTimeZone());
+        var nonMondayEpoch = ToRoundupEpoch(expectedMonday.AddYears(10).AddDays(1));
+        var roundupTargetKey = expectedMonday.ToString("yyyy-MM-dd");
+
+        await SetLatestRoundupsEpochAsync(arrangeConnection, latestRoundups, nonMondayEpoch);
+
+        try
+        {
+            var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
+                "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+                new { TargetKey = roundupTargetKey });
+
+            var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=roundup", null, TestContext.Current.CancellationToken);
+            response.StatusCode.Should().Be(HttpStatusCode.Accepted);
+
+            var wasSent = false;
+            for (var attempt = 0; attempt < 25; attempt++)
+            {
+                await Task.Delay(200, TestContext.Current.CancellationToken);
+                await using var pollScope = _factory.Services.CreateAsyncScope();
+                var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
+                var countAfter = await pollConnection.ExecuteScalarAsync<int>(
+                    "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+                    new { TargetKey = roundupTargetKey });
+                if (countAfter > countBefore)
+                {
+                    wasSent = true;
+                    break;
+                }
+            }
+
+            wasSent.Should().BeFalse("roundup send should be skipped until latest section roundups match expected Monday");
+        }
+        finally
+        {
+            await RestoreLatestRoundupsEpochAsync(arrangeConnection, latestRoundups);
+        }
     }
 
     [Fact]
@@ -265,6 +373,92 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
     private sealed class MessageResponse
     {
         public string? Message { get; init; }
+    }
+
+    private sealed record LatestRoundupRow(string Slug, long DateEpoch);
+
+    private static TimeZoneInfo ResolveTimeZone(string configuredId)
+    {
+        if (!string.IsNullOrWhiteSpace(configuredId))
+        {
+            try
+            {
+                return TimeZoneInfo.FindSystemTimeZoneById(configuredId);
+            }
+            catch (TimeZoneNotFoundException)
+            {
+            }
+            catch (InvalidTimeZoneException)
+            {
+            }
+        }
+
+        return TimeZoneInfo.Utc;
+    }
+
+    private static TimeZoneInfo ResolveRoundupTimeZone()
+    {
+        return TimeZoneInfo.FindSystemTimeZoneById(
+            OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
+    }
+
+    private static DateOnly GetExpectedRoundupMonday(DateTimeOffset utcNow, TimeZoneInfo roundupTimeZone)
+    {
+        var localDate = DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(utcNow, roundupTimeZone).Date);
+        var daysSinceMonday = ((int)localDate.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
+        return localDate.AddDays(-daysSinceMonday);
+    }
+
+    private static long ToRoundupEpoch(DateOnly publishDate)
+    {
+        var roundupTimeZone = ResolveRoundupTimeZone();
+        var publishLocal = publishDate.ToDateTime(new TimeOnly(9, 0, 0));
+        return (long)TimeZoneInfo.ConvertTimeToUtc(publishLocal, roundupTimeZone)
+            .Subtract(DateTime.UnixEpoch)
+            .TotalSeconds;
+    }
+
+    private static async Task<List<LatestRoundupRow>> LoadLatestSectionRoundupsAsync(IDbConnection connection)
+    {
+        return (await connection.QueryAsync<LatestRoundupRow>(
+            """
+            SELECT DISTINCT ON (primary_section_name)
+                slug AS Slug,
+                date_epoch AS DateEpoch
+            FROM content_items
+            WHERE collection_name = 'roundups'
+              AND primary_section_name IS NOT NULL
+              AND primary_section_name <> 'all'
+            ORDER BY primary_section_name, date_epoch DESC
+            """)).ToList();
+    }
+
+    private static Task SetLatestRoundupsEpochAsync(IDbConnection connection, IEnumerable<LatestRoundupRow> latestRoundups, long dateEpoch)
+    {
+        return connection.ExecuteAsync(
+            "UPDATE content_items SET date_epoch = @DateEpoch WHERE collection_name = 'roundups' AND slug = ANY(@Slugs)",
+            new
+            {
+                DateEpoch = dateEpoch,
+                Slugs = latestRoundups.Select(r => r.Slug).ToArray()
+            });
+    }
+
+    private static Task RestoreLatestRoundupsEpochAsync(IDbConnection connection, IEnumerable<LatestRoundupRow> latestRoundups)
+    {
+        return connection.ExecuteAsync(
+            """
+            UPDATE content_items AS c
+            SET date_epoch = v.date_epoch
+            FROM (SELECT UNNEST(@Slugs) AS slug, UNNEST(@Epochs) AS date_epoch) AS v
+            WHERE c.collection_name = 'roundups'
+              AND c.slug = v.slug
+            """,
+            new
+            {
+                Slugs = latestRoundups.Select(r => r.Slug).ToArray(),
+                Epochs = latestRoundups.Select(r => r.DateEpoch).ToArray()
+            });
     }
 
     [Fact]

@@ -224,16 +224,17 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     public async Task SendCombinedWeeklyAsync_WhenAllSlugsAlreadySent_ReturnsFalse()
     {
         const string Slug = "weekly-ai-roundup-2026-06-01-combined-skip";
+        const string TargetKey = "2026-06-01";
         await SeedRoundupAsync(Slug);
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO newsletter_send_log (send_kind, target_key, recipient_count, status)
-            VALUES ('weekly-roundup', @Slug, 0, 'sent')
+            VALUES ('weekly-roundup', @TargetKey, 0, 'sent')
             ON CONFLICT (send_kind, target_key) DO UPDATE SET status = 'sent'
-            """, new { Slug });
+            """, new { TargetKey });
 
         var sut = CreateService();
 
-        var sent = await sut.SendCombinedWeeklyAsync([Slug], TestContext.Current.CancellationToken);
+        var sent = await sut.SendCombinedWeeklyAsync([Slug], TargetKey, TestContext.Current.CancellationToken);
 
         sent.Should().BeFalse();
     }
@@ -243,6 +244,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     {
         const string AiSlug = "weekly-ai-roundup-2026-06-02-combined";
         const string DotnetSlug = "weekly-dotnet-roundup-2026-06-02-combined";
+        const string TargetKey = "2026-06-02";
 
         // Remove any weekly AI subscribers left by other tests so VerifyNoOtherCalls is reliable
         await _fixture.Connection.ExecuteAsync("""
@@ -278,7 +280,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
 
         var sut = CreateService(emailSender: emailSender.Object);
 
-        var sent = await sut.SendCombinedWeeklyAsync([AiSlug, DotnetSlug], TestContext.Current.CancellationToken);
+        var sent = await sut.SendCombinedWeeklyAsync([AiSlug, DotnetSlug], TargetKey, TestContext.Current.CancellationToken);
 
         sent.Should().BeTrue();
 
@@ -288,16 +290,131 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             Times.Once);
         emailSender.VerifyNoOtherCalls();
 
-        // Both slugs should be logged as sent
-        var aiStatus = await _fixture.Connection.ExecuteScalarAsync<string?>(
-            "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @Slug",
-            new { Slug = AiSlug });
-        var dotnetStatus = await _fixture.Connection.ExecuteScalarAsync<string?>(
-            "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @Slug",
-            new { Slug = DotnetSlug });
+        var status = await _fixture.Connection.ExecuteScalarAsync<string?>(
+            "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+            new { TargetKey });
+        var rowCount = await _fixture.Connection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
+            new { TargetKey });
 
-        aiStatus.Should().Be("sent");
-        dotnetStatus.Should().Be("sent");
+        status.Should().Be("sent");
+        rowCount.Should().Be(1);
+    }
+
+    [Fact]
+    public async Task SendCombinedWeeklyAsync_OrdersSectionsByWebsiteOrderInEmail()
+    {
+        const string AiSlug = "weekly-ai-roundup-2026-06-03-ordering";
+        const string DotnetSlug = "weekly-dotnet-roundup-2026-06-03-ordering";
+
+        await _fixture.Connection.ExecuteAsync("""
+            DELETE FROM newsletter_subscribers
+            WHERE preferences @> '{"weeklySections":["ai"]}'
+               OR preferences @> '{"weeklySections":["dotnet"]}'
+               OR email = 'weekly-ordering@example.com';
+            DELETE FROM content_items WHERE collection_name = 'roundups' AND slug IN (@AiSlug, @DotnetSlug);
+            DELETE FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key IN (@AiSlug, @DotnetSlug);
+            """, new { AiSlug, DotnetSlug });
+
+        await SeedRoundupAsync(AiSlug);
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name, tags_csv,
+                 sections_bitmask, content_hash, is_ai)
+            VALUES
+                (@Slug, 'roundups', '.NET Weekly', '## .NET Highlights', 'Dotnet intro', 1748304000,
+                 'dotnet', '/dotnet/roundups/' || @Slug, 'TechHub', 'TechHub', ',Roundups,.NET,',
+                 2, 'hash-newsletter-dotnet-ordering', FALSE)
+            ON CONFLICT (collection_name, slug) DO NOTHING
+            """, new { Slug = DotnetSlug });
+
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES ('weekly-ordering@example.com', TRUE, NOW(), '{"weeklySections":["dotnet","ai"],"dailySections":[]}'::jsonb)
+            ON CONFLICT (lower(email)) WHERE unsubscribed_at IS NULL DO UPDATE SET preferences = EXCLUDED.preferences
+            """);
+
+        string? htmlBody = null;
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        emailSender
+            .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Callback<string, string, string, string, CancellationToken>((recipient, _, html, _, _) =>
+            {
+                if (string.Equals(recipient, "weekly-ordering@example.com", StringComparison.OrdinalIgnoreCase))
+                {
+                    htmlBody = html;
+                }
+            })
+            .ReturnsAsync(true);
+
+        var sut = CreateService(emailSender: emailSender.Object);
+        var sent = await sut.SendCombinedWeeklyAsync([DotnetSlug, AiSlug], ct: TestContext.Current.CancellationToken);
+
+        sent.Should().BeTrue();
+        htmlBody.Should().NotBeNull();
+        htmlBody!.IndexOf("Artificial Intelligence", StringComparison.Ordinal).Should().BeLessThan(
+            htmlBody.IndexOf(".NET", StringComparison.Ordinal),
+            "weekly digest sections should follow configured website order");
+    }
+
+    [Fact]
+    public async Task SendDailyOverviewAsync_OrdersSectionsByWebsiteOrderInEmail()
+    {
+        const string RecipientEmail = "daily-ordering@example.com";
+
+        await _fixture.Connection.ExecuteAsync("""
+            DELETE FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = '2026-05-22';
+            DELETE FROM newsletter_subscribers WHERE email = 'daily-ordering@example.com';
+            DELETE FROM content_items WHERE collection_name = 'blogs' AND slug IN ('daily-order-ai-2026-05-22', 'daily-order-dotnet-2026-05-22');
+            """);
+
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES ('daily-ordering@example.com', TRUE, NOW(), '{"weeklySections":[],"dailySections":["dotnet","ai"]}'::jsonb)
+            """);
+
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name, tags_csv,
+                 sections_bitmask, content_hash, is_ai, created_at)
+            VALUES
+                ('daily-order-ai-2026-05-22', 'blogs', 'AI Daily Item', 'Body', 'Excerpt', 1747872000,
+                 'ai', '/ai/all-daily-order-2026-05-22', 'TechHub', 'TechHub', ',AI,',
+                 1, 'hash-daily-order-ai', TRUE, '2026-05-22T10:00:00Z'),
+                ('daily-order-dotnet-2026-05-22', 'blogs', '.NET Daily Item', 'Body', 'Excerpt', 1747872000,
+                 'dotnet', '/dotnet/all-daily-order-2026-05-22', 'TechHub', 'TechHub', ',.NET,',
+                 2, 'hash-daily-order-dotnet', FALSE, '2026-05-22T10:00:00Z')
+            ON CONFLICT (collection_name, slug) DO NOTHING
+            """);
+
+        string? htmlBody = null;
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        emailSender
+            .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Callback<string, string, string, string, CancellationToken>((recipient, _, html, _, _) =>
+            {
+                if (string.Equals(recipient, RecipientEmail, StringComparison.Ordinal))
+                {
+                    htmlBody = html;
+                }
+            })
+            .ReturnsAsync(true);
+
+        var contentRepository = new Mock<IContentRepository>(MockBehavior.Strict);
+        contentRepository
+            .Setup(x => x.GetAllSectionsAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync([CreateSection("ai"), CreateSection("dotnet")]);
+
+        var sut = CreateService(contentRepository.Object, emailSender.Object);
+        var sent = await sut.SendDailyOverviewAsync(new DateOnly(2026, 5, 22), TestContext.Current.CancellationToken);
+
+        sent.Should().BeTrue();
+        htmlBody.Should().NotBeNull();
+        htmlBody!.IndexOf("Artificial Intelligence", StringComparison.Ordinal).Should().BeLessThan(
+            htmlBody.IndexOf(".NET", StringComparison.Ordinal),
+            "daily email sections should follow configured website order");
     }
 
     private NewsletterService CreateService(
@@ -323,7 +440,9 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             {
                 Sections = new Dictionary<string, SectionConfig>
                 {
-                    ["ai"] = new SectionConfig { Title = "Artificial Intelligence", Description = "", Url = "/ai", Tag = "ai", Collections = [] }
+                    ["ai"] = new SectionConfig { Title = "Artificial Intelligence", Description = "", Url = "/ai", Tag = "ai", Order = 1, Collections = [] },
+                    ["dotnet"] = new SectionConfig { Title = ".NET", Description = "", Url = "/dotnet", Tag = "dotnet", Order = 2, Collections = [] },
+                    ["azure"] = new SectionConfig { Title = "Azure", Description = "", Url = "/azure", Tag = "azure", Order = 3, Collections = [] }
                 }
             }
         });
@@ -339,27 +458,30 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     }
 
     private static Section CreateSection(string name) =>
+        CreateSection(name, name.Equals("dotnet", StringComparison.OrdinalIgnoreCase) ? ".NET" : "AI");
+
+    private static Section CreateSection(string name, string title) =>
         new(
             name,
-            "AI",
-            "AI section",
-            "/ai",
-            "AI",
-            [new Collection("blogs", "Blogs", "/ai/blogs", "Blogs", "Blogs")]);
+            title,
+            $"{name} section",
+            $"/{name}",
+            title,
+            [new Collection("blogs", "Blogs", $"/{name}/blogs", "Blogs", "Blogs")]);
 
     private async Task CleanupDailyOverviewTestDataAsync()
     {
         await _fixture.Connection.ExecuteAsync("""
             DELETE FROM newsletter_send_log
             WHERE send_kind = 'daily-overview'
-              AND target_key IN ('2026-05-20', '2026-05-21');
+              AND target_key IN ('2026-05-20', '2026-05-21', '2026-05-22');
 
             DELETE FROM newsletter_subscribers
-            WHERE email IN ('confirmed@example.com', 'unconfirmed@example.com', 'confirmed-daily@example.com');
+            WHERE email IN ('confirmed@example.com', 'unconfirmed@example.com', 'confirmed-daily@example.com', 'daily-ordering@example.com');
 
             DELETE FROM content_items
             WHERE collection_name = 'blogs'
-              AND slug IN ('daily-item-newsletter-test-2026-05-20', 'daily-item-newsletter-test-2026-05-21');
+              AND slug IN ('daily-item-newsletter-test-2026-05-20', 'daily-item-newsletter-test-2026-05-21', 'daily-order-ai-2026-05-22', 'daily-order-dotnet-2026-05-22');
             """);
     }
 

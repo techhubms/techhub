@@ -5,7 +5,7 @@ namespace TechHub.Core.Interfaces;
 public interface INewsletterService
 {
     Task<bool> SendRoundupNewsletterAsync(string roundupSlug, CancellationToken ct = default);
-    Task<bool> SendCombinedWeeklyAsync(IReadOnlyList<string> roundupSlugs, CancellationToken ct = default);
+    Task<bool> SendCombinedWeeklyAsync(IReadOnlyList<string> roundupSlugs, string? sendTargetKey = null, CancellationToken ct = default);
     Task<bool> SendTestEmailAsync(string roundupSlug, string recipientEmail, CancellationToken ct = default);
     Task<bool> SendTestWeeklyAsync(IReadOnlyList<string> sections, string recipientEmail, CancellationToken ct = default);
     Task<bool> SendTestDailyEmailAsync(IReadOnlyList<string> sections, string recipientEmail, CancellationToken ct = default);
