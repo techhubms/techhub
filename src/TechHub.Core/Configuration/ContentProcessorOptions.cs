@@ -9,12 +9,11 @@ public class ContentProcessorOptions
     public const string SectionName = "ContentProcessor";
 
     /// <summary>
-    /// Whether scheduled content processing is enabled. Defaults to true.
-    /// Set <c>ContentProcessor__Enabled=false</c> via environment variable to disable scheduling
-    /// in environments where automatic processing should not run (e.g. PR preview environments).
+    /// Whether scheduled content processing is enabled. Defaults to false.
+    /// Set to <c>true</c> only in production via <c>appsettings.Production.json</c>.
     /// Manual admin-triggered runs are unaffected by this setting.
     /// </summary>
-    public bool Enabled { get; init; } = true;
+    public bool Enabled { get; init; }
 
     /// <summary>How often to run the content processing pipeline (in minutes).</summary>
     public int IntervalMinutes { get; init; } = 60;

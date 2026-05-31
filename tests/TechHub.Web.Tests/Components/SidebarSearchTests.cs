@@ -174,4 +174,57 @@ public class SidebarSearchTests : BunitContext
         heading.Should().NotBeNull("Sidebar section should have a heading");
         heading.TextContent.Should().Contain("Search", "Heading should indicate search functionality");
     }
+
+    [Fact]
+    public void SidebarSearch_HidesExactMatchCheckbox_WhenQueryIsEmpty()
+    {
+        // Arrange & Act
+        var cut = Render<SidebarSearch>();
+
+        // Assert
+        var checkboxes = cut.FindAll("input[type='checkbox']");
+        checkboxes.Should().BeEmpty("Exact match checkbox should be hidden when query is empty");
+    }
+
+    [Fact]
+    public void SidebarSearch_ShowsExactMatchCheckbox_WhenQueryHasText()
+    {
+        // Arrange & Act
+        var cut = Render<SidebarSearch>(parameters => parameters
+            .Add(p => p.SearchQuery, "test query"));
+
+        // Assert
+        var checkbox = cut.Find("input[type='checkbox']");
+        checkbox.Should().NotBeNull("Exact match checkbox should be visible when query has text");
+    }
+
+    [Fact]
+    public void SidebarSearch_ExactMatchCheckbox_ReflectsParameter()
+    {
+        // Arrange & Act
+        var cut = Render<SidebarSearch>(parameters => parameters
+            .Add(p => p.SearchQuery, "test query")
+            .Add(p => p.ExactMatch, true));
+
+        // Assert
+        var checkbox = cut.Find("input[type='checkbox']");
+        checkbox.HasAttribute("checked").Should().BeTrue("Checkbox should be checked when ExactMatch is true");
+    }
+
+    [Fact]
+    public void SidebarSearch_ExactMatchCheckbox_EmitsChange()
+    {
+        // Arrange
+        bool? captured = null;
+        var cut = Render<SidebarSearch>(parameters => parameters
+            .Add(p => p.SearchQuery, "test query")
+            .Add(p => p.OnExactMatchChanged, (bool value) => { captured = value; }));
+
+        // Act
+        var checkbox = cut.Find("input[type='checkbox']");
+        checkbox.Change(true);
+
+        // Assert
+        captured.Should().BeTrue("OnExactMatchChanged should emit true when checkbox is checked");
+    }
 }

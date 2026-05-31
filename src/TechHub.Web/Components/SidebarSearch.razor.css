@@ -84,3 +84,23 @@
 .search-clear-button:active {
     transform: translateY(-50%) scale(0.95);
 }
+
+/* Exact title match checkbox */
+.search-exact-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    user-select: none;
+}
+
+.search-exact-label input[type="checkbox"] {
+    accent-color: var(--color-purple-medium);
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+}

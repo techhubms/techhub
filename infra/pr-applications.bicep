@@ -90,7 +90,6 @@ module apiApp './modules/api.bicep' = {
     aiCategorizationEndpoint: '' // AI categorization disabled (background jobs are off)
     aiCategorizationDeploymentName: ''
     aspNetCoreEnvironment: 'Staging'
-    enableBackgroundJobs: false // prevent PR from triggering content sync / roundup jobs
     minReplicas: 0 // scale to zero when idle to minimize cost
     maxReplicas: 1
   }

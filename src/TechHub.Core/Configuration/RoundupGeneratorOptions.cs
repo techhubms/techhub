@@ -9,12 +9,11 @@ public class RoundupGeneratorOptions
     public const string SectionName = "RoundupGenerator";
 
     /// <summary>
-    /// Whether scheduled roundup generation is enabled. Defaults to true.
-    /// Set <c>RoundupGenerator__Enabled=false</c> via environment variable to disable scheduling
-    /// in environments where automatic generation should not run (e.g. PR preview environments).
+    /// Whether scheduled roundup generation is enabled. Defaults to false.
+    /// Set to <c>true</c> only in production via <c>appsettings.Production.json</c>.
     /// Manual admin-triggered runs are unaffected by this setting.
     /// </summary>
-    public bool Enabled { get; init; } = true;
+    public bool Enabled { get; init; }
 
     /// <summary>Hour of day (UTC) to run roundup generation. Default: 8 (8:00 AM UTC = ~9-10 AM Brussels).</summary>
     public int RunHourUtc { get; init; } = 8;

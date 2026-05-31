@@ -165,6 +165,7 @@ public class TechHubApiClient : ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         string? types = null,
+        bool exact = false,
         CancellationToken cancellationToken = default)
     {
         sectionName = sectionName.Sanitize();
@@ -210,6 +211,11 @@ public class TechHubApiClient : ITechHubApiClient
             if (!string.IsNullOrEmpty(types))
             {
                 queryParams.Add($"types={Uri.EscapeDataString(types)}");
+            }
+
+            if (exact)
+            {
+                queryParams.Add("exact=true");
             }
 
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";

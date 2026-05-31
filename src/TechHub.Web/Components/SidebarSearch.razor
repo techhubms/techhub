@@ -24,4 +24,15 @@
             </button>
         }
     </div>
+
+    @if (!string.IsNullOrWhiteSpace(_searchQueryInternal))
+    {
+        <label class="search-exact-label">
+            <input
+                type="checkbox"
+                checked="@ExactMatch"
+                @onchange="HandleExactMatchChanged" />
+            Exact title match
+        </label>
+    }
 </nav>

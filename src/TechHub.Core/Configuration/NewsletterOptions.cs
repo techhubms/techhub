@@ -4,6 +4,10 @@ public sealed class NewsletterOptions
 {
     public const string SectionName = "Newsletter";
 
+    /// <summary>
+    /// Whether scheduled newsletter sending is enabled. Defaults to false.
+    /// Set to <c>true</c> only in production via <c>appsettings.Production.json</c>.
+    /// </summary>
     public bool ScheduledSendEnabled { get; init; }
     public string Endpoint { get; init; } = string.Empty;
     public string SenderAddress { get; init; } = string.Empty;

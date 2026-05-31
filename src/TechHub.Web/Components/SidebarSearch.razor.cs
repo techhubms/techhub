@@ -24,6 +24,18 @@ public sealed partial class SidebarSearch : ComponentBase, IDisposable
     [Parameter]
     public EventCallback<string> OnSearchQueryChanged { get; set; }
 
+    /// <summary>
+    /// Whether exact title match mode is active.
+    /// </summary>
+    [Parameter]
+    public bool ExactMatch { get; set; }
+
+    /// <summary>
+    /// Event callback when exact match toggle changes.
+    /// </summary>
+    [Parameter]
+    public EventCallback<bool> OnExactMatchChanged { get; set; }
+
     private string _searchQueryInternal = string.Empty;
     private Timer? _debounceTimer;
 
@@ -73,6 +85,11 @@ public sealed partial class SidebarSearch : ComponentBase, IDisposable
         }
 
         await OnSearchQueryChanged.InvokeAsync(string.Empty);
+    }
+
+    private async Task HandleExactMatchChanged(ChangeEventArgs e)
+    {
+        await OnExactMatchChanged.InvokeAsync(e.Value is true);
     }
 
     public void Dispose()

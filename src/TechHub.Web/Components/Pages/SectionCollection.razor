@@ -40,7 +40,8 @@
         </MobileSidebarPanel>
         }
         <MobileSidebarPanel Label="Search" Icon="search" HasActiveFilter="@(!string.IsNullOrWhiteSpace(searchQuery))">
-        <SidebarSearch SearchQuery="@searchQuery" OnSearchQueryChanged="HandleSearchQueryChanged" />
+        <SidebarSearch SearchQuery="@searchQuery" OnSearchQueryChanged="HandleSearchQueryChanged"
+            ExactMatch="@isExactMatch" OnExactMatchChanged="HandleExactMatchChanged" />
         </MobileSidebarPanel>
         <MobileSidebarPanel Label="Date" Icon="calendar" HasActiveFilter="@(fromDate != null || toDate != null)">
         <DateRangeSlider FromDate="@fromDate" ToDate="@toDate"
@@ -64,8 +65,9 @@
 
     <section>
         <ContentItemsGrid SectionName="@SectionName" CollectionName="@EffectiveCollectionName" FilterTags="@selectedTags"
-            SearchQuery="@searchQuery" FromDate="@fromDateString" ToDate="@toDateString"
-            ContentTypes="@ActiveContentTypesParam"
+            SearchQuery="@searchQuery" FromDate="@(isExactMatch ? null : fromDateString)" ToDate="@(isExactMatch ? null : toDateString)"
+            ContentTypes="@(isExactMatch ? null : ActiveContentTypesParam)"
+            ExactMatch="@isExactMatch"
             @key="@GridKey" />
     </section>
 </main>
@@ -92,6 +94,9 @@
     [SupplyParameterFromQuery(Name = "types")]
     public string? TypesParam { get; set; }
 
+    [SupplyParameterFromQuery(Name = "exact")]
+    public string? ExactParam { get; set; }
+
     private List<string> selectedTags = new();
     private string searchQuery = string.Empty;
     private TechHub.Core.Models.Section? section;
@@ -103,6 +108,7 @@
     private string? _previousSectionName;
     private string? _previousCollectionName;
     private HashSet<string> activeContentTypes = new(StringComparer.OrdinalIgnoreCase);
+    private bool isExactMatch;
     private bool IsAll => string.Equals(CollectionName, "all", StringComparison.OrdinalIgnoreCase);
 
     /// <summary>
@@ -162,7 +168,7 @@
     /// <summary>
     /// Key for the ContentItemsGrid component to force re-render on section or type changes.
     /// </summary>
-    private string GridKey => $"{SectionName}_{CollectionName}_{ActiveContentTypesParam}";
+    private string GridKey => $"{SectionName}_{CollectionName}_{ActiveContentTypesParam}_{isExactMatch}";
 
     private string PageTitleText => IsAll
         ? $"{section?.Title ?? SectionName} - Tech Hub"
@@ -189,6 +195,7 @@
         ParseSearchFromUrl();
         ParseDatesFromUrl();
         ParseTypesFromUrl();
+        ParseExactFromUrl();
 
         // Initialize change tracking
         _previousSectionName = SectionName;
@@ -226,12 +233,14 @@
             fromDateString = null;
             toDateString = null;
             activeContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            isExactMatch = false;
         }
 
         ParseTagsFromUrl();
         ParseSearchFromUrl();
         ParseDatesFromUrl();
         ParseTypesFromUrl();
+        ParseExactFromUrl();
     }
 
     private bool IsContentTypeActive(string collectionName)
@@ -306,6 +315,12 @@
         searchQuery = raw.Length > 200 ? raw[..200] : raw;
     }
 
+    private void ParseExactFromUrl()
+    {
+        // Exact mode only when the param is explicitly "true" (matches API bool binding) and a query is present
+        isExactMatch = string.Equals(ExactParam, "true", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrWhiteSpace(searchQuery);
+    }
+
     private void ParseDatesFromUrl()
     {
         fromDate = ParseDate(FromParam);
@@ -347,7 +362,8 @@
             ["to"] = toDate?.ToString("yyyy-MM-dd"),
             ["types"] = activeContentTypes.Count > 0 && activeContentTypes.Count < ContentTypeCollections.Count
                 ? string.Join(",", activeContentTypes)
-                : null
+                : null,
+            ["exact"] = isExactMatch && !string.IsNullOrWhiteSpace(searchQuery) ? "true" : null
         };
 
         var url = Navigation.GetUriWithQueryParameters(queryParams);
@@ -356,7 +372,19 @@
 
     private void HandleSearchQueryChanged(string query)
     {
+        // When the user types a new search manually, exit exact match mode
+        if (query != searchQuery)
+        {
+            isExactMatch = false;
+        }
+
         searchQuery = query;
+        UpdateUrl();
+    }
+
+    private void HandleExactMatchChanged(bool isExact)
+    {
+        isExactMatch = isExact;
         UpdateUrl();
     }
 

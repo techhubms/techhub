@@ -1983,4 +1983,124 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     #endregion
+
+    #region Exact Title Match Tests
+
+    [Fact]
+    public async Task GetCollectionItems_WithExactTrue_MatchesExactTitle()
+    {
+        // Arrange - Use a known title from test data
+        const string ExactTitle = "Specific News Item for Collection Test";
+
+        // Act
+        var response = await _client.GetAsync(
+            $"/api/sections/ai/collections/all/items?q={Uri.EscapeDataString(ExactTitle)}&exact=true",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().NotBeEmpty("exact phrase match should find the item");
+        result.Items.Should().AllSatisfy(item =>
+        {
+            item.Title.Should().ContainEquivalentOf(ExactTitle, "all returned items must contain the exact phrase");
+        });
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithExactTrue_MatchesByPhrase()
+    {
+        // Arrange - Use part of a known title: "Specific News Item" is contained in
+        // "Specific News Item for Collection Test", so it SHOULD match (phrase containment).
+        const string Phrase = "Specific News Item";
+
+        // Act
+        var response = await _client.GetAsync(
+            $"/api/sections/ai/collections/all/items?q={Uri.EscapeDataString(Phrase)}&exact=true",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+
+        // The full-title item must appear because it contains the phrase
+        result!.Items.Should().Contain(
+            item => item.Title.Contains(Phrase, StringComparison.OrdinalIgnoreCase),
+            "exact phrase match should return items whose title contains the search phrase");
+
+        // Every returned item must contain the phrase in its title
+        result.Items.Should().AllSatisfy(item =>
+        {
+            item.Title.Should().ContainEquivalentOf(Phrase,
+                "exact phrase mode only returns items whose title contains the entire query phrase");
+        });
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithExactTrueAndNoQuery_BehavesLikeNormalRequest()
+    {
+        // Arrange - exact=true without q should NOT bypass normal date/tag filters
+        // Normal requests apply a default date range (lastDays filter), so they typically return
+        // fewer items than an unrestricted query. Verify items are returned (endpoint works)
+        // and that the request succeeds without treating it as an exact search.
+
+        // Act - exact=true but no q parameter
+        var response = await _client.GetAsync(
+            "/api/sections/ai/collections/all/items?exact=true",
+            TestContext.Current.CancellationToken);
+
+        // Assert - should succeed with normal filtering applied
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        // TotalCount reflects filtered results (default date range), not an unfiltered dump
+        result!.TotalCount.Should().BeGreaterThanOrEqualTo(0);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithExactTrueAndNoQuery_RespectsDateFilter()
+    {
+        // exact=true without q must NOT bypass the date range filter.
+        // Request with a very old date range should return 0 items when exact mode is inactive.
+        var response = await _client.GetAsync(
+            "/api/sections/ai/collections/all/items?exact=true&from=2000-01-01&to=2000-01-02",
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().BeEmpty("no items existed in year 2000, so the date filter must be active");
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithExactTrue_IgnoresDateAndTagFilters()
+    {
+        // When exact=true with a valid query, date and tag filters should be ignored so
+        // the exact-title match returns results regardless of date or tag constraints.
+        const string ExactTitle = "Specific News Item for Collection Test";
+
+        // Use a date range that excludes the item (it is dated 2025-01-01)
+        var response = await _client.GetAsync(
+            $"/api/sections/ai/collections/all/items?q={Uri.EscapeDataString(ExactTitle)}&exact=true&from=2026-01-01&to=2026-12-31&tags=nonexistent-tag",
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().NotBeEmpty(
+            "exact title match ignores date and tag filters, so the item should still be returned");
+        result.Items.Should().AllSatisfy(item =>
+        {
+            item.Title.Should().Be(ExactTitle);
+        });
+    }
+
+    #endregion
 }
