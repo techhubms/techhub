@@ -23,70 +23,6 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     }
 
     [Fact]
-    public async Task SendRoundupNewsletterAsync_WhenRoundupMissing_ReturnsFalse()
-    {
-        var sut = CreateService();
-
-        var sent = await sut.SendRoundupNewsletterAsync("missing-roundup-slug", TestContext.Current.CancellationToken);
-
-        sent.Should().BeFalse();
-    }
-
-    [Fact]
-    public async Task SendRoundupNewsletterAsync_WhenSendFails_LogsFailedStatus()
-    {
-        await SeedRoundupAsync("weekly-ai-roundup-2026-05-18");
-        await _fixture.Connection.ExecuteAsync("""
-            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
-            VALUES ('not-a-valid-email-address', TRUE, NOW(), '{"weeklySections":["ai"],"dailySections":[]}'::jsonb)
-            """);
-
-        var emailSender = new Mock<IEmailSender>();
-        emailSender.Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(false);
-
-        var sut = CreateService(emailSender: emailSender.Object);
-
-        var sent = await sut.SendRoundupNewsletterAsync("weekly-ai-roundup-2026-05-18", TestContext.Current.CancellationToken);
-
-        sent.Should().BeFalse();
-        var status = await _fixture.Connection.ExecuteScalarAsync<string?>(
-            "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = 'weekly-ai-roundup-2026-05-18'");
-        status.Should().Be("failed");
-    }
-
-    [Fact]
-    public async Task SendRoundupNewsletterAsync_ShouldRenderResponsiveHtmlMarkers()
-    {
-        const string Slug = "weekly-ai-roundup-2026-06-03-responsive-markers";
-        const string Recipient = "responsive-markers@example.com";
-
-        await SeedRoundupAsync(Slug);
-        await _fixture.Connection.ExecuteAsync("""
-            DELETE FROM newsletter_subscribers WHERE email = @Email;
-            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
-            VALUES (@Email, TRUE, NOW(), '{"weeklySections":["ai"],"dailySections":[]}'::jsonb)
-            """, new { Email = Recipient });
-
-        string? htmlBody = null;
-        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
-        emailSender
-            .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .Callback<string, string, string, string, CancellationToken>((_, _, html, _, _) => htmlBody = html)
-            .ReturnsAsync(true);
-
-        var sut = CreateService(emailSender: emailSender.Object);
-
-        var sent = await sut.SendRoundupNewsletterAsync(Slug, TestContext.Current.CancellationToken);
-
-        sent.Should().BeTrue();
-        htmlBody.Should().NotBeNull();
-        htmlBody.Should().Contain("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"");
-        htmlBody.Should().Contain("width=\"100%\"");
-        htmlBody.Should().Contain("max-width:900px");
-    }
-
-    [Fact]
     public async Task SendDailyOverviewAsync_SkipsUnconfirmedSubscribers()
     {
         const string Slug = "daily-item-newsletter-test-2026-05-20";
@@ -170,43 +106,6 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         var sut = CreateService(contentRepository.Object, emailSender.Object, unsubscribeSecret: unsubscribeSecret);
 
         var sent = await sut.SendDailyOverviewAsync(day, TestContext.Current.CancellationToken);
-
-        sent.Should().BeFalse();
-        emailSender.VerifyNoOtherCalls();
-    }
-
-    [Fact]
-    public async Task SendRoundupNewsletterAsync_WhenUnsubscribeSecretMissing_LogsFailedStatus()
-    {
-        await SeedRoundupAsync("weekly-ai-roundup-2026-05-25");
-        await _fixture.Connection.ExecuteAsync("""
-            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
-            VALUES ('configured@example.com', TRUE, NOW(), '{"weeklySections":["ai"],"dailySections":[]}'::jsonb)
-            """);
-
-        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
-        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: " ");
-
-        var sent = await sut.SendRoundupNewsletterAsync("weekly-ai-roundup-2026-05-25", TestContext.Current.CancellationToken);
-
-        sent.Should().BeFalse();
-        emailSender.VerifyNoOtherCalls();
-        var status = await _fixture.Connection.ExecuteScalarAsync<string?>(
-            "SELECT status FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = 'weekly-ai-roundup-2026-05-25'");
-        status.Should().Be("failed");
-    }
-
-    [Theory]
-    [InlineData("")]
-    [InlineData(" ")]
-    public async Task SendTestEmailAsync_WhenUnsubscribeSecretMissing_ReturnsFalseWithoutSending(string unsubscribeSecret)
-    {
-        await SeedRoundupAsync("weekly-ai-roundup-2026-05-26");
-
-        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
-        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: unsubscribeSecret);
-
-        var sent = await sut.SendTestEmailAsync("weekly-ai-roundup-2026-05-26", "test@example.com", TestContext.Current.CancellationToken);
 
         sent.Should().BeFalse();
         emailSender.VerifyNoOtherCalls();
