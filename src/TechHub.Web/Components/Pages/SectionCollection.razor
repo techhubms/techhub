@@ -316,8 +316,8 @@
 
     private void ParseExactFromUrl()
     {
-        // Exact mode is only active when both the exact param is set AND a search query is present
-        isExactMatch = !string.IsNullOrWhiteSpace(ExactParam) && !string.IsNullOrWhiteSpace(searchQuery);
+        // Exact mode only when the param is explicitly "true" (matches API bool binding) and a query is present
+        isExactMatch = string.Equals(ExactParam, "true", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrWhiteSpace(searchQuery);
     }
 
     private void ParseDatesFromUrl()

@@ -363,8 +363,10 @@ public static class ContentEndpoints
 
         // Build collections array - when "all" and types specified, filter to specific collection types.
         // When exact=true, types are ignored (exact match covers all collections).
+        // Exact mode requires a non-empty query; without one, behave as a normal request.
+        var exactMode = exact && !string.IsNullOrWhiteSpace(q);
         string[] collectionsArray;
-        if (!exact && isAllCollection && !string.IsNullOrWhiteSpace(types))
+        if (!exactMode && isAllCollection && !string.IsNullOrWhiteSpace(types))
         {
             // Validate types against section's actual non-custom collections
             var validCollectionNames = section.Collections
@@ -387,17 +389,17 @@ public static class ContentEndpoints
         }
 
         // Build search request - repository will handle "all" as no filter.
-        // When exact=true, skip date filters (exact match is purely title-based).
+        // When exact=true, skip date and tag filters (exact match is purely title-based).
         var request = new SearchRequest(
             take: limit,
             skip: offset,
             query: q,
             sections: new[] { section.Name },
             collections: collectionsArray,
-            tags: parsedTags ?? Array.Empty<string>(),
-            dateFrom: exact ? null : dateFrom,
-            dateTo: exact ? null : dateTo,
-            exactTitleMatch: exact
+            tags: exactMode ? Array.Empty<string>() : (parsedTags ?? Array.Empty<string>()),
+            dateFrom: exactMode ? null : dateFrom,
+            dateTo: exactMode ? null : dateTo,
+            exactTitleMatch: exactMode
         );
 
         var content = await contentRepository.SearchAsync(request, cancellationToken);

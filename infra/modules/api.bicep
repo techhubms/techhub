@@ -50,9 +50,6 @@ param newsletterUnsubscribeSecretName string = ''
 @description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
 param aspNetCoreEnvironment string = 'Production'
 
-@description('When false, disables scheduled background jobs (ContentProcessor, RoundupGenerator). Set to false for PR preview environments.')
-param enableBackgroundJobs bool = true
-
 @description('Minimum replica count. Use 0 to enable scale-to-zero for PR preview environments.')
 param minReplicas int = 1
 
@@ -73,21 +70,6 @@ var corsEnvVars = [for (fqdn, i) in webFqdns: {
   name: 'Cors__AllowedOrigins__${i}'
   value: 'https://${fqdn}'
 }]
-var backgroundJobEnvVars = enableBackgroundJobs ? [] : [
-  {
-    // PR preview: override back to false since appsettings.Production.json enables these
-    name: 'ContentProcessor__Enabled'
-    value: 'false'
-  }
-  {
-    name: 'RoundupGenerator__Enabled'
-    value: 'false'
-  }
-  {
-    name: 'Newsletter__ScheduledSendEnabled'
-    value: 'false'
-  }
-]
 var newsletterSecretEnvVars = empty(newsletterUnsubscribeSecretName)
   ? []
   : [
@@ -258,7 +240,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
             cpu: json('0.25')
             memory: '0.5Gi'
           }
-          env: concat(staticEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars, backgroundJobEnvVars)
+          env: concat(staticEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars)
           probes: [
             {
               type: 'startup'

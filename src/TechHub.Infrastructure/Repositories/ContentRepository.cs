@@ -1196,9 +1196,9 @@ public sealed class ContentRepository : IContentRepository
             {
                 if (request.ExactTitleMatch)
                 {
-                    // Exact title match: simple case-insensitive ILIKE on title, no FTS ranking
+                    // Exact title match: case-insensitive equality on title, no FTS ranking
                     whereClauses.Add("c.title ILIKE @titleSearch");
-                    parameters.Add("titleSearch", $"%{request.Query}%");
+                    parameters.Add("titleSearch", request.Query);
                 }
                 else
                 {

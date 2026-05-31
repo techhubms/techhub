@@ -80,7 +80,7 @@ public class ContentProcessingBackgroundServiceTests
 
         var serviceProvider = services.BuildServiceProvider();
 
-        var options = new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", IntervalMinutes = 60 };
+        var options = new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", IntervalMinutes = 60, Enabled = true };
 
         var sut = new ContentProcessingBackgroundService(
             serviceProvider,
