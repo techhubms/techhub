@@ -33,8 +33,9 @@ public class SubNavTests : BunitContext
                 It.IsAny<string?>(),
                 null,
                 null,
+                It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
-            .ReturnsAsync((string _, string _, int? _, int? _, string? _, string? _, int? _, string? fromDate, string? _, string? _, CancellationToken _) =>
+            .ReturnsAsync((string _, string _, int? _, int? _, string? _, string? _, int? _, string? fromDate, string? _, string? _, bool _, CancellationToken _) =>
                 new CollectionItemsResponse([], fromDate is null ? 100 : 5));
         Services.AddSingleton(_apiClientMock.Object);
     }

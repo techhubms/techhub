@@ -62,6 +62,7 @@ internal interface ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         string? types = null,
+        bool exact = false,
         CancellationToken cancellationToken = default);
 
     /// <summary>

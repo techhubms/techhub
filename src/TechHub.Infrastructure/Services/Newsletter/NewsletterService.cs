@@ -339,7 +339,21 @@ public sealed class NewsletterService : INewsletterService
             return false;
         }
 
-        var yesterday = DateOnly.FromDateTime(DateTime.UtcNow.AddDays(-1));
+        TimeZoneInfo testTz;
+        try
+        {
+            testTz = string.IsNullOrWhiteSpace(_options.DailyDigestTimeZoneId)
+                ? TimeZoneInfo.Utc
+                : TimeZoneInfo.FindSystemTimeZoneById(_options.DailyDigestTimeZoneId);
+        }
+        catch (Exception ex) when (ex is TimeZoneNotFoundException or InvalidTimeZoneException)
+        {
+            _logger.LogWarning(ex, "Invalid DailyDigestTimeZoneId '{TimeZoneId}'. Falling back to UTC.", _options.DailyDigestTimeZoneId);
+            testTz = TimeZoneInfo.Utc;
+        }
+
+        var localNow = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, testTz);
+        var yesterday = DateOnly.FromDateTime(localNow.DateTime.Date.AddDays(-1));
         var (start, end) = GetDayUtcWindow(yesterday);
         var sectionNames = OrderSectionsByWebsiteOrder(sections);
         var itemsBySection = await GetDailyItemsBySectionAsync(sectionNames, start, end, ct);
@@ -377,11 +391,11 @@ public sealed class NewsletterService : INewsletterService
 
         var manageUrl = BuildManageUrl(email, secret);
         var html = $"""
-            <html><body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
-              <h2>Manage your TechHub newsletter subscription</h2>
+            <html><body style="font-family:Segoe UI,Arial,sans-serif;color:#c9d1d9;background:#161b22;">
+              <h2 style="color:#f0f6fc;">Manage your TechHub newsletter subscription</h2>
               <p>Click the button below to manage your subscription preferences.</p>
-              <p><a href="{WebUtility.HtmlEncode(manageUrl)}" style="display:inline-block;padding:10px 20px;background:#111827;color:#fff;text-decoration:none;border-radius:6px;">Manage subscription</a></p>
-              <p style="color:#6b7280;font-size:0.875rem;">Or copy this link into your browser:<br>{WebUtility.HtmlEncode(manageUrl)}</p>
+              <p><a href="{WebUtility.HtmlEncode(manageUrl)}" style="display:inline-block;padding:10px 20px;background:#7f56d9;color:#fff;text-decoration:none;border-radius:6px;">Manage subscription</a></p>
+              <p style="color:#8b949e;font-size:0.875rem;">Or copy this link into your browser:<br>{WebUtility.HtmlEncode(manageUrl)}</p>
             </body></html>
             """;
         var text = $"""
@@ -477,11 +491,19 @@ public sealed class NewsletterService : INewsletterService
         }
 
         var sent = 0;
+        var eligible = 0;
         foreach (var subscriber in dailySubscribers)
         {
             var selectedSections = subscriber.DailySections
                 .Where(section => itemsBySection.ContainsKey(section))
                 .ToList();
+
+            if (selectedSections.Count == 0)
+            {
+                continue; // No news for any of this subscriber's sections today — skip email
+            }
+
+            eligible++;
             selectedSections = OrderSectionsByWebsiteOrder(selectedSections);
 
             var html = BuildDailyOverviewHtml(day, selectedSections, itemsBySection, subscriber.Email);
@@ -492,12 +514,12 @@ public sealed class NewsletterService : INewsletterService
             }
         }
 
-        var sendStatus = sent == dailySubscribers.Count ? "sent" : sent > 0 ? "partial" : "failed";
-        var sendError = sent == dailySubscribers.Count
+        var sendStatus = eligible == 0 || sent == eligible ? "sent" : sent > 0 ? "partial" : "failed";
+        var sendError = eligible == 0 || sent == eligible
             ? null
             : sent > 0
-                ? $"Delivered to {sent} of {dailySubscribers.Count} subscribers"
-                : "Delivery failed for all subscribers";
+                ? $"Delivered to {sent} of {eligible} eligible subscribers"
+                : "Delivery failed for all eligible subscribers";
         await _subscriberRepository.LogSendAsync(SendKind, targetKey, sent, sendStatus, sendError, ct);
         return sent > 0;
     }
@@ -543,11 +565,11 @@ public sealed class NewsletterService : INewsletterService
               <meta charset="utf-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </head>
-            <body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
-              <h2>Confirm your TechHub newsletter subscription</h2>
+            <body style="font-family:Segoe UI,Arial,sans-serif;color:#c9d1d9;background:#161b22;">
+              <h2 style="color:#f0f6fc;">Confirm your TechHub newsletter subscription</h2>
               <p>Click the button below to confirm your subscription. If you did not sign up, you can safely ignore this email.</p>
-              <p><a href="{WebUtility.HtmlEncode(confirmUrl)}" style="display:inline-block;padding:10px 20px;background:#7c3aed;color:#fff;text-decoration:none;border-radius:6px;">Confirm subscription</a></p>
-              <p style="color:#6b7280;font-size:0.875rem;">Or copy this link into your browser:<br>{WebUtility.HtmlEncode(confirmUrl)}</p>
+              <p><a href="{WebUtility.HtmlEncode(confirmUrl)}" style="display:inline-block;padding:10px 20px;background:#7f56d9;color:#fff;text-decoration:none;border-radius:6px;">Confirm subscription</a></p>
+              <p style="color:#8b949e;font-size:0.875rem;">Or copy this link into your browser:<br>{WebUtility.HtmlEncode(confirmUrl)}</p>
             </body></html>
             """;
         var text = $"""
@@ -768,10 +790,11 @@ public sealed class NewsletterService : INewsletterService
         foreach (var header in headers)
         {
             var href = $"{baseRoundupUrl}#{RoundupContentBuilder.BuildAnchor(header)}";
-            sb.Append("<li style=\"margin:0 0 8px 0;\">");
-            sb.Append($"<a href=\"{WebUtility.HtmlEncode(href)}\" style=\"color:#2563eb;text-decoration:none;\">");
+            sb.Append("<li style=\"margin:0 0 8px 0;color:#c9d1d9;\">");
+            sb.Append($"<a href=\"{WebUtility.HtmlEncode(href)}\" style=\"color:#9d72d9;text-decoration:none;\">");
             sb.Append(WebUtility.HtmlEncode(header));
             sb.Append("</a></li>");
+
         }
 
         sb.Append("</ul>");
@@ -809,16 +832,16 @@ public sealed class NewsletterService : INewsletterService
               <meta charset="utf-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </head>
-            <body style="margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
+            <body style="margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif;color:#c9d1d9;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
                 <tr>
-                  <td align="center">
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:900px;background:#ffffff;border-radius:12px;overflow:hidden;">
+                  <td align="center" style="padding:20px 8px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:900px;background:#161b22;border-radius:12px;overflow:hidden;border:1px solid #30363d;">
                       <tr>
-                        <td style="background:#111827;color:#ffffff;padding:20px 28px;font-size:20px;font-weight:700;">TechHub Weekly Digest</td>
+                        <td style="background:#252538;color:#f0f6fc;padding:20px 28px;font-size:20px;font-weight:700;border-bottom:3px solid #7f56d9;">TechHub Weekly Digest</td>
                       </tr>
                       <tr>
-                        <td style="padding:28px;">
+                        <td style="padding:28px;background-color:#161b22;">
             """);
 
         for (var i = 0; i < roundups.Count; i++)
@@ -830,28 +853,28 @@ public sealed class NewsletterService : INewsletterService
 
             if (i > 0)
             {
-                sb.Append("<hr style=\"border:none;border-top:1px solid #e5e7eb;margin:28px 0;\" />");
+                sb.Append("<hr style=\"border:none;border-top:1px solid #30363d;margin:28px 0;\" />");
             }
 
             sb.Append(CultureInfo.InvariantCulture, $"""
                 <div>
-                  <p style="margin:0 0 4px 0;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#6b7280;">{WebUtility.HtmlEncode(sectionTitle)}</p>
-                  <h2 style="margin:0 0 12px 0;font-size:22px;color:#111827;">{WebUtility.HtmlEncode(roundup.Title)}</h2>
-                  <p style="margin:0 0 16px 0;line-height:1.6;color:#374151;">{WebUtility.HtmlEncode(roundup.Introduction)}</p>
-                  <h3 style="margin:0 0 8px 0;font-size:15px;color:#111827;">📑 In this roundup</h3>
+                  <p style="margin:0 0 4px 0;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#8b949e;">{WebUtility.HtmlEncode(sectionTitle)}</p>
+                  <h2 style="margin:0 0 12px 0;font-size:22px;color:#f0f6fc;">{WebUtility.HtmlEncode(roundup.Title)}</h2>
+                  <p style="margin:0 0 16px 0;line-height:1.6;color:#c9d1d9;">{WebUtility.HtmlEncode(roundup.Introduction)}</p>
+                  <h3 style="margin:0 0 8px 0;font-size:15px;color:#f0f6fc;">📑 In this roundup</h3>
                   <div style="margin:0 0 16px 0;">{sectionLinksHtml}</div>
                   <p style="margin:0;">
-                    <a href="{WebUtility.HtmlEncode(fullRoundupUrl)}" style="display:inline-block;background:#111827;color:#ffffff;text-decoration:none;padding:10px 14px;border-radius:8px;font-size:14px;">Read the full {WebUtility.HtmlEncode(sectionTitle)} roundup →</a>
+                    <a href="{WebUtility.HtmlEncode(fullRoundupUrl)}" style="display:inline-block;background:#7f56d9;color:#ffffff;text-decoration:none;padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;">Read the full {WebUtility.HtmlEncode(sectionTitle)} roundup →</a>
                   </p>
                 </div>
                 """);
         }
 
         sb.Append(CultureInfo.InvariantCulture, $"""
-                          <p style="margin:28px 0 0 0;font-size:12px;color:#6b7280;border-top:1px solid #e5e7eb;padding-top:20px;">
+                          <p style="margin:28px 0 0 0;font-size:12px;color:#8b949e;border-top:1px solid #30363d;padding-top:20px;">
                             You received this because you subscribed to TechHub newsletters.<br />
-                            <a href="{WebUtility.HtmlEncode(manageUrl)}" style="color:#2563eb;">Manage subscription</a> &nbsp;·&nbsp;
-                            <a href="{WebUtility.HtmlEncode(unsubscribeUrl)}" style="color:#2563eb;">Unsubscribe</a>
+                            <a href="{WebUtility.HtmlEncode(manageUrl)}" style="color:#9d72d9;">Manage subscription</a> &nbsp;·&nbsp;
+                            <a href="{WebUtility.HtmlEncode(unsubscribeUrl)}" style="color:#9d72d9;">Unsubscribe</a>
                           </p>
                         </td>
                       </tr>
@@ -944,54 +967,46 @@ public sealed class NewsletterService : INewsletterService
               <meta charset="utf-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </head>
-            <body style="margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
+            <body style="margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif;color:#c9d1d9;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
                 <tr>
-                  <td align="center">
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:1100px;background:#ffffff;border-radius:12px;overflow:hidden;">
+                  <td align="center" style="padding:20px 8px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:1100px;background:#161b22;border-radius:12px;overflow:hidden;border:1px solid #30363d;">
                       <tr>
-                        <td style="background:#111827;color:#ffffff;padding:20px 28px;font-size:20px;font-weight:700;">TechHub Daily Overview</td>
+                        <td style="background:#252538;color:#f0f6fc;padding:20px 28px;font-size:20px;font-weight:700;border-bottom:3px solid #7f56d9;">TechHub Daily Overview</td>
                       </tr>
                       <tr>
-                        <td style="padding:28px;">
-                          <p style="margin:0 0 20px 0;font-size:15px;color:#6b7280;">{day:yyyy-MM-dd}</p>
+                        <td style="padding:28px;background-color:#161b22;">
+                          <p style="margin:0 0 20px 0;font-size:15px;color:#8b949e;">{day:yyyy-MM-dd}</p>
             """);
 
-        if (sections.Count == 0)
+        foreach (var section in sections)
         {
-            sb.Append("<p style=\"color:#374151;\">No daily subscriptions are active.</p>");
-        }
-        else
-        {
-            foreach (var section in sections)
+            var items = itemsBySection.TryGetValue(section, out var rows) ? rows : [];
+            if (items.Count == 0)
             {
-                var items = itemsBySection.TryGetValue(section, out var rows) ? rows : [];
-                sb.Append($"<h3 style=\"margin:20px 0 8px 0;font-size:18px;font-weight:700;color:#111827;\">{WebUtility.HtmlEncode(GetSectionTitle(section))}</h3>");
-                if (items.Count == 0)
-                {
-                    sb.Append("<p style=\"margin:0 0 8px 0;color:#6b7280;\">No new content items in the last 24 hours.</p>");
-                    continue;
-                }
-
-                sb.Append("<ul style=\"margin:0 0 8px 0;padding-left:20px;\">");
-                foreach (var item in items)
-                {
-                    var filteredUrl = BuildAbsoluteUrl($"/{section}/all?types={Uri.EscapeDataString(item.CollectionName)}&search={Uri.EscapeDataString(item.Title)}&from={day:yyyy-MM-dd}&to={day:yyyy-MM-dd}");
-                    sb.Append("<li style=\"margin-bottom:6px;font-size:16px;line-height:1.5;\">");
-                    sb.Append($"<a href=\"{WebUtility.HtmlEncode(filteredUrl)}\" style=\"color:#2563eb;text-decoration:none;\">{WebUtility.HtmlEncode(item.Title)}</a>");
-                    sb.Append($" <span style=\"color:#6b7280;font-size:14px;\">({WebUtility.HtmlEncode(item.CollectionName)})</span>");
-                    sb.Append("</li>");
-                }
-
-                sb.Append("</ul>");
+                continue; // Section has no news today — skip it
             }
+
+            sb.Append($"<h3 style=\"margin:20px 0 8px 0;font-size:18px;font-weight:700;color:#f0f6fc;\">{WebUtility.HtmlEncode(GetSectionTitle(section))}</h3>");
+            sb.Append("<ul style=\"margin:0 0 8px 0;padding-left:20px;\">");
+            foreach (var item in items)
+            {
+                var filteredUrl = BuildAbsoluteUrl($"/{section}/all?search={Uri.EscapeDataString(item.Title)}&exact=true");
+                sb.Append("<li style=\"margin-bottom:6px;font-size:16px;line-height:1.5;\">");
+                sb.Append($"<a href=\"{WebUtility.HtmlEncode(filteredUrl)}\" style=\"color:#9d72d9;text-decoration:none;\">{WebUtility.HtmlEncode(item.Title)}</a>");
+                sb.Append($" <span style=\"color:#8b949e;font-size:14px;\">({WebUtility.HtmlEncode(item.CollectionName)})</span>");
+                sb.Append("</li>");
+            }
+
+            sb.Append("</ul>");
         }
 
         sb.Append($"""
-                          <p style="margin:28px 0 0 0;font-size:12px;color:#6b7280;border-top:1px solid #e5e7eb;padding-top:20px;">
+                          <p style="margin:28px 0 0 0;font-size:12px;color:#8b949e;border-top:1px solid #30363d;padding-top:20px;">
                             You received this because you subscribed to TechHub newsletters.<br />
-                            <a href="{WebUtility.HtmlEncode(manageUrl)}" style="color:#2563eb;">Manage subscription</a> &nbsp;·&nbsp;
-                            <a href="{WebUtility.HtmlEncode(unsubscribeUrl)}" style="color:#2563eb;">Unsubscribe</a>
+                            <a href="{WebUtility.HtmlEncode(manageUrl)}" style="color:#9d72d9;">Manage subscription</a> &nbsp;·&nbsp;
+                            <a href="{WebUtility.HtmlEncode(unsubscribeUrl)}" style="color:#9d72d9;">Unsubscribe</a>
                           </p>
                         </td>
                       </tr>
@@ -1017,20 +1032,18 @@ public sealed class NewsletterService : INewsletterService
 
         foreach (var section in sections)
         {
-            sb.AppendLine(GetSectionTitle(section));
             var items = itemsBySection.TryGetValue(section, out var rows) ? rows : [];
             if (items.Count == 0)
             {
-                sb.AppendLine("- No new content items");
+                continue; // Section has no news today — skip it
             }
-            else
+
+            sb.AppendLine(GetSectionTitle(section));
+            foreach (var item in items)
             {
-                foreach (var item in items)
-                {
-                    var filteredUrl = BuildAbsoluteUrl($"/{section}/all?types={Uri.EscapeDataString(item.CollectionName)}&search={Uri.EscapeDataString(item.Title)}&from={day:yyyy-MM-dd}&to={day:yyyy-MM-dd}");
-                    sb.AppendLine($"- {item.Title} ({item.CollectionName})");
-                    sb.AppendLine($"  {filteredUrl}");
-                }
+                var filteredUrl = BuildAbsoluteUrl($"/{section}/all?search={Uri.EscapeDataString(item.Title)}&exact=true");
+                sb.AppendLine($"- {item.Title} ({item.CollectionName})");
+                sb.AppendLine($"  {filteredUrl}");
             }
 
             sb.AppendLine();
@@ -1043,8 +1056,8 @@ public sealed class NewsletterService : INewsletterService
 
     private static string BuildAdminStatusHtml(DateOnly day, NewsletterDailyReportStats stats) =>
         $"""
-        <html><body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2937;">
-          <h2>TechHub Daily Status Report — {day:yyyy-MM-dd}</h2>
+        <html><body style="font-family:Segoe UI,Arial,sans-serif;color:#c9d1d9;background:#161b22;">
+          <h2 style="color:#f0f6fc;">TechHub Daily Status Report — {day:yyyy-MM-dd}</h2>
           <ul>
             <li>New content items (24h): {stats.NewContentItemsLast24Hours}</li>
             <li>Failed processed URLs (24h): {stats.FailedProcessedUrlsLast24Hours}</li>

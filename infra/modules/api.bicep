@@ -75,11 +75,16 @@ var corsEnvVars = [for (fqdn, i) in webFqdns: {
 }]
 var backgroundJobEnvVars = enableBackgroundJobs ? [] : [
   {
+    // PR preview: override back to false since appsettings.Production.json enables these
     name: 'ContentProcessor__Enabled'
     value: 'false'
   }
   {
     name: 'RoundupGenerator__Enabled'
+    value: 'false'
+  }
+  {
+    name: 'Newsletter__ScheduledSendEnabled'
     value: 'false'
   }
 ]

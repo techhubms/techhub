@@ -264,6 +264,7 @@ public static class ContentEndpoints
         [FromQuery] string? from = null,
         [FromQuery] string? to = null,
         [FromQuery] string? types = null,
+        [FromQuery] bool exact = false,
         CancellationToken cancellationToken = default)
     {
         sectionName = sectionName.Sanitize();
@@ -360,9 +361,10 @@ public static class ContentEndpoints
             (dateFrom, dateTo) = (dateTo, dateFrom);
         }
 
-        // Build collections array - when "all" and types specified, filter to specific collection types
+        // Build collections array - when "all" and types specified, filter to specific collection types.
+        // When exact=true, types are ignored (exact match covers all collections).
         string[] collectionsArray;
-        if (isAllCollection && !string.IsNullOrWhiteSpace(types))
+        if (!exact && isAllCollection && !string.IsNullOrWhiteSpace(types))
         {
             // Validate types against section's actual non-custom collections
             var validCollectionNames = section.Collections
@@ -384,7 +386,8 @@ public static class ContentEndpoints
             collectionsArray = new[] { collectionName };
         }
 
-        // Build search request - repository will handle "all" as no filter
+        // Build search request - repository will handle "all" as no filter.
+        // When exact=true, skip date filters (exact match is purely title-based).
         var request = new SearchRequest(
             take: limit,
             skip: offset,
@@ -392,8 +395,9 @@ public static class ContentEndpoints
             sections: new[] { section.Name },
             collections: collectionsArray,
             tags: parsedTags ?? Array.Empty<string>(),
-            dateFrom: dateFrom,
-            dateTo: dateTo
+            dateFrom: exact ? null : dateFrom,
+            dateTo: exact ? null : dateTo,
+            exactTitleMatch: exact
         );
 
         var content = await contentRepository.SearchAsync(request, cancellationToken);

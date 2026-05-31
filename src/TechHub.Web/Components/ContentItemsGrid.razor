@@ -123,6 +123,13 @@
     public string? AuthorName { get; set; }
 
     /// <summary>
+    /// When true, performs exact title match (ILIKE) instead of full-text search.
+    /// Used when navigating from newsletter links to show precisely the linked article.
+    /// </summary>
+    [Parameter]
+    public bool ExactMatch { get; set; }
+
+    /// <summary>
     /// When set, overrides the default page heading.
     /// </summary>
     [Parameter]
@@ -146,6 +153,7 @@
     private string? previousToDate;
     private string? previousAuthorName;
     private string? previousContentTypes;
+    private bool previousExactMatch;
 
 
     // State persistence (prevents double-fetch during prerender -> interactive transition)
@@ -223,7 +231,8 @@
         var typesKey = !string.IsNullOrEmpty(ContentTypes)
             ? $"_types_{ContentTypes.Sanitize()}"
             : "";
-        return $"ContentItemsGrid_{SectionName.Sanitize()}_{CollectionName.Sanitize()}{tagsKey}{searchKey}{dateKey}{authorKey}{typesKey}";
+        var exactKey = ExactMatch ? "_exact" : "";
+        return $"ContentItemsGrid_{SectionName.Sanitize()}_{CollectionName.Sanitize()}{tagsKey}{searchKey}{dateKey}{authorKey}{typesKey}{exactKey}";
     }
 
     private Task PersistState()
@@ -263,13 +272,15 @@
         var searchChanged = SearchQuery != previousSearchQuery;
         var datesChanged = FromDate != previousFromDate || ToDate != previousToDate;
         var typesChanged = ContentTypes != previousContentTypes;
-        if (tagsChanged || searchChanged || datesChanged || typesChanged)
+        var exactChanged = ExactMatch != previousExactMatch;
+        if (tagsChanged || searchChanged || datesChanged || typesChanged || exactChanged)
         {
             previousFilterTags = FilterTags?.ToList();
             previousSearchQuery = SearchQuery;
             previousFromDate = FromDate;
             previousToDate = ToDate;
             previousContentTypes = ContentTypes;
+            previousExactMatch = ExactMatch;
             // Filters changed - reload data from API with new filters
             await LoadInitialBatch();
         }
@@ -324,7 +335,8 @@
                 tags: tagsParam,
                 fromDate: FromDate,
                 toDate: ToDate,
-                types: ContentTypes);
+                types: ContentTypes,
+                exact: ExactMatch);
 
         var newItems = result?.Items.ToList() ?? [];
 

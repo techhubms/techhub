@@ -69,6 +69,7 @@ public class HomeTests : BunitContext
             .Setup(x => x.GetCollectionItemsAsync(
                 "all", "all",
                 1, null, null, null, null, null, null, null,
+                It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CollectionItemsResponse([], 1337));
 
@@ -76,6 +77,7 @@ public class HomeTests : BunitContext
             .Setup(x => x.GetCollectionItemsAsync(
                 "all", "all",
                 1, null, null, null, null, It.IsNotNull<string>(), null, null,
+                It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CollectionItemsResponse([], 42));
 
@@ -120,6 +122,7 @@ public class HomeTests : BunitContext
             .Setup(x => x.GetCollectionItemsAsync(
                 "all", "all",
                 1, null, null, null, null, It.IsNotNull<string>(), null, null,
+                It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CollectionItemsResponse([], 0));
 
@@ -165,6 +168,7 @@ public class HomeTests : BunitContext
             .Setup(x => x.GetCollectionItemsAsync(
                 "all", "all",
                 1, null, null, null, null, null, null, null,
+                It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CollectionItemsResponse([], 12345));
 
@@ -202,6 +206,7 @@ public class HomeTests : BunitContext
             .Setup(x => x.GetCollectionItemsAsync(
                 "all", "all",
                 1, null, null, null, null, null, null, null,
+                It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync((CollectionItemsResponse?)null);
 
@@ -209,6 +214,7 @@ public class HomeTests : BunitContext
             .Setup(x => x.GetCollectionItemsAsync(
                 "all", "all",
                 1, null, null, null, 7, null, null, null,
+                It.IsAny<bool>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync((CollectionItemsResponse?)null);
 

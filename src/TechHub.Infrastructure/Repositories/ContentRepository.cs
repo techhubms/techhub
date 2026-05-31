@@ -1086,13 +1086,22 @@ public sealed class ContentRepository : IContentRepository
         var parameters = new DynamicParameters();
 
         var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
-        // Transform upfront — returns empty string when no tokenizable terms survive
-        // (e.g., "C#", "!", "#" produce no usable tokens after operator/single-char stripping).
-        // Treat an empty result as no query so callers skip FTS and avoid a to_tsquery syntax error.
-        var transformedQuery = hasQuery ? Dialect.TransformFullTextQuery(request.Query!) : null;
-        if (string.IsNullOrEmpty(transformedQuery))
+        // When ExactTitleMatch is requested, skip FTS transformation entirely — use ILIKE on title directly.
+        string? transformedQuery;
+        if (request.ExactTitleMatch)
         {
-            hasQuery = false;
+            transformedQuery = null; // FTS path is bypassed; raw query used for ILIKE below
+        }
+        else
+        {
+            // Transform upfront — returns empty string when no tokenizable terms survive
+            // (e.g., "C#", "!", "#" produce no usable tokens after operator/single-char stripping).
+            // Treat an empty result as no query so callers skip FTS and avoid a to_tsquery syntax error.
+            transformedQuery = hasQuery ? Dialect.TransformFullTextQuery(request.Query!) : null;
+            if (string.IsNullOrEmpty(transformedQuery))
+            {
+                hasQuery = false;
+            }
         }
 
         var hasTags = request.Tags != null && request.Tags.Count > 0;
@@ -1170,7 +1179,7 @@ public sealed class ContentRepository : IContentRepository
             SELECT {ListViewColumns}
             FROM content_items c");
 
-            if (hasQuery)
+            if (hasQuery && !request.ExactTitleMatch)
             {
                 var ftsJoin = Dialect.GetFullTextJoinClause();
                 if (!string.IsNullOrEmpty(ftsJoin))
@@ -1185,8 +1194,17 @@ public sealed class ContentRepository : IContentRepository
 
             if (hasQuery)
             {
-                whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
-                parameters.Add("query", transformedQuery!);
+                if (request.ExactTitleMatch)
+                {
+                    // Exact title match: simple case-insensitive ILIKE on title, no FTS ranking
+                    whereClauses.Add("c.title ILIKE @titleSearch");
+                    parameters.Add("titleSearch", $"%{request.Query}%");
+                }
+                else
+                {
+                    whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
+                    parameters.Add("query", transformedQuery!);
+                }
             }
 
             if (hasSections)
@@ -1245,8 +1263,9 @@ public sealed class ContentRepository : IContentRepository
             }
 
             // When a search query is provided, order by relevance (ts_rank) first, then date
-            // This ensures title matches rank higher than content-only matches
-            if (hasQuery)
+            // This ensures title matches rank higher than content-only matches.
+            // ExactTitleMatch uses ILIKE (no FTS rank), so always sort by date.
+            if (hasQuery && !request.ExactTitleMatch)
             {
                 sql.Append(CultureInfo.InvariantCulture, $" ORDER BY {Dialect.GetFullTextOrderByClause("query")}, c.date_epoch DESC");
             }
@@ -1352,7 +1371,7 @@ public sealed class ContentRepository : IContentRepository
         // Standard count query
         var countSql = new StringBuilder($"SELECT COUNT(*) FROM content_items c");
 
-        if (hasQuery)
+        if (hasQuery && !request.ExactTitleMatch)
         {
             var ftsJoin = Dialect.GetFullTextJoinClause();
             if (!string.IsNullOrEmpty(ftsJoin))
@@ -1365,7 +1384,15 @@ public sealed class ContentRepository : IContentRepository
 
         if (hasQuery)
         {
-            whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
+            if (request.ExactTitleMatch)
+            {
+                whereClauses.Add("c.title ILIKE @titleSearch");
+                // @titleSearch parameter already added by SearchInternalAsync
+            }
+            else
+            {
+                whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
+            }
         }
 
         if (hasSections)

@@ -13,6 +13,7 @@ public class SearchRequest
     public DateTimeOffset? DateFrom { get; }
     public DateTimeOffset? DateTo { get; }
     public bool UseSemanticSearch { get; }
+    public bool ExactTitleMatch { get; }
     public int Take { get; }
     public int Skip { get; }
     public string OrderBy { get; }
@@ -30,6 +31,7 @@ public class SearchRequest
         DateTimeOffset? dateFrom = null,
         DateTimeOffset? dateTo = null,
         bool useSemanticSearch = false,
+        bool exactTitleMatch = false,
         string orderBy = "date_desc",
         string? continuationToken = null,
         bool includeFacets = false)
@@ -89,6 +91,7 @@ public class SearchRequest
         DateFrom = dateFrom;
         DateTo = dateTo;
         UseSemanticSearch = useSemanticSearch;
+        ExactTitleMatch = exactTitleMatch;
         OrderBy = orderBy;
         ContinuationToken = continuationToken;
         IncludeFacets = includeFacets;
@@ -145,6 +148,11 @@ public class SearchRequest
 
         sb.Append("|take:").Append(Take);
         sb.Append("|skip:").Append(Skip);
+
+        if (ExactTitleMatch)
+        {
+            sb.Append("|exact");
+        }
 
         if (!string.IsNullOrWhiteSpace(ContinuationToken))
         {
