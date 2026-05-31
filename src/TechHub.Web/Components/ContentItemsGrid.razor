@@ -178,6 +178,7 @@
         previousToDate = ToDate;
         previousAuthorName = AuthorName;
         previousContentTypes = ContentTypes;
+        previousExactMatch = ExactMatch;
 
         // Register for state persistence (called during prerender to save state)
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
