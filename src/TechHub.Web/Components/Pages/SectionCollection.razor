@@ -40,7 +40,8 @@
         </MobileSidebarPanel>
         }
         <MobileSidebarPanel Label="Search" Icon="search" HasActiveFilter="@(!string.IsNullOrWhiteSpace(searchQuery))">
-        <SidebarSearch SearchQuery="@searchQuery" OnSearchQueryChanged="HandleSearchQueryChanged" />
+        <SidebarSearch SearchQuery="@searchQuery" OnSearchQueryChanged="HandleSearchQueryChanged"
+            ExactMatch="@isExactMatch" OnExactMatchChanged="HandleExactMatchChanged" />
         </MobileSidebarPanel>
         <MobileSidebarPanel Label="Date" Icon="calendar" HasActiveFilter="@(fromDate != null || toDate != null)">
         <DateRangeSlider FromDate="@fromDate" ToDate="@toDate"
@@ -378,6 +379,12 @@
         }
 
         searchQuery = query;
+        UpdateUrl();
+    }
+
+    private void HandleExactMatchChanged(bool isExact)
+    {
+        isExactMatch = isExact;
         UpdateUrl();
     }
 

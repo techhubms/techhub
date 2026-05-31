@@ -2002,22 +2002,23 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
         result.Should().NotBeNull();
-        result!.Items.Should().NotBeEmpty("exact title match should find the item");
+        result!.Items.Should().NotBeEmpty("exact phrase match should find the item");
         result.Items.Should().AllSatisfy(item =>
         {
-            item.Title.Should().Be(ExactTitle, "exact match should only return items with this title");
+            item.Title.Should().ContainEquivalentOf(ExactTitle, "all returned items must contain the exact phrase");
         });
     }
 
     [Fact]
-    public async Task GetCollectionItems_WithExactTrue_DoesNotMatchSubstrings()
+    public async Task GetCollectionItems_WithExactTrue_MatchesByPhrase()
     {
-        // Arrange - Use just part of a known title; should not match via substring
-        const string Substring = "Specific News Item"; // partial title of "Specific News Item for Collection Test"
+        // Arrange - Use part of a known title: "Specific News Item" is contained in
+        // "Specific News Item for Collection Test", so it SHOULD match (phrase containment).
+        const string Phrase = "Specific News Item";
 
-        // Act - exact=true means ILIKE without wildcards, so partial title should NOT match
+        // Act
         var response = await _client.GetAsync(
-            $"/api/sections/ai/collections/all/items?q={Uri.EscapeDataString(Substring)}&exact=true",
+            $"/api/sections/ai/collections/all/items?q={Uri.EscapeDataString(Phrase)}&exact=true",
             TestContext.Current.CancellationToken);
 
         // Assert
@@ -2026,10 +2027,17 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
         result.Should().NotBeNull();
 
-        // None of the returned items should have a title that only contains our substring but not the full match
-        result!.Items.Should().NotContain(
-            item => item.Title.Equals("Specific News Item for Collection Test", StringComparison.OrdinalIgnoreCase),
-            "exact mode with a partial title should not return the full-title item");
+        // The full-title item must appear because it contains the phrase
+        result!.Items.Should().Contain(
+            item => item.Title.Contains(Phrase, StringComparison.OrdinalIgnoreCase),
+            "exact phrase match should return items whose title contains the search phrase");
+
+        // Every returned item must contain the phrase in its title
+        result.Items.Should().AllSatisfy(item =>
+        {
+            item.Title.Should().ContainEquivalentOf(Phrase,
+                "exact phrase mode only returns items whose title contains the entire query phrase");
+        });
     }
 
     [Fact]

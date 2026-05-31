@@ -1196,9 +1196,10 @@ public sealed class ContentRepository : IContentRepository
             {
                 if (request.ExactTitleMatch)
                 {
-                    // Exact title match: case-insensitive equality on title, no FTS ranking
+                    // Exact phrase match: title must contain the entire query as a case-insensitive substring.
+                    // %query% ensures "vscode update" matches "VSCode Update 1.90" but not "vscode tips".
                     whereClauses.Add("c.title ILIKE @titleSearch");
-                    parameters.Add("titleSearch", request.Query);
+                    parameters.Add("titleSearch", $"%{request.Query}%");
                 }
                 else
                 {

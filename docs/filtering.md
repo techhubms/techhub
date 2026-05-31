@@ -34,6 +34,7 @@ This enables auto-complete-style search behavior where users don't need to type 
 - Clear button (X icon) to remove the search query
 - Keyboard support (Escape key clears the search)
 - URL parameter synchronization (`?search=query`)
+- **Exact phrase match checkbox** — visible when a query is entered; activates exact phrase mode (see below)
 
 **Backend**: Full-text search is implemented at the database level:
 
@@ -62,6 +63,7 @@ Search state is preserved in the URL for sharing and bookmarking:
 ?search=copilot                          # Search only
 ?search=copilot&tags=ai                  # Search + tag filter
 ?search=copilot&tags=ai&from=2024-01-01  # Search + tag + date filter
+?search=vscode+update&exact=true         # Exact phrase match
 ```
 
 **Implementation Details**:
@@ -70,6 +72,32 @@ Search state is preserved in the URL for sharing and bookmarking:
 - Empty/removed when search is cleared
 - Combined with `tags`, `from`, `to` parameters
 - Supports browser back/forward navigation
+
+### Exact Phrase Match
+
+When `?exact=true` is present together with a non-empty `?search=` value, the full-text search engine is bypassed and replaced with a case-insensitive **phrase containment** check on the title:
+
+```sql
+WHERE title ILIKE '%<query>%'
+```
+
+- **"vscode update"** matches "VSCode Update 1.90", "The VSCode Update you missed", etc.
+- **"vscode update"** does **not** match "VSCode tips" — "update" is missing from that title.
+- Date, tag, and content-type filters are **ignored** in exact phrase mode.
+- Results are sorted by date (newest first), not by relevance rank.
+
+**Use cases**:
+
+- **Newsletter links** — each daily-update item links back to the website with `?search={title}&exact=true` so the linked page always shows only that item regardless of the current date range.
+- **Sidebar checkbox** — the "Exact title match" checkbox under the search box activates this mode interactively. It appears only when the search field has text. Typing a new query automatically deactivates exact mode.
+
+If `?exact=true` is present but `?search=` is empty or absent, it is ignored and normal filtering applies (including the default date range).
+
+**API parameter**: `exact` (boolean, passed as `true`/`false` string). Example:
+
+```bash
+curl -k "https://localhost:5001/api/sections/ai/collections/all/items?q=vscode+update&exact=true"
+```
 
 ## Tag Storage and Expansion
 
