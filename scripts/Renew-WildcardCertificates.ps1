@@ -12,8 +12,8 @@
 
     Prerequisites:
     - certbot and certbot-dns-azure installed (pip install certbot certbot-dns-azure)
-    - Azure CLI authenticated with access to rg-techhub-shared
-    - ACME DNS zone deployed (acme.hub.ms in rg-techhub-shared)
+    - Azure CLI authenticated with access to rg-techhub-prod
+    - ACME DNS zone deployed (acme.hub.ms in rg-techhub-prod)
     - GoDaddy CNAME records configured (see docs/wildcard-certificates.md)
 
 .PARAMETER KeyVaultName
@@ -51,7 +51,7 @@ param(
     [string]$KeyVaultName = 'kv-techhub-prod',
 
     [Parameter(Mandatory = $false)]
-    [string]$ResourceGroup = 'rg-techhub-shared',
+    [string]$ResourceGroup = 'rg-techhub-prod',
 
     [Parameter(Mandatory = $false)]
     [string]$AcmeDnsZone = 'acme.hub.ms',
@@ -147,7 +147,7 @@ Write-Ok "certbot-dns-azure plugin found"
 az network dns zone show --resource-group $ResourceGroup --name $AcmeDnsZone -o json 2>&1 | Out-Null
 if ($LASTEXITCODE -ne 0) {
     Write-Fail "DNS zone '$AcmeDnsZone' not found in resource group '$ResourceGroup'."
-    Write-Detail "Deploy shared infrastructure first: ./scripts/Deploy-Infrastructure.ps1 -Environment shared -Mode deploy"
+    Write-Detail "Deploy infrastructure first: ./scripts/Deploy-Infrastructure.ps1 -Mode deploy"
     exit 1
 }
 Write-Ok "ACME DNS zone '$AcmeDnsZone' exists"

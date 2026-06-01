@@ -45,7 +45,22 @@ public sealed class AcsEmailSender : IEmailSender
             },
             recipients: new EmailRecipients([new EmailAddress(recipientEmail)]));
 
-        var operation = await _emailClient.SendAsync(WaitUntil.Completed, emailMessage, ct);
+        EmailSendOperation operation;
+        try
+        {
+            operation = await _emailClient.SendAsync(WaitUntil.Completed, emailMessage, ct);
+        }
+        catch (RequestFailedException ex) when (ex.Status == 429)
+        {
+            _logger.LogWarning(ex, "Newsletter email send rate-limited by ACS (429). Email to {RecipientEmail} was not sent", recipientEmail);
+            return false;
+        }
+        catch (RequestFailedException ex)
+        {
+            _logger.LogError(ex, "Newsletter email send failed with ACS error {Status} for {RecipientEmail}", ex.Status, recipientEmail);
+            return false;
+        }
+
         if (operation.Value.Status != EmailSendStatus.Succeeded)
         {
             _logger.LogWarning("Newsletter email delivery completed with non-success status {Status}", operation.Value.Status);

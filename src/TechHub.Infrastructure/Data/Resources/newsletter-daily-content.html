@@ -1,0 +1,13 @@
+<p class="th-date" style="margin:0 0 20px 0;font-size:15px;color:#4a5568;font-weight:500;text-decoration:underline;">{{date}}</p>
+{{#each sections}}
+<h3 class="th-section-heading">{{title}}</h3>
+<ul class="th-item-list">
+  {{#each items}}
+  <li class="th-item">
+    <a href="{{url}}" class="th-link" style="color:#6535c7;text-decoration:none;font-weight:500;">{{title}}</a>
+    <span class="th-muted">({{collectionName}})</span>
+  </li>
+  {{/each}}
+</ul>
+{{/each}}
+{{{footer}}}

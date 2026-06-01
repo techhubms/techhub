@@ -25,9 +25,15 @@ var builder = WebApplication.CreateBuilder(args);
 // WebTelemetryFilters suppresses Blazor disconnect noise and bot-crawler 404s from traces.
 // SuppressIfClientError clears ActivityTraceFlags.Recorded for 4xx responses so they are
 // not exported to App Insights and do not inflate the requests/failed metric.
+// additionalActivityProcessor: suppresses failed ComponentHub/UpdateRootComponents activities
+// (Blazor Server push to disconnected circuits, success=false resultCode=0 in App Insights).
+// CA2000 suppressed: TracerProviderBuilder.AddProcessor takes ownership and disposes the processor.
+#pragma warning disable CA2000 // Dispose objects before losing scope
 builder.AddServiceDefaults(
     additionalTraceFilter: WebTelemetryFilters.ShouldTrace,
-    additionalResponseEnricher: WebTelemetryFilters.SuppressIfClientError);
+    additionalResponseEnricher: WebTelemetryFilters.SuppressIfClientError,
+    additionalActivityProcessor: new BlazorHubNoiseSuppressor());
+#pragma warning restore CA2000 // Dispose objects before losing scope
 
 // Log environment during startup for verification
 using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
@@ -461,34 +467,15 @@ app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProv
 // reach the auth stack or endpoint selection.
 app.UseInvalidRouteSegmentFilter();
 
-// ── HEAD → GET rewrite (must be immediately before UseRouting) ────────────────
-// MapRazorComponents and MapGet only register GET endpoints. In WebApplication,
-// UseRouting() is auto-inserted at the start of the pipeline (before user middleware),
-// so it sees the original HEAD method and returns 405. To fix this, we place an
-// explicit app.UseRouting() AFTER the rewrite so routing happens after the method
-// is already GET. The body is suppressed via Stream.Null so HEAD responses are empty.
-app.Use(async (context, next) =>
-{
-    if (HttpMethods.IsHead(context.Request.Method))
-    {
-        context.Request.Method = HttpMethods.Get;
-        var originalBody = context.Response.Body;
-        context.Response.Body = Stream.Null;
-        try
-        {
-            await next();
-        }
-        finally
-        {
-            context.Response.Body = originalBody;
-            context.Request.Method = HttpMethods.Head;
-        }
-    }
-    else
-    {
-        await next();
-    }
-});
+// ── HEAD request handling (must be immediately before UseRouting) ───────────────
+// Extension-less HEAD requests (Blazor page routes) are short-circuited with 200 OK
+// before Blazor SSR runs. SSR triggers an API call; when the API is slow, bots and
+// crawlers disconnect after their timeout and generate 499s with ~23 s duration.
+// File-extension HEAD requests (static assets, RSS) are rewritten to GET with
+// Stream.Null to suppress the body — MapStaticAssets then serves correct headers.
+// UseRouting() is placed explicitly after this middleware so endpoint selection sees
+// GET rather than HEAD (MapRazorComponents only registers GET endpoints).
+app.UseHeadRequestHandling();
 
 // Explicit UseRouting() placement: must come AFTER the HEAD→GET rewrite so that
 // endpoint selection (including HTTP-method matching) sees GET rather than HEAD.

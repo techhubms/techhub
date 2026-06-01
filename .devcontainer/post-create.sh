@@ -144,11 +144,11 @@ fi
 echo "Installing PowerShell modules..."
 pwsh -Command 'Install-Module HtmlToMarkdown -AcceptLicense -Force'
 pwsh -Command 'Install-Module Pester -Force -SkipPublisherCheck -MinimumVersion "5.0.0" -Scope CurrentUser'
-# Az.Accounts + Az.Resources are the only Az sub-modules needed for Deploy-Infrastructure.ps1
-# (New-AzDeployment, Test-AzDeployment, Get-AzContext). Installing just these avoids pulling
-# the full Az bundle (~80 modules).
+# Install only the Az sub-modules required by the deployment scripts.
+# Az.PostgreSql is needed for Get-AzPostgreSqlFlexibleServerFirewallRule in Deploy-Infrastructure.ps1.
 pwsh -Command 'Install-Module Az.Accounts -Force -Scope CurrentUser'
 pwsh -Command 'Install-Module Az.Resources -Force -Scope CurrentUser'
+pwsh -Command 'Install-Module Az.PostgreSql -Force -Scope CurrentUser'
 
 # ==================== PowerShell Profile ====================
 echo "Setting up PowerShell profile..."

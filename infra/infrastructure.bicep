@@ -80,6 +80,12 @@ param emailServiceName string = 'eml-techhub-prod'
 @description('Communication Service name')
 param communicationServiceName string = 'acs-techhub-prod'
 
+@description('Custom email sending domain linked to ACS (e.g. mail.hub.ms). Must be verified in ACS after deploy.')
+param customEmailDomain string = 'mail.hub.ms'
+
+@description('Set to true only after the custom domain DNS records have been added and verified in ACS. Redeploy after verification.')
+param linkEmailDomain bool = false
+
 @description('Common tags applied to all resources managed by this template')
 param commonTags object = {
   owner: 'techhub-maintainer'
@@ -305,6 +311,8 @@ module communication './modules/communication.bicep' = {
   name: 'communication-${deploymentSuffix}'
   params: {
     emailServiceName: emailServiceName
+    customEmailDomain: customEmailDomain
+    linkEmailDomain: linkEmailDomain
     communicationServiceName: communicationServiceName
     tags: prodTags
   }

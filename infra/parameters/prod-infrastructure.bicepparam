@@ -25,3 +25,4 @@ param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES')
 param alertEmailAddress = 'reinier.vanmaanen@xebia.com'
 param monthlyBudgetAmount = 250
 param budgetStartDate = '2026-04-01'
+param linkEmailDomain = true

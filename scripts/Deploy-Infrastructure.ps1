@@ -37,7 +37,10 @@ param(
     [string]$Mode = 'whatif',
 
     [Parameter(Mandatory = $false)]
-    [string]$Location = 'swedencentral'
+    [string]$Location = 'swedencentral',
+
+    [Parameter(Mandatory = $false)]
+    [switch]$LinkEmailDomain
 )
 
 $ErrorActionPreference = "Stop"
@@ -222,18 +225,33 @@ if ($Mode -eq 'deploy') {
     $savedVerbose = $VerbosePreference
     $VerbosePreference = 'Continue'
     try {
-        New-AzDeployment `
-            -Name $deploymentName `
-            -Location $Location `
-            -TemplateFile $infraTemplateFile `
-            -TemplateParameterFile $infraParamsFile `
-            -SkipTemplateParameterPrompt `
-            -OutVariable infraResult | Out-Null
+        $effectiveParamsFile = $infraParamsFile
+        $tempParamsFile = $null
+        if ($LinkEmailDomain) {
+            Write-Warn "LinkEmailDomain is set — domain will be linked to ACS. Only use this after DNS verification."
+            # Write temp file to the same directory so the 'using' relative path remains valid
+            $tempParamsFile = Join-Path (Split-Path $infraParamsFile) "prod-infrastructure-linkdomain.bicepparam"
+            (Get-Content $infraParamsFile -Raw) `
+                -replace 'param linkEmailDomain = false', 'param linkEmailDomain = true' |
+                Set-Content $tempParamsFile
+            $effectiveParamsFile = $tempParamsFile
+        }
+        $deployParams = @{
+            Name = $deploymentName
+            Location = $Location
+            TemplateFile = $infraTemplateFile
+            TemplateParameterFile = $effectiveParamsFile
+            SkipTemplateParameterPrompt = $true
+        }
+        New-AzDeployment @deployParams -OutVariable infraResult | Out-Null
     } catch {
         Write-Fail "Infrastructure deployment failed: $_"
         exit 1
     } finally {
         $VerbosePreference = $savedVerbose
+        if ($tempParamsFile -and (Test-Path $tempParamsFile)) {
+            Remove-Item $tempParamsFile -Force
+        }
     }
     Write-Ok "Base infrastructure deployed successfully"
 

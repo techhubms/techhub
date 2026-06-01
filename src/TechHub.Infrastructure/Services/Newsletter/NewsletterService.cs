@@ -1,11 +1,12 @@
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
-using System.Net;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using Dapper;
+using HandlebarsDotNet;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -27,9 +28,12 @@ public sealed class NewsletterService : INewsletterService
     private readonly AppSettings _appSettings;
     private readonly IEmailSender _emailSender;
     private readonly ILogger<NewsletterService> _logger;
-    private readonly string _weeklyDigestTemplate;
-    private readonly string _dailyOverviewTemplate;
-    private readonly string _adminStatusTemplate;
+    private readonly HandlebarsTemplate<object, object> _shellTemplate;
+    private readonly HandlebarsTemplate<object, object> _subscriberFooterTemplate;
+    private readonly HandlebarsTemplate<object, object> _accountActionTemplate;
+    private readonly HandlebarsTemplate<object, object> _weeklyContentTemplate;
+    private readonly HandlebarsTemplate<object, object> _dailyContentTemplate;
+    private readonly HandlebarsTemplate<object, object> _adminContentTemplate;
 
     public NewsletterService(
         IDbConnection connection,
@@ -38,7 +42,8 @@ public sealed class NewsletterService : INewsletterService
         IOptions<NewsletterOptions> options,
         IOptions<AppSettings> appSettings,
         IEmailSender emailSender,
-        ILogger<NewsletterService> logger)
+        ILogger<NewsletterService> logger,
+        IHostEnvironment env)
     {
         ArgumentNullException.ThrowIfNull(connection);
         ArgumentNullException.ThrowIfNull(subscriberRepository);
@@ -47,6 +52,7 @@ public sealed class NewsletterService : INewsletterService
         ArgumentNullException.ThrowIfNull(appSettings);
         ArgumentNullException.ThrowIfNull(emailSender);
         ArgumentNullException.ThrowIfNull(logger);
+        ArgumentNullException.ThrowIfNull(env);
 
         _connection = connection;
         _subscriberRepository = subscriberRepository;
@@ -55,9 +61,25 @@ public sealed class NewsletterService : INewsletterService
         _appSettings = appSettings.Value;
         _emailSender = emailSender;
         _logger = logger;
-        _weeklyDigestTemplate = LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-weekly-digest-template.html");
-        _dailyOverviewTemplate = LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-daily-overview-template.html");
-        _adminStatusTemplate = LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-admin-status-template.html");
+        if (env.IsDevelopment())
+        {
+            var resourcesPath = Path.GetFullPath(Path.Combine(env.ContentRootPath, "..", "TechHub.Infrastructure", "Data", "Resources"));
+            _shellTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-template.html")));
+            _subscriberFooterTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-subscriber-footer.html")));
+            _accountActionTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-account-action-content.html")));
+            _weeklyContentTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-weekly-content.html")));
+            _dailyContentTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-daily-content.html")));
+            _adminContentTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-admin-content.html")));
+        }
+        else
+        {
+            _shellTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-template.html"));
+            _subscriberFooterTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-subscriber-footer.html"));
+            _accountActionTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-account-action-content.html"));
+            _weeklyContentTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-weekly-content.html"));
+            _dailyContentTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-daily-content.html"));
+            _adminContentTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-admin-content.html"));
+        }
     }
 
     public async Task<bool> SendCombinedWeeklyAsync(IReadOnlyList<string> roundupSlugs, string? sendTargetKey = null, CancellationToken ct = default)
@@ -297,14 +319,11 @@ public sealed class NewsletterService : INewsletterService
         }
 
         var manageUrl = BuildManageUrl(email, secret);
-        var html = $"""
-            <html><body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2328;background:#f6f8fa;">
-              <h2 style="color:#1f1144;">Manage your TechHub newsletter subscription</h2>
-              <p>Click the button below to manage your subscription preferences.</p>
-              <p><a href="{WebUtility.HtmlEncode(manageUrl)}" style="display:inline-block;padding:10px 20px;background:#7f56d9;color:#fff;text-decoration:none;border-radius:6px;">Manage subscription</a></p>
-              <p style="color:#57606a;font-size:0.875rem;">Or copy this link into your browser:<br>{WebUtility.HtmlEncode(manageUrl)}</p>
-            </body></html>
-            """;
+        var html = BuildAccountActionHtml(
+                title: "Manage your TechHub newsletter subscription",
+                message: "Click the button below to manage your subscription preferences.",
+                actionLabel: "Manage subscription",
+                actionUrl: manageUrl);
         var text = $"""
             Manage your TechHub newsletter subscription
 
@@ -465,20 +484,11 @@ public sealed class NewsletterService : INewsletterService
         }
 
         var confirmUrl = BuildConfirmUrl(email);
-        var html = $"""
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-              <meta charset="utf-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            </head>
-            <body style="font-family:Segoe UI,Arial,sans-serif;color:#1f2328;background:#f6f8fa;">
-              <h2 style="color:#1f1144;">Confirm your TechHub newsletter subscription</h2>
-              <p>Click the button below to confirm your subscription. If you did not sign up, you can safely ignore this email.</p>
-              <p><a href="{WebUtility.HtmlEncode(confirmUrl)}" style="display:inline-block;padding:10px 20px;background:#7f56d9;color:#fff;text-decoration:none;border-radius:6px;">Confirm subscription</a></p>
-              <p style="color:#57606a;font-size:0.875rem;">Or copy this link into your browser:<br>{WebUtility.HtmlEncode(confirmUrl)}</p>
-            </body></html>
-            """;
+        var html = BuildAccountActionHtml(
+                title: "Confirm your TechHub newsletter subscription",
+                message: "Click the button below to confirm your subscription. If you did not sign up, you can safely ignore this email.",
+                actionLabel: "Confirm subscription",
+                actionUrl: confirmUrl);
         var text = $"""
             Confirm your TechHub newsletter subscription
 
@@ -682,66 +692,43 @@ public sealed class NewsletterService : INewsletterService
         return result;
     }
 
-    private string BuildSectionLinksHtml(RoundupRow roundup)
+    private IEnumerable<object> GetRoundupLinks(RoundupRow roundup)
     {
-        var headers = roundup.Content
+        var baseRoundupUrl = BuildAbsoluteUrl($"/{roundup.SectionName}/roundups/{roundup.Slug}");
+        return roundup.Content
             .Split('\n', StringSplitOptions.RemoveEmptyEntries)
             .Where(line => line.StartsWith("## ", StringComparison.Ordinal))
             .Select(line => line[3..].Trim())
             .Distinct(StringComparer.OrdinalIgnoreCase)
-            .ToList();
-
-        var baseRoundupUrl = BuildAbsoluteUrl($"/{roundup.SectionName}/roundups/{roundup.Slug}");
-        var sb = new StringBuilder();
-        sb.Append("<ul style=\"padding-left:18px;margin:0;\">");
-        foreach (var header in headers)
-        {
-            var href = $"{baseRoundupUrl}#{RoundupContentBuilder.BuildAnchor(header)}";
-            sb.Append("<li style=\"margin:0 0 8px 0;color:#1f2328;\">");
-            sb.Append($"<a href=\"{WebUtility.HtmlEncode(href)}\" style=\"color:#321873;text-decoration:none;\">");
-            sb.Append(WebUtility.HtmlEncode(header));
-            sb.Append("</a></li>");
-
-        }
-
-        sb.Append("</ul>");
-        return sb.ToString();
+            .Select(header => (object)new
+            {
+                href = $"{baseRoundupUrl}#{RoundupContentBuilder.BuildAnchor(header)}",
+                text = header
+            });
     }
 
     private string RenderCombinedWeeklyHtml(IReadOnlyList<RoundupRow> roundups, string unsubscribeUrl, string manageUrl)
     {
-        var sb = new StringBuilder();
-
-        for (var i = 0; i < roundups.Count; i++)
+        var footer = _subscriberFooterTemplate(new { manageUrl, unsubscribeUrl });
+        var content = _weeklyContentTemplate(new
         {
-            var roundup = roundups[i];
-            var sectionTitle = GetSectionTitle(roundup.SectionName);
-            var fullRoundupUrl = BuildAbsoluteUrl($"/{roundup.SectionName}/roundups/{roundup.Slug}");
-            var sectionLinksHtml = BuildSectionLinksHtml(roundup);
-
-            if (i > 0)
+            roundups = roundups.Select(r => new
             {
-                sb.Append("<hr style=\"border:none;border-top:1px solid #d0d7de;margin:28px 0;\" />");
-            }
-
-            sb.Append(CultureInfo.InvariantCulture, $"""
-                <div>
-                  <p style="margin:0 0 4px 0;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#57606a;">{WebUtility.HtmlEncode(sectionTitle)}</p>
-                  <h2 style="margin:0 0 12px 0;font-size:22px;color:#1f1144;">{WebUtility.HtmlEncode(roundup.Title)}</h2>
-                  <p style="margin:0 0 16px 0;line-height:1.6;color:#1f2328;">{WebUtility.HtmlEncode(roundup.Introduction)}</p>
-                  <h3 style="margin:0 0 8px 0;font-size:15px;color:#1f1144;">📑 In this roundup</h3>
-                  <div style="margin:0 0 16px 0;">{sectionLinksHtml}</div>
-                  <p style="margin:0;">
-                    <a href="{WebUtility.HtmlEncode(fullRoundupUrl)}" style="display:inline-block;background:#7f56d9;color:#ffffff;text-decoration:none;padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;">Read the full {WebUtility.HtmlEncode(sectionTitle)} roundup →</a>
-                  </p>
-                </div>
-                """);
-        }
-
-        return _weeklyDigestTemplate
-            .Replace("{Content}", sb.ToString(), StringComparison.Ordinal)
-            .Replace("{ManageUrl}", WebUtility.HtmlEncode(manageUrl), StringComparison.Ordinal)
-            .Replace("{UnsubscribeUrl}", WebUtility.HtmlEncode(unsubscribeUrl), StringComparison.Ordinal);
+                sectionTitle = GetSectionTitle(r.SectionName),
+                title = StripRoundupPrefix(r.Title),
+                introduction = r.Introduction,
+                roundupUrl = BuildAbsoluteUrl($"/{r.SectionName}/roundups/{r.Slug}"),
+                links = GetRoundupLinks(r)
+            }),
+            footer
+        });
+        return _shellTemplate(new
+        {
+            title = "TechHub Weekly Digest",
+            cardClass = "th-card--weekly",
+            maxWidth = "900px",
+            content
+        });
     }
 
     private string BuildCombinedWeeklyPlainText(IReadOnlyList<RoundupRow> roundups, string unsubscribeUrl, string manageUrl)
@@ -757,7 +744,7 @@ public sealed class NewsletterService : INewsletterService
             var fullRoundupUrl = BuildAbsoluteUrl($"/{roundup.SectionName}/roundups/{roundup.Slug}");
             sb.AppendLine(sectionTitle);
             sb.AppendLine(new string('-', sectionTitle.Length));
-            sb.AppendLine(roundup.Title);
+            sb.AppendLine(StripRoundupPrefix(roundup.Title));
             sb.AppendLine();
             sb.AppendLine(roundup.Introduction);
             sb.AppendLine();
@@ -773,6 +760,12 @@ public sealed class NewsletterService : INewsletterService
 
     private string GetSectionTitle(string slug) =>
         _appSettings.Content.Sections.TryGetValue(slug, out var config) ? config.Title : slug;
+
+    private static string StripRoundupPrefix(string title)
+    {
+        var colonIndex = title.IndexOf(": ", StringComparison.Ordinal);
+        return colonIndex >= 0 ? title[(colonIndex + 2)..] : title;
+    }
 
     private List<string> OrderSectionsByWebsiteOrder(IEnumerable<string> sectionNames)
     {
@@ -813,35 +806,31 @@ public sealed class NewsletterService : INewsletterService
     {
         var unsubscribeUrl = BuildUnsubscribeUrl(email);
         var manageUrl = BuildManageUrl(email, _options.UnsubscribeSecret);
-
-        var sb = new StringBuilder();
-        foreach (var section in sections)
+        var footer = _subscriberFooterTemplate(new { manageUrl, unsubscribeUrl });
+        var content = _dailyContentTemplate(new
         {
-            var items = itemsBySection.TryGetValue(section, out var rows) ? rows : [];
-            if (items.Count == 0)
-            {
-                continue; // Section has no news today — skip it
-            }
-
-            sb.Append($"<h3 style=\"margin:20px 0 8px 0;font-size:18px;font-weight:700;color:#1f1144;\">{WebUtility.HtmlEncode(GetSectionTitle(section))}</h3>");
-            sb.Append("<ul style=\"margin:0 0 8px 0;padding-left:20px;\">");
-            foreach (var item in items)
-            {
-                var filteredUrl = BuildAbsoluteUrl($"/{section}/all?search={Uri.EscapeDataString(item.Title)}&exact=true");
-                sb.Append("<li style=\"margin-bottom:6px;font-size:16px;line-height:1.5;color:#1f2328;\">");
-                sb.Append($"<a href=\"{WebUtility.HtmlEncode(filteredUrl)}\" style=\"color:#321873;text-decoration:none;\">{WebUtility.HtmlEncode(item.Title)}</a>");
-                sb.Append($" <span style=\"color:#57606a;font-size:14px;\">({WebUtility.HtmlEncode(item.CollectionName)})</span>");
-                sb.Append("</li>");
-            }
-
-            sb.Append("</ul>");
-        }
-
-        return _dailyOverviewTemplate
-            .Replace("{Date}", day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture), StringComparison.Ordinal)
-            .Replace("{Content}", sb.ToString(), StringComparison.Ordinal)
-            .Replace("{ManageUrl}", WebUtility.HtmlEncode(manageUrl), StringComparison.Ordinal)
-            .Replace("{UnsubscribeUrl}", WebUtility.HtmlEncode(unsubscribeUrl), StringComparison.Ordinal);
+            date = day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture),
+            sections = sections
+                .Where(s => itemsBySection.TryGetValue(s, out var rows) && rows.Count > 0)
+                .Select(s => new
+                {
+                    title = GetSectionTitle(s),
+                    items = itemsBySection[s].Select(item => new
+                    {
+                        url = BuildAbsoluteUrl($"/{s}/all?search={Uri.EscapeDataString(item.Title)}&exact=true"),
+                        title = item.Title,
+                        collectionName = item.CollectionName
+                    })
+                }),
+            footer
+        });
+        return _shellTemplate(new
+        {
+            title = "TechHub Daily Overview",
+            cardClass = "th-card--daily",
+            maxWidth = "1100px",
+            content
+        });
     }
 
     private string BuildDailyOverviewText(
@@ -878,15 +867,37 @@ public sealed class NewsletterService : INewsletterService
         return sb.ToString();
     }
 
-    private string BuildAdminStatusHtml(DateOnly day, NewsletterDailyReportStats stats) =>
-        _adminStatusTemplate
-            .Replace("{Date}", day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture), StringComparison.Ordinal)
-            .Replace("{NewContentItems}", stats.NewContentItemsLast24Hours.ToString(CultureInfo.InvariantCulture), StringComparison.Ordinal)
-            .Replace("{FailedUrls}", stats.FailedProcessedUrlsLast24Hours.ToString(CultureInfo.InvariantCulture), StringComparison.Ordinal)
-            .Replace("{FailedJobs}", stats.FailedJobsLast24Hours.ToString(CultureInfo.InvariantCulture), StringComparison.Ordinal)
-            .Replace("{NewSubscribers}", stats.NewSubscribersLast24Hours.ToString(CultureInfo.InvariantCulture), StringComparison.Ordinal)
-            .Replace("{ActiveSubscribers}", stats.ActiveSubscribers.ToString(CultureInfo.InvariantCulture), StringComparison.Ordinal)
-            .Replace("{UnconfirmedSubscribers}", stats.UnconfirmedSubscribers.ToString(CultureInfo.InvariantCulture), StringComparison.Ordinal);
+    private string BuildAdminStatusHtml(DateOnly day, NewsletterDailyReportStats stats)
+    {
+        var content = _adminContentTemplate(new
+        {
+            newContentItems = stats.NewContentItemsLast24Hours.ToString(CultureInfo.InvariantCulture),
+            failedProcessedUrls = stats.FailedProcessedUrlsLast24Hours.ToString(CultureInfo.InvariantCulture),
+            failedJobs = stats.FailedJobsLast24Hours.ToString(CultureInfo.InvariantCulture),
+            newSubscribers = stats.NewSubscribersLast24Hours.ToString(CultureInfo.InvariantCulture),
+            activeSubscribers = stats.ActiveSubscribers.ToString(CultureInfo.InvariantCulture),
+            unconfirmedSubscribers = stats.UnconfirmedSubscribers.ToString(CultureInfo.InvariantCulture)
+        });
+        return _shellTemplate(new
+        {
+            title = $"TechHub Daily Status Report \u2014 {day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}",
+            cardClass = "th-card--admin",
+            maxWidth = "600px",
+            content
+        });
+    }
+
+    private string BuildAccountActionHtml(string title, string message, string actionLabel, string actionUrl)
+    {
+        var content = _accountActionTemplate(new { message, actionLabel, actionUrl });
+        return _shellTemplate(new
+        {
+            title,
+            cardClass = "th-card--account",
+            maxWidth = "640px",
+            content
+        });
+    }
 
     private static string BuildAdminStatusText(DateOnly day, NewsletterDailyReportStats stats) =>
         string.Create(CultureInfo.InvariantCulture, $"""
