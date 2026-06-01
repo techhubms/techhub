@@ -232,7 +232,7 @@ if ($Mode -eq 'deploy') {
             # Write temp file to the same directory so the 'using' relative path remains valid
             $tempParamsFile = Join-Path (Split-Path $infraParamsFile) "prod-infrastructure-linkdomain.bicepparam"
             (Get-Content $infraParamsFile -Raw) `
-                -replace 'param linkEmailDomain = false', 'param linkEmailDomain = true' |
+                -replace 'param linkEmailDomain = (?:false|true)', 'param linkEmailDomain = true' |
                 Set-Content $tempParamsFile
             $effectiveParamsFile = $tempParamsFile
         }

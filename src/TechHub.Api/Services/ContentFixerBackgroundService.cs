@@ -124,7 +124,7 @@ public sealed class ContentFixerBackgroundService : BackgroundService
                     transcriptsSucceeded: 0, transcriptsFailed: 0,
                     logOutput: "Content cleanup aborted by admin.", ct: CancellationToken.None);
             }
-            catch (Exception ex) when (ex is not OperationCanceledException and not OutOfMemoryException and not StackOverflowException)
+            catch (Exception ex) when (ex is not OperationCanceledException)
             {
                 _logger.LogError(ex, "Content fixer run failed (job {JobId})", jobId);
                 await jobRepo.FailAsync(jobId,
@@ -137,7 +137,7 @@ public sealed class ContentFixerBackgroundService : BackgroundService
         {
             // Shutting down — expected
         }
-        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+        catch (Exception ex) when (ex is not OperationCanceledException)
         {
             _logger.LogError(ex, "Unexpected exception in ContentFixerBackgroundService");
         }

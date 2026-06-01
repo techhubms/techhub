@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 
 namespace TechHub.Infrastructure.Services.Newsletter;
 
@@ -52,12 +53,12 @@ public sealed class AcsEmailSender : IEmailSender
         }
         catch (RequestFailedException ex) when (ex.Status == 429)
         {
-            _logger.LogWarning(ex, "Newsletter email send rate-limited by ACS (429). Email to {RecipientEmail} was not sent", recipientEmail);
+            _logger.LogWarning(ex, "Newsletter email send rate-limited by ACS (429). Email to {RecipientEmail} was not sent", recipientEmail.Sanitize());
             return false;
         }
         catch (RequestFailedException ex)
         {
-            _logger.LogError(ex, "Newsletter email send failed with ACS error {Status} for {RecipientEmail}", ex.Status, recipientEmail);
+            _logger.LogError(ex, "Newsletter email send failed with ACS error {Status} for {RecipientEmail}", ex.Status, recipientEmail.Sanitize());
             return false;
         }
 

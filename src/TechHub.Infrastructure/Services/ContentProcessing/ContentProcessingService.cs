@@ -444,7 +444,7 @@ public sealed class ContentProcessingService
             await TryAbortJobAsync(jobId, 0, 0, 0, 0, 0, 0, log.ToString());
             throw;
         }
-        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+        catch (Exception ex) when (ex is not OperationCanceledException)
         {
             Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message.Sanitize()}"));
             _logger.LogError(ex, "Ad-hoc processing job {JobId} failed with unhandled exception", jobId);

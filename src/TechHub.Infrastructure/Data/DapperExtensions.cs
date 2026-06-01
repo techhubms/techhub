@@ -151,7 +151,7 @@ public static class DapperExtensions
 
             logger.LogWarning("{ExplainPlan}", sb.ToString().TrimEnd());
         }
-        catch (Exception ex) when (ex is not OutOfMemoryException)
+        catch (Exception ex) when (ex is not OperationCanceledException)
         {
             logger.LogWarning(ex, "Failed to retrieve EXPLAIN plan for slow query");
         }

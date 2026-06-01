@@ -45,6 +45,32 @@
 - **End users get friendly error messages** — But logs and Application Insights must contain full exception details, parameters, and context
 - **Log then rethrow or let it crash** — Prefer logging with context and rethrowing over catching and returning a default value
 
+### Accepted Broad-Catch Pattern
+
+Catching all non-cancellation exceptions (`when (ex is not OperationCanceledException)`) is **accepted and preferred** in two scenarios:
+
+1. **Background service loops** — To prevent the entire service (and thus the application) from crashing on one unexpected error. The service logs, then continues processing on the next tick.
+
+   ```csharp
+   catch (Exception ex) when (ex is not OperationCanceledException)
+   {
+       _logger.LogError(ex, "Unhandled exception in … — service will continue");
+   }
+   ```
+
+2. **Per-item processing loops** — To skip a failing item and continue with the next (e.g., content processing, newsletter subscriber sending). Must be suppressed with `#pragma warning disable CA1031` and a comment explaining the intent.
+
+   ```csharp
+   #pragma warning disable CA1031 // Best-effort: continue with other items if one fails
+   catch (Exception ex) when (ex is not OperationCanceledException)
+   {
+       _logger.LogWarning(ex, "Failed to process {Item} — skipping", item);
+   }
+   #pragma warning restore CA1031
+   ```
+
+Do **not** add `OutOfMemoryException` or `StackOverflowException` exclusions — the CLR already terminates the process for those regardless of catch blocks.
+
 ## Project Structure
 
 ```text

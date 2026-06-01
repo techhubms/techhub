@@ -82,13 +82,8 @@ public class BlazorHubNoiseSuppressorTests
         // Verifies the bitwise operation does not inadvertently flip flags on unrecorded
         // ComponentHub activities that were already suppressed upstream.
         var suppressor = new BlazorHubNoiseSuppressor();
-        using var activity = new ActivitySource("test").CreateActivity(
-            "Microsoft.AspNetCore.Components.Server.ComponentHub/UpdateRootComponents",
-            ActivityKind.Internal);
-
-        // activity may be null when no listener is registered — skip the test in that case
-        if (activity is null)
-            return;
+        using var activity = new Activity(
+            "Microsoft.AspNetCore.Components.Server.ComponentHub/UpdateRootComponents");
 
         activity.SetStatus(ActivityStatusCode.Error);
         activity.ActivityTraceFlags &= ~ActivityTraceFlags.Recorded; // already not recorded

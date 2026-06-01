@@ -358,7 +358,7 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             appSettings,
             emailSender,
             NullLogger<NewsletterService>.Instance,
-            env.Object);
+            new NewsletterTemplateProvider(env.Object));
     }
 
     private static Section CreateSection(string name) =>

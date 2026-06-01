@@ -261,6 +261,7 @@ builder.Services.Configure<NewsletterOptions>(
     builder.Configuration.GetSection(NewsletterOptions.SectionName));
 builder.Services.AddScoped<ISectionRoundupRepository, SectionRoundupRepository>();
 builder.Services.AddScoped<INewsletterSubscriberRepository, NewsletterSubscriberRepository>();
+builder.Services.AddSingleton<NewsletterTemplateProvider>();
 builder.Services.AddScoped<INewsletterService, NewsletterService>();
 builder.Services.AddAcsEmailClient();
 builder.Services.AddScoped<IEmailSender, AcsEmailSender>();

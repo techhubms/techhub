@@ -1,12 +1,9 @@
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
-using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using Dapper;
-using HandlebarsDotNet;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -28,12 +25,7 @@ public sealed class NewsletterService : INewsletterService
     private readonly AppSettings _appSettings;
     private readonly IEmailSender _emailSender;
     private readonly ILogger<NewsletterService> _logger;
-    private readonly HandlebarsTemplate<object, object> _shellTemplate;
-    private readonly HandlebarsTemplate<object, object> _subscriberFooterTemplate;
-    private readonly HandlebarsTemplate<object, object> _accountActionTemplate;
-    private readonly HandlebarsTemplate<object, object> _weeklyContentTemplate;
-    private readonly HandlebarsTemplate<object, object> _dailyContentTemplate;
-    private readonly HandlebarsTemplate<object, object> _adminContentTemplate;
+    private readonly NewsletterTemplateProvider _templates;
 
     public NewsletterService(
         IDbConnection connection,
@@ -43,7 +35,7 @@ public sealed class NewsletterService : INewsletterService
         IOptions<AppSettings> appSettings,
         IEmailSender emailSender,
         ILogger<NewsletterService> logger,
-        IHostEnvironment env)
+        NewsletterTemplateProvider templates)
     {
         ArgumentNullException.ThrowIfNull(connection);
         ArgumentNullException.ThrowIfNull(subscriberRepository);
@@ -52,7 +44,7 @@ public sealed class NewsletterService : INewsletterService
         ArgumentNullException.ThrowIfNull(appSettings);
         ArgumentNullException.ThrowIfNull(emailSender);
         ArgumentNullException.ThrowIfNull(logger);
-        ArgumentNullException.ThrowIfNull(env);
+        ArgumentNullException.ThrowIfNull(templates);
 
         _connection = connection;
         _subscriberRepository = subscriberRepository;
@@ -61,25 +53,7 @@ public sealed class NewsletterService : INewsletterService
         _appSettings = appSettings.Value;
         _emailSender = emailSender;
         _logger = logger;
-        if (env.IsDevelopment())
-        {
-            var resourcesPath = Path.GetFullPath(Path.Combine(env.ContentRootPath, "..", "TechHub.Infrastructure", "Data", "Resources"));
-            _shellTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-template.html")));
-            _subscriberFooterTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-subscriber-footer.html")));
-            _accountActionTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-account-action-content.html")));
-            _weeklyContentTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-weekly-content.html")));
-            _dailyContentTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-daily-content.html")));
-            _adminContentTemplate = Handlebars.Compile(File.ReadAllText(Path.Combine(resourcesPath, "newsletter-admin-content.html")));
-        }
-        else
-        {
-            _shellTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-template.html"));
-            _subscriberFooterTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-subscriber-footer.html"));
-            _accountActionTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-account-action-content.html"));
-            _weeklyContentTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-weekly-content.html"));
-            _dailyContentTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-daily-content.html"));
-            _adminContentTemplate = Handlebars.Compile(LoadEmbeddedHtml("TechHub.Infrastructure.Data.Resources.newsletter-admin-content.html"));
-        }
+        _templates = templates;
     }
 
     public async Task<bool> SendCombinedWeeklyAsync(IReadOnlyList<string> roundupSlugs, string? sendTargetKey = null, CancellationToken ct = default)
@@ -169,7 +143,7 @@ public sealed class NewsletterService : INewsletterService
                 }
             }
         }
-        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+        catch (Exception ex) when (ex is not OperationCanceledException)
         {
             var status = successful > 0 ? "partial" : "failed";
             await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, successful, status, ex.Message, ct);
@@ -709,8 +683,8 @@ public sealed class NewsletterService : INewsletterService
 
     private string RenderCombinedWeeklyHtml(IReadOnlyList<RoundupRow> roundups, string unsubscribeUrl, string manageUrl)
     {
-        var footer = _subscriberFooterTemplate(new { manageUrl, unsubscribeUrl });
-        var content = _weeklyContentTemplate(new
+        var footer = _templates.SubscriberFooter(new { manageUrl, unsubscribeUrl });
+        var content = _templates.WeeklyContent(new
         {
             roundups = roundups.Select(r => new
             {
@@ -722,7 +696,7 @@ public sealed class NewsletterService : INewsletterService
             }),
             footer
         });
-        return _shellTemplate(new
+        return _templates.Shell(new
         {
             title = "TechHub Weekly Digest",
             cardClass = "th-card--weekly",
@@ -806,8 +780,8 @@ public sealed class NewsletterService : INewsletterService
     {
         var unsubscribeUrl = BuildUnsubscribeUrl(email);
         var manageUrl = BuildManageUrl(email, _options.UnsubscribeSecret);
-        var footer = _subscriberFooterTemplate(new { manageUrl, unsubscribeUrl });
-        var content = _dailyContentTemplate(new
+        var footer = _templates.SubscriberFooter(new { manageUrl, unsubscribeUrl });
+        var content = _templates.DailyContent(new
         {
             date = day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture),
             sections = sections
@@ -824,7 +798,7 @@ public sealed class NewsletterService : INewsletterService
                 }),
             footer
         });
-        return _shellTemplate(new
+        return _templates.Shell(new
         {
             title = "TechHub Daily Overview",
             cardClass = "th-card--daily",
@@ -869,7 +843,7 @@ public sealed class NewsletterService : INewsletterService
 
     private string BuildAdminStatusHtml(DateOnly day, NewsletterDailyReportStats stats)
     {
-        var content = _adminContentTemplate(new
+        var content = _templates.AdminContent(new
         {
             newContentItems = stats.NewContentItemsLast24Hours.ToString(CultureInfo.InvariantCulture),
             failedProcessedUrls = stats.FailedProcessedUrlsLast24Hours.ToString(CultureInfo.InvariantCulture),
@@ -878,7 +852,7 @@ public sealed class NewsletterService : INewsletterService
             activeSubscribers = stats.ActiveSubscribers.ToString(CultureInfo.InvariantCulture),
             unconfirmedSubscribers = stats.UnconfirmedSubscribers.ToString(CultureInfo.InvariantCulture)
         });
-        return _shellTemplate(new
+        return _templates.Shell(new
         {
             title = $"TechHub Daily Status Report \u2014 {day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}",
             cardClass = "th-card--admin",
@@ -889,8 +863,8 @@ public sealed class NewsletterService : INewsletterService
 
     private string BuildAccountActionHtml(string title, string message, string actionLabel, string actionUrl)
     {
-        var content = _accountActionTemplate(new { message, actionLabel, actionUrl });
-        return _shellTemplate(new
+        var content = _templates.AccountAction(new { message, actionLabel, actionUrl });
+        return _templates.Shell(new
         {
             title,
             cardClass = "th-card--account",
@@ -950,19 +924,6 @@ public sealed class NewsletterService : INewsletterService
 
         _logger.LogError("Newsletter unsubscribe secret is not configured; skipping {OperationName}", operationName);
         return false;
-    }
-
-    private static string LoadEmbeddedHtml(string resourceName, string fallback = "")
-    {
-        var assembly = Assembly.GetExecutingAssembly();
-        using var stream = assembly.GetManifestResourceStream(resourceName);
-        if (stream is null)
-        {
-            return fallback;
-        }
-
-        using var reader = new StreamReader(stream);
-        return reader.ReadToEnd();
     }
 
     private sealed class RoundupRow
