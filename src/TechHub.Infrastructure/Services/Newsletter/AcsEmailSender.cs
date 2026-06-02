@@ -53,12 +53,12 @@ public sealed class AcsEmailSender : IEmailSender
         }
         catch (RequestFailedException ex) when (ex.Status == 429)
         {
-            _logger.LogWarning(ex, "Newsletter email send rate-limited by ACS (429). Email to {RecipientEmail} was not sent", recipientEmail.Sanitize());
+            _logger.LogWarning(ex, "Newsletter email send rate-limited by ACS (429). Email to {RecipientEmail} was not sent", recipientEmail.MaskEmail());
             return false;
         }
         catch (RequestFailedException ex)
         {
-            _logger.LogError(ex, "Newsletter email send failed with ACS error {Status} for {RecipientEmail}", ex.Status, recipientEmail.Sanitize());
+            _logger.LogError(ex, "Newsletter email send failed with ACS error {Status} for {RecipientEmail}", ex.Status, recipientEmail.MaskEmail());
             return false;
         }
 

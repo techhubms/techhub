@@ -102,4 +102,42 @@ public class InputSanitizerTests
         // Assert
         result.Should().Be(expected);
     }
+
+    // ─── MaskEmail ───────────────────────────────────────────────────────────
+
+    [Fact]
+    public void MaskEmail_NullValue_ReturnsEmpty()
+    {
+        InputSanitizer.MaskEmail(null).Should().BeEmpty();
+    }
+
+    [Fact]
+    public void MaskEmail_EmptyString_ReturnsEmpty()
+    {
+        InputSanitizer.MaskEmail(string.Empty).Should().BeEmpty();
+    }
+
+    [Theory]
+    [InlineData("user@example.com", "u***@example.com")]
+    [InlineData("reinier@xebia.com", "r***@xebia.com")]
+    [InlineData("a@b.com", "a***@b.com")]
+    [InlineData("newsletter@mail.hub.ms", "n***@mail.hub.ms")]
+    public void MaskEmail_ValidEmail_MasksLocalPart(string input, string expected)
+    {
+        InputSanitizer.MaskEmail(input).Should().Be(expected);
+    }
+
+    [Fact]
+    public void MaskEmail_NoAtSign_ReturnsSanitizedValue()
+    {
+        // Not a recognisable email — falls back to Sanitize behaviour (no crash).
+        InputSanitizer.MaskEmail("notanemail").Should().Be("notanemail");
+    }
+
+    [Fact]
+    public void MaskEmail_EmailWithNewline_MasksAndSanitizes()
+    {
+        // Log-forging attempt embedded in an otherwise valid email.
+        InputSanitizer.MaskEmail("u\nser@example.com").Should().Be("u***@example.com");
+    }
 }
