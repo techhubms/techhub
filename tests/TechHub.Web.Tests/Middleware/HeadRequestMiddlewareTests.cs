@@ -43,6 +43,31 @@ public class HeadRequestMiddlewareTests
         context.Response.ContentType.Should().Be("text/html; charset=utf-8");
     }
 
+    // ─── Known minimal API endpoints must use the HEAD→GET rewrite path ───────
+
+    [Theory]
+    [InlineData("/version")]
+    [InlineData("/health")]
+    [InlineData("/alive")]
+    public async Task InvokeAsync_HeadMinimalApiPath_CallsNextWithGetMethod(string path)
+    {
+        string? methodSeenByNext = null;
+        RequestDelegate next = ctx =>
+        {
+            methodSeenByNext = ctx.Request.Method;
+            return Task.CompletedTask;
+        };
+        var middleware = new HeadRequestMiddleware(next);
+        var context = new DefaultHttpContext();
+        context.Request.Method = "HEAD";
+        context.Request.Path = path;
+
+        await middleware.InvokeAsync(context);
+
+        methodSeenByNext.Should().Be(HttpMethods.Get, "minimal API endpoints must see GET so their MapGet handlers match");
+        context.Request.Method.Should().Be("HEAD", "method must be restored to HEAD after next() returns");
+    }
+
     [Fact]
     public async Task InvokeAsync_HeadExtensionlessPath_MethodRemainsHead()
     {

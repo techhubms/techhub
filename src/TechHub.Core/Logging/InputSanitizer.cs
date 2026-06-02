@@ -22,5 +22,4 @@ public static class InputSanitizer
             .Replace("\r", string.Empty, StringComparison.Ordinal)
             .Replace("\n", string.Empty, StringComparison.Ordinal);
     }
-
 }

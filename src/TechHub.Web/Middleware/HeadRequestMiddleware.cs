@@ -7,18 +7,20 @@ namespace TechHub.Web.Middleware;
 /// Two categories of HEAD request are handled differently:
 /// </para>
 /// <list type="bullet">
-///   <item><b>Extension-less paths (Blazor page routes)</b> — Returned immediately with
+///   <item><b>Extension-less Blazor page routes</b> — Returned immediately with
 ///         <c>200 OK</c> and <c>Content-Type: text/html</c>, bypassing Blazor SSR entirely.
 ///         The SSR pipeline makes an API call for every page render; when the API is slow,
 ///         bots and crawlers (Slack link previews, SEO scanners) disconnect after their
 ///         15–25 s timeout and record 499 (client closed request) in telemetry. Since HEAD
 ///         only requires response headers — not a body — returning 200 immediately is
-///         semantically correct and eliminates the 499s with ~23 s duration.</item>
-///   <item><b>File-extension paths (static assets, RSS feeds)</b> — Rewrites the method to
+///         semantically correct and eliminates the 499s with ~23 s duration.
+///         Known minimal API endpoints (<c>/version</c>, <c>/health</c>, <c>/alive</c>)
+///         are excluded from this path and fall through to the rewrite path below.</item>
+///   <item><b>File-extension paths and minimal API endpoints</b> — Rewrites the method to
 ///         GET, sets <c>Response.Body = Stream.Null</c> to suppress body output, and calls
 ///         the next middleware. <c>MapStaticAssets</c> serves the correct headers (ETag,
 ///         Content-Length, Cache-Control) without sending bytes; <c>MapGet</c> endpoints
-///         (RSS feeds, /version, etc.) also work correctly this way.</item>
+///         (RSS feeds, /version, /health, /alive, etc.) also work correctly this way.</item>
 /// </list>
 ///
 /// <para>
@@ -29,6 +31,16 @@ namespace TechHub.Web.Middleware;
 /// </summary>
 public class HeadRequestMiddleware
 {
+    // Extension-less minimal API endpoints that must NOT be short-circuited.
+    // They are not Blazor page routes so they must go through the HEAD→GET rewrite
+    // path so their handlers can run and return correct headers/status codes.
+    private static readonly HashSet<string> _minimalApiPaths = new(StringComparer.OrdinalIgnoreCase)
+    {
+        "/version",
+        "/health",
+        "/alive",
+    };
+
     private readonly RequestDelegate _next;
 
     public HeadRequestMiddleware(RequestDelegate next)
@@ -54,7 +66,7 @@ public class HeadRequestMiddleware
         var lastSegment = path.AsSpan()[(lastSlash + 1)..];
         var isExtensionless = !lastSegment.Contains('.');
 
-        if (isExtensionless)
+        if (isExtensionless && !_minimalApiPaths.Contains(path))
         {
             // Extension-less path → Blazor page route. Short-circuit with 200 immediately.
             // Calling next would trigger Blazor SSR → API call → potential slow response →
