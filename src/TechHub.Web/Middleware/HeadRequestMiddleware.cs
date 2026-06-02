@@ -35,15 +35,24 @@ namespace TechHub.Web.Middleware;
 /// </summary>
 public class HeadRequestMiddleware
 {
-    // Extension-less minimal API endpoints that must NOT be short-circuited.
+    // Exact extension-less endpoints that must NOT be short-circuited.
     // They are not Blazor page routes so they must go through the HEAD→GET rewrite
     // path so their handlers can run and return correct headers/status codes.
-    private static readonly HashSet<string> _minimalApiPaths = new(StringComparer.OrdinalIgnoreCase)
+    private static readonly HashSet<string> _excludedExactPaths = new(StringComparer.OrdinalIgnoreCase)
     {
         "/version",
         "/health",
         "/alive",
+        "/signin-oidc",
+        "/admin/logout",
     };
+
+    // Prefix-based endpoints that must NOT be short-circuited.
+    private static readonly string[] _excludedPrefixes =
+    [
+        "/_blazor",
+        "/MicrosoftIdentity",
+    ];
 
     private readonly RequestDelegate _next;
 
@@ -70,7 +79,7 @@ public class HeadRequestMiddleware
         var lastSegment = path.AsSpan()[(lastSlash + 1)..];
         var isExtensionless = !lastSegment.Contains('.');
 
-        if (isExtensionless && !_minimalApiPaths.Contains(path))
+        if (isExtensionless && !IsShortCircuitExcluded(context.Request.Path))
         {
             // Validate all path segments structurally before short-circuiting.
             // InvalidRouteSegmentMiddleware validates only the first segment; segments
@@ -108,6 +117,16 @@ public class HeadRequestMiddleware
             context.Response.Body = originalBody;
             context.Request.Method = HttpMethods.Head;
         }
+    }
+
+    private static bool IsShortCircuitExcluded(PathString path)
+    {
+        if (_excludedExactPaths.Contains(path.Value ?? string.Empty))
+        {
+            return true;
+        }
+
+        return _excludedPrefixes.Any(prefix => path.StartsWithSegments(prefix, StringComparison.OrdinalIgnoreCase));
     }
 }
 

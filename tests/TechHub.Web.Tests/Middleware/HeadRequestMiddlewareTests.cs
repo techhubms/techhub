@@ -68,6 +68,31 @@ public class HeadRequestMiddlewareTests
         context.Request.Method.Should().Be("HEAD", "method must be restored to HEAD after next() returns");
     }
 
+    [Theory]
+    [InlineData("/_blazor")]
+    [InlineData("/_blazor/negotiate")]
+    [InlineData("/MicrosoftIdentity/Account/SignIn")]
+    [InlineData("/signin-oidc")]
+    [InlineData("/admin/logout")]
+    public async Task InvokeAsync_HeadExcludedNonPagePath_CallsNextWithGetMethod(string path)
+    {
+        string? methodSeenByNext = null;
+        RequestDelegate next = ctx =>
+        {
+            methodSeenByNext = ctx.Request.Method;
+            return Task.CompletedTask;
+        };
+        var middleware = new HeadRequestMiddleware(next);
+        var context = new DefaultHttpContext();
+        context.Request.Method = "HEAD";
+        context.Request.Path = path;
+
+        await middleware.InvokeAsync(context);
+
+        methodSeenByNext.Should().Be(HttpMethods.Get, "excluded non-page endpoints must use the HEAD→GET rewrite path");
+        context.Request.Method.Should().Be("HEAD", "method must be restored to HEAD after next() returns");
+    }
+
     [Fact]
     public async Task InvokeAsync_HeadExtensionlessPath_MethodRemainsHead()
     {
