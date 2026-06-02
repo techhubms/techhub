@@ -80,13 +80,10 @@ public class HeadRequestMiddleware
             // hyphens) and rejects dots, spaces, special characters, and other patterns
             // that can never match a Blazor route.
             var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
-            foreach (var segment in segments)
+            if (segments.Any(segment => !RouteParameterValidator.IsValidSlug(segment)))
             {
-                if (!RouteParameterValidator.IsValidSlug(segment))
-                {
-                    context.Response.StatusCode = StatusCodes.Status404NotFound;
-                    return;
-                }
+                context.Response.StatusCode = StatusCodes.Status404NotFound;
+                return;
             }
 
             // Extension-less path → Blazor page route. Short-circuit with 200 immediately.
