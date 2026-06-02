@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 using TechHub.Infrastructure.Services.RoundupGeneration;
@@ -222,7 +223,8 @@ public sealed class NewsletterService : INewsletterService
             logKey,
             sent ? 1 : 0,
             sent ? "sent" : "failed",
-            sent ? null : $"Delivery failed to {recipientEmail}",
+            // codeql[cs/exposure-of-private-information] - email is masked via MaskEmail() before writing to the log table
+            sent ? null : $"Delivery failed to {recipientEmail.MaskEmail()}",
             ct);
         return sent;
     }
@@ -269,7 +271,8 @@ public sealed class NewsletterService : INewsletterService
             logKey,
             sent ? 1 : 0,
             sent ? "sent" : "failed",
-            sent ? null : $"Delivery failed to {recipientEmail}",
+            // codeql[cs/exposure-of-private-information] - email is masked via MaskEmail() before writing to the log table
+            sent ? null : $"Delivery failed to {recipientEmail.MaskEmail()}",
             ct);
         return sent;
     }
