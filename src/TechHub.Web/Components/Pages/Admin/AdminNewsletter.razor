@@ -118,7 +118,8 @@
                     <th>When</th>
                     <th>Kind</th>
                     <th>Target</th>
-                    <th>Recipients</th>
+                    <th>Sent</th>
+                    <th>Failed</th>
                     <th>Status</th>
                 </tr>
             </thead>
@@ -130,6 +131,7 @@
                         <td>@log.SendKind</td>
                         <td class="admin-cell-mono">@log.TargetKey</td>
                         <td>@log.RecipientCount</td>
+                        <td>@(log.FailedCount > 0 ? log.FailedCount.ToString() : "—")</td>
                         <td>@log.Status</td>
                     </tr>
                 }

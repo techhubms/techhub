@@ -595,6 +595,11 @@ jobs:
           subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
           enable-AzPSSession: true
 
+      - name: Install Az.PostgreSql module
+        if: steps.changes.outputs.infra-changed == 'true'
+        shell: pwsh
+        run: Install-Module Az.PostgreSql -Force -Scope CurrentUser -ErrorAction Stop
+
       - name: Deploy infrastructure (Phase 1)
         if: steps.changes.outputs.infra-changed == 'true'
         shell: pwsh

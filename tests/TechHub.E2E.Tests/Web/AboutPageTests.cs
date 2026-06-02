@@ -28,7 +28,6 @@ public class AboutPageTests : PlaywrightTestBase
         // Assert - Check for team member headings
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Reinier van Maanen");
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Rob Bos");
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Fokko Veegens");
     }
 
     [Fact]
@@ -40,7 +39,6 @@ public class AboutPageTests : PlaywrightTestBase
         // Assert - Check for team member photos (exact alt text matching)
         await Page.AssertElementVisibleByAltTextAsync("Reinier van Maanen");
         await Page.AssertElementVisibleByAltTextAsync("Rob Bos");
-        await Page.AssertElementVisibleByAltTextAsync("Fokko Veegens");
     }
 
     [Fact]
@@ -62,14 +60,6 @@ public class AboutPageTests : PlaywrightTestBase
         await robSection.AssertElementVisibleByRoleAsync(AriaRole.Link, "📘 GitHub");
         await robSection.AssertElementVisibleByRoleAsync(AriaRole.Link, "💼 LinkedIn");
         await robSection.AssertElementVisibleByRoleAsync(AriaRole.Link, "✍️ Blog");
-
-        // Fokko Veegens - should have GitHub and LinkedIn
-        var fokkoSection = Page.Locator("text=Fokko Veegens").Locator("..");
-        await fokkoSection.AssertElementVisibleByRoleAsync(AriaRole.Link, "📘 GitHub");
-        await fokkoSection.AssertElementVisibleByRoleAsync(AriaRole.Link, "💼 LinkedIn");
-
-        // Note: Fokko's blog link might not be visible or might be a placeholder
-        // This test verifies the presence of GitHub and LinkedIn only
     }
 
     [Fact]

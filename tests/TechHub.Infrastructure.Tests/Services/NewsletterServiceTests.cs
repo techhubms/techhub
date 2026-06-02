@@ -1,5 +1,6 @@
 using Dapper;
 using FluentAssertions;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 using Moq;
@@ -346,6 +347,9 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             }
         });
 
+        var env = new Mock<IHostEnvironment>();
+        env.Setup(e => e.EnvironmentName).Returns(Environments.Production);
+
         return new NewsletterService(
             _fixture.Connection,
             new NewsletterSubscriberRepository(_fixture.Connection),
@@ -353,7 +357,8 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             options,
             appSettings,
             emailSender,
-            NullLogger<NewsletterService>.Instance);
+            NullLogger<NewsletterService>.Instance,
+            new NewsletterTemplateProvider(env.Object));
     }
 
     private static Section CreateSection(string name) =>

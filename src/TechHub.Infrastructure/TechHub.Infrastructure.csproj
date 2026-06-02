@@ -14,6 +14,7 @@
     <PackageReference Include="Azure.Communication.Email" />
     <PackageReference Include="Azure.Identity" />
     <PackageReference Include="Dapper" />
+    <PackageReference Include="Handlebars.Net" />
     <PackageReference Include="Markdig" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
@@ -37,9 +38,12 @@
     <EmbeddedResource Include="Data\Resources\roundup-narrative-enhancer-system.md" />
     <EmbeddedResource Include="Data\Resources\roundup-condenser-system.md" />
     <EmbeddedResource Include="Data\Resources\roundup-metadata-generator-system.md" />
-    <EmbeddedResource Include="Data\Resources\newsletter-weekly-digest-template.html" />
-    <EmbeddedResource Include="Data\Resources\newsletter-daily-overview-template.html" />
-    <EmbeddedResource Include="Data\Resources\newsletter-admin-status-template.html" />
+    <EmbeddedResource Include="Data\Resources\newsletter-template.html" />
+    <EmbeddedResource Include="Data\Resources\newsletter-subscriber-footer.html" />
+    <EmbeddedResource Include="Data\Resources\newsletter-account-action-content.html" />
+    <EmbeddedResource Include="Data\Resources\newsletter-weekly-content.html" />
+    <EmbeddedResource Include="Data\Resources\newsletter-daily-content.html" />
+    <EmbeddedResource Include="Data\Resources\newsletter-admin-content.html" />
     <EmbeddedResource Include="..\..\docs\writing-style-guidelines.md" Link="Data\Resources\roundup-writing-guidelines.md" />
   </ItemGroup>
 

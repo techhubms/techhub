@@ -37,11 +37,11 @@ These are permanent — they never need updating.
 
 ### One-time GoDaddy NS delegation
 
-After deploying the shared infrastructure (which creates the `acme.hub.ms` zone), add NS records for `acme` in the `hub.ms` zone at GoDaddy pointing to the Azure DNS nameservers:
+After deploying the infrastructure (which creates the `acme.hub.ms` zone), add NS records for `acme` in the `hub.ms` zone at GoDaddy pointing to the Azure DNS nameservers:
 
 ```bash
-# Get the nameservers after deploying shared infra
-az network dns zone show --resource-group rg-techhub-shared --name acme.hub.ms --query nameServers -o tsv
+# Get the nameservers after deploying infra
+az network dns zone show --resource-group rg-techhub-prod --name acme.hub.ms --query nameServers -o tsv
 ```
 
 Add each returned nameserver as an NS record for `acme` in GoDaddy's `hub.ms` zone.
@@ -57,8 +57,8 @@ pip install certbot certbot-dns-azure
 The ACME DNS zone is deployed as part of shared infrastructure:
 
 - **Bicep module**: `infra/modules/acmeDnsZone.bicep`
-- **Deployed by**: `infra/shared.bicep` → `acmeDnsZone` module
-- **Resource**: `Microsoft.Network/dnsZones` — `acme.hub.ms` in `rg-techhub-shared`
+- **Deployed by**: `infra/infrastructure.bicep` → `acmeDnsZone` module
+- **Resource**: `Microsoft.Network/dnsZones` — `acme.hub.ms` in `rg-techhub-prod`
 
 Deploy with:
 

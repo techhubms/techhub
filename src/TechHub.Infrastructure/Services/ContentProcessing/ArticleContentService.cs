@@ -127,7 +127,7 @@ public sealed partial class ArticleContentService : IArticleContentService
 
             return article.IsReadable ? article.Content : null;
         }
-        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+        catch (Exception ex) when (ex is not OperationCanceledException)
         {
             return null;
         }

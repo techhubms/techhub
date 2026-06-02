@@ -271,6 +271,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
         string sendKind,
         string targetKey,
         int recipientCount,
+        int failedCount,
         string status,
         string? errorMessage,
         CancellationToken ct = default)
@@ -281,13 +282,14 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
 
         const string Sql = """
             INSERT INTO newsletter_send_log
-                (send_kind, target_key, recipient_count, status, error_message)
+                (send_kind, target_key, recipient_count, failed_count, status, error_message)
             VALUES
-                (@SendKind, @TargetKey, @RecipientCount, @Status, @Error)
+                (@SendKind, @TargetKey, @RecipientCount, @FailedCount, @Status, @Error)
             ON CONFLICT (send_kind, target_key)
             DO UPDATE SET
                 sent_at = NOW(),
                 recipient_count = EXCLUDED.recipient_count,
+                failed_count = EXCLUDED.failed_count,
                 status = EXCLUDED.status,
                 error_message = EXCLUDED.error_message
             """;
@@ -299,6 +301,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
                 SendKind = sendKind,
                 TargetKey = targetKey,
                 RecipientCount = recipientCount,
+                FailedCount = failedCount,
                 Status = status,
                 Error = errorMessage
             },
@@ -314,6 +317,7 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
                 target_key AS TargetKey,
                 sent_at AS SentAt,
                 recipient_count AS RecipientCount,
+                failed_count AS FailedCount,
                 status AS Status,
                 error_message AS ErrorMessage
             FROM newsletter_send_log
@@ -395,7 +399,8 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
                 (SELECT COUNT(*) FROM content_processing_jobs WHERE status = 'failed' AND started_at >= NOW() - INTERVAL '24 hours') AS FailedJobsLast24Hours,
                 (SELECT COUNT(*) FROM newsletter_subscribers WHERE subscribed_at >= NOW() - INTERVAL '24 hours') AS NewSubscribersLast24Hours,
                 (SELECT COUNT(*) FROM newsletter_subscribers WHERE is_confirmed = TRUE AND unsubscribed_at IS NULL) AS ActiveSubscribers,
-                (SELECT COUNT(*) FROM newsletter_subscribers WHERE is_confirmed = FALSE AND unsubscribed_at IS NULL) AS UnconfirmedSubscribers
+                (SELECT COUNT(*) FROM newsletter_subscribers WHERE is_confirmed = FALSE AND unsubscribed_at IS NULL) AS UnconfirmedSubscribers,
+                (SELECT COALESCE(SUM(failed_count), 0) FROM newsletter_send_log WHERE sent_at >= NOW() - INTERVAL '24 hours') AS FailedNewsletterSendsLast24Hours
             """;
 
         return await _connection.QuerySingleAsync<NewsletterDailyReportStats>(new CommandDefinition(Sql, cancellationToken: ct));

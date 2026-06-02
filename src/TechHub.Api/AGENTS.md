@@ -6,7 +6,18 @@
 
 REST API backend using ASP.NET Core Minimal APIs. Exposes endpoints for sections, content, filtering, RSS feeds, and structured data.
 
-**Testing**: See [tests/TechHub.Api.Tests/AGENTS.md](../../tests/TechHub.Api.Tests/AGENTS.md) for integration testing patterns.
+## Background Services
+
+Background services inherit from `BackgroundService` and are registered in `Program.cs` via `AddHostedService<T>()`. The outer execution loop MUST catch all non-cancellation exceptions to prevent the entire application from crashing:
+
+```csharp
+catch (Exception ex) when (ex is not OperationCanceledException)
+{
+    _logger.LogError(ex, "Unhandled exception in MyBackgroundService — service will continue");
+}
+```
+
+See [src/AGENTS.md](../AGENTS.md#accepted-broad-catch-pattern) for the accepted broad-catch pattern and rationale.
 
 ## Project Structure
 

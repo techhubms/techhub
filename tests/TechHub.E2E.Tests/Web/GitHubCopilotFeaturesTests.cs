@@ -89,9 +89,11 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
 
         // Assert - All tiers should be stacked vertically in the sidebar
         var sidebar = Page.Locator("aside.sidebar");
+        var tiersSection = sidebar.Locator(".features-tiers-sidebar");
+        await tiersSection.AssertElementVisibleAsync();
+
         var tierCards = sidebar.Locator(".features-tier-card");
-        var count = await tierCards.CountAsync();
-        count.Should().Be(6, "Expected 6 tier cards stacked in the sidebar");
+        await tierCards.AssertCountAsync(6);
     }
 
     [Fact]

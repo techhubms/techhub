@@ -293,7 +293,7 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
             {
                 // Shutting down — expected
             }
-            catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+            catch (Exception ex) when (ex is not OperationCanceledException)
             {
                 _logger.LogError(ex, "Unexpected exception in RoundupGeneratorBackgroundService (job {JobId})", jobId);
                 await jobRepo.AppendLogAsync(jobId, $"Roundup generation failed: {ex.Message}\n{ex.StackTrace}", CancellationToken.None);

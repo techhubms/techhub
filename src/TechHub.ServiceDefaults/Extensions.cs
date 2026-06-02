@@ -39,14 +39,20 @@ public static class ServiceDefaultsExtensions
     /// Use this to enrich or suppress activities based on response properties
     /// (e.g. clear <c>ActivityTraceFlags.Recorded</c> for 4xx responses).
     /// </param>
+    /// <param name="additionalActivityProcessor">
+    /// Optional <see cref="BaseProcessor{Activity}"/> added to the tracing pipeline.
+    /// Use this to suppress or enrich activities that bypass the HTTP filter (e.g. SignalR
+    /// hub method invocations that have no <see cref="HttpContext"/>).
+    /// </param>
     public static IHostApplicationBuilder AddServiceDefaults(
         this IHostApplicationBuilder builder,
         Func<HttpContext, bool>? additionalTraceFilter = null,
-        Action<Activity, HttpResponse>? additionalResponseEnricher = null)
+        Action<Activity, HttpResponse>? additionalResponseEnricher = null,
+        BaseProcessor<Activity>? additionalActivityProcessor = null)
     {
         ArgumentNullException.ThrowIfNull(builder);
 
-        builder.ConfigureOpenTelemetry(additionalTraceFilter, additionalResponseEnricher);
+        builder.ConfigureOpenTelemetry(additionalTraceFilter, additionalResponseEnricher, additionalActivityProcessor);
 
         builder.AddDefaultHealthChecks();
 
@@ -78,10 +84,16 @@ public static class ServiceDefaultsExtensions
     /// Optional callback invoked by <c>EnrichWithHttpResponse</c> after the response is written.
     /// Use this to enrich or suppress activities based on response properties.
     /// </param>
+    /// <param name="additionalActivityProcessor">
+    /// Optional <see cref="BaseProcessor{Activity}"/> added to the tracing pipeline.
+    /// Use this to suppress or enrich activities that bypass the HTTP filter (e.g. SignalR
+    /// hub method invocations that have no <see cref="HttpContext"/>).
+    /// </param>
     public static IHostApplicationBuilder ConfigureOpenTelemetry(
         this IHostApplicationBuilder builder,
         Func<HttpContext, bool>? additionalTraceFilter = null,
-        Action<Activity, HttpResponse>? additionalResponseEnricher = null)
+        Action<Activity, HttpResponse>? additionalResponseEnricher = null,
+        BaseProcessor<Activity>? additionalActivityProcessor = null)
     {
         ArgumentNullException.ThrowIfNull(builder);
 
@@ -153,6 +165,11 @@ public static class ServiceDefaultsExtensions
                            };
                        })
                        .AddHttpClientInstrumentation();
+
+                if (additionalActivityProcessor != null)
+                {
+                    tracing.AddProcessor(additionalActivityProcessor);
+                }
             });
 
         builder.AddOpenTelemetryExporters();

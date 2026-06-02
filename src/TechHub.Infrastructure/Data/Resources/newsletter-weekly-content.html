@@ -1,0 +1,26 @@
+{{#each roundups}}
+{{#unless @first}}<hr class="th-divider" />{{/unless}}
+<div class="th-roundup">
+  <p class="th-section-label" style="text-decoration:underline;">{{sectionTitle}}</p>
+  <h2 class="th-roundup-title">{{title}}</h2>
+  <p class="th-roundup-intro">{{introduction}}</p>
+  <h3 class="th-subtitle">In this roundup</h3>
+  <div class="th-links-wrap">
+    <ul class="th-list">
+      {{#each links}}
+      <li class="th-list-item"><a href="{{href}}" class="th-link" style="color:#6535c7;text-decoration:none;font-weight:500;">{{text}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="th-cta-wrap">
+    <table role="presentation" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="th-button-cell" style="border:2px solid #6535c7;border-radius:6px;padding:9px 18px;">
+          <a href="{{roundupUrl}}" class="th-button" style="color:#6535c7;text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap;">📑 Read the full {{sectionTitle}} roundup &#x2192;</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+{{/each}}
+{{{footer}}}

@@ -172,7 +172,7 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
         {
             // Shutting down — expected
         }
-        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+        catch (Exception ex) when (ex is not OperationCanceledException)
         {
             // Errors are already recorded by ContentProcessingService; log defensively here
             _logger.LogError(ex, "Unexpected exception in ContentProcessingBackgroundService");

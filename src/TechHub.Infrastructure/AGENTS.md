@@ -55,6 +55,22 @@ See [Data/Migrations/postgres/](Data/Migrations/postgres/) for complete schema.
 | Scoped | `IDbConnection` (per-request) |
 | Transient | All other services |
 
+## Per-Item Processing Loops
+
+Processing pipelines (content ingestion, newsletter sending, roundup generation) iterate over collections and MUST NOT abort the entire run when one item fails. Use the broad-catch pattern with `#pragma warning disable CA1031`:
+
+```csharp
+#pragma warning disable CA1031 // Best-effort: continue with other items if one fails
+catch (Exception ex) when (ex is not OperationCanceledException)
+{
+    errorCount++;
+    _logger.LogWarning(ex, "Failed to process {Item} — skipping", item);
+}
+#pragma warning restore CA1031
+```
+
+See [src/AGENTS.md](../AGENTS.md#accepted-broad-catch-pattern) for the full rationale.
+
 ## Tag Cloud
 
 `TagCloudService` queries tags with section/collection title exclusion (repository filters these BEFORE counting). Quantile sizing: top 25% Large, middle 50% Medium, bottom 25% Small. Size group normalization: 1 group → all Medium, 2 → Medium + Small.

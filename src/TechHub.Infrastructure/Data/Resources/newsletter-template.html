@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <style>
+    .th-body { margin:0; padding:0; font-family:Segoe UI,Arial,sans-serif; }
+    .th-outer { padding:20px 8px; }
+    .th-card { background-color:#ffffff; border-radius:12px; box-shadow:0 2px 12px rgba(137,87,229,0.10); }
+    .th-card--weekly { max-width:900px; }
+    .th-card--daily { max-width:1100px; }
+    .th-card--admin { max-width:600px; }
+    .th-card--account { max-width:640px; }
+    .th-header { background-color:#ede5ff; color:#1f2328; padding:24px 28px; font-size:20px; font-weight:700; border-top:1px solid #a87ee8; border-left:1px solid #a87ee8; border-right:1px solid #a87ee8; border-bottom:1px solid #a87ee8; border-top-left-radius:12px; border-top-right-radius:12px; }
+    .th-content { background-color:#ffffff; color:#1f2328; padding:28px; border-left:1px solid #a87ee8; border-right:1px solid #a87ee8; border-bottom:1px solid #a87ee8; border-bottom-left-radius:12px; border-bottom-right-radius:12px; }
+    .th-date { margin:0 0 20px 0; font-size:15px; color:#4a5568; font-weight:500; }
+    .th-divider { border:none; border-top:1px solid #e8d9ff; margin:28px 0; }
+    .th-section-label { margin:0 0 4px 0; font-size:12px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#4a5568; }
+    .th-roundup-title { margin:0 0 12px 0; font-size:22px; color:#1f2328; }
+    .th-roundup-intro { margin:0 0 16px 0; line-height:1.6; color:#1f2328; }
+    .th-subtitle { margin:0 0 8px 0; font-size:15px; color:#1f2328; font-weight:600; }
+    .th-links-wrap { margin:0 0 16px 0; }
+    .th-list { padding-left:18px; margin:0; }
+    .th-list-item { margin:0 0 8px 0; color:#1f2328; font-size:14px; }
+    .th-section-heading { margin:20px 0 8px 0; font-size:18px; font-weight:700; color:#1f2328; }
+    .th-item-list { margin:0 0 8px 0; padding-left:20px; }
+    .th-item { margin-bottom:6px; font-size:16px; line-height:1.5; color:#1f2328; }
+    .th-stat-label { padding:8px 0; color:#4a5568; font-size:14px; }
+    .th-stat-value { padding:8px 0; color:#1f2328; font-size:14px; text-align:right; font-weight:600; }
+    .th-stat-border { border-bottom:1px solid #e8d9ff; }
+    .th-heading { margin:0 0 12px 0; color:#1f2328; font-size:24px; }
+    .th-body-text { margin:0 0 16px 0; line-height:1.5; color:#1f2328; }
+    .th-note { margin:0; color:#4a5568; font-size:14px; line-height:1.5; }
+    .th-link { color:#6535c7 !important; text-decoration:none; font-weight:500; }
+    .th-muted { color:#4a5568; font-size:14px; }
+    .th-cta-wrap { margin:0; }
+    .th-button-cell { border:2px solid #6535c7; border-radius:6px; padding:9px 18px; }
+    .th-button { color:#6535c7 !important; text-decoration:none; font-weight:600; font-size:16px; }
+    .th-footer { margin:28px 0 0 0; font-size:12px; color:#4a5568; border-top:1px solid #e8d9ff; padding-top:20px; }
+
+  </style>
+</head>
+<body class="th-body" style="margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td align="center" class="th-outer" style="padding:20px 8px;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" class="th-card {{cardClass}}" bgcolor="#ffffff" style="max-width:{{maxWidth}};background-color:#ffffff;border-radius:12px;">
+          <tr>
+            <td bgcolor="#ede5ff" class="th-header" style="background-color:#ede5ff;color:#1f2328;padding:24px 28px;font-size:20px;font-weight:700;border-top:1px solid #a87ee8;border-left:1px solid #a87ee8;border-right:1px solid #a87ee8;border-bottom:1px solid #a87ee8;border-top-left-radius:12px;border-top-right-radius:12px;">{{title}}</td>
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff" class="th-content" style="background-color:#ffffff;color:#1f2328;padding:28px;border-left:1px solid #a87ee8;border-right:1px solid #a87ee8;border-bottom:1px solid #a87ee8;border-bottom-left-radius:12px;border-bottom-right-radius:12px;">
+              {{{content}}}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

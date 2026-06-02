@@ -52,6 +52,7 @@ public interface INewsletterSubscriberRepository
         string sendKind,
         string targetKey,
         int recipientCount,
+        int failedCount,
         string status,
         string? errorMessage,
         CancellationToken ct = default);

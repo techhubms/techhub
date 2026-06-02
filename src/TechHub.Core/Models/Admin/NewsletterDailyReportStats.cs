@@ -8,4 +8,5 @@ public sealed class NewsletterDailyReportStats
     public int NewSubscribersLast24Hours { get; init; }
     public int ActiveSubscribers { get; init; }
     public int UnconfirmedSubscribers { get; init; }
+    public int FailedNewsletterSendsLast24Hours { get; init; }
 }

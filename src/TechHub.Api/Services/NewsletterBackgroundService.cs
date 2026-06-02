@@ -76,7 +76,15 @@ public sealed class NewsletterBackgroundService : BackgroundService
             if (completed == manualTask)
             {
                 _manualTrigger = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
-                await RunManualAsync(stoppingToken);
+                try
+                {
+                    await RunManualAsync(stoppingToken);
+                }
+                catch (Exception ex) when (ex is not OperationCanceledException)
+                {
+                    _logger.LogError(ex, "Unhandled exception in newsletter manual run — service will continue");
+                }
+
                 continue;
             }
 
@@ -87,8 +95,15 @@ public sealed class NewsletterBackgroundService : BackgroundService
                 continue;
             }
 
-            await SendLatestRoundupsAsync(stoppingToken);
-            await SendScheduledDailyEmailsAsync(stoppingToken);
+            try
+            {
+                await SendLatestRoundupsAsync(stoppingToken);
+                await SendScheduledDailyEmailsAsync(stoppingToken);
+            }
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                _logger.LogError(ex, "Unhandled exception in newsletter periodic run — service will continue");
+            }
         }
     }
 
