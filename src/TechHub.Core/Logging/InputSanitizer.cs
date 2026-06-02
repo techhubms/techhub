@@ -23,26 +23,4 @@ public static class InputSanitizer
             .Replace("\n", string.Empty, StringComparison.Ordinal);
     }
 
-    /// <summary>
-    /// Masks an email address for safe logging, preserving only the first character of the local
-    /// part and the full domain so logs remain useful without exposing PII.
-    /// Examples: <c>user@example.com</c> → <c>u***@example.com</c>,
-    ///           <c>a@b.com</c> → <c>a***@b.com</c>.
-    /// </summary>
-    public static string MaskEmail(this string? email)
-    {
-        if (string.IsNullOrEmpty(email))
-        {
-            return string.Empty;
-        }
-
-        var atIndex = email.IndexOf('@', StringComparison.Ordinal);
-        if (atIndex <= 0)
-        {
-            // Not a recognisable email — sanitize only.
-            return email.Sanitize();
-        }
-
-        return string.Concat(email.AsSpan(0, 1), "***", email.AsSpan(atIndex));
-    }
 }

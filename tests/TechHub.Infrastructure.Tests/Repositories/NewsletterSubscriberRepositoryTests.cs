@@ -109,7 +109,7 @@ public class NewsletterSubscriberRepositoryTests : IClassFixture<DatabaseFixture
     [Fact]
     public async Task LogSendAsync_AndHasBeenSentAsync_WorkAsExpected()
     {
-        await _sut.LogSendAsync("weekly-roundup", "weekly-ai-roundup-2026-05-18", 12, "sent", null, TestContext.Current.CancellationToken);
+        await _sut.LogSendAsync("weekly-roundup", "weekly-ai-roundup-2026-05-18", 12, 0, "sent", null, TestContext.Current.CancellationToken);
 
         var hasBeenSent = await _sut.HasBeenSentAsync("weekly-roundup", "weekly-ai-roundup-2026-05-18", TestContext.Current.CancellationToken);
         hasBeenSent.Should().BeTrue();
@@ -126,6 +126,7 @@ public class NewsletterSubscriberRepositoryTests : IClassFixture<DatabaseFixture
         stats.NewContentItemsLast24Hours.Should().BeGreaterThanOrEqualTo(0);
         stats.FailedProcessedUrlsLast24Hours.Should().BeGreaterThanOrEqualTo(0);
         stats.FailedJobsLast24Hours.Should().BeGreaterThanOrEqualTo(0);
+        stats.FailedNewsletterSendsLast24Hours.Should().BeGreaterThanOrEqualTo(0);
         stats.NewSubscribersLast24Hours.Should().BeGreaterThanOrEqualTo(0);
         stats.ActiveSubscribers.Should().BeGreaterThanOrEqualTo(0);
         stats.UnconfirmedSubscribers.Should().BeGreaterThanOrEqualTo(0);

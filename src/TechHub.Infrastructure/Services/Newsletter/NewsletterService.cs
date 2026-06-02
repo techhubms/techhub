@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
-using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 using TechHub.Infrastructure.Services.RoundupGeneration;
@@ -92,7 +91,7 @@ public sealed class NewsletterService : INewsletterService
 
         if (!IsUnsubscribeSecretConfigured("combined-weekly"))
         {
-            await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, 0, "failed", "Unsubscribe secret is not configured", ct);
+            await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, 0, 0, "failed", "Unsubscribe secret is not configured", ct);
             return false;
         }
 
@@ -147,7 +146,7 @@ public sealed class NewsletterService : INewsletterService
         catch (Exception ex) when (ex is not OperationCanceledException)
         {
             var status = successful > 0 ? "partial" : "failed";
-            await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, successful, status, ex.Message, ct);
+            await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, successful, attempted - successful, status, ex.Message, ct);
             _logger.LogError(ex, "Failed sending combined weekly newsletter");
             return false;
         }
@@ -156,7 +155,7 @@ public sealed class NewsletterService : INewsletterService
         var sendError = attempted == 0 || successful == attempted
             ? null
             : $"Delivered to {successful} of {attempted} subscribers";
-        await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, successful, sendStatus, sendError, ct);
+        await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, successful, attempted - successful, sendStatus, sendError, ct);
         return attempted == 0 || successful > 0;
     }
 
@@ -222,9 +221,9 @@ public sealed class NewsletterService : INewsletterService
             "test-send",
             logKey,
             sent ? 1 : 0,
+            sent ? 0 : 1,
             sent ? "sent" : "failed",
-            // codeql[cs/exposure-of-private-information] - email is masked via MaskEmail() before writing to the log table
-            sent ? null : $"Delivery failed to {recipientEmail.MaskEmail()}",
+            sent ? null : "Delivery failed",
             ct);
         return sent;
     }
@@ -270,9 +269,9 @@ public sealed class NewsletterService : INewsletterService
             "test-daily",
             logKey,
             sent ? 1 : 0,
+            sent ? 0 : 1,
             sent ? "sent" : "failed",
-            // codeql[cs/exposure-of-private-information] - email is masked via MaskEmail() before writing to the log table
-            sent ? null : $"Delivery failed to {recipientEmail.MaskEmail()}",
+            sent ? null : "Delivery failed",
             ct);
         return sent;
     }
@@ -389,7 +388,7 @@ public sealed class NewsletterService : INewsletterService
 
         if (dailySubscribers.Count == 0)
         {
-            await _subscriberRepository.LogSendAsync(SendKind, targetKey, 0, "sent", null, ct);
+            await _subscriberRepository.LogSendAsync(SendKind, targetKey, 0, 0, "sent", null, ct);
             return true;
         }
 
@@ -423,7 +422,7 @@ public sealed class NewsletterService : INewsletterService
             : sent > 0
                 ? $"Delivered to {sent} of {eligible} eligible subscribers"
                 : "Delivery failed for all eligible subscribers";
-        await _subscriberRepository.LogSendAsync(SendKind, targetKey, sent, sendStatus, sendError, ct);
+        await _subscriberRepository.LogSendAsync(SendKind, targetKey, sent, eligible - sent, sendStatus, sendError, ct);
         return sent > 0;
     }
 
@@ -446,7 +445,7 @@ public sealed class NewsletterService : INewsletterService
         var text = BuildAdminStatusText(day, stats);
 
         var sent = await SendEmailAsync(_options.AdminReportEmailAddress, $"TechHub Daily Status Report — {targetKey}", html, text, ct);
-        await _subscriberRepository.LogSendAsync(SendKind, targetKey, sent ? 1 : 0, sent ? "sent" : "failed", sent ? null : "Unable to send admin status report", ct);
+        await _subscriberRepository.LogSendAsync(SendKind, targetKey, sent ? 1 : 0, sent ? 0 : 1, sent ? "sent" : "failed", sent ? null : "Unable to send admin status report", ct);
         return sent;
     }
 
@@ -851,6 +850,7 @@ public sealed class NewsletterService : INewsletterService
             newContentItems = stats.NewContentItemsLast24Hours.ToString(CultureInfo.InvariantCulture),
             failedProcessedUrls = stats.FailedProcessedUrlsLast24Hours.ToString(CultureInfo.InvariantCulture),
             failedJobs = stats.FailedJobsLast24Hours.ToString(CultureInfo.InvariantCulture),
+            failedNewsletterSends = stats.FailedNewsletterSendsLast24Hours.ToString(CultureInfo.InvariantCulture),
             newSubscribers = stats.NewSubscribersLast24Hours.ToString(CultureInfo.InvariantCulture),
             activeSubscribers = stats.ActiveSubscribers.ToString(CultureInfo.InvariantCulture),
             unconfirmedSubscribers = stats.UnconfirmedSubscribers.ToString(CultureInfo.InvariantCulture)
@@ -883,6 +883,7 @@ public sealed class NewsletterService : INewsletterService
             New content items (24h): {stats.NewContentItemsLast24Hours}
             Failed processed URLs (24h): {stats.FailedProcessedUrlsLast24Hours}
             Failed background jobs (24h): {stats.FailedJobsLast24Hours}
+            Failed newsletter sends (24h): {stats.FailedNewsletterSendsLast24Hours}
             New newsletter subscribers (24h): {stats.NewSubscribersLast24Hours}
             Active subscribers: {stats.ActiveSubscribers}
             Unconfirmed subscribers: {stats.UnconfirmedSubscribers}

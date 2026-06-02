@@ -7,6 +7,7 @@ public sealed class NewsletterSendLogEntry
     public string TargetKey { get; init; } = string.Empty;
     public DateTimeOffset SentAt { get; init; }
     public int RecipientCount { get; init; }
+    public int FailedCount { get; init; }
     public string Status { get; init; } = string.Empty;
     public string? ErrorMessage { get; init; }
 }
