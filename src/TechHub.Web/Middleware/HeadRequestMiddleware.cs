@@ -121,12 +121,21 @@ public class HeadRequestMiddleware
 
     private static bool IsShortCircuitExcluded(PathString path)
     {
-        if (_excludedExactPaths.Contains(path.Value ?? string.Empty))
+        var value = path.Value;
+        if (value is not null && _excludedExactPaths.Contains(value))
         {
             return true;
         }
 
-        return _excludedPrefixes.Any(prefix => path.StartsWithSegments(prefix, StringComparison.OrdinalIgnoreCase));
+        for (var i = 0; i < _excludedPrefixes.Length; i++)
+        {
+            if (path.StartsWithSegments(_excludedPrefixes[i], StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
 
