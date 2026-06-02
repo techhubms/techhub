@@ -111,24 +111,24 @@ public sealed class NewsletterService : INewsletterService
         var attempted = 0;
         var successful = 0;
 
-        try
+        foreach (var subscriber in allSubscribers.Values)
         {
-            foreach (var subscriber in allSubscribers.Values)
+            // Find the roundups this subscriber cares about (intersection of their sections and new roundups)
+            var relevantRoundups = subscriber.WeeklySections
+                .Where(s => roundupsBySection.ContainsKey(s))
+                .Select(s => roundupsBySection[s])
+                .ToList();
+            relevantRoundups = OrderRoundupsByWebsiteOrder(relevantRoundups);
+
+            if (relevantRoundups.Count == 0)
             {
-                // Find the roundups this subscriber cares about (intersection of their sections and new roundups)
-                var relevantRoundups = subscriber.WeeklySections
-                    .Where(s => roundupsBySection.ContainsKey(s))
-                    .Select(s => roundupsBySection[s])
-                    .ToList();
-                relevantRoundups = OrderRoundupsByWebsiteOrder(relevantRoundups);
+                continue;
+            }
 
-                if (relevantRoundups.Count == 0)
-                {
-                    continue;
-                }
+            attempted++;
 
-                attempted++;
-
+            try
+            {
                 var unsubscribeUrl = BuildUnsubscribeUrl(subscriber.Email);
                 var manageUrl = BuildManageUrl(subscriber.Email, _options.UnsubscribeSecret);
                 var subject = relevantRoundups.Count == 1
@@ -142,13 +142,12 @@ public sealed class NewsletterService : INewsletterService
                     successful++;
                 }
             }
-        }
-        catch (Exception ex) when (ex is not OperationCanceledException)
-        {
-            var status = successful > 0 ? "partial" : "failed";
-            await _subscriberRepository.LogSendAsync("weekly-roundup", targetKey, successful, attempted - successful, status, ex.Message, ct);
-            _logger.LogError(ex, "Failed sending combined weekly newsletter");
-            return false;
+#pragma warning disable CA1031 // Best-effort: continue with other subscribers if one fails
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                _logger.LogWarning(ex, "Failed sending weekly newsletter to subscriber — skipping");
+            }
+#pragma warning restore CA1031
         }
 
         var sendStatus = attempted == 0 || successful == attempted ? "sent" : successful > 0 ? "partial" : "failed";

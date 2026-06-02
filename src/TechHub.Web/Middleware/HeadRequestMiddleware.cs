@@ -1,3 +1,5 @@
+using TechHub.Core.Validation;
+
 namespace TechHub.Web.Middleware;
 
 /// <summary>
@@ -12,8 +14,10 @@ namespace TechHub.Web.Middleware;
 ///         The SSR pipeline makes an API call for every page render; when the API is slow,
 ///         bots and crawlers (Slack link previews, SEO scanners) disconnect after their
 ///         15–25 s timeout and record 499 (client closed request) in telemetry. Since HEAD
-///         only requires response headers — not a body — returning 200 immediately is
-///         semantically correct and eliminates the 499s with ~23 s duration.
+///         only requires response headers — not a body — returning 200 immediately avoids
+///         these 499s; note that for unknown routes the response may not mirror a GET (which
+///         would 404 after SSR slug validation), so this is a deliberate performance
+///         trade-off rather than a strict semantic guarantee.
 ///         Known minimal API endpoints (<c>/version</c>, <c>/health</c>, <c>/alive</c>)
 ///         are excluded from this path and fall through to the rewrite path below.</item>
 ///   <item><b>File-extension paths and minimal API endpoints</b> — Rewrites the method to
@@ -68,6 +72,23 @@ public class HeadRequestMiddleware
 
         if (isExtensionless && !_minimalApiPaths.Contains(path))
         {
+            // Validate all path segments structurally before short-circuiting.
+            // InvalidRouteSegmentMiddleware validates only the first segment; segments
+            // beyond that (collection, slug, date-component, etc.) are checked here so
+            // that clearly invalid paths return 404 rather than a misleading 200.
+            // IsValidSlug covers all structurally valid URL segments (letters, digits,
+            // hyphens) and rejects dots, spaces, special characters, and other patterns
+            // that can never match a Blazor route.
+            var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
+            foreach (var segment in segments)
+            {
+                if (!RouteParameterValidator.IsValidSlug(segment))
+                {
+                    context.Response.StatusCode = StatusCodes.Status404NotFound;
+                    return;
+                }
+            }
+
             // Extension-less path → Blazor page route. Short-circuit with 200 immediately.
             // Calling next would trigger Blazor SSR → API call → potential slow response →
             // bot/crawler timeout → 499. HEAD only needs headers, not a body.

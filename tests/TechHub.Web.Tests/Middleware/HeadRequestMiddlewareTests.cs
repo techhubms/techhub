@@ -162,6 +162,24 @@ public class HeadRequestMiddlewareTests
         context.Request.Method.Should().Be("HEAD", "method must be restored even when next() throws");
     }
 
+    // ─── Structurally invalid extension-less paths → 404, no SSR ─────────────
+
+    [Theory]
+    [InlineData("/ai/invalid segment")]          // space in segment
+    [InlineData("/section/../../etc/passwd")]    // path traversal
+    [InlineData("/section/col%lection")]         // percent + invalid chars
+    [InlineData("/section/has_underscore")]      // underscore is not a valid slug character
+    [InlineData("/section/has.dot/slug")]        // dot in non-terminal segment
+    public async Task InvokeAsync_HeadExtensionlessPath_InvalidSegment_Returns404WithoutCallingNext(string path)
+    {
+        var (middleware, context, nextCalled) = CreateMiddleware("HEAD", path);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeFalse("SSR must be bypassed for structurally invalid extension-less HEAD requests");
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
+    }
+
     // ─── Constructor guard ────────────────────────────────────────────────────
 
     [Fact]
