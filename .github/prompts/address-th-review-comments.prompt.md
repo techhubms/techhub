@@ -1,10 +1,10 @@
 ---
 name: address-th-review-comments
-description: "Reviews all open review comment threads on the current branch's pull request, analyses each one, applies code fixes where needed, replies to each thread explaining what was done or why it was ignored, resolves each thread after replying, then commits and pushes directly."
+description: "Reviews all open review comment threads, CodeQL code scanning alerts, and GitHub Advanced Security alerts on the current branch's pull request, analyses each one, applies code fixes where needed, replies to each thread explaining what was done or why it was ignored, resolves each thread after replying, then commits and pushes directly."
 model: Claude Sonnet 4.6
 ---
 
-# Address PR Review Comments
+# Address PR Review Comments, CodeQL Alerts, and Advanced Security Alerts
 
 **🚨 CRITICAL**: Read this entire prompt from start to finish before executing any step.
 
@@ -103,7 +103,9 @@ Store the result as `[REPO]` (format: `owner/repo`).
 
 ---
 
-## Step 5 — Fetch all open (unresolved) review threads
+## Step 5 — Fetch all open issues (review threads + security alerts)
+
+### 5a — Fetch unresolved review threads
 
 Run the following GraphQL query to retrieve all unresolved review threads and their comments. Replace `[OWNER]`, `[REPONAME]`, and `[PR_NUMBER]` with the actual values (split `[REPO]` on `/`):
 
@@ -171,21 +173,55 @@ gh api graphql -f query='
 ' | Out-File -FilePath ".tmp/pr-review-threads.json" -Encoding utf8
 ```
 
-Parse the file. Filter to threads where `isResolved` is `false`. If there are no unresolved threads, inform the user:
+Parse the file. Filter to threads where `isResolved` is `false`. Count them and store as `[THREAD_COUNT]`.
 
-> All review threads on PR #[PR_NUMBER] are already resolved. Nothing to do.
+### 5b — Fetch open code scanning (CodeQL) alerts
 
-Then skip directly to Step 9.
+Fetch all open code scanning alerts for the branch:
 
-Otherwise, count the unresolved threads and report:
+```pwsh
+gh api "repos/[REPO]/code-scanning/alerts?ref=refs/heads/[BRANCHNAME]&state=open&per_page=100" | Out-File -FilePath ".tmp/pr-codeql-alerts.json" -Encoding utf8
+```
 
-> Found [N] unresolved review thread(s) to address.
+Parse the file. Each alert has: `number`, `rule.id`, `rule.description`, `rule.severity`, `most_recent_instance.location` (`path`, `start_line`, `end_line`), `most_recent_instance.message.text`, and `html_url`.
 
-**CHECKPOINT**: "✅ Step 5 completed. Found [N] unresolved thread(s). Moving to Step 6."
+If the command fails (e.g., code scanning is not enabled), record 0 alerts and continue.
+
+Count the open alerts and store as `[CODEQL_COUNT]`.
+
+### 5c — Fetch open secret scanning alerts
+
+Fetch all open secret scanning alerts:
+
+```pwsh
+gh api "repos/[REPO]/secret-scanning/alerts?state=open&per_page=100" | Out-File -FilePath ".tmp/pr-secret-alerts.json" -Encoding utf8
+```
+
+Parse the file. Each alert has: `number`, `secret_type_display_name`, `resolution`, `html_url`, and `locations_url`.
+
+If the command fails (e.g., secret scanning is not enabled), record 0 alerts and continue.
+
+Count the open alerts and store as `[SECRET_COUNT]`.
+
+### 5d — Summarise what was found
+
+If ALL three counts are zero, inform the user:
+
+> No open review threads, CodeQL alerts, or secret scanning alerts found on PR #[PR_NUMBER]. Nothing to do.
+
+Then skip directly to Step 10.
+
+Otherwise report:
+
+> Found [THREAD_COUNT] unresolved review thread(s), [CODEQL_COUNT] open CodeQL alert(s), and [SECRET_COUNT] open secret scanning alert(s) to address.
+
+**CHECKPOINT**: "✅ Step 5 completed. [THREAD_COUNT] thread(s), [CODEQL_COUNT] CodeQL alert(s), [SECRET_COUNT] secret alert(s). Moving to Step 6."
 
 ---
 
-## Step 6 — Analyse and address each open thread
+## Step 6 — Analyse and address each open review thread
+
+If `[THREAD_COUNT]` is 0, skip this step entirely.
 
 **🚨 CRITICAL**: Steps 6d (reply) and 6e (resolve) are **MANDATORY** for **every single thread** — including threads where you made a code fix. You are not done with a thread until you have BOTH posted a reply AND resolved it on GitHub. Never skip 6d or 6e. Never batch them for later.
 
@@ -262,11 +298,132 @@ Confirm both actions completed, then state:
 
 Repeat steps 6a–6f for every unresolved thread before moving on.
 
-**CHECKPOINT**: "✅ Step 6 completed. All [N] threads replied to and resolved on GitHub. Moving to Step 7."
+**CHECKPOINT**: "✅ Step 6 completed. All [THREAD_COUNT] threads replied to and resolved on GitHub. Moving to Step 7."
 
 ---
 
-## Step 7 — Verify no new errors
+## Step 7 — Analyse and address each open CodeQL alert
+
+If `[CODEQL_COUNT]` is 0, skip this step entirely.
+
+Work through each open CodeQL alert one at a time. **Complete all sub-steps before moving to the next alert.**
+
+### 7a — Read and understand the alert
+
+For each alert, read:
+
+- **Rule**: `rule.id` and `rule.description` — what vulnerability or code quality issue was detected
+- **Severity**: `rule.severity` (e.g., `error`, `warning`, `note`)
+- **Location**: `most_recent_instance.location.path` and `start_line` — the exact file and line
+- **Message**: `most_recent_instance.message.text` — the specific diagnostic message
+
+Read the relevant file around the flagged line to understand the current code in context.
+
+### 7b — Decide: fix or dismiss
+
+**NEEDS A FIX** — The alert points to a genuine security issue, vulnerability, or code defect that should be corrected (e.g., SQL injection risk, unvalidated input, exposed secret, use of a deprecated insecure API).
+
+**DISMISS** — The alert is a false positive, the code path is unreachable, the risk is mitigated elsewhere, or the flagged pattern is an intentional and safe design choice.
+
+**🚨 CRITICAL**: For `error`-severity alerts, default to fixing unless there is a clear, well-reasoned case for dismissal.
+
+### 7c — If NEEDS A FIX: apply the fix
+
+Make the minimal correct change to resolve the CodeQL finding. Follow the conventions in the relevant `AGENTS.md` files. Run `get_errors` after editing to ensure no new errors were introduced.
+
+### 7d — **MANDATORY**: Dismiss or note the alert on GitHub
+
+**If you fixed the code**: The alert will auto-close when the fix is pushed. No API call needed here — just make a note that this alert was fixed in code.
+
+**If dismissing (false positive / won't fix)**: Dismiss the alert via the API:
+
+```pwsh
+gh api repos/[REPO]/code-scanning/alerts/[ALERT_NUMBER] -X PATCH -f state="dismissed" -f dismissed_reason="false positive" -f dismissed_comment="[One or two sentences explaining why this is a false positive or won't be fixed, referencing the specific code path or mitigation]"
+```
+
+Valid `dismissed_reason` values: `"false positive"`, `"won't fix"`, `"used in tests"`.
+
+Verify the command exits 0. If it fails, stop and report the error.
+
+### 7e — Checkpoint for this alert
+
+State:
+
+"✅ CodeQL alert [N/TOTAL] (#[ALERT_NUMBER] — [rule.id]) — [FIXED in code / DISMISSED]. [Brief one-line summary of action taken]."
+
+---
+
+Repeat steps 7a–7e for every open CodeQL alert before moving on.
+
+**CHECKPOINT**: "✅ Step 7 completed. All [CODEQL_COUNT] CodeQL alerts addressed. Moving to Step 8."
+
+---
+
+## Step 8 — Analyse and address each open secret scanning alert
+
+If `[SECRET_COUNT]` is 0, skip this step entirely.
+
+Work through each open secret scanning alert one at a time.
+
+### 8a — Read and understand the alert
+
+For each alert:
+
+- Note the `secret_type_display_name` (e.g., "GitHub Personal Access Token")
+- Fetch the alert locations to find where in the codebase the secret appears:
+
+  ```pwsh
+  gh api [LOCATIONS_URL]
+  ```
+
+- Identify the file(s) and line(s) involved.
+
+### 8b — Decide: rotate or dismiss
+
+**ROTATE / REMEDIATE** — The secret is a real credential or token that should not be in source code. The correct fix is to:
+
+1. Remove the secret from the file (replace with an environment variable reference, a secrets manager reference, or a placeholder)
+2. Immediately rotate/revoke the actual secret in the relevant system (GitHub, Azure Key Vault, etc.) — **inform the user** that rotation is needed since you cannot do this on their behalf
+
+**DISMISS** — The value is a test fixture, a clearly fake/placeholder value, or is already rotated and the alert is stale.
+
+**🚨 CRITICAL**: Never leave a real secret in the codebase. If in doubt, treat it as real and remediate.
+
+### 8c — If ROTATE / REMEDIATE: remove the secret from code
+
+Replace the hardcoded secret with an appropriate reference (e.g., `Environment.GetEnvironmentVariable("SECRET_NAME")`, a config binding, or a Key Vault reference). Follow existing patterns in the codebase. Run `get_errors` after editing.
+
+**Then inform the user**:
+
+> ⚠️ Secret `[SECRET_TYPE]` was found at `[FILE]:[LINE]`. The hardcoded value has been removed from the code. **You must manually rotate this secret** in [the relevant system] to ensure the exposed value is no longer valid.
+
+### 8d — **MANDATORY**: Resolve or dismiss the alert on GitHub
+
+**If you removed the secret from code**: The alert will auto-close when the fix is pushed. No API call needed.
+
+**If dismissing**: Dismiss via the API:
+
+```pwsh
+gh api repos/[REPO]/secret-scanning/alerts/[ALERT_NUMBER] -X PATCH -f resolution="used_in_tests" -f resolution_comment="[Brief explanation]"
+```
+
+Valid `resolution` values: `"false_positive"`, `"wont_fix"`, `"revoked"`, `"used_in_tests"`.
+
+### 8e — Checkpoint for this alert
+
+State:
+
+"✅ Secret alert [N/TOTAL] (#[ALERT_NUMBER] — [secret_type_display_name]) — [REMEDIATED in code / DISMISSED]. [Brief one-line summary]."
+
+---
+
+Repeat steps 8a–8e for every open secret scanning alert before moving on.
+
+**CHECKPOINT**: "✅ Step 8 completed. All [SECRET_COUNT] secret scanning alerts addressed. Moving to Step 9."
+
+---
+
+## Step 9 — Verify no new errors
 
 Run:
 
@@ -274,35 +431,55 @@ Run:
 Run -Clean
 ```
 
-If there are build or test failures caused by changes made in Step 6, fix them before proceeding.
+If there are build or test failures caused by changes made in Steps 6, 7, or 8, fix them before proceeding.
 
-**CHECKPOINT**: "✅ Step 7 completed. No errors or failures. Moving to Step 8."
+**CHECKPOINT**: "✅ Step 9 completed. No errors or failures. Moving to Step 10."
 
 ---
 
-## Step 8 — Summarise changes for the user
+## Step 10 — Summarise changes for the user
 
-Print a concise table of every thread and what was done:
+Print a concise summary with three sections:
+
+**Review threads:**
 
 | # | File | Line | Action | Summary |
-|---|------|------|--------|---------|
+|---|------|------|--------|------|
 | 1 | ... | ... | Fixed / No fix | ... |
 
-**CHECKPOINT**: "✅ Step 8 completed. Summary provided. Moving to Step 9."
+**CodeQL alerts:**
+
+| # | Alert # | Rule | Severity | Action | Summary |
+|---|---------|------|----------|--------|------|
+| 1 | ... | ... | ... | Fixed / Dismissed | ... |
+
+**Secret scanning alerts:**
+
+| # | Alert # | Type | Action | Summary |
+|---|---------|------|--------|------|
+| 1 | ... | ... | Remediated / Dismissed | ... |
+
+If a category had 0 items, omit its table and note "None found."
+
+**CHECKPOINT**: "✅ Step 10 completed. Summary provided. Moving to Step 11."
 
 ---
 
-## Step 9 — Commit and push directly
+## Step 11 — Commit and push directly
 
-If **no code changes** were made (all threads received "no fix needed" replies), skip this step — no commit is necessary.
+If **no code changes** were made (all issues received "no fix" / "dismiss" responses), skip this step — no commit is necessary.
 
-Otherwise, stage and commit only the files changed in Step 6:
+Otherwise, stage all changed files:
 
 ```pwsh
 git add -A
 ```
 
-Write a short, direct commit message summarising the fixes (no ticket numbers, no PR references). Use imperative mood. Example: `"Address PR review comments: [brief summary]"`.
+Write a short, direct commit message summarising the fixes (no ticket numbers, no PR references). Use imperative mood. Include all relevant issue types. Examples:
+
+- `"Address PR review comments: [brief summary]"`
+- `"Fix CodeQL alerts: [brief summary]"`
+- `"Address review comments and fix CodeQL alerts: [brief summary]"`
 
 ```pwsh
 git commit -m "[COMMIT_MESSAGE]"
@@ -317,4 +494,4 @@ git push origin [BRANCHNAME]
 
 If the push is rejected for any reason, stop and ask the user.
 
-**CHECKPOINT**: "✅ Step 9 completed. Changes committed and pushed. Workflow complete."
+**CHECKPOINT**: "✅ Step 11 completed. Changes committed and pushed. Workflow complete."
