@@ -649,6 +649,11 @@ public static class BlazorHelpers
         var escapedValue = value.Replace("\\", "\\\\").Replace("'", "\\'");
         var inputSelector = await locator.EvaluateAsync<string>(
             "el => el.tagName.toLowerCase() + (el.type ? '[type=' + el.type + ']' : '')");
+        var targetInputIndex = await locator.EvaluateAsync<int>(
+            @"el => {
+                const selector = el.tagName.toLowerCase() + (el.type ? '[type=' + el.type + ']' : '');
+                return Array.from(document.querySelectorAll(selector)).indexOf(el);
+            }");
         await locator.Page.WaitForConditionAsync($@"
             () => {{
                 if (window.location.href.includes('{urlQueryParam}=')) return true;
@@ -660,7 +665,13 @@ public static class BlazorHelpers
                     // returns the first in DOM order which may be the hidden mobile one.
                     const inputs = document.querySelectorAll('{inputSelector}');
                     let input = null;
+                    if ({targetInputIndex} >= 0 && {targetInputIndex} < inputs.length) {{
+                        input = inputs[{targetInputIndex}];
+                    }}
                     for (const inp of inputs) {{
+                        if (input) {{
+                            break;
+                        }}
                         if (inp.offsetParent !== null || inp.getClientRects().length > 0) {{
                             input = inp;
                             break;
