@@ -143,14 +143,34 @@ public sealed class NewsletterService : INewsletterService
                     successful++;
                 }
 
-                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: emailSent, ct);
+                try
+                {
+                    await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: emailSent, ct);
+                }
+#pragma warning disable CA1031 // Best-effort: send-status tracking must not abort subscriber sending
+                catch (Exception ex) when (ex is not OperationCanceledException)
+                {
+                    _logger.LogWarning(ex, "Failed recording weekly newsletter send status for subscriber — skipping");
+                }
+#pragma warning restore CA1031
             }
 #pragma warning disable CA1031 // Best-effort: continue with other subscribers if one fails
             catch (Exception ex) when (ex is not OperationCanceledException)
             {
                 _logger.LogWarning(ex, "Failed sending weekly newsletter to subscriber — skipping");
-                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: false, CancellationToken.None);
+
+                try
+                {
+                    await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: false, ct);
+                }
+#pragma warning disable CA1031 // Best-effort: send-status tracking must not abort subscriber sending
+                catch (Exception recordEx) when (recordEx is not OperationCanceledException)
+                {
+                    _logger.LogWarning(recordEx, "Failed recording weekly newsletter send status for subscriber — skipping");
+                }
+#pragma warning restore CA1031
             }
+#pragma warning restore CA1031
 #pragma warning restore CA1031
         }
 
