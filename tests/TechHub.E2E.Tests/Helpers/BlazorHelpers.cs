@@ -665,16 +665,17 @@ public static class BlazorHelpers
                     // returns the first in DOM order which may be the hidden mobile one.
                     const inputs = document.querySelectorAll('{inputSelector}');
                     let input = null;
+                    // Prefer the originally targeted input index so retries keep firing
+                    // on the same DOM slot (desktop vs mobile variants can coexist).
                     if ({targetInputIndex} >= 0 && {targetInputIndex} < inputs.length) {{
                         input = inputs[{targetInputIndex}];
                     }}
-                    for (const inp of inputs) {{
-                        if (input) {{
-                            break;
-                        }}
-                        if (inp.offsetParent !== null || inp.getClientRects().length > 0) {{
-                            input = inp;
-                            break;
+                    else {{
+                        for (const inp of inputs) {{
+                            if (inp.offsetParent !== null || inp.getClientRects().length > 0) {{
+                                input = inp;
+                                break;
+                            }}
                         }}
                     }}
                     if (!input && inputs.length > 0) input = inputs[0];
