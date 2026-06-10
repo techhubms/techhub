@@ -119,6 +119,67 @@ public class NewsletterSubscriberRepositoryTests : IClassFixture<DatabaseFixture
     }
 
     [Fact]
+    public async Task RecordSubscriberSendAsync_Daily_UpdatesLastDailyStatus()
+    {
+        // Arrange
+        const string Email = "send-status-daily@example.com";
+        await _sut.UpsertSubscriberAsync(Email, null, [], ["ai"], TestContext.Current.CancellationToken);
+        await _sut.ConfirmSubscriberAsync(Email, TestContext.Current.CancellationToken);
+
+        // Act
+        await _sut.RecordSubscriberSendAsync(Email, isWeekly: false, succeeded: true, TestContext.Current.CancellationToken);
+
+        // Assert
+        var subscriber = await _sut.GetSubscriberByEmailAsync(Email, TestContext.Current.CancellationToken);
+        subscriber.Should().NotBeNull();
+        subscriber!.LastDailySentAt.Should().NotBeNull();
+        subscriber.LastDailySucceeded.Should().BeTrue();
+        subscriber.LastWeeklySentAt.Should().BeNull();
+        subscriber.LastWeeklySucceeded.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task RecordSubscriberSendAsync_Weekly_UpdatesLastWeeklyStatus()
+    {
+        // Arrange
+        const string Email = "send-status-weekly@example.com";
+        await _sut.UpsertSubscriberAsync(Email, null, ["ai"], [], TestContext.Current.CancellationToken);
+        await _sut.ConfirmSubscriberAsync(Email, TestContext.Current.CancellationToken);
+
+        // Act
+        await _sut.RecordSubscriberSendAsync(Email, isWeekly: true, succeeded: false, TestContext.Current.CancellationToken);
+
+        // Assert
+        var subscriber = await _sut.GetSubscriberByEmailAsync(Email, TestContext.Current.CancellationToken);
+        subscriber.Should().NotBeNull();
+        subscriber!.LastWeeklySentAt.Should().NotBeNull();
+        subscriber.LastWeeklySucceeded.Should().BeFalse();
+        subscriber.LastDailySentAt.Should().BeNull();
+        subscriber.LastDailySucceeded.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task GetSubscribersAsync_IncludesSendStatus_WhenPresent()
+    {
+        // Arrange
+        const string Email = "send-status-admin@example.com";
+        await _sut.UpsertSubscriberAsync(Email, null, ["ai"], ["ai"], TestContext.Current.CancellationToken);
+        await _sut.ConfirmSubscriberAsync(Email, TestContext.Current.CancellationToken);
+        await _sut.RecordSubscriberSendAsync(Email, isWeekly: false, succeeded: true, TestContext.Current.CancellationToken);
+        await _sut.RecordSubscriberSendAsync(Email, isWeekly: true, succeeded: false, TestContext.Current.CancellationToken);
+
+        // Act
+        var subscribers = await _sut.GetSubscribersAsync(search: "send-status-admin", ct: TestContext.Current.CancellationToken);
+
+        // Assert
+        var found = subscribers.Should().ContainSingle(s => s.Email == Email).Which;
+        found.LastDailySentAt.Should().NotBeNull();
+        found.LastDailySucceeded.Should().BeTrue();
+        found.LastWeeklySentAt.Should().NotBeNull();
+        found.LastWeeklySucceeded.Should().BeFalse();
+    }
+
+    [Fact]
     public async Task GetDailyReportStatsAsync_ReturnsNonNegativeCounts()
     {
         var stats = await _sut.GetDailyReportStatsAsync(TestContext.Current.CancellationToken);

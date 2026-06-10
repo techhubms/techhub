@@ -88,6 +88,8 @@
                     <th>Weekly sections</th>
                     <th>Daily sections</th>
                     <th>Confirmed</th>
+                    <th>Last daily</th>
+                    <th>Last weekly</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -100,6 +102,8 @@
                         <td>@string.Join(", ", subscriber.WeeklySections)</td>
                         <td>@string.Join(", ", subscriber.DailySections)</td>
                         <td>@(subscriber.IsConfirmed ? "✓" : "✗")</td>
+                        <td class="admin-cell-send-status">@RenderSendStatus(subscriber.LastDailySentAt, subscriber.LastDailySucceeded)</td>
+                        <td class="admin-cell-send-status">@RenderSendStatus(subscriber.LastWeeklySentAt, subscriber.LastWeeklySucceeded)</td>
                         <td>
                             <button class="admin-link-btn" @onclick="() => StartEdit(subscriber)">Edit</button>
                             <button class="admin-link-btn admin-link-btn-danger" @onclick="() => DeleteAsync(subscriber.Id)">Delete</button>
@@ -359,4 +363,11 @@
                 .Select(x => x.ToLowerInvariant())
                 .Distinct(StringComparer.OrdinalIgnoreCase)
                 .ToList();
+
+    private static string RenderSendStatus(DateTimeOffset? sentAt, bool? succeeded) =>
+        sentAt is null
+            ? "—"
+            : succeeded == true
+                ? $"✓ {DateHelper.FormatTimestamp(sentAt.Value)}"
+                : $"✗ {DateHelper.FormatTimestamp(sentAt.Value)}";
 }

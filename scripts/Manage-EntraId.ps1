@@ -20,9 +20,10 @@
     3. Optionally cleans up expired secrets
 
     Deployment SP Key Vault roles (staging/production only):
-    The GitHub Actions deployment service principal (AZURE_CREDENTIALS) is separate from the
-    TechHub OIDC app registration. It needs two roles on the subscription to write secrets and
-    manage Key Vault network firewall rules during deploy:
+    The GitHub Actions deployment service principal (sp-techhubms, appId: 91fe5f39-bee3-48b1-b976-e8ba4e41d84e)
+    is separate from the TechHub OIDC app registration. It uses OIDC federated credentials (no secret)
+    and needs two roles on the subscription to write secrets and manage Key Vault network firewall rules
+    during deploy:
         - Key Vault Secrets Officer  (write/read/delete secrets)
         - Key Vault Contributor      (manage network ACL rules)
     Pass -DeploymentSpObjectId <OID> to assign these roles automatically.
@@ -60,7 +61,7 @@
     GitHub repository in 'owner/repo' format. Defaults to the current repo.
 
 .PARAMETER DeploymentSpObjectId
-    Object ID of the GitHub Actions deployment service principal (from AZURE_CREDENTIALS).
+    Object ID of the GitHub Actions deployment service principal (sp-techhubms).
     When provided for staging/production, assigns 'Key Vault Secrets Officer' and
     'Key Vault Contributor' roles at subscription scope. Safe to re-run (idempotent).
 

@@ -23,8 +23,8 @@ param openAiName = 'oai-techhub-prod'
 // Azure AD — admin dashboard authentication
 // Tenant ID and Client ID are public Entra identifiers (issuer URL contains tenant ID).
 // The actual Client Secret lives in Key Vault — see scripts/Sync-KeyVaultSecrets.ps1.
-param azureAdTenantId = '3d4d17ea-1ae4-4705-947e-51369c5a5f79'
-param azureAdClientId = '6f993c39-347a-49a2-a854-836d07358905'
+param azureAdTenantId = '459df0d4-819b-42e9-9ff4-f9ddf3065c0c'
+param azureAdClientId = '03886f87-2316-4ee8-ba3b-353cfcb43f4c'
 // GitHub Container Registry
 param githubRegistryUsername = 'techhubms'
 // Telemetry — set to empty string in PR preview environments to prevent data from

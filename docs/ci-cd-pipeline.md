@@ -286,7 +286,7 @@ Configure these per-environment in GitHub repository settings → Environments �
 | Secret | Staging | Production | Notes |
 |--------|---------|------------|-------|
 | `POSTGRES_ADMIN_PASSWORD` | - | Required | Production DB admin password. `Deploy-Infrastructure.ps1` reads this from Key Vault automatically if not set; only needed explicitly in CI or on first deploy before Key Vault is populated. |
-| `AZURE_AD_CLIENT_SECRET` | - | Required | Entra ID client secret for user authentication — set via `Manage-EntraId.ps1 -Environment prod`. |
+| `AZURE_AD_CLIENT_SECRET` | - | Required | Entra ID client secret for user authentication — set via `Manage-EntraId.ps1 -Environment production`. |
 | `NEWSLETTER_UNSUBSCRIBE_SECRET` | - | Required | HMAC key used to sign newsletter unsubscribe and confirm links. Set once on initial deploy; `Sync-KeyVaultSecrets.ps1` preserves the existing Key Vault value on subsequent deploys if the env var is absent. |
 | `WILDCARD_CERT_HUB_MS` | - | Required | PFX certificate for the `*.hub.ms` wildcard TLS domain. Set once on initial deploy or at renewal time; skipped on re-deploy if already in Key Vault. |
 | `WILDCARD_CERT_XEBIA_MS` | - | Required | PFX certificate for the `*.xebia.ms` wildcard TLS domain. Set once on initial deploy or at renewal time; skipped on re-deploy if already in Key Vault. |

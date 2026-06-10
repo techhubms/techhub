@@ -1,6 +1,6 @@
-<p class="th-date" style="margin:0 0 20px 0;font-size:15px;color:#4a5568;font-weight:500;text-decoration:underline;">{{date}}</p>
+<p class="th-section-label">{{date}}</p>
 {{#each sections}}
-<h3 class="th-section-heading">{{title}}</h3>
+<h3 class="th-section-heading"{{#if @first}} style="margin-top: 8px;"{{/if}}>{{title}}</h3>
 <ul class="th-item-list">
   {{#each items}}
   <li class="th-item">
