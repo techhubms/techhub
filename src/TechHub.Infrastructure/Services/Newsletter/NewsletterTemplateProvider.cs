@@ -9,6 +9,9 @@ namespace TechHub.Infrastructure.Services.Newsletter;
 /// Injected into <see cref="NewsletterService"/> so templates are not recompiled
 /// per DI scope.
 /// </summary>
+/// <remarks>
+/// In development, templates are reloaded from disk (and recompiled) on each access to enable live editing.
+/// </remarks>
 public sealed class NewsletterTemplateProvider
 {
     private readonly IHostEnvironment _env;
