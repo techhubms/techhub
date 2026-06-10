@@ -143,32 +143,13 @@ public sealed class NewsletterService : INewsletterService
                     successful++;
                 }
 
-                try
-                {
-                    await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: emailSent, ct);
-                }
-#pragma warning disable CA1031 // Best-effort: send-status tracking must not abort subscriber sending
-                catch (Exception ex) when (ex is not OperationCanceledException)
-                {
-                    _logger.LogWarning(ex, "Failed recording weekly newsletter send status for subscriber — skipping");
-                }
-#pragma warning restore CA1031
+                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: emailSent, ct);
             }
 #pragma warning disable CA1031 // Best-effort: continue with other subscribers if one fails
             catch (Exception ex) when (ex is not OperationCanceledException)
             {
                 _logger.LogWarning(ex, "Failed sending weekly newsletter to subscriber — skipping");
-
-                try
-                {
-                    await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: false, ct);
-                }
-#pragma warning disable CA1031 // Best-effort: send-status tracking must not abort subscriber sending
-                catch (Exception recordEx) when (recordEx is not OperationCanceledException)
-                {
-                    _logger.LogWarning(recordEx, "Failed recording weekly newsletter send status for subscriber — skipping");
-                }
-#pragma warning restore CA1031
+                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: false, CancellationToken.None);
             }
 #pragma warning restore CA1031
         }
@@ -430,15 +411,25 @@ public sealed class NewsletterService : INewsletterService
             eligible++;
             selectedSections = OrderSectionsByWebsiteOrder(selectedSections);
 
-            var html = BuildDailyOverviewHtml(day, selectedSections, itemsBySection, subscriber.Email);
-            var text = BuildDailyOverviewText(day, selectedSections, itemsBySection, subscriber.Email);
-            var emailSent = await SendEmailAsync(subscriber.Email, $"TechHub Daily Overview — {targetKey}", html, text, ct);
-            if (emailSent)
+            try
             {
-                sent++;
-            }
+                var html = BuildDailyOverviewHtml(day, selectedSections, itemsBySection, subscriber.Email);
+                var text = BuildDailyOverviewText(day, selectedSections, itemsBySection, subscriber.Email);
+                var emailSent = await SendEmailAsync(subscriber.Email, $"TechHub Daily Overview — {targetKey}", html, text, ct);
+                if (emailSent)
+                {
+                    sent++;
+                }
 
-            await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: false, succeeded: emailSent, ct);
+                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: false, succeeded: emailSent, ct);
+            }
+#pragma warning disable CA1031 // Best-effort: continue with other subscribers if one fails
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                _logger.LogWarning(ex, "Failed sending daily newsletter to subscriber — skipping");
+                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: false, succeeded: false, CancellationToken.None);
+            }
+#pragma warning restore CA1031
         }
 
         var sendStatus = eligible == 0 || sent == eligible ? "sent" : sent > 0 ? "partial" : "failed";
