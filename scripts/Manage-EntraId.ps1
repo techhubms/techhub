@@ -22,10 +22,11 @@
     Deployment SP Key Vault roles (staging/production only):
     The GitHub Actions deployment service principal (sp-techhubms, appId: 91fe5f39-bee3-48b1-b976-e8ba4e41d84e)
     is separate from the TechHub OIDC app registration. It uses OIDC federated credentials (no secret)
-    and needs two roles on the subscription to write secrets and manage Key Vault network firewall rules
-    during deploy:
-        - Key Vault Secrets Officer  (write/read/delete secrets)
-        - Key Vault Contributor      (manage network ACL rules)
+    and needs three roles on the subscription to write secrets, manage Key Vault network firewall rules,
+    and create/update subscription-scoped policy assignments during deploy:
+        - Key Vault Secrets Officer      (write/read/delete secrets)
+        - Key Vault Contributor          (manage network ACL rules)
+        - Resource Policy Contributor    (create/update policy assignments in infrastructure.bicep)
     Pass -DeploymentSpObjectId <OID> to assign these roles automatically.
 
     Secret delivery:
@@ -621,8 +622,9 @@ if (-not $isLocalhost -and $DeploymentSpObjectId) {
     $subscriptionScope = "/subscriptions/$subscriptionId"
 
     $kvRoles = @(
-        @{ Name = 'Key Vault Secrets Officer'; Reason = 'write/read/delete secrets during deploy' },
-        @{ Name = 'Key Vault Contributor';     Reason = 'manage network ACL firewall rules' }
+        @{ Name = 'Key Vault Secrets Officer';    Reason = 'write/read/delete secrets during deploy' },
+        @{ Name = 'Key Vault Contributor';        Reason = 'manage network ACL firewall rules' },
+        @{ Name = 'Resource Policy Contributor';  Reason = 'create/update subscription-scoped policy assignments in infrastructure.bicep' }
     )
 
     foreach ($kvRole in $kvRoles) {

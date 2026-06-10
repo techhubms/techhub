@@ -9,7 +9,7 @@ Tech Hub is a **modern .NET 10 web application** built with Blazor that serves a
 | **Backend** | ASP.NET Core Minimal API, .NET 10, C# 13 |
 | **Frontend** | Blazor InteractiveServer with prerendering |
 | **Orchestration** | .NET Aspire (service discovery, telemetry, health checks) |
-| **Database** | PostgreSQL (Dapper) or FileSystem (no database) |
+| **Database** | PostgreSQL (Dapper) |
 | **Infrastructure** | Azure Container Apps, Bicep IaC, GitHub Actions CI/CD |
 | **Testing** | xUnit v3, bUnit, Playwright, Pester |
 
@@ -49,7 +49,6 @@ See **[docs/running-and-testing.md](docs/running-and-testing.md)** for the full 
 
 - **TechHub.Core** — Domain models and interfaces (framework-agnostic)
 - **TechHub.Infrastructure** — Dapper repositories, markdown processing, caching
-- **collections/** — Markdown content (news, videos, blogs, community, roundups) synced to database at startup
 
 See **[docs/architecture.md](docs/architecture.md)** for full details.
 
@@ -59,11 +58,9 @@ See **[docs/architecture.md](docs/architecture.md)** for full details.
 |-----------|---------|
 | `src/` | Application source code (API, Web, Core, Infrastructure, AppHost) |
 | `tests/` | Unit, integration, component, E2E, and PowerShell tests |
-| `collections/` | Markdown content organized by collection type |
 | `docs/` | Functional and technical documentation |
 | `scripts/` | PowerShell automation (build, deploy, content processing) |
 | `infra/` | Bicep IaC templates for Azure Container Apps |
-| `specs/` | Feature specifications (SpecKit format) |
 
 See **[docs/repository-structure.md](docs/repository-structure.md)** for the complete breakdown.
 

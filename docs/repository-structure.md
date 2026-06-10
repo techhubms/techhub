@@ -81,8 +81,6 @@ See [src/AGENTS.md](../src/AGENTS.md) for general .NET development patterns and 
     - `_news/` - Sample news items
     - `_roundups/` - Sample roundup posts
     - `_videos/` - Sample video content
-  - `DatabaseFixture.cs` - In-memory database setup for integration tests
-  - `TechHubApiFactory.cs` - WebApplicationFactory for API testing
   - `TestCollectionsSeeder.cs` - Seeds test database from TestCollections
   - See [tests/TechHub.TestUtilities/AGENTS.md](../tests/TechHub.TestUtilities/AGENTS.md)
 

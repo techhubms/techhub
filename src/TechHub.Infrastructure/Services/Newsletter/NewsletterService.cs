@@ -143,13 +143,31 @@ public sealed class NewsletterService : INewsletterService
                     successful++;
                 }
 
-                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: emailSent, ct);
+#pragma warning disable CA1031 // Best-effort: status recording must not affect the send result
+                try
+                {
+                    await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: emailSent, ct);
+                }
+                catch (Exception dbEx) when (dbEx is not OperationCanceledException)
+                {
+                    _logger.LogWarning(dbEx, "Failed recording weekly send status for subscriber — continuing");
+                }
+#pragma warning restore CA1031
             }
 #pragma warning disable CA1031 // Best-effort: continue with other subscribers if one fails
             catch (Exception ex) when (ex is not OperationCanceledException)
             {
                 _logger.LogWarning(ex, "Failed sending weekly newsletter to subscriber — skipping");
-                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: false, CancellationToken.None);
+#pragma warning disable CA1031 // Best-effort: status recording must not abort the loop
+                try
+                {
+                    await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: false, CancellationToken.None);
+                }
+                catch (Exception dbEx) when (dbEx is not OperationCanceledException)
+                {
+                    _logger.LogWarning(dbEx, "Failed recording weekly send failure status for subscriber — continuing");
+                }
+#pragma warning restore CA1031
             }
 #pragma warning restore CA1031
         }
@@ -421,13 +439,31 @@ public sealed class NewsletterService : INewsletterService
                     sent++;
                 }
 
-                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: false, succeeded: emailSent, ct);
+#pragma warning disable CA1031 // Best-effort: status recording must not affect the send result
+                try
+                {
+                    await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: false, succeeded: emailSent, ct);
+                }
+                catch (Exception dbEx) when (dbEx is not OperationCanceledException)
+                {
+                    _logger.LogWarning(dbEx, "Failed recording daily send status for subscriber — continuing");
+                }
+#pragma warning restore CA1031
             }
 #pragma warning disable CA1031 // Best-effort: continue with other subscribers if one fails
             catch (Exception ex) when (ex is not OperationCanceledException)
             {
                 _logger.LogWarning(ex, "Failed sending daily newsletter to subscriber — skipping");
-                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: false, succeeded: false, CancellationToken.None);
+#pragma warning disable CA1031 // Best-effort: status recording must not abort the loop
+                try
+                {
+                    await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: false, succeeded: false, CancellationToken.None);
+                }
+                catch (Exception dbEx) when (dbEx is not OperationCanceledException)
+                {
+                    _logger.LogWarning(dbEx, "Failed recording daily send failure status for subscriber — continuing");
+                }
+#pragma warning restore CA1031
             }
 #pragma warning restore CA1031
         }
