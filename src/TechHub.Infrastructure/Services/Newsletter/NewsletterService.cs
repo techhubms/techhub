@@ -171,7 +171,6 @@ public sealed class NewsletterService : INewsletterService
 #pragma warning restore CA1031
             }
 #pragma warning restore CA1031
-#pragma warning restore CA1031
         }
 
         var sendStatus = attempted == 0 || successful == attempted ? "sent" : successful > 0 ? "partial" : "failed";
