@@ -833,7 +833,7 @@ public sealed class NewsletterService : INewsletterService
         });
         return _templates.Shell(new
         {
-            title = "TechHub Daily Overview",
+            title = $"TechHub Daily Overview — {day.ToString("d MMMM yyyy", CultureInfo.InvariantCulture)}",
             cardClass = "th-card--daily",
             maxWidth = "1100px",
             content

@@ -22,6 +22,11 @@
       * { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
       div[style*="margin: 16px 0"] { margin: 0 !important; }
       #MessageViewBody, #MessageWebViewDiv { width: 100% !important; }
+
+      /* ── Responsive ────────────────────────────────────────── */
+      @media only screen and (max-width: 480px) {
+        .email-container { width: 100% !important; padding: 0 8px !important; box-sizing: border-box; }
+      }
       table, td { mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; }
       table { border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto !important; }
       img { -ms-interpolation-mode: bicubic; }
@@ -39,9 +44,8 @@
         font-size: 24px;
         font-weight: 700;
         color: #6535c7;
-        border-bottom: 2px solid #e8d9ff;
-        padding: 16px 0;
-        margin-bottom: 8px;
+        padding: 16px 0 0;
+        margin-bottom: 0;
       }
       .th-content {
         font-family: Segoe UI, Arial, sans-serif;
@@ -80,9 +84,9 @@
       <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr><td>
       <![endif]-->
-      <div style="max-width: 640px; margin: 0 auto;" class="email-container">
+      <div style="width: 80%; max-width: 1024px; margin: 0 auto;" class="email-container">
         <!--[if mso]>
-        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640">
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="1024">
         <tr><td>
         <![endif]-->
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#ffffff" style="margin: auto; background-color: #ffffff;">
