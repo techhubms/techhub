@@ -59,5 +59,7 @@ public interface INewsletterSubscriberRepository
 
     Task<IReadOnlyList<NewsletterSendLogEntry>> GetSendLogAsync(int count = 100, CancellationToken ct = default);
 
+    Task RecordSubscriberSendAsync(string email, bool isWeekly, bool succeeded, CancellationToken ct = default);
+
     Task<NewsletterDailyReportStats> GetDailyReportStatsAsync(CancellationToken ct = default);
 }

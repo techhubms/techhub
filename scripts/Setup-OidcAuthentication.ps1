@@ -17,7 +17,7 @@
     The pull_request subject covers PR preview jobs that have no GitHub environment assigned
     (pr-preview-build-and-push, pr-preview-teardown), including Dependabot PRs.
 
-    After running this script, delete the AZURE_CREDENTIALS GitHub secret - it is no longer used.
+    After running this script, ensure no AZURE_CREDENTIALS secret exists in GitHub - it is not used.
 
     Requires:
       - Azure CLI (az) authenticated with permission to manage app registrations
@@ -40,7 +40,7 @@
 
 param(
     [Parameter(Mandatory = $false)]
-    [string]$AppId = 'b515cadd-924c-4a87-ad8d-4fb41ed8b85b',
+    [string]$AppId = '91fe5f39-bee3-48b1-b976-e8ba4e41d84e',
 
     [Parameter(Mandatory = $false)]
     [string]$GitHubRepo = 'techhubms/techhub'
@@ -214,7 +214,5 @@ foreach ($varName in $variables.Keys) {
 Write-Host ""
 Write-Host "OIDC setup complete." -ForegroundColor Green
 Write-Host ""
-Write-Host "Next step: delete the AZURE_CREDENTIALS secret from GitHub." -ForegroundColor Yellow
-Write-Host "  Go to: https://github.com/$GitHubRepo/settings/secrets/actions" -ForegroundColor Yellow
-Write-Host "  Delete: AZURE_CREDENTIALS" -ForegroundColor Yellow
+Write-Host "OIDC is the only authentication method — no AZURE_CREDENTIALS secret is needed." -ForegroundColor Green
 Write-Host ""

@@ -193,7 +193,11 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
                 is_confirmed AS IsConfirmed,
                 subscribed_at AS SubscribedAt,
                 confirmed_at AS ConfirmedAt,
-                preferences::text AS Preferences
+                preferences::text AS Preferences,
+                last_daily_sent_at AS LastDailySentAt,
+                last_daily_succeeded AS LastDailySucceeded,
+                last_weekly_sent_at AS LastWeeklySentAt,
+                last_weekly_succeeded AS LastWeeklySucceeded
             FROM newsletter_subscribers
             WHERE {whereSql}
             ORDER BY subscribed_at DESC, id DESC
@@ -344,7 +348,11 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
                 is_confirmed AS IsConfirmed,
                 subscribed_at AS SubscribedAt,
                 confirmed_at AS ConfirmedAt,
-                preferences::text AS Preferences
+                preferences::text AS Preferences,
+                last_daily_sent_at AS LastDailySentAt,
+                last_daily_succeeded AS LastDailySucceeded,
+                last_weekly_sent_at AS LastWeeklySentAt,
+                last_weekly_succeeded AS LastWeeklySucceeded
             FROM newsletter_subscribers
             WHERE lower(email) = lower(@Email)
               AND unsubscribed_at IS NULL
@@ -390,6 +398,30 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
         return affected > 0;
     }
 
+    public async Task RecordSubscriberSendAsync(string email, bool isWeekly, bool succeeded, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(email);
+
+        await _connection.ExecuteAsync(new CommandDefinition(
+            isWeekly
+                ? """
+                    UPDATE newsletter_subscribers
+                    SET last_weekly_sent_at  = NOW(),
+                        last_weekly_succeeded = @Succeeded
+                    WHERE lower(email) = lower(@Email)
+                      AND unsubscribed_at IS NULL
+                    """
+                : """
+                    UPDATE newsletter_subscribers
+                    SET last_daily_sent_at  = NOW(),
+                        last_daily_succeeded = @Succeeded
+                    WHERE lower(email) = lower(@Email)
+                      AND unsubscribed_at IS NULL
+                    """,
+            new { Email = email.Trim(), Succeeded = succeeded },
+            cancellationToken: ct));
+    }
+
     public async Task<NewsletterDailyReportStats> GetDailyReportStatsAsync(CancellationToken ct = default)
     {
         const string Sql = """
@@ -418,7 +450,11 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
             SubscribedAt = row.SubscribedAt,
             ConfirmedAt = row.ConfirmedAt,
             WeeklySections = preferences.WeeklySections,
-            DailySections = preferences.DailySections
+            DailySections = preferences.DailySections,
+            LastDailySentAt = row.LastDailySentAt,
+            LastDailySucceeded = row.LastDailySucceeded,
+            LastWeeklySentAt = row.LastWeeklySentAt,
+            LastWeeklySucceeded = row.LastWeeklySucceeded
         };
     }
 
@@ -472,6 +508,10 @@ public sealed class NewsletterSubscriberRepository : INewsletterSubscriberReposi
         public DateTimeOffset SubscribedAt { get; init; }
         public DateTimeOffset? ConfirmedAt { get; init; }
         public string? Preferences { get; init; }
+        public DateTimeOffset? LastDailySentAt { get; init; }
+        public bool? LastDailySucceeded { get; init; }
+        public DateTimeOffset? LastWeeklySentAt { get; init; }
+        public bool? LastWeeklySucceeded { get; init; }
     }
 
     private sealed class SubscriberPreferences

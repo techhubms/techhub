@@ -10,4 +10,8 @@ public sealed class NewsletterSubscriber
     public DateTimeOffset? ConfirmedAt { get; init; }
     public IReadOnlyList<string> WeeklySections { get; init; } = [];
     public IReadOnlyList<string> DailySections { get; init; } = [];
+    public DateTimeOffset? LastDailySentAt { get; init; }
+    public bool? LastDailySucceeded { get; init; }
+    public DateTimeOffset? LastWeeklySentAt { get; init; }
+    public bool? LastWeeklySucceeded { get; init; }
 }

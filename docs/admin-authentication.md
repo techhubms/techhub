@@ -121,4 +121,4 @@ These are fed from GitHub Actions secrets → `Deploy-Infrastructure.ps1` env va
 - Token handler — `src/TechHub.Web/Services/AdminTokenDelegatingHandler.cs`
 - Entra ID management — `scripts/Manage-EntraId.ps1` (create + rotate for all environments)
 - Bicep modules — `infra/modules/web.bicep`, `infra/modules/api.bicep`
-- CI/CD secrets — `.github/workflows/ci-cd.yml`
+- CI/CD secrets — `.github/workflows/ci.yml`, `.github/workflows/cd.yml`

@@ -137,15 +137,19 @@ public sealed class NewsletterService : INewsletterService
                 var html = RenderCombinedWeeklyHtml(relevantRoundups, unsubscribeUrl, manageUrl);
                 var text = BuildCombinedWeeklyPlainText(relevantRoundups, unsubscribeUrl, manageUrl);
 
-                if (await SendEmailAsync(subscriber.Email, subject, html, text, ct))
+                var emailSent = await SendEmailAsync(subscriber.Email, subject, html, text, ct);
+                if (emailSent)
                 {
                     successful++;
                 }
+
+                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: emailSent, ct);
             }
 #pragma warning disable CA1031 // Best-effort: continue with other subscribers if one fails
             catch (Exception ex) when (ex is not OperationCanceledException)
             {
                 _logger.LogWarning(ex, "Failed sending weekly newsletter to subscriber — skipping");
+                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: true, succeeded: false, CancellationToken.None);
             }
 #pragma warning restore CA1031
         }
@@ -407,12 +411,25 @@ public sealed class NewsletterService : INewsletterService
             eligible++;
             selectedSections = OrderSectionsByWebsiteOrder(selectedSections);
 
-            var html = BuildDailyOverviewHtml(day, selectedSections, itemsBySection, subscriber.Email);
-            var text = BuildDailyOverviewText(day, selectedSections, itemsBySection, subscriber.Email);
-            if (await SendEmailAsync(subscriber.Email, $"TechHub Daily Overview — {targetKey}", html, text, ct))
+            try
             {
-                sent++;
+                var html = BuildDailyOverviewHtml(day, selectedSections, itemsBySection, subscriber.Email);
+                var text = BuildDailyOverviewText(day, selectedSections, itemsBySection, subscriber.Email);
+                var emailSent = await SendEmailAsync(subscriber.Email, $"TechHub Daily Overview — {targetKey}", html, text, ct);
+                if (emailSent)
+                {
+                    sent++;
+                }
+
+                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: false, succeeded: emailSent, ct);
             }
+#pragma warning disable CA1031 // Best-effort: continue with other subscribers if one fails
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                _logger.LogWarning(ex, "Failed sending daily newsletter to subscriber — skipping");
+                await _subscriberRepository.RecordSubscriberSendAsync(subscriber.Email, isWeekly: false, succeeded: false, CancellationToken.None);
+            }
+#pragma warning restore CA1031
         }
 
         var sendStatus = eligible == 0 || sent == eligible ? "sent" : sent > 0 ? "partial" : "failed";
@@ -440,6 +457,16 @@ public sealed class NewsletterService : INewsletterService
         }
 
         var stats = await _subscriberRepository.GetDailyReportStatsAsync(ct);
+
+        var hasFailures = stats.FailedProcessedUrlsLast24Hours > 0
+            || stats.FailedJobsLast24Hours > 0
+            || stats.FailedNewsletterSendsLast24Hours > 0;
+
+        if (!hasFailures)
+        {
+            return false;
+        }
+
         var html = BuildAdminStatusHtml(day, stats);
         var text = BuildAdminStatusText(day, stats);
 
@@ -661,6 +688,7 @@ public sealed class NewsletterService : INewsletterService
                     Title = row.Title,
                     CollectionName = row.CollectionName
                 })
+                .OrderBy(row => row.Title, StringComparer.OrdinalIgnoreCase)
                 .ToList();
         }
 
@@ -690,6 +718,7 @@ public sealed class NewsletterService : INewsletterService
             roundups = roundups.Select(r => new
             {
                 sectionTitle = GetSectionTitle(r.SectionName),
+                sectionTag = GetSectionTag(r.SectionName),
                 title = StripRoundupPrefix(r.Title),
                 introduction = r.Introduction,
                 roundupUrl = BuildAbsoluteUrl($"/{r.SectionName}/roundups/{r.Slug}"),
@@ -735,6 +764,9 @@ public sealed class NewsletterService : INewsletterService
 
     private string GetSectionTitle(string slug) =>
         _appSettings.Content.Sections.TryGetValue(slug, out var config) ? config.Title : slug;
+
+    private string GetSectionTag(string slug) =>
+        _appSettings.Content.Sections.TryGetValue(slug, out var config) ? config.Tag : slug;
 
     private static string StripRoundupPrefix(string title)
     {
@@ -801,7 +833,7 @@ public sealed class NewsletterService : INewsletterService
         });
         return _templates.Shell(new
         {
-            title = "TechHub Daily Overview",
+            title = $"TechHub Daily Overview — {day.ToString("d MMMM yyyy", CultureInfo.InvariantCulture)}",
             cardClass = "th-card--daily",
             maxWidth = "1100px",
             content

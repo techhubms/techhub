@@ -317,17 +317,37 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
             "daily email sections should follow configured website order");
     }
 
+    [Fact]
+    public async Task SendAdminStatusReportAsync_WhenNoFailures_ReturnsFalseWithoutSendingEmail()
+    {
+        var day = new DateOnly(2026, 5, 28);
+        const string TargetKey = "2026-05-28";
+        await _fixture.Connection.ExecuteAsync("""
+            DELETE FROM newsletter_send_log WHERE send_kind = 'admin-status' AND target_key = @TargetKey
+            """, new { TargetKey });
+
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(adminReportEmailAddress: "admin@example.com", emailSender: emailSender.Object);
+
+        var result = await sut.SendAdminStatusReportAsync(day, TestContext.Current.CancellationToken);
+
+        result.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+    }
+
     private NewsletterService CreateService(
         IContentRepository? contentRepository = null,
         IEmailSender? emailSender = null,
-        string unsubscribeSecret = "test-secret")
+        string unsubscribeSecret = "test-secret",
+        string adminReportEmailAddress = "")
     {
         var options = Options.Create(new NewsletterOptions
         {
             Endpoint = "https://invalid.communication.azure.com/",
             SenderAddress = "DoNotReply@example.azurecomm.net",
             WebsiteBaseUrl = "https://tech.hub.ms",
-            UnsubscribeSecret = unsubscribeSecret
+            UnsubscribeSecret = unsubscribeSecret,
+            AdminReportEmailAddress = adminReportEmailAddress
         });
 
         contentRepository ??= new Mock<IContentRepository>(MockBehavior.Loose).Object;

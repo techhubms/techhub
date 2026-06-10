@@ -33,12 +33,10 @@ param tags object = {}
 var severityHigh = 1
 var severityMedium = 2
 
-// --- Application Insights: failed request count (log query, noise-filtered) ---
-// Excludes:
-//   ResultCode=0  — client-aborted Blazor SignalR circuits and bot connections that
-//                   drop the WebSocket before the server can respond. Always client-side.
-//   HTTP 499      — client closed the connection before the server finished responding.
-//                   Unactionable; spikes during outages are captured by availability tests.
+// --- Application Insights: failed request count (log query) ---
+// Includes all failed requests — ResultCode=0 (client aborted) and HTTP 499 (client
+// closed before response) are intentionally NOT excluded: a burst of either can indicate
+// the application is too slow and users are abandoning requests, which is actionable.
 // Scoped to the App Insights resource (not the Log Analytics workspace) so that the
 // 'requests' table is always available during ARM KQL schema validation.
 resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-preview' = {
@@ -47,7 +45,7 @@ resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-
   tags: tags
   properties: {
     displayName: 'Failed HTTP requests (${environmentName})'
-    description: 'Fires when actionable failed requests exceed 10 in 15 minutes. Excludes ResultCode=0 (client-aborted) and HTTP 499 (client disconnect).'
+    description: 'Fires when failed requests exceed 10 in 15 minutes, including client disconnects (499) and aborted circuits (0) which may indicate the application is too slow.'
     severity: severityHigh
     enabled: true
     evaluationFrequency: 'PT5M'
@@ -56,7 +54,7 @@ resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-
     criteria: {
       allOf: [
         {
-          query: 'requests\n| where success == false\n| where resultCode != "0"\n| where resultCode != "499"'
+          query: 'requests\n| where success == false'
           timeAggregation: 'Count'
           operator: 'GreaterThan'
           threshold: 10
