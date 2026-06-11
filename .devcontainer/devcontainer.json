@@ -7,7 +7,7 @@
       "version": "10.0"
     },
     "ghcr.io/devcontainers/features/powershell:2.0.2": {},
-    "ghcr.io/devcontainers/features/azure-cli:1": {
+    "ghcr.io/devcontainers/features/azure-cli:": {
       "installBicep": true,
       "installPowerShell": true
     },

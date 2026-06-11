@@ -424,15 +424,12 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await Page.GotoRelativeAsync(PageUrl);
         await Page.WaitForBlazorReadyAsync();
 
-        // The first entry auto-expands on page load; use the second entry to test the toggle.
-        var entries = Page.Locator(".features-timeline-entry");
-        await Assertions.Expect(entries.First).ToBeVisibleAsync();
-
-        var testEntry = entries.Nth(1);
+        // Don't assume a fixed index is collapsed. Data can contain duplicate slugs,
+        // which may cause multiple entries to start expanded.
+        var testEntry = Page.Locator(
+            ".features-timeline-entry:has(.features-timeline-card[aria-expanded='false'])").First;
         var testCard = testEntry.Locator(".features-timeline-card");
         await Assertions.Expect(testEntry).ToBeVisibleAsync();
-
-        // Second entry starts collapsed (only the first entry auto-expands)
         await Assertions.Expect(testCard).ToHaveAttributeAsync("aria-expanded", "false");
 
         // Act - Click to expand
