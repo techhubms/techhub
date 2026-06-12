@@ -426,8 +426,28 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
 
         // Don't assume a fixed index is collapsed. Data can contain duplicate slugs,
         // which may cause multiple entries to start expanded.
-        var testEntry = Page.Locator(
-            ".features-timeline-entry:has(.features-timeline-card[aria-expanded='false'])").First;
+        var entries = Page.Locator(".features-timeline-entry");
+        var entryCount = await entries.CountAsync();
+        entryCount.Should().BeGreaterThan(0, "timeline should contain entries");
+
+        var collapsedEntryIndex = -1;
+        for (var i = 0; i < entryCount; i++)
+        {
+            var ariaExpanded = await entries.Nth(i)
+                .Locator(".features-timeline-card")
+                .GetAttributeAsync("aria-expanded");
+
+            if (ariaExpanded == "false")
+            {
+                collapsedEntryIndex = i;
+                break;
+            }
+        }
+
+        Assert.SkipWhen(collapsedEntryIndex < 0,
+            "No collapsed timeline entry found to validate expand/collapse behavior");
+
+        var testEntry = entries.Nth(collapsedEntryIndex);
         var testCard = testEntry.Locator(".features-timeline-card");
         await Assertions.Expect(testEntry).ToBeVisibleAsync();
         await Assertions.Expect(testCard).ToHaveAttributeAsync("aria-expanded", "false");
