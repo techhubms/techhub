@@ -102,16 +102,64 @@ resource keyVaultPrivateDnsZoneVnetLink 'Microsoft.Network/privateDnsZones/virtu
   }
 }
 
-// Private DNS zone for AI Foundry (Cognitive Services) private endpoints — linked to the VNet so
-// Container Apps resolve <account>.cognitiveservices.azure.com to the private endpoint IP automatically.
+// Private DNS zone for AI Foundry (Azure OpenAI) private endpoints — linked to the VNet so
+// Container Apps resolve <account>.openai.azure.com to the private endpoint IP automatically.
+// This is the domain the application actually calls (see AiCategorizationOptions.Endpoint).
 resource openAiPrivateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {
-  name: 'privatelink.cognitiveservices.azure.com'
+  name: 'privatelink.openai.azure.com'
   location: 'global'
   tags: tags
 }
 
 resource openAiPrivateDnsZoneVnetLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = {
   parent: openAiPrivateDnsZone
+  name: '${vnetName}-link'
+  location: 'global'
+  properties: {
+    virtualNetwork: {
+      id: vnet.id
+    }
+    registrationEnabled: false
+  }
+}
+
+// Private DNS zone for AI Foundry (Cognitive Services) private endpoints — linked to the VNet so
+// Container Apps resolve <account>.cognitiveservices.azure.com to the private endpoint IP automatically.
+// The account is kind 'AIServices' (multi-service, "Foundry Tools" in Microsoft's private
+// endpoint DNS zone reference), which exposes management/data-plane endpoints across
+// openai.azure.com, cognitiveservices.azure.com, and services.ai.azure.com; all three zones are
+// registered on the same private endpoint's DNS zone group per Microsoft's documented mapping for
+// Microsoft.CognitiveServices/accounts (subresource "account").
+resource cognitiveServicesPrivateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {
+  name: 'privatelink.cognitiveservices.azure.com'
+  location: 'global'
+  tags: tags
+}
+
+resource cognitiveServicesPrivateDnsZoneVnetLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = {
+  parent: cognitiveServicesPrivateDnsZone
+  name: '${vnetName}-link'
+  location: 'global'
+  properties: {
+    virtualNetwork: {
+      id: vnet.id
+    }
+    registrationEnabled: false
+  }
+}
+
+// Private DNS zone for AI Foundry (AI Services) private endpoints — linked to the VNet so
+// Container Apps resolve <account>.services.ai.azure.com to the private endpoint IP automatically.
+// This is the third zone Microsoft's private endpoint DNS reference lists for
+// Microsoft.CognitiveServices/accounts, used by newer AI Foundry project/agent APIs.
+resource servicesAiPrivateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {
+  name: 'privatelink.services.ai.azure.com'
+  location: 'global'
+  tags: tags
+}
+
+resource servicesAiPrivateDnsZoneVnetLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = {
+  parent: servicesAiPrivateDnsZone
   name: '${vnetName}-link'
   location: 'global'
   properties: {
@@ -132,3 +180,5 @@ output privateEndpointsSubnetId string = filter(vnet.properties.subnets, s => s.
 output postgresPrivateDnsZoneId string = postgresPrivateDnsZone.id
 output keyVaultPrivateDnsZoneId string = keyVaultPrivateDnsZone.id
 output openAiPrivateDnsZoneId string = openAiPrivateDnsZone.id
+output cognitiveServicesPrivateDnsZoneId string = cognitiveServicesPrivateDnsZone.id
+output servicesAiPrivateDnsZoneId string = servicesAiPrivateDnsZone.id

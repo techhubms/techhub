@@ -191,6 +191,8 @@ module openai './modules/openai.bicep' = {
     // no fully-open public access needed for application traffic.
     privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
     privateDnsZoneId: network.outputs.openAiPrivateDnsZoneId
+    cognitiveServicesPrivateDnsZoneId: network.outputs.cognitiveServicesPrivateDnsZoneId
+    servicesAiPrivateDnsZoneId: network.outputs.servicesAiPrivateDnsZoneId
     tags: prodTags
   }
 }
