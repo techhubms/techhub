@@ -55,11 +55,18 @@ public class MermaidTests : PlaywrightTestBase
         // Wait until diagrams render so any errors triggered during rendering surface first.
         await Assertions.Expect(Page.Locator(".mermaid svg").First).ToBeVisibleAsync();
 
-        // Assert - No console errors (filter out ad-blocker / network errors outside our control)
+        // Assert - No console errors (filter out expected/benign errors outside our control):
+        // - Ad-blocker related errors (ERR_CONNECTION_REFUSED, ERR_ADDRESS_INVALID — blocked by DNS-level ad blockers)
+        // - Blazor SignalR WebSocket failures during rolling deployments/container restarts: when the
+        //   PR preview container recycles while a long-running E2E suite is mid-flight, the old circuit
+        //   ID is gone and Blazor briefly attempts (and fails) to reconnect. These surface as "_blazor"
+        //   404s or "WebSocket failed to connect" / "sticky sessions" transport-layer messages. This is
+        //   infrastructure noise, not an app defect — see the identical filter in SidebarTocTests.
         var errors = consoleMessages
             .Where(m => m.Type == "error")
             .Where(e => !e.Text.Contains("ERR_CONNECTION_REFUSED"))
             .Where(e => !e.Text.Contains("ERR_ADDRESS_INVALID"))
+            .Where(e => !(e.Text.Contains("WebSocket failed to connect") || e.Text.Contains("sticky sessions") || (e.Text.Contains("_blazor") && e.Text.Contains("404"))))
             .ToList();
 
         errors.Should().BeEmpty($"Expected no console errors, but found: {string.Join(", ", errors.Select(e => e.Text))}");
