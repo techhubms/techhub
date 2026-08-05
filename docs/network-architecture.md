@@ -35,8 +35,9 @@ Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
          │
          └── pe-oai-techhub-prod → oai-techhub-prod
                  → Container Apps reach AI Foundry over the VNet via
-                   privatelink.openai.azure.com (Private DNS Zone, app-facing endpoint) and
-                   privatelink.cognitiveservices.azure.com (Private DNS Zone, other data-plane APIs)
+                   privatelink.openai.azure.com (Private DNS Zone, app-facing endpoint),
+                   privatelink.cognitiveservices.azure.com (Private DNS Zone, other data-plane APIs), and
+                   privatelink.services.ai.azure.com (Private DNS Zone, AI Foundry project/agent APIs)
 ```
 
 ## Address Spaces
@@ -178,12 +179,15 @@ a private endpoint.
 - **Public access**: Enabled only when admin IPs are configured; admin IPs allowlisted via
   `networkAcls.ipRules`; default deny; `bypass: 'None'` (no trusted Microsoft services bypass)
 - **Private endpoint**: `pe-oai-techhub-prod` in `snet-private-endpoints`. The account is kind
-  `AIServices` (multi-service), and the application calls the endpoint at
-  `<account>.openai.azure.com` (see `AiCategorizationOptions.Endpoint`), so the private endpoint's
-  DNS zone group registers both the `privatelink.openai.azure.com` Private DNS Zone (required —
-  resolves the domain the app actually calls) and the `privatelink.cognitiveservices.azure.com`
-  Private DNS Zone (recommended, for any other Cognitive Services-style data-plane calls), both
-  linked to the VNet — Container Apps reach AI Foundry entirely over the VNet
+  `AIServices` (multi-service — "Foundry Tools" in Microsoft's private endpoint DNS reference),
+  and the application calls the endpoint at `<account>.openai.azure.com` (see
+  `AiCategorizationOptions.Endpoint`). Per Microsoft's documented DNS zone mapping for
+  `Microsoft.CognitiveServices/accounts` (subresource `account`), the private endpoint's DNS zone
+  group registers all three zones: `privatelink.openai.azure.com` (required — resolves the domain
+  the app actually calls), `privatelink.cognitiveservices.azure.com`, and
+  `privatelink.services.ai.azure.com` (both recommended, for other Cognitive Services/AI Foundry
+  data-plane calls) — all linked to the VNet so Container Apps reach AI Foundry entirely over the
+  VNet
 - **Authentication**: RBAC — `Cognitive Services OpenAI User` role (`5e0bd9bd-7b93-4f28-af87-19fc36ad61bd`)
   assigned to `id-techhub-prod`. No API key is used; the application acquires an Entra token with
   `DefaultAzureCredential` and the `https://cognitiveservices.azure.com/.default` scope.

@@ -28,14 +28,18 @@ param privateEndpointSubnetId string = ''
 @description('Private DNS zone ID for privatelink.openai.azure.com — resolves the endpoint the app actually calls (<account>.openai.azure.com). The private endpoint is only created when both this and privateEndpointSubnetId are non-empty; supplying only one silently skips creation.')
 param privateDnsZoneId string = ''
 
-@description('Private DNS zone ID for privatelink.cognitiveservices.azure.com. Optional — the account is kind "AIServices" (multi-service) and Microsoft recommends registering both zones on the same private endpoint, but only privateDnsZoneId is required for the app to function.')
+@description('Private DNS zone ID for privatelink.cognitiveservices.azure.com. Optional — the account is kind "AIServices" (multi-service) and Microsoft recommends registering all three zones on the same private endpoint, but only privateDnsZoneId is required for the app to function.')
 param cognitiveServicesPrivateDnsZoneId string = ''
+
+@description('Private DNS zone ID for privatelink.services.ai.azure.com. Optional — the third zone Microsoft documents for Microsoft.CognitiveServices/accounts private endpoints (subresource "account"), used by newer AI Foundry project/agent APIs.')
+param servicesAiPrivateDnsZoneId string = ''
 
 @description('Tags applied to the AI Foundry account')
 param tags object = {}
 
 var deployPrivateEndpoint = !empty(privateEndpointSubnetId) && !empty(privateDnsZoneId)
 var deployCognitiveServicesDnsZoneConfig = !empty(cognitiveServicesPrivateDnsZoneId)
+var deployServicesAiDnsZoneConfig = !empty(servicesAiPrivateDnsZoneId)
 
 // Azure AI Foundry Account (AIServices)
 resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
@@ -85,11 +89,12 @@ resource openAiPrivateEndpoint 'Microsoft.Network/privateEndpoints@2024-05-01' =
   }
 }
 
-// The account is kind 'AIServices' (multi-service), so both the openai.azure.com and
-// cognitiveservices.azure.com domains resolve to this endpoint depending on which API is
+// The account is kind 'AIServices' (multi-service — "Foundry Tools" in Microsoft's private
+// endpoint DNS reference), so openai.azure.com, cognitiveservices.azure.com, and
+// services.ai.azure.com domains can all resolve to this endpoint depending on which API is
 // called. The app itself only calls <account>.openai.azure.com (see AiCategorizationOptions),
-// so privateDnsZoneId is required; cognitiveServicesPrivateDnsZoneId is optional but
-// recommended so any Cognitive Services-style calls also resolve privately.
+// so privateDnsZoneId is required; the other two zone IDs are optional but recommended so any
+// Cognitive Services- or AI Foundry project/agent-style calls also resolve privately.
 resource openAiPrivateDnsZoneGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2024-05-01' = if (deployPrivateEndpoint) {
   parent: openAiPrivateEndpoint
   name: 'default'
@@ -109,6 +114,16 @@ resource openAiPrivateDnsZoneGroup 'Microsoft.Network/privateEndpoints/privateDn
               name: 'cognitiveservices-config'
               properties: {
                 privateDnsZoneId: cognitiveServicesPrivateDnsZoneId
+              }
+            }
+          ]
+        : [],
+      deployServicesAiDnsZoneConfig
+        ? [
+            {
+              name: 'servicesai-config'
+              properties: {
+                privateDnsZoneId: servicesAiPrivateDnsZoneId
               }
             }
           ]

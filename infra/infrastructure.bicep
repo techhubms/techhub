@@ -192,6 +192,7 @@ module openai './modules/openai.bicep' = {
     privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
     privateDnsZoneId: network.outputs.openAiPrivateDnsZoneId
     cognitiveServicesPrivateDnsZoneId: network.outputs.cognitiveServicesPrivateDnsZoneId
+    servicesAiPrivateDnsZoneId: network.outputs.servicesAiPrivateDnsZoneId
     tags: prodTags
   }
 }
