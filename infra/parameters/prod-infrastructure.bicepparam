@@ -9,6 +9,7 @@ param containerAppsEnvName = 'cae-techhub-prod'
 param vnetName = 'vnet-techhub-prod'
 param addressSpacePrefix = '10.2.0.0/16'
 param containerAppsSubnetPrefix = '10.2.0.0/23'
+param privateEndpointsSubnetPrefix = '10.2.2.0/27'
 // Availability tests — same hosts as the production web app
 param primaryHosts = ['tech.hub.ms', 'tech.xebia.ms']
 // PostgreSQL configuration
@@ -18,7 +19,7 @@ param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-prod'
 param openAiModelCapacity = 200
-// Admin IP allow-list — grants firewall access to PostgreSQL and Key Vault.
+// Admin IP allow-list — grants firewall access to PostgreSQL, Key Vault, and AI Foundry.
 // MUST be set via ADMIN_IP_ADDRESSES env var — no default to prevent leaking IPs into git.
 param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES')
 // Alerts and budget

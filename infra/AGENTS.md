@@ -10,7 +10,7 @@ The infrastructure is deployed in **two strictly separated phases**:
 
 **Contains ONLY platform-level resources:**
 
-- Networking (VNet, NAT Gateway, subnets, DNS zones)
+- Networking (VNet, subnets, private endpoints, DNS zones)
 - Identity (managed identities for production and PR environments)
 - Key Vault (with admin IP firewall rules)
 - PostgreSQL Flexible Server

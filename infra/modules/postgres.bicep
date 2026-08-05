@@ -42,8 +42,11 @@ param geoRedundantBackup bool = false
 @description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
 param adminIpAddresses string[] = []
 
-@description('Public IP of the NAT Gateway attached to the Container Apps subnet. All Container Apps outbound traffic uses this IP when connecting to PostgreSQL public endpoint. Leave empty to skip.')
-param containerAppsNatGatewayIp string = ''
+@description('Subnet ID for the PostgreSQL private endpoint. The private endpoint is only created when both this and privateDnsZoneId are non-empty; supplying only one silently skips creation.')
+param privateEndpointSubnetId string = ''
+
+@description('Private DNS zone ID for privatelink.postgres.database.azure.com. The private endpoint is only created when both this and privateEndpointSubnetId are non-empty; supplying only one silently skips creation.')
+param privateDnsZoneId string = ''
 
 @description('Entra (AAD) object ID of the principal to register as the Active Directory administrator. Leave empty to skip Entra admin setup.')
 param entraAdminObjectId string = ''
@@ -96,8 +99,49 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      publicNetworkAccess: (!empty(adminIpAddresses) || !empty(containerAppsNatGatewayIp)) ? 'Enabled' : 'Disabled'
+      // Public access is only needed for admin IP allowlisting — Container Apps reach
+      // PostgreSQL over the private endpoint below, not the public endpoint.
+      publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
     }
+  }
+}
+
+var deployPrivateEndpoint = !empty(privateEndpointSubnetId) && !empty(privateDnsZoneId)
+
+// Private endpoint — gives Container Apps a private IP path to PostgreSQL, removing the need
+// for a NAT Gateway to allowlist a stable outbound public IP in the firewall.
+resource postgresPrivateEndpoint 'Microsoft.Network/privateEndpoints@2024-05-01' = if (deployPrivateEndpoint) {
+  name: 'pe-${serverName}'
+  location: location
+  tags: tags
+  properties: {
+    subnet: {
+      id: privateEndpointSubnetId
+    }
+    privateLinkServiceConnections: [
+      {
+        name: 'pe-${serverName}-connection'
+        properties: {
+          privateLinkServiceId: postgresServer.id
+          groupIds: ['postgresqlServer']
+        }
+      }
+    ]
+  }
+}
+
+resource postgresPrivateDnsZoneGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2024-05-01' = if (deployPrivateEndpoint) {
+  parent: postgresPrivateEndpoint
+  name: 'default'
+  properties: {
+    privateDnsZoneConfigs: [
+      {
+        name: 'postgres-config'
+        properties: {
+          privateDnsZoneId: privateDnsZoneId
+        }
+      }
+    ]
   }
 }
 
@@ -110,19 +154,6 @@ resource adminFirewallRules 'Microsoft.DBforPostgreSQL/flexibleServers/firewallR
     endIpAddress: ip
   }
 }]
-
-// Firewall rule: allow the NAT Gateway public IP so Container Apps can reach PostgreSQL.
-// VNet-integrated Container Apps route all outbound traffic through the NAT Gateway attached
-// to the Container Apps subnet. Without a NAT Gateway, containers use a large shared pool
-// of ephemeral Azure SNAT IPs (~150+) that cannot be predicted or allowlisted.
-resource containerAppsNatGatewayFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsNatGatewayIp)) {
-  parent: postgresServer
-  name: 'allow-nat-gateway'
-  properties: {
-    startIpAddress: containerAppsNatGatewayIp
-    endIpAddress: containerAppsNatGatewayIp
-  }
-}
 
 // Entra ID (AAD) administrator for the PostgreSQL server.
 // When set, applications can authenticate with a managed identity token instead of a password.
@@ -139,7 +170,7 @@ resource entraAdmin 'Microsoft.DBforPostgreSQL/flexibleServers/administrators@20
     principalType: 'ServicePrincipal'
     tenantId: subscription().tenantId
   }
-  dependsOn: [adminFirewallRules, containerAppsNatGatewayFirewallRule]
+  dependsOn: [adminFirewallRules]
 }
 
 // Database
