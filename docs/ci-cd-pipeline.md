@@ -161,9 +161,10 @@ only be run locally. They are excluded by `--filter-not-trait "Category=Performa
 CI E2E runs.
 
 **Why local-only**: The performance tests connect directly to a PostgreSQL database containing
-a full production dataset (~4000+ content items). The production database uses IP-based
-firewall rules (admin IPs and the NAT Gateway public IP) and is not accessible from GitHub
-Actions runners. There is no publicly reachable database with real data available in CI.
+a full production dataset (~4000+ content items). The production database is reachable from
+Container Apps only via a private endpoint on the VNet, plus IP-based firewall rules for admin
+IPs, and is not accessible from GitHub Actions runners. There is no publicly reachable database
+with real data available in CI.
 
 **To run locally**:
 

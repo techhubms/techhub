@@ -30,6 +30,9 @@ param addressSpacePrefix string = '10.2.0.0/16'
 @description('Container Apps subnet prefix')
 param containerAppsSubnetPrefix string = '10.2.0.0/23'
 
+@description('Private endpoints subnet prefix')
+param privateEndpointsSubnetPrefix string = '10.2.2.0/27'
+
 @description('Primary host names for the web app. Used for Application Insights availability tests.')
 param primaryHosts string[] = []
 
@@ -127,7 +130,8 @@ module identity './modules/identity.bicep' = {
   }
 }
 
-// Networking (VNet + Container Apps subnet with Key Vault service endpoint)
+// Networking (VNet + Container Apps subnet, plus a private endpoints subnet with private
+// DNS zones used by PostgreSQL, Key Vault, and AI Foundry)
 module network './modules/network.bicep' = {
   scope: resourceGroup
   name: 'network-${deploymentSuffix}'
@@ -136,6 +140,7 @@ module network './modules/network.bicep' = {
     vnetName: vnetName
     addressSpacePrefix: addressSpacePrefix
     containerAppsSubnetPrefix: containerAppsSubnetPrefix
+    privateEndpointsSubnetPrefix: privateEndpointsSubnetPrefix
     tags: prodTags
   }
 }
@@ -165,7 +170,10 @@ module keyVault './modules/keyVault.bicep' = {
     vaultName: keyVaultName
     logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
     adminIpAddresses: adminIpList
-    containerAppsSubnetId: network.outputs.containerAppsSubnetId
+    // Container Apps reach Key Vault over a private endpoint in the dedicated subnet —
+    // no VNet service endpoint needed for application traffic.
+    privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
+    privateDnsZoneId: network.outputs.keyVaultPrivateDnsZoneId
     tags: prodTags
   }
 }
@@ -178,6 +186,11 @@ module openai './modules/openai.bicep' = {
     location: location
     openAiName: openAiName
     modelCapacity: openAiModelCapacity
+    adminIpAddresses: adminIpList
+    // Container Apps reach AI Foundry over a private endpoint in the dedicated subnet —
+    // no fully-open public access needed for application traffic.
+    privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
+    privateDnsZoneId: network.outputs.openAiPrivateDnsZoneId
     tags: prodTags
   }
 }
@@ -248,9 +261,10 @@ module postgres './modules/postgres.bicep' = {
     backupRetentionDays: 21
     geoRedundantBackup: true
     adminIpAddresses: adminIpList
-    // Container Apps routes outbound traffic through the NAT Gateway, which has a single
-    // stable public IP. PostgreSQL's firewall must allowlist this IP.
-    containerAppsNatGatewayIp: network.outputs.natGatewayPublicIp
+    // Container Apps reach PostgreSQL over a private endpoint in the dedicated subnet —
+    // no NAT Gateway or public IP allowlisting needed for application traffic.
+    privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
+    privateDnsZoneId: network.outputs.postgresPrivateDnsZoneId
     entraAdminObjectId: identity.outputs.identityPrincipalId
     entraAdminName: prodIdentityName
     tags: prodTags

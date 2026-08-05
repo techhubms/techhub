@@ -15,10 +15,11 @@
 
     On deploy, a PR-specific Postgres instance is provisioned using Azure Point-in-Time
     Restore (PITR) from the production server. This creates an independent copy with
-    realistic production data. PostgreSQL is accessible over the public internet with
-    firewall rules for admin IPs and the Container Apps subnet.
+    realistic production data. PR Container Apps reach it over a private endpoint in the
+    shared VNet; admin access remains available via public firewall rules for admin IPs.
 
-    On teardown, the PR-specific Postgres instance is deleted along with the Container Apps.
+    On teardown, the PR-specific Postgres instance and its private endpoint are deleted
+    along with the Container Apps.
 
 .PARAMETER PrNumber
     Pull request number. Used to derive unique resource names.
@@ -79,15 +80,17 @@ $prodIdentityName = 'id-techhub-prod'
 # Production server (source for PITR database clone)
 $prodPostgresServer = 'psql-techhub-prod'
 
-# NAT Gateway public IP resource name — outbound traffic from VNet-integrated Container Apps
-# routes through the NAT Gateway on the Container Apps subnet, NOT through the CAE staticIp
-# (which is the inbound LB frontend). Name follows infra/modules/network.bicep:
-# replace(vnetName, 'vnet-', 'pip-nat-').
-$natGatewayPublicIpName = 'pip-nat-techhub-prod'
+# Shared VNet, private endpoints subnet, and private DNS zone (created once by
+# infrastructure.bicep) used to give each PR's PostgreSQL server a private endpoint —
+# same mechanism as production, avoids relying on a NAT Gateway public IP.
+$vnetName = 'vnet-techhub-prod'
+$privateEndpointsSubnetName = 'snet-private-endpoints'
+$postgresPrivateDnsZoneName = 'privatelink.postgres.database.azure.com'
 
 # PR-specific resource names
 $prPostgresServer = "psql-techhub-pr-$PrNumber"
 $prPostgresDb = 'techhub'
+$prPrivateEndpointName = "pe-$prPostgresServer"
 # Shared managed identity — created once by infrastructure.bicep, reused by all PR environments.
 $prManagedIdentityName = 'id-techhub-pr'
 
@@ -277,6 +280,29 @@ if ($Action -eq 'teardown') {
         Write-Warn "$apiAppName not found — already removed or never deployed"
     }
 
+    # Delete the PostgreSQL private endpoint before the server itself so no orphaned
+    # NIC/DNS zone group is left behind.
+    Write-Step "Deleting PostgreSQL private endpoint: $prPrivateEndpointName"
+    $existingPe = az network private-endpoint show `
+        --name $prPrivateEndpointName `
+        --resource-group $prodRG `
+        --query name -o tsv 2>$null
+    if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingPe)) {
+        az network private-endpoint delete `
+            --name $prPrivateEndpointName `
+            --resource-group $prodRG
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warn "Failed to delete private endpoint $prPrivateEndpointName — continuing"
+        }
+        else {
+            Write-Ok "Deleted $prPrivateEndpointName"
+            $deletedAny = $true
+        }
+    }
+    else {
+        Write-Warn "$prPrivateEndpointName not found — already removed or never deployed"
+    }
+
     # Delete PR-specific PostgreSQL server
     Write-Step "Deleting PR PostgreSQL server: $prPostgresServer"
 
@@ -418,24 +444,9 @@ else {
     Write-Ok "PR managed identity registered as Entra admin on $prPostgresServer"
 }
 
-# Add firewall rules for the PR PostgreSQL server.
-# Admin IPs: allow explicit admin access.
-# NAT Gateway IP: all outbound connections from VNet-integrated Container Apps egress through
-# the NAT Gateway attached to the Container Apps subnet — this is the SNAT IP seen by PostgreSQL.
-Write-Step "Configuring PostgreSQL firewall rules for $prPostgresServer"
-
-# Fetch the NAT Gateway's stable public IP.
-# Do NOT use properties.staticIp from the Container Apps Environment — that is the INBOUND
-# load balancer frontend IP, not the outbound SNAT IP for pods.
-$natGatewayIp = az network public-ip show `
-    --name $natGatewayPublicIpName `
-    --resource-group $prodRG `
-    --query ipAddress -o tsv 2>$null
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($natGatewayIp)) {
-    Write-Fail "Could not retrieve NAT Gateway public IP from '$natGatewayPublicIpName' in '$prodRG'"
-    exit 1
-}
-Write-Ok "NAT Gateway outbound IP: $natGatewayIp"
+# Add firewall rules for the PR PostgreSQL server (admin IPs only) and a private endpoint
+# so PR Container Apps reach PostgreSQL over the VNet instead of the public internet.
+Write-Step "Configuring PostgreSQL network access for $prPostgresServer"
 
 # Parse admin IPs from env var
 $adminIps = @($env:ADMIN_IP_ADDRESSES -split ',' | ForEach-Object { $_.Trim() } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
@@ -444,15 +455,15 @@ $adminIps = @($env:ADMIN_IP_ADDRESSES -split ',' | ForEach-Object { $_.Trim() } 
 # deploy so that IPs removed from ADMIN_IP_ADDRESSES do not remain permitted indefinitely.
 $existingAdminRuleNames = az postgres flexible-server firewall-rule list `
     --resource-group $prodRG `
-    --name $prPostgresServer `
+    --server-name $prPostgresServer `
     --query "[?starts_with(name, 'allow-admin-ip-')].name" `
     --output tsv 2>$null
 if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingAdminRuleNames)) {
     foreach ($existingRuleName in ($existingAdminRuleNames -split "`n" | ForEach-Object { $_.Trim() } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })) {
         az postgres flexible-server firewall-rule delete `
             --resource-group $prodRG `
-            --name $prPostgresServer `
-            --rule-name $existingRuleName `
+            --server-name $prPostgresServer `
+            --name $existingRuleName `
             --yes 2>$null | Out-Null
         Write-Detail "Removed stale admin IP firewall rule: $existingRuleName"
     }
@@ -463,8 +474,8 @@ foreach ($ip in $adminIps) {
     Write-Detail "Adding admin IP firewall rule for $ip..."
     az postgres flexible-server firewall-rule create `
         --resource-group $prodRG `
-        --name $prPostgresServer `
-        --rule-name "allow-admin-ip-$ruleIndex" `
+        --server-name $prPostgresServer `
+        --name "allow-admin-ip-$ruleIndex" `
         --start-ip-address $ip `
         --end-ip-address $ip 2>$null | Out-Null
     if ($LASTEXITCODE -eq 0) {
@@ -476,68 +487,89 @@ foreach ($ip in $adminIps) {
     $ruleIndex++
 }
 
-# NAT Gateway firewall rule (idempotent)
-$natGatewayRuleName = 'allow-nat-gateway'
-
-# Clean up stale rules from previous Bicep iterations (incremental deployments leave orphans).
-$staleRuleNames = @('allow-container-apps-subnet', 'allow-container-apps-static-ip')
+# Clean up stale rules from previous iterations of this script (no longer used).
+$staleRuleNames = @('allow-container-apps-subnet', 'allow-container-apps-static-ip', 'allow-nat-gateway')
 foreach ($staleRule in $staleRuleNames) {
     $staleRuleJson = az postgres flexible-server firewall-rule list `
         --resource-group $prodRG `
-        --name $prPostgresServer `
+        --server-name $prPostgresServer `
         --query "[?name=='$staleRule'] | [0]" `
         --output json 2>$null
     if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($staleRuleJson) -and $staleRuleJson -ne 'null') {
         Write-Detail "Removing stale firewall rule: $staleRule"
         az postgres flexible-server firewall-rule delete `
             --resource-group $prodRG `
-            --name $prPostgresServer `
-            --rule-name $staleRule `
+            --server-name $prPostgresServer `
+            --name $staleRule `
             --yes 2>$null | Out-Null
     }
 }
 
-$existingNatRuleJson = az postgres flexible-server firewall-rule list `
-    --resource-group $prodRG `
-    --name $prPostgresServer `
-    --query "[?name=='$natGatewayRuleName'] | [0]" `
-    --output json 2>$null
-$existingNatRule = $null
-if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingNatRuleJson) -and $existingNatRuleJson -ne 'null') {
-    $existingNatRule = $existingNatRuleJson | ConvertFrom-Json
-}
+# Private endpoint (idempotent) — gives PR Container Apps a private IP path to this PR's
+# PostgreSQL server, using the shared subnet + DNS zone created once by infrastructure.bicep.
+Write-Step "Configuring PostgreSQL private endpoint for $prPostgresServer"
 
-if ($existingNatRule -and
-    $existingNatRule.startIpAddress -eq $natGatewayIp -and
-    $existingNatRule.endIpAddress -eq $natGatewayIp) {
-    Write-Ok "NAT Gateway firewall rule already configured"
+$existingPe = az network private-endpoint show `
+    --name $prPrivateEndpointName `
+    --resource-group $prodRG `
+    --query name -o tsv 2>$null
+
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingPe)) {
+    Write-Ok "Private endpoint already exists: $prPrivateEndpointName"
 }
 else {
-    if ($existingNatRule) {
-        Write-Detail "Replacing stale NAT Gateway firewall rule..."
-        az postgres flexible-server firewall-rule delete `
-            --resource-group $prodRG `
-            --name $prPostgresServer `
-            --rule-name $natGatewayRuleName `
-            --yes 2>$null | Out-Null
-        if ($LASTEXITCODE -ne 0) {
-            Write-Fail "Failed to remove existing NAT Gateway firewall rule"
-            exit 1
-        }
-    }
-
-    Write-Detail "Adding NAT Gateway firewall rule ($natGatewayIp)..."
-    az postgres flexible-server firewall-rule create `
-        --resource-group $prodRG `
+    $prPostgresServerId = az postgres flexible-server show `
         --name $prPostgresServer `
-        --rule-name $natGatewayRuleName `
-        --start-ip-address $natGatewayIp `
-        --end-ip-address $natGatewayIp
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to add NAT Gateway firewall rule"
+        --resource-group $prodRG `
+        --query id -o tsv 2>$null
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($prPostgresServerId)) {
+        Write-Fail "Could not retrieve resource ID for $prPostgresServer"
         exit 1
     }
-    Write-Ok "NAT Gateway firewall rule added"
+
+    Write-Detail "Creating private endpoint $prPrivateEndpointName..."
+    az network private-endpoint create `
+        --name $prPrivateEndpointName `
+        --resource-group $prodRG `
+        --vnet-name $vnetName `
+        --subnet $privateEndpointsSubnetName `
+        --private-connection-resource-id $prPostgresServerId `
+        --group-id postgresqlServer `
+        --connection-name "$prPrivateEndpointName-connection" `
+        --output none
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to create private endpoint $prPrivateEndpointName"
+        exit 1
+    }
+    Write-Ok "Private endpoint created: $prPrivateEndpointName"
+}
+
+# Check the DNS zone group independently of the private endpoint's existence — a previous run
+# may have created the private endpoint but failed before linking DNS, which would otherwise be
+# silently skipped on rerun and leave PostgreSQL name resolution broken for Container Apps.
+$existingDnsZoneGroup = az network private-endpoint dns-zone-group show `
+    --resource-group $prodRG `
+    --endpoint-name $prPrivateEndpointName `
+    --name default `
+    --query name -o tsv 2>$null
+
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingDnsZoneGroup)) {
+    Write-Ok "Private endpoint DNS zone group already configured: $prPrivateEndpointName"
+}
+else {
+    Write-Detail "Linking private endpoint to DNS zone $postgresPrivateDnsZoneName..."
+    az network private-endpoint dns-zone-group create `
+        --resource-group $prodRG `
+        --endpoint-name $prPrivateEndpointName `
+        --name default `
+        --zone-name postgres-config `
+        --private-dns-zone $postgresPrivateDnsZoneName `
+        --output none
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to link private endpoint $prPrivateEndpointName to DNS zone"
+        exit 1
+    }
+    Write-Ok "Private endpoint DNS zone group created: $prPrivateEndpointName"
 }
 
 # ============================================================================
