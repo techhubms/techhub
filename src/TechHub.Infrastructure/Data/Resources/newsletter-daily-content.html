@@ -1,3 +1,4 @@
+{{#if hasItems}}
 {{#each sections}}
 <h3 class="th-section-heading"{{#if @first}} style="margin-top: 8px;"{{/if}}>{{title}}</h3>
 <ul class="th-item-list">
@@ -9,4 +10,7 @@
   {{/each}}
 </ul>
 {{/each}}
+{{else}}
+<p class="th-no-items" style="margin-top: 8px; color: #666;">No new content items for today.</p>
+{{/if}}
 {{{footer}}}

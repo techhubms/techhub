@@ -318,6 +318,51 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     }
 
     [Fact]
+    public async Task SendDailyOverviewAsync_WhenNoItemsForSubscriberSections_SendsEmailWithNoItemsMessage()
+    {
+        const string RecipientEmail = "daily-no-items@example.com";
+        var day = new DateOnly(2026, 5, 25);
+
+        await _fixture.Connection.ExecuteAsync("""
+            DELETE FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = '2026-05-25';
+            DELETE FROM newsletter_subscribers WHERE email = 'daily-no-items@example.com';
+            """);
+
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES ('daily-no-items@example.com', TRUE, NOW(), '{"weeklySections":[],"dailySections":["ai"]}'::jsonb)
+            """);
+
+        string? htmlBody = null;
+        string? textBody = null;
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        emailSender
+            .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Callback<string, string, string, string, CancellationToken>((_, _, html, text, _) =>
+            {
+                htmlBody = html;
+                textBody = text;
+            })
+            .ReturnsAsync(true);
+
+        var contentRepository = new Mock<IContentRepository>(MockBehavior.Strict);
+        contentRepository
+            .Setup(x => x.GetAllSectionsAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync([CreateSection("ai")]);
+
+        var sut = CreateService(contentRepository.Object, emailSender.Object);
+
+        var sent = await sut.SendDailyOverviewAsync(day, TestContext.Current.CancellationToken);
+
+        sent.Should().BeTrue();
+        emailSender.Verify(
+            s => s.SendAsync(RecipientEmail, It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()),
+            Times.Once);
+        htmlBody.Should().Contain("No new content items for today.");
+        textBody.Should().Contain("No new content items for today.");
+    }
+
+    [Fact]
     public async Task SendAdminStatusReportAsync_WhenNoFailures_ReturnsFalseWithoutSendingEmail()
     {
         var day = new DateOnly(2026, 5, 28);
