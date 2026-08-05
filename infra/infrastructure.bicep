@@ -59,8 +59,8 @@ param adminIpAddresses string
 @description('Email address for operational alerts and budget notifications')
 param alertEmailAddress string = 'reinier.vanmaanen@xebia.com'
 
-@description('Monthly budget amount (in billing currency, typically EUR)')
-param monthlyBudgetAmount int = 250
+@description('Budget amount per billing period (in billing currency, typically EUR)')
+param monthlyBudgetAmount int = 150
 
 @description('Budget start date (YYYY-MM-DD, aligned to billing period start)')
 param budgetStartDate string = '2026-04-01'

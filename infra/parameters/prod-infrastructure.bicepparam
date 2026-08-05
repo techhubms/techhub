@@ -24,6 +24,6 @@ param openAiModelCapacity = 200
 param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES')
 // Alerts and budget
 param alertEmailAddress = 'reinier.vanmaanen@xebia.com'
-param monthlyBudgetAmount = 250
+param monthlyBudgetAmount = 150
 param budgetStartDate = '2026-04-01'
 param linkEmailDomain = true
