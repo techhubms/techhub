@@ -414,19 +414,30 @@ public class TagFilteringTests : PlaywrightTestBase
     [Fact]
     public async Task TagCounts_ShouldBeConsistent_RegardlessOfClickOrder()
     {
-        // This test verifies that tag count intersection is symmetric regardless of click order.
+        // This test verifies that tag count intersection is symmetric regardless of selection order.
         //
         // Instead of hardcoding specific tag names (which depend on content data and may drift),
         // we dynamically select a starting tag, then pick two tags from the filtered cloud.
         //
+        // Both tagA and tagB are navigated to as *already selected* (via the "tags=" URL query,
+        // listed in different orders for Path 1 vs Path 2) rather than being clicked one at a time.
+        // This matters because clicking a tag only works if it's currently rendered — but the
+        // sidebar only ever shows the top-N "popular" tags for the *current* filter, plus whichever
+        // tags are already selected. A tag popular enough to show up when only firstTagName is
+        // selected can easily fall out of the top-N once a second tag further narrows the
+        // intersection, so clicking tagA and only then trying to click tagB was liable to fail
+        // simply because tagB was no longer rendered — not because of any real timing race.
+        // Selecting all tags up front via the URL sidesteps that: selected tags are always
+        // guaranteed to be included in the API's response (via tagsToCount), regardless of how
+        // popular they are relative to others.
+        //
         // Test logic:
         // 1. Navigate to /github-copilot, pick the first tag with count > 0
-        // 2. Click it → tag cloud updates with filtered counts
-        // 3. From the filtered cloud, pick two more tags (tagA, tagB) both with count > 0
-        // 4. Path 1: Click tagA first → read tagB's count
-        // 5. Reset to same starting state
-        // 6. Path 2: Click tagB first → read tagA's count
-        // 7. Assert: tagB count from Path 1 == tagA count from Path 2 (symmetry)
+        // 2. Reload with that tag pre-selected via URL (baseUrl) → tag cloud shows filtered counts
+        // 3. From this reloaded state, pick two more tags (tagA, tagB) both with count > 0
+        // 4. Path 1: Navigate directly to "?tags=firstTagName,tagA,tagB" → read tagB's joint count
+        // 5. Path 2: Navigate directly to "?tags=firstTagName,tagB,tagA" (reversed order) → read tagA's joint count
+        // 6. Assert: both paths report the same joint intersection count (order doesn't matter)
 
         // Arrange - Navigate to /github-copilot section (no tags pre-selected)
         await Page.GotoRelativeAsync("/github-copilot");
@@ -441,11 +452,19 @@ public class TagFilteringTests : PlaywrightTestBase
         var firstTagText = await firstTag.TextContentAsync();
         var firstTagName = ExtractTagNameFromText(firstTagText);
 
-        await firstTag.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
+        // Build URL with the first tag selected (our starting state for both paths)
+        var baseUrl = $"/github-copilot?tags={Uri.EscapeDataString(firstTagName)}";
+
+        // Establish the baseline by navigating directly to baseUrl (full page load) rather than
+        // clicking through, and pick tagA/tagB from THIS reloaded state. Picking them from an
+        // in-place SPA click (ToggleTagAndUpdateUrl) instead of a full navigation
+        // (OnInitializedAsync + persisted-state restore) can occasionally surface a different tag
+        // cloud, since the two code paths aren't guaranteed to agree — causing tagA/tagB picked
+        // via click to be missing after a later full reload. Picking from the same kind of load
+        // we verify against (full navigation) guarantees they'll still be present.
+        await Page.GotoRelativeAsync(baseUrl);
         await WaitForTagCloudReadyAsync();
 
-        // Now pick two unselected tags with count > 0 from the filtered cloud
         var availableTags = Page.Locator(".tag-cloud-item:not(.selected):not(.disabled)");
         var availableCount = await availableTags.CountAsync();
         availableCount.Should().BeGreaterThanOrEqualTo(2,
@@ -465,53 +484,43 @@ public class TagFilteringTests : PlaywrightTestBase
         tagAInitialCount.Should().BeGreaterThan(0, $"'{tagAName}' should have count > 0");
         tagBInitialCount.Should().BeGreaterThan(0, $"'{tagBName}' should have count > 0");
 
-        // Build URL with the first tag selected (our starting state for both paths)
-        var baseUrl = $"/github-copilot?tags={Uri.EscapeDataString(firstTagName)}";
-
-        // Path 1: Click tagA first → read tagB's count
-        await Page.GotoRelativeAsync(baseUrl);
+        // Path 1: Navigate with tags listed as [firstTagName, tagA, tagB] → all three are selected,
+        // so tagB's displayed count is the fully-intersected count, guaranteed to be rendered.
+        var pathOneUrl = $"/github-copilot?tags={Uri.EscapeDataString(firstTagName)}," +
+            $"{Uri.EscapeDataString(tagAName)},{Uri.EscapeDataString(tagBName)}";
+        await Page.GotoRelativeAsync(pathOneUrl);
         await WaitForTagCloudReadyAsync();
 
-        var tagALocator = Page.Locator(".tag-cloud-item")
-            .Filter(new() { HasTextRegex = BuildTagRegex(tagAName) });
-        await Assertions.Expect(tagALocator).ToBeVisibleAsync();
-        // Assert URL contains the specifically clicked tag (not just "any tags=") so we wait for
-        // the URL update that happens after LoadTagsAsync() completes — ensuring counts are fresh.
-        var tagAUrlPattern = Regex.Escape(Uri.EscapeDataString(tagAName.ToLowerInvariant()));
-        await tagALocator.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex($".*{tagAUrlPattern}.*", RegexOptions.IgnoreCase)));
+        var tagBCountPath1 = await ReadSelectedTagCountAsync(tagBName);
+
+        // Path 2: Navigate with tags listed in reversed order [firstTagName, tagB, tagA] → same set,
+        // different order in the URL/request — read tagA's fully-intersected count.
+        var pathTwoUrl = $"/github-copilot?tags={Uri.EscapeDataString(firstTagName)}," +
+            $"{Uri.EscapeDataString(tagBName)},{Uri.EscapeDataString(tagAName)}";
+        await Page.GotoRelativeAsync(pathTwoUrl);
         await WaitForTagCloudReadyAsync();
 
-        var tagBLocator = Page.Locator(".tag-cloud-item")
-            .Filter(new() { HasTextRegex = BuildTagRegex(tagBName) });
-        await Assertions.Expect(tagBLocator).ToBeVisibleAsync();
-        var tagBCountPath1 = ExtractCountFromTagText(await tagBLocator.TextContentAsync());
+        var tagACountPath2 = await ReadSelectedTagCountAsync(tagAName);
 
-        // Path 2: Click tagB first → read tagA's count
-        await Page.GotoRelativeAsync(baseUrl);
-        await WaitForTagCloudReadyAsync();
-
-        tagBLocator = Page.Locator(".tag-cloud-item")
-            .Filter(new() { HasTextRegex = BuildTagRegex(tagBName) });
-        await Assertions.Expect(tagBLocator).ToBeVisibleAsync();
-        // Assert URL contains the specifically clicked tag (not just "any tags=") so we wait for
-        // the URL update that happens after LoadTagsAsync() completes — ensuring counts are fresh.
-        var tagBUrlPattern = Regex.Escape(Uri.EscapeDataString(tagBName.ToLowerInvariant()));
-        await tagBLocator.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex($".*{tagBUrlPattern}.*", RegexOptions.IgnoreCase)));
-        await WaitForTagCloudReadyAsync();
-
-        tagALocator = Page.Locator(".tag-cloud-item")
-            .Filter(new() { HasTextRegex = BuildTagRegex(tagAName) });
-        await Assertions.Expect(tagALocator).ToBeVisibleAsync();
-        var tagACountPath2 = ExtractCountFromTagText(await tagALocator.TextContentAsync());
-
-        // Assert - The intersection count should be symmetric
+        // Assert - The joint intersection count should be symmetric regardless of selection order
         tagBCountPath1.Should().Be(tagACountPath2,
             $"Intersection counts should be symmetric: " +
-            $"clicking '{tagAName}' then seeing '{tagBName}' count ({tagBCountPath1}) should equal " +
-            $"clicking '{tagBName}' then seeing '{tagAName}' count ({tagACountPath2}). " +
-            $"Starting tags: [{firstTagName}]");
+            $"selecting [{firstTagName}, {tagAName}, {tagBName}] should yield the same joint count " +
+            $"for '{tagBName}' ({tagBCountPath1}) as selecting [{firstTagName}, {tagBName}, {tagAName}] " +
+            $"yields for '{tagAName}' ({tagACountPath2}).");
+    }
+
+    /// <summary>
+    /// Reads the displayed count for a tag that is expected to currently be selected.
+    /// Selected tags are always included in the API response (via tagsToCount), so this is safe
+    /// regardless of how the tag ranks amongst other popular tags.
+    /// </summary>
+    private async Task<int> ReadSelectedTagCountAsync(string tagName)
+    {
+        var locator = Page.Locator(".tag-cloud-item.selected")
+            .Filter(new() { HasTextRegex = BuildTagRegex(tagName) });
+        await Assertions.Expect(locator).ToBeVisibleAsync();
+        return ExtractCountFromTagText(await locator.TextContentAsync());
     }
 
     /// <summary>

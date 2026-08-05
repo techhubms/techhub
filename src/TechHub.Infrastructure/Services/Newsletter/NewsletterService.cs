@@ -850,21 +850,24 @@ public sealed class NewsletterService : INewsletterService
         var unsubscribeUrl = BuildUnsubscribeUrl(email);
         var manageUrl = BuildManageUrl(email, _options.UnsubscribeSecret);
         var footer = _templates.SubscriberFooter(new { manageUrl, unsubscribeUrl });
+        var sectionData = sections
+            .Where(s => itemsBySection.TryGetValue(s, out var rows) && rows.Count > 0)
+            .Select(s => new
+            {
+                title = GetSectionTitle(s),
+                items = itemsBySection[s].Select(item => new
+                {
+                    url = BuildAbsoluteUrl($"/{s}/all?search={Uri.EscapeDataString(item.Title)}&exact=true"),
+                    title = item.Title,
+                    collectionName = item.CollectionName
+                })
+            })
+            .ToList();
         var content = _templates.DailyContent(new
         {
             date = day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture),
-            sections = sections
-                .Where(s => itemsBySection.TryGetValue(s, out var rows) && rows.Count > 0)
-                .Select(s => new
-                {
-                    title = GetSectionTitle(s),
-                    items = itemsBySection[s].Select(item => new
-                    {
-                        url = BuildAbsoluteUrl($"/{s}/all?search={Uri.EscapeDataString(item.Title)}&exact=true"),
-                        title = item.Title,
-                        collectionName = item.CollectionName
-                    })
-                }),
+            hasItems = sectionData.Count > 0,
+            sections = sectionData,
             footer
         });
         return _templates.Shell(new
@@ -886,6 +889,7 @@ public sealed class NewsletterService : INewsletterService
         sb.AppendLine($"TechHub Daily Overview — {day:yyyy-MM-dd}");
         sb.AppendLine();
 
+        var hasItems = false;
         foreach (var section in sections)
         {
             var items = itemsBySection.TryGetValue(section, out var rows) ? rows : [];
@@ -894,6 +898,7 @@ public sealed class NewsletterService : INewsletterService
                 continue; // Section has no news today — skip it
             }
 
+            hasItems = true;
             sb.AppendLine(GetSectionTitle(section));
             foreach (var item in items)
             {
@@ -902,6 +907,12 @@ public sealed class NewsletterService : INewsletterService
                 sb.AppendLine($"  {filteredUrl}");
             }
 
+            sb.AppendLine();
+        }
+
+        if (!hasItems)
+        {
+            sb.AppendLine("No new content items for today.");
             sb.AppendLine();
         }
 
