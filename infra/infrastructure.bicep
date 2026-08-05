@@ -130,8 +130,8 @@ module identity './modules/identity.bicep' = {
   }
 }
 
-// Networking (VNet + Container Apps subnet with Key Vault service endpoint, plus a
-// private endpoints subnet + private DNS zone used by PostgreSQL)
+// Networking (VNet + Container Apps subnet, plus a private endpoints subnet with private
+// DNS zones used by PostgreSQL, Key Vault, and AI Foundry)
 module network './modules/network.bicep' = {
   scope: resourceGroup
   name: 'network-${deploymentSuffix}'
@@ -170,7 +170,10 @@ module keyVault './modules/keyVault.bicep' = {
     vaultName: keyVaultName
     logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
     adminIpAddresses: adminIpList
-    containerAppsSubnetId: network.outputs.containerAppsSubnetId
+    // Container Apps reach Key Vault over a private endpoint in the dedicated subnet —
+    // no VNet service endpoint needed for application traffic.
+    privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
+    privateDnsZoneId: network.outputs.keyVaultPrivateDnsZoneId
     tags: prodTags
   }
 }
@@ -183,6 +186,11 @@ module openai './modules/openai.bicep' = {
     location: location
     openAiName: openAiName
     modelCapacity: openAiModelCapacity
+    adminIpAddresses: adminIpList
+    // Container Apps reach AI Foundry over a private endpoint in the dedicated subnet —
+    // no fully-open public access needed for application traffic.
+    privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
+    privateDnsZoneId: network.outputs.openAiPrivateDnsZoneId
     tags: prodTags
   }
 }

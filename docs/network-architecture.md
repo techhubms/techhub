@@ -1,9 +1,9 @@
 # Network Architecture
 
-Tech Hub uses a **single VNet** in the production resource group. Most application services
-(Container Apps, Key Vault, AI Foundry) communicate over the public internet where needed,
-secured by managed identity, RBAC, IP firewall rules, and a Key Vault VNet service endpoint.
-PostgreSQL is reached over a **private endpoint** in a dedicated subnet.
+Tech Hub uses a **single VNet** in the production resource group. Key Vault, AI Foundry, and
+PostgreSQL are all reached over **private endpoints** in a dedicated subnet — Container Apps
+traffic to these services never touches the public internet. Admin access to each service goes
+through public access with IP-based firewall rules instead.
 
 ## Topology
 
@@ -13,39 +13,43 @@ Internet
     ├── Web frontend (ca-techhub-web-prod) — public ingress (external: true)
     │       HTTPS on tech.hub.ms, tech.xebia.ms (wildcard TLS from kv-techhub-prod)
     │
-    └── Admin IP (allowlisted for Key Vault + PostgreSQL)
+    └── Admin IP (allowlisted for Key Vault, PostgreSQL, and AI Foundry)
 
 Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
     ├── snet-container-apps (10.2.0.0/23) — Container Apps Environment (internal: false)
     │    │
     │    ├── ca-techhub-web-prod   [external: true]  ← reachable from internet
     │    │
-    │    ├── ca-techhub-api-prod   [external: false] ← internal only, NOT reachable from internet
-    │    │       (Web frontend calls API over the internal Container Apps environment network)
-    │    │
-    │    ├── Key Vault service endpoint (Microsoft.KeyVault)
-    │    │       → Container Apps reach kv-techhub-prod over Microsoft backbone
-    │    │
-    │    └── AI Foundry — open public access, Entra token auth (Cognitive Services OpenAI User RBAC)
+    │    └── ca-techhub-api-prod   [external: false] ← internal only, NOT reachable from internet
+    │            (Web frontend calls API over the internal Container Apps environment network)
     │
     └── snet-private-endpoints (10.2.2.0/27) — private endpoint NICs only
          │
-         └── pe-psql-techhub-prod → psql-techhub-prod
-                 → Container Apps reach PostgreSQL over the VNet via
-                   privatelink.postgres.database.azure.com (Private DNS Zone)
+         ├── pe-psql-techhub-prod → psql-techhub-prod
+         │       → Container Apps reach PostgreSQL over the VNet via
+         │         privatelink.postgres.database.azure.com (Private DNS Zone)
+         │
+         ├── pe-kv-techhub-prod → kv-techhub-prod
+         │       → Container Apps reach Key Vault over the VNet via
+         │         privatelink.vaultcore.azure.net (Private DNS Zone)
+         │
+         └── pe-oai-techhub-prod → oai-techhub-prod
+                 → Container Apps reach AI Foundry over the VNet via
+                   privatelink.cognitiveservices.azure.com (Private DNS Zone)
 ```
 
 ## Address Spaces
 
 | VNet | CIDR | Resource Group | Purpose |
 |------|------|----------------|---------|
-| `vnet-techhub-prod` | `10.2.0.0/16` | `rg-techhub-prod` | Container Apps + PostgreSQL private endpoints (prod + PR previews) |
+| `vnet-techhub-prod` | `10.2.0.0/16` | `rg-techhub-prod` | Container Apps + private endpoints (prod + PR previews) |
 
 There are two subnets:
 
 - `snet-container-apps` (`10.2.0.0/23`), delegated to `Microsoft.App/environments`
-- `snet-private-endpoints` (`10.2.2.0/27`), hosts the PostgreSQL private endpoint NIC(s) —
-  private endpoints cannot share a subnet delegated to `Microsoft.App/environments`
+- `snet-private-endpoints` (`10.2.2.0/27`), hosts the PostgreSQL, Key Vault, and AI Foundry
+  private endpoint NICs — private endpoints cannot share a subnet delegated to
+  `Microsoft.App/environments`
 
 No hub-spoke peering.
 
@@ -73,11 +77,11 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 
 | Resource | Firewall Mechanism | Access |
 |----------|-------------------|--------|
-| Key Vault | `networkAcls.ipRules` + VNet service endpoint | Admin IPs + Container Apps subnet; default deny |
+| Key Vault | Private endpoint (VNet traffic) + `networkAcls.ipRules` (admin traffic) | Container Apps via private endpoint; admin IPs via public access; default deny, no trusted-services bypass |
 | PostgreSQL | Private endpoint (VNet traffic) + per-IP/range firewall rules (admin traffic) | Container Apps via private endpoint; admin IPs via public access; default deny otherwise |
+| AI Foundry | Private endpoint (VNet traffic) + `networkAcls.ipRules` (admin traffic) | Container Apps via private endpoint; admin IPs via public access; default deny, no trusted-services bypass |
 | Log Analytics | Public ingestion + query enabled | RBAC-protected |
 | App Insights | Public ingestion + query enabled | RBAC-protected; browser JS SDK over public internet |
-| AI Foundry | Public access open | Entra token (Cognitive Services OpenAI User RBAC); no IP restriction needed |
 
 ## Key Vault
 
@@ -93,9 +97,11 @@ The production Key Vault (`kv-techhub-prod`) stores:
 
 Security:
 
-- **Public access**: Enabled (admin IPs allowlisted via `networkAcls.ipRules`; default deny)
-- **VNet service endpoint**: `Microsoft.KeyVault` on the Container Apps subnet allows Container
-  Apps to reach Key Vault over the Microsoft backbone without a private endpoint
+- **Public access**: Enabled only when admin IPs are configured; admin IPs allowlisted via
+  `networkAcls.ipRules`; default deny; `bypass: 'None'` (no trusted Microsoft services bypass)
+- **Private endpoint**: `pe-kv-techhub-prod` in `snet-private-endpoints`, resolved via the
+  `privatelink.vaultcore.azure.net` Private DNS Zone linked to the VNet — Container Apps reach
+  Key Vault entirely over the VNet, replacing the previous VNet service endpoint
 - **Authorization**: RBAC (Key Vault Administrator role for admins; Key Vault Secrets User for
   the managed identity used by Container Apps)
 
@@ -164,19 +170,23 @@ outbound newsletter email delivery.
 
 ## AI Foundry (OpenAI)
 
-The production AI Foundry account (`oai-techhub-prod`) is publicly accessible.
+The production AI Foundry account (`oai-techhub-prod`) is secured the same way as Key Vault and
+PostgreSQL — no public access without an allowlisted admin IP, and Container Apps reach it over
+a private endpoint.
 
-- **Public access**: Enabled with `defaultAction: Allow` — Container Apps and GitHub Actions
-  runners both reach the endpoint over the public internet
+- **Public access**: Enabled only when admin IPs are configured; admin IPs allowlisted via
+  `networkAcls.ipRules`; default deny; `bypass: 'None'` (no trusted Microsoft services bypass)
+- **Private endpoint**: `pe-oai-techhub-prod` in `snet-private-endpoints`, resolved via the
+  `privatelink.cognitiveservices.azure.com` Private DNS Zone linked to the VNet — Container Apps
+  reach AI Foundry entirely over the VNet
 - **Authentication**: RBAC — `Cognitive Services OpenAI User` role (`5e0bd9bd-7b93-4f28-af87-19fc36ad61bd`)
-  assigned to `id-techhub-prod` (for production) and to developer object IDs in `keyVaultAdminObjectIds`
-  (for local development). No API key is used; the application acquires an Entra token with
+  assigned to `id-techhub-prod`. No API key is used; the application acquires an Entra token with
   `DefaultAzureCredential` and the `https://cognitiveservices.azure.com/.default` scope.
 
 **Local development**: After `az login`, `DefaultAzureCredential` uses your user token
-automatically. Ensure your Azure AD object ID is listed in `keyVaultAdminObjectIds` in
-`infra/parameters/prod-infrastructure.bicepparam` and redeploy infrastructure to get the RBAC assignment.
-Find your object ID with: `az ad signed-in-user show --query id -o tsv`
+automatically, provided you have the `Cognitive Services OpenAI User` RBAC role and connect from
+an allowlisted admin IP (`ADMIN_IP_ADDRESSES`) — AI Foundry no longer accepts unrestricted public
+traffic. Find your object ID with: `az ad signed-in-user show --query id -o tsv`
 
 ## Deploy Order
 
@@ -189,7 +199,7 @@ No shared or staging resource groups. PR preview environments are created on-dem
 
 ## Implementation Reference
 
-- Spoke VNet + NAT Gateway: [infra/modules/network.bicep](../infra/modules/network.bicep)
+- Spoke VNet + private endpoint subnet/DNS zones: [infra/modules/network.bicep](../infra/modules/network.bicep)
 - Key Vault: [infra/modules/keyVault.bicep](../infra/modules/keyVault.bicep)
 - Log Analytics: [infra/modules/monitoring.bicep](../infra/modules/monitoring.bicep)
 - PostgreSQL: [infra/modules/postgres.bicep](../infra/modules/postgres.bicep)
