@@ -323,10 +323,9 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         const string RecipientEmail = "daily-no-items@example.com";
         var day = new DateOnly(2026, 5, 25);
 
-        await _fixture.Connection.ExecuteAsync("""
-            DELETE FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = '2026-05-25';
-            DELETE FROM newsletter_subscribers WHERE email = 'daily-no-items@example.com';
-            """);
+        // Remove leftover subscribers from other tests (e.g. confirmed@example.com) that also
+        // have "ai" in their daily sections, so this test's Strict mock only sees one recipient.
+        await CleanupDailyOverviewTestDataAsync();
 
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
@@ -447,10 +446,10 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         await _fixture.Connection.ExecuteAsync("""
             DELETE FROM newsletter_send_log
             WHERE send_kind = 'daily-overview'
-              AND target_key IN ('2026-05-20', '2026-05-21', '2026-05-22');
+              AND target_key IN ('2026-05-20', '2026-05-21', '2026-05-22', '2026-05-25');
 
             DELETE FROM newsletter_subscribers
-            WHERE email IN ('confirmed@example.com', 'unconfirmed@example.com', 'confirmed-daily@example.com', 'daily-ordering@example.com');
+            WHERE email IN ('confirmed@example.com', 'unconfirmed@example.com', 'confirmed-daily@example.com', 'daily-ordering@example.com', 'daily-no-items@example.com');
 
             DELETE FROM content_items
             WHERE collection_name = 'blogs'
