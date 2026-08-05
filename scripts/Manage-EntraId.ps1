@@ -27,6 +27,9 @@
         - Key Vault Secrets Officer      (write/read/delete secrets)
         - Key Vault Contributor          (manage network ACL rules)
         - Resource Policy Contributor    (create/update policy assignments in infrastructure.bicep)
+    It also needs one role at the production resource group scope so it can create role assignments
+    for managed identities during Bicep deployment (e.g. Key Vault Secrets User, OpenAI User):
+        - User Access Administrator      (write role assignments within rg-techhub-prod)
     Pass -DeploymentSpObjectId <OID> to assign these roles automatically.
 
     Secret delivery:
@@ -63,8 +66,10 @@
 
 .PARAMETER DeploymentSpObjectId
     Object ID of the GitHub Actions deployment service principal (sp-techhubms).
-    When provided for staging/production, assigns 'Key Vault Secrets Officer' and
-    'Key Vault Contributor' roles at subscription scope. Safe to re-run (idempotent).
+    When provided for staging/production, assigns 'Key Vault Secrets Officer',
+    'Key Vault Contributor', and 'Resource Policy Contributor' roles at subscription scope,
+    plus 'User Access Administrator' at the production resource group scope (required for
+    Bicep to create managed identity role assignments). Safe to re-run (idempotent).
 
 .EXAMPLE
     ./scripts/Manage-EntraId.ps1 -Environment localhost
@@ -525,35 +530,11 @@ if ($isLocalhost) {
     Write-Host "  $(if ($isNewApp) { 'Setup' } else { 'Secret Rotation' }) Complete!" -ForegroundColor Green
     Write-Host "===============================================================" -ForegroundColor DarkCyan
     Write-Host ""
-    Write-Host "  Copy these values to your local configuration:" -ForegroundColor White
+    Write-Host "  App registration  : $DisplayName (appId: $clientId)" -ForegroundColor White
+    Write-Host "  Redirect URI      : $($redirectUris -join ', ')" -ForegroundColor White
     Write-Host ""
-    Write-Host "  ┌─────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
-    Write-Host "  │ TenantId     : $tenantId" -ForegroundColor White
-    Write-Host "  │ ClientId     : $clientId" -ForegroundColor White
-    Write-Host "  │ ClientSecret : $secret" -ForegroundColor White
-    Write-Host "  │ Scopes       : $fullScope" -ForegroundColor White
-    Write-Host "  └─────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
-    Write-Host ""
-    Write-Host "  Store the client secret securely! It will not be shown again." -ForegroundColor Yellow
-    Write-Host ""
-    Write-Host "  Option 1: Set environment variables" -ForegroundColor Gray
-    Write-Host "    `$env:AzureAd__TenantId = '$tenantId'" -ForegroundColor DarkGray
-    Write-Host "    `$env:AzureAd__ClientId = '$clientId'" -ForegroundColor DarkGray
-    Write-Host "    `$env:AzureAd__ClientSecret = '$secret'" -ForegroundColor DarkGray
-    Write-Host "    `$env:AzureAd__Scopes = '$fullScope'" -ForegroundColor DarkGray
-    Write-Host ""
-    Write-Host "  Option 2: .NET User Secrets (recommended)" -ForegroundColor Gray
-    Write-Host "    cd src/TechHub.Web" -ForegroundColor DarkGray
-    Write-Host "    dotnet user-secrets set AzureAd:TenantId '$tenantId'" -ForegroundColor DarkGray
-    Write-Host "    dotnet user-secrets set AzureAd:ClientId '$clientId'" -ForegroundColor DarkGray
-    Write-Host "    dotnet user-secrets set AzureAd:ClientSecret '$secret'" -ForegroundColor DarkGray
-    Write-Host "    dotnet user-secrets set AzureAd:Scopes '$fullScope'" -ForegroundColor DarkGray
-    Write-Host "    cd ../TechHub.Api" -ForegroundColor DarkGray
-    Write-Host "    dotnet user-secrets set AzureAd:TenantId '$tenantId'" -ForegroundColor DarkGray
-    Write-Host "    dotnet user-secrets set AzureAd:ClientId '$clientId'" -ForegroundColor DarkGray
-    Write-Host ""
-    Write-Host "  Redirect URI: $($redirectUris -join ', ')" -ForegroundColor Gray
-    Write-Host "  API Scope   : $fullScope" -ForegroundColor Gray
+    Write-Host "  Next step: run Setup-UserSecrets.ps1 to populate all local user secrets." -ForegroundColor Green
+    Write-Host "    ./scripts/Setup-UserSecrets.ps1" -ForegroundColor DarkGray
     Write-Host ""
 }
 else {
@@ -616,37 +597,86 @@ else {
 # ============================================================================
 
 if (-not $isLocalhost -and $DeploymentSpObjectId) {
-    Write-Step "Assigning Key Vault roles to deployment SP ($DeploymentSpObjectId)"
+    Write-Step "Assigning roles to deployment SP ($DeploymentSpObjectId)"
 
     $subscriptionId = $accountInfo.id
     $subscriptionScope = "/subscriptions/$subscriptionId"
 
-    $kvRoles = @(
+    # Roles needed at subscription scope
+    $subscriptionRoles = @(
         @{ Name = 'Key Vault Secrets Officer';    Reason = 'write/read/delete secrets during deploy' },
         @{ Name = 'Key Vault Contributor';        Reason = 'manage network ACL firewall rules' },
         @{ Name = 'Resource Policy Contributor';  Reason = 'create/update subscription-scoped policy assignments in infrastructure.bicep' }
     )
 
-    foreach ($kvRole in $kvRoles) {
+    foreach ($role in $subscriptionRoles) {
         $result = az role assignment create `
             --assignee-object-id $DeploymentSpObjectId `
             --assignee-principal-type ServicePrincipal `
-            --role $($kvRole.Name) `
+            --role $($role.Name) `
             --scope $subscriptionScope `
             -o json 2>&1
 
         if ($LASTEXITCODE -eq 0) {
-            Write-Ok "'$($kvRole.Name)' assigned ($($kvRole.Reason))"
+            Write-Ok "'$($role.Name)' assigned at subscription scope ($($role.Reason))"
         }
         else {
             $resultText = ($result | Out-String).Trim()
             # RoleAssignmentExists is not a failure — the role is already in place.
             if ($resultText -match 'RoleAssignmentAlreadyExists') {
-                Write-Ok "'$($kvRole.Name)' already assigned — no change needed"
+                Write-Ok "'$($role.Name)' already assigned — no change needed"
             }
             else {
-                Write-Warn "Failed to assign '$($kvRole.Name)': $resultText"
+                Write-Warn "Failed to assign '$($role.Name)': $resultText"
             }
+        }
+    }
+
+    # User Access Administrator is needed at resource group scope so the SP can create
+    # managed identity role assignments during Bicep deployment (e.g. Key Vault Secrets User,
+    # Cognitive Services OpenAI User). Contributor alone does not include this permission.
+    $rgName = switch ($Environment) {
+        'staging'    { 'rg-techhub-staging' }
+        'production' { 'rg-techhub-prod' }
+    }
+
+    # Ensure the resource group exists — on a fresh subscription it won't yet.
+    # Bicep (Deploy-Infrastructure.ps1) creates it on first deploy, but the role
+    # assignment below needs it to exist first.
+    $rgLocation = 'swedencentral'
+    $existingRg = az group show --name $rgName -o json 2>$null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Step "Creating resource group '$rgName' in '$rgLocation' (does not exist yet)"
+        $createRgResult = az group create --name $rgName --location $rgLocation -o json 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warn "Failed to create resource group '$rgName': $createRgResult"
+        }
+        else {
+            Write-Ok "Resource group '$rgName' created"
+        }
+    }
+    else {
+        Write-Detail "Resource group '$rgName' already exists — skipping creation"
+    }
+
+    $rgScope = "$subscriptionScope/resourceGroups/$rgName"
+    $uaaResult = az role assignment create `
+        --assignee-object-id $DeploymentSpObjectId `
+        --assignee-principal-type ServicePrincipal `
+        --role 'User Access Administrator' `
+        --scope $rgScope `
+        -o json 2>&1
+
+    if ($LASTEXITCODE -eq 0) {
+        Write-Ok "'User Access Administrator' assigned at $rgName scope (create managed identity role assignments in Bicep)"
+    }
+    else {
+        $uaaResultText = ($uaaResult | Out-String).Trim()
+        if ($uaaResultText -match 'RoleAssignmentAlreadyExists') {
+            Write-Ok "'User Access Administrator' already assigned at $rgName — no change needed"
+        }
+        else {
+            Write-Warn "Failed to assign 'User Access Administrator' at $rgName`: $uaaResultText"
         }
     }
 }

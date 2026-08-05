@@ -89,8 +89,12 @@ The script:
 2. Generates certbot-dns-azure configuration
 3. Runs certbot for each domain (`*.hub.ms` + `hub.ms`, `*.xebia.ms` + `xebia.ms`)
 4. Converts PEM certificates to PFX format
-5. Imports into Key Vault (`kv-techhub-prod`)
-6. Cleans up temporary files
+5. Temporarily opens the Key Vault firewall for the machine's outbound IP
+6. Writes PFX as a secret into Key Vault (`kv-techhub-prod`)
+7. Updates the Container Apps Environment certificates directly via PFX upload
+8. Restores the Key Vault firewall and cleans up temporary files
+
+> **Note on Container Apps cert update**: the script uploads the PFX directly to the CAE using `api-version=2024-03-01` (`value`/`password` properties). The newer KV-reference approach (`certificateKeyVaultProperties`) returns `InternalServerError` when updating existing certs and should not be used for renewals.
 
 ### Dry run (test without issuing certificates)
 
@@ -106,7 +110,7 @@ The script:
 
 ### Network access
 
-Key Vault has `publicNetworkAccess: Disabled`. To import certificates, run the script from a machine connected to the VPN, or use a CI/CD agent with private endpoint access.
+Key Vault firewall blocks public IPs by default (`publicNetworkAccess: Disabled`, `defaultAction: Deny`). The renewal script automatically detects the machine's outbound IP, adds a temporary firewall rule, polls until it propagates, then removes it in a `finally` block. No VPN access or manual firewall changes are needed.
 
 ## Certificate Details
 

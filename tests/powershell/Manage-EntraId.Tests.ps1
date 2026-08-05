@@ -194,9 +194,8 @@ Describe "Manage-EntraId" {
             $content = Get-Content $scriptPath -Raw
         }
 
-        It "Should print secrets to console for localhost" {
-            $content | Should -Match 'dotnet user-secrets set'
-            $content | Should -Match 'AzureAd__TenantId'
+        It "Should refer to Setup-UserSecrets.ps1 for localhost" {
+            $content | Should -Match 'Setup-UserSecrets\.ps1'
         }
 
         It "Should push secrets to GitHub for staging/production" {
