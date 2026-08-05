@@ -257,10 +257,10 @@ if ($Mode -eq 'deploy') {
 
     # Clean up any stale PostgreSQL firewall rules left over from previous infrastructure iterations.
     # Bicep uses incremental deployments — renaming a rule resource creates the new rule but leaves
-    # the old one as an orphan. The rules below were replaced by 'allow-nat-gateway' in PR #425.
+    # the old one as an orphan. 'allow-nat-gateway' was replaced by a PostgreSQL private endpoint.
     Write-Step "Cleaning up stale PostgreSQL firewall rules"
     $postgresServer = "psql-techhub-prod"
-    $staleRules = @("allow-container-apps-subnet", "allow-container-apps-static-ip")
+    $staleRules = @("allow-container-apps-subnet", "allow-container-apps-static-ip", "allow-nat-gateway")
     foreach ($ruleName in $staleRules) {
         try {
             $rule = Get-AzPostgreSqlFlexibleServerFirewallRule `
@@ -280,6 +280,36 @@ if ($Mode -eq 'deploy') {
         } catch {
             Write-Warn "Could not check/remove rule '$ruleName': $_"
         }
+    }
+
+    # Remove the decommissioned NAT Gateway and its public IP — replaced by a PostgreSQL
+    # private endpoint. Bicep's incremental deployment does not delete resources removed
+    # from the template, so these must be deleted explicitly after the subnet's NAT Gateway
+    # association has been dropped by the deployment above.
+    Write-Step "Removing decommissioned NAT Gateway resources"
+    $natGatewayName = "natgw-techhub-prod"
+    $natGatewayPublicIpName = "pip-nat-techhub-prod"
+    try {
+        $natGateway = Get-AzNatGateway -ResourceGroupName $resourceGroup -Name $natGatewayName -ErrorAction SilentlyContinue
+        if ($natGateway) {
+            Remove-AzNatGateway -ResourceGroupName $resourceGroup -Name $natGatewayName -Force
+            Write-Ok "Deleted NAT Gateway: $natGatewayName"
+        } else {
+            Write-Detail "NAT Gateway not present (already removed): $natGatewayName"
+        }
+    } catch {
+        Write-Warn "Could not check/remove NAT Gateway '$natGatewayName': $_"
+    }
+    try {
+        $natGatewayIp = Get-AzPublicIpAddress -ResourceGroupName $resourceGroup -Name $natGatewayPublicIpName -ErrorAction SilentlyContinue
+        if ($natGatewayIp) {
+            Remove-AzPublicIpAddress -ResourceGroupName $resourceGroup -Name $natGatewayPublicIpName -Force
+            Write-Ok "Deleted NAT Gateway public IP: $natGatewayPublicIpName"
+        } else {
+            Write-Detail "NAT Gateway public IP not present (already removed): $natGatewayPublicIpName"
+        }
+    } catch {
+        Write-Warn "Could not check/remove NAT Gateway public IP '$natGatewayPublicIpName': $_"
     }
 
     # Store the ACS endpoint in Key Vault so Deploy-Applications.ps1 can reference it

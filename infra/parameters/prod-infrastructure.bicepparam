@@ -9,6 +9,7 @@ param containerAppsEnvName = 'cae-techhub-prod'
 param vnetName = 'vnet-techhub-prod'
 param addressSpacePrefix = '10.2.0.0/16'
 param containerAppsSubnetPrefix = '10.2.0.0/23'
+param privateEndpointsSubnetPrefix = '10.2.2.0/27'
 // Availability tests — same hosts as the production web app
 param primaryHosts = ['tech.hub.ms', 'tech.xebia.ms']
 // PostgreSQL configuration

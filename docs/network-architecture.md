@@ -1,9 +1,9 @@
 # Network Architecture
 
-Tech Hub uses a **single VNet** in the production resource group. All application services
-(Container Apps, PostgreSQL, Key Vault, AI Foundry) communicate over the public internet where
-needed, secured by managed identity, RBAC, IP firewall rules, and a Key Vault VNet service
-endpoint.
+Tech Hub uses a **single VNet** in the production resource group. Most application services
+(Container Apps, Key Vault, AI Foundry) communicate over the public internet where needed,
+secured by managed identity, RBAC, IP firewall rules, and a Key Vault VNet service endpoint.
+PostgreSQL is reached over a **private endpoint** in a dedicated subnet.
 
 ## Topology
 
@@ -16,33 +16,38 @@ Internet
     └── Admin IP (allowlisted for Key Vault + PostgreSQL)
 
 Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
-    └── snet-container-apps (10.2.0.0/23) — Container Apps Environment (internal: false)
+    ├── snet-container-apps (10.2.0.0/23) — Container Apps Environment (internal: false)
+    │    │
+    │    ├── ca-techhub-web-prod   [external: true]  ← reachable from internet
+    │    │
+    │    ├── ca-techhub-api-prod   [external: false] ← internal only, NOT reachable from internet
+    │    │       (Web frontend calls API over the internal Container Apps environment network)
+    │    │
+    │    ├── Key Vault service endpoint (Microsoft.KeyVault)
+    │    │       → Container Apps reach kv-techhub-prod over Microsoft backbone
+    │    │
+    │    └── AI Foundry — open public access, Entra token auth (Cognitive Services OpenAI User RBAC)
+    │
+    └── snet-private-endpoints (10.2.2.0/27) — private endpoint NICs only
          │
-         ├── natgw-techhub-prod (NAT Gateway) — stable outbound IP via pip-nat-techhub-prod
-         │
-         ├── ca-techhub-web-prod   [external: true]  ← reachable from internet
-         │
-         ├── ca-techhub-api-prod   [external: false] ← internal only, NOT reachable from internet
-         │       (Web frontend calls API over the internal Container Apps environment network)
-         │
-         ├── Key Vault service endpoint (Microsoft.KeyVault)
-         │       → Container Apps reach kv-techhub-prod over Microsoft backbone
-         │
-         ├── PostgreSQL firewall rule (NAT Gateway public IP)
-         │       → Container Apps reach psql-techhub-prod over public internet
-         │       → Source IP is the NAT Gateway public IP (pip-nat-techhub-prod) — stable, single IP
-         │
-         └── AI Foundry — open public access, Entra token auth (Cognitive Services OpenAI User RBAC)
+         └── pe-psql-techhub-prod → psql-techhub-prod
+                 → Container Apps reach PostgreSQL over the VNet via
+                   privatelink.postgres.database.azure.com (Private DNS Zone)
 ```
 
 ## Address Spaces
 
 | VNet | CIDR | Resource Group | Purpose |
 |------|------|----------------|---------|
-| `vnet-techhub-prod` | `10.2.0.0/16` | `rg-techhub-prod` | Container Apps (prod + PR previews) |
+| `vnet-techhub-prod` | `10.2.0.0/16` | `rg-techhub-prod` | Container Apps + PostgreSQL private endpoints (prod + PR previews) |
 
-There is a single subnet: `snet-container-apps` (`10.2.0.0/23`), delegated to
-`Microsoft.App/environments`. No private endpoints or hub-spoke peering.
+There are two subnets:
+
+- `snet-container-apps` (`10.2.0.0/23`), delegated to `Microsoft.App/environments`
+- `snet-private-endpoints` (`10.2.2.0/27`), hosts the PostgreSQL private endpoint NIC(s) —
+  private endpoints cannot share a subnet delegated to `Microsoft.App/environments`
+
+No hub-spoke peering.
 
 ## Container Apps Ingress
 
@@ -69,7 +74,7 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 | Resource | Firewall Mechanism | Access |
 |----------|-------------------|--------|
 | Key Vault | `networkAcls.ipRules` + VNet service endpoint | Admin IPs + Container Apps subnet; default deny |
-| PostgreSQL | Per-IP/range firewall rules | Admin IPs + NAT Gateway public IP (`pip-nat-techhub-prod`); default deny |
+| PostgreSQL | Private endpoint (VNet traffic) + per-IP/range firewall rules (admin traffic) | Container Apps via private endpoint; admin IPs via public access; default deny otherwise |
 | Log Analytics | Public ingestion + query enabled | RBAC-protected |
 | App Insights | Public ingestion + query enabled | RBAC-protected; browser JS SDK over public internet |
 | AI Foundry | Public access open | Entra token (Cognitive Services OpenAI User RBAC); no IP restriction needed |
@@ -122,13 +127,14 @@ created via PITR from the production backup — both in `rg-techhub-prod`.
 
 - **Production**: `psql-techhub-prod` — permanent, public access with firewall rules; both password auth (for admin/emergency use) and Entra ID auth enabled
 - **PR environments**: `psql-techhub-pr-{N}` — ephemeral, created via Point-in-Time Restore; Entra-only auth
-- **Public access**: Enabled with firewall rules for admin IPs and the NAT Gateway public IP
-- **Firewall**: Admin IP rules + NAT Gateway public IP (`pip-nat-techhub-prod`)
-- **Container Apps** reach PostgreSQL over the public internet; the source IP is the
-  **NAT Gateway public IP** (`pip-nat-techhub-prod`). The NAT Gateway is attached to the
-  Container Apps subnet and gives all outbound traffic a single, stable, predictable IP that
-  can be allowlisted in the PostgreSQL firewall. Without the NAT Gateway, Container Apps would
-  use a large pool of ephemeral Azure SNAT IPs (~150+) that cannot be predicted or allowlisted.
+- **Public access**: Enabled with firewall rules for admin IPs only
+- **Private endpoint**: `pe-psql-techhub-prod` (and `pe-psql-techhub-pr-{N}` for PR servers) in
+  `snet-private-endpoints`, resolved via the `privatelink.postgres.database.azure.com` Private
+  DNS Zone linked to the VNet
+- **Container Apps** reach PostgreSQL over the **private endpoint** — traffic stays on the VNet
+  and never touches the public internet. This replaced a NAT Gateway (`natgw-techhub-prod`) that
+  previously gave Container Apps a single stable outbound public IP for firewall allowlisting;
+  the private endpoint removes both the NAT Gateway cost and the public-internet hop entirely.
 - **Admin** reaches PostgreSQL via IP-allowlisted public access
 
 > **Authentication**: The `id-techhub-prod` user-assigned managed identity is registered as the
