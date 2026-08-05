@@ -455,15 +455,15 @@ $adminIps = @($env:ADMIN_IP_ADDRESSES -split ',' | ForEach-Object { $_.Trim() } 
 # deploy so that IPs removed from ADMIN_IP_ADDRESSES do not remain permitted indefinitely.
 $existingAdminRuleNames = az postgres flexible-server firewall-rule list `
     --resource-group $prodRG `
-    --name $prPostgresServer `
+    --server-name $prPostgresServer `
     --query "[?starts_with(name, 'allow-admin-ip-')].name" `
     --output tsv 2>$null
 if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingAdminRuleNames)) {
     foreach ($existingRuleName in ($existingAdminRuleNames -split "`n" | ForEach-Object { $_.Trim() } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })) {
         az postgres flexible-server firewall-rule delete `
             --resource-group $prodRG `
-            --name $prPostgresServer `
-            --rule-name $existingRuleName `
+            --server-name $prPostgresServer `
+            --name $existingRuleName `
             --yes 2>$null | Out-Null
         Write-Detail "Removed stale admin IP firewall rule: $existingRuleName"
     }
@@ -474,8 +474,8 @@ foreach ($ip in $adminIps) {
     Write-Detail "Adding admin IP firewall rule for $ip..."
     az postgres flexible-server firewall-rule create `
         --resource-group $prodRG `
-        --name $prPostgresServer `
-        --rule-name "allow-admin-ip-$ruleIndex" `
+        --server-name $prPostgresServer `
+        --name "allow-admin-ip-$ruleIndex" `
         --start-ip-address $ip `
         --end-ip-address $ip 2>$null | Out-Null
     if ($LASTEXITCODE -eq 0) {
@@ -492,15 +492,15 @@ $staleRuleNames = @('allow-container-apps-subnet', 'allow-container-apps-static-
 foreach ($staleRule in $staleRuleNames) {
     $staleRuleJson = az postgres flexible-server firewall-rule list `
         --resource-group $prodRG `
-        --name $prPostgresServer `
+        --server-name $prPostgresServer `
         --query "[?name=='$staleRule'] | [0]" `
         --output json 2>$null
     if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($staleRuleJson) -and $staleRuleJson -ne 'null') {
         Write-Detail "Removing stale firewall rule: $staleRule"
         az postgres flexible-server firewall-rule delete `
             --resource-group $prodRG `
-            --name $prPostgresServer `
-            --rule-name $staleRule `
+            --server-name $prPostgresServer `
+            --name $staleRule `
             --yes 2>$null | Out-Null
     }
 }

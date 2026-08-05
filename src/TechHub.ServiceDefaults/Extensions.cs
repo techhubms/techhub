@@ -124,6 +124,16 @@ public static class ServiceDefaultsExtensions
                 // Fires for every Blazor component on every SSR page render (~20 components/request).
                 // Pure render profiling data; no production health or alerting value.
                 metrics.AddView("aspnetcore.components.update_parameters.duration", MetricStreamConfiguration.Drop);
+
+                // The content pipeline fetches RSS feeds and articles from hundreds of distinct
+                // external blog/vendor hosts (see RssFeedClient/ArticleFetchClient). Without this
+                // view, http.client.* metrics are tagged with server.address/server.port, creating
+                // one time series per external host — the dominant contributor to AppMetrics volume.
+                // Dropping those tags collapses the series to one per method/status combination
+                // while still keeping outbound latency and error-rate visibility.
+                var httpClientTagKeys = new[] { "http.request.method", "http.response.status_code", "error.type" };
+                metrics.AddView("http.client.request.duration", new MetricStreamConfiguration { TagKeys = httpClientTagKeys });
+                metrics.AddView("http.client.active_requests", new MetricStreamConfiguration { TagKeys = httpClientTagKeys });
             })
             .WithTracing(tracing =>
             {
@@ -239,14 +249,20 @@ public static class ServiceDefaultsExtensions
         // Adding health checks endpoints to applications in non-development environments has security implications.
         // See https://aka.ms/dotnet/aspire/healthchecks for details before enabling in production.
 
+        // Container Apps polls these every 10-30s per replica. DisableHttpMetricsAttribute
+        // (.NET 9+) suppresses http.server.request.duration/active_requests and
+        // aspnetcore.routing.match_attempts for these endpoints — probe traffic was
+        // responsible for the majority of those metrics' AppMetrics ingestion volume.
+
         // All health checks must pass for app to be considered ready to accept traffic
-        app.MapHealthChecks("/health");
+        app.MapHealthChecks("/health")
+           .WithMetadata(new DisableHttpMetricsAttribute());
 
         // Only health checks tagged with the "live" tag must pass for app to be considered alive
         app.MapHealthChecks("/alive", new HealthCheckOptions
         {
             Predicate = r => r.Tags.Contains("live")
-        });
+        }).WithMetadata(new DisableHttpMetricsAttribute());
 
         return app;
     }
