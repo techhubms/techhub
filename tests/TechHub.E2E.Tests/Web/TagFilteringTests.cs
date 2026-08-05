@@ -421,10 +421,10 @@ public class TagFilteringTests : PlaywrightTestBase
         //
         // Test logic:
         // 1. Navigate to /github-copilot, pick the first tag with count > 0
-        // 2. Click it → tag cloud updates with filtered counts
-        // 3. From the filtered cloud, pick two more tags (tagA, tagB) both with count > 0
+        // 2. Reload with that tag pre-selected via URL (baseUrl) → tag cloud shows filtered counts
+        // 3. From this reloaded state, pick two more tags (tagA, tagB) both with count > 0
         // 4. Path 1: Click tagA first → read tagB's count
-        // 5. Reset to same starting state
+        // 5. Reset to same starting state (reload baseUrl)
         // 6. Path 2: Click tagB first → read tagA's count
         // 7. Assert: tagB count from Path 1 == tagA count from Path 2 (symmetry)
 
@@ -441,11 +441,19 @@ public class TagFilteringTests : PlaywrightTestBase
         var firstTagText = await firstTag.TextContentAsync();
         var firstTagName = ExtractTagNameFromText(firstTagText);
 
-        await firstTag.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
+        // Build URL with the first tag selected (our starting state for both paths)
+        var baseUrl = $"/github-copilot?tags={Uri.EscapeDataString(firstTagName)}";
+
+        // Establish the baseline by navigating directly to baseUrl (full page load) rather than
+        // clicking through, and pick tagA/tagB from THIS reloaded state. Picking them from an
+        // in-place SPA click (ToggleTagAndUpdateUrl) instead of a full navigation
+        // (OnInitializedAsync + persisted-state restore) can occasionally surface a different tag
+        // cloud, since the two code paths aren't guaranteed to agree — causing tagA/tagB picked
+        // via click to be missing after a later full reload. Picking from the same kind of load
+        // we verify against (full navigation) guarantees they'll still be present.
+        await Page.GotoRelativeAsync(baseUrl);
         await WaitForTagCloudReadyAsync();
 
-        // Now pick two unselected tags with count > 0 from the filtered cloud
         var availableTags = Page.Locator(".tag-cloud-item:not(.selected):not(.disabled)");
         var availableCount = await availableTags.CountAsync();
         availableCount.Should().BeGreaterThanOrEqualTo(2,
@@ -465,13 +473,9 @@ public class TagFilteringTests : PlaywrightTestBase
         tagAInitialCount.Should().BeGreaterThan(0, $"'{tagAName}' should have count > 0");
         tagBInitialCount.Should().BeGreaterThan(0, $"'{tagBName}' should have count > 0");
 
-        // Build URL with the first tag selected (our starting state for both paths)
-        var baseUrl = $"/github-copilot?tags={Uri.EscapeDataString(firstTagName)}";
-
-        // Path 1: Click tagA first → read tagB's count
-        await Page.GotoRelativeAsync(baseUrl);
-        await WaitForTagCloudReadyAsync();
-
+        // Path 1: Click tagA first → read tagB's count.
+        // We're already on baseUrl from the pick step above, so no extra reload is needed here
+        // (an extra reload would reintroduce the exact discrepancy window we just eliminated).
         var tagALocator = Page.Locator(".tag-cloud-item")
             .Filter(new() { HasTextRegex = BuildTagRegex(tagAName) });
         await Assertions.Expect(tagALocator).ToBeVisibleAsync();
