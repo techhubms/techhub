@@ -18,7 +18,7 @@ sudo rm -f /etc/apt/sources.list.d/yarn.list
 # the transfer.v1 plugin fails to register, causing dockerd to time out on containerd startup.
 echo "Installing system dependencies..."
 sudo apt-get update
-sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 certbot python3-pip curl gnupg erofs-utils
+sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 certbot python3-pip python3.12-venv curl gnupg erofs-utils
 
 # Add the PostgreSQL Global Development Group (PGDG) apt repo and install the v17 client tools
 echo "Installing PostgreSQL 17 client from PGDG..."
@@ -34,8 +34,22 @@ sudo apt-get install -y postgresql-client-17
 # Verify that pg_dump 17.x is the default on PATH
 pg_dump --version
 
-# certbot-dns-azure is not an apt package — install via pip
-pip3 install certbot-dns-azure --break-system-packages
+# certbot-dns-azure requires an isolated venv because certbot 3.x still depends on
+# pyOpenSSL's legacy crypto APIs (X509Req, X509Extension) which were removed in
+# pyOpenSSL 24.0.0. Installing into the system/user site-packages causes runtime
+# errors when azure-identity pulls in newer cryptography+pyOpenSSL versions.
+# Solution: isolated venv with pinned pyOpenSSL<24 (ignoring resolver conflicts).
+echo "Installing certbot + certbot-dns-azure (isolated venv)..."
+sudo python3 -m venv /opt/certbot
+sudo /opt/certbot/bin/pip install --upgrade pip --quiet
+# Pin exact versions to avoid the multi-way conflict between certbot, acme, josepy, pyOpenSSL
+# and cryptography. The working combination is:
+#   certbot 5.x + acme 5.x + josepy 2.x (dropped pyOpenSSL) + cryptography 43+
+#   certbot-dns-azure 2.5.0 (last version compatible with this stack)
+#   azure-mgmt-dns 8.2.0 (9.0.0 changed DnsManagementClient constructor, breaking certbot-dns-azure 2.x)
+sudo /opt/certbot/bin/pip install 'certbot==5.6.0' 'acme==5.6.0' 'josepy>=2.0.0' --quiet
+sudo /opt/certbot/bin/pip install 'certbot-dns-azure==2.5.0' 'azure-mgmt-dns==8.2.0' --quiet
+sudo ln -sf /opt/certbot/bin/certbot /usr/local/bin/certbot
 
 # ==================== .NET Dev Certificates ====================
 sudo dotnet workload update
