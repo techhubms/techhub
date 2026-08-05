@@ -102,16 +102,40 @@ resource keyVaultPrivateDnsZoneVnetLink 'Microsoft.Network/privateDnsZones/virtu
   }
 }
 
-// Private DNS zone for AI Foundry (Cognitive Services) private endpoints — linked to the VNet so
-// Container Apps resolve <account>.cognitiveservices.azure.com to the private endpoint IP automatically.
+// Private DNS zone for AI Foundry (Azure OpenAI) private endpoints — linked to the VNet so
+// Container Apps resolve <account>.openai.azure.com to the private endpoint IP automatically.
+// This is the domain the application actually calls (see AiCategorizationOptions.Endpoint).
 resource openAiPrivateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {
-  name: 'privatelink.cognitiveservices.azure.com'
+  name: 'privatelink.openai.azure.com'
   location: 'global'
   tags: tags
 }
 
 resource openAiPrivateDnsZoneVnetLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = {
   parent: openAiPrivateDnsZone
+  name: '${vnetName}-link'
+  location: 'global'
+  properties: {
+    virtualNetwork: {
+      id: vnet.id
+    }
+    registrationEnabled: false
+  }
+}
+
+// Private DNS zone for AI Foundry (Cognitive Services) private endpoints — linked to the VNet so
+// Container Apps resolve <account>.cognitiveservices.azure.com to the private endpoint IP automatically.
+// The account is kind 'AIServices' (multi-service), which exposes management/data-plane
+// endpoints under both openai.azure.com and cognitiveservices.azure.com; both zones are
+// registered on the same private endpoint's DNS zone group per Microsoft guidance.
+resource cognitiveServicesPrivateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {
+  name: 'privatelink.cognitiveservices.azure.com'
+  location: 'global'
+  tags: tags
+}
+
+resource cognitiveServicesPrivateDnsZoneVnetLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = {
+  parent: cognitiveServicesPrivateDnsZone
   name: '${vnetName}-link'
   location: 'global'
   properties: {
@@ -132,3 +156,4 @@ output privateEndpointsSubnetId string = filter(vnet.properties.subnets, s => s.
 output postgresPrivateDnsZoneId string = postgresPrivateDnsZone.id
 output keyVaultPrivateDnsZoneId string = keyVaultPrivateDnsZone.id
 output openAiPrivateDnsZoneId string = openAiPrivateDnsZone.id
+output cognitiveServicesPrivateDnsZoneId string = cognitiveServicesPrivateDnsZone.id
