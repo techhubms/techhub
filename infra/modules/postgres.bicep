@@ -42,10 +42,10 @@ param geoRedundantBackup bool = false
 @description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
 param adminIpAddresses string[] = []
 
-@description('Subnet ID for the PostgreSQL private endpoint. Leave empty to skip creating a private endpoint.')
+@description('Subnet ID for the PostgreSQL private endpoint. The private endpoint is only created when both this and privateDnsZoneId are non-empty; supplying only one silently skips creation.')
 param privateEndpointSubnetId string = ''
 
-@description('Private DNS zone ID for privatelink.postgres.database.azure.com. Required when privateEndpointSubnetId is set.')
+@description('Private DNS zone ID for privatelink.postgres.database.azure.com. The private endpoint is only created when both this and privateEndpointSubnetId are non-empty; supplying only one silently skips creation.')
 param privateDnsZoneId string = ''
 
 @description('Entra (AAD) object ID of the principal to register as the Active Directory administrator. Leave empty to skip Entra admin setup.')

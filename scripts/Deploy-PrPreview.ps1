@@ -515,7 +515,7 @@ $existingPe = az network private-endpoint show `
     --query name -o tsv 2>$null
 
 if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingPe)) {
-    Write-Ok "Private endpoint already configured: $prPrivateEndpointName"
+    Write-Ok "Private endpoint already exists: $prPrivateEndpointName"
 }
 else {
     $prPostgresServerId = az postgres flexible-server show `
@@ -541,7 +541,22 @@ else {
         Write-Fail "Failed to create private endpoint $prPrivateEndpointName"
         exit 1
     }
+    Write-Ok "Private endpoint created: $prPrivateEndpointName"
+}
 
+# Check the DNS zone group independently of the private endpoint's existence — a previous run
+# may have created the private endpoint but failed before linking DNS, which would otherwise be
+# silently skipped on rerun and leave PostgreSQL name resolution broken for Container Apps.
+$existingDnsZoneGroup = az network private-endpoint dns-zone-group show `
+    --resource-group $prodRG `
+    --endpoint-name $prPrivateEndpointName `
+    --name default `
+    --query name -o tsv 2>$null
+
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingDnsZoneGroup)) {
+    Write-Ok "Private endpoint DNS zone group already configured: $prPrivateEndpointName"
+}
+else {
     Write-Detail "Linking private endpoint to DNS zone $postgresPrivateDnsZoneName..."
     az network private-endpoint dns-zone-group create `
         --resource-group $prodRG `
@@ -554,7 +569,7 @@ else {
         Write-Fail "Failed to link private endpoint $prPrivateEndpointName to DNS zone"
         exit 1
     }
-    Write-Ok "Private endpoint created: $prPrivateEndpointName"
+    Write-Ok "Private endpoint DNS zone group created: $prPrivateEndpointName"
 }
 
 # ============================================================================

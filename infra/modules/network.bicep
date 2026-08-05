@@ -92,8 +92,10 @@ resource postgresPrivateDnsZoneVnetLink 'Microsoft.Network/privateDnsZones/virtu
 }
 
 // Outputs
+// Subnet IDs are looked up by name rather than array index — indexing is brittle because
+// reordering or inserting subnets would silently change which subnet ID is exported.
 output vnetId string = vnet.id
 output vnetName string = vnet.name
-output containerAppsSubnetId string = vnet.properties.subnets[0].id
-output privateEndpointsSubnetId string = vnet.properties.subnets[1].id
+output containerAppsSubnetId string = filter(vnet.properties.subnets, s => s.name == containerAppsSubnetName)[0].id
+output privateEndpointsSubnetId string = filter(vnet.properties.subnets, s => s.name == privateEndpointsSubnetName)[0].id
 output postgresPrivateDnsZoneId string = postgresPrivateDnsZone.id
