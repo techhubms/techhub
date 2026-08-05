@@ -197,6 +197,27 @@ automatically, provided you have the `Cognitive Services OpenAI User` RBAC role 
 an allowlisted admin IP (`ADMIN_IP_ADDRESSES`) — AI Foundry no longer accepts unrestricted public
 traffic. Find your object ID with: `az ad signed-in-user show --query id -o tsv`
 
+## Monitoring (Application Insights / Log Analytics)
+
+Unlike Key Vault, PostgreSQL, and AI Foundry, **Application Insights and Log Analytics have no
+private endpoint / Azure Monitor Private Link Scope (AMPLS)**. Both `publicNetworkAccessForIngestion`
+and `publicNetworkAccessForQuery` are left `Enabled`. This is deliberate, not an oversight:
+
+- **Browser (RUM/client-side) telemetry requires public ingestion.** The App Insights JS SDK sends
+  telemetry directly from end-user browsers, which cannot reach our VNet. An AMPLS cannot close
+  this path, so ingestion has to stay public regardless of any other configuration.
+- **Server-side telemetry gets little benefit from an AMPLS here.** Container Apps telemetry could
+  move to a private path via AMPLS, but since ingestion must stay public anyway for the browser
+  path above, the security improvement is marginal (only slightly less public egress) relative to
+  the added cost/complexity (a private endpoint + DNS zones + AMPLS resource, ~$7-8/month).
+- **Query access is intentionally public too**, protected by RBAC, so portal/admin users can query
+  without VPN/jumpbox access. An AMPLS would only add value here if we also wanted to force query
+  access through the VNet.
+
+If this trade-off changes (e.g. compliance requirements demand private query, or admin access moves
+behind a VPN), revisit adding an AMPLS following the same private-endpoint pattern used for Key
+Vault/PostgreSQL/AI Foundry.
+
 ## Deploy Order
 
 1. **Production** (`rg-techhub-prod`): VNet, monitoring, Key Vault, AI Foundry, Container Apps

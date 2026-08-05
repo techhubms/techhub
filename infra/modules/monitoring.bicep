@@ -22,6 +22,18 @@ param enableSmartDetection bool = true
 @description('Tags applied to the Log Analytics workspace, Application Insights component and availability resources')
 param tags object = {}
 
+// No Azure Monitor Private Link Scope (AMPLS) / private endpoint for this workspace, unlike
+// Key Vault, PostgreSQL, and AI Foundry — deliberately, not an oversight:
+// - Application Insights JS SDK sends browser (RUM/client-side) telemetry directly from end-user
+//   browsers on the public internet. Browsers cannot reach our VNet, so ingestion MUST stay public
+//   for that telemetry to arrive at all — an AMPLS would not let us close it.
+// - Server-side telemetry (Container Apps) would be the only traffic that could move to a private
+//   path via AMPLS, but ingestion still has to stay public for the browser path above, so the
+//   security win is small (marginally less public egress) relative to the added cost/complexity
+//   (~$7-8/month private endpoint + DNS zones + AMPLS resource).
+// - Query access is intentionally left public too (RBAC-protected) for portal/admin use; an AMPLS
+//   would only add value here if we also wanted to force queries through a VPN/jumpbox in the VNet.
+// See docs/network-architecture.md for the full writeup.
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
   name: logAnalyticsWorkspaceName
   location: location
@@ -50,8 +62,10 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     WorkspaceResourceId: logAnalyticsWorkspace.id
     IngestionMode: 'LogAnalytics'
     RetentionInDays: appInsightsRetentionInDays
-    // Ingestion enabled: browser JS SDK sends telemetry over the public internet.
-    // Server-side telemetry uses the AMPLS private path.
+    // Ingestion enabled: browser JS SDK sends telemetry over the public internet — this is
+    // required, not just permissive, since browsers cannot reach the VNet. Server-side (Container
+    // Apps) telemetry also goes over this same public endpoint; there is no AMPLS/private endpoint
+    // fronting it (see comment above logAnalyticsWorkspace for why).
     // Availability tests use Azure-internal paths and are not affected by this setting.
     publicNetworkAccessForIngestion: 'Enabled'
     // Query enabled: allows portal and admin access (protected by RBAC)
