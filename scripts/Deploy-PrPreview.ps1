@@ -452,7 +452,7 @@ if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingAdminRul
         az postgres flexible-server firewall-rule delete `
             --resource-group $prodRG `
             --server-name $prPostgresServer `
-            --rule-name $existingRuleName `
+            --name $existingRuleName `
             --yes 2>$null | Out-Null
         Write-Detail "Removed stale admin IP firewall rule: $existingRuleName"
     }
@@ -464,7 +464,7 @@ foreach ($ip in $adminIps) {
     az postgres flexible-server firewall-rule create `
         --resource-group $prodRG `
         --server-name $prPostgresServer `
-        --rule-name "allow-admin-ip-$ruleIndex" `
+        --name "allow-admin-ip-$ruleIndex" `
         --start-ip-address $ip `
         --end-ip-address $ip 2>$null | Out-Null
     if ($LASTEXITCODE -eq 0) {
@@ -492,7 +492,7 @@ foreach ($staleRule in $staleRuleNames) {
         az postgres flexible-server firewall-rule delete `
             --resource-group $prodRG `
             --server-name $prPostgresServer `
-            --rule-name $staleRule `
+            --name $staleRule `
             --yes 2>$null | Out-Null
     }
 }
@@ -518,7 +518,7 @@ else {
         az postgres flexible-server firewall-rule delete `
             --resource-group $prodRG `
             --server-name $prPostgresServer `
-            --rule-name $natGatewayRuleName `
+            --name $natGatewayRuleName `
             --yes 2>$null | Out-Null
         if ($LASTEXITCODE -ne 0) {
             Write-Fail "Failed to remove existing NAT Gateway firewall rule"
@@ -530,7 +530,7 @@ else {
     az postgres flexible-server firewall-rule create `
         --resource-group $prodRG `
         --server-name $prPostgresServer `
-        --rule-name $natGatewayRuleName `
+        --name $natGatewayRuleName `
         --start-ip-address $natGatewayIp `
         --end-ip-address $natGatewayIp
     if ($LASTEXITCODE -ne 0) {
