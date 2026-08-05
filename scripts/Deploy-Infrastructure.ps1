@@ -127,7 +127,7 @@ foreach ($f in @($infraTemplateFile, $infraParamsFile)) {
 }
 Write-Ok "Template files found"
 
-# ADMIN_IP_ADDRESSES — required for PostgreSQL and Key Vault firewall rules.
+# ADMIN_IP_ADDRESSES — required for PostgreSQL, Key Vault, and AI Foundry firewall rules.
 # If not set, reads from the ADMIN_IP_ADDRESSES GitHub Actions variable.
 if (-not $env:ADMIN_IP_ADDRESSES) {
     try {

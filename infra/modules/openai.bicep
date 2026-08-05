@@ -19,8 +19,19 @@ param modelVersion string = '2025-12-11'
 @maxValue(1000)
 param modelCapacity int = 100
 
+@description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
+param adminIpAddresses string[] = []
+
+@description('Subnet ID for the AI Foundry private endpoint. The private endpoint is only created when both this and privateDnsZoneId are non-empty; supplying only one silently skips creation.')
+param privateEndpointSubnetId string = ''
+
+@description('Private DNS zone ID for privatelink.cognitiveservices.azure.com. The private endpoint is only created when both this and privateEndpointSubnetId are non-empty; supplying only one silently skips creation.')
+param privateDnsZoneId string = ''
+
 @description('Tags applied to the AI Foundry account')
 param tags object = {}
+
+var deployPrivateEndpoint = !empty(privateEndpointSubnetId) && !empty(privateDnsZoneId)
 
 // Azure AI Foundry Account (AIServices)
 resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
@@ -33,15 +44,55 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   kind: 'AIServices'
   properties: {
     customSubDomainName: openAiName
-    // Public access fully open — access is secured by the Cognitive Services OpenAI User RBAC role
-    // assigned to id-techhub-prod (Container App managed identity) and to developer accounts.
+    // Access is secured by the Cognitive Services OpenAI User RBAC role assigned to
+    // id-techhub-prod (Container App managed identity) and to developer accounts.
     // Container Apps acquire an Entra token (cognitiveservices.azure.com scope) at runtime.
     disableLocalAuth: true
-    publicNetworkAccess: 'Enabled'
+    // Public access is only needed for admin IP allowlisting — Container Apps reach AI Foundry
+    // over the private endpoint below, not the public endpoint.
+    publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
     networkAcls: {
-      defaultAction: 'Allow'
-      ipRules: []
+      defaultAction: 'Deny'
+      bypass: 'None'
+      ipRules: [for ip in adminIpAddresses: { value: ip }]
     }
+  }
+}
+
+// Private endpoint — gives Container Apps a private IP path to AI Foundry, removing the need
+// for the fully-open public endpoint that previously had no IP restriction at all.
+resource openAiPrivateEndpoint 'Microsoft.Network/privateEndpoints@2024-05-01' = if (deployPrivateEndpoint) {
+  name: 'pe-${openAiName}'
+  location: location
+  tags: tags
+  properties: {
+    subnet: {
+      id: privateEndpointSubnetId
+    }
+    privateLinkServiceConnections: [
+      {
+        name: 'pe-${openAiName}-connection'
+        properties: {
+          privateLinkServiceId: openAiAccount.id
+          groupIds: ['account']
+        }
+      }
+    ]
+  }
+}
+
+resource openAiPrivateDnsZoneGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2024-05-01' = if (deployPrivateEndpoint) {
+  parent: openAiPrivateEndpoint
+  name: 'default'
+  properties: {
+    privateDnsZoneConfigs: [
+      {
+        name: 'openai-config'
+        properties: {
+          privateDnsZoneId: privateDnsZoneId
+        }
+      }
+    ]
   }
 }
 
