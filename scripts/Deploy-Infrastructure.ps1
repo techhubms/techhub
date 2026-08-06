@@ -253,7 +253,7 @@ if ($Mode -eq 'deploy') {
         # "Value cannot be null. Parameter name: format" for some resource types).
         try {
             Write-Detail "Listing deployment operations for '$deploymentName' to find the failing resource(s):"
-            Get-AzDeploymentOperation -DeploymentName $deploymentName |
+            Get-AzDeploymentOperation -DeploymentName $deploymentName -ErrorAction Stop |
                 Where-Object { $_.ProvisioningState -eq 'Failed' } |
                 ForEach-Object {
                     Write-Fail "Resource: $($_.TargetResource.ResourceName) ($($_.TargetResource.ResourceType))"
