@@ -57,7 +57,7 @@ param openAiModelCapacity int = 100
 param adminIpAddresses string
 
 @description('Email address for operational alerts and budget notifications')
-param alertEmailAddress string = 'reinier.vanmaanen@xebia.com'
+param alertEmailAddress string = 'reinier.vanmaanen@hotmail.com'
 
 @description('Budget amount per billing period (in billing currency, typically EUR)')
 param monthlyBudgetAmount int = 150
@@ -157,6 +157,7 @@ module monitoring './modules/monitoring.bicep' = {
     appInsightsRetentionInDays: 30
     availabilityTestHosts: primaryHosts
     enableSmartDetection: true
+    actionGroupId: actionGroup.outputs.actionGroupId
     tags: prodTags
   }
 }

@@ -83,7 +83,7 @@ Each hostname in the `primaryHosts` Bicep parameter (e.g. `tech.hub.ms`, `tech.x
 
 A metric alert (severity 1) is created alongside each test. It fires when the West Europe probe location fails within a 5-minute window, evaluated every minute.
 
-Alerts are created with an empty actions list — add an action group in the Azure Portal to receive email or webhook notifications.
+Alerts notify the shared operational action group (`ag-techhub-ops`), which emails the address configured via the `alertEmailAddress` parameter.
 
 ### When No Tests Are Created
 

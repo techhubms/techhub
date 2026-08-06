@@ -23,7 +23,7 @@ param openAiModelCapacity = 200
 // MUST be set via ADMIN_IP_ADDRESSES env var — no default to prevent leaking IPs into git.
 param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES')
 // Alerts and budget
-param alertEmailAddress = 'reinier.vanmaanen@xebia.com'
+param alertEmailAddress = 'reinier.vanmaanen@hotmail.com'
 param monthlyBudgetAmount = 150
 param budgetStartDate = '2026-04-01'
 param linkEmailDomain = true

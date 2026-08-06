@@ -19,6 +19,9 @@ param availabilityTestHosts string[] = []
 @description('Enable smart detection alert rules (Failure Anomalies). Set false for staging where alerts add no value.')
 param enableSmartDetection bool = true
 
+@description('Shared action group resource ID for alert email notifications. Leave empty to create availability alerts without any notification action.')
+param actionGroupId string = ''
+
 @description('Tags applied to the Log Analytics workspace, Application Insights component and availability resources')
 param tags object = {}
 
@@ -137,7 +140,13 @@ resource availabilityAlerts 'Microsoft.Insights/metricAlerts@2018-03-01' = [for 
       componentId: appInsights.id
       failedLocationCount: 1
     }
-    actions: []
+    // Notify the shared action group by email; without this, availability failures were
+    // never emailed to anyone even though the alert resource existed and fired.
+    actions: empty(actionGroupId) ? [] : [
+      {
+        actionGroupId: actionGroupId
+      }
+    ]
   }
 }]
 
