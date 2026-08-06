@@ -102,7 +102,12 @@ resource availabilityTests 'Microsoft.Insights/webtests@2022-06-15' = [for host 
     SyntheticMonitorId: 'avail-${replace(host, '.', '-')}'
     Kind: 'standard'
     Enabled: true
-    Frequency: 1800
+    // Classic Application Insights web tests only support 300/600/900 second frequencies
+    // (5/10/15 min, matching the portal's dropdown options). Any other value — including the
+    // previously-attempted 1800 (30 min) — causes the Azure Monitor RP to fail the whole
+    // resource with an opaque "Value cannot be null. Parameter name: format" error instead of
+    // a clear validation message. 900 is the least frequent supported value.
+    Frequency: 900
     Timeout: 30
     RetryEnabled: true
     Locations: availabilityLocations

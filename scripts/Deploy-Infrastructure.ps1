@@ -246,6 +246,23 @@ if ($Mode -eq 'deploy') {
         New-AzDeployment @deployParams -OutVariable infraResult | Out-Null
     } catch {
         Write-Fail "Infrastructure deployment failed: $_"
+        # The top-level error only says "at least one resource deployment operation failed" —
+        # it does not name the resource. List the operations so the actual failing resource
+        # and its provider-reported message are visible in the logs, instead of only the
+        # generic aggregate error (which can be a misleading/unhelpful message like
+        # "Value cannot be null. Parameter name: format" for some resource types).
+        try {
+            Write-Detail "Listing deployment operations for '$deploymentName' to find the failing resource(s):"
+            Get-AzDeploymentOperation -DeploymentName $deploymentName -ErrorAction Stop |
+                Where-Object { $_.ProvisioningState -eq 'Failed' } |
+                ForEach-Object {
+                    Write-Fail "Resource: $($_.TargetResource.ResourceName) ($($_.TargetResource.ResourceType))"
+                    Write-Detail "StatusCode: $($_.StatusCode)"
+                    Write-Detail "StatusMessage: $($_.StatusMessage | ConvertTo-Json -Depth 10 -Compress)"
+                }
+        } catch {
+            Write-Warn "Could not list deployment operations for '$deploymentName': $_"
+        }
         exit 1
     } finally {
         $VerbosePreference = $savedVerbose
