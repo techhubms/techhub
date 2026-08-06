@@ -2,7 +2,6 @@
 // - App Insights: elevated exception rate + failed request count
 // - Postgres Flexible Server: CPU saturation + connection count
 // - AI Foundry (Cognitive Services account): client errors (429/5xx)
-// - Container Apps: replica restart storms
 //
 // All alerts notify the shared action group.
 
@@ -207,39 +206,13 @@ resource openAiErrorsAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
   }
 }
 
-// --- Container Apps: replica restart storm (log query alert via Log Analytics) ---
-// Detects repeated container restarts indicating a crash loop.
-resource containerRestartAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-preview' = {
-  name: 'alert-${environmentName}-container-restarts'
-  location: location
-  tags: tags
-  properties: {
-    displayName: 'Container App restart storm (${environmentName})'
-    description: 'Fires when a Container App revision restarts 5+ times within 15 minutes.'
-    severity: severityMedium
-    enabled: true
-    evaluationFrequency: 'PT5M'
-    windowSize: 'PT15M'
-    scopes: [logAnalyticsWorkspaceId]
-    criteria: {
-      allOf: [
-        {
-          query: 'ContainerAppSystemLogs\n| where Reason in ("StartupProbeFailed", "LivenessProbeFailed", "ContainerCrashed", "Killing")\n| summarize restartCount = count() by ContainerAppName, RevisionName\n| where restartCount >= 5'
-          timeAggregation: 'Count'
-          operator: 'GreaterThan'
-          threshold: 0
-          failingPeriods: {
-            numberOfEvaluationPeriods: 1
-            minFailingPeriodsToAlert: 1
-          }
-        }
-      ]
-    }
-    actions: {
-      actionGroups: [actionGroupId]
-    }
-  }
-}
+// NOTE: The former "Container App restart storm" log query alert (querying ContainerAppSystemLogs)
+// was removed as part of the Container Apps → App Service migration — that log table only ever
+// populated for Container Apps and would never fire for App Service sites. App Service crash-loop
+// detection is intentionally left to Always On + the /health health-check path (which auto-restarts
+// unhealthy instances) rather than a separate alert here; failedRequestsAlert (App Insights) already
+// catches the resulting failed-request symptoms. Revisit if a dedicated App Service platform-log
+// diagnostic setting is added to Log Analytics in the future.
 
 output alertIds string[] = [
   failedRequestsAlert.id
@@ -247,5 +220,4 @@ output alertIds string[] = [
   postgresCpuAlert.id
   postgresConnAlert.id
   openAiErrorsAlert.id
-  containerRestartAlert.id
 ]

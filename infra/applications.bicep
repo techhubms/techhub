@@ -1,6 +1,6 @@
 targetScope = 'subscription'
 
-// Phase 2: Container App deployments for Tech Hub production.
+// Phase 2: App Service site deployments for Tech Hub production.
 // Reads existing infrastructure resources created by infrastructure.bicep via `existing`
 // references — no cross-deployment output passing required.
 // Run after infrastructure.bicep and after secrets have been synced to Key Vault.
@@ -17,14 +17,14 @@ param appInsightsName string = 'appi-techhub-prod'
 @description('Key Vault name (existing resource)')
 param keyVaultName string = 'kv-techhub-prod'
 
-@description('Container Apps Environment name (existing resource)')
-param containerAppsEnvName string = 'cae-techhub-prod'
+@description('App Service Plan name (existing resource, Basic B1, hosts both API and Web sites)')
+param appServicePlanName string = 'asp-techhub-prod'
 
-@description('API Container App name')
-param apiAppName string = 'ca-techhub-api-prod'
+@description('API Web App name')
+param apiAppName string = 'app-techhub-api-prod'
 
-@description('Web Container App name')
-param webAppName string = 'ca-techhub-web-prod'
+@description('Web Web App name')
+param webAppName string = 'app-techhub-web-prod'
 
 @description('API Docker image tag (yyyyMMddHHmmss format)')
 param apiImageTag string = ''
@@ -41,8 +41,14 @@ param azureAdClientId string = ''
 @description('Primary host names for the web app (e.g. ["tech.hub.ms", "tech.xebia.ms"])')
 param primaryHosts string[] = []
 
-@description('Wildcard certificate names in Key Vault, keyed by base domain')
+@description('Wildcard certificate resource names in Microsoft.Web/certificates, keyed by base domain (e.g. { "hub.ms": "wildcard-hub-ms" })')
 param wildcardCertNames object = {}
+
+@description('VNet name (existing resource)')
+param vnetName string = 'vnet-techhub-prod'
+
+@description('App Service Regional VNet Integration subnet name (existing resource)')
+param appServiceSubnetName string = 'snet-app-service'
 
 @description('PostgreSQL server name (existing resource)')
 param postgresServerName string = 'psql-techhub-prod'
@@ -103,9 +109,16 @@ resource managedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-
   name: prodIdentityName
 }
 
-resource containerAppsEnvResource 'Microsoft.App/managedEnvironments@2025-07-01' existing = {
+resource appServicePlan 'Microsoft.Web/serverfarms@2023-12-01' existing = {
   scope: resourceGroup
-  name: containerAppsEnvName
+  name: appServicePlanName
+}
+
+// Regional VNet Integration subnet — shared by both API and Web sites (they're on the same
+// App Service Plan, and a single subnet can serve one Plan's VNet integration).
+resource appServiceSubnet 'Microsoft.Network/virtualNetworks/subnets@2025-01-01' existing = {
+  scope: resourceGroup
+  name: '${vnetName}/${appServiceSubnetName}'
 }
 
 resource appInsights 'Microsoft.Insights/components@2020-02-02' existing = {
@@ -148,42 +161,27 @@ var effectiveAppInsightsConnStr = appInsightsConnectionString == '@existing' ? a
 // ============================================================================
 // Wildcard certificates
 // ============================================================================
-
-// Reference existing wildcard certificates via `existing` — do NOT re-deploy them.
 //
-// Background: re-deploying Microsoft.App/managedEnvironments/certificates via Bicep on every
-// CD run triggers an idempotent ARM PUT on the Azure Container Apps cert provider. When the
-// cert already exists the provider starts an async re-import operation that never signals
-// completion, causing ARM to poll indefinitely and the deployment to hang.
-//
-// Certificates are created once (initial environment setup) and renewed via
-// infra/modules/wildcardCertificates.bicep run separately after cert rotation.
-// See docs/wildcard-certificates.md for the renewal process.
-var certEntries = items(wildcardCertNames)
-resource existingCerts 'Microsoft.App/managedEnvironments/certificates@2025-07-01' existing = [for entry in certEntries: {
-  parent: containerAppsEnvResource
-  name: 'wildcard-${replace(entry.key, '.', '-')}'
-}]
-
-// Build cert ID lookup: { 'hub.ms': '/subscriptions/.../certificates/wildcard-hub-ms', ... }
-var wildcardCertIdPairs = [for (entry, i) in certEntries: {
-  key: entry.key
-  value: existingCerts[i].id
-}]
-var wildcardCertIds = !empty(certEntries) ? toObject(wildcardCertIdPairs, item => item.key, item => item.value) : {}
+// Wildcard domains (e.g. *.hub.ms, *.xebia.ms) are computed here from wildcardCertNames'
+// keys and passed straight through to modules/web.bicep, which resolves the matching
+// Microsoft.Web/certificates thumbprint via `existing` references and binds the hostname.
+// Certificates are imported once via modules/wildcardCert.bicep — see docs/wildcard-certificates.md
+// for the renewal process.
 
 // ============================================================================
-// Container Apps
+// App Service sites
 // ============================================================================
 
-// API Container App
+// API Web App
 module apiApp './modules/api.bicep' = {
   scope: resourceGroup
   name: 'api-${deploymentSuffix}'
   params: {
     location: location
-    containerAppName: apiAppName
-    containerAppsEnvironmentId: containerAppsEnvResource.id
+    siteName: apiAppName
+    appServicePlanId: appServicePlan.id
+    vnetIntegrationSubnetId: appServiceSubnet.id
+    allowedCallerSubnetId: appServiceSubnet.id
     githubRegistryUsername: githubRegistryUsername
     githubRegistryAuthUsername: githubRegistryAuthUsername
     identityId: managedIdentity.id
@@ -192,7 +190,7 @@ module apiApp './modules/api.bicep' = {
     appInsightsConnectionString: effectiveAppInsightsConnStr
     keyVaultUri: keyVaultUri
     dbConnectionString: dbConnectionString
-    webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnvResource.properties.defaultDomain}']
+    webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.azurewebsites.net']
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
     aiCategorizationEndpoint: openAiAccount.properties.endpoint
@@ -204,14 +202,15 @@ module apiApp './modules/api.bicep' = {
   }
 }
 
-// Web Container App
+// Web Web App
 module webApp './modules/web.bicep' = {
   scope: resourceGroup
   name: 'web-${deploymentSuffix}'
   params: {
     location: location
-    containerAppName: webAppName
-    containerAppsEnvironmentId: containerAppsEnvResource.id
+    siteName: webAppName
+    appServicePlanId: appServicePlan.id
+    vnetIntegrationSubnetId: appServiceSubnet.id
     githubRegistryUsername: githubRegistryUsername
     githubRegistryAuthUsername: githubRegistryAuthUsername
     identityId: managedIdentity.id
@@ -220,7 +219,7 @@ module webApp './modules/web.bicep' = {
     appInsightsConnectionString: effectiveAppInsightsConnStr
     customDomains: allCustomDomains
     primaryHosts: primaryHosts
-    wildcardCertificateIds: wildcardCertIds
+    wildcardCertNames: wildcardCertNames
     keyVaultUri: keyVaultUri
     aadClientSecretSecretName: aadClientSecretSecretName
     azureAdTenantId: azureAdTenantId

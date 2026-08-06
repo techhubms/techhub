@@ -239,7 +239,7 @@ function Run {
         - Executes from published DLLs (same as real production deployment)
         - Tests bundled/minified CSS, optimized assemblies, trimmed code
         - Published output stored in .tmp/publish/ (excluded from git)
-        - Mimics actual Azure Container Apps deployment
+        - Mimics actual Azure App Service deployment
 
     .EXAMPLE
         Run

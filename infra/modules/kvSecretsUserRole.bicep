@@ -8,7 +8,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' existing = {
   name: keyVaultName
 }
 
-// Key Vault Secrets User — allows reading certificate secrets (needed by Container Apps)
+// Key Vault Secrets User — allows reading certificate secrets (needed by App Service sites)
 resource secretsUserRole 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
   name: guid(keyVault.id, principalId, 'Key Vault Secrets User')
   scope: keyVault

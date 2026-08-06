@@ -4,11 +4,13 @@ param location = 'swedencentral'
 param resourceGroupName = 'rg-techhub-prod'
 param appInsightsName = 'appi-techhub-prod'
 param keyVaultName = 'kv-techhub-prod'
-param containerAppsEnvName = 'cae-techhub-prod'
+param appServicePlanName = 'asp-techhub-prod'
+param appServicePlanPrName = 'asp-techhub-pr'
 // Networking
 param vnetName = 'vnet-techhub-prod'
 param addressSpacePrefix = '10.2.0.0/16'
-param containerAppsSubnetPrefix = '10.2.0.0/23'
+param appServiceSubnetPrefix = '10.2.0.0/23'
+param appServicePrSubnetPrefix = '10.2.4.0/23'
 param privateEndpointsSubnetPrefix = '10.2.2.0/27'
 // Availability tests — same hosts as the production web app
 param primaryHosts = ['tech.hub.ms', 'tech.xebia.ms']

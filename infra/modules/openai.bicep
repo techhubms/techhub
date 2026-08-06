@@ -53,10 +53,10 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   properties: {
     customSubDomainName: openAiName
     // Access is secured by the Cognitive Services OpenAI User RBAC role assigned to
-    // id-techhub-prod (Container App managed identity) and to developer accounts.
-    // Container Apps acquire an Entra token (cognitiveservices.azure.com scope) at runtime.
+    // id-techhub-prod (API App Service managed identity) and to developer accounts.
+    // App Service sites acquire an Entra token (cognitiveservices.azure.com scope) at runtime.
     disableLocalAuth: true
-    // Public access is only needed for admin IP allowlisting — Container Apps reach AI Foundry
+    // Public access is only needed for admin IP allowlisting — App Service sites reach AI Foundry
     // over the private endpoint below, not the public endpoint.
     publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
     networkAcls: {
@@ -67,7 +67,7 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   }
 }
 
-// Private endpoint — gives Container Apps a private IP path to AI Foundry, removing the need
+// Private endpoint — gives App Service sites a private IP path to AI Foundry, removing the need
 // for the fully-open public endpoint that previously had no IP restriction at all.
 resource openAiPrivateEndpoint 'Microsoft.Network/privateEndpoints@2024-05-01' = if (deployPrivateEndpoint) {
   name: 'pe-${openAiName}'

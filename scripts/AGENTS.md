@@ -75,10 +75,10 @@ scripts/
 ### Infrastructure
 
 - **Deploy-Infrastructure.ps1**: Phase 1 Bicep deployment (validate/whatif/deploy). Deploys networking, identity, Key Vault, PostgreSQL, ACS, monitoring. **No image tag needed.**
-- **Deploy-Applications.ps1**: Phase 2 Bicep deployment (Container Apps declarative). Requires `-ImageTag`. Used when infra/scripts changed.
+- **Deploy-Applications.ps1**: Phase 2 Bicep deployment (API + Web App Service sites, declarative). Requires `-ImageTag`. Used when infra/scripts changed.
 - **Build-Images.ps1**: Docker build + push to ghcr.io. Supports `-SkipPush` for local testing. Used by CI build-and-push jobs.
-- **Deploy-Application.ps1**: `az containerapp update` with health checks, smoke tests, and auto-rollback. Requires `-Tag`. Used for **fast code-only deploys** (skips full Bicep evaluation).
-- **Deploy-PrPreview.ps1**: PR preview environment lifecycle (deploy/teardown). Creates PITR clone of prod PostgreSQL in prod RG. Uses ghcr.io images + `pr-applications.bicep`.
+- **Deploy-Application.ps1**: `az webapp config set` with health checks, smoke tests, and auto-rollback. Requires `-Tag`. Used for **fast code-only deploys** (skips full Bicep evaluation).
+- **Deploy-PrPreview.ps1**: PR preview environment lifecycle (deploy/teardown). Creates PITR clone of prod PostgreSQL in prod RG. Uses ghcr.io images + `pr-applications.bicep` (shared PR App Service Plan).
 - **Migrate-KeyVaultSecrets.ps1**: One-time migration script to copy secrets from `kv-techhub-shared` to `kv-techhub-prod`.
 
 ### CD Pipeline Deployment Strategy

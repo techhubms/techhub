@@ -16,7 +16,7 @@ The infrastructure is deployed in **two strictly separated phases**:
 - PostgreSQL Flexible Server
 - Azure AI Foundry (OpenAI)
 - Log Analytics + Application Insights
-- Container Apps Environment (no apps yet!)
+- App Service Plan (Basic B1, no sites yet!)
 - Azure Communication Services (ACS) for email delivery
 - Monitoring (action groups, alerts, availability tests)
 - Governance (budgets, policies)
@@ -29,12 +29,12 @@ The infrastructure is deployed in **two strictly separated phases**:
 - RBAC role assigned to API managed identity in Phase 1
 - Only sender address stored in Key Vault secret: `techhub-prod-acs-sender-address`
 
-### Phase 2: Container Apps (`applications.bicep`)
+### Phase 2: App Service Sites (`applications.bicep`)
 
 **Contains ONLY application deployments:**
 
-- API Container App
-- Web Container App
+- API Web App (Web App for Containers, VNet-integrated, not publicly accessible — reached only via the Web app's `WEBSITES_PORT`/private call)
+- Web Web App (Web App for Containers, public-facing)
 
 **No infrastructure resources.** Phase 2 reads from Key Vault secrets created in Phase 1.
 
@@ -55,7 +55,7 @@ Phase 2 (applications.bicep)
   ↓
   Reads sender address secret name from Key Vault
   ↓
-  Container App uses managed identity to authenticate to ACS
+  App Service site uses managed identity to authenticate to ACS
 ```
 
 **Key insight**: With managed identity, only the sender address needs Key Vault storage. The endpoint is public and passed via Bicep parameters. Authentication happens automatically via Entra ID.
@@ -72,24 +72,24 @@ Phase 2 (applications.bicep)
 ### Adding a new application secret
 
 1. ✅ Add to Key Vault in Phase 1 (or via `Sync-KeyVaultSecrets.ps1` between phases)
-2. ✅ Reference in Phase 2 via `keyVaultUrl` in Container App secrets
+2. ✅ Reference in Phase 2 via `keyVaultUrl` in App Service settings (Key Vault references)
 3. ❌ **Never** pass secrets as plain Bicep parameters in Phase 2
 
 ## Why This Separation?
 
-**Problem**: You can't deploy "just infrastructure" without also deploying Container Apps.
+**Problem**: You can't deploy "just infrastructure" without also deploying application sites.
 
 **Before** (wrong):
 
 - Phase 1: Base infrastructure
-- Phase 2: ACS + Container Apps (tightly coupled!)
+- Phase 2: ACS + application sites (tightly coupled!)
 - **Issue**: Can't add ACS without providing container image tags
 
 **After** (correct):
 
-- Phase 1: Base infrastructure + ACS (no container apps!)
+- Phase 1: Base infrastructure + ACS (no application sites!)
 - Key Vault secrets bridge the gap
-- Phase 2: Container Apps only (reads from Key Vault)
+- Phase 2: Application sites only (reads from Key Vault)
 - **Benefit**: Can deploy Phase 1 independently for local development
 
 ## Local Development Workflow
@@ -107,9 +107,9 @@ Infrastructure and applications are deployed by **separate scripts**:
 | Script | Phase | What it deploys | Image tag needed? |
 |--------|-------|-----------------|-------------------|
 | `Deploy-Infrastructure.ps1` | Phase 1 | `infrastructure.bicep` + secret sync | **No** |
-| `Deploy-Applications.ps1` | Phase 2 | `applications.bicep` (Container Apps) | **Yes** |
+| `Deploy-Applications.ps1` | Phase 2 | `applications.bicep` (API + Web App Service sites) | **Yes** |
 | `Build-Images.ps1` | Build | Docker build + push to ghcr.io | **Yes** |
-| `Deploy-Application.ps1` | Fast path | `az containerapp update` (image swap only) | **Yes** |
+| `Deploy-Application.ps1` | Fast path | `az webapp config set` (image swap only) | **Yes** |
 
 ### CD Pipeline (automatic)
 
@@ -139,9 +139,9 @@ $env:POSTGRES_ADMIN_PASSWORD = "<password>"
 
 ### ✅ Services Using Managed Identity (Current)
 
-- **PostgreSQL** - Container Apps use `DefaultAzureCredential` with passwordless connection string
+- **PostgreSQL** - App Service sites use `DefaultAzureCredential` with passwordless connection string
 - **Azure AI Foundry (OpenAI)** - Apps use Entra token auth instead of API keys
-- **Key Vault** - Container Apps reference secrets via `keyVaultUrl` with managed identity
+- **Key Vault** - App Service sites reference secrets via `keyVaultUrl` (Key Vault references) with managed identity
 - **Azure Communication Services** - EmailClient uses managed identity instead of connection string
 
 ### 🔧 When Adding New Azure Services
@@ -186,7 +186,7 @@ var client = new ServiceClient(
 
 ## Never Do
 
-- ❌ Add Container Apps to `infrastructure.bicep`
+- ❌ Add application sites to `infrastructure.bicep`
 - ❌ Add infrastructure resources (storage, databases, message queues, etc.) to `applications.bicep`
 - ❌ Pass secrets as plain Bicep parameters (always use Key Vault + `keyVaultUrl`)
 - ❌ Reference outputs directly between phases (use Key Vault as the bridge)

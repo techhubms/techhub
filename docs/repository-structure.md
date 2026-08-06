@@ -134,33 +134,34 @@ PowerShell automation scripts for development and maintenance tasks:
   - Deploys networking, identity, Key Vault, PostgreSQL, ACS, monitoring
   - Modes: validate, whatif, deploy
   - Auto-resolves `ADMIN_IP_ADDRESSES` from GitHub variable and `POSTGRES_ADMIN_PASSWORD` from Key Vault
-- **`Deploy-Applications.ps1`** - Phase 2 Container Apps deployment (Bicep, fully standalone)
+- **`Deploy-Applications.ps1`** - Phase 2 App Service deployment (Bicep, fully standalone)
   - Requires `-ImageTag`; no infrastructure output dependencies
   - Modes: validate, whatif, deploy
-- **`Deploy-Application.ps1`** - Fast image-only update via `az containerapp update`
+- **`Deploy-Application.ps1`** - Fast image-only update via `az webapp config set`
   - Smoke tests and automatic rollback
   - Requires `-Tag`; used for code-only deploys (skips full Bicep evaluation)
 See [scripts/AGENTS.md](../scripts/AGENTS.md) for scripting guidelines and patterns.
 
 ### Infrastructure (`infra/`)
 
-Azure infrastructure as code (Bicep templates) for Azure Container Apps deployment:
+Azure infrastructure as code (Bicep templates) for Azure App Service deployment:
 
-- **`infrastructure.bicep`** - Phase 1: base infrastructure (identity, networking, KV, postgres, Container Apps Environment)
-- **`applications.bicep`** - Phase 2: production Container App deployments (API + Web)
-- **`pr-applications.bicep`** - PR preview Container App deployments (scale-to-zero, telemetry disabled)
+- **`infrastructure.bicep`** - Phase 1: base infrastructure (identity, networking, KV, postgres, App Service Plans)
+- **`applications.bicep`** - Phase 2: production API + Web App Service site deployments (Web Apps for Containers)
+- **`pr-applications.bicep`** - PR preview API + Web App Service site deployments (shared PR App Service Plan, telemetry disabled)
 - **`parameters/`** - Environment-specific parameter files:
   - `prod-infrastructure.bicepparam` - Production infrastructure parameters
   - `prod-applications.bicepparam` - Production application deployment parameters
 - **`modules/`** - Reusable Bicep modules:
-  - `containerApps.bicep` - Container Apps Environment
-  - `api.bicep` - TechHub API Container App
-  - `web.bicep` - TechHub Web Container App
+  - `appServicePlan.bicep` - App Service Plan (Basic B1, shared by API + Web sites)
+  - `api.bicep` - TechHub API App Service site (Web App for Containers, VNet-restricted, not publicly accessible)
+  - `web.bicep` - TechHub Web App Service site (Web App for Containers)
   - `monitoring.bicep` - Application Insights + Log Analytics
   - `postgres.bicep` - PostgreSQL Flexible Server
   - `keyVault.bicep` - Key Vault
   - `identity.bicep` - User-assigned managed identity
   - `network.bicep` - VNet and subnets
+  - `wildcardCert.bicep` - Imports a wildcard TLS certificate from Key Vault into an App Service Plan (deployed standalone by `Renew-WildcardCertificates.ps1`)
 
 Deployment is managed via PowerShell scripts (`scripts/Deploy-Infrastructure.ps1` and `scripts/Deploy-Application.ps1`) which are called by GitHub Actions workflows. Scripts can also be run locally for testing.
 

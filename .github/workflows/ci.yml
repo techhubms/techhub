@@ -4,6 +4,12 @@ on:
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened, closed]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull request number to build, deploy, and E2E-test a preview environment for'
+        type: string
+        required: true
 
 # Concurrency strategy:
 # - NO workflow-level concurrency group. Each push starts its own CI run immediately.
@@ -12,6 +18,17 @@ on:
 # - PR preview jobs use per-PR concurrency (see pr-preview-build-and-push, pr-preview-deploy)
 #   to cancel stale preview deploys when a new commit is pushed to the same PR.
 # - CI jobs are stateless and safe to run in parallel across commits.
+#
+# Trigger strategy:
+# - The quality-gate jobs (build/test/lint/security/codeql) run automatically on every
+#   `pull_request` event (not `workflow_dispatch`).
+# - The PR preview jobs (build-and-push/deploy/e2e) run ONLY on manual `workflow_dispatch`,
+#   so preview deployments to the shared PR-preview App Service Plan never happen without an
+#   explicit decision — this is the primary cost/load control lever for that shared plan.
+#   Configure "Deploy PR Preview" as a required branch-protection status check so a preview
+#   must be manually triggered (and pass) before merge.
+# - The teardown job runs automatically when a PR is closed, to keep the shared PR-preview
+#   plan's cost/load down without requiring manual cleanup.
 
 permissions:
   contents: read
@@ -28,7 +45,7 @@ jobs:
   build:
     name: Build .NET Solution
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -55,7 +72,7 @@ jobs:
   test-unit:
     name: Unit Tests
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -110,7 +127,7 @@ jobs:
   test-integration:
     name: Integration Tests
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -169,7 +186,7 @@ jobs:
   test-powershell:
     name: PowerShell Tests
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -204,7 +221,7 @@ jobs:
   test-javascript:
     name: JavaScript Tests
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -225,7 +242,7 @@ jobs:
   lint:
     name: Lint & Format Check
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -266,7 +283,7 @@ jobs:
   security:
     name: Security Scan
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -314,7 +331,7 @@ jobs:
   codeql:
     name: CodeQL Analysis
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -336,7 +353,7 @@ jobs:
     name: Code Coverage Report
     runs-on: ubuntu-latest
     needs: [test-unit, test-integration]
-    if: always() && github.event.action != 'closed'
+    if: always() && github.event_name == 'pull_request' && github.event.action != 'closed'
 
     steps:
       - name: Download unit coverage
@@ -399,7 +416,7 @@ jobs:
     name: Quality Gate
     runs-on: ubuntu-latest
     needs: [build, test-unit, test-integration, test-powershell, test-javascript, lint, security, codeql]
-    if: always() && github.event.action != 'closed'
+    if: always() && github.event_name == 'pull_request' && github.event.action != 'closed'
 
     steps:
       - name: Check quality gate
@@ -526,27 +543,29 @@ jobs:
           fi
 
   # ════════════════════════════════════════════════════════════════════════════════
-  # PR PREVIEW JOBS — Only run on pull requests (not closed), after quality gate
+  # PR PREVIEW JOBS — Manual only (workflow_dispatch), so deploys to the shared
+  # PR-preview App Service Plan never happen without an explicit decision.
   # ════════════════════════════════════════════════════════════════════════════════
 
   pr-preview-build-and-push:
     name: Build & Push Docker Images (PR Preview)
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
-    needs: quality-gate
+    if: github.event_name == 'workflow_dispatch'
     concurrency:
-      group: pr-preview-${{ github.event.pull_request.number }}
+      group: pr-preview-${{ inputs.pr_number }}
       cancel-in-progress: true
     outputs:
       image-tag: ${{ steps.tag.outputs.image-tag }}
 
     steps:
-      - name: Checkout code
+      - name: Checkout PR head
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: refs/pull/${{ inputs.pr_number }}/head
 
       - name: Generate image tag
         id: tag
-        run: echo "image-tag=pr-${{ github.event.pull_request.number }}-$(date -u +'%Y%m%d%H%M%S')" >> "$GITHUB_OUTPUT"
+        run: echo "image-tag=pr-${{ inputs.pr_number }}-$(date -u +'%Y%m%d%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: Log in to GitHub Container Registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io --username "${{ github.actor }}" --password-stdin
@@ -564,23 +583,19 @@ jobs:
     name: Deploy PR Preview
     runs-on: ubuntu-latest
     needs: pr-preview-build-and-push
-    if: github.event.action != 'closed'
+    if: github.event_name == 'workflow_dispatch'
     environment:
       name: staging
-      url: "https://ca-techhub-web-pr-${{ github.event.pull_request.number }}.${{ steps.deploy.outputs.cae-default-domain }}"
+      url: "https://app-techhub-web-pr-${{ inputs.pr_number }}.azurewebsites.net"
     concurrency:
-      group: pr-preview-${{ github.event.pull_request.number }}
+      group: pr-preview-${{ inputs.pr_number }}
       cancel-in-progress: true
-    outputs:
-      # NOTE: web-url is NOT output directly — the PR number in the URL may coincide with a
-      # registered secret substring and get masked in $GITHUB_OUTPUT. Instead we output the
-      # CAE default domain and reconstruct the full URL in consuming jobs using the PR number
-      # from github context (which is never masked).
-      cae-default-domain: ${{ steps.deploy.outputs.cae-default-domain }}
 
     steps:
-      - name: Checkout code
+      - name: Checkout PR head
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: refs/pull/${{ inputs.pr_number }}/head
 
       - name: Azure Login
         uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
@@ -589,7 +604,7 @@ jobs:
           tenant-id: ${{ vars.AZURE_TENANT_ID }}
           subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Deploy PR preview Container Apps
+      - name: Deploy PR preview App Service sites
         id: deploy
         shell: pwsh
         env:
@@ -597,7 +612,7 @@ jobs:
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
         run: |
           ./scripts/Deploy-PrPreview.ps1 `
-            -PrNumber ${{ github.event.pull_request.number }} `
+            -PrNumber ${{ inputs.pr_number }} `
             -Action deploy `
             -Tag "${{ needs.pr-preview-build-and-push.outputs.image-tag }}"
 
@@ -605,10 +620,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          PR_NUMBER="${{ github.event.pull_request.number }}"
-          WEB_URL="https://ca-techhub-web-pr-${PR_NUMBER}.${{ steps.deploy.outputs.cae-default-domain }}"
-          SHORT_SHA="${{ github.event.pull_request.head.sha }}"
-          SHORT_SHA="${SHORT_SHA:0:7}"
+          PR_NUMBER="${{ inputs.pr_number }}"
+          WEB_URL="https://app-techhub-web-pr-${PR_NUMBER}.azurewebsites.net"
+          SHORT_SHA="$(git rev-parse --short HEAD)"
 
           cat > /tmp/pr-preview-comment.md << EOF
           <!-- PR-PREVIEW -->
@@ -622,7 +636,7 @@ jobs:
           | **Commit** | \`${SHORT_SHA}\` |
 
           > [!NOTE]
-          > The environment uses an isolated PostgreSQL database (cloned from production via PITR) and runs in the production Azure Container Apps Environment.
+          > The environment uses an isolated PostgreSQL database (cloned from production via PITR) and runs on the dedicated PR-preview App Service Plan (separate from production).
           > It will be automatically removed when this PR is closed.
           EOF
 
@@ -644,14 +658,16 @@ jobs:
     name: E2E Tests (PR Preview)
     runs-on: ubuntu-latest
     needs: pr-preview-deploy
-    if: github.event.action != 'closed'
+    if: github.event_name == 'workflow_dispatch'
     concurrency:
-      group: test-e2e-preview-${{ github.event.pull_request.number }}
+      group: test-e2e-preview-${{ inputs.pr_number }}
       cancel-in-progress: true
 
     steps:
-      - name: Checkout code
+      - name: Checkout PR head
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: refs/pull/${{ inputs.pr_number }}/head
 
       - name: Setup .NET
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
@@ -679,7 +695,7 @@ jobs:
             --report-xunit-trx-filename e2e-test-results.trx \
             -- --filter-not-trait "Category=Performance"
         env:
-          E2E_BASE_URL: https://ca-techhub-web-pr-${{ github.event.pull_request.number }}.${{ needs.pr-preview-deploy.outputs.cae-default-domain }}
+          E2E_BASE_URL: https://app-techhub-web-pr-${{ inputs.pr_number }}.azurewebsites.net
 
       - name: Upload test results
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -704,7 +720,7 @@ jobs:
   pr-preview-teardown:
     name: Teardown PR Preview
     runs-on: ubuntu-latest
-    if: github.event.action == 'closed'
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
 
     steps:
       - name: Checkout code
@@ -717,7 +733,7 @@ jobs:
           tenant-id: ${{ vars.AZURE_TENANT_ID }}
           subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Delete PR preview Container Apps
+      - name: Delete PR preview App Service sites
         shell: pwsh
         run: |
           ./scripts/Deploy-PrPreview.ps1 `

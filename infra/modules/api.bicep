@@ -1,6 +1,12 @@
 param location string
-param containerAppName string
-param containerAppsEnvironmentId string
+param siteName string
+param appServicePlanId string
+
+@description('Subnet resource ID (delegated to Microsoft.Web/serverFarms) used for Regional VNet Integration — required to reach Key Vault/PostgreSQL/AI Foundry private endpoints')
+param vnetIntegrationSubnetId string
+
+@description('Subnet resource ID that is allowed to call this app (the Web app\'s VNet integration subnet). All other inbound traffic is denied — this keeps the API non-publicly-reachable, listening only for traffic routed from the Web app over the VNet.')
+param allowedCallerSubnetId string
 
 @description('GitHub Container Registry organization/namespace for image names (e.g. techhubms → ghcr.io/techhubms/...)')
 param githubRegistryUsername string
@@ -50,39 +56,35 @@ param newsletterUnsubscribeSecretName string = ''
 @description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
 param aspNetCoreEnvironment string = 'Production'
 
-@description('Minimum replica count. Use 0 to enable scale-to-zero for PR preview environments.')
-param minReplicas int = 1
-
-@description('Maximum replica count.')
-param maxReplicas int = 3
-
-@description('Tags applied to the Container App')
+@description('Tags applied to the Web App')
 param tags object = {}
 
 var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-api:${imageTag}'
-var revisionSuffix = 'api-${imageTag}'
 var hasAcsEndpoint = !empty(acsEndpointSecretName)
 var hasAcsSenderAddress = !empty(acsSenderAddressSecretName)
-var newsletterWebsiteBaseUrl = !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
+var newsletterWebsiteBaseUrl = !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${siteName}.azurewebsites.net'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
-var corsOrigins = union(['https://*.azurecontainerapps.io'], customOrigins)
+var corsOrigins = union(['https://*.azurewebsites.net'], customOrigins)
 var corsEnvVars = [for (fqdn, i) in webFqdns: {
   name: 'Cors__AllowedOrigins__${i}'
   value: 'https://${fqdn}'
 }]
+
+func kvRef(vaultUri string, secretName string) string => '@Microsoft.KeyVault(SecretUri=${vaultUri}secrets/${secretName})'
+
 var newsletterSecretEnvVars = empty(newsletterUnsubscribeSecretName)
   ? []
   : [
       {
         name: 'Newsletter__UnsubscribeSecret'
-        secretRef: 'newsletter-unsubscribe-secret'
+        value: kvRef(keyVaultUri, newsletterUnsubscribeSecretName)
       }
     ]
 var newsletterAcsEnvVars = hasAcsEndpoint
   ? [
       {
         name: 'Newsletter__Endpoint'
-        secretRef: 'newsletter-acs-endpoint'
+        value: kvRef(keyVaultUri, acsEndpointSecretName)
       }
     ]
   : []
@@ -90,36 +92,7 @@ var newsletterSenderEnvVars = hasAcsSenderAddress
   ? [
       {
         name: 'Newsletter__SenderAddress'
-        secretRef: 'acs-sender-address'
-      }
-    ]
-  : []
-var newsletterSecrets = empty(newsletterUnsubscribeSecretName)
-  ? []
-  : [
-      {
-        name: 'newsletter-unsubscribe-secret'
-        keyVaultUrl: '${keyVaultUri}secrets/${newsletterUnsubscribeSecretName}'
-        identity: identityId
-      }
-    ]
-
-var newsletterAcsSecrets = hasAcsEndpoint
-  ? [
-      {
-        name: 'newsletter-acs-endpoint'
-        keyVaultUrl: '${keyVaultUri}secrets/${acsEndpointSecretName}'
-        identity: identityId
-      }
-    ]
-  : []
-
-var newsletterSenderSecrets = hasAcsSenderAddress
-  ? [
-      {
-        name: 'acs-sender-address'
-        keyVaultUrl: '${keyVaultUri}secrets/${acsSenderAddressSecretName}'
-        identity: identityId
+        value: kvRef(keyVaultUri, acsSenderAddressSecretName)
       }
     ]
   : []
@@ -183,12 +156,37 @@ var staticEnvVars = [
     name: 'AiCategorization__DeploymentName'
     value: aiCategorizationDeploymentName
   }
+  {
+    // Container listens on 8080 — tells the App Service container host which port to route to.
+    name: 'WEBSITES_PORT'
+    value: '8080'
+  }
+  {
+    // Containers have no need for the default persistent /home file share.
+    name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE'
+    value: 'false'
+  }
+  {
+    name: 'DOCKER_REGISTRY_SERVER_URL'
+    value: 'https://ghcr.io'
+  }
+  {
+    name: 'DOCKER_REGISTRY_SERVER_USERNAME'
+    value: githubRegistryAuthUsername
+  }
+  {
+    // GitHub Container Registry PAT for image pulls (read:packages scope), resolved via
+    // Key Vault reference using the user-assigned managed identity (keyVaultReferenceIdentity below).
+    name: 'DOCKER_REGISTRY_SERVER_PASSWORD'
+    value: kvRef(keyVaultUri, 'techhub-github-registry-token')
+  }
 ]
 
-resource api 'Microsoft.App/containerApps@2025-07-01' = {
-  name: containerAppName
+resource api 'Microsoft.Web/sites@2023-12-01' = {
+  name: siteName
   location: location
   tags: tags
+  kind: 'app,linux,container'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
@@ -196,108 +194,52 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
     }
   }
   properties: {
-    managedEnvironmentId: containerAppsEnvironmentId
-    configuration: {
-      activeRevisionsMode: 'Single'
-      ingress: {
-        external: false
-        allowInsecure: false
-        targetPort: 8080
-        transport: 'http'
-        corsPolicy: {
-          allowedOrigins: corsOrigins
-          allowedMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
-          allowedHeaders: ['*']
-          allowCredentials: false
-        }
+    serverFarmId: appServicePlanId
+    httpsOnly: true
+    // Resolve Key Vault references (@Microsoft.KeyVault(...) app settings above) using the
+    // user-assigned identity instead of a system-assigned one.
+    keyVaultReferenceIdentity: identityId
+    // Route all outbound traffic (including Key Vault reference resolution) through the
+    // VNet integration subnet so it reaches Key Vault/PostgreSQL/AI Foundry over their
+    // private endpoints — keeps all backing-service traffic on the VNet.
+    vnetRouteAllEnabled: true
+    siteConfig: {
+      linuxFxVersion: 'DOCKER|${imageReference}'
+      alwaysOn: true
+      healthCheckPath: '/health'
+      http20Enabled: true
+      minTlsVersion: '1.2'
+      ftpsState: 'Disabled'
+      cors: {
+        allowedOrigins: corsOrigins
+        supportCredentials: false
       }
-      registries: [
+      appSettings: concat(staticEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars)
+      // Deny all public inbound traffic except from the Web app's VNet integration subnet —
+      // keeps the API reachable only from the Web app's subnet, never from the public internet.
+      ipSecurityRestrictions: [
         {
-          // Pull images from GitHub Container Registry using a PAT stored in Key Vault.
-          // username must match the PAT owner (githubRegistryAuthUsername), which may differ
-          // from the image namespace (githubRegistryUsername / the org).
-          server: 'ghcr.io'
-          username: githubRegistryAuthUsername
-          passwordSecretRef: 'ghcr-token'
+          vnetSubnetResourceId: allowedCallerSubnetId
+          action: 'Allow'
+          priority: 100
+          name: 'AllowWebApp'
         }
       ]
-      secrets: concat([
-        // GitHub Container Registry PAT for image pulls (read:packages scope)
-        {
-          name: 'ghcr-token'
-          keyVaultUrl: '${keyVaultUri}secrets/techhub-github-registry-token'
-          identity: identityId
-        }
-      ], newsletterSenderSecrets, newsletterAcsSecrets, newsletterSecrets)
-    }
-    template: {
-      revisionSuffix: revisionSuffix
-      containers: [
-        {
-          name: 'api'
-          image: imageReference
-          resources: {
-            cpu: json('0.25')
-            memory: '0.5Gi'
-          }
-          env: concat(staticEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars)
-          probes: [
-            {
-              type: 'startup'
-              httpGet: {
-                path: '/alive'
-                port: 8080
-                scheme: 'HTTP'
-              }
-              initialDelaySeconds: 5
-              periodSeconds: 10
-              failureThreshold: 30  // 5s + 30×10s = 305s max startup (DB migrations + content sync)
-              timeoutSeconds: 5
-            }
-            {
-              type: 'liveness'
-              httpGet: {
-                path: '/alive'
-                port: 8080
-                scheme: 'HTTP'
-              }
-              periodSeconds: 30
-              failureThreshold: 3
-              timeoutSeconds: 5
-            }
-            {
-              type: 'readiness'
-              httpGet: {
-                path: '/health'
-                port: 8080
-                scheme: 'HTTP'
-              }
-              periodSeconds: 10
-              failureThreshold: 3
-              timeoutSeconds: 5
-            }
-          ]
-        }
-      ]
-      scale: {
-        minReplicas: minReplicas
-        maxReplicas: maxReplicas
-        cooldownPeriod: 300
-        pollingInterval: 30
-        rules: [
-          {
-            name: 'http-scaling'
-            http: {
-              metadata: {
-                concurrentRequests: '100'
-              }
-            }
-          }
-        ]
-      }
+      ipSecurityRestrictionsDefaultAction: 'Deny'
     }
   }
 }
 
-output fqdn string = api.properties.configuration.ingress.fqdn
+// Regional VNet Integration — gives the API outbound access into the delegated subnet.
+resource vnetIntegration 'Microsoft.Web/sites/networkConfig@2023-12-01' = {
+  parent: api
+  name: 'virtualNetwork'
+  properties: {
+    subnetResourceId: vnetIntegrationSubnetId
+    swiftSupported: true
+  }
+}
+
+output fqdn string = api.properties.defaultHostName
 output id string = api.id
+output principalId string = api.identity.principalId

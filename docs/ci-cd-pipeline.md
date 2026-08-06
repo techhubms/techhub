@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tech Hub uses GitHub Actions for continuous integration (CI) and continuous deployment (CD) to Azure Container Apps.
+Tech Hub uses GitHub Actions for continuous integration (CI) and continuous deployment (CD) to a single Azure App Service Plan (Basic B1) hosting both the API and Web sites as separate Web Apps for Containers.
 
 All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infrastructure.ps1` and `scripts/Deploy-Application.ps1`) that can be run both locally and from GitHub Actions workflows.
 
@@ -17,9 +17,10 @@ PR failures show up under "CI Pipeline" and production deployments under "CD Pip
 
 **Triggers**:
 
-- Pull requests to `main` branch (opened, synchronize, reopened, closed)
+- Pull requests to `main` branch (opened, synchronize, reopened, closed) — runs quality-gate checks only
+- Manual dispatch (`workflow_dispatch` with a required `pr_number` input) — builds, deploys, and E2E-tests a PR preview environment for that PR
 
-Runs all quality checks and, when they pass, deploys and tears down PR preview environments.
+Runs all quality checks on every PR push. PR preview build/deploy/E2E and teardown only run when explicitly triggered — see [PR Preview Environments](#pr-preview-environments) below.
 
 ### CD Pipeline (Production)
 
@@ -63,34 +64,42 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 
 - **No workflow-level concurrency group** — each push starts its own CI run immediately, so new commits are never blocked by older runs waiting for environment approval
 - **Deployment jobs use per-environment concurrency** (`deploy-production`) to prevent conflicting deploys to the same environment
-- **PR preview jobs use per-PR concurrency** (`pr-preview-{N}`) — new pushes to an open PR cancel any in-progress preview deploy for that PR; each PR gets its own isolated database so there is no cross-PR interference
+- **PR preview jobs use per-PR concurrency** (`pr-preview-{N}`) — new manual dispatches for an open PR cancel any in-progress preview deploy for that PR; each PR gets its own isolated database so there is no cross-PR interference
 - CI jobs are stateless and safe to run in parallel across commits
 
 ### PR Preview Environments
 
-PR preview is handled by jobs inside [.github/workflows/ci.yml](../.github/workflows/ci.yml).
-This means **the quality gate must pass before a preview is deployed** —
-if unit tests, integration tests, lint, or security checks fail, no container is built and no
-preview environment is created.
+PR preview is handled by jobs inside [.github/workflows/ci.yml](../.github/workflows/ci.yml), but
+unlike the quality-gate jobs, the preview build/deploy/E2E jobs **only run on manual
+`workflow_dispatch`** — they do not run automatically on `pull_request` events. This is a
+deliberate choice for the App Service model: only one shared, persistent PR-preview App Service
+Plan (`asp-techhub-pr`) exists (Regional VNet Integration is strictly 1 subnet : 1 Plan, so
+per-PR Plans aren't practical), so preview deploys must be triggered explicitly rather than
+firing automatically for every push to every open PR.
 
-When a pull request is opened or updated and the quality gate passes, a **fully isolated preview
-environment** is automatically deployed inside the **production resource group** (`rg-techhub-prod`),
-using the production Container Apps Environment (`cae-techhub-prod`).
-Each PR gets its own Container Apps (`ca-techhub-api-pr-{number}` and
-`ca-techhub-web-pr-{number}`) and its own **PostgreSQL Flexible Server** (`psql-techhub-pr-{number}`)
-created via Point-in-Time Restore (PITR) from the production database.
+**To deploy/refresh a PR preview**: go to GitHub Actions → "CI Pipeline" → "Run workflow", select
+the PR's branch, and provide the PR number as the `pr_number` input. The workflow checks out
+`refs/pull/{pr_number}/head` regardless of which ref is selected in the UI, builds and pushes
+images, deploys the preview, and runs Playwright E2E tests against it.
 
-**On PR opened / new commit pushed** (after quality gate passes):
+When triggered, a **fully isolated preview environment** is deployed inside the **production
+resource group** (`rg-techhub-prod`), using the shared PR-preview App Service Plan
+(`asp-techhub-pr`). Each PR gets its own API + Web App Service sites
+(`app-techhub-api-pr-{number}` and `app-techhub-web-pr-{number}`) and its own **PostgreSQL
+Flexible Server** (`psql-techhub-pr-{number}`) created via Point-in-Time Restore (PITR) from the
+production database.
+
+**On manual dispatch for a PR** (`pr_number` input):
 
 1. Docker images are built and pushed to **ghcr.io**, tagged `pr-{number}-{timestamp}`
-2. A PR-specific PostgreSQL server is created via PITR from production (5–8 min)
-3. PR-specific Container Apps are created or updated in the production environment (`cae-techhub-prod` in `rg-techhub-prod`)
-4. A comment is posted (or updated) on the PR with the direct Container Apps URL
+2. A PR-specific PostgreSQL server is created via PITR from production (5–8 min), if it doesn't already exist
+3. PR-specific App Service sites are created or updated on the shared PR-preview App Service Plan (`asp-techhub-pr` in `rg-techhub-prod`)
+4. A comment is posted (or updated) on the PR with the preview URL
 5. Playwright E2E tests run against the preview URL (`Category=Performance` excluded)
 
-**On PR closed**:
+**On PR closed** (automatic, `pull_request` trigger, no quality gate or manual dispatch required):
 
-1. The PR-specific Container Apps are deleted (no quality gate required)
+1. The PR-specific App Service sites are deleted
 2. The PR-specific PostgreSQL server is deleted
 3. Docker images tagged for the PR are cleaned up from **ghcr.io**
 4. The PR comment is updated to confirm the environment has been removed
@@ -99,11 +108,12 @@ created via Point-in-Time Restore (PITR) from the production database.
 
 - Each PR gets an **isolated PostgreSQL database** cloned from production via PITR
 - No shared database state — multiple PRs cannot interfere with each other
-- Reuse production infrastructure (`rg-techhub-prod`, Container Apps Environment `cae-techhub-prod`)
-- Accessible via the default Azure Container Apps URL (no custom domain)
-- Multiple PRs run in parallel, each with a unique URL and isolated database
-- Concurrency per PR: new pushes cancel in-progress deploys for the same PR
+- Reuse production infrastructure (`rg-techhub-prod`) but on a separate, dedicated App Service Plan (`asp-techhub-pr`) so PR traffic never affects prod memory/CPU
+- Accessible via the default `*.azurewebsites.net` hostname (no custom domain)
+- Multiple PRs can run in parallel on the shared Plan, each with a unique URL and isolated database
+- Concurrency per PR: new manual dispatches cancel in-progress deploys for the same PR
 - Images tagged with `pr-{number}-{timestamp}` for easy identification
+- Preview deploy/refresh is **manual-only** (`workflow_dispatch`) — it does not run automatically on every push to an open PR
 
 **Script**: `scripts/Deploy-PrPreview.ps1` — can also be run locally:
 
@@ -124,8 +134,8 @@ created via Point-in-Time Restore (PITR) from the production database.
 - Scheduled daily at 21:00 UTC (22:00 CET / 23:00 CEST depending on DST)
 - Manual dispatch with optional `dry_run` flag
 
-Scans `rg-techhub-prod` for all active PR environments (Container Apps named
-`ca-techhub-api-pr-{N}` and PostgreSQL servers named `psql-techhub-pr-{N}`) and tears
+Scans `rg-techhub-prod` for all active PR environments (App Service sites named
+`app-techhub-api-pr-{N}` and PostgreSQL servers named `psql-techhub-pr-{N}`) and tears
 them all down. This eliminates the cost of idle PostgreSQL servers and catches **orphaned
 environments** that were not cleaned up when a PR was closed (e.g. due to a workflow failure).
 
@@ -150,8 +160,8 @@ Run only after the quality gate passes, and never on PRs.
 2. **Deploy to Production** - Infrastructure + application deployment
    - Uses GitHub environment protection (at least 1 required reviewer)
    - Automatically detects whether `infra/` or `scripts/` files have changed since the last successful deploy:
-     - **Full deploy** (infrastructure changed): runs `Deploy-Infrastructure.ps1` (Phase 1: Bicep infra), then `Deploy-Applications.ps1` (Phase 2: Container Apps Bicep)
-     - **Fast update** (no infrastructure changes): runs `Deploy-Application.ps1` — updates Container App image tags only, no Bicep evaluation
+     - **Full deploy** (infrastructure changed): runs `Deploy-Infrastructure.ps1` (Phase 1: Bicep infra), then `Deploy-Applications.ps1` (Phase 2: API + Web App Service Bicep)
+     - **Fast update** (no infrastructure changes): runs `Deploy-Application.ps1` — updates the App Service sites' container image tags only (`az webapp config set`), no Bicep evaluation
    - After deploy: E2E tests run against production (excluding `Category=Performance` and `Category=DevEnvironment`)
 
 ### Performance Tests
@@ -162,7 +172,7 @@ CI E2E runs.
 
 **Why local-only**: The performance tests connect directly to a PostgreSQL database containing
 a full production dataset (~4000+ content items). The production database is reachable from
-Container Apps only via a private endpoint on the VNet, plus IP-based firewall rules for admin
+the App Service sites only via a private endpoint on the VNet, plus IP-based firewall rules for admin
 IPs, and is not accessible from GitHub Actions runners. There is no publicly reachable database
 with real data available in CI.
 
@@ -182,9 +192,9 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 **Production**:
 
 - Resource Group: `rg-techhub-prod`
-- Container Apps Environment: `cae-techhub-prod` (shared by PR preview environments too)
-- API App: `ca-techhub-api-prod`
-- Web App: `ca-techhub-web-prod`
+- App Service Plan: `asp-techhub-prod` (Basic B1, shared by API + Web sites)
+- API App: `app-techhub-api-prod`
+- Web App: `app-techhub-web-prod`
 - PostgreSQL: `psql-techhub-prod`
 - Azure OpenAI: `oai-techhub-prod`
 - Key Vault: `kv-techhub-prod`
@@ -193,8 +203,8 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 
 **PR preview environments** (created on-demand in `rg-techhub-prod`):
 
-- Container Apps Environment: `cae-techhub-prod` (shared with production)
-- Each PR gets its own Container Apps: `ca-techhub-api-pr-{N}`, `ca-techhub-web-pr-{N}`
+- App Service Plan: `asp-techhub-pr` (Basic B1, shared by all PR previews — separate from production)
+- Each PR gets its own App Service sites: `app-techhub-api-pr-{N}`, `app-techhub-web-pr-{N}`
 - Each PR gets its own PostgreSQL: `psql-techhub-pr-{N}` (created via PITR from production)
 - Shared managed identity: `id-techhub-pr` (created once by `infrastructure.bicep`)
 
@@ -203,7 +213,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 **Rollback Strategy**:
 
 - Manual rollback available via redeployment with a previous image tag
-- Container Apps revision history provides additional rollback options
+- No revision history like Container Apps — rollback always redeploys a specific tag via `Deploy-Application.ps1 -Tag <tag>`
 
 ## Docker Images
 
@@ -278,7 +288,7 @@ One repository-level secret is required (accessible to all environments and jobs
 
 | Secret | Notes |
 |--------|-------|
-| `GHCR_PAT` | GitHub PAT with `write:packages` scope. Synced to Key Vault as `techhub-github-registry-token` by `Sync-KeyVaultSecrets.ps1` so Container Apps can pull images from `ghcr.io`. Also used locally to push images with `Build-Images.ps1`. |
+| `GHCR_PAT` | GitHub PAT with `write:packages` scope. Synced to Key Vault as `techhub-github-registry-token` by `Sync-KeyVaultSecrets.ps1` so App Service sites can pull images from `ghcr.io`. Also used locally to push images with `Build-Images.ps1`. |
 
 ### Environment Secrets
 
@@ -338,7 +348,7 @@ Both deployment scripts can be run locally, making it easy to test without trigg
 **Application deployment**:
 
 ```powershell
-# Deploy Container Apps with a specific image tag (fully standalone)
+# Deploy the API + Web App Service sites with a specific image tag (fully standalone)
 ./scripts/Deploy-Applications.ps1 -Mode deploy -ImageTag "20260501120000"
 
 # Fast image-only update (no Bicep evaluation)
@@ -359,7 +369,7 @@ When deploying to a completely new Azure subscription for the first time:
    - The production deployment job awaits approval
    - All CI checks run first, then images are built, then after approval, production infrastructure and application deploy
 
-**Note**: The Bicep templates use `imageTag = 'initial'` which deploys a Microsoft-provided placeholder ASP.NET app. The deployment workflow immediately replaces this with your actual application. This solves the chicken-and-egg problem of needing Container Apps to exist before images are built, but needing images to exist before Container Apps can be created.
+**Note**: The Bicep templates default `apiImageTag`/`webImageTag` to an empty string, which `Deploy-Applications.ps1` resolves to a placeholder tag (`00000000000000`) when no `-ImageTag` is supplied in `validate`/`whatif` mode — a real tag is required for `deploy`. This solves the chicken-and-egg problem of needing the App Service sites to exist before images are built, but needing images to exist before the sites can be created with a real tag.
 
 ### Automatic Production Deployment
 
@@ -375,7 +385,7 @@ When deploying to a completely new Azure subscription for the first time:
    - Approve or reject deployment
 8. After approval, deployment proceeds:
    - Deploys production infrastructure (Phase 1 Bicep: VNet, KV, PostgreSQL, ACS, …) if changed
-   - Deploys production applications (Phase 2 Bicep: Container Apps) if changed
+   - Deploys production applications (Phase 2 Bicep: API + Web App Service sites) if changed
    - Fast image-update path if only image tags changed
    - E2E tests run against production (excluding `Category=Performance`, `Category=DevEnvironment`)
 9. **Deployment complete** — Production is live with new version
@@ -391,7 +401,7 @@ When deploying to a completely new Azure subscription for the first time:
 ### Post-Deployment
 
 - Monitor Application Insights for errors
-- Check Container Apps logs in Azure Portal
+- Check App Service log stream / diagnostics in Azure Portal
 - Review metrics in Aspire Dashboard (local development)
 
 ## Rollback Procedures
@@ -412,10 +422,10 @@ Production deployment automatically rolls back if:
 
 ### Emergency Rollback (Azure Portal)
 
-1. Go to Azure Portal → Container Apps
-2. Select the affected app
-3. Navigate to "Revisions"
-4. Activate previous revision
+1. Go to Azure Portal → App Services
+2. Select the affected site (`app-techhub-api-prod` or `app-techhub-web-prod`)
+3. Navigate to "Deployment Center" or "Container settings"
+4. Set the container image tag back to a previous known-good tag and restart the site
 
 ## Troubleshooting
 
@@ -436,12 +446,12 @@ Production deployment automatically rolls back if:
 - Verify Azure credentials are valid
 - Check Container Registry authentication
 - Ensure correct resource group and app names
-- Review Azure Container Apps logs
+- Review App Service log stream / diagnostics in Azure Portal
 
 ### Rollback Failures
 
-- Use Azure Portal to manually activate previous revision
-- Check if previous images still exist in ACR
+- Use Azure Portal to manually set the container image tag on the affected App Service site and restart it
+- Check if previous images still exist in `ghcr.io`
 - Verify Azure permissions
 
 ## Best Practices
