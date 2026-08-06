@@ -60,7 +60,7 @@ param adminIpAddresses string
 param alertEmailAddress string = 'reinier.vanmaanen@hotmail.com'
 
 @description('Budget amount per billing period (in billing currency, typically EUR)')
-param monthlyBudgetAmount int = 150
+param billingPeriodBudgetAmount int = 150
 
 @description('Budget start date (YYYY-MM-DD, aligned to billing period start)')
 param budgetStartDate string = '2026-04-07'
@@ -363,7 +363,7 @@ module acsSenderAddressSecret './modules/keyVaultSecret.bicep' = {
 module budget './modules/budget.bicep' = {
   name: 'budget-${deploymentSuffix}'
   params: {
-    amount: monthlyBudgetAmount
+    amount: billingPeriodBudgetAmount
     contactEmails: [alertEmailAddress]
     startDate: budgetStartDate
   }
