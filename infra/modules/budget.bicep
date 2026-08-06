@@ -16,8 +16,15 @@ param contactEmails string[]
 @description('Start date for the budget (YYYY-MM-DD format, aligned to billing period start)')
 param startDate string
 
+// Azure rejects updates to an existing budget's timePeriod.startDate ("Start date of budgets
+// cannot be updated. Please delete and create a new budget."), so the start date is baked into
+// the resource name. Changing startDate then deploys a brand-new budget resource instead of
+// trying to mutate the immutable field on the old one. The previous budget (with the old name)
+// is orphaned in Azure and must be deleted manually — Azure does not auto-remove it.
+var uniqueBudgetName = '${budgetName}-${replace(startDate, '-', '')}'
+
 resource budget 'Microsoft.Consumption/budgets@2024-08-01' = {
-  name: budgetName
+  name: uniqueBudgetName
   properties: {
     category: 'Cost'
     amount: amount
