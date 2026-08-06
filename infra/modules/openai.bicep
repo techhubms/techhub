@@ -101,8 +101,15 @@ resource openAiPrivateDnsZoneGroup 'Microsoft.Network/privateEndpoints/privateDn
   properties: {
     privateDnsZoneConfigs: concat(
       [
+        // Named 'openai-azure-config' (not 'openai-config') deliberately: the private endpoint
+        // was originally deployed with a single zone config named 'openai-config' pointing at
+        // privatelink.cognitiveservices.azure.com (see PR #497/#504 history). Azure does not
+        // allow updating the privateDnsZoneId on an existing zone config in place
+        // (UpdatingPrivateDnsZoneIdOnPrivateDnsZoneConfigNotAllowed) — reusing 'openai-config'
+        // here for the now-different openai.azure.com zone would hit that error. A distinct name
+        // makes this an add instead of an update; the retired 'openai-config' entry is removed.
         {
-          name: 'openai-config'
+          name: 'openai-azure-config'
           properties: {
             privateDnsZoneId: privateDnsZoneId
           }
