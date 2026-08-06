@@ -57,13 +57,13 @@ param openAiModelCapacity int = 100
 param adminIpAddresses string
 
 @description('Email address for operational alerts and budget notifications')
-param alertEmailAddress string = 'reinier.vanmaanen@xebia.com'
+param alertEmailAddress string = 'reinier.vanmaanen@hotmail.com'
 
-@description('Monthly budget amount (in billing currency, typically EUR)')
-param monthlyBudgetAmount int = 250
+@description('Budget amount per billing period (in billing currency, typically EUR)')
+param billingPeriodBudgetAmount int = 150
 
 @description('Budget start date (YYYY-MM-DD, aligned to billing period start)')
-param budgetStartDate string = '2026-04-01'
+param budgetStartDate string = '2026-04-07'
 
 @description('Azure Policy: allowed deployment locations')
 param allowedLocations string[] = ['swedencentral', 'westeurope', 'global']
@@ -157,6 +157,7 @@ module monitoring './modules/monitoring.bicep' = {
     appInsightsRetentionInDays: 30
     availabilityTestHosts: primaryHosts
     enableSmartDetection: true
+    actionGroupId: actionGroup.outputs.actionGroupId
     tags: prodTags
   }
 }
@@ -362,7 +363,7 @@ module acsSenderAddressSecret './modules/keyVaultSecret.bicep' = {
 module budget './modules/budget.bicep' = {
   name: 'budget-${deploymentSuffix}'
   params: {
-    amount: monthlyBudgetAmount
+    amount: billingPeriodBudgetAmount
     contactEmails: [alertEmailAddress]
     startDate: budgetStartDate
   }

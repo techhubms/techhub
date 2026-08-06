@@ -64,7 +64,7 @@ The Web-to-API dependency is automatically captured through HTTP client tracing 
 
 ## Availability Tests
 
-Application Insights availability tests actively probe the web frontend from five global locations every 5 minutes and alert when an outage is detected.
+Application Insights availability tests actively probe the web frontend from West Europe every 30 minutes and alert when an outage is detected. Probing from a single region at a reduced frequency keeps Azure Monitor availability test costs down.
 
 ### What Is Tested
 
@@ -78,16 +78,12 @@ Each hostname in the `primaryHosts` Bicep parameter (e.g. `tech.hub.ms`, `tech.x
 | Location ID | Region |
 |-------------|--------|
 | `emea-nl-ams-azr` | West Europe (Amsterdam) |
-| `us-ca-sjc-azr` | West US (San Jose) |
-| `us-tx-sn1-azr` | South Central US |
-| `apac-sg-sin-azr` | Southeast Asia (Singapore) |
-| `emea-gb-db3-azr` | North Europe (Dublin) |
 
 ### Alert Behavior
 
-A metric alert (severity 1) is created alongside each test. It fires when **2 or more** probe locations fail simultaneously within a 5-minute window, evaluated every minute. The threshold of 2 avoids false positives from transient single-location probe failures.
+A metric alert (severity 1) is created alongside each test. It fires when the West Europe probe location fails within a 5-minute window, evaluated every minute.
 
-Alerts are created with an empty actions list — add an action group in the Azure Portal to receive email or webhook notifications.
+Alerts notify the shared operational action group (`ag-techhub-ops`), which emails the address configured via the `alertEmailAddress` parameter.
 
 ### When No Tests Are Created
 

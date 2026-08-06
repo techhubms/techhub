@@ -19,6 +19,9 @@ param availabilityTestHosts string[] = []
 @description('Enable smart detection alert rules (Failure Anomalies). Set false for staging where alerts add no value.')
 param enableSmartDetection bool = true
 
+@description('Shared action group resource ID for alert email notifications. Leave empty to create availability alerts without any notification action.')
+param actionGroupId string = ''
+
 @description('Tags applied to the Log Analytics workspace, Application Insights component and availability resources')
 param tags object = {}
 
@@ -78,11 +81,11 @@ output appInsightsId string = appInsights.id
 output appInsightsConnectionString string = appInsights.properties.ConnectionString
 output logAnalyticsWorkspaceId string = logAnalyticsWorkspace.id
 
-// Three geographically distributed probe locations for sufficient coverage
+// Single probe location (West Europe) to control Application Insights availability test costs.
+// Previously probed from 3 global locations every 15 minutes; that multiplies test executions
+// (locations x frequency) and was a major driver of Azure Monitor costs.
 var availabilityLocations = [
   { Id: 'emea-nl-ams-azr' }  // West Europe (Amsterdam)
-  { Id: 'us-ca-sjc-azr' }    // West US (San Jose)
-  { Id: 'apac-sg-sin-azr' }  // Southeast Asia (Singapore)
 ]
 
 // Standard availability test (HTTP GET, SSL check, expect HTTP 200) per host
@@ -99,7 +102,7 @@ resource availabilityTests 'Microsoft.Insights/webtests@2022-06-15' = [for host 
     SyntheticMonitorId: 'avail-${replace(host, '.', '-')}'
     Kind: 'standard'
     Enabled: true
-    Frequency: 900
+    Frequency: 1800
     Timeout: 30
     RetryEnabled: true
     Locations: availabilityLocations
@@ -117,12 +120,12 @@ resource availabilityTests 'Microsoft.Insights/webtests@2022-06-15' = [for host 
   }
 }]
 
-// Alert when 2+ probe locations fail simultaneously (fires ~immediately on real outages)
+// Alert when the (single) probe location fails (fires ~immediately on real outages)
 resource availabilityAlerts 'Microsoft.Insights/metricAlerts@2018-03-01' = [for (host, i) in availabilityTestHosts: {
   name: 'alert-avail-${replace(host, '.', '-')}'
   location: 'global'
   properties: {
-    description: 'Fires when 2 or more probe locations cannot reach https://${host}/'
+    description: 'Fires when the West Europe probe location cannot reach https://${host}/'
     severity: 1
     enabled: true
     scopes: [
@@ -135,9 +138,15 @@ resource availabilityAlerts 'Microsoft.Insights/metricAlerts@2018-03-01' = [for 
       'odata.type': 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'
       webTestId: availabilityTests[i].id
       componentId: appInsights.id
-      failedLocationCount: 2
+      failedLocationCount: 1
     }
-    actions: []
+    // Notify the shared action group by email; without this, availability failures were
+    // never emailed to anyone even though the alert resource existed and fired.
+    actions: empty(actionGroupId) ? [] : [
+      {
+        actionGroupId: actionGroupId
+      }
+    ]
   }
 }]
 
