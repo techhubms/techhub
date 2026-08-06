@@ -63,7 +63,7 @@ param alertEmailAddress string = 'reinier.vanmaanen@hotmail.com'
 param monthlyBudgetAmount int = 150
 
 @description('Budget start date (YYYY-MM-DD, aligned to billing period start)')
-param budgetStartDate string = '2026-04-01'
+param budgetStartDate string = '2026-04-07'
 
 @description('Azure Policy: allowed deployment locations')
 param allowedLocations string[] = ['swedencentral', 'westeurope', 'global']
