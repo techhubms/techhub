@@ -141,8 +141,8 @@ public static class ServiceDefaultsExtensions
                        {
                            // Filter requests that have no diagnostic value and would inflate
                            // App Insights data volume:
-                           //   - /health and /alive: Container Apps liveness/readiness probes,
-                           //     fired every 10-30s × 2 replicas × 2 services (~2.9 GB/month).
+                           //   - /health and /alive: App Service health-check pings against
+                           //     healthCheckPath, fired periodically × 2 sites.
                            //   - Scanner/attacker probe paths (via ProbeDetector): have no
                            //     diagnostic value and are rejected by middleware anyway.
                            //   - File-extension requests for unknown paths: not served by this
@@ -161,8 +161,8 @@ public static class ServiceDefaultsExtensions
                            // ForwardedHeaders middleware has updated RemoteIpAddress from
                            // X-Forwarded-For. The OTel SDK captures client.address at activity
                            // start — before ForwardedHeaders runs — so without this override
-                           // all requests appear to originate from the Container Apps NAT IP
-                           // (which geo-resolves to Gävle, Sweden Central).
+                           // all requests appear to originate from the App Service front-end/
+                           // reverse-proxy IP instead of the real client.
                            options.EnrichWithHttpResponse = (activity, httpResponse) =>
                            {
                                var ip = httpResponse.HttpContext.Connection.RemoteIpAddress;
@@ -249,7 +249,7 @@ public static class ServiceDefaultsExtensions
         // Adding health checks endpoints to applications in non-development environments has security implications.
         // See https://aka.ms/dotnet/aspire/healthchecks for details before enabling in production.
 
-        // Container Apps polls these every 10-30s per replica. DisableHttpMetricsAttribute
+        // App Service polls these periodically per site. DisableHttpMetricsAttribute
         // (.NET 9+) suppresses http.server.request.duration/active_requests and
         // aspnetcore.routing.match_attempts for these endpoints — probe traffic was
         // responsible for the majority of those metrics' AppMetrics ingestion volume.

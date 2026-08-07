@@ -10,7 +10,7 @@ Tech Hub is a **modern .NET 10 web application** built with Blazor that serves a
 | **Frontend** | Blazor InteractiveServer with prerendering |
 | **Orchestration** | .NET Aspire (service discovery, telemetry, health checks) |
 | **Database** | PostgreSQL (Dapper) |
-| **Infrastructure** | Azure Container Apps, Bicep IaC, GitHub Actions CI/CD |
+| **Infrastructure** | Azure App Service, Bicep IaC, GitHub Actions CI/CD |
 | **Testing** | xUnit v3, bUnit, Playwright, Pester |
 
 ## Quick Start
@@ -60,7 +60,7 @@ See **[docs/architecture.md](docs/architecture.md)** for full details.
 | `tests/` | Unit, integration, component, E2E, and PowerShell tests |
 | `docs/` | Functional and technical documentation |
 | `scripts/` | PowerShell automation (build, deploy, content processing) |
-| `infra/` | Bicep IaC templates for Azure Container Apps |
+| `infra/` | Bicep IaC templates for Azure App Service |
 
 See **[docs/repository-structure.md](docs/repository-structure.md)** for the complete breakdown.
 

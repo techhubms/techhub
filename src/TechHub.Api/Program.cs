@@ -450,7 +450,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors();
 
-// Trust X-Forwarded-For from the Azure Container Apps reverse proxy so rate limiting
+// Trust X-Forwarded-For from the Azure App Service reverse proxy so rate limiting
 // partitions by real client IP rather than the proxy/NAT address.
 // KnownIPNetworks/KnownProxies are cleared because the proxy IPs are internal and dynamic.
 var forwardedHeadersOptions = new ForwardedHeadersOptions

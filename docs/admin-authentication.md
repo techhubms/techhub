@@ -104,16 +104,16 @@ For staging and production, the script also pushes the three `AZURE_AD_*` secret
 
 ## Infrastructure
 
-The Bicep templates pass Azure AD configuration as environment variables to Container Apps:
+The Bicep templates pass Azure AD configuration as App Service app settings:
 
 | Env Variable | Source | Used By |
 |---|---|---|
-| `AzureAd__TenantId` | Plain env var in Container App | Web + API |
-| `AzureAd__ClientId` | Plain env var in Container App | Web + API |
-| `AzureAd__ClientSecret` | Secret ref in Container App (KV reference) | Web only |
-| `AzureAd__Scopes` | Plain env var in Container App | Web only |
+| `AzureAd__TenantId` | Plain app setting | Web + API |
+| `AzureAd__ClientId` | Plain app setting | Web + API |
+| `AzureAd__ClientSecret` | Key Vault reference app setting | Web only |
+| `AzureAd__Scopes` | Plain app setting | Web only |
 
-These are fed from GitHub Actions secrets → `Deploy-Infrastructure.ps1` env vars → Bicep `readEnvironmentVariable()` → Container App secrets/env vars.
+These are fed from GitHub Actions secrets → `Deploy-Infrastructure.ps1` env vars → Bicep `readEnvironmentVariable()` → App Service app settings/Key Vault references.
 
 ## Implementation Reference
 

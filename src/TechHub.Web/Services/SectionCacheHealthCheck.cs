@@ -6,7 +6,7 @@ namespace TechHub.Web.Services;
 /// <summary>
 /// Readiness health check for <see cref="SectionCache"/>.
 /// Reports <see cref="HealthCheckResult.Unhealthy"/> until the cache has been populated
-/// from the API at least once. Container Apps uses <c>/health</c> as its readiness probe,
+/// from the API at least once. App Service uses <c>/health</c> as its health-check probe,
 /// so a cold instance will not receive traffic until this check passes.
 /// </summary>
 public class SectionCacheHealthCheck(SectionCache sectionCache) : IHealthCheck

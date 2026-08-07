@@ -60,7 +60,7 @@ Run -TestProject E2E -NetworkProfile wan
 Run -TestProject E2E -NetworkProfile slow3g -TestName BackNavigation -RepeatTests 5
 ```
 
-Profiles: `ci` (2x CPU throttle), `regular4g`, `fast3g`, `slow3g`, `wan` (150ms latency, simulates GitHub runner → remote Azure Container App). Uses CDP via `PlaywrightTestBase.InitializeAsync()`. See [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs).
+Profiles: `ci` (2x CPU throttle), `regular4g`, `fast3g`, `slow3g`, `wan` (150ms latency, simulates GitHub runner → remote Azure App Service). Uses CDP via `PlaywrightTestBase.InitializeAsync()`. See [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs).
 
 Alternatively, set the environment variable directly (it won't be auto-cleared):
 

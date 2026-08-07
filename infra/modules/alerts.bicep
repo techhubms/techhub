@@ -17,9 +17,6 @@ param actionGroupId string
 @description('Application Insights resource ID')
 param appInsightsId string
 
-@description('Log Analytics workspace ID (used for log query alerts)')
-param logAnalyticsWorkspaceId string
-
 @description('PostgreSQL Flexible Server resource ID')
 param postgresServerId string
 
@@ -205,14 +202,6 @@ resource openAiErrorsAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
     ]
   }
 }
-
-// NOTE: The former "Container App restart storm" log query alert (querying ContainerAppSystemLogs)
-// was removed as part of the Container Apps → App Service migration — that log table only ever
-// populated for Container Apps and would never fire for App Service sites. App Service crash-loop
-// detection is intentionally left to Always On + the /health health-check path (which auto-restarts
-// unhealthy instances) rather than a separate alert here; failedRequestsAlert (App Insights) already
-// catches the resulting failed-request symptoms. Revisit if a dedicated App Service platform-log
-// diagnostic setting is added to Log Analytics in the future.
 
 output alertIds string[] = [
   failedRequestsAlert.id

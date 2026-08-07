@@ -324,7 +324,6 @@ module alerts './modules/alerts.bicep' = {
     environmentName: 'prod'
     actionGroupId: actionGroup.outputs.actionGroupId
     appInsightsId: monitoring.outputs.appInsightsId
-    logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
     postgresServerId: postgres.outputs.serverId
     openAiAccountId: openai.outputs.openAiId
     tags: prodTags
