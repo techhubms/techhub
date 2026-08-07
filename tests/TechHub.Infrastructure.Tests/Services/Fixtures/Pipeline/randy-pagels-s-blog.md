@@ -6,18 +6,13 @@
 
 *Posted on Apr 3, 2026*
 
-
-
  Usage
  
-
 
  Sometimes the best answer does not come from asking better questions.
 
  It comes from letting GitHub Copilot ask them first.
  
-
-
 
  ProTip
  
@@ -29,10 +24,8 @@
  Why This Works
  
 
-
  Developers often rush to solutions. But unclear requirements lead to:
  
-
 
  
 
@@ -46,70 +39,50 @@
 
  
 
-
  GitHub Copilot can help slow things down just enough to get it right the first time.
  
-
-
 
  Start With Clarifying Questions
  
 
-
  Instead of:
  
 
-
  
-
 
  `Add validation to this function`
  
 
-
  
-
 
  Try:
  
 
-
  
-
 
  `Before making changes, ask clarifying questions about expected behavior and edge cases.`
  
 
-
  
-
 
  Now Copilot shifts from answering to understanding.
  
 
-
-
  Use It for Ambiguous Tasks
  
-
 
  When requirements are not fully defined:
  
 
-
  
-
 
  `Ask questions to better understand what this feature should do before suggesting an implementation.`
  
 
-
  
-
 
  This is especially useful for:
  
-
 
  
 
@@ -121,14 +94,11 @@
 - legacy code
  
 
-
  Combine With Context
  
 
-
  Pair this with what you learned last time. Give Copilot:
  
-
 
  
 
@@ -140,33 +110,24 @@
 
  
 
-
  Then ask:
  
 
-
  
-
 
  `Based on this code, what questions should we answer before making changes?`
  
 
-
  
-
 
  You’ll get a much stronger starting point.
  
 
-
-
  Turn Questions Into Better Prompts
  
 
-
  Once Copilot asks questions, you can refine your request. This creates a natural loop:
  
-
 
  
 
@@ -182,15 +143,11 @@
 
  
 
-
  That’s real collaboration.
  
 
-
-
  A Simple Rule of Thumb
  
-
 
  
 

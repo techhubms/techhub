@@ -1,0 +1,14 @@
+# Auto detect text files and normalize line endings to LF in the repository.
+* text=auto eol=lf
+
+# Binary files must not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.pdf binary
