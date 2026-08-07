@@ -250,4 +250,3 @@ No shared or staging resource groups. PR preview environments are created on-dem
 - Azure Communication Services: [infra/modules/communication.bicep](../infra/modules/communication.bicep)
 - Infrastructure orchestration (Phase 1): [infra/infrastructure.bicep](../infra/infrastructure.bicep)
 - Application orchestration (Phase 2): [infra/applications.bicep](../infra/applications.bicep)
-
