@@ -69,10 +69,16 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
 
 // Private endpoint — gives Container Apps a private IP path to AI Foundry, removing the need
 // for the fully-open public endpoint that previously had no IP restriction at all.
+// Explicitly depends on raiPolicy and modelDeployment (not just openAiAccount): creating either
+// of those child resources briefly flips the account's provisioningState back to "Accepted"
+// while it applies, and without this dependsOn Bicep deploys the private endpoint in parallel,
+// intermittently hitting that window and failing with AccountProvisioningStateInvalid
+// ("...in state Accepted") — seen in prod deployments on 2026-08-06.
 resource openAiPrivateEndpoint 'Microsoft.Network/privateEndpoints@2024-05-01' = if (deployPrivateEndpoint) {
   name: 'pe-${openAiName}'
   location: location
   tags: tags
+  dependsOn: [raiPolicy, modelDeployment]
   properties: {
     subnet: {
       id: privateEndpointSubnetId
