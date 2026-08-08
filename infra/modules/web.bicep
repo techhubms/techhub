@@ -1,6 +1,9 @@
 param location string
-param containerAppName string
-param containerAppsEnvironmentId string
+param siteName string
+param appServicePlanId string
+
+@description('Subnet resource ID (delegated to Microsoft.Web/serverFarms) used for Regional VNet Integration — required to reach Key Vault private endpoint and to call the API app')
+param vnetIntegrationSubnetId string
 
 @description('GitHub Container Registry organization/namespace for image names (e.g. techhubms → ghcr.io/techhubms/...)')
 param githubRegistryUsername string
@@ -21,8 +24,8 @@ param customDomains string[] = []
 @description('Primary host names for the SubdomainRedirectMiddleware configuration')
 param primaryHosts string[] = []
 
-@description('Key Vault certificate resource IDs for wildcard TLS (mapped by base domain, e.g. { "hub.ms": "cert-resource-id" }). When provided, domains use SniEnabled binding with these certs instead of managed certificates.')
-param wildcardCertificateIds object = {}
+@description('Wildcard TLS certificate resource names in Microsoft.Web/certificates, mapped by base domain (e.g. { "hub.ms": "wildcard-hub-ms" }). Certificates must already be imported from Key Vault — see modules/wildcardCert.bicep.')
+param wildcardCertNames object = {}
 
 @description('Key Vault URI (e.g. https://kv-techhub-prod.vault.azure.net/) — used to resolve KV secret references')
 param keyVaultUri string
@@ -39,23 +42,28 @@ param azureAdClientId string = ''
 @description('Google Analytics Measurement ID (e.g. G-XXXXXXXXXX). Pass empty string to disable GA telemetry (PR preview environments).')
 param googleAnalyticsMeasurementId string = ''
 
-@description('Tags applied to the Container App')
+@description('Tags applied to the Web App')
 param tags object = {}
 
 @description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
 param aspNetCoreEnvironment string = 'Production'
 
-@description('Minimum replica count. Use 0 to enable scale-to-zero for PR preview environments.')
-param minReplicas int = 1
-
-@description('Maximum replica count.')
-param maxReplicas int = 2
-
 var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-web:${imageTag}'
-var revisionSuffix = 'web-${imageTag}'
-// When scale-to-zero is enabled the API may cold-start while the Web is also starting up.
-// Give extra startup probe tolerance so the Web is not killed before the API is ready.
-var startupProbeFailureThreshold = minReplicas == 0 ? 40 : 12
+
+func kvRef(vaultUri string, secretName string) string => '@Microsoft.KeyVault(SecretUri=${vaultUri}secrets/${secretName})'
+
+// Resolve wildcard certificate thumbprints (already imported into Microsoft.Web/certificates
+// from Key Vault by modules/wildcardCert.bicep), keyed by base domain so each custom domain
+// binding below can look up its matching cert regardless of array ordering.
+var certEntries = items(wildcardCertNames)
+resource wildcardCerts 'Microsoft.Web/certificates@2023-12-01' existing = [for entry in certEntries: {
+  name: entry.value
+}]
+var certIndexPairs = [for (entry, i) in certEntries: {
+  key: entry.key
+  value: i
+}]
+var certIndexByDomain = !empty(certEntries) ? toObject(certIndexPairs, item => item.key, item => item.value) : {}
 
 // Environment variables: static config + dynamic shortcuts/primary hosts from Bicep params
 var staticEnvVars = [
@@ -108,19 +116,41 @@ var aadSecretEnvVars = empty(azureAdClientId)
   : [
       {
         name: 'AzureAd__ClientSecret'
-        secretRef: 'azure-ad-client-secret'
+        value: kvRef(keyVaultUri, aadClientSecretSecretName)
       }
     ]
 var primaryHostEnvVars = [for (host, i) in primaryHosts: {
   name: 'PrimaryHosts__${i}'
   value: host
 }]
-var allEnvVars = concat(staticEnvVars, aadSecretEnvVars, primaryHostEnvVars)
+var allEnvVars = concat(staticEnvVars, aadSecretEnvVars, primaryHostEnvVars, [
+  {
+    name: 'WEBSITES_PORT'
+    value: '8080'
+  }
+  {
+    name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE'
+    value: 'false'
+  }
+  {
+    name: 'DOCKER_REGISTRY_SERVER_URL'
+    value: 'https://ghcr.io'
+  }
+  {
+    name: 'DOCKER_REGISTRY_SERVER_USERNAME'
+    value: githubRegistryAuthUsername
+  }
+  {
+    name: 'DOCKER_REGISTRY_SERVER_PASSWORD'
+    value: kvRef(keyVaultUri, 'techhub-github-registry-token')
+  }
+])
 
-resource web 'Microsoft.App/containerApps@2025-07-01' = {
-  name: containerAppName
+resource web 'Microsoft.Web/sites@2023-12-01' = {
+  name: siteName
   location: location
   tags: tags
+  kind: 'app,linux,container'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
@@ -128,123 +158,54 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
     }
   }
   properties: {
-    managedEnvironmentId: containerAppsEnvironmentId
-    configuration: {
-      activeRevisionsMode: 'Single'
-      ingress: {
-        external: true
-        allowInsecure: false
-        targetPort: 8080
-        transport: 'auto'
-        stickySessions: {
-          affinity: 'sticky'
-        }
-        customDomains: [for domain in customDomains: {
-            name: domain
-            bindingType: 'SniEnabled'
-            certificateId: wildcardCertificateIds[substring(domain, indexOf(domain, '.') + 1)]
-          }]
-      }
-      registries: [
-        {
-          // Pull images from GitHub Container Registry using a PAT stored in Key Vault.
-          // username must match the PAT owner (githubRegistryAuthUsername), which may differ
-          // from the image namespace (githubRegistryUsername / the org).
-          server: 'ghcr.io'
-          username: githubRegistryAuthUsername
-          passwordSecretRef: 'ghcr-token'
-        }
-      ]
-      secrets: concat(
-        [
-          // GitHub Container Registry PAT for image pulls (read:packages scope)
-          {
-            name: 'ghcr-token'
-            keyVaultUrl: '${keyVaultUri}secrets/techhub-github-registry-token'
-            identity: identityId
-          }
-        ],
-        empty(azureAdClientId)
-          ? []
-          : [
-              // Container App references the Key Vault secret at revision start via the managed identity.
-              // Rotate by updating Key Vault + restarting the revision — no redeploy required.
-              {
-                name: 'azure-ad-client-secret'
-                keyVaultUrl: '${keyVaultUri}secrets/${aadClientSecretSecretName}'
-                identity: identityId
-              }
-            ]
-      )
-    }
-    template: {
-      revisionSuffix: revisionSuffix
-      containers: [
-        {
-          name: 'web'
-          image: imageReference
-          resources: {
-            cpu: json('0.25')
-            memory: '0.5Gi'
-          }
-          env: allEnvVars
-          probes: [
-            {
-              type: 'startup'
-              httpGet: {
-                path: '/alive'
-                port: 8080
-                scheme: 'HTTP'
-              }
-              initialDelaySeconds: 3
-              periodSeconds: 5
-              failureThreshold: startupProbeFailureThreshold  // 12×5=60s prod; 40×5=200s for scale-to-zero (API cold-start)
-              timeoutSeconds: 5
-            }
-            {
-              type: 'liveness'
-              httpGet: {
-                path: '/alive'
-                port: 8080
-                scheme: 'HTTP'
-              }
-              periodSeconds: 30
-              failureThreshold: 3
-              timeoutSeconds: 5
-            }
-            {
-              type: 'readiness'
-              httpGet: {
-                path: '/health'
-                port: 8080
-                scheme: 'HTTP'
-              }
-              periodSeconds: 10
-              failureThreshold: 3
-              timeoutSeconds: 5
-            }
-          ]
-        }
-      ]
-      scale: {
-        minReplicas: minReplicas
-        maxReplicas: maxReplicas
-        cooldownPeriod: 300
-        pollingInterval: 30
-        rules: [
-          {
-            name: 'http-scaling'
-            http: {
-              metadata: {
-                concurrentRequests: '50'
-              }
-            }
-          }
-        ]
-      }
+    serverFarmId: appServicePlanId
+    httpsOnly: true
+    // Blazor InteractiveServer keeps a persistent SignalR circuit per browser tab — client
+    // affinity (ARR cookie) keeps a client pinned to the same instance, mirroring Container
+    // Apps' `stickySessions.affinity: sticky`. Matters most if instance count > 1 later.
+    clientAffinityEnabled: true
+    keyVaultReferenceIdentity: identityId
+    vnetRouteAllEnabled: true
+    siteConfig: {
+      linuxFxVersion: 'DOCKER|${imageReference}'
+      alwaysOn: true
+      healthCheckPath: '/health'
+      http20Enabled: true
+      minTlsVersion: '1.2'
+      ftpsState: 'Disabled'
+      // WebSockets are required for Blazor InteractiveServer's SignalR circuit; supported on
+      // Linux App Service from the Basic tier up.
+      webSocketsEnabled: true
+      appSettings: allEnvVars
     }
   }
 }
 
-output fqdn string = web.properties.configuration.ingress.fqdn
+// Regional VNet Integration — gives Web outbound access into the delegated subnet so it can
+// reach Key Vault (secret resolution) and call the API app (which only accepts inbound
+// traffic from this subnet — see modules/api.bicep's ipSecurityRestrictions).
+resource vnetIntegration 'Microsoft.Web/sites/networkConfig@2023-12-01' = {
+  parent: web
+  name: 'virtualNetwork'
+  properties: {
+    subnetResourceId: vnetIntegrationSubnetId
+    swiftSupported: true
+  }
+}
+
+// Wildcard custom domain bindings (e.g. *.hub.ms, *.xebia.ms), SNI-bound to the matching
+// certificate imported from Key Vault. The domain's DNS (CNAME/TXT verification) must already
+// point at this app's default hostname before these bindings will succeed.
+resource hostNameBindings 'Microsoft.Web/sites/hostNameBindings@2023-12-01' = [for domain in customDomains: {
+  parent: web
+  name: domain
+  properties: {
+    sslState: 'SniEnabled'
+    thumbprint: wildcardCerts[certIndexByDomain[substring(domain, indexOf(domain, '.') + 1)]].properties.thumbprint
+    hostNameType: 'Verified'
+  }
+}]
+
+output fqdn string = web.properties.defaultHostName
 output id string = web.id
+output principalId string = web.identity.principalId

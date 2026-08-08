@@ -16,7 +16,7 @@ namespace TechHub.Infrastructure.Services;
 /// Typed HTTP client that sends chat completion requests to Azure AI Foundry (OpenAI).
 /// Authenticates using a managed identity token (Entra ID) via <see cref="DefaultAzureCredential"/>
 /// with the <c>https://cognitiveservices.azure.com/.default</c> scope.
-/// In production, the Container App's user-assigned managed identity is granted the
+/// In production, the App Service site's user-assigned managed identity is granted the
 /// <c>Cognitive Services OpenAI User</c> role on the AI Foundry account.
 /// Locally, developers use <c>az login</c> and are granted the same RBAC role.
 /// </summary>
@@ -27,7 +27,7 @@ public sealed class AiCompletionClient : IAiCompletionClient
         ["https://cognitiveservices.azure.com/.default"];
 
     // DefaultAzureCredential is thread-safe and reusable; share a single instance.
-    // In production: picks up the Container App's user-assigned managed identity.
+    // In production: picks up the App Service site's user-assigned managed identity.
     // Locally: uses 'az login' credentials after the developer is granted the RBAC role.
     private static readonly DefaultAzureCredential _sharedCredential = new();
 

@@ -4,22 +4,23 @@
     Deploys or tears down a fully ephemeral PR preview environment.
 
 .DESCRIPTION
-    Creates/updates or deletes a fully isolated PR preview environment in the production Azure
-    Container Apps Environment. Each PR gets its own:
+    Creates/updates or deletes a fully isolated PR preview environment on the shared,
+    dedicated PR-preview App Service Plan (kept separate from the production Plan so
+    idle preview apps can never affect prod). Each PR gets its own:
     - PostgreSQL Flexible Server (created via PITR from production)
-    - Container Apps (ca-techhub-api-pr-{number} and ca-techhub-web-pr-{number})
+    - App Service sites (app-techhub-api-pr-{number} and app-techhub-web-pr-{number})
 
-    The PR apps share the production Container Apps Environment and VNet,
-    but get their own isolated database. Application telemetry export is disabled
-    for PR previews to avoid polluting production monitoring data.
+    The PR apps share the PR-preview App Service Plan and VNet, but get their own
+    isolated database. Application telemetry export is disabled for PR previews to
+    avoid polluting production monitoring data.
 
     On deploy, a PR-specific Postgres instance is provisioned using Azure Point-in-Time
     Restore (PITR) from the production server. This creates an independent copy with
-    realistic production data. PR Container Apps reach it over a private endpoint in the
+    realistic production data. PR App Service sites reach it over a private endpoint in the
     shared VNet; admin access remains available via public firewall rules for admin IPs.
 
     On teardown, the PR-specific Postgres instance and its private endpoint are deleted
-    along with the Container Apps.
+    along with the App Service sites.
 
 .PARAMETER PrNumber
     Pull request number. Used to derive unique resource names.
@@ -74,7 +75,6 @@ Set-StrictMode -Version Latest
 
 # Production resource group (PR previews run here alongside production)
 $prodRG = 'rg-techhub-prod'
-$prodEnvName = 'cae-techhub-prod'
 $prodIdentityName = 'id-techhub-prod'
 
 # Production server (source for PITR database clone)
@@ -94,9 +94,9 @@ $prPrivateEndpointName = "pe-$prPostgresServer"
 # Shared managed identity — created once by infrastructure.bicep, reused by all PR environments.
 $prManagedIdentityName = 'id-techhub-pr'
 
-# PR-specific Container App names
-$apiAppName = "ca-techhub-api-pr-$PrNumber"
-$webAppName = "ca-techhub-web-pr-$PrNumber"
+# PR-specific App Service site names
+$apiAppName = "app-techhub-api-pr-$PrNumber"
+$webAppName = "app-techhub-web-pr-$PrNumber"
 
 # ============================================================================
 # HELPERS
@@ -128,9 +128,9 @@ function Write-Detail {
     Write-Host "   $Message" -ForegroundColor Gray
 }
 
-function Get-ContainerAppExists {
+function Get-WebAppExists {
     param([string]$Name, [string]$ResourceGroup)
-    $result = az containerapp list --resource-group $ResourceGroup --query "[?name=='$Name'].name | [0]" -o tsv 2>$null
+    $result = az webapp list --resource-group $ResourceGroup --query "[?name=='$Name'].name | [0]" -o tsv --only-show-errors
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
 }
 
@@ -140,44 +140,46 @@ function Get-PostgresServerExists {
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
 }
 
-function Write-ContainerAppDiagnostics {
+function Write-WebAppDiagnostics {
     <#
     .SYNOPSIS
-        Dumps the latest revision status and system logs for a Container App.
-        Used when warmup fails to help triage ActivationFailed / crash-loop / image-pull errors.
+        Dumps the current site state and a short tail of container logs for a Web App.
+        Used when warmup fails to help triage image-pull errors, crash loops, or startup failures.
     #>
     param([string]$AppName, [string]$ResourceGroup)
 
     try {
-        $latestRevision = az containerapp revision list `
-            -n $AppName -g $ResourceGroup `
-            --query "sort_by([], &properties.createdTime) | [-1]" -o json 2>$null |
-            ConvertFrom-Json -ErrorAction SilentlyContinue
-        if ($latestRevision) {
+        $site = az webapp show -n $AppName -g $ResourceGroup `
+            --query "{state:state, defaultHostName:defaultHostName, linuxFxVersion:siteConfig.linuxFxVersion}" `
+            -o json 2>$null | ConvertFrom-Json -ErrorAction SilentlyContinue
+        if ($site) {
             Write-Host ""
-            Write-Host "Latest revision status for ${AppName}:" -ForegroundColor Yellow
-            Write-Host "  Name            : $($latestRevision.name)" -ForegroundColor Gray
-            Write-Host "  Image           : $($latestRevision.properties.template.containers[0].image)" -ForegroundColor Gray
-            Write-Host "  Replicas        : $($latestRevision.properties.replicas)" -ForegroundColor Gray
-            Write-Host "  HealthState     : $($latestRevision.properties.healthState)" -ForegroundColor Gray
-            Write-Host "  RunningState    : $($latestRevision.properties.runningState)" -ForegroundColor Gray
-            if ($latestRevision.properties.PSObject.Properties['runningStateDetails']) {
-                Write-Host "  Details         : $($latestRevision.properties.runningStateDetails)" -ForegroundColor Gray
-            }
+            Write-Host "Site status for ${AppName}:" -ForegroundColor Yellow
+            Write-Host "  State           : $($site.state)" -ForegroundColor Gray
+            Write-Host "  Image           : $($site.linuxFxVersion)" -ForegroundColor Gray
+            Write-Host "  Default host    : $($site.defaultHostName)" -ForegroundColor Gray
         }
     }
     catch {
-        Write-Detail "Could not fetch revision status for ${AppName}: $_"
+        Write-Detail "Could not fetch site status for ${AppName}: $_"
     }
 
     try {
         Write-Host ""
-        Write-Host "Recent system events for ${AppName}:" -ForegroundColor Yellow
-        az containerapp logs show -n $AppName -g $ResourceGroup --type system --tail 30 2>&1 |
-            ForEach-Object { Write-Host $_ }
+        Write-Host "Recent container logs for ${AppName} (10s tail):" -ForegroundColor Yellow
+        # `az webapp log tail` streams indefinitely, so run it as a background job and
+        # capture a short window of output rather than blocking the pipeline.
+        $logJob = Start-Job -ScriptBlock {
+            param($n, $g)
+            az webapp log tail --name $n --resource-group $g 2>&1
+        } -ArgumentList $AppName, $ResourceGroup
+        Start-Sleep -Seconds 10
+        Stop-Job $logJob -ErrorAction SilentlyContinue | Out-Null
+        Receive-Job $logJob | ForEach-Object { Write-Host $_ }
+        Remove-Job $logJob -Force -ErrorAction SilentlyContinue
     }
     catch {
-        Write-Detail "Could not fetch system logs for ${AppName}: $_"
+        Write-Detail "Could not fetch container logs for ${AppName}: $_"
     }
 }
 
@@ -244,13 +246,12 @@ if ($Action -eq 'teardown') {
 
     $deletedAny = $false
 
-    # Delete Web Container App first (it calls the API)
-    if (Get-ContainerAppExists -Name $webAppName -ResourceGroup $prodRG) {
+    # Delete Web site first (it calls the API)
+    if (Get-WebAppExists -Name $webAppName -ResourceGroup $prodRG) {
         Write-Detail "Deleting $webAppName..."
-        az containerapp delete `
+        az webapp delete `
             --name $webAppName `
-            --resource-group $prodRG `
-            --yes
+            --resource-group $prodRG
         if ($LASTEXITCODE -ne 0) {
             Write-Fail "Failed to delete $webAppName"
             exit 1
@@ -262,13 +263,12 @@ if ($Action -eq 'teardown') {
         Write-Warn "$webAppName not found — already removed or never deployed"
     }
 
-    # Delete API Container App
-    if (Get-ContainerAppExists -Name $apiAppName -ResourceGroup $prodRG) {
+    # Delete API Web site
+    if (Get-WebAppExists -Name $apiAppName -ResourceGroup $prodRG) {
         Write-Detail "Deleting $apiAppName..."
-        az containerapp delete `
+        az webapp delete `
             --name $apiAppName `
-            --resource-group $prodRG `
-            --yes
+            --resource-group $prodRG
         if ($LASTEXITCODE -ne 0) {
             Write-Fail "Failed to delete $apiAppName"
             exit 1
@@ -445,7 +445,7 @@ else {
 }
 
 # Add firewall rules for the PR PostgreSQL server (admin IPs only) and a private endpoint
-# so PR Container Apps reach PostgreSQL over the VNet instead of the public internet.
+# so PR App Service sites reach PostgreSQL over the VNet instead of the public internet.
 Write-Step "Configuring PostgreSQL network access for $prPostgresServer"
 
 # Parse admin IPs from env var
@@ -505,7 +505,7 @@ foreach ($staleRule in $staleRuleNames) {
     }
 }
 
-# Private endpoint (idempotent) — gives PR Container Apps a private IP path to this PR's
+# Private endpoint (idempotent) — gives PR App Service sites a private IP path to this PR's
 # PostgreSQL server, using the shared subnet + DNS zone created once by infrastructure.bicep.
 Write-Step "Configuring PostgreSQL private endpoint for $prPostgresServer"
 
@@ -546,7 +546,7 @@ else {
 
 # Check the DNS zone group independently of the private endpoint's existence — a previous run
 # may have created the private endpoint but failed before linking DNS, which would otherwise be
-# silently skipped on rerun and leave PostgreSQL name resolution broken for Container Apps.
+# silently skipped on rerun and leave PostgreSQL name resolution broken for the App Service sites.
 $existingDnsZoneGroup = az network private-endpoint dns-zone-group show `
     --resource-group $prodRG `
     --endpoint-name $prPrivateEndpointName `
@@ -573,22 +573,10 @@ else {
 }
 
 # ============================================================================
-# DEPLOY — Container Apps via Bicep
+# DEPLOY — App Service sites via Bicep
 # ============================================================================
 
-Write-Step "Deploying Container Apps via Bicep"
-
-# Get the Container Apps Environment default domain for GITHUB_OUTPUT.
-$envDefaultDomain = az containerapp env show `
-    --name $prodEnvName `
-    --resource-group $prodRG `
-    --query properties.defaultDomain -o tsv 2>$null
-
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($envDefaultDomain)) {
-    Write-Fail "Could not retrieve Container Apps Environment default domain"
-    exit 1
-}
-Write-Ok "Environment default domain: $envDefaultDomain"
+Write-Step "Deploying App Service sites via Bicep"
 
 $templateFile = Join-Path $PSScriptRoot '../infra/pr-applications.bicep'
 $deploymentOutput = az deployment group create `
@@ -615,15 +603,9 @@ if ([string]::IsNullOrWhiteSpace($webFqdn)) {
     exit 1
 }
 
-Write-Ok "API Container App : $apiAppName"
-Write-Ok "Web Container App : $webAppName"
-Write-Ok "Web FQDN          : $webFqdn"
-
-# Write output for GitHub Actions
-if ($env:GITHUB_OUTPUT) {
-    "cae-default-domain=$envDefaultDomain" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
-    Write-Ok "Written cae-default-domain to GITHUB_OUTPUT"
-}
+Write-Ok "API App Service site : $apiAppName"
+Write-Ok "Web App Service site : $webAppName"
+Write-Ok "Web FQDN             : $webFqdn"
 
 # ============================================================================
 # VERSION WAIT + SMOKE TESTS
@@ -632,8 +614,8 @@ if ($env:GITHUB_OUTPUT) {
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 & (Join-Path $scriptDir 'Wait-ForLiveVersion.ps1') -WebFqdn $webFqdn -Tag $Tag
 if ($LASTEXITCODE -ne 0) {
-    Write-ContainerAppDiagnostics -AppName $webAppName -ResourceGroup $prodRG
-    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $prodRG
+    Write-WebAppDiagnostics -AppName $webAppName -ResourceGroup $prodRG
+    Write-WebAppDiagnostics -AppName $apiAppName -ResourceGroup $prodRG
     exit 1
 }
 

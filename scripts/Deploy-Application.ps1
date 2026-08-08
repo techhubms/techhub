@@ -1,11 +1,11 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Deploys TechHub containers to Azure Container Apps (imperative image swap).
+    Deploys TechHub containers to the production Azure App Service Plan (imperative image swap).
 
 .DESCRIPTION
-    Updates Azure Container Apps with a previously-pushed image tag. Performs health checks,
-    verifies sticky sessions, runs smoke tests, and auto-rolls back on failure.
+    Updates the API and Web sites (Web App for Containers) with a previously-pushed image tag.
+    Performs health checks, runs smoke tests, and auto-rolls back on failure.
 
     Images must already exist in ghcr.io (built by Build-Images.ps1 or CI).
 
@@ -20,7 +20,7 @@
 
 .EXAMPLE
     ./scripts/Deploy-Application.ps1 -Tag "20260501120000"
-    Deploy the given image tag to production Container Apps.
+    Deploy the given image tag to the production App Service sites.
 
 .EXAMPLE
     ./scripts/Deploy-Application.ps1 -Tag "20260501120000" -SkipSmokeTests
@@ -47,8 +47,8 @@ Set-StrictMode -Version Latest
 $registryServer = "ghcr.io"
 $apiImage = "$registryServer/$GithubRegistryUsername/techhub-api"
 $webImage = "$registryServer/$GithubRegistryUsername/techhub-web"
-$apiAppName = "ca-techhub-api-prod"
-$webAppName = "ca-techhub-web-prod"
+$apiAppName = "app-techhub-api-prod"
+$webAppName = "app-techhub-web-prod"
 $resourceGroup = "rg-techhub-prod"
 
 # ============================================================================
@@ -90,8 +90,8 @@ Write-Host "===============================================================" -Fo
 Write-Host "  TechHub Application Deployment" -ForegroundColor White
 Write-Host "  Tag                 : $Tag" -ForegroundColor Gray
 Write-Host "  Registry            : $registryServer" -ForegroundColor Gray
-Write-Host "  API Container App   : $apiAppName" -ForegroundColor Gray
-Write-Host "  Web Container App   : $webAppName" -ForegroundColor Gray
+Write-Host "  API Web App         : $apiAppName" -ForegroundColor Gray
+Write-Host "  Web App             : $webAppName" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 
 # ============================================================================
@@ -112,32 +112,33 @@ Write-Ok "Azure CLI authenticated (subscription: $($accountInfo.name))"
 # DEPLOY
 # ============================================================================
 
-# Save current production images for rollback
-$previousApiImage = az containerapp show `
+# Save current production linuxFxVersion (DOCKER|<image>) for rollback
+$previousApiFxVersion = az webapp config show `
     --name $apiAppName `
     --resource-group $resourceGroup `
-    --query "properties.template.containers[0].image" `
-    -o tsv 2>$null
-$previousWebImage = az containerapp show `
+    --query "linuxFxVersion" `
+    --only-show-errors `
+    -o tsv
+$previousWebFxVersion = az webapp config show `
     --name $webAppName `
     --resource-group $resourceGroup `
-    --query "properties.template.containers[0].image" `
-    -o tsv 2>$null
+    --query "linuxFxVersion" `
+    --only-show-errors `
+    -o tsv
 
-if ($previousApiImage) {
-    Write-Detail "Previous API image: $previousApiImage"
-    Write-Detail "Previous Web image: $previousWebImage"
+if ($previousApiFxVersion) {
+    Write-Detail "Previous API image: $previousApiFxVersion"
+    Write-Detail "Previous Web image: $previousWebFxVersion"
 }
 
 Write-Step "Deploying to production (tag: $Tag)"
 
-# Update API container app
+# Update API site — changing linuxFxVersion swaps the container image and restarts the site
 Write-Detail "Deploying API..."
-az containerapp update `
+az webapp config set `
     --name $apiAppName `
     --resource-group $resourceGroup `
-    --image "$($apiImage):$Tag" `
-    --revision-suffix "api-$Tag"
+    --linux-fx-version "DOCKER|$($apiImage):$Tag" | Out-Null
 if ($LASTEXITCODE -ne 0) {
     Write-Fail "Failed to deploy API"
     exit 1
@@ -146,10 +147,10 @@ Write-Ok "API deployed"
 
 # Wait for API to become healthy before deploying Web
 Write-Detail "Waiting for API to become healthy..."
-$apiFqdn = az containerapp show `
+$apiFqdn = az webapp show `
     --name $apiAppName `
     --resource-group $resourceGroup `
-    --query properties.configuration.ingress.fqdn `
+    --query defaultHostName `
     -o tsv 2>$null
 
 if ($apiFqdn) {
@@ -177,88 +178,39 @@ if ($apiFqdn) {
         exit 1
     }
 } else {
-    Write-Warning "Could not get API FQDN, skipping health check"
+    Write-Warning "Could not get API hostname, skipping health check"
 }
 
-# Update Web container app
+# Update Web site
 Write-Detail "Deploying Web..."
-az containerapp update `
+az webapp config set `
     --name $webAppName `
     --resource-group $resourceGroup `
-    --image "$($webImage):$Tag" `
-    --revision-suffix "web-$Tag" `
-    --set-env-vars "DEPLOY_IMAGE_TAG=$Tag"
+    --linux-fx-version "DOCKER|$($webImage):$Tag" | Out-Null
 if ($LASTEXITCODE -ne 0) {
     Write-Fail "Failed to deploy Web"
     exit 1
 }
-Write-Ok "Web deployed"
-
-$webFqdn = az containerapp show `
+az webapp config appsettings set `
     --name $webAppName `
     --resource-group $resourceGroup `
-    --query properties.configuration.ingress.fqdn `
+    --settings "DEPLOY_IMAGE_TAG=$Tag" | Out-Null
+if ($LASTEXITCODE -ne 0) {
+    Write-Fail "Failed to set DEPLOY_IMAGE_TAG app setting"
+    exit 1
+}
+Write-Ok "Web deployed"
+
+$webFqdn = az webapp show `
+    --name $webAppName `
+    --resource-group $resourceGroup `
+    --query defaultHostName `
     -o tsv 2>$null
 
 if ([string]::IsNullOrWhiteSpace($webFqdn)) {
-    Write-Fail "Could not retrieve Web Container App FQDN"
+    Write-Fail "Could not retrieve Web App hostname"
     exit 1
 }
-
-# Verify sticky sessions are still enabled after the update
-Write-Step "Verifying sticky sessions on Web Container App"
-$stickySetTimeoutSeconds = 90
-$stickySetRetryDelaySeconds = 5
-$stickySetDeadline = (Get-Date).AddSeconds($stickySetTimeoutSeconds)
-$stickySessionsEnabled = $false
-while ((Get-Date) -lt $stickySetDeadline) {
-    $stickySetOutput = az containerapp ingress sticky-sessions set `
-        --name $webAppName `
-        --resource-group $resourceGroup `
-        --affinity sticky 2>&1
-    if ($LASTEXITCODE -eq 0) {
-        $stickySessionsEnabled = $true
-        break
-    }
-
-    $stickySetOutputText = ($stickySetOutput | Out-String).Trim()
-    if ($stickySetOutputText -match 'ContainerAppOperationInProgress') {
-        Write-Warn "Container App operation still in progress — retrying in $($stickySetRetryDelaySeconds)s"
-        Start-Sleep -Seconds $stickySetRetryDelaySeconds
-        continue
-    }
-
-    Write-Fail "Failed to set sticky sessions (exit code $LASTEXITCODE)"
-    if (-not [string]::IsNullOrWhiteSpace($stickySetOutputText)) {
-        Write-Detail $stickySetOutputText
-    }
-    exit 1
-}
-if (-not $stickySessionsEnabled) {
-    Write-Fail "Failed to set sticky sessions within $($stickySetTimeoutSeconds)s"
-    exit 1
-}
-
-# Poll until sticky sessions are confirmed active
-$stickyConfirmDeadline = (Get-Date).AddSeconds(60)
-$stickyConfirmed = $false
-while ((Get-Date) -lt $stickyConfirmDeadline) {
-    $affinity = az containerapp show `
-        --name $webAppName `
-        --resource-group $resourceGroup `
-        --query "properties.configuration.ingress.stickySessions.affinity" `
-        -o tsv 2>$null
-    if ($affinity -eq 'sticky') {
-        $stickyConfirmed = $true
-        break
-    }
-    Start-Sleep -Seconds 5
-}
-if (-not $stickyConfirmed) {
-    Write-Fail "Sticky sessions did not propagate within 60s — Blazor SignalR will not work correctly"
-    exit 1
-}
-Write-Ok "Sticky sessions confirmed active (affinity=sticky)"
 
 # Delegate version wait and smoke tests to the shared script
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -267,16 +219,16 @@ if ($SkipSmokeTests) { $waitArgs += '-SkipSmokeTests' }
 & (Join-Path $scriptDir 'Wait-ForLiveVersion.ps1') @waitArgs
 if ($LASTEXITCODE -ne 0) {
     # Rollback on failure
-    if ($previousApiImage -and $previousWebImage) {
+    if ($previousApiFxVersion -and $previousWebFxVersion) {
         Write-Step "Rolling back to previous version"
-        az containerapp update `
+        az webapp config set `
             --name $apiAppName `
             --resource-group $resourceGroup `
-            --image $previousApiImage | Out-Null
-        az containerapp update `
+            --linux-fx-version $previousApiFxVersion | Out-Null
+        az webapp config set `
             --name $webAppName `
             --resource-group $resourceGroup `
-            --image $previousWebImage | Out-Null
+            --linux-fx-version $previousWebFxVersion | Out-Null
         Write-Warn "Rollback complete. Previous images restored."
     }
     exit 1

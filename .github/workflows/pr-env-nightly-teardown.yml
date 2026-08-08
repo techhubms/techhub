@@ -40,16 +40,16 @@ jobs:
           $prodRG = 'rg-techhub-prod'
           $prNumbers = [System.Collections.Generic.SortedSet[int]]::new()
 
-          $caApps = az containerapp list `
+          $webApps = az webapp list `
             --resource-group $prodRG `
-            --query "[?starts_with(name, 'ca-techhub-api-pr-')].name" -o tsv 2>$null
-          if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($caApps)) {
-            foreach ($app in ($caApps -split "`n")) {
-              if ($app -match 'ca-techhub-api-pr-(\d+)') { [void]$prNumbers.Add([int]$Matches[1]) }
+            --query "[?starts_with(name, 'app-techhub-api-pr-')].name" -o tsv 2>$null
+          if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($webApps)) {
+            foreach ($app in ($webApps -split "`n")) {
+              if ($app -match 'app-techhub-api-pr-(\d+)') { [void]$prNumbers.Add([int]$Matches[1]) }
             }
           }
 
-          # Also scan PostgreSQL servers — catches orphaned DBs with no matching Container App
+          # Also scan PostgreSQL servers — catches orphaned DBs with no matching App Service site
           $pgServers = az postgres flexible-server list `
             --resource-group $prodRG `
             --query "[?starts_with(name, 'psql-techhub-pr-')].name" -o tsv 2>$null

@@ -346,13 +346,13 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
 
             // Assert — circuit must still be active after an interactive action.
             // If sticky sessions are broken, a user interaction can route to a different
-            // replica which doesn't own the circuit, causing it to drop. A dropped circuit
+            // instance which doesn't own the circuit, causing it to drop. A dropped circuit
             // means all @onclick handlers stop working and the page becomes a dead shell.
             var circuitActiveAfterInteraction = await Page.EvaluateAsync<bool>(
                 "() => window.__blazorServerReady === true");
             circuitActiveAfterInteraction.Should().BeTrue(
                 "Blazor Server circuit should remain active after interacting with the page — " +
-                "if it dropped, sticky sessions may be misconfigured on the Container App");
+                "if it dropped, clientAffinityEnabled may be misconfigured on the App Service site");
 
             // Assert - No JavaScript errors
             consoleErrors.Should().BeEmpty("expanding custom pages should not cause JavaScript errors");

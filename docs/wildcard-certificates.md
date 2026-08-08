@@ -66,14 +66,16 @@ Deploy with:
 ./scripts/Deploy-Infrastructure.ps1 -Environment shared -Mode deploy
 ```
 
-### Container Apps integration
+### App Service integration
 
-Wildcard certificates from Key Vault are loaded into each Container Apps Environment and bound to custom domains:
+Wildcard certificates from Key Vault are imported into the production App Service Plan and bound to custom domains on each site (API + Web):
 
-- **Certificate loading**: `infra/modules/wildcardCertificates.bicep` + `wildcardCert.bicep`
-- **Key Vault access**: `infra/modules/kvSecretsUserRole.bicep` grants the environment's managed identity Key Vault Secrets User role
-- **Domain binding**: `infra/modules/web.bicep` uses `bindingType: 'SniEnabled'` with the wildcard cert for all custom domains. Every domain must have a matching wildcard certificate configured — there is no automatic fallback. If a certificate is missing for a domain, deployment will fail, ensuring misconfigurations are caught immediately
+- **Certificate loading**: `infra/modules/wildcardCert.bicep` imports the PFX from Key Vault into `Microsoft.Web/certificates`, scoped to the App Service Plan
+- **Key Vault access**: `infra/modules/kvSecretsUserRole.bicep` grants the managed identity Key Vault Secrets User role so it can read certificate secrets
+- **Domain binding**: `infra/modules/web.bicep` uses `sslState: 'SniEnabled'` with the wildcard cert thumbprint for all custom domains. Every domain must have a matching wildcard certificate configured — there is no automatic fallback. If a certificate is missing for a domain, deployment will fail, ensuring misconfigurations are caught immediately
 - **Configuration**: Set `wildcardCertNames` in environment parameter files (e.g., `{ "hub.ms": "wildcard-hub-ms" }`)
+
+> **Note**: `wildcardCert.bicep` is intentionally **not** part of the regular `infrastructure.bicep`/`applications.bicep` deploy cycle — `Microsoft.Web/certificates` resources only re-read the Key Vault secret at deploy time (no auto-refresh on KV secret rotation), so it must be redeployed standalone whenever a new PFX is written to Key Vault. `Renew-WildcardCertificates.ps1` does this automatically after each renewal.
 
 ## Certificate Renewal
 
@@ -91,10 +93,10 @@ The script:
 4. Converts PEM certificates to PFX format
 5. Temporarily opens the Key Vault firewall for the machine's outbound IP
 6. Writes PFX as a secret into Key Vault (`kv-techhub-prod`)
-7. Updates the Container Apps Environment certificates directly via PFX upload
+7. Redeploys `infra/modules/wildcardCert.bicep` per domain to import the renewed PFX into the App Service Plan
 8. Restores the Key Vault firewall and cleans up temporary files
 
-> **Note on Container Apps cert update**: the script uploads the PFX directly to the CAE using `api-version=2024-03-01` (`value`/`password` properties). The newer KV-reference approach (`certificateKeyVaultProperties`) returns `InternalServerError` when updating existing certs and should not be used for renewals.
+> **Note on App Service cert update**: `Microsoft.Web/certificates` reads the Key Vault secret only at deploy time — it does not auto-refresh when the KV secret is rotated. That's why the renewal script redeploys `wildcardCert.bicep` per domain after writing the new PFX to Key Vault, rather than relying on the certificate resource to pick up the change on its own.
 
 ### Dry run (test without issuing certificates)
 

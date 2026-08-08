@@ -4,9 +4,9 @@ param location = 'swedencentral'
 param resourceGroupName = 'rg-techhub-prod'
 param appInsightsName = 'appi-techhub-prod'
 param keyVaultName = 'kv-techhub-prod'
-param containerAppsEnvName = 'cae-techhub-prod'
-param apiAppName = 'ca-techhub-api-prod'
-param webAppName = 'ca-techhub-web-prod'
+param appServicePlanName = 'asp-techhub-prod'
+param apiAppName = 'app-techhub-api-prod'
+param webAppName = 'app-techhub-web-prod'
 // Image tags — injected via environment variables by Deploy-Infrastructure.ps1
 param apiImageTag = readEnvironmentVariable('API_IMAGE_TAG')
 param webImageTag = readEnvironmentVariable('WEB_IMAGE_TAG')

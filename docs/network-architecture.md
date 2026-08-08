@@ -1,7 +1,7 @@
 # Network Architecture
 
 Tech Hub uses a **single VNet** in the production resource group. Key Vault, AI Foundry, and
-PostgreSQL are all reached over **private endpoints** in a dedicated subnet — Container Apps
+PostgreSQL are all reached over **private endpoints** in a dedicated subnet — App Service
 traffic to these services never touches the public internet. Admin access to each service goes
 through public access with IP-based firewall rules instead.
 
@@ -10,31 +10,36 @@ through public access with IP-based firewall rules instead.
 ```text
 Internet
     │
-    ├── Web frontend (ca-techhub-web-prod) — public ingress (external: true)
+    ├── Web site (app-techhub-web-prod) — public, https://tech.hub.ms, https://tech.xebia.ms
     │       HTTPS on tech.hub.ms, tech.xebia.ms (wildcard TLS from kv-techhub-prod)
     │
     └── Admin IP (allowlisted for Key Vault, PostgreSQL, and AI Foundry)
 
 Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
-    ├── snet-container-apps (10.2.0.0/23) — Container Apps Environment (internal: false)
+    ├── snet-app-service (10.2.0.0/23) — Regional VNet Integration for asp-techhub-prod (Basic B1)
     │    │
-    │    ├── ca-techhub-web-prod   [external: true]  ← reachable from internet
+    │    ├── app-techhub-web-prod   — public HTTPS ingress, reachable from internet
     │    │
-    │    └── ca-techhub-api-prod   [external: false] ← internal only, NOT reachable from internet
-    │            (Web frontend calls API over the internal Container Apps environment network)
+    │    └── app-techhub-api-prod   — IP-restricted to the Web site's VNet-integration outbound
+    │            address only; NOT reachable from the internet (Web calls API over the VNet)
+    │
+    ├── snet-app-service-pr (10.2.4.0/23) — Regional VNet Integration for asp-techhub-pr,
+    │    │                                   the shared PR-preview App Service Plan
+    │    │
+    │    └── app-techhub-{api,web}-pr-{N} — same public/VNet-restricted split as prod, per PR
     │
     └── snet-private-endpoints (10.2.2.0/27) — private endpoint NICs only
          │
          ├── pe-psql-techhub-prod → psql-techhub-prod
-         │       → Container Apps reach PostgreSQL over the VNet via
+         │       → App Service sites reach PostgreSQL over the VNet via
          │         privatelink.postgres.database.azure.com (Private DNS Zone)
          │
          ├── pe-kv-techhub-prod → kv-techhub-prod
-         │       → Container Apps reach Key Vault over the VNet via
+         │       → App Service sites reach Key Vault over the VNet via
          │         privatelink.vaultcore.azure.net (Private DNS Zone)
          │
          └── pe-oai-techhub-prod → oai-techhub-prod
-                 → Container Apps reach AI Foundry over the VNet via
+                 → App Service sites reach AI Foundry over the VNet via
                    privatelink.openai.azure.com (Private DNS Zone, app-facing endpoint),
                    privatelink.cognitiveservices.azure.com (Private DNS Zone, other data-plane APIs), and
                    privatelink.services.ai.azure.com (Private DNS Zone, AI Foundry project/agent APIs)
@@ -44,34 +49,43 @@ Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
 
 | VNet | CIDR | Resource Group | Purpose |
 |------|------|----------------|---------|
-| `vnet-techhub-prod` | `10.2.0.0/16` | `rg-techhub-prod` | Container Apps + private endpoints (prod + PR previews) |
+| `vnet-techhub-prod` | `10.2.0.0/16` | `rg-techhub-prod` | App Service VNet integration + private endpoints (prod + PR previews) |
 
-There are two subnets:
+There are three subnets:
 
-- `snet-container-apps` (`10.2.0.0/23`), delegated to `Microsoft.App/environments`
+- `snet-app-service` (`10.2.0.0/23`), delegated to `Microsoft.Web/serverFarms` — Regional VNet
+  Integration for the production App Service Plan (`asp-techhub-prod`)
+- `snet-app-service-pr` (`10.2.4.0/23`), delegated to `Microsoft.Web/serverFarms` — Regional VNet
+  Integration for the shared PR-preview App Service Plan (`asp-techhub-pr`). Regional VNet
+  Integration is strictly 1 subnet : 1 App Service Plan, so the PR-preview Plan needs its own
+  dedicated subnet even though it is deployed and reused persistently (not created/torn down per PR)
 - `snet-private-endpoints` (`10.2.2.0/27`), hosts the PostgreSQL, Key Vault, and AI Foundry
   private endpoint NICs — private endpoints cannot share a subnet delegated to
-  `Microsoft.App/environments`
+  `Microsoft.Web/serverFarms`
 
 No hub-spoke peering.
 
-## Container Apps Ingress
+## App Service Ingress
 
-The Container Apps Environment (`cae-techhub-prod`) is deployed with `internal: false`, meaning
-it has a public IP. However, each Container App controls its own ingress independently.
+Both API and Web sites run on the same **Basic B1 App Service Plan** (`asp-techhub-prod`), each
+as a separate Web App for Containers with its own VNet-integrated outbound traffic and its own
+inbound access rules.
 
 | App | Ingress | Reachable from internet | Notes |
 |-----|---------|------------------------|-------|
-| `ca-techhub-web-prod` | `external: true` | **Yes** | Custom domains (`tech.hub.ms`, `tech.xebia.ms`); wildcard TLS from Key Vault |
-| `ca-techhub-api-prod` | `external: false` | **No** | Internal only; the Web frontend calls the API over the internal Container Apps environment network |
+| `app-techhub-web-prod` | Public | **Yes** | Custom domains (`tech.hub.ms`, `tech.xebia.ms`); wildcard TLS from Key Vault |
+| `app-techhub-api-prod` | `ipSecurityRestrictions` (deny-by-default, allow only the Web site's VNet-integration subnet) | **No** | Internal only; the Web frontend calls the API over the VNet |
 
 The API backend is intentionally not publicly accessible. No path to the API exists from the
-internet — not via the custom domains, not via the default Container Apps FQDN. The Web Blazor
-frontend calls the API exclusively over the internal environment network (server-side rendering
-and SSR API calls stay within the Container Apps environment).
+internet — not via the custom domains, not via its default `*.azurewebsites.net` hostname. The Web
+Blazor frontend calls the API using its `ApiBaseUrl` app setting; with `vnetRouteAllEnabled: true`
+on the Web App, all outbound traffic (including API calls) is sourced from the Web site's VNet
+integration subnet. The API's `ipSecurityRestrictions` allow only that subnet and deny everything
+else by default — so while the API still has a public `*.azurewebsites.net` hostname (there is no
+private endpoint on the API), the IP restriction policy effectively blocks all public access.
 
 CORS policy is configured on the API app and restricts allowed origins to the configured
-`primaryHosts` (i.e. `tech.hub.ms`, `tech.xebia.ms`), so even if the API were made external,
+`primaryHosts` (i.e. `tech.hub.ms`, `tech.xebia.ms`), so even if the API were made public,
 cross-origin browser requests from unexpected origins would be blocked.
 
 Admin access to Azure resources is controlled via per-resource IP firewall rules using the
@@ -79,9 +93,9 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 
 | Resource | Firewall Mechanism | Access |
 |----------|-------------------|--------|
-| Key Vault | Private endpoint (VNet traffic) + `networkAcls.ipRules` (admin traffic) | Container Apps via private endpoint; admin IPs via public access; default deny, no trusted-services bypass |
-| PostgreSQL | Private endpoint (VNet traffic) + per-IP/range firewall rules (admin traffic) | Container Apps via private endpoint; admin IPs via public access; default deny otherwise |
-| AI Foundry | Private endpoint (VNet traffic) + `networkAcls.ipRules` (admin traffic) | Container Apps via private endpoint; admin IPs via public access; default deny, no trusted-services bypass |
+| Key Vault | Private endpoint (VNet traffic) + `networkAcls.ipRules` (admin traffic) | App Service sites via private endpoint; admin IPs via public access; default deny, no trusted-services bypass |
+| PostgreSQL | Private endpoint (VNet traffic) + per-IP/range firewall rules (admin traffic) | App Service sites via private endpoint; admin IPs via public access; default deny otherwise |
+| AI Foundry | Private endpoint (VNet traffic) + `networkAcls.ipRules` (admin traffic) | App Service sites via private endpoint; admin IPs via public access; default deny, no trusted-services bypass |
 | Log Analytics | Public ingestion + query enabled | RBAC-protected |
 | App Insights | Public ingestion + query enabled | RBAC-protected; browser JS SDK over public internet |
 
@@ -91,7 +105,7 @@ The production Key Vault (`kv-techhub-prod`) stores:
 
 - Wildcard TLS certificates for `*.hub.ms` and `*.xebia.ms`
 - AAD client secret (`techhub-prod-aad-client-secret`) for the admin dashboard
-- GitHub registry token (`techhub-github-registry-token`) for Container Apps pulling from ghcr.io
+- GitHub registry token (`techhub-github-registry-token`) for App Service sites pulling from ghcr.io
 - PostgreSQL admin password (`techhub-prod-postgres-admin-password`) for infrastructure management
 - Newsletter ACS endpoint URL (`techhub-prod-newsletter-acs-endpoint`) — written automatically by `Sync-KeyVaultSecrets.ps1` from infra deployment outputs
 - Newsletter ACS sender address (`techhub-prod-acs-sender-address`) — written directly by Bicep from the ACS domain output
@@ -102,10 +116,10 @@ Security:
 - **Public access**: Enabled only when admin IPs are configured; admin IPs allowlisted via
   `networkAcls.ipRules`; default deny; `bypass: 'None'` (no trusted Microsoft services bypass)
 - **Private endpoint**: `pe-kv-techhub-prod` in `snet-private-endpoints`, resolved via the
-  `privatelink.vaultcore.azure.net` Private DNS Zone linked to the VNet — Container Apps reach
+  `privatelink.vaultcore.azure.net` Private DNS Zone linked to the VNet — App Service sites reach
   Key Vault entirely over the VNet, replacing the previous VNet service endpoint
 - **Authorization**: RBAC (Key Vault Administrator role for admins; Key Vault Secrets User for
-  the managed identity used by Container Apps)
+  the managed identity used by App Service sites)
 
 > **Note:** PostgreSQL connection strings and AI Foundry API keys are no longer stored in Key
 > Vault. The application uses managed identity token auth for both services (see below).
@@ -115,7 +129,7 @@ Security:
 Docker images are hosted on **GitHub Container Registry** (`ghcr.io`) as private packages.
 
 - **Push**: GitHub Actions uses `GITHUB_TOKEN` with `packages:write` permission
-- **Pull**: Container Apps use a GitHub PAT (`read:packages` scope) stored in Key Vault as
+- **Pull**: App Service sites use a GitHub PAT (`read:packages` scope) stored in Key Vault as
   `techhub-github-registry-token`
 
 This replaces the previous Azure Container Registry (ACR Standard) at a saving of ~€20/month.
@@ -139,20 +153,20 @@ created via PITR from the production backup — both in `rg-techhub-prod`.
 - **Private endpoint**: `pe-psql-techhub-prod` (and `pe-psql-techhub-pr-{N}` for PR servers) in
   `snet-private-endpoints`, resolved via the `privatelink.postgres.database.azure.com` Private
   DNS Zone linked to the VNet
-- **Container Apps** reach PostgreSQL over the **private endpoint** — traffic stays on the VNet
+- **App Service sites** reach PostgreSQL over the **private endpoint** — traffic stays on the VNet
   and never touches the public internet. This replaced a NAT Gateway (`natgw-techhub-prod`) that
-  previously gave Container Apps a single stable outbound public IP for firewall allowlisting;
+  previously gave the compute layer a single stable outbound public IP for firewall allowlisting;
   the private endpoint removes both the NAT Gateway cost and the public-internet hop entirely.
 - **Admin** reaches PostgreSQL via IP-allowlisted public access
 
 > **Authentication**: The `id-techhub-prod` user-assigned managed identity is registered as the
-> Entra administrator on `psql-techhub-prod`. The Container App sets `Database:UseEntraAuth=true`
+> Entra administrator on `psql-techhub-prod`. The API site sets `Database:UseEntraAuth=true`
 > and acquires Azure AD tokens at runtime via `DefaultAzureCredential` —
 > no password in the connection string or Key Vault.
 >
 > **PR isolation**: All PR environments share one managed identity (`id-techhub-pr`), created
 > once by `infrastructure.bicep` and registered as the Entra admin on each ephemeral PITR server.
-> A PR container cannot authenticate against `psql-techhub-prod` because that server's Entra
+> A PR site cannot authenticate against `psql-techhub-prod` because that server's Entra
 > admin is `id-techhub-prod` — a completely separate identity. No shared credentials exist.
 
 ## Azure Communication Services (ACS)
@@ -173,7 +187,7 @@ outbound newsletter email delivery.
 ## AI Foundry (OpenAI)
 
 The production AI Foundry account (`oai-techhub-prod`) is secured the same way as Key Vault and
-PostgreSQL — no public access without an allowlisted admin IP, and Container Apps reach it over
+PostgreSQL — no public access without an allowlisted admin IP, and App Service sites reach it over
 a private endpoint.
 
 - **Public access**: Enabled only when admin IPs are configured; admin IPs allowlisted via
@@ -186,7 +200,7 @@ a private endpoint.
   group registers all three zones: `privatelink.openai.azure.com` (required — resolves the domain
   the app actually calls), `privatelink.cognitiveservices.azure.com`, and
   `privatelink.services.ai.azure.com` (both recommended, for other Cognitive Services/AI Foundry
-  data-plane calls) — all linked to the VNet so Container Apps reach AI Foundry entirely over the
+  data-plane calls) — all linked to the VNet so App Service sites reach AI Foundry entirely over the
   VNet
 - **Authentication**: RBAC — `Cognitive Services OpenAI User` role (`5e0bd9bd-7b93-4f28-af87-19fc36ad61bd`)
   assigned to `id-techhub-prod`. No API key is used; the application acquires an Entra token with
@@ -206,7 +220,7 @@ and `publicNetworkAccessForQuery` are left `Enabled`. This is deliberate, not an
 - **Browser (RUM/client-side) telemetry requires public ingestion.** The App Insights JS SDK sends
   telemetry directly from end-user browsers, which cannot reach our VNet. An AMPLS cannot close
   this path, so ingestion has to stay public regardless of any other configuration.
-- **Server-side telemetry gets little benefit from an AMPLS here.** Container Apps telemetry could
+- **Server-side telemetry gets little benefit from an AMPLS here.** App Service telemetry could
   move to a private path via AMPLS, but since ingestion must stay public anyway for the browser
   path above, the security improvement is marginal (only slightly less public egress) relative to
   the added cost/complexity (a private endpoint + DNS zones + AMPLS resource, ~$7-8/month).
@@ -220,8 +234,8 @@ Vault/PostgreSQL/AI Foundry.
 
 ## Deploy Order
 
-1. **Production** (`rg-techhub-prod`): VNet, monitoring, Key Vault, AI Foundry, Container Apps
-   Environment, wildcard certificates, PostgreSQL, API Container App, Web Container App,
+1. **Production** (`rg-techhub-prod`): VNet, monitoring, Key Vault, AI Foundry, App Service Plans
+   (prod + PR-preview), wildcard certificates, PostgreSQL, API App Service site, Web App Service site,
    action group, ACME DNS zone, budget, policy
 
 No shared or staging resource groups. PR preview environments are created on-demand within

@@ -22,11 +22,13 @@
 .PARAMETER ResourceGroup
     Resource group containing the ACME DNS zone and other resources. Defaults to 'rg-techhub-prod'.
 
-.PARAMETER ContainerAppsEnvironmentName
-    Container Apps Environment to update certificates in. Defaults to 'cae-techhub-prod'.
+.PARAMETER AppServicePlanName
+    App Service Plan to associate the renewed certificates with (App Service certificates are
+    scoped to a resource group but validated/priced against a plan's region). Defaults to
+    'asp-techhub-prod'.
 
-.PARAMETER ContainerAppsEnvironmentResourceGroup
-    Resource group containing the Container Apps Environment. Defaults to the same as ResourceGroup.
+.PARAMETER AppServicePlanResourceGroup
+    Resource group containing the App Service Plan. Defaults to the same as ResourceGroup.
 
 .PARAMETER AcmeDnsZone
     Azure DNS zone used for ACME challenges. Defaults to 'acme.hub.ms'.
@@ -63,10 +65,10 @@ param(
     [string]$AcmeDnsZone = 'acme.hub.ms',
 
     [Parameter(Mandatory = $false)]
-    [string]$ContainerAppsEnvironmentName = 'cae-techhub-prod',
+    [string]$AppServicePlanName = 'asp-techhub-prod',
 
     [Parameter(Mandatory = $false)]
-    [string]$ContainerAppsEnvironmentResourceGroup = '',
+    [string]$AppServicePlanResourceGroup = '',
 
     [Parameter(Mandatory = $false)]
     [switch]$DryRun,
@@ -75,9 +77,9 @@ param(
     [switch]$Force
 )
 
-# Default CAE resource group to the same RG if not specified
-if (-not $ContainerAppsEnvironmentResourceGroup) {
-    $ContainerAppsEnvironmentResourceGroup = $ResourceGroup
+# Default the App Service Plan's resource group to the same RG if not specified
+if (-not $AppServicePlanResourceGroup) {
+    $AppServicePlanResourceGroup = $ResourceGroup
 }
 
 $ErrorActionPreference = "Stop"
@@ -278,6 +280,26 @@ if ($DryRun) {
         exit 1
     }
 
+    # Resolve the App Service Plan and Key Vault resource details once — reused for every
+    # domain's wildcardCert.bicep redeploy below.
+    Write-Step "Resolving App Service Plan and Key Vault resource IDs"
+    $appServicePlanId = (az appservice plan show --name $AppServicePlanName --resource-group $AppServicePlanResourceGroup --query id --output tsv --only-show-errors 2>&1)
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Could not resolve App Service Plan '$AppServicePlanName' in resource group '$AppServicePlanResourceGroup'."
+        exit 1
+    }
+    $appServicePlanLocation = (az appservice plan show --name $AppServicePlanName --resource-group $AppServicePlanResourceGroup --query location --output tsv --only-show-errors 2>&1)
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Could not resolve location for App Service Plan '$AppServicePlanName'."
+        exit 1
+    }
+    $keyVaultResourceId = (az keyvault show --name $KeyVaultName --query id --output tsv --only-show-errors 2>&1)
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Could not resolve Key Vault '$KeyVaultName' resource ID."
+        exit 1
+    }
+    Write-Ok "App Service Plan: $AppServicePlanName ($appServicePlanLocation)"
+
     # --- Temporarily open Key Vault firewall for this machine's IP ---
     Write-Step "Opening Key Vault firewall for current IP"
     $currentIp = $null
@@ -370,32 +392,25 @@ if ($DryRun) {
             }
             Write-Ok "Imported $($domain.CertName) into Key Vault"
 
-            # Update the certificate directly in the Container Apps Environment.
-            # Uses direct PFX upload (api-version=2024-03-01 with value/password) because
-            # updating KV-backed cert references via the newer API returns InternalServerError
-            # when the original KV no longer exists.
-            Write-Detail "Updating Container Apps Environment certificate '$($domain.CertName)'..."
-            $caeLocation = az containerapp env show `
-                --name $ContainerAppsEnvironmentName `
-                --resource-group $ContainerAppsEnvironmentResourceGroup `
-                --query location --output tsv --only-show-errors 2>&1
+            # Update the certificate in Microsoft.Web/certificates (App Service) by redeploying
+            # modules/wildcardCert.bicep — App Service certificates read the PFX from Key Vault
+            # only at deploy time, they do not auto-refresh when the underlying KV secret changes.
+            Write-Detail "Updating App Service certificate '$($domain.CertName)'..."
+            az deployment group create `
+                --resource-group $AppServicePlanResourceGroup `
+                --template-file (Join-Path $PSScriptRoot '../infra/modules/wildcardCert.bicep') `
+                --parameters `
+                    location=$appServicePlanLocation `
+                    appServicePlanId=$appServicePlanId `
+                    certResourceName=$($domain.CertName) `
+                    keyVaultResourceId=$keyVaultResourceId `
+                    keyVaultSecretName=$($domain.CertName) `
+                --output none --only-show-errors
             if ($LASTEXITCODE -ne 0) {
-                Write-Warning "Could not resolve CAE location — skipping CAE cert update for $($domain.CertName). Update manually."
+                Write-Warning "App Service certificate update failed for $($domain.CertName). Run manually:"
+                Write-Warning "  az deployment group create --resource-group $AppServicePlanResourceGroup --template-file infra/modules/wildcardCert.bicep --parameters location=$appServicePlanLocation appServicePlanId=$appServicePlanId certResourceName=$($domain.CertName) keyVaultResourceId=$keyVaultResourceId keyVaultSecretName=$($domain.CertName)"
             } else {
-                $caeBody = @{
-                    location   = $caeLocation.Trim()
-                    properties = @{ value = $b64; password = '' }
-                } | ConvertTo-Json -Depth 5
-                az rest --method PUT `
-                    --url "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$ContainerAppsEnvironmentResourceGroup/providers/Microsoft.App/managedEnvironments/$ContainerAppsEnvironmentName/certificates/$($domain.CertName)?api-version=2024-03-01" `
-                    --body $caeBody `
-                    --only-show-errors | Out-Null
-                if ($LASTEXITCODE -ne 0) {
-                    Write-Warning "CAE cert update failed for $($domain.CertName). Run manually:"
-                    Write-Warning "  az rest --method PUT --url 'https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$ContainerAppsEnvironmentResourceGroup/providers/Microsoft.App/managedEnvironments/$ContainerAppsEnvironmentName/certificates/$($domain.CertName)?api-version=2024-03-01' --body '{\"location\":\"<location>\",\"properties\":{\"value\":\"<base64pfx>\",\"password\":\"\"}}'  "
-                } else {
-                    Write-Ok "Updated Container Apps certificate '$($domain.CertName)'"
-                }
+                Write-Ok "Updated App Service certificate '$($domain.CertName)'"
             }
 
             # Clean up PFX
@@ -441,6 +456,6 @@ if (-not $DryRun) {
     Write-Host ""
     Write-Host "  Let's Encrypt certs expire after 90 days." -ForegroundColor Yellow
     Write-Host "  Schedule this script to run every 60 days." -ForegroundColor Yellow
-    Write-Host "  Container Apps Environment: $ContainerAppsEnvironmentName" -ForegroundColor Gray
+    Write-Host "  App Service Plan: $AppServicePlanName" -ForegroundColor Gray
 }
 Write-Host "===============================================================" -ForegroundColor DarkCyan

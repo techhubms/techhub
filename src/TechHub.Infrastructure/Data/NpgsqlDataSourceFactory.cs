@@ -44,7 +44,7 @@ public static class NpgsqlDataSourceFactory
         var dataSourceBuilder = new NpgsqlDataSourceBuilder(connectionString);
 
         // DefaultAzureCredential picks up the user-assigned managed identity automatically
-        // when only one is assigned to the Container App.
+        // when only one is assigned to the App Service site.
         dataSourceBuilder.UsePeriodicPasswordProvider(
             async (_, ct) =>
             {

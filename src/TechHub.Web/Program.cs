@@ -142,8 +142,8 @@ builder.Services.AddSingleton<SectionCache>();
 builder.Services.AddHostedService<SectionCacheRefreshService>();
 
 // Readiness health check: the web instance is not ready to serve traffic until the
-// SectionCache has been populated from the API. Container Apps uses /health as its
-// readiness probe, so a cold instance will not receive traffic until the cache is warm.
+// SectionCache has been populated from the API. App Service uses /health as its
+// health-check path, so a cold instance will not receive traffic until the cache is warm.
 // This is deliberately NOT tagged "live" — a refresh failure after startup should not
 // restart the container, only temporarily remove it from the load balancer.
 builder.Services.AddHealthChecks()
@@ -350,8 +350,8 @@ builder.Services.AddRateLimiter(options =>
     });
     // Note: Blazor Server SignalR circuits (/_blazor) cannot be rate-limited via endpoint
     // metadata because they go through the Blazor hub middleware, not endpoint routing.
-    // SignalR concurrency is instead managed by the SignalR MaximumParallelInvocationsPerClient
-    // and Azure Container Apps scaling rules at the infrastructure level.
+    // SignalR concurrency is instead bounded by the SignalR MaximumParallelInvocationsPerClient
+    // setting and the App Service Plan's single-instance capacity (no autoscale on Basic B1).
 });
 
 var app = builder.Build();
@@ -408,10 +408,10 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// Trust X-Forwarded-Proto and X-Forwarded-For from the Azure Container Apps reverse proxy.
+// Trust X-Forwarded-Proto and X-Forwarded-For from the Azure App Service reverse proxy.
 // Without this, ASP.NET Core sees the inner HTTP request and builds OIDC redirect URIs
 // with http:// instead of https://, causing AADSTS50011 redirect URI mismatch errors.
-// KnownIPNetworks/KnownProxies are cleared because Azure Container Apps proxies from
+// KnownIPNetworks/KnownProxies are cleared because Azure App Service proxies from
 // internal IPs that are not in the default loopback-only trusted list.
 var forwardedHeadersOptions = new ForwardedHeadersOptions
 {

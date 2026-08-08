@@ -99,7 +99,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      // Public access is only needed for admin IP allowlisting — Container Apps reach
+      // Public access is only needed for admin IP allowlisting — App Service sites reach
       // PostgreSQL over the private endpoint below, not the public endpoint.
       publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
     }
@@ -108,7 +108,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
 
 var deployPrivateEndpoint = !empty(privateEndpointSubnetId) && !empty(privateDnsZoneId)
 
-// Private endpoint — gives Container Apps a private IP path to PostgreSQL, removing the need
+// Private endpoint — gives App Service sites a private IP path to PostgreSQL, removing the need
 // for a NAT Gateway to allowlist a stable outbound public IP in the firewall.
 resource postgresPrivateEndpoint 'Microsoft.Network/privateEndpoints@2024-05-01' = if (deployPrivateEndpoint) {
   name: 'pe-${serverName}'
