@@ -130,7 +130,7 @@ function Write-Detail {
 
 function Get-WebAppExists {
     param([string]$Name, [string]$ResourceGroup)
-    $result = az webapp list --resource-group $ResourceGroup --query "[?name=='$Name'].name | [0]" -o tsv 2>$null
+    $result = az webapp list --resource-group $ResourceGroup --query "[?name=='$Name'].name | [0]" -o tsv --only-show-errors
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
 }
 

@@ -110,7 +110,7 @@ $prNumbers = [System.Collections.Generic.SortedSet[int]]::new()
 # Discover from App Service sites (app-techhub-api-pr-{N})
 $webApps = az webapp list `
     --resource-group $prodRG `
-    --query "[?starts_with(name, 'app-techhub-api-pr-')].name" -o tsv 2>$null
+    --query "[?starts_with(name, 'app-techhub-api-pr-')].name" -o tsv --only-show-errors
 
 if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($webApps)) {
     foreach ($app in ($webApps -split "`n")) {
@@ -125,7 +125,7 @@ Write-Detail "App Service sites found: $($prNumbers.Count) PR(s)"
 # Catches orphaned databases with no matching App Service site
 $pgServers = az postgres flexible-server list `
     --resource-group $prodRG `
-    --query "[?starts_with(name, 'psql-techhub-pr-')].name" -o tsv 2>$null
+    --query "[?starts_with(name, 'psql-techhub-pr-')].name" -o tsv --only-show-errors
 
 if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($pgServers)) {
     foreach ($server in ($pgServers -split "`n")) {

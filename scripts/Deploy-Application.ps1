@@ -91,7 +91,7 @@ Write-Host "  TechHub Application Deployment" -ForegroundColor White
 Write-Host "  Tag                 : $Tag" -ForegroundColor Gray
 Write-Host "  Registry            : $registryServer" -ForegroundColor Gray
 Write-Host "  API Web App         : $apiAppName" -ForegroundColor Gray
-Write-Host "  Web Web App         : $webAppName" -ForegroundColor Gray
+Write-Host "  Web App             : $webAppName" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 
 # ============================================================================
@@ -117,12 +117,14 @@ $previousApiFxVersion = az webapp config show `
     --name $apiAppName `
     --resource-group $resourceGroup `
     --query "linuxFxVersion" `
-    -o tsv 2>$null
+    --only-show-errors `
+    -o tsv
 $previousWebFxVersion = az webapp config show `
     --name $webAppName `
     --resource-group $resourceGroup `
     --query "linuxFxVersion" `
-    -o tsv 2>$null
+    --only-show-errors `
+    -o tsv
 
 if ($previousApiFxVersion) {
     Write-Detail "Previous API image: $previousApiFxVersion"

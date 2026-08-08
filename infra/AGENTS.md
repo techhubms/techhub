@@ -72,7 +72,7 @@ Phase 2 (applications.bicep)
 ### Adding a new application secret
 
 1. ✅ Add to Key Vault in Phase 1 (or via `Sync-KeyVaultSecrets.ps1` between phases)
-2. ✅ Reference in Phase 2 via `keyVaultUrl` in App Service settings (Key Vault references)
+2. ✅ Reference in Phase 2 via a Key Vault reference app setting (`@Microsoft.KeyVault(SecretUri=...)`) in `applications.bicep`
 3. ❌ **Never** pass secrets as plain Bicep parameters in Phase 2
 
 ## Why This Separation?

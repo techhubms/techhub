@@ -59,11 +59,11 @@ var certEntries = items(wildcardCertNames)
 resource wildcardCerts 'Microsoft.Web/certificates@2023-12-01' existing = [for entry in certEntries: {
   name: entry.value
 }]
-var certThumbprintPairs = [for (entry, i) in certEntries: {
+var certIndexPairs = [for (entry, i) in certEntries: {
   key: entry.key
   value: i
 }]
-var certIndexByDomain = !empty(certEntries) ? toObject(certThumbprintPairs, item => item.key, item => item.value) : {}
+var certIndexByDomain = !empty(certEntries) ? toObject(certIndexPairs, item => item.key, item => item.value) : {}
 
 // Environment variables: static config + dynamic shortcuts/primary hosts from Bicep params
 var staticEnvVars = [
