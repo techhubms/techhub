@@ -286,6 +286,34 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
 
+// Readiness health check: verifies Web can reach the API over the network (see ApiHealthCheck).
+// Uses its own short-timeout HttpClient — the health check must fail fast, not wait
+// out TechHubApiClient's generous 3-minute timeout for slow admin operations.
+builder.Services.AddHttpClient<ApiHealthCheck>(client =>
+{
+    client.BaseAddress = new Uri(apiBaseUrl);
+    client.Timeout = TimeSpan.FromSeconds(5);
+})
+.ConfigurePrimaryHttpMessageHandler(sp =>
+{
+    var handler = new SocketsHttpHandler();
+    var env = sp.GetRequiredService<IHostEnvironment>();
+    if (env.IsDevelopment())
+    {
+#pragma warning disable CA5359 // Required for Docker inter-container HTTPS communication in development
+        handler.SslOptions = new System.Net.Security.SslClientAuthenticationOptions
+        {
+            RemoteCertificateValidationCallback = (_, _, _, _) => true
+        };
+#pragma warning restore CA5359
+    }
+
+    return handler;
+});
+
+builder.Services.AddHealthChecks()
+    .AddCheck<ApiHealthCheck>("api-connectivity");
+
 // Rate limiting: protect the public Web surface against excessive requests and bot scraping
 // Loopback exemptions are scoped to Development so that a spoofed X-Forwarded-For: 127.0.0.1
 // cannot bypass rate limiting in production (UseForwardedHeaders runs before UseRateLimiter).

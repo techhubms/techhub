@@ -54,25 +54,29 @@ Healthy
 
 Both API and Web App Service sites configure a single health-check path in their Bicep modules:
 
-| Setting | Value | Purpose | Failure behavior |
-|---------|-------|---------|-----------------|
-| `alwaysOn` | `true` | Keeps the site warm — no cold start / idle unload on Basic tier | N/A |
-| `healthCheckPath` | `/health` | Azure pings this path on the running instance | Instance is taken out of load-balancer rotation, then restarted, after repeated consecutive failures |
+| Setting | Value | Purpose |
+|---------|-------|---------|
+| `alwaysOn` | `true` | Keeps the site warm — no cold start / idle unload on Basic tier |
+| `healthCheckPath` | `/health` | Azure pings this path on the running instance every minute |
 
-Unlike Container Apps' three separate probe types (startup/liveness/readiness), App Service has
-**one** health-check mechanism: it periodically requests `healthCheckPath` and, after enough
-consecutive failures, marks the instance unhealthy (removed from routing) and eventually restarts
-it. Both API and Web point this at `/health` — the same endpoint that waits for database
-migrations and content sync to complete — rather than the DB-agnostic `/alive` endpoint.
+**Actual App Service behavior** (see [Monitor the health of App Service instances](https://learn.microsoft.com/azure/app-service/monitor-instances-health-check)) differs from Container Apps' restart-on-failure model and is more lenient:
+
+- Both `api` and `web` App Service Plans run **Basic B1 with a single instance**. Per Microsoft's own docs, a single-instance app is **never removed from the load balancer** while unhealthy — that would take down the entire site — so a failing `/health` never causes an outage by itself.
+- After **one continuous hour** of unhealthy pings, App Service replaces the instance (a cold restart), capped at one replacement per hour and three per day per plan.
+- With 2+ instances, an unhealthy instance is pulled from rotation after `WEBSITE_HEALTHCHECK_MAXPINGFAILURES` consecutive failures (default 10, i.e. ~10 minutes), then replaced after the same one-hour threshold if it doesn't recover.
+
+Both API and Web point `healthCheckPath` at `/health` — the same endpoint that waits for database
+migrations, content sync, and (for Web) API reachability — rather than the DB-agnostic `/alive`
+endpoint. Microsoft's own guidance recommends this: the health-check path should check the
+app's critical dependencies and return a failure code when they're unavailable.
 
 **Trade-off vs the previous Container Apps model**: pointing the platform health check at `/health`
-(which depends on the database) means a prolonged database outage could eventually cause App
-Service to restart the site, whereas the old Container Apps setup deliberately kept its liveness
-probe DB-agnostic (`/alive`) to avoid a restart storm during DB outages. This is an accepted
-trade-off of the App Service migration — Basic B1 runs a single instance per site, so there is no
-"remove one bad instance from the load balancer while others keep serving" benefit to gain from
-splitting readiness/liveness, and `alwaysOn` combined with the simpler single-probe model was
-judged an acceptable simplification for this app's traffic profile.
+means a prolonged (1+ hour) outage of a critical dependency can eventually cause App Service to
+replace the instance, whereas the old Container Apps setup deliberately kept its liveness probe
+dependency-free (`/alive`) to avoid a faster restart-storm loop. App Service's much longer, rate-limited
+replacement threshold makes this an acceptable trade-off — a single unhealthy instance is never
+pulled from traffic, and replacement is both slow and capped, so it functions more as a
+self-healing safety net than a restart storm risk.
 
 ## Implementation Details
 
@@ -80,7 +84,31 @@ Health checks are implemented using standard ASP.NET Core Health Checks middlewa
 
 - **Liveness Check** (`self`): Registered in `ServiceDefaults/Extensions.cs`, tagged with `"live"`. Checks GC memory pressure — returns unhealthy if memory usage exceeds 95% of the high memory load threshold.
 - **Startup Health Check**: A custom health check tagged with `"ready"` (API only) that waits for database migrations and content synchronization to complete. Included in `/health` but not in `/alive`.
+- **SectionCache Health Check** (Web only): Reports unhealthy until `SectionCache` has been populated from the API at least once. Included in `/health` but not in `/alive`.
+- **API Connectivity Health Check** (`api-connectivity`, Web only): Calls the API's `/alive` endpoint to verify the Web instance can reach the API over the network. Included in `/health` but not in `/alive` — see rationale below.
 - **Aspire Service Defaults**: Maps both `/health` and `/alive` endpoints via `app.MapDefaultEndpoints()`.
+
+### Why Web Checks API Connectivity (and Only `/alive`, Not `/health`)
+
+Web's `SectionCache`/`HeroBannerCache` are populated once at startup and refreshed every 5 minutes,
+but a refresh failure after startup only logs a warning — it never flips Web back to unhealthy
+(`SectionCache.IsReady` is `Sections.Count > 0`, which stays `true` forever once set). Without an
+explicit connectivity check, a broken Web→API network path (VNet integration misconfigured, DNS
+failure, firewall rule change) would never surface in `/health`, and Web would keep serving
+increasingly stale cached data indefinitely with no signal.
+
+`ApiHealthCheck` closes that gap by calling the API's `/alive` endpoint — deliberately **not**
+`/health` — with a short (5s) timeout, independent of `TechHubApiClient`'s 3-minute timeout for
+slow admin operations. Checking `/alive` instead of `/health` keeps the two failure domains
+separate: an API-side database outage is the API's own health concern (already reflected in the
+API's `/health`), and shouldn't also flip Web unhealthy — Web's caches are specifically designed to
+keep serving fine through a brief API/DB blip. `ApiHealthCheck` only fails when Web genuinely
+cannot reach the API process at all.
+
+This is a low-risk addition given App Service's actual health-check semantics (see above): on a
+single-instance Basic B1 plan, `/health` failures never remove the instance from traffic and only
+result in a replacement after a full continuous hour of failures — far longer than any routine API
+deploy or transient blip.
 
 ### Why Liveness Doesn't Check the Database
 
@@ -102,5 +130,7 @@ endpoint for other uses (e.g. manual checks, future load balancer configuration)
 
 - [ServiceDefaults/Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) — Liveness check and endpoint mapping
 - [StartupHealthCheck.cs](../src/TechHub.Api/HealthChecks/StartupHealthCheck.cs) — API startup health check
+- [SectionCacheHealthCheck.cs](../src/TechHub.Web/Services/SectionCacheHealthCheck.cs) — Web readiness health check
+- [ApiHealthCheck.cs](../src/TechHub.Web/Services/ApiHealthCheck.cs) — Web→API connectivity health check
 - [api.bicep](../infra/modules/api.bicep) — API App Service health-check configuration
 - [web.bicep](../infra/modules/web.bicep) — Web App Service health-check configuration

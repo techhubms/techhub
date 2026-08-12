@@ -160,13 +160,27 @@ if ($apiFqdn) {
 
     while ($retryCount -lt $maxRetries -and -not $apiHealthy) {
         $retryCount++
-        $healthResponse = try {
-            Invoke-WebRequest -Uri "https://$apiFqdn/health" -TimeoutSec 10 -UseBasicParsing
-        } catch { $null }
+        $statusCode = $null
+        try {
+            $healthResponse = Invoke-WebRequest -Uri "https://$apiFqdn/health" -TimeoutSec 10 -UseBasicParsing
+            $statusCode = $healthResponse.StatusCode
+        } catch {
+            if ($_.Exception.Response) {
+                $statusCode = [int]$_.Exception.Response.StatusCode
+            }
+        }
 
-        if ($healthResponse -and $healthResponse.StatusCode -eq 200) {
+        if ($statusCode -eq 200) {
             $apiHealthy = $true
             Write-Ok "API health check passed (attempt $retryCount/$maxRetries)"
+        } elseif ($statusCode -eq 403) {
+            # The API only allows inbound traffic from the Web app's VNet integration subnet
+            # (see infra/modules/api.bicep), so a direct request from outside the VNet — e.g. a
+            # GitHub Actions runner or a developer machine — is blocked here even when the API is
+            # healthy. Treat 403 as "health check not possible from this context" and continue;
+            # Wait-ForLiveVersion.ps1's Web /version warmup still validates the full chain.
+            Write-Warn "API health endpoint returned 403 (blocked by VNet access restrictions from this network context); skipping direct health check."
+            $apiHealthy = $true
         } else {
             Write-Detail "API not healthy yet (attempt $retryCount/$maxRetries), waiting 5 seconds..."
             Start-Sleep -Seconds 5
