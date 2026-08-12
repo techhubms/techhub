@@ -29,7 +29,7 @@ The Web app signs users in via OIDC, then uses `ITokenAcquisition` to obtain an 
 
 Both the Web and API projects read from the `AzureAd` configuration section. When `AzureAd:ClientId` is empty, authentication is disabled and admin endpoints allow all requests (local dev without Entra).
 
-### Web App (`src/TechHub.Web/appsettings.json`)
+### Web app (`src/TechHub.Web/appsettings.json`)
 
 | Key | Description |
 |-----|-------------|

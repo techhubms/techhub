@@ -193,8 +193,8 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 
 - Resource Group: `rg-techhub-prod`
 - App Service Plan: `asp-techhub-prod` (Basic B1, shared by API + Web sites)
-- API App: `app-techhub-api-prod`
-- Web App: `app-techhub-web-prod`
+- API app: `app-techhub-api-prod`
+- Web app: `app-techhub-web-prod`
 - PostgreSQL: `psql-techhub-prod`
 - Azure OpenAI: `oai-techhub-prod`
 - Key Vault: `kv-techhub-prod`

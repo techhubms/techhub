@@ -20,10 +20,10 @@ param keyVaultName string = 'kv-techhub-prod'
 @description('App Service Plan name (existing resource, Basic B1, hosts both API and Web sites)')
 param appServicePlanName string = 'asp-techhub-prod'
 
-@description('API Web App name')
+@description('API app name')
 param apiAppName string = 'app-techhub-api-prod'
 
-@description('Web Web App name')
+@description('Web app name')
 param webAppName string = 'app-techhub-web-prod'
 
 @description('API Docker image tag (yyyyMMddHHmmss format)')
@@ -172,7 +172,7 @@ var effectiveAppInsightsConnStr = appInsightsConnectionString == '@existing' ? a
 // App Service sites
 // ============================================================================
 
-// API Web App
+// API app
 module apiApp './modules/api.bicep' = {
   scope: resourceGroup
   name: 'api-${deploymentSuffix}'
@@ -202,7 +202,7 @@ module apiApp './modules/api.bicep' = {
   }
 }
 
-// Web Web App
+// Web app
 module webApp './modules/web.bicep' = {
   scope: resourceGroup
   name: 'web-${deploymentSuffix}'

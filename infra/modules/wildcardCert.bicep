@@ -14,7 +14,7 @@ param keyVaultResourceId string
 param keyVaultSecretName string
 
 // Imports a certificate directly from Key Vault into Microsoft.Web/certificates so it can be
-// SNI-bound to a Web App custom domain (see modules/web.bicep's hostNameBindings).
+// SNI-bound to a Web app custom domain (see modules/web.bicep's hostNameBindings).
 //
 // One-time prerequisite (cannot be expressed in Bicep — run once per tenant/Key Vault):
 // the first-party "Microsoft Azure App Service" service principal (app ID

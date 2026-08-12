@@ -33,8 +33,8 @@ The infrastructure is deployed in **two strictly separated phases**:
 
 **Contains ONLY application deployments:**
 
-- API Web App (Web App for Containers, VNet-integrated, not publicly accessible — reached only via the Web app's `WEBSITES_PORT`/private call)
-- Web Web App (Web App for Containers, public-facing)
+- API app (Web App for Containers, VNet-integrated; not publicly accessible — access restrictions allow inbound calls only from the Web app's VNet integration subnet)
+- Web app (Web App for Containers, public-facing)
 
 **No infrastructure resources.** Phase 2 reads from Key Vault secrets created in Phase 1.
 
@@ -141,7 +141,7 @@ $env:POSTGRES_ADMIN_PASSWORD = "<password>"
 
 - **PostgreSQL** - App Service sites use `DefaultAzureCredential` with passwordless connection string
 - **Azure AI Foundry (OpenAI)** - Apps use Entra token auth instead of API keys
-- **Key Vault** - App Service sites reference secrets via `keyVaultUrl` (Key Vault references) with managed identity
+- **Key Vault** - App Service sites reference secrets via Key Vault reference app settings (`@Microsoft.KeyVault(SecretUri=...)`) with managed identity
 - **Azure Communication Services** - EmailClient uses managed identity instead of connection string
 
 ### 🔧 When Adding New Azure Services

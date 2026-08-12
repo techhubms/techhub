@@ -90,8 +90,8 @@ Write-Host "===============================================================" -Fo
 Write-Host "  TechHub Application Deployment" -ForegroundColor White
 Write-Host "  Tag                 : $Tag" -ForegroundColor Gray
 Write-Host "  Registry            : $registryServer" -ForegroundColor Gray
-Write-Host "  API Web App         : $apiAppName" -ForegroundColor Gray
-Write-Host "  Web App             : $webAppName" -ForegroundColor Gray
+Write-Host "  API app             : $apiAppName" -ForegroundColor Gray
+Write-Host "  Web app             : $webAppName" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 
 # ============================================================================
@@ -151,7 +151,7 @@ $apiFqdn = az webapp show `
     --name $apiAppName `
     --resource-group $resourceGroup `
     --query defaultHostName `
-    -o tsv 2>$null
+    -o tsv --only-show-errors
 
 if ($apiFqdn) {
     $maxRetries = 30
@@ -205,10 +205,10 @@ $webFqdn = az webapp show `
     --name $webAppName `
     --resource-group $resourceGroup `
     --query defaultHostName `
-    -o tsv 2>$null
+    -o tsv --only-show-errors
 
 if ([string]::IsNullOrWhiteSpace($webFqdn)) {
-    Write-Fail "Could not retrieve Web App hostname"
+    Write-Fail "Could not retrieve Web app hostname"
     exit 1
 }
 

@@ -56,15 +56,17 @@ param newsletterUnsubscribeSecretName string = ''
 @description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
 param aspNetCoreEnvironment string = 'Production'
 
-@description('Tags applied to the Web App')
+@description('Tags applied to the API app')
 param tags object = {}
 
 var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-api:${imageTag}'
 var hasAcsEndpoint = !empty(acsEndpointSecretName)
 var hasAcsSenderAddress = !empty(acsSenderAddressSecretName)
-var newsletterWebsiteBaseUrl = !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${siteName}.azurewebsites.net'
+// All current callers pass a non-empty webFqdns — index directly so a caller mistake fails fast
+// instead of silently producing an invalid azurewebsites.net newsletter link.
+var newsletterWebsiteBaseUrl = 'https://${webFqdns[0]}'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
-var corsOrigins = union(['https://*.azurewebsites.net'], customOrigins)
+var corsOrigins = customOrigins
 var corsEnvVars = [for (fqdn, i) in webFqdns: {
   name: 'Cors__AllowedOrigins__${i}'
   value: 'https://${fqdn}'

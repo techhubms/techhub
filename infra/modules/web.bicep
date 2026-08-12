@@ -42,7 +42,7 @@ param azureAdClientId string = ''
 @description('Google Analytics Measurement ID (e.g. G-XXXXXXXXXX). Pass empty string to disable GA telemetry (PR preview environments).')
 param googleAnalyticsMeasurementId string = ''
 
-@description('Tags applied to the Web App')
+@description('Tags applied to the Web app')
 param tags object = {}
 
 @description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')

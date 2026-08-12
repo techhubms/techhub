@@ -143,7 +143,7 @@ function Get-PostgresServerExists {
 function Write-WebAppDiagnostics {
     <#
     .SYNOPSIS
-        Dumps the current site state and a short tail of container logs for a Web App.
+        Dumps the current site state and a short tail of container logs for an App Service site.
         Used when warmup fails to help triage image-pull errors, crash loops, or startup failures.
     #>
     param([string]$AppName, [string]$ResourceGroup)
@@ -195,8 +195,8 @@ Write-Host "  Action      : $Action" -ForegroundColor Gray
 if ($Tag) {
     Write-Host "  Tag         : $Tag" -ForegroundColor Gray
 }
-Write-Host "  API App     : $apiAppName" -ForegroundColor Gray
-Write-Host "  Web App     : $webAppName" -ForegroundColor Gray
+Write-Host "  API app     : $apiAppName" -ForegroundColor Gray
+Write-Host "  Web app     : $webAppName" -ForegroundColor Gray
 Write-Host "  PostgreSQL  : $prPostgresServer" -ForegroundColor Gray
 Write-Host "  Resource RG : $prodRG" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
@@ -628,8 +628,8 @@ Write-Host "===============================================================" -Fo
 Write-Host "  PR Preview Environment Ready" -ForegroundColor Green
 Write-Host "  PR Number   : #$PrNumber" -ForegroundColor Gray
 Write-Host "  Tag         : $Tag" -ForegroundColor Gray
-Write-Host "  API App     : $apiAppName" -ForegroundColor Gray
-Write-Host "  Web App     : $webAppName" -ForegroundColor Gray
+Write-Host "  API app     : $apiAppName" -ForegroundColor Gray
+Write-Host "  Web app     : $webAppName" -ForegroundColor Gray
 Write-Host "  PostgreSQL  : $prPostgresServer" -ForegroundColor Gray
 Write-Host "  Web URL     : https://$webFqdn" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan

@@ -79,7 +79,7 @@ inbound access rules.
 The API backend is intentionally not publicly accessible. No path to the API exists from the
 internet — not via the custom domains, not via its default `*.azurewebsites.net` hostname. The Web
 Blazor frontend calls the API using its `ApiBaseUrl` app setting; with `vnetRouteAllEnabled: true`
-on the Web App, all outbound traffic (including API calls) is sourced from the Web site's VNet
+on the Web app, all outbound traffic (including API calls) is sourced from the Web site's VNet
 integration subnet. The API's `ipSecurityRestrictions` allow only that subnet and deny everything
 else by default — so while the API still has a public `*.azurewebsites.net` hostname (there is no
 private endpoint on the API), the IP restriction policy effectively blocks all public access.

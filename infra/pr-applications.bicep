@@ -78,7 +78,7 @@ resource prManagedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@202
 // Derived values
 // ============================================================================
 
-// Web App default hostnames are deterministic (<name>.azurewebsites.net, global — not tied to
+// Web app default hostnames are deterministic (<name>.azurewebsites.net, global — not tied to
 // any environment/region domain), so the expected Web FQDN can be computed directly, without a
 // Container-Apps-style environment default-domain lookup.
 var webExpectedFqdn = '${webAppName}.azurewebsites.net'

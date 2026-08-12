@@ -71,7 +71,7 @@ Deploy with:
 Wildcard certificates from Key Vault are imported into the production App Service Plan and bound to custom domains on each site (API + Web):
 
 - **Certificate loading**: `infra/modules/wildcardCert.bicep` imports the PFX from Key Vault into `Microsoft.Web/certificates`, scoped to the App Service Plan
-- **Key Vault access**: `infra/modules/kvSecretsUserRole.bicep` grants the managed identity Key Vault Secrets User role so it can read certificate secrets
+- **Key Vault access**: Certificate import is performed by the first-party "Microsoft Azure App Service" service principal, not the app's managed identity — it must be granted the Key Vault Certificate User and Key Vault Secrets User roles once per Key Vault (see the prerequisite note in `infra/modules/wildcardCert.bicep`)
 - **Domain binding**: `infra/modules/web.bicep` uses `sslState: 'SniEnabled'` with the wildcard cert thumbprint for all custom domains. Every domain must have a matching wildcard certificate configured — there is no automatic fallback. If a certificate is missing for a domain, deployment will fail, ensuring misconfigurations are caught immediately
 - **Configuration**: Set `wildcardCertNames` in environment parameter files (e.g., `{ "hub.ms": "wildcard-hub-ms" }`)
 
