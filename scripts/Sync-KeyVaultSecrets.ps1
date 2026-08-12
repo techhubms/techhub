@@ -82,7 +82,8 @@ function Set-KvSecret {
     param(
         [Parameter(Mandatory = $true)][string]$Name,
         [Parameter(Mandatory = $true)][AllowEmptyString()][string]$Value,
-        [Parameter(Mandatory = $true)][string]$Description
+        [Parameter(Mandatory = $true)][string]$Description,
+        [string]$ContentType
     )
 
     if ([string]::IsNullOrWhiteSpace($Value)) {
@@ -107,11 +108,12 @@ function Set-KvSecret {
     $tmpFile = [System.IO.Path]::GetTempFileName()
     try {
         [System.IO.File]::WriteAllText($tmpFile, $Value)
-        az keyvault secret set `
-            --vault-name $KeyVaultName `
-            --name $Name `
-            --file $tmpFile `
-            --output none
+        $setArgs = @('keyvault', 'secret', 'set', '--vault-name', $KeyVaultName, '--name', $Name, '--file', $tmpFile, '--output', 'none')
+        if ($ContentType) {
+            # Required for Microsoft.Web/certificates to recognize this secret as an importable PFX.
+            $setArgs += @('--content-type', $ContentType)
+        }
+        az @setArgs
     }
     finally {
         Remove-Item $tmpFile -Force -ErrorAction SilentlyContinue
@@ -224,8 +226,8 @@ try {
     Set-KvSecret -Name "techhub-prod-newsletter-acs-endpoint"        -Value $newsletterAcsEndpoint       -Description 'ACS email endpoint URL'
     Set-KvSecret -Name "techhub-prod-newsletter-unsubscribe-secret"  -Value $newsletterUnsubscribeSecret -Description 'HMAC secret for newsletter unsubscribe/confirm URLs'
     Set-KvSecret -Name "techhub-prod-postgres-admin-password"        -Value $postgresAdminPassword       -Description 'PostgreSQL admin password'
-    Set-KvSecret -Name "wildcard-hub-ms"                             -Value $wildcardHubMs               -Description 'Wildcard TLS certificate (*.hub.ms)'
-    Set-KvSecret -Name "wildcard-xebia-ms"                           -Value $wildcardXebiaMs             -Description 'Wildcard TLS certificate (*.xebia.ms)'
+    Set-KvSecret -Name "wildcard-hub-ms"                             -Value $wildcardHubMs               -Description 'Wildcard TLS certificate (*.hub.ms)'   -ContentType 'application/x-pkcs12'
+    Set-KvSecret -Name "wildcard-xebia-ms"                           -Value $wildcardXebiaMs             -Description 'Wildcard TLS certificate (*.xebia.ms)' -ContentType 'application/x-pkcs12'
 
     Write-Host ""
     Write-Host "All secrets synchronised into '$($KeyVaultName)'." -ForegroundColor Green

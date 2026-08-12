@@ -250,15 +250,32 @@ if ($Mode -eq 'deploy') {
 
         foreach ($certName in $missingCertNames) {
             Write-Detail "Importing missing certificate: $certName"
-            New-AzResourceGroupDeployment `
-                -ResourceGroupName $resourceGroup `
-                -TemplateFile (Join-Path $workspaceRoot "infra/modules/wildcardCert.bicep") `
-                -location $appServicePlan.Location `
-                -appServicePlanId $appServicePlan.ResourceId `
-                -certResourceName $certName `
-                -keyVaultResourceId $keyVault.ResourceId `
-                -keyVaultSecretName $certName `
-                -ErrorAction Stop | Out-Null
+            # Role assignments are eventually consistent — the grant above can take up to a
+            # couple of minutes to propagate before Key Vault actually enforces it, so the import
+            # can fail with "the service does not have access" even though the RBAC grant itself
+            # succeeded. Retry instead of failing the whole deploy on this specific error.
+            $maxAttempts = 6
+            $retryDelaySecs = 20
+            for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {
+                try {
+                    New-AzResourceGroupDeployment `
+                        -ResourceGroupName $resourceGroup `
+                        -TemplateFile (Join-Path $workspaceRoot "infra/modules/wildcardCert.bicep") `
+                        -location $appServicePlan.Location `
+                        -appServicePlanId $appServicePlan.ResourceId `
+                        -certResourceName $certName `
+                        -keyVaultResourceId $keyVault.ResourceId `
+                        -keyVaultSecretName $certName `
+                        -ErrorAction Stop | Out-Null
+                    break
+                } catch {
+                    if ($_.Exception.Message -notmatch 'does not have access' -or $attempt -eq $maxAttempts) {
+                        throw
+                    }
+                    Write-Warn "Key Vault access not yet propagated for certificate '$certName' (attempt $attempt/$maxAttempts) — retrying in $retryDelaySecs seconds"
+                    Start-Sleep -Seconds $retryDelaySecs
+                }
+            }
             Write-Ok "Imported certificate: $certName"
         }
     }

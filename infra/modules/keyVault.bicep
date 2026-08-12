@@ -37,7 +37,11 @@ resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
     publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
     networkAcls: {
       defaultAction: 'Deny'
-      bypass: 'None'
+      // AzureServices: the App Service certificate provider (Microsoft.Web/certificates import)
+      // is a control-plane operation that runs outside the customer's VNet, so it can only reach
+      // the public endpoint — 'None' silently firewall-blocks it (surfaced as the same generic
+      // "does not have access" error as an RBAC denial). RBAC is still fully enforced either way.
+      bypass: 'AzureServices'
       ipRules: [for ip in adminIpAddresses: { value: ip }]
     }
   }
