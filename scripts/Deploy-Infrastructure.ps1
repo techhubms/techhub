@@ -227,7 +227,10 @@ if ($Mode -eq 'whatif') {
 # must be deleted before the subnet can be freed.
 if ($Mode -eq 'deploy') {
     Write-Step "Removing decommissioned Container Apps resources"
-    $containerApps = @(Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/containerApps' -ErrorAction SilentlyContinue)
+    # No -ErrorAction SilentlyContinue: listing zero resources is not an error, and swallowing
+    # real errors here (e.g. auth/RBAC issues) would let the deploy proceed and fail later with
+    # the same subnet-in-use root cause.
+    $containerApps = @(Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/containerApps')
     if ($containerApps.Count -eq 0) {
         Write-Detail "No Container Apps present (already removed)"
     } else {
@@ -238,7 +241,7 @@ if ($Mode -eq 'deploy') {
     }
 
     $containerAppsEnvName = "cae-techhub-prod"
-    $containerAppsEnv = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/managedEnvironments' -Name $containerAppsEnvName -ErrorAction SilentlyContinue
+    $containerAppsEnv = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/managedEnvironments' -Name $containerAppsEnvName
     if ($containerAppsEnv) {
         Remove-AzResource -ResourceId $containerAppsEnv.ResourceId -Force -ErrorAction Stop | Out-Null
         Write-Ok "Deleted Container Apps Environment: $containerAppsEnvName"
