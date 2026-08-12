@@ -223,16 +223,20 @@ if ($Mode -eq 'deploy') {
         # the prerequisite note in infra/modules/wildcardCert.bicep). This is normally a one-time
         # manual grant, but a freshly rebuilt Key Vault won't have it yet — assign it here so the
         # import below doesn't fail with "the service does not have access to ... Key Vault".
+        # Use -ApplicationId (not Get-AzADServicePrincipal) so Azure resolves the service principal
+        # server-side — the deploy pipeline's identity has no Microsoft Graph read permissions.
         Write-Detail "Ensuring App Service certificate provider has Key Vault access"
-        $appServicePrincipal = Get-AzADServicePrincipal -ApplicationId 'abfa0a7c-a6b6-4736-8310-5855508787cd' -ErrorAction Stop
         $requiredRoleIds = @(
             'db79e9a7-68ee-4b58-9aeb-b90e7c24fcba' # Key Vault Certificate User
             '4633458b-17de-408a-b874-0445c86b69e6' # Key Vault Secrets User
         )
         foreach ($roleId in $requiredRoleIds) {
-            $existingAssignment = Get-AzRoleAssignment -ObjectId $appServicePrincipal.Id -RoleDefinitionId $roleId -Scope $keyVault.ResourceId -ErrorAction SilentlyContinue
-            if (-not $existingAssignment) {
-                New-AzRoleAssignment -ObjectId $appServicePrincipal.Id -RoleDefinitionId $roleId -Scope $keyVault.ResourceId -ErrorAction Stop | Out-Null
+            try {
+                New-AzRoleAssignment -ApplicationId 'abfa0a7c-a6b6-4736-8310-5855508787cd' -RoleDefinitionId $roleId -Scope $keyVault.ResourceId -ErrorAction Stop | Out-Null
+            } catch {
+                if ($_.Exception.Message -notmatch 'already exists|RoleAssignmentExists') {
+                    throw
+                }
             }
         }
 
