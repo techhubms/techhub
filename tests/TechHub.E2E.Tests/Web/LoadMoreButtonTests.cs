@@ -17,6 +17,21 @@ public class LoadMoreButtonTests : PlaywrightTestBase
 
     public LoadMoreButtonTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
+    /// <summary>
+    /// Builds a "from"/"to" query string spanning the full 3-year window the date-range
+    /// slider supports. The app's default filter (applied when no from/to is given) only
+    /// shows the last 90 days, but the local dev database is a periodically-refreshed
+    /// snapshot whose newest content can lag "today" by more than 90 days. Using the full
+    /// 3-year window keeps /ai/blogs (267 items) reliably above BatchSize (40) regardless
+    /// of how stale the local snapshot is.
+    /// </summary>
+    private static string WideDateRangeQuery()
+    {
+        var to = DateOnly.FromDateTime(DateTime.Today);
+        var from = to.AddYears(-3);
+        return $"from={from:yyyy-MM-dd}&to={to:yyyy-MM-dd}";
+    }
+
     [Fact]
     public async Task ContentGrid_InitialLoad_ShowsItems()
     {
@@ -54,10 +69,10 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     [Fact]
     public async Task LoadMoreButton_WhenClicked_AppendsMoreItems()
     {
-        // Use ai/blogs (47 items) — deterministically exceeds BatchSize (40) so the
-        // Load more button is always present and the test can never silently pass on a
-        // collection that happens to fit in a single batch.
-        await Page.GotoRelativeAsync("/ai/blogs");
+        // Use ai/blogs (267 items) with a wide date range — deterministically exceeds
+        // BatchSize (40) so the Load more button is always present and the test can
+        // never silently pass on a collection that happens to fit in a single batch.
+        await Page.GotoRelativeAsync($"/ai/blogs?{WideDateRangeQuery()}");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
@@ -78,9 +93,9 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     [Fact]
     public async Task LoadMoreButton_WhenClicked_ItemsAreAppendedNotReplaced()
     {
-        // Use ai/blogs (47 items) — deterministically exceeds BatchSize (40) so the
-        // Load more button is always present.
-        await Page.GotoRelativeAsync("/ai/blogs");
+        // Use ai/blogs (267 items) with a wide date range — deterministically exceeds
+        // BatchSize (40) so the Load more button is always present.
+        await Page.GotoRelativeAsync($"/ai/blogs?{WideDateRangeQuery()}");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
@@ -156,9 +171,10 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     {
         // Use /ai/blogs because this collection is expected to exceed one batch (BatchSize=40),
         // and tag=ai keeps the dataset broad enough to exercise a real Load more click path.
+        // A wide date range guards against the default 90-day filter returning too few items.
         const string Tag = "ai";
 
-        await Page.GotoRelativeAsync($"/ai/blogs?tags={Uri.EscapeDataString(Tag)}");
+        await Page.GotoRelativeAsync($"/ai/blogs?tags={Uri.EscapeDataString(Tag)}&{WideDateRangeQuery()}");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
@@ -199,7 +215,8 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     {
         // Use /ai/blogs because this collection is expected to exceed one batch (BatchSize=40),
         // so this test can reliably load an additional batch before navigating away.
-        await Page.GotoRelativeAsync("/ai/blogs");
+        // A wide date range guards against the default 90-day filter returning too few items.
+        await Page.GotoRelativeAsync($"/ai/blogs?{WideDateRangeQuery()}");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");

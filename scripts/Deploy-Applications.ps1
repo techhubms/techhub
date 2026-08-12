@@ -1,11 +1,11 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Deploys TechHub Container Apps to Azure (Phase 2).
+    Deploys TechHub App Service sites to Azure (Phase 2).
 
 .DESCRIPTION
-    Deploys Container Apps using Bicep templates. Deploys API + Web container apps with the
-    specified image tag. The ACS endpoint is resolved automatically from Key Vault at deploy time
+    Deploys the API + Web App Service sites using Bicep templates, with the specified image tag.
+    The ACS endpoint is resolved automatically from Key Vault at deploy time
     (stored there by Deploy-Infrastructure.ps1).
 
     Phase 1 (infrastructure) must be deployed first — this script references existing resources
@@ -25,11 +25,11 @@
 
 .EXAMPLE
     ./scripts/Deploy-Applications.ps1 -Mode whatif -ImageTag "20260501120000"
-    Preview what changes would be made to Container Apps.
+    Preview what changes would be made to the App Service sites.
 
 .EXAMPLE
     ./scripts/Deploy-Applications.ps1 -Mode deploy -ImageTag "20260501120000"
-    Deploy Container Apps with the given image tag.
+    Deploy the App Service sites with the given image tag.
 
 .EXAMPLE
     ./scripts/Deploy-Applications.ps1 -Mode validate -ImageTag "20260501120000"
@@ -195,7 +195,7 @@ if ($Mode -eq 'whatif') {
 
 # Step 3: Deploy
 if ($Mode -eq 'deploy') {
-    Write-Step "Deploying Container Apps"
+    Write-Step "Deploying App Service sites"
 
     $savedVerbose = $VerbosePreference
     $VerbosePreference = 'Continue'
@@ -207,12 +207,12 @@ if ($Mode -eq 'deploy') {
             -TemplateParameterFile $appsParamsFile `
             -SkipTemplateParameterPrompt
     } catch {
-        Write-Fail "Container Apps deployment failed: $_"
+        Write-Fail "App Service sites deployment failed: $_"
         exit 1
     } finally {
         $VerbosePreference = $savedVerbose
     }
-    Write-Ok "Container Apps deployed successfully"
+    Write-Ok "App Service sites deployed successfully"
 }
 
 # ============================================================================

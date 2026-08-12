@@ -142,12 +142,13 @@ builder.Services.AddSingleton<SectionCache>();
 builder.Services.AddHostedService<SectionCacheRefreshService>();
 
 // Readiness health check: the web instance is not ready to serve traffic until the
-// SectionCache has been populated from the API. Container Apps uses /health as its
-// readiness probe, so a cold instance will not receive traffic until the cache is warm.
+// SectionCache has been populated from the API. App Service uses /health as its
+// health-check path, so a cold instance will not receive traffic until the cache is warm.
 // This is deliberately NOT tagged "live" — a refresh failure after startup should not
 // restart the container, only temporarily remove it from the load balancer.
 builder.Services.AddHealthChecks()
-    .AddCheck<SectionCacheHealthCheck>("section-cache");
+    .AddCheck<SectionCacheHealthCheck>("section-cache")
+    .AddCheck<ApiHealthCheck>("api-connectivity");
 
 // Hero banner cache for immediate rendering without per-request API calls
 builder.Services.AddSingleton<HeroBannerCache>();
@@ -286,6 +287,31 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
 
+// Readiness health check: verifies Web can reach the API over the network (see ApiHealthCheck).
+// Uses its own short-timeout HttpClient — the health check must fail fast, not wait
+// out TechHubApiClient's generous 3-minute timeout for slow admin operations.
+builder.Services.AddHttpClient<ApiHealthCheck>(client =>
+{
+    client.BaseAddress = new Uri(apiBaseUrl);
+    client.Timeout = TimeSpan.FromSeconds(5);
+})
+.ConfigurePrimaryHttpMessageHandler(sp =>
+{
+    var handler = new SocketsHttpHandler();
+    var env = sp.GetRequiredService<IHostEnvironment>();
+    if (env.IsDevelopment())
+    {
+#pragma warning disable CA5359 // Required for Docker inter-container HTTPS communication in development
+        handler.SslOptions = new System.Net.Security.SslClientAuthenticationOptions
+        {
+            RemoteCertificateValidationCallback = (_, _, _, _) => true
+        };
+#pragma warning restore CA5359
+    }
+
+    return handler;
+});
+
 // Rate limiting: protect the public Web surface against excessive requests and bot scraping
 // Loopback exemptions are scoped to Development so that a spoofed X-Forwarded-For: 127.0.0.1
 // cannot bypass rate limiting in production (UseForwardedHeaders runs before UseRateLimiter).
@@ -350,8 +376,8 @@ builder.Services.AddRateLimiter(options =>
     });
     // Note: Blazor Server SignalR circuits (/_blazor) cannot be rate-limited via endpoint
     // metadata because they go through the Blazor hub middleware, not endpoint routing.
-    // SignalR concurrency is instead managed by the SignalR MaximumParallelInvocationsPerClient
-    // and Azure Container Apps scaling rules at the infrastructure level.
+    // SignalR concurrency is instead bounded by the SignalR MaximumParallelInvocationsPerClient
+    // setting and the App Service Plan's single-instance capacity (no autoscale on Basic B1).
 });
 
 var app = builder.Build();
@@ -408,10 +434,10 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// Trust X-Forwarded-Proto and X-Forwarded-For from the Azure Container Apps reverse proxy.
+// Trust X-Forwarded-Proto and X-Forwarded-For from the Azure App Service reverse proxy.
 // Without this, ASP.NET Core sees the inner HTTP request and builds OIDC redirect URIs
 // with http:// instead of https://, causing AADSTS50011 redirect URI mismatch errors.
-// KnownIPNetworks/KnownProxies are cleared because Azure Container Apps proxies from
+// KnownIPNetworks/KnownProxies are cleared because Azure App Service proxies from
 // internal IPs that are not in the default loopback-only trusted list.
 var forwardedHeadersOptions = new ForwardedHeadersOptions
 {

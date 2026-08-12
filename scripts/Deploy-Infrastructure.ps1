@@ -7,7 +7,7 @@
     Deploys base platform infrastructure using Bicep templates: networking, identity, Key Vault,
     PostgreSQL, Azure AI Foundry, Azure Communication Services, monitoring, and governance.
 
-    Does NOT deploy Container Apps — use Deploy-Applications.ps1 for that.
+    Does NOT deploy the API/Web App Service sites — use Deploy-Applications.ps1 for that.
 
     Can be run locally or from GitHub Actions workflows.
 

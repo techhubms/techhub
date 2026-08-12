@@ -4,10 +4,11 @@
     Syncs application secrets from env vars into the production Tech Hub Key Vault.
 
 .DESCRIPTION
-    Tech Hub Container Apps reference secrets via `keyVaultUrl` instead of inline
-    ARM values (see infra/modules/api.bicep and infra/modules/web.bicep). This
-    script pushes the current values from environment variables into the production
-    Key Vault using Azure CLI, so the Bicep deploy can reference them.
+    Tech Hub's API and Web App Service sites reference secrets via `@Microsoft.KeyVault(...)`
+    app-setting values instead of inline ARM values (see infra/modules/api.bicep and
+    infra/modules/web.bicep). This script pushes the current values from environment
+    variables into the production Key Vault using Azure CLI, so the Bicep deploy can
+    reference them.
 
     Secrets written:
         techhub-prod-aad-client-secret           — Entra client secret
@@ -206,7 +207,7 @@ try {
 
     Write-Host ""
     Write-Host "All secrets synchronised into '$($KeyVaultName)'." -ForegroundColor Green
-    Write-Host "Container Apps pick up new values on next revision. Restart a revision to apply immediately." -ForegroundColor Yellow
+    Write-Host "App Service sites pick up new Key Vault reference values automatically (periodic refresh) — restart the site to apply immediately." -ForegroundColor Yellow
 }
 catch {
     Write-Error "Sync-KeyVaultSecrets.ps1 failed: $($_.Exception.Message)"

@@ -30,7 +30,7 @@ param tags object = {}
 // - Application Insights JS SDK sends browser (RUM/client-side) telemetry directly from end-user
 //   browsers on the public internet. Browsers cannot reach our VNet, so ingestion MUST stay public
 //   for that telemetry to arrive at all — an AMPLS would not let us close it.
-// - Server-side telemetry (Container Apps) would be the only traffic that could move to a private
+// - Server-side telemetry (App Service sites) would be the only traffic that could move to a private
 //   path via AMPLS, but ingestion still has to stay public for the browser path above, so the
 //   security win is small (marginally less public egress) relative to the added cost/complexity
 //   (~$7-8/month private endpoint + DNS zones + AMPLS resource).

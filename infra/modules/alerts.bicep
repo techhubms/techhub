@@ -2,7 +2,6 @@
 // - App Insights: elevated exception rate + failed request count
 // - Postgres Flexible Server: CPU saturation + connection count
 // - AI Foundry (Cognitive Services account): client errors (429/5xx)
-// - Container Apps: replica restart storms
 //
 // All alerts notify the shared action group.
 
@@ -17,9 +16,6 @@ param actionGroupId string
 
 @description('Application Insights resource ID')
 param appInsightsId string
-
-@description('Log Analytics workspace ID (used for log query alerts)')
-param logAnalyticsWorkspaceId string
 
 @description('PostgreSQL Flexible Server resource ID')
 param postgresServerId string
@@ -207,45 +203,10 @@ resource openAiErrorsAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
   }
 }
 
-// --- Container Apps: replica restart storm (log query alert via Log Analytics) ---
-// Detects repeated container restarts indicating a crash loop.
-resource containerRestartAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-preview' = {
-  name: 'alert-${environmentName}-container-restarts'
-  location: location
-  tags: tags
-  properties: {
-    displayName: 'Container App restart storm (${environmentName})'
-    description: 'Fires when a Container App revision restarts 5+ times within 15 minutes.'
-    severity: severityMedium
-    enabled: true
-    evaluationFrequency: 'PT5M'
-    windowSize: 'PT15M'
-    scopes: [logAnalyticsWorkspaceId]
-    criteria: {
-      allOf: [
-        {
-          query: 'ContainerAppSystemLogs\n| where Reason in ("StartupProbeFailed", "LivenessProbeFailed", "ContainerCrashed", "Killing")\n| summarize restartCount = count() by ContainerAppName, RevisionName\n| where restartCount >= 5'
-          timeAggregation: 'Count'
-          operator: 'GreaterThan'
-          threshold: 0
-          failingPeriods: {
-            numberOfEvaluationPeriods: 1
-            minFailingPeriodsToAlert: 1
-          }
-        }
-      ]
-    }
-    actions: {
-      actionGroups: [actionGroupId]
-    }
-  }
-}
-
 output alertIds string[] = [
   failedRequestsAlert.id
   exceptionsAlert.id
   postgresCpuAlert.id
   postgresConnAlert.id
   openAiErrorsAlert.id
-  containerRestartAlert.id
 ]
