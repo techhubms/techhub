@@ -147,7 +147,8 @@ builder.Services.AddHostedService<SectionCacheRefreshService>();
 // This is deliberately NOT tagged "live" — a refresh failure after startup should not
 // restart the container, only temporarily remove it from the load balancer.
 builder.Services.AddHealthChecks()
-    .AddCheck<SectionCacheHealthCheck>("section-cache");
+    .AddCheck<SectionCacheHealthCheck>("section-cache")
+    .AddCheck<ApiHealthCheck>("api-connectivity");
 
 // Hero banner cache for immediate rendering without per-request API calls
 builder.Services.AddSingleton<HeroBannerCache>();
@@ -310,9 +311,6 @@ builder.Services.AddHttpClient<ApiHealthCheck>(client =>
 
     return handler;
 });
-
-builder.Services.AddHealthChecks()
-    .AddCheck<ApiHealthCheck>("api-connectivity");
 
 // Rate limiting: protect the public Web surface against excessive requests and bot scraping
 // Loopback exemptions are scoped to Development so that a spoofed X-Forwarded-For: 127.0.0.1

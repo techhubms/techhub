@@ -23,7 +23,9 @@ public class ApiHealthCheck(HttpClient httpClient, ILogger<ApiHealthCheck> logge
                 ? HealthCheckResult.Healthy()
                 : HealthCheckResult.Unhealthy($"API returned {(int)response.StatusCode} {response.StatusCode}");
         }
-        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
+        // Only treat cancellation as unhealthy when it's the HttpClient's own timeout firing;
+        // caller-triggered cancellation (app shutdown, health-check timeout) must propagate.
+        catch (Exception ex) when (ex is HttpRequestException || (ex is TaskCanceledException && !cancellationToken.IsCancellationRequested))
         {
             logger.LogWarning(ex, "API connectivity health check failed");
             return HealthCheckResult.Unhealthy("Unable to reach API", ex);

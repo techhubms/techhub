@@ -52,6 +52,25 @@ public class ApiHealthCheckTests
         result.Exception.Should().BeOfType<HttpRequestException>();
     }
 
+    [Fact]
+    public async Task CheckHealthAsync_Propagates_WhenCallerCancels()
+    {
+        using var cts = new CancellationTokenSource();
+        using var httpClient = new HttpClient(new StubHandler(_ =>
+        {
+            cts.Cancel();
+            throw new TaskCanceledException();
+        }))
+        {
+            BaseAddress = new Uri("https://localhost:5001")
+        };
+        var sut = new ApiHealthCheck(httpClient, NullLogger<ApiHealthCheck>.Instance);
+
+        var act = () => sut.CheckHealthAsync(new HealthCheckContext(), cts.Token);
+
+        await act.Should().ThrowAsync<TaskCanceledException>();
+    }
+
     private sealed class StubHandler(Func<HttpRequestMessage, HttpResponseMessage> responder) : HttpMessageHandler
     {
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
