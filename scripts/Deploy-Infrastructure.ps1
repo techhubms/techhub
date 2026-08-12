@@ -241,12 +241,20 @@ if ($Mode -eq 'deploy') {
     }
 
     $containerAppsEnvName = "cae-techhub-prod"
-    $containerAppsEnv = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/managedEnvironments' -Name $containerAppsEnvName
-    if ($containerAppsEnv) {
-        Remove-AzResource -ResourceId $containerAppsEnv.ResourceId -Force -ErrorAction Stop | Out-Null
-        Write-Ok "Deleted Container Apps Environment: $containerAppsEnvName"
-    } else {
-        Write-Detail "Container Apps Environment not present (already removed): $containerAppsEnvName"
+    try {
+        # Unlike the containerApps list above, Get-AzResource with a Name+ResourceType filter
+        # resolves straight to a GET on that resource ID and throws a terminating 404 once the
+        # environment has already been deleted (e.g. by a previous run) — SilentlyContinue is
+        # needed here so that expected "already removed" runs don't fail the whole deployment.
+        $containerAppsEnv = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/managedEnvironments' -Name $containerAppsEnvName -ErrorAction SilentlyContinue
+        if ($containerAppsEnv) {
+            Remove-AzResource -ResourceId $containerAppsEnv.ResourceId -Force -ErrorAction Stop | Out-Null
+            Write-Ok "Deleted Container Apps Environment: $containerAppsEnvName"
+        } else {
+            Write-Detail "Container Apps Environment not present (already removed): $containerAppsEnvName"
+        }
+    } catch {
+        Write-Warn "Could not check/remove Container Apps Environment '$containerAppsEnvName': $_"
     }
 }
 
