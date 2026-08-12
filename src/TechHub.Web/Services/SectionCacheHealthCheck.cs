@@ -7,7 +7,9 @@ namespace TechHub.Web.Services;
 /// Readiness health check for <see cref="SectionCache"/>.
 /// Reports <see cref="HealthCheckResult.Unhealthy"/> until the cache has been populated
 /// from the API at least once. App Service uses <c>/health</c> as its health-check probe,
-/// so a cold instance will not receive traffic until this check passes.
+/// but on this single-instance Basic plan it never removes the instance from rotation for
+/// a failing probe — it only replaces the instance after a full continuous hour of
+/// failures (see docs/health-checks.md). This check mainly surfaces a monitoring signal.
 /// </summary>
 public class SectionCacheHealthCheck(SectionCache sectionCache) : IHealthCheck
 {

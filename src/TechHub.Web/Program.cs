@@ -141,11 +141,11 @@ builder.Services.AddSingleton<SectionCache>();
 // Background service to periodically refresh the SectionCache from the API
 builder.Services.AddHostedService<SectionCacheRefreshService>();
 
-// Readiness health check: the web instance is not ready to serve traffic until the
-// SectionCache has been populated from the API. App Service uses /health as its
-// health-check path, so a cold instance will not receive traffic until the cache is warm.
-// This is deliberately NOT tagged "live" — a refresh failure after startup should not
-// restart the container, only temporarily remove it from the load balancer.
+// Readiness health check: reports whether SectionCache has been populated from the API.
+// Included in /health (not tagged "live") — on this single-instance Basic plan, App Service
+// never removes the instance from rotation for a failing /health; it only replaces the
+// instance after a full continuous hour of failures (see docs/health-checks.md), so this
+// mainly surfaces a monitoring signal rather than gating traffic.
 builder.Services.AddHealthChecks()
     .AddCheck<SectionCacheHealthCheck>("section-cache")
     .AddCheck<ApiHealthCheck>("api-connectivity");

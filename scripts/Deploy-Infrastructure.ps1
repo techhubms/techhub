@@ -218,7 +218,39 @@ if ($Mode -eq 'whatif') {
     Write-Ok "Infrastructure What-If completed"
 }
 
-# Step 3: Deploy
+# Step 3: Remove orphaned Container Apps resources left over from the Container Apps ->
+# App Service migration. Bicep's incremental deployment does not delete resources removed
+# from the template, so the old Container Apps (and their shared Environment) still hold a
+# service association link on 'snet-container-apps' — this blocks network.bicep from
+# removing that subnet from the VNet, failing the deployment below with
+# 'InUseSubnetCannotBeDeleted'. Container Apps must be deleted before the Environment, which
+# must be deleted before the subnet can be freed.
+if ($Mode -eq 'deploy') {
+    Write-Step "Removing decommissioned Container Apps resources"
+    # No -ErrorAction SilentlyContinue: listing zero resources is not an error, and swallowing
+    # real errors here (e.g. auth/RBAC issues) would let the deploy proceed and fail later with
+    # the same subnet-in-use root cause.
+    $containerApps = @(Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/containerApps')
+    if ($containerApps.Count -eq 0) {
+        Write-Detail "No Container Apps present (already removed)"
+    } else {
+        foreach ($containerApp in $containerApps) {
+            Remove-AzResource -ResourceId $containerApp.ResourceId -Force -ErrorAction Stop | Out-Null
+            Write-Ok "Deleted Container App: $($containerApp.Name)"
+        }
+    }
+
+    $containerAppsEnvName = "cae-techhub-prod"
+    $containerAppsEnv = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/managedEnvironments' -Name $containerAppsEnvName
+    if ($containerAppsEnv) {
+        Remove-AzResource -ResourceId $containerAppsEnv.ResourceId -Force -ErrorAction Stop | Out-Null
+        Write-Ok "Deleted Container Apps Environment: $containerAppsEnvName"
+    } else {
+        Write-Detail "Container Apps Environment not present (already removed): $containerAppsEnvName"
+    }
+}
+
+# Step 4: Deploy
 if ($Mode -eq 'deploy') {
     Write-Step "Deploying base infrastructure"
 
