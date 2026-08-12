@@ -142,12 +142,10 @@ environments** that were not cleaned up when a PR was closed (e.g. due to a work
 After teardown, the PR comment on each affected pull request is updated with a nightly
 teardown notice.
 
-**Resuming after nightly teardown:**
-
-| You want to... | How |
-|---|---|
-| Continue testing the same code | Push an empty commit (or re-push the branch tip) — CI builds new images and deploys automatically |
-| Push new changes and redeploy | Push a commit — CI builds new images and deploys automatically |
+**Resuming after nightly teardown:** manually re-trigger the [CI Pipeline](../.github/workflows/ci.yml)
+workflow (`workflow_dispatch`, providing the PR number) to rebuild images and redeploy the preview
+environment. Pushing a new commit does **not** redeploy the preview automatically — only the
+quality-gate checks re-run on push (preview deploy is manual-only, see above).
 
 ### Main Branch Deployment Jobs
 
