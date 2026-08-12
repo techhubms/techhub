@@ -223,20 +223,30 @@ if ($Mode -eq 'deploy') {
         # the prerequisite note in infra/modules/wildcardCert.bicep). This is normally a one-time
         # manual grant, but a freshly rebuilt Key Vault won't have it yet — assign it here so the
         # import below doesn't fail with "the service does not have access to ... Key Vault".
-        # Use -ApplicationId (not Get-AzADServicePrincipal) so Azure resolves the service principal
-        # server-side — the deploy pipeline's identity has no Microsoft Graph read permissions.
-        # -ApplicationId only has a parameter set with -RoleDefinitionName, not -RoleDefinitionId.
+        # Both -ApplicationId and Get-AzADServicePrincipal need Microsoft Graph to resolve the
+        # principal, which the deploy pipeline's identity cannot read ('PrincipalId' cannot be
+        # null / Graph permission errors). -ObjectId + -ObjectType instead assigns the role
+        # directly against ARM without any Graph lookup. The object ID below is this specific
+        # tenant's instance of that service principal (appId abfa0a7c-a6b6-4736-8310-5855508787cd,
+        # display name "Microsoft.Azure.WebSites") — re-resolve via `az ad sp show --id
+        # abfa0a7c-a6b6-4736-8310-5855508787cd` (from an account with Graph read access) if this
+        # Key Vault is ever moved to a different tenant.
         Write-Detail "Ensuring App Service certificate provider has Key Vault access"
-        $requiredRoleNames = @('Key Vault Certificate User', 'Key Vault Secrets User')
-        foreach ($roleName in $requiredRoleNames) {
+        $appServiceCertProviderObjectId = 'c3b57f5b-db8e-4ede-bead-4f11bef97e1c'
+        $requiredRoleIds = @(
+            'db79e9a7-68ee-4b58-9aeb-b90e7c24fcba' # Key Vault Certificate User
+            '4633458b-17de-408a-b874-0445c86b69e6' # Key Vault Secrets User
+        )
+        foreach ($roleId in $requiredRoleIds) {
             try {
-                New-AzRoleAssignment -ApplicationId 'abfa0a7c-a6b6-4736-8310-5855508787cd' -RoleDefinitionName $roleName -Scope $keyVault.ResourceId -ErrorAction Stop | Out-Null
+                New-AzRoleAssignment -ObjectId $appServiceCertProviderObjectId -ObjectType ServicePrincipal -RoleDefinitionId $roleId -Scope $keyVault.ResourceId -ErrorAction Stop | Out-Null
             } catch {
                 if ($_.Exception.Message -notmatch 'already exists|RoleAssignmentExists') {
                     throw
                 }
             }
         }
+
 
         foreach ($certName in $missingCertNames) {
             Write-Detail "Importing missing certificate: $certName"
