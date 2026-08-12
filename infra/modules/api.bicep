@@ -244,4 +244,3 @@ resource vnetIntegration 'Microsoft.Web/sites/networkConfig@2023-12-01' = {
 
 output fqdn string = api.properties.defaultHostName
 output id string = api.id
-output principalId string = api.identity.principalId

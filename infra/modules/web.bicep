@@ -208,4 +208,3 @@ resource hostNameBindings 'Microsoft.Web/sites/hostNameBindings@2023-12-01' = [f
 
 output fqdn string = web.properties.defaultHostName
 output id string = web.id
-output principalId string = web.identity.principalId
