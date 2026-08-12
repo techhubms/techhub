@@ -159,6 +159,12 @@ Write-Ok "Image tag: $ImageTag"
 
 $deploymentName = "techhub-prod-apps-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
 
+# Wildcard certificates required by applications.bicep's hostNameBindings (must match
+# infra/parameters/prod-applications.bicepparam's wildcardCertNames).
+$keyVaultName = "kv-techhub-prod"
+$appServicePlanName = "asp-techhub-prod"
+$wildcardCertNames = @('wildcard-hub-ms', 'wildcard-xebia-ms')
+
 # Step 1: Validate
 if ($Mode -in @('validate', 'whatif', 'deploy')) {
     Write-Step "Validating Bicep template"
@@ -195,6 +201,37 @@ if ($Mode -eq 'whatif') {
 
 # Step 3: Deploy
 if ($Mode -eq 'deploy') {
+    # applications.bicep's hostNameBindings requires these Microsoft.Web/certificates to already
+    # exist (see docs/wildcard-certificates.md) — wildcardCert.bicep is intentionally NOT part of
+    # the regular deploy cycle (App Service certificates don't auto-refresh from Key Vault), so it
+    # normally only gets (re)deployed by Renew-WildcardCertificates.ps1 after a renewal. But on a
+    # freshly (re)built environment with a new App Service Plan, the certificates won't exist yet —
+    # import them here from whatever PFX is already in Key Vault so the deploy self-heals instead
+    # of hard-failing on ResourceNotFound.
+    Write-Step "Checking wildcard certificates exist"
+    $missingCertNames = @($wildcardCertNames | Where-Object {
+        -not (Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.Web/certificates' -Name $_ -ErrorAction SilentlyContinue)
+    })
+    if ($missingCertNames.Count -eq 0) {
+        Write-Ok "All wildcard certificates present"
+    } else {
+        $appServicePlan = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.Web/serverfarms' -Name $appServicePlanName -ErrorAction Stop
+        $keyVault = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.KeyVault/vaults' -Name $keyVaultName -ErrorAction Stop
+        foreach ($certName in $missingCertNames) {
+            Write-Detail "Importing missing certificate: $certName"
+            New-AzResourceGroupDeployment `
+                -ResourceGroupName $resourceGroup `
+                -TemplateFile (Join-Path $workspaceRoot "infra/modules/wildcardCert.bicep") `
+                -location $appServicePlan.Location `
+                -appServicePlanId $appServicePlan.ResourceId `
+                -certResourceName $certName `
+                -keyVaultResourceId $keyVault.ResourceId `
+                -keyVaultSecretName $certName `
+                -ErrorAction Stop | Out-Null
+            Write-Ok "Imported certificate: $certName"
+        }
+    }
+
     Write-Step "Deploying App Service sites"
 
     $savedVerbose = $VerbosePreference
