@@ -225,14 +225,12 @@ if ($Mode -eq 'deploy') {
         # import below doesn't fail with "the service does not have access to ... Key Vault".
         # Use -ApplicationId (not Get-AzADServicePrincipal) so Azure resolves the service principal
         # server-side — the deploy pipeline's identity has no Microsoft Graph read permissions.
+        # -ApplicationId only has a parameter set with -RoleDefinitionName, not -RoleDefinitionId.
         Write-Detail "Ensuring App Service certificate provider has Key Vault access"
-        $requiredRoleIds = @(
-            'db79e9a7-68ee-4b58-9aeb-b90e7c24fcba' # Key Vault Certificate User
-            '4633458b-17de-408a-b874-0445c86b69e6' # Key Vault Secrets User
-        )
-        foreach ($roleId in $requiredRoleIds) {
+        $requiredRoleNames = @('Key Vault Certificate User', 'Key Vault Secrets User')
+        foreach ($roleName in $requiredRoleNames) {
             try {
-                New-AzRoleAssignment -ApplicationId 'abfa0a7c-a6b6-4736-8310-5855508787cd' -RoleDefinitionId $roleId -Scope $keyVault.ResourceId -ErrorAction Stop | Out-Null
+                New-AzRoleAssignment -ApplicationId 'abfa0a7c-a6b6-4736-8310-5855508787cd' -RoleDefinitionName $roleName -Scope $keyVault.ResourceId -ErrorAction Stop | Out-Null
             } catch {
                 if ($_.Exception.Message -notmatch 'already exists|RoleAssignmentExists') {
                     throw
