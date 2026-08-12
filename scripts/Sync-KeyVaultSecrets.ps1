@@ -27,6 +27,12 @@
     mode, so you normally do not need to run it manually. The CI/CD workflow
     provides AZURE_AD_CLIENT_SECRET as a GitHub secret.
 
+    In GitHub Actions, if AZURE_CLIENT_ID/AZURE_TENANT_ID env vars are present (alongside the
+    runner-provided ACTIONS_ID_TOKEN_REQUEST_* vars), the script re-authenticates the Azure CLI
+    with a fresh OIDC token before calling Key Vault. This avoids AADSTS700024 ("client assertion
+    is not within its valid time range") when the preceding infrastructure deployment took long
+    enough that the original azure/login assertion (valid ~5 minutes) has expired.
+
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
         2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_PAT, NEWSLETTER_ACS_ENDPOINT, NEWSLETTER_UNSUBSCRIBE_SECRET,
@@ -55,6 +61,22 @@ param(
 
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
+
+# In GitHub Actions, refresh the Azure CLI login with a brand-new OIDC federated token before
+# touching Key Vault. The token azure/login used at job start is only valid for ~5 minutes;
+# if the preceding infrastructure deployment ran long (e.g. a slow one-off resource cleanup),
+# that assertion has since expired and any new token acquisition fails with AADSTS700024
+# (client assertion outside its valid time range). Local/manual runs skip this and rely on the
+# caller's own `az login`.
+if ($env:ACTIONS_ID_TOKEN_REQUEST_TOKEN -and $env:AZURE_CLIENT_ID -and $env:AZURE_TENANT_ID) {
+    Write-Host "Refreshing Azure CLI login with a fresh federated token..." -ForegroundColor Cyan
+    $oidcToken = (Invoke-RestMethod -Uri "$($env:ACTIONS_ID_TOKEN_REQUEST_URL)&audience=api://AzureADTokenExchange" `
+        -Headers @{ Authorization = "Bearer $($env:ACTIONS_ID_TOKEN_REQUEST_TOKEN)" }).value
+    az login --service-principal --username $env:AZURE_CLIENT_ID --tenant $env:AZURE_TENANT_ID --federated-token $oidcToken --output none
+    if ($LASTEXITCODE -ne 0) {
+        throw "Failed to refresh Azure CLI login with a fresh federated token."
+    }
+}
 
 function Set-KvSecret {
     param(
