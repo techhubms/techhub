@@ -21,9 +21,6 @@ param keyVaultName string = 'kv-techhub-prod'
 @description('App Service Plan name (Basic B1, hosts both API and Web sites)')
 param appServicePlanName string = 'asp-techhub-prod'
 
-@description('PR-preview App Service Plan name (Basic B1, hosts all open PR preview sites — kept separate from production so PR traffic/memory never affects prod)')
-param appServicePlanPrName string = 'asp-techhub-pr'
-
 @description('VNet name')
 param vnetName string = 'vnet-techhub-prod'
 
@@ -217,19 +214,12 @@ module appServicePlan './modules/appServicePlan.bicep' = {
   }
 }
 
-// PR-preview App Service Plan (Basic B1, Linux) — a separate, dedicated Plan for all open PR
-// preview sites so idle preview apps' resident memory/Always-On keep-alive traffic can never
-// compete with or degrade production. Deployed once and reused across PRs (deploy/teardown of
-// individual sites happens per PR in pr-applications.bicep — see docs/architecture.md).
-module appServicePlanPr './modules/appServicePlan.bicep' = {
-  scope: resourceGroup
-  name: 'appServicePlanPr-${deploymentSuffix}'
-  params: {
-    location: location
-    appServicePlanName: appServicePlanPrName
-    tags: union(commonTags, { env: 'pr' })
-  }
-}
+// The PR-preview App Service Plan (asp-techhub-pr) is deliberately NOT created here. Unlike the
+// production Plan, it is fully ephemeral — Deploy-PrPreview.ps1 creates it on first PR preview
+// deploy and deletes it once the last PR preview site is torn down, so it never bills while no
+// PR previews are active. Its dedicated subnet (snet-app-service-pr) is still created here and
+// persists regardless, since Regional VNet Integration subnet delegation is independent of any
+// specific Plan resource — see docs/network-architecture.md.
 
 // Grant Key Vault Secrets User to the managed identity on the prod Key Vault
 module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {

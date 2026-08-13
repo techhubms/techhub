@@ -27,6 +27,12 @@
     mode, so you normally do not need to run it manually. The CI/CD workflow
     provides AZURE_AD_CLIENT_SECRET as a GitHub secret.
 
+    In GitHub Actions, if AZURE_CLIENT_ID/AZURE_TENANT_ID env vars are present (alongside the
+    runner-provided ACTIONS_ID_TOKEN_REQUEST_* vars), the script re-authenticates the Azure CLI
+    with a fresh OIDC token before calling Key Vault. This avoids AADSTS700024 ("client assertion
+    is not within its valid time range") when the preceding infrastructure deployment took long
+    enough that the original azure/login assertion (valid ~5 minutes) has expired.
+
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
         2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_PAT, NEWSLETTER_ACS_ENDPOINT, NEWSLETTER_UNSUBSCRIBE_SECRET,
@@ -56,11 +62,28 @@ param(
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
+# In GitHub Actions, refresh the Azure CLI login with a brand-new OIDC federated token before
+# touching Key Vault. The token azure/login used at job start is only valid for ~5 minutes;
+# if the preceding infrastructure deployment ran long (e.g. a slow one-off resource cleanup),
+# that assertion has since expired and any new token acquisition fails with AADSTS700024
+# (client assertion outside its valid time range). Local/manual runs skip this and rely on the
+# caller's own `az login`.
+if ($env:ACTIONS_ID_TOKEN_REQUEST_TOKEN -and $env:AZURE_CLIENT_ID -and $env:AZURE_TENANT_ID) {
+    Write-Host "Refreshing Azure CLI login with a fresh federated token..." -ForegroundColor Cyan
+    $oidcToken = (Invoke-RestMethod -Uri "$($env:ACTIONS_ID_TOKEN_REQUEST_URL)&audience=api://AzureADTokenExchange" `
+        -Headers @{ Authorization = "Bearer $($env:ACTIONS_ID_TOKEN_REQUEST_TOKEN)" }).value
+    az login --service-principal --username $env:AZURE_CLIENT_ID --tenant $env:AZURE_TENANT_ID --federated-token $oidcToken --output none
+    if ($LASTEXITCODE -ne 0) {
+        throw "Failed to refresh Azure CLI login with a fresh federated token."
+    }
+}
+
 function Set-KvSecret {
     param(
         [Parameter(Mandatory = $true)][string]$Name,
         [Parameter(Mandatory = $true)][AllowEmptyString()][string]$Value,
-        [Parameter(Mandatory = $true)][string]$Description
+        [Parameter(Mandatory = $true)][string]$Description,
+        [string]$ContentType
     )
 
     if ([string]::IsNullOrWhiteSpace($Value)) {
@@ -85,11 +108,12 @@ function Set-KvSecret {
     $tmpFile = [System.IO.Path]::GetTempFileName()
     try {
         [System.IO.File]::WriteAllText($tmpFile, $Value)
-        az keyvault secret set `
-            --vault-name $KeyVaultName `
-            --name $Name `
-            --file $tmpFile `
-            --output none
+        $setArgs = @('keyvault', 'secret', 'set', '--vault-name', $KeyVaultName, '--name', $Name, '--file', $tmpFile, '--output', 'none')
+        if ($ContentType) {
+            # Required for Microsoft.Web/certificates to recognize this secret as an importable PFX.
+            $setArgs += @('--content-type', $ContentType)
+        }
+        az @setArgs
     }
     finally {
         Remove-Item $tmpFile -Force -ErrorAction SilentlyContinue
@@ -202,8 +226,8 @@ try {
     Set-KvSecret -Name "techhub-prod-newsletter-acs-endpoint"        -Value $newsletterAcsEndpoint       -Description 'ACS email endpoint URL'
     Set-KvSecret -Name "techhub-prod-newsletter-unsubscribe-secret"  -Value $newsletterUnsubscribeSecret -Description 'HMAC secret for newsletter unsubscribe/confirm URLs'
     Set-KvSecret -Name "techhub-prod-postgres-admin-password"        -Value $postgresAdminPassword       -Description 'PostgreSQL admin password'
-    Set-KvSecret -Name "wildcard-hub-ms"                             -Value $wildcardHubMs               -Description 'Wildcard TLS certificate (*.hub.ms)'
-    Set-KvSecret -Name "wildcard-xebia-ms"                           -Value $wildcardXebiaMs             -Description 'Wildcard TLS certificate (*.xebia.ms)'
+    Set-KvSecret -Name "wildcard-hub-ms"                             -Value $wildcardHubMs               -Description 'Wildcard TLS certificate (*.hub.ms)'   -ContentType 'application/x-pkcs12'
+    Set-KvSecret -Name "wildcard-xebia-ms"                           -Value $wildcardXebiaMs             -Description 'Wildcard TLS certificate (*.xebia.ms)' -ContentType 'application/x-pkcs12'
 
     Write-Host ""
     Write-Host "All secrets synchronised into '$($KeyVaultName)'." -ForegroundColor Green

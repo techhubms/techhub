@@ -72,10 +72,16 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 PR preview is handled by jobs inside [.github/workflows/ci.yml](../.github/workflows/ci.yml), but
 unlike the quality-gate jobs, the preview build/deploy/E2E jobs **only run on manual
 `workflow_dispatch`** — they do not run automatically on `pull_request` events. This is a
-deliberate choice for the App Service model: only one shared, persistent PR-preview App Service
-Plan (`asp-techhub-pr`) exists (Regional VNet Integration is strictly 1 subnet : 1 Plan, so
+deliberate choice for the App Service model: all open PR previews share one PR-preview App
+Service Plan (`asp-techhub-pr`) (Regional VNet Integration is strictly 1 subnet : 1 Plan, so
 per-PR Plans aren't practical), so preview deploys must be triggered explicitly rather than
 firing automatically for every push to every open PR.
+
+The shared Plan is **ephemeral, not persistent** — `scripts/Deploy-PrPreview.ps1` creates it on
+the first PR preview deploy and deletes it once the last PR preview site is torn down (on PR
+close or via nightly teardown), so it never bills while no PR previews are active. Its dedicated
+subnet (`snet-app-service-pr`) is still created once by `infrastructure.bicep` and persists
+regardless — see [docs/network-architecture.md](network-architecture.md).
 
 **To deploy/refresh a PR preview**: go to GitHub Actions → "CI Pipeline" → "Run workflow", select
 the PR's branch, and provide the PR number as the `pr_number` input. The workflow checks out
@@ -109,6 +115,7 @@ production database.
 - Each PR gets an **isolated PostgreSQL database** cloned from production via PITR
 - No shared database state — multiple PRs cannot interfere with each other
 - Reuse production infrastructure (`rg-techhub-prod`) but on a separate, dedicated App Service Plan (`asp-techhub-pr`) so PR traffic never affects prod memory/CPU
+- The Plan itself is ephemeral — created on the first active PR preview, deleted when the last one is torn down (no idle billing between previews)
 - Accessible via the default `*.azurewebsites.net` hostname (no custom domain)
 - Multiple PRs can run in parallel on the shared Plan, each with a unique URL and isolated database
 - Concurrency per PR: new manual dispatches cancel in-progress deploys for the same PR
@@ -201,7 +208,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 
 **PR preview environments** (created on-demand in `rg-techhub-prod`):
 
-- App Service Plan: `asp-techhub-pr` (Basic B1, shared by all PR previews — separate from production)
+- App Service Plan: `asp-techhub-pr` (Basic B1, shared by all PR previews — separate from production, **ephemeral**: created on first PR preview deploy, deleted once the last one is torn down)
 - Each PR gets its own App Service sites: `app-techhub-api-pr-{N}`, `app-techhub-web-pr-{N}`
 - Each PR gets its own PostgreSQL: `psql-techhub-pr-{N}` (created via PITR from production)
 - Shared managed identity: `id-techhub-pr` (created once by `infrastructure.bicep`)

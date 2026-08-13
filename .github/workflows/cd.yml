@@ -607,6 +607,8 @@ jobs:
           POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
           ADMIN_IP_ADDRESSES: ${{ vars.ADMIN_IP_ADDRESSES }}
           AZURE_AD_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+          AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+          AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
           NEWSLETTER_UNSUBSCRIBE_SECRET: ${{ secrets.NEWSLETTER_UNSUBSCRIBE_SECRET }}
           WILDCARD_CERT_HUB_MS: ${{ secrets.WILDCARD_CERT_HUB_MS }}

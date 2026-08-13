@@ -196,6 +196,12 @@ resource vnetIntegration 'Microsoft.Web/sites/networkConfig@2023-12-01' = {
 // Wildcard custom domain bindings (e.g. *.hub.ms, *.xebia.ms), SNI-bound to the matching
 // certificate imported from Key Vault. The domain's DNS (CNAME/TXT verification) must already
 // point at this app's default hostname before these bindings will succeed.
+// batchSize(1) + explicit dependsOn on vnetIntegration serialize all writes to the site:
+// without this, ARM fires the networkConfig update and the hostNameBindings updates (and each
+// binding against the next) concurrently, and App Service rejects the overlapping ones with
+// "Cannot modify this site because another operation is in progress" (Code: Conflict) — a
+// deterministic race, not a transient failure, so retries never help.
+@batchSize(1)
 resource hostNameBindings 'Microsoft.Web/sites/hostNameBindings@2023-12-01' = [for domain in customDomains: {
   parent: web
   name: domain
@@ -204,8 +210,10 @@ resource hostNameBindings 'Microsoft.Web/sites/hostNameBindings@2023-12-01' = [f
     thumbprint: wildcardCerts[certIndexByDomain[substring(domain, indexOf(domain, '.') + 1)]].properties.thumbprint
     hostNameType: 'Verified'
   }
+  dependsOn: [
+    vnetIntegration
+  ]
 }]
 
 output fqdn string = web.properties.defaultHostName
 output id string = web.id
-output principalId string = web.identity.principalId

@@ -91,6 +91,27 @@ function Write-Detail {
     Write-Host "   $Message" -ForegroundColor Gray
 }
 
+function Write-DeploymentFailureDetails {
+    param([string]$DeploymentName)
+    # The top-level error only says "at least one resource deployment operation failed" —
+    # it does not name the resource. List the operations so the actual failing resource
+    # and its provider-reported message are visible in the logs, instead of only the
+    # generic aggregate error (which can be a misleading/unhelpful message like
+    # "Value cannot be null. Parameter name: format" for some resource types).
+    try {
+        Write-Detail "Listing deployment operations for '$DeploymentName' to find the failing resource(s):"
+        Get-AzDeploymentOperation -DeploymentName $DeploymentName -ErrorAction Stop |
+            Where-Object { $_.ProvisioningState -eq 'Failed' } |
+            ForEach-Object {
+                Write-Fail "Resource: $($_.TargetResource.ResourceName) ($($_.TargetResource.ResourceType))"
+                Write-Detail "StatusCode: $($_.StatusCode)"
+                Write-Detail "StatusMessage: $($_.StatusMessage | ConvertTo-Json -Depth 10 -Compress)"
+            }
+    } catch {
+        Write-Warn "Could not list deployment operations for '$DeploymentName': $_"
+    }
+}
+
 # ============================================================================
 # BANNER
 # ============================================================================
@@ -218,7 +239,47 @@ if ($Mode -eq 'whatif') {
     Write-Ok "Infrastructure What-If completed"
 }
 
-# Step 3: Deploy
+# Step 3: Remove orphaned Container Apps resources left over from the Container Apps ->
+# App Service migration. Bicep's incremental deployment does not delete resources removed
+# from the template, so the old Container Apps (and their shared Environment) still hold a
+# service association link on 'snet-container-apps' — this blocks network.bicep from
+# removing that subnet from the VNet, failing the deployment below with
+# 'InUseSubnetCannotBeDeleted'. Container Apps must be deleted before the Environment, which
+# must be deleted before the subnet can be freed.
+if ($Mode -eq 'deploy') {
+    Write-Step "Removing decommissioned Container Apps resources"
+    # No -ErrorAction SilentlyContinue: listing zero resources is not an error, and swallowing
+    # real errors here (e.g. auth/RBAC issues) would let the deploy proceed and fail later with
+    # the same subnet-in-use root cause.
+    $containerApps = @(Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/containerApps')
+    if ($containerApps.Count -eq 0) {
+        Write-Detail "No Container Apps present (already removed)"
+    } else {
+        foreach ($containerApp in $containerApps) {
+            Remove-AzResource -ResourceId $containerApp.ResourceId -Force -ErrorAction Stop | Out-Null
+            Write-Ok "Deleted Container App: $($containerApp.Name)"
+        }
+    }
+
+    $containerAppsEnvName = "cae-techhub-prod"
+    try {
+        # Unlike the containerApps list above, Get-AzResource with a Name+ResourceType filter
+        # resolves straight to a GET on that resource ID and throws a terminating 404 once the
+        # environment has already been deleted (e.g. by a previous run) — SilentlyContinue is
+        # needed here so that expected "already removed" runs don't fail the whole deployment.
+        $containerAppsEnv = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.App/managedEnvironments' -Name $containerAppsEnvName -ErrorAction SilentlyContinue
+        if ($containerAppsEnv) {
+            Remove-AzResource -ResourceId $containerAppsEnv.ResourceId -Force -ErrorAction Stop | Out-Null
+            Write-Ok "Deleted Container Apps Environment: $containerAppsEnvName"
+        } else {
+            Write-Detail "Container Apps Environment not present (already removed): $containerAppsEnvName"
+        }
+    } catch {
+        Write-Warn "Could not check/remove Container Apps Environment '$containerAppsEnvName': $_"
+    }
+}
+
+# Step 4: Deploy
 if ($Mode -eq 'deploy') {
     Write-Step "Deploying base infrastructure"
 
@@ -245,25 +306,40 @@ if ($Mode -eq 'deploy') {
         }
         New-AzDeployment @deployParams -OutVariable infraResult | Out-Null
     } catch {
-        Write-Fail "Infrastructure deployment failed: $_"
-        # The top-level error only says "at least one resource deployment operation failed" —
-        # it does not name the resource. List the operations so the actual failing resource
-        # and its provider-reported message are visible in the logs, instead of only the
-        # generic aggregate error (which can be a misleading/unhelpful message like
-        # "Value cannot be null. Parameter name: format" for some resource types).
-        try {
-            Write-Detail "Listing deployment operations for '$deploymentName' to find the failing resource(s):"
-            Get-AzDeploymentOperation -DeploymentName $deploymentName -ErrorAction Stop |
-                Where-Object { $_.ProvisioningState -eq 'Failed' } |
-                ForEach-Object {
-                    Write-Fail "Resource: $($_.TargetResource.ResourceName) ($($_.TargetResource.ResourceType))"
-                    Write-Detail "StatusCode: $($_.StatusCode)"
-                    Write-Detail "StatusMessage: $($_.StatusMessage | ConvertTo-Json -Depth 10 -Compress)"
-                }
-        } catch {
-            Write-Warn "Could not list deployment operations for '$deploymentName': $_"
+        # New-AzDeployment polls the ARM operation for the whole (long-running) deployment
+        # duration; a transient network blip during that polling throws this generic HttpClient
+        # error even though the deployment itself is often still running, or already finished,
+        # in Azure. Reattach by polling the existing deployment by name instead of treating a
+        # dropped connection as a hard failure.
+        if ($_.Exception.Message -notmatch 'error occurred while sending the request') {
+            Write-Fail "Infrastructure deployment failed: $_"
+            Write-DeploymentFailureDetails -DeploymentName $deploymentName
+            exit 1
         }
-        exit 1
+
+        Write-Warn "Lost connection while polling deployment status — reattaching to '$deploymentName'"
+        $deployment = $null
+        $maxReattachAttempts = 80
+        for ($attempt = 1; $attempt -le $maxReattachAttempts; $attempt++) {
+            Start-Sleep -Seconds 15
+            try {
+                $deployment = Get-AzDeployment -Name $deploymentName -ErrorAction Stop
+                if ($deployment.ProvisioningState -in @('Succeeded', 'Failed', 'Canceled')) {
+                    break
+                }
+            } catch {
+                Write-Warn "Reattach check failed (attempt $attempt/$maxReattachAttempts): $_"
+            }
+        }
+
+        if (-not $deployment -or $deployment.ProvisioningState -ne 'Succeeded') {
+            $state = if ($deployment) { $deployment.ProvisioningState } else { 'unknown (could not reattach)' }
+            Write-Fail "Infrastructure deployment failed: $state"
+            Write-DeploymentFailureDetails -DeploymentName $deploymentName
+            exit 1
+        }
+
+        Write-Ok "Reattached — deployment '$deploymentName' completed successfully"
     } finally {
         $VerbosePreference = $savedVerbose
         if ($tempParamsFile -and (Test-Path $tempParamsFile)) {
