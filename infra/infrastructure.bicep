@@ -2,7 +2,7 @@ targetScope = 'subscription'
 
 // Phase 1: Base infrastructure for Tech Hub production.
 // Deploys networking, identity, Key Vault, PostgreSQL, OpenAI, monitoring,
-// Container Apps Environment, and governance resources.
+// App Service Plans, and governance resources.
 // Run this before applications.bicep — it creates the Key Vault that must
 // exist before application secrets can be synced.
 
@@ -18,8 +18,8 @@ param appInsightsName string = 'appi-techhub-prod'
 @description('Key Vault name (stores wildcard certs, app secrets, and GitHub registry token)')
 param keyVaultName string = 'kv-techhub-prod'
 
-@description('Container Apps Environment name')
-param containerAppsEnvName string = 'cae-techhub-prod'
+@description('App Service Plan name (Basic B1, hosts both API and Web sites)')
+param appServicePlanName string = 'asp-techhub-prod'
 
 @description('VNet name')
 param vnetName string = 'vnet-techhub-prod'
@@ -27,8 +27,11 @@ param vnetName string = 'vnet-techhub-prod'
 @description('VNet address space')
 param addressSpacePrefix string = '10.2.0.0/16'
 
-@description('Container Apps subnet prefix')
-param containerAppsSubnetPrefix string = '10.2.0.0/23'
+@description('App Service Regional VNet Integration subnet prefix')
+param appServiceSubnetPrefix string = '10.2.0.0/23'
+
+@description('PR-preview App Service Regional VNet Integration subnet prefix')
+param appServicePrSubnetPrefix string = '10.2.4.0/23'
 
 @description('Private endpoints subnet prefix')
 param privateEndpointsSubnetPrefix string = '10.2.2.0/27'
@@ -119,7 +122,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
 // and the passwordless connection string so they always stay in sync.
 var prodIdentityName = 'id-techhub-prod'
 
-// User-Assigned Managed Identity (used by Container Apps to access Key Vault and PostgreSQL)
+// User-Assigned Managed Identity (used by the API/Web App Service sites to access Key Vault and PostgreSQL)
 module identity './modules/identity.bicep' = {
   scope: resourceGroup
   name: 'identity-${deploymentSuffix}'
@@ -130,8 +133,8 @@ module identity './modules/identity.bicep' = {
   }
 }
 
-// Networking (VNet + Container Apps subnet, plus a private endpoints subnet with private
-// DNS zones used by PostgreSQL, Key Vault, and AI Foundry)
+// Networking (VNet + App Service Regional VNet Integration subnet, plus a private endpoints
+// subnet with private DNS zones used by PostgreSQL, Key Vault, and AI Foundry)
 module network './modules/network.bicep' = {
   scope: resourceGroup
   name: 'network-${deploymentSuffix}'
@@ -139,7 +142,8 @@ module network './modules/network.bicep' = {
     location: location
     vnetName: vnetName
     addressSpacePrefix: addressSpacePrefix
-    containerAppsSubnetPrefix: containerAppsSubnetPrefix
+    appServiceSubnetPrefix: appServiceSubnetPrefix
+    appServicePrSubnetPrefix: appServicePrSubnetPrefix
     privateEndpointsSubnetPrefix: privateEndpointsSubnetPrefix
     tags: prodTags
   }
@@ -171,7 +175,7 @@ module keyVault './modules/keyVault.bicep' = {
     vaultName: keyVaultName
     logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
     adminIpAddresses: adminIpList
-    // Container Apps reach Key Vault over a private endpoint in the dedicated subnet —
+    // App Service reaches Key Vault over a private endpoint in the dedicated subnet —
     // no VNet service endpoint needed for application traffic.
     privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
     privateDnsZoneId: network.outputs.keyVaultPrivateDnsZoneId
@@ -188,7 +192,7 @@ module openai './modules/openai.bicep' = {
     openAiName: openAiName
     modelCapacity: openAiModelCapacity
     adminIpAddresses: adminIpList
-    // Container Apps reach AI Foundry over a private endpoint in the dedicated subnet —
+    // App Service reaches AI Foundry over a private endpoint in the dedicated subnet —
     // no fully-open public access needed for application traffic.
     privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
     privateDnsZoneId: network.outputs.openAiPrivateDnsZoneId
@@ -198,19 +202,24 @@ module openai './modules/openai.bicep' = {
   }
 }
 
-// Container Apps Environment (VNet-integrated)
-module containerAppsEnv './modules/containerApps.bicep' = {
+// App Service Plan (Basic B1, Linux, Regional VNet Integration) — hosts both the API and Web
+// sites as separate Microsoft.Web/sites resources in applications.bicep (Phase 2).
+module appServicePlan './modules/appServicePlan.bicep' = {
   scope: resourceGroup
-  name: 'containerAppsEnv-${deploymentSuffix}'
+  name: 'appServicePlan-${deploymentSuffix}'
   params: {
     location: location
-    environmentName: containerAppsEnvName
-    logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
-    infrastructureSubnetId: network.outputs.containerAppsSubnetId
-    identityId: identity.outputs.identityId
+    appServicePlanName: appServicePlanName
     tags: prodTags
   }
 }
+
+// The PR-preview App Service Plan (asp-techhub-pr) is deliberately NOT created here. Unlike the
+// production Plan, it is fully ephemeral — Deploy-PrPreview.ps1 creates it on first PR preview
+// deploy and deletes it once the last PR preview site is torn down, so it never bills while no
+// PR previews are active. Its dedicated subnet (snet-app-service-pr) is still created here and
+// persists regardless, since Regional VNet Integration subnet delegation is independent of any
+// specific Plan resource — see docs/network-architecture.md.
 
 // Grant Key Vault Secrets User to the managed identity on the prod Key Vault
 module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
@@ -223,7 +232,7 @@ module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
   dependsOn: [keyVault]
 }
 
-// Shared managed identity for PR preview Container Apps.
+// Shared managed identity for PR preview App Service sites.
 // All PR environments reuse this single identity — no per-PR identity lifecycle needed.
 // infrastructure.bicep owns this resource; Deploy-PrPreview.ps1 only reads it.
 var prIdentityName = 'id-techhub-pr'
@@ -238,7 +247,7 @@ module prIdentity './modules/identity.bicep' = {
   }
 }
 
-// Grant Key Vault Secrets User to the shared PR identity so PR Container Apps can
+// Grant Key Vault Secrets User to the shared PR identity so PR App Service sites can
 // resolve the ghcr-token KV secret reference for image pull authentication.
 module kvSecretsUserRolePr './modules/kvSecretsUserRole.bicep' = {
   scope: resourceGroup
@@ -264,7 +273,7 @@ module postgres './modules/postgres.bicep' = {
     backupRetentionDays: 21
     geoRedundantBackup: true
     adminIpAddresses: adminIpList
-    // Container Apps reach PostgreSQL over a private endpoint in the dedicated subnet —
+    // App Service sites reach PostgreSQL over a private endpoint in the dedicated subnet —
     // no NAT Gateway or public IP allowlisting needed for application traffic.
     privateEndpointSubnetId: network.outputs.privateEndpointsSubnetId
     privateDnsZoneId: network.outputs.postgresPrivateDnsZoneId
@@ -305,7 +314,6 @@ module alerts './modules/alerts.bicep' = {
     environmentName: 'prod'
     actionGroupId: actionGroup.outputs.actionGroupId
     appInsightsId: monitoring.outputs.appInsightsId
-    logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
     postgresServerId: postgres.outputs.serverId
     openAiAccountId: openai.outputs.openAiId
     tags: prodTags

@@ -13,7 +13,7 @@ namespace TechHub.E2E.Tests.Helpers;
 ///   E2E_NETWORK_THROTTLE=ci         → Simulates CI runner conditions (CPU throttle only, no network throttle)
 ///   E2E_NETWORK_THROTTLE=wan        → Simulates remote deployment latency (150ms latency, unlimited bandwidth)
 ///                                     Reproduces PR preview / staging E2E conditions where the GitHub runner
-///                                     targets a remote Azure Container App over WAN. SignalR WebSocket
+///                                     targets a remote Azure App Service site over WAN. SignalR WebSocket
 ///                                     round-trips and JS interop calls each pay this latency cost.
 ///
 /// The "ci" profile also applies CPU throttling to better simulate resource-constrained CI runners.
@@ -96,7 +96,7 @@ public static class NetworkThrottling
         "wan" => new ThrottleProfile(
             DownloadThroughputBytesPerSecond: -1,                       // No bandwidth limit
             UploadThroughputBytesPerSecond: -1,                        // No bandwidth limit
-            LatencyMs: 150,                                            // 150ms simulates GitHub runner → remote Azure Container App
+            LatencyMs: 150,                                            // 150ms simulates GitHub runner → remote Azure App Service
             CpuThrottleRate: 1),                                       // No CPU throttle (CI runners are fast)
         _ => null,
     };

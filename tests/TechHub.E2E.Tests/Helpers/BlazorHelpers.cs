@@ -412,8 +412,9 @@ public static class BlazorHelpers
         gotoOptions.Timeout ??= E2ETimeout;
 
         // Navigate with a single retry on timeout — handles cold-start scenarios in CI and
-        // PR-preview environments (e.g. Azure Container Apps scaled to zero) where the first
-        // request warms up the container and subsequent requests succeed within the timeout.
+        // freshly-deployed PR-preview environments (Azure App Service is always-on, but the
+        // very first request after a deploy still pays for container pull/startup) where the
+        // first request warms up the site and subsequent requests succeed within the timeout.
         try
         {
             await page.GotoAsync(url, gotoOptions);

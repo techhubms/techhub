@@ -5,10 +5,10 @@
 
 .DESCRIPTION
     Scans rg-techhub-prod for active PR preview environments by listing:
-    - Container Apps matching ca-techhub-api-pr-{N}
+    - App Service sites matching app-techhub-api-pr-{N}
     - PostgreSQL Flexible Servers matching psql-techhub-pr-{N}
 
-    The dual-scan catches orphaned databases that have no matching Container App
+    The dual-scan catches orphaned databases that have no matching App Service site
     (e.g. from a partial teardown failure when a PR was closed).
 
     For each discovered PR number, calls Deploy-PrPreview.ps1 -Action teardown.
@@ -107,25 +107,25 @@ Write-Step "Scanning $prodRG for active PR environments"
 
 $prNumbers = [System.Collections.Generic.SortedSet[int]]::new()
 
-# Discover from Container Apps (ca-techhub-api-pr-{N})
-$caApps = az containerapp list `
+# Discover from App Service sites (app-techhub-api-pr-{N})
+$webApps = az webapp list `
     --resource-group $prodRG `
-    --query "[?starts_with(name, 'ca-techhub-api-pr-')].name" -o tsv 2>$null
+    --query "[?starts_with(name, 'app-techhub-api-pr-')].name" -o tsv --only-show-errors
 
-if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($caApps)) {
-    foreach ($app in ($caApps -split "`n")) {
-        if ($app -match 'ca-techhub-api-pr-(\d+)') {
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($webApps)) {
+    foreach ($app in ($webApps -split "`n")) {
+        if ($app -match 'app-techhub-api-pr-(\d+)') {
             [void]$prNumbers.Add([int]$Matches[1])
         }
     }
 }
-Write-Detail "Container Apps found  : $($prNumbers.Count) PR(s)"
+Write-Detail "App Service sites found: $($prNumbers.Count) PR(s)"
 
 # Discover from PostgreSQL servers (psql-techhub-pr-{N})
-# Catches orphaned databases with no matching Container App
+# Catches orphaned databases with no matching App Service site
 $pgServers = az postgres flexible-server list `
     --resource-group $prodRG `
-    --query "[?starts_with(name, 'psql-techhub-pr-')].name" -o tsv 2>$null
+    --query "[?starts_with(name, 'psql-techhub-pr-')].name" -o tsv --only-show-errors
 
 if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($pgServers)) {
     foreach ($server in ($pgServers -split "`n")) {

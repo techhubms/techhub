@@ -1,11 +1,11 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Deploys TechHub Container Apps to Azure (Phase 2).
+    Deploys TechHub App Service sites to Azure (Phase 2).
 
 .DESCRIPTION
-    Deploys Container Apps using Bicep templates. Deploys API + Web container apps with the
-    specified image tag. The ACS endpoint is resolved automatically from Key Vault at deploy time
+    Deploys the API + Web App Service sites using Bicep templates, with the specified image tag.
+    The ACS endpoint is resolved automatically from Key Vault at deploy time
     (stored there by Deploy-Infrastructure.ps1).
 
     Phase 1 (infrastructure) must be deployed first — this script references existing resources
@@ -25,11 +25,11 @@
 
 .EXAMPLE
     ./scripts/Deploy-Applications.ps1 -Mode whatif -ImageTag "20260501120000"
-    Preview what changes would be made to Container Apps.
+    Preview what changes would be made to the App Service sites.
 
 .EXAMPLE
     ./scripts/Deploy-Applications.ps1 -Mode deploy -ImageTag "20260501120000"
-    Deploy Container Apps with the given image tag.
+    Deploy the App Service sites with the given image tag.
 
 .EXAMPLE
     ./scripts/Deploy-Applications.ps1 -Mode validate -ImageTag "20260501120000"
@@ -159,6 +159,12 @@ Write-Ok "Image tag: $ImageTag"
 
 $deploymentName = "techhub-prod-apps-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
 
+# Wildcard certificates required by applications.bicep's hostNameBindings (must match
+# infra/parameters/prod-applications.bicepparam's wildcardCertNames).
+$keyVaultName = "kv-techhub-prod"
+$appServicePlanName = "asp-techhub-prod"
+$wildcardCertNames = @('wildcard-hub-ms', 'wildcard-xebia-ms')
+
 # Step 1: Validate
 if ($Mode -in @('validate', 'whatif', 'deploy')) {
     Write-Step "Validating Bicep template"
@@ -195,7 +201,86 @@ if ($Mode -eq 'whatif') {
 
 # Step 3: Deploy
 if ($Mode -eq 'deploy') {
-    Write-Step "Deploying Container Apps"
+    # applications.bicep's hostNameBindings requires these Microsoft.Web/certificates to already
+    # exist (see docs/wildcard-certificates.md) — wildcardCert.bicep is intentionally NOT part of
+    # the regular deploy cycle (App Service certificates don't auto-refresh from Key Vault), so it
+    # normally only gets (re)deployed by Renew-WildcardCertificates.ps1 after a renewal. But on a
+    # freshly (re)built environment with a new App Service Plan, the certificates won't exist yet —
+    # import them here from whatever PFX is already in Key Vault so the deploy self-heals instead
+    # of hard-failing on ResourceNotFound.
+    Write-Step "Checking wildcard certificates exist"
+    $missingCertNames = @($wildcardCertNames | Where-Object {
+        -not (Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.Web/certificates' -Name $_ -ErrorAction SilentlyContinue)
+    })
+    if ($missingCertNames.Count -eq 0) {
+        Write-Ok "All wildcard certificates present"
+    } else {
+        $appServicePlan = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.Web/serverfarms' -Name $appServicePlanName -ErrorAction Stop
+        $keyVault = Get-AzResource -ResourceGroupName $resourceGroup -ResourceType 'Microsoft.KeyVault/vaults' -Name $keyVaultName -ErrorAction Stop
+
+        # The first-party "Microsoft Azure App Service" service principal must hold Key Vault
+        # Certificate User + Key Vault Secrets User on this Key Vault to read the PFX secret (see
+        # the prerequisite note in infra/modules/wildcardCert.bicep). This is normally a one-time
+        # manual grant, but a freshly rebuilt Key Vault won't have it yet — assign it here so the
+        # import below doesn't fail with "the service does not have access to ... Key Vault".
+        # Both -ApplicationId and Get-AzADServicePrincipal need Microsoft Graph to resolve the
+        # principal, which the deploy pipeline's identity cannot read ('PrincipalId' cannot be
+        # null / Graph permission errors). -ObjectId + -ObjectType instead assigns the role
+        # directly against ARM without any Graph lookup. The object ID below is this specific
+        # tenant's instance of that service principal (appId abfa0a7c-a6b6-4736-8310-5855508787cd,
+        # display name "Microsoft.Azure.WebSites") — re-resolve via `az ad sp show --id
+        # abfa0a7c-a6b6-4736-8310-5855508787cd` (from an account with Graph read access) if this
+        # Key Vault is ever moved to a different tenant.
+        Write-Detail "Ensuring App Service certificate provider has Key Vault access"
+        $appServiceCertProviderObjectId = 'c3b57f5b-db8e-4ede-bead-4f11bef97e1c'
+        $requiredRoleIds = @(
+            'db79e9a7-68ee-4b58-9aeb-b90e7c24fcba' # Key Vault Certificate User
+            '4633458b-17de-408a-b874-0445c86b69e6' # Key Vault Secrets User
+        )
+        foreach ($roleId in $requiredRoleIds) {
+            try {
+                New-AzRoleAssignment -ObjectId $appServiceCertProviderObjectId -ObjectType ServicePrincipal -RoleDefinitionId $roleId -Scope $keyVault.ResourceId -ErrorAction Stop | Out-Null
+            } catch {
+                if ($_.Exception.Message -notmatch 'already exists|RoleAssignmentExists') {
+                    throw
+                }
+            }
+        }
+
+
+        foreach ($certName in $missingCertNames) {
+            Write-Detail "Importing missing certificate: $certName"
+            # Role assignments are eventually consistent — the grant above can take up to a
+            # couple of minutes to propagate before Key Vault actually enforces it, so the import
+            # can fail with "the service does not have access" even though the RBAC grant itself
+            # succeeded. Retry instead of failing the whole deploy on this specific error.
+            $maxAttempts = 6
+            $retryDelaySecs = 20
+            for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {
+                try {
+                    New-AzResourceGroupDeployment `
+                        -ResourceGroupName $resourceGroup `
+                        -TemplateFile (Join-Path $workspaceRoot "infra/modules/wildcardCert.bicep") `
+                        -location $appServicePlan.Location `
+                        -appServicePlanId $appServicePlan.ResourceId `
+                        -certResourceName $certName `
+                        -keyVaultResourceId $keyVault.ResourceId `
+                        -keyVaultSecretName $certName `
+                        -ErrorAction Stop | Out-Null
+                    break
+                } catch {
+                    if ($_.Exception.Message -notmatch 'does not have access' -or $attempt -eq $maxAttempts) {
+                        throw
+                    }
+                    Write-Warn "Key Vault access not yet propagated for certificate '$certName' (attempt $attempt/$maxAttempts) — retrying in $retryDelaySecs seconds"
+                    Start-Sleep -Seconds $retryDelaySecs
+                }
+            }
+            Write-Ok "Imported certificate: $certName"
+        }
+    }
+
+    Write-Step "Deploying App Service sites"
 
     $savedVerbose = $VerbosePreference
     $VerbosePreference = 'Continue'
@@ -207,12 +292,12 @@ if ($Mode -eq 'deploy') {
             -TemplateParameterFile $appsParamsFile `
             -SkipTemplateParameterPrompt
     } catch {
-        Write-Fail "Container Apps deployment failed: $_"
+        Write-Fail "App Service sites deployment failed: $_"
         exit 1
     } finally {
         $VerbosePreference = $savedVerbose
     }
-    Write-Ok "Container Apps deployed successfully"
+    Write-Ok "App Service sites deployed successfully"
 }
 
 # ============================================================================

@@ -6,16 +6,16 @@
 .DESCRIPTION
     Populates all required user secrets for the TechHub API and Web projects by
     combining localhost Entra ID app registration values with production AI/cookie
-    secrets from the Container App and Key Vault.
+    secrets from the App Service API site and Key Vault.
 
     AzureAd settings (TenantId, ClientId, ClientSecret, Scopes) are read/created
     from the localhost app registration ('TechHub Local Dev') so that local
     development uses the correct redirect URIs and token audience. A new client
     secret is created on the app registration (appended — old secrets remain valid).
 
-    AI configuration (endpoint, deployment name) is fetched from the production Container App.
+    AI configuration (endpoint, deployment name) is fetched from the production App Service API site.
     AI auth uses DefaultAzureCredential (az login) — no API key needed or stored.
-    Newsletter ACS endpoint and unsubscribe secret are fetched from the Container App and Key Vault.
+    Newsletter ACS endpoint and unsubscribe secret are fetched from the App Service API site and Key Vault.
 
     Requires:
         - Azure CLI (`az`) authenticated with access to rg-techhub-prod, kv-techhub-prod,
@@ -148,19 +148,18 @@ else {
     Write-Host "Client secret already set in user secrets — skipping creation (use -Force to rotate)" -ForegroundColor Gray
 }
 
-# --- Fetch AI config from production Container App env vars ---
+# --- Fetch AI config from production App Service API site's app settings ---
 Write-Host ""
 Write-Host "Fetching AI configuration from production..." -ForegroundColor Cyan
 
-$apiEnvVarsOutput = az containerapp show `
-    --name ca-techhub-api-prod `
+$apiEnvVarsOutput = az webapp config appsettings list `
+    --name app-techhub-api-prod `
     --resource-group rg-techhub-prod `
-    --query "properties.template.containers[0].env" `
     --output json `
     --only-show-errors 2>&1
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "  [FAIL] Failed to fetch AI configuration from Container App" -ForegroundColor Red
+    Write-Host "  [FAIL] Failed to fetch AI configuration from App Service" -ForegroundColor Red
     Write-Host $apiEnvVarsOutput -ForegroundColor Red
     exit 1
 }
@@ -171,7 +170,8 @@ $apiEnvVars = $apiEnvVarsJson | ConvertFrom-Json
 function Get-EnvVar($envVars, $name) {
     $entry = $envVars | Where-Object { $_.name -eq $name } | Select-Object -First 1
     if ($null -eq $entry) { return $null }
-    # Secret-ref env vars have no 'value' property — return null for those
+    # Key-Vault-reference app settings resolve to an @Microsoft.KeyVault(...) string here rather
+    # than the underlying secret value — none of the settings read below are KV references.
     if (-not ($entry.PSObject.Properties.Name -contains 'value')) { return $null }
     return $entry.value
 }

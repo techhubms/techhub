@@ -18,7 +18,7 @@
         techhub-prod-db-connection-string   — removed; app uses Entra token auth
         techhub-prod-ai-api-key             — removed; app uses Cognitive Services OpenAI User RBAC role
 
-    Run this script ONCE after creating kv-techhub-prod and BEFORE deploying Container Apps
+    Run this script ONCE after creating kv-techhub-prod and BEFORE deploying App Service sites
     that reference the production Key Vault. See the deployment order in the cost-reduction
     implementation plan.
 

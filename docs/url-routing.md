@@ -137,7 +137,7 @@ When the filter returns `false`, no `Activity` span is created for that request.
 The combined filter (defined in `ServiceDefaults`) checks all of:
 
 ```text
-!IsHealthProbeRequest(path)                         -- /health and /alive (Container Apps probes)
+!IsHealthProbeRequest(path)                         -- /health and /alive (App Service health checks)
 && !ProbeDetector.IsProbeRequest(path)              -- wp-admin, actuator, .env, etc.
 && ProbeDetector.IsKnownStaticAssetOrExtensionless  -- rejects unknown-extension paths
 && additionalTraceFilter(httpContext)               -- service-specific rules (Web only)
@@ -158,7 +158,7 @@ Because `IsKnownStaticAssetOrExtensionless` returns `true` for any path with no 
 
 ### Forwarded Headers
 
-`UseForwardedHeaders` trusts `X-Forwarded-For` and `X-Forwarded-Proto` from the Azure Container Apps reverse proxy. `KnownIPNetworks` and `KnownProxies` are both cleared because the proxy IPs are internal and dynamic. This must run first so that `RemoteIpAddress` reflects the real client IP before rate limiting partitions by it.
+`UseForwardedHeaders` trusts `X-Forwarded-For` and `X-Forwarded-Proto` from the Azure App Service reverse proxy. `KnownIPNetworks` and `KnownProxies` are both cleared because the proxy IPs are internal and dynamic. This must run first so that `RemoteIpAddress` reflects the real client IP before rate limiting partitions by it.
 
 ### Exception Handler
 
@@ -222,7 +222,7 @@ Why POST is path-specific: every admin page uses `@rendermode InteractiveServer`
 
 This placement avoids doing URL work (including potential legacy slug API calls in `UrlNormalizationMiddleware`) on HTTP requests that will be redirected anyway. It also avoids the wasteful case of redirecting a request that would have been rejected by the method filter.
 
-In production, Azure Container Apps terminates TLS at the edge and forwards requests with `X-Forwarded-Proto: https`. `UseForwardedHeaders` (which runs earlier) sets `IsHttps = true` from that header, so `UseHttpsRedirection` is a no-op in production. It only fires in development or when the app is accessed directly.
+In production, Azure App Service terminates TLS at the edge and forwards requests with `X-Forwarded-Proto: https`. `UseForwardedHeaders` (which runs earlier) sets `IsHttps = true` from that header, so `UseHttpsRedirection` is a no-op in production. It only fires in development or when the app is accessed directly.
 
 ## Phase 3 - URL Correction
 

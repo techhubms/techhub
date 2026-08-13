@@ -16,7 +16,7 @@
 
 ## Infrastructure
 
-- Azure Container Apps
+- Azure App Service
 - Bicep IaC
 - GitHub Actions CI/CD
 

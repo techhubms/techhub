@@ -184,9 +184,13 @@ public class DateRangeSliderTests : PlaywrightTestBase
     [Fact]
     public async Task DateRangeSlider_PreservesDateInTagUrl()
     {
-        // Arrange - Navigate with date range
+        // Arrange - Navigate with date range. Use a 90-day window (matching the app's own
+        // default filter) rather than 30 days: the local dev database is a periodically
+        // refreshed snapshot whose newest content can lag "today" by more than 30 days,
+        // which would leave the tag cloud empty and make this test fail regardless of
+        // the feature actually working.
         var toDate = DateOnly.FromDateTime(DateTime.Today);
-        var fromDate = toDate.AddDays(-30);
+        var fromDate = toDate.AddDays(-90);
 
         await Page.GotoRelativeAsync(
             $"/github-copilot?from={fromDate:yyyy-MM-dd}&to={toDate:yyyy-MM-dd}");

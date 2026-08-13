@@ -1,20 +1,20 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Waits until a deployed web Container App is serving a specific version, then runs smoke tests.
+    Waits until a deployed web App Service site is serving a specific version, then runs smoke tests.
 
 .DESCRIPTION
     Polls the /version endpoint on the web FQDN until it reports the expected image tag, then
     optionally runs basic smoke tests (health check + homepage). Used by both Deploy-Application.ps1
     and Deploy-PrPreview.ps1 to provide a single, tested readiness gate after each deployment.
 
-    For PR environments (minReplicas=0) the /version poll also acts as the warmup trigger: the
-    web Container App only starts serving once its Kestrel startup completes (which is blocked
-    until the API responds to the section-cache pre-load). So if /version returns the expected
-    tag, the full Web → API → DB chain is confirmed healthy.
+    The /version poll also acts as the warmup trigger after a deploy or restart: the web site
+    only starts serving once its Kestrel startup completes (which is blocked until the API
+    responds to the section-cache pre-load). So if /version returns the expected tag, the full
+    Web → API → DB chain is confirmed healthy.
 
 .PARAMETER WebFqdn
-    The FQDN of the web Container App, without scheme (e.g. ca-techhub-web-pr-42.domain.io).
+    The FQDN of the web App Service site, without scheme (e.g. app-techhub-web-pr-42.azurewebsites.net).
 
 .PARAMETER Tag
     The image tag to wait for (e.g. 20260509120000 or pr-406-20260509120000).
@@ -26,7 +26,7 @@
     When set, skip the smoke tests after version confirmation.
 
 .EXAMPLE
-    ./scripts/Wait-ForLiveVersion.ps1 -WebFqdn "myapp.region.azurecontainerapps.io" -Tag "20260509120000"
+    ./scripts/Wait-ForLiveVersion.ps1 -WebFqdn "app-techhub-web-prod.azurewebsites.net" -Tag "20260509120000"
 
 .EXAMPLE
     ./scripts/Wait-ForLiveVersion.ps1 -WebFqdn $webFqdn -Tag $Tag -SkipSmokeTests
