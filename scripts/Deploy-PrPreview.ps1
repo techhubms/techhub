@@ -6,7 +6,10 @@
 .DESCRIPTION
     Creates/updates or deletes a fully isolated PR preview environment on the shared,
     dedicated PR-preview App Service Plan (kept separate from the production Plan so
-    idle preview apps can never affect prod). Each PR gets its own:
+    idle preview apps can never affect prod). The Plan itself is fully ephemeral: this
+    script creates it on the first PR preview deploy and deletes it once the last PR
+    preview site is torn down, so it never bills while no PR previews are active. Each
+    PR gets its own:
     - PostgreSQL Flexible Server (created via PITR from production)
     - App Service sites (app-techhub-api-pr-{number} and app-techhub-web-pr-{number})
 
@@ -20,7 +23,8 @@
     shared VNet; admin access remains available via public firewall rules for admin IPs.
 
     On teardown, the PR-specific Postgres instance and its private endpoint are deleted
-    along with the App Service sites.
+    along with the App Service sites. If this was the last active PR preview, the shared
+    PR-preview App Service Plan is deleted too (recreated automatically on the next deploy).
 
 .PARAMETER PrNumber
     Pull request number. Used to derive unique resource names.
@@ -76,6 +80,14 @@ Set-StrictMode -Version Latest
 # Production resource group (PR previews run here alongside production)
 $prodRG = 'rg-techhub-prod'
 $prodIdentityName = 'id-techhub-prod'
+$location = 'swedencentral'
+
+# Shared PR-preview App Service Plan (Basic B1, Linux) — fully ephemeral: created here on first
+# PR preview deploy and deleted once the last PR preview site is torn down, so it never bills
+# while no PR previews are active. Its dedicated subnet (snet-app-service-pr) is created once by
+# infrastructure.bicep and persists regardless (VNet subnet delegation is independent of any
+# specific Plan resource).
+$prAppServicePlanName = 'asp-techhub-pr'
 
 # Production server (source for PITR database clone)
 $prodPostgresServer = 'psql-techhub-prod'
@@ -138,6 +150,20 @@ function Get-PostgresServerExists {
     param([string]$Name, [string]$ResourceGroup)
     $result = az postgres flexible-server list --resource-group $ResourceGroup --query "[?name=='$Name'].name | [0]" -o tsv 2>$null
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
+}
+
+function Get-AppServicePlanExists {
+    param([string]$Name, [string]$ResourceGroup)
+    $result = az appservice plan show --name $Name --resource-group $ResourceGroup --query name -o tsv 2>$null
+    return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
+}
+
+function Get-AppServicePlanSiteCount {
+    # Returns -1 if the plan doesn't exist (already removed) or its site count can't be read.
+    param([string]$Name, [string]$ResourceGroup)
+    $count = az appservice plan show --name $Name --resource-group $ResourceGroup --query numberOfSites -o tsv 2>$null
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($count)) { return -1 }
+    return [int]$count
 }
 
 function Write-WebAppDiagnostics {
@@ -278,6 +304,35 @@ if ($Action -eq 'teardown') {
     }
     else {
         Write-Warn "$apiAppName not found — already removed or never deployed"
+    }
+
+    # Delete the shared PR App Service Plan once it has no sites left — App Service Plans bill
+    # per instance-hour regardless of how many sites are on them, so an idle Basic B1 plan
+    # between PR previews would otherwise cost the same as a fully-used one.
+    Write-Step "Checking PR App Service Plan: $prAppServicePlanName"
+
+    if (Get-AppServicePlanExists -Name $prAppServicePlanName -ResourceGroup $prodRG) {
+        $remainingSites = Get-AppServicePlanSiteCount -Name $prAppServicePlanName -ResourceGroup $prodRG
+        if ($remainingSites -eq 0) {
+            Write-Detail "No PR sites remain on $prAppServicePlanName — deleting..."
+            az appservice plan delete `
+                --name $prAppServicePlanName `
+                --resource-group $prodRG `
+                --yes
+            if ($LASTEXITCODE -ne 0) {
+                Write-Warn "Failed to delete $prAppServicePlanName — continuing"
+            }
+            else {
+                Write-Ok "Deleted $prAppServicePlanName (no PR previews remain)"
+                $deletedAny = $true
+            }
+        }
+        else {
+            Write-Detail "$prAppServicePlanName still has $remainingSites site(s) — keeping"
+        }
+    }
+    else {
+        Write-Warn "$prAppServicePlanName not found — already removed"
     }
 
     # Delete the PostgreSQL private endpoint before the server itself so no orphaned
@@ -570,6 +625,33 @@ else {
         exit 1
     }
     Write-Ok "Private endpoint DNS zone group created: $prPrivateEndpointName"
+}
+
+# ============================================================================
+# ENSURE PR APP SERVICE PLAN EXISTS
+# ============================================================================
+
+# The shared PR-preview Plan is ephemeral — created here on first use and deleted by the
+# teardown path once no PR sites remain, so it doesn't bill while no PR previews are active.
+Write-Step "Ensuring PR App Service Plan exists: $prAppServicePlanName"
+
+if (Get-AppServicePlanExists -Name $prAppServicePlanName -ResourceGroup $prodRG) {
+    Write-Ok "PR App Service Plan already exists — reusing $prAppServicePlanName"
+}
+else {
+    Write-Detail "Creating $prAppServicePlanName (Basic B1, Linux)..."
+    az appservice plan create `
+        --name $prAppServicePlanName `
+        --resource-group $prodRG `
+        --location $location `
+        --is-linux `
+        --sku B1 `
+        --output none
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to create PR App Service Plan $prAppServicePlanName"
+        exit 1
+    }
+    Write-Ok "PR App Service Plan created: $prAppServicePlanName"
 }
 
 # ============================================================================

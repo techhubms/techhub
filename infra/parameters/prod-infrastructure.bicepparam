@@ -5,7 +5,6 @@ param resourceGroupName = 'rg-techhub-prod'
 param appInsightsName = 'appi-techhub-prod'
 param keyVaultName = 'kv-techhub-prod'
 param appServicePlanName = 'asp-techhub-prod'
-param appServicePlanPrName = 'asp-techhub-pr'
 // Networking
 param vnetName = 'vnet-techhub-prod'
 param addressSpacePrefix = '10.2.0.0/16'

@@ -58,7 +58,11 @@ There are three subnets:
 - `snet-app-service-pr` (`10.2.4.0/23`), delegated to `Microsoft.Web/serverFarms` — Regional VNet
   Integration for the shared PR-preview App Service Plan (`asp-techhub-pr`). Regional VNet
   Integration is strictly 1 subnet : 1 App Service Plan, so the PR-preview Plan needs its own
-  dedicated subnet even though it is deployed and reused persistently (not created/torn down per PR)
+  dedicated subnet. Unlike the subnet (created once by `infrastructure.bicep` and persistent),
+  the Plan itself is ephemeral — `scripts/Deploy-PrPreview.ps1` creates it on the first PR
+  preview deploy and deletes it once the last PR preview site is torn down, so it never bills
+  while no PR previews are active. Subnet delegation is independent of any specific Plan
+  resource, so recreating the Plan later re-integrates with the same subnet without issue.
 - `snet-private-endpoints` (`10.2.2.0/27`), hosts the PostgreSQL, Key Vault, and AI Foundry
   private endpoint NICs — private endpoints cannot share a subnet delegated to
   `Microsoft.Web/serverFarms`
