@@ -11,9 +11,9 @@
       "integrity": "sha256:d98f1066c077be0fa9d115b718f458bd803e415181b4a96f82a6f5d9f77241ac"
     },
     "ghcr.io/devcontainers/features/docker-in-docker:": {
-      "version": "3.1.0",
-      "resolved": "ghcr.io/devcontainers/features/docker-in-docker@sha256:62e04ec83d944da4fd2830f68a677d1f5466c0654aea1e4baa30232d16029ac1",
-      "integrity": "sha256:62e04ec83d944da4fd2830f68a677d1f5466c0654aea1e4baa30232d16029ac1"
+      "version": "4.1.0",
+      "resolved": "ghcr.io/devcontainers/features/docker-in-docker@sha256:7d979c4a36d595eb4ab79909caa3f396daf3b6152dcf38e8328ea4eff42206c7",
+      "integrity": "sha256:7d979c4a36d595eb4ab79909caa3f396daf3b6152dcf38e8328ea4eff42206c7"
     },
     "ghcr.io/devcontainers/features/dotnet:2": {
       "version": "2.5.0",
@@ -21,19 +21,19 @@
       "integrity": "sha256:0fc16547ed4db6d7ff2a9f5981d2b93eb314e568affb9958029ad794f1f9a093"
     },
     "ghcr.io/devcontainers/features/github-cli:1": {
-      "version": "1.1.0",
-      "resolved": "ghcr.io/devcontainers/features/github-cli@sha256:d22f50b70ed75339b4eed1ba9ecde3a1791f90e88d37936517e3bace0bbad671",
-      "integrity": "sha256:d22f50b70ed75339b4eed1ba9ecde3a1791f90e88d37936517e3bace0bbad671"
+      "version": "1.1.2",
+      "resolved": "ghcr.io/devcontainers/features/github-cli@sha256:7c409bf6316ffd85f04fd92fba85a744282639e603417dd4796409866bdb6805",
+      "integrity": "sha256:7c409bf6316ffd85f04fd92fba85a744282639e603417dd4796409866bdb6805"
     },
     "ghcr.io/devcontainers/features/node:2.1.0": {
       "version": "2.1.0",
       "resolved": "ghcr.io/devcontainers/features/node@sha256:586c9a6f7dd40bd3ba2cd41e7f2f88dcc31fbe5d1442afcbf07ffbc66b686857",
       "integrity": "sha256:586c9a6f7dd40bd3ba2cd41e7f2f88dcc31fbe5d1442afcbf07ffbc66b686857"
     },
-    "ghcr.io/devcontainers/features/powershell:2.0.2": {
-      "version": "2.0.2",
-      "resolved": "ghcr.io/devcontainers/features/powershell@sha256:82ea3880c5706ac3963f1b5e940a7f5871835393a5472f80008148b995d58d61",
-      "integrity": "sha256:82ea3880c5706ac3963f1b5e940a7f5871835393a5472f80008148b995d58d61"
+    "ghcr.io/devcontainers/features/powershell:2.0.3": {
+      "version": "2.0.3",
+      "resolved": "ghcr.io/devcontainers/features/powershell@sha256:460fb241f4f9e098a30f9e1ea4a6ac8cac8cdf5df89ba2edfcf177f66e17d8b7",
+      "integrity": "sha256:460fb241f4f9e098a30f9e1ea4a6ac8cac8cdf5df89ba2edfcf177f66e17d8b7"
     }
   }
 }
