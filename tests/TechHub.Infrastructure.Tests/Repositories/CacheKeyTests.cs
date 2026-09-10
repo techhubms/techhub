@@ -305,6 +305,39 @@ public class CacheKeyTests
     }
 
     [Fact]
+    public void SearchRequest_GetCacheKey_DateToSame5MinuteBucket_ProducesSameKey()
+    {
+        // Arrange - two "now"-relative timestamps 3 minutes apart, within the same 5-minute bucket
+        var baseTime = new DateTimeOffset(2026, 1, 1, 10, 30, 0, TimeSpan.Zero);
+        var request1 = new SearchRequest(
+            take: 10, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(),
+            dateTo: baseTime);
+        var request2 = new SearchRequest(
+            take: 10, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(),
+            dateTo: baseTime.AddMinutes(3));
+
+        // Act & Assert
+        request1.GetCacheKey().Should().Be(request2.GetCacheKey(),
+            "requests within the same 5-minute bucket should share a cache entry");
+    }
+
+    [Fact]
+    public void SearchRequest_GetCacheKey_DateToDifferent5MinuteBucket_ProducesDifferentKey()
+    {
+        // Arrange - timestamps that straddle a 5-minute bucket boundary
+        var request1 = new SearchRequest(
+            take: 10, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(),
+            dateTo: new DateTimeOffset(2026, 1, 1, 10, 34, 59, TimeSpan.Zero));
+        var request2 = new SearchRequest(
+            take: 10, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(),
+            dateTo: new DateTimeOffset(2026, 1, 1, 10, 35, 0, TimeSpan.Zero));
+
+        // Act & Assert
+        request1.GetCacheKey().Should().NotBe(request2.GetCacheKey(),
+            "requests in different 5-minute buckets should still create different cache keys");
+    }
+
+    [Fact]
     public void TagCountsRequest_GetCacheKey_Same5MinuteBucket_ProducesSameKey()
     {
         // Arrange
