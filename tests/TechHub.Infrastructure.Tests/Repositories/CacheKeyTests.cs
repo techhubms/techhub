@@ -351,4 +351,20 @@ public class CacheKeyTests
         request1.GetCacheKey().Should().NotBe(request2.GetCacheKey(),
             "requests in different 5-minute buckets should still create different cache keys");
     }
+
+    [Fact]
+    public void SearchRequest_GetCacheKey_PreEpochAndEpochBoundary_ProducesDifferentKey()
+    {
+        // Arrange - floor bucketing must keep pre-1970 timestamps in the previous bucket
+        var request1 = new SearchRequest(
+            take: 10, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(),
+            dateFrom: DateTimeOffset.FromUnixTimeSeconds(-1));
+        var request2 = new SearchRequest(
+            take: 10, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(),
+            dateFrom: DateTimeOffset.FromUnixTimeSeconds(0));
+
+        // Act & Assert
+        request1.GetCacheKey().Should().NotBe(request2.GetCacheKey(),
+            "pre-1970 timestamps must bucket down instead of truncating toward zero");
+    }
 }

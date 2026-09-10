@@ -10,6 +10,16 @@ internal static class CacheKeyDateBucketing
 {
     private const long BucketSeconds = 300;
 
-    public static long ToBucketedUnixSeconds(this DateTimeOffset value) =>
-        value.ToUnixTimeSeconds() / BucketSeconds * BucketSeconds;
+    public static long ToBucketedUnixSeconds(this DateTimeOffset value)
+    {
+        var unixSeconds = value.ToUnixTimeSeconds();
+        var remainder = unixSeconds % BucketSeconds;
+
+        if (remainder == 0)
+        {
+            return unixSeconds;
+        }
+
+        return unixSeconds - remainder - (unixSeconds < 0 ? BucketSeconds : 0);
+    }
 }
