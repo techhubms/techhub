@@ -483,6 +483,7 @@ app.MapNewsletterEndpoints();
 // App Service "Always On" pings GET / every ~5 minutes to keep the app warm; without a mapped
 // route this 404s and gets counted as a failed request by the failed-requests alert.
 app.MapGet("/", () => Results.Ok())
+    .RequireRateLimiting("api-public")
     .ExcludeFromDescription();
 
 // Map Aspire default health check endpoints (/health and /alive)
