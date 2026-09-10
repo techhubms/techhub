@@ -332,7 +332,11 @@ public static class ContentEndpoints
                 return TypedResults.BadRequest($"Invalid 'from' date format: {from}. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
 
-            dateFrom = parsedFrom;
+            // Normalize to day precision (start of day UTC): the API only documents date-only
+            // input, and this keeps repeated calls for the same day cache-stable instead of
+            // colliding with unrelated requests that happen to fall in the same 5-minute
+            // cache-key bucket as an arbitrary time component would.
+            dateFrom = new DateTimeOffset(parsedFrom.UtcDateTime.Date, TimeSpan.Zero);
         }
 
         if (!string.IsNullOrWhiteSpace(to))
@@ -342,11 +346,8 @@ public static class ContentEndpoints
                 return TypedResults.BadRequest($"Invalid 'to' date format: {to}. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
 
-            dateTo = parsedTo;
-            if (dateTo.Value.TimeOfDay == TimeSpan.Zero)
-            {
-                dateTo = dateTo.Value.AddDays(1).AddSeconds(-1);
-            }
+            // Normalize to end of day (day precision), same reasoning as 'from' above.
+            dateTo = new DateTimeOffset(parsedTo.UtcDateTime.Date, TimeSpan.Zero).AddDays(1).AddSeconds(-1);
         }
 
         // Fall back to lastDays if from/to not specified, then to configured default
@@ -488,7 +489,11 @@ public static class ContentEndpoints
                 return TypedResults.BadRequest($"Invalid 'from' date format: {from}. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
 
-            dateFrom = parsedFrom;
+            // Normalize to day precision (start of day UTC): the API only documents date-only
+            // input, and this keeps repeated calls for the same day cache-stable instead of
+            // colliding with unrelated requests that happen to fall in the same 5-minute
+            // cache-key bucket as an arbitrary time component would.
+            dateFrom = new DateTimeOffset(parsedFrom.UtcDateTime.Date, TimeSpan.Zero);
         }
 
         if (!string.IsNullOrWhiteSpace(to))
@@ -498,11 +503,8 @@ public static class ContentEndpoints
                 return TypedResults.BadRequest($"Invalid 'to' date format: {to}. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
 
-            dateTo = parsedTo;
-            if (dateTo.Value.TimeOfDay == TimeSpan.Zero)
-            {
-                dateTo = dateTo.Value.AddDays(1).AddSeconds(-1);
-            }
+            // Normalize to end of day (day precision), same reasoning as 'from' above.
+            dateTo = new DateTimeOffset(parsedTo.UtcDateTime.Date, TimeSpan.Zero).AddDays(1).AddSeconds(-1);
         }
 
         // Fall back to lastDays if from/to not specified

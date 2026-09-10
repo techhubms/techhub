@@ -138,12 +138,12 @@ public class SearchRequest
 
         if (DateFrom.HasValue)
         {
-            sb.Append("|df:").Append(DateFrom.Value.ToUnixTimeSeconds());
+            sb.Append("|df:").Append(DateFrom.Value.ToBucketedUnixSeconds());
         }
 
         if (DateTo.HasValue)
         {
-            sb.Append("|dt:").Append(DateTo.Value.ToUnixTimeSeconds());
+            sb.Append("|dt:").Append(DateTo.Value.ToBucketedUnixSeconds());
         }
 
         sb.Append("|take:").Append(Take);
@@ -152,6 +152,11 @@ public class SearchRequest
         if (ExactTitleMatch)
         {
             sb.Append("|exact");
+        }
+
+        if (IncludeFacets)
+        {
+            sb.Append("|facets");
         }
 
         if (!string.IsNullOrWhiteSpace(ContinuationToken))

@@ -98,12 +98,12 @@ public class TagCountsRequest
 
         if (DateFrom.HasValue)
         {
-            parts.Add($"df:{DateFrom.Value.ToUnixTimeSeconds()}");
+            parts.Add($"df:{DateFrom.Value.ToBucketedUnixSeconds()}");
         }
 
         if (DateTo.HasValue)
         {
-            parts.Add($"dt:{DateTo.Value.ToUnixTimeSeconds()}");
+            parts.Add($"dt:{DateTo.Value.ToBucketedUnixSeconds()}");
         }
 
         parts.Add($"s:{SectionName}");

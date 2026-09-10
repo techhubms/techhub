@@ -1460,6 +1460,32 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
+    public async Task GetCollectionItems_WithTimeComponentInToDate_NormalizesToEndOfDay()
+    {
+        // Arrange - an explicit 'to' with a time component should still be treated as the whole
+        // day (not truncated), so it must return the same total as the plain date-only 'to'.
+        var fromDate = DateTimeOffset.UtcNow.AddDays(-90).ToString("yyyy-MM-dd");
+        var toDateOnly = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd");
+        var toWithTime = $"{toDateOnly}T00:00:01Z";
+
+        // Act
+        var dayPrecisionResponse = await _client.GetAsync(
+            $"/api/sections/all/collections/all/items?from={fromDate}&to={toDateOnly}", TestContext.Current.CancellationToken);
+        var timeComponentResponse = await _client.GetAsync(
+            $"/api/sections/all/collections/all/items?from={fromDate}&to={toWithTime}", TestContext.Current.CancellationToken);
+
+        // Assert
+        dayPrecisionResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+        timeComponentResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var dayPrecisionResult = await dayPrecisionResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        var timeComponentResult = await timeComponentResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+
+        timeComponentResult!.TotalCount.Should().Be(dayPrecisionResult!.TotalCount,
+            "an explicit time component in 'to' should be normalized to end-of-day, not cut off same-day results");
+    }
+
+    [Fact]
     public async Task GetCollectionItems_WithInvalidToDate_ReturnsBadRequest()
     {
         // Act

@@ -354,6 +354,9 @@ builder.Services.AddRateLimiter(options =>
     // runners, not external clients. Loopback exemption is restricted to Development and
     // IntegrationTest: UseForwardedHeaders rewrites RemoteIpAddress before UseRateLimiter
     // runs, so a spoofed X-Forwarded-For: 127.0.0.1 could otherwise bypass rate limiting.
+    // PermitLimit raised from 200 to 500 (Sep 2026): prod App Insights (14d) showed a 321
+    // req/min peak from the Web app — which calls the API server-side, so all site visitors
+    // are funneled through this single partition — already exceeding the prior 200 limit.
     options.AddPolicy("api-public", context =>
     {
         if (isIntegrationTest)
@@ -371,7 +374,7 @@ builder.Services.AddRateLimiter(options =>
             partitionKey: ip?.ToString() ?? "unknown",
             factory: _ => new SlidingWindowRateLimiterOptions
             {
-                PermitLimit = 200,
+                PermitLimit = 500,
                 Window = TimeSpan.FromMinutes(1),
                 SegmentsPerWindow = 6,
                 QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
@@ -476,6 +479,12 @@ app.MapAuthorEndpoints();
 app.MapGhcFeaturesEndpoints();
 app.MapAdminEndpoints();
 app.MapNewsletterEndpoints();
+
+// App Service "Always On" pings GET / every ~5 minutes to keep the app warm; without a mapped
+// route this 404s and gets counted as a failed request by the failed-requests alert.
+app.MapGet("/", () => Results.Ok())
+    .RequireRateLimiting("api-public")
+    .ExcludeFromDescription();
 
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();
