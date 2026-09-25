@@ -107,6 +107,11 @@ if (-not $OutputPath) {
 # Default local connection string (matches docker-compose.yml)
 $localConnectionString = "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
 
+# Production resource identifiers (shared by the Key Vault password fetch and the
+# PostgreSQL firewall allow-list logic below).
+$prodResourceGroup = "rg-techhub-prod"
+$prodPostgresServer = "psql-techhub-prod"
+
 # Tables to include when -TablesOnly is specified
 $contentTables = @(
     "content_items",
@@ -140,6 +145,18 @@ function Write-Fail {
 function Write-Detail {
     param([string]$Message)
     Write-Host "   $Message" -ForegroundColor Gray
+}
+
+function Get-CurrentOutboundIp {
+    foreach ($ipProvider in @('https://checkip.amazonaws.com', 'https://api.ipify.org', 'https://icanhazip.com')) {
+        try {
+            $ipResponse = (Invoke-RestMethod -Uri $ipProvider -TimeoutSec 10).Trim()
+            if ($ipResponse -match '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$') {
+                return $ipResponse
+            }
+        } catch {}
+    }
+    return $null
 }
 
 function Parse-ConnectionString {
@@ -320,8 +337,8 @@ if (-not $SkipDump -and -not $ProductionConnectionString) {
     # Try to fetch from Azure (requires az CLI login and VPN access)
     Write-Detail "Attempting to read production connection string from Azure..."
     try {
-        $prodRg = "rg-techhub-prod"
-        $prodServer = "psql-techhub-prod"
+        $prodRg = $prodResourceGroup
+        $prodServer = $prodPostgresServer
         $prodDb = "techhub"
         $adminUser = "techhubadmin"
 
@@ -353,16 +370,7 @@ if (-not $SkipDump -and -not $ProductionConnectionString) {
                 if ($LASTEXITCODE -ne 0) {
                     # Access denied — detect current outbound IP and add it to the KV firewall
                     Write-Detail "Key Vault access restricted — detecting current IP to add firewall rule..."
-                    $currentIp = $null
-                    foreach ($ipProvider in @('https://checkip.amazonaws.com', 'https://api.ipify.org', 'https://icanhazip.com')) {
-                        try {
-                            $ipResponse = (Invoke-RestMethod -Uri $ipProvider -TimeoutSec 10).Trim()
-                            if ($ipResponse -match '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$') {
-                                $currentIp = $ipResponse
-                                break
-                            }
-                        } catch {}
-                    }
+                    $currentIp = Get-CurrentOutboundIp
 
                     if ($currentIp) {
                         $kvAddedIpCidr = "$currentIp/32"
@@ -469,7 +477,51 @@ if (-not $SkipDump) {
         Write-Detail "Dumping entire database"
     }
 
-    Invoke-PgDump -PgEnv $prodPgEnv -OutputFile $OutputPath -Tables $tablesToDump
+    # Production PostgreSQL only allows connections from the static ADMIN_IP_ADDRESSES
+    # allow-list (applied at infra-deploy time) — public access is otherwise disabled.
+    # Temporarily add the caller's current outbound IP so ad-hoc local restores don't
+    # require updating that list and redeploying infrastructure (mirrors the Key Vault
+    # firewall pattern above). Always removed afterward, even if the dump fails.
+    $pgFirewallRuleName = "allow-temp-restore-$([Guid]::NewGuid().ToString('N').Substring(0, 8))"
+    $pgIpWasAdded = $false
+    try {
+        $currentIp = Get-CurrentOutboundIp
+        if ($currentIp) {
+            Write-Detail "Adding temporary PostgreSQL firewall rule for $currentIp..."
+            az postgres flexible-server firewall-rule create `
+                --resource-group $prodResourceGroup `
+                --server-name $prodPostgresServer `
+                --name $pgFirewallRuleName `
+                --start-ip-address $currentIp `
+                --end-ip-address $currentIp `
+                --output none 2>$null
+            if ($LASTEXITCODE -eq 0) {
+                $pgIpWasAdded = $true
+                Write-Ok "Added temporary firewall rule for $currentIp"
+                Write-Detail "Waiting for firewall rule to propagate..."
+                Start-Sleep -Seconds 15
+            }
+            else {
+                Write-Host "   [WARN] Could not add PostgreSQL firewall rule automatically — ensure your IP is in ADMIN_IP_ADDRESSES or connect via VPN" -ForegroundColor Yellow
+            }
+        }
+        else {
+            Write-Host "   [WARN] Could not detect current outbound IP — ensure your IP is in ADMIN_IP_ADDRESSES or connect via VPN" -ForegroundColor Yellow
+        }
+
+        Invoke-PgDump -PgEnv $prodPgEnv -OutputFile $OutputPath -Tables $tablesToDump
+    }
+    finally {
+        if ($pgIpWasAdded) {
+            Write-Detail "Removing temporary PostgreSQL firewall rule ($pgFirewallRuleName)..."
+            az postgres flexible-server firewall-rule delete `
+                --resource-group $prodResourceGroup `
+                --server-name $prodPostgresServer `
+                --name $pgFirewallRuleName `
+                --yes `
+                --output none 2>$null
+        }
+    }
 
     $dumpSizeMb = [math]::Round((Get-Item $OutputPath).Length / 1MB, 1)
     Write-Ok "Dump complete: $OutputPath ($dumpSizeMb MB)"
