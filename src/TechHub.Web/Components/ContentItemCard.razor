@@ -2,17 +2,36 @@
 @using TechHub.Web.Services
 @inject NavigationManager Navigation
 @inject SectionCache SectionCache
+@inject IJSRuntime JS
+@implements IDisposable
 
 <div class="card"
    aria-label="@Item.GetAriaLabel()">
         <div class="card-header">
-            <h3 class="card-title">
-                <a href="@Item.GetHref(SectionName)"
-                   class="card-link"
-                   target="@Item.GetTarget()"
-                   rel="@Item.GetRel()"
-                   aria-label="@Item.GetAriaLabel()">@Item.Title</a>
-            </h3>
+            <div class="card-title-row">
+                <h3 class="card-title">
+                    <a href="@Item.GetHref(SectionName)"
+                       class="card-link"
+                       target="@Item.GetTarget()"
+                       rel="@Item.GetRel()"
+                       aria-label="@Item.GetAriaLabel()">@Item.Title</a>
+                </h3>
+                <button type="button" class="card-share-button"
+                        @onclick="CopyShareLinkAsync"
+                        @onclick:stopPropagation="true"
+                        title="@(_copied ? "Copied!" : "Copy link to this page")"
+                        aria-label="@(_copied ? "Link copied to clipboard" : "Copy link to this page")">
+                    @if (_copied)
+                    {
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+                    }
+                    else
+                    {
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
+                    }
+                </button>
+               <span class="visually-hidden" aria-live="polite">@(_copied ? "Link copied to clipboard" : string.Empty)</span>
+            </div>
             <div class="card-meta">
                 <time datetime="@FormatDateIso(Item.DateEpoch)" title="@FormatDateFull(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>@if (!string.IsNullOrWhiteSpace(Item.Author))
                 {<span class="content-author"> by @Item.Author</span>}
@@ -95,6 +114,41 @@
     public IReadOnlyList<string>? ActiveFilterTags { get; set; }
 
     private bool _showAllTags;
+    private bool _copied;
+    private CancellationTokenSource? _copiedResetCts;
+
+    private async Task CopyShareLinkAsync()
+    {
+        var canonicalUrl = new Uri(new Uri(Navigation.BaseUri), Item.GetCanonicalHref(SectionName)).ToString();
+        await JS.InvokeVoidAsync("navigator.clipboard.writeText", canonicalUrl);
+
+        _copiedResetCts?.Cancel();
+        _copiedResetCts?.Dispose();
+        _copiedResetCts = new CancellationTokenSource();
+
+        _copied = true;
+        await InvokeAsync(StateHasChanged);
+
+        try
+        {
+            await Task.Delay(2000, _copiedResetCts.Token);
+        }
+        catch (OperationCanceledException)
+        {
+            return;
+        }
+
+        _copied = false;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        _copiedResetCts?.Cancel();
+        _copiedResetCts?.Dispose();
+        _copiedResetCts = null;
+        _copied = false;
+    }
 
     private string GetCollectionUrl()
     {

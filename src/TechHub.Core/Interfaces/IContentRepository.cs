@@ -20,6 +20,12 @@ public interface IContentRepository
         string slug,
         CancellationToken ct = default);
 
+    Task<ContentItemDetail?> GetBySlugAsync(
+        string collectionName,
+        string slug,
+        bool includeRenderedHtml,
+        CancellationToken ct = default);
+
     // ==================== Search Methods ====================
 
     /// <summary>
