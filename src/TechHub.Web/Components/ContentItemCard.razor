@@ -146,6 +146,7 @@
     {
         _copiedResetCts?.Cancel();
         _copiedResetCts?.Dispose();
+        _copiedResetCts = null;
         _copied = false;
     }
 
