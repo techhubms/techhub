@@ -712,7 +712,8 @@ public class ContentItemCardTests : BunitContext
             .WithExternalUrl("https://example.com/post")
             .Build();
 
-        JSInterop.SetupVoid("navigator.clipboard.writeText", _ => true);
+        var clipboardWrite = JSInterop.SetupVoid("navigator.clipboard.writeText", _ => true);
+        clipboardWrite.SetVoidResult();
 
         var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item)
@@ -727,6 +728,38 @@ public class ContentItemCardTests : BunitContext
             .ContainSingle(i => i.Identifier == "navigator.clipboard.writeText").Subject;
         invocation.Arguments.Should().ContainSingle()
             .Which.Should().Be("http://localhost/ai/blogs/example-post");
+    }
+
+    [Fact]
+    public void ContentItemCard_ClickShareButton_UpdatesAccessibleLabel_WhenCopySucceeds()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithSlug("example-post")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        var clipboardWrite = JSInterop.SetupVoid("navigator.clipboard.writeText", _ => true);
+        clipboardWrite.SetVoidResult();
+
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.SectionName, "ai"));
+
+        // Act
+        var shareButton = cut.Find(".card-share-button");
+        shareButton.Click();
+
+        // Assert
+        cut.WaitForAssertion(() =>
+        {
+            shareButton.GetAttribute("aria-label").Should().Be("Link copied to clipboard");
+            shareButton.GetAttribute("title").Should().Be("Copied!");
+            cut.Find(".visually-hidden").TextContent.Should().Be("Link copied to clipboard");
+        });
     }
 
     [Fact]
@@ -752,4 +785,3 @@ public class ContentItemCardTests : BunitContext
         link.GetAttribute("target").Should().Be("_blank");
     }
 }
-

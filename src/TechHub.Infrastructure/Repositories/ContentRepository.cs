@@ -334,6 +334,7 @@ public sealed class ContentRepository : IContentRepository
     public async Task<ContentItemDetail?> GetBySlugAsync(
         string collectionName,
         string slug,
+        bool includeRenderedHtml = true,
         CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(collectionName);
@@ -343,12 +344,17 @@ public sealed class ContentRepository : IContentRepository
         collectionName = collectionName.ToLowerInvariant();
         slug = slug.ToLowerInvariant();
 
-        var cacheKey = $"slug:{collectionName}:{slug}";
+        var cacheKey = $"slug:{collectionName}:{slug}:rendered:{includeRenderedHtml}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SetAbsoluteExpiration(_slugCacheTtl);
             var item = await GetBySlugInternalAsync(collectionName, slug, ct);
-            return item != null ? RenderHtmlIfNeeded(item) : null;
+            if (item == null)
+            {
+                return null;
+            }
+
+            return includeRenderedHtml ? RenderHtmlIfNeeded(item) : item;
         });
     }
 

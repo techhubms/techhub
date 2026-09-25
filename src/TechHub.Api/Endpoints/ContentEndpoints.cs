@@ -719,7 +719,11 @@ public static class ContentEndpoints
         // Get the content item detail by collection and slug.
         // Items in externally-linking collections (news, blogs, community) are returned too;
         // the Web layer renders a summary with a link to the original source for those instead of the rendered HTML.
-        var item = await contentRepository.GetBySlugAsync(collectionName, slug, cancellationToken);
+        var item = await contentRepository.GetBySlugAsync(
+            collectionName,
+            slug,
+            includeRenderedHtml: !ContentItem.CollectionLinksExternally(collectionName),
+            ct: cancellationToken);
 
         if (item == null)
         {

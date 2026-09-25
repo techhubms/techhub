@@ -1306,6 +1306,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         detail!.Slug.Should().Be(testItem.Slug);
         detail.Excerpt.Should().NotBeNullOrEmpty();
         detail.ExternalUrl.Should().NotBeNullOrEmpty();
+        detail.RenderedHtml.Should().BeNull("external detail pages render a summary instead of the full article body");
     }
 
     /// <summary>

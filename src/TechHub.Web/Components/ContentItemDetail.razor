@@ -12,7 +12,10 @@
                 {<span class="content-author"> by @Item.Author</span>}
             </div>
         </div>
-        <SafeMarkup Html="@Item.Excerpt" />
+        @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
+        {
+            <p>@Item.Excerpt</p>
+        }
         <p class="article-external-cta">
             <a class="btn" href="@Item.ExternalUrl" target="_blank" rel="noopener noreferrer">Read the full article</a>
         </p>
