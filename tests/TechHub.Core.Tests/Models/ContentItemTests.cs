@@ -155,6 +155,45 @@ public class ContentItemTests
     }
 
     [Fact]
+    public void GetCanonicalHref_ReturnsInternalTechHubUrl_ForExternalCollections()
+    {
+        // Arrange - unlike GetHref(), the canonical href never returns ExternalUrl
+        var contentItem = CreateContentItemWithCollection("news", externalUrl: "https://example.com/article");
+
+        // Act
+        var result = contentItem.GetCanonicalHref();
+
+        // Assert
+        result.Should().Be("/github-copilot/news/test-slug");
+    }
+
+    [Fact]
+    public void GetCanonicalHref_ReturnsSameUrlAsGetHref_ForInternalCollections()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("videos");
+
+        // Act
+        var result = contentItem.GetCanonicalHref();
+
+        // Assert
+        result.Should().Be("/github-copilot/videos/test-slug");
+    }
+
+    [Fact]
+    public void GetCanonicalHref_UsesSectionOverride_WhenProvided()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("news", externalUrl: "https://example.com/article");
+
+        // Act
+        var result = contentItem.GetCanonicalHref("ai");
+
+        // Assert
+        result.Should().Be("/ai/news/test-slug");
+    }
+
+    [Fact]
     public void GetTarget_ReturnsBlank_ForExternalCollections()
     {
         // Arrange

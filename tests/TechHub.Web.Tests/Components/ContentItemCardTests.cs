@@ -15,6 +15,8 @@ public class ContentItemCardTests : BunitContext
 {
     public ContentItemCardTests()
     {
+        JSInterop.Mode = JSRuntimeMode.Loose;
+
         var sectionCache = new SectionCache();
         sectionCache.Initialize(
         [
@@ -655,6 +657,99 @@ public class ContentItemCardTests : BunitContext
         currentUri.Should().Contain("tags=azure");
         currentUri.Should().NotContain("types=",
             "types should not appear when it wasn't in the original URL");
+    }
+
+    [Fact]
+    public void ContentItemCard_ShowsShareButton_ForExternalItem()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithSlug("example-post")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        // Act
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.SectionName, "ai"));
+
+        // Assert
+        cut.FindAll(".card-share-button").Should().ContainSingle();
+    }
+
+    [Fact]
+    public void ContentItemCard_ShowsShareButton_ForInternalItem()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("Example Video")
+            .WithCollectionName("videos")
+            .WithPrimarySectionName("github-copilot")
+            .WithSlug("example-video")
+            .Build();
+
+        // Act
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.SectionName, "github-copilot"));
+
+        // Assert - share button is always available, even for internally-rendered items
+        cut.FindAll(".card-share-button").Should().ContainSingle();
+    }
+
+    [Fact]
+    public void ContentItemCard_ClickShareButton_CopiesCanonicalTechHubUrl_ForExternalItem()
+    {
+        // Arrange - external items should still copy the internal TechHub URL, not the external one
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithSlug("example-post")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        JSInterop.SetupVoid("navigator.clipboard.writeText", _ => true);
+
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.SectionName, "ai"));
+
+        // Act
+        var shareButton = cut.Find(".card-share-button");
+        shareButton.Click();
+
+        // Assert
+        var invocation = JSInterop.Invocations.Should()
+            .ContainSingle(i => i.Identifier == "navigator.clipboard.writeText").Subject;
+        invocation.Arguments.Should().ContainSingle()
+            .Which.Should().Be("http://localhost/ai/blogs/example-post");
+    }
+
+    [Fact]
+    public void ContentItemCard_CardLink_StillOpensExternalUrlDirectly_InNewTab()
+    {
+        // Arrange - clicking the card itself (not the share button) must be unaffected by the share button
+        var item = A.ContentItem
+            .WithTitle("Example Post")
+            .WithCollectionName("blogs")
+            .WithPrimarySectionName("ai")
+            .WithSlug("example-post")
+            .WithExternalUrl("https://example.com/post")
+            .Build();
+
+        // Act
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.SectionName, "ai"));
+
+        // Assert
+        var link = cut.Find(".card-link");
+        link.GetAttribute("href").Should().Be("https://example.com/post");
+        link.GetAttribute("target").Should().Be("_blank");
     }
 }
 

@@ -84,13 +84,13 @@ Content linking behavior is determined by **collection name**, not by the `exter
 
 | Collection | Links To | Detail Endpoint | `externalUrl` Usage |
 |------------|----------|-----------------|---------------------|
-| `news` | External URL | Returns `204 No Content` | Used for linking |
-| `blogs` | External URL | Returns `204 No Content` | Used for linking |
-| `community` | External URL | Returns `204 No Content` | Used for linking |
+| `news` | External URL | Returns content for summary rendering | Used for linking |
+| `blogs` | External URL | Returns content for summary rendering | Used for linking |
+| `community` | External URL | Returns content for summary rendering | Used for linking |
 | `videos` | Internal page | Returns content | Stored but not used for linking |
 | `roundups` | Internal page | Returns content | Internal path, not used |
 
-- **External Collections** (news, blogs, community): UI cards link directly to `externalUrl`. The detail endpoint returns `204 No Content`.
+- **External Collections** (news, blogs, community): UI cards link directly to `externalUrl`. The canonical internal URL (`/section/collection/slug`) still renders a summary (excerpt + a link to the original source) so shared links always land on Tech Hub first.
 - **Internal Collections** (videos, roundups): Content is displayed on the internal detail page at `/section/collection/slug`.
 
 **Note**: Tech Hub aggregates external content but presents videos and roundups internally. The `externalUrl` field stores the source URL for all content (used for RSS feeds and attribution), but the linking behavior is controlled by collection type.
@@ -103,6 +103,7 @@ The `ContentItem` domain model provides helper methods for navigation and URL ge
 |--------|---------|---------|
 | `LinksExternally()` | Checks if item links to external source | `bool` |
 | `GetHref(sectionOverride?)` | Gets the navigation URL (external or internal) | `string` |
+| `GetCanonicalHref(sectionOverride?)` | Gets the internal Tech Hub URL, always `/section/collection/slug`, even for external items | `string` |
 | `GetTarget()` | Gets link target attribute | `"_blank"` or `null` |
 | `GetRel()` | Gets link rel attribute | `"noopener noreferrer"` or `null` |
 | `GetAriaLabel()` | Gets accessibility label for screen readers | `string` |
@@ -119,6 +120,10 @@ The `ContentItem` domain model provides helper methods for navigation and URL ge
     @item.Title
 </a>
 ```
+
+`GetCanonicalHref()` powers the card's share button: it always copies the Tech Hub internal URL to
+the clipboard — regardless of whether the card itself opens externally — so recipients always land
+on Tech Hub first.
 
 For detailed information about filtering content by tags, see [filtering.md](filtering.md).
 
@@ -219,7 +224,7 @@ Get detailed content item by section, collection, and content slug.
 - `collectionName` (path): Collection name
 - `slug` (path): Content slug
 
-**Response**: `200 OK`, `204 No Content` (section, collection, or slug not found, or the matched item links externally and has no internal detail representation), or `400 Bad Request` (invalid `sectionName`, `collectionName`, or `slug` format)
+**Response**: `200 OK`, `204 No Content` (section, collection, or slug not found), or `400 Bad Request` (invalid `sectionName`, `collectionName`, or `slug` format)
 
 **Response Body**: `ContentItemDetail` with full rendered HTML, metadata, and TOC
 
@@ -227,7 +232,7 @@ Get detailed content item by section, collection, and content slug.
 curl -k "https://localhost:5001/api/sections/ai/collections/videos/2024-06-ai-overview"
 ```
 
-**Note**: Only `videos` and `roundups` collections return content. External collections (`news`, `blogs`, `community`) return `204 No Content`.
+**Note**: All valid slugs return `200 OK` with the full `ContentItemDetail`, regardless of collection. For items in externally-linking collections (`news`, `blogs`, `community`), the Web app renders a summary (excerpt + a link to the original source) at the canonical URL instead of the rendered HTML.
 
 ### Authors
 

@@ -857,7 +857,7 @@ public sealed class NewsletterService : INewsletterService
                 title = GetSectionTitle(s),
                 items = itemsBySection[s].Select(item => new
                 {
-                    url = BuildAbsoluteUrl($"/{s}/all?search={Uri.EscapeDataString(item.Title)}&exact=true"),
+                    url = BuildAbsoluteUrl($"/{s}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"),
                     title = item.Title,
                     collectionName = item.CollectionName
                 })
@@ -902,9 +902,9 @@ public sealed class NewsletterService : INewsletterService
             sb.AppendLine(GetSectionTitle(section));
             foreach (var item in items)
             {
-                var filteredUrl = BuildAbsoluteUrl($"/{section}/all?search={Uri.EscapeDataString(item.Title)}&exact=true");
+                var itemUrl = BuildAbsoluteUrl($"/{section}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}");
                 sb.AppendLine($"- {item.Title} ({item.CollectionName})");
-                sb.AppendLine($"  {filteredUrl}");
+                sb.AppendLine($"  {itemUrl}");
             }
 
             sb.AppendLine();

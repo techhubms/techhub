@@ -1281,10 +1281,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
-    public async Task GetContentDetail_WithExternalUrl_ReturnsNoContent()
+    public async Task GetContentDetail_WithExternalUrl_ReturnsDetailForSummaryRendering()
     {
-        // External collections (news, blogs, community) link to original sources,
-        // so detail endpoint returns 204 since there's no internal content to display
+        // External collections (news, blogs, community) link to original sources, but the detail
+        // endpoint still returns the item so the Web layer can render a summary + link to the source.
 
         // Arrange - Get a news item (external collection)
         var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items", TestContext.Current.CancellationToken);
@@ -1294,12 +1294,18 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Verify it's actually an external item
         testItem.LinksExternally().Should().BeTrue("News items should link externally");
 
-        // Act - Try to access detail endpoint
+        // Act - Access detail endpoint
         var response = await _client.GetAsync($"/api/sections/ai/collections/news/{testItem.Slug}", TestContext.Current.CancellationToken);
 
-        // Assert - Should return 204 since external items don't have detail pages
-        response.StatusCode.Should().Be(HttpStatusCode.NoContent,
-            "External collections should return 204 for detail endpoint since they link to original sources");
+        // Assert - Should return 200 with the item so the Web layer can render a summary and CTA link
+        response.StatusCode.Should().Be(HttpStatusCode.OK,
+            "external collections should still return detail data so a summary can be rendered at the canonical URL");
+
+        var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>(TestContext.Current.CancellationToken);
+        detail.Should().NotBeNull();
+        detail!.Slug.Should().Be(testItem.Slug);
+        detail.Excerpt.Should().NotBeNullOrEmpty();
+        detail.ExternalUrl.Should().NotBeNullOrEmpty();
     }
 
     /// <summary>

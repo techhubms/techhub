@@ -101,7 +101,7 @@ public static class ContentEndpoints
         group.MapGet("/{sectionName}/collections/{collectionName}/{slug}", GetContentDetail)
             .WithName("GetContentDetail")
             .WithSummary("Get content item detail")
-            .WithDescription("Returns full content item including rendered HTML for content pages. Returns 204 No Content when the section, collection, or slug does not exist, or when the matched item links externally and therefore has no internal detail representation.")
+            .WithDescription("Returns full content item including rendered HTML for content pages. Returns 204 No Content when the section, collection, or slug does not exist. Items in externally-linking collections are also returned; clients are expected to render a summary with a link to the original source instead of the rendered HTML.")
             .Produces<ContentItemDetail>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status204NoContent)
             .Produces(StatusCodes.Status400BadRequest);
@@ -716,16 +716,12 @@ public static class ContentEndpoints
             return TypedResults.NoContent();
         }
 
-        // Get the content item detail by collection and slug
+        // Get the content item detail by collection and slug.
+        // Items in externally-linking collections (news, blogs, community) are returned too;
+        // the Web layer renders a summary with a link to the original source for those instead of the rendered HTML.
         var item = await contentRepository.GetBySlugAsync(collectionName, slug, cancellationToken);
 
         if (item == null)
-        {
-            return TypedResults.NoContent();
-        }
-
-        // External items don't have internal detail pages
-        if (item.LinksExternally())
         {
             return TypedResults.NoContent();
         }

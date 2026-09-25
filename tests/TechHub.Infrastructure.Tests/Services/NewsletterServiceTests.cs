@@ -318,6 +318,65 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     }
 
     [Fact]
+    public async Task SendDailyOverviewAsync_LinksToCanonicalContentPage_NotSearchResultsPage()
+    {
+        const string Slug = "daily-item-newsletter-link-test-2026-05-26";
+        const string RecipientEmail = "daily-link-test@example.com";
+        var day = new DateOnly(2026, 5, 26);
+        await CleanupDailyOverviewTestDataAsync();
+
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name, tags_csv,
+                 sections_bitmask, content_hash, is_ai, created_at)
+            VALUES
+                (@Slug, 'blogs', 'Daily Link Test Item', 'Body', 'Excerpt', 1748044800,
+                 'ai', 'https://example.com/external-article', 'TechHub', 'TechHub', ',AI,',
+                 1, 'hash-daily-newsletter-link-test', TRUE, '2026-05-26T12:00:00Z')
+            ON CONFLICT (collection_name, slug) DO NOTHING
+            """, new { Slug });
+
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES ('daily-link-test@example.com', TRUE, NOW(), '{"weeklySections":[],"dailySections":["ai"]}'::jsonb)
+            """);
+
+        string? htmlBody = null;
+        string? textBody = null;
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        emailSender
+            .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Callback<string, string, string, string, CancellationToken>((recipient, _, html, text, _) =>
+            {
+                if (string.Equals(recipient, RecipientEmail, StringComparison.Ordinal))
+                {
+                    htmlBody = html;
+                    textBody = text;
+                }
+            })
+            .ReturnsAsync(true);
+
+        var contentRepository = new Mock<IContentRepository>(MockBehavior.Strict);
+        contentRepository
+            .Setup(x => x.GetAllSectionsAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync([CreateSection("ai")]);
+
+        var sut = CreateService(contentRepository.Object, emailSender.Object);
+
+        var sent = await sut.SendDailyOverviewAsync(day, TestContext.Current.CancellationToken);
+
+        sent.Should().BeTrue();
+        const string ExpectedUrl = "https://tech.hub.ms/ai/blogs/daily-item-newsletter-link-test-2026-05-26";
+        htmlBody.Should().NotBeNull();
+        htmlBody!.Should().Contain(ExpectedUrl, "newsletter items should always link to the canonical TechHub page");
+        htmlBody.Should().NotContain("/all?search=", "newsletter items should not link to the filtered search results page");
+        textBody.Should().NotBeNull();
+        textBody!.Should().Contain(ExpectedUrl, "newsletter items should always link to the canonical TechHub page");
+        textBody.Should().NotContain("/all?search=", "newsletter items should not link to the filtered search results page");
+    }
+
+    [Fact]
     public async Task SendDailyOverviewAsync_WhenNoItemsForSubscriberSections_SendsEmailWithNoItemsMessage()
     {
         const string RecipientEmail = "daily-no-items@example.com";
@@ -446,14 +505,14 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         await _fixture.Connection.ExecuteAsync("""
             DELETE FROM newsletter_send_log
             WHERE send_kind = 'daily-overview'
-              AND target_key IN ('2026-05-20', '2026-05-21', '2026-05-22', '2026-05-25');
+              AND target_key IN ('2026-05-20', '2026-05-21', '2026-05-22', '2026-05-25', '2026-05-26');
 
             DELETE FROM newsletter_subscribers
-            WHERE email IN ('confirmed@example.com', 'unconfirmed@example.com', 'confirmed-daily@example.com', 'daily-ordering@example.com', 'daily-no-items@example.com');
+            WHERE email IN ('confirmed@example.com', 'unconfirmed@example.com', 'confirmed-daily@example.com', 'daily-ordering@example.com', 'daily-no-items@example.com', 'daily-link-test@example.com');
 
             DELETE FROM content_items
             WHERE collection_name = 'blogs'
-              AND slug IN ('daily-item-newsletter-test-2026-05-20', 'daily-item-newsletter-test-2026-05-21', 'daily-order-ai-2026-05-22', 'daily-order-dotnet-2026-05-22');
+              AND slug IN ('daily-item-newsletter-test-2026-05-20', 'daily-item-newsletter-test-2026-05-21', 'daily-order-ai-2026-05-22', 'daily-order-dotnet-2026-05-22', 'daily-item-newsletter-link-test-2026-05-26');
             """);
     }
 

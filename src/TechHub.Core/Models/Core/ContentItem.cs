@@ -197,6 +197,17 @@ public record ContentItem
         return BuildHref(CollectionName, Slug, ExternalUrl, section);
     }
 
+    /// <summary>
+    /// Gets the canonical Tech Hub URL for this item — always /{section}/{collection}/{slug},
+    /// even for items that link externally via <see cref="GetHref"/>. Used for share links so
+    /// recipients always land on Tech Hub first, regardless of how the card itself opens.
+    /// </summary>
+    public string GetCanonicalHref(string? sectionOverride = null)
+    {
+        var section = (sectionOverride ?? PrimarySectionName).ToLowerInvariant();
+        return $"/{section}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}";
+    }
+
     public static bool CollectionLinksExternally(string collectionName)
     {
         ArgumentNullException.ThrowIfNull(collectionName);
