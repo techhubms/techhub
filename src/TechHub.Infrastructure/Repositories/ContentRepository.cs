@@ -334,7 +334,15 @@ public sealed class ContentRepository : IContentRepository
     public async Task<ContentItemDetail?> GetBySlugAsync(
         string collectionName,
         string slug,
-        bool includeRenderedHtml = true,
+        CancellationToken ct = default)
+    {
+        return await GetBySlugAsync(collectionName, slug, includeRenderedHtml: true, ct);
+    }
+
+    public async Task<ContentItemDetail?> GetBySlugAsync(
+        string collectionName,
+        string slug,
+        bool includeRenderedHtml,
         CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(collectionName);

@@ -18,7 +18,12 @@ public interface IContentRepository
     Task<ContentItemDetail?> GetBySlugAsync(
         string collectionName,
         string slug,
-        bool includeRenderedHtml = true,
+        CancellationToken ct = default);
+
+    Task<ContentItemDetail?> GetBySlugAsync(
+        string collectionName,
+        string slug,
+        bool includeRenderedHtml,
         CancellationToken ct = default);
 
     // ==================== Search Methods ====================
