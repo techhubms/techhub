@@ -220,6 +220,19 @@ public class ContentItemTests
     }
 
     [Fact]
+    public void GetTarget_UsesInternalNavigation_WhenExternalUrlIsUnsafe()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("news", externalUrl: "javascript:alert('xss')");
+
+        // Act
+        var result = contentItem.GetTarget();
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
     public void GetTarget_ReturnsBlank_ForExternalCollections()
     {
         // Arrange
@@ -240,6 +253,19 @@ public class ContentItemTests
 
         // Act
         var result = contentItem.GetTarget();
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
+    public void GetRel_ReturnsNull_WhenExternalUrlIsUnsafe()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("community", externalUrl: "javascript:alert('xss')");
+
+        // Act
+        var result = contentItem.GetRel();
 
         // Assert
         result.Should().BeNull();
@@ -269,6 +295,19 @@ public class ContentItemTests
 
         // Assert
         result.Should().BeNull();
+    }
+
+    [Fact]
+    public void GetAriaLabel_UsesTitle_WhenExternalUrlIsUnsafe()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("news", externalUrl: "javascript:alert('xss')", title: "Breaking News");
+
+        // Act
+        var result = contentItem.GetAriaLabel();
+
+        // Assert
+        result.Should().Be("Breaking News");
     }
 
     [Fact]

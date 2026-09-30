@@ -249,11 +249,13 @@ public record ContentItem
         Uri.TryCreate(url, UriKind.Absolute, out var parsedUri)
         && (parsedUri.Scheme == Uri.UriSchemeHttp || parsedUri.Scheme == Uri.UriSchemeHttps);
 
-    public string? GetTarget() => LinksExternally() ? "_blank" : null;
+    private bool HasSafeExternalHref() => LinksExternally() && IsSafeExternalUrl(ExternalUrl);
 
-    public string? GetRel() => LinksExternally() ? "noopener noreferrer" : null;
+    public string? GetTarget() => HasSafeExternalHref() ? "_blank" : null;
 
-    public string GetAriaLabel() => LinksExternally() ? $"{Title} - opens in new tab" : Title;
+    public string? GetRel() => HasSafeExternalHref() ? "noopener noreferrer" : null;
+
+    public string GetAriaLabel() => HasSafeExternalHref() ? $"{Title} - opens in new tab" : Title;
 
     public DateTime DateUtc => DateTimeOffset.FromUnixTimeSeconds(DateEpoch).UtcDateTime;
 }
