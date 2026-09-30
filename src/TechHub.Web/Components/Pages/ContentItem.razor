@@ -46,9 +46,12 @@ else
                 Title="Tags" NavigationMode="TagCloudNavigationMode.Navigate"
                 NavigationBaseUrl="@($"/{SectionName.ToLowerInvariant()}")" />
             </MobileSidebarPanel>
-            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
-            <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
-            </MobileSidebarPanel>
+            @if (!item.LinksExternally())
+            {
+                <MobileSidebarPanel Label="Table of Contents" Icon="toc">
+                <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
+                </MobileSidebarPanel>
+            }
         }
         </MobileSidebarToolbar>
     </aside>

@@ -189,12 +189,24 @@ public record ContentItem
 
     /// <summary>
     /// Gets the contextual href for this content item.
-    /// External collections return ExternalUrl. Internal items return /{section}/{collection}/{slug}.
+    /// External collections return a safe HTTP(S) ExternalUrl; otherwise, the canonical Tech Hub URL is returned.
+    /// Internal items return /{section}/{collection}/{slug}.
     /// </summary>
     public string GetHref(string? sectionOverride = null)
     {
         var section = sectionOverride ?? PrimarySectionName;
         return BuildHref(CollectionName, Slug, ExternalUrl, section);
+    }
+
+    /// <summary>
+    /// Gets the canonical Tech Hub URL for this item — always /{section}/{collection}/{slug},
+    /// even for items that link externally via <see cref="GetHref"/>. Used for share links so
+    /// recipients always land on Tech Hub first, regardless of how the card itself opens.
+    /// </summary>
+    public string GetCanonicalHref(string? sectionOverride = null)
+    {
+        var section = (sectionOverride ?? PrimarySectionName).ToLowerInvariant();
+        return $"/{section}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}";
     }
 
     public static bool CollectionLinksExternally(string collectionName)
@@ -214,7 +226,15 @@ public record ContentItem
 
         if (CollectionLinksExternally(normalizedCollection))
         {
-            return externalUrl;
+            if (IsSafeExternalUrl(externalUrl))
+            {
+                return externalUrl;
+            }
+
+            var fallbackSection = string.IsNullOrWhiteSpace(primarySectionName)
+                ? "github-copilot"
+                : primarySectionName.ToLowerInvariant();
+            return $"/{fallbackSection}/{normalizedCollection}/{normalizedSlug}";
         }
 
         if (!string.IsNullOrWhiteSpace(primarySectionName))
@@ -225,11 +245,17 @@ public record ContentItem
         return externalUrl;
     }
 
-    public string? GetTarget() => LinksExternally() ? "_blank" : null;
+    private static bool IsSafeExternalUrl(string url) =>
+        Uri.TryCreate(url, UriKind.Absolute, out var parsedUri)
+        && (parsedUri.Scheme == Uri.UriSchemeHttp || parsedUri.Scheme == Uri.UriSchemeHttps);
 
-    public string? GetRel() => LinksExternally() ? "noopener noreferrer" : null;
+    private bool HasSafeExternalHref() => LinksExternally() && IsSafeExternalUrl(ExternalUrl);
 
-    public string GetAriaLabel() => LinksExternally() ? $"{Title} - opens in new tab" : Title;
+    public string? GetTarget() => HasSafeExternalHref() ? "_blank" : null;
+
+    public string? GetRel() => HasSafeExternalHref() ? "noopener noreferrer" : null;
+
+    public string GetAriaLabel() => HasSafeExternalHref() ? $"{Title} - opens in new tab" : Title;
 
     public DateTime DateUtc => DateTimeOffset.FromUnixTimeSeconds(DateEpoch).UtcDateTime;
 }

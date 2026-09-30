@@ -115,6 +115,32 @@ public class ContentItemTests
         result.Should().Be("https://example.com/article");
     }
 
+    [Theory]
+    [InlineData("javascript:alert('xss')")]
+    [InlineData("data:text/html,<script>alert('xss')</script>")]
+    [InlineData("/relative/article")]
+    public void GetHref_UsesCanonicalUrl_WhenExternalUrlIsUnsafe(string externalUrl)
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("news", externalUrl);
+
+        // Act
+        var result = contentItem.GetHref();
+
+        // Assert
+        result.Should().Be("/github-copilot/news/test-slug");
+    }
+
+    [Fact]
+    public void BuildHref_UsesDefaultSection_WhenUnsafeExternalUrlHasNoSection()
+    {
+        // Act
+        var result = ContentItem.BuildHref("news", "test-slug", "javascript:alert('xss')");
+
+        // Assert
+        result.Should().Be("/github-copilot/news/test-slug");
+    }
+
     [Fact]
     public void GetHref_ReturnsUrl_ForInternalCollections()
     {
@@ -155,6 +181,58 @@ public class ContentItemTests
     }
 
     [Fact]
+    public void GetCanonicalHref_ReturnsInternalTechHubUrl_ForExternalCollections()
+    {
+        // Arrange - unlike GetHref(), the canonical href never returns ExternalUrl
+        var contentItem = CreateContentItemWithCollection("news", externalUrl: "https://example.com/article");
+
+        // Act
+        var result = contentItem.GetCanonicalHref();
+
+        // Assert
+        result.Should().Be("/github-copilot/news/test-slug");
+    }
+
+    [Fact]
+    public void GetCanonicalHref_ReturnsSameUrlAsGetHref_ForInternalCollections()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("videos");
+
+        // Act
+        var result = contentItem.GetCanonicalHref();
+
+        // Assert
+        result.Should().Be("/github-copilot/videos/test-slug");
+    }
+
+    [Fact]
+    public void GetCanonicalHref_UsesSectionOverride_WhenProvided()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("news", externalUrl: "https://example.com/article");
+
+        // Act
+        var result = contentItem.GetCanonicalHref("ai");
+
+        // Assert
+        result.Should().Be("/ai/news/test-slug");
+    }
+
+    [Fact]
+    public void GetTarget_UsesInternalNavigation_WhenExternalUrlIsUnsafe()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("news", externalUrl: "javascript:alert('xss')");
+
+        // Act
+        var result = contentItem.GetTarget();
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
     public void GetTarget_ReturnsBlank_ForExternalCollections()
     {
         // Arrange
@@ -175,6 +253,19 @@ public class ContentItemTests
 
         // Act
         var result = contentItem.GetTarget();
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
+    public void GetRel_ReturnsNull_WhenExternalUrlIsUnsafe()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("community", externalUrl: "javascript:alert('xss')");
+
+        // Act
+        var result = contentItem.GetRel();
 
         // Assert
         result.Should().BeNull();
@@ -204,6 +295,19 @@ public class ContentItemTests
 
         // Assert
         result.Should().BeNull();
+    }
+
+    [Fact]
+    public void GetAriaLabel_UsesTitle_WhenExternalUrlIsUnsafe()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("news", externalUrl: "javascript:alert('xss')", title: "Breaking News");
+
+        // Act
+        var result = contentItem.GetAriaLabel();
+
+        // Assert
+        result.Should().Be("Breaking News");
     }
 
     [Fact]

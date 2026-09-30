@@ -600,3 +600,13 @@ pre.mermaid, .article-body pre.mermaid {
         page-break-inside: avoid;
     }
 }
+
+/* =================================================================
+   External Content Summary
+   Shown instead of the full body for items in externally-linking
+   collections (news, blogs, community).
+   ================================================================= */
+
+.article-external-cta {
+    margin-top: var(--spacing-3) !important;
+}
