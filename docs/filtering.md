@@ -88,7 +88,6 @@ WHERE title ILIKE '%<query>%'
 
 **Use cases**:
 
-- **Newsletter links** — each daily-update item links back to the website with `?search={title}&exact=true` so the linked page always shows only that item regardless of the current date range.
 - **Sidebar checkbox** — the "Exact title match" checkbox under the search box activates this mode interactively. It appears only when the search field has text. Typing a new query automatically deactivates exact mode.
 
 If `?exact=true` is present but `?search=` is empty or absent, it is ignored and normal filtering applies (including the default date range).

@@ -113,8 +113,17 @@
   margin-bottom: var(--spacing-1);
 }
 
+/* Title row - title takes remaining space, share button sits alongside it */
+.card-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+}
+
 /* Card title/heading */
 .card-title {
+  flex: 1;
+  min-width: 0;
   margin: 0 0 var(--spacing-1) 0;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
@@ -414,4 +423,39 @@
   .cards-grid-compact {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* =======================================================================
+   SHARE BUTTON - Copies the canonical Tech Hub URL for a card's item
+   ======================================================================= */
+
+.card-share-button {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+  .card-share-button:hover {
+    background: var(--color-purple-bg-badge);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-on-emphasis);
+  }
+}
+
+.card-share-button:active {
+  transform: scale(0.95);
 }

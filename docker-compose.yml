@@ -3,6 +3,13 @@ services:
   postgres:
     image: postgres:17-alpine
     container_name: techhub-postgres
+    # work_mem raised from the 4MB default: the tag-cloud query's cross-section anti-join hashes
+    # tens of thousands of rows, and 4MB forces it to spill to disk (multiple batches), turning a
+    # ~150ms query into 600-1300ms and causing DatabasePerformanceTests flakiness for large sections.
+    # random_page_cost lowered from the 4 (spinning-disk) default to reflect this container's cached/SSD
+    # storage, so the planner reliably picks the GIN full-text index instead of a slow seq scan. This
+    # only affects the local/test container - production Azure Postgres config is unaffected.
+    command: ["postgres", "-c", "work_mem=32MB", "-c", "random_page_cost=1.1"]
     environment:
       POSTGRES_DB: techhub
       POSTGRES_USER: techhub
