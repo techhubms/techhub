@@ -35,4 +35,25 @@ public class ContentItemDetailTests : BunitContext
         sourceLink.GetAttribute("target").Should().Be("_blank");
         sourceLink.GetAttribute("rel").Should().Be("noopener noreferrer");
     }
+
+    [Fact]
+    public void ContentItemDetail_ExternalItemWithUnsafeUrl_DoesNotRenderCta()
+    {
+        // Arrange
+        var item = A.ContentItem
+            .WithTitle("External Article")
+            .WithCollectionName("news")
+            .WithPrimarySectionName("ai")
+            .WithSlug("external-article")
+            .WithExcerpt("Safe excerpt")
+            .WithExternalUrl("javascript:alert('xss')")
+            .BuildDetail();
+
+        // Act
+        var cut = Render<ContentItemDetail>(parameters => parameters
+            .Add(p => p.Item, item));
+
+        // Assert
+        cut.Markup.Should().NotContain("article-external-cta");
+    }
 }

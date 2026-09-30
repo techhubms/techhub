@@ -16,9 +16,12 @@
         {
             <p>@Item.Excerpt</p>
         }
-        <p class="article-external-cta">
-            <a class="btn" href="@Item.ExternalUrl" target="_blank" rel="noopener noreferrer">Read the full article</a>
-        </p>
+        @if (IsSafeExternalUrl(Item.ExternalUrl))
+        {
+            <p class="article-external-cta">
+                <a class="btn" href="@Item.ExternalUrl" target="_blank" rel="noopener noreferrer">Read the full article</a>
+            </p>
+        }
     </article>
 }
 else if (!string.IsNullOrWhiteSpace(Item.RenderedHtml))
@@ -42,6 +45,12 @@ else if (!string.IsNullOrWhiteSpace(Item.RenderedHtml))
 
     [Parameter]
     public string? Id { get; set; }
+
+    // Only render the CTA for an absolute http/https URL to prevent javascript: or other unsafe schemes from executing.
+    private static bool IsSafeExternalUrl(string? url) =>
+        !string.IsNullOrWhiteSpace(url)
+        && Uri.TryCreate(url, UriKind.Absolute, out var parsedUri)
+        && (parsedUri.Scheme == Uri.UriSchemeHttp || parsedUri.Scheme == Uri.UriSchemeHttps);
 
     private static string FormatDate(long epochSeconds) =>
         epochSeconds == 0 ? string.Empty : DateHelper.FormatDateRelative(epochSeconds);
