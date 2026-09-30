@@ -189,7 +189,8 @@ public record ContentItem
 
     /// <summary>
     /// Gets the contextual href for this content item.
-    /// External collections return ExternalUrl. Internal items return /{section}/{collection}/{slug}.
+    /// External collections return a safe HTTP(S) ExternalUrl; otherwise, the canonical Tech Hub URL is returned.
+    /// Internal items return /{section}/{collection}/{slug}.
     /// </summary>
     public string GetHref(string? sectionOverride = null)
     {
@@ -225,7 +226,15 @@ public record ContentItem
 
         if (CollectionLinksExternally(normalizedCollection))
         {
-            return externalUrl;
+            if (IsSafeExternalUrl(externalUrl))
+            {
+                return externalUrl;
+            }
+
+            var fallbackSection = string.IsNullOrWhiteSpace(primarySectionName)
+                ? "github-copilot"
+                : primarySectionName.ToLowerInvariant();
+            return $"/{fallbackSection}/{normalizedCollection}/{normalizedSlug}";
         }
 
         if (!string.IsNullOrWhiteSpace(primarySectionName))
@@ -235,6 +244,10 @@ public record ContentItem
 
         return externalUrl;
     }
+
+    private static bool IsSafeExternalUrl(string url) =>
+        Uri.TryCreate(url, UriKind.Absolute, out var parsedUri)
+        && (parsedUri.Scheme == Uri.UriSchemeHttp || parsedUri.Scheme == Uri.UriSchemeHttps);
 
     public string? GetTarget() => LinksExternally() ? "_blank" : null;
 

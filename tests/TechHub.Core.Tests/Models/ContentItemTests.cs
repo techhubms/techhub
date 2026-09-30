@@ -115,6 +115,32 @@ public class ContentItemTests
         result.Should().Be("https://example.com/article");
     }
 
+    [Theory]
+    [InlineData("javascript:alert('xss')")]
+    [InlineData("data:text/html,<script>alert('xss')</script>")]
+    [InlineData("/relative/article")]
+    public void GetHref_UsesCanonicalUrl_WhenExternalUrlIsUnsafe(string externalUrl)
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("news", externalUrl);
+
+        // Act
+        var result = contentItem.GetHref();
+
+        // Assert
+        result.Should().Be("/github-copilot/news/test-slug");
+    }
+
+    [Fact]
+    public void BuildHref_UsesDefaultSection_WhenUnsafeExternalUrlHasNoSection()
+    {
+        // Act
+        var result = ContentItem.BuildHref("news", "test-slug", "javascript:alert('xss')");
+
+        // Assert
+        result.Should().Be("/github-copilot/news/test-slug");
+    }
+
     [Fact]
     public void GetHref_ReturnsUrl_ForInternalCollections()
     {
