@@ -16,7 +16,7 @@ public sealed class ProcessedUrl
     public string? ErrorMessage { get; init; }
 
     /// <summary>YouTube tags fetched from the external API (null for non-YouTube items).</summary>
-    public string[]? YouTubeTags { get; init; }
+    public IReadOnlyList<string>? YouTubeTags { get; init; }
 
     /// <summary>When this URL was first processed.</summary>
     public DateTimeOffset ProcessedAt { get; init; }
