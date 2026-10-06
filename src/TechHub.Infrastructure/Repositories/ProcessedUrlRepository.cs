@@ -58,8 +58,31 @@ SELECT external_url AS ExternalUrl,
 FROM processed_urls
 WHERE external_url = @ExternalUrl";
 
-        return await _connection.QuerySingleOrDefaultAsync<ProcessedUrl>(
+        var row = await _connection.QuerySingleOrDefaultAsync<ProcessedUrlRow>(
             new CommandDefinition(Sql, new { ExternalUrl = externalUrl }, cancellationToken: ct));
+
+        return row is null
+            ? null
+            : new ProcessedUrl
+            {
+                ExternalUrl = row.ExternalUrl,
+                Status = row.Status,
+                ErrorMessage = row.ErrorMessage,
+                YouTubeTags = row.YouTubeTags,
+                ProcessedAt = row.ProcessedAt,
+                UpdatedAt = row.UpdatedAt
+            };
+    }
+
+    // Dapper cannot map a PostgreSQL text[] column onto IReadOnlyList<string>, so read it as string[] first.
+    private sealed class ProcessedUrlRow
+    {
+        public string ExternalUrl { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
+        public string? ErrorMessage { get; set; }
+        public string[]? YouTubeTags { get; set; }
+        public DateTimeOffset ProcessedAt { get; set; }
+        public DateTimeOffset UpdatedAt { get; set; }
     }
 
     /// <inheritdoc/>
