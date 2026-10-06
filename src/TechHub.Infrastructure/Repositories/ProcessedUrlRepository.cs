@@ -75,13 +75,15 @@ WHERE external_url = @ExternalUrl";
     }
 
     // Dapper cannot map a PostgreSQL text[] column onto IReadOnlyList<string>, so read it as string[] first.
-    private sealed record ProcessedUrlRow(
-        string ExternalUrl,
-        string Status,
-        string? ErrorMessage,
-        string[]? YouTubeTags,
-        DateTimeOffset ProcessedAt,
-        DateTimeOffset UpdatedAt);
+    private sealed class ProcessedUrlRow
+    {
+        public string ExternalUrl { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
+        public string? ErrorMessage { get; set; }
+        public string[]? YouTubeTags { get; set; }
+        public DateTimeOffset ProcessedAt { get; set; }
+        public DateTimeOffset UpdatedAt { get; set; }
+    }
 
     /// <inheritdoc/>
     public async Task RecordSuccessAsync(string externalUrl, IReadOnlyList<string>? youtubeTags = null, string? feedName = null, string? collectionName = null, string? reason = null, bool? hasTranscript = null, long? jobId = null, string? slug = null, CancellationToken ct = default)
