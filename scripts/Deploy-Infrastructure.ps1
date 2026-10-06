@@ -100,13 +100,26 @@ function Write-DeploymentFailureDetails {
     # "Value cannot be null. Parameter name: format" for some resource types).
     try {
         Write-Detail "Listing deployment operations for '$DeploymentName' to find the failing resource(s):"
-        Get-AzDeploymentOperation -DeploymentName $DeploymentName -ErrorAction Stop |
-            Where-Object { $_.ProvisioningState -eq 'Failed' } |
-            ForEach-Object {
-                Write-Fail "Resource: $($_.TargetResource.ResourceName) ($($_.TargetResource.ResourceType))"
-                Write-Detail "StatusCode: $($_.StatusCode)"
-                Write-Detail "StatusMessage: $($_.StatusMessage | ConvertTo-Json -Depth 10 -Compress)"
+        $operations = Get-AzDeploymentOperation -DeploymentName $DeploymentName -ErrorAction Stop |
+            Where-Object { $_.ProvisioningState -eq 'Failed' }
+        foreach ($operation in $operations) {
+            # TargetResource is a plain resource ID string in current Az versions, not an object.
+            $target = [string]$operation.TargetResource
+            Write-Fail "Resource: $target"
+            Write-Detail "StatusCode: $($operation.StatusCode)"
+            Write-Detail "StatusMessage: $($operation.StatusMessage | ConvertTo-Json -Depth 10 -Compress)"
+
+            # Module deployments are nested resource-group deployments; drill into them for the real failing resource.
+            if ($target -match '/resourceGroups/(?<rg>[^/]+)/providers/Microsoft\.Resources/deployments/(?<name>[^/]+)$') {
+                Get-AzResourceGroupDeploymentOperation -ResourceGroupName $Matches['rg'] -DeploymentName $Matches['name'] -ErrorAction Stop |
+                    Where-Object { $_.ProvisioningState -eq 'Failed' } |
+                    ForEach-Object {
+                        Write-Fail "  Nested resource: $([string]$_.TargetResource)"
+                        Write-Detail "  StatusCode: $($_.StatusCode)"
+                        Write-Detail "  StatusMessage: $($_.StatusMessage | ConvertTo-Json -Depth 10 -Compress)"
+                    }
             }
+        }
     } catch {
         Write-Warn "Could not list deployment operations for '$DeploymentName': $_"
     }
@@ -288,13 +301,30 @@ if ($Mode -eq 'deploy') {
     try {
         $effectiveParamsFile = $infraParamsFile
         $tempParamsFile = $null
+        $paramsContent = Get-Content $infraParamsFile -Raw
+        $paramsChanged = $false
+
         if ($LinkEmailDomain) {
             Write-Warn "LinkEmailDomain is set — domain will be linked to ACS. Only use this after DNS verification."
+            $paramsContent = $paramsContent -replace 'param linkEmailDomain = (?:false|true)', 'param linkEmailDomain = true'
+            $paramsChanged = $true
+        }
+
+        # Every PUT of the ACS email domain resets its DNS verification to NotStarted, which then makes
+        # linking it to the Communication Service fail (DomainValidationError). Only create it once.
+        $emailDomain = Get-AzResource -ResourceGroupName $resourceGroup `
+            -ResourceType 'Microsoft.Communication/emailServices/domains' `
+            -ResourceName 'eml-techhub-prod/mail.hub.ms' -ErrorAction SilentlyContinue
+        if ($emailDomain) {
+            Write-Detail "Email domain mail.hub.ms already exists — not re-deploying it (a PUT would reset its DNS verification)"
+            $paramsContent += "`nparam createEmailDomain = false`n"
+            $paramsChanged = $true
+        }
+
+        if ($paramsChanged) {
             # Write temp file to the same directory so the 'using' relative path remains valid
-            $tempParamsFile = Join-Path (Split-Path $infraParamsFile) "prod-infrastructure-linkdomain.bicepparam"
-            (Get-Content $infraParamsFile -Raw) `
-                -replace 'param linkEmailDomain = (?:false|true)', 'param linkEmailDomain = true' |
-                Set-Content $tempParamsFile
+            $tempParamsFile = Join-Path (Split-Path $infraParamsFile) "prod-infrastructure-override.bicepparam"
+            Set-Content $tempParamsFile $paramsContent
             $effectiveParamsFile = $tempParamsFile
         }
         $deployParams = @{
