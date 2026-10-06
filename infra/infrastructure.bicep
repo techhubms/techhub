@@ -92,6 +92,9 @@ param customEmailDomain string = 'mail.hub.ms'
 @description('Set to true only after the custom domain DNS records have been added and verified in ACS. Redeploy after verification.')
 param linkEmailDomain bool = false
 
+@description('Create the custom email domain. The deploy script sets this to false once it exists, because re-PUTting it resets its DNS verification.')
+param createEmailDomain bool = true
+
 @description('Common tags applied to all resources managed by this template')
 param commonTags object = {
   owner: 'techhub-maintainer'
@@ -338,6 +341,7 @@ module communication './modules/communication.bicep' = {
     emailServiceName: emailServiceName
     customEmailDomain: customEmailDomain
     linkEmailDomain: linkEmailDomain
+    createEmailDomain: createEmailDomain
     communicationServiceName: communicationServiceName
     tags: prodTags
   }
