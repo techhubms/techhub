@@ -53,6 +53,17 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
+    public async Task GetSitemap_DeclaresUtf8Encoding()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sitemap", TestContext.Current.CancellationToken);
+        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+
+        // Assert
+        XDocument.Parse(xml).Declaration?.Encoding.Should().Be("utf-8");
+    }
+
+    [Fact]
     public async Task GetSitemap_ContainsHomepage()
     {
         // Act
