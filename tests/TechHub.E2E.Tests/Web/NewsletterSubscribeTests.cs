@@ -46,7 +46,8 @@ public class NewsletterSubscribeTests : PlaywrightTestBase
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Weekly roundup per section");
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Daily overview per section (every morning at 9:00 CET/CEST)");
 
-        // At least one checkbox should be visible (requires sections to load)
+        // Sections load from the API asynchronously (streaming render), so wait for the checkboxes instead of counting once
+        await Assertions.Expect(Page.Locator("input[type='checkbox']").First).ToBeVisibleAsync();
         var checkboxCount = await Page.Locator("input[type='checkbox']").CountAsync();
         checkboxCount.Should().BeGreaterThan(0, "subscribe page should show section checkboxes");
     }
