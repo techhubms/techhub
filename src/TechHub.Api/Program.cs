@@ -341,9 +341,6 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-app.UseHttpsRedirection();
-app.UseCors();
-
 // Trust X-Forwarded-For from the Azure App Service reverse proxy so logs and telemetry
 // record the real client IP rather than the proxy/NAT address.
 // KnownIPNetworks/KnownProxies are cleared because the proxy IPs are internal and dynamic.
@@ -354,6 +351,9 @@ var forwardedHeadersOptions = new ForwardedHeadersOptions
 forwardedHeadersOptions.KnownIPNetworks.Clear();
 forwardedHeadersOptions.KnownProxies.Clear();
 app.UseForwardedHeaders(forwardedHeadersOptions);
+
+app.UseHttpsRedirection();
+app.UseCors();
 
 // The API is only reachable from the Web layer (which rate-limits real clients), so it has
 // no rate limiting of its own: all traffic arrives from the Web app's single IP.

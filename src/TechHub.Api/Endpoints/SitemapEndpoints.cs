@@ -50,7 +50,6 @@ public static class SitemapEndpoints
         IReadOnlyList<Core.Models.Section> sections,
         IReadOnlyList<Core.Models.SitemapItem> contentItems)
     {
-        var sb = new StringBuilder();
         var settings = new XmlWriterSettings
         {
             Indent = true,
@@ -58,7 +57,8 @@ public static class SitemapEndpoints
             OmitXmlDeclaration = false
         };
 
-        using var writer = XmlWriter.Create(sb, settings);
+        using var stream = new System.IO.MemoryStream();
+        using var writer = XmlWriter.Create(stream, settings);
 
         writer.WriteStartDocument();
         writer.WriteStartElement("urlset", SitemapNs);
@@ -95,7 +95,7 @@ public static class SitemapEndpoints
         writer.WriteEndDocument();
         writer.Flush();
 
-        return sb.ToString();
+        return Encoding.UTF8.GetString(stream.ToArray());
     }
 
     private static void WriteUrl(
