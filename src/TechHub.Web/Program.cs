@@ -1,4 +1,3 @@
-using System.Net;
 using System.Text.Json;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication;
@@ -12,9 +11,9 @@ using Microsoft.Identity.Web.UI;
 using Polly;
 using TechHub.Core.Logging;
 using TechHub.Core.Models;
-using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
+using TechHub.Web.Endpoints;
 using TechHub.Web.Middleware;
 using TechHub.Web.Services;
 using TechHub.Web.Telemetry;
@@ -539,61 +538,7 @@ app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken
 .ExcludeFromDescription()
 .RequireRateLimiting("web-rss");
 
-app.MapGet("/{sectionName}/roundups/feed.xml", async (string sectionName, SectionCache sectionCache, TechHubApiClient apiClient, CancellationToken ct) =>
-{
-    if (!RouteParameterValidator.IsValidNameSegment(sectionName))
-    {
-        return Results.BadRequest("Invalid section name format.");
-    }
-
-    // Crawlers append /feed.xml to arbitrary article slugs. Answer 404 here instead of calling
-    // the API (404 -> HttpRequestException -> 500), which would count as two failed requests.
-    if (sectionCache.IsReady && sectionCache.GetSectionByName(sectionName) is null)
-    {
-        return Results.NotFound();
-    }
-
-    try
-    {
-        var xml = await apiClient.GetCollectionRssFeedAsync("roundups", sectionName, ct);
-        return Results.Content(xml, "application/rss+xml; charset=utf-8");
-    }
-    catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
-    {
-        return Results.NotFound();
-    }
-})
-.WithName("GetRoundupsRssFeed")
-.WithSummary("RSS feed for section roundups collection")
-.ExcludeFromDescription()
-.RequireRateLimiting("web-rss");
-
-app.MapGet("/{sectionName}/feed.xml", async (string sectionName, SectionCache sectionCache, TechHubApiClient apiClient, CancellationToken ct) =>
-{
-    if (!RouteParameterValidator.IsValidNameSegment(sectionName))
-    {
-        return Results.BadRequest("Invalid section name format.");
-    }
-
-    if (sectionCache.IsReady && sectionCache.GetSectionByName(sectionName) is null)
-    {
-        return Results.NotFound();
-    }
-
-    try
-    {
-        var xml = await apiClient.GetSectionRssFeedAsync(sectionName, ct);
-        return Results.Content(xml, "application/rss+xml; charset=utf-8");
-    }
-    catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
-    {
-        return Results.NotFound();
-    }
-})
-.WithName("GetSectionRssFeed")
-.WithSummary("RSS feed for a section")
-.ExcludeFromDescription()
-.RequireRateLimiting("web-rss");
+app.MapSectionRssFeedEndpoints();
 
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();
