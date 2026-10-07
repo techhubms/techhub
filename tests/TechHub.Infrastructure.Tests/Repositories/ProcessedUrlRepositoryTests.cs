@@ -529,7 +529,7 @@ public class ProcessedUrlRepositoryTests
                 .BeEquivalentTo(
                 [
                     $"Seeded 1 entries from processed-entries-first-{suffix}",
-                    $"Seeded 1 entries from processed-entries-second-{suffix}",
+                    $"Seeded 0 entries from processed-entries-second-{suffix}",
                     "Seeded 1 processed URLs from JSON files"
                 ]);
         }
