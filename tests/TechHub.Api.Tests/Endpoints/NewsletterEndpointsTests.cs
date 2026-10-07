@@ -550,6 +550,37 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
     }
 
     [Fact]
+    public async Task ManagePreferences_UpdateWithOnlyInvalidSections_ReturnsBadRequest()
+    {
+        const string Email = "manage-invalid-sections@example.com";
+
+        await _client.PostAsJsonAsync(
+            "/api/newsletter/subscribe",
+            new { Email, WeeklySections = new[] { "ai" }, DailySections = Array.Empty<string>() },
+            TestContext.Current.CancellationToken);
+
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        await connection.ExecuteAsync(
+            "UPDATE newsletter_subscribers SET is_confirmed = TRUE WHERE email = @Email",
+            new { Email });
+
+        var token = NewsletterService.BuildUnsubscribeToken(Email, "integration-test-secret");
+        var response = await _client.PutAsJsonAsync(
+            "/api/newsletter/manage",
+            new
+            {
+                Email,
+                Token = token,
+                WeeklySections = new[] { "not-a-weekly-section" },
+                DailySections = new[] { "not-a-daily-section" }
+            },
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
     public async Task ManagePreferences_UpdateWithValidToken_PersistsChanges()
     {
         const string Email = "manage-update@example.com";
