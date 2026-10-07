@@ -151,6 +151,8 @@ Get RSS feed specifically for weekly roundups in a section (e.g. `/ai/roundups/f
 Get RSS feed for a specific section (e.g., `/ai/feed.xml`).
 **Discovery Link**: Available on Section pages
 
+**Unknown sections**: both section-based proxy endpoints return `404 Not Found` directly from the Web app (using the in-memory section cache, without calling the API) when `{sectionName}` is not a known section. Crawlers regularly append `/feed.xml` to arbitrary article slugs; answering 404 here keeps those requests from becoming 500s and failed API calls that trip the failed-requests alert.
+
 ## Implementation & Testing
 
 **For implementation details**, see:

@@ -18,8 +18,7 @@ public static class RssEndpoints
         var group = endpoints.MapGroup("/api/rss")
             .WithTags("RSS")
             .WithDescription("RSS 2.0 feed endpoints for content syndication")
-            .AddEndpointFilter(ValidateRouteParameters)
-            .RequireRateLimiting("api-public");
+            .AddEndpointFilter(ValidateRouteParameters);
 
         // Everything feed (all content)
         group.MapGet("/all", GetAllContentFeed)

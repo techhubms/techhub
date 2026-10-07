@@ -539,11 +539,18 @@ app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken
 .ExcludeFromDescription()
 .RequireRateLimiting("web-rss");
 
-app.MapGet("/{sectionName}/roundups/feed.xml", async (string sectionName, TechHubApiClient apiClient, CancellationToken ct) =>
+app.MapGet("/{sectionName}/roundups/feed.xml", async (string sectionName, SectionCache sectionCache, TechHubApiClient apiClient, CancellationToken ct) =>
 {
     if (!RouteParameterValidator.IsValidNameSegment(sectionName))
     {
         return Results.BadRequest("Invalid section name format.");
+    }
+
+    // Crawlers append /feed.xml to arbitrary article slugs. Answer 404 here instead of calling
+    // the API (404 -> HttpRequestException -> 500), which would count as two failed requests.
+    if (sectionCache.IsReady && sectionCache.GetSectionByName(sectionName) is null)
+    {
+        return Results.NotFound();
     }
 
     var xml = await apiClient.GetCollectionRssFeedAsync("roundups", sectionName, ct);
@@ -554,11 +561,16 @@ app.MapGet("/{sectionName}/roundups/feed.xml", async (string sectionName, TechHu
 .ExcludeFromDescription()
 .RequireRateLimiting("web-rss");
 
-app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClient apiClient, CancellationToken ct) =>
+app.MapGet("/{sectionName}/feed.xml", async (string sectionName, SectionCache sectionCache, TechHubApiClient apiClient, CancellationToken ct) =>
 {
     if (!RouteParameterValidator.IsValidNameSegment(sectionName))
     {
         return Results.BadRequest("Invalid section name format.");
+    }
+
+    if (sectionCache.IsReady && sectionCache.GetSectionByName(sectionName) is null)
+    {
+        return Results.NotFound();
     }
 
     var xml = await apiClient.GetSectionRssFeedAsync(sectionName, ct);

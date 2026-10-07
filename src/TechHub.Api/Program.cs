@@ -1,6 +1,4 @@
 using System.Data;
-using System.Net;
-using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Options;
@@ -326,113 +324,6 @@ builder.Services.AddAuthorization(options =>
     });
 });
 
-// Rate limiting: defense-in-depth for the API (primary rate limiting is on the Web layer)
-// Disabled in IntegrationTest environment to avoid throttling test suites that run many
-// requests from a single IP within a short window.
-// Loopback exemptions are scoped to Development/IntegrationTest so that a spoofed
-// X-Forwarded-For: 127.0.0.1 cannot bypass rate limiting in production
-// (UseForwardedHeaders runs before UseRateLimiter).
-var isIntegrationTest = builder.Environment.IsEnvironment("IntegrationTest");
-var isLoopbackExempt = builder.Environment.IsDevelopment() || isIntegrationTest;
-builder.Services.AddRateLimiter(options =>
-{
-    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
-
-    options.OnRejected = async (context, token) =>
-    {
-        if (context.Lease.TryGetMetadata(MetadataName.RetryAfter, out var retryAfter))
-        {
-            context.HttpContext.Response.Headers.RetryAfter =
-                ((int)retryAfter.TotalSeconds).ToString(System.Globalization.CultureInfo.InvariantCulture);
-        }
-
-        await context.HttpContext.Response.WriteAsync("Rate limit exceeded. Please retry later.", token);
-    };
-
-    // Public content endpoints: generous limit (defense against runaway loops or future architecture changes).
-    // Loopback connections (localhost) are exempt — they are always local dev or CI integration test
-    // runners, not external clients. Loopback exemption is restricted to Development and
-    // IntegrationTest: UseForwardedHeaders rewrites RemoteIpAddress before UseRateLimiter
-    // runs, so a spoofed X-Forwarded-For: 127.0.0.1 could otherwise bypass rate limiting.
-    // PermitLimit raised from 200 to 500 (Sep 2026): prod App Insights (14d) showed a 321
-    // req/min peak from the Web app — which calls the API server-side, so all site visitors
-    // are funneled through this single partition — already exceeding the prior 200 limit.
-    options.AddPolicy("api-public", context =>
-    {
-        if (isIntegrationTest)
-        {
-            return RateLimitPartition.GetNoLimiter("no-limit");
-        }
-
-        var ip = context.Connection.RemoteIpAddress;
-        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
-        {
-            return RateLimitPartition.GetNoLimiter("loopback");
-        }
-
-        return RateLimitPartition.GetSlidingWindowLimiter(
-            partitionKey: ip?.ToString() ?? "unknown",
-            factory: _ => new SlidingWindowRateLimiterOptions
-            {
-                PermitLimit = 500,
-                Window = TimeSpan.FromMinutes(1),
-                SegmentsPerWindow = 6,
-                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                QueueLimit = 10
-            });
-    });
-
-    // Admin endpoints: per-user limit for authenticated requests (generous for legitimate admin
-    // work), strict IP-based limit for unauthenticated requests (brute-force protection).
-    // Loopback exemption is restricted to Development/IntegrationTest for the same reason as api-public.
-    // NOTE: UseRateLimiter() must run after UseAuthentication() so context.User is populated.
-    options.AddPolicy("api-admin", context =>
-    {
-        if (isIntegrationTest)
-        {
-            return RateLimitPartition.GetNoLimiter("no-limit");
-        }
-
-        var ip = context.Connection.RemoteIpAddress;
-        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
-        {
-            return RateLimitPartition.GetNoLimiter("loopback");
-        }
-
-        // Prefer the Azure AD object-ID claim so each admin user gets their own bucket.
-        // Fall back to IP when the request is unauthenticated (keeps the strict limit that
-        // deters auth brute-forcing).
-        var userId = context.User.FindFirst("oid")?.Value
-            ?? context.User.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value;
-
-        if (userId is not null)
-        {
-            return RateLimitPartition.GetSlidingWindowLimiter(
-                partitionKey: $"user:{userId}",
-                factory: _ => new SlidingWindowRateLimiterOptions
-                {
-                    PermitLimit = 200,
-                    Window = TimeSpan.FromMinutes(1),
-                    SegmentsPerWindow = 6,
-                    QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                    QueueLimit = 10
-                });
-        }
-
-        // Unauthenticated — keep a strict IP limit to deter auth brute-forcing.
-        return RateLimitPartition.GetSlidingWindowLimiter(
-            partitionKey: ip?.ToString() ?? "unknown",
-            factory: _ => new SlidingWindowRateLimiterOptions
-            {
-                PermitLimit = 30,
-                Window = TimeSpan.FromMinutes(1),
-                SegmentsPerWindow = 6,
-                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                QueueLimit = 0
-            });
-    });
-});
-
 var app = builder.Build();
 
 // Global exception handler (must be first)
@@ -453,8 +344,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors();
 
-// Trust X-Forwarded-For from the Azure App Service reverse proxy so rate limiting
-// partitions by real client IP rather than the proxy/NAT address.
+// Trust X-Forwarded-For from the Azure App Service reverse proxy so logs and telemetry
+// record the real client IP rather than the proxy/NAT address.
 // KnownIPNetworks/KnownProxies are cleared because the proxy IPs are internal and dynamic.
 var forwardedHeadersOptions = new ForwardedHeadersOptions
 {
@@ -464,10 +355,9 @@ forwardedHeadersOptions.KnownIPNetworks.Clear();
 forwardedHeadersOptions.KnownProxies.Clear();
 app.UseForwardedHeaders(forwardedHeadersOptions);
 
-// Authentication must run before rate limiting so the api-admin policy can read
-// the Azure AD OID claim and partition by user rather than by IP.
+// The API is only reachable from the Web layer (which rate-limits real clients), so it has
+// no rate limiting of its own: all traffic arrives from the Web app's single IP.
 app.UseAuthentication();
-app.UseRateLimiter();
 app.UseAuthorization();
 
 // Map API endpoints
@@ -483,7 +373,6 @@ app.MapNewsletterEndpoints();
 // App Service "Always On" pings GET / every ~5 minutes to keep the app warm; without a mapped
 // route this 404s and gets counted as a failed request by the failed-requests alert.
 app.MapGet("/", () => Results.Ok())
-    .RequireRateLimiting("api-public")
     .ExcludeFromDescription();
 
 // Map Aspire default health check endpoints (/health and /alive)

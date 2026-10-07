@@ -63,7 +63,9 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 **Concurrency Strategy**:
 
 - **No workflow-level concurrency group** — each push starts its own CI run immediately, so new commits are never blocked by older runs waiting for environment approval
-- **Deployment jobs use per-environment concurrency** (`deploy-production`) to prevent conflicting deploys to the same environment
+- **Deployment jobs use per-environment concurrency** (`deploy-production`) to prevent conflicting deploys to the same environment; a running deploy is never cancelled, so infrastructure/Bicep deployments always run to completion
+- **Production E2E runs as the final steps of the `deploy-production` job**, so the same concurrency group covers deploy and E2E. A newer run's deploy starts only after the older run's deploy and E2E have finished; E2E never tests a site that a newer deploy is restarting, and nothing in the production pipeline is ever cancelled while running
+- **GitHub keeps one pending job per concurrency group** — when several runs queue up, only the newest pending deploy survives and older pending ones are cancelled before they start (the newest commit contains them)
 - **PR preview jobs use per-PR concurrency** (`pr-preview-{N}`) — new manual dispatches for an open PR cancel any in-progress preview deploy for that PR; each PR gets its own isolated database so there is no cross-PR interference
 - CI jobs are stateless and safe to run in parallel across commits
 
@@ -162,7 +164,7 @@ Run only after the quality gate passes, and never on PRs.
    - Tags images with a timestamp (`yyyyMMddHHmmss` format)
    - Images are built once and reused for production
 
-2. **Deploy to Production** - Infrastructure + application deployment
+2. **Deploy & E2E Tests (Production)** - Infrastructure + application deployment, followed by E2E tests in the same job
    - Uses GitHub environment protection (at least 1 required reviewer)
    - Automatically detects whether `infra/` or `scripts/` files have changed since the last successful deploy:
      - **Full deploy** (infrastructure changed): runs `Deploy-Infrastructure.ps1` (Phase 1: Bicep infra), then `Deploy-Applications.ps1` (Phase 2: API + Web App Service Bicep)

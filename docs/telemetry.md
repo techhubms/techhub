@@ -112,7 +112,7 @@ Even after probe and bot suppression, some requests that reach the full Blazor p
 | 404 | Unknown paths (`/bla`) re-executed through `UseStatusCodePagesWithReExecute` | Bots and stale links following dead URLs; the server handled it correctly |
 | 405 | `HttpMethodFilterMiddleware` blocking OPTIONS/PUT/PATCH/etc | Scanner probes testing for REST APIs on the web host |
 
-Azure Monitor counts any span with an HTTP status of 400–499 as a `requests/failed` data point, which would inflate the alert metric and trigger server-down alerts for traffic that is completely expected.
+Azure Monitor counts any span with an HTTP status of 400–499 as a `requests/failed` data point (`success == false`), which inflates the failed-request metric for traffic that is completely expected. The **Failed HTTP requests** alert (`infra/modules/alerts.bicep`) therefore does not use `success`: it counts only `resultCode >= 500` (more than 10 in 15 minutes), so any 4xx, 499 or aborted-circuit (`0`) result can never fire it.
 
 The Web service registers `WebTelemetryFilters.SuppressIfClientError` as the `additionalResponseEnricher` callback in `AddServiceDefaults`. This callback runs inside `EnrichWithHttpResponse` — **after the response is written but before `Activity.Stop()` fires** — which is the only window where the status code is known and the export flag can still be cleared:
 

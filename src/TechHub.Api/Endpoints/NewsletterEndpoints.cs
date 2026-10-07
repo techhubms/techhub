@@ -16,8 +16,7 @@ public static class NewsletterEndpoints
     public static IEndpointRouteBuilder MapNewsletterEndpoints(this IEndpointRouteBuilder app)
     {
         var publicGroup = app.MapGroup("/api/newsletter")
-            .WithTags("Newsletter")
-            .RequireRateLimiting("api-public");
+            .WithTags("Newsletter");
 
         publicGroup.MapGet("/sections", GetNewsletterSectionsAsync)
             .WithName("GetNewsletterSections")
@@ -72,8 +71,7 @@ public static class NewsletterEndpoints
 
         var adminGroup = app.MapGroup("/api/admin/newsletter")
             .WithTags("Admin")
-            .RequireAuthorization("AdminOnly")
-            .RequireRateLimiting("api-admin");
+            .RequireAuthorization("AdminOnly");
 
         adminGroup.MapGet("/subscribers", GetSubscribersAsync)
             .WithName("GetNewsletterSubscribers")
