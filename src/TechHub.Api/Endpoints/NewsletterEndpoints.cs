@@ -368,6 +368,11 @@ public static class NewsletterEndpoints
         var normalizedWeekly = NormalizeRequestedSections(weekly, validSections);
         var normalizedDaily = NormalizeRequestedSections(daily, validSections);
 
+        if (normalizedWeekly.Count == 0 && normalizedDaily.Count == 0)
+        {
+            return Results.BadRequest("Select at least one weekly or daily section.");
+        }
+
         var updated = await newsletterService.UpdateSubscriberPreferencesAsync(email, token, displayName, normalizedWeekly, normalizedDaily, ct);
         return updated
             ? Results.Ok(new { message = "Preferences updated." })
