@@ -12,10 +12,13 @@ on:
 # - Deployment jobs use per-environment concurrency (see deploy-production)
 #   to prevent conflicting deploys to the same environment. They are NEVER cancelled
 #   while running (cancel-in-progress: false) so Bicep/app deployments always finish.
-# - Production E2E (production-e2e) is the only job that cancels in-progress runs: a newer
-#   commit's E2E supersedes a stale one, and it only starts after its own deploy completed
-#   (needs: deploy-production). This stops an E2E run for an older commit from testing a
-#   site that a newer deploy is restarting.
+# - Production E2E runs as the last steps of deploy-production, inside the same concurrency
+#   group. A newer run's deploy therefore starts only after the older run's deploy AND E2E
+#   have finished, so E2E never tests a site that a newer deploy is restarting. Nothing in
+#   this workflow is cancelled while running.
+# - GitHub keeps at most one pending job per group: if several runs queue up, only the newest
+#   pending deploy survives (older pending ones are cancelled before they start), which is fine
+#   because the newest commit contains the older ones.
 # - CI jobs are stateless and safe to run in parallel across commits.
 
 permissions:
@@ -552,7 +555,7 @@ jobs:
 
 
   deploy-production:
-    name: Deploy to Production
+    name: Deploy & E2E Tests (Production)
     runs-on: ubuntu-latest
     needs: build-and-push
     concurrency:
@@ -668,25 +671,15 @@ jobs:
             -DeployedBy "${{ github.actor }}" `
             -RunUrl "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
-  # ────────────────────────────────────────────
-  # Production E2E tests — run after deployment
-  # Uses the same E2E test suite as PR preview environments,
-  # but skips performance tests (Category=Performance) and
-  # dev-environment-only tests (Category=DevEnvironment) such as
-  # GoogleAnalyticsTests which assert GA is absent (true in dev, false in prod).
-  # ────────────────────────────────────────────
-
-  production-e2e:
-    name: E2E Tests (Production)
-    runs-on: ubuntu-latest
-    needs: deploy-production
-    concurrency:
-      group: test-e2e-production
-      cancel-in-progress: true
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # ────────────────────────────────────────────
+      # Production E2E tests — run after deployment, in the SAME job as the deploy
+      # so the deploy-production concurrency group also covers the E2E run: a newer
+      # run's deploy waits until this E2E has finished instead of restarting the site under it.
+      # Uses the same E2E test suite as PR preview environments,
+      # but skips performance tests (Category=Performance) and
+      # dev-environment-only tests (Category=DevEnvironment) such as
+      # GoogleAnalyticsTests which assert GA is absent (true in dev, false in prod).
+      # ────────────────────────────────────────────
 
       - name: Setup .NET
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
