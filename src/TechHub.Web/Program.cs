@@ -553,8 +553,15 @@ app.MapGet("/{sectionName}/roundups/feed.xml", async (string sectionName, Sectio
         return Results.NotFound();
     }
 
-    var xml = await apiClient.GetCollectionRssFeedAsync("roundups", sectionName, ct);
-    return Results.Content(xml, "application/rss+xml; charset=utf-8");
+    try
+    {
+        var xml = await apiClient.GetCollectionRssFeedAsync("roundups", sectionName, ct);
+        return Results.Content(xml, "application/rss+xml; charset=utf-8");
+    }
+    catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+    {
+        return Results.NotFound();
+    }
 })
 .WithName("GetRoundupsRssFeed")
 .WithSummary("RSS feed for section roundups collection")
@@ -573,8 +580,15 @@ app.MapGet("/{sectionName}/feed.xml", async (string sectionName, SectionCache se
         return Results.NotFound();
     }
 
-    var xml = await apiClient.GetSectionRssFeedAsync(sectionName, ct);
-    return Results.Content(xml, "application/rss+xml; charset=utf-8");
+    try
+    {
+        var xml = await apiClient.GetSectionRssFeedAsync(sectionName, ct);
+        return Results.Content(xml, "application/rss+xml; charset=utf-8");
+    }
+    catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+    {
+        return Results.NotFound();
+    }
 })
 .WithName("GetSectionRssFeed")
 .WithSummary("RSS feed for a section")
