@@ -314,6 +314,8 @@ WHERE status = 'failed'
                 continue;
             }
 
+            var fileSeeded = 0;
+
             // Determine status from filename: skipped-entries → skipped, processed-entries → succeeded
             var fileName = Path.GetFileNameWithoutExtension(jsonPath);
             var status = fileName.Contains("skipped", StringComparison.OrdinalIgnoreCase) ? "skipped" : "succeeded";
@@ -347,9 +349,10 @@ WHERE status = 'failed'
                     new { ExternalUrl = url, Status = status, Reason = reason, CollectionName = collection, ProcessedAt = timestamp },
                     cancellationToken: ct));
                 seeded += affectedRows;
+                fileSeeded += affectedRows;
             }
 
-            _logger.LogInformation("Seeded {Count} entries from {FileName}", seeded, fileName);
+            _logger.LogInformation("Seeded {Count} entries from {FileName}", fileSeeded, fileName);
         }
 
         _logger.LogInformation("Seeded {Count} processed URLs from JSON files", seeded);
