@@ -3,6 +3,7 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.Web.Endpoints;
 using TechHub.Web.Services;
@@ -29,7 +30,7 @@ public class RssProxyEndpointTests
 
         await using var app = builder.Build();
         app.MapSectionRssFeedEndpoints();
-        await app.StartAsync();
+        await app.StartAsync(TestContext.Current.CancellationToken);
         using var client = app.GetTestClient();
 
         // Act
@@ -50,8 +51,7 @@ public class RssProxyEndpointTests
             CancellationToken cancellationToken)
         {
             RequestCount++;
-            var response = new HttpResponseMessage(HttpStatusCode.NotFound);
-            return Task.FromResult(response);
+            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.NotFound));
         }
     }
 }
