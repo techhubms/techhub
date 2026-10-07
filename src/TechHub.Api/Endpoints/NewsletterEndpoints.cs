@@ -370,7 +370,7 @@ public static class NewsletterEndpoints
 
         if (normalizedWeekly.Count == 0 && normalizedDaily.Count == 0)
         {
-            return Results.BadRequest("Select at least one weekly or daily section.");
+            return Results.BadRequest("Select at least one valid weekly or daily section.");
         }
 
         var updated = await newsletterService.UpdateSubscriberPreferencesAsync(email, token, displayName, normalizedWeekly, normalizedDaily, ct);
