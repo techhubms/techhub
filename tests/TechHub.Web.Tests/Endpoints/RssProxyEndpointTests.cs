@@ -50,7 +50,8 @@ public class RssProxyEndpointTests
             CancellationToken cancellationToken)
         {
             RequestCount++;
-            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.NotFound));
+            var response = new HttpResponseMessage(HttpStatusCode.NotFound);
+            return Task.FromResult(response);
         }
     }
 }
