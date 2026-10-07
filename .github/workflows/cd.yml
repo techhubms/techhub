@@ -10,7 +10,12 @@ on:
 #   This avoids the GitHub Actions limitation where runs pending environment approval
 #   block the entire concurrency group, preventing newer runs from starting.
 # - Deployment jobs use per-environment concurrency (see deploy-production)
-#   to prevent conflicting deploys to the same environment.
+#   to prevent conflicting deploys to the same environment. They are NEVER cancelled
+#   while running (cancel-in-progress: false) so Bicep/app deployments always finish.
+# - Production E2E (production-e2e) is the only job that cancels in-progress runs: a newer
+#   commit's E2E supersedes a stale one, and it only starts after its own deploy completed
+#   (needs: deploy-production). This stops an E2E run for an older commit from testing a
+#   site that a newer deploy is restarting.
 # - CI jobs are stateless and safe to run in parallel across commits.
 
 permissions:
@@ -677,7 +682,7 @@ jobs:
     needs: deploy-production
     concurrency:
       group: test-e2e-production
-      cancel-in-progress: false
+      cancel-in-progress: true
 
     steps:
       - name: Checkout code

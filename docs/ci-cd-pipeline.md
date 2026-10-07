@@ -63,7 +63,8 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 **Concurrency Strategy**:
 
 - **No workflow-level concurrency group** — each push starts its own CI run immediately, so new commits are never blocked by older runs waiting for environment approval
-- **Deployment jobs use per-environment concurrency** (`deploy-production`) to prevent conflicting deploys to the same environment
+- **Deployment jobs use per-environment concurrency** (`deploy-production`) to prevent conflicting deploys to the same environment; a running deploy is never cancelled, so infrastructure/Bicep deployments always run to completion
+- **Production E2E uses `test-e2e-production` with `cancel-in-progress: true`** — it only starts after its own deploy has finished (`needs: deploy-production`) and cancels any stale E2E run for an older commit, so tests never run against a site that a newer deploy is restarting. This is the only job that cancels in-progress runs
 - **PR preview jobs use per-PR concurrency** (`pr-preview-{N}`) — new manual dispatches for an open PR cancel any in-progress preview deploy for that PR; each PR gets its own isolated database so there is no cross-PR interference
 - CI jobs are stateless and safe to run in parallel across commits
 

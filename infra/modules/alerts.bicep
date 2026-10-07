@@ -29,10 +29,10 @@ param tags object = {}
 var severityHigh = 1
 var severityMedium = 2
 
-// --- Application Insights: failed request count (log query) ---
-// Includes all failed requests — ResultCode=0 (client aborted) and HTTP 499 (client
-// closed before response) are intentionally NOT excluded: a burst of either can indicate
-// the application is too slow and users are abandoning requests, which is actionable.
+// --- Application Insights: server error count (log query) ---
+// Counts only HTTP 5xx responses. 4xx (404/429/...), 499 (client closed request) and
+// ResultCode=0 (aborted Blazor circuits/hub calls) are client-driven or expected noise
+// (crawlers, stale links, rate limiting) and must not page anyone.
 // Scoped to the App Insights resource (not the Log Analytics workspace) so that the
 // 'requests' table is always available during ARM KQL schema validation.
 resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-preview' = {
@@ -41,7 +41,7 @@ resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-
   tags: tags
   properties: {
     displayName: 'Failed HTTP requests (${environmentName})'
-    description: 'Fires when failed requests exceed 10 in 15 minutes, including client disconnects (499) and aborted circuits (0) which may indicate the application is too slow.'
+    description: 'Fires when server errors (HTTP 5xx) exceed 10 in 15 minutes. Client errors (4xx), client disconnects (499) and aborted circuits (0) are ignored.'
     severity: severityHigh
     enabled: true
     evaluationFrequency: 'PT5M'
@@ -50,7 +50,7 @@ resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-
     criteria: {
       allOf: [
         {
-          query: 'requests\n| where success == false'
+          query: 'requests\n| where toint(resultCode) >= 500'
           timeAggregation: 'Count'
           operator: 'GreaterThan'
           threshold: 10

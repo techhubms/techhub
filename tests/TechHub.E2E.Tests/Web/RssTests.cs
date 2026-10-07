@@ -177,4 +177,17 @@ public class RssTests : PlaywrightTestBase
         channel.Element("link").Should().NotBeNull();
         channel.Element("description").Should().NotBeNull();
     }
+
+    [Theory]
+    [InlineData("/Understanding-AI-Agents-Turning-Plain-Language-into-Code-Execution/feed.xml")]
+    [InlineData("/not-a-section/feed.xml")]
+    [InlineData("/not-a-section/roundups/feed.xml")]
+    public async Task RssFeed_UnknownSection_Returns404(string path)
+    {
+        // Crawlers append /feed.xml to arbitrary article slugs; this must be a plain 404,
+        // not a 500 (which also triggers a failed API request and the failed-requests alert).
+        var response = await Page.APIGetAsync($"{BaseUrl}{path}");
+
+        response.Status.Should().Be(404);
+    }
 }
