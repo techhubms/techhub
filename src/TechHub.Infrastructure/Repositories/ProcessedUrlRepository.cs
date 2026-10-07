@@ -340,13 +340,13 @@ WHERE status = 'failed'
                     ? DateTimeOffset.TryParse(t.GetString(), out var parsed) ? parsed : null
                     : null;
 
-                await _connection.ExecuteAsync(new CommandDefinition(
+                var affectedRows = await _connection.ExecuteAsync(new CommandDefinition(
                     @"INSERT INTO processed_urls (external_url, status, reason, collection_name, processed_at, updated_at)
                       VALUES (@ExternalUrl, @Status, @Reason, @CollectionName, COALESCE(@ProcessedAt, NOW()), COALESCE(@ProcessedAt, NOW()))
                       ON CONFLICT (external_url) DO NOTHING",
                     new { ExternalUrl = url, Status = status, Reason = reason, CollectionName = collection, ProcessedAt = timestamp },
                     cancellationToken: ct));
-                seeded++;
+                seeded += affectedRows;
             }
 
             _logger.LogInformation("Seeded {Count} entries from {FileName}", seeded, fileName);
@@ -376,46 +376,66 @@ WHERE status = 'failed'
 
             // Batch updates using a temporary table for efficiency
             // (avoids 7000+ individual UPDATE round-trips)
-            await _connection.ExecuteAsync(new CommandDefinition(
-                @"CREATE TEMP TABLE IF NOT EXISTS _backfill_urls (
-                    external_url TEXT PRIMARY KEY,
-                    collection_name TEXT,
-                    reason TEXT
-                )",
-                cancellationToken: ct));
-
-            foreach (var entry in doc.RootElement.EnumerateArray())
+            if (_connection.State != ConnectionState.Open)
             {
-                var url = entry.TryGetProperty("canonical_url", out var u) ? u.GetString() : null;
-                if (string.IsNullOrWhiteSpace(url))
-                {
-                    continue;
-                }
-
-                var reason = entry.TryGetProperty("reason", out var r) ? r.GetString() : null;
-                var collection = entry.TryGetProperty("collection", out var c) ? c.GetString() : null;
-
-                await _connection.ExecuteAsync(new CommandDefinition(
-                    @"INSERT INTO _backfill_urls (external_url, collection_name, reason)
-                      VALUES (@Url, @Collection, @Reason)
-                      ON CONFLICT (external_url) DO NOTHING",
-                    new { Url = url, Collection = collection, Reason = reason },
-                    cancellationToken: ct));
+                _connection.Open();
             }
 
-            var rows = await _connection.ExecuteAsync(new CommandDefinition(
-                @"UPDATE processed_urls p
-                  SET collection_name = COALESCE(p.collection_name, b.collection_name),
-                      reason = COALESCE(p.reason, b.reason)
-                  FROM _backfill_urls b
-                  WHERE p.external_url = b.external_url
-                    AND (p.collection_name IS NULL OR p.reason IS NULL)",
-                cancellationToken: ct));
-            updated += rows;
+            using var tx = _connection.BeginTransaction();
+            try
+            {
+                await _connection.ExecuteAsync(new CommandDefinition(
+                    @"CREATE TEMP TABLE IF NOT EXISTS _backfill_urls (
+                        external_url TEXT PRIMARY KEY,
+                        collection_name TEXT,
+                        reason TEXT
+                    )",
+                    transaction: tx,
+                    cancellationToken: ct));
 
-            await _connection.ExecuteAsync(new CommandDefinition(
-                "DROP TABLE IF EXISTS _backfill_urls",
-                cancellationToken: ct));
+                foreach (var entry in doc.RootElement.EnumerateArray())
+                {
+                    var url = entry.TryGetProperty("canonical_url", out var u) ? u.GetString() : null;
+                    if (string.IsNullOrWhiteSpace(url))
+                    {
+                        continue;
+                    }
+
+                    var reason = entry.TryGetProperty("reason", out var r) ? r.GetString() : null;
+                    var collection = entry.TryGetProperty("collection", out var c) ? c.GetString() : null;
+
+                    await _connection.ExecuteAsync(new CommandDefinition(
+                        @"INSERT INTO _backfill_urls (external_url, collection_name, reason)
+                          VALUES (@Url, @Collection, @Reason)
+                          ON CONFLICT (external_url) DO NOTHING",
+                        new { Url = url, Collection = collection, Reason = reason },
+                        transaction: tx,
+                        cancellationToken: ct));
+                }
+
+                var rows = await _connection.ExecuteAsync(new CommandDefinition(
+                    @"UPDATE processed_urls p
+                      SET collection_name = COALESCE(p.collection_name, b.collection_name),
+                          reason = COALESCE(p.reason, b.reason)
+                      FROM _backfill_urls b
+                      WHERE p.external_url = b.external_url
+                        AND (p.collection_name IS NULL OR p.reason IS NULL)",
+                    transaction: tx,
+                    cancellationToken: ct));
+                updated += rows;
+
+                await _connection.ExecuteAsync(new CommandDefinition(
+                    "DROP TABLE IF EXISTS _backfill_urls",
+                    transaction: tx,
+                    cancellationToken: ct));
+
+                tx.Commit();
+            }
+            catch
+            {
+                tx.Rollback();
+                throw;
+            }
         }
 
         if (updated > 0)

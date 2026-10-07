@@ -1,5 +1,9 @@
+using Dapper;
 using FluentAssertions;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
+using Moq;
+using Npgsql;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 
@@ -12,6 +16,7 @@ namespace TechHub.Infrastructure.Tests.Repositories;
 public class ProcessedUrlRepositoryTests
     : IClassFixture<DatabaseFixture<ProcessedUrlRepositoryTests>>
 {
+    private readonly DatabaseFixture<ProcessedUrlRepositoryTests> _fixture;
     private readonly ProcessedUrlRepository _repository;
     private readonly ContentProcessingJobRepository _jobRepository;
 
@@ -19,6 +24,7 @@ public class ProcessedUrlRepositoryTests
     {
         ArgumentNullException.ThrowIfNull(fixture);
 
+        _fixture = fixture;
         _repository = new ProcessedUrlRepository(
             fixture.Connection,
             NullLogger<ProcessedUrlRepository>.Instance);
@@ -485,6 +491,91 @@ public class ProcessedUrlRepositoryTests
         // Assert
         result.Items.Should().Contain(i => i.ExternalUrl == url1);
         result.Items.Should().NotContain(i => i.ExternalUrl == url2);
+    }
+
+    [Fact]
+    public async Task SeedFromJsonAsync_DuplicateUrlsAcrossFiles_LogsOnlyInsertedRows()
+    {
+        // Arrange
+        const string Url = "https://example.com/duplicate-seed";
+        await _fixture.Connection.ExecuteAsync("DELETE FROM processed_urls");
+
+        var directory = Path.Combine(".tmp", "processed-url-tests");
+        Directory.CreateDirectory(directory);
+        var suffix = Guid.NewGuid().ToString("N");
+        var firstFile = Path.Combine(directory, $"processed-entries-first-{suffix}.json");
+        var secondFile = Path.Combine(directory, $"processed-entries-second-{suffix}.json");
+        await File.WriteAllTextAsync(
+            firstFile,
+            $$"""[{"canonical_url":"{{Url}}"}]""",
+            TestContext.Current.CancellationToken);
+        await File.WriteAllTextAsync(
+            secondFile,
+            $$"""[{"canonical_url":"{{Url}}"}]""",
+            TestContext.Current.CancellationToken);
+
+        var logger = new Mock<ILogger<ProcessedUrlRepository>>();
+        var repository = new ProcessedUrlRepository(_fixture.Connection, logger.Object);
+
+        try
+        {
+            // Act
+            await repository.SeedFromJsonAsync([firstFile, secondFile], TestContext.Current.CancellationToken);
+
+            // Assert
+            logger.Invocations
+                .Select(invocation => invocation.Arguments[2]?.ToString())
+                .Should()
+                .BeEquivalentTo(
+                [
+                    $"Seeded 1 entries from processed-entries-first-{suffix}",
+                    $"Seeded 1 entries from processed-entries-second-{suffix}",
+                    "Seeded 1 processed URLs from JSON files"
+                ]);
+        }
+        finally
+        {
+            File.Delete(firstFile);
+            File.Delete(secondFile);
+        }
+    }
+
+    [Fact]
+    public async Task SeedFromJsonAsync_BackfillWithInitiallyClosedConnection_UsesOneSession()
+    {
+        // Arrange
+        var url = $"https://example.com/backfill-closed-{Guid.NewGuid():N}";
+        await _repository.RecordSuccessAsync(url, ct: TestContext.Current.CancellationToken);
+
+        var directory = Path.Combine(".tmp", "processed-url-tests");
+        Directory.CreateDirectory(directory);
+        var jsonPath = Path.Combine(directory, $"backfill-{Guid.NewGuid():N}.json");
+        await File.WriteAllTextAsync(
+            jsonPath,
+            $$"""[{"canonical_url":"{{url}}","collection":"blogs","reason":"backfilled"}]""",
+            TestContext.Current.CancellationToken);
+
+        await using var connection = new NpgsqlConnection(_fixture.ConnectionString);
+        var repository = new ProcessedUrlRepository(
+            connection,
+            NullLogger<ProcessedUrlRepository>.Instance);
+
+        try
+        {
+            // Act
+            await repository.SeedFromJsonAsync([jsonPath], TestContext.Current.CancellationToken);
+            var result = await _repository.GetPagedAsync(0, 10, search: url, ct: TestContext.Current.CancellationToken);
+
+            // Assert
+            connection.State.Should().Be(System.Data.ConnectionState.Open);
+            result.Items.Should().ContainSingle();
+            result.Items[0].CollectionName.Should().Be("blogs");
+            result.Items[0].Reason.Should().Be("backfilled");
+        }
+        finally
+        {
+            File.Delete(jsonPath);
+        }
     }
 
     [Fact]
