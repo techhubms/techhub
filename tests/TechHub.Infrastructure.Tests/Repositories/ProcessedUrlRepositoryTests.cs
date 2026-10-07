@@ -500,11 +500,11 @@ public class ProcessedUrlRepositoryTests
         const string Url = "https://example.com/duplicate-seed";
         await _fixture.Connection.ExecuteAsync("DELETE FROM processed_urls");
 
-        var directory = Path.Combine(".tmp", "processed-url-tests");
+        var directory = Path.Join(".tmp", "processed-url-tests");
         Directory.CreateDirectory(directory);
         var suffix = Guid.NewGuid().ToString("N");
-        var firstFile = Path.Combine(directory, $"processed-entries-first-{suffix}.json");
-        var secondFile = Path.Combine(directory, $"processed-entries-second-{suffix}.json");
+        var firstFile = Path.Join(directory, $"processed-entries-first-{suffix}.json");
+        var secondFile = Path.Join(directory, $"processed-entries-second-{suffix}.json");
         await File.WriteAllTextAsync(
             firstFile,
             $$"""[{"canonical_url":"{{Url}}"}]""",
@@ -547,9 +547,9 @@ public class ProcessedUrlRepositoryTests
         var url = $"https://example.com/backfill-closed-{Guid.NewGuid():N}";
         await _repository.RecordSuccessAsync(url, ct: TestContext.Current.CancellationToken);
 
-        var directory = Path.Combine(".tmp", "processed-url-tests");
+        var directory = Path.Join(".tmp", "processed-url-tests");
         Directory.CreateDirectory(directory);
-        var jsonPath = Path.Combine(directory, $"backfill-{Guid.NewGuid():N}.json");
+        var jsonPath = Path.Join(directory, $"backfill-{Guid.NewGuid():N}.json");
         await File.WriteAllTextAsync(
             jsonPath,
             $$"""[{"canonical_url":"{{url}}","collection":"blogs","reason":"backfilled"}]""",
