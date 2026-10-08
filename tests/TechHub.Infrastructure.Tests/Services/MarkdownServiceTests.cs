@@ -57,8 +57,8 @@ public class MarkdownServiceTests
     [Fact]
     public void ToHtml_RoundupDecimalVersionHeading_MatchesTableOfContentsAnchor()
     {
-        const string heading = "Multi-model Copilot gets real: GPT-6.1 Sol, Claude Sonnet 5.5, and HydraFusion routing";
-        var markdown = $"## {heading}";
+        const string Heading = "Multi-model Copilot gets real: GPT-6.1 Sol, Claude Sonnet 5.5, and HydraFusion routing";
+        var markdown = $"## {Heading}";
 
         var toc = RoundupContentBuilder.BuildTableOfContents(markdown);
         var html = _service.RenderToHtml(markdown);
