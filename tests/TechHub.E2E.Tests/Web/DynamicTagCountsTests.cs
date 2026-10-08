@@ -85,15 +85,15 @@ public class DynamicTagCountsTests : PlaywrightTestBase
         while (attempts < maxAttempts)
         {
             // Get enabled tags that are NOT already selected (to avoid deselecting)
-            var enabledTags = await Page.Locator(".tag-cloud-item:not(.disabled):not(.selected)").AllAsync();
-            if (enabledTags.Count == 0)
+            var enabledTagLocator = Page.Locator(".tag-cloud-item:not(.disabled):not(.selected)");
+            if (await enabledTagLocator.CountAsync() == 0)
             {
                 break;
             }
 
             // Select a tag
             var selectedCountBefore = await Page.Locator(".tag-cloud-item.selected").CountAsync();
-            await enabledTags[0].ClickAndExpectAsync(async () =>
+            await enabledTagLocator.First.ClickAndExpectAsync(async () =>
                 await Page.WaitForConditionAsync(
                     $"() => document.querySelectorAll('.tag-cloud-item.selected').length > {selectedCountBefore}"));
             await WaitForTagCloudReadyAsync();
@@ -246,14 +246,14 @@ public class DynamicTagCountsTests : PlaywrightTestBase
         while (attempts < maxAttempts)
         {
             // Get enabled tags that are NOT already selected (to avoid deselecting)
-            var enabledTags = await Page.Locator(".tag-cloud-item:not(.disabled):not(.selected)").AllAsync();
-            if (enabledTags.Count == 0)
+            var enabledTagLocator = Page.Locator(".tag-cloud-item:not(.disabled):not(.selected)");
+            if (await enabledTagLocator.CountAsync() == 0)
             {
                 break;
             }
 
             var selectedCountBefore = await Page.Locator(".tag-cloud-item.selected").CountAsync();
-            await enabledTags[0].ClickAndExpectAsync(async () =>
+            await enabledTagLocator.First.ClickAndExpectAsync(async () =>
                 await Page.WaitForConditionAsync(
                     $"() => document.querySelectorAll('.tag-cloud-item.selected').length > {selectedCountBefore}"));
             await WaitForTagCloudReadyAsync();
