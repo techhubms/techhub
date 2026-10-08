@@ -1,5 +1,6 @@
 using FluentAssertions;
 using TechHub.Infrastructure.Services;
+using TechHub.Infrastructure.Services.RoundupGeneration;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
@@ -51,6 +52,19 @@ public class MarkdownServiceTests
         html.Should().Contain("<p>This is a paragraph.</p>");
         html.Should().Contain("<ul>");
         html.Should().Contain("<li>List item 1</li>");
+    }
+
+    [Fact]
+    public void ToHtml_RoundupDecimalVersionHeading_MatchesTableOfContentsAnchor()
+    {
+        const string heading = "Multi-model Copilot gets real: GPT-6.1 Sol, Claude Sonnet 5.5, and HydraFusion routing";
+        var markdown = $"## {heading}";
+
+        var toc = RoundupContentBuilder.BuildTableOfContents(markdown);
+        var html = _service.RenderToHtml(markdown);
+
+        toc.Should().Contain("(#multi-model-copilot-gets-real-gpt-6.1-sol-claude-sonnet-5.5-and-hydrafusion-routing)");
+        html.Should().Contain("id=\"multi-model-copilot-gets-real-gpt-6.1-sol-claude-sonnet-5.5-and-hydrafusion-routing\"");
     }
 
     /// <summary>
