@@ -381,6 +381,18 @@ Returned when a section, collection, or item does not exist.
 }
 ```
 
+## MCP Server
+
+The Web frontend exposes the latest content to AI clients through a Model Context Protocol (MCP) server at `/mcp` (Streamable HTTP, stateless).
+
+- **One tool per section**: `get_latest_<section>_content` for `github_copilot`, `ai`, `ml`, `dotnet`, `azure`, `devops` and `security`. Each tool has a readable title and is declared read-only.
+- **Paging**: Newest first, 10 items per page, optional `page` parameter (1-100). The response contains `items`, `page`, `pageSize`, `totalPages` and `totalCount`; every item links to its Tech Hub page.
+- **Caching**: Responses are cached in memory per section and page for 5 minutes. Failed API calls are never cached.
+- **Throttling**: The `web-mcp` rate limit policy allows 60 requests per minute per IP (loopback exempt in Development only). Excess requests receive `429` with `Retry-After`.
+- **Instrumentation**: See [MCP Server Telemetry](telemetry.md#mcp-server-telemetry).
+
+Implementation: [src/TechHub.Web/MCP/](../src/TechHub.Web/MCP/). A new section needs one more tool method in `ContentTools`; the shared logic lives in `LatestContentProvider`.
+
 ## Performance Characteristics
 
 - **Sections**: ~25ms response time

@@ -35,5 +35,57 @@ public class McpEndpointTests : PlaywrightTestBase
         response.Status.Should().Be(200, "POST /mcp must pass URL normalization and the HTTP method filter");
         var body = await response.TextAsync();
         body.Should().Contain("\"serverInfo\"", "an initialize response must describe the MCP server");
+        body.Should().Contain("\"techhub\"", "the server must identify itself with a readable name");
+    }
+
+    [Fact]
+    public async Task McpEndpoint_ToolsList_ExposesOneDescriptiveToolPerSection()
+    {
+        // Act
+        var body = await PostJsonRpcAsync("""{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}""");
+
+        // Assert
+        foreach (var section in new[] { "github_copilot", "ai", "ml", "dotnet", "azure", "devops", "security" })
+        {
+            body.Should().Contain($"get_latest_{section}_content");
+        }
+    }
+
+    [Theory]
+    [InlineData("get_latest_github_copilot_content")]
+    [InlineData("get_latest_ai_content")]
+    [InlineData("get_latest_ml_content")]
+    [InlineData("get_latest_dotnet_content")]
+    [InlineData("get_latest_azure_content")]
+    [InlineData("get_latest_devops_content")]
+    [InlineData("get_latest_security_content")]
+    public async Task McpEndpoint_ToolCall_ReturnsLatestContentPage(string toolName)
+    {
+        // Act
+        var body = await PostJsonRpcAsync(
+            """{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"TOOL_NAME","arguments":{"page":1}}}"""
+                .Replace("TOOL_NAME", toolName, StringComparison.Ordinal));
+
+        // Assert
+        body.Should().Contain("totalCount", "the tool must return a page of content");
+        body.Should().NotContain("\"isError\":true");
+    }
+
+    private async Task<string> PostJsonRpcAsync(string jsonRpcRequest)
+    {
+        var response = await Page.APIRequest.PostAsync($"{BlazorHelpers.BaseUrl}/mcp", new()
+        {
+            Headers = new Dictionary<string, string>
+            {
+                ["Content-Type"] = "application/json",
+                ["Accept"] = "application/json, text/event-stream",
+            },
+            DataString = jsonRpcRequest,
+            FailOnStatusCode = false,
+            Timeout = BlazorHelpers.E2ETimeout,
+        });
+
+        response.Status.Should().Be(200);
+        return await response.TextAsync();
     }
 }
