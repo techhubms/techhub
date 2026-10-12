@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Http.Resilience;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
+using ModelContextProtocol.Server;
 using Polly;
 using TechHub.Core.Logging;
 using TechHub.Core.Models;
@@ -18,7 +19,6 @@ using TechHub.Web.Endpoints;
 using TechHub.Web.Middleware;
 using TechHub.Web.Services;
 using TechHub.Web.Telemetry;
-using ModelContextProtocol.Server;
 
 var builder = WebApplication.CreateBuilder(args);
 

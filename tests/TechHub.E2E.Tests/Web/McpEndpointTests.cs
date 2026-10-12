@@ -14,7 +14,7 @@ public class McpEndpointTests : PlaywrightTestBase
     public async Task McpEndpoint_Initialize_ReturnsServerInfo()
     {
         // Arrange - JSON-RPC initialize request per the MCP streamable HTTP transport
-        const string initializeRequest = """
+        const string InitializeRequest = """
             {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"e2e-test","version":"1.0.0"}}}
             """;
 
@@ -26,7 +26,7 @@ public class McpEndpointTests : PlaywrightTestBase
                 ["Content-Type"] = "application/json",
                 ["Accept"] = "application/json, text/event-stream",
             },
-            DataString = initializeRequest,
+            DataString = InitializeRequest,
             FailOnStatusCode = false,
             Timeout = BlazorHelpers.E2ETimeout,
         });
