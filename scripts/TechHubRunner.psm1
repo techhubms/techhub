@@ -78,6 +78,37 @@ function Stop-Servers {
         }
     }
     
+    # Kill Aspire AppHost/Api/Web processes (dotnet watch/run wrappers and native apphosts) that
+    # may survive a previous session and keep holding ports such as the Aspire dashboard (18891)
+    $serverPids = @()
+    foreach ($line in (ps -eo 'pid=,comm=,args=')) {
+        if ($line -notmatch '^\s*(\d+)\s+(\S+)\s+(.*)$') { continue }
+        $procId = [int]$Matches[1]
+        $comm = $Matches[2]
+        $cmdArgs = $Matches[3]
+        if ($procId -eq $PID -or $cmdArgs -match 'vscode-server') { continue }
+        if ($comm -match '^TechHub\.(AppHost|Api|Web)$' -or
+            ($comm -eq 'dotnet' -and $cmdArgs -match '--project\s+\S*/src/TechHub\.(AppHost|Api|Web)/')) {
+            $serverPids += $procId
+        }
+    }
+
+    if ($serverPids.Count -gt 0) {
+        $stoppedAny = $true
+        foreach ($pidToKill in $serverPids) {
+            if (-not $Silent) {
+                & $writeInfo "  Killing server process (PID: $pidToKill)"
+            }
+            kill -TERM $pidToKill 2>$null
+        }
+        Start-Sleep -Milliseconds 1500
+        foreach ($pidToKill in $serverPids) {
+            if (Test-Path "/proc/$pidToKill") {
+                kill -9 $pidToKill 2>$null
+            }
+        }
+    }
+
     if ($stoppedAny) {
         # Brief wait to ensure ports are released
         Start-Sleep -Milliseconds 300
