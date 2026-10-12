@@ -32,7 +32,7 @@ public static class RejectedRequestLogging
                     request.Method.Sanitize(),
                     request.Path.Value.Sanitize(),
                     request.QueryString.Value.Sanitize(),
-                    reason.Sanitize());
+                    reason?.Sanitize() ?? string.Empty);
         }
 
         return result;
