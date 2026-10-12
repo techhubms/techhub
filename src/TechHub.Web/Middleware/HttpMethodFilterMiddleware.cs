@@ -34,6 +34,7 @@ public class HttpMethodFilterMiddleware
     [
         "/_blazor",
         "/MicrosoftIdentity",
+        "/mcp",
     ];
 
     // Exact paths that accept POST — checked case-insensitively.

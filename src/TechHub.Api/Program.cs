@@ -360,15 +360,16 @@ app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Map API endpoints
-app.MapContentEndpoints();
-app.MapCustomPagesEndpoints();
-app.MapRssEndpoints();
-app.MapSitemapEndpoints();
-app.MapAuthorEndpoints();
-app.MapGhcFeaturesEndpoints();
-app.MapAdminEndpoints();
-app.MapNewsletterEndpoints();
+// Map API endpoints. The root group's filter wraps every endpoint group below.
+var api = app.MapGroup(string.Empty).WithRejectedRequestLogging();
+api.MapContentEndpoints();
+api.MapCustomPagesEndpoints();
+api.MapRssEndpoints();
+api.MapSitemapEndpoints();
+api.MapAuthorEndpoints();
+api.MapGhcFeaturesEndpoints();
+api.MapAdminEndpoints();
+api.MapNewsletterEndpoints();
 
 // App Service "Always On" pings GET / every ~5 minutes to keep the app warm; without a mapped
 // route this 404s and gets counted as a failed request by the failed-requests alert.

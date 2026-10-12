@@ -18,6 +18,7 @@ using TechHub.Web.Endpoints;
 using TechHub.Web.Middleware;
 using TechHub.Web.Services;
 using TechHub.Web.Telemetry;
+using ModelContextProtocol.Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -380,6 +381,11 @@ builder.Services.AddRateLimiter(options =>
     // setting and the App Service Plan's single-instance capacity (no autoscale on Basic B1).
 });
 
+builder.Services
+    .AddMcpServer()
+    .WithHttpTransport()
+    .WithToolsFromAssembly();
+
 var app = builder.Build();
 
 // Pre-load sections into cache at startup for flicker-free navigation
@@ -523,6 +529,8 @@ app.UseAntiforgery();
 app.MapStaticAssets();
 
 app.MapControllers();
+
+app.MapMcp("/mcp");
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
