@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
 using TechHub.Core.Models;
 using TechHub.Web.Services;
 
@@ -18,13 +19,13 @@ internal sealed class LatestContentProvider
 
     private readonly ITechHubApiClient _apiClient;
     private readonly IMemoryCache _cache;
-    private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly string _baseUrl;
 
-    public LatestContentProvider(ITechHubApiClient apiClient, IMemoryCache cache, IHttpContextAccessor httpContextAccessor)
+    public LatestContentProvider(ITechHubApiClient apiClient, IMemoryCache cache, IOptions<McpOptions> options)
     {
         _apiClient = apiClient;
         _cache = cache;
-        _httpContextAccessor = httpContextAccessor;
+        _baseUrl = options.Value.BaseUrl.TrimEnd('/');
     }
 
     public async Task<ContentPage> GetLatestAsync(string sectionName, int page, CancellationToken cancellationToken)
@@ -39,7 +40,7 @@ internal sealed class LatestContentProvider
         var result = "error";
         try
         {
-            // The cache key excludes the request host; absolute URLs are built after the lookup.
+            // The cache holds the raw API response; absolute URLs are built after the lookup.
             var cacheKey = $"mcp:latest:{sectionName}:{page}";
             var cacheHit = _cache.TryGetValue(cacheKey, out CollectionItemsResponse? response) && response is not null;
 
@@ -72,11 +73,8 @@ internal sealed class LatestContentProvider
 
     private ContentPage ToContentPage(CollectionItemsResponse response, int page)
     {
-        var request = _httpContextAccessor.HttpContext?.Request;
-        var baseUrl = request is null ? string.Empty : $"{request.Scheme}://{request.Host}";
-
         var items = response.Items
-            .Select(i => new ContentPageItem(i.Title, i.Author, i.DateEpoch, i.Tags, i.Excerpt, $"{baseUrl}{i.GetCanonicalHref()}"))
+            .Select(i => new ContentPageItem(i.Title, i.Author, i.DateEpoch, i.Tags, i.Excerpt, $"{_baseUrl}{i.GetCanonicalHref()}"))
             .ToList();
 
         return new ContentPage(items, page, PageSize, (int)Math.Ceiling(response.TotalCount / (double)PageSize), response.TotalCount);

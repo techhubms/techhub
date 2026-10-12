@@ -3,7 +3,9 @@ using TechHub.Core.Logging;
 namespace TechHub.Api.Endpoints;
 
 /// <summary>
-/// Endpoint filter that logs every request rejected with 400 Bad Request, including the reason.
+/// Endpoint filter that logs every 400 Bad Request returned by an endpoint handler, including the reason.
+/// Framework-generated binding failures (e.g. malformed JSON) never reach endpoint filters and are not logged here.
+/// The query string is deliberately omitted because it can carry emails and tokens.
 /// Applied once on the root group in Program.cs so it wraps every endpoint group's own filters.
 /// </summary>
 public static class RejectedRequestLogging
@@ -28,10 +30,9 @@ public static class RejectedRequestLogging
 
             context.HttpContext.RequestServices.GetRequiredService<ILoggerFactory>()
                 .CreateLogger(typeof(RejectedRequestLogging).FullName!)
-                .LogWarning("Rejected request {Method} {Path}{Query}: {Reason}",
+                .LogWarning("Rejected request {Method} {Path}: {Reason}",
                     request.Method.Sanitize(),
                     request.Path.Value.Sanitize(),
-                    request.QueryString.Value.Sanitize(),
                     reason?.Sanitize() ?? string.Empty);
         }
 

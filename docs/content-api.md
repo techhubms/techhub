@@ -369,6 +369,8 @@ Returned when route parameters have invalid format. All path parameters are vali
 
 Validation is enforced via an endpoint filter on the `/api/sections` group and the `/api/rss` group. See `RouteParameterValidator` in `TechHub.Core/Validation/`.
 
+Every `400` returned by an endpoint handler is logged as a warning (method, path and reason) by `RejectedRequestLogging`. The query string is never logged because it can carry emails and tokens, and framework-generated binding failures such as malformed JSON bodies never reach endpoint filters, so they are not covered.
+
 ### 404 Not Found
 
 Returned when a section, collection, or item does not exist.
@@ -385,13 +387,14 @@ Returned when a section, collection, or item does not exist.
 
 The Web frontend exposes the latest content to AI clients through a Model Context Protocol (MCP) server at `/mcp` (Streamable HTTP, stateless).
 
-- **One tool per section**: `get_latest_<section>_content` for `github_copilot`, `ai`, `ml`, `dotnet`, `azure`, `devops` and `security`. Each tool has a readable title and is declared read-only.
+- **One tool per section**: `get_latest_<section>_content` (hyphens in the section name become underscores, e.g. `get_latest_github_copilot_content`). Tools are generated per request from the configured sections in `SectionCache`, excluding the aggregate `all` section, so a newly configured section is exposed without code changes. Each tool has a readable title and is declared read-only.
 - **Paging**: Newest first, 10 items per page, optional `page` parameter (1-100). The response contains `items`, `page`, `pageSize`, `totalPages` and `totalCount`; every item links to its Tech Hub page.
+- **Item links**: Absolute URLs are built from the configured `Mcp:BaseUrl` (`https://tech.hub.ms` by default, `https://localhost:5003` in Development), never from the request `Host` header.
 - **Caching**: Responses are cached in memory per section and page for 5 minutes. Failed API calls are never cached.
 - **Throttling**: The `web-mcp` rate limit policy allows 60 requests per minute per IP (loopback exempt in Development only). Excess requests receive `429` with `Retry-After`.
 - **Instrumentation**: See [MCP Server Telemetry](telemetry.md#mcp-server-telemetry).
 
-Implementation: [src/TechHub.Web/MCP/](../src/TechHub.Web/MCP/). A new section needs one more tool method in `ContentTools`; the shared logic lives in `LatestContentProvider`.
+Implementation: [src/TechHub.Web/MCP/](../src/TechHub.Web/MCP/). `ContentToolCatalog` builds the tools; the shared logic lives in `LatestContentProvider`.
 
 ## Performance Characteristics
 

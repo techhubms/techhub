@@ -169,7 +169,12 @@ builder.Services.AddHttpContextAccessor();
 
 // In-memory cache for MCP tool responses
 builder.Services.AddMemoryCache();
+builder.Services.AddOptions<McpOptions>()
+    .BindConfiguration(McpOptions.ConfigurationKey)
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
 builder.Services.AddScoped<LatestContentProvider>();
+builder.Services.AddSingleton<ContentToolCatalog>();
 
 // Favicon service for base64-encoded favicon (eliminates HTTP requests)
 builder.Services.AddSingleton<FaviconService>();
@@ -391,14 +396,22 @@ builder.Services
         {
             Name = "techhub",
             Title = "Tech Hub",
-            Version = typeof(ContentTools).Assembly.GetName().Version?.ToString() ?? "1.0.0",
+            Version = typeof(LatestContentProvider).Assembly.GetName().Version?.ToString() ?? "1.0.0",
         };
         options.ServerInstructions =
             "Tech Hub curates Microsoft-focused developer content. Use the get_latest_<section>_content tools " +
             "to browse the newest news, blogs, videos, community posts and roundups of a section.";
     })
-    .WithHttpTransport()
-    .WithToolsFromAssembly();
+    .WithHttpTransport(transport =>
+    {
+        // Tools follow the configured sections, so they are resolved per request instead of via assembly scanning.
+        transport.ConfigureSessionOptions = (httpContext, mcpOptions, _) =>
+        {
+            var catalog = httpContext.RequestServices.GetRequiredService<ContentToolCatalog>();
+            mcpOptions.ToolCollection = [.. catalog.GetTools()];
+            return Task.CompletedTask;
+        };
+    });
 
 var app = builder.Build();
 

@@ -1,7 +1,7 @@
 using System.Diagnostics.Metrics;
 using FluentAssertions;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
 using Moq;
 using TechHub.Core.Models;
 using TechHub.TestUtilities.Builders;
@@ -14,12 +14,6 @@ public sealed class LatestContentProviderTests : IDisposable
 {
     private readonly Mock<ITechHubApiClient> _apiClient = new();
     private readonly MemoryCache _cache = new(new MemoryCacheOptions());
-    private readonly HttpContextAccessor _httpContextAccessor = new();
-
-    public LatestContentProviderTests()
-    {
-        SetRequestHost("techhub.test");
-    }
 
     public void Dispose() => _cache.Dispose();
 
@@ -43,7 +37,7 @@ public sealed class LatestContentProviderTests : IDisposable
     }
 
     [Fact]
-    public async Task GetLatestAsync_MapsItemsToAbsoluteCanonicalUrls()
+    public async Task GetLatestAsync_MapsItemsToAbsoluteCanonicalUrlsOnConfiguredBaseUrl()
     {
         // Arrange
         var item = new ContentItemBuilder()
@@ -81,20 +75,20 @@ public sealed class LatestContentProviderTests : IDisposable
             It.IsAny<bool>(), It.IsAny<CancellationToken>()), Times.Once);
     }
 
-    [Fact]
-    public async Task GetLatestAsync_CachedResponse_UsesHostOfCurrentRequest()
+    [Theory]
+    [InlineData("https://techhub.test")]
+    [InlineData("https://techhub.test/")]
+    public async Task GetLatestAsync_TrimsTrailingSlashOfConfiguredBaseUrl(string baseUrl)
     {
         // Arrange
         SetupApi("azure", skip: 0, items: [new ContentItemBuilder().WithPrimarySectionName("azure").Build()], totalCount: 1);
-        var sut = CreateSut();
-        await sut.GetLatestAsync("azure", page: 1, TestContext.Current.CancellationToken);
-        SetRequestHost("other.test");
+        var sut = CreateSut(baseUrl);
 
         // Act
         var result = await sut.GetLatestAsync("azure", page: 1, TestContext.Current.CancellationToken);
 
         // Assert
-        result.Items.Should().ContainSingle().Which.Url.Should().StartWith("https://other.test/");
+        result.Items.Should().ContainSingle().Which.Url.Should().StartWith("https://techhub.test/azure/");
     }
 
     [Fact]
@@ -225,15 +219,8 @@ public sealed class LatestContentProviderTests : IDisposable
         }
     }
 
-    private LatestContentProvider CreateSut() => new(_apiClient.Object, _cache, _httpContextAccessor);
-
-    private void SetRequestHost(string host)
-    {
-        var context = new DefaultHttpContext();
-        context.Request.Scheme = "https";
-        context.Request.Host = new HostString(host);
-        _httpContextAccessor.HttpContext = context;
-    }
+    private LatestContentProvider CreateSut(string baseUrl = "https://techhub.test") =>
+        new(_apiClient.Object, _cache, Options.Create(new McpOptions { BaseUrl = baseUrl }));
 
     private void SetupApi(string section, int skip, IReadOnlyList<ContentItem> items, long totalCount)
     {
