@@ -5,21 +5,48 @@ using TechHub.Core.Models;
 namespace TechHub.Web.MCP;
 
 /// <summary>
-/// Builds one read-only MCP tool per configured section from <see cref="SectionCache"/>, so the MCP surface
-/// follows the configured sections instead of a second hard-coded list. The aggregate "all" section is
-/// intentionally not exposed. The tool list is rebuilt only when the cache publishes a new section snapshot.
+/// Builds the read-only MCP tools from <see cref="SectionCache"/>: one latest-content tool per configured section
+/// (the aggregate "all" section becomes the cross-section <c>get_latest_content</c> tool) plus <c>get_content_item</c>,
+/// so the MCP surface follows the configured sections instead of a second hard-coded list.
+/// The tool list is rebuilt only when the cache publishes a new section snapshot.
 /// </summary>
 internal sealed class ContentToolCatalog
 {
+    internal const string GetContentItemToolName = "get_content_item";
+
     internal const string PageDescription = "Page number to retrieve, starting at 1 (maximum 100). Each page contains up to 10 items.";
 
+    private const string AllSectionName = "all";
+
+    // The 90-day default window comes from the content API's DefaultDateRangeDays setting.
     private const string ResultDescription =
-        " Returns the newest items first, 10 per page, along with page, pageSize, totalPages and totalCount. " +
-        "Use the page parameter to retrieve further pages. Each item's url links to the item on Tech Hub.";
+        " Returns items newest first, 10 per page, along with page, pageSize, totalPages, totalCount and generatedAt " +
+        "(the server's current time, so you can judge how fresh the data is). " +
+        "Only the last 90 days are included unless you pass days or since; use contentType=roundups for the weekly summaries. " +
+        "Each item has title, author, date (ISO 8601), collection, excerpt and a Tech Hub url that you can pass to get_content_item. " +
+        "Use the page parameter to retrieve further pages.";
+
+    internal const string DaysDescription =
+        "Only include items from the last N days (0-3650). Defaults to 90 when neither days nor since is given; 0 removes the date window.";
+
+    internal const string SinceDescription =
+        "Only include items published on or after this date, formatted yyyy-MM-dd. Takes precedence over days.";
+
+    internal const string ContentTypeDescription =
+        "Comma-separated content types to include: news, blogs, videos, community, roundups.";
+
+    internal const string TagsDescription =
+        "Comma-separated tags; items must have all of them, for example 'MCP,Microsoft Agent Framework'.";
+
+    internal const string QueryDescription =
+        "Keyword search across title, description and tags (maximum 200 characters).";
+
+    internal const string IncludeTagsDescription =
+        "Include the tags of every item. Off by default to keep results small.";
 
     private readonly SectionCache _sectionCache;
     private readonly IServiceProvider _services;
-    private Snapshot _snapshot = new([], []);
+    private Snapshot? _snapshot;
 
     public ContentToolCatalog(SectionCache sectionCache, IServiceProvider services)
     {
@@ -28,38 +55,70 @@ internal sealed class ContentToolCatalog
     }
 
     public static string GetToolName(string sectionName) =>
-        $"get_latest_{sectionName.Replace('-', '_')}_content";
+        IsAllSection(sectionName)
+            ? "get_latest_content"
+            : $"get_latest_{sectionName.Replace('-', '_')}_content";
 
     public IReadOnlyList<McpServerTool> GetTools()
     {
         var sections = _sectionCache.Sections;
         var snapshot = Volatile.Read(ref _snapshot);
-        if (ReferenceEquals(snapshot.Sections, sections))
+        if (snapshot is not null && ReferenceEquals(snapshot.Sections, sections))
         {
             return snapshot.Tools;
         }
 
         var tools = sections
-            .Where(s => !string.Equals(s.Name, "all", StringComparison.OrdinalIgnoreCase))
-            .Select(CreateTool)
+            .Select(CreateLatestContentTool)
+            .Append(CreateContentItemTool())
             .ToList();
 
         Volatile.Write(ref _snapshot, new Snapshot(sections, tools));
         return tools;
     }
 
-    private McpServerTool CreateTool(Section section)
+    private static bool IsAllSection(string sectionName) =>
+        string.Equals(sectionName, AllSectionName, StringComparison.OrdinalIgnoreCase);
+
+    private McpServerTool CreateLatestContentTool(Section section)
     {
         var sectionName = section.Name;
+        var isAll = IsAllSection(sectionName);
+
+        var description = isAll
+            ? "Gets the latest content across all sections on Tech Hub in one list: news, blogs, videos, community posts and roundups. " +
+              "Each item appears once, even if it belongs to several sections, so prefer this over combining the per-section tools."
+            : $"Gets the latest {section.Title} content on Tech Hub: news, blogs, videos, community posts and roundups. " +
+              "Items can belong to several sections; use get_latest_content to avoid duplicates across sections.";
 
         return McpServerTool.Create(
-            (LatestContentProvider provider, [Description(PageDescription)] int page = 1, CancellationToken cancellationToken = default)
-                => provider.GetLatestAsync(sectionName, page, cancellationToken),
+            (LatestContentProvider provider,
+                [Description(PageDescription)] int page = 1,
+                [Description(DaysDescription)] int? days = null,
+                [Description(SinceDescription)] string? since = null,
+                [Description(ContentTypeDescription)] string? contentType = null,
+                [Description(TagsDescription)] string? tags = null,
+                [Description(QueryDescription)] string? query = null,
+                [Description(IncludeTagsDescription)] bool includeTags = false,
+                CancellationToken cancellationToken = default)
+                => provider.GetLatestAsync(
+                    sectionName,
+                    new ContentFilter
+                    {
+                        Page = page,
+                        Days = days,
+                        Since = since,
+                        ContentTypes = contentType,
+                        Tags = tags,
+                        Query = query,
+                        IncludeTags = includeTags,
+                    },
+                    cancellationToken),
             new McpServerToolCreateOptions
             {
                 Name = GetToolName(sectionName),
-                Title = $"Latest {section.Title} content",
-                Description = $"Gets the latest {section.Title} content on Tech Hub: news, blogs, videos, community posts and roundups." + ResultDescription,
+                Title = isAll ? "Latest content across all sections" : $"Latest {section.Title} content",
+                Description = description + ResultDescription,
                 ReadOnly = true,
                 Idempotent = true,
                 Destructive = false,
@@ -67,6 +126,27 @@ internal sealed class ContentToolCatalog
                 Services = _services,
             });
     }
+
+    private McpServerTool CreateContentItemTool() =>
+        McpServerTool.Create(
+            (ContentItemProvider provider,
+                [Description("The Tech Hub item url, as returned by the latest-content tools.")] string url,
+                [Description(IncludeTagsDescription)] bool includeTags = false,
+                CancellationToken cancellationToken = default)
+                => provider.GetAsync(url, includeTags, cancellationToken),
+            new McpServerToolCreateOptions
+            {
+                Name = GetContentItemToolName,
+                Title = "Content item details",
+                Description = "Gets a single Tech Hub content item by its url (as returned by the latest-content tools): " +
+                    "title, author, date, excerpt, the original sourceUrl and, for videos and roundups, the full content. " +
+                    "News, blogs and community posts only include the excerpt and sourceUrl.",
+                ReadOnly = true,
+                Idempotent = true,
+                Destructive = false,
+                OpenWorld = false,
+                Services = _services,
+            });
 
     private sealed record Snapshot(IReadOnlyList<Section> Sections, IReadOnlyList<McpServerTool> Tools);
 }

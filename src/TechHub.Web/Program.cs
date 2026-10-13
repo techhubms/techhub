@@ -174,6 +174,8 @@ builder.Services.AddOptions<McpOptions>()
     .ValidateDataAnnotations()
     .ValidateOnStart();
 builder.Services.AddScoped<LatestContentProvider>();
+builder.Services.AddScoped<ContentItemProvider>();
+builder.Services.AddSingleton(TimeProvider.System);
 builder.Services.AddSingleton<ContentToolCatalog>();
 
 // Favicon service for base64-encoded favicon (eliminates HTTP requests)
@@ -399,8 +401,10 @@ builder.Services
             Version = typeof(LatestContentProvider).Assembly.GetName().Version?.ToString() ?? "1.0.0",
         };
         options.ServerInstructions =
-            "Tech Hub curates Microsoft-focused developer content. Use the get_latest_<section>_content tools " +
-            "to browse the newest news, blogs, videos, community posts and roundups of a section.";
+            "Tech Hub curates Microsoft-focused developer content. Use get_latest_content to browse the newest news, blogs, " +
+            "videos, community posts and roundups across all sections (each item once), or a get_latest_<section>_content tool " +
+            "for a single section. Narrow results with days or since, contentType, tags and query instead of paging through everything; " +
+            "contentType=roundups returns the weekly summaries. Use get_content_item with an item's url for its details.";
     })
     .WithHttpTransport(transport =>
     {

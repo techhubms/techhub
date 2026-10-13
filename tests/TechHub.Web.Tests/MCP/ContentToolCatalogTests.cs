@@ -23,6 +23,10 @@ public sealed partial class ContentToolCatalogTests : IDisposable
             .AddScoped(_ => new LatestContentProvider(
                 new Mock<ITechHubApiClient>().Object,
                 _cache,
+                Options.Create(new McpOptions { BaseUrl = "https://techhub.test" }),
+                TimeProvider.System))
+            .AddScoped(_ => new ContentItemProvider(
+                new Mock<ITechHubApiClient>().Object,
                 Options.Create(new McpOptions { BaseUrl = "https://techhub.test" })))
             .BuildServiceProvider();
     }
@@ -34,16 +38,17 @@ public sealed partial class ContentToolCatalogTests : IDisposable
     }
 
     [Fact]
-    public void GetTools_ExposesOneToolPerConfiguredSectionExceptAll()
+    public void GetTools_ExposesOneToolPerConfiguredSectionAndAggregateAsGetLatestContent()
     {
         // Arrange
         var sut = CreateSut(Section("all"), Section("github-copilot"), Section("ai"), Section("dotnet"), Section("brand-new"));
 
         // Act
-        var names = sut.GetTools().Select(t => t.ProtocolTool.Name);
+        var names = SectionToolNames(sut);
 
         // Assert
         names.Should().BeEquivalentTo(
+            "get_latest_content",
             "get_latest_github_copilot_content",
             "get_latest_ai_content",
             "get_latest_dotnet_content",
@@ -51,10 +56,25 @@ public sealed partial class ContentToolCatalogTests : IDisposable
     }
 
     [Fact]
+    public void GetTools_AlwaysExposesGetContentItemTool()
+    {
+        // Arrange
+        var sut = CreateSut(Section("ai"));
+
+        // Act
+        var tool = sut.GetTools().Single(t => t.ProtocolTool.Name == ContentToolCatalog.GetContentItemToolName).ProtocolTool;
+
+        // Assert
+        tool.Description.Should().Contain("url");
+        tool.InputSchema.GetProperty("properties").EnumerateObject().Select(p => p.Name).Should().Contain("url");
+        tool.InputSchema.GetProperty("required").EnumerateArray().Select(e => e.GetString()).Should().Equal("url");
+    }
+
+    [Fact]
     public void GetTools_NamesAreStableReadableSnakeCase()
     {
         // Arrange
-        var sut = CreateSut(Section("github-copilot"), Section("ml"), Section("devops"));
+        var sut = CreateSut(Section("all"), Section("github-copilot"), Section("ml"), Section("devops"));
 
         // Act
         var tools = sut.GetTools();
@@ -62,6 +82,7 @@ public sealed partial class ContentToolCatalogTests : IDisposable
         // Assert
         tools.Should().OnlyContain(t => ToolNamePattern().IsMatch(t.ProtocolTool.Name));
         ContentToolCatalog.GetToolName("github-copilot").Should().Be("get_latest_github_copilot_content");
+        ContentToolCatalog.GetToolName("all").Should().Be("get_latest_content");
     }
 
     [Fact]
@@ -71,11 +92,41 @@ public sealed partial class ContentToolCatalogTests : IDisposable
         var sut = CreateSut(Section("ml", title: "Machine Learning"));
 
         // Act
-        var tool = sut.GetTools().Should().ContainSingle().Subject.ProtocolTool;
+        var tool = SectionTools(sut).Should().ContainSingle().Subject.ProtocolTool;
 
         // Assert
         tool.Title.Should().Be("Latest Machine Learning content");
         tool.Description.Should().Contain("Machine Learning").And.Contain("page");
+    }
+
+    [Fact]
+    public void GetTools_AggregateToolDescribesCrossSectionDeduplication()
+    {
+        // Arrange
+        var sut = CreateSut(Section("all", title: "All"), Section("ai"));
+
+        // Act
+        var tool = sut.GetTools().Single(t => t.ProtocolTool.Name == "get_latest_content").ProtocolTool;
+
+        // Assert
+        tool.Title.Should().Be("Latest content across all sections");
+        tool.Description.Should().Contain("once");
+    }
+
+    [Fact]
+    public void GetTools_DescriptionsExplainSortOrderDefaultWindowAndRoundupShortcut()
+    {
+        // Arrange
+        var sut = CreateSut(Section("azure"));
+
+        // Act
+        var description = SectionTools(sut).Should().ContainSingle().Subject.ProtocolTool.Description;
+
+        // Assert
+        description.Should().Contain("newest first")
+            .And.Contain("90 days")
+            .And.Contain("roundups")
+            .And.Contain("generatedAt");
     }
 
     [Fact]
@@ -99,20 +150,25 @@ public sealed partial class ContentToolCatalogTests : IDisposable
     }
 
     [Fact]
-    public void GetTools_ExposeOnlyOptionalDescribedPageArgument()
+    public void GetTools_ExposeOnlyOptionalDescribedFilterArguments()
     {
         // Arrange
         var sut = CreateSut(Section("azure"));
 
         // Act
-        var schema = sut.GetTools().Should().ContainSingle().Subject.ProtocolTool.InputSchema;
+        var schema = SectionTools(sut).Should().ContainSingle().Subject.ProtocolTool.InputSchema;
 
         // Assert
         var properties = schema.GetProperty("properties");
-        properties.EnumerateObject().Select(p => p.Name).Should().Equal("page");
-        properties.GetProperty("page").GetProperty("description").GetString().Should().NotBeNullOrWhiteSpace();
+        properties.EnumerateObject().Select(p => p.Name).Should().BeEquivalentTo(
+            "page", "days", "since", "contentType", "tags", "query", "includeTags");
+        foreach (var property in properties.EnumerateObject())
+        {
+            property.Value.GetProperty("description").GetString().Should().NotBeNullOrWhiteSpace(property.Name);
+        }
+
         schema.TryGetProperty("required", out _)
-            .Should().BeFalse("page defaults to 1, so callers may omit it");
+            .Should().BeFalse("every filter is optional, so callers may omit all of them");
     }
 
     [Fact]
@@ -136,28 +192,34 @@ public sealed partial class ContentToolCatalogTests : IDisposable
         var cache = new SectionCache();
         cache.Initialize([Section("ai")]);
         var sut = new ContentToolCatalog(cache, _services);
-        sut.GetTools().Should().ContainSingle();
+        SectionToolNames(sut).Should().ContainSingle();
 
         // Act
         cache.Initialize([Section("ai"), Section("quantum")]);
-        var names = sut.GetTools().Select(t => t.ProtocolTool.Name);
+        var names = SectionToolNames(sut);
 
         // Assert
         names.Should().BeEquivalentTo("get_latest_ai_content", "get_latest_quantum_content");
     }
 
     [Fact]
-    public void GetTools_BeforeSectionsAreLoaded_ReturnsNoTools()
+    public void GetTools_BeforeSectionsAreLoaded_ReturnsOnlyGetContentItemTool()
     {
         // Arrange
         var sut = new ContentToolCatalog(SectionCacheBuilder.Empty(), _services);
 
         // Act
-        var tools = sut.GetTools();
+        var names = sut.GetTools().Select(t => t.ProtocolTool.Name);
 
         // Assert
-        tools.Should().BeEmpty();
+        names.Should().Equal(ContentToolCatalog.GetContentItemToolName);
     }
+
+    private static IEnumerable<ModelContextProtocol.Server.McpServerTool> SectionTools(ContentToolCatalog sut) =>
+        sut.GetTools().Where(t => t.ProtocolTool.Name != ContentToolCatalog.GetContentItemToolName);
+
+    private static IEnumerable<string> SectionToolNames(ContentToolCatalog sut) =>
+        SectionTools(sut).Select(t => t.ProtocolTool.Name);
 
     private ContentToolCatalog CreateSut(params Section[] sections)
     {
@@ -173,6 +235,6 @@ public sealed partial class ContentToolCatalogTests : IDisposable
             .WithUrl($"/{name}")
             .Build();
 
-    [GeneratedRegex("^get_latest_[a-z]+(_[a-z]+)*_content$")]
+    [GeneratedRegex("^get_(latest_([a-z]+(_[a-z]+)*_)?content|content_item)$")]
     private static partial Regex ToolNamePattern();
 }

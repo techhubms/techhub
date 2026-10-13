@@ -387,15 +387,29 @@ Returned when a section, collection, or item does not exist.
 
 The Web frontend exposes the latest content to AI clients through a Model Context Protocol (MCP) server at `/mcp` (Streamable HTTP, stateless).
 
-- **One tool per section**: `get_latest_<section>_content` (hyphens in the section name become underscores, e.g. `get_latest_github_copilot_content`). Tools are generated per request from the configured sections in `SectionCache`, excluding the aggregate `all` section, so a newly configured section is exposed without code changes. Each tool has a readable title and is declared read-only.
-- **Paging**: Newest first, 10 items per page, optional `page` parameter (1-100). The response contains `items`, `page`, `pageSize`, `totalPages` (capped at 100) and `totalCount`; every item links to its Tech Hub page.
+- **Latest-content tools**: one `get_latest_<section>_content` tool per section (hyphens in the section name become underscores, e.g. `get_latest_github_copilot_content`), plus `get_latest_content` for the aggregate `all` section. Items can belong to several sections, so `get_latest_content` lists each item once and is the tool to prefer when no single section is needed. Tools are generated per request from the configured sections in `SectionCache`, so a newly configured section is exposed without code changes. Each tool has a readable title and is declared read-only.
+- **Filters**: every latest-content tool accepts the optional arguments below; the tool descriptions and server instructions explain them to the client.
+
+  | Argument | Meaning |
+  |---|---|
+  | `page` | Page number, 1-100 (default 1). |
+  | `days` | Only items from the last N days (0-3650). Without `days` and `since` the content API's default window of 90 days applies; `0` removes it. |
+  | `since` | Only items on or after this date (`yyyy-MM-dd`). Takes precedence over `days`. |
+  | `contentType` | Comma-separated collections: `news`, `blogs`, `videos`, `community`, `roundups`. `roundups` returns the weekly summaries. |
+  | `tags` | Comma-separated tags (maximum 20 of up to 100 characters); items must have all of them. |
+  | `query` | Keyword search across title, description and tags (maximum 200 characters). |
+  | `includeTags` | Include the tags of every item. Off by default to keep results small. |
+
+  Invalid values fail with a readable tool error (`McpException`) instead of a generic failure.
+- **Paging**: Newest first, 10 items per page. The response contains `items`, `page`, `pageSize`, `totalPages` (capped at 100), `totalCount` and `generatedAt` (the server's current time in Europe/Brussels, so clients can judge how fresh the data is). Every item has `title`, `author`, `date` (ISO 8601, Europe/Brussels), `collection`, `excerpt` and an absolute `url` to its Tech Hub page, plus `tags` when requested.
+- **`get_content_item`**: takes the `url` of an item as returned by the latest-content tools (an absolute URL on the configured `Mcp:BaseUrl` or a path such as `/ai/news/some-item`) and returns its metadata, `sourceUrl` and, for videos and roundups, the rendered `content`. News, blogs and community items only return the excerpt and `sourceUrl`, matching what the website shows for externally linked content.
 - **Item links**: Absolute URLs are built from the configured `Mcp:BaseUrl` (`https://tech.hub.ms` by default, `https://localhost:5003` in Development), never from the request `Host` header. Startup fails unless `Mcp:BaseUrl` is an absolute `http(s)` URL with a host and no query or fragment.
 - **Origin validation**: Requests with an `Origin` header are rejected with `403` unless the origin is `https://` plus a configured `PrimaryHosts` entry, the `Mcp:BaseUrl` origin, or (Development only) a loopback origin. This prevents DNS-rebinding attacks as required by the MCP Streamable HTTP transport. Requests without `Origin` (non-browser clients) are allowed. Implemented in `McpOriginValidationMiddleware`, which runs before rate limiting.
-- **Caching**: Responses are cached in memory per section and page for 5 minutes. Failed API calls are never cached.
+- **Caching**: Responses are cached in memory per section, page and date/content-type filter for 5 minutes. Requests with free-text filters (`query`, `tags`) are not cached because their values are unbounded. Failed API calls are never cached.
 - **Throttling**: The `web-mcp` rate limit policy allows 60 requests per minute per IP (loopback exempt in Development only). Excess requests receive `429` with `Retry-After`.
 - **Instrumentation**: See [MCP Server Telemetry](telemetry.md#mcp-server-telemetry).
 
-Implementation: [src/TechHub.Web/MCP/](../src/TechHub.Web/MCP/). `ContentToolCatalog` builds the tools; the shared logic lives in `LatestContentProvider`.
+Implementation: [src/TechHub.Web/MCP/](../src/TechHub.Web/MCP/). `ContentToolCatalog` builds the tools; the shared logic lives in `LatestContentProvider` (latest-content tools) and `ContentItemProvider` (`get_content_item`).
 
 ## Performance Characteristics
 

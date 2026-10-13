@@ -118,6 +118,35 @@ function Stop-Servers {
     }
 }
 
+function Start-McpInspector {
+    <#
+    .SYNOPSIS
+        Starts the MCP Inspector to test the local Tech Hub MCP server.
+
+    .DESCRIPTION
+        Runs 'npx @modelcontextprotocol/inspector' with TLS validation disabled (to accept the local
+        dev certificate) and without auto-opening a browser. Both environment variables are restored
+        when the inspector exits so they don't leak into the terminal session.
+
+    .EXAMPLE
+        Start-McpInspector
+    #>
+    param()
+
+    $previousTlsReject = $env:NODE_TLS_REJECT_UNAUTHORIZED
+    $previousAutoOpen = $env:MCP_AUTO_OPEN_ENABLED
+
+    try {
+        $env:NODE_TLS_REJECT_UNAUTHORIZED = "0"
+        $env:MCP_AUTO_OPEN_ENABLED = "false"
+        npx @modelcontextprotocol/inspector
+    }
+    finally {
+        $env:NODE_TLS_REJECT_UNAUTHORIZED = $previousTlsReject
+        $env:MCP_AUTO_OPEN_ENABLED = $previousAutoOpen
+    }
+}
+
 # Stop all orphaned test-related processes (browsers, test runners)
 function Stop-AllOrphanedProcesses {
     param(
@@ -1798,4 +1827,4 @@ function Run {
 }
 
 # Export functions
-Export-ModuleMember -Function Run, Stop-Servers, Stop-OrphanedTestProcesses
+Export-ModuleMember -Function Run, Stop-Servers, Stop-OrphanedTestProcesses, Start-McpInspector

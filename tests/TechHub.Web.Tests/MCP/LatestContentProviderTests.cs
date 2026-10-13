@@ -2,6 +2,7 @@ using System.Diagnostics.Metrics;
 using FluentAssertions;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
+using ModelContextProtocol;
 using Moq;
 using TechHub.Core.Models;
 using TechHub.TestUtilities.Builders;
@@ -12,6 +13,8 @@ namespace TechHub.Web.Tests.MCP;
 
 public sealed class LatestContentProviderTests : IDisposable
 {
+    private static readonly DateTimeOffset _now = new(2026, 10, 13, 8, 0, 0, TimeSpan.Zero);
+
     private readonly Mock<ITechHubApiClient> _apiClient = new();
     private readonly MemoryCache _cache = new(new MemoryCacheOptions());
 
@@ -25,7 +28,7 @@ public sealed class LatestContentProviderTests : IDisposable
         var sut = CreateSut();
 
         // Act
-        var result = await sut.GetLatestAsync("ai", page: 3, TestContext.Current.CancellationToken);
+        var result = await sut.GetLatestAsync("ai", new ContentFilter { Page = 3 }, TestContext.Current.CancellationToken);
 
         // Assert
         result.Page.Should().Be(3);
@@ -44,7 +47,7 @@ public sealed class LatestContentProviderTests : IDisposable
         var sut = CreateSut();
 
         // Act
-        var result = await sut.GetLatestAsync("ai", page: 1, TestContext.Current.CancellationToken);
+        var result = await sut.GetLatestAsync("ai", new ContentFilter(), TestContext.Current.CancellationToken);
 
         // Assert
         result.TotalPages.Should().Be(LatestContentProvider.MaxPage);
@@ -64,11 +67,226 @@ public sealed class LatestContentProviderTests : IDisposable
         var sut = CreateSut();
 
         // Act
-        var result = await sut.GetLatestAsync("dotnet", page: 1, TestContext.Current.CancellationToken);
+        var result = await sut.GetLatestAsync("dotnet", new ContentFilter(), TestContext.Current.CancellationToken);
 
         // Assert
         result.Items.Should().ContainSingle()
             .Which.Url.Should().Be("https://techhub.test/dotnet/blogs/my-slug");
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_MapsDateAsBrusselsIsoAndExposesCollection()
+    {
+        // Arrange
+        var item = new ContentItemBuilder()
+            .WithDateEpoch(new DateTimeOffset(2026, 9, 24, 8, 0, 0, TimeSpan.Zero).ToUnixTimeSeconds())
+            .WithCollectionName("videos")
+            .Build();
+        SetupApi("ai", skip: 0, items: [item], totalCount: 1);
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GetLatestAsync("ai", new ContentFilter(), TestContext.Current.CancellationToken);
+
+        // Assert
+        var mapped = result.Items.Should().ContainSingle().Subject;
+        mapped.Date.Should().Be("2026-09-24T10:00:00+02:00");
+        mapped.Collection.Should().Be("videos");
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_ReportsGeneratedAtFromTimeProviderInBrusselsIso()
+    {
+        // Arrange
+        SetupApi("ai", skip: 0, items: [], totalCount: 0);
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GetLatestAsync("ai", new ContentFilter(), TestContext.Current.CancellationToken);
+
+        // Assert
+        result.GeneratedAt.Should().Be("2026-10-13T10:00:00+02:00");
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_ByDefault_OmitsTags()
+    {
+        // Arrange
+        SetupApi("ai", skip: 0, items: [new ContentItemBuilder().WithTags("mcp", "agents").Build()], totalCount: 1);
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GetLatestAsync("ai", new ContentFilter(), TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Items.Should().ContainSingle().Which.Tags.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_IncludeTags_ReturnsTags()
+    {
+        // Arrange
+        SetupApi("ai", skip: 0, items: [new ContentItemBuilder().WithTags("mcp", "agents").Build()], totalCount: 1);
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GetLatestAsync("ai", new ContentFilter { IncludeTags = true }, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Items.Should().ContainSingle().Which.Tags.Should().Equal("mcp", "agents");
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_IncludeTagsToggled_DoesNotCallApiAgain()
+    {
+        // Arrange
+        SetupApi("ai", skip: 0, items: [new ContentItemBuilder().WithTags("mcp").Build()], totalCount: 1);
+        var sut = CreateSut();
+
+        // Act
+        await sut.GetLatestAsync("ai", new ContentFilter(), TestContext.Current.CancellationToken);
+        var withTags = await sut.GetLatestAsync("ai", new ContentFilter { IncludeTags = true }, TestContext.Current.CancellationToken);
+
+        // Assert
+        withTags.Items.Should().ContainSingle().Which.Tags.Should().Equal("mcp");
+        VerifyApiCalls(Times.Once());
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_Days_IsForwardedAsLastDays()
+    {
+        // Arrange
+        SetupApi("ai", skip: 0, items: [], totalCount: 0, lastDays: 14);
+        var sut = CreateSut();
+
+        // Act
+        await sut.GetLatestAsync("ai", new ContentFilter { Days = 14 }, TestContext.Current.CancellationToken);
+
+        // Assert
+        _apiClient.VerifyAll();
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_Since_IsForwardedAsFromDateAndWinsOverDays()
+    {
+        // Arrange
+        SetupApi("ai", skip: 0, items: [], totalCount: 0, fromDate: "2026-09-29");
+        var sut = CreateSut();
+
+        // Act
+        await sut.GetLatestAsync("ai", new ContentFilter { Since = "2026-09-29", Days = 14 }, TestContext.Current.CancellationToken);
+
+        // Assert
+        _apiClient.VerifyAll();
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_ContentTypes_AreNormalizedAndForwardedAsTypes()
+    {
+        // Arrange
+        SetupApi("ai", skip: 0, items: [], totalCount: 0, types: "news,roundups");
+        var sut = CreateSut();
+
+        // Act
+        await sut.GetLatestAsync("ai", new ContentFilter { ContentTypes = " News, Roundups " }, TestContext.Current.CancellationToken);
+
+        // Assert
+        _apiClient.VerifyAll();
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_QueryAndTags_AreTrimmedAndForwarded()
+    {
+        // Arrange
+        SetupApi("ai", skip: 0, items: [], totalCount: 0, query: "agent framework", tags: "mcp,.net");
+        var sut = CreateSut();
+
+        // Act
+        await sut.GetLatestAsync(
+            "ai",
+            new ContentFilter { Query = "  agent framework ", Tags = " mcp , .net " },
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        _apiClient.VerifyAll();
+    }
+
+    [Theory]
+    [InlineData("2026-9-29")]
+    [InlineData("29/09/2026")]
+    [InlineData("yesterday")]
+    [InlineData("2026-09-29T10:00:00Z")]
+    public async Task GetLatestAsync_InvalidSince_ThrowsMcpExceptionWithHint(string since)
+    {
+        // Arrange
+        var sut = CreateSut();
+
+        // Act
+        var act = () => sut.GetLatestAsync("ai", new ContentFilter { Since = since }, TestContext.Current.CancellationToken);
+
+        // Assert
+        (await act.Should().ThrowAsync<McpException>()).Which.Message.Should().Contain("yyyy-MM-dd");
+        _apiClient.VerifyNoOtherCalls();
+    }
+
+    [Theory]
+    [InlineData(-1)]
+    [InlineData(3651)]
+    public async Task GetLatestAsync_DaysOutOfRange_ThrowsMcpException(int days)
+    {
+        // Arrange
+        var sut = CreateSut();
+
+        // Act
+        var act = () => sut.GetLatestAsync("ai", new ContentFilter { Days = days }, TestContext.Current.CancellationToken);
+
+        // Assert
+        (await act.Should().ThrowAsync<McpException>()).Which.Message.Should().Contain("days");
+    }
+
+    [Theory]
+    [InlineData("news,../etc")]
+    [InlineData("news;drop")]
+    [InlineData("a,b,c,d,e,f,g,h,i,j,k")]
+    public async Task GetLatestAsync_InvalidContentTypes_ThrowsMcpException(string contentTypes)
+    {
+        // Arrange
+        var sut = CreateSut();
+
+        // Act
+        var act = () => sut.GetLatestAsync("ai", new ContentFilter { ContentTypes = contentTypes }, TestContext.Current.CancellationToken);
+
+        // Assert
+        (await act.Should().ThrowAsync<McpException>()).Which.Message.Should().Contain("contentType");
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_QueryTooLong_ThrowsMcpException()
+    {
+        // Arrange
+        var sut = CreateSut();
+
+        // Act
+        var act = () => sut.GetLatestAsync("ai", new ContentFilter { Query = new string('a', 201) }, TestContext.Current.CancellationToken);
+
+        // Assert
+        (await act.Should().ThrowAsync<McpException>()).Which.Message.Should().Contain("query");
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_TooManyOrTooLongTags_ThrowsMcpException()
+    {
+        // Arrange
+        var sut = CreateSut();
+        var tooMany = string.Join(',', Enumerable.Range(0, 21).Select(i => $"tag{i}"));
+
+        // Act
+        var manyTags = () => sut.GetLatestAsync("ai", new ContentFilter { Tags = tooMany }, TestContext.Current.CancellationToken);
+        var longTag = () => sut.GetLatestAsync("ai", new ContentFilter { Tags = new string('a', 101) }, TestContext.Current.CancellationToken);
+
+        // Assert
+        (await manyTags.Should().ThrowAsync<McpException>()).Which.Message.Should().Contain("tags");
+        (await longTag.Should().ThrowAsync<McpException>()).Which.Message.Should().Contain("tags");
     }
 
     [Fact]
@@ -79,15 +297,46 @@ public sealed class LatestContentProviderTests : IDisposable
         var sut = CreateSut();
 
         // Act
-        var first = await sut.GetLatestAsync("azure", page: 1, TestContext.Current.CancellationToken);
-        var second = await sut.GetLatestAsync("azure", page: 1, TestContext.Current.CancellationToken);
+        var first = await sut.GetLatestAsync("azure", new ContentFilter(), TestContext.Current.CancellationToken);
+        var second = await sut.GetLatestAsync("azure", new ContentFilter(), TestContext.Current.CancellationToken);
 
         // Assert
         second.Should().BeEquivalentTo(first);
-        _apiClient.Verify(c => c.GetCollectionItemsAsync(
-            It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int?>(), It.IsAny<int?>(), It.IsAny<string?>(),
-            It.IsAny<string?>(), It.IsAny<int?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(),
-            It.IsAny<bool>(), It.IsAny<CancellationToken>()), Times.Once);
+        VerifyApiCalls(Times.Once());
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_SameFilterTwice_CallsApiOnce()
+    {
+        // Arrange
+        SetupApi("azure", skip: 0, items: [], totalCount: 0, lastDays: 7, types: "news");
+        var sut = CreateSut();
+        var filter = new ContentFilter { Days = 7, ContentTypes = "news" };
+
+        // Act
+        await sut.GetLatestAsync("azure", filter, TestContext.Current.CancellationToken);
+        await sut.GetLatestAsync("azure", filter, TestContext.Current.CancellationToken);
+
+        // Assert
+        VerifyApiCalls(Times.Once());
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_FreeTextFilters_BypassTheCache()
+    {
+        // Arrange - free-text values are unbounded, so caching them would let callers fill the cache
+        SetupApi("azure", skip: 0, items: [], totalCount: 0, query: "agents");
+        SetupApi("azure", skip: 0, items: [], totalCount: 0, tags: "mcp");
+        var sut = CreateSut();
+
+        // Act
+        await sut.GetLatestAsync("azure", new ContentFilter { Query = "agents" }, TestContext.Current.CancellationToken);
+        await sut.GetLatestAsync("azure", new ContentFilter { Query = "agents" }, TestContext.Current.CancellationToken);
+        await sut.GetLatestAsync("azure", new ContentFilter { Tags = "mcp" }, TestContext.Current.CancellationToken);
+        await sut.GetLatestAsync("azure", new ContentFilter { Tags = "mcp" }, TestContext.Current.CancellationToken);
+
+        // Assert
+        VerifyApiCalls(Times.Exactly(4));
     }
 
     [Theory]
@@ -100,7 +349,7 @@ public sealed class LatestContentProviderTests : IDisposable
         var sut = CreateSut(baseUrl);
 
         // Act
-        var result = await sut.GetLatestAsync("azure", page: 1, TestContext.Current.CancellationToken);
+        var result = await sut.GetLatestAsync("azure", new ContentFilter(), TestContext.Current.CancellationToken);
 
         // Assert
         result.Items.Should().ContainSingle().Which.Url.Should().StartWith("https://techhub.test/azure/");
@@ -117,15 +366,12 @@ public sealed class LatestContentProviderTests : IDisposable
         var sut = CreateSut();
 
         // Act
-        await sut.GetLatestAsync("ml", page: 1, TestContext.Current.CancellationToken);
-        await sut.GetLatestAsync("ml", page: 2, TestContext.Current.CancellationToken);
-        await sut.GetLatestAsync("security", page: 1, TestContext.Current.CancellationToken);
+        await sut.GetLatestAsync("ml", new ContentFilter { Page = 1 }, TestContext.Current.CancellationToken);
+        await sut.GetLatestAsync("ml", new ContentFilter { Page = 2 }, TestContext.Current.CancellationToken);
+        await sut.GetLatestAsync("security", new ContentFilter { Page = 1 }, TestContext.Current.CancellationToken);
 
         // Assert
-        _apiClient.Verify(c => c.GetCollectionItemsAsync(
-            It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int?>(), It.IsAny<int?>(), It.IsAny<string?>(),
-            It.IsAny<string?>(), It.IsAny<int?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(),
-            It.IsAny<bool>(), It.IsAny<CancellationToken>()), Times.Exactly(3));
+        VerifyApiCalls(Times.Exactly(3));
     }
 
     [Fact]
@@ -142,9 +388,9 @@ public sealed class LatestContentProviderTests : IDisposable
         var sut = CreateSut();
 
         // Act
-        var failing = () => sut.GetLatestAsync("devops", page: 1, TestContext.Current.CancellationToken);
+        var failing = () => sut.GetLatestAsync("devops", new ContentFilter(), TestContext.Current.CancellationToken);
         await failing.Should().ThrowAsync<HttpRequestException>();
-        var result = await sut.GetLatestAsync("devops", page: 1, TestContext.Current.CancellationToken);
+        var result = await sut.GetLatestAsync("devops", new ContentFilter(), TestContext.Current.CancellationToken);
 
         // Assert
         result.Items.Should().HaveCount(1);
@@ -168,7 +414,7 @@ public sealed class LatestContentProviderTests : IDisposable
         var sut = CreateSut();
 
         // Act
-        var result = await sut.GetLatestAsync("ai", requestedPage, TestContext.Current.CancellationToken);
+        var result = await sut.GetLatestAsync("ai", new ContentFilter { Page = requestedPage }, TestContext.Current.CancellationToken);
 
         // Assert
         result.Page.Should().Be(expectedPage);
@@ -180,68 +426,126 @@ public sealed class LatestContentProviderTests : IDisposable
     {
         // Arrange - unique section so parallel tests sharing the static meter do not interfere
         const string Section = "telemetry-test-section";
-        var results = new List<string>();
-        using var listener = new MeterListener();
-        listener.InstrumentPublished = (instrument, l) =>
-        {
-            if (instrument.Meter.Name == McpTelemetry.Name)
-            {
-                l.EnableMeasurementEvents(instrument);
-            }
-        };
-        listener.SetMeasurementEventCallback<long>((instrument, _, tags, _) =>
-        {
-            if (instrument.Name != McpTelemetry.RequestsMetricName)
-            {
-                return;
-            }
-
-            string? section = null;
-            string? result = null;
-            foreach (var tag in tags)
-            {
-                if (tag.Key == "techhub.section")
-                {
-                    section = (string?)tag.Value;
-                }
-                else if (tag.Key == "techhub.result")
-                {
-                    result = (string?)tag.Value;
-                }
-            }
-
-            if (section == Section && result is not null)
-            {
-                lock (results)
-                {
-                    results.Add(result);
-                }
-            }
-        });
-        listener.Start();
-
+        using var recorder = new RequestMetricRecorder(Section);
         SetupApi(Section, skip: 0, items: [new ContentItemBuilder().Build()], totalCount: 1);
         var sut = CreateSut();
 
         // Act
-        await sut.GetLatestAsync(Section, page: 1, TestContext.Current.CancellationToken);
-        await sut.GetLatestAsync(Section, page: 1, TestContext.Current.CancellationToken);
+        await sut.GetLatestAsync(Section, new ContentFilter(), TestContext.Current.CancellationToken);
+        await sut.GetLatestAsync(Section, new ContentFilter(), TestContext.Current.CancellationToken);
 
         // Assert
-        lock (results)
-        {
-            results.Should().Equal("cache_miss", "cache_hit");
-        }
+        recorder.Results.Should().Equal("cache_miss", "cache_hit");
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_FreeTextFilter_RecordsCacheBypassMetric()
+    {
+        // Arrange
+        const string Section = "telemetry-bypass-section";
+        using var recorder = new RequestMetricRecorder(Section);
+        SetupApi(Section, skip: 0, items: [], totalCount: 0, query: "agents");
+        var sut = CreateSut();
+
+        // Act
+        await sut.GetLatestAsync(Section, new ContentFilter { Query = "agents" }, TestContext.Current.CancellationToken);
+
+        // Assert
+        recorder.Results.Should().Equal("cache_bypass");
     }
 
     private LatestContentProvider CreateSut(string baseUrl = "https://techhub.test") =>
-        new(_apiClient.Object, _cache, Options.Create(new McpOptions { BaseUrl = baseUrl }));
+        new(_apiClient.Object, _cache, Options.Create(new McpOptions { BaseUrl = baseUrl }), new FrozenTimeProvider(_now));
 
-    private void SetupApi(string section, int skip, IReadOnlyList<ContentItem> items, long totalCount)
+    private void SetupApi(
+        string section,
+        int skip,
+        IReadOnlyList<ContentItem> items,
+        long totalCount,
+        string? query = null,
+        string? tags = null,
+        int? lastDays = null,
+        string? fromDate = null,
+        string? types = null)
     {
         _apiClient
             .Setup(c => c.GetCollectionItemsAsync(
-                section, "all", 10, skip, null, null, null, null, null, null, false, It.IsAny<CancellationToken>()))
+                section, "all", 10, skip, query, tags, lastDays, fromDate, null, types, false, It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CollectionItemsResponse(items, totalCount));
+    }
+
+    private void VerifyApiCalls(Times times) =>
+        _apiClient.Verify(c => c.GetCollectionItemsAsync(
+            It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int?>(), It.IsAny<int?>(), It.IsAny<string?>(),
+            It.IsAny<string?>(), It.IsAny<int?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(),
+            It.IsAny<bool>(), It.IsAny<CancellationToken>()), times);
+
+    private sealed class FrozenTimeProvider : TimeProvider
+    {
+        private readonly DateTimeOffset _utcNow;
+
+        public FrozenTimeProvider(DateTimeOffset utcNow) => _utcNow = utcNow;
+
+        public override DateTimeOffset GetUtcNow() => _utcNow;
+    }
+
+    private sealed class RequestMetricRecorder : IDisposable
+    {
+        private readonly MeterListener _listener = new();
+        private readonly List<string> _results = [];
+
+        public RequestMetricRecorder(string section)
+        {
+            _listener.InstrumentPublished = (instrument, l) =>
+            {
+                if (instrument.Meter.Name == McpTelemetry.Name)
+                {
+                    l.EnableMeasurementEvents(instrument);
+                }
+            };
+            _listener.SetMeasurementEventCallback<long>((instrument, _, tags, _) =>
+            {
+                if (instrument.Name != McpTelemetry.RequestsMetricName)
+                {
+                    return;
+                }
+
+                string? tagSection = null;
+                string? result = null;
+                foreach (var tag in tags)
+                {
+                    if (tag.Key == "techhub.section")
+                    {
+                        tagSection = (string?)tag.Value;
+                    }
+                    else if (tag.Key == "techhub.result")
+                    {
+                        result = (string?)tag.Value;
+                    }
+                }
+
+                if (tagSection == section && result is not null)
+                {
+                    lock (_results)
+                    {
+                        _results.Add(result);
+                    }
+                }
+            });
+            _listener.Start();
+        }
+
+        public IReadOnlyList<string> Results
+        {
+            get
+            {
+                lock (_results)
+                {
+                    return [.. _results];
+                }
+            }
+        }
+
+        public void Dispose() => _listener.Dispose();
     }
 }
