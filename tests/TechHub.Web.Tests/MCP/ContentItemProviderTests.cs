@@ -31,16 +31,16 @@ public sealed class ContentItemProviderTests
     }
 
     [Fact]
-    public async Task GetAsync_ExternalCollection_ReturnsExcerptAndSourceUrlButNoContent()
+    public async Task GetAsync_ExternalCollection_ReturnsExcerptSourceUrlAndAiGeneratedContent()
     {
-        // Arrange - news links externally, so Tech Hub only republishes the excerpt
+        // Arrange - news links externally on the website, but the stored AI-generated content is still returned
         var detail = new ContentItemBuilder()
             .WithSlug("my-slug")
             .WithCollectionName("news")
             .WithPrimarySectionName("ai")
             .WithExcerpt("Short summary")
             .WithExternalUrl("https://example.org/original")
-            .WithRenderedHtml("<p>Full third-party article</p>")
+            .WithRenderedHtml("<p>AI-generated summary</p>")
             .BuildDetail();
         SetupDetail("ai", "news", "my-slug", detail);
         var sut = CreateSut();
@@ -51,7 +51,7 @@ public sealed class ContentItemProviderTests
         // Assert
         result.Excerpt.Should().Be("Short summary");
         result.SourceUrl.Should().Be("https://example.org/original");
-        result.Content.Should().BeNull();
+        result.Content.Should().Be("<p>AI-generated summary</p>");
     }
 
     [Fact]

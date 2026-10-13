@@ -40,8 +40,7 @@ internal sealed class ContentItemProvider
             $"{_baseUrl}{detail.GetCanonicalHref()}")
         {
             SourceUrl = SafeSourceUrl(detail.ExternalUrl),
-            // Externally linked collections only show an excerpt on Tech Hub, so the full text is not republished here.
-            Content = detail.LinksExternally() ? null : detail.RenderedHtml,
+            Content = detail.RenderedHtml,
             Tags = includeTags ? detail.Tags : null,
         };
     }
