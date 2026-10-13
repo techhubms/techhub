@@ -182,7 +182,10 @@
 
     private bool IsLogoActive()
     {
-        return IsActivePage("/") || GetCurrentSection() is "mcp" or "newsletter";
+        var currentSection = GetCurrentSection();
+        return IsActivePage("/")
+            || string.Equals(currentSection, "mcp", StringComparison.OrdinalIgnoreCase)
+            || string.Equals(currentSection, "newsletter", StringComparison.OrdinalIgnoreCase);
     }
 
     public void Dispose()
