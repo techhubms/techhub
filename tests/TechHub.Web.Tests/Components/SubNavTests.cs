@@ -342,6 +342,48 @@ public class SubNavTests : BunitContext
     }
 
     [Fact]
+    public void SubNav_HomepageWithMcp_ShowsMcpButtonAfterNewsletter()
+    {
+        // Arrange
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.ShowNewsletter, true)
+            .Add(p => p.ShowMcp, true));
+
+        // Assert
+        var links = cut.FindAll("nav.sub-nav a.btn-subnav");
+        var hrefs = links.Select(l => l.GetAttribute("href")).ToList();
+        hrefs.Should().ContainInOrder("/newsletter/subscribe", "/mcp");
+        links.Single(l => l.GetAttribute("href") == "/mcp").TextContent.Trim().Should().Be("MCP");
+    }
+
+    [Fact]
+    public void SubNav_WithoutShowMcp_DoesNotShowMcpButton()
+    {
+        // Arrange
+        var sections = new List<Section>
+        {
+            new("ai", "Artificial Intelligence", "AI", "/ai", "AI",
+                [new Collection("news", "News", "/ai/news", "Latest news", "News")])
+        };
+
+        // Act
+        var cut = Render<SubNav>(parameters => parameters
+            .Add(p => p.Sections, sections)
+            .Add(p => p.ShowNewsletter, true));
+
+        // Assert
+        cut.FindAll("a.btn-subnav[href='/mcp']").Should().BeEmpty();
+    }
+
+    [Fact]
     public void SubNav_WithHideStats_DoesNotShowStatsBox()
     {
         // Arrange - stats are loaded but HideStats=true

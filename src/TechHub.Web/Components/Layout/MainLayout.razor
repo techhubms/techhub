@@ -14,6 +14,7 @@
 <Header SectionName="@_currentSectionName"
         RssFeedUrl="@_currentRssFeedUrl"
         ShowNewsletter="@_showNewsletter"
+        ShowMcp="@_showMcp"
         CustomBannerTitle="@_customBannerTitle"
         CustomBannerDescription="@_customBannerDescription"
         HideStats="@_hideStats"
@@ -64,6 +65,7 @@ else
     private string? _customBannerTitle;
     private string? _customBannerDescription;
     private bool _showNewsletter;
+    private bool _showMcp;
     private bool _hideStats;
     private bool _showDiscord;
     private bool _isHomepage;
@@ -80,6 +82,7 @@ else
         "error",      // Error.razor (lowercased by LowercaseUrls)
         "admin",      // Admin section (uses AdminLayout, not subject to section validation)
         "newsletter", // NewsletterSubscribe.razor, NewsletterUnsubscribe.razor
+        "mcp",        // McpInfo.razor (browser view of the MCP endpoint)
     };
 
     protected override void OnInitialized()
@@ -110,6 +113,7 @@ else
         _customBannerDescription = null;
         _currentSection = null;
         _showNewsletter = false;
+        _showMcp = false;
         _hideStats = false;
         _showDiscord = false;
         _isHomepage = false;
@@ -169,6 +173,7 @@ else
                 _customBannerDescription = "Your source for Microsoft technology news, tutorials, and community content";
                 _currentRssFeedUrl = "/all/feed.xml";
                 _showNewsletter = true;
+                _showMcp = true;
                 _showHomeButton = true;
                 _isHomepage = true;
                 break;
@@ -182,6 +187,14 @@ else
                 _customBannerTitle = "Newsletter";
                 _customBannerDescription = "Subscribe to weekly roundups and daily overviews for your favourite sections";
                 _showNewsletter = true;
+                _showMcp = true;
+                _showHomeButton = true;
+                break;
+            case "mcp":
+                _customBannerTitle = "MCP Server";
+                _customBannerDescription = "Connect your AI assistant to the latest Microsoft technology content";
+                _showNewsletter = true;
+                _showMcp = true;
                 _showHomeButton = true;
                 break;
             case "not-found":

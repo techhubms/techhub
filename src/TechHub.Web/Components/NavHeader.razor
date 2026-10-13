@@ -8,7 +8,7 @@
 
 <nav class="main-nav" aria-label="Primary navigation">
     <div class="main-nav-content">
-        <a href="/" class="site-logo @(IsActivePage("/") ? "home-active" : "")" aria-label="@Branding.SiteName Home">
+        <a href="/" class="site-logo @(IsLogoActive() ? "home-active" : "")" aria-label="@Branding.SiteName Home">
             <span class="logo-text">@Branding.SiteName</span>
             @if (Branding.ShowCopilotLogo)
             {
@@ -178,6 +178,14 @@
     {
         var uri = new Uri(Navigation.Uri);
         return string.Equals(uri.AbsolutePath, path, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private bool IsLogoActive()
+    {
+        var currentSection = GetCurrentSection();
+        return IsActivePage("/")
+            || string.Equals(currentSection, "mcp", StringComparison.OrdinalIgnoreCase)
+            || string.Equals(currentSection, "newsletter", StringComparison.OrdinalIgnoreCase);
     }
 
     public void Dispose()

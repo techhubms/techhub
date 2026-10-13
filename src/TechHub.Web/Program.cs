@@ -409,6 +409,10 @@ builder.Services
     })
     .WithHttpTransport(transport =>
     {
+        // Stateless: no sessions or server-to-client streams, so the server scales out without affinity.
+        // It also leaves GET /mcp free for the McpInfo landing page.
+        transport.Stateless = true;
+
         // Tools follow the configured sections, so they are resolved per request instead of via assembly scanning.
         transport.ConfigureSessionOptions = (httpContext, mcpOptions, _) =>
         {
@@ -514,6 +518,7 @@ app.UseSecurityHeaders();
 app.UseHttpMethodFilter();
 // Runs before the rate limiter so rejected cross-origin MCP requests don't consume a client's quota.
 app.UseMcpOriginValidation();
+app.UseMcpStreamRequestRejection();
 app.UseHttpsRedirection();
 
 // ── URL correction (301 redirects) ───────────────────────────────────────────
@@ -564,6 +569,7 @@ app.MapStaticAssets();
 
 app.MapControllers();
 
+// GET /mcp is not mapped by the (stateless) MCP server, so browsers fall through to the McpInfo landing page.
 app.MapMcp("/mcp")
     .RequireRateLimiting("web-mcp");
 

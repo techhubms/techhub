@@ -385,9 +385,11 @@ Returned when a section, collection, or item does not exist.
 
 ## MCP Server
 
-The Web frontend exposes the latest content to AI clients through a Model Context Protocol (MCP) server at `/mcp` (Streamable HTTP, stateless).
+The Web frontend exposes the latest content to AI clients through a Model Context Protocol (MCP) server at `/mcp` over stateless Streamable HTTP. The server does not create sessions, emit an `Mcp-Session-Id` header, or expose MCP `GET`/`DELETE` transport operations.
 
-- **Latest-content tools**: one `get_latest_<section>_content` tool per section (hyphens in the section name become underscores, e.g. `get_latest_github_copilot_content`), plus `get_latest_content` for the aggregate `all` section. Items can belong to several sections, so `get_latest_content` lists each item once and is the tool to prefer when no single section is needed. Tools are generated per request from the configured sections in `SectionCache`, so a newly configured section is exposed without code changes. Each tool has a readable title and is declared read-only.
+- **Landing page**: Opening `/mcp` in a browser on `tech.hub.ms` or `tech.xebia.ms` shows an overview, the branded public server URL (never `localhost`), connection snippets, and the available tools and options. The homepage-style navigation shows an `MCP` button next to `Newsletter` on the homepage, newsletter pages, and the MCP page itself. An MCP client requesting `GET /mcp` with `Accept: text/event-stream` and no acceptable HTML representation receives `405` with `Allow: POST` instead of the landing page.
+
+- **Latest-content tools**: one `get_latest_<section>_content` tool per section (hyphens in the section name become underscores, e.g. `get_latest_github_copilot_content`), plus `get_latest_content` for the aggregate `all` section. Items can belong to several sections, so `get_latest_content` lists each item once and is the tool to prefer when no single section is needed. Tools reflect the site's configured content sections. Each tool has a readable title and is declared read-only.
 - **Filters**: every latest-content tool accepts the optional arguments below; the tool descriptions and server instructions explain them to the client.
 
   | Argument | Meaning |
@@ -400,16 +402,14 @@ The Web frontend exposes the latest content to AI clients through a Model Contex
   | `query` | Keyword search across title, description and tags (maximum 200 characters). |
   | `includeTags` | Include the tags of every item. Off by default to keep results small. |
 
-  Invalid values fail with a readable tool error (`McpException`) instead of a generic failure.
+  Invalid values return a readable tool error instead of a generic failure.
 - **Paging**: Newest first, 10 items per page. The response contains `items`, `page`, `pageSize`, `totalPages` (capped at 100), `totalCount` and `generatedAt` (the server's current time in Europe/Brussels, so clients can judge how fresh the data is). Every item has `title`, `author`, `date` (ISO 8601, Europe/Brussels), `collection`, `excerpt` and an absolute `url` to its Tech Hub page, plus `tags` when requested. The original article's URL is deliberately not exposed: the Tech Hub page of a news, blog or community item shows the summary and a button to open the original, so linking to `url` keeps Tech Hub in the loop and brings traffic.
-- **`get_roundup_content`**: takes the `url` of a roundup (an absolute URL on the configured `Mcp:BaseUrl` or a path such as `/ai/roundups/some-roundup`, found with a latest-content tool and `contentType=roundups`) and returns `title`, `date`, `section`, `url` and the rendered HTML `content` (the AI-generated editorial summary of the week). Urls of other collections are rejected with a readable tool error. This is the only tool that returns body content: for every other item the `excerpt` is the summary and clients link users to the item's Tech Hub `url`.
-- **Item links**: Absolute URLs are built from the configured `Mcp:BaseUrl` (`https://tech.hub.ms` by default, `https://localhost:5003` in Development), never from the request `Host` header. Startup fails unless `Mcp:BaseUrl` is an origin-only absolute `http(s)` URL (scheme, host and optional port) with no credentials, path, query or fragment.
-- **Origin validation**: Requests with an `Origin` header are rejected with `403` unless the origin is `https://` plus a configured `PrimaryHosts` entry, the `Mcp:BaseUrl` origin, or (Development only) a loopback origin. This prevents DNS-rebinding attacks as required by the MCP Streamable HTTP transport. Requests without `Origin` (non-browser clients) are allowed. Implemented in `McpOriginValidationMiddleware`, which runs before rate limiting.
-- **Caching**: Responses are cached in memory per section and page for 5 minutes, but only when no filter is set. Requests with any filter (`query`, `tags`, `days`, `since`, `contentType`) are not cached because their values are unbounded and would let callers fill the shared cache. Failed API calls are never cached.
-- **Throttling**: The `web-mcp` rate limit policy allows 60 requests per minute per IP (loopback exempt in Development only). Excess requests receive `429` with `Retry-After`.
+- **`get_roundup_content`**: takes the `url` of a roundup (an absolute URL on the configured server origin or a path such as `/ai/roundups/some-roundup`, found with a latest-content tool and `contentType=roundups`) and returns `title`, `date`, `section`, `url` and the rendered HTML `content` (the AI-generated editorial summary of the week). Urls of other collections are rejected with a readable tool error. This is the only tool that returns body content: for every other item the `excerpt` is the summary and clients link users to the item's Tech Hub `url`.
+- **Item links**: Absolute URLs use the configured public server origin (`https://tech.hub.ms` by default, `https://localhost:5003` in Development), never the request `Host` header.
+- **Origin validation**: Requests with an `Origin` header are rejected with `403` unless the origin uses HTTPS and matches a configured public site host or the server's public base URL. In Development, loopback origins are also allowed. This prevents DNS-rebinding attacks as required by the MCP Streamable HTTP transport. Requests without `Origin` (non-browser clients) are allowed.
+- **Caching**: Unfiltered requests may return recently cached results. Filtered requests are not cached so arbitrary filter combinations do not create stale cached variants.
+- **Throttling**: Requests are limited to 60 per minute per IP (loopback exempt in Development only). Excess requests receive `429` with `Retry-After`.
 - **Instrumentation**: See [MCP Server Telemetry](telemetry.md#mcp-server-telemetry).
-
-Implementation: [src/TechHub.Web/MCP/](../src/TechHub.Web/MCP/). `ContentToolCatalog` builds the tools; the shared logic lives in `LatestContentProvider` (latest-content tools) and `RoundupContentProvider` (`get_roundup_content`).
 
 ## Performance Characteristics
 

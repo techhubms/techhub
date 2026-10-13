@@ -40,17 +40,17 @@
         <SectionBanner Title="@CustomBannerTitle" Description="@CustomBannerDescription" RssFeedUrl="@RssFeedUrl" IsHomepage="@IsHomepage" />
         @if (!HideSubNav)
         {
-            <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomeButton="@ShowHomeButton" />
+            <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" ShowMcp="@ShowMcp" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomeButton="@ShowHomeButton" />
         }
     }
     else if (ChildContent != null)
     {
         @ChildContent
-        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomeButton="@ShowHomeButton" />
+        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" ShowMcp="@ShowMcp" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomeButton="@ShowHomeButton" />
     }
     else
     {
-        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomeButton="@ShowHomeButton" />
+        <SubNav Sections="@SectionCache.Sections" RssFeedUrl="@RssFeedUrl" ShowNewsletter="@ShowNewsletter" ShowMcp="@ShowMcp" HideStats="@HideStats" ShowDiscord="@ShowDiscord" ShowHomeButton="@ShowHomeButton" />
     }
 </header>
 
@@ -69,6 +69,12 @@
     /// </summary>
     [Parameter]
     public bool ShowNewsletter { get; set; }
+
+    /// <summary>
+    /// When true, renders an MCP button in the SubNav next to the Newsletter button.
+    /// </summary>
+    [Parameter]
+    public bool ShowMcp { get; set; }
 
     /// <summary>
     /// When true, hides the statistics box in the SubNav. Used on pages where stats are not relevant (e.g. About).

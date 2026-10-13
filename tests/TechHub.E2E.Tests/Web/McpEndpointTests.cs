@@ -1,4 +1,5 @@
 using FluentAssertions;
+using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
@@ -9,6 +10,39 @@ namespace TechHub.E2E.Tests.Web;
 public class McpEndpointTests : PlaywrightTestBase
 {
     public McpEndpointTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
+
+    [Fact]
+    public async Task McpEndpoint_BrowserNavigation_ShowsLandingPageAtMcpUrl()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/mcp");
+
+        // Assert - the browser stays on /mcp and shows the explanation, including the server URL to copy
+        Page.Url.Should().EndWith("/mcp", "the landing page is served at the MCP address itself");
+        await Assertions.Expect(Page.Locator("h1")).ToContainTextAsync("MCP server");
+        await Assertions.Expect(Page.GetByTestId("mcp-endpoint-url")).ToHaveTextAsync("https://tech.hub.ms/mcp");
+        await Assertions.Expect(Page.Locator(".sub-nav a[href='/mcp']")).ToHaveClassAsync(new System.Text.RegularExpressions.Regex("active"));
+        await Assertions.Expect(Page.Locator(".sub-nav a[href='/newsletter/subscribe']")).ToBeVisibleAsync();
+        await Assertions.Expect(Page.Locator(".mcp-card pre code").First).ToContainTextAsync("/mcp");
+        await Assertions.Expect(Page.Locator(".mcp-table code", new() { HasTextString = "get_roundup_content" })).ToBeVisibleAsync();
+    }
+
+    [Fact]
+    public async Task McpEndpoint_GetWithEventStreamAccept_Returns405InsteadOfLandingPage()
+    {
+        // Act - an MCP client opening the optional server-to-client stream
+        var response = await Page.APIRequest.GetAsync($"{BlazorHelpers.BaseUrl}/mcp", new()
+        {
+            Headers = new Dictionary<string, string> { ["Accept"] = "text/event-stream" },
+            FailOnStatusCode = false,
+            Timeout = BlazorHelpers.E2ETimeout,
+        });
+
+        // Assert
+        response.Status.Should().Be(405, "the stateless MCP server has no server-to-client stream");
+        response.Headers.GetValueOrDefault("content-type", string.Empty)
+            .Should().NotContain("text/html", "MCP clients must not receive the landing page");
+    }
 
     [Fact]
     public async Task McpEndpoint_Initialize_ReturnsServerInfo()
@@ -33,6 +67,7 @@ public class McpEndpointTests : PlaywrightTestBase
 
         // Assert - the body is JSON or an SSE stream containing the JSON-RPC result
         response.Status.Should().Be(200, "POST /mcp must pass URL normalization and the HTTP method filter");
+        response.Headers.Keys.Should().NotContain(k => k.Equals("mcp-session-id", StringComparison.OrdinalIgnoreCase), "the server must be stateless");
         var body = await response.TextAsync();
         body.Should().Contain("\"serverInfo\"", "an initialize response must describe the MCP server");
         body.Should().Contain("\"techhub\"", "the server must identify itself with a readable name");

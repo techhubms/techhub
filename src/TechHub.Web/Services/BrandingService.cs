@@ -9,6 +9,7 @@ namespace TechHub.Web.Services;
 public sealed class BrandingService
 {
     private const string XebiaDomain = "tech.xebia.ms";
+    private const string TechHubDomain = "tech.hub.ms";
 
     public BrandingService(IHttpContextAccessor httpContextAccessor, IConfiguration configuration)
     {
@@ -46,4 +47,10 @@ public sealed class BrandingService
     /// Whether to show the GitHub Copilot logo next to the site name.
     /// </summary>
     public bool ShowCopilotLogo => IsXebiaBranding;
+
+    /// <summary>
+    /// The public host of the current branding, for URLs users copy elsewhere (never the request host, so
+    /// localhost and preview hosts still show the real website).
+    /// </summary>
+    public string PublicHost => IsXebiaBranding ? XebiaDomain : TechHubDomain;
 }
