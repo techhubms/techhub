@@ -42,6 +42,11 @@ internal sealed class McpStreamRequestRejectionMiddleware
         var eventStream = false;
         foreach (var mediaType in request.GetTypedHeaders().Accept)
         {
+            if ((mediaType.Quality ?? 1) <= 0)
+            {
+                continue;
+            }
+
             if (mediaType.MediaType.Equals("text/html", StringComparison.OrdinalIgnoreCase))
             {
                 return false;
