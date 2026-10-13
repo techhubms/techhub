@@ -369,7 +369,7 @@ Returned when route parameters have invalid format. All path parameters are vali
 
 Validation is enforced via an endpoint filter on the `/api/sections` group and the `/api/rss` group. See `RouteParameterValidator` in `TechHub.Core/Validation/`.
 
-Every `400` returned by an endpoint handler is logged as a warning (method, path and reason) by `RejectedRequestLogging`. The query string is never logged because it can carry emails and tokens, and framework-generated binding failures such as malformed JSON bodies never reach endpoint filters, so they are not covered.
+Every `400` returned by an endpoint handler is logged as a warning (method, path and reason) by `RejectedRequestLogging`. The query string is never logged because it can carry emails and tokens, and handlers must not echo untrusted request values in their 400 reason, and framework-generated binding failures such as malformed JSON bodies never reach endpoint filters, so they are not covered.
 
 ### 404 Not Found
 

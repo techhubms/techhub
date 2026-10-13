@@ -56,6 +56,20 @@ public sealed class RejectedRequestLoggingTests : IClassFixture<TechHubIntegrati
     }
 
     [Fact]
+    public async Task HandlerReturnedBadRequest_DoesNotLogEchoedQueryValues()
+    {
+        // Act
+        var response = await _client.GetAsync(
+            "/api/sections/all/collections/all/items?from=secret-from-value",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        var entry = _logs.Entries.Should().ContainSingle().Subject;
+        entry.Message.Should().NotContain("secret-from-value");
+    }
+
+    [Fact]
     public async Task SuccessfulRequest_IsNotLogged()
     {
         // Act
