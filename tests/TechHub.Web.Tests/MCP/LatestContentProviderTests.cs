@@ -37,6 +37,21 @@ public sealed class LatestContentProviderTests : IDisposable
     }
 
     [Fact]
+    public async Task GetLatestAsync_MoreItemsThanMaxPageAllows_CapsTotalPagesAtMaxPage()
+    {
+        // Arrange
+        SetupApi("ai", skip: 0, items: [new ContentItemBuilder().Build()], totalCount: 5000);
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GetLatestAsync("ai", page: 1, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.TotalPages.Should().Be(LatestContentProvider.MaxPage);
+        result.TotalCount.Should().Be(5000);
+    }
+
+    [Fact]
     public async Task GetLatestAsync_MapsItemsToAbsoluteCanonicalUrlsOnConfiguredBaseUrl()
     {
         // Arrange

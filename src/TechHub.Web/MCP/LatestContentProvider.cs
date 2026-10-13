@@ -77,7 +77,10 @@ internal sealed class LatestContentProvider
             .Select(i => new ContentPageItem(i.Title, i.Author, i.DateEpoch, i.Tags, i.Excerpt, $"{_baseUrl}{i.GetCanonicalHref()}"))
             .ToList();
 
-        return new ContentPage(items, page, PageSize, (int)Math.Ceiling(response.TotalCount / (double)PageSize), response.TotalCount);
+        // Pages beyond MaxPage are unreachable, so never advertise them.
+        var totalPages = (int)Math.Min(MaxPage, Math.Ceiling(response.TotalCount / (double)PageSize));
+
+        return new ContentPage(items, page, PageSize, totalPages, response.TotalCount);
     }
 }
 
