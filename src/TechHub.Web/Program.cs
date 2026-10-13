@@ -507,6 +507,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseSecurityHeaders();
 app.UseHttpMethodFilter();
+// Runs before the rate limiter so rejected cross-origin MCP requests don't consume a client's quota.
+app.UseMcpOriginValidation();
 app.UseHttpsRedirection();
 
 // ── URL correction (301 redirects) ───────────────────────────────────────────
