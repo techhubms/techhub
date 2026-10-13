@@ -39,23 +39,50 @@ internal sealed class McpStreamRequestRejectionMiddleware
 
     private static bool AcceptsEventStreamOnly(HttpRequest request)
     {
-        var eventStream = false;
-        foreach (var mediaType in request.GetTypedHeaders().Accept)
+        return IsAcceptable(request, "text/event-stream") && !IsAcceptable(request, "text/html");
+    }
+
+    private static bool IsAcceptable(HttpRequest request, string targetMediaType)
+    {
+        var acceptedMediaTypes = request.GetTypedHeaders().Accept;
+        if (acceptedMediaTypes is null)
         {
-            if ((mediaType.Quality ?? 1) <= 0)
+            return false;
+        }
+
+        var targetType = targetMediaType[..targetMediaType.IndexOf('/')];
+        var mostSpecificMatch = -1;
+        var bestQuality = 0d;
+
+        foreach (var acceptedMediaType in acceptedMediaTypes)
+        {
+            var mediaRange = acceptedMediaType.MediaType;
+            var specificity = mediaRange.Equals(targetMediaType, StringComparison.OrdinalIgnoreCase)
+                ? 2
+                : mediaRange.Equals($"{targetType}/*", StringComparison.OrdinalIgnoreCase)
+                    ? 1
+                    : mediaRange.Equals("*/*", StringComparison.Ordinal)
+                        ? 0
+                        : -1;
+
+            if (specificity < 0)
             {
                 continue;
             }
 
-            if (mediaType.MediaType.Equals("text/html", StringComparison.OrdinalIgnoreCase))
+            var quality = acceptedMediaType.Quality ?? 1;
+            if (specificity > mostSpecificMatch)
             {
-                return false;
+                mostSpecificMatch = specificity;
+                bestQuality = quality;
             }
-
-            eventStream |= mediaType.MediaType.Equals("text/event-stream", StringComparison.OrdinalIgnoreCase);
+            else if (specificity == mostSpecificMatch)
+            {
+                bestQuality = Math.Max(bestQuality, quality);
+            }
         }
 
-        return eventStream;
+        return mostSpecificMatch >= 0 && bestQuality > 0;
     }
 }
 

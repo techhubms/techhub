@@ -10,6 +10,7 @@ public class McpStreamRequestRejectionMiddlewareTests
     [InlineData("text/event-stream")]
     [InlineData("application/json, text/event-stream")]
     [InlineData("TEXT/EVENT-STREAM")]
+    [InlineData("text/event-stream, text/html;q=0, */*;q=1")]
     public async Task InvokeAsync_GetMcpWithEventStreamAccept_Returns405WithBody(string accept)
     {
         // Arrange
@@ -28,6 +29,8 @@ public class McpStreamRequestRejectionMiddlewareTests
     [Theory]
     [InlineData("text/html,application/xhtml+xml,*/*;q=0.8")]
     [InlineData("text/html, text/event-stream")]
+    [InlineData("text/event-stream, */*")]
+    [InlineData("text/event-stream;q=0, */*;q=1")]
     [InlineData("*/*")]
     [InlineData("application/json")]
     [InlineData(null)]
