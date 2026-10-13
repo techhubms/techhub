@@ -137,25 +137,25 @@ function Start-McpInspector {
         Starts the MCP Inspector to test the local Tech Hub MCP server.
 
     .DESCRIPTION
-        Runs 'npx @modelcontextprotocol/inspector@2.10.1' (pinned for reproducible runs) with TLS validation disabled (to accept the local
-        dev certificate) and without auto-opening a browser. Both environment variables are restored
-        when the inspector exits so they don't leak into the terminal session.
+        Runs 'npx @modelcontextprotocol/inspector@2.10.1' (pinned for reproducible runs) with the local
+        dev certificate trusted and without auto-opening a browser. Both environment variables are
+        restored when the inspector exits so they don't leak into the terminal session.
 
     .EXAMPLE
         Start-McpInspector
     #>
     param()
 
-    $previousTlsReject = $env:NODE_TLS_REJECT_UNAUTHORIZED
+    $previousExtraCaCerts = $env:NODE_EXTRA_CA_CERTS
     $previousAutoOpen = $env:MCP_AUTO_OPEN_ENABLED
 
     try {
-        $env:NODE_TLS_REJECT_UNAUTHORIZED = "0"
+        $env:NODE_EXTRA_CA_CERTS = "/usr/local/share/ca-certificates/aspnet/https.crt"
         $env:MCP_AUTO_OPEN_ENABLED = "false"
         npx @modelcontextprotocol/inspector@2.10.1
     }
     finally {
-        $env:NODE_TLS_REJECT_UNAUTHORIZED = $previousTlsReject
+        $env:NODE_EXTRA_CA_CERTS = $previousExtraCaCerts
         $env:MCP_AUTO_OPEN_ENABLED = $previousAutoOpen
     }
 }
