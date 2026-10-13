@@ -28,8 +28,12 @@ internal sealed class ContentToolCatalog
         "to open the original article. For items with collection roundups pass the url to get_roundup_content to read the full roundup. " +
         "Use the page parameter to retrieve further pages.";
 
+    // Optional parameters use non-nullable types with sentinel defaults: nullable types emit ["integer","null"] schemas
+    // that single-type clients (e.g. Gemini) reject.
+    private const int DaysNotSet = -1;
+
     internal const string DaysDescription =
-        "Only include items from the last N days (0-3650). Defaults to 90 when neither days nor since is given; 0 removes the date window.";
+        "Only include items from the last N days (0-3650). Omit it to use the default of 90 days when since is not given; 0 removes the date window.";
 
     internal const string SinceDescription =
         "Only include items published on or after this date, formatted yyyy-MM-dd. Takes precedence over days.";
@@ -96,11 +100,11 @@ internal sealed class ContentToolCatalog
         return McpServerTool.Create(
             (LatestContentProvider provider,
                 [Description(PageDescription)] int page = 1,
-                [Description(DaysDescription)] int? days = null,
-                [Description(SinceDescription)] string? since = null,
-                [Description(ContentTypeDescription)] string? contentType = null,
-                [Description(TagsDescription)] string? tags = null,
-                [Description(QueryDescription)] string? query = null,
+                [Description(DaysDescription)] int days = DaysNotSet,
+                [Description(SinceDescription)] string since = "",
+                [Description(ContentTypeDescription)] string contentType = "",
+                [Description(TagsDescription)] string tags = "",
+                [Description(QueryDescription)] string query = "",
                 [Description(IncludeTagsDescription)] bool includeTags = false,
                 CancellationToken cancellationToken = default)
                 => provider.GetLatestAsync(
@@ -108,7 +112,7 @@ internal sealed class ContentToolCatalog
                     new ContentFilter
                     {
                         Page = page,
-                        Days = days,
+                        Days = days == DaysNotSet ? null : days,
                         Since = since,
                         ContentTypes = contentType,
                         Tags = tags,

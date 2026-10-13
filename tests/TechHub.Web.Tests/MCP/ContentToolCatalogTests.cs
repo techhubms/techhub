@@ -187,6 +187,22 @@ public sealed partial class ContentToolCatalogTests : IDisposable
     }
 
     [Fact]
+    public void GetTools_FilterArgumentsUseSingleTypeSchemas()
+    {
+        // Arrange
+        var sut = CreateSut(Section("azure"));
+
+        // Act
+        var properties = SectionTools(sut).Should().ContainSingle().Subject.ProtocolTool.InputSchema.GetProperty("properties");
+
+        // Assert - ["string","null"] type arrays are rejected by single-type clients such as Gemini
+        foreach (var property in properties.EnumerateObject())
+        {
+            property.Value.GetProperty("type").ValueKind.Should().Be(JsonValueKind.String, property.Name);
+        }
+    }
+
+    [Fact]
     public void GetTools_UnchangedSections_ReturnsSameToolInstances()
     {
         // Arrange

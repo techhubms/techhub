@@ -72,6 +72,8 @@ dotnet dev-certs https
 # Export to PEM format for system-level trust
 sudo mkdir -p /usr/local/share/ca-certificates/aspnet
 sudo -E dotnet dev-certs https -ep /usr/local/share/ca-certificates/aspnet/https.crt --format PEM
+# Public cert only; must be readable by non-root (e.g. Node's NODE_EXTRA_CA_CERTS)
+sudo chmod 644 /usr/local/share/ca-certificates/aspnet/https.crt
 sudo update-ca-certificates
 
 # Export to PFX for Docker containers (with password)
