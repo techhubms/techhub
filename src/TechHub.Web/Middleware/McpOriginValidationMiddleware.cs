@@ -66,7 +66,7 @@ internal sealed class McpOriginValidationMiddleware
             return;
         }
 
-        _logger.LogInformation("Rejected MCP request with untrusted Origin {Origin}", origin.Sanitize());
+        _logger.LogDebug("Rejected MCP request with untrusted Origin {Origin}", origin.Sanitize());
 
         context.Response.StatusCode = StatusCodes.Status403Forbidden;
         await context.Response.WriteAsync("Forbidden: untrusted Origin.", context.RequestAborted);
