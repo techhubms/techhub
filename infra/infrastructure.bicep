@@ -63,7 +63,7 @@ param adminIpAddresses string
 param alertEmailAddress string = 'reinier.vanmaanen@hotmail.com'
 
 @description('Budget amount per billing period (in billing currency, typically EUR)')
-param billingPeriodBudgetAmount int = 150
+param billingPeriodBudgetAmount int = 100
 
 @description('Budget start date (YYYY-MM-DD, aligned to billing period start)')
 param budgetStartDate string = '2026-04-07'

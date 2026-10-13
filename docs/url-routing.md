@@ -420,6 +420,7 @@ After the auth and rate-limiting phase, requests reach the registered endpoints:
 | `/{section}` or `/{section}/{collection}` | `SectionCollection.razor` |
 | `/{section}/{collection}/{slug}` | `ContentItem.razor` |
 | `/about` | `About.razor` |
+| `/mcp` (GET from a browser; MCP clients POST to the same path) | `McpInfo.razor` |
 | `/not-found` | `NotFound.razor` |
 | `/admin` | Admin pages |
 | `/github-copilot/vscode-updates` | `GitHubCopilotVSCodeUpdates.razor` |

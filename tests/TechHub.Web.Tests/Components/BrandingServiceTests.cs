@@ -80,6 +80,19 @@ public class BrandingServiceTests
         service.BannerTitle.Should().Be("Tech Hub");
     }
 
+    [Theory]
+    [InlineData("tech.xebia.ms", "tech.xebia.ms")]
+    [InlineData("tech.hub.ms", "tech.hub.ms")]
+    [InlineData("localhost", "tech.hub.ms")]
+    public void BrandingService_PublicHost_FollowsBranding(string requestHost, string expectedPublicHost)
+    {
+        // Arrange
+        var service = CreateBrandingService(requestHost);
+
+        // Assert
+        service.PublicHost.Should().Be(expectedPublicHost);
+    }
+
     [Fact]
     public void BrandingService_XebiaDomain_ShowsCopilotLogo()
     {

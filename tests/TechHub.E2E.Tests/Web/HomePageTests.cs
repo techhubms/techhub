@@ -57,6 +57,35 @@ public class HomePageTests : PlaywrightTestBase
             "newsletter link should point to the internal subscribe page, not an external URL");
     }
 
+    [Fact]
+    public async Task HomePage_ShouldDisplay_McpLinkNextToNewsletter()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/");
+
+        // Assert
+        var mcpLink = Page.Locator(".sub-nav a[href='/mcp']");
+        await Assertions.Expect(mcpLink).ToBeVisibleAsync();
+        var newsletterBox = await Page.Locator(".sub-nav a[href='/newsletter/subscribe']").BoundingBoxAsync();
+        var mcpBox = await mcpLink.BoundingBoxAsync();
+        mcpBox!.X.Should().BeGreaterThan(newsletterBox!.X, "the MCP button sits right after the Newsletter button");
+    }
+
+    [Fact]
+    public async Task HomePage_McpLink_NavigatesToMcpLandingPage()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync("/");
+
+        // Act
+        await Page.Locator(".sub-nav a[href='/mcp']").ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.GetByTestId("mcp-endpoint-url")).ToBeVisibleAsync());
+
+        // Assert
+        Page.Url.Should().EndWith("/mcp");
+        await Assertions.Expect(Page.Locator(".sub-nav a[href='/mcp']")).ToHaveClassAsync(new System.Text.RegularExpressions.Regex("active"));
+    }
+
     // General Sidebar Tests
     [Fact]
     public async Task HomePage_ShouldDisplay_Sidebar()

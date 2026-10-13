@@ -1,0 +1,175 @@
+@page "/mcp"
+@using TechHub.Core.Models
+@using TechHub.Web.MCP
+@using TechHub.Web.Services
+@inject BrandingService Branding
+@inject SectionCache SectionCache
+@inherits PageComponentBase
+
+<PageTitle>MCP Server - @Branding.SiteName</PageTitle>
+
+<SeoMetaTags
+    Title="@($"MCP Server - {Branding.SiteName}")"
+    Description="@($"Connect your AI assistant to {Branding.BannerTitle} with the Model Context Protocol (MCP) and ask for the latest Microsoft tech news, blogs, videos and weekly roundups.")"
+    ContentType="SeoMetaTags.SeoContentType.Website" />
+
+<main class="page-without-sidebar">
+    <section class="mcp-page">
+        <header class="mcp-hero">
+            <h1 id="skiptohere" class="page-h1">@Branding.BannerTitle MCP server</h1>
+            <p class="mcp-lead">
+                Give your AI assistant direct access to the latest Microsoft tech news, blogs, videos and weekly
+                roundups, curated on @Branding.BannerTitle.
+            </p>
+            <div class="mcp-endpoint">
+                <span class="mcp-endpoint-label">Server URL</span>
+                <code class="mcp-endpoint-url" data-testid="mcp-endpoint-url">@EndpointUrl</code>
+                <ul class="mcp-badges">
+                    <li>Streamable HTTP</li>
+                    <li>Read-only</li>
+                    <li>No sign-in</li>
+                </ul>
+            </div>
+        </header>
+
+        <h2>What is this?</h2>
+        <div class="mcp-cards">
+            <article class="mcp-card">
+                <h3>Model Context Protocol</h3>
+                <p>
+                    <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener noreferrer">MCP</a>
+                    is an open standard that lets AI assistants such as GitHub Copilot, Claude or Cursor call external
+                    tools and read external data.
+                </p>
+            </article>
+            <article class="mcp-card">
+                <h3>What you get</h3>
+                <p>
+                    Instead of searching the web, your assistant asks @Branding.BannerTitle for fresh, pre-screened content
+                    and links you straight to the items it finds.
+                </p>
+            </article>
+            <article class="mcp-card">
+                <h3>Free to use</h3>
+                <p>
+                    No account, no API key. Requests are limited to 60 per minute per IP address, which is plenty for
+                    normal use.
+                </p>
+            </article>
+        </div>
+
+        <h2>Connect your AI client</h2>
+        <p>Add the server to your client, then restart or refresh its tool list.</p>
+        <div class="mcp-cards">
+            <article class="mcp-card">
+                <h3>VS Code &amp; Visual Studio</h3>
+                <p>Add this to <code>.vscode/mcp.json</code> (VS Code) or <code>.mcp.json</code> (Visual Studio):</p>
+                <pre><code>@VsCodeConfig</code></pre>
+            </article>
+            <article class="mcp-card">
+                <h3>Claude Code</h3>
+                <p>Run this in your terminal:</p>
+                <pre><code>@ClaudeCodeCommand</code></pre>
+            </article>
+            <article class="mcp-card">
+                <h3>Cursor &amp; others</h3>
+                <p>Add this to <code>~/.cursor/mcp.json</code>, or give the URL to any client that supports remote MCP servers:</p>
+                <pre><code>@CursorConfig</code></pre>
+            </article>
+        </div>
+
+        <h2>Available tools</h2>
+        <p>All tools are read-only. Each returns the newest items first, 10 per page.</p>
+        <div class="mcp-table-wrapper">
+            <table class="mcp-table" data-testid="mcp-tools">
+                <thead>
+                    <tr>
+                        <th scope="col">Tool</th>
+                        <th scope="col">What it does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sectionData in SectionCache.Sections)
+                    {
+                        <tr>
+                            <td><code>@ContentToolCatalog.GetToolName(sectionData.Name)</code></td>
+                            <td>@DescribeSectionTool(sectionData)</td>
+                        </tr>
+                    }
+                    <tr>
+                        <td><code>@ContentToolCatalog.GetRoundupContentToolName</code></td>
+                        <td>Reads the full text of a weekly roundup, found with <code>contentType=roundups</code>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Options for the latest-content tools</h3>
+        <div class="mcp-table-wrapper">
+            <table class="mcp-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Parameter</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>page</code></td><td>@ContentToolCatalog.PageDescription</td></tr>
+                    <tr><td><code>days</code></td><td>@ContentToolCatalog.DaysDescription</td></tr>
+                    <tr><td><code>since</code></td><td>@ContentToolCatalog.SinceDescription</td></tr>
+                    <tr><td><code>contentType</code></td><td>@ContentToolCatalog.ContentTypeDescription</td></tr>
+                    <tr><td><code>tags</code></td><td>@ContentToolCatalog.TagsDescription</td></tr>
+                    <tr><td><code>query</code></td><td>@ContentToolCatalog.QueryDescription</td></tr>
+                    <tr><td><code>includeTags</code></td><td>@ContentToolCatalog.IncludeTagsDescription</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Try asking</h2>
+        <ul class="mcp-prompts">
+            <li>"What's new in GitHub Copilot this week?"</li>
+            <li>"Summarize the latest .NET roundup from @Branding.BannerTitle."</li>
+            <li>"Find recent videos about the Model Context Protocol."</li>
+            <li>"What happened in Azure over the last 7 days?"</li>
+        </ul>
+
+        <h2>Good to know</h2>
+        <ul>
+            <li>Results carry a short excerpt and a link. Open the link to read the item on @Branding.BannerTitle, which also leads to the original article.</li>
+            <li>Opening this address in a browser shows this page; MCP clients talk to the same address over HTTP.</li>
+            <li>Want to explore the tools yourself? Try the <a href="https://github.com/modelcontextprotocol/inspector" target="_blank" rel="noopener noreferrer">MCP Inspector</a>.</li>
+        </ul>
+    </section>
+</main>
+
+@code {
+    private string EndpointUrl => $"https://{Branding.PublicHost}/mcp";
+
+    private string VsCodeConfig => $$"""
+        {
+          "servers": {
+            "techhub": {
+              "type": "http",
+              "url": "{{EndpointUrl}}"
+            }
+          }
+        }
+        """;
+
+    private string ClaudeCodeCommand => $"claude mcp add --transport http techhub {EndpointUrl}";
+
+    private string CursorConfig => $$"""
+        {
+          "mcpServers": {
+            "techhub": {
+              "url": "{{EndpointUrl}}"
+            }
+          }
+        }
+        """;
+
+    private static string DescribeSectionTool(Section sectionData) =>
+        string.Equals(sectionData.Name, "all", StringComparison.OrdinalIgnoreCase)
+            ? "Latest content across all sections, with every item listed once."
+            : $"Latest {sectionData.Title} news, blogs, videos, community posts and roundups.";
+}
