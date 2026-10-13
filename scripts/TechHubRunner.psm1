@@ -80,6 +80,18 @@ function Stop-Servers {
     
     # Kill Aspire AppHost/Api/Web processes (dotnet watch/run wrappers and native apphosts) that
     # may survive a previous session and keep holding ports such as the Aspire dashboard (18891)
+    # Only processes that belong to this checkout are stopped, so another running checkout is left alone.
+    $repoRoot = (Split-Path $PSScriptRoot -Parent).TrimEnd('/') + '/'
+    $isInThisRepo = {
+        param([int]$ProcessId, [string]$CommandArgs)
+        if ($CommandArgs.Contains($repoRoot)) { return $true }
+        foreach ($link in "/proc/$ProcessId/cwd", "/proc/$ProcessId/exe") {
+            $target = readlink -f $link 2>$null
+            if ($target -and "$target/".StartsWith($repoRoot)) { return $true }
+        }
+        return $false
+    }
+
     $serverPids = @()
     foreach ($line in (ps -eo 'pid=,comm=,args=')) {
         if ($line -notmatch '^\s*(\d+)\s+(\S+)\s+(.*)$') { continue }
@@ -87,8 +99,9 @@ function Stop-Servers {
         $comm = $Matches[2]
         $cmdArgs = $Matches[3]
         if ($procId -eq $PID -or $cmdArgs -match 'vscode-server') { continue }
-        if ($comm -match '^TechHub\.(AppHost|Api|Web)$' -or
-            ($comm -eq 'dotnet' -and $cmdArgs -match '--project\s+\S*/src/TechHub\.(AppHost|Api|Web)/')) {
+        if (($comm -match '^TechHub\.(AppHost|Api|Web)$' -or
+            ($comm -eq 'dotnet' -and $cmdArgs -match '--project\s+\S*/src/TechHub\.(AppHost|Api|Web)/')) -and
+            (& $isInThisRepo $procId $cmdArgs)) {
             $serverPids += $procId
         }
     }
@@ -124,7 +137,7 @@ function Start-McpInspector {
         Starts the MCP Inspector to test the local Tech Hub MCP server.
 
     .DESCRIPTION
-        Runs 'npx @modelcontextprotocol/inspector' with TLS validation disabled (to accept the local
+        Runs 'npx @modelcontextprotocol/inspector@2.10.1' (pinned for reproducible runs) with TLS validation disabled (to accept the local
         dev certificate) and without auto-opening a browser. Both environment variables are restored
         when the inspector exits so they don't leak into the terminal session.
 
@@ -139,7 +152,7 @@ function Start-McpInspector {
     try {
         $env:NODE_TLS_REJECT_UNAUTHORIZED = "0"
         $env:MCP_AUTO_OPEN_ENABLED = "false"
-        npx @modelcontextprotocol/inspector
+        npx @modelcontextprotocol/inspector@2.10.1
     }
     finally {
         $env:NODE_TLS_REJECT_UNAUTHORIZED = $previousTlsReject

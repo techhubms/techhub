@@ -23,6 +23,7 @@ public sealed partial class ContentToolCatalogTests : IDisposable
             .AddScoped(_ => new LatestContentProvider(
                 new Mock<ITechHubApiClient>().Object,
                 _cache,
+                new SectionCacheBuilder().Build(),
                 Options.Create(new McpOptions { BaseUrl = "https://techhub.test" }),
                 TimeProvider.System))
             .AddScoped(_ => new ContentItemProvider(

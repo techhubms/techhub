@@ -261,6 +261,20 @@ public sealed class LatestContentProviderTests : IDisposable
     }
 
     [Fact]
+    public async Task GetLatestAsync_UnknownContentType_ThrowsMcpExceptionListingValidTypes()
+    {
+        // Arrange
+        var sut = CreateSut();
+
+        // Act
+        var act = () => sut.GetLatestAsync("ai", new ContentFilter { ContentTypes = "news,typo" }, TestContext.Current.CancellationToken);
+
+        // Assert
+        (await act.Should().ThrowAsync<McpException>()).Which.Message.Should().Contain("typo").And.Contain("blogs, community, news, roundups, videos");
+        _apiClient.VerifyNoOtherCalls();
+    }
+
+    [Fact]
     public async Task GetLatestAsync_QueryTooLong_ThrowsMcpException()
     {
         // Arrange
@@ -455,7 +469,7 @@ public sealed class LatestContentProviderTests : IDisposable
     }
 
     private LatestContentProvider CreateSut(string baseUrl = "https://techhub.test") =>
-        new(_apiClient.Object, _cache, Options.Create(new McpOptions { BaseUrl = baseUrl }), new FrozenTimeProvider(_now));
+        new(_apiClient.Object, _cache, new SectionCacheBuilder().Build(), Options.Create(new McpOptions { BaseUrl = baseUrl }), new FrozenTimeProvider(_now));
 
     private void SetupApi(
         string section,

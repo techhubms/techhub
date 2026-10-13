@@ -42,7 +42,7 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | `Run -BuildOnly` | Build only, then exit (no tests, no servers). |
 | `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). |
 | `Stop-Servers` (without Run in front!) | Stops the servers directly. |
-| `Start-McpInspector` | Starts the MCP Inspector (`npx @modelcontextprotocol/inspector`) for testing the local MCP server at `https://localhost:5003/mcp`. Accepts the local dev certificate and doesn't open a browser automatically. |
+| `Start-McpInspector` | Starts the MCP Inspector (`npx @modelcontextprotocol/inspector@2.10.1`, pinned version) for testing the local MCP server at `https://localhost:5003/mcp`. Accepts the local dev certificate and doesn't open a browser automatically. |
 
 ## Validating All Tests
 

@@ -139,8 +139,9 @@ internal sealed class ContentToolCatalog
                 Name = GetContentItemToolName,
                 Title = "Content item details",
                 Description = "Gets a single Tech Hub content item by its url (as returned by the latest-content tools): " +
-                    "title, author, date, excerpt, the original sourceUrl and the full Tech Hub content (AI-generated for " +
-                    "news, blogs, community posts and videos, an editorial summary for roundups).",
+                    "title, author, date, excerpt and the original sourceUrl. Roundups and videos also include the full Tech Hub " +
+                    "content (an editorial summary for roundups); news, blogs and community posts are excerpt and source-only, " +
+                    "so follow sourceUrl for the original article.",
                 ReadOnly = true,
                 Idempotent = true,
                 Destructive = false,

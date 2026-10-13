@@ -32,20 +32,22 @@ internal sealed class LatestContentProvider
 
     private readonly ITechHubApiClient _apiClient;
     private readonly IMemoryCache _cache;
+    private readonly SectionCache _sectionCache;
     private readonly TimeProvider _timeProvider;
     private readonly string _baseUrl;
 
-    public LatestContentProvider(ITechHubApiClient apiClient, IMemoryCache cache, IOptions<McpOptions> options, TimeProvider timeProvider)
+    public LatestContentProvider(ITechHubApiClient apiClient, IMemoryCache cache, SectionCache sectionCache, IOptions<McpOptions> options, TimeProvider timeProvider)
     {
         _apiClient = apiClient;
         _cache = cache;
+        _sectionCache = sectionCache;
         _timeProvider = timeProvider;
         _baseUrl = options.Value.BaseUrl.TrimEnd('/');
     }
 
     public async Task<ContentPage> GetLatestAsync(string sectionName, ContentFilter filter, CancellationToken cancellationToken)
     {
-        var request = ApiRequest.From(filter);
+        var request = ApiRequest.From(filter, GetValidCollectionNames(sectionName));
 
         using var activity = McpTelemetry.ActivitySource.StartActivity("McpContent.GetLatest");
         activity?.SetTag("techhub.section", sectionName);
@@ -98,6 +100,13 @@ internal sealed class LatestContentProvider
         }
     }
 
+    // Null while the section is not cached yet; the API then reports the unknown section itself.
+    private HashSet<string>? GetValidCollectionNames(string sectionName) =>
+        _sectionCache.GetSectionByName(sectionName)?.Collections
+            .Where(c => !c.IsCustom)
+            .Select(c => c.Name)
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
     private ContentPage ToContentPage(CollectionItemsResponse response, int page, bool includeTags)
     {
         var items = response.Items
@@ -122,7 +131,7 @@ internal sealed class LatestContentProvider
     /// <summary>Validated, normalized filter values in the shape the content API expects.</summary>
     private sealed record ApiRequest(int Page, string? Query, string? Tags, int? LastDays, string? FromDate, string? Types)
     {
-        public static ApiRequest From(ContentFilter filter)
+        public static ApiRequest From(ContentFilter filter, HashSet<string>? validCollectionNames)
         {
             if (filter.Days is < 0 or > MaxDays)
             {
@@ -156,6 +165,12 @@ internal sealed class LatestContentProvider
             if (types.Length > MaxContentTypeCount || !types.All(RouteParameterValidator.IsValidNameSegment))
             {
                 throw new McpException("contentType must be a comma-separated list of collection names, for example news,blogs,videos,community,roundups.");
+            }
+
+            // The API silently ignores unknown types and falls back to all collections, so reject them here.
+            if (validCollectionNames is not null && types.FirstOrDefault(t => !validCollectionNames.Contains(t)) is { } unknownType)
+            {
+                throw new McpException($"contentType '{unknownType}' is not a collection of this section. Valid values: {string.Join(", ", validCollectionNames.Order(StringComparer.OrdinalIgnoreCase))}.");
             }
 
             return new ApiRequest(
