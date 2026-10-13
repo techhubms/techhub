@@ -50,7 +50,7 @@ internal sealed class McpStreamRequestRejectionMiddleware
             return false;
         }
 
-        var targetType = targetMediaType[..targetMediaType.IndexOf('/')];
+        var targetType = targetMediaType[..targetMediaType.IndexOf('/', StringComparison.Ordinal)];
         var mostSpecificMatch = -1;
         var bestQuality = 0d;
 
