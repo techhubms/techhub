@@ -156,7 +156,7 @@ When running via docker-compose (`Run -Docker`), the same setup applies - an Asp
 The MCP server at `/mcp` emits two kinds of signals, both exported through the regular OpenTelemetry pipeline:
 
 - **MCP SDK signals** (`Experimental.ModelContextProtocol`): spans and metrics per protocol call, with attributes such as `mcp.method.name` and `gen_ai.tool.name`.
-- **Tech Hub signals** (`TechHub.Mcp`): the `techhub.mcp.content.requests` counter and `techhub.mcp.content.duration` histogram, tagged with `techhub.section` and `techhub.result` (`cache_hit`, `cache_miss`, `cache_bypass` for requests with any filter, which skip the cache, or `error`), plus a `McpContent.GetLatest` span per latest-content tool call. These show cache effectiveness per section.
+- **Tech Hub signals** (`TechHub.Mcp`): the `techhub.mcp.content.requests` counter and `techhub.mcp.content.duration` histogram, tagged with `techhub.section` and `techhub.result` (`cache_hit`, `cache_miss`, `cache_bypass` for requests with `query`, `tags`, `days`, `since` or `contentType`, which skip the cache, or `error`), plus a `McpContent.GetLatest` span per latest-content tool call. These show cache effectiveness per section.
 
 ## Configuration Reference
 
