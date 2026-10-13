@@ -1,4 +1,5 @@
 using System.Diagnostics.Metrics;
+using System.Text.Json;
 using FluentAssertions;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
@@ -92,6 +93,27 @@ public sealed class LatestContentProviderTests : IDisposable
         var mapped = result.Items.Should().ContainSingle().Subject;
         mapped.Date.Should().Be("2026-09-24T10:00:00+02:00");
         mapped.Collection.Should().Be("videos");
+    }
+
+    [Fact]
+    public async Task GetLatestAsync_ExternalItem_LinksToTechHubAndDoesNotExposeOriginalUrl()
+    {
+        // Arrange - the Tech Hub page shows the summary and the button to the original, so the original is never handed to agents
+        var item = new ContentItemBuilder()
+            .WithSlug("my-slug")
+            .WithCollectionName("news")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.org/original")
+            .Build();
+        SetupApi("ai", skip: 0, items: [item], totalCount: 1);
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GetLatestAsync("ai", new ContentFilter(), TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Items.Should().ContainSingle().Which.Url.Should().Be("https://techhub.test/ai/news/my-slug");
+        JsonSerializer.Serialize(result).Should().NotContain("example.org");
     }
 
     [Fact]

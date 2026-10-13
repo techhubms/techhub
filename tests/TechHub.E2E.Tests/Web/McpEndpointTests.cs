@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using FluentAssertions;
 using TechHub.E2E.Tests.Helpers;
 
@@ -7,7 +6,7 @@ namespace TechHub.E2E.Tests.Web;
 /// <summary>
 /// E2E test verifying the MCP endpoint is reachable through the full Web middleware pipeline.
 /// </summary>
-public partial class McpEndpointTests : PlaywrightTestBase
+public class McpEndpointTests : PlaywrightTestBase
 {
     public McpEndpointTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
@@ -52,7 +51,7 @@ public partial class McpEndpointTests : PlaywrightTestBase
         }
 
         body.Should().Contain("get_latest_content", "the cross-section tool must be exposed");
-        body.Should().Contain("get_content_item", "the item lookup tool must be exposed");
+        body.Should().Contain("get_roundup_content", "the roundup content tool must be exposed");
     }
 
     [Theory]
@@ -101,39 +100,29 @@ public partial class McpEndpointTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task McpEndpoint_GetContentItem_ReturnsItemForUrlFromLatestContent()
+    public async Task McpEndpoint_LatestContentForExternalCollections_LinksToTechHubWithoutSourceUrl()
     {
-        // Arrange - days=0 removes the default date window so seeded test content is always found
-        var latest = await PostJsonRpcAsync(
-            """{"jsonrpc":"2.0","id":6,"method":"tools/call","params":{"name":"get_latest_content","arguments":{"days":0}}}""");
-        var url = UrlPattern().Match(latest).Groups["url"].Value;
-        url.Should().NotBeNullOrEmpty("the latest-content tool must return item urls");
-
-        // Act
+        // Act - days=0 removes the default date window so seeded test content is always found
         var body = await PostJsonRpcAsync(
-            """{"jsonrpc":"2.0","id":7,"method":"tools/call","params":{"name":"get_content_item","arguments":{"url":"URL"}}}"""
-                .Replace("URL", url, StringComparison.Ordinal));
+            """{"jsonrpc":"2.0","id":6,"method":"tools/call","params":{"name":"get_latest_content","arguments":{"days":0,"contentType":"news,blogs"}}}""");
 
         // Assert
-        body.Should().Contain("excerpt");
+        body.Should().Contain("totalCount");
+        body.Should().NotContain("sourceUrl", "agents must send readers to the Tech Hub page, not bypass it");
         body.Should().NotContain("\"isError\":true");
     }
 
     [Fact]
-    public async Task McpEndpoint_GetContentItem_UnknownUrl_ReturnsReadableToolError()
+    public async Task McpEndpoint_GetRoundupContent_NonRoundupUrl_ReturnsReadableToolError()
     {
         // Act
         var body = await PostJsonRpcAsync(
-            """{"jsonrpc":"2.0","id":8,"method":"tools/call","params":{"name":"get_content_item","arguments":{"url":"https://evil.example/ai/news/x"}}}""");
+            """{"jsonrpc":"2.0","id":9,"method":"tools/call","params":{"name":"get_roundup_content","arguments":{"url":"/ai/news/x"}}}""");
 
         // Assert
         body.Should().Contain("\"isError\":true");
-        body.Should().Contain("Tech Hub item url");
+        body.Should().Contain("roundup url");
     }
-
-    // The tool result is JSON text nested in the JSON-RPC payload, where quotes are escaped as \u0022.
-    [GeneratedRegex(@"\\u0022url\\u0022:\\u0022(?<url>[^\\]+)\\u0022")]
-    private static partial Regex UrlPattern();
 
     private async Task<string> PostJsonRpcAsync(string jsonRpcRequest)
     {

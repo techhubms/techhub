@@ -26,7 +26,7 @@ public sealed partial class ContentToolCatalogTests : IDisposable
                 new SectionCacheBuilder().Build(),
                 Options.Create(new McpOptions { BaseUrl = "https://techhub.test" }),
                 TimeProvider.System))
-            .AddScoped(_ => new ContentItemProvider(
+            .AddScoped(_ => new RoundupContentProvider(
                 new Mock<ITechHubApiClient>().Object,
                 Options.Create(new McpOptions { BaseUrl = "https://techhub.test" })))
             .BuildServiceProvider();
@@ -57,18 +57,32 @@ public sealed partial class ContentToolCatalogTests : IDisposable
     }
 
     [Fact]
-    public void GetTools_AlwaysExposesGetContentItemTool()
+    public void GetTools_AlwaysExposesGetRoundupContentTool()
     {
         // Arrange
         var sut = CreateSut(Section("ai"));
 
         // Act
-        var tool = sut.GetTools().Single(t => t.ProtocolTool.Name == ContentToolCatalog.GetContentItemToolName).ProtocolTool;
+        var tool = sut.GetTools().Single(t => t.ProtocolTool.Name == ContentToolCatalog.GetRoundupContentToolName).ProtocolTool;
 
         // Assert
-        tool.Description.Should().Contain("url");
-        tool.InputSchema.GetProperty("properties").EnumerateObject().Select(p => p.Name).Should().Contain("url");
+        tool.Description.Should().Contain("roundup");
+        tool.InputSchema.GetProperty("properties").EnumerateObject().Select(p => p.Name).Should().Equal("url");
         tool.InputSchema.GetProperty("required").EnumerateArray().Select(e => e.GetString()).Should().Equal("url");
+    }
+
+    [Fact]
+    public void GetTools_LatestContentDescriptionsDirectAgentsToTechHubUrlAndRoundupTool()
+    {
+        // Arrange
+        var sut = CreateSut(Section("azure"));
+
+        // Act
+        var description = SectionTools(sut).Should().ContainSingle().Subject.ProtocolTool.Description;
+
+        // Assert
+        description.Should().Contain("link users to the Tech Hub url").And.Contain(ContentToolCatalog.GetRoundupContentToolName)
+            .And.Contain("never the full text").And.NotContain("sourceUrl");
     }
 
     [Fact]
@@ -204,7 +218,7 @@ public sealed partial class ContentToolCatalogTests : IDisposable
     }
 
     [Fact]
-    public void GetTools_BeforeSectionsAreLoaded_ReturnsOnlyGetContentItemTool()
+    public void GetTools_BeforeSectionsAreLoaded_ReturnsOnlyRoundupContentTool()
     {
         // Arrange
         var sut = new ContentToolCatalog(SectionCacheBuilder.Empty(), _services);
@@ -213,11 +227,11 @@ public sealed partial class ContentToolCatalogTests : IDisposable
         var names = sut.GetTools().Select(t => t.ProtocolTool.Name);
 
         // Assert
-        names.Should().Equal(ContentToolCatalog.GetContentItemToolName);
+        names.Should().Equal(ContentToolCatalog.GetRoundupContentToolName);
     }
 
     private static IEnumerable<ModelContextProtocol.Server.McpServerTool> SectionTools(ContentToolCatalog sut) =>
-        sut.GetTools().Where(t => t.ProtocolTool.Name != ContentToolCatalog.GetContentItemToolName);
+        sut.GetTools().Where(t => t.ProtocolTool.Name != ContentToolCatalog.GetRoundupContentToolName);
 
     private static IEnumerable<string> SectionToolNames(ContentToolCatalog sut) =>
         SectionTools(sut).Select(t => t.ProtocolTool.Name);
@@ -236,6 +250,6 @@ public sealed partial class ContentToolCatalogTests : IDisposable
             .WithUrl($"/{name}")
             .Build();
 
-    [GeneratedRegex("^get_(latest_([a-z]+(_[a-z]+)*_)?content|content_item)$")]
+    [GeneratedRegex("^get_(latest_([a-z]+(_[a-z]+)*_)?content|roundup_content)$")]
     private static partial Regex ToolNamePattern();
 }

@@ -6,13 +6,13 @@ namespace TechHub.Web.MCP;
 
 /// <summary>
 /// Builds the read-only MCP tools from <see cref="SectionCache"/>: one latest-content tool per configured section
-/// (the aggregate "all" section becomes the cross-section <c>get_latest_content</c> tool) plus <c>get_content_item</c>,
+/// (the aggregate "all" section becomes the cross-section <c>get_latest_content</c> tool) plus <c>get_roundup_content</c>,
 /// so the MCP surface follows the configured sections instead of a second hard-coded list.
 /// The tool list is rebuilt only when the cache publishes a new section snapshot.
 /// </summary>
 internal sealed class ContentToolCatalog
 {
-    internal const string GetContentItemToolName = "get_content_item";
+    internal const string GetRoundupContentToolName = "get_roundup_content";
 
     internal const string PageDescription = "Page number to retrieve, starting at 1 (maximum 100). Each page contains up to 10 items.";
 
@@ -23,7 +23,9 @@ internal sealed class ContentToolCatalog
         " Returns items newest first, 10 per page, along with page, pageSize, totalPages, totalCount and generatedAt " +
         "(the server's current time, so you can judge how fresh the data is). " +
         "Only the last 90 days are included unless you pass days or since; use contentType=roundups for the weekly summaries. " +
-        "Each item has title, author, date (ISO 8601), collection, excerpt and a Tech Hub url that you can pass to get_content_item. " +
+        "Each item has title, author, date (ISO 8601), collection, excerpt and a Tech Hub url. " +
+        "Items only carry an excerpt, never the full text. Always link users to the Tech Hub url: it shows the summary and a button " +
+        "to open the original article. For items with collection roundups pass the url to get_roundup_content to read the full roundup. " +
         "Use the page parameter to retrieve further pages.";
 
     internal const string DaysDescription =
@@ -70,7 +72,7 @@ internal sealed class ContentToolCatalog
 
         var tools = sections
             .Select(CreateLatestContentTool)
-            .Append(CreateContentItemTool())
+            .Append(CreateRoundupContentTool())
             .ToList();
 
         Volatile.Write(ref _snapshot, new Snapshot(sections, tools));
@@ -127,21 +129,19 @@ internal sealed class ContentToolCatalog
             });
     }
 
-    private McpServerTool CreateContentItemTool() =>
+    private McpServerTool CreateRoundupContentTool() =>
         McpServerTool.Create(
-            (ContentItemProvider provider,
-                [Description("The Tech Hub item url, as returned by the latest-content tools.")] string url,
-                [Description(IncludeTagsDescription)] bool includeTags = false,
+            (RoundupContentProvider provider,
+                [Description("The Tech Hub roundup url, as returned by a latest-content tool with contentType=roundups.")] string url,
                 CancellationToken cancellationToken = default)
-                => provider.GetAsync(url, includeTags, cancellationToken),
+                => provider.GetAsync(url, cancellationToken),
             new McpServerToolCreateOptions
             {
-                Name = GetContentItemToolName,
-                Title = "Content item details",
-                Description = "Gets a single Tech Hub content item by its url (as returned by the latest-content tools): " +
-                    "title, author, date, excerpt and the original sourceUrl. Roundups and videos also include the full Tech Hub " +
-                    "content (an editorial summary for roundups); news, blogs and community posts are excerpt and source-only, " +
-                    "so follow sourceUrl for the original article.",
+                Name = GetRoundupContentToolName,
+                Title = "Roundup content",
+                Description = "Gets the full content (HTML) of a Tech Hub weekly roundup, an editorial summary of the week, by its url. " +
+                    "Use it when a latest-content result has collection roundups and its excerpt is not enough. " +
+                    "Find roundup urls with a latest-content tool and contentType=roundups. Only roundup urls are accepted.",
                 ReadOnly = true,
                 Idempotent = true,
                 Destructive = false,

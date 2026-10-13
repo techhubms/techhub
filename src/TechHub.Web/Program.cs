@@ -174,7 +174,7 @@ builder.Services.AddOptions<McpOptions>()
     .ValidateDataAnnotations()
     .ValidateOnStart();
 builder.Services.AddScoped<LatestContentProvider>();
-builder.Services.AddScoped<ContentItemProvider>();
+builder.Services.AddScoped<RoundupContentProvider>();
 builder.Services.AddSingleton(TimeProvider.System);
 builder.Services.AddSingleton<ContentToolCatalog>();
 
@@ -404,7 +404,8 @@ builder.Services
             "Tech Hub curates Microsoft-focused developer content. Use get_latest_content to browse the newest news, blogs, " +
             "videos, community posts and roundups across all sections (each item once), or a get_latest_<section>_content tool " +
             "for a single section. Narrow results with days or since, contentType, tags and query instead of paging through everything; " +
-            "contentType=roundups returns the weekly summaries. Use get_content_item with an item's url for its details.";
+            "contentType=roundups returns the weekly summaries; items only carry an excerpt, so always link users to an item's Tech Hub url " +
+            "(it shows the summary and a button to the original article) and use get_roundup_content with a roundup's url to read its full text.";
     })
     .WithHttpTransport(transport =>
     {

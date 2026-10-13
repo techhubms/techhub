@@ -18,7 +18,7 @@ internal sealed class McpOptions : IValidatableObject
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {
-        // Origin-only: item links are built as BaseUrl + canonical href, and ContentItemProvider.ParseUrl
+        // Origin-only: item links are built as BaseUrl + canonical href, and RoundupContentProvider.ParseUrl
         // requires exactly three path segments, so a base path would produce URLs the server rejects.
         if (!Uri.TryCreate(BaseUrl, UriKind.Absolute, out var uri)
             || (uri.Scheme != Uri.UriSchemeHttps && uri.Scheme != Uri.UriSchemeHttp)
