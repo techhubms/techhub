@@ -40,11 +40,13 @@ public class StartupBackgroundServiceTests
             mockHostLifetime.Object,
             mockLogger.Object);
 
-        // Act
-        await backgroundService.StartAsync(CancellationToken.None);
-        await Task.Delay(500, TestContext.Current.CancellationToken);
+        // Act — StartAsync may surface the synchronous failure on some runtimes; the ExecuteTask assertion below covers both
+        _ = await Record.ExceptionAsync(() => backgroundService.StartAsync(CancellationToken.None));
+        Func<Task> waitForExecution = () =>
+            backgroundService.ExecuteTask!.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
 
-        // Assert
+        // Assert — startup stops the application and then rethrows the migration failure
+        await waitForExecution.Should().ThrowAsync<InvalidOperationException>().WithMessage("Migration failed");
         mockHostLifetime.Verify(l => l.StopApplication(), Times.Once);
         mockStartupState.IsStartupCompleted.Should().BeFalse();
     }
@@ -93,9 +95,10 @@ public class StartupBackgroundServiceTests
             mockHostLifetime.Object,
             mockLogger.Object);
 
-        // Act
+        // Act — wait for the whole startup sequence (including record count logging) to finish,
+        // so "StopApplication never called" is asserted after every possible failure point
         await backgroundService.StartAsync(CancellationToken.None);
-        await Task.Delay(500, TestContext.Current.CancellationToken);
+        await backgroundService.ExecuteTask!.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
 
         // Assert
         mockHostLifetime.Verify(l => l.StopApplication(), Times.Never);

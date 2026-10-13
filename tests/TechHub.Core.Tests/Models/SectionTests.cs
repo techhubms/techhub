@@ -22,10 +22,14 @@ public class SectionTests
     public void Validate_ValidSection_PassesWithoutException()
     {
         // Arrange & Act
-        var act = () => CreateValidSection();
+        var section = CreateValidSection();
 
         // Assert
-        act.Should().NotThrow();
+        section.Name.Should().Be("github-copilot");
+        section.Title.Should().Be("GitHub Copilot");
+        section.Url.Should().Be("/github-copilot");
+        section.Tag.Should().Be("GitHub Copilot");
+        section.Collections.Select(c => c.Name).Should().Equal("blogs", "news");
     }
 
     /// <summary>
@@ -105,13 +109,13 @@ public class SectionTests
     {
         // Arrange & Act
         var collection = A.Collection.Build();
-        var act = () => A.Section
+        var section = A.Section
             .WithName(validName)
             .WithCollections(collection)
             .Build();
 
         // Assert
-        act.Should().NotThrow();
+        section.Name.Should().Be(validName);
     }
 
     /// <summary>
@@ -189,13 +193,13 @@ public class SectionTests
     {
         // Arrange & Act
         var collection = A.Collection.Build();
-        var act = () => A.Section
+        var section = A.Section
             .WithUrl(validUrl)
             .WithCollections(collection)
             .Build();
 
         // Assert
-        act.Should().NotThrow();
+        section.Url.Should().Be(validUrl);
     }
 
     /// <summary>
@@ -230,43 +234,81 @@ public class SectionTests
             A.Collection.WithName("blogs").Build(),
             A.Collection.WithName("videos").Build()
         };
-        var act = () => A.Section
+        var section = A.Section
             .WithCollections(collections)
             .Build();
 
         // Assert
-        act.Should().NotThrow();
+        section.Collections.Select(c => c.Name).Should().Equal("news", "blogs", "videos");
     }
 
     /// <summary>
-    /// Test: Section properties can be set during initialization
-    /// Why: Verify record type with init-only properties works as expected
+    /// Test: Constructor stores every supplied value
+    /// Why: Verify no property is dropped or swapped during initialization
     /// </summary>
     [Fact]
-    public void Section_InitOnlyProperties_CanBeSetDuringInitialization()
+    public void Constructor_AllValuesSupplied_StoresEveryProperty()
     {
-        // Arrange & Act - should throw because empty collections
-        var act = () => A.Section
-            .WithCollections()
+        // Arrange
+        var collection = A.Collection.WithName("videos").Build();
+
+        // Act
+        var section = A.Section
+            .WithName("machine-learning")
+            .WithTitle("Machine Learning")
+            .WithDescription("ML resources")
+            .WithUrl("/machine-learning")
+            .WithTag("ML")
+            .WithHideCollectionPages()
+            .WithShowHeroBanner()
+            .WithCollections(collection)
             .Build();
 
-        // Assert - validation happens in constructor now
-        act.Should().Throw<ArgumentException>();
+        // Assert
+        section.Name.Should().Be("machine-learning");
+        section.Title.Should().Be("Machine Learning");
+        section.Description.Should().Be("ML resources");
+        section.Url.Should().Be("/machine-learning");
+        section.Tag.Should().Be("ML");
+        section.HideCollectionPages.Should().BeTrue();
+        section.ShowHeroBanner.Should().BeTrue();
+        section.Collections.Should().ContainSingle().Which.Should().Be(collection);
     }
 
     /// <summary>
-    /// Test: Section model enforces all required properties
-    /// Why: Verify 'required' keyword is working correctly
+    /// Test: Constructor defaults the optional display flags to false
+    /// Why: Hero banner and hidden collection pages must be opt-in
     /// </summary>
     [Fact]
-    public void Section_RequiredProperties_MustBeSet()
+    public void Constructor_OptionalFlagsOmitted_DefaultToFalse()
     {
-        // Arrange & Act - should throw because empty collections
+        // Arrange & Act
+        var section = CreateValidSection();
+
+        // Assert
+        section.HideCollectionPages.Should().BeFalse();
+        section.ShowHeroBanner.Should().BeFalse();
+    }
+
+    /// <summary>
+    /// Test: Validate throws ArgumentException when Description or Tag is blank
+    /// Why: Description and tag are required section metadata
+    /// </summary>
+    [Theory]
+    [InlineData("description", "", "tag")]
+    [InlineData("description", "   ", "tag")]
+    [InlineData("tag", "description", "")]
+    [InlineData("tag", "description", "   ")]
+    public void Constructor_BlankDescriptionOrTag_ThrowsArgumentException(string expectedParameter, string description, string tag)
+    {
+        // Arrange & Act
         var act = () => A.Section
-            .WithCollections()
+            .WithDescription(description)
+            .WithTag(tag)
             .Build();
 
-        // Assert - validation happens in constructor now
-        act.Should().Throw<ArgumentException>();
+        // Assert
+        act.Should().Throw<ArgumentException>()
+            .WithParameterName(expectedParameter);
     }
 }

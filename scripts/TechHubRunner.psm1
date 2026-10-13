@@ -800,15 +800,6 @@ function Run {
             return $false
         }
         
-        # Pre-load PowerShell functions BEFORE Pester runs (avoids Discovery phase overhead)
-        $functionsPath = Join-Path $testDirectory "../../scripts/content-processing/functions"
-        if (Test-Path $functionsPath) {
-            . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
-            Get-ChildItem -Path $functionsPath -Filter "*.ps1" | 
-            Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
-            ForEach-Object { . $_.FullName }
-        }
-        
         # Set up global temp directory for tests
         $tempBase = if ($env:TEMP) { $env:TEMP } elseif ($env:TMP) { $env:TMP } elseif ($env:TMPDIR) { $env:TMPDIR } else { "/tmp" }
         $tempPath = Join-Path $tempBase "pwshtests"

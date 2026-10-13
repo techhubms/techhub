@@ -8,7 +8,7 @@ Tech Hub uses **.NET Aspire** for orchestration, observability, and service disc
 
 - **Service Discovery**: Web frontend automatically discovers the API via `https+http://api`
 - **OpenTelemetry**: Distributed tracing, metrics, and structured logging
-- **Resilience**: Built-in retry policies and circuit breakers for HTTP clients
+- **Resilience**: Each typed `HttpClient` configures its own resilience. The Web-to-API client retries transient failures for idempotent requests only (GET and HEAD), with no circuit breaker. The API's outbound clients use the standard resilience handler with per-client timeouts. `AddServiceDefaults()` deliberately adds no global handler, so pipelines do not stack
 - **Health Checks**: `/health` and `/alive` endpoints on all services
 
 ### Port Configuration
@@ -43,9 +43,9 @@ Tech Hub uses **.NET Aspire** for orchestration, observability, and service disc
 │   TechHub.Api   │  │   TechHub.Web   │  │ Aspire Dashboard│
 │   (Port 5001)   │◄─┤   (Port 5003)   │  │  (Port 18888)   │
 │                 │  │                 │  │                 │
-│ - REST API      │  │ - Blazor SSR    │  │ - Traces        │
-│ - Swagger UI    │  │ - Service       │  │ - Metrics       │
-│ - Health checks │  │   Discovery     │  │ - Logs          │
+│ - REST API      │  │ - Blazor        │  │ - Traces        │
+│ - Swagger UI    │  │   Interactive   │  │ - Metrics       │
+│ - Health checks │  │   Server        │  │ - Logs          │
 └─────────────────┘  └─────────────────┘  └─────────────────┘
          │                    │                    ▲
          │                    │                    │
@@ -59,7 +59,7 @@ The `TechHub.ServiceDefaults` project provides shared Aspire configuration:
 
 ```csharp
 // In API and Web Program.cs
-builder.AddServiceDefaults();  // Adds OpenTelemetry, health checks, resilience
+builder.AddServiceDefaults();  // Adds OpenTelemetry, service discovery, health checks
 // ...
 app.MapDefaultEndpoints();     // Maps /health and /alive endpoints
 ```
@@ -79,6 +79,6 @@ The website is served on two custom domains with different branding:
 | `tech.hub.ms` | Tech Hub | Tech Hub | Text only | Team info, Discord, why we built this |
 | `tech.xebia.ms` | Xebia | Xebia Tech Hub | GitHub Copilot logo + text | Adds Xebia company section with link to [xebia.com](https://xebia.com/) |
 
-The `BrandingService` (scoped, per-request) reads the HTTP `Host` header to determine branding. It is injected into `NavHeader`, `MainLayout`, and the About page.
+The `BrandingService` (scoped, per-request) reads the HTTP `Host` header to determine branding. It is injected into `NavHeader`, `MainLayout`, the About page, `McpInfo` and `SeoMetaTags`.
 
 **Implementation**: [Services/BrandingService.cs](../src/TechHub.Web/Services/BrandingService.cs)

@@ -59,27 +59,50 @@ Set-StrictMode -Version Latest
 
 **Error Handling**: Use try/catch with proper error reporting.
 
-## Directory Structure
+## Scope
 
-```text
-scripts/
-└── data/                    # rss-feeds.json (seed file for initial DB population)
-```
+`scripts/` is a flat directory of PowerShell scripts plus the `TechHubRunner.psm1` module. Tests for them live in `tests/powershell/`.
 
-> **Note**: All content processing (RSS feeds AND weekly roundup generation) is now handled
+> **Note**: All content processing (RSS feeds AND weekly roundup generation) is handled
 > entirely by the C# background services in `TechHub.Api` — no PowerShell scripts are involved
 > in content or roundup processing.
 
 ## Key Scripts
 
-### Infrastructure
+See [docs/repository-structure.md](../docs/repository-structure.md) for the complete list. The groups below describe how they relate.
 
-- **Deploy-Infrastructure.ps1**: Phase 1 Bicep deployment (validate/whatif/deploy). Deploys networking, identity, Key Vault, PostgreSQL, ACS, monitoring. **No image tag needed.**
+### Development
+
+- **TechHubRunner.psm1**: Exports `Run`, `Stop-Servers`, `Stop-OrphanedTestProcesses`, and `Start-McpInspector`. Auto-imported in every session (see [docs/running-and-testing.md](../docs/running-and-testing.md)).
+- **Restore-Database.ps1**: Dumps the production database and restores it locally (`-Target local`) or only dumps to `.tmp/` (`-Target disk`).
+- **Invoke-Sql.ps1**: Runs one SQL query against the local PostgreSQL container. Extend it for specific local-query use cases.
+- **Setup-UserSecrets.ps1**: Fills .NET user secrets for local development (localhost Entra ID app, AI, and newsletter settings) from Azure.
+- **Generate-DevCertificate.ps1**, **Normalize-Images.ps1**: HTTPS dev certificate and image normalization helpers.
+- **Fetch-VideoTranscripts.ps1**: Backfills video transcripts with yt-dlp through the admin API. Defaults to the local API (`https://localhost:5001`).
+
+### Infrastructure and deployment
+
+- **Deploy-Infrastructure.ps1**: Phase 1 Bicep deployment (validate/whatif/deploy). Deploys networking, identity, Key Vault, PostgreSQL, ACS, monitoring. `-LinkEmailDomain` links the verified ACS email domain. **No image tag needed.**
 - **Deploy-Applications.ps1**: Phase 2 Bicep deployment (API + Web App Service sites, declarative). Requires `-ImageTag`. Used when infra/scripts changed.
 - **Build-Images.ps1**: Docker build + push to ghcr.io. Supports `-SkipPush` for local testing. Used by CI build-and-push jobs.
 - **Deploy-Application.ps1**: `az webapp config set` with health checks, smoke tests, and auto-rollback. Requires `-Tag`. Used for **fast code-only deploys** (skips full Bicep evaluation).
+- **Wait-ForLiveVersion.ps1**: Post-deploy gate. Polls the Web `/version` endpoint for the expected tag, then runs smoke tests. Called by `Deploy-Application.ps1` and `Deploy-PrPreview.ps1`.
+- **Add-AppInsightsAnnotation.ps1**: Creates an Application Insights release annotation. Called by `cd.yml` after a production deploy.
 - **Deploy-PrPreview.ps1**: PR preview environment lifecycle (deploy/teardown). Creates PITR clone of prod PostgreSQL in prod RG. Uses ghcr.io images + `pr-applications.bicep` (shared PR App Service Plan).
-- **Migrate-KeyVaultSecrets.ps1**: One-time migration script to copy secrets from `kv-techhub-shared` to `kv-techhub-prod`.
+- **Teardown-PrEnvironments.ps1**: Finds all active PR previews (sites and PostgreSQL servers) and tears them down via `Deploy-PrPreview.ps1`. Supports `-DryRun`. Used by the nightly workflow.
+
+### Identity, secrets, and certificates
+
+- **Manage-EntraId.ps1**: Creates or rotates the Entra ID app registration (localhost, staging, production). See [docs/admin-authentication.md](../docs/admin-authentication.md).
+- **Assign-AdminUsers.ps1**: Idempotently assigns the admin users to the Entra ID enterprise app. The user list is in the script.
+- **Setup-OidcAuthentication.ps1**: Configures GitHub Actions OIDC federated credentials and the repository variables.
+- **Sync-KeyVaultSecrets.ps1**: Writes application secrets from environment variables to Key Vault. Called by `Deploy-Infrastructure.ps1`.
+- **Renew-WildcardCertificates.ps1**: Renews the Let's Encrypt wildcard certificates and redeploys `wildcardCert.bicep`. See [docs/wildcard-certificates.md](../docs/wildcard-certificates.md).
+
+### Legacy (one-off)
+
+- **Migrate-KeyVaultSecrets.ps1**: One-time copy of secrets from `kv-techhub-shared` to `kv-techhub-prod`. Only relevant to the old shared-resource-group setup.
+- **Cleanup-ContainerRegistry.ps1**: Cleans untagged manifests in the retired Azure Container Registry. Images now live on `ghcr.io`, where retention is handled by the CD and CI workflows.
 
 ### CD Pipeline Deployment Strategy
 

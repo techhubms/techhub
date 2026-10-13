@@ -12,15 +12,20 @@ Domain models and interfaces with **zero external dependencies** (pure .NET). De
 
 ```text
 TechHub.Core/
-├── Models/                       # Domain models organized by feature
-│   ├── Core/                    # Section, ContentItem, Collection
+├── Models/                       # Domain models organized by feature (plus root-level models such as GhcFeature, NewsletterSubscriber, PagedResult)
+│   ├── Admin/                   # Admin DTOs: job settings, content reviews, edit/list items, statistics, newsletter send log
+│   ├── ContentProcessing/       # Pipeline models: FeedConfig, RawFeedItem, ProcessedContentItem, ProcessedUrl, roundup models
+│   ├── Core/                    # Section, Collection, ContentItem, ContentItemDetail, SectionCache, AuthorSummary, SitemapItem
 │   ├── Facets/                  # FacetRequest, FacetResults, FacetValue
-│   ├── Filter/                  # FilterRequest, FilterResponse, FilterSummary
 │   ├── PageData/                # Custom page data models (DXSpace, Features, GenAI, etc.)
 │   ├── Rss/                     # RssChannel, RssItem
 │   ├── Search/                  # SearchRequest, SearchResults
-│   └── Tags/                    # AllTagsResponse, TagCloudItem, TagWithCount
-├── Interfaces/                   # IContentRepository, IDbConnectionFactory, IMarkdownService, IRssService, ISqlDialect
+│   └── Tags/                    # AllTagsResponse, TagCloudItem, TagCountsRequest, TagWithCount
+├── Configuration/                # Options classes (AppSettings, ContentProcessorOptions, NewsletterOptions, ...), TagNormalizer, TagExclusions
+├── Interfaces/                   # Repository, service, client and dialect contracts (IContentRepository, ISqlDialect, IMarkdownService, ...)
+├── Logging/                      # InputSanitizer (.Sanitize()), FileLoggerProvider
+├── Security/                     # ProbeDetector
+├── Validation/                   # RouteParameterValidator
 └── TechHub.Core.csproj          # Project file (zero dependencies!)
 ```
 
@@ -39,11 +44,11 @@ Use `init` accessors and `required` properties. Use `IReadOnlyList<T>` for colle
 
 ### Unified Model Pattern (No Separate DTOs)
 
-Single model serves both list and detail views. **ContentItem** ([Models/Core/ContentItem.cs](Models/Core/ContentItem.cs)):
+One model hierarchy serves list and detail views:
 
-- List views: `RenderedHtml` is null
-- Detail views: `RenderedHtml` getter throws if accessed when null (fail-fast)
-- Same pattern for custom page data models in `Models/PageData/`
+- **`ContentItem`** ([Models/Core/ContentItem.cs](Models/Core/ContentItem.cs)): list-view fields only. It has no `Content` or `RenderedHtml`.
+- **`ContentItemDetail`** ([Models/Core/ContentItemDetail.cs](Models/Core/ContentItemDetail.cs)) extends it with `RenderedHtml` (nullable, set via `SetRenderedHtml`, does not throw) and the JSON-ignored raw `Content`. `RenderedHtml` is null for externally-linking collections (news, blogs, community).
+- Custom page data models live in `Models/PageData/`.
 
 ### Repository Contract
 
@@ -55,7 +60,7 @@ All methods async with `CancellationToken ct = default`. Return `IReadOnlyList<T
 
 📖 See [docs/content-schema.md](../../docs/content-schema.md#domain-model-mapping) for complete field definitions.
 
-Key mappings: `date` → `DateEpoch` (Unix timestamp, Europe/Brussels), `section_names` → `SectionNames` (array), `tags` → `Tags` (normalized lowercase), filename → `Slug`.
+Key mappings: `date` → `DateEpoch` (Unix timestamp, Europe/Brussels), `section_names` → `Sections` (array), `tags` → `Tags` (casing normalized by `TagNormalizer` via a mapping, e.g. `vscode` → `VS Code`, not lowercased), filename → `Slug`.
 
 ## Collection Custom Page Ordering
 
@@ -63,4 +68,5 @@ Custom pages (`IsCustom = true`) support ordering via `Order` property: lower va
 
 ## URL Generation
 
-`ContentItem.GetUrlInSection(sectionName)` → `/{sectionName}/{collectionName}/{slug}`. Validates section name exists in item's `SectionNames`.
+- `ContentItem.GetHref(sectionOverride)`: contextual link. Items in externally-linking collections (news, blogs, community) return their safe HTTP(S) `ExternalUrl`, all others return `/{section}/{collection}/{slug}` (section defaults to `PrimarySectionName`).
+- `ContentItem.GetCanonicalHref(sectionOverride)`: always the internal `/{section}/{collection}/{slug}`. Use it for share links and MCP output.

@@ -15,8 +15,10 @@ The search box allows users to filter content by typing text queries. Search is 
 
 - **Title**: Article/post titles
 - **Excerpt/Description**: Brief descriptions or excerpts
-- **Content**: Full article body text (when using full-text search providers)
-- **Tags**: All tags associated with the content
+- **Content**: Full article body text
+- **Feed, collection and section names**: Lower-weight metadata, so a search for a feed name finds its items
+
+Tags are **not** searched. Use the `tags` filter to narrow by tag (see [Tag Filtering Behavior](#tag-filtering-behavior)).
 
 **Prefix Matching**: Search supports prefix matching, allowing users to find content by typing partial words:
 
@@ -39,12 +41,12 @@ This enables auto-complete-style search behavior where users don't need to type 
 **Backend**: Full-text search is implemented at the database level:
 
 - **PostgreSQL**: Uses `tsvector` with `to_tsquery` for prefix support
-- Supports weighted search (title weight A > excerpt weight B > content weight C)
+- Supports weighted search (title weight A > excerpt weight B > content weight C > metadata weight D)
 - Storage uses dual tsvector config: `english` (stemming) + `simple` (preserves stop words like "vs")
 - Queries use `simple` config only — this preserves stop words (e.g., "vs" in "VS Code") at the cost of no stemming at query time (e.g., "running" won't match stemmed "run")
 - Uses **OR logic** between search terms for better recall (matching any term surfaces results)
 - Automatically appends wildcards for prefix matching (`copilot` → `copilot:*` for PostgreSQL)
-- **Compound word expansion**: known compounds like "vscode" expand to also match "vs" + "code"
+- **Compound word expansion**: known compounds like "vscode" expand to also match "code" (terms shorter than 3 characters are dropped from expansions)
 - Results are ordered by **relevance first** (ts_rank), then by date (newest first)
 
 ### Search + Filter Combination
@@ -231,13 +233,17 @@ This is the primary endpoint for content retrieval and filtering. Using `all` fo
 
 **Query Parameters**:
 
-- `q` (optional): Text search query (searches title, description, tags)
-- `tags` (optional): Comma-separated tags - content must have ALL tags (AND logic)
-- `lastDays` (optional): Filter to content from last N days. **Default behavior**: When no `lastDays`, `from`, or `to` parameters are provided, a default 90-day filter is automatically applied (configured via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`). Pass `lastDays=0` to explicitly disable date filtering and return all content regardless of date.
+- `q` (optional): Text search query, maximum 200 characters (searches title, excerpt, content and feed/collection/section names, not tags)
+- `tags` (optional): Comma-separated tags - content must have ALL tags (AND logic). Maximum 20 tags of up to 100 characters each
+- `types` (optional): Comma-separated collection types to include (e.g., `news,blogs`). Only applies when the collection is `all`
+- `exact` (optional): `true` for an exact title phrase match (see [Exact Phrase Match](#exact-phrase-match))
+- `lastDays` (optional): Filter to content from last N days (0-3650). **Default behavior**: When no `lastDays`, `from`, or `to` parameters are provided, a default 90-day filter is automatically applied (configured via `AppSettings:TagCloud:DefaultDateRangeDays`). Pass `lastDays=0` to explicitly disable date filtering and return all content regardless of date.
+- `from` (optional): Start date of a custom range (ISO 8601, e.g., `2024-01-15`). Takes precedence over `lastDays`
+- `to` (optional): End date of a custom range (ISO 8601). Takes precedence over `lastDays`
 - `take` (optional): Number of items to return (default: 20, max: 50)
 - `skip` (optional): Number of items to skip (for pagination)
 
-**Response**: `200 OK`
+**Response**: `200 OK` with `{ items, totalCount }`, `404 Not Found` (unknown section or collection), or `400 Bad Request` (invalid parameters, see [content-api.md](content-api.md))
 
 **Examples**:
 
@@ -288,10 +294,12 @@ Get a tag cloud with quantile-based sizing for visual representation. Using `all
 **Parameters**:
 
 - `maxTags` (query, optional): Maximum number of tags (default: 20)
-- `minUses` (query, optional): Minimum tag usage count (default: 5)
-- `lastDays` (query, optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`)
+- `minUses` (query, optional): Minimum tag usage count (default: 1)
+- `lastDays` (query, optional): Filter to content from last N days (default: 90 days via `AppSettings:TagCloud:DefaultDateRangeDays`)
 - `tags` (query, optional): Comma-separated list of currently selected tags for dynamic count calculation
 - `tagsToCount` (query, optional): Comma-separated list of specific tags to get counts for. Returns counts only for these tags instead of the top N popular tags. Display names in the response preserve the casing from this parameter.
+- `q` (query, optional): Text search query. Counts only reflect matching items
+- `types` (query, optional): Comma-separated collection types to include (only when the collection is `all`)
 - `from` (query, optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`)
 - `to` (query, optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`)
 

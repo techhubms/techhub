@@ -4,27 +4,27 @@ Google Analytics 4 (GA4) provides user behavior tracking and traffic analytics f
 
 ## Configuration
 
-GA4 is configured via `appsettings.Production.json` in the Web project:
+GA4 is configured through the `GoogleAnalytics:MeasurementId` configuration key, which the Web container receives as the environment variable `GoogleAnalytics__MeasurementId`. No `appsettings*.json` file in the Web project contains it.
 
-```json
-{
-  "GoogleAnalytics": {
-    "MeasurementId": "G-95LLB67KJV"
-  }
-}
-```
+| Where | What |
+|-------|------|
+| [infra/parameters/prod-applications.bicepparam](../infra/parameters/prod-applications.bicepparam) | Production measurement ID value |
+| [infra/applications.bicep](../infra/applications.bicep) | `googleAnalyticsMeasurementId` parameter (with a default), passed to the web module |
+| [infra/modules/web.bicep](../infra/modules/web.bicep) | Sets the `GoogleAnalytics__MeasurementId` app setting on the Web app |
+| [infra/pr-applications.bicep](../infra/pr-applications.bicep) | Sets it to an empty string so PR preview traffic never appears in GA reports |
 
 The measurement ID is read from `IConfiguration` in [App.razor](../src/TechHub.Web/Components/App.razor).
 
 ## Environment Behavior
 
-Each environment runs with its own `ASPNETCORE_ENVIRONMENT` and loads the matching `appsettings.{Environment}.json`:
+Whether GA4 loads depends on `ASPNETCORE_ENVIRONMENT` and on whether the deployment supplies a measurement ID:
 
-| Environment | GA4 Active | `ASPNETCORE_ENVIRONMENT` | Reason |
-|-------------|-----------|--------------------------|--------|
-| Development | No | `Development` | First condition fails (`!= "Development"` is false) |
-| Staging | No | `Staging` | `appsettings.Staging.json` has no `GoogleAnalytics:MeasurementId` |
-| Production | Yes | `Production` | `appsettings.Production.json` provides the measurement ID |
+| Environment | GA4 Active | Reason |
+|-------------|-----------|--------|
+| Development | No | First condition fails (`!= "Development"` is false) |
+| PR preview | No | The Bicep deployment sets an empty measurement ID |
+| Production | Yes | The Bicep deployment provides the measurement ID |
+| Any other non-Development environment | Only if the deployment sets `GoogleAnalytics__MeasurementId` | Second condition |
 
 Both conditions must be true for GA to load:
 
@@ -64,4 +64,5 @@ This suppression is client-side only and has no effect on actual GA4 data collec
 ## Implementation Reference
 
 - [App.razor](../src/TechHub.Web/Components/App.razor) — Script injection and conditional rendering
-- [appsettings.Production.json](../src/TechHub.Web/appsettings.Production.json) — Measurement ID configuration
+- [web.bicep](../infra/modules/web.bicep) — Measurement ID app setting
+- [prod-applications.bicepparam](../infra/parameters/prod-applications.bicepparam) — Production measurement ID

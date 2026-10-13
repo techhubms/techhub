@@ -370,6 +370,8 @@ if ($Mode -eq 'deploy') {
         }
 
         Write-Ok "Reattached — deployment '$deploymentName' completed successfully"
+        # OutVariable stays empty when New-AzDeployment threw; use the reattached deployment's outputs.
+        $infraResult = @($deployment)
     } finally {
         $VerbosePreference = $savedVerbose
         if ($tempParamsFile -and (Test-Path $tempParamsFile)) {

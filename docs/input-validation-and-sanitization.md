@@ -126,6 +126,20 @@ Apply `.Sanitize()` consistently everywhere: API endpoints, `TechHubApiClient`, 
 
 **What `InputSanitizer` is NOT for**: Input validation. It does not reject bad input — it only makes values safe to log.
 
+### Rendered Markdown (HTML Sanitization)
+
+**Boundary**: `MarkdownService.RenderToHtml`, used for content items, roundups, custom pages and the admin preview.
+
+**Purpose**: Markdown content originates from third-party feeds and AI output and may contain raw HTML. Blazor renders it as markup (`MarkupString`), so unsanitized HTML would be an XSS vector, including in the admin area.
+
+**What it does**: The rendered HTML is passed through an allow-list sanitizer. Scripts, event-handler attributes and `javascript:`/`data:` links are removed. Markdig output that the site relies on is kept: headings with ids, classes and `data-*` attributes, task-list checkboxes, tables, Mermaid blocks, and external links with `target`/`rel`. `<iframe>` is only allowed for HTTPS embeds from YouTube and Vimeo, and `<input>` only as a checkbox.
+
+### Outbound Request Protection (SSRF)
+
+**Boundary**: HTTP clients that fetch feed XML, article HTML and YouTube data from URLs supplied by admins or by third-party feeds.
+
+**What it does**: These clients use `PublicEndpointHandler`, which resolves DNS and validates the address at connect time. Loopback, private (RFC 1918), CGNAT, link-local (including the cloud metadata address), multicast and other non-public addresses are rejected, including IPv4-mapped IPv6 forms. Because the check happens on every connection, redirects and DNS rebinding cannot reach internal hosts.
+
 ### Layer 6: CodeQL (Static Analysis)
 
 **Purpose**: CodeQL's built-in `cs/log-forging` query detects user-controlled values that reach log statements without sanitization. This catches missing `.Sanitize()` calls in CI.
@@ -138,7 +152,7 @@ These are handled automatically — no application code needed:
 
 | Threat | Protection | Provided by |
 |---|---|---|
-| XSS (Cross-Site Scripting) | All rendered output is HTML-encoded | Blazor rendering engine |
+| XSS (Cross-Site Scripting) | All rendered output is HTML-encoded; rendered markdown is sanitized | Blazor rendering engine, `MarkdownService` |
 | SQL Injection | All queries use parameterized statements | Dapper |
 | URL Injection | Query parameters are URL-encoded | `HttpClient` / `Uri.EscapeDataString` |
 | CSRF | SignalR circuit (no form submissions) | Blazor InteractiveServer |
@@ -172,6 +186,8 @@ HTTP Request
 - API endpoint filter: `src/TechHub.Api/Endpoints/ContentEndpoints.cs` → `ValidateRouteParameters`
 - Author validation: `src/TechHub.Api/Endpoints/AuthorEndpoints.cs` → `IsValidAuthorName`
 - Log sanitization: `src/TechHub.Core/Logging/InputSanitizer.cs` (static method + `.Sanitize()` extension)
+- Markdown HTML sanitization: `src/TechHub.Infrastructure/Services/MarkdownService.cs`
+- Outbound request guard: `src/TechHub.Infrastructure/Services/ContentProcessing/PublicEndpointHandler.cs`
 - Search input: `src/TechHub.Web/Components/SidebarSearch.razor`
 - Date input: `src/TechHub.Web/Components/DateRangeSlider.razor`
 - Tests: `tests/TechHub.Core.Tests/Validation/RouteParameterValidatorTests.cs`, `tests/TechHub.Core.Tests/Logging/InputSanitizerTests.cs`

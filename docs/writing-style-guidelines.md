@@ -20,18 +20,23 @@ This document defines the writing style and tone requirements for all content in
 
 ### Character and Typography Standards
 
-**Use plain ASCII characters for consistency and to avoid encoding issues.**
+**Prefer plain ASCII punctuation in running text, and allow a small set of symbols that the repository already uses.**
 
-| Use This | Not This | Why |
-| -------- | -------- | --- |
-| `-` (hyphen) | `—` (em-dash) or `–` (en-dash) | ASCII compatibility, searchability |
-| `"` (straight quotes) | `"` `"` (curly quotes) | Prevents encoding mismatches |
-| `'` (straight apostrophe) | `'` `'` (curly apostrophes) | Consistent rendering |
-| `...` (three periods) | `…` (ellipsis character) | Easier to type and match |
+| Use | Notes |
+| --- | ----- |
+| `"` straight quotes and `'` straight apostrophes | Not curly quotes. Prevents encoding mismatches and keeps text searchable |
+| `...` (three periods) | Not the `…` ellipsis character |
+| `-` (hyphen) | For compound words and ranges written as "1-3" |
+| `—` (em-dash) | Accepted in documentation and AGENTS.md files as a separator in lists (`**Term** — explanation`) and for an occasional aside |
+| `→` `←` (arrows) | Accepted for flows, diagrams, mappings and "A → B" sequences |
+| `≤` `≥` `×` | Accepted in technical text (breakpoints, sizes, formulas) |
+| ✅ ❌ ⚠️ 🚫 | Accepted only as markers in Always Do / Ask First / Never Do rule lists and in good-versus-poor examples. No other emoji in documentation |
+
+Avoid en-dashes (`–`), curly quotes and decorative emoji.
 
 **Punctuation rules:**
 
-- **Use parentheses for asides**: Write `GitHub Actions (the CI/CD platform) is popular` instead of using em-dashes
+- **Prefer parentheses or commas for asides in prose**: Write `GitHub Actions (the CI/CD platform) is popular` instead of stringing em-dashes through a paragraph
 - **Minimize semicolons**: Use periods and start new sentences instead - semicolons can make text feel formal and choppy
 - **Avoid excessive parentheses**: Incorporate information into the main sentence flow when possible
 
@@ -40,7 +45,9 @@ This document defines the writing style and tone requirements for all content in
 - Good: `Everything an AI processes (words, images, concepts) gets converted into vectors, which are simply lists of numbers that capture meaning.`
 - Avoid: `Everything an AI processes—words, images, concepts—gets converted into vectors. Which are simply lists of numbers; they capture meaning.`
 
-**Rationale**: Plain ASCII characters are easier to search, replace, and process programmatically. Special Unicode characters can cause issues with text matching tools and may render inconsistently across different systems.
+**Reader-facing generated content** (article excerpts, roundups, newsletter text) should stay with plain ASCII punctuation and no em-dashes. That text is matched, searched and processed programmatically, and special characters can render inconsistently across systems.
+
+**Rationale**: Plain ASCII is easier to search, replace and process. The symbols in the table above are used throughout the repository's technical documentation, render correctly everywhere the docs are read, and carry meaning that plain text would make longer.
 
 ### Punctuation and Sentence Flow
 

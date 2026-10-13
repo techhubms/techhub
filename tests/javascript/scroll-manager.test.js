@@ -57,8 +57,6 @@ describe('scroll-manager.js', () => {
         delete window.TechHub;
         delete window.__savedScrollPositions;
         delete window.__restoreScrollPosition;
-        delete window.__scrollListenerReady;
-        delete window.__scrollListenerVersion;
         delete window.__e2eSignal;
         delete window.navigation;
 
@@ -122,6 +120,7 @@ describe('scroll-manager.js', () => {
 
     afterEach(() => {
         // Restore the original pushState to prevent wrapper accumulation across tests.
+        vi.useRealTimers();
         window.history.pushState = originalPushState;
         delete globalThis.Blazor;
         delete window.__mockResizeObservers;
@@ -327,7 +326,7 @@ describe('scroll-manager.js', () => {
             expect(result).toBe(false);
         });
 
-        it('should clear navigating flag after restoring position', async () => {
+        it('should clear navigating flag after restoring position', () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             window.location = { ...window.location, pathname: '/other-page' };
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
@@ -335,7 +334,6 @@ describe('scroll-manager.js', () => {
 
             window.__savedScrollPositions['/other-page'] = 600;
             window.__restoreScrollPosition();
-            await new Promise(r => setTimeout(r, 0));
             expect(mod.isNavigating()).toBe(false);
         });
 
@@ -349,7 +347,7 @@ describe('scroll-manager.js', () => {
             expect(window.scrollTo).toHaveBeenCalledWith(0, 800);
         });
 
-        it('should defer scroll when page is too short and retry after layout stabilizes', async () => {
+        it('should defer scroll when page is too short and retry after layout stabilizes', () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             Object.defineProperty(document.documentElement, 'scrollHeight', { value: 200, writable: true, configurable: true });
 
@@ -357,6 +355,7 @@ describe('scroll-manager.js', () => {
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
             window.__savedScrollPositions['/other-page'] = 2000;
             window.scrollTo.mockClear();
+            vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] });
 
             const result = window.__restoreScrollPosition();
             expect(result).toBe(true);
@@ -367,8 +366,8 @@ describe('scroll-manager.js', () => {
             const ro = window.__mockResizeObservers.find(o => !o.disconnected);
             ro.trigger();
 
-            // Wait for the 150ms debounce to settle
-            await new Promise(r => setTimeout(r, 200));
+            // Let the 150ms debounce settle
+            vi.advanceTimersByTime(150);
 
             expect(window.scrollTo).toHaveBeenCalledWith(0, 2000);
         });
@@ -398,7 +397,7 @@ describe('scroll-manager.js', () => {
             expect(mod.isNavigating()).toBe(false);
         });
 
-        it('restoreScrollPosition clears isNavigating', async () => {
+        it('restoreScrollPosition clears isNavigating', () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             window.location = { ...window.location, pathname: '/other-page' };
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
@@ -406,11 +405,10 @@ describe('scroll-manager.js', () => {
 
             window.__savedScrollPositions['/other-page'] = 400;
             window.__restoreScrollPosition();
-            await new Promise(r => setTimeout(r, 0));
             expect(mod.isNavigating()).toBe(false);
         });
 
-        it('restoreScrollPosition deferred path clears isNavigating after layout stabilizes', async () => {
+        it('restoreScrollPosition deferred path clears isNavigating after layout stabilizes', () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             Object.defineProperty(document.documentElement, 'scrollHeight', { value: 200, writable: true, configurable: true });
 
@@ -418,6 +416,7 @@ describe('scroll-manager.js', () => {
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
             window.__savedScrollPositions['/other-page'] = 2000;
             window.scrollTo.mockClear();
+            vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] });
 
             window.__restoreScrollPosition();
             expect(mod.isNavigating()).toBe('traverse');
@@ -427,13 +426,13 @@ describe('scroll-manager.js', () => {
             const ro = window.__mockResizeObservers.find(o => !o.disconnected);
             ro.trigger();
 
-            // Wait for the 150ms debounce to settle + rAF
-            await new Promise(r => setTimeout(r, 200));
+            // Let the 150ms debounce settle (rAF is synchronous in this suite)
+            vi.advanceTimersByTime(150);
 
             expect(mod.isNavigating()).toBe(false);
         });
 
-        it('no-position path clears isNavigating', async () => {
+        it('no-position path clears isNavigating', () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             window.location = { ...window.location, pathname: '/other-page' };
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
@@ -441,7 +440,6 @@ describe('scroll-manager.js', () => {
 
             const result = window.__restoreScrollPosition();
             expect(result).toBe(false);
-            await new Promise(r => setTimeout(r, 0));
             expect(mod.isNavigating()).toBe(false);
         });
     });

@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
 using Npgsql;
 using Polly;
+using TechHub.Api.Authorization;
 using TechHub.Api.Endpoints;
 using TechHub.Api.HealthChecks;
 using TechHub.Api.Middleware;
@@ -146,6 +147,8 @@ builder.Services.AddScoped<IProcessedUrlRepository, ProcessedUrlRepository>();
 
 // Typed HTTP clients for external API communication with Polly resilience
 builder.Services.AddHttpClient<IRssFeedClient, RssFeedClient>()
+    // SSRF protection: feed URLs are admin/third-party supplied, so only public addresses may be contacted
+    .ConfigurePrimaryHttpMessageHandler(() => PublicEndpointHandler.Create())
     .ConfigureHttpClient(client =>
     {
         client.DefaultRequestHeaders.UserAgent.ParseAdd(
@@ -166,12 +169,9 @@ builder.Services.AddHttpClient<IRssFeedClient, RssFeedClient>()
     });
 
 builder.Services.AddHttpClient<IArticleFetchClient, ArticleFetchClient>()
-    .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
-    {
-        // Disable auto-redirect so ArticleFetchClient can handle HTTPS→HTTP scheme-downgrade
-        // redirects explicitly (e.g. mindbyte.nl redirects www.mindbyte.nl → mindbyte.nl over HTTP).
-        AllowAutoRedirect = false
-    })
+    // Auto-redirect is disabled so ArticleFetchClient can follow HTTPS→HTTP downgrade redirects itself
+    // (e.g. www.mindbyte.nl → http://mindbyte.nl). Each hop still goes through the public-only connect guard.
+    .ConfigurePrimaryHttpMessageHandler(() => PublicEndpointHandler.Create(allowAutoRedirect: false))
     .ConfigureHttpClient((sp, client) =>
     {
         var options = sp.GetRequiredService<IOptions<ContentProcessorOptions>>().Value;
@@ -192,6 +192,7 @@ builder.Services.AddHttpClient<IArticleFetchClient, ArticleFetchClient>()
     });
 
 builder.Services.AddHttpClient<IYouTubeTagClient, YouTubeTagClient>()
+    .ConfigurePrimaryHttpMessageHandler(() => PublicEndpointHandler.Create())
     .ConfigureHttpClient((sp, client) =>
     {
         var options = sp.GetRequiredService<IOptions<ContentProcessorOptions>>().Value;
@@ -288,9 +289,16 @@ builder.Services.AddCors(options =>
 
 // ─── Admin Authentication (Azure AD JWT Bearer) ─────────────────────────────
 // When AzureAd:ClientId is configured, admin endpoints require a valid bearer token
-// issued by Azure AD (forwarded by the Web front-end). When not configured (local dev),
-// the AdminOnly policy allows all requests so admin endpoints remain accessible.
+// issued by Azure AD (forwarded by the Web front-end). When not configured, the AdminOnly policy
+// allows all requests outside Production (local dev/tests) and denies all requests in Production.
 var azureAdClientId = builder.Configuration["AzureAd:ClientId"];
+if (string.IsNullOrEmpty(azureAdClientId) && builder.Environment.IsProduction())
+{
+    using var authLoggerFactory = LoggerFactory.Create(b => b.AddConsole());
+    authLoggerFactory.CreateLogger("Startup").LogError(
+        "AzureAd:ClientId is not configured in Production - all admin endpoints are denied");
+}
+
 if (!string.IsNullOrEmpty(azureAdClientId))
 {
     builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -304,24 +312,8 @@ else
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("AdminOnly", policy =>
-    {
-        if (!string.IsNullOrEmpty(azureAdClientId))
-        {
-            policy.RequireAuthenticatedUser();
-
-            // The API scope is part of the app registration's public contract,
-            // defined by Manage-EntraId.ps1 and not environment-specific. Entra ID
-            // places the short scope name (without the "api://<client-id>/" prefix)
-            // in the JWT "scp" claim, so we validate against that directly.
-            policy.RequireScope("Admin.Access");
-        }
-        else
-        {
-            // When Azure AD is not configured (local dev), allow all requests
-            policy.RequireAssertion(_ => true);
-        }
-    });
+    options.AddPolicy(AdminAuthorization.PolicyName, policy =>
+        AdminAuthorization.Configure(policy, azureAdClientId, builder.Environment));
 });
 
 var app = builder.Build();

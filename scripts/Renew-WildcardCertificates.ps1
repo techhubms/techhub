@@ -11,7 +11,7 @@
     After renewal, certificates are converted to PFX and imported into Key Vault.
 
     Prerequisites:
-    - certbot and certbot-dns-azure installed (pip install certbot certbot-dns-azure)
+    - certbot and certbot-dns-azure installed (provided by the devcontainer, see .devcontainer/post-create.sh)
     - Azure CLI authenticated with access to rg-techhub-prod
     - ACME DNS zone deployed (acme.hub.ms in rg-techhub-prod)
     - GoDaddy CNAME records configured (see docs/wildcard-certificates.md)
@@ -149,7 +149,7 @@ Write-Ok "Azure CLI authenticated (subscription: $($accountInfo.name))"
 
 # Check certbot
 if (-not (Get-Command certbot -ErrorAction SilentlyContinue)) {
-    Write-Fail "certbot not found. Install with: pip install certbot certbot-dns-azure"
+    Write-Fail "certbot not found. It is provided by the devcontainer (.devcontainer/post-create.sh) - rebuild the devcontainer."
     exit 1
 }
 Write-Ok "certbot found"
@@ -157,7 +157,7 @@ Write-Ok "certbot found"
 # Check certbot-dns-azure plugin
 $plugins = certbot plugins 2>&1
 if (-not ($plugins -match 'dns-azure')) {
-    Write-Fail "certbot-dns-azure plugin not found. Install with: pip install certbot-dns-azure"
+    Write-Fail "certbot-dns-azure plugin not found. It is provided by the devcontainer (.devcontainer/post-create.sh) - rebuild the devcontainer."
     exit 1
 }
 Write-Ok "certbot-dns-azure plugin found"

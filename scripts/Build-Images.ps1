@@ -106,7 +106,8 @@ function Invoke-DockerPush {
         [int]$RetryDelaySecs = 15
     )
     for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
-        docker push $ImageRef
+        # Out-Host keeps docker's output on screen without polluting the function's return value
+        docker push $ImageRef | Out-Host
         if ($LASTEXITCODE -eq 0) { return $true }
         if ($attempt -lt $MaxAttempts) {
             Write-Warn "Push failed (attempt $attempt/$MaxAttempts) — retrying in ${RetryDelaySecs}s (known GHCR transient issue)"

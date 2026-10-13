@@ -12,6 +12,8 @@ For input validation beyond the middleware layer (API route parameters, query pa
 - [Phase 0 - Telemetry Filter](#phase-0---telemetry-filter)
 - [Phase 1 - Infrastructure](#phase-1---infrastructure)
 - [Phase 2 - Security and Protocol](#phase-2---security-and-protocol)
+  - [HTTP Method Filter](#http-method-filter)
+  - [MCP Request Guards](#mcp-request-guards)
 - [Phase 3 - URL Correction](#phase-3---url-correction)
   - [Subdomain Redirects](#subdomain-redirects)
   - [URL Normalization](#url-normalization)
@@ -22,8 +24,9 @@ For input validation beyond the middleware layer (API route parameters, query pa
   - [File-Extension Check](#file-extension-check)
   - [Probe Detection](#probe-detection)
   - [Segment Validation](#segment-validation)
-- [Phase 6 - Head to GET Rewrite](#phase-6---head-to-get-rewrite)
+- [Phase 6 - HEAD Request Handling](#phase-6---head-request-handling)
 - [Phase 7 - Auth and Rate Limiting](#phase-7---auth-and-rate-limiting)
+  - [Rate Limiting](#rate-limiting)
 - [Phase 8 - Endpoint Routing](#phase-8---endpoint-routing)
 - [ProbeDetector: Shared Logic](#probedetector-shared-logic)
 - [How the Telemetry Filter and Middleware Relate](#how-the-telemetry-filter-and-middleware-relate)
@@ -45,7 +48,7 @@ Examples:
 - `/github-copilot/roundups/june-2026-digest`
 - `/{section}/roundups/{slug}` — roundups use their owning section path
 
-Special pages sit outside this structure: `/`, `/about`, `/admin`, `/not-found`.
+Special pages sit outside this structure: `/`, `/about`, `/mcp`, `/newsletter/*`, `/admin`, `/not-found`.
 
 ## Components
 
@@ -55,10 +58,13 @@ Special pages sit outside this structure: `/`, `/about`, `/admin`, `/not-found`.
 | Web-specific trace filter | `src/TechHub.Web/Telemetry/WebTelemetryFilters.cs` | Suppresses Blazor disconnect, bot, /api probes |
 | Security headers | `src/TechHub.Web/Middleware/SecurityHeadersMiddleware.cs` | Adds XSS/clickjacking headers to all responses |
 | HTTP method filter | `src/TechHub.Web/Middleware/HttpMethodFilterMiddleware.cs` | Rejects disallowed HTTP methods (OPTIONS, PUT, DELETE, PATCH, etc.) with 405 |
+| MCP origin validation | `src/TechHub.Web/Middleware/McpOriginValidationMiddleware.cs` | Rejects `/mcp` requests with an untrusted `Origin` (403) |
+| MCP stream rejection | `src/TechHub.Web/Middleware/McpStreamRequestRejectionMiddleware.cs` | Answers `GET /mcp` stream requests with 405 so the landing page stays reachable for browsers |
 | Subdomain redirects | `src/TechHub.Web/Middleware/SubdomainRedirectMiddleware.cs` | Normalizes hostnames, shortcuts |
 | URL normalization | `src/TechHub.Web/Middleware/UrlNormalizationMiddleware.cs` | Strips .html, date prefixes, trailing slash, renames, legacy slugs |
 | Static file cache | `src/TechHub.Web/Middleware/StaticFilesCacheMiddleware.cs` | Sets Cache-Control headers for all static responses |
 | Request filter | `src/TechHub.Web/Middleware/InvalidRouteSegmentMiddleware.cs` | Rejects probes, unknown extensions, invalid first segments |
+| HEAD handling | `src/TechHub.Web/Middleware/HeadRequestMiddleware.cs` | Answers extension-less HEAD requests directly, rewrites other HEAD requests to GET |
 | Probe detector | `src/TechHub.Core/Security/ProbeDetector.cs` | Shared probe/asset logic used by both middleware and OTel filter |
 | Admin token check | `src/TechHub.Web/Middleware/AdminTokenValidationMiddleware.cs` | Re-challenges authenticated users with empty MSAL cache |
 | Pipeline registration | `src/TechHub.Web/Program.cs` | Registers all middleware in order |
@@ -75,22 +81,25 @@ Every HTTP request passes through these stages in order. A stage that produces a
 | 1c | Status code pages | `UseStatusCodePagesWithReExecute` | Re-executes empty 4xx responses at `/not-found` so browsers get a full HTML page |
 | 2a | HSTS | `UseHsts` (non-dev) | Adds `Strict-Transport-Security` header |
 | 2b | Security headers | `SecurityHeadersMiddleware` | Adds CSP, X-Frame-Options, etc. via `OnStarting` |
-| 2c | HTTP method filter | `HttpMethodFilterMiddleware` | **405** for OPTIONS/PUT/DELETE/PATCH/CONNECT/TRACE |
-| 2d | HTTPS redirect | `UseHttpsRedirection` | **301** HTTP → HTTPS |
+| 2c | HTTP method filter | `HttpMethodFilterMiddleware` | **405** for OPTIONS/PUT/DELETE/PATCH/CONNECT/TRACE and POST outside the allowed paths |
+| 2d | MCP origin validation | `McpOriginValidationMiddleware` | **403** for `/mcp` requests with an untrusted `Origin` header |
+| 2e | MCP stream rejection | `McpStreamRequestRejectionMiddleware` | **405** for `GET /mcp` requests that only accept an event stream |
+| 2f | HTTPS redirect | `UseHttpsRedirection` | **301** HTTP → HTTPS |
 | 3a | Subdomain redirect | `SubdomainRedirectMiddleware` | **301** to canonical hostname |
 | 3b | URL normalization | `UrlNormalizationMiddleware` | **301** (at most one), or **404/503** |
 | 4a | Static file cache | `StaticFilesCacheMiddleware` | Registers `OnStarting` callback for Cache-Control |
 | 4b | Static files | `UseStaticFiles` | Serves `wwwroot/` files, short-circuits |
 | 5 | Request filter | `InvalidRouteSegmentMiddleware` | **404** for probes, unknown extensions, invalid segments |
-| 6 | HEAD → GET rewrite | Inline lambda | Converts HEAD to GET, suppresses response body |
+| 6 | HEAD handling | `HeadRequestMiddleware` | Extension-less HEAD: **200** `text/html` (or **404** for an invalid segment) without running Blazor. Other HEAD requests are rewritten to GET with the body suppressed |
 | 7a | Routing | `UseRouting` | Endpoint selection |
 | 7b | Auth | `UseAuthentication` + `UseAuthorization` | Cookie/OIDC authentication |
 | 7c | Rate limiter | `UseRateLimiter` | 429 if over limit |
 | 7d | Admin token | `AdminTokenValidationMiddleware` | **OIDC challenge** when MSAL cache empty |
 | 7e | Antiforgery | `UseAntiforgery` | Validates antiforgery tokens |
 | 8a | Static assets | `MapStaticAssets` | Serves fingerprinted/optimized assets |
-| 8b | Blazor routing | `MapRazorComponents<App>` | Renders matching Razor page |
-| 8c | Explicit endpoints | `MapGet`, `MapPost`, `MapControllers` | RSS feeds, version probe, admin logout |
+| 8b | MCP server | `MapMcp("/mcp")` | MCP JSON-RPC over POST, rate limited by `web-mcp` |
+| 8c | Blazor routing | `MapRazorComponents<App>` | Renders matching Razor page, rate limited by `web-general` |
+| 8d | Explicit endpoints | `MapGet`, `MapPost`, `MapControllers` | RSS feeds, sitemap, version probe, admin logout |
 
 ```mermaid
 flowchart TD
@@ -99,11 +108,12 @@ flowchart TD
     EXC --> SCP[UseStatusCodePagesWithReExecute\nexcluding /_blazor]
     SCP --> HSTS["UseHsts (non-dev)\nStrict-Transport-Security"]
     HSTS --> SEC[SecurityHeadersMiddleware\nRegister OnStarting callback]
-    SEC --> HMF{HttpMethodFilterMiddleware\nGET or HEAD?}
-    HMF -->|GET or HEAD| SD
-    HMF -->|POST to allowed path| SD
+    SEC --> HMF{HttpMethodFilterMiddleware\nAllowed method?}
     HMF -->|Disallowed method| R405[405 Method Not Allowed]
-    HMF -->|GET, HEAD, or allowed POST| HTTPS[UseHttpsRedirection\nHTTP only]
+    HMF -->|GET, HEAD, or allowed POST| MCPO{MCP guards\nOrigin + stream request}
+    MCPO -->|Untrusted Origin| R403[403 Forbidden]
+    MCPO -->|GET /mcp event stream| R405B[405 Allow: POST]
+    MCPO -->|Pass| HTTPS[UseHttpsRedirection\nHTTP only]
     HTTPS --> SD
     SD{SubdomainRedirectMiddleware\nPrimary host?}
     SD -->|Known shortcut / www / unknown sub| R301A[301 Redirect]
@@ -117,12 +127,14 @@ flowchart TD
     FILTER -->|Probe pattern| F404B[404]
     FILTER -->|Invalid first segment| F404C[404]
     FILTER -->|Passes| HEAD{HEAD request?}
-    HEAD -->|Yes| REWRITE[Rewrite to GET\nSuppress body]
+    HEAD -->|Extension-less| HEAD200[200 or 404\nwithout Blazor]
+    HEAD -->|Has file extension or endpoint| REWRITE[Rewrite to GET\nSuppress body]
     HEAD -->|No| ROUTING[UseRouting\nEndpoint selection]
     REWRITE --> ROUTING
     ROUTING --> AUTH[Auth + RateLimiter\n+ AdminToken + Antiforgery]
     AUTH --> ENDPOINTS{Endpoint match}
     ENDPOINTS -->|Fingerprinted asset| MSA[MapStaticAssets]
+    ENDPOINTS -->|/mcp| MCP[MapMcp]
     ENDPOINTS -->|Blazor route| BLAZOR[MapRazorComponents]
     ENDPOINTS -->|Explicit MapGet/Post| MAPPED[Registered endpoints\nfeed.xml / version / sitemap]
     ENDPOINTS -->|No match| NF[NotFound.razor\n404]
@@ -208,17 +220,26 @@ The CSP allows `'unsafe-inline'` for scripts and styles (required by Blazor Serv
 |--------|--------------|----------|
 | GET | Everywhere | Pass through |
 | HEAD | Everywhere | Pass through (rewritten to GET later) |
-| POST | `/_blazor/*`, `/MicrosoftIdentity/*`, `/signin-oidc`, `/admin/logout` | Pass through |
+| POST | `/_blazor/*`, `/MicrosoftIdentity/*`, `/mcp`, `/signin-oidc`, `/admin/logout` | Pass through |
 | OPTIONS, PUT, DELETE, PATCH, CONNECT, TRACE | Nowhere | **405 Method Not Allowed** |
 | POST (any other path) | — | **405 Method Not Allowed** |
 
+HTTP/2 WebSocket upgrades (extended `CONNECT` with `:protocol=websocket`) are the one exception to the CONNECT rule, because blocking them would break the Blazor SignalR circuit.
+
 Why block OPTIONS: this site has no CORS policy and no cross-origin JavaScript consumers. OPTIONS is the browser's CORS preflight mechanism and is never sent by a real visitor to this site. Any OPTIONS request is a scanner or security probe.
 
-Why POST is path-specific: every admin page uses `@rendermode InteractiveServer`. User actions (form submissions, button clicks) travel over Blazor's existing SignalR circuit as WebSocket messages — not as HTTP POSTs. The only real HTTP POST endpoints are the Blazor SignalR hub (`/_blazor/*`), Microsoft Identity OIDC flows (`/MicrosoftIdentity/*`, `/signin-oidc`), and the admin logout button (`/admin/logout`).
+Why POST is path-specific: every admin page uses `@rendermode InteractiveServer`. User actions (form submissions, button clicks) travel over Blazor's existing SignalR circuit as WebSocket messages — not as HTTP POSTs. The HTTP POST endpoints are the Blazor SignalR hub (`/_blazor/*`), Microsoft Identity OIDC flows (`/MicrosoftIdentity/*`, `/signin-oidc`), the MCP server (`/mcp`, where clients send JSON-RPC requests) and the admin logout button (`/admin/logout`).
+
+### MCP Request Guards
+
+Two small middleware stages protect the `/mcp` endpoint before rate limiting runs, so rejected requests do not consume a client's quota. Details of the MCP server are in [content-api.md](content-api.md#mcp-server).
+
+- **Origin validation** (`McpOriginValidationMiddleware`): a request with an `Origin` header gets **403** unless the origin is `https://` plus a configured primary host, the `Mcp:BaseUrl` origin, or (Development only) a loopback origin. Requests without `Origin` (non-browser clients) pass. This is the DNS-rebinding protection the MCP transport requires.
+- **Stream rejection** (`McpStreamRequestRejectionMiddleware`): the MCP server is stateless and has no event stream, so a `GET /mcp` that accepts `text/event-stream` but not `text/html` gets **405** with `Allow: POST`. Browsers fall through to the `McpInfo` landing page at the same address.
 
 ### HTTPS Redirect
 
-`UseHttpsRedirection` runs immediately after the method filter, before any URL processing. A request that arrives over plain HTTP is redirected to the HTTPS equivalent before subdomain normalization or URL normalization runs.
+`UseHttpsRedirection` runs immediately after the method filter and MCP guards, before any URL processing. A request that arrives over plain HTTP is redirected to the HTTPS equivalent before subdomain normalization or URL normalization runs.
 
 This placement avoids doing URL work (including potential legacy slug API calls in `UrlNormalizationMiddleware`) on HTTP requests that will be redirected anyway. It also avoids the wasteful case of redirecting a request that would have been rejected by the method filter.
 
@@ -267,7 +288,7 @@ This ensures `/coding/2025-01-01-slug.html` → `/dotnet/slug` in one redirect.
 
 - Framework paths (`_blazor`, `_framework`, `_content`) always pass
 - `MicrosoftIdentity` paths always pass
-- Known non-section pages (`about`, `not-found`, `error`, `admin`, `health`, `alive`, `version`, `signin-oidc`) always pass
+- Known non-section pages (`about`, `not-found`, `error`, `admin`, `health`, `alive`, `version`, `signin-oidc`, `newsletter`, `mcp`) always pass
 - Virtual sections (`all`) validate the second segment against known collections or dedicated sub-pages (`/all/authors`)
 - Paths whose last segment has a file extension pass through (static assets, feed URLs)
 - Real sections: the second segment must be a known collection or the virtual `all` keyword
@@ -293,6 +314,8 @@ For qualifying paths the middleware calls `GET /api/legacy-redirect?slug={slug}&
 | `/ai/bare-slug` | ✗ | Hard 404, no API call |
 
 Case is not normalized in the middleware. The infrastructure layer lowercases before DB queries, so `/My-Article` and `/my-article` resolve identically without an extra redirect.
+
+Redirect targets are always same-site paths: any leading run of slashes or backslashes in a `Location` is collapsed to a single `/`, because browsers treat `//host` and `/\host` as protocol-relative (off-site) URLs.
 
 ## Phase 4 - Static Files
 
@@ -386,11 +409,14 @@ All remaining segments are validated against `^[a-zA-Z][a-zA-Z-]*$`: letters and
 
 Anything that fails - a segment starting with a digit, containing a dot, percent-encoded, or with underscores - receives an immediate **404**.
 
-## Phase 6 - Head to GET Rewrite
+## Phase 6 - HEAD Request Handling
 
-`MapRazorComponents` and `MapGet` only register GET endpoints. ASP.NET Core's routing would return 405 for HEAD requests because the HTTP method does not match. The fix: an inline middleware rewrites `HEAD` to `GET`, then calls `_next`. The response body is suppressed by replacing `context.Response.Body` with `Stream.Null`. An explicit `UseRouting()` call is placed after this rewrite so endpoint selection sees `GET` rather than `HEAD`.
+`HeadRequestMiddleware` runs immediately before `UseRouting()` and treats HEAD requests in two ways:
 
-Without the explicit `UseRouting()`, WebApplication auto-inserts it before all user middleware, causing it to see the original HEAD method and return 405.
+- **Extension-less paths** (Blazor page routes): answered immediately with `200 OK` and `Content-Type: text/html`, without running Blazor. Rendering a page triggers an API call, and bots and crawlers often disconnect when the API is slow, which showed up as 499 errors. HEAD only needs headers. Every path segment must pass `RouteParameterValidator.IsValidSlug`, otherwise the response is **404**. The response is therefore a deliberate shortcut and does not always mirror what GET would return (GET can still 404 after section validation).
+- **Paths with a file extension and explicit endpoints**: the method is rewritten from `HEAD` to `GET` and the response body is replaced by `Stream.Null`, so static assets and `MapGet` endpoints return correct headers without a body. The excluded endpoints (`/version`, `/health`, `/alive`, `/signin-oidc`, `/admin/logout`, `/_blazor/*`, `/MicrosoftIdentity/*`) also take this path because they are not page routes.
+
+`MapRazorComponents` and `MapGet` only register GET endpoints, so without the rewrite HEAD requests to them would get 405. An explicit `UseRouting()` call sits after this middleware so endpoint selection sees `GET` rather than `HEAD`. Without it, WebApplication would insert routing before all user middleware and return 405 for HEAD.
 
 ## Phase 7 - Auth and Rate Limiting
 
@@ -400,11 +426,25 @@ These run in order after `UseRouting` (so endpoint metadata is available for aut
 
 **`UseAuthorization`** enforces `[Authorize]` attributes and policies.
 
-**`UseRateLimiter`** applies rate limiting. The `web-general` policy applies to all Blazor routes via `MapRazorComponents(...).RequireRateLimiting("web-general")`. RSS endpoints use `web-rss`. Rate limiting is disabled in `IntegrationTest` to avoid throttling test suites.
+**`UseRateLimiter`** applies rate limiting, see [Rate Limiting](#rate-limiting).
 
 **`AdminTokenValidationMiddleware`** targets `/admin/*` paths (excluding `/admin/login` and `/admin/logout`) for authenticated users. It attempts to acquire a token from the MSAL cache via `ITokenAcquisition`. If the cache is empty (server restart since login), it issues an OIDC challenge to re-authenticate before Blazor starts rendering - preventing circuit crashes.
 
 **`UseAntiforgery`** validates antiforgery tokens for state-changing operations.
+
+### Rate Limiting
+
+Rate limiting protects the public web surface against excessive requests and bot scraping. All policies are fixed-window limits of one minute, partitioned per client IP (the real client IP, because forwarded headers are applied first). Requests over the limit get **429** with a `Retry-After` header.
+
+| Policy | Limit | Queue | Applied to |
+|---|---|---|---|
+| `web-general` | 60 requests/min per IP | 5 | All Blazor routes (`MapRazorComponents`) |
+| `web-rss` | 20 requests/min per IP | none | RSS proxy endpoints (`/all/feed.xml`, `/{section}/feed.xml`, `/{section}/roundups/feed.xml`) |
+| `web-mcp` | 60 requests/min per IP | none | `/mcp` |
+
+Requests from loopback addresses are exempt **in Development only**. In other environments a spoofed `X-Forwarded-For: 127.0.0.1` header must not bypass the limits, because forwarded headers are processed before the rate limiter.
+
+Not covered by a policy: the Blazor SignalR hub (`/_blazor`), because it goes through hub middleware instead of endpoint routing. Its load is bounded by SignalR settings and the single-instance capacity of the App Service plan. The sitemap, `/version` and health endpoints are not rate limited either.
 
 ## Phase 8 - Endpoint Routing
 
@@ -421,12 +461,21 @@ After the auth and rate-limiting phase, requests reach the registered endpoints:
 | `/{section}/{collection}/{slug}` | `ContentItem.razor` |
 | `/about` | `About.razor` |
 | `/mcp` (GET from a browser; MCP clients POST to the same path) | `McpInfo.razor` |
+| `/newsletter/subscribe`, `/newsletter/confirm`, `/newsletter/manage`, `/newsletter/unsubscribe` | Newsletter pages, see [newsletter.md](newsletter.md) |
+| `/all/authors` and `/all/authors/{authorName}` | `Authors.razor` |
+| `/github-copilot/features`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord`, `/vscode-updates[/{slug}]` | GitHub Copilot custom pages |
+| `/ai/genai-basics`, `/genai-applied`, `/genai-advanced`, `/sdlc` | AI custom pages |
+| `/devops/dx-space` | `DXSpace.razor` |
 | `/not-found` | `NotFound.razor` |
-| `/admin` | Admin pages |
-| `/github-copilot/vscode-updates` | `GitHubCopilotVSCodeUpdates.razor` |
+| `/Error` | `Error.razor` |
+| `/admin` and `/admin/*` | Admin pages, see [admin.md](admin.md) |
 | No match | Fallback → `NotFound.razor` (HTTP 404) |
 
+The custom page routes are listed in [custom-pages.md](custom-pages.md). Because the dedicated routes are more specific than `/{section}/{collection}`, they win over the generic route.
+
 When `SectionCollection.razor` or `ContentItem.razor` render, they also validate section/collection existence via `SectionCache` in `OnInitializedAsync` and redirect to `/not-found` for invalid combinations.
+
+**`MapMcp("/mcp")`** - the stateless MCP server. Rate limited by `web-mcp`. `GET /mcp` is not mapped, so browsers reach the `McpInfo` page.
 
 **Explicit `MapGet` endpoints**: `/all/feed.xml`, `/{section}/feed.xml`, `/{section}/roundups/feed.xml` (RSS proxy to API), `/sitemap.xml` (sitemap proxy), `/version` (deployment probe), `/admin/logout` (`MapPost`).
 
@@ -499,6 +548,7 @@ The practical consequence: any extension-less path whose first segment matches `
 | `/api/` | Not served by the web host |
 | `/swagger/` | API documentation UI |
 | `/health`, `/alive` | Health check endpoints |
+| `/version` | Deployment version probe |
 | `/not-found` | 404 error page |
 | `/Error` | ASP.NET error handler page |
 | `/admin` | Admin section |

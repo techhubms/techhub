@@ -22,12 +22,13 @@ The Web app signs users in via OIDC, then uses `ITokenAcquisition` to obtain an 
 ### Key Components
 
 - **`AdminTokenDelegatingHandler`** — HTTP delegating handler that acquires access tokens via `ITokenAcquisition` and attaches them to admin API requests
-- **`AdminOnly` policy** — Authorization policy on the API that requires `RequireAuthenticatedUser()` + `RequireScope()`
+- **`AdminTokenValidationMiddleware`** — Web middleware for `/admin` routes. Access tokens live in an in-memory MSAL token cache, so after a server restart a signed-in user still has a valid cookie but no cached token. The middleware detects the empty cache and issues an OIDC challenge before Blazor renders, instead of letting the circuit fail
+- **`AdminOnly` policy** — Authorization policy on the API (`src/TechHub.Api/Authorization/AdminAuthorization.cs`) that requires `RequireAuthenticatedUser()` + `RequireScope()`
 - **Enterprise App** — "Assignment required" is enabled so only explicitly assigned users can sign in
 
 ## Configuration
 
-Both the Web and API projects read from the `AzureAd` configuration section. When `AzureAd:ClientId` is empty, authentication is disabled and admin endpoints allow all requests (local dev without Entra).
+Both the Web and API projects read from the `AzureAd` configuration section. When `AzureAd:ClientId` is empty, authentication is disabled. Outside Production (local dev without Entra, tests, PR previews) admin endpoints then allow all requests; in Production the `AdminOnly` policy denies every request and a startup error is logged, so a missing setting fails closed.
 
 ### Web app (`src/TechHub.Web/appsettings.json`)
 
@@ -67,7 +68,13 @@ This creates (on first run):
 4. A service principal with "assignment required" enabled
 5. Assigns the current user to the enterprise app
 
-The script outputs the configuration values. Store them using .NET User Secrets:
+The script outputs the registration details and points to `Setup-UserSecrets.ps1`, which fills all local user secrets (AzureAd settings, plus the AI and newsletter settings from Azure):
+
+```powershell
+./scripts/Setup-UserSecrets.ps1
+```
+
+To set the AzureAd values by hand instead, store them with .NET User Secrets:
 
 ```powershell
 cd src/TechHub.Web
@@ -83,24 +90,25 @@ dotnet user-secrets set AzureAd:ClientId '<client-id>'
 
 On subsequent runs, the script detects the existing app registration, skips creation, and only rotates the secret. Old secrets remain valid for overlap — no downtime.
 
-Parameters: `-DisplayName`, `-WebPort`, `-SecretExpiryDays`, `-SkipUserAssignment`, `-RemoveExpired`.
+Parameters: `-DisplayName`, `-WebPort`, `-SecretExpiryDays`, `-SkipUserAssignment`, `-RemoveExpired`, `-GitHubSecretName` (defaults to `AZURE_AD_CLIENT_SECRET`), `-GitHubRepo` (defaults to the current repository), and `-DeploymentSpObjectId`.
+
+`-DeploymentSpObjectId` takes the object ID of the GitHub Actions deployment service principal (`sp-techhubms`) and assigns it the roles the deployment needs: Key Vault Secrets Officer, Key Vault Contributor, and Resource Policy Contributor at subscription scope, plus User Access Administrator on `rg-techhub-prod` (so Bicep can create managed identity role assignments). It is safe to re-run.
+
+Use `Assign-AdminUsers.ps1 -Environment <env>` to assign the admin users to the enterprise app.
 
 ## Secret Rotation
 
 All environments use the same script. It appends a new secret without invalidating existing ones, so there is no downtime during rotation.
 
 ```powershell
-# Localhost — prints new secret to console
+# Localhost — creates or rotates the localhost app registration secret
 ./scripts/Manage-EntraId.ps1 -Environment localhost
-
-# Staging — rotates secret and updates GitHub Actions environment secrets
-./scripts/Manage-EntraId.ps1 -Environment staging
 
 # Production — rotates secret, updates GitHub, and cleans up expired secrets
 ./scripts/Manage-EntraId.ps1 -Environment production -RemoveExpired
 ```
 
-For staging and production, the script also pushes the three `AZURE_AD_*` secrets (TenantId, ClientId, ClientSecret) to the corresponding GitHub Actions environment via `gh secret set`.
+For staging and production, the script pushes `AZURE_AD_TENANT_ID`, `AZURE_AD_CLIENT_ID`, and the client secret (`AZURE_AD_CLIENT_SECRET`) to the GitHub Actions environment of the same name via `gh secret set`. Only the production client secret is used by the pipeline. There is no separate staging Azure environment (the `staging` GitHub environment only provides the OIDC subject for PR previews, which have the admin dashboard authentication disabled), and no workflow reads the tenant and client ID secrets, because those identifiers are set in the Bicep parameter file.
 
 ## Infrastructure
 
@@ -108,12 +116,12 @@ The Bicep templates pass Azure AD configuration as App Service app settings:
 
 | Env Variable | Source | Used By |
 |---|---|---|
-| `AzureAd__TenantId` | Plain app setting | Web + API |
-| `AzureAd__ClientId` | Plain app setting | Web + API |
-| `AzureAd__ClientSecret` | Key Vault reference app setting | Web only |
-| `AzureAd__Scopes` | Plain app setting | Web only |
+| `AzureAd__TenantId` | Plain app setting from `azureAdTenantId` in `infra/parameters/prod-applications.bicepparam` | Web + API |
+| `AzureAd__ClientId` | Plain app setting from `azureAdClientId` in `infra/parameters/prod-applications.bicepparam` | Web + API |
+| `AzureAd__ClientSecret` | Key Vault reference to `techhub-prod-aad-client-secret` | Web only |
+| `AzureAd__Scopes` | Plain app setting derived in `web.bicep` as `api://<client-id>/Admin.Access` | Web only |
 
-These are fed from GitHub Actions secrets → `Deploy-Infrastructure.ps1` env vars → Bicep `readEnvironmentVariable()` → App Service app settings/Key Vault references.
+The tenant and client IDs are identifiers, not secrets, so they are committed in the parameter file. Only the client secret travels through the secret chain: GitHub production environment secret `AZURE_AD_CLIENT_SECRET` → env var in the deploy job → `Sync-KeyVaultSecrets.ps1` (called by `Deploy-Infrastructure.ps1`) → Key Vault secret → App Service Key Vault reference. `readEnvironmentVariable()` in the parameter files is only used for the image tags and infrastructure inputs such as the PostgreSQL password and admin IPs. PR preview sites leave the AzureAd values empty, which disables admin authentication there.
 
 ## Implementation Reference
 

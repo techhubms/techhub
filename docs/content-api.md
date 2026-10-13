@@ -7,6 +7,8 @@ This document describes the core Content API endpoints for retrieving sections, 
 - [Filtering](filtering.md) - Tag filtering behavior and tag cloud API
 - [Custom Pages](custom-pages.md) - Custom page endpoints for specialized content
 - [RSS Feeds](rss-feeds.md) - RSS feed endpoints for content syndication
+- [Newsletter](newsletter.md) - Newsletter subscription API, schedule and email delivery
+- [Admin](admin.md) - Admin API (`/api/admin/*`) and admin UI pages
 - [Database Configuration](database.md) - Supported database providers and sync behavior
 - [Terminology](terminology.md) - Section and collection definitions
 
@@ -34,17 +36,24 @@ Represents a thematic grouping of content (e.g., AI, GitHub Copilot, Azure).
   "title": "AI",
   "description": "Your gateway to the AI revolution...",
   "url": "/ai",
+  "tag": "AI",
+  "hideCollectionPages": false,
+  "showHeroBanner": false,
   "collections": [
     {
       "title": "News",
       "name": "news",
       "url": "/ai/news",
       "description": "News articles from official product sources.",
-      "isCustom": false
+      "displayName": "News",
+      "isCustom": false,
+      "order": 0
     }
   ]
 }
 ```
+
+`tag` is the display tag of the section. `hideCollectionPages` replaces the per-collection sub-navigation with a unified Browse page, and `showHeroBanner` renders the collapsible hero banner. On a collection, `order` only matters for custom pages (lower values appear first).
 
 ### Content Item (ContentItem)
 
@@ -84,9 +93,9 @@ Content linking behavior is determined by **collection name**, not by the `exter
 
 | Collection | Links To | Detail Endpoint | `externalUrl` Usage |
 |------------|----------|-----------------|---------------------|
-| `news` | External URL | Returns content for summary rendering | Used for linking |
-| `blogs` | External URL | Returns content for summary rendering | Used for linking |
-| `community` | External URL | Returns content for summary rendering | Used for linking |
+| `news` | External URL | Returns metadata without `renderedHtml` | Used for linking |
+| `blogs` | External URL | Returns metadata without `renderedHtml` | Used for linking |
+| `community` | External URL | Returns metadata without `renderedHtml` | Used for linking |
 | `videos` | Internal page | Returns content | Stored but not used for linking |
 | `roundups` | Internal page | Returns content | Internal path, not used |
 
@@ -168,14 +177,17 @@ Get items in a specific collection within a section. Use `all` as collectionName
 
 - `take` (optional): Number of items to return (default: 20, max: 50)
 - `skip` (optional): Number of items to skip for pagination
-- `q` (optional): Search query (searches title, description, tags)
-- `tags` (optional): Comma-separated tags (AND logic - items must have all tags)
-- `types` (optional): Comma-separated collection types to include (e.g., `news,blogs`). Only applies when `collectionName` is `all`.
-- `lastDays` (optional): Filter to content from last N days. **Default behavior**: When no `lastDays`, `from`, or `to` parameters are provided, a default 90-day filter is automatically applied (configured via `DefaultDateRangeDays`). Pass `lastDays=0` to explicitly disable date filtering and return all content regardless of date.
+- `q` (optional): Search query, maximum 200 characters (searches title, excerpt, content, feed name, collection name and section name; tags are filtered with `tags`, not searched)
+- `tags` (optional): Comma-separated tags (AND logic - items must have all tags). Maximum 20 tags of up to 100 characters each
+- `types` (optional): Comma-separated collection types to include (e.g., `news,blogs`). Only applies when `collectionName` is `all`. Unknown types are ignored
+- `exact` (optional): `true` switches to an exact title phrase match (see [filtering.md](filtering.md#exact-phrase-match)). Ignored without `q`. Tags, dates and `types` are ignored in exact mode
+- `lastDays` (optional): Filter to content from last N days (0-3650). **Default behavior**: When no `lastDays`, `from`, or `to` parameters are provided, a default 90-day filter is automatically applied (`AppSettings:TagCloud:DefaultDateRangeDays`). Pass `lastDays=0` to explicitly disable date filtering and return all content regardless of date.
 - `from` (optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`). Takes precedence over `lastDays`
 - `to` (optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`). Takes precedence over `lastDays`
 
-**Response**: `200 OK` or `404 Not Found`
+**Response**: `200 OK`, `404 Not Found` (section or collection not found), or `400 Bad Request` (invalid name format, `q` over 200 characters, more than 20 tags, a tag over 100 characters, `lastDays` outside 0-3650, or an unparseable `from`/`to`)
+
+**Response Body**: `{ "items": [ContentItem, ...], "totalCount": 123 }`. `totalCount` is the number of matches before `take`/`skip` is applied.
 
 ```bash
 curl -k https://localhost:5001/api/sections/ml/collections/videos/items
@@ -226,13 +238,13 @@ Get detailed content item by section, collection, and content slug.
 
 **Response**: `200 OK`, `204 No Content` (section, collection, or slug not found), or `400 Bad Request` (invalid `sectionName`, `collectionName`, or `slug` format)
 
-**Response Body**: `ContentItemDetail` with full rendered HTML, metadata, and TOC
+**Response Body**: `ContentItemDetail` with metadata, TOC and the rendered HTML
 
 ```bash
 curl -k "https://localhost:5001/api/sections/ai/collections/videos/2024-06-ai-overview"
 ```
 
-**Note**: All valid slugs return `200 OK` with the full `ContentItemDetail`, regardless of collection. For items in externally-linking collections (`news`, `blogs`, `community`), the Web app renders a summary (excerpt + a link to the original source) at the canonical URL instead of the rendered HTML.
+**Note**: Every valid slug returns `200 OK` with a `ContentItemDetail`. For items in externally-linking collections (`news`, `blogs`, `community`), `renderedHtml` is null because the Web app renders a summary (excerpt + a link to the original source) at the canonical URL instead. Other collections include the rendered HTML.
 
 ### Authors
 
@@ -270,7 +282,7 @@ Get paginated content items attributed to a specific author across all sections 
 - `take` (optional): Number of items to return (default: 20, max: 50)
 - `skip` (optional): Number of items to skip for pagination
 
-**Response**: `200 OK`, `400 Bad Request` (invalid author name), or `404 Not Found` (author not found)
+**Response**: `200 OK`, `400 Bad Request` (invalid author name), or `204 No Content` (author not found)
 
 ```bash
 curl -k "https://localhost:5001/api/authors/Alice%20Example/items"
@@ -280,6 +292,8 @@ curl -k "https://localhost:5001/api/authors/Alice%20Example/items"
 
 - Author name matching is case-insensitive (URL parameter) but the stored name casing is used for the database query.
 - Only published items are returned.
+- The author name is URL-decoded first and must not contain path separators or null bytes (maximum 200 characters).
+- The response body has the same `{ items, totalCount }` shape as the items endpoint.
 
 ### Tag Cloud
 
@@ -295,20 +309,22 @@ Get tag cloud with quantile-based sizing for visual representation.
 **Query Parameters**:
 
 - `maxTags` (optional): Maximum number of tags to return (default: 20)
-- `minUses` (optional): Minimum tag usage count (default: 5)
-- `lastDays` (optional): Filter to content from last N days (default: 90 days via `AppSettings:Filtering:TagCloud:DefaultDateRangeDays`)
-- `tags` (optional): Comma-separated list of currently selected tags for dynamic count calculation
+- `minUses` (optional): Minimum tag usage count (default: 1)
+- `lastDays` (optional): Filter to content from last N days (0-3650, default: 90 days via `AppSettings:TagCloud:DefaultDateRangeDays`)
+- `tags` (optional): Comma-separated list of currently selected tags for dynamic count calculation. Maximum 20 tags of up to 100 characters each
 - `tagsToCount` (optional): Comma-separated list of specific tags to get counts for. When provided, returns counts only for these tags (used by content item pages to show real section counts for the item's tags). Display names in the response match the casing provided in this parameter.
+- `q` (optional): Text search query (maximum 200 characters). Counts only reflect items matching the search
+- `types` (optional): Comma-separated collection types to include. Only applies when `collectionName` is `all`
 - `from` (optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`). Takes precedence over `lastDays`
 - `to` (optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`). Takes precedence over `lastDays`
 
-**Response**: `200 OK`, `404 Not Found`, or `400 Bad Request` (invalid date format)
+**Response**: `200 OK`, `404 Not Found` (section or collection not found), or `400 Bad Request` (invalid date format, `q` too long, `lastDays` out of range, or too many/too long `tags`)
 
 ```bash
 curl -k "https://localhost:5001/api/sections/all/collections/all/tags?maxTags=30"
 ```
 
-## GHC Features API {#ghc-features-api}
+## GHC Features API
 
 Endpoints for GitHub Copilot feature metadata stored in the `ghc_features` table.
 See [content-schema.md](content-schema.md#github-copilot-features) for the schema.
@@ -348,9 +364,9 @@ Returns all GHC features with their content links. Public endpoint (no authentic
 
 Create or update a GHC feature. **Requires AdminOnly authorization.**
 
-**Body**: `GhcFeature` JSON (same schema as GET response item).
+**Body**: `GhcFeature` JSON (same schema as GET response item). `slug` in the body must match the URL, `title` is required and `plans` must be an array (use `[]` when no plan applies).
 
-**Response**: `204 No Content`
+**Response**: `204 No Content` or `400 Bad Request` (slug mismatch, empty title or null plans)
 
 ### DELETE /api/ghc-features/{slug}
 
@@ -358,22 +374,82 @@ Delete a GHC feature and its content links. **Requires AdminOnly authorization.*
 
 **Response**: `204 No Content` or `404 Not Found`
 
-### Error Responses
+### POST /api/ghc-features/{slug}/content-links
+
+Link a content item (usually a video) to a feature. **Requires AdminOnly authorization.**
+
+**Body**: `{ "collectionName": "videos", "itemSlug": "intro-to-copilot-free", "isThumbnail": false, "sortOrder": 0 }`. `collectionName` and `itemSlug` are required. Linking an item again updates its `isThumbnail` and `sortOrder`, and setting `isThumbnail` clears the previous thumbnail.
+
+**Response**: `204 No Content`, `400 Bad Request` (missing fields), or `404 Not Found` (feature or content item does not exist)
+
+### DELETE /api/ghc-features/{slug}/content-links
+
+Remove a content link. **Requires AdminOnly authorization.**
+
+**Query Parameters**: `collection` and `itemSlug` (both required)
+
+**Response**: `204 No Content`, `400 Bad Request` (missing parameters), or `404 Not Found`
+
+### PUT /api/ghc-features/{slug}/thumbnail
+
+Mark one of the feature's existing content links as its thumbnail. A feature has at most one thumbnail. **Requires AdminOnly authorization.**
+
+**Query Parameters**: `collection` and `itemSlug` (both required)
+
+**Response**: `204 No Content`, `400 Bad Request` (missing parameters), or `404 Not Found` (the link does not exist)
+
+## VS Code Updates API
+
+### GET /api/vscode-updates
+
+Returns the content items shown on the VS Code Updates page (`/github-copilot/vscode-updates`). Public endpoint (no authentication required). The endpoint has no pagination parameters and returns at most 100 items.
+
+**Response**: `200 OK` with an array of `{ collectionName, slug, title, externalUrl, primarySectionName, dateEpoch, createdAt }`
+
+Admins manage the membership through the admin API, see [admin.md](admin.md).
+
+## Legacy Redirect API
+
+### GET /api/legacy-redirect
+
+Resolves a slug from the old website to the canonical URL. The Web app calls it from URL normalization when a request ends in `.html` (see [url-routing.md](url-routing.md#url-normalization)).
+
+**Query Parameters**:
+
+- `slug` (required): Legacy slug, with or without a `YYYY-MM-DD-` prefix and `.html` extension
+- `section` (optional): Section hint. When several items match, the item from this section wins
+
+**Response**: `200 OK` with `{ "url": "..." }`, `204 No Content` (no matching item), or `400 Bad Request` (invalid `slug` or `section` format)
+
+`url` is the original source URL for items in externally-linking collections and the internal path (`/{section}/{collection}/{slug}`) for everything else. The old weekly roundup permalink `weekly-ai-and-tech-news-roundup` resolves to the latest roundup instead of an exact match.
+
+## Other APIs
+
+- **Newsletter**: Public subscribe, confirm, manage and unsubscribe endpoints. See [newsletter.md](newsletter.md).
+- **Admin**: `/api/admin/*` (processing triggers, feeds, reviews, content editing, job settings, cache invalidation and more). See [admin.md](admin.md) and [admin-authentication.md](admin-authentication.md).
+- **Custom pages**: See [custom-pages.md](custom-pages.md).
+- **RSS and sitemap**: See [rss-feeds.md](rss-feeds.md) and [seo.md](seo.md).
+
+## Error Responses
 
 ### 400 Bad Request
 
 Returned when route parameters have invalid format. All path parameters are validated:
 
-- **sectionName / collectionName**: Must be lowercase letters and hyphens only (e.g., `ai`, `github-copilot`). Rejects dots, slashes, encoded characters, uppercase.
-- **slug**: Must be lowercase letters, digits, and hyphens only. Rejects file extensions (`.php`), encoded HTML, path traversal.
+- **sectionName / collectionName**: Must start with a letter and contain only letters and hyphens, case-insensitive (e.g., `ai`, `github-copilot`, `AI`). Rejects dots, slashes, encoded characters and leading hyphens. Maximum 200 characters.
+- **slug**: Must start with a letter or digit and contain only letters, digits and hyphens, case-insensitive. Rejects file extensions (`.php`), encoded HTML, path traversal. Maximum 200 characters.
 
-Validation is enforced via an endpoint filter on the `/api/sections` group and the `/api/rss` group. See `RouteParameterValidator` in `TechHub.Core/Validation/`.
+Validation is enforced via an endpoint filter on the `/api/sections` group and the `/api/rss` group. See `RouteParameterValidator` in `TechHub.Core/Validation/`. Query parameters have their own limits, listed per endpoint above and in [input-validation-and-sanitization.md](input-validation-and-sanitization.md).
 
 Every `400` returned by an endpoint handler is logged as a warning (method, path and reason) by `RejectedRequestLogging`. The query string is never logged because it can carry emails and tokens, and handlers must not echo untrusted request values in their 400 reason, and framework-generated binding failures such as malformed JSON bodies never reach endpoint filters, so they are not covered.
 
+### 204 No Content
+
+Lookup endpoints answer a missing resource with `204` instead of `404`, because they are data lookups and not page requests: section, collections, collection and content detail endpoints, authors and legacy redirect. Clients treat `204` as "not found".
+
 ### 404 Not Found
 
-Returned when a section, collection, or item does not exist.
+Returned by the items and tag cloud endpoints when the section or collection does not exist, by the RSS endpoints for unknown sections or collections, and by the GHC feature endpoints for unknown features.
 
 ```json
 {
@@ -399,7 +475,7 @@ The Web frontend exposes the latest content to AI clients through a Model Contex
   | `since` | Only items on or after this date (`yyyy-MM-dd`). Takes precedence over `days`. |
   | `contentType` | Comma-separated collections: `news`, `blogs`, `videos`, `community`, `roundups`. `roundups` returns the weekly summaries. |
   | `tags` | Comma-separated tags (maximum 20 of up to 100 characters); items must have all of them. |
-  | `query` | Keyword search across title, description and tags (maximum 200 characters). |
+  | `query` | Keyword search (maximum 200 characters), the same search as `q` on the items endpoint. |
   | `includeTags` | Include the tags of every item. Off by default to keep results small. |
 
   Invalid values return a readable tool error instead of a generic failure.

@@ -1,3 +1,4 @@
+using Ganss.Xss;
 using Markdig;
 using TechHub.Core.Interfaces;
 
@@ -5,14 +6,26 @@ namespace TechHub.Infrastructure.Services;
 
 /// <summary>
 /// Markdown rendering service using Markdig
-/// Converts markdown content to HTML with GitHub Flavored Markdown support
+/// Converts markdown content to HTML with GitHub Flavored Markdown support.
+/// Rendered HTML is sanitized because markdown may contain raw HTML from third-party content.
 /// </summary>
 public class MarkdownService : IMarkdownService
 {
+    // Only these hosts may be embedded via <iframe> (YouTube embeds and Markdig media links).
+    private static readonly string[] _allowedEmbedHosts =
+    [
+        "www.youtube.com",
+        "www.youtube-nocookie.com",
+        "player.vimeo.com"
+    ];
+
     private readonly MarkdownPipeline _pipeline;
+    private readonly HtmlSanitizer _sanitizer;
+    private readonly Lock _sanitizerLock = new();
 
     public MarkdownService()
     {
+        _sanitizer = CreateSanitizer();
         // Build single pipeline once - all Markdig extensions configured here
         // Link rewriting handled via preprocessing (before render) and post-processing (after render)
         _pipeline = new MarkdownPipelineBuilder()
@@ -77,7 +90,7 @@ public class MarkdownService : IMarkdownService
             // Post-process: Add target="_blank" to external links
             html = AddTargetBlankToExternalLinks(html);
 
-            return html;
+            return Sanitize(html);
         }
         catch (Exception ex)
         {
@@ -86,6 +99,58 @@ public class MarkdownService : IMarkdownService
             throw new InvalidOperationException(
                 $"Failed to render markdown to HTML. Markdown preview: {preview}",
                 ex);
+        }
+    }
+
+    private static HtmlSanitizer CreateSanitizer()
+    {
+        var sanitizer = new HtmlSanitizer();
+
+        // Markdig output relies on these tags (task list checkboxes, media links/embeds).
+        foreach (var tag in new[] { "iframe", "input", "video", "audio", "source" })
+        {
+            sanitizer.AllowedTags.Add(tag);
+        }
+
+        foreach (var attribute in new[]
+        {
+            "id", "class", "target", "rel", "allow", "allowfullscreen", "frameborder",
+            "loading", "controls", "checked", "disabled", "type", "width", "height", "title"
+        })
+        {
+            sanitizer.AllowedAttributes.Add(attribute);
+        }
+
+        sanitizer.AllowedSchemes.Add("mailto");
+        sanitizer.AllowDataAttributes = true;
+
+        sanitizer.PostProcessNode += (_, e) =>
+        {
+            if (e.Node is AngleSharp.Html.Dom.IHtmlInlineFrameElement iframe && !IsAllowedEmbed(iframe.Source))
+            {
+                iframe.Remove();
+            }
+            else if (e.Node is AngleSharp.Html.Dom.IHtmlInputElement input
+                && !string.Equals(input.Type, "checkbox", StringComparison.OrdinalIgnoreCase))
+            {
+                input.Remove();
+            }
+        };
+
+        return sanitizer;
+    }
+
+    private static bool IsAllowedEmbed(string? source)
+        => Uri.TryCreate(source, UriKind.Absolute, out var uri)
+            && uri.Scheme == Uri.UriSchemeHttps
+            && _allowedEmbedHosts.Contains(uri.Host, StringComparer.OrdinalIgnoreCase);
+
+    private string Sanitize(string html)
+    {
+        // HtmlSanitizer instances are not safe for concurrent use
+        lock (_sanitizerLock)
+        {
+            return _sanitizer.Sanitize(html);
         }
     }
 

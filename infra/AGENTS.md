@@ -17,17 +17,20 @@ The infrastructure is deployed in **two strictly separated phases**:
 - Azure AI Foundry (OpenAI)
 - Log Analytics + Application Insights
 - App Service Plan (Basic B1, no sites yet!)
-- Azure Communication Services (ACS) for email delivery
+- Azure Communication Services (ACS) for email delivery, using a customer-managed email domain (`mail.hub.ms`)
 - Monitoring (action groups, alerts, availability tests)
 - Governance (budgets, policies)
+- ACME DNS zone (`acme.hub.ms`) for wildcard certificate renewal
 
 **Key principle**: Phase 1 creates the **Key Vault first**, then stores all application secrets in it.
 
 **ACS configuration pattern (managed identity):**
 
-- Endpoint passed via Bicep output from Phase 1 to Phase 2
-- RBAC role assigned to API managed identity in Phase 1
-- Only sender address stored in Key Vault secret: `techhub-prod-acs-sender-address`
+- RBAC role (`acsDataContributorRole.bicep`) assigned to the API managed identity in Phase 1
+- Sender address stored in Key Vault secret `techhub-prod-acs-sender-address`, written directly by Bicep in Phase 1
+- Endpoint is a Phase 1 Bicep output (`acsEndpoint`). `Deploy-Infrastructure.ps1` exports it as `NEWSLETTER_ACS_ENDPOINT` and `Sync-KeyVaultSecrets.ps1` stores it in Key Vault secret `techhub-prod-newsletter-acs-endpoint`. Phase 2 only knows the secret name (`acsEndpointSecretName`)
+
+**ACS custom email domain (verify, then link):** the domain must have verified DNS records before it can be linked to the Communication Service. The first deploy creates the domain without linking it (`linkEmailDomain = false`). After the DNS records are added and verified in ACS, redeploy with `Deploy-Infrastructure.ps1 -LinkEmailDomain` (or `linkEmailDomain = true` in the parameter file). Every PUT of the domain resets its verification, so `Deploy-Infrastructure.ps1` sets `createEmailDomain = false` once the domain exists. See [docs/network-architecture.md](../docs/network-architecture.md#azure-communication-services-acs).
 
 ### Phase 2: App Service Sites (`applications.bicep`)
 
@@ -38,6 +41,15 @@ The infrastructure is deployed in **two strictly separated phases**:
 
 **No infrastructure resources.** Phase 2 reads from Key Vault secrets created in Phase 1.
 
+### PR previews (`pr-applications.bicep`)
+
+`pr-applications.bicep` deploys the per-PR API + Web sites onto the shared, **ephemeral** PR-preview App Service Plan (`asp-techhub-pr`). Phase 1 deliberately does not create that Plan: `Deploy-PrPreview.ps1` creates it on the first PR preview deploy and deletes it after the last teardown. Phase 1 only creates the PR subnet and the PR managed identity (`id-techhub-pr`). See [docs/ci-cd-pipeline.md](../docs/ci-cd-pipeline.md#pr-preview-environments).
+
+### Parameters and compiled output
+
+- `parameters/` holds the production parameter files (`prod-infrastructure.bicepparam`, `prod-applications.bicepparam`). `readEnvironmentVariable()` is used for values that must not be committed (admin IPs, the PostgreSQL password) or that change per deploy (image tags)
+- Compiled ARM templates (`infra/**/*.json`) are build output and gitignored. Edit the Bicep files only
+
 ## Secret Flow Pattern
 
 ```text
@@ -45,29 +57,33 @@ Phase 1 (infrastructure.bicep)
   ↓
   Creates ACS resources + RBAC role assignment
   ↓
-  Writes sender address to Key Vault secret
+  Writes sender address to Key Vault secret (Bicep)
   ↓
   Outputs endpoint URL (not secret) to deployment output
   ↓
-Phase 2 (applications.bicep)
+Deploy-Infrastructure.ps1 → Sync-KeyVaultSecrets.ps1
   ↓
-  Receives ACS endpoint as parameter
+  Writes endpoint URL to Key Vault secret (techhub-prod-newsletter-acs-endpoint)
   ↓
-  Reads sender address secret name from Key Vault
+Phase 2 (applications.bicep, standalone)
+  ↓
+  Receives only the Key Vault secret NAMES as parameters
+  ↓
+  App settings are Key Vault references resolved by App Service at runtime
   ↓
   App Service site uses managed identity to authenticate to ACS
 ```
 
-**Key insight**: With managed identity, only the sender address needs Key Vault storage. The endpoint is public and passed via Bicep parameters. Authentication happens automatically via Entra ID.
+**Key insight**: With managed identity, no ACS key or connection string exists. The endpoint and sender address travel through Key Vault, not through Bicep outputs or parameters, so Phase 2 stays fully standalone (`Deploy-Applications.ps1` needs only an image tag). Authentication happens automatically via Entra ID.
 
 ## Rules for Adding New Infrastructure
 
 ### Adding a new shared service (like ACS)
 
 1. ✅ Add to `infrastructure.bicep` (Phase 1)
-2. ✅ Store outputs in Key Vault secrets
+2. ✅ Store values Phase 2 needs in Key Vault secrets (written by Bicep, or by `Sync-KeyVaultSecrets.ps1` for deployment outputs)
 3. ✅ Reference in `applications.bicep` (Phase 2) via Key Vault secret names
-4. ❌ **Never** pass outputs directly from Phase 1 to Phase 2 via Bicep outputs
+4. ❌ **Never** pass Phase 1 outputs to Phase 2 as Bicep outputs or parameters (scripts may read outputs only to write them to Key Vault)
 
 ### Adding a new application secret
 
@@ -106,10 +122,15 @@ Infrastructure and applications are deployed by **separate scripts**:
 
 | Script | Phase | What it deploys | Image tag needed? |
 |--------|-------|-----------------|-------------------|
-| `Deploy-Infrastructure.ps1` | Phase 1 | `infrastructure.bicep` + secret sync | **No** |
+| `Deploy-Infrastructure.ps1` | Phase 1 | `infrastructure.bicep` + secret sync (`-LinkEmailDomain` links the verified ACS email domain) | **No** |
 | `Deploy-Applications.ps1` | Phase 2 | `applications.bicep` (API + Web App Service sites) | **Yes** |
 | `Build-Images.ps1` | Build | Docker build + push to ghcr.io | **Yes** |
 | `Deploy-Application.ps1` | Fast path | `az webapp config set` (image swap only) | **Yes** |
+| `Deploy-PrPreview.ps1` | PR preview | `pr-applications.bicep` + ephemeral PR App Service Plan + PITR PostgreSQL server (`-Action deploy` or `teardown`) | **Yes** (`-Tag`) |
+| `Teardown-PrEnvironments.ps1` | PR preview | Tears down every active PR preview (nightly workflow) | No |
+| `Sync-KeyVaultSecrets.ps1` | Secrets | Writes application secrets from env vars to Key Vault. Called by `Deploy-Infrastructure.ps1` | No |
+| `Renew-WildcardCertificates.ps1` | Certificates | Standalone `modules/wildcardCert.bicep` after renewing the PFX in Key Vault | No |
+| `Setup-OidcAuthentication.ps1` | One-time setup | GitHub Actions OIDC federated credentials and repository variables (no Bicep) | No |
 
 ### CD Pipeline (automatic)
 
@@ -156,7 +177,7 @@ $env:POSTGRES_ADMIN_PASSWORD = "<password>"
 
 ```bicep
 // Phase 1: Grant managed identity access to service
-module serviceRole './modules/serviceDataContributorRole.bicep' = {
+module serviceRole './modules/acsDataContributorRole.bicep' = {
   scope: resourceGroup
   params: {
     serviceName: serviceName
@@ -188,6 +209,6 @@ var client = new ServiceClient(
 
 - ❌ Add application sites to `infrastructure.bicep`
 - ❌ Add infrastructure resources (storage, databases, message queues, etc.) to `applications.bicep`
-- ❌ Pass secrets as plain Bicep parameters (always use Key Vault + `keyVaultUrl`)
+- ❌ Pass secrets as plain Bicep parameters (always use Key Vault + `keyVaultUri`)
 - ❌ Reference outputs directly between phases (use Key Vault as the bridge)
 - ❌ **Use connection strings or API keys when managed identity is available**

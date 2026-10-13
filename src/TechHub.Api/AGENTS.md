@@ -4,7 +4,7 @@
 
 ## Overview
 
-REST API backend using ASP.NET Core Minimal APIs. Exposes endpoints for sections, content, filtering, RSS feeds, and structured data.
+REST API backend using ASP.NET Core Minimal APIs. Exposes endpoints for sections, collections, content and filtering, authors, RSS feeds, sitemap, custom page data, GitHub Copilot features, VS Code updates, legacy slug redirects, newsletter, and the admin API (`/api/admin/*`). Also hosts the background services (content processing, content fixer, roundup generation, newsletter, startup).
 
 ## Background Services
 
@@ -24,9 +24,13 @@ See [src/AGENTS.md](../AGENTS.md#accepted-broad-catch-pattern) for the accepted 
 ```text
 TechHub.Api/
 ├── Program.cs                    # Entry point, DI registration, middleware pipeline
-├── Endpoints/                    # Minimal API endpoint definitions (content, RSS, authors, admin, custom pages, sitemap)
-├── appsettings.json             # Configuration (sections, collections, paths)
-└── appsettings.Development.json # Development-specific settings
+├── Authorization/                # AdminAuthorization (the AdminOnly policy; fails closed in Production without Azure AD)
+├── Endpoints/                    # Minimal API endpoints (content, RSS, authors, admin, custom pages, sitemap, GHC features, newsletter)
+├── HealthChecks/                 # StartupHealthCheck, DatabaseHealthCheck
+├── Middleware/                   # ExceptionHandlerMiddleware
+├── Services/                     # Background services (content processing, content fixer, roundup, newsletter, startup) and StartupStateService
+├── appsettings.json              # Configuration (sections, collections, paths)
+└── appsettings.{Environment}.json # Per-environment overrides (Development, IntegrationTest, Staging, Production)
 ```
 
 ## Input Sanitization
@@ -37,11 +41,13 @@ See [docs/input-validation-and-sanitization.md](../../docs/input-validation-and-
 
 ## Minimal API Patterns
 
-**Key Pattern**: Static extension methods on `WebApplication` with endpoint groups. Separate files in `Endpoints/`. Register in Program.cs: `app.MapContentEndpoints();`
+**Key Pattern**: Static extension methods on `IEndpointRouteBuilder` (`MapXxxEndpoints`) with endpoint groups, one file per area in `Endpoints/`. Register on the root group in Program.cs, which applies `WithRejectedRequestLogging()`: `api.MapContentEndpoints();`
 
-**RESTful Design**: Resource hierarchy (`/sections/{sectionName}/collections/{collectionName}/items`), human-readable slugs, GET for retrieval, 200/404 status codes.
+**RESTful Design**: Resource hierarchy (`/sections/{sectionName}/collections/{collectionName}/items`), human-readable slugs, GET for retrieval.
 
-**Always add OpenAPI metadata**: `WithName()`, `WithSummary()`, `WithDescription()`, `WithTags()`, `WithOpenApi()`, `Produces<T>()`.
+**Status codes for missing resources**: Match the sibling endpoints. Single-resource lookups (section, collection, content detail by slug, author items, legacy redirect) return `204 No Content`. Collection items and tag cloud, RSS feeds, custom page data and GHC feature mutations return `404 Not Found`. Invalid input returns `400`.
+
+**Always add OpenAPI metadata**: `WithName()`, `WithSummary()`, `WithDescription()`, `WithTags()`, `Produces<T>()`. OpenAPI is provided by `AddOpenApi()` plus Swashbuckle (`AddSwaggerGen`), so there is no `WithOpenApi()`.
 
 **Always include `CancellationToken` parameter** in endpoint handlers.
 
@@ -55,6 +61,6 @@ See [docs/input-validation-and-sanitization.md](../../docs/input-validation-and-
 | `GET /api/rss/{sectionName}`               | Content for a specific section    |
 | `GET /api/rss/{sectionName}/{collectionName}` | Content for a specific collection |
 
-All return `application/xml; charset=utf-8`. These are internal — user-facing feeds via [Web frontend proxies](../TechHub.Web/AGENTS.md).
+All return `application/rss+xml; charset=utf-8`. These are internal — user-facing feeds via [Web frontend proxies](../TechHub.Web/AGENTS.md).
 
 See [docs/rss-feeds.md](../../docs/rss-feeds.md) for functional documentation.

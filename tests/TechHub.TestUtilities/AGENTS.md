@@ -26,7 +26,7 @@ var cache = A.SectionCache.WithSections("ai").Build();        // Custom sections
 var empty = A.SectionCache.Empty();                           // Not-ready cache
 ```
 
-**Defaults**: ContentItem → roundups collection, ai section. Section → ai with blogs/news. Collection → blogs. SectionCache → all 7 real sections × 5 collections, ready state.
+**Defaults**: ContentItem → roundups collection, ai section. Section → ai with blogs/news. Collection → blogs. SectionCache → the 7 real sections (ai, ml, devops, azure, dotnet, security, github-copilot) × 5 standard collections (news, videos, community, blogs, roundups), ready state. The production `appsettings.json` also defines an eighth `all` section (virtual aggregate with the `authors` custom collection); `SectionCacheBuilder` does not include it by default.
 
 ## Shared Utilities
 

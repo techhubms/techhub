@@ -9,7 +9,7 @@ This directory contains all automated tests implementing a **testing diamond str
 
 **Testing is Mandatory**: See [Root AGENTS.md - Step 4](../AGENTS.md#4-write-tests-before-implementing-changes-tdd) for when and how to test.
 
-**Database Strategy**: Integration and infrastructure tests use PostgreSQL via Testcontainers (`postgres:17-alpine`). E2E tests use PostgreSQL via docker-compose. See [docs/testing-strategy.md](../docs/testing-strategy.md#database-strategy) for details.
+**Database Strategy**: Integration and infrastructure tests use PostgreSQL via Testcontainers (`postgres:17.5-alpine3.22`, pinned in `TechHubApiFactory.cs` and `DatabaseFixture.cs`). E2E tests use PostgreSQL via docker-compose. See [docs/testing-strategy.md](../docs/testing-strategy.md#database-strategy) for details.
 
 ## Core Testing Rules
 

@@ -498,8 +498,8 @@ window.markScriptsReady = function() {
         // SignalR round-trip so this loop rarely iterates more than once.
         //
         // Bounded deadline: if a component flag is never set (e.g. JS init
-        // threw before setting __mermaidReady / __dateRangeSliderReady /
-        // __scrollListenerReady), we give up after 60 s and proceed anyway
+        // threw before setting __mermaidReady / __dateRangeSliderReady),
+        // we give up after 60 s and proceed anyway
         // so WaitForBlazorReadyAsync does not hang indefinitely.
         //
         // 60 s matches the maximum E2ETimeout (slow3g / CI profile), so under

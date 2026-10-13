@@ -7,8 +7,8 @@ Tech Hub uses three complementary telemetry systems: Application Insights for pr
 | System | Scope | Environment | What It Captures |
 |--------|-------|-------------|------------------|
 | Application Insights (server) | API + Web backends | Staging, Production | Requests, dependencies, exceptions, traces, metrics, live metrics |
-| Application Insights (browser) | Web frontend (client) | Production | Page views, browser exceptions, client-side performance |
-| Google Analytics 4 | Web frontend (client) | Production | User behavior, page views, traffic analytics |
+| Application Insights (browser) | Web frontend (client) | Staging, Production | Page views, browser exceptions, client-side performance |
+| Google Analytics 4 | Web frontend (client) | Any non-Development environment where a measurement ID is configured (Production) | User behavior, page views, traffic analytics |
 | Aspire Dashboard | API + Web backends | Development | Distributed traces, structured logs, metrics (via OTLP) |
 
 ## Application Insights
@@ -38,7 +38,7 @@ In local development with Aspire, the resource names `api` and `web` from the Ap
 
 ### Client-Side Telemetry (Browser SDK)
 
-The Application Insights JavaScript SDK loads in the Web frontend for production environments. It captures browser-side page views, client exceptions, and performance timings. The SDK is injected conditionally in `App.razor` when both conditions are met:
+The Application Insights JavaScript SDK loads in the Web frontend in every environment except Development. It captures browser-side page views, client exceptions, and performance timings. The SDK is injected conditionally in `App.razor` when both conditions are met:
 
 1. `ASPNETCORE_ENVIRONMENT` is not `Development`
 2. `APPLICATIONINSIGHTS_CONNECTION_STRING` is non-empty
@@ -64,7 +64,7 @@ The Web-to-API dependency is automatically captured through HTTP client tracing 
 
 ## Availability Tests
 
-Application Insights availability tests actively probe the web frontend from West Europe every 30 minutes and alert when an outage is detected. Probing from a single region at a reduced frequency keeps Azure Monitor availability test costs down.
+Application Insights availability tests actively probe the web frontend from West Europe every 15 minutes and alert when an outage is detected. Probing from a single region at a reduced frequency keeps Azure Monitor availability test costs down. 15 minutes (900 seconds) is the least frequent interval the standard test accepts.
 
 ### What Is Tested
 
@@ -137,11 +137,25 @@ Only 404 and 405 are suppressed. Codes with real diagnostic value are retained:
 
 ## Google Analytics
 
-GA4 is active in Production only (controlled by `GoogleAnalytics:MeasurementId` in `appsettings.Production.json`).
+GA4 is active in Production only. The measurement ID is supplied through the `GoogleAnalytics__MeasurementId` environment variable, set by the Bicep deployment (`infra/modules/web.bicep`), and is left empty for PR previews so preview traffic never reaches GA reports. See [google-analytics.md](google-analytics.md) for the configuration details.
+
+## File Logging
+
+In addition to the telemetry exporters, both the API and Web services write log lines to a local file during development. `FileLoggerProvider` (in `TechHub.Core.Logging`) is added in each service's `Program.cs` unless file logging is skipped.
+
+| Setting | Purpose |
+|---------|---------|
+| `AppSettings:SkipFileLogging` | When `true`, no file provider is registered. Set to `true` in each service's `appsettings.Production.json` because production containers log to stdout and stderr, which Azure collects |
+| `TECHHUB_TMP` (environment variable) | Directory for log output. Falls back to the system temp directory when unset (the dev container sets it to the workspace `.tmp/` folder, docker-compose to `/tmp/techhub`) |
+| `Logging:File:LogLevel` | Per-category minimum levels for the file provider, independent of the console `Logging:LogLevel` section. `Default` sets the fallback level (Information when absent), and the longest matching category prefix wins |
+
+Log files are named `{api|web}-{environment}.log` and live in a `logs` folder under the output directory, for example `logs/web-development.log`. Entries use the Europe/Brussels timezone, and exception output is compacted to the exception chain plus stack frames from TechHub code.
+
+Writes go through a bounded background queue (10,000 entries) so logging never blocks requests, and the provider retries for up to about 100 ms when another process (such as a parallel test run) holds the file lock. Write failures are swallowed, so logging cannot take the application down.
 
 ## Local Development (Aspire Dashboard)
 
-During local development, the Aspire Dashboard at `https://localhost:18888` provides the same observability signals without requiring Azure resources.
+During local development, the Aspire Dashboard at `http://localhost:18888` provides the same observability signals without requiring Azure resources.
 
 The Aspire AppHost automatically configures `OTEL_EXPORTER_OTLP_ENDPOINT` for both services, which enables the OTLP exporter in `ServiceDefaults`. The dashboard shows:
 
@@ -174,7 +188,7 @@ The MCP server at `/mcp` emits two kinds of signals, both exported through the r
 |------|-------------|
 | [infra/modules/monitoring.bicep](../infra/modules/monitoring.bicep) | Creates Application Insights + Log Analytics Workspace + availability tests |
 | [infra/modules/api.bicep](../infra/modules/api.bicep) | Passes connection string and service name to API container |
-| [infra/modules/web.bicep](../infra/modules/web.bicep) | Passes connection string and service name to Web container |
+| [infra/modules/web.bicep](../infra/modules/web.bicep) | Passes connection string, service name and the Google Analytics measurement ID to Web container |
 
 ## Implementation Reference
 

@@ -44,17 +44,19 @@ public class ContentItemTests
     }
 
     [Fact]
-    public void Validate_WithValidData_DoesNotThrow()
+    public void Constructor_WithValidData_StoresValues()
     {
         // Arrange & Act
-        var act = () => A.ContentItem
+        var item = A.ContentItem
             .WithDateEpoch(1704844800)
             .WithCollectionName("news")
             .WithExternalUrl("https://example.com")
             .Build();
 
         // Assert
-        act.Should().NotThrow();
+        item.DateEpoch.Should().Be(1704844800);
+        item.CollectionName.Should().Be("news");
+        item.ExternalUrl.Should().Be("https://example.com");
     }
 
     /// <summary>

@@ -28,10 +28,15 @@ public class ContentProcessingBackgroundServiceTests
         mockJobSettingRepo.Setup(r => r.IsEnabledAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(false);
 
+        // Signalled by the last step of a run (cache invalidation), so the test waits for the run itself
+        var runCompleted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var mockContentRepo = new Mock<IContentRepository>();
+        mockContentRepo.Setup(r => r.InvalidateCachedData()).Callback(() => runCompleted.TrySetResult());
+
         var services = new ServiceCollection();
         services.AddScoped(_ => CreateMockProcessingService(mockJobRepo.Object));
         services.AddScoped(_ => mockJobSettingRepo.Object);
-        services.AddScoped(_ => Mock.Of<IContentRepository>());
+        services.AddScoped(_ => mockContentRepo.Object);
 
         var serviceProvider = services.BuildServiceProvider();
 
@@ -43,13 +48,12 @@ public class ContentProcessingBackgroundServiceTests
             startupState,
             Mock.Of<ILogger<ContentProcessingBackgroundService>>());
 
-        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
 
-        // Act — start the service and trigger a manual run
+        // Act — start the service and trigger a manual run (the trigger is latched, so no startup delay is needed)
         await sut.StartAsync(cts.Token);
-        await Task.Delay(200, cts.Token);
         sut.TriggerImmediateRun();
-        await Task.Delay(500, cts.Token);
+        await runCompleted.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
         await sut.StopAsync(CancellationToken.None);
 
         // Assert — CreateAsync should have been called with "manual" trigger
@@ -73,10 +77,27 @@ public class ContentProcessingBackgroundServiceTests
         mockJobSettingRepo.Setup(r => r.IsEnabledAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(true);
 
+        // Signalled by the last step of each run (cache invalidation): first the scheduled run, then the manual run
+        var scheduledRunCompleted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var manualRunCompleted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var completedRuns = 0;
+        var mockContentRepo = new Mock<IContentRepository>();
+        mockContentRepo.Setup(r => r.InvalidateCachedData()).Callback(() =>
+        {
+            if (Interlocked.Increment(ref completedRuns) == 1)
+            {
+                scheduledRunCompleted.TrySetResult();
+            }
+            else
+            {
+                manualRunCompleted.TrySetResult();
+            }
+        });
+
         var services = new ServiceCollection();
         services.AddScoped(_ => CreateMockProcessingService(mockJobRepo.Object));
         services.AddScoped(_ => mockJobSettingRepo.Object);
-        services.AddScoped(_ => Mock.Of<IContentRepository>());
+        services.AddScoped(_ => mockContentRepo.Object);
 
         var serviceProvider = services.BuildServiceProvider();
 
@@ -88,14 +109,14 @@ public class ContentProcessingBackgroundServiceTests
             startupState,
             Mock.Of<ILogger<ContentProcessingBackgroundService>>());
 
-        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
 
         // Act
         await sut.StartAsync(cts.Token);
         // Wait for the initial scheduled run to finish
-        await Task.Delay(500, cts.Token);
+        await scheduledRunCompleted.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
         sut.TriggerImmediateRun();
-        await Task.Delay(500, cts.Token);
+        await manualRunCompleted.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
         await sut.StopAsync(CancellationToken.None);
 
         // Assert — one scheduled + one manual
@@ -134,12 +155,17 @@ public class ContentProcessingBackgroundServiceTests
         startupState.MarkStartupCompleted();
 
         var runStarted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var jobAborted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
 
         var mockJobRepo = new Mock<IContentProcessingJobRepository>();
         mockJobRepo.Setup(r => r.CreateAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(1L);
         mockJobRepo.Setup(r => r.AbortJobAsync(It.IsAny<long>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string>(), It.IsAny<int>(), It.IsAny<CancellationToken>()))
-            .Returns(Task.CompletedTask);
+            .Returns(() =>
+            {
+                jobAborted.TrySetResult();
+                return Task.CompletedTask;
+            });
 
         var mockJobSettingRepo = new Mock<IBackgroundJobSettingRepository>();
         mockJobSettingRepo.Setup(r => r.IsEnabledAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
@@ -181,19 +207,17 @@ public class ContentProcessingBackgroundServiceTests
             startupState,
             Mock.Of<ILogger<ContentProcessingBackgroundService>>());
 
-        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
 
         // Act — start the service, trigger a run, wait for it to start, then cancel
         await sut.StartAsync(cts.Token);
-        await Task.Delay(200, cts.Token);
         sut.TriggerImmediateRun();
 
-        // Wait for the run to actually start (blocks on GetEnabledAsync)
-        await runStarted.Task.WaitAsync(cts.Token);
-        await Task.Delay(100, cts.Token);
+        // The run holds its cancellation source from before it blocks on GetEnabledAsync, so cancelling is safe once it started
+        await runStarted.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
 
         var cancelled = sut.CancelCurrentRun();
-        await Task.Delay(500, cts.Token);
+        await jobAborted.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
         await sut.StopAsync(CancellationToken.None);
 
         // Assert
@@ -218,7 +242,10 @@ public class ContentProcessingBackgroundServiceTests
         mockJobSettingRepo.Setup(r => r.IsEnabledAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(false);
 
+        // Signalled by the last step of a run (cache invalidation), so the test waits for the run itself
+        var runCompleted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
         var mockContentRepo = new Mock<IContentRepository>();
+        mockContentRepo.Setup(r => r.InvalidateCachedData()).Callback(() => runCompleted.TrySetResult());
 
         var services = new ServiceCollection();
         services.AddScoped(_ => CreateMockProcessingService(mockJobRepo.Object));
@@ -234,13 +261,12 @@ public class ContentProcessingBackgroundServiceTests
             startupState,
             Mock.Of<ILogger<ContentProcessingBackgroundService>>());
 
-        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
 
         // Act — trigger a manual run and wait for it to complete
         await sut.StartAsync(cts.Token);
-        await Task.Delay(200, cts.Token);
         sut.TriggerImmediateRun();
-        await Task.Delay(500, cts.Token);
+        await runCompleted.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
         await sut.StopAsync(CancellationToken.None);
 
         // Assert — cache should have been invalidated after the run

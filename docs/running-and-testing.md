@@ -29,20 +29,27 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | Command | Description |
 |---------|-------------|
 | `Run` | Builds the solution, runs **ALL** tests, and starts servers in the background. |
+| `Run -Help` | Shows the built-in usage help. |
 | `Run -Clean` | Cleans all build artifacts (`bin`/`obj`) before running the standard workflow. |
 | `Run -TestProject Api -TestName Auth` | Run only "Auth" tests within the "Api" project (combines filters). |
 | `Run -TestProject Web.Tests` | Run only the **Web** component tests. |
 | `Run -TestProject Api` | Run tests with "Api" in the project name. |
-| `Run -TestProject javascript` | Run only the **JavaScript** (Vitest) tests. |
+| `Run -TestProject javascript` | Run only the **JavaScript** (Vitest) tests. Aliases: `js`, `vitest`. |
+| `Run -TestProject powershell` | Run only the **PowerShell** (Pester) tests. Aliases: `pester`, `scripts`. |
 | `Run -TestName Filter` | Run only individual test methods containing "Filter". |
 | `Run -TestProject E2E -TestName BackNav -RepeatTests 5` | Build once, start servers once, then run the matching E2E test 5 times in a row (useful for flaky test investigation). |
-| `Run -TestProject E2E -NetworkProfile slow3g` | Run all E2E tests with Slow 3G throttling (sets `E2E_NETWORK_THROTTLE`, clears it when done). |
+| `Run -TestProject E2E -NetworkProfile slow3g` | Run all E2E tests with Slow 3G throttling (sets `E2E_NETWORK_THROTTLE`, clears it when done). Profiles: `fast3g`, `slow3g`, `regular4g`, `ci` (CPU throttle only), `wan` (150 ms latency, closest to PR preview conditions). |
 | `Run -TestProject E2E -TestName BackNav -NetworkProfile slow3g -RepeatTests 5` | Combine network profile + repeat for targeted flaky-test investigation. |
-| `Run -Docker` | Run ALL services (API + Web + PostgreSQL) via docker compose containers (production-like). |
+| `Run -Docker` | Run ALL services (API + Web + PostgreSQL + Aspire Dashboard) via docker compose containers (production-like). |
 | `Run -BuildOnly` | Build only, then exit (no tests, no servers). |
-| `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). |
+| `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). Also accepts `Staging` and `Development` (default). |
 | `Stop-Servers` (without Run in front!) | Stops the servers directly. |
+| `Stop-OrphanedTestProcesses` | Stops leftover test host processes from earlier runs. `Run` calls it automatically. |
 | `Start-McpInspector` | Starts the MCP Inspector (`npx @modelcontextprotocol/inspector@2.10.1`, pinned version) for testing the local MCP server at `https://localhost:5003/mcp`. Accepts the local dev certificate and doesn't open a browser automatically. |
+
+### Testing a Remote Deployment
+
+When `E2E_BASE_URL` is set to a non-localhost URL, `Run` skips starting the local servers and runs the E2E tests against that URL. The production pipeline uses this, and E2E tests tagged `Category=Performance` or `Category=DevEnvironment` are excluded there (see [ci-cd-pipeline.md](ci-cd-pipeline.md)).
 
 ## Validating All Tests
 
@@ -69,7 +76,7 @@ Run
 
 - **Web UI**: <https://localhost:5003> (Accept the self-signed certificate warning)
 - **API**: <https://localhost:5001> (Swagger UI: <https://localhost:5001/swagger>)
-- **Aspire Dashboard**: <https://localhost:18888> (View logs, traces, and metrics)
+- **Aspire Dashboard**: <http://localhost:18888> (View logs, traces, and metrics)
 
 > **Note**: You might see browser warnings about "Your connection is not private" because localhost uses a self-signed certificate. Click **Advanced** -> **Proceed to localhost (unsafe)** to continue.
 
@@ -97,7 +104,7 @@ Tech Hub is designed to be developed in a **containerized environment**. This en
 This is the easiest way to run and debug the application.
 
 1. Open the **Run and Debug** view (`Ctrl+Shift+D`).
-2. Select **"Tech Hub (API + Web)"** from the dropdown configuration list.
+2. Select **"Tech Hub (Development)"** from the dropdown configuration list. Use **"Tech Hub (Attach to running)"** to attach the debugger to an already running process you pick from a list, or **"Tech Hub (Production)"** to launch in Production mode (Release build).
 3. Press **F5** or click the play button.
 
 ## Troubleshooting
@@ -120,7 +127,7 @@ Delete the local database directories to force a clean rebuild:
 # Remove Docker volumes and containers
 docker compose down -v
 
-# Then, remove PostgreSQL data directory
+# Then, remove PostgreSQL data directory (bind-mounted at .databases/postgres)
 Remove-Item -Recurse -Force .databases/
 ```
 

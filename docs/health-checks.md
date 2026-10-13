@@ -11,7 +11,7 @@ Health checks are critical for ensuring the application is running correctly and
 - **Monitoring Systems**: To alert on downtime or degraded performance
 - **Aspire Dashboard**: To monitor service health during development
 
-Tech Hub includes standard health checks for the API and Web components, plus a custom startup probe that ensures content synchronization is complete before the API declares itself ready.
+Tech Hub includes standard health checks for the API and Web components. The API adds a startup check that reports unhealthy until database migrations and stale-job cleanup finish, and a database check that verifies connectivity.
 
 ## Endpoints
 
@@ -28,7 +28,7 @@ Healthy
 **Behavior**:
 
 - Returns `200 OK` only after ALL health checks pass, including the startup health check
-- Returns `503 Service Unavailable` if any health check fails (e.g., database migrations not complete, content sync in progress)
+- Returns `503 Service Unavailable` if any health check fails (e.g., startup migrations not complete, database unreachable)
 
 **Use Case**: Readiness probes — is the app ready to serve traffic?
 
@@ -66,7 +66,7 @@ Both API and Web App Service sites configure a single health-check path in their
 - With 2+ instances, an unhealthy instance is pulled from rotation after `WEBSITE_HEALTHCHECK_MAXPINGFAILURES` consecutive failures (default 10, i.e. ~10 minutes), then replaced after the same one-hour threshold if it doesn't recover.
 
 Both API and Web point `healthCheckPath` at `/health` — the same endpoint that waits for database
-migrations, content sync, and (for Web) API reachability — rather than the DB-agnostic `/alive`
+migrations and database connectivity (API), or the section cache and API reachability (Web) — rather than the DB-agnostic `/alive`
 endpoint. Microsoft's own guidance recommends this: the health-check path should check the
 app's critical dependencies and return a failure code when they're unavailable.
 
@@ -83,7 +83,8 @@ self-healing safety net than a restart storm risk.
 Health checks are implemented using standard ASP.NET Core Health Checks middleware and the `Aspire.ServiceDefaults` project.
 
 - **Liveness Check** (`self`): Registered in `ServiceDefaults/Extensions.cs`, tagged with `"live"`. Checks GC memory pressure — returns unhealthy if memory usage exceeds 95% of the high memory load threshold.
-- **Startup Health Check**: A custom health check tagged with `"ready"` (API only) that waits for database migrations and content synchronization to complete. Included in `/health` but not in `/alive`.
+- **Startup Health Check** (`startup`, API only): Tagged `"ready"`. Reports unhealthy until `StartupBackgroundService` has run database migrations and aborted jobs left in `running` state by a previous instance. Content is not synchronized at startup, because it already lives in the database. If migrations fail, the application stops instead of staying unhealthy. Included in `/health` but not in `/alive`.
+- **Database Health Check** (`database`, API only): Tagged `"ready"`. Opens a connection and runs `SELECT 1` to detect connection pool exhaustion and network partitions. Included in `/health` but not in `/alive`.
 - **SectionCache Health Check** (Web only): Reports unhealthy until `SectionCache` has been populated from the API at least once. Included in `/health` but not in `/alive`.
 - **API Connectivity Health Check** (`api-connectivity`, Web only): Calls the API's `/alive` endpoint to verify the Web instance can reach the API over the network. Included in `/health` but not in `/alive` — see rationale below.
 - **Aspire Service Defaults**: Maps both `/health` and `/alive` endpoints via `app.MapDefaultEndpoints()`.
@@ -130,6 +131,8 @@ endpoint for other uses (e.g. manual checks, future load balancer configuration)
 
 - [ServiceDefaults/Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) — Liveness check and endpoint mapping
 - [StartupHealthCheck.cs](../src/TechHub.Api/HealthChecks/StartupHealthCheck.cs) — API startup health check
+- [StartupBackgroundService.cs](../src/TechHub.Api/Services/StartupBackgroundService.cs) — Runs migrations and marks startup complete
+- [DatabaseHealthCheck.cs](../src/TechHub.Api/HealthChecks/DatabaseHealthCheck.cs) — API database connectivity check
 - [SectionCacheHealthCheck.cs](../src/TechHub.Web/Services/SectionCacheHealthCheck.cs) — Web readiness health check
 - [ApiHealthCheck.cs](../src/TechHub.Web/Services/ApiHealthCheck.cs) — Web→API connectivity health check
 - [api.bicep](../infra/modules/api.bicep) — API App Service health-check configuration

@@ -5,6 +5,7 @@ using Dapper;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using TechHub.Api.Tests.TestSupport;
 using TechHub.Core.Configuration;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Services.Newsletter;
@@ -13,6 +14,9 @@ namespace TechHub.Api.Tests.Endpoints;
 
 public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
 {
+    private static readonly TimeSpan _sendTimeout = TimeSpan.FromSeconds(10);
+    private static readonly TimeSpan _skipObservationWindow = TimeSpan.FromSeconds(3);
+
     private readonly HttpClient _client;
     private readonly TechHubIntegrationTestApiFactory _factory;
 
@@ -108,31 +112,18 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
 
         try
         {
-            var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
-                "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-                new { TargetKey = roundupTargetKey });
+            var countBefore = await CountSendLogAsync("weekly-roundup", roundupTargetKey);
 
             var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=roundup", null, TestContext.Current.CancellationToken);
             response.StatusCode.Should().Be(HttpStatusCode.Accepted);
 
-            var timedOut = true;
-            for (var attempt = 0; attempt < 25; attempt++)
-            {
-                await Task.Delay(200, TestContext.Current.CancellationToken);
-                await using var pollScope = _factory.Services.CreateAsyncScope();
-                var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
-                var countAfter = await pollConnection.ExecuteScalarAsync<int>(
-                    "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-                    new { TargetKey = roundupTargetKey });
+            // The background service exposes no completion hook, so poll the send log (bounded).
+            var sent = await Eventually.WaitAsync(
+                async () => await CountSendLogAsync("weekly-roundup", roundupTargetKey) > countBefore,
+                _sendTimeout,
+                TestContext.Current.CancellationToken);
 
-                if (countAfter > countBefore)
-                {
-                    timedOut = false;
-                    break;
-                }
-            }
-
-            timedOut.Should().BeFalse("manual admin trigger should execute even when scheduled sends are disabled");
+            sent.Should().BeTrue("manual admin trigger should execute even when scheduled sends are disabled");
         }
         finally
         {
@@ -171,31 +162,18 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
             ON CONFLICT (collection_name, slug) DO UPDATE SET created_at = EXCLUDED.created_at
             """, new { CreatedAt = dayStartUtc.AddHours(12) });
 
-        var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
-            "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = @TargetKey",
-            new { TargetKey = day.ToString("yyyy-MM-dd") });
+        var countBefore = await CountSendLogAsync("daily-overview", day.ToString("yyyy-MM-dd"));
 
         var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=daily", null, TestContext.Current.CancellationToken);
         response.StatusCode.Should().Be(HttpStatusCode.Accepted);
 
-        var timedOut = true;
-        for (var attempt = 0; attempt < 25; attempt++)
-        {
-            await Task.Delay(200, TestContext.Current.CancellationToken);
-            await using var pollScope = _factory.Services.CreateAsyncScope();
-            var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
-            var countAfter = await pollConnection.ExecuteScalarAsync<int>(
-                "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'daily-overview' AND target_key = @TargetKey",
-                new { TargetKey = day.ToString("yyyy-MM-dd") });
+        // The background service exposes no completion hook, so poll the send log (bounded).
+        var sent = await Eventually.WaitAsync(
+            async () => await CountSendLogAsync("daily-overview", day.ToString("yyyy-MM-dd")) > countBefore,
+            _sendTimeout,
+            TestContext.Current.CancellationToken);
 
-            if (countAfter > countBefore)
-            {
-                timedOut = false;
-                break;
-            }
-        }
-
-        timedOut.Should().BeFalse("manual admin daily trigger should execute daily overview send");
+        sent.Should().BeTrue("manual admin daily trigger should execute daily overview send");
     }
 
     [Fact]
@@ -214,28 +192,17 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
 
         try
         {
-            var countBefore = await arrangeConnection.ExecuteScalarAsync<int>(
-                "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-                new { TargetKey = roundupTargetKey });
+            var countBefore = await CountSendLogAsync("weekly-roundup", roundupTargetKey);
 
             var response = await _client.PostAsync("/api/admin/newsletter/trigger?kind=roundup", null, TestContext.Current.CancellationToken);
             response.StatusCode.Should().Be(HttpStatusCode.Accepted);
 
-            var wasSent = false;
-            for (var attempt = 0; attempt < 25; attempt++)
-            {
-                await Task.Delay(200, TestContext.Current.CancellationToken);
-                await using var pollScope = _factory.Services.CreateAsyncScope();
-                var pollConnection = pollScope.ServiceProvider.GetRequiredService<IDbConnection>();
-                var countAfter = await pollConnection.ExecuteScalarAsync<int>(
-                    "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = 'weekly-roundup' AND target_key = @TargetKey",
-                    new { TargetKey = roundupTargetKey });
-                if (countAfter > countBefore)
-                {
-                    wasSent = true;
-                    break;
-                }
-            }
+            // Absence can only be observed over a bounded window: the service logs nothing observable when it skips.
+            // A send takes milliseconds locally, so a short window is enough to detect a wrongly executed send.
+            var wasSent = await Eventually.WaitAsync(
+                async () => await CountSendLogAsync("weekly-roundup", roundupTargetKey) > countBefore,
+                _skipObservationWindow,
+                TestContext.Current.CancellationToken);
 
             wasSent.Should().BeFalse("roundup send should be skipped until latest section roundups match expected Monday");
         }
@@ -373,6 +340,15 @@ public class NewsletterEndpointsTests : IClassFixture<TechHubIntegrationTestApiF
     private sealed class MessageResponse
     {
         public string? Message { get; init; }
+    }
+
+    private async Task<int> CountSendLogAsync(string sendKind, string targetKey)
+    {
+        await using var scope = _factory.Services.CreateAsyncScope();
+        var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+        return await connection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = @SendKind AND target_key = @TargetKey",
+            new { SendKind = sendKind, TargetKey = targetKey });
     }
 
     private sealed record LatestRoundupRow(string Slug, long DateEpoch);

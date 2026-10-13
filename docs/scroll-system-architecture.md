@@ -85,8 +85,8 @@ Positions are saved in exactly two places:
 
 ### The `markScriptsReady` Bridge
 
-Blazor pages call `markScriptsReady()` at the end of `OnAfterRenderAsync`. This
-signals that the DOM is in its final state. `scroll-manager.js` patches this
+Blazor pages call `markScriptsReady()` at the end of `OnAfterRenderAsync` (via `PageComponentBase`, see
+[javascript.md](javascript.md#page-script-lifecycle)). This signals that the DOM is in its final state. `scroll-manager.js` patches this
 function to also call `restoreScrollPosition()`. The lifecycle:
 
 1. `enhancedload` fires → lib module sets `__scriptsReady = false`
@@ -104,15 +104,20 @@ Every page **must** call `markScriptsReady` — enforced by a convention test.
 components to finish rendering. This prevents scroll jumps caused by late DOM
 changes adding height above the restored position.
 
-`allComponentsReady()` checks three flags (only when the corresponding element exists):
+`allComponentsReady()` checks two flags (only when the corresponding element exists):
 
 | Flag | Set by | Checked when |
 |------|--------|--------------|
 | `window.__dateRangeSliderReady` | `date-range-slider.js` init | `#date-range-slider` exists |
-| `window.__mermaidReady` | `initMermaid()` in page-scripts.js | Unprocessed `.mermaid` elements exist |
+| `window.__mermaidReady` | `initMermaid()` in page-scripts.js | Unprocessed diagrams exist in article content (`.article-body pre.mermaid`) |
 
 If the element isn't on the page, the flag is skipped — pages without a date-range
 slider or mermaid diagrams restore immediately after `markScriptsReady` is called.
+
+**Safety deadline**: If a flag never flips (for example, a component's JS init threw
+before setting it), the polling loop gives up after 60 seconds, logs a console
+warning, and proceeds anyway so navigation is never blocked indefinitely. 60 seconds
+matches the largest E2E timeout (slow network profile).
 
 ### Restore Retry Mechanism
 

@@ -184,7 +184,7 @@ builder.Services.AddSingleton<FaviconService>();
 // Error handling service for centralized exception management
 builder.Services.AddScoped<ErrorService>();
 
-// Circuit-scoped cache for infinite scroll state (survives enhanced navigations for back-button support)
+// Circuit-scoped cache for content grid (Load More) state (survives enhanced navigations for back-button support)
 builder.Services.AddScoped<ContentGridStateCache>();
 
 // Homepage stats (recent count, total count) shared between Home.razor and SubNav.razor

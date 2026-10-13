@@ -14,7 +14,7 @@ namespace TechHub.E2E.Tests.Helpers;
 /// The main Blazor-specific challenge is detecting when enhanced navigation completes,
 /// since it doesn't trigger traditional navigation events.
 ///
-/// TIMEOUT MANAGEMENT: All timeouts use a single E2ETimeout (60s) safety net with
+/// TIMEOUT MANAGEMENT: All timeouts use a single E2ETimeout (scaled 10-60s by network profile) safety net with
 /// E2EPollingInterval (100ms). Counter-based polling means timeouts never fire in
 /// normal operation — they only catch genuine hangs.
 ///

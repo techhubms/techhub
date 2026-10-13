@@ -34,7 +34,7 @@
     Mutually exclusive with Slug/Slugs.
 
 .PARAMETER ApiBaseUrl
-    Base URL of the TechHub API. Defaults to http://localhost:5244 (local development).
+    Base URL of the TechHub API. Defaults to https://localhost:5001 (local development).
 
 .PARAMETER BearerToken
     Optional. Bearer token for authentication. When omitted, relies on the AdminOnly policy
@@ -71,7 +71,7 @@ param(
     [Parameter(ParameterSetName = 'Job')]
     [long]$JobId,
 
-    [string]$ApiBaseUrl = 'http://localhost:5244',
+    [string]$ApiBaseUrl = 'https://localhost:5001',
 
     [string]$BearerToken = '',
 
@@ -120,7 +120,7 @@ function Get-VideosByJobId {
     $url = "$ApiBaseUrl/api/admin/processed-urls?jobId=$JobId&collectionName=videos&status=succeeded&pageSize=500"
     try {
         $response = Invoke-RestMethod -Uri $url -Headers (Get-ApiHeaders) -Method Get
-        $slugs = $response.items | Where-Object { $null -ne $_.slug } | Select-Object -ExpandProperty slug
+        $slugs = @($response.items | Where-Object { $null -ne $_.slug } | Select-Object -ExpandProperty slug)
         if ($response.totalCount -gt $slugs.Count) {
             Write-Warn "WARNING: Job $JobId has $($response.totalCount) succeeded video(s) but only $($slugs.Count) were retrieved (page limit). Run multiple times or narrow the job scope to avoid missing items."
         }
@@ -180,7 +180,7 @@ function Get-TranscriptViaYtDlp {
             -NoNewWindow -PassThru -RedirectStandardError (Join-Path $tempDir 'stderr.txt')
 
         # Wait up to 5 minutes; kill and bail if yt-dlp hangs (network stall, consent wall, etc.)
-        $ytDlpTimeoutMs = 300_000
+        $ytDlpTimeoutMs = 300000
         $null = $proc.WaitForExit($ytDlpTimeoutMs)
         if (-not $proc.HasExited) {
             # Kill() can fail if the process has already exited between the HasExited check and the kill call;
@@ -207,8 +207,8 @@ function Get-TranscriptViaYtDlp {
         # and auto-generated captions are available (e.g., "transcript.en.vtt" for manual,
         # "transcript.en.auto.vtt" or "transcript.en-orig.vtt" for auto-generated).
         # Prefer manual subtitles (no "auto" or "-orig" suffix) over auto-generated captions.
-        $vttFiles = Get-ChildItem -Path $tempDir -Filter '*.vtt' -ErrorAction SilentlyContinue
-        if (-not $vttFiles -or $vttFiles.Count -eq 0) {
+        $vttFiles = @(Get-ChildItem -Path $tempDir -Filter '*.vtt' -ErrorAction SilentlyContinue)
+        if ($vttFiles.Count -eq 0) {
             Write-Warn "No VTT subtitle file found for $VideoUrl"
             return $null
         }
@@ -341,10 +341,10 @@ if ($PSCmdlet.ParameterSetName -eq 'Slug' -and $Slug -ne '') {
     $slugList = @($Slug)
 }
 elseif ($PSCmdlet.ParameterSetName -eq 'Slugs' -and $Slugs -ne '') {
-    $slugList = $Slugs -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne '' }
+    $slugList = @($Slugs -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne '' })
 }
 elseif ($PSCmdlet.ParameterSetName -eq 'Job') {
-    $slugList = Get-VideosByJobId -JobId $JobId
+    $slugList = @(Get-VideosByJobId -JobId $JobId)
 }
 else {
     Write-Host "ERROR: Specify -Slug, -Slugs, or -JobId." -ForegroundColor Red

@@ -403,6 +403,181 @@ public class MarkdownServiceTests
 
     #endregion
 
+    #region Sanitization Tests
+
+    [Fact]
+    public void RenderToHtml_ScriptTag_IsRemoved()
+    {
+        // Arrange
+        var markdown = "Hello\n\n<script>alert('xss')</script>\n\nWorld";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().NotContainEquivalentOf("<script");
+        html.Should().NotContain("alert('xss')");
+        html.Should().Contain("Hello").And.Contain("World");
+    }
+
+    [Fact]
+    public void RenderToHtml_EventHandlerAttribute_IsRemoved()
+    {
+        // Arrange
+        var markdown = "<img src=\"x\" onerror=\"alert(1)\" alt=\"pic\">";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().NotContainEquivalentOf("onerror");
+        html.Should().Contain("<img");
+    }
+
+    [Theory]
+    [InlineData("[click](javascript:alert(1))")]
+    [InlineData("<a href=\"javascript:alert(1)\">click</a>")]
+    [InlineData("<a href=\"JaVaScRiPt:alert(1)\">click</a>")]
+    [InlineData("<a href=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\">click</a>")]
+    public void RenderToHtml_DangerousLinkScheme_IsRemoved(string markdown)
+    {
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().NotContainEquivalentOf("javascript:");
+        html.Should().NotContainEquivalentOf("data:text/html");
+    }
+
+    [Fact]
+    public void RenderToHtml_GenericAttributesOnclick_IsRemoved()
+    {
+        // Arrange: Markdig generic attributes syntax {onclick=...}
+        var markdown = "A paragraph {onclick=\"alert(1)\"}";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().NotContainEquivalentOf("onclick");
+    }
+
+    [Fact]
+    public void RenderToHtml_IframeFromUntrustedHost_IsRemoved()
+    {
+        // Arrange
+        var markdown = "<iframe src=\"https://evil.example.com/phish\"></iframe>";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().NotContainEquivalentOf("<iframe");
+        html.Should().NotContain("evil.example.com");
+    }
+
+    [Fact]
+    public void RenderToHtml_IframeWithJavascriptSource_IsRemoved()
+    {
+        // Arrange
+        var markdown = "<iframe src=\"javascript:alert(1)\"></iframe>";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().NotContainEquivalentOf("<iframe");
+        html.Should().NotContainEquivalentOf("javascript:");
+    }
+
+    [Fact]
+    public void RenderToHtml_YouTubeEmbed_IsPreserved()
+    {
+        // Arrange
+        var markdown = _service.ProcessYouTubeEmbeds("[YouTube: dQw4w9WgXcQ]");
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().Contain("<iframe");
+        html.Should().Contain("https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ");
+        html.Should().Contain("allowfullscreen");
+        html.Should().Contain("video-container");
+    }
+
+    [Fact]
+    public void RenderToHtml_TaskListCheckbox_IsPreserved()
+    {
+        // Arrange
+        var markdown = "- [x] Done\n- [ ] Todo";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().Contain("type=\"checkbox\"");
+        html.Should().Contain("checked");
+    }
+
+    [Fact]
+    public void RenderToHtml_NonCheckboxInput_IsRemoved()
+    {
+        // Arrange
+        var markdown = "<input type=\"text\" name=\"password\">";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().NotContainEquivalentOf("<input");
+    }
+
+    [Fact]
+    public void RenderToHtml_ExternalLink_KeepsTargetBlankAndRel()
+    {
+        // Arrange
+        var markdown = "[site](https://example.com/page)";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().Contain("href=\"https://example.com/page\"");
+        html.Should().Contain("target=\"_blank\"");
+        html.Should().Contain("rel=\"noopener noreferrer\"");
+    }
+
+    [Fact]
+    public void RenderToHtml_HashLinkAndHeadingId_ArePreserved()
+    {
+        // Arrange
+        var markdown = "# My Heading\n\n[jump](#my-heading)";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().Contain("id=\"my-heading\"");
+        html.Should().Contain("href=\"#my-heading\"");
+    }
+
+    [Fact]
+    public void RenderToHtml_MermaidDiagram_IsPreserved()
+    {
+        // Arrange
+        var markdown = "```mermaid\ngraph TD; A-->B;\n```";
+
+        // Act
+        var html = _service.RenderToHtml(markdown);
+
+        // Assert
+        html.Should().Contain("class=\"mermaid\"");
+        html.Should().Contain("graph TD;");
+    }
+
+    #endregion
+
     #region Singleton Stateless Verification
 
     /// <summary>
