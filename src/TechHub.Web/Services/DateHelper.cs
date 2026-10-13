@@ -81,4 +81,16 @@ public static class DateHelper
     /// </summary>
     public static string FormatTimestamp(DateTimeOffset timestamp) =>
         TimeZoneInfo.ConvertTime(timestamp, _brusselsTimeZone).ToString("yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+
+    /// <summary>
+    /// Formats a <see cref="DateTimeOffset"/> as ISO 8601 with the Europe/Brussels offset, e.g. "2026-09-24T10:00:00+02:00".
+    /// </summary>
+    public static string FormatTimestampIso(DateTimeOffset timestamp) =>
+        TimeZoneInfo.ConvertTime(timestamp, _brusselsTimeZone).ToString("yyyy-MM-dd'T'HH:mm:sszzz", System.Globalization.CultureInfo.InvariantCulture);
+
+    /// <summary>
+    /// Formats a Unix epoch timestamp as ISO 8601 with the Europe/Brussels offset.
+    /// </summary>
+    public static string FormatTimestampIso(long epochSeconds) =>
+        FormatTimestampIso(DateTimeOffset.FromUnixTimeSeconds(epochSeconds));
 }

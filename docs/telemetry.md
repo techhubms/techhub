@@ -151,6 +151,13 @@ The Aspire AppHost automatically configures `OTEL_EXPORTER_OTLP_ENDPOINT` for bo
 
 When running via docker-compose (`Run -Docker`), the same setup applies - an Aspire Dashboard container receives OTLP data from both services.
 
+## MCP Server Telemetry
+
+The MCP server at `/mcp` emits two kinds of signals, both exported through the regular OpenTelemetry pipeline:
+
+- **MCP SDK signals** (`Experimental.ModelContextProtocol`): spans and metrics per protocol call, with attributes such as `mcp.method.name` and `gen_ai.tool.name`.
+- **Tech Hub signals** (`TechHub.Mcp`): the `techhub.mcp.content.requests` counter and `techhub.mcp.content.duration` histogram, tagged with `techhub.section` and `techhub.result` (`cache_hit`, `cache_miss`, `cache_bypass` for requests with `query`, `tags`, `days`, `since` or `contentType`, which skip the cache, or `error`), plus a `McpContent.GetLatest` span per latest-content tool call. These show cache effectiveness per section.
+
 ## Configuration Reference
 
 ### Environment Variables
@@ -174,6 +181,7 @@ When running via docker-compose (`Run -Docker`), the same setup applies - an Asp
 - [Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) - OpenTelemetry configuration and exporter setup
 - [Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) (`ConfigureOpenTelemetry`) - Inline `options.Filter` excludes health probes and scanner probes via `ProbeDetector.IsProbeRequest()` before any span is created
 - [WebTelemetryFilters.cs](../src/TechHub.Web/Telemetry/WebTelemetryFilters.cs) - Web-specific trace filters: suppresses `/_blazor/disconnect` 499s, bot requests, and clears `ActivityTraceFlags.Recorded` for 404/405 responses via `SuppressIfClientError`
+- [McpTelemetry.cs](../src/TechHub.Web/MCP/McpTelemetry.cs) - MCP content metrics and activity source
 - [App.razor](../src/TechHub.Web/Components/App.razor) - Browser SDK and GA4 script injection
 - [AppHost.cs](../src/TechHub.AppHost/AppHost.cs) - Aspire service orchestration
 - [docker-compose.yml](../docker-compose.yml) - Docker environment variables for OTLP and service names

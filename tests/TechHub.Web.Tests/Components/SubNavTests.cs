@@ -235,7 +235,7 @@ public class SubNavTests : BunitContext
             "new-this-week stat button should be rendered when recentCount > 0");
         cut.Find(".btn-subnav-stat-total").Should().NotBeNull(
             "total count stat button should be rendered when stats are available");
-        cut.Find(".btn-subnav-stat-total").TextContent.Should().Contain("1,337 items total",
+        cut.Find(".btn-subnav-stat-total").TextContent.Should().Contain("1,337 items last 90d",
             "total count should be formatted with thousands separator");
         cut.Markup.Should().NotContain("5 sections",
             "sections count is no longer shown in the subnav");
@@ -289,7 +289,7 @@ public class SubNavTests : BunitContext
         // Assert - "new this week" chip should NOT appear when recentCount is 0
         cut.Markup.Should().NotContain("new this week",
             "new-this-week chip should be hidden when recentCount is 0");
-        cut.Markup.Should().Contain("500 items total",
+        cut.Markup.Should().Contain("500 items last 90d",
             "total count should still appear");
     }
 
@@ -518,6 +518,6 @@ public class SubNavTests : BunitContext
         cut.Find("a.btn-subnav[href='/']").Should().NotBeNull();
         cut.Find("a.btn-subnav[href='/newsletter/subscribe']").Should().NotBeNull();
         cut.WaitForAssertion(() =>
-            cut.Find(".btn-subnav-stat-total").TextContent.Should().Contain("100 items total"));
+            cut.Find(".btn-subnav-stat-total").TextContent.Should().Contain("100 items last 90d"));
     }
 }

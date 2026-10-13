@@ -328,7 +328,7 @@ public static class ContentEndpoints
         {
             if (!DateTimeOffset.TryParse(from, null, System.Globalization.DateTimeStyles.AssumeUniversal, out var parsedFrom))
             {
-                return TypedResults.BadRequest($"Invalid 'from' date format: {from}. Expected ISO 8601 format (e.g., 2024-01-15).");
+                return TypedResults.BadRequest("Invalid 'from' date format. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
 
             // Normalize to day precision (start of day UTC): the API only documents date-only
@@ -342,7 +342,7 @@ public static class ContentEndpoints
         {
             if (!DateTimeOffset.TryParse(to, null, System.Globalization.DateTimeStyles.AssumeUniversal, out var parsedTo))
             {
-                return TypedResults.BadRequest($"Invalid 'to' date format: {to}. Expected ISO 8601 format (e.g., 2024-01-15).");
+                return TypedResults.BadRequest("Invalid 'to' date format. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
 
             // Normalize to end of day (day precision), same reasoning as 'from' above.
@@ -485,7 +485,7 @@ public static class ContentEndpoints
         {
             if (!DateTimeOffset.TryParse(from, null, System.Globalization.DateTimeStyles.AssumeUniversal, out var parsedFrom))
             {
-                return TypedResults.BadRequest($"Invalid 'from' date format: {from}. Expected ISO 8601 format (e.g., 2024-01-15).");
+                return TypedResults.BadRequest("Invalid 'from' date format. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
 
             // Normalize to day precision (start of day UTC): the API only documents date-only
@@ -499,7 +499,7 @@ public static class ContentEndpoints
         {
             if (!DateTimeOffset.TryParse(to, null, System.Globalization.DateTimeStyles.AssumeUniversal, out var parsedTo))
             {
-                return TypedResults.BadRequest($"Invalid 'to' date format: {to}. Expected ISO 8601 format (e.g., 2024-01-15).");
+                return TypedResults.BadRequest("Invalid 'to' date format. Expected ISO 8601 format (e.g., 2024-01-15).");
             }
 
             // Normalize to end of day (day precision), same reasoning as 'from' above.

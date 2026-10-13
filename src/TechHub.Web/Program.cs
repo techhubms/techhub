@@ -9,12 +9,15 @@ using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Http.Resilience;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
+using ModelContextProtocol.Protocol;
+using ModelContextProtocol.Server;
 using Polly;
 using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
 using TechHub.Web.Endpoints;
+using TechHub.Web.MCP;
 using TechHub.Web.Middleware;
 using TechHub.Web.Services;
 using TechHub.Web.Telemetry;
@@ -34,6 +37,11 @@ builder.AddServiceDefaults(
     additionalResponseEnricher: WebTelemetryFilters.SuppressIfClientError,
     additionalActivityProcessor: new BlazorHubNoiseSuppressor());
 #pragma warning restore CA2000 // Dispose objects before losing scope
+
+// MCP telemetry: the SDK's own spans/metrics (method, tool name, duration) plus our content-level metrics.
+builder.Services.AddOpenTelemetry()
+    .WithTracing(tracing => tracing.AddSource(McpTelemetry.Name, "Experimental.ModelContextProtocol"))
+    .WithMetrics(metrics => metrics.AddMeter(McpTelemetry.Name, "Experimental.ModelContextProtocol"));
 
 // Log environment during startup for verification
 using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
@@ -158,6 +166,17 @@ builder.Services.AddHostedService<HeroBannerCacheRefreshService>();
 
 // HTTP context accessor for reading cookies during SSR (e.g. sidebar collapsed state)
 builder.Services.AddHttpContextAccessor();
+
+// In-memory cache for MCP tool responses
+builder.Services.AddMemoryCache();
+builder.Services.AddOptions<McpOptions>()
+    .BindConfiguration(McpOptions.ConfigurationKey)
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
+builder.Services.AddScoped<LatestContentProvider>();
+builder.Services.AddScoped<RoundupContentProvider>();
+builder.Services.AddSingleton(TimeProvider.System);
+builder.Services.AddSingleton<ContentToolCatalog>();
 
 // Favicon service for base64-encoded favicon (eliminates HTTP requests)
 builder.Services.AddSingleton<FaviconService>();
@@ -318,6 +337,31 @@ builder.Services.AddHttpClient<ApiHealthCheck>(client =>
 var isLoopbackExempt = builder.Environment.IsDevelopment();
 builder.Services.AddRateLimiter(options =>
 {
+    // Per-IP fixed-window policy. Loopback exemption is restricted to Development: UseForwardedHeaders
+    // rewrites RemoteIpAddress before UseRateLimiter runs, so a spoofed X-Forwarded-For: 127.0.0.1
+    // could otherwise bypass rate limiting in production.
+    void AddPerIpPolicy(string policyName, int permitLimit, int queueLimit)
+    {
+        options.AddPolicy(policyName, context =>
+        {
+            var ip = context.Connection.RemoteIpAddress;
+            if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
+            {
+                return RateLimitPartition.GetNoLimiter("loopback");
+            }
+
+            return RateLimitPartition.GetFixedWindowLimiter(
+                partitionKey: ip?.ToString() ?? "unknown",
+                factory: _ => new FixedWindowRateLimiterOptions
+                {
+                    PermitLimit = permitLimit,
+                    Window = TimeSpan.FromMinutes(1),
+                    QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                    QueueLimit = queueLimit
+                });
+        });
+    }
+
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
 
     options.OnRejected = async (context, token) =>
@@ -332,53 +376,47 @@ builder.Services.AddRateLimiter(options =>
     };
 
     // General page requests: 60/min per IP (covers Blazor Server HTML and enhanced navigation).
-    // Loopback exemption is restricted to Development: UseForwardedHeaders rewrites RemoteIpAddress
-    // before UseRateLimiter runs, so a spoofed X-Forwarded-For: 127.0.0.1 could otherwise bypass
-    // rate limiting in production.
-    options.AddPolicy("web-general", context =>
-    {
-        var ip = context.Connection.RemoteIpAddress;
-        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
-        {
-            return RateLimitPartition.GetNoLimiter("loopback");
-        }
-
-        return RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: ip?.ToString() ?? "unknown",
-            factory: _ => new FixedWindowRateLimiterOptions
-            {
-                PermitLimit = 60,
-                Window = TimeSpan.FromMinutes(1),
-                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                QueueLimit = 5
-            });
-    });
+    AddPerIpPolicy("web-general", permitLimit: 60, queueLimit: 5);
 
     // RSS feed endpoints: stricter limit — bot-targeted content syndication.
-    // Loopback exemption is restricted to Development for the same reason as web-general.
-    options.AddPolicy("web-rss", context =>
-    {
-        var ip = context.Connection.RemoteIpAddress;
-        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
-        {
-            return RateLimitPartition.GetNoLimiter("loopback");
-        }
+    AddPerIpPolicy("web-rss", permitLimit: 20, queueLimit: 0);
 
-        return RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: ip?.ToString() ?? "unknown",
-            factory: _ => new FixedWindowRateLimiterOptions
-            {
-                PermitLimit = 20,
-                Window = TimeSpan.FromMinutes(1),
-                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                QueueLimit = 0
-            });
-    });
+    // MCP endpoint: 60/min per IP. A client session needs a handful of requests (initialize,
+    // tools/list, tools/call), so this leaves room for normal use while stopping scrapers.
+    AddPerIpPolicy("web-mcp", permitLimit: 60, queueLimit: 0);
+
     // Note: Blazor Server SignalR circuits (/_blazor) cannot be rate-limited via endpoint
     // metadata because they go through the Blazor hub middleware, not endpoint routing.
     // SignalR concurrency is instead bounded by the SignalR MaximumParallelInvocationsPerClient
     // setting and the App Service Plan's single-instance capacity (no autoscale on Basic B1).
 });
+
+builder.Services
+    .AddMcpServer(options =>
+    {
+        options.ServerInfo = new Implementation
+        {
+            Name = "techhub",
+            Title = "Tech Hub",
+            Version = typeof(LatestContentProvider).Assembly.GetName().Version?.ToString() ?? "1.0.0",
+        };
+        options.ServerInstructions =
+            "Tech Hub curates Microsoft-focused developer content. Use get_latest_content to browse the newest news, blogs, " +
+            "videos, community posts and roundups across all sections (each item once), or a get_latest_<section>_content tool " +
+            "for a single section. Narrow results with days or since, contentType, tags and query instead of paging through everything; " +
+            "contentType=roundups returns the weekly summaries; items only carry an excerpt, so always link users to an item's Tech Hub url " +
+            "(it shows the summary and a button to the original article) and use get_roundup_content with a roundup's url to read its full text.";
+    })
+    .WithHttpTransport(transport =>
+    {
+        // Tools follow the configured sections, so they are resolved per request instead of via assembly scanning.
+        transport.ConfigureSessionOptions = (httpContext, mcpOptions, _) =>
+        {
+            var catalog = httpContext.RequestServices.GetRequiredService<ContentToolCatalog>();
+            mcpOptions.ToolCollection = [.. catalog.GetTools()];
+            return Task.CompletedTask;
+        };
+    });
 
 var app = builder.Build();
 
@@ -474,6 +512,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseSecurityHeaders();
 app.UseHttpMethodFilter();
+// Runs before the rate limiter so rejected cross-origin MCP requests don't consume a client's quota.
+app.UseMcpOriginValidation();
 app.UseHttpsRedirection();
 
 // ── URL correction (301 redirects) ───────────────────────────────────────────
@@ -523,6 +563,9 @@ app.UseAntiforgery();
 app.MapStaticAssets();
 
 app.MapControllers();
+
+app.MapMcp("/mcp")
+    .RequireRateLimiting("web-mcp");
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()

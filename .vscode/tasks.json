@@ -20,6 +20,33 @@
       }
     },
     {
+      "label": "postgres-up",
+      "detail": "Start the local PostgreSQL container and wait until healthy",
+      "command": "docker",
+      "type": "process",
+      "args": [
+        "compose",
+        "up",
+        "-d",
+        "--wait",
+        "postgres"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "build-and-postgres",
+      "detail": "Build the solution and start PostgreSQL (used by F5 Development)",
+      "dependsOn": [
+        "build",
+        "postgres-up"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
       "label": "clean",
       "detail": "Clean entire solution",
       "command": "dotnet",

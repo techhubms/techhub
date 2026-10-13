@@ -53,6 +53,8 @@ public partial class UrlNormalizationMiddleware
         "signin-oidc",
         // Newsletter subscription/unsubscription pages.
         "newsletter",
+        // MCP server endpoint (MapMcp).
+        "mcp",
     };
 
     // Sections that have been permanently renamed. When a path starts with an old section name,

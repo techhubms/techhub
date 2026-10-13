@@ -5,7 +5,7 @@
       "name": "Tech Hub (Development)",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build",
+      "preLaunchTask": "build-and-postgres",
       "program": "${workspaceFolder}/src/TechHub.AppHost/bin/Debug/net10.0/TechHub.AppHost.dll",
       "args": [
         "--launch-profile",
@@ -17,6 +17,12 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DOTNET_ENVIRONMENT": "Development"
       }
+    },
+    {
+      "name": "Tech Hub (Attach to running)",
+      "type": "coreclr",
+      "request": "attach",
+      "processId": "${command:pickProcess}"
     },
     {
       "name": "Tech Hub (Production)",
