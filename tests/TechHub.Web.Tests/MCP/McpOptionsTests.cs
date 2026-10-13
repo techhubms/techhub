@@ -34,6 +34,10 @@ public class McpOptionsTests
     [InlineData("https://tech.hub.ms?x=1")]
     [InlineData("https://tech.hub.ms/?")]
     [InlineData("https://tech.hub.ms#top")]
+    [InlineData("https://host/techhub")]
+    [InlineData("https://host/techhub/")]
+    [InlineData("https://user:pass@tech.hub.ms")]
+    [InlineData("https://user@tech.hub.ms")]
     public void Validation_InvalidBaseUrl_Throws(string baseUrl)
     {
         // Arrange

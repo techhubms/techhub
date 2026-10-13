@@ -18,15 +18,18 @@ internal sealed class McpOptions : IValidatableObject
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {
-        // [Url] only checks the prefix, so values like "https://" or "ftp://host" would pass.
+        // Origin-only: item links are built as BaseUrl + canonical href, and ContentItemProvider.ParseUrl
+        // requires exactly three path segments, so a base path would produce URLs the server rejects.
         if (!Uri.TryCreate(BaseUrl, UriKind.Absolute, out var uri)
             || (uri.Scheme != Uri.UriSchemeHttps && uri.Scheme != Uri.UriSchemeHttp)
             || string.IsNullOrEmpty(uri.Host)
+            || !string.IsNullOrEmpty(uri.UserInfo)
+            || uri.AbsolutePath != "/"
             || BaseUrl.Contains('?', StringComparison.Ordinal)
             || BaseUrl.Contains('#', StringComparison.Ordinal))
         {
             yield return new ValidationResult(
-                "BaseUrl must be an absolute http(s) URL with a host and no query or fragment.",
+                "BaseUrl must be an origin-only absolute http(s) URL (scheme, host, optional port) with no credentials, path, query or fragment.",
                 [nameof(BaseUrl)]);
         }
     }
