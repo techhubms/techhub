@@ -320,19 +320,24 @@ public sealed class LatestContentProviderTests : IDisposable
     }
 
     [Fact]
-    public async Task GetLatestAsync_SameFilterTwice_CallsApiOnce()
+    public async Task GetLatestAsync_DateAndTypeFilters_BypassTheCache()
     {
-        // Arrange
-        SetupApi("azure", skip: 0, items: [], totalCount: 0, lastDays: 7, types: "news");
+        // Arrange - day counts, dates and type lists have too many distinct values to cache safely
+        SetupApi("azure", skip: 0, items: [], totalCount: 0, lastDays: 7);
+        SetupApi("azure", skip: 0, items: [], totalCount: 0, fromDate: "2026-09-29");
+        SetupApi("azure", skip: 0, items: [], totalCount: 0, types: "news");
         var sut = CreateSut();
-        var filter = new ContentFilter { Days = 7, ContentTypes = "news" };
 
         // Act
-        await sut.GetLatestAsync("azure", filter, TestContext.Current.CancellationToken);
-        await sut.GetLatestAsync("azure", filter, TestContext.Current.CancellationToken);
+        for (var i = 0; i < 2; i++)
+        {
+            await sut.GetLatestAsync("azure", new ContentFilter { Days = 7 }, TestContext.Current.CancellationToken);
+            await sut.GetLatestAsync("azure", new ContentFilter { Since = "2026-09-29" }, TestContext.Current.CancellationToken);
+            await sut.GetLatestAsync("azure", new ContentFilter { ContentTypes = "news" }, TestContext.Current.CancellationToken);
+        }
 
         // Assert
-        VerifyApiCalls(Times.Once());
+        VerifyApiCalls(Times.Exactly(6));
     }
 
     [Fact]

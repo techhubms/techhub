@@ -57,9 +57,10 @@ internal sealed class LatestContentProvider
         var result = "error";
         try
         {
-            // Free-text filters are unbounded, so those requests skip the cache instead of letting callers fill it.
-            var cacheable = request.Query is null && request.Tags is null;
-            var cacheKey = $"mcp:latest:{sectionName}:{request.Page}:{request.LastDays}:{request.FromDate}:{request.Types}";
+            // Only the unfiltered default window is cached (key space: sections x MaxPage); any filter value
+            // would let unauthenticated callers mint unbounded distinct keys in the shared cache.
+            var cacheable = request is { Query: null, Tags: null, LastDays: null, FromDate: null, Types: null };
+            var cacheKey = $"mcp:latest:{sectionName}:{request.Page}";
 
             CollectionItemsResponse? response = null;
             var cacheHit = cacheable && _cache.TryGetValue(cacheKey, out response) && response is not null;
