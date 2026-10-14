@@ -51,7 +51,6 @@ Trigger endpoints return `202 Accepted` immediately and run on the background se
 | `GET /content-items` | Paged list | `page`, `pageSize` (1-500, default 100), `search`, `collectionName`, `feedName`, `sectionName`, `primarySectionOnly` |
 | `GET /content-items/edit-data?collection&slug` | All editable fields of one item | `400` without parameters, `404` if unknown |
 | `PUT /content-items/edit-data?collection&slug` | Save all editable fields | Requires title, author, primary section, at least one tag, at least one section and a positive date. `ai_metadata` must be valid JSON when present. `204`, `400` or `404`. |
-| `GET` and `PUT /content-items/ai-metadata?collection&slug` | Read or replace only the `ai_metadata` JSON | `400` for invalid JSON, `404` if unknown. The admin pages use `edit-data` instead. |
 | `POST /content-items/apply-transcript?collection&slug` | Apply a manually pasted transcript to a YouTube video and regenerate its AI content | Collection must be `videos`, transcript required and at most 50,000 characters. `400` invalid input, `404` unknown item, `422` AI excluded or failed to categorize, `502` AI service error, `200` with the updated item. |
 | `POST /content-items/preview-markdown` | Render markdown to HTML for preview | `400` for empty markdown |
 | `DELETE /content-items?collection&slug` | Delete an item (cascades to `processed_urls`) | `204`, `400` or `404` |
@@ -117,7 +116,7 @@ All pages render interactively on the server inside the admin layout. Unauthenti
 | `/admin/statistics` | Content and database statistics |
 | `/admin/login` | Sign-in entry point |
 
-The item editor (title, author, sections, tags, content, `ai_metadata`, and the transcript apply action for videos) is a shared dialog opened from the content items, processed URLs and reviews pages.
+The item editor (title, author, sections, tags, content, `ai_metadata`, and the transcript apply action for videos) is a shared dialog opened from the content items, processed URLs and reviews pages. AI metadata is read and saved together with the other editable fields through `GET` and `PUT /content-items/edit-data`.
 
 ## Related Documentation
 

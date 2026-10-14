@@ -9,7 +9,7 @@ namespace TechHub.Api.Tests.Endpoints;
 
 /// <summary>
 /// Integration tests for the admin content item editing endpoints:
-/// ai-metadata (GET/PUT), edit-data (GET/PUT validation) and apply-transcript.
+/// edit-data (GET/PUT), apply-transcript and removal of the unused ai-metadata routes.
 /// AI categorization is replaced by a stateless stub (see <see cref="TechHubStubbedExternalServicesApiFactory"/>).
 /// </summary>
 public class AdminContentItemsEndpointsTests : IClassFixture<TechHubStubbedExternalServicesApiFactory>
@@ -28,155 +28,26 @@ public class AdminContentItemsEndpointsTests : IClassFixture<TechHubStubbedExter
         _client = factory.CreateClient();
     }
 
-    // ── GET /api/admin/content-items/ai-metadata ─────────────────────────────
-
     [Theory]
-    [InlineData("")]
-    [InlineData("?collection=videos")]
-    [InlineData("?slug=some-slug")]
-    [InlineData("?collection=%20&slug=%20")]
-    public async Task GetAiMetadata_MissingOrBlankParams_ReturnsBadRequest(string query)
-    {
-        // Act
-        var response = await _client.GetAsync(
-            $"/api/admin/content-items/ai-metadata{query}",
-            TestContext.Current.CancellationToken);
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
-    }
-
-    [Fact]
-    public async Task GetAiMetadata_UnknownItem_ReturnsNotFound()
+    [InlineData("GET")]
+    [InlineData("PUT")]
+    public async Task AiMetadata_RemovedEndpoint_ReturnsNotFoundAndDoesNotModifyItem(string method)
     {
         // Arrange
-        var slug = $"unknown-{NewId()}";
+        var slug = await SeedVideoAsync();
+        using var request = new HttpRequestMessage(new HttpMethod(method), ItemUrl("ai-metadata", VideosCollection, slug));
+        if (method == "PUT")
+        {
+            request.Content = JsonContent.Create(new { AiMetadata = """{"roundup_summary":"Unused route"}""" });
+        }
 
         // Act
-        var response = await _client.GetAsync(
-            ItemUrl("ai-metadata", VideosCollection, slug),
-            TestContext.Current.CancellationToken);
+        using var response = await _client.SendAsync(request, TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
-    }
-
-    [Fact]
-    public async Task GetAiMetadata_ExistingItemWithoutMetadata_ReturnsIdentityAndNullMetadata()
-    {
-        // Arrange
-        var slug = await SeedVideoAsync();
-
-        // Act
-        var response = await _client.GetAsync(
-            ItemUrl("ai-metadata", VideosCollection, slug),
-            TestContext.Current.CancellationToken);
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var result = await response.Content.ReadFromJsonAsync<ContentItemAiMetadataResult>(
-            TestContext.Current.CancellationToken);
-        result.Should().NotBeNull();
-        result!.CollectionName.Should().Be(VideosCollection);
-        result.Slug.Should().Be(slug);
-        result.AiMetadata.Should().BeNull();
-    }
-
-    // ── PUT /api/admin/content-items/ai-metadata ─────────────────────────────
-
-    [Theory]
-    [InlineData("")]
-    [InlineData("?collection=videos")]
-    [InlineData("?slug=some-slug")]
-    [InlineData("?collection=%20&slug=%20")]
-    public async Task UpdateAiMetadata_MissingOrBlankParams_ReturnsBadRequest(string query)
-    {
-        // Act
-        var response = await _client.PutAsJsonAsync(
-            $"/api/admin/content-items/ai-metadata{query}",
-            new { AiMetadata = "{}" },
-            TestContext.Current.CancellationToken);
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
-    }
-
-    [Theory]
-    [InlineData(null)]
-    [InlineData("")]
-    [InlineData("   ")]
-    public async Task UpdateAiMetadata_BlankMetadata_ReturnsBadRequest(string? aiMetadata)
-    {
-        // Arrange
-        var slug = await SeedVideoAsync();
-
-        // Act
-        var response = await _client.PutAsJsonAsync(
-            ItemUrl("ai-metadata", VideosCollection, slug),
-            new { AiMetadata = aiMetadata },
-            TestContext.Current.CancellationToken);
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
-    }
-
-    [Theory]
-    [InlineData("{not json")]
-    [InlineData("[1,")]
-    [InlineData("plain text")]
-    public async Task UpdateAiMetadata_InvalidJson_ReturnsBadRequestAndDoesNotPersist(string aiMetadata)
-    {
-        // Arrange
-        var slug = await SeedVideoAsync();
-
-        // Act
-        var response = await _client.PutAsJsonAsync(
-            ItemUrl("ai-metadata", VideosCollection, slug),
-            new { AiMetadata = aiMetadata },
-            TestContext.Current.CancellationToken);
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
-        var stored = await GetAiMetadataAsync(slug);
-        stored.Should().BeNull("invalid JSON must not be written to the ai_metadata column");
-    }
-
-    [Fact]
-    public async Task UpdateAiMetadata_UnknownItem_ReturnsNotFound()
-    {
-        // Arrange
-        var slug = $"unknown-{NewId()}";
-
-        // Act
-        var response = await _client.PutAsJsonAsync(
-            ItemUrl("ai-metadata", VideosCollection, slug),
-            new { AiMetadata = "{}" },
-            TestContext.Current.CancellationToken);
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
-    }
-
-    [Fact]
-    public async Task UpdateAiMetadata_ValidJson_ReturnsNoContentAndPersists()
-    {
-        // Arrange
-        var slug = await SeedVideoAsync();
-        const string Json = """{"roundup_summary":"Persisted summary","key_topics":["a","b"]}""";
-
-        // Act
-        var response = await _client.PutAsJsonAsync(
-            ItemUrl("ai-metadata", VideosCollection, slug),
-            new { AiMetadata = Json },
-            TestContext.Current.CancellationToken);
-
-        // Assert — compare semantically; jsonb re-formats whitespace
-        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
-        var stored = await GetAiMetadataAsync(slug);
-        stored.Should().NotBeNull();
-        using var doc = JsonDocument.Parse(stored!);
-        doc.RootElement.GetProperty("roundup_summary").GetString().Should().Be("Persisted summary");
-        doc.RootElement.GetProperty("key_topics").GetArrayLength().Should().Be(2);
+        var stored = await GetEditDataAsync(slug);
+        stored.AiMetadata.Should().BeNull();
     }
 
     // ── GET /api/admin/content-items/edit-data ───────────────────────────────
@@ -258,6 +129,7 @@ public class AdminContentItemsEndpointsTests : IClassFixture<TechHubStubbedExter
         var stored = await GetEditDataAsync(slug);
         stored.Title.Should().Be("Original Title");
         stored.Author.Should().Be("Original Author");
+        stored.AiMetadata.Should().BeNull();
     }
 
     [Fact]
@@ -276,12 +148,19 @@ public class AdminContentItemsEndpointsTests : IClassFixture<TechHubStubbedExter
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
     }
 
-    [Fact]
-    public async Task UpdateEditData_ValidPayload_PersistsAllEditableFields()
+    [Theory]
+    [InlineData(null)]
+    [InlineData("""{"roundup_summary":"Persisted summary","key_topics":["a","b"]}""")]
+    public async Task UpdateEditData_ValidPayload_PersistsAllEditableFields(string? aiMetadata)
     {
         // Arrange
         var slug = await SeedVideoAsync(title: "Original Title");
-        var payload = ValidEditData(slug) with { DateEpoch = 1710000000 };
+        using var initialResponse = await _client.PutAsJsonAsync(
+            ItemUrl("edit-data", VideosCollection, slug),
+            ValidEditData(slug) with { AiMetadata = """{"roundup_summary":"Original summary"}""" },
+            TestContext.Current.CancellationToken);
+        initialResponse.StatusCode.Should().Be(HttpStatusCode.NoContent);
+        var payload = ValidEditData(slug) with { DateEpoch = 1710000000, AiMetadata = aiMetadata };
 
         // Act
         var response = await _client.PutAsJsonAsync(
@@ -300,6 +179,17 @@ public class AdminContentItemsEndpointsTests : IClassFixture<TechHubStubbedExter
         stored.PrimarySectionName.Should().Be("ai");
         stored.Tags.Should().BeEquivalentTo(["AI", "Azure"]);
         stored.Sections.Should().BeEquivalentTo(["ai", "azure"]);
+        if (aiMetadata is null)
+        {
+            stored.AiMetadata.Should().BeNull();
+        }
+        else
+        {
+            stored.AiMetadata.Should().NotBeNull();
+            using var doc = JsonDocument.Parse(stored.AiMetadata!);
+            doc.RootElement.GetProperty("roundup_summary").GetString().Should().Be("Persisted summary");
+            doc.RootElement.GetProperty("key_topics").GetArrayLength().Should().Be(2);
+        }
     }
 
     // ── POST /api/admin/content-items/apply-transcript ───────────────────────
@@ -542,17 +432,6 @@ public class AdminContentItemsEndpointsTests : IClassFixture<TechHubStubbedExter
             author: "Original Author",
             dateEpoch);
         return slug;
-    }
-
-    private async Task<string?> GetAiMetadataAsync(string slug)
-    {
-        var response = await _client.GetAsync(
-            ItemUrl("ai-metadata", VideosCollection, slug),
-            TestContext.Current.CancellationToken);
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var result = await response.Content.ReadFromJsonAsync<ContentItemAiMetadataResult>(
-            TestContext.Current.CancellationToken);
-        return result!.AiMetadata;
     }
 
     private async Task<ContentItemEditData> GetEditDataAsync(string slug)
