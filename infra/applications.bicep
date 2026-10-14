@@ -195,6 +195,9 @@ module apiApp './modules/api.bicep' = {
     azureAdClientId: azureAdClientId
     aiCategorizationEndpoint: openAiAccount.properties.endpoint
     aiCategorizationDeploymentName: openAiModelDeployment.name
+    contentProcessorEnabled: true
+    roundupGeneratorEnabled: true
+    newsletterScheduledSendEnabled: true
     acsEndpointSecretName: acsEndpointSecretName
     acsSenderAddressSecretName: 'techhub-prod-acs-sender-address'
     newsletterUnsubscribeSecretName: 'techhub-prod-newsletter-unsubscribe-secret'

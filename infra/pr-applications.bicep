@@ -116,6 +116,9 @@ module apiApp './modules/api.bicep' = {
     azureAdClientId: ''
     aiCategorizationEndpoint: '' // AI categorization disabled (background jobs are off)
     aiCategorizationDeploymentName: ''
+    contentProcessorEnabled: false
+    roundupGeneratorEnabled: false
+    newsletterScheduledSendEnabled: false
     aspNetCoreEnvironment: 'Staging'
     tags: tags
   }
