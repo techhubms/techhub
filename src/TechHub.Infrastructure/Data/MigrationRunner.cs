@@ -66,7 +66,7 @@ public class MigrationRunner : IMigrationRunner
         // Get all migration scripts sorted by filename
         var migrationScripts = assembly.GetManifestResourceNames()
             .Where(name => name.StartsWith(migrationPrefix, StringComparison.Ordinal) && name.EndsWith(".sql", StringComparison.Ordinal))
-            .OrderBy(name => name)
+            .OrderBy(name => name, StringComparer.Ordinal)
             .ToList();
 
         if (migrationScripts.Count == 0)
@@ -83,15 +83,16 @@ public class MigrationRunner : IMigrationRunner
         var pendingCount = 0;
         foreach (var scriptName in migrationScripts)
         {
-            var scriptFileName = Path.GetFileName(scriptName);
+            var scriptFileName = GetScriptFileName(scriptName, migrationPrefix);
 
-            if (executedMigrations.Contains(scriptFileName))
+            // Older rows stored the full embedded resource name, so accept both forms
+            if (executedMigrations.Contains(scriptFileName) || executedMigrations.Contains(scriptName))
             {
                 _logger.LogDebug("Skipping already executed migration: {ScriptName}", scriptFileName);
                 continue;
             }
 
-            await RunMigrationScriptAsync(assembly, scriptName, cancellationToken);
+            await RunMigrationScriptAsync(assembly, scriptName, scriptFileName, cancellationToken);
             pendingCount++;
         }
 
@@ -104,6 +105,9 @@ public class MigrationRunner : IMigrationRunner
             _logger.LogInformation("Database migrations completed successfully ({Count} migrations executed)", pendingCount);
         }
     }
+
+    private static string GetScriptFileName(string resourceName, string prefix) =>
+        resourceName[prefix.Length..];
 
     private async Task EnsureMigrationTableExistsAsync()
     {
@@ -132,9 +136,9 @@ public class MigrationRunner : IMigrationRunner
     private async Task RunMigrationScriptAsync(
         Assembly assembly,
         string scriptName,
+        string scriptFileName,
         CancellationToken cancellationToken)
     {
-        var scriptFileName = Path.GetFileName(scriptName);
         _logger.LogInformation("Running migration: {ScriptName}", scriptFileName);
 
         using var stream = assembly.GetManifestResourceStream(scriptName) ?? throw new InvalidOperationException($"Migration script not found: {scriptName}");
