@@ -10,7 +10,7 @@ namespace TechHub.Infrastructure.Services.ContentProcessing;
 /// </summary>
 public static class PublicEndpointHandler
 {
-    private static readonly IPNetwork[] NonPublicIpv4Networks =
+    private static readonly IPNetwork[] _nonPublicIpv4Networks =
     [
         IPNetwork.Parse("0.0.0.0/8"),
         IPNetwork.Parse("10.0.0.0/8"),
@@ -29,9 +29,9 @@ public static class PublicEndpointHandler
         IPNetwork.Parse("240.0.0.0/4")
     ];
 
-    private static readonly IPNetwork Ipv6GlobalUnicastNetwork = IPNetwork.Parse("2000::/3");
+    private static readonly IPNetwork _ipv6GlobalUnicastNetwork = IPNetwork.Parse("2000::/3");
 
-    private static readonly IPNetwork[] NonPublicIpv6Networks =
+    private static readonly IPNetwork[] _nonPublicIpv6Networks =
     [
         IPNetwork.Parse("2001::/23"),
         IPNetwork.Parse("2001:db8::/32"),
@@ -65,13 +65,13 @@ public static class PublicEndpointHandler
 
         if (address.AddressFamily == AddressFamily.InterNetwork)
         {
-            return !NonPublicIpv4Networks.Any(network => network.Contains(address));
+            return !_nonPublicIpv4Networks.Any(network => network.Contains(address));
         }
 
         if (address.AddressFamily == AddressFamily.InterNetworkV6)
         {
-            return Ipv6GlobalUnicastNetwork.Contains(address)
-                && !NonPublicIpv6Networks.Any(network => network.Contains(address));
+            return _ipv6GlobalUnicastNetwork.Contains(address)
+                && !_nonPublicIpv6Networks.Any(network => network.Contains(address));
         }
 
         return false;
