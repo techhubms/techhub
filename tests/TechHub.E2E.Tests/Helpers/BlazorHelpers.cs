@@ -411,15 +411,17 @@ public static class BlazorHelpers
         gotoOptions.WaitUntil ??= WaitUntilState.DOMContentLoaded;
         gotoOptions.Timeout ??= E2ETimeout;
 
-        // Navigate with a single retry on timeout — handles cold-start scenarios in CI and
-        // freshly-deployed PR-preview environments (Azure App Service is always-on, but the
-        // very first request after a deploy still pays for container pull/startup) where the
-        // first request warms up the site and subsequent requests succeed within the timeout.
+        // Navigate with a single retry on timeout or transient network error — handles cold-start
+        // scenarios in CI and freshly-deployed PR-preview environments (Azure App Service is
+        // always-on, but the very first request after a deploy still pays for container
+        // pull/startup) where the first request warms up the site and subsequent requests
+        // succeed within the timeout. Connection resets/closed happen when the remote proxy
+        // drops a connection mid-request and are not reproducible on an immediate retry.
         try
         {
             await page.GotoAsync(url, gotoOptions);
         }
-        catch (TimeoutException)
+        catch (Exception ex) when (ex is TimeoutException || IsTransientNetworkError(ex))
         {
             // Retry once. If the server is unavailable (not just slow to start), the
             // second attempt will also throw and the exception propagates as normal.
@@ -431,6 +433,13 @@ public static class BlazorHelpers
         // instead of the weaker __blazorWebReady which fires before the interactive circuit.
         await page.WaitForBlazorReadyAsync();
     }
+
+    private static bool IsTransientNetworkError(Exception ex) =>
+        ex is PlaywrightException pe &&
+        (pe.Message.Contains("net::ERR_CONNECTION_RESET", StringComparison.Ordinal) ||
+         pe.Message.Contains("net::ERR_CONNECTION_CLOSED", StringComparison.Ordinal) ||
+         pe.Message.Contains("net::ERR_CONNECTION_TIMED_OUT", StringComparison.Ordinal) ||
+         pe.Message.Contains("net::ERR_EMPTY_RESPONSE", StringComparison.Ordinal));
 
     /// <summary>
     /// Navigates to a relative URL (prepends BaseUrl automatically).

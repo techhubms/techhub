@@ -698,7 +698,29 @@ jobs:
           pwsh bin/Release/net10.0/playwright.ps1 install chrome --with-deps
 
       - name: Wait for deployment to stabilize
-        run: sleep 60
+        run: |
+          # A fixed sleep is not enough: right after a deploy the site can serve the generic
+          # error page for a while. Poll representative pages until all return 200 without it.
+          paths="/ /github-copilot/all /github-copilot/handbook /ai/genai-applied /ai/genai-basics"
+          for attempt in $(seq 1 30); do
+            all_ok=true
+            for path in $paths; do
+              body=$(mktemp)
+              status=$(curl -sS -L --max-time 30 -o "$body" -w '%{http_code}' "https://tech.hub.ms$path" || echo "000")
+              if [ "$status" != "200" ] || grep -q "Something went wrong" "$body"; then
+                echo "Attempt $attempt: $path not ready (status $status)"
+                all_ok=false
+              fi
+              rm -f "$body"
+            done
+            if [ "$all_ok" = true ]; then
+              echo "All pages healthy after $attempt attempt(s)"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::Production did not become healthy within the wait window"
+          exit 1
 
       - name: Run E2E tests against production
         run: |
