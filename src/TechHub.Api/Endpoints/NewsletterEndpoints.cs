@@ -243,11 +243,18 @@ public static class NewsletterEndpoints
         long id,
         NewsletterSubscriberUpdateRequest request,
         INewsletterSubscriberRepository subscriberRepository,
+        IContentRepository contentRepository,
         CancellationToken ct)
     {
         var displayName = request.DisplayName?.Trim().Sanitize();
-        var weeklySections = SanitizeRequestedSections(request.WeeklySections);
-        var dailySections = SanitizeRequestedSections(request.DailySections);
+
+        var validSections = (await contentRepository.GetAllSectionsAsync(ct))
+            .Where(s => !string.Equals(s.Name, "all", StringComparison.OrdinalIgnoreCase))
+            .Select(s => s.Name.Trim().ToLowerInvariant())
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+        var weeklySections = NormalizeRequestedSections(SanitizeRequestedSections(request.WeeklySections), validSections);
+        var dailySections = NormalizeRequestedSections(SanitizeRequestedSections(request.DailySections), validSections);
 
         var updated = await subscriberRepository.UpdateSubscriberAsync(
             id,
