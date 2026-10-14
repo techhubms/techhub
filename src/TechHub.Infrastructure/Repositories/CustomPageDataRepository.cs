@@ -57,7 +57,8 @@ WHERE key = @Key";
 INSERT INTO custom_page_data (key, description, json_data, updated_at)
 VALUES (@Key, @Description, @JsonData, NOW())
 ON CONFLICT (key) DO UPDATE
-SET json_data  = EXCLUDED.json_data,
+SET description = EXCLUDED.description,
+    json_data   = EXCLUDED.json_data,
     updated_at = NOW()";
 
         await _connection.ExecuteAsync(
