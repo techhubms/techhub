@@ -6,8 +6,19 @@ Integration tests for the REST API using xUnit and WebApplicationFactory, backed
 
 ## Test Infrastructure
 
-- `TechHubApiFactory.cs` — Custom `WebApplicationFactory<Program>` with PostgreSQL Testcontainer (lives in this project)
+- `TechHubApiFactory.cs` — Contains `TechHubApiFactoryBase` (shared `WebApplicationFactory<Program>` setup) and `TechHubIntegrationTestApiFactory` (adds the PostgreSQL Testcontainer and seeds test data). Lives in this project
 - Test classes use `IClassFixture<TechHubIntegrationTestApiFactory>` to share the factory
+- `TechHubStubbedExternalServicesApiFactory.cs` — Derived factory that stubs the article fetch client and AI categorization (no network); the outcome is selected by a marker in the URL
+- Tests that need a different configuration derive from `TechHubIntegrationTestApiFactory` as a nested fixture class (see `AdminAuthorizationTests`, which enables Azure AD with a header-driven auth scheme to test the real `AdminOnly` policy)
+- `TestSupport/` — `ContentItemSeeder` (per-test data) and `Eventually` (bounded poll helper for background work with no completion signal; prefer a `TaskCompletionSource` where a hook exists)
+
+## Structure
+
+- `Endpoints/` — One test class per endpoint group (content, admin, GHC features, custom pages, and so on)
+- `Middleware/` — API middleware tests
+- `Services/` — Service tests that need the API's DI setup
+- `Telemetry/` — Telemetry filter tests
+- `HealthCheckTests.cs`, `HttpsRedirectionTests.cs` — Pipeline-level tests at the project root
 
 ## What to Test
 

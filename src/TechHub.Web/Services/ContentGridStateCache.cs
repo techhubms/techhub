@@ -15,7 +15,7 @@ public sealed class CachedGridState
 
 /// <summary>
 /// Circuit-scoped cache that preserves ContentItemsGrid state across enhanced navigations.
-/// When users scroll through infinite-scroll content, navigate to a detail page, and press
+/// When users load more content via the Load More button, navigate to a detail page, and press
 /// back, the grid can restore all previously loaded items from this cache instead of starting
 /// with a single batch. This prevents the browser's scroll restoration from triggering a
 /// cascade of batch loads that scrolls to "End of content".

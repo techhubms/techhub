@@ -22,7 +22,7 @@ The component emits:
 - `<meta name="page-path">` — normalized current URL path (lowercased); used by E2E tests to detect when HeadContent has been updated after navigation
 - `<meta name="description">` — truncated to 160 characters, HTML stripped
 - Open Graph tags (`og:type`, `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale`)
-- Article-specific Open Graph properties (`article:published_time`, `article:author`, `article:section`, `article:tag`) for Article and Video content types
+- Article-specific Open Graph properties (`article:published_time`, `article:modified_time`, `article:author`, `article:section`, `article:tag`) for Article and Video content types. `article:modified_time` repeats the publication date, and `article:tag` is capped at 10 tags
 - Twitter Card tags (`twitter:card`, `twitter:title`, `twitter:description`)
 - JSON-LD structured data (schema type depends on `ContentType` parameter)
 - A second `BreadcrumbList` JSON-LD block when the `Breadcrumbs` parameter contains at least two items
@@ -46,7 +46,7 @@ The `SeoContentType` enum controls which JSON-LD schema is generated and the Ope
 
 **Article**: includes `headline`, `description`, `url`, `publisher`, `author` (when present), `datePublished`, `dateModified`, `keywords` (up to 20), and `articleSection` (when present).
 
-**VideoObject**: includes `name`, `description`, `publisher`, `uploadDate`, `contentUrl` (external video URL), and `embedUrl` (YouTube embed URL derived automatically from watch/youtu.be URLs).
+**VideoObject**: includes `name`, `description`, `publisher`, `uploadDate`, `contentUrl` (external video URL), `embedUrl` (YouTube embed URL derived automatically from watch/youtu.be URLs) and `thumbnailUrl` (YouTube thumbnail, when the video is a YouTube URL).
 
 **CollectionPage**: includes `name`, `description`, `url`, and `publisher`.
 
@@ -58,10 +58,13 @@ The `SeoContentType` enum controls which JSON-LD schema is generated and the Ope
 
 Each page has a descriptive title using `<PageTitle>`. Title patterns:
 
-- **Homepage**: `Tech Hub - Microsoft Developer Resources`
-- **Section**: `AI - Tech Hub`
-- **Collection**: `News - AI - Tech Hub`
+- **Homepage**: `Tech Hub - Microsoft Technology News & Resources`
+- **Section**: `Artificial Intelligence - Tech Hub` (the section title from configuration)
+- **Collection**: `News - Artificial Intelligence - Tech Hub`
 - **Content Item**: `Article Title - Tech Hub`
+- **Custom pages and other pages**: `{Page title} - Tech Hub`
+- **About and MCP pages**: `About Us - {site name}`, `MCP Server - {site name}`, where the site name follows the domain branding
+- **Newsletter and admin pages**: `... - TechHub`, `... - TechHub Admin`
 
 ## Meta Description
 
@@ -90,6 +93,7 @@ The `robots.txt` file is served as a static file from `src/TechHub.Web/wwwroot/r
 - `/api/` — Internal API (not meant for crawlers)
 - `/swagger/` — API documentation UI
 - `/health` and `/alive` — Health check endpoints
+- `/version` — Deployment version probe
 - `/not-found` — 404 error page (not a real content destination)
 - `/Error` — ASP.NET error handler page
 - `/admin` — Admin section (not for public indexing)
@@ -114,7 +118,7 @@ Content items from the database where `collection NOT IN ('news', 'blogs', 'comm
 
 URL routing for dynamic entries follows the same rules as the site navigation: internal content (including `roundups`) routes to `/{primarySection}/{collection}/{slug}`.
 
-The dynamic items are cached in memory under the key `"sitemap:items"` with `CacheItemPriority.NeverRemove`.
+The dynamic items are cached in memory under the key `"sitemap:items"` for 30 minutes, and the cache is cleared whenever content changes (see [caching.md](caching.md#server-side-caching)).
 
 **Implementation files:**
 
@@ -148,7 +152,7 @@ URLs follow a hierarchical pattern:
 
 - **Sections**: `/{sectionName}` (e.g., `/ai`, `/github-copilot`)
 - **Collections**: `/{sectionName}/{collectionName}` (e.g., `/ai/news`)
-- **Content**: `/{sectionName}/{collectionName}/{slug}` (e.g., `/ai/news/2025-01-15-article`)
+- **Content**: `/{sectionName}/{collectionName}/{slug}` (e.g., `/ai/news/example-article`). Date prefixes from old URLs (`2025-01-15-example-article`) are stripped and redirected, see [url-routing.md](url-routing.md#url-normalization)
 
 This structure:
 
@@ -182,7 +186,7 @@ Custom page data objects stored in the database each contain a top-level `descri
 - Homepage: [src/TechHub.Web/Components/Pages/Home.razor](../src/TechHub.Web/Components/Pages/Home.razor)
 - Content detail pages: [src/TechHub.Web/Components/Pages/ContentItem.razor](../src/TechHub.Web/Components/Pages/ContentItem.razor)
 - Section and collection listing pages: [src/TechHub.Web/Components/Pages/SectionCollection.razor](../src/TechHub.Web/Components/Pages/SectionCollection.razor)
-- Custom pages: [src/TechHub.Web/Components/Pages/Custom/](../src/TechHub.Web/Components/Pages/Custom/) (Features, Handbook, Levels, ToolTips, GettingStarted, GenAI, SDLC, DXSpace)
+- Custom pages: `src/TechHub.Web/Components/Pages/` (GitHubCopilotFeatures, GitHubCopilotHandbook, GitHubCopilotLevels, GitHubCopilotToolTips, GitHubCopilotGettingStarted, GitHubCopilotDiscord, GenAI, AISDLC, DXSpace)
 - VS Code Updates: [src/TechHub.Web/Components/Pages/GitHubCopilotVSCodeUpdates.razor](../src/TechHub.Web/Components/Pages/GitHubCopilotVSCodeUpdates.razor)
 - About page: [src/TechHub.Web/Components/Pages/About.razor](../src/TechHub.Web/Components/Pages/About.razor)
 - RSS feeds: [rss-feeds.md](rss-feeds.md)

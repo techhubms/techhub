@@ -14,7 +14,7 @@
   - Implements the design system and all UI components
   - See [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md) for frontend development guidelines
 - **`TechHub.Core/`** - Domain models, interfaces, and business logic
-  - Contains all entity definitions (ContentItem, Collection, Section, Tag)
+  - Contains all entity definitions (ContentItem, Collection, Section)
   - Defines repository interfaces and core abstractions
   - Framework-agnostic, reusable across all projects
   - See [src/TechHub.Core/AGENTS.md](../src/TechHub.Core/AGENTS.md) for domain modeling guidelines
@@ -33,8 +33,6 @@
 - **`TechHub.ServiceDefaults/`** - Shared .NET Aspire service configuration
   - Common observability, health checks, and service defaults
   - Reusable across all Aspire-managed services
-
-### Utilities and Background Services
 
 See [src/AGENTS.md](../src/AGENTS.md) for general .NET development patterns and architecture guidelines.
 
@@ -91,16 +89,22 @@ See [tests/AGENTS.md](../tests/AGENTS.md) for testing strategies, TDD workflow, 
 ### Critical Configuration Files
 
 - **`AGENTS.md`** - Root AI assistant workflow (8-step development process) - **READ THIS FIRST**
-- **`appsettings.json`** - Application configuration (API, Web projects)
-  - Section and collection definitions
-  - Database connection strings
-  - Service settings and feature flags
+- **`appsettings*.json`** - Configuration lives per project, with environment variants (Development, Production, and so on):
+  - `src/TechHub.Api/` - Section and collection definitions, database, content processing, and other API settings
+  - `src/TechHub.Web/` - MCP, subdomain shortcuts, primary hosts, and `AzureAd` settings
+  - `src/TechHub.AppHost/` - Aspire orchestration settings
 - **`Directory.Build.props`** - MSBuild properties for all projects
+- **`Directory.Packages.props`** - Central NuGet package version management
+- **`global.json`** - Pins the .NET SDK version and selects the Microsoft.Testing.Platform test runner
 - **`TechHub.slnx`** - Solution file (XML-based .NET 10+ format)
-- **`docker-compose.yml`** - Multi-container Docker configuration
-- **`package.json`** - Node.js dependencies (markdownlint, etc.)
+- **`docker-compose.yml`** - Local PostgreSQL, API, Web, and Aspire Dashboard containers
+- **`package.json`** - Node.js tooling: Vitest and jsdom (JavaScript tests), Husky (git hooks), markdownlint-cli2, and `@playwright/test`
+- **`vitest.config.js`** - Vitest configuration for the JavaScript tests
+- **`.husky/pre-commit`** - Git hook that verifies `dotnet format` on staged C# files and runs markdownlint on staged Markdown files
 - **`.editorconfig`** - Code style and formatting rules
-- **`.runsettings`** - Test execution configuration
+- **`.markdownlint-cli2.jsonc`** - Markdown lint rules
+- **`.gitattributes`** - Git line ending and attribute rules
+- **`CODEOWNERS`** - Code review ownership
 
 ### Documentation (`docs/`)
 
@@ -117,36 +121,59 @@ See [docs/AGENTS.md](AGENTS.md) for documentation maintenance guidelines.
 
 ### Automation & Scripts (`scripts/`)
 
-PowerShell automation scripts for development and maintenance tasks:
+PowerShell automation scripts for development, deployment, and maintenance. All content processing lives in the C# background services, not in scripts.
 
-- **`TechHubRunner.psm1`** - **PRIMARY BUILD/RUN/TEST MODULE** - exports `Run` function
+#### Development and local data
+
+- **`TechHubRunner.psm1`** - **PRIMARY BUILD/RUN/TEST MODULE** - exports `Run`, `Stop-Servers`, `Stop-OrphanedTestProcesses`, and `Start-McpInspector`
   - `Run` - Build, test, and start servers (use this for all build/test operations)
   - `Run -WithoutTests` - Start servers without running tests
   - `Run -TestProject <name>` - Run specific test project
-
 - **`Generate-DevCertificate.ps1`** - Creates HTTPS dev certificates
 - **`Normalize-Images.ps1`** - Optimizes and normalizes images
-- **`Restore-Database.ps1`** - Downloads and restores the production PostgreSQL database
-  - Target: `local` (Docker Compose) or `staging` (Azure)
-  - Crucial step to populate data in non-production environments
-  - Requires PostgreSQL client tools and VPN access to production
+- **`Restore-Database.ps1`** - Dumps the production PostgreSQL database and restores it locally
+  - Target: `local` (restore into Docker Compose PostgreSQL) or `disk` (dump to `.tmp/` only)
+  - Populates data in non-production environments
+  - Requires PostgreSQL client tools and network access to the production database
+- **`Invoke-Sql.ps1`** - Runs a single SQL query against the local PostgreSQL container
+- **`Setup-UserSecrets.ps1`** - Fills .NET user secrets for local development from Azure and the localhost Entra ID app registration
+- **`Fetch-VideoTranscripts.ps1`** - Backfills video transcripts with yt-dlp through the admin API
+
+#### Build and deploy
+
+- **`Build-Images.ps1`** - Builds the API and Web Docker images and pushes them to `ghcr.io`
 - **`Deploy-Infrastructure.ps1`** - Phase 1 Azure infrastructure deployment (Bicep)
-  - Deploys networking, identity, Key Vault, PostgreSQL, ACS, monitoring
-  - Modes: validate, whatif, deploy
-  - Auto-resolves `ADMIN_IP_ADDRESSES` from GitHub variable and `POSTGRES_ADMIN_PASSWORD` from Key Vault
+  - Deploys networking, identity, Key Vault, PostgreSQL, AI Foundry, ACS, monitoring, and governance
+  - Modes: validate, whatif, deploy. `-LinkEmailDomain` links the verified ACS email domain
+  - Resolves `ADMIN_IP_ADDRESSES` from the GitHub variable and `POSTGRES_ADMIN_PASSWORD` from Key Vault when not set
 - **`Deploy-Applications.ps1`** - Phase 2 App Service deployment (Bicep, fully standalone)
   - Requires `-ImageTag`; no infrastructure output dependencies
   - Modes: validate, whatif, deploy
 - **`Deploy-Application.ps1`** - Fast image-only update via `az webapp config set`
   - Smoke tests and automatic rollback
   - Requires `-Tag`; used for code-only deploys (skips full Bicep evaluation)
+- **`Deploy-PrPreview.ps1`** - Deploys or tears down a PR preview environment (`deploy` or `teardown`)
+- **`Teardown-PrEnvironments.ps1`** - Tears down all active PR preview environments (used by the nightly workflow)
+- **`Wait-ForLiveVersion.ps1`** - Post-deploy gate that polls the Web `/version` endpoint, then runs smoke tests
+- **`Add-AppInsightsAnnotation.ps1`** - Creates an Application Insights release annotation after a production deploy
+
+#### Identity, secrets, and certificates
+
+- **`Manage-EntraId.ps1`** - Creates or rotates the Entra ID app registration for localhost, staging, or production
+- **`Assign-AdminUsers.ps1`** - Assigns admin users to the Entra ID enterprise app
+- **`Setup-OidcAuthentication.ps1`** - Configures GitHub Actions OIDC federated credentials and repository variables
+- **`Sync-KeyVaultSecrets.ps1`** - Writes application secrets from environment variables to Key Vault
+- **`Renew-WildcardCertificates.ps1`** - Renews the Let's Encrypt wildcard certificates and imports them into Key Vault and App Service
+- **`Migrate-KeyVaultSecrets.ps1`** - Legacy one-off copy from `kv-techhub-shared` to `kv-techhub-prod`
+- **`Cleanup-ContainerRegistry.ps1`** - Legacy cleanup for the retired Azure Container Registry (images now live on `ghcr.io`)
+
 See [scripts/AGENTS.md](../scripts/AGENTS.md) for scripting guidelines and patterns.
 
 ### Infrastructure (`infra/`)
 
 Azure infrastructure as code (Bicep templates) for Azure App Service deployment:
 
-- **`infrastructure.bicep`** - Phase 1: base infrastructure (identity, networking, KV, postgres, App Service Plans)
+- **`infrastructure.bicep`** - Phase 1: base infrastructure (identity, networking, KV, PostgreSQL, AI Foundry, ACS, monitoring, governance, and the production App Service Plan)
 - **`applications.bicep`** - Phase 2: production API + Web App Service site deployments (Web Apps for Containers)
 - **`pr-applications.bicep`** - PR preview API + Web App Service site deployments (shared PR App Service Plan, telemetry disabled)
 - **`parameters/`** - Environment-specific parameter files:
@@ -156,14 +183,24 @@ Azure infrastructure as code (Bicep templates) for Azure App Service deployment:
   - `appServicePlan.bicep` - App Service Plan (Basic B1, shared by API + Web sites)
   - `api.bicep` - TechHub API App Service site (Web App for Containers, VNet-restricted, not publicly accessible)
   - `web.bicep` - TechHub Web App Service site (Web App for Containers)
-  - `monitoring.bicep` - Application Insights + Log Analytics
+  - `monitoring.bicep` - Application Insights + Log Analytics workspace (the Log Analytics workspace is defined here)
   - `postgres.bicep` - PostgreSQL Flexible Server
   - `keyVault.bicep` - Key Vault
+  - `keyVaultSecret.bicep` - Writes a single Key Vault secret
   - `identity.bicep` - User-assigned managed identity
-  - `network.bicep` - VNet and subnets
+  - `network.bicep` - VNet, subnets, private DNS zones
+  - `openai.bicep` - AI Foundry (OpenAI) account, model deployment, and private endpoint
+  - `communication.bicep` - Azure Communication Services and the custom email domain used for newsletters
+  - `acsDataContributorRole.bicep`, `kvSecretsUserRole.bicep`, `openAiUserRole.bicep` - RBAC role assignments for managed identities
+  - `acmeDnsZone.bicep` - Azure DNS zone used for ACME DNS-01 challenge delegation
+  - `actionGroup.bicep` and `alerts.bicep` - Alert notification target and alert rules
+  - `budget.bicep` and `policy.bicep` - Cost budget and Azure Policy assignments
   - `wildcardCert.bicep` - Imports a wildcard TLS certificate from Key Vault into an App Service Plan (deployed standalone by `Renew-WildcardCertificates.ps1`)
+  - `logAnalytics.bicep` - Not referenced by any template (orphaned; `monitoring.bicep` creates its own workspace)
 
-Deployment is managed via PowerShell scripts (`scripts/Deploy-Infrastructure.ps1` and `scripts/Deploy-Application.ps1`) which are called by GitHub Actions workflows. Scripts can also be run locally for testing.
+Compiled ARM templates (`infra/**/*.json`) are gitignored build output.
+
+Deployment is managed via PowerShell scripts (`Deploy-Infrastructure.ps1`, `Deploy-Applications.ps1`, `Deploy-Application.ps1`, and `Deploy-PrPreview.ps1`) which are called by GitHub Actions workflows. Scripts can also be run locally for testing. See [infra/AGENTS.md](../infra/AGENTS.md) for the deployment rules.
 
 ## Development Environment & Working Directories
 
@@ -172,7 +209,9 @@ Deployment is managed via PowerShell scripts (`scripts/Deploy-Infrastructure.ps1
 Dev container configuration for VS Code and GitHub Codespaces:
 
 - **`devcontainer.json`** - Container configuration, extensions, settings
-- **`post-create.sh`** - Post-creation setup script. Add ALL dependencies needed for the devcontainer here
+- **`devcontainer-lock.json`** - Pinned versions of dev container features
+- **`post-create.sh`** - Post-creation setup script. Add ALL dependencies needed for the devcontainer here (including certbot)
+- **`oh-my-posh.json`** - Shell prompt theme
 
 ### `.databases/postgres/**`
 
@@ -192,11 +231,21 @@ Temporary working directory for AI assistants and development tasks (gitignored)
 
 ### Other Hidden Directories
 
-- **`.github/`** - GitHub Actions workflows and CI/CD automation
-  - `workflows/ci.yml` - CI pipeline: runs on all pull requests (build, test, lint, security, CodeQL, PR preview deploy/teardown)
-  - `workflows/cd.yml` - CD pipeline: runs on pushes to `main` (CI + staging and production deployment)
+- **`.github/`** - GitHub Actions workflows, dependency automation, and AI assistant configuration
+  - `workflows/ci.yml` - CI pipeline: quality checks run on pull requests, PR preview build/deploy/E2E run on manual dispatch only, and preview teardown runs automatically when a PR closes
+  - `workflows/cd.yml` - CD pipeline: runs on pushes to `main` (CI + production deployment)
+  - `workflows/dependency-review.yml` - Dependency review on pull requests
+  - `workflows/pr-env-nightly-teardown.yml` - Nightly teardown of leftover PR preview environments
+  - `dependabot.yml` - Weekly dependency updates
+  - `codeql/codeql-config.yml` - CodeQL code scanning configuration
+  - `copilot-instructions.md`, `prompts/`, and `skills/` (`cleanup`, `pushall`) - AI assistant instructions, prompts, and skills
   - See [ci-cd-pipeline.md](ci-cd-pipeline.md) for complete CI/CD documentation
-- **`.vscode/`** - VS Code workspace settings and launch configurations
+- **`.husky/`** - Git hooks (pre-commit formatting and Markdown lint checks)
+- **`.vscode/`** - VS Code workspace configuration
+  - `launch.json` - Launch configurations: "Tech Hub (Development)", "Tech Hub (Attach to running)", and "Tech Hub (Production)"
+  - `tasks.json` - Build, test, and run tasks
+  - `settings.json` - Workspace settings
+  - `mcp.json` (gitignored, copy from `mcp.example.json`) and `playwright-mcp-config.json` - MCP server configuration
 - **`.git/`** - Git repository metadata
-- **`.playwright-mcp/`** - Playwright MCP (Model Context Protocol) configuration
+- **`.playwright-mcp/`** - Playwright MCP output (console logs, page snapshots, screenshots). Gitignored
 - **`.dockerignore`** - Files to exclude from Docker builds

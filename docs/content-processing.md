@@ -18,25 +18,26 @@ and writes directly to the database.
 
 | Environment | Content Source |
 |-------------|---------------|
-| Production | `ContentProcessingBackgroundService` writes RSS content directly every 15 minutes |
-| Staging | Database restore from production snapshot (`scripts/Restore-Database.ps1`) |
-| Local development | Database restore from production snapshot |
+| Production | `ContentProcessingBackgroundService` writes RSS content directly every 60 minutes (`ContentProcessor:IntervalMinutes`) |
+| Staging | Scheduled processing is disabled. Data comes from a production snapshot (`scripts/Restore-Database.ps1`) |
+| PR previews | Scheduled jobs are disabled through environment variables. Manual triggers still work |
+| Local development | Scheduled processing is disabled. Data comes from a production snapshot |
 
 For local development, see [running-and-testing.md](running-and-testing.md) for setup instructions.
 
-### Database Restore (Staging/Local)
+### Database Restore (Local/Disk)
 
-To populate a non-production environment with real data:
+To populate a local environment with real data, or to save a snapshot to disk:
 
 ```powershell
 # Restore production data to local Docker Compose database
 ./scripts/Restore-Database.ps1 -Target local
 
-# Restore production data to staging
-./scripts/Restore-Database.ps1 -Target staging
+# Dump production data to .tmp/ without restoring
+./scripts/Restore-Database.ps1 -Target disk
 ```
 
-Requires VPN access to the production environment and PostgreSQL client tools installed.
+The `-Target` parameter accepts only `local` and `disk`. Requires VPN access to the production environment and PostgreSQL client tools installed.
 
 ## RSS Feed Processing
 
@@ -46,7 +47,7 @@ content current. The pipeline is implemented entirely in C# and runs inside `Tec
 ### Content Processing Pipeline
 
 `ContentProcessingBackgroundService` (`IHostedService`) runs on a configurable schedule
-(default: every 15 minutes) and performs:
+(default: every 60 minutes, see [Scheduling](#scheduling)) and performs:
 
 1. **Feed ingestion** — Downloads and parses RSS/Atom XML from all enabled feeds in the database
 2. **Content fetching** — Fetches the full article HTML for non-YouTube items. **YouTube video items
@@ -96,7 +97,8 @@ existing videos in batch:
 ./Fetch-VideoTranscripts.ps1 -JobId 42 -DryRun
 ```
 
-The script requires yt-dlp (`pip install yt-dlp`) and a running TechHub API.
+The script requires yt-dlp (`pip install yt-dlp`) and a running TechHub API. `-ApiBaseUrl` defaults to
+`https://localhost:5001`, and `-BearerToken` supplies credentials for deployed environments.
 
 ### Feed Configuration
 
@@ -143,6 +145,29 @@ The system analyzes content using `src/TechHub.Infrastructure/Data/Resources/sys
 - **ML**: Azure ML, Azure Databricks, data science pipelines, custom model training
 - **Security**: Microsoft Entra ID, Azure Key Vault, Microsoft Sentinel, zero trust
 
+### AI Categorization Service
+
+`AiCategorizationService` sends each item to an Azure OpenAI chat deployment through
+`AiCompletionClient`. The client authenticates with Microsoft Entra ID (managed identity in Azure,
+`az login` locally), so no API key is configured. Configured under `"AiCategorization"`:
+
+| Setting | Default | Description |
+|---|---|---|
+| `Endpoint` | empty | Azure OpenAI endpoint URL |
+| `DeploymentName` | `gpt-5.2` in `appsettings.json` | Chat deployment to call |
+| `ApiVersion` | `2025-04-01-preview` in `appsettings.json` | Azure OpenAI REST API version |
+| `MaxRetries` | `3` | Attempts per item on rate limits and transient failures |
+| `RateLimitDelaySeconds` | `15` | Wait between attempts on a rate limit without a `Retry-After` header (multiplied by the attempt number) |
+| `MaxContentLength` | `200000` | Declared in the options class, but nothing reads it today, so content is not truncated by this setting |
+
+Behavior worth knowing:
+
+- **Retries**: A `429` waits for the server's `Retry-After` value when present. Network errors and timeouts back off 5 seconds times the attempt number. The HTTP client itself does not retry, so all retry logic lives in the service.
+- **Non-retryable responses**: Content filter blocks and context-length errors return immediately and are recorded as failures with the Azure message.
+- **Response validation**: Responses that are empty, cut off (`finish_reason` other than `stop`), or not valid JSON are recorded as failures. A JSON sanitizer repairs invalid escape sequences before parsing.
+- **Section filter**: Sections returned by the AI that are not one of the seven configured sections are discarded.
+- **Content hash**: `content_hash` is the SHA-256 of title, content and excerpt.
+
 ### Roundup Metadata
 
 The AI extracts roundup metadata for each included item (stored in `ai_metadata` JSONB column):
@@ -154,8 +179,8 @@ The AI extracts roundup metadata for each included item (stored in `ai_metadata`
 - `impact_level` — significance rating
 - `time_sensitivity` — `immediate` / `this-week` / `this-month` / `long-term`
 
-Items with `high` or `medium` relevance are used by the weekly roundup generation
-(see [Weekly Roundups](#weekly-roundups)).
+The weekly roundup generation passes this metadata (including the relevance label) to the AI
+prompt, but it does not use relevance to select articles (see [Roundup Pipeline](#roundup-pipeline)).
 
 ### Admin Dashboard
 
@@ -177,6 +202,26 @@ See [admin-authentication.md](admin-authentication.md) for authentication setup.
   transcripts can be provided manually via the admin UI or batch script
 - **AI API failures**: Retried up to `MaxRetries` times (configurable in `AiCategorizationOptions`)
 - **Rate limiting**: Configurable delay between AI calls (`RateLimitDelaySeconds`)
+
+### Content Processor Configuration
+
+Configured under `"ContentProcessor"` in `appsettings.json`:
+
+| Setting | Default | Description |
+|---|---|---|
+| `Enabled` | `false` (`true` in Production) | Enables scheduled runs. Manual triggers ignore it |
+| `IntervalMinutes` | `60` | Time between scheduled runs |
+| `ItemAgeLimitDays` | `365` | RSS items older than this are skipped at ingestion |
+| `RequestDelayMs` | `10000` | Delay between items within a run, to avoid AI and site rate limits |
+| `RequestTimeoutSeconds` | `30` | Declared in the options class, but the HTTP clients use fixed timeouts configured in the API startup |
+| `MaxItemsPerRun` | `0` | Maximum new items per run (`0` = unlimited) |
+| `MaxYouTubeTagCount` | `15` | YouTube videos with more tags are assumed to be tag-spammed and their tags are ignored. `0` disables YouTube tag fetching |
+| `FailedUrlRetentionDays` | `7` | Failed URL records older than this are purged so the URLs are retried. `0` keeps them forever |
+| `PurgeJobKeepCount` | `500` | Number of recent job records kept. Older ones are deleted at the end of each run |
+| `BrowserUserAgent` | none (required) | User-Agent for article and YouTube requests. Startup fails when it is empty |
+| `SubcollectionRules` | see below | Rules that route items into lookup tables |
+
+Items whose publication date is in the future are capped to the processing date at ingestion.
 
 ### Dedicated Lookup Table Rules
 
@@ -216,26 +261,72 @@ Rules are applied after AI categorization succeeds, so only items that pass the 
 are written to lookup tables. Manually added items that are already in the lookup table
 are not affected.
 
+## Scheduling
+
+Three hosted services in `TechHub.Api` run the background jobs. Each one waits for startup
+(migrations) to finish before doing anything.
+
+| Service | Schedule | Trigger types |
+|---|---|---|
+| `ContentProcessingBackgroundService` | On startup (when enabled), then every `IntervalMinutes` | `scheduled`, `manual` |
+| `RoundupGeneratorBackgroundService` | Every Monday at `RunHourUtc` | `scheduled`, `manual` (including regenerate) |
+| `ContentFixerBackgroundService` | None | `manual` only |
+
+Every run is recorded in `content_processing_jobs` with one of these job types:
+
+| Job type | Written by |
+|---|---|
+| `content-processing` | Scheduled and manual feed processing |
+| `ad-hoc-processing` | Single URL added from the admin UI |
+| `roundup-generation` | Weekly roundup generation |
+| `content-cleanup` | Content fixer |
+
+Job statuses are `running`, `completed`, `failed` and `aborted`. Jobs still `running` after a crash
+or restart are marked aborted on the next startup.
+
+### Enable Gates
+
+A scheduled run happens only when **both** gates are open:
+
+1. The configuration flag (`ContentProcessor:Enabled` or `RoundupGenerator:Enabled`) is `true`. Both
+   default to `false` and are switched on only in Production. PR preview environments override them
+   with environment variables so a restored production database cannot trigger scheduled runs.
+2. The job's row in the `background_job_settings` table (`ContentProcessor`, `RoundupGenerator`) has
+   `enabled = true`. Admins can change it at runtime on `/admin/settings`.
+
+**Manual triggers bypass both gates.** An admin can always start a run from the dashboard, even in
+environments where scheduling is off. The newsletter job uses the same table, see
+[newsletter.md](newsletter.md). Admin endpoints are described in [admin.md](admin.md).
+
 ## Weekly Roundups
 
 Weekly roundups are generated entirely by `RoundupGeneratorBackgroundService`, a background
-service running inside `TechHub.Api`. It fires every Monday at 08:00 UTC and writes
-section-specific roundups directly to the `content_items` table (`collection_name = 'roundups'`).
+service running inside `TechHub.Api`. It fires every Monday at `RunHourUtc` (default 08:00 UTC)
+and writes section-specific roundups directly to the `content_items` table (`collection_name = 'roundups'`).
 Each section roundup is generated sequentially to avoid AI throttling.
 
 ### Roundup Pipeline
 
-1. **Article loading** — Queries `content_items` directly using `primary_section_name`
-   and `ai_metadata`, filtered by `created_at` within the target week
-2. **Relevance filtering** — Per section: always includes all `high`-relevance articles; fills up
-   to `MinArticlesPerSection` with `medium` then `low` articles if the high count is below the minimum
-3. **AI metadata backfill** — Any articles missing `ai_metadata` are categorized on-the-fly before proceeding
+The generator covers the previous Monday-to-Sunday week and loops over every configured section
+except `all`. For each section:
+
+1. **Article loading** — Queries `content_items` for items in that section (`sections_bitmask`),
+   excluding roundups, with `created_at` inside the target week. An item that belongs to several
+   sections is therefore used by each of them
+2. **AI metadata backfill** — Any articles missing `ai_metadata` are categorized on-the-fly before proceeding
+3. **Existing check** — Sections whose roundup for that week already exists are skipped
 4. **Step 1/5** — AI creates news-style narrative stories per section
 5. **Step 2/5** — AI adds continuity by comparing with the previous week's roundup
-6. **Step 3/5** — AI condenses the content paragraph-by-paragraph
+6. **Step 3/5** — AI condenses the content paragraph-by-paragraph. Skipped when `CondensingEnabled` is `false`
 7. **Step 4/5** — AI generates metadata: `title`, `tags`, `introduction`
 8. **Step 5/5** — Table of contents is built from `##`/`###` headers (pure C#)
 9. **DB write** — Upserts one roundup per section into `content_items` + `content_tags_expanded`
+
+**Relevance is not used for selection.** A `RoundupRelevanceFilter` (high relevance always, filled up
+to `MinArticlesPerSection` with medium and low) is registered in dependency injection, but the
+generator never calls it. All articles of the week go to the AI, each labelled with its
+`roundup_relevance`. As a result `MinArticlesPerSection` has no effect today, and the
+`NoArticlesAfterFiltering` outcome is never produced.
 
 Writing style guidelines (`docs/writing-style-guidelines.md`) are injected into every AI step
 prompt to ensure consistent tone and style throughout the roundup.
@@ -246,9 +337,10 @@ Configured under `"RoundupGenerator"` in `appsettings.json`:
 
 | Setting | Default | Description |
 |---|---|---|
-| `Enabled` | `false` | Enable/disable weekly roundup generation |
+| `Enabled` | `false` (`true` in Production) | Enables scheduled roundup generation. Manual triggers ignore it |
 | `RunHourUtc` | `8` | UTC hour to fire on Monday |
-| `MinArticlesPerSection` | `10` | Minimum articles per section; fills from medium/low if high count is below |
+| `MinArticlesPerSection` | `10` | Used only by the unused relevance filter, so it currently has no effect |
+| `CondensingEnabled` | `true` in code, `false` in `appsettings.json` | Runs the condensing step (step 3). The shipped configuration skips it |
 | `RateLimitDelaySeconds` | `15` | Delay between AI calls |
 | `MaxRetries` | `3` | Max retries per AI call |
 
@@ -260,21 +352,22 @@ If an article was skipped with an unexpected reason:
 
 1. Open the admin panel at `/admin/processed-urls`
 2. Find the entry and click **Copy** to copy all details to the clipboard
-3. Check the `Reason` field to understand the AI''s decision
+3. Check the `Reason` field to understand the AI's decision
 4. If the decision was wrong, click **Remove** to delete the entry — it will be retried on the
    next scheduled run
 
 ## Content Fixer
 
 `ContentFixerBackgroundService` performs bulk content quality fixes across all items in the
-database. It runs on-demand via the admin dashboard (manual trigger only).
+database. It runs on-demand via the admin dashboard (manual trigger only), is recorded as a
+`content-cleanup` job, and clears the content cache when changes were applied directly.
 
 ### Fix Operations
 
 | Operation | Description |
 |---|---|
 | **Tag normalization** | Adds missing collection/section tags, removes deprecated tags |
-| **Author normalization** | Standardizes author names to canonical forms |
+| **Author normalization** | Renames the author `Tech Hub Team` to `TechHub`. This is the only rule |
 | **Markdown repair** | Fixes formatting issues (heading spacing, whitespace, HTML entities) |
 | **Markdown validation** | Detects structural issues via Markdig AST (empty headings, broken links) |
 

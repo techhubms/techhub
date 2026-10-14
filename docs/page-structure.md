@@ -12,10 +12,15 @@ The `MainLayout.razor` component renders elements shared across all pages:
 
 - **SkipLink** - Accessibility bypass for keyboard users (WCAG 2.4.1)
 - **Header** - Site navigation (NavHeader + SectionBanner + SubNav), automatically configured from the current URL and SectionCache
-- **HeadContent** - Canonical URL and RSS feed `<link>` tags, derived from the current URL
+- **Body** - The page component, or inline not-found content when the URL does not match a section, collection or fixed page
 - **Footer** - Site footer
+- **Error UI** - The `#blazor-error-ui` banner for unhandled errors
 
-Individual pages only render their `<main>` content area. They do not include `<SkipLink />`, `<Header>`, or `<HeadContent>` for canonical/RSS links.
+Canonical URL, RSS autodiscovery, Open Graph and JSON-LD tags are rendered by the `SeoMetaTags` component in each page, not by the layout. `HeadContent` from a layout does not render during SSR prerendering, so these tags would be missing for crawlers. See [seo.md](seo.md).
+
+Individual pages only render their `<main>` content area. They do not include `<SkipLink />` or `<Header>`.
+
+Admin pages use `AdminLayout` instead of `MainLayout`. See [admin.md](admin.md) for the admin UI and [newsletter.md](newsletter.md) for the newsletter pages (subscribe, confirm, manage, unsubscribe).
 
 ### Required Structure by Page Type
 
@@ -25,7 +30,7 @@ Individual pages only render their `<main>` content area. They do not include `<
 <html>
   <header>                           <!-- Rendered by MainLayout (NavHeader + SectionBanner) -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
-    <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Latest, Tags -->
+    <aside class="sidebar">          <!-- SidebarToggle + MobileSidebarToolbar with panels: Latest, Tags -->
     <section class="home-main-content">  <!-- Section cards grid -->
   </main>
   <footer>                           <!-- Rendered by MainLayout -->
@@ -38,7 +43,7 @@ Individual pages only render their `<main>` content area. They do not include `<
 <html>
   <header>                           <!-- Rendered by MainLayout (NavHeader + section banner) -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
-    <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Search, Date, Tags -->
+    <aside class="sidebar">          <!-- SidebarToggle + MobileSidebarToolbar with panels: Search, Date, Tags -->
     <section>                        <!-- Content items grid -->
   </main>
   <footer>                           <!-- Rendered by MainLayout -->
@@ -51,7 +56,7 @@ Individual pages only render their `<main>` content area. They do not include `<
 <html>
   <header>                           <!-- Rendered by MainLayout (NavHeader + section banner) -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
-    <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Tags, Table of Contents -->
+    <aside class="sidebar">          <!-- SidebarToggle + MobileSidebarToolbar with panels: Tags, Table of Contents -->
     <article>                        <!-- Individual content item -->
   </main>
   <footer>                           <!-- Rendered by MainLayout -->
@@ -64,12 +69,27 @@ Individual pages only render their `<main>` content area. They do not include `<
 <html>
   <header>                           <!-- Rendered by MainLayout (NavHeader + section banner) -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
-    <aside class="sidebar">          <!-- MobileSidebarToolbar with panels: Table of Contents (+ others per page) -->
+    <aside class="sidebar">          <!-- SidebarToggle + MobileSidebarToolbar with panels: Table of Contents (+ others per page) -->
     <article class="article-body">   <!-- Selected video/content -->
   </main>
   <footer>                           <!-- Rendered by MainLayout -->
 </html>
 ```
+
+**Authors Page** (`Authors.razor`, routes `/all/authors` and `/all/authors/{authorName}`):
+
+```html
+<html>
+  <header>                           <!-- Rendered by MainLayout -->
+  <main class="page-with-sidebar">   <!-- Main content wrapper -->
+    <aside class="sidebar">          <!-- SidebarToggle + one "Authors" panel: filter box + author list with item counts -->
+    <section>                        <!-- Prompt to pick an author, or that author's ContentItemsGrid -->
+  </main>
+  <footer>                           <!-- Rendered by MainLayout -->
+</html>
+```
+
+The author list is loaded once and persisted across prerender and hydration. Typing in the filter box narrows the list in the component (no API call), and each author link navigates to `/all/authors/{authorName}`. The `authors` entry in the `all` section is a custom collection, not a content type.
 
 **About Page** (`About.razor`):
 
@@ -122,9 +142,11 @@ Individual pages only render their `<main>` content area. They do not include `<
 
 **CSS Classes** (defined in `page-container.css`):
 
-- **`.page-with-sidebar`** - Applied to `<main>` for two-column grid layout (300px sidebar + 1fr content)
+- **`.page-with-sidebar`** - Applied to `<main>` for two-column grid layout (300px sidebar + 1fr content). The sidebar column shrinks to 48px when the sidebar is collapsed (see [Desktop Sidebar Collapse](#desktop-sidebar-collapse))
 - **`.page-without-sidebar`** - Applied to `<main>` for single-column centered layout
 - **`.article-body`** - Applied to content container within `<article>` for typography styling
+
+A `.hero-banner` placed directly inside `.page-with-sidebar` sits in the content column on desktop and above the sidebar toolbar on mobile (see [Hero Banner](#hero-banner)).
 
 **Why `<aside>` is INSIDE `<main>`**: Per WAI-ARIA best practices, complementary content (`<aside>`) that's directly related to the main content should be nested within the `<main>` landmark. This helps assistive technologies understand the page structure.
 
@@ -159,7 +181,7 @@ header {
     position: sticky;
     top: 76px;          /* Desktop: sticks below main-nav (76px = main-nav height) */
     z-index: 999;       /* Slightly lower than main-nav */
-    /* Mobile (≤ 1292px): top: 59px to sit below compact header */
+    /* Mobile (≤ 1292px): top: var(--mobile-nav-height) (64px) to sit below the compact header */
 }
 ```
 
@@ -183,17 +205,18 @@ Pages define layout structure with `<aside class="sidebar">`, sidebar components
 
 ### Responsibility Pattern
 
-**Pages** (`Section.razor`, `Home.razor`, `ContentItem.razor`):
+**Pages** (`SectionCollection.razor`, `Home.razor`, `ContentItem.razor`):
 
 - Use `.page-with-sidebar` container class
 - Define the `<aside class="sidebar">` container
+- Render `SidebarToggle` (desktop collapse button) and a `MobileSidebarToolbar`
 - Determine which sidebar components to render
 - Control component order and composition
 - Pass required parameters to components
 
-**Sidebar Components** (`SidebarCollectionNav.razor`, `SidebarRssLinks.razor`, `SidebarTagCloud.razor`):
+**Sidebar Components** (`SidebarSearch.razor`, `SidebarTagCloud.razor`, `SidebarToc.razor`, `DateRangeSlider.razor`):
 
-- Render their specific content (navigation, RSS links, tag clouds)
+- Render their specific content (search box, tag cloud, table of contents, date slider)
 - Use semantic HTML appropriate to their purpose (`<nav>`, `<div>`, etc.)
 - Apply shared sidebar styles (`.sidebar-section`, `.sidebar-link-button`, etc.)
 - DO NOT wrap themselves in `<aside class="sidebar">`
@@ -204,13 +227,10 @@ Pages define layout structure with `<aside class="sidebar">`, sidebar components
 All pages with sidebars wrap their sidebar components in `MobileSidebarToolbar` and `MobileSidebarPanel`. On desktop, the toolbar is invisible (`display: contents`); on mobile, it renders a button bar for toggling individual panels.
 
 ```razor
-<Header SectionName="..." />
-
 <main class="page-with-sidebar">
-    <PageHeader Section="@sectionData" />
-    
     <!-- Page defines sidebar container -->
     <aside class="sidebar">
+        <SidebarToggle />
         <MobileSidebarToolbar>
             <MobileSidebarPanel Label="Search" Icon="search">
                 <SidebarSearch ... />
@@ -228,24 +248,68 @@ All pages with sidebars wrap their sidebar components in `MobileSidebarToolbar` 
 </main>
 ```
 
+The site header (`Header`) is rendered by `MainLayout`, so pages never include it.
+
 ### Available Sidebar Components
 
 | Component | Purpose | Parameters |
 |-----------|---------|------------|
-| `SidebarCollectionNav` | Section collections and custom pages navigation | `Section`, `SelectedCollection` |
-| `SidebarRssLinks` | RSS feed and subscription links | `Links` (array of RssLink) |
+| `SidebarSearch` | Search box with exact-match toggle | `SearchQuery`, `ExactMatch` (plus change callbacks) |
+| `DateRangeSlider` | Date range filter | `FromDate`, `ToDate`, `DefaultLastDays` (plus change callback) |
 | `SidebarTagCloud` | Interactive tag cloud for filtering | `SectionName` (fetches from API), `Tags` (optional, shows real counts for specific tags) |
-| `SidebarToc` | Table of contents from HTML headings | `HtmlContent` |
+| `SidebarToc` | Table of contents from HTML headings | `HtmlContent`, `Title`, `MinLevel`, `MaxLevel` (see [toc-component.md](toc-component.md)) |
+| `SidebarToggle` | Desktop sidebar collapse button | None |
+| `MobileSidebarToolbar` | Wraps the panels; button bar on mobile, invisible on desktop | `ChildContent` |
+| `MobileSidebarPanel` | One toggleable panel inside the toolbar | `Label`, `Icon`, `HasActiveFilter` |
+
+`SidebarRssLinks` and `MobileSidebarCollapse` exist in the codebase but no page uses them today.
 
 ### Sidebar Component Semantic HTML
 
 Each component chooses its own semantic wrapper:
 
-- `<nav>` - For site navigation (collections, pages)
-- `<div>` - For non-navigational content (RSS feeds, metadata)
+- `<nav>` - For site navigation and the table of contents
+- `<div>` - For non-navigational content (search, tag cloud, metadata)
 - `<aside>` - ONLY used by pages for the outer sidebar container
 
 Multiple `<nav>` elements per page are valid. Screen readers can distinguish between different navigation sections.
+
+## Desktop Sidebar Collapse
+
+On desktop (> 1292px) users can collapse the sidebar to a narrow rail with the `SidebarToggle` button at the top of the sidebar, which gives the content column more room.
+
+- **State**: Persisted in the `sidebar-collapsed` cookie (1 year, `SameSite=Lax`) so the choice survives page loads and browser sessions
+- **Server rendering**: `App.razor` reads the cookie during SSR and adds the `sidebar-collapsed` class to `<html>`, so the first paint already shows the right layout (no flash, no inline script). `SidebarToggle` reads the same cookie to pick its initial icon and label
+- **Toggle**: Clicking the button calls `TechHub.sidebar.toggle()` in `sidebar-toggle.js`, which flips the class on `<html>` and rewrites the cookie
+- **Layout**: With `html.sidebar-collapsed`, `.page-with-sidebar` uses a 48px first column and a wider section card grid (`page-container.css`), and `sidebar.css` hides everything in the sidebar except the toggle button
+- **Mobile and tablet**: The collapsed state is ignored at ≤ 1292px, where the toolbar-based sidebar applies
+
+Every page that uses `.page-with-sidebar` renders `SidebarToggle`.
+
+## Hero Banner
+
+`HeroBanner` is a collapsible announcement banner shown above the content on section pages whose configuration enables it (currently used by `SectionCollection`). It renders nothing when no cards are active.
+
+- **Data**: Cards come from `HeroBannerCache`, an in-process singleton populated at startup and refreshed every 5 minutes by `HeroBannerCacheRefreshService`, so rendering needs no per-request API call. The data originates from the custom pages API (see [custom-pages.md](custom-pages.md))
+- **Active cards**: A card shows when today's date (Europe/Brussels) falls between its start and end date (inclusive), and its optional section list contains the current section
+- **Collapse state**: Stored in the `hero-banner-collapsed` cookie
+- **Auto-expand on new content**: A hash of the active card titles is stored in the `hero-banner-hash` cookie. When the hash differs (new cards appeared), the banner opens even if the visitor collapsed it earlier, and the hash cookie is updated so it stays closed on the next visit if collapsed again
+- **Persistence**: The component state is persisted across prerender and hydration with `PersistentComponentState`
+- **Layout**: See [Page Layout Classes](#page-layout-classes) for placement on desktop and mobile
+
+## Reconnect Modal
+
+`ReconnectModal` (in `Components/Layout`) is a `<dialog>` that Blazor shows when the interactive circuit is lost. Its companion module `ReconnectModal.razor.js` handles the circuit states:
+
+| State | Behavior |
+|-------|----------|
+| Show | Opens the dialog with "Rejoining the server..." and a countdown between attempts |
+| Failed | Shows **Retry** and **Reload Page** buttons, and retries automatically when the tab becomes visible again |
+| Paused | Offers a **Resume** button for sessions paused by the server |
+| Rejected | Reloads the page, because the circuit no longer exists |
+| Hide | Fades the dialog out before closing it so content resizing is not visible |
+
+`App.razor` renders the modal once for the whole site.
 
 ## Skeleton Loading States
 
@@ -296,7 +360,7 @@ On mobile devices (≤ 1292px), the layout adapts with a hamburger menu, dropdow
 
 | Breakpoint | Behavior |
 |---|---|
-| ≤ 1292px | Hamburger menu, compact header (~50px), SubNav dropdown, sidebar toolbar, single-column grid |
+| ≤ 1292px | Hamburger menu, compact header (`--mobile-nav-height`, 64px), SubNav dropdown, sidebar toolbar, single-column grid |
 | ≤ 768px | Reduced padding, secondary layout adjustments |
 
 ### Hamburger Menu
@@ -326,7 +390,7 @@ The `NavHeader` component includes a hamburger button (three-line icon) that ope
 **Key behaviors**:
 
 - Hamburger animates to X when open (CSS `rotate` transition on three `<span>` lines)
-- Menu panel slides in from right (`min(320px, 85vw)` width, starts at `top: 52px`)
+- Menu panel slides in from right (`min(320px, 85vw)` width, starts at `top: var(--mobile-nav-height)`)
 - Background overlay blocks interaction with page content
 - Body scroll locked via JS interop (`mobile-nav.js`)
 - Clicking a link closes the menu and navigates
@@ -341,18 +405,18 @@ The `NavHeader` component includes a hamburger button (three-line icon) that ope
 | Menu panel | 1001 | `.mobile-menu.open` (slide-out panel) |
 | Overlay | 1000 | `.mobile-menu-overlay` (click-to-close backdrop) |
 
-The `.main-nav` z-index is raised to 1002 on mobile so the hamburger button remains clickable above the open menu panel. The menu panel starts at `top: 52px` to sit below the compact nav header.
+The `.main-nav` z-index is raised to 1002 on mobile so the hamburger button remains clickable above the open menu panel. The menu panel starts at `top: var(--mobile-nav-height)` to sit below the compact nav header.
 
 ### Compact Header
 
-On mobile (≤ 1292px) the NavHeader shrinks to ~50px (`min-height`) showing only the logo and hamburger button. On desktop (> 1292px) the full 76px header with horizontal nav links is displayed.
+On mobile (≤ 1292px) the NavHeader shrinks to `--mobile-nav-height` (64px) showing only the logo and hamburger button. On desktop (> 1292px) the full 76px header (`--main-nav-height`) with horizontal nav links is displayed.
 
 ### SubNav on Mobile
 
 The SubNav remains sticky on mobile but switches from a horizontal button bar to a dropdown menu:
 
 - **Desktop**: Horizontal button bar at `position: sticky; top: 76px`
-- **Mobile**: Dropdown toggle at `position: sticky; top: 59px` (below compact header)
+- **Mobile**: Dropdown toggle at `position: sticky; top: var(--mobile-nav-height)` (below compact header)
 - The dropdown shows the currently active collection label with a chevron
 - Clicking opens an absolute-positioned menu with all collection and custom page links
 - Each dropdown item has `min-height: 44px` touch target
@@ -380,9 +444,10 @@ On mobile, sidebar content is organized into individually toggleable panels acce
 | SectionCollection (Browse page `/section/all`) | "Content" / `filter` *(conditional)*, "Search" / `search`, "Date" / `calendar`, "Tags" / `tags` |
 | SectionCollection (collection page `/section/collection`) | "Search" / `search`, "Date" / `calendar`, "Tags" / `tags` |
 | ContentItem | "Tags" / `tags`, "Table of Contents" / `toc` |
-| GitHubCopilotFeatures | "Table of Contents" / `toc`, "Filters" / `filter` |
-| GitHubCopilotVSCodeUpdates | "All Updates" / `updates`, "Table of Contents" / `toc` |
-| Custom Pages (Levels, Handbook, GenAI, DXSpace, AISDLC) | "Table of Contents" / `toc` |
+| GitHubCopilotFeatures | "Subscriptions" / `filter` (no table of contents) |
+| GitHubCopilotVSCodeUpdates | "Recent Updates" / `updates`, "Table of Contents" / `toc` |
+| Authors (`/all/authors`) | "Authors" / `filter` (with `HasActiveFilter` while the name filter is set) |
+| Custom Pages (Levels, Handbook, Getting Started, GenAI, DXSpace, AISDLC) | "Table of Contents" / `toc` |
 
 ### Mobile CSS Architecture
 
@@ -400,8 +465,10 @@ Long content lists use a "Load more" button for progressive loading.
 
 ### Configuration
 
+- **Implementation**: `ContentItemsGrid.razor` (used by section and collection pages, and the Authors page)
 - **Items per batch**: 40 items
 - **URL parameter preservation**: Maintains filters/search when loading more
+- **Back navigation**: Loaded batches are kept in a circuit-scoped cache (`ContentGridStateCache`), so returning from a detail page restores all previously loaded items instead of only the first batch
 
 ### Pattern
 

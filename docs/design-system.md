@@ -83,9 +83,10 @@ All colors use the `--color-` prefix for consistency. See `design-tokens.css` fo
 ### Font Stack
 
 ```css
-font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-             "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 ```
+
+This is `--font-family-base` in `design-tokens.css`. Code uses `--font-family-mono`.
 
 ### Font Sizes
 
@@ -102,6 +103,9 @@ Use consistent spacing units based on an 8px grid system:
 - `--spacing-4`: 2rem (32px)
 - `--spacing-5`: 2.5rem (40px)
 - `--spacing-6`: 3rem (48px)
+- `--spacing-8`: 4rem (64px)
+- `--spacing-10`: 5rem (80px)
+- `--spacing-12`: 6rem (96px)
 
 ## Breakpoints
 
@@ -115,7 +119,7 @@ The layout uses two main breakpoints that control navigation, sidebar, and grid 
 
 The primary layout switch between collapsed (mobile/tablet) and expanded (desktop) happens at **1292px**. The 768px breakpoint provides additional padding and font-size reductions for smaller screens.
 
-**Note**: CSS custom properties cannot be used in media queries, so breakpoint values are hardcoded in `@media` rules. The design tokens (`--breakpoint-mobile`, `--breakpoint-tablet`) serve as reference documentation only.
+**Note**: CSS custom properties cannot be used in media queries, so breakpoint values are hardcoded in `@media` rules. The design tokens (`--breakpoint-mobile`, `--breakpoint-tablet`) serve as reference documentation only. `--breakpoint-desktop` (1280px) is a leftover that does not match the 1292px switch used in the CSS, so do not rely on it.
 
 ## CSS Architecture
 
@@ -129,11 +133,17 @@ Reusable design system components and site-wide styles:
 |------|---------|
 | `design-tokens.css` | ALL colors, typography, spacing (single source of truth) |
 | `base.css` | Reset, typography, links, focus states, utilities, forms |
+| `buttons.css` | Shared button styles |
+| `cards.css` | Shared card styles |
 | `sidebar.css` | Shared sidebar component (used across multiple pages) |
 | `nav-helpers.css` | Navigation helpers (back to top, back to previous) |
 | `loading.css` | Skeleton loaders, loading states |
-| `page-container.css` | Page layout containers |
+| `page-container.css` | Page layout containers, including the collapsed-sidebar layout |
 | `article.css` | Article content styling |
+| `newsletter.css` | Newsletter pages |
+| `admin.css` | Admin area (loaded globally to avoid a flash of unstyled content on interactive admin pages) |
+
+The authoritative list and load order is `Configuration/CssFiles.cs`.
 
 ### Component-Scoped CSS (.razor.css files)
 

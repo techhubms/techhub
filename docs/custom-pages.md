@@ -24,9 +24,12 @@ While most content in Tech Hub is standard markdown served via generic item endp
 
 | Section | Custom Pages |
 |---|---|
-| `github-copilot` | Features, Getting Started, Levels of Enlightenment, The GitHub Copilot Handbook, Tool Tips, VS Code Updates |
+| `all` | Content by Author (`/all/authors`) |
+| `github-copilot` | Features, VS Code Updates, Getting Started, Levels of Enlightenment, The GitHub Copilot Handbook, Tool Tips, Discord |
 | `ai` | GenAI Basics, GenAI Advanced, GenAI Applied, AI SDLC |
 | `devops` | DX, SPACE & DORA |
+
+This is 13 custom page collections across 4 sections. Not every one has an endpoint below. The authors page uses the [authors API](content-api.md#authors), VS Code Updates uses its own public endpoint (see [Implementation](#implementation)), and Discord is a static page.
 
 ## Endpoints
 
@@ -96,7 +99,7 @@ Retrieves the structured data required to render the corresponding custom page.
 
 **Endpoint**: `GET /api/custom-pages/hero-banner`
 **Data Model**: `HeroBannerData`
-**Description**: Cards for the collapsible announcement banner shown above section content (currently used in the GitHub Copilot section). All cards are returned regardless of date — clients filter by `startDate`/`endDate` using the Europe/Brussels timezone. When no active cards remain, the banner is hidden automatically.
+**Description**: Cards for the collapsible announcement banner shown above section content for sections that enable `ShowHeroBanner` (no section enables it in the shipped configuration). All cards are returned regardless of date. Clients filter by `startDate`/`endDate` using the Europe/Brussels timezone. When no active cards remain, the banner is hidden automatically. The Web app keeps this data in `HeroBannerCache` (see [caching.md](caching.md#web-caches)).
 
 ## Response Format
 
@@ -117,7 +120,7 @@ Custom pages content is hydrated from:
 
 Custom page JSON data can be viewed and edited from the admin dashboard at `/admin/custom-pages`. Each entry shows:
 
-- **Key** — Unique identifier matching the API endpoint (e.g., `dx-space`, `levels`)
+- **Key** — Unique identifier of the `custom_page_data` row. It matches the endpoint name for most pages (e.g., `dx-space`, `levels`), with one exception: `GET /api/custom-pages/features` reads the key `githubcopilot-features`
 - **Description** — Human-readable label
 - **Last Updated** — Timestamp of the most recent edit
 - **Edit** — Opens a JSON editor modal (`JsonEditorModal`) for in-place editing
@@ -130,7 +133,7 @@ The three GenAI endpoints use a special handler that processes markdown content 
 
 All three GenAI pages (`genai-basics`, `genai-advanced`, `genai-applied`) share a single Razor component (`GenAI.razor`) with three `@page` routes.
 
-The VS Code Updates page (`GitHubCopilotVSCodeUpdates.razor`) is configured as `Custom: true` but does **not** use a custom pages API endpoint. It fetches content via the dedicated public endpoint `GET /api/vscode-updates` (implemented by `GetPublicVscodeUpdatesAsync`), which returns items tracked in the `vscode_update_items` lookup table.
+The VS Code Updates page (`GitHubCopilotVSCodeUpdates.razor`) is configured as `Custom: true` but does **not** use a custom pages API endpoint. It fetches content via the dedicated public endpoint `GET /api/vscode-updates` (called by `GetPublicVscodeUpdatesAsync` in the Web API client and handled by `GetVscodeUpdatesPublicAsync` in the API), which returns items tracked in the `vscode_update_items` lookup table. See [content-api.md](content-api.md#vs-code-updates-api).
 
 See [src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs](../src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs) for endpoint implementation.
 
@@ -140,23 +143,16 @@ Some custom pages are populated by specialized video content tracked in dedicate
 
 ### GitHub Copilot Features Content
 
-**Location**: Videos stored under `collection_name = 'videos'` and tracked in the `ghc_features` and `ghc_feature_content` tables.
+**Location**: Features live in the `ghc_features` table and link to content items (usually videos under `collection_name = 'videos'`) through the `ghc_feature_content` table.
 
-GHC features are managed via the admin UI and the `ghc_features`/`ghc_feature_content` database tables. They can also be synced from the content repository's `_videos/ghc-features/` directory via `ContentSyncService`. The `ghc_feature_content` table links features to their related video content items.
-
-**Requirements**:
-
-- Managed via the admin UI or by `ContentSyncService` syncing markdown files from the content repository's `_videos/ghc-features/` directory
-- **Metadata** (frontmatter, when synced via `ContentSyncService`):
-  - Requires `plans` array indicating supported tiers (e.g. `["Free", "Pro", "Business", "Pro+", "Enterprise"]`)
-  - Requires `ghes_support` boolean
+GHC features are managed through the admin UI, which writes to those tables (see [admin.md](admin.md) and the [GHC features API](content-api.md#ghc-features-api)). The test-only `ContentSyncService` can also seed them from fixture files, but production never does.
 
 **Features**:
 
-- Tracked in `ghc_features` and `ghc_feature_content` database tables
 - Populates the features timeline page at `/github-copilot/features` (via `/api/ghc-features`)
-- Videos are matched to feature entries via the `feature_slug` FK in `ghc_feature_content` — when a match is found, the video thumbnail and link appear in the expanded feature detail
-- Published items with YouTube URLs display video thumbnails and link to the video page
+- Each feature has a release date, the list of plans that include it and a GHES support flag. See [content-schema.md](content-schema.md#github-copilot-features)
+- Linked content items appear in the expanded feature detail, and the item marked as thumbnail supplies the video thumbnail
+- Items with YouTube URLs display video thumbnails and link to the video page
 
 ### VS Code Updates
 
@@ -174,7 +170,7 @@ Items are automatically identified based on feed name and title pattern rules co
 - Tracked in the `vscode_update_items` lookup table
 - Populates the updates page at `/github-copilot/vscode-updates`
 - Latest video is featured prominently
-- Fetched via `GET /api/vscode-updates`, which returns all items without a date filter
+- Fetched via `GET /api/vscode-updates`, which returns the items without a date filter, capped at 100 items
 
 ## Custom Page Ordering
 
@@ -212,7 +208,7 @@ Add the `Order` property to custom page collections in `appsettings.json`:
 }
 ```
 
-All 10 custom page collections across 3 sections (`github-copilot`, `ai`, `devops`) use this pattern.
+All 13 custom page collections across 4 sections (`all`, `github-copilot`, `ai`, `devops`) use this pattern.
 
 ### Ordering Rules
 

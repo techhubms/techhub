@@ -165,7 +165,8 @@ if ($apiFqdn) {
             $healthResponse = Invoke-WebRequest -Uri "https://$apiFqdn/health" -TimeoutSec 10 -UseBasicParsing
             $statusCode = $healthResponse.StatusCode
         } catch {
-            if ($_.Exception.Response) {
+            # Connection failures have no HTTP response; $_.Exception.Response does not exist then (StrictMode)
+            if ($_.Exception.PSObject.Properties['Response'] -and $_.Exception.Response) {
                 $statusCode = [int]$_.Exception.Response.StatusCode
             }
         }

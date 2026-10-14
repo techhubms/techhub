@@ -2,11 +2,11 @@
 
 > **RULE**: Follow [Root AGENTS.md](../../AGENTS.md) for workflow and [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) for frontend context.
 
-Vitest + jsdom unit tests for client-side JavaScript in `src/TechHub.Web/wwwroot/js/`.
+Vitest + jsdom unit tests for client-side JavaScript in `src/TechHub.Web/wwwroot/js/`, the Blazor initializer `wwwroot/TechHub.Web.lib.module.js` and component modules such as `Components/Layout/ReconnectModal.razor.js`.
 
 ## Framework
 
-- **Vitest** v4 — Fast ES module test runner with native `import()` support
+- **Vitest** v5 — Fast ES module test runner with native `import()` support
 - **jsdom** — DOM simulation environment (configured in `vitest.config.js`)
 - Tests run in Node.js with jsdom providing `window`, `document`, etc.
 
@@ -24,7 +24,7 @@ npm run test:watch # Watch mode
 ## Structure
 
 - All test files: `tests/javascript/*.test.js`
-- One test file per source file (e.g., `scroll-manager.test.js` tests `scroll-manager.js`)
+- One test file per source file (e.g., `scroll-manager.test.js` tests `scroll-manager.js`); initializer and component modules use a short name (`lib-module.test.js`, `reconnect-modal.test.js`)
 - Config: `/vitest.config.js` (root)
 - Dependencies: `/package.json` devDependencies
 
@@ -60,13 +60,15 @@ Create needed DOM elements in `beforeEach`, clean with `document.body.innerHTML 
 
 | Source File | Test File | Key Behaviors |
 |-------------|-----------|---------------|
-| `scroll-manager.js` | `scroll-manager.test.js` | Buttons, keyboard nav, scroll save/restore, TOC highlight, infinite scroll, navigation gating |
+| `scroll-manager.js` | `scroll-manager.test.js` | Buttons, keyboard nav, scroll save/restore, TOC highlight, navigation gating |
 | `sidebar-toggle.js` | `sidebar-toggle.test.js` | Toggle class, cookie persistence |
 | `hero-banner.js` | `hero-banner.test.js` | Cookie persistence for collapsed/hash |
 | `mobile-nav.js` | `mobile-nav.test.js` | Scroll lock/unlock, escape handler |
 | `date-range-slider.js` | `date-range-slider.test.js` | Clamping, fill position |
 | `custom-pages.js` | `custom-pages.test.js` | Collapsible cards, filters, expandable badges |
 | `page-scripts.js` | `page-scripts.test.js` | Global exposure, script loading flags |
+| `wwwroot/TechHub.Web.lib.module.js` | `lib-module.test.js` | SignalR timeouts, ready flags, enhancedload reset, scroll restoration, `__isBlazorInteractiveReady` |
+| `Components/Layout/ReconnectModal.razor.js` | `reconnect-modal.test.js` | Modal show/hide, retry/resume/reload flows |
 
 ## Key Rules
 
@@ -76,6 +78,8 @@ Create needed DOM elements in `beforeEach`, clean with `document.body.innerHTML 
 - **Clean up event listeners** — call `dispose()`/`destroy()` in `afterEach`
 - **Use `vi.fn()` for Blazor interop** — mock `invokeMethodAsync` and similar
 - **Floating-point assertions** — use `toBeCloseTo()` for percentage calculations
+- **Never wait in real time** — use `vi.useFakeTimers()` + `vi.advanceTimersByTime()` (restore with `vi.useRealTimers()` in `afterEach`); fake only what you need, e.g. `{ toFake: ['setTimeout', 'clearTimeout'] }`, so stubbed `requestAnimationFrame` keeps working
+- **Remove document-level listeners** — modules that register `document` listeners on import outlive the test; spy on `document.addEventListener` and remove them in `afterEach`
 
 ## CI/CD Integration
 

@@ -442,6 +442,876 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
         emailSender.VerifyNoOtherCalls();
     }
 
+    // ── Token logic (static, no database) ─────────────────────────────────
+
+    [Fact]
+    public void IsValidConfirmToken_TokenBuiltForSameEmailAndSecret_ReturnsTrue()
+    {
+        // Arrange
+        var token = NewsletterService.BuildConfirmToken("user@example.com", Secret);
+
+        // Act
+        var isValid = NewsletterService.IsValidConfirmToken("user@example.com", token, Secret);
+
+        // Assert
+        isValid.Should().BeTrue();
+    }
+
+    [Fact]
+    public void BuildConfirmToken_SameInput_IsDeterministicAndUrlSafe()
+    {
+        // Act
+        var first = NewsletterService.BuildConfirmToken("user@example.com", Secret);
+        var second = NewsletterService.BuildConfirmToken("user@example.com", Secret);
+
+        // Assert
+        first.Should().Be(second);
+        first.Should().HaveLength(43, "an HMAC-SHA256 digest encodes to 43 unpadded base64url characters");
+        first.Should().MatchRegex("^[A-Za-z0-9_-]+$");
+    }
+
+    [Fact]
+    public void IsValidConfirmToken_TamperedToken_ReturnsFalse()
+    {
+        // Arrange
+        var token = NewsletterService.BuildConfirmToken("user@example.com", Secret);
+        var tampered = (token[0] == 'A' ? 'B' : 'A') + token[1..];
+
+        // Act
+        var isValid = NewsletterService.IsValidConfirmToken("user@example.com", tampered, Secret);
+
+        // Assert
+        isValid.Should().BeFalse();
+    }
+
+    [Fact]
+    public void IsValidConfirmToken_TokenForDifferentEmail_ReturnsFalse()
+    {
+        // Arrange
+        var token = NewsletterService.BuildConfirmToken("user@example.com", Secret);
+
+        // Act
+        var isValid = NewsletterService.IsValidConfirmToken("other@example.com", token, Secret);
+
+        // Assert
+        isValid.Should().BeFalse();
+    }
+
+    [Fact]
+    public void IsValidConfirmToken_TokenSignedWithDifferentSecret_ReturnsFalse()
+    {
+        // Arrange
+        var token = NewsletterService.BuildConfirmToken("user@example.com", "another-secret");
+
+        // Act
+        var isValid = NewsletterService.IsValidConfirmToken("user@example.com", token, Secret);
+
+        // Assert
+        isValid.Should().BeFalse();
+    }
+
+    [Fact]
+    public void IsValidConfirmToken_UnsubscribeTokenUsed_ReturnsFalse()
+    {
+        // Arrange
+        var unsubscribeToken = NewsletterService.BuildUnsubscribeToken("user@example.com", Secret);
+
+        // Act
+        var isValid = NewsletterService.IsValidConfirmToken("user@example.com", unsubscribeToken, Secret);
+
+        // Assert
+        isValid.Should().BeFalse("confirm and unsubscribe tokens use separate HMAC domains");
+    }
+
+    [Fact]
+    public void IsValidUnsubscribeToken_ConfirmTokenUsed_ReturnsFalse()
+    {
+        // Arrange
+        var confirmToken = NewsletterService.BuildConfirmToken("user@example.com", Secret);
+
+        // Act
+        var isValid = NewsletterService.IsValidUnsubscribeToken("user@example.com", confirmToken, Secret);
+
+        // Assert
+        isValid.Should().BeFalse("a confirmation link must never grant unsubscribe or manage access");
+    }
+
+    [Fact]
+    public void BuildConfirmToken_AndBuildUnsubscribeToken_ProduceDifferentTokensForSameInput()
+    {
+        // Act
+        var confirmToken = NewsletterService.BuildConfirmToken("user@example.com", Secret);
+        var unsubscribeToken = NewsletterService.BuildUnsubscribeToken("user@example.com", Secret);
+
+        // Assert
+        confirmToken.Should().NotBe(unsubscribeToken);
+    }
+
+    [Theory]
+    [InlineData("USER@EXAMPLE.COM")]
+    [InlineData("  user@example.com  ")]
+    [InlineData("User@Example.com")]
+    public void IsValidConfirmToken_EmailWithDifferentCaseOrWhitespace_ReturnsTrue(string email)
+    {
+        // Arrange
+        var token = NewsletterService.BuildConfirmToken("user@example.com", Secret);
+
+        // Act
+        var isValid = NewsletterService.IsValidConfirmToken(email, token, Secret);
+
+        // Assert
+        isValid.Should().BeTrue("emails are normalised (trimmed, lower-cased) before signing");
+    }
+
+    [Theory]
+    [InlineData("USER@EXAMPLE.COM")]
+    [InlineData("  user@example.com  ")]
+    public void IsValidUnsubscribeToken_EmailWithDifferentCaseOrWhitespace_ReturnsTrue(string email)
+    {
+        // Arrange
+        var token = NewsletterService.BuildUnsubscribeToken("user@example.com", Secret);
+
+        // Act
+        var isValid = NewsletterService.IsValidUnsubscribeToken(email, token, Secret);
+
+        // Assert
+        isValid.Should().BeTrue();
+    }
+
+    [Theory]
+    [InlineData("not base64!")]
+    [InlineData("a")]
+    [InlineData("!!!!")]
+    [InlineData("AAAA")]
+    public void IsValidConfirmToken_MalformedOrWrongLengthToken_ReturnsFalseWithoutThrowing(string token)
+    {
+        // Act
+        var isValid = NewsletterService.IsValidConfirmToken("user@example.com", token, Secret);
+
+        // Assert
+        isValid.Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData("not base64!")]
+    [InlineData("a")]
+    [InlineData("!!!!")]
+    public void IsValidUnsubscribeToken_MalformedToken_ReturnsFalseWithoutThrowing(string token)
+    {
+        // Act
+        var isValid = NewsletterService.IsValidUnsubscribeToken("user@example.com", token, Secret);
+
+        // Assert
+        isValid.Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public void IsValidConfirmToken_BlankToken_ReturnsFalse(string token)
+    {
+        // Act
+        var isValid = NewsletterService.IsValidConfirmToken("user@example.com", token, Secret);
+
+        // Assert
+        isValid.Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public void BuildConfirmToken_BlankSecret_ThrowsArgumentException(string secret)
+    {
+        // Act
+        var act = () => NewsletterService.BuildConfirmToken("user@example.com", secret);
+
+        // Assert
+        act.Should().Throw<ArgumentException>().WithParameterName("secret");
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public void BuildUnsubscribeToken_BlankSecret_ThrowsArgumentException(string secret)
+    {
+        // Act
+        var act = () => NewsletterService.BuildUnsubscribeToken("user@example.com", secret);
+
+        // Assert
+        act.Should().Throw<ArgumentException>().WithParameterName("secret");
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public void IsValidConfirmToken_BlankSecret_Throws(string secret)
+    {
+        // Arrange
+        var token = NewsletterService.BuildConfirmToken("user@example.com", Secret);
+
+        // Act
+        var act = () => NewsletterService.IsValidConfirmToken("user@example.com", token, secret);
+
+        // Assert — callers must guard against a blank secret before validating
+        act.Should().Throw<ArgumentException>();
+    }
+
+    // ── ConfirmSubscriberAsync ────────────────────────────────────────────
+
+    [Fact]
+    public async Task ConfirmSubscriberAsync_ValidToken_ConfirmsSubscriber()
+    {
+        // Arrange
+        const string Email = "confirm-valid@example.com";
+        await SeedSubscriberAsync(Email, confirmed: false);
+        var sut = CreateService();
+        var token = NewsletterService.BuildConfirmToken(Email, Secret);
+
+        // Act
+        var result = await sut.ConfirmSubscriberAsync(Email, token, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().Be(ConfirmSubscriptionResult.Confirmed);
+        (await IsConfirmedAsync(Email)).Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task ConfirmSubscriberAsync_EmailInDifferentCase_ConfirmsSubscriber()
+    {
+        // Arrange
+        const string Email = "confirm-case@example.com";
+        await SeedSubscriberAsync(Email, confirmed: false);
+        var sut = CreateService();
+        var token = NewsletterService.BuildConfirmToken(Email, Secret);
+
+        // Act
+        var result = await sut.ConfirmSubscriberAsync("Confirm-CASE@Example.com", token, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().Be(ConfirmSubscriptionResult.Confirmed);
+        (await IsConfirmedAsync(Email)).Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task ConfirmSubscriberAsync_AlreadyConfirmedSubscriber_ReturnsAlreadyConfirmed()
+    {
+        // Arrange
+        const string Email = "confirm-already@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true);
+        var sut = CreateService();
+        var token = NewsletterService.BuildConfirmToken(Email, Secret);
+
+        // Act
+        var result = await sut.ConfirmSubscriberAsync(Email, token, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().Be(ConfirmSubscriptionResult.AlreadyConfirmed);
+    }
+
+    [Fact]
+    public async Task ConfirmSubscriberAsync_TamperedToken_ReturnsInvalidTokenAndDoesNotConfirm()
+    {
+        // Arrange
+        const string Email = "confirm-tampered@example.com";
+        await SeedSubscriberAsync(Email, confirmed: false);
+        var sut = CreateService();
+        var token = NewsletterService.BuildConfirmToken(Email, Secret);
+        var tampered = (token[0] == 'A' ? 'B' : 'A') + token[1..];
+
+        // Act
+        var result = await sut.ConfirmSubscriberAsync(Email, tampered, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().Be(ConfirmSubscriptionResult.InvalidToken);
+        (await IsConfirmedAsync(Email)).Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task ConfirmSubscriberAsync_UnsubscribeTokenUsed_ReturnsInvalidTokenAndDoesNotConfirm()
+    {
+        // Arrange
+        const string Email = "confirm-wrong-domain@example.com";
+        await SeedSubscriberAsync(Email, confirmed: false);
+        var sut = CreateService();
+        var unsubscribeToken = NewsletterService.BuildUnsubscribeToken(Email, Secret);
+
+        // Act
+        var result = await sut.ConfirmSubscriberAsync(Email, unsubscribeToken, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().Be(ConfirmSubscriptionResult.InvalidToken);
+        (await IsConfirmedAsync(Email)).Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task ConfirmSubscriberAsync_ValidTokenForUnknownEmail_ReturnsInvalidToken()
+    {
+        // Arrange
+        const string Email = "confirm-unknown@example.com";
+        await _fixture.Connection.ExecuteAsync("DELETE FROM newsletter_subscribers WHERE lower(email) = @Email", new { Email });
+        var sut = CreateService();
+        var token = NewsletterService.BuildConfirmToken(Email, Secret);
+
+        // Act
+        var result = await sut.ConfirmSubscriberAsync(Email, token, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().Be(ConfirmSubscriptionResult.InvalidToken);
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public async Task ConfirmSubscriberAsync_BlankSecret_ReturnsInvalidTokenAndDoesNotConfirm(string secret)
+    {
+        // Arrange
+        var email = secret.Length == 0 ? "confirm-empty-secret@example.com" : "confirm-whitespace-secret@example.com";
+        await SeedSubscriberAsync(email, confirmed: false);
+        var sut = CreateService(unsubscribeSecret: secret);
+        var tokenFromAnotherSecret = NewsletterService.BuildConfirmToken(email, Secret);
+
+        // Act
+        var result = await sut.ConfirmSubscriberAsync(email, tokenFromAnotherSecret, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().Be(ConfirmSubscriptionResult.InvalidToken);
+        (await IsConfirmedAsync(email)).Should().BeFalse();
+    }
+
+    // ── SendConfirmationEmailAsync ────────────────────────────────────────
+
+    [Fact]
+    public async Task SendConfirmationEmailAsync_WithSecret_SendsEmailWithValidConfirmLink()
+    {
+        // Arrange
+        const string Email = "user+tag@example.com";
+        var sent = new List<SentEmail>();
+        var emailSender = CreateRecordingSender(sent);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendConfirmationEmailAsync(Email, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeTrue();
+        var message = sent.Should().ContainSingle().Subject;
+        message.Recipient.Should().Be(Email);
+        message.Subject.Should().Be("Confirm your TechHub newsletter subscription");
+        message.Html.Should().Contain("Confirm subscription");
+        message.Text.Should().Contain("https://tech.hub.ms/newsletter/confirm?email=user%2Btag%40example.com&token=");
+        NewsletterService.IsValidConfirmToken(Email, ExtractToken(message.Text), Secret).Should().BeTrue();
+        NewsletterService.IsValidUnsubscribeToken(Email, ExtractToken(message.Text), Secret).Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public async Task SendConfirmationEmailAsync_BlankSecret_ReturnsFalseWithoutSending(string secret)
+    {
+        // Arrange
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: secret);
+
+        // Act
+        var result = await sut.SendConfirmationEmailAsync("user@example.com", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Fact]
+    public async Task SendConfirmationEmailAsync_SenderFails_ReturnsFalse()
+    {
+        // Arrange
+        var sent = new List<SentEmail>();
+        var emailSender = CreateRecordingSender(sent, result: false);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendConfirmationEmailAsync("user@example.com", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        sent.Should().ContainSingle();
+    }
+
+    // ── SendManageLinkEmailAsync ──────────────────────────────────────────
+
+    [Fact]
+    public async Task SendManageLinkEmailAsync_ConfirmedSubscriber_SendsEmailWithValidManageLink()
+    {
+        // Arrange
+        const string Email = "manage-link-confirmed@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true);
+        var sent = new List<SentEmail>();
+        var emailSender = CreateRecordingSender(sent);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendManageLinkEmailAsync(Email, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeTrue();
+        var message = sent.Should().ContainSingle().Subject;
+        message.Recipient.Should().Be(Email);
+        message.Subject.Should().Be("Manage your TechHub newsletter subscription");
+        message.Text.Should().Contain("https://tech.hub.ms/newsletter/manage?email=manage-link-confirmed%40example.com&token=");
+        NewsletterService.IsValidUnsubscribeToken(Email, ExtractToken(message.Text), Secret).Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task SendManageLinkEmailAsync_UnknownEmail_ReturnsTrueWithoutSending()
+    {
+        // Arrange
+        const string Email = "manage-link-unknown@example.com";
+        await _fixture.Connection.ExecuteAsync("DELETE FROM newsletter_subscribers WHERE lower(email) = @Email", new { Email });
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendManageLinkEmailAsync(Email, TestContext.Current.CancellationToken);
+
+        // Assert — must not reveal whether an address is subscribed
+        result.Should().BeTrue();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Fact]
+    public async Task SendManageLinkEmailAsync_UnsubscribedSubscriber_ReturnsTrueWithoutSending()
+    {
+        // Arrange
+        const string Email = "manage-link-unsubscribed@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true);
+        await _fixture.Connection.ExecuteAsync(
+            "UPDATE newsletter_subscribers SET unsubscribed_at = NOW() WHERE lower(email) = @Email", new { Email });
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendManageLinkEmailAsync(Email, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeTrue();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public async Task SendManageLinkEmailAsync_BlankSecret_ReturnsFalseWithoutSending(string secret)
+    {
+        // Arrange
+        const string Email = "manage-link-blank-secret@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true);
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: secret);
+
+        // Act
+        var result = await sut.SendManageLinkEmailAsync(Email, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Fact]
+    public async Task SendManageLinkEmailAsync_SenderFails_ReturnsFalse()
+    {
+        // Arrange
+        const string Email = "manage-link-sender-fails@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true);
+        var sent = new List<SentEmail>();
+        var emailSender = CreateRecordingSender(sent, result: false);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendManageLinkEmailAsync(Email, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        sent.Should().ContainSingle();
+    }
+
+    // ── GetSubscriberPreferencesAsync / UpdateSubscriberPreferencesAsync ──
+
+    [Fact]
+    public async Task GetSubscriberPreferencesAsync_ValidToken_ReturnsSubscriber()
+    {
+        // Arrange
+        const string Email = "prefs-get-valid@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true, preferencesJson: """{"weeklySections":["azure"],"dailySections":[]}""");
+        var sut = CreateService();
+        var token = NewsletterService.BuildUnsubscribeToken(Email, Secret);
+
+        // Act
+        var subscriber = await sut.GetSubscriberPreferencesAsync(Email, token, TestContext.Current.CancellationToken);
+
+        // Assert
+        subscriber.Should().NotBeNull();
+        subscriber!.Email.Should().Be(Email);
+        subscriber.WeeklySections.Should().Equal("azure");
+    }
+
+    [Fact]
+    public async Task GetSubscriberPreferencesAsync_ConfirmTokenUsed_ReturnsNull()
+    {
+        // Arrange
+        const string Email = "prefs-get-confirm-token@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true);
+        var sut = CreateService();
+        var confirmToken = NewsletterService.BuildConfirmToken(Email, Secret);
+
+        // Act
+        var subscriber = await sut.GetSubscriberPreferencesAsync(Email, confirmToken, TestContext.Current.CancellationToken);
+
+        // Assert
+        subscriber.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task GetSubscriberPreferencesAsync_BlankSecret_ReturnsNull()
+    {
+        // Arrange
+        const string Email = "prefs-get-blank-secret@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true);
+        var sut = CreateService(unsubscribeSecret: "");
+        var token = NewsletterService.BuildUnsubscribeToken(Email, Secret);
+
+        // Act
+        var subscriber = await sut.GetSubscriberPreferencesAsync(Email, token, TestContext.Current.CancellationToken);
+
+        // Assert
+        subscriber.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task UpdateSubscriberPreferencesAsync_ValidToken_PersistsPreferences()
+    {
+        // Arrange
+        const string Email = "prefs-update-valid@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true);
+        var sut = CreateService();
+        var token = NewsletterService.BuildUnsubscribeToken(Email, Secret);
+
+        // Act
+        var updated = await sut.UpdateSubscriberPreferencesAsync(
+            Email, token, "Jane", ["azure"], [], TestContext.Current.CancellationToken);
+
+        // Assert
+        updated.Should().BeTrue();
+        var stored = await new NewsletterSubscriberRepository(_fixture.Connection)
+            .GetSubscriberByEmailAsync(Email, TestContext.Current.CancellationToken);
+        stored.Should().NotBeNull();
+        stored!.DisplayName.Should().Be("Jane");
+        stored.WeeklySections.Should().Equal("azure");
+        stored.DailySections.Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task UpdateSubscriberPreferencesAsync_InvalidToken_ReturnsFalseAndLeavesPreferencesUnchanged()
+    {
+        // Arrange
+        const string Email = "prefs-update-invalid@example.com";
+        await SeedSubscriberAsync(Email, confirmed: true, preferencesJson: """{"weeklySections":["azure"],"dailySections":[]}""");
+        var sut = CreateService();
+        var confirmToken = NewsletterService.BuildConfirmToken(Email, Secret);
+
+        // Act
+        var updated = await sut.UpdateSubscriberPreferencesAsync(
+            Email, confirmToken, "Hacker", [], ["azure"], TestContext.Current.CancellationToken);
+
+        // Assert
+        updated.Should().BeFalse();
+        var stored = await new NewsletterSubscriberRepository(_fixture.Connection)
+            .GetSubscriberByEmailAsync(Email, TestContext.Current.CancellationToken);
+        stored!.DisplayName.Should().BeNull();
+        stored.WeeklySections.Should().Equal("azure");
+        stored.DailySections.Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task UpdateSubscriberPreferencesAsync_UnconfirmedSubscriber_ReturnsFalse()
+    {
+        // Arrange
+        const string Email = "prefs-update-unconfirmed@example.com";
+        await SeedSubscriberAsync(Email, confirmed: false);
+        var sut = CreateService();
+        var token = NewsletterService.BuildUnsubscribeToken(Email, Secret);
+
+        // Act
+        var updated = await sut.UpdateSubscriberPreferencesAsync(
+            Email, token, null, ["azure"], [], TestContext.Current.CancellationToken);
+
+        // Assert
+        updated.Should().BeFalse();
+    }
+
+    // ── SendTestWeeklyAsync ───────────────────────────────────────────────
+
+    [Fact]
+    public async Task SendTestWeeklyAsync_NoSections_ReturnsFalseWithoutSending()
+    {
+        // Arrange
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendTestWeeklyAsync([], "admin@example.com", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public async Task SendTestWeeklyAsync_BlankSecret_ReturnsFalseWithoutSending(string secret)
+    {
+        // Arrange
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: secret);
+
+        // Act
+        var result = await sut.SendTestWeeklyAsync(["ai"], "admin@example.com", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Fact]
+    public async Task SendTestWeeklyAsync_NoRoundupForSection_ReturnsFalseWithoutSendingOrLogging()
+    {
+        // Arrange
+        await ClearTestSendLogAsync();
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendTestWeeklyAsync(["section-without-roundups"], "admin@example.com", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+        (await CountTestSendLogRowsAsync("test-send")).Should().Be(0);
+    }
+
+    [Fact]
+    public async Task SendTestWeeklyAsync_RoundupExists_SendsTestEmailAndLogsSuccess()
+    {
+        // Arrange
+        const string Recipient = "test-weekly-admin@example.com";
+        await ClearTestSendLogAsync();
+        await SeedLatestTestRoundupAsync();
+        var sent = new List<SentEmail>();
+        var emailSender = CreateRecordingSender(sent);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendTestWeeklyAsync(["ai"], Recipient, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeTrue();
+        var message = sent.Should().ContainSingle().Subject;
+        message.Recipient.Should().Be(Recipient);
+        message.Subject.Should().Be($"[Test] {LatestTestRoundupTitle}");
+        message.Html.Should().Contain("Artificial Intelligence");
+        message.Text.Should().Contain($"https://tech.hub.ms/ai/roundups/{LatestTestRoundupSlug}");
+        NewsletterService.IsValidUnsubscribeToken(Recipient, ExtractToken(message.Text), Secret).Should().BeTrue();
+
+        var log = await GetSingleTestSendLogAsync("test-send");
+        log.Status.Should().Be("sent");
+        log.RecipientCount.Should().Be(1);
+        log.FailedCount.Should().Be(0);
+        log.ErrorMessage.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task SendTestWeeklyAsync_SenderFails_ReturnsFalseAndLogsFailure()
+    {
+        // Arrange
+        await ClearTestSendLogAsync();
+        await SeedLatestTestRoundupAsync();
+        var sent = new List<SentEmail>();
+        var emailSender = CreateRecordingSender(sent, result: false);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendTestWeeklyAsync(["ai"], "test-weekly-fail@example.com", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        var log = await GetSingleTestSendLogAsync("test-send");
+        await ClearTestSendLogAsync(); // failed_count feeds the admin status report; don't leak it to other tests
+        log.Status.Should().Be("failed");
+        log.RecipientCount.Should().Be(0);
+        log.FailedCount.Should().Be(1);
+        log.ErrorMessage.Should().Be("Delivery failed");
+    }
+
+    // ── SendTestDailyEmailAsync ───────────────────────────────────────────
+
+    [Fact]
+    public async Task SendTestDailyEmailAsync_NoSections_ReturnsFalseWithoutSending()
+    {
+        // Arrange
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendTestDailyEmailAsync([], "admin@example.com", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public async Task SendTestDailyEmailAsync_BlankSecret_ReturnsFalseWithoutSending(string secret)
+    {
+        // Arrange
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object, unsubscribeSecret: secret);
+
+        // Act
+        var result = await sut.SendTestDailyEmailAsync(["ai"], "admin@example.com", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Fact]
+    public async Task SendTestDailyEmailAsync_ValidRequest_SendsTestEmailAndLogsSuccess()
+    {
+        // Arrange
+        const string Recipient = "test-daily-admin@example.com";
+        await ClearTestSendLogAsync();
+        var sent = new List<SentEmail>();
+        var emailSender = CreateRecordingSender(sent);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendTestDailyEmailAsync(["ai"], Recipient, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeTrue();
+        var message = sent.Should().ContainSingle().Subject;
+        message.Recipient.Should().Be(Recipient);
+        message.Subject.Should().MatchRegex(@"^\[Test\] TechHub Daily Overview — \d{4}-\d{2}-\d{2}$");
+        NewsletterService.IsValidUnsubscribeToken(Recipient, ExtractToken(message.Text), Secret).Should().BeTrue();
+
+        var log = await GetSingleTestSendLogAsync("test-daily");
+        log.Status.Should().Be("sent");
+        log.RecipientCount.Should().Be(1);
+        log.FailedCount.Should().Be(0);
+    }
+
+    [Fact]
+    public async Task SendTestDailyEmailAsync_SenderFails_ReturnsFalseAndLogsFailure()
+    {
+        // Arrange
+        await ClearTestSendLogAsync();
+        var sent = new List<SentEmail>();
+        var emailSender = CreateRecordingSender(sent, result: false);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendTestDailyEmailAsync(["ai"], "test-daily-fail@example.com", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeFalse();
+        var log = await GetSingleTestSendLogAsync("test-daily");
+        await ClearTestSendLogAsync(); // failed_count feeds the admin status report; don't leak it to other tests
+        log.Status.Should().Be("failed");
+        log.RecipientCount.Should().Be(0);
+        log.FailedCount.Should().Be(1);
+        log.ErrorMessage.Should().Be("Delivery failed");
+    }
+
+    // ── Helpers for the tests above ───────────────────────────────────────
+
+    private const string Secret = "test-secret";
+    private const string LatestTestRoundupSlug = "weekly-ai-roundup-test-send-latest";
+    private const string LatestTestRoundupTitle = "AI Weekly: Test Send Roundup";
+
+    private sealed record SentEmail(string Recipient, string Subject, string Html, string Text);
+
+    private static Mock<IEmailSender> CreateRecordingSender(List<SentEmail> sent, bool result = true)
+    {
+        var sender = new Mock<IEmailSender>(MockBehavior.Strict);
+        sender
+            .Setup(s => s.SendAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Callback<string, string, string, string, CancellationToken>((recipient, subject, html, text, _) =>
+                sent.Add(new SentEmail(recipient, subject, html, text)))
+            .ReturnsAsync(result);
+        return sender;
+    }
+
+    private static string ExtractToken(string text)
+    {
+        const string Marker = "token=";
+        var start = text.IndexOf(Marker, StringComparison.Ordinal) + Marker.Length;
+        var end = text.IndexOfAny(['\r', '\n', ' ', '&'], start);
+        return Uri.UnescapeDataString(end < 0 ? text[start..] : text[start..end]);
+    }
+
+    private async Task SeedSubscriberAsync(
+        string email,
+        bool confirmed,
+        string preferencesJson = """{"weeklySections":[],"dailySections":[]}""")
+    {
+        await _fixture.Connection.ExecuteAsync(
+            "DELETE FROM newsletter_subscribers WHERE lower(email) = lower(@Email)",
+            new { Email = email });
+
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO newsletter_subscribers (email, is_confirmed, confirmed_at, preferences)
+            VALUES (@Email, @Confirmed, CASE WHEN @Confirmed THEN NOW() ELSE NULL END, CAST(@Preferences AS jsonb))
+            """, new { Email = email, Confirmed = confirmed, Preferences = preferencesJson });
+    }
+
+    private async Task<bool?> IsConfirmedAsync(string email) =>
+        await _fixture.Connection.ExecuteScalarAsync<bool?>(
+            "SELECT is_confirmed FROM newsletter_subscribers WHERE lower(email) = lower(@Email) AND unsubscribed_at IS NULL",
+            new { Email = email });
+
+    private async Task ClearTestSendLogAsync() =>
+        await _fixture.Connection.ExecuteAsync(
+            "DELETE FROM newsletter_send_log WHERE send_kind IN ('test-send', 'test-daily')");
+
+    private async Task<int> CountTestSendLogRowsAsync(string sendKind) =>
+        await _fixture.Connection.ExecuteScalarAsync<int>(
+            "SELECT COUNT(*) FROM newsletter_send_log WHERE send_kind = @SendKind",
+            new { SendKind = sendKind });
+
+    private async Task<(string Status, int RecipientCount, int FailedCount, string? ErrorMessage)> GetSingleTestSendLogAsync(string sendKind) =>
+        await _fixture.Connection.QuerySingleAsync<(string Status, int RecipientCount, int FailedCount, string? ErrorMessage)>(
+            """
+            SELECT status, recipient_count, failed_count, error_message
+            FROM newsletter_send_log
+            WHERE send_kind = @SendKind
+            """,
+            new { SendKind = sendKind });
+
+    // Far-future date_epoch so this roundup is always "the latest" AI roundup for the test-send lookup
+    private async Task SeedLatestTestRoundupAsync() =>
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name, tags_csv,
+                 sections_bitmask, content_hash, is_ai)
+            VALUES
+                (@Slug, 'roundups', @Title, '## AI Highlights', 'Test send intro', 4102444800,
+                 'ai', '/ai/roundups/' || @Slug, 'TechHub', 'TechHub', ',Roundups,AI,',
+                 1, 'hash-newsletter-test-send-latest', TRUE)
+            ON CONFLICT (collection_name, slug) DO NOTHING
+            """, new { Slug = LatestTestRoundupSlug, Title = LatestTestRoundupTitle });
+
     private NewsletterService CreateService(
         IContentRepository? contentRepository = null,
         IEmailSender? emailSender = null,

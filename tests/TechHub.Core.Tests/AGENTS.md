@@ -6,7 +6,7 @@ Unit tests for the Core domain layer. Validates domain models, business logic, a
 
 ## What to Test
 
-- ✅ Domain model behavior (`GetUrlInSection`, URL generation, property calculations)
+- ✅ Domain model behavior (`ContentItem.GetHref`, URL generation, property calculations)
 - ✅ Business rules and validation
 - ✅ Edge cases (null, empty, boundary values)
 - ✅ Extension methods (pure functions)

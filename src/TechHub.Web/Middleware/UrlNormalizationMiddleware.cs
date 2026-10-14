@@ -562,6 +562,13 @@ public partial class UrlNormalizationMiddleware
 
     private static void Redirect(HttpContext context, string url)
     {
+        // Browsers treat a leading "/\" or "//" as protocol-relative (off-site), so collapse any
+        // leading run of slashes/backslashes to a single slash.
+        if (url.Length > 0 && url[0] is '/' or '\\')
+        {
+            url = "/" + url.TrimStart('/', '\\');
+        }
+
         context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
         context.Response.Headers.Location = url;
     }

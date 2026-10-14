@@ -20,7 +20,7 @@ PR failures show up under "CI Pipeline" and production deployments under "CD Pip
 - Pull requests to `main` branch (opened, synchronize, reopened, closed) — runs quality-gate checks only
 - Manual dispatch (`workflow_dispatch` with a required `pr_number` input) — builds, deploys, and E2E-tests a PR preview environment for that PR
 
-Runs all quality checks on every PR push. PR preview build/deploy/E2E and teardown only run when explicitly triggered — see [PR Preview Environments](#pr-preview-environments) below.
+Runs all quality checks on every PR push. PR preview build/deploy/E2E only run when explicitly triggered, and teardown runs automatically when a PR is closed (closing a PR runs only the teardown job, no quality checks) - see [PR Preview Environments](#pr-preview-environments) below.
 
 ### CD Pipeline (Production)
 
@@ -31,23 +31,24 @@ Runs all quality checks on every PR push. PR preview build/deploy/E2E and teardo
 - Push to `main` branch (CI + production deployment)
 - Manual dispatch (CI + production deployment)
 
-Runs all quality checks and, when they pass, deploys to staging and production.
+Runs all quality checks and, when they pass, builds images and deploys to production. There is no staging deployment job.
 
-**CI Jobs** (run on every trigger except closed PRs, in parallel):
+**CI Jobs** (run in parallel): in `ci.yml` they run only on `pull_request` events (not on manual dispatch and not on closed PRs). In `cd.yml` they run on every push to `main` and on manual dispatch.
 
 1. **Build** - Builds the entire .NET solution
 2. **Unit Tests** - Runs all unit tests
 3. **Integration Tests** - Runs API integration tests
 4. **PowerShell Tests** - Runs Pester tests for automation scripts
-5. **Lint** - Checks code formatting and markdown linting
-6. **Security** - Scans for vulnerabilities in dependencies (Trivy + dependency scan)
-7. **CodeQL** - Static analysis for security vulnerabilities (code scanning)
-8. **Code Coverage** - Generates coverage reports
-9. **Quality Gate** - Validates all checks passed and provides a clear summary
+5. **JavaScript Tests** - Runs Vitest tests for client-side JavaScript
+6. **Lint** - Checks code formatting and markdown linting
+7. **Security** - Scans for vulnerabilities in dependencies (Trivy + dependency scan)
+8. **CodeQL** - Static analysis for security vulnerabilities (code scanning)
+9. **Code Coverage** - Generates coverage reports (informational, not part of the quality gate)
+10. **Quality Gate** - Validates that the build, test, lint, security, and CodeQL jobs passed and provides a clear summary
 
 **Quality Gates**:
 
-- All tests must pass (unit, integration, PowerShell)
+- All tests must pass (unit, integration, PowerShell, JavaScript)
 - No linting errors
 - Build succeeds with zero warnings (`TreatWarningsAsErrors` enabled)
 - Security scan passes (Trivy fails the build on CRITICAL or HIGH vulnerabilities)
@@ -162,14 +163,37 @@ Run only after the quality gate passes, and never on PRs.
 
 1. **Build & Push** - Calls `Build-Images.ps1` to build Docker images and push to `ghcr.io`
    - Tags images with a timestamp (`yyyyMMddHHmmss` format)
-   - Images are built once and reused for production
+   - Images are built fresh on `main` (PR preview images are separate `pr-{number}-{timestamp}` builds and are not promoted)
+   - Prunes old production versions in `ghcr.io`, keeping the last 2 tagged versions per package (see [Container Image Retention](#container-image-retention))
 
 2. **Deploy & E2E Tests (Production)** - Infrastructure + application deployment, followed by E2E tests in the same job
    - Uses GitHub environment protection (at least 1 required reviewer)
    - Automatically detects whether `infra/` or `scripts/` files have changed since the last successful deploy:
-     - **Full deploy** (infrastructure changed): runs `Deploy-Infrastructure.ps1` (Phase 1: Bicep infra), then `Deploy-Applications.ps1` (Phase 2: API + Web App Service Bicep)
-     - **Fast update** (no infrastructure changes): runs `Deploy-Application.ps1` — updates the App Service sites' container image tags only (`az webapp config set`), no Bicep evaluation
-   - After deploy: E2E tests run against production (excluding `Category=Performance` and `Category=DevEnvironment`)
+     - **Full deploy** (infrastructure changed): installs the `Az.PostgreSql` PowerShell module, runs `Deploy-Infrastructure.ps1` (Phase 1: Bicep infra), then `Deploy-Applications.ps1` (Phase 2: API + Web App Service Bicep)
+     - **Fast update** (no infrastructure changes): runs `Deploy-Application.ps1` - updates the App Service sites' container image tags only (`az webapp config set`), no Bicep evaluation
+   - `Deploy-Application.ps1` also sets the `DEPLOY_IMAGE_TAG` app setting and runs the [post-deploy gate](#post-deploy-gate)
+   - Creates an Application Insights release annotation (see [Release Annotations](#release-annotations))
+   - Waits 60 seconds for the deployment to stabilize, then runs E2E tests against production (excluding `Category=Performance` and `Category=DevEnvironment`)
+
+#### Post-Deploy Gate
+
+`scripts/Wait-ForLiveVersion.ps1` is the readiness gate after a deploy. It polls the Web `/version` endpoint (up to 300 seconds) until the expected image tag is reported, then runs health and homepage smoke tests. The Web site only serves once its startup has reached the API, so a matching `/version` confirms the Web -> API -> database chain. `Deploy-Application.ps1` (production) and `Deploy-PrPreview.ps1` (PR previews) both call it. `Deploy-Application.ps1` rolls back to the previous images when the gate fails.
+
+#### Release Annotations
+
+After each production deploy, `scripts/Add-AppInsightsAnnotation.ps1` creates an Application Insights release annotation (release name = image tag, plus commit, actor, and run URL), so deployments show up as markers on the telemetry charts.
+
+#### Container Image Retention
+
+- **Production images**: after each build, `cd.yml` deletes old production versions from `ghcr.io` and keeps the last 2 (PR images are excluded from this pruning)
+- **PR images**: removed from `ghcr.io` when the PR is closed (see [PR Preview Environments](#pr-preview-environments))
+
+### Dependency Automation and Git Hooks
+
+- **Dependabot** ([.github/dependabot.yml](../.github/dependabot.yml)): weekly, grouped update PRs for GitHub Actions, NuGet, npm, Docker (root, API, and Web Dockerfiles), and dev container features
+- **Dependency review** ([.github/workflows/dependency-review.yml](../.github/workflows/dependency-review.yml)): runs on every pull request and flags newly introduced vulnerable dependencies. Mark it as a required check to block merging
+- **CodeQL configuration** ([.github/codeql/codeql-config.yml](../.github/codeql/codeql-config.yml)): excludes test fixtures and sample collections from code scanning
+- **Husky pre-commit hook** (`.husky/pre-commit`): verifies `dotnet format` on staged C# files and runs markdownlint on staged Markdown files, so formatting issues are caught before CI
 
 ### Performance Tests
 
@@ -215,7 +239,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 - Each PR gets its own PostgreSQL: `psql-techhub-pr-{N}` (created via PITR from production)
 - Shared managed identity: `id-techhub-pr` (created once by `infrastructure.bicep`)
 
-**Container Images**: Pushed to `ghcr.io` (GitHub Container Registry). The same image built and tested in a PR preview is deployed directly to production — no rebuild.
+**Container Images**: Pushed to `ghcr.io` (GitHub Container Registry). PR previews and production use separate builds: PR images are tagged `pr-{number}-{timestamp}` by `ci.yml`, and `cd.yml` rebuilds on `main` with a new timestamp tag.
 
 **Rollback Strategy**:
 
@@ -266,9 +290,9 @@ Four federated credentials on `sp-techhubms` cover every job in the pipeline:
 | `techhub-environment-staging` | `repo:...:environment:staging` | `pr-preview-deploy` |
 | `techhub-environment-production` | `repo:...:environment:production` | `deploy-production` |
 | `techhub-ref-main` | `repo:...:ref:refs/heads/main` | `teardown-all-pr-envs` (nightly scheduled job) |
-| `techhub-pull-request` | `repo:...:pull_request` | `pr-preview-teardown` (includes Dependabot PRs) |
+| `techhub-pull-request` | `repo:...:pull_request` | `pr-preview-teardown` (also works for Dependabot PRs, which cannot read repository secrets but can use OIDC variables) |
 
-The `pull_request` credential is what allows Dependabot PRs to get full preview environments - GitHub blocks repository secrets from Dependabot, but OIDC variables are accessible.
+The `pull_request` credential is used by the `pr-preview-teardown` job, which runs when a PR closes. Preview deploys (`workflow_dispatch`) use the `staging` environment credential instead.
 
 ### Setup
 
@@ -309,7 +333,7 @@ Configure these per-environment in GitHub repository settings → Environments �
 | `WILDCARD_CERT_HUB_MS` | - | Required | PFX certificate for the `*.hub.ms` wildcard TLS domain. Set once on initial deploy or at renewal time; skipped on re-deploy if already in Key Vault. |
 | `WILDCARD_CERT_XEBIA_MS` | - | Required | PFX certificate for the `*.xebia.ms` wildcard TLS domain. Set once on initial deploy or at renewal time; skipped on re-deploy if already in Key Vault. |
 
-> **Values resolved automatically — not needed as GitHub secrets:** Tenant ID and Client ID are resolved from the active Azure CLI session and app registration name. The AI key is read directly from the Azure Cognitive Services account. The ACS email endpoint (`NEWSLETTER_ACS_ENDPOINT`) is captured from infrastructure deployment outputs and written to Key Vault automatically — no manual input needed. Only values that Azure cannot provide at deploy time live as GitHub secrets.
+> **Values not needed as GitHub secrets:** The Entra ID tenant and client IDs for the admin dashboard are set in `infra/parameters/prod-applications.bicepparam` (they are identifiers, not secrets). Only the client secret is a GitHub secret. The AI service uses managed identity and RBAC, so no AI key exists. The ACS email endpoint (`NEWSLETTER_ACS_ENDPOINT`) is captured from infrastructure deployment outputs and written to Key Vault automatically. Only values that Azure cannot provide at deploy time live as GitHub secrets.
 
 ## GitHub Environments
 
@@ -384,7 +408,7 @@ When deploying to a completely new Azure subscription for the first time:
 2. CD workflow triggers automatically
 3. All CI checks run (build, tests, lint, security)
 4. Quality gate validates all checks passed
-5. Docker images built once (tagged with a timestamp)
+5. Docker images built (tagged with a timestamp)
 6. Images pushed to `ghcr.io`
 7. **Approval required** — Workflow pauses at the production deployment job
    - Designated approvers receive notification
@@ -402,8 +426,8 @@ When deploying to a completely new Azure subscription for the first time:
 ### During Deployment
 
 - GitHub Actions provides real-time logs
-- Smoke tests validate critical endpoints
-- Health checks ensure services are responding
+- The [post-deploy gate](#post-deploy-gate) validates the live version and critical endpoints
+- Application Insights release annotations mark each deployment
 
 ### Post-Deployment
 
@@ -415,17 +439,20 @@ When deploying to a completely new Azure subscription for the first time:
 
 ### Automatic Rollback
 
-Production deployment automatically rolls back if:
+Production deployment automatically rolls back when `Deploy-Application.ps1` (the fast image-update path) fails its [post-deploy gate](#post-deploy-gate):
 
-- Smoke tests fail
-- Health checks fail during 5-minute monitoring window
+- The Web `/version` endpoint does not report the new image tag within 300 seconds
+- The health check or homepage smoke test fails after the version is confirmed
+
+There is no ongoing monitoring window after the gate passes.
 
 ### Manual Rollback
 
-1. Find the previous successful deployment's commit SHA
-2. Go to "Deploy to Production" workflow
-3. Run workflow with previous commit SHA as image tag
-4. Approve deployment
+Redeploy a previous image tag (it must still exist in `ghcr.io`, see [Container Image Retention](#container-image-retention)):
+
+```powershell
+./scripts/Deploy-Application.ps1 -Tag <previous-tag>
+```
 
 ### Emergency Rollback (Azure Portal)
 

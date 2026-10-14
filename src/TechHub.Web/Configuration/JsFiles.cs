@@ -52,7 +52,7 @@ public static class JsFiles
     [
         "js/scroll-manager.js", // Navigation, scroll position, TOC scroll spy
         "js/mobile-nav.js",     // Mobile navigation scroll lock and keyboard handling
-        "js/sidebar-toggle.js", // Desktop sidebar collapse/expand with localStorage persistence
+        "js/sidebar-toggle.js", // Desktop sidebar collapse/expand with cookie persistence
         "js/hero-banner.js"     // Hero banner collapse/expand with cookie persistence
     ];
 
@@ -62,7 +62,7 @@ public static class JsFiles
     /// </summary>
     public static readonly string[] DynamicLoad =
     [
-        "js/page-scripts.js",       // ES module - Page script initializers (mermaid, highlight.js, custom pages)
+        "js/page-scripts.js",       // ES module - Page script initializers (mermaid, highlight.js, custom pages); loaded by a static module tag in App.razor
         "js/custom-pages.js",       // ES module - Loaded when [data-collapsible] exists
         "js/date-range-slider.js"   // ES module - Loaded by DateRangeSlider component for client-side clamping
     ];

@@ -48,36 +48,32 @@ All feeds are generated in **RSS 2.0** format with the following characteristics
 
 Each feed includes:
 
-- **Title**: Section or collection name (e.g., "Tech Hub - AI")
+- **Title**: `Tech Hub - {section title}` (e.g., "Tech Hub - AI", "Tech Hub - Everything" for the everything feed)
 - **Description**: Section or collection description
 - **Link**: URL to the section or collection page on Tech Hub
 - **Language**: `en-us`
-- **Last Build Date**: Timestamp when feed was generated
+- **Last Build Date**: Publication date of the newest item in the feed (the current time when the feed is empty)
+- **Self link**: An `atom:link rel="self"` element with the canonical feed URL
 
 ### Feed Items
 
 Each item in the feed includes:
 
 - **Title**: Content item title
-- **Link**: URL to the full content (external source or internal detail page)
-- **Description**: Content excerpt (up to 200 words)
-- **Author**: Content author name
-- **Publication Date**: Date content was published (Europe/Brussels timezone)
-- **GUID**: Unique identifier for the item (based on slug)
-
-### Content Rendering
-
-- **Markdown to HTML**: Markdown content is converted to HTML using Markdig
-- **Absolute URLs**: All relative URLs (images, links) are converted to absolute URLs using `https://tech.hub.ms` domain
-- **Proper Escaping**: HTML content is properly escaped for XML
+- **Link**: URL to the full content. External source for `news`, `blogs` and `community`, otherwise the absolute Tech Hub page URL
+- **Description**: The plain-text excerpt of the item (no rendered body)
+- **Creator**: Author name in a `dc:creator` element, because RSS `author` requires an email address
+- **Publication Date**: Publication date in RFC 1123 format, expressed in GMT
+- **GUID**: The item link, marked `isPermaLink="true"`
+- **Categories**: The item's tags, one `category` element each
 
 ## Feed Behavior
 
 ### Sorting and Limiting
 
 - Feeds are sorted by publication date, **newest first**
-- Feeds are limited to the **50 most recent items** for performance
-- Future-dated content (beyond current date in Europe/Brussels timezone) is excluded
+- Feeds are limited to the **50 most recent items** for performance (`AppSettings:Rss:MaxItemsInFeed`)
+- The feed itself does not filter by date. Items with a future publication date never appear because the content pipeline caps them to the processing date at ingestion (see [content-processing.md](content-processing.md#content-processor-configuration))
 
 ### Content-Type
 
@@ -91,15 +87,21 @@ Content-Type: application/rss+xml; charset=utf-8
 
 ### UI Integration
 
-- Section pages include an RSS icon link in the page header
-- Footer includes "Subscribe via RSS" link to the everything feed (`/all/feed.xml`)
+- Section and home pages render an RSS link in the banner (mobile) and an RSS button in the sub-navigation
+- The sidebar can list RSS links (`SidebarRssLinks`)
+- Pages include a `<link rel="alternate" type="application/rss+xml">` tag in the head for feed autodiscovery
 - RSS links navigate to the frontend feed URLs (e.g., `/{sectionName}/feed.xml`)
+
+### Legacy Feed URLs
+
+The URL normalization middleware redirects old feed URLs with a `301`: `/feed.xml` goes to `/all/feed.xml` and `/{sectionName}.xml` goes to `/{sectionName}/feed.xml` (known sections only). See [url-routing.md](url-routing.md#url-normalization).
 
 ### Feed Architecture
 
 - **Frontend Proxy**: RSS feeds are served from the web frontend at `https://tech.hub.ms/{sectionName}/feed.xml`
 - **Backend API**: The frontend proxies requests to the secured API backend (`/api/rss/*` endpoints)
 - **Same-Origin**: Feeds are served from the same domain as the website for security and simplicity
+- **Rate limiting**: The proxy endpoints use the `web-rss` policy, 20 requests per minute per IP (see [url-routing.md](url-routing.md#rate-limiting))
 
 ## RSS API Direct Endpoints
 
@@ -119,7 +121,7 @@ Get RSS feed for a specific section.
 
 - `sectionName` (path): Section identifier (e.g., `ai`, `github-copilot`)
 
-**Response**: `200 OK` or `404 Not Found`
+**Response**: `200 OK`, `400 Bad Request` (invalid `sectionName` format), or `404 Not Found`
 
 ### GET /api/rss/{sectionName}/{collectionName}
 
@@ -130,7 +132,7 @@ Get RSS feed for a specific collection within a section (use `all` for sectionNa
 - `sectionName` (path): Section identifier or `all` for cross-section
 - `collectionName` (path): Collection name (e.g., `roundups`, `news`, `blogs`)
 
-**Response**: `200 OK` or `404 Not Found`
+**Response**: `200 OK`, `400 Bad Request` (invalid name format), or `404 Not Found`
 
 ## RSS Proxy Endpoints (Blazor Web)
 
@@ -151,7 +153,7 @@ Get RSS feed specifically for weekly roundups in a section (e.g. `/ai/roundups/f
 Get RSS feed for a specific section (e.g., `/ai/feed.xml`).
 **Discovery Link**: Available on Section pages
 
-**Unknown sections**: both section-based proxy endpoints return `404 Not Found` when `{sectionName}` is not a known section. When the in-memory section cache is ready, the Web app answers 404 directly without calling the API. When the cache is not ready yet, the request is forwarded to the API and a downstream `404` is translated to `404 Not Found` instead of surfacing as a `500`. Crawlers regularly append `/feed.xml` to arbitrary article slugs; answering 404 here keeps those requests from becoming 500s and failed API calls that trip the failed-requests alert.
+**Unknown sections**: both section-based proxy endpoints return `400 Bad Request` for an invalid section name format and `404 Not Found` when `{sectionName}` is not a known section. When the in-memory section cache is ready, the Web app answers 404 directly without calling the API. When the cache is not ready yet, the request is forwarded to the API and a downstream `404` is translated to `404 Not Found` instead of surfacing as a `500`. Crawlers regularly append `/feed.xml` to arbitrary article slugs; answering 404 here keeps those requests from becoming 500s and failed API calls that trip the failed-requests alert.
 
 ## Implementation & Testing
 

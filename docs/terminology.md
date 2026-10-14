@@ -26,7 +26,7 @@ When working with sections and collections in code, use consistent naming:
 
 - **Purpose**: Organize content by format and purpose (news, videos, community, blogs, roundups)
 - **Configuration**: Defined in `appsettings.json`, associated with sections via section configuration
-- **Technical**: Each collection has its own directory, can be marked as custom (manually created) or auto-generated
+- **Technical**: Collections are defined in configuration (not as directories) and can be marked as custom (a dedicated page component instead of a content list)
 - **Properties**: Collections generate individual pages for each item via Blazor routing
 
 **Items**: Individual pieces of content within collections. Also referred to as content or content items.
@@ -70,37 +70,13 @@ Current valid collection values (slugs) used in the system:
 - `blogs` - Blogs and technical articles
 - `roundups` - Weekly content summaries
 
-## Specialized Collections & Classification
+## Collection Behavior
 
-## Specialized Collections
+Collections come in two kinds, controlled by the `Custom` flag in each collection's configuration:
 
-Specialized collections are predefined collection types that have specific rendering behavior:
+| Kind | Collections | Rendering |
+|------|-------------|-----------|
+| Content collections | `news`, `blogs`, `videos`, `community`, `roundups` | All use the same list view (`ContentItemsGrid` with `ContentItemCard`), newest first. The slug only changes the title, description and which items match |
+| Custom collections (custom pages) | For example `features`, `handbook`, `getting-started`, `dx-space`, and `authors` in the `all` section | Each has its own page component instead of a content list. They are ordered by `Order` in navigation. See [custom-pages.md](custom-pages.md) |
 
-| Slug | Display Name | Rendering Behavior |
-|------|--------------|-------------------|
-| `news` | News | Standard list view, reverse chronological |
-| `blogs` | Blogs | Standard list view, reverse chronological |
-| `videos` | Videos | Grid view with thumbnails |
-| `roundups` | Roundups | Standard list view |
-| `community` | Community | Author-centric view |
-| `custom` | Custom | Special rendering (e.g., Features table) |
-
-Any other collection slug is treated as a generic collection and rendered with the standard list view.
-
-## Alt-Collection
-
-The "Alt-Collection" property allows an item to appear in a secondary collection while physically residing in its primary collection folder.
-
-- **Primary Collection**: Determined by the file system folder name (e.g., `_news/`).
-- **Secondary Collection**: Defined via frontmatter `altCollection: <slug>`.
-
-### Use Case
-
-An item primarily belongs to `news` (Folder: `_news/`) but should also appear in a `videos` list (Alt: `videos`).
-
-### Behavior
-
-- The item appears in API responses for both collections.
-- The item's `Collection` property reflects the query context:
-  - When querying `news`: Returns `news`.
-  - When querying `videos`: Returns `videos` (even though file is in `_news`).
+There is no collection-specific rendering for videos or community items. An item belongs to exactly one collection and can appear in several sections through its section metadata.

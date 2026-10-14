@@ -39,7 +39,7 @@ These are permanent — they never need updating.
 
 After deploying the infrastructure (which creates the `acme.hub.ms` zone), add NS records for `acme` in the `hub.ms` zone at GoDaddy pointing to the Azure DNS nameservers:
 
-```bash
+```powershell
 # Get the nameservers after deploying infra
 az network dns zone show --resource-group rg-techhub-prod --name acme.hub.ms --query nameServers -o tsv
 ```
@@ -48,13 +48,11 @@ Add each returned nameserver as an NS record for `acme` in GoDaddy's `hub.ms` zo
 
 ### Tool installation
 
-```bash
-pip install certbot certbot-dns-azure
-```
+`certbot` and `certbot-dns-azure` are provided by the devcontainer (see `.devcontainer/post-create.sh`), in an isolated virtual environment with pinned versions because a plain `pip install` hits dependency conflicts. Rebuild the devcontainer if they are missing.
 
 ## Azure Infrastructure
 
-The ACME DNS zone is deployed as part of shared infrastructure:
+The ACME DNS zone is deployed as part of the Phase 1 infrastructure:
 
 - **Bicep module**: `infra/modules/acmeDnsZone.bicep`
 - **Deployed by**: `infra/infrastructure.bicep` → `acmeDnsZone` module
@@ -62,8 +60,8 @@ The ACME DNS zone is deployed as part of shared infrastructure:
 
 Deploy with:
 
-```bash
-./scripts/Deploy-Infrastructure.ps1 -Environment shared -Mode deploy
+```powershell
+./scripts/Deploy-Infrastructure.ps1 -Mode deploy
 ```
 
 ### App Service integration
@@ -81,7 +79,7 @@ Wildcard certificates from Key Vault are imported into the production App Servic
 
 ### Automated renewal
 
-```bash
+```powershell
 ./scripts/Renew-WildcardCertificates.ps1 -Email admin@xebia.com
 ```
 
@@ -100,19 +98,19 @@ The script:
 
 ### Dry run (test without issuing certificates)
 
-```bash
+```powershell
 ./scripts/Renew-WildcardCertificates.ps1 -Email admin@xebia.com -DryRun
 ```
 
 ### Force renewal
 
-```bash
+```powershell
 ./scripts/Renew-WildcardCertificates.ps1 -Email admin@xebia.com -Force
 ```
 
 ### Network access
 
-Key Vault firewall blocks public IPs by default (`publicNetworkAccess: Disabled`, `defaultAction: Deny`). The renewal script automatically detects the machine's outbound IP, adds a temporary firewall rule, polls until it propagates, then removes it in a `finally` block. No VPN access or manual firewall changes are needed.
+The Key Vault firewall uses `defaultAction: Deny`, and public access is only enabled when admin IPs are configured (see [network-architecture.md](network-architecture.md#key-vault)). The renewal script automatically detects the machine's outbound IP, adds a temporary firewall rule (`az keyvault network-rule add`), polls until it propagates, then removes it in a `finally` block. No VPN access or manual firewall changes are needed.
 
 ## Certificate Details
 
@@ -120,6 +118,10 @@ Key Vault firewall blocks public IPs by default (`publicNetworkAccess: Disabled`
 |-------------|---------------|------|----------|
 | `*.hub.ms` | `wildcard-hub-ms` | `*.hub.ms`, `hub.ms` | 90 days |
 | `*.xebia.ms` | `wildcard-xebia-ms` | `*.xebia.ms`, `xebia.ms` | 90 days |
+
+### Initial seeding
+
+On the first production deploy, the PFX files are supplied through the `WILDCARD_CERT_HUB_MS` and `WILDCARD_CERT_XEBIA_MS` environment variables (GitHub environment secrets in CI). `Sync-KeyVaultSecrets.ps1` writes them to the `wildcard-hub-ms` and `wildcard-xebia-ms` Key Vault secrets and skips them on later deploys when the secrets already exist. After that, `Renew-WildcardCertificates.ps1` keeps the Key Vault secrets current.
 
 ## Renewal Schedule
 

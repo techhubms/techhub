@@ -1,6 +1,7 @@
 using System.Net;
 using System.Text.Json;
 using System.Threading.RateLimiting;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -184,7 +185,7 @@ builder.Services.AddSingleton<FaviconService>();
 // Error handling service for centralized exception management
 builder.Services.AddScoped<ErrorService>();
 
-// Circuit-scoped cache for infinite scroll state (survives enhanced navigations for back-button support)
+// Circuit-scoped cache for content grid (Load More) state (survives enhanced navigations for back-button support)
 builder.Services.AddScoped<ContentGridStateCache>();
 
 // Homepage stats (recent count, total count) shared between Home.razor and SubNav.razor
@@ -636,13 +637,25 @@ app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken 
 // Signs out of OIDC first (issues the end_session request to Azure AD), then
 // clears the local cookie. The OIDC sign-out redirects to "/" on completion.
 // Uses POST to prevent CSRF / prefetch-triggered logout (antiforgery validated).
-app.MapPost("/admin/logout", async (HttpContext context) =>
+app.MapPost("/admin/logout", async (HttpContext context, IAntiforgery antiforgery) =>
 {
+    // UseAntiforgery() only validates endpoints that carry antiforgery metadata, which this handler does not bind.
+    try
+    {
+        await antiforgery.ValidateRequestAsync(context);
+    }
+    catch (AntiforgeryValidationException)
+    {
+        // A non-empty body keeps UseStatusCodePagesWithReExecute from re-executing the POST as /not-found (405).
+        return Results.Text("Invalid antiforgery token.", statusCode: StatusCodes.Status400BadRequest);
+    }
+
     // OIDC sign-out must happen first — it issues the end_session_endpoint redirect.
     // Cookie sign-out is handled by the OIDC post-logout flow automatically.
     await context.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme,
         new AuthenticationProperties { RedirectUri = "/" });
     await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+    return Results.Empty;
 })
 .WithName("AdminLogout")
 .ExcludeFromDescription();

@@ -14,7 +14,7 @@ Blazor frontend with global InteractiveServer render mode and prerendering. Cons
 
 - **Always use design tokens exclusively** — ALL colors, spacing, typography from `wwwroot/css/design-tokens.css` (see [docs/design-system.md](../../docs/design-system.md))
 - **Always use PersistentComponentState for pages with async data** — Prevents duplicate API calls during prerender→hydration
-- **Always call `markScriptsReady` in every page's `OnAfterRenderAsync`** — Required for scroll position restoration on back/forward navigation. Pages with scripts call it after init; pages without call it directly. A build-time test enforces this rule.
+- **Always inherit `PageComponentBase` in every routable page** (`@inherits PageComponentBase`) — it runs the `markScriptsLoading` / init functions / `markScriptsReady` lifecycle that scroll position restoration on back/forward navigation depends on. Do not call `markScriptsReady` yourself. A build-time convention test (`PageMarkScriptsReadyConventionTests`) enforces the inheritance. See [Page Script Lifecycle](#page-script-lifecycle).
 - **Always progressive enhancement** — Core functionality works without JavaScript
 - **Always use TechHubApiClient for all API calls** — Typed HTTP client in `Services/TechHubApiClient.cs`
 - **Always follow semantic HTML structure** — `<main>`, `<section>`, `<article>`, `<aside>` (see [docs/page-structure.md](../../docs/page-structure.md))
@@ -59,7 +59,7 @@ Blazor frontend with global InteractiveServer render mode and prerendering. Cons
 
 ### CSS Bundle Configuration
 
-CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and referenced by both App.razor and Program.cs.
+CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and referenced by `App.razor` through `@Assets[...]`. `Program.cs` does not use the list; tests use it to verify every CSS file is referenced in `App.razor`.
 
 - `@Assets["path"]` produces fingerprinted URLs (e.g., `base.e3opgp91n1.css`)
 - `@Assets` requires string literals for compile-time fingerprint resolution
@@ -98,13 +98,18 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 | --------------------- | ------------------------------------------------- | ---------------- |
 | `scroll-manager.js`   | Navigation, scroll position, TOC spy, buttons | Static ES module |
 | `mobile-nav.js`       | Mobile navigation scroll lock and keyboard handling | Static (defer) |
-| `sidebar-toggle.js`   | Desktop sidebar collapse/expand with localStorage | Static (defer)   |
+| `sidebar-toggle.js`   | Desktop sidebar collapse/expand with cookie persistence | Static (defer)   |
 | `hero-banner.js`      | Hero banner collapse/expand with cookie persistence | Static (defer) |
-| `page-scripts.js`     | CDN loading, init functions (mermaid, highlight.js) | Static ES module |
-| `custom-pages.js`     | Collapsible sections for SDLC/DX pages            | Dynamic          |
+| `page-scripts.js`     | CDN loading, page init functions (mermaid, highlight.js, TOC, custom pages), script lifecycle | Static ES module (listed under `DynamicLoad` in `JsFiles.cs`) |
+| `custom-pages.js`     | Collapsible sections for SDLC/DX pages, feature filters, expandable badges | Dynamic (imported by `initCustomPages`) |
 | `date-range-slider.js` | Date range slider client-side clamping           | Dynamic          |
 
-Special: `TechHub.Web.lib.module.js` — Blazor lifecycle callbacks (auto-discovered by Blazor)
+Special:
+
+- `wwwroot/TechHub.Web.lib.module.js` — Blazor lifecycle callbacks (auto-discovered by Blazor)
+- `Components/Layout/ReconnectModal.razor.js` — Reconnect dialog behavior, loaded by `ReconnectModal.razor`
+
+See [docs/javascript.md](../../docs/javascript.md) for the window globals table, lifecycle hooks and `custom-pages.js` exports.
 
 **NEVER create**: Client-side filtering JavaScript. Tag filtering is 100% Blazor server-side.
 
@@ -137,27 +142,46 @@ Versions and SRI hashes centralized in [Configuration/CdnLibraries.cs](Configura
 
 ## Conditional JavaScript Loading
 
-Each page component calls only the init functions it needs from `OnAfterRenderAsync`:
+### Page Script Lifecycle
 
-- `initHighlighting()` → Highlight.js CDN
-- `initMermaid()` → Mermaid CDN
-- `initTocScrollSpy()` → TOC scroll-spy module
-- `initCustomPages()` → Collapsible cards module
-- `markScriptsLoading()` / `markScriptsReady()` → E2E test signals
+Every routable page declares `@inherits PageComponentBase` ([Components/PageComponentBase.cs](Components/PageComponentBase.cs)). The base class implements `OnAfterRenderAsync` and runs the JS lifecycle, so pages normally do **not** override `OnAfterRenderAsync` for scripts. If a page needs its own post-render logic, override it and call `await base.OnAfterRenderAsync(firstRender)` at the end.
 
-CDN config bridged from C# via inline script in App.razor (`window.TechHubCDN`). `page-scripts.js` tracks loaded state to avoid duplicate CDN fetches.
+Pages configure the lifecycle by overriding properties:
 
-| Component | Init Functions |
-|---|---|
-| `Home.razor` | `initCustomPages` |
-| `ContentItem.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` |
-| `GenAI.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` |
-| `DXSpace.razor` | `initCustomPages`, `initTocScrollSpy` |
-| `GitHubCopilotHandbook.razor` | `initCustomPages`, `initTocScrollSpy` |
-| `GitHubCopilotFeatures.razor` | *(none — filters use Blazor `@onclick`)* |
-| `GitHubCopilotLevels.razor` | `initCustomPages`, `initTocScrollSpy` |
-| `GitHubCopilotVSCodeUpdates.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` |
-| `AISDLC.razor` | `initCustomPages`, `initTocScrollSpy` |
+| Property | Default | Meaning |
+|---|---|---|
+| `PageScripts` | `[]` | JS function names invoked in order once data is ready (for example `["initHighlighting", "initTocScrollSpy"]`) |
+| `IsPageDataReady` | `true` | `true` once async data has loaded (for example `pageData != null`); scripts do not run before |
+| `IsNotFound` | `false` | `true` when the page rendered not-found content and data will never arrive; calls `markScriptsReady` so waiters do not hang |
+| `ReinitializeScriptsOnRerender` | `false` | `true` re-runs scripts on every render where `IsPageDataReady` is true. Use for pages that swap content without a component teardown (`ContentItem`, `GenAI`, `GitHubCopilotVSCodeUpdates`) |
+
+Flow per render: `IsNotFound` → `markScriptsReady`; not `IsPageDataReady` → wait for the next render; no `PageScripts` → `markScriptsReady`; otherwise (once, unless `ReinitializeScriptsOnRerender`) `markScriptsLoading` → each script → `markScriptsReady` (in a `finally`).
+
+Available init functions (defined in `page-scripts.js`, all idempotent):
+
+- `initHighlighting` → Highlight.js CDN
+- `initMermaid` → Mermaid CDN
+- `initTocScrollSpy` → TOC scroll-spy module
+- `initCustomPages` → Collapsible cards, feature filters and expandable badges module (`custom-pages.js`)
+
+CDN config is bridged from C# via an inline script in App.razor (`window.TechHubCDN`). `page-scripts.js` tracks loaded state to avoid duplicate CDN fetches.
+
+### Init Functions per Page
+
+| Component | `PageScripts` | Re-run on rerender |
+|---|---|---|
+| `Home.razor` | `initCustomPages` | No |
+| `ContentItem.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | Yes |
+| `GenAI.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | Yes |
+| `DXSpace.razor` | `initTocScrollSpy` | No |
+| `GitHubCopilotHandbook.razor` | `initCustomPages`, `initTocScrollSpy` | No |
+| `GitHubCopilotLevels.razor` | `initCustomPages`, `initTocScrollSpy` | No |
+| `GitHubCopilotGettingStarted.razor` | `initHighlighting`, `initTocScrollSpy` | No |
+| `GitHubCopilotVSCodeUpdates.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | Yes |
+| `AISDLC.razor` | `initMermaid`, `initTocScrollSpy` | No |
+| `GitHubCopilotFeatures.razor` | *(none in `PageScripts`)* — filters use Blazor `@onclick`; it calls the `scrollTierCardIntoView` and `preventScrollOnExpand` globals from `page-scripts.js` through JS interop | No |
+
+All other pages (`SectionCollection`, `Authors`, `About`, `McpInfo`, `Newsletter*`, `Admin*`, `Error`, `NotFound`, and the `GitHubCopilotDiscord` and `GitHubCopilotToolTips` pages) declare no scripts, so the base class only calls `markScriptsReady`.
 
 ## Image Conventions
 
@@ -168,7 +192,7 @@ Images provided in three formats: JPEG XL (`.jxl`, best compression), WebP (`.we
 Section backgrounds: `/images/section-backgrounds/{section-name}.{format}`
 
 - CSS backgrounds: Reference `.webp`
-- `<img>` tags: Use ResponsiveImage component for automatic `<picture>` generation
+- `<img>` tags: Use the `ResponsiveImage` component for automatic `<picture>` generation (it exists but no page uses it today)
 
 ### Loading Rules
 
@@ -205,7 +229,7 @@ See [Middleware/StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddle
 
 ## Date Formatting
 
-Use `DateHelper` methods from `Helpers/DateHelper.cs` for consistent date display across the site. All dates use Europe/Brussels timezone.
+Use `DateHelper` methods from [Services/DateHelper.cs](Services/DateHelper.cs) (`FormatDateRelative`, `FormatDateFull`, `FormatDateIso`, `FormatTimestamp`) for consistent date display across the site. All dates use Europe/Brussels timezone.
 
 ## RSS Feed Proxy Endpoints
 
@@ -219,11 +243,13 @@ User-facing RSS feeds served by the Web frontend (proxied from internal API):
 
 ## Mobile Navigation
 
-Hamburger menu at ≤ 1024px breakpoint. Menu panel slides from right (320px / 85vw). Features: section expand/collapse, overlay click-to-close, body scroll lock via `mobile-nav.js`, Escape key close, close on navigation.
+Hamburger menu at ≤ 1292px breakpoint (`NavHeader.razor.css`, `SubNav.razor.css`, `page-container.css` and `sidebar.css` all switch at 1292px). Menu panel slides from right (320px / 85vw) and starts below the compact header (`--mobile-nav-height`, 64px). Features: section expand/collapse, overlay click-to-close, body scroll lock via `mobile-nav.js`, Escape key close, close on navigation.
 
 **Z-index stacking**: Nav header (1002) > Menu panel (1001) > Overlay (1000)
 
-**Sidebar collapse**: `MobileSidebarCollapse` component — `display: contents` on desktop, toggle button on mobile. Uses `div` + Blazor `@onclick` (not `<details>/<summary>`).
+**Sidebar on mobile**: `MobileSidebarToolbar` + `MobileSidebarPanel` — `display: contents` on desktop, a button bar with one toggleable panel at a time on mobile. Panels take `Label`, `Icon` and `HasActiveFilter`. `MobileSidebarCollapse` (a single collapse wrapper, tested but not used by any page) is the older pattern; use the toolbar and panels. Both use Blazor `@onclick` (not `<details>/<summary>`). Note: comments in `MobileSidebarCollapse.razor` and `MobileSidebarToolbar.razor` mention 1024px, but the CSS breakpoint is 1292px.
+
+**Desktop sidebar collapse**: `SidebarToggle` (rendered at the top of every `<aside class="sidebar">`) calls `TechHub.sidebar.toggle()`. State lives in the `sidebar-collapsed` cookie; `App.razor` reads it during SSR and sets the `sidebar-collapsed` class on `<html>` (`HtmlClass`), so there is no flash. Layout is in `css/page-container.css`, hiding rules in `css/sidebar.css`.
 
 ## Tag Filtering
 
@@ -242,12 +268,40 @@ Use `history.pushState` for URL updates without triggering Blazor navigation (e.
 
 ## Component Catalog
 
-**Layout**: `MainLayout`, `NavMenu`, `NavHeader`, `ReconnectModal`
+Generated from the directory contents (`list_dir` on `Components/`). Re-check the directories when adding or removing components; do not trust this list over the code.
 
-**Pages**: `Home` (`/`), `SectionCollection` (`/{sectionName}`, `/{sectionName}/{collectionName}`), `ContentItem` (`/{sectionName}/{collectionName}/{slug}`), `About` (`/about`), `NotFound` (404)
+**Layout** (`Components/Layout/`): `MainLayout`, `AdminLayout`, `ReconnectModal` (+ `.razor.js`). Also in `Components/`: `App` (root document), `Routes`, `Header` (composes `NavHeader`, `SectionBanner`, `SubNav`), `NavHeader`, `SectionBanner`, `SubNav`, `SkipLink`, `SeoMetaTags`, `NotFoundContent`
 
-**Shared**: `PageHeader`, `SidebarCollectionNav`, `SidebarRssLinks`, `SidebarTagCloud`
+**Base class**: `PageComponentBase` (`Components/PageComponentBase.cs`) — see [Page Script Lifecycle](#page-script-lifecycle)
 
-**Content**: `SectionCard`, `SectionCardsGrid`, `ContentItemCard`, `ContentItemsGrid`, `ContentItemDetail`
+**Pages** (`Components/Pages/`):
 
-**Filter**: `SearchBox`, `TagFilter`, `DateFilter`
+| Page | Route(s) |
+|---|---|
+| `Home` | `/` |
+| `SectionCollection` | `/{sectionName}`, `/{sectionName}/{collectionName}` |
+| `ContentItem` | `/{sectionName}/{collectionName}/{slug}` |
+| `Authors` | `/all/authors`, `/all/authors/{authorName}` |
+| `About` | `/about` |
+| `McpInfo` | `/mcp` |
+| `Error`, `NotFound` | `/Error`, `/not-found` |
+| `GenAI` | `/ai/genai-basics`, `/ai/genai-applied`, `/ai/genai-advanced` |
+| `AISDLC` | `/ai/sdlc` |
+| `DXSpace` | `/devops/dx-space` |
+| `GitHubCopilotFeatures`, `GitHubCopilotVSCodeUpdates` (also `/{VideoSlug}`), `GitHubCopilotGettingStarted`, `GitHubCopilotLevels`, `GitHubCopilotHandbook`, `GitHubCopilotToolTips`, `GitHubCopilotDiscord` | `/github-copilot/features`, `/vscode-updates`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord` |
+| `NewsletterSubscribe`, `NewsletterConfirm`, `NewsletterManage`, `NewsletterUnsubscribe` | `/newsletter/subscribe`, `/confirm`, `/manage`, `/unsubscribe` (see [docs/newsletter.md](../../docs/newsletter.md)) |
+| `Admin*` (`Components/Pages/Admin/`) | `/admin` and `/admin/*`, rendered with `AdminLayout` (see [docs/admin.md](../../docs/admin.md) and [docs/admin-authentication.md](../../docs/admin-authentication.md)) |
+
+Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `AdminCopilotFeatures`, `AdminCustomPages`, `AdminFeeds`, `AdminLogin` (+ `AdminLoginContent`), `AdminNewsletter`, `AdminProcessedUrls`, `AdminReviews`, `AdminSettings`, `AdminStatistics`, `AdminVscodeUpdates`. They declare `@rendermode InteractiveServer` explicitly.
+
+**Sidebar**: `SidebarToggle`, `MobileSidebarToolbar`, `MobileSidebarPanel`, `SidebarSearch`, `SidebarTagCloud`, `SidebarToc`, `DateRangeSlider`
+
+**Content**: `SectionCard`, `SectionCardsGrid`, `ContentItemCard`, `ContentItemsGrid`, `ContentItemDetail`, `HeroBanner`, `SafeMarkup`, `ReviewDiff` (uses `Helpers/DiffHelper.cs`)
+
+**Admin modals**: `AddContentModal`, `ContentItemEditorModal`, `JsonEditorModal`
+
+**Unused components** (exist, but no page or component renders them; keep or delete deliberately): `ResponsiveImage`, `MobileSidebarCollapse` (only tests render it), `SidebarRssLinks`
+
+**Services** (`Services/`): `TechHubApiClient` / `ITechHubApiClient`, `AdminTokenDelegatingHandler`, `BrandingService`, `FaviconService`, `ErrorService`, `DateHelper`, `SectionHelper`, `ContentGridStateCache`, `HomepageStatsState`, `SectionCacheRefreshService`, `SectionCacheHealthCheck` (the `SectionCache` itself lives in `TechHub.Core.Models`), `HeroBannerCache` (+ `HeroBannerCacheRefreshService`), `ApiHealthCheck`
+
+**Other directories**: `Configuration/` (`CdnLibraries`, `CssFiles`, `JsFiles`), `Middleware/`, `Endpoints/` (RSS proxy), `MCP/`, `Telemetry/`, `Helpers/` (`DiffHelper` only)

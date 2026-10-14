@@ -42,7 +42,7 @@ private string GetRenderedContent()
 
 ### Component Features
 
-- **HTML extraction**: Parses heading tags (h2-h6) with IDs from HTML strings
+- **HTML extraction**: Parses heading tags with IDs from HTML strings. By default only h2 to h4 are included; `MinLevel` (default 2) and `MaxLevel` (default 4) change the range
 - **Hierarchical nesting**: Automatically builds parent-child relationships for nested headings
 - **Scroll spy integration**: Highlights active TOC link based on scroll position
 - **Accessibility**: ARIA labels, semantic navigation markup, keyboard-accessible
@@ -53,7 +53,7 @@ private string GetRenderedContent()
 
 ### Detection Point
 
-The scroll spy detection line is positioned at **~30% from the top of the viewport**. When a heading crosses this line while scrolling, the corresponding TOC link highlights.
+The scroll spy detection line is positioned about **30% of the way down the area below the sticky header**. Concretely, it sits at `106px + 0.30 × (viewport height − 106px)`, where 106px is the sticky header offset (`STICKY_HEADER_OFFSET` in `scroll-manager.js`). When a heading crosses this line while scrolling, the corresponding TOC link highlights.
 
 **Why 30%?**
 
@@ -78,7 +78,7 @@ The scroll spy detection line is positioned at **~30% from the top of the viewpo
 **Explanation**:
 
 - Adds 50% of viewport height as empty space after content
-- Allows last heading to scroll to detection point (~30% from top)
+- Allows last heading to scroll to the detection point
 - Not full viewport to avoid excessive empty scrolling
 - Applied globally to all `.article-body` containers
 
@@ -86,7 +86,7 @@ The scroll spy detection line is positioned at **~30% from the top of the viewpo
 
 1. **Setup**: Component marks itself with `data-toc-scroll-spy` attribute
 2. **Content selector**: Points to `.article-body` container
-3. **Heading tracking**: Tracks `h2` and `h3` elements only (skips `h4`+ to reduce noise)
+3. **Heading tracking**: The scroll spy tracks `h2` and `h3` elements that have an `id` (it skips `h4` and deeper to reduce noise, even if the TOC lists them)
 4. **JavaScript observer**: Tracks heading positions relative to detection line
 5. **Highlighting**: Updates active TOC link when heading crosses detection point
 
@@ -100,6 +100,14 @@ The scroll spy detection line is positioned at **~30% from the top of the viewpo
     @* TOC content *@
 </nav>
 ```
+
+## Mobile Behavior
+
+On mobile and tablet viewports (≤ 1292px) `initTocScrollSpy` adds the `toc-mobile-mode` class to the TOC and the list becomes an accordion:
+
+- Clicking a top-level (h2) link that has sub-items expands or collapses its sub-list (`.expanded`) and does not scroll
+- Clicking an h2 without children, or any sub-item, scrolls to the heading, updates the URL hash with `replaceState` and highlights the link
+- No initial highlight pass runs on mobile, so the accordion is not pre-expanded before any user interaction
 
 ## Content Container Requirements
 
@@ -165,7 +173,7 @@ Pages using `<SidebarToc>` must wrap content in `.article-body` container:
 
 **Scrolling Content**:
 
-- TOC link highlights when corresponding heading crosses detection point (~30% from viewport top)
+- TOC link highlights when corresponding heading crosses the detection point (see [Detection Point](#detection-point))
 - Only one TOC link highlighted at a time (the current/active section)
 - Highlighting updates automatically as user scrolls through content
 

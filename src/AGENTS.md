@@ -78,7 +78,7 @@ src/
 ├── TechHub.Api/           # REST API Backend (Minimal APIs)
 ├── TechHub.Web/           # Blazor Frontend (InteractiveServer)
 ├── TechHub.Core/          # Domain Models & Interfaces (zero dependencies)
-├── TechHub.Infrastructure/ # Data Access (PostgreSQL, Markdown, RSS)
+├── TechHub.Infrastructure/ # Data Access (PostgreSQL), Markdown, RSS, content processing, AI roundups, newsletter email
 ├── TechHub.ServiceDefaults/ # Shared Aspire Configuration
 └── TechHub.AppHost/       # Aspire Orchestration
 ```
@@ -100,9 +100,10 @@ Each project has its own AGENTS.md with detailed patterns.
 
 ## Dependency Injection Service Lifetimes
 
-- **Singleton**: `ISqlDialect`, `IDbConnectionFactory`, `IMemoryCache`
-- **Scoped**: `IDbConnection`, `ITechHubApiClient`
-- **Transient**: `IContentRepository`, `IMarkdownService`, `IRssService`, `IMigrationRunner`
+- **Singleton**: `ISqlDialect`, `IDbConnectionFactory`, `IMemoryCache`, background services, `NewsletterTemplateProvider`
+- **Scoped**: `IDbConnection`, `ITechHubApiClient`, most repositories (anything reusing the scoped `IDbConnection`) and the content fixer, newsletter and roundup services
+- **Transient**: `IContentRepository`, `IGhcFeatureRepository`, `IMarkdownService`, `IRssService`, `IMigrationRunner`
+- Full table with the authoritative registrations: [TechHub.Infrastructure/AGENTS.md](TechHub.Infrastructure/AGENTS.md#service-lifetimes)
 - Always use Options pattern for configuration (never `builder.Configuration["Key"]`)
 
 ## Port Configuration

@@ -6,15 +6,14 @@ This document defines TechHub's Blazor render mode architecture: global Interact
 
 TechHub uses **global InteractiveServer** render mode with prerendering enabled. This means:
 
-- All components run in InteractiveServer mode (set at the router level in `Routes.razor`)
+- All components run in InteractiveServer mode (set on the router in `App.razor`)
 - Prerendering is enabled by default, so initial page loads render complete HTML on the server
 - After prerendering, the SignalR circuit connects and the app becomes interactive
-- No per-component `@rendermode` directives are needed
+- Public pages need no per-component `@rendermode` directive. The admin pages (`Components/Pages/Admin/Admin*.razor`) declare `@rendermode InteractiveServer` explicitly
 
 ```razor
-@* Routes.razor - global render mode *@
-<Router AppAssembly="typeof(Program).Assembly"
-        @rendermode="InteractiveServer">
+@* App.razor - global render mode on the router *@
+<Routes @rendermode="InteractiveServer" />
 ```
 
 ```razor
@@ -139,20 +138,27 @@ public void Dispose()
 - For pages with route parameters, include them in the key to avoid stale data
 - Use a sealed `PersistedXxxData` class when persisting multiple fields
 
-**Pages using PersistentComponentState**:
+**Pages and components using PersistentComponentState**:
 
-| Page | State Key Pattern | Data Persisted |
+| Page / Component | State Key Pattern | Data Persisted |
 |------|-------------------|----------------|
 | `Home.razor` | `home-data` | Sections list |
 | `ContentItem.razor` | `content-item-{Section}-{Collection}-{Slug}` | Content detail |
-| `ContentItemsGrid.razor` | `grid-state-{Section}-{Collection}` | Grid items |
+| `ContentItemsGrid.razor` | Built by `GetStateKey()` from section, collection and active filters (tags, search, dates, author, types, exact match) | Grid items |
+| `SidebarTagCloud` | Built by `GetPersistedStateKey()` | Tag cloud data (only when loaded from the API) |
+| `HeroBanner` | `hero-banner-state` | Banner data, collapse state, card hash |
+| `Authors.razor` | `authors` | Author list |
 | `DXSpace.razor` | `dxspace-data` | Section + page data |
 | `GitHubCopilotFeatures.razor` | `copilot-features-data` | Page + video items |
+| `GitHubCopilotGettingStarted.razor` | `copilot-getting-started-data` | Page data |
 | `GitHubCopilotHandbook.razor` | `copilot-handbook-data` | Page data |
 | `GitHubCopilotLevels.razor` | `copilot-levels-data` | Page data |
-| `GitHubCopilotVSCodeUpdates.razor` | `vscode-updates-{VideoSlug}` | Video items + detail |
+| `GitHubCopilotToolTips.razor` | `copilot-tool-tips-data` | Page data |
+| `GitHubCopilotVSCodeUpdates.razor` | `vscode-updates-{VideoSlug}` (`index` when no video is selected) | Video items + detail |
 | `GenAI.razor` | `genai-{PageType}` | Section + page data |
 | `AISDLC.razor` | `ai-sdlc-data` | Section + page data |
+| `NewsletterConfirm.razor` | `newsletter-confirm-result` | Confirmation result |
+| `Admin*.razor` pages | One key per page (for example `admin-dashboard-jobs`) | The list or statistics each page shows |
 
 ## RendererInfo.IsInteractive Guard
 

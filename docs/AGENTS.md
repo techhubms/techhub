@@ -36,7 +36,7 @@
 - **Never copy full implementations** — Describe patterns instead
 - **Never document HOW TO CODE** — Belongs in AGENTS.md files
 - **Never duplicate content** — Link instead
-- **Never hardcode file lists** — Use `grep_search` or `list_dir`
+- **Never hardcode file lists** — Use `grep_search` or `list_dir`. The category table below is the one exception: it is a placement guide, not an inventory
 
 ## Content Placement Decision
 
@@ -48,18 +48,21 @@
 | Functional docs, architecture, features, specs | docs/ |
 | Writing standards | [writing-style-guidelines.md](writing-style-guidelines.md) |
 
-**docs/ File Categories**:
+**docs/ File Categories**: use this table to decide where new content belongs. Every `docs/*.md` file must appear in exactly one category (check with `list_dir`), and a new docs file is added to the table in the same change.
 
 | Category | Files |
 |----------|-------|
-| **Architecture** | architecture.md, database.md, technology-stack.md |
+| **Architecture** | architecture.md, network-architecture.md, database.md, technology-stack.md, scroll-system-architecture.md |
+| **Operations** | ci-cd-pipeline.md, wildcard-certificates.md, background-services.md |
+| **Security** | admin-authentication.md, input-validation-and-sanitization.md |
+| **Routing** | url-routing.md |
 | **Observability** | telemetry.md, google-analytics.md, query-logging.md |
 | **Content** | content-api.md, content-processing.md, content-schema.md, rss-feeds.md |
 | **UI/UX** | design-system.md, page-structure.md, toc-component.md, render-modes.md |
-| **Features** | filtering.md, custom-pages.md, health-checks.md |
+| **Features** | filtering.md, custom-pages.md, health-checks.md, newsletter.md, admin.md |
 | **Frontend** | javascript.md, caching.md, seo.md |
 | **Testing** | testing-strategy.md, running-and-testing.md |
-| **Reference** | terminology.md, repository-structure.md |
+| **Reference** | terminology.md, repository-structure.md, writing-style-guidelines.md |
 
 ## Documentation Standards
 

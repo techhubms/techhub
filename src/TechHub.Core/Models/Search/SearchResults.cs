@@ -24,7 +24,7 @@ public record SearchResults<T>
     public FacetResults? Facets { get; init; }
 
     /// <summary>
-    /// Continuation token for next page (keyset pagination).
+    /// Continuation token for next page.
     /// Null if this is the last page.
     /// </summary>
     public string? ContinuationToken { get; init; }

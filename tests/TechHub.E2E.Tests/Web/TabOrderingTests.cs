@@ -264,7 +264,7 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/");
 
         // Wait for section cards to be rendered
-        await Page.WaitForSelectorAsync(".section-card");
+        await Page.Locator(".section-card").First.AssertElementVisibleAsync();
 
         // Act - Click on the first section card to navigate; retry until URL changes.
         var firstSectionCard = Page.Locator("a.section-card").First;
@@ -273,7 +273,7 @@ public class TabOrderingTests : PlaywrightTestBase
                 new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$")));
 
         // Wait for the skip link to be present in the new page's DOM before proceeding.
-        await Page.WaitForSelectorAsync("a.skip-link");
+        await Page.Locator("a.skip-link").AssertElementVisibleAsync();
 
         // scroll-manager.js's resetPagePosition() schedules a requestAnimationFrame that
         // sets body.tabIndex=-1, focuses body, then removes tabIndex. If that rAF fires
@@ -326,7 +326,7 @@ public class TabOrderingTests : PlaywrightTestBase
     {
         // Arrange - Start on homepage
         await Page.GotoRelativeAsync("/");
-        await Page.WaitForSelectorAsync(".section-card");
+        await Page.Locator(".section-card").First.AssertElementVisibleAsync();
 
         // Flush any pending rAFs from scroll-manager.js (e.g., resetPagePosition's rAF) and
         // ensure Tab starts from a known focus state — same pattern used by

@@ -4,6 +4,10 @@
     Deletes untagged (dangling) manifests from the shared Tech Hub Container Registry.
 
 .DESCRIPTION
+    LEGACY: Tech Hub images now live on ghcr.io, not in Azure Container Registry. This script only
+    applies to an ACR registry and is kept for cleaning up the old 'crtechhubms' registry.
+    GHCR retention is handled by the CD and CI workflows (see docs/ci-cd-pipeline.md).
+
     Every CI build pushes a new image with a unique tag (commit SHA or PR timestamp),
     which over time leaves many untagged manifests from replaced :latest / :pr-N tags.
     Because the registry is the 'Standard' SKU, the built-in retention policy

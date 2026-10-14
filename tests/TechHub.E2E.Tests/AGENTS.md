@@ -72,7 +72,7 @@ $env:E2E_NETWORK_THROTTLE = "wan"; Run -TestProject E2E
 
 A monotonic lifecycle counter replaces independent `window.__*` flags. Every JS lifecycle hook calls `__e2eSignal(label)` which increments the counter. Test helpers capture counter before actions and wait for it to change.
 
-**Signal sources**: `blazor-web-ready`, `blazor-server-ready`, `enhanced-nav` (from `TechHub.Web.lib.module.js`), `scripts-loading`/`scripts-ready`/`mermaid-rendered` (from `page-scripts.js`), `scroll-listener:{triggerId}`/`scroll-disposed:{triggerId}`/`toc-initialized`/`toc-active-updated` (from `scroll-manager.js`), `scroll-end` (browser `scrollend` event).
+**Signal sources**: `blazor-web-ready`, `blazor-server-ready`, `enhanced-nav` (from `TechHub.Web.lib.module.js`; the module also emits `blazor-wasm-ready`, which is unused because the app has no WebAssembly runtime), `scripts-loading`/`scripts-ready`/`mermaid-rendered`/`toc-initialized` (from `page-scripts.js`), `toc-initialized`/`toc-active-updated` (from `scroll-manager.js`), `scroll-end` (browser `scrollend` event listener in `App.razor`).
 
 Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scales by network profile: 10s local, 30s regular4g/wan/ci, 45s fast3g, 60s slow3g; 60s in CI without a profile), `E2EPollingInterval` (100ms) — centralized in `BlazorHelpers.cs`.
 

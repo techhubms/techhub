@@ -6,7 +6,7 @@ This document defines the schema for `ContentItem` records stored in the Postgre
 
 The PostgreSQL database is the **single source of truth** for all content. There are no content files checked into the repository. Content enters the database through two paths:
 
-1. **RSS pipeline** — `ContentProcessingBackgroundService` fetches RSS feeds every 15 minutes, runs AI categorization via Azure OpenAI, and upserts into `content_items`. See [content-processing.md](content-processing.md).
+1. **RSS pipeline** — `ContentProcessingBackgroundService` fetches RSS feeds every 60 minutes (configurable), runs AI categorization via Azure OpenAI, and upserts into `content_items`. See [content-processing.md](content-processing.md).
 2. **Admin UI / ad-hoc processing** — Admins can submit individual URLs (including YouTube videos and GitHub Copilot Feature items) through the admin panel for immediate AI processing and insertion.
 
 > **Note**: `ContentSyncService` exists only for **integration tests**. It reads markdown fixture files under `tests/TechHub.TestUtilities/TestCollections/` and seeds the test database. It is never used in production or staging.
@@ -25,12 +25,17 @@ See the full DDL in [src/TechHub.Infrastructure/Data/Migrations/postgres/001_ini
 | `author` | TEXT | Yes | Author or presenter name |
 | `date_epoch` | BIGINT | Yes | Unix timestamp (seconds). For RSS items this is the feed publication date. |
 | `primary_section_name` | TEXT | Yes | Primary section: `ai`, `azure`, `github-copilot`, `dotnet`, `devops`, `security`, `ml` |
-| `external_url` | TEXT | Yes (except `roundups`) | Source URL. For YouTube videos this is the YouTube URL. Roundups have no external source URL. |
+| `external_url` | TEXT | Yes | Source URL. For YouTube videos this is the YouTube URL. Roundups store their internal path, `/{section}/roundups/{slug}`. |
 | `feed_name` | TEXT | Yes | Display name of the originating RSS feed (or `"TechHub"` for admin-added items). |
 | `excerpt` | TEXT | Yes | Plain-text summary, max ~200 words. Used in cards, meta descriptions, RSS. |
 | `content` | TEXT | Yes | Full body content in markdown format. |
 | `tags_csv` | TEXT | Yes | Comma-delimited normalized tags, e.g. `,AI,GitHub Copilot,`. |
-| `content_hash` | TEXT | Yes | MD5 of content for change detection. |
+| `content_hash` | TEXT | Yes | SHA-256 hex digest for change detection. For feed items it covers title, content and excerpt. For roundups it covers the content only. |
+| `ai_metadata` | JSONB | No | AI-extracted roundup metadata (summary, topics, relevance). See [content-processing.md](content-processing.md#roundup-metadata). |
+| `created_at` / `updated_at` | TIMESTAMPTZ | Yes | Row audit timestamps. `created_at` decides which week an item belongs to in the weekly roundup. |
+| `search_vector` | TSVECTOR | Generated | Full-text search vector built by the database from title, excerpt, content, feed name, collection name and primary section name. Never written by the application. See [filtering.md](filtering.md#search-implementation). |
+
+Earlier versions of the table also had `subcollection_name`, `plans`, `ghes_support` and `draft`. Migration 016 moved them into the dedicated tables described below and dropped them.
 
 ### Section Flags (denormalized for fast filtering)
 
@@ -63,6 +68,8 @@ How `content_items` columns map to C# properties in `TechHub.Core.Models.Content
 | `tags_csv` | `Tags` | `IReadOnlyList<string>` | Parsed from CSV |
 | Section booleans | `Sections` | `IReadOnlyList<string>` | Reconstructed from booleans |
 
+`ContentItem` is the list model and carries no body. `content` and the rendered HTML live on `ContentItemDetail`, which is returned only by the detail endpoint.
+
 ## Section Names
 
 Valid `primary_section_name` values (also used in `section_names` multi-value context):
@@ -91,7 +98,7 @@ External-linking collections (`news`, `blogs`, `community`) use `external_url` f
 
 ## GitHub Copilot Features
 
-GitHub Copilot feature videos have `collection_name = 'videos'` and appear on the `/github-copilot/features` timeline page. Feature metadata is stored in dedicated tables:
+GitHub Copilot features are an independent entity, not content items. Each feature is a row in `ghc_features` and can link to any number of content items (typically videos) through `ghc_feature_content`. The features appear on the `/github-copilot/features` timeline page. Feature metadata is stored in dedicated tables:
 
 ### `ghc_features` table
 
@@ -99,11 +106,11 @@ Stores metadata for each GHC feature release:
 
 | Column | Type | Description |
 |---|---|---|
-| `slug` | `text` PK | Unique identifier matching the `content_items.slug` |
+| `slug` | `text` PK | Unique feature identifier. Independent of `content_items.slug` |
 | `title` | `text` | Feature release title |
-| `excerpt` | `text` | Short description |
+| `description` | `text` | Short description (renamed from `excerpt` in migration 022) |
 | `release_date` | `bigint` | Unix epoch timestamp of the release (nullable) |
-| `plans` | `text` | Comma-separated plan names: `Free`, `Pro`, `Business`, `Enterprise` |
+| `plans` | `text` | Comma-separated list of every plan that includes the feature: `Free`, `Student`, `Pro`, `Business`, `Pro+`, `Enterprise` |
 | `ghes_support` | `boolean` | Whether GHES is supported |
 | `created_at` / `updated_at` | `timestamptz` | Audit timestamps |
 
@@ -131,7 +138,7 @@ Tracks which `videos` items are VS Code monthly update videos:
 This table is populated automatically by:
 
 - `ContentItemWriteRepository` when the item matches a `vscode-updates` rule in `ContentProcessor.SubcollectionRules`
-- `ContentSyncService` when seeding items from `_videos/vscode-updates/` fixture directories
+- `ContentSyncService` when seeding items from `_videos/vscode-updates/` fixture directories (test-only)
 - `IGhcFeatureRepository.AddVscodeUpdateItemAsync` for manual admin operations
 
 ### API

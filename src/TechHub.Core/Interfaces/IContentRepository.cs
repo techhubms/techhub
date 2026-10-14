@@ -30,7 +30,7 @@ public interface IContentRepository
 
     /// <summary>
     /// Search content with filters, facets, and pagination.
-    /// Supports full-text search, tag filtering, date ranges, and keyset pagination.
+    /// Supports full-text search, tag filtering, date ranges, and offset pagination.
     /// 
     /// Examples:
     /// - All items: SearchAsync(new SearchRequest { Take = 20 })

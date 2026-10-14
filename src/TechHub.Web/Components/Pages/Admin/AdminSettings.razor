@@ -169,9 +169,11 @@
         {
             var newEnabled = !setting.Enabled;
             await Api.UpdateJobSettingAsync(setting.JobName, newEnabled);
+
+            // Reload first: LoadSettingsAsync clears the message, which would hide this confirmation
+            await LoadSettingsAsync();
             _message = $"{setting.JobName} has been {(newEnabled ? "enabled" : "disabled")}.";
             _messageIsError = false;
-            await LoadSettingsAsync();
         }
         catch (Exception ex)
         {

@@ -51,7 +51,7 @@ Tech Hub uses PostgreSQL as the database for all environments, including tests:
 | **Local Development** | PostgreSQL | Persistent data via docker-compose |
 | **Production** | Azure PostgreSQL | Managed, scalable, production-grade |
 
-Testcontainers spins up a throwaway `postgres:17-alpine` container per test fixture. The container starts for free on any machine with Docker and requires no manual setup.
+Testcontainers spins up a throwaway `postgres:17.5-alpine3.22` container per test fixture (pinned in `TechHubApiFactory.cs` and `DatabaseFixture.cs`). The container starts for free on any machine with Docker and requires no manual setup.
 
 ## Test Layer Definitions
 
@@ -92,7 +92,7 @@ Testcontainers spins up a throwaway `postgres:17-alpine` container per test fixt
 **What's Stubbed/Mocked** (external to our control):
 
 - Third-party APIs (external HTTP calls)
-- Email services (SMTP, SendGrid)
+- Email services (Azure Communication Services via `IEmailSender`)
 
 **What to Test**:
 
@@ -145,11 +145,13 @@ Testcontainers spins up a throwaway `postgres:17-alpine` container per test fixt
 | Layer | Framework | Projects | External Dependencies | Local Dependencies (Filesystem) |
 |-------|-----------|----------|----------------------|--------------------------------|
 | **Integration** | xUnit v3 + WebApplicationFactory | Api | PostgreSQL (Testcontainers) | Real (we control it) |
-| **Unit** | xUnit v3 + Stubs | Core, Infrastructure | NEVER | NEVER |
+| **Unit** | xUnit v3 + Stubs | Core, Infrastructure (service and parser tests) | NEVER | NEVER |
 | **E2E** | Playwright .NET | E2E | Real (local or deployed) | Real |
 | **Component** | bUnit | Web | Stub/Mock | Stub/Mock |
 | **JavaScript** | Vitest + jsdom | javascript/ | N/A | Mock (Blazor interop, CDN) |
 | **PowerShell** | Pester | powershell/ | Mock | Real (test files) |
+
+Infrastructure repository tests are the exception to the unit rule: they run against a real PostgreSQL database (Testcontainers) because queries cannot be validated against stubs.
 
 ## Test Doubles Terminology
 
@@ -185,7 +187,7 @@ Testcontainers spins up a throwaway `postgres:17-alpine` container per test fixt
 - HTTP calls to external APIs
 - Database access (SQL queries, Entity Framework)
 - Cloud services (Azure Storage, AWS S3)
-- Email services (SMTP, SendGrid)
+- Email services (Azure Communication Services via `IEmailSender`)
 - Third-party APIs
 
 ### NEVER Allowed in Unit Tests
@@ -203,12 +205,9 @@ If a service is registered as **Singleton** in production, tests MUST verify it 
 
 **Why**: If someone adds mutable state to a Singleton service, tests should FAIL to catch the production-breaking bug.
 
-**Services Registered as Singleton**:
+**Singleton services that tests construct directly** (see `src/TechHub.Api/Program.cs`): `StartupStateService`, `PostgresDialect`, `PostgresConnectionFactory`, `TimeProvider`. Background services are also singletons but are not constructed directly in unit tests.
 
-- `MarkdownService` - Markdown rendering (stateless)
-- `SectionRepository` - Section data access (uses caching)
-- `ContentRepository` - Content data access (uses caching)
-- `RssService` - RSS feed generation (stateless)
+Services such as `MarkdownService`, `RssService` and `ContentRepository` are registered as **Transient**, so they are not singletons. Their tests may still include parallel execution cases (for example `MarkdownServiceTests`) because the same instance can be shared by concurrent callers.
 
 ## Implementation Reference
 
