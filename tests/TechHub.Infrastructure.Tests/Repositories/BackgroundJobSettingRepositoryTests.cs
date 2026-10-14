@@ -31,13 +31,14 @@ public class BackgroundJobSettingRepositoryTests
     public async Task GetAllAsync_SeededJobs_AreReturnedOrderedByName()
     {
         // Arrange
-        string[] seededJobs = ["ContentCleanup", "ContentProcessor", "Newsletter", "RoundupGenerator"];
+        string[] seededJobs = ["ContentProcessor", "Newsletter", "RoundupGenerator"];
 
         // Act
         var settings = await _repository.GetAllAsync(TestContext.Current.CancellationToken);
 
         // Assert
         settings.Where(s => seededJobs.Contains(s.JobName)).Select(s => s.JobName).Should().Equal(seededJobs);
+        settings.Should().NotContain(s => s.JobName == "ContentCleanup");
     }
 
     [Fact]
