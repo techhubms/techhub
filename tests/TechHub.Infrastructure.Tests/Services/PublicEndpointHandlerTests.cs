@@ -73,7 +73,7 @@ public class PublicEndpointHandlerTests
     [InlineData("2001:db9::1")]
     [InlineData("2003::1")]
     [InlineData("3fff:1000::1")]
-    [InlineData("5f01::1")]
+    [InlineData("2000::1")]
     [InlineData("::ffff:8.8.8.8")]
     public void IsPublicAddress_PublicAddress_ReturnsTrue(string address)
     {
