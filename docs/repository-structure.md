@@ -195,7 +195,6 @@ Azure infrastructure as code (Bicep templates) for Azure App Service deployment:
   - `actionGroup.bicep` and `alerts.bicep` - Alert notification target and alert rules
   - `budget.bicep` and `policy.bicep` - Cost budget and Azure Policy assignments
   - `wildcardCert.bicep` - Imports a wildcard TLS certificate from Key Vault into an App Service Plan (deployed standalone by `Renew-WildcardCertificates.ps1`)
-  - `logAnalytics.bicep` - Not referenced by any template (orphaned; `monitoring.bicep` creates its own workspace)
 
 Compiled ARM templates (`infra/**/*.json`) are gitignored build output.
 
