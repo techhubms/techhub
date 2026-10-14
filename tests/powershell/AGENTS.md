@@ -13,7 +13,6 @@ Every script in `scripts/` has a test file named after it (`TechHubRunner.psm1` 
 | `Add-AppInsightsAnnotation.Tests.ps1` | `Add-AppInsightsAnnotation.ps1` |
 | `Assign-AdminUsers.Tests.ps1` | `Assign-AdminUsers.ps1` |
 | `Build-Images.Tests.ps1` | `Build-Images.ps1` |
-| `Cleanup-ContainerRegistry.Tests.ps1` | `Cleanup-ContainerRegistry.ps1` |
 | `Deploy-Application.Tests.ps1` | `Deploy-Application.ps1` |
 | `Deploy-Applications.Tests.ps1` | `Deploy-Applications.ps1` |
 | `Deploy-Infrastructure.Tests.ps1` | `Deploy-Infrastructure.ps1` |
