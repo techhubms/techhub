@@ -878,6 +878,23 @@ public class NewsletterServiceTests : IClassFixture<DatabaseFixture<NewsletterSe
     }
 
     [Fact]
+    public async Task SendManageLinkEmailAsync_UnconfirmedSubscriber_ReturnsTrueWithoutSending()
+    {
+        // Arrange
+        const string Email = "manage-link-unconfirmed@example.com";
+        await SeedSubscriberAsync(Email, confirmed: false);
+        var emailSender = new Mock<IEmailSender>(MockBehavior.Strict);
+        var sut = CreateService(emailSender: emailSender.Object);
+
+        // Act
+        var result = await sut.SendManageLinkEmailAsync(Email, TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Should().BeTrue();
+        emailSender.VerifyNoOtherCalls();
+    }
+
+    [Fact]
     public async Task SendManageLinkEmailAsync_UnsubscribedSubscriber_ReturnsTrueWithoutSending()
     {
         // Arrange

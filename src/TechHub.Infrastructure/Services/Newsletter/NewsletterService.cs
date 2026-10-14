@@ -309,9 +309,9 @@ public sealed class NewsletterService : INewsletterService
         }
 
         var subscriber = await _subscriberRepository.GetSubscriberByEmailAsync(email, ct);
-        if (subscriber is null)
+        if (subscriber is null || !subscriber.IsConfirmed)
         {
-            // Don't reveal whether an email is subscribed — silently succeed
+            // Don't reveal whether an email is subscribed (or confirmed) — silently succeed
             return true;
         }
 
