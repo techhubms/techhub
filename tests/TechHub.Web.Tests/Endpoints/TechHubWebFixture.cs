@@ -127,21 +127,20 @@ public sealed class StubApiHandler : HttpMessageHandler
     {
         ArgumentNullException.ThrowIfNull(request);
 
-        var response = request.RequestUri?.AbsolutePath switch
+        return Task.FromResult(request.RequestUri?.AbsolutePath switch
         {
-            "/api/sections" => new HttpResponseMessage(HttpStatusCode.OK)
-            {
-                Content = new StringContent("[]", Encoding.UTF8, "application/json")
-            },
-            "/api/rss/all" => new HttpResponseMessage(HttpStatusCode.OK)
-            {
-                Content = new StringContent("<rss version=\"2.0\"><channel><title>Tech Hub</title></channel></rss>", Encoding.UTF8, "application/rss+xml")
-            },
-            _ => new HttpResponseMessage(HttpStatusCode.NotFound)
-        };
-
-        return Task.FromResult(response);
+            "/api/sections" => Ok("[]", "application/json"),
+            "/api/rss/all" => Ok("<rss version=\"2.0\"><channel><title>Tech Hub</title></channel></rss>", "application/rss+xml"),
+            _ => NotFound()
+        });
     }
+
+    private static HttpResponseMessage Ok(string content, string mediaType) => new(HttpStatusCode.OK)
+    {
+        Content = new StringContent(content, Encoding.UTF8, mediaType)
+    };
+
+    private static HttpResponseMessage NotFound() => new(HttpStatusCode.NotFound);
 }
 
 /// <summary>Collects the redirect URIs of sign-out calls made against the fake OIDC scheme.</summary>

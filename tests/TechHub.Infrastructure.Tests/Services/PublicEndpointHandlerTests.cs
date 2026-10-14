@@ -57,6 +57,16 @@ public class PublicEndpointHandlerTests
         result.Should().BeTrue();
     }
 
+    [Fact]
+    public void Create_DisablesProxy()
+    {
+        // Act
+        using var handler = PublicEndpointHandler.Create();
+
+        // Assert
+        handler.UseProxy.Should().BeFalse();
+    }
+
     [Theory]
     [InlineData("http://127.0.0.1:9/")]
     [InlineData("http://[::1]:9/")]

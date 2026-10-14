@@ -151,7 +151,7 @@ In addition to the telemetry exporters, both the API and Web services write log 
 
 Log files are named `{api|web}-{environment}.log` and live in a `logs` folder under the output directory, for example `logs/web-development.log`. Entries use the Europe/Brussels timezone, and exception output is compacted to the exception chain plus stack frames from TechHub code.
 
-Writes go through a bounded background queue (10,000 entries) so logging never blocks requests, and the provider retries for up to about 100 ms when another process (such as a parallel test run) holds the file lock. Write failures are swallowed, so logging cannot take the application down.
+Writes go through a bounded background queue (10,000 entries). When the queue is full, a log call waits up to 100 ms for space before dropping the entry, so a saturated logger can briefly block a request thread. Separately, the background writer retries for up to about 100 ms when another process (such as a parallel test run) holds the file lock. Write failures are swallowed, so logging cannot take the application down.
 
 ## Local Development (Aspire Dashboard)
 

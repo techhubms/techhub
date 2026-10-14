@@ -1,4 +1,5 @@
 using System.Data;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Options;
@@ -306,8 +307,9 @@ if (!string.IsNullOrEmpty(azureAdClientId))
 }
 else
 {
-    // Register base auth services so UseAuthentication() middleware doesn't throw
-    builder.Services.AddAuthentication();
+    // Without a concrete scheme a denied AdminOnly request would throw from ChallengeAsync instead of returning 401
+    builder.Services.AddAuthentication(DenyAllAuthenticationHandler.SchemeName)
+        .AddScheme<AuthenticationSchemeOptions, DenyAllAuthenticationHandler>(DenyAllAuthenticationHandler.SchemeName, _ => { });
 }
 
 builder.Services.AddAuthorization(options =>

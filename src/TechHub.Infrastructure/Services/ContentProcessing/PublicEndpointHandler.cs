@@ -14,6 +14,8 @@ public static class PublicEndpointHandler
         => new()
         {
             AllowAutoRedirect = allowAutoRedirect,
+            // A proxy would be the connect target, so the validated endpoint would no longer be the real destination
+            UseProxy = false,
             ConnectCallback = ConnectAsync
         };
 

@@ -81,21 +81,16 @@ public class PostgresConnectionFactoryTests : IClassFixture<DatabaseFixture<Post
     public async Task CreateConnectionAsync_ConcurrentCalls_AllReturnOpenConnections()
     {
         // Act
-        var connections = await Task.WhenAll(
+        var created = await Task.WhenAll(
             Enumerable.Range(0, 5).Select(_ => _factory.CreateConnectionAsync(TestContext.Current.CancellationToken)));
+        using var first = created[0];
+        using var second = created[1];
+        using var third = created[2];
+        using var fourth = created[3];
+        using var fifth = created[4];
 
         // Assert
-        try
-        {
-            connections.Should().OnlyContain(c => c.State == ConnectionState.Open);
-            connections.Distinct().Should().HaveCount(5);
-        }
-        finally
-        {
-            foreach (var connection in connections)
-            {
-                connection.Dispose();
-            }
-        }
+        created.Should().OnlyContain(c => c.State == ConnectionState.Open);
+        created.Distinct().Should().HaveCount(5);
     }
 }
