@@ -10,6 +10,36 @@ namespace TechHub.Infrastructure.Services.ContentProcessing;
 /// </summary>
 public static class PublicEndpointHandler
 {
+    private static readonly IPNetwork[] NonPublicIpv4Networks =
+    [
+        IPNetwork.Parse("0.0.0.0/8"),
+        IPNetwork.Parse("10.0.0.0/8"),
+        IPNetwork.Parse("100.64.0.0/10"),
+        IPNetwork.Parse("127.0.0.0/8"),
+        IPNetwork.Parse("169.254.0.0/16"),
+        IPNetwork.Parse("172.16.0.0/12"),
+        IPNetwork.Parse("192.0.0.0/24"),
+        IPNetwork.Parse("192.0.2.0/24"),
+        IPNetwork.Parse("192.88.99.0/24"),
+        IPNetwork.Parse("192.168.0.0/16"),
+        IPNetwork.Parse("198.18.0.0/15"),
+        IPNetwork.Parse("198.51.100.0/24"),
+        IPNetwork.Parse("203.0.113.0/24"),
+        IPNetwork.Parse("224.0.0.0/4"),
+        IPNetwork.Parse("240.0.0.0/4")
+    ];
+
+    private static readonly IPNetwork Ipv6GlobalUnicastNetwork = IPNetwork.Parse("2000::/3");
+
+    private static readonly IPNetwork[] NonPublicIpv6Networks =
+    [
+        IPNetwork.Parse("2001::/23"),
+        IPNetwork.Parse("2001:db8::/32"),
+        IPNetwork.Parse("2002::/16"),
+        IPNetwork.Parse("3fff::/20"),
+        IPNetwork.Parse("5f00::/16")
+    ];
+
     public static SocketsHttpHandler Create(bool allowAutoRedirect = true)
         => new()
         {
@@ -33,27 +63,15 @@ public static class PublicEndpointHandler
             return false;
         }
 
-        var bytes = address.GetAddressBytes();
-
         if (address.AddressFamily == AddressFamily.InterNetwork)
         {
-            return !(bytes[0] == 0                                          // 0.0.0.0/8
-                || bytes[0] == 10                                           // 10.0.0.0/8
-                || (bytes[0] == 100 && bytes[1] is >= 64 and <= 127)        // 100.64.0.0/10 (CGNAT)
-                || (bytes[0] == 169 && bytes[1] == 254)                     // 169.254.0.0/16 (link-local, cloud metadata)
-                || (bytes[0] == 172 && bytes[1] is >= 16 and <= 31)         // 172.16.0.0/12
-                || (bytes[0] == 192 && bytes[1] == 168)                     // 192.168.0.0/16
-                || (bytes[0] == 192 && bytes[1] == 0 && bytes[2] == 0)      // 192.0.0.0/24 (IETF protocol assignments)
-                || (bytes[0] == 198 && bytes[1] is 18 or 19)                // 198.18.0.0/15 (benchmarking)
-                || bytes[0] >= 224);                                        // multicast, reserved, broadcast
+            return !NonPublicIpv4Networks.Any(network => network.Contains(address));
         }
 
         if (address.AddressFamily == AddressFamily.InterNetworkV6)
         {
-            return !(address.IsIPv6LinkLocal
-                || address.IsIPv6SiteLocal
-                || address.IsIPv6Multicast
-                || address.IsIPv6UniqueLocal);
+            return Ipv6GlobalUnicastNetwork.Contains(address)
+                && !NonPublicIpv6Networks.Any(network => network.Contains(address));
         }
 
         return false;

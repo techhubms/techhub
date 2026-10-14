@@ -138,7 +138,7 @@ Apply `.Sanitize()` consistently everywhere: API endpoints, `TechHubApiClient`, 
 
 **Boundary**: HTTP clients that fetch feed XML, article HTML and YouTube data from URLs supplied by admins or by third-party feeds.
 
-**What it does**: These clients use `PublicEndpointHandler`, which resolves DNS and validates the address at connect time. Loopback, private (RFC 1918), CGNAT, link-local (including the cloud metadata address), multicast and other non-public addresses are rejected, including IPv4-mapped IPv6 forms. Because the check happens on every connection, redirects and DNS rebinding cannot reach internal hosts.
+**What it does**: These clients use `PublicEndpointHandler`, which resolves DNS and validates the address at connect time. Loopback, private (RFC 1918), CGNAT, link-local (including the cloud metadata address), documentation, benchmarking, multicast, reserved and other non-public address ranges are rejected, including IPv4-mapped IPv6 forms. IPv6 is limited to global-unicast space, excluding its special-purpose ranges. The denied prefixes follow the [IANA IPv4](https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml) and [IPv6](https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml) special-purpose address registries. Because the check happens on every connection, redirects and DNS rebinding cannot reach internal hosts.
 
 ### Layer 6: CodeQL (Static Analysis)
 
