@@ -543,8 +543,6 @@ else {
     Write-Step "Updating GitHub Actions secrets for '$Environment'"
 
     $secrets = @{
-        'AZURE_AD_TENANT_ID' = $tenantId
-        'AZURE_AD_CLIENT_ID' = $clientId
         $GitHubSecretName    = $secret
     }
 

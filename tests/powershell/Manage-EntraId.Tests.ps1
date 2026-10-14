@@ -1,5 +1,6 @@
 Describe "Manage-EntraId" {
     BeforeAll {
+        . $PSScriptRoot/TestHelpers.ps1
         $scriptPath = Join-Path $PSScriptRoot "../../scripts/Manage-EntraId.ps1"
     }
 
@@ -206,10 +207,61 @@ Describe "Manage-EntraId" {
             $content | Should -Match '--env'
         }
 
-        It "Should push the three GitHub secrets (TenantId, ClientId, ClientSecret)" {
-            $content | Should -Match 'AZURE_AD_TENANT_ID'
-            $content | Should -Match 'AZURE_AD_CLIENT_ID'
-            $content | Should -Match 'AZURE_AD_CLIENT_SECRET'
+        BeforeEach {
+            $cli = New-CliFake
+            Mock az { Invoke-CliFake -Fake $cli -Command 'az' -Arguments $args }
+            Mock gh { Invoke-CliFake -Fake $cli -Command 'gh' -Arguments $args }
+
+            Add-CliRule $cli 'az' '^az account show' '{"tenantId":"tenant-123","id":"subscription-123"}'
+            Add-CliRule $cli 'az' '^az ad app list' '[{"appId":"client-123","id":"object-123"}]'
+            Add-CliRule $cli 'az' '^az ad app credential list' '[]'
+            Add-CliRule $cli 'az' '^az ad app credential reset' '{"password":"test-client-secret"}'
+        }
+
+        It "Updates only the client secret for <Environment>" -ForEach @(
+            @{ Environment = 'staging' }
+            @{ Environment = 'production' }
+        ) {
+            $result = Invoke-ScriptUnderTest $scriptPath @{ Environment = $Environment; GitHubRepo = 'techhubms/techhub' }
+
+            $result.Error | Should -BeNullOrEmpty
+            $result.ExitCode | Should -Be 0
+            $writes = @(Get-CliCalls $cli '^gh secret set')
+            $writes | Should -HaveCount 1
+            $writes[0] | Should -Be "gh secret set AZURE_AD_CLIENT_SECRET --repo techhubms/techhub --body test-client-secret --env $Environment"
+        }
+
+        It "Preserves the custom client secret name" {
+            $result = Invoke-ScriptUnderTest $scriptPath @{
+                Environment = 'production'
+                GitHubRepo = 'techhubms/techhub'
+                GitHubSecretName = 'CUSTOM_CLIENT_SECRET'
+            }
+
+            $result.Error | Should -BeNullOrEmpty
+            $result.ExitCode | Should -Be 0
+            $writes = @(Get-CliCalls $cli '^gh secret set')
+            $writes | Should -HaveCount 1
+            $writes[0] | Should -Be 'gh secret set CUSTOM_CLIENT_SECRET --repo techhubms/techhub --body test-client-secret --env production'
+        }
+
+        It "Reports failure when the client secret cannot be updated" {
+            Add-CliRule $cli 'gh' '^gh secret set AZURE_AD_CLIENT_SECRET' 'denied' -ExitCode 1
+
+            $result = Invoke-ScriptUnderTest $scriptPath @{ Environment = 'production'; GitHubRepo = 'techhubms/techhub' }
+
+            $result.Error | Should -BeNullOrEmpty
+            $result.ExitCode | Should -Be 1
+            $result.Output | Should -Match "Failed to set GitHub secret 'AZURE_AD_CLIENT_SECRET'"
+            @(Get-CliCalls $cli '^gh secret set') | Should -HaveCount 1
+        }
+
+        It "Does not write GitHub secrets for localhost" {
+            $result = Invoke-ScriptUnderTest $scriptPath @{ Environment = 'localhost' }
+
+            $result.Error | Should -BeNullOrEmpty
+            $result.ExitCode | Should -Be 0
+            @(Get-CliCalls $cli '^gh') | Should -BeNullOrEmpty
         }
     }
 }
