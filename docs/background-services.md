@@ -36,7 +36,7 @@ Generates the weekly roundup for every section for the previous Monday to Sunday
 
 ## Content Fixer
 
-Applies bulk cleanup (tags, authors, markdown) to existing content. It has no schedule and no enable gate, and runs only when an admin triggers it. A triggered run records a job and proposes its changes as content reviews, which an admin approves or rejects before they are applied. The content cache is only cleared when a run applied fixes directly. See [content-processing.md](content-processing.md) and [admin.md](admin.md#content-reviews). The `ContentCleanup` row in `background_job_settings` is seeded for completeness but nothing reads it.
+Applies bulk cleanup (tags, authors, markdown) to existing content. It has no schedule and no enable gate, and runs only when an admin triggers it. A triggered run records a job and proposes its changes as content reviews, which an admin approves or rejects before they are applied. The content cache is only cleared when a run applied fixes directly. See [content-processing.md](content-processing.md) and [admin.md](admin.md#content-reviews). Content cleanup has no row in `background_job_settings`; startup migrations remove the unused setting from existing databases without affecting manual runs or job history.
 
 ## Newsletter
 
@@ -46,8 +46,8 @@ Every `CheckIntervalMinutes` the service checks whether the weekly digest is due
 
 Scheduled runs of the content processor, roundup generator and newsletter need two switches to be on:
 
-1. **Configuration flag** (environment level). `ContentProcessor:Enabled`, `RoundupGenerator:Enabled` and `Newsletter:ScheduledSendEnabled` default to `false` and are set to `true` only in `appsettings.Production.json`. `appsettings.Staging.json`, used by PR previews, sets all three to `false`. The deployment templates can also force `ContentProcessor__Enabled` and `RoundupGenerator__Enabled` to `false`. When the flag is off the database is not consulted. This keeps a preview environment that runs on a restored production database from processing content or emailing subscribers.
-2. **Database setting** (runtime level). The `background_job_settings` table has one row per job (`ContentProcessor`, `RoundupGenerator`, `Newsletter`) with an `enabled` column. Migrations seed every row as disabled, and a missing row counts as disabled. Admins toggle the rows at `/admin/settings`, and the services read the value on every scheduled run, so no restart is needed.
+1. **Configuration flag** (environment level). `ContentProcessor:Enabled`, `RoundupGenerator:Enabled` and `Newsletter:ScheduledSendEnabled` default to `false` and are set to `true` only in `appsettings.Production.json`. `appsettings.Staging.json`, used by PR previews, sets all three to `false`. The PR-preview Bicep template also explicitly sets all three flags to `false`, independently of the ASP.NET Core environment, so a preview running against a restored production database cannot process content or send subscriber email. Production Bicep explicitly enables all three. When a flag is off the database is not consulted.
+2. **Database setting** (runtime level). The `background_job_settings` table has one row per scheduled job (`ContentProcessor`, `RoundupGenerator`, `Newsletter`) with an `enabled` column. Migrations seed every row as disabled, and a missing row counts as disabled. Admins toggle the rows at `/admin/settings`, and the services read the value on every scheduled run, so no restart is needed.
 
 Disabled services stay alive and still react to manual triggers.
 

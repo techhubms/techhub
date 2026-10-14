@@ -106,6 +106,24 @@ Describe "Deploy-PrPreview" {
         }
     }
 
+    Context "Bicep scheduled job configuration" {
+        It "Disables scheduled content processing, roundup generation, and newsletter sends for PR previews" {
+            $prTemplate = Get-Content (Join-Path $PSScriptRoot "../../infra/pr-applications.bicep") -Raw
+            $applicationTemplate = Get-Content (Join-Path $PSScriptRoot "../../infra/applications.bicep") -Raw
+            $apiModule = Get-Content (Join-Path $PSScriptRoot "../../infra/modules/api.bicep") -Raw
+
+            $prTemplate | Should -Match "contentProcessorEnabled:\s*false"
+            $prTemplate | Should -Match "roundupGeneratorEnabled:\s*false"
+            $prTemplate | Should -Match "newsletterScheduledSendEnabled:\s*false"
+            $applicationTemplate | Should -Match "contentProcessorEnabled:\s*true"
+            $applicationTemplate | Should -Match "roundupGeneratorEnabled:\s*true"
+            $applicationTemplate | Should -Match "newsletterScheduledSendEnabled:\s*true"
+            $apiModule | Should -Match "name: 'ContentProcessor__Enabled'\s+value: contentProcessorEnabled"
+            $apiModule | Should -Match "name: 'RoundupGenerator__Enabled'\s+value: roundupGeneratorEnabled"
+            $apiModule | Should -Match "name: 'Newsletter__ScheduledSendEnabled'\s+value: newsletterScheduledSendEnabled"
+        }
+    }
+
     Context "Teardown" {
         BeforeEach {
             Add-CliRule $cli 'az' "webapp list .*name=='app-techhub-web-pr-42'" 'app-techhub-web-pr-42'

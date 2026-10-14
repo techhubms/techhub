@@ -119,7 +119,47 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
         }
 
         var jobNames = await connection.QueryAsync<string>("SELECT job_name FROM background_job_settings");
-        jobNames.Should().BeEquivalentTo("ContentProcessor", "RoundupGenerator", "ContentCleanup", "Newsletter");
+        jobNames.Should().BeEquivalentTo("ContentProcessor", "RoundupGenerator", "Newsletter");
+    }
+
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    public async Task RunMigrationsAsync_ExistingDatabase_RemovesOnlyInertContentCleanupSetting(bool cleanupSettingExists)
+    {
+        // Arrange - defer the removal migration to reproduce an already-deployed database.
+        const string RemovalScriptName = MigrationResourcePrefix + "048_remove_content_cleanup_job_setting.sql";
+        var ct = TestContext.Current.CancellationToken;
+        await using var connection = await OpenFreshDatabaseAsync(ct);
+        await connection.ExecuteAsync(
+            "CREATE TABLE _migrations (script_name TEXT PRIMARY KEY, executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW())");
+        await connection.ExecuteAsync(
+            "INSERT INTO _migrations (script_name) VALUES (@Name)", new { Name = RemovalScriptName });
+        await CreateRunner(connection).RunMigrationsAsync(ct);
+        await connection.ExecuteAsync(
+            "UPDATE background_job_settings SET enabled = TRUE, description = 'Customized setting' WHERE job_name IN ('ContentProcessor', 'ContentCleanup')");
+        if (!cleanupSettingExists)
+        {
+            await connection.ExecuteAsync("DELETE FROM background_job_settings WHERE job_name = 'ContentCleanup'");
+        }
+
+        var settingsBefore = (await connection.QueryAsync<JobSetting>(
+            "SELECT job_name AS JobName, enabled, description FROM background_job_settings WHERE job_name <> 'ContentCleanup' ORDER BY job_name")).ToList();
+        await connection.ExecuteAsync(
+            "DELETE FROM _migrations WHERE script_name = @Name", new { Name = RemovalScriptName });
+        var migrationsBefore = await GetRecordedExecutionsAsync(connection);
+
+        // Act
+        await CreateRunner(connection).RunMigrationsAsync(ct);
+
+        // Assert
+        (await connection.QueryAsync<JobSetting>(
+            "SELECT job_name AS JobName, enabled, description FROM background_job_settings ORDER BY job_name"))
+            .Should().Equal(settingsBefore, "only the unused setting should be removed");
+        var migrationsAfter = await GetRecordedExecutionsAsync(connection);
+        migrationsAfter.Should().ContainSingle(row => row.ScriptName == RemovalScriptName);
+        migrationsAfter.Where(row => row.ScriptName != RemovalScriptName)
+            .Should().Equal(migrationsBefore, "historical migrations must not be re-executed");
     }
 
     // ── Repeat runs ────────────────────────────────────────────────────────
@@ -325,4 +365,6 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
             "SELECT to_regclass(@Name) IS NOT NULL", new { Name = $"public.{tableName}" });
 
     private sealed record RecordedExecution(string ScriptName, string ExecutedAt);
+
+    private sealed record JobSetting(string JobName, bool Enabled, string Description);
 }

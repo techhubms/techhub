@@ -44,6 +44,15 @@ param aiCategorizationEndpoint string = ''
 @description('Azure AI Foundry deployment name')
 param aiCategorizationDeploymentName string = ''
 
+@description('Whether scheduled content processing is enabled for this API app.')
+param contentProcessorEnabled bool = true
+
+@description('Whether scheduled roundup generation is enabled for this API app.')
+param roundupGeneratorEnabled bool = true
+
+@description('Whether scheduled newsletter delivery is enabled for this API app.')
+param newsletterScheduledSendEnabled bool = true
+
 @description('Key Vault secret name for Newsletter ACS endpoint URL. Leave empty to disable.')
 param acsEndpointSecretName string = ''
 
@@ -157,6 +166,18 @@ var staticEnvVars = [
   {
     name: 'AiCategorization__DeploymentName'
     value: aiCategorizationDeploymentName
+  }
+  {
+    name: 'ContentProcessor__Enabled'
+    value: contentProcessorEnabled ? 'true' : 'false'
+  }
+  {
+    name: 'RoundupGenerator__Enabled'
+    value: roundupGeneratorEnabled ? 'true' : 'false'
+  }
+  {
+    name: 'Newsletter__ScheduledSendEnabled'
+    value: newsletterScheduledSendEnabled ? 'true' : 'false'
   }
   {
     // Container listens on 8080 — tells the App Service container host which port to route to.
