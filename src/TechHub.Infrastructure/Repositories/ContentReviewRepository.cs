@@ -269,5 +269,78 @@ public sealed class ContentReviewRepository : IContentReviewRepository
                 Collection = review.CollectionName,
                 Slug = review.Slug
             }, cancellationToken: ct));
+
+        if (review.ChangeType == ContentReviewChangeType.Tags)
+        {
+            await RebuildExpandedTagsAsync(review, ct);
+        }
+    }
+
+    private async Task RebuildExpandedTagsAsync(ContentReview review, CancellationToken ct)
+    {
+        var item = await _connection.QuerySingleOrDefaultAsync<TagFlagsRow>(new CommandDefinition(
+            @"SELECT date_epoch AS DateEpoch, sections_bitmask AS SectionsBitmask,
+                     is_ai AS IsAi, is_azure AS IsAzure, is_dotnet AS IsDotnet,
+                     is_devops AS IsDevops, is_github_copilot AS IsGithubCopilot,
+                     is_ml AS IsMl, is_security AS IsSecurity
+              FROM content_items
+              WHERE collection_name = @Collection AND slug = @Slug",
+            new { Collection = review.CollectionName, Slug = review.Slug },
+            cancellationToken: ct));
+
+        if (item is null)
+        {
+            return;
+        }
+
+        await _connection.ExecuteAsync(new CommandDefinition(
+            "DELETE FROM content_tags_expanded WHERE collection_name = @Collection AND slug = @Slug",
+            new { Collection = review.CollectionName, Slug = review.Slug },
+            cancellationToken: ct));
+
+        var tags = (review.FixedValue ?? string.Empty)
+            .Split(',', StringSplitOptions.RemoveEmptyEntries)
+            .Select(t => t.Trim())
+            .Where(t => t.Length > 0)
+            .ToList();
+
+        if (tags.Count == 0)
+        {
+            return;
+        }
+
+        var tagRows = ContentItemWriteRepository.BuildTagWords(
+            tags, review.CollectionName, review.Slug, item.DateEpoch,
+            item.IsAi, item.IsAzure, item.IsDotnet, item.IsDevops,
+            item.IsGithubCopilot, item.IsMl, item.IsSecurity, item.SectionsBitmask);
+
+        foreach (var row in tagRows)
+        {
+            await _connection.ExecuteAsync(new CommandDefinition(
+                @"INSERT INTO content_tags_expanded
+                    (collection_name, slug, tag_word, tag_display, is_full_tag,
+                     date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                     is_ml, is_security, sections_bitmask)
+                  VALUES
+                    (@CollectionName, @Slug, @TagWord, @TagDisplay, @IsFullTag,
+                     @DateEpoch, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
+                     @IsMl, @IsSecurity, @Bitmask)
+                  ON CONFLICT DO NOTHING",
+                row,
+                cancellationToken: ct));
+        }
+    }
+
+    private sealed class TagFlagsRow
+    {
+        public long DateEpoch { get; init; }
+        public int SectionsBitmask { get; init; }
+        public bool IsAi { get; init; }
+        public bool IsAzure { get; init; }
+        public bool IsDotnet { get; init; }
+        public bool IsDevops { get; init; }
+        public bool IsGithubCopilot { get; init; }
+        public bool IsMl { get; init; }
+        public bool IsSecurity { get; init; }
     }
 }
