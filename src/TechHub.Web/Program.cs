@@ -634,10 +634,10 @@ app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken 
 // ─── Admin Logout Endpoint ────────────────────────────────────────────────────
 // Microsoft.Identity.Web provides /MicrosoftIdentity/Account/SignIn and /SignOut
 // built-in. We expose /admin/logout as a stable alias for the logout button.
-// Signs out of OIDC first (issues the end_session request to Azure AD), then
+// Signs out of OIDC first when registered (issues the end_session request to Azure AD), then
 // clears the local cookie. The OIDC sign-out redirects to "/" on completion.
 // Uses POST to prevent CSRF / prefetch-triggered logout (antiforgery validated).
-app.MapPost("/admin/logout", async (HttpContext context, IAntiforgery antiforgery) =>
+app.MapPost("/admin/logout", async (HttpContext context, IAntiforgery antiforgery, IAuthenticationSchemeProvider schemes) =>
 {
     // UseAntiforgery() only validates endpoints that carry antiforgery metadata, which this handler does not bind.
     try
@@ -650,11 +650,20 @@ app.MapPost("/admin/logout", async (HttpContext context, IAntiforgery antiforger
         return Results.Text("Invalid antiforgery token.", statusCode: StatusCodes.Status400BadRequest);
     }
 
-    // OIDC sign-out must happen first — it issues the end_session_endpoint redirect.
-    // Cookie sign-out is handled by the OIDC post-logout flow automatically.
-    await context.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme,
-        new AuthenticationProperties { RedirectUri = "/" });
+    var hasOidcScheme = await schemes.GetSchemeAsync(OpenIdConnectDefaults.AuthenticationScheme) is not null;
+    if (hasOidcScheme)
+    {
+        // OIDC sign-out must happen first — it issues the end_session_endpoint redirect.
+        await context.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme,
+            new AuthenticationProperties { RedirectUri = "/" });
+    }
+
     await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+    if (!hasOidcScheme)
+    {
+        return Results.LocalRedirect("/");
+    }
+
     return Results.Empty;
 })
 .WithName("AdminLogout")

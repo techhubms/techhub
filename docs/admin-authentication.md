@@ -26,6 +26,10 @@ The Web app signs users in via OIDC, then uses `ITokenAcquisition` to obtain an 
 - **`AdminOnly` policy** — Authorization policy on the API (`src/TechHub.Api/Authorization/AdminAuthorization.cs`) that requires `RequireAuthenticatedUser()` + `RequireScope()`
 - **Enterprise App** — "Assignment required" is enabled so only explicitly assigned users can sign in
 
+### Logout
+
+`POST /admin/logout` requires a valid antiforgery token. Missing or invalid tokens return `400` without signing out. Valid requests clear the local authentication cookie and sign out through Entra ID when OIDC is registered. Without OIDC, logout clears only the local cookie and redirects to `/`.
+
 ## Configuration
 
 Both the Web and API projects read from the `AzureAd` configuration section. When `AzureAd:ClientId` is empty, authentication is disabled. Outside Production (local dev without Entra, tests, PR previews) admin endpoints then allow all requests; in Production the `AdminOnly` policy denies every request and a startup error is logged, so a missing setting fails closed.

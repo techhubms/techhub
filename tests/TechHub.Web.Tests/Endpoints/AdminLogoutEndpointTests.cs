@@ -1,7 +1,10 @@
 using System.Net;
 using FluentAssertions;
 using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace TechHub.Web.Tests.Endpoints;
@@ -78,6 +81,57 @@ public class AdminLogoutEndpointTests(DevelopmentWebFixture fixture) : IClassFix
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
         fixture.SignOuts.RedirectUris.Count.Should().Be(before);
+        response.Headers.Contains("Set-Cookie").Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData("Cookie")]
+    [InlineData("RequestVerificationToken")]
+    public async Task Post_LogoutWithInvalidAntiforgeryToken_IsRejectedWithoutSigningOut(string headerName)
+    {
+        // Arrange
+        var before = fixture.SignOuts.RedirectUris.Count;
+        using var client = fixture.CreateClient("198.51.100.6");
+        using var request = CreateLogoutRequest();
+        request.Headers.Remove(headerName);
+        request.Headers.Add(headerName, headerName == "Cookie"
+            ? ".AspNetCore.Cookies=stale-session"
+            : "invalid-token");
+
+        // Act
+        using var response = await client.SendAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        fixture.SignOuts.RedirectUris.Count.Should().Be(before);
+        response.Headers.Contains("Set-Cookie").Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task Post_LogoutWithoutOidc_ClearsLocalCookieAndRedirectsToRoot()
+    {
+        // Arrange
+        await using var factory = new TechHubWebFactory("Development");
+        using var client = factory.CreateClient(new WebApplicationFactoryClientOptions
+        {
+            AllowAutoRedirect = false,
+            BaseAddress = new Uri("https://localhost")
+        });
+        factory.Services.GetRequiredService<IAuthenticationSchemeProvider>()
+            .RemoveScheme(OpenIdConnectDefaults.AuthenticationScheme);
+        using var request = CreateLogoutRequest(
+            extraCookie: ".AspNetCore.Cookies=stale-session", services: factory.Services);
+
+        // Act
+        using var response = await client.SendAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.Redirect);
+        response.Headers.Location.Should().Be(new Uri("/", UriKind.Relative));
+        response.Headers.TryGetValues("Set-Cookie", out var setCookies).Should().BeTrue();
+        setCookies.Should().Contain(c => c.StartsWith(".AspNetCore.Cookies=;", StringComparison.Ordinal)
+            && c.Contains("expires=Thu, 01 Jan 1970", StringComparison.OrdinalIgnoreCase));
+        factory.SignOuts.RedirectUris.Should().BeEmpty();
     }
 
     [Theory]
@@ -99,10 +153,11 @@ public class AdminLogoutEndpointTests(DevelopmentWebFixture fixture) : IClassFix
         fixture.SignOuts.RedirectUris.Count.Should().Be(before);
     }
 
-    private HttpRequestMessage CreateLogoutRequest(string? extraCookie = null)
+    private HttpRequestMessage CreateLogoutRequest(string? extraCookie = null, IServiceProvider? services = null)
     {
-        var httpContext = new DefaultHttpContext { RequestServices = fixture.Services };
-        var tokens = fixture.Services.GetRequiredService<IAntiforgery>().GetAndStoreTokens(httpContext);
+        services ??= fixture.Services;
+        var httpContext = new DefaultHttpContext { RequestServices = services };
+        var tokens = services.GetRequiredService<IAntiforgery>().GetAndStoreTokens(httpContext);
         var antiforgeryCookie = httpContext.Response.Headers.SetCookie.ToString().Split(';')[0];
 
         var request = new HttpRequestMessage(HttpMethod.Post, "/admin/logout")
