@@ -1,3 +1,5 @@
+using System.Buffers;
+
 namespace TechHub.Web.Helpers;
 
 public enum DiffOp { Equal, Insert, Delete }
@@ -19,8 +21,13 @@ public static class DiffHelper
         ArgumentNullException.ThrowIfNull(original);
         ArgumentNullException.ThrowIfNull(modified);
 
-        var orig = original.ReplaceLineEndings("\n").Split('\n');
-        var mod = modified.ReplaceLineEndings("\n").Split('\n');
+        if (original.Length == 0 && modified.Length == 0)
+        {
+            return [new DiffLine(DiffOp.Equal, string.Empty)];
+        }
+
+        var orig = original.Length == 0 ? Array.Empty<string>() : original.ReplaceLineEndings("\n").Split('\n');
+        var mod = modified.Length == 0 ? Array.Empty<string>() : modified.ReplaceLineEndings("\n").Split('\n');
         return Lcs(orig, mod);
     }
 
@@ -54,48 +61,160 @@ public static class DiffHelper
     private static List<DiffLine> Lcs(string[] orig, string[] mod)
     {
         int m = orig.Length, n = mod.Length;
+        var matches = new List<(int Original, int Modified)>();
+        FindLcsMatches(orig, 0, m, mod, 0, n, matches);
 
-        // Build LCS table bottom-up using a jagged array to satisfy CA1814
-        var c = new int[m + 1][];
-        for (int i = 0; i <= m; i++)
-        {
-            c[i] = new int[n + 1];
-        }
-
-        for (int i = m - 1; i >= 0; i--)
-        {
-            for (int j = n - 1; j >= 0; j--)
-            {
-                c[i][j] = orig[i] == mod[j]
-                    ? c[i + 1][j + 1] + 1
-                    : Math.Max(c[i + 1][j], c[i][j + 1]);
-            }
-        }
-
-        // Backtrack to produce diff
         var result = new List<DiffLine>(m + n);
         int oi = 0, mi = 0;
 
-        while (oi < m || mi < n)
+        foreach (var (originalIndex, modifiedIndex) in matches)
         {
-            if (oi < m && mi < n && orig[oi] == mod[mi])
+            while (mi < modifiedIndex)
             {
-                result.Add(new DiffLine(DiffOp.Equal, orig[oi]));
-                oi++;
-                mi++;
+                result.Add(new DiffLine(DiffOp.Insert, mod[mi++]));
             }
-            else if (mi < n && (oi >= m || c[oi + 1][mi] <= c[oi][mi + 1]))
+
+            while (oi < originalIndex)
             {
-                result.Add(new DiffLine(DiffOp.Insert, mod[mi]));
-                mi++;
+                result.Add(new DiffLine(DiffOp.Delete, orig[oi++]));
             }
-            else
-            {
-                result.Add(new DiffLine(DiffOp.Delete, orig[oi]));
-                oi++;
-            }
+
+            result.Add(new DiffLine(DiffOp.Equal, orig[oi]));
+            oi++;
+            mi++;
+        }
+
+        while (mi < n)
+        {
+            result.Add(new DiffLine(DiffOp.Insert, mod[mi++]));
+        }
+
+        while (oi < m)
+        {
+            result.Add(new DiffLine(DiffOp.Delete, orig[oi++]));
         }
 
         return result;
+    }
+
+    private static void FindLcsMatches(
+        string[] orig,
+        int origStart,
+        int origLength,
+        string[] mod,
+        int modStart,
+        int modLength,
+        List<(int Original, int Modified)> matches)
+    {
+        if (origLength == 0 || modLength == 0)
+        {
+            return;
+        }
+
+        if (origLength == 1)
+        {
+            for (int mi = modStart; mi < modStart + modLength; mi++)
+            {
+                if (orig[origStart] == mod[mi])
+                {
+                    matches.Add((origStart, mi));
+                    break;
+                }
+            }
+
+            return;
+        }
+
+        if (modLength == 1)
+        {
+            for (int oi = origStart; oi < origStart + origLength; oi++)
+            {
+                if (orig[oi] == mod[modStart])
+                {
+                    matches.Add((oi, modStart));
+                    break;
+                }
+            }
+
+            return;
+        }
+
+        if (origLength >= modLength)
+        {
+            int leftLength = origLength / 2;
+            int modSplit = FindSplit(orig, origStart, leftLength, origLength - leftLength, mod, modStart, modLength);
+            FindLcsMatches(orig, origStart, leftLength, mod, modStart, modSplit, matches);
+            FindLcsMatches(orig, origStart + leftLength, origLength - leftLength, mod, modStart + modSplit, modLength - modSplit, matches);
+        }
+        else
+        {
+            int leftLength = modLength / 2;
+            int origSplit = FindSplit(mod, modStart, leftLength, modLength - leftLength, orig, origStart, origLength);
+            FindLcsMatches(orig, origStart, origSplit, mod, modStart, leftLength, matches);
+            FindLcsMatches(orig, origStart + origSplit, origLength - origSplit, mod, modStart + leftLength, modLength - leftLength, matches);
+        }
+    }
+
+    private static int FindSplit(
+        string[] splitLines,
+        int splitStart,
+        int leftLength,
+        int rightLength,
+        string[] rangeLines,
+        int rangeStart,
+        int rangeLength)
+    {
+        var forward = ArrayPool<int>.Shared.Rent(rangeLength + 1);
+        var backward = ArrayPool<int>.Shared.Rent(rangeLength + 1);
+
+        try
+        {
+            Array.Clear(forward, 0, rangeLength + 1);
+            for (int i = splitStart; i < splitStart + leftLength; i++)
+            {
+                int diagonal = 0;
+                for (int j = 1; j <= rangeLength; j++)
+                {
+                    int previous = forward[j];
+                    forward[j] = splitLines[i] == rangeLines[rangeStart + j - 1]
+                        ? diagonal + 1
+                        : Math.Max(forward[j], forward[j - 1]);
+                    diagonal = previous;
+                }
+            }
+
+            Array.Clear(backward, 0, rangeLength + 1);
+            for (int i = splitStart + leftLength + rightLength - 1; i >= splitStart + leftLength; i--)
+            {
+                int diagonal = 0;
+                for (int j = rangeLength - 1; j >= 0; j--)
+                {
+                    int previous = backward[j];
+                    backward[j] = splitLines[i] == rangeLines[rangeStart + j]
+                        ? diagonal + 1
+                        : Math.Max(backward[j], backward[j + 1]);
+                    diagonal = previous;
+                }
+            }
+
+            int bestSplit = 0;
+            int bestLength = -1;
+            for (int j = 0; j <= rangeLength; j++)
+            {
+                int length = forward[j] + backward[j];
+                if (length > bestLength)
+                {
+                    bestSplit = j;
+                    bestLength = length;
+                }
+            }
+
+            return bestSplit;
+        }
+        finally
+        {
+            ArrayPool<int>.Shared.Return(forward);
+            ArrayPool<int>.Shared.Return(backward);
+        }
     }
 }
