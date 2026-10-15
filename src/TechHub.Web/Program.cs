@@ -84,6 +84,13 @@ builder.Services.Configure<RouteOptions>(options =>
     options.LowercaseQueryStrings = false; // Keep query strings as-is
 });
 
+builder.Services.AddHsts(options =>
+{
+    options.MaxAge = TimeSpan.FromDays(365);
+    options.IncludeSubDomains = true;
+    options.Preload = true;
+});
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
