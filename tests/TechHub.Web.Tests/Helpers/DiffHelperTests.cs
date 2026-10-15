@@ -82,11 +82,11 @@ public class DiffHelperTests
         var result = DiffHelper.DiffLines("a\nold\nc", "a\nnew\nc");
 
         // Assert
-        result.Should().HaveCount(4);
-        result[0].Should().Be(new DiffLine(DiffOp.Equal, "a"));
-        result[3].Should().Be(new DiffLine(DiffOp.Equal, "c"));
-        result.Skip(1).Take(2).Should().BeEquivalentTo(
-            new[] { new DiffLine(DiffOp.Delete, "old"), new DiffLine(DiffOp.Insert, "new") });
+        result.Should().Equal(
+            new DiffLine(DiffOp.Equal, "a"),
+            new DiffLine(DiffOp.Insert, "new"),
+            new DiffLine(DiffOp.Delete, "old"),
+            new DiffLine(DiffOp.Equal, "c"));
     }
 
     [Fact]
@@ -108,8 +108,9 @@ public class DiffHelperTests
         var result = DiffHelper.DiffLines(string.Empty, "a\nb");
 
         // Assert
-        result.Where(l => l.Op == DiffOp.Insert).Select(l => l.Text).Should().Equal("a", "b");
-        result.Should().NotContain(l => l.Op == DiffOp.Equal);
+        result.Should().Equal(
+            new DiffLine(DiffOp.Insert, "a"),
+            new DiffLine(DiffOp.Insert, "b"));
     }
 
     [Fact]
@@ -119,8 +120,9 @@ public class DiffHelperTests
         var result = DiffHelper.DiffLines("a\nb", string.Empty);
 
         // Assert
-        result.Where(l => l.Op == DiffOp.Delete).Select(l => l.Text).Should().Equal("a", "b");
-        result.Should().NotContain(l => l.Op == DiffOp.Equal);
+        result.Should().Equal(
+            new DiffLine(DiffOp.Delete, "a"),
+            new DiffLine(DiffOp.Delete, "b"));
     }
 
     [Fact]
