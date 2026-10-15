@@ -1,5 +1,6 @@
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Channels;
 using Dapper;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -14,11 +15,8 @@ public sealed class NewsletterBackgroundService : BackgroundService
     private readonly NewsletterOptions _options;
     private readonly ILogger<NewsletterBackgroundService> _logger;
 
-    private volatile TaskCompletionSource<bool> _manualTrigger = new(TaskCreationOptions.RunContinuationsAsynchronously);
-    private string? _pendingTestSendEmail;
-    private IReadOnlyList<string>? _pendingTestSections;
-    private string? _pendingTestSendKind;
-    private string? _pendingManualKind;
+    private readonly Channel<ManualRequest> _manualRequests = Channel.CreateUnbounded<ManualRequest>(
+        new UnboundedChannelOptions { SingleReader = true });
 
     public NewsletterBackgroundService(
         IServiceProvider serviceProvider,
@@ -39,19 +37,12 @@ public sealed class NewsletterBackgroundService : BackgroundService
 
     public void TriggerImmediateRun(string kind = "roundup")
     {
-        _pendingTestSendEmail = null;
-        _pendingTestSections = null;
-        _pendingTestSendKind = null;
-        _pendingManualKind = kind;
-        _manualTrigger.TrySetResult(true);
+        _manualRequests.Writer.TryWrite(new ManualRequest(kind, null, null, null));
     }
 
     public void TriggerTestSend(string recipientEmail, IReadOnlyList<string> sections, string kind)
     {
-        _pendingTestSendEmail = recipientEmail;
-        _pendingTestSections = sections;
-        _pendingTestSendKind = kind;
-        _manualTrigger.TrySetResult(true);
+        _manualRequests.Writer.TryWrite(new ManualRequest(null, recipientEmail, sections, kind));
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -64,9 +55,10 @@ public sealed class NewsletterBackgroundService : BackgroundService
         using var timer = new PeriodicTimer(checkInterval);
         var timerTask = timer.WaitForNextTickAsync(stoppingToken).AsTask();
 
+        var manualTask = _manualRequests.Reader.WaitToReadAsync(stoppingToken).AsTask();
+
         while (!stoppingToken.IsCancellationRequested)
         {
-            var manualTask = _manualTrigger.Task;
             var completed = await Task.WhenAny(manualTask, timerTask);
             if (stoppingToken.IsCancellationRequested)
             {
@@ -75,16 +67,24 @@ public sealed class NewsletterBackgroundService : BackgroundService
 
             if (completed == manualTask)
             {
-                _manualTrigger = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
-                try
+                if (!await manualTask)
                 {
-                    await RunManualAsync(stoppingToken);
-                }
-                catch (Exception ex) when (ex is not OperationCanceledException)
-                {
-                    _logger.LogError(ex, "Unhandled exception in newsletter manual run — service will continue");
+                    break;
                 }
 
+                while (_manualRequests.Reader.TryRead(out var request))
+                {
+                    try
+                    {
+                        await RunManualAsync(request, stoppingToken);
+                    }
+                    catch (Exception ex) when (ex is not OperationCanceledException)
+                    {
+                        _logger.LogError(ex, "Unhandled exception in newsletter manual run — service will continue");
+                    }
+                }
+
+                manualTask = _manualRequests.Reader.WaitToReadAsync(stoppingToken).AsTask();
                 continue;
             }
 
@@ -107,23 +107,15 @@ public sealed class NewsletterBackgroundService : BackgroundService
         }
     }
 
-    private async Task RunManualAsync(CancellationToken ct)
+    private async Task RunManualAsync(ManualRequest request, CancellationToken ct)
     {
-        var testEmail = _pendingTestSendEmail;
-        var testSections = _pendingTestSections;
-        var testKind = _pendingTestSendKind;
-        _pendingTestSendEmail = null;
-        _pendingTestSections = null;
-        _pendingTestSendKind = null;
-
-        if (!string.IsNullOrWhiteSpace(testEmail))
+        if (!string.IsNullOrWhiteSpace(request.TestEmail))
         {
-            await RunTestSendAsync(testEmail, testSections ?? [], testKind ?? "weekly", ct);
+            await RunTestSendAsync(request.TestEmail, request.TestSections ?? [], request.TestKind ?? "weekly", ct);
             return;
         }
 
-        var manualKind = string.Equals(_pendingManualKind?.Trim(), "daily", StringComparison.OrdinalIgnoreCase) ? "daily" : "roundup";
-        _pendingManualKind = null;
+        var manualKind = string.Equals(request.ManualKind?.Trim(), "daily", StringComparison.OrdinalIgnoreCase) ? "daily" : "roundup";
 
         if (string.Equals(manualKind, "daily", StringComparison.OrdinalIgnoreCase))
         {
@@ -197,6 +189,8 @@ public sealed class NewsletterBackgroundService : BackgroundService
         await newsletterService.SendDailyOverviewAsync(day, ct);
         await newsletterService.SendAdminStatusReportAsync(day, ct);
     }
+
+    private sealed record ManualRequest(string? ManualKind, string? TestEmail, IReadOnlyList<string>? TestSections, string? TestKind);
 
     [SuppressMessage("Performance", "CA1812", Justification = "Instantiated by Dapper materialization.")]
     private sealed record LatestSectionRoundupRow(string Slug, long DateEpoch);
