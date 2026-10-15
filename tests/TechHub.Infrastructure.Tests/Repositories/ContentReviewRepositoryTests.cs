@@ -424,6 +424,61 @@ public class ContentReviewRepositoryTests
     }
 
     [Fact]
+    public async Task ApproveAllAsync_ReviewCreatedWhileApplyingBatch_LeavesLateReviewPending()
+    {
+        // Arrange
+        var firstSlug = await SeedContentItemAsync(author: "First Original");
+        var lateSlug = await SeedContentItemAsync(author: "Late Original");
+        var firstId = await CreateReviewAsync(
+            firstSlug, ContentReviewChangeType.Author, "First Original", "First Fixed");
+
+        // The trigger runs during the first apply, after the pending batch has been fetched.
+        await _fixture.Connection.ExecuteAsync("""
+            CREATE FUNCTION pg_temp.enqueue_late_content_review() RETURNS trigger
+            LANGUAGE plpgsql AS $$
+            BEGIN
+                INSERT INTO content_reviews
+                    (slug, collection_name, change_type, original_value, fixed_value)
+                VALUES
+                    (TG_ARGV[0], TG_ARGV[1], 'author', 'Late Original', 'Late Fixed');
+                RETURN NEW;
+            END;
+            $$;
+            """);
+        await _fixture.Connection.ExecuteAsync($"""
+            CREATE TRIGGER enqueue_late_content_review
+            AFTER UPDATE OF author ON content_items
+            FOR EACH ROW
+            WHEN (OLD.author = 'First Original' AND NEW.author = 'First Fixed')
+            EXECUTE FUNCTION pg_temp.enqueue_late_content_review('{lateSlug}', '{Collection}');
+            """);
+
+        try
+        {
+            // Act
+            var count = await _repository.ApproveAllAsync(TestContext.Current.CancellationToken);
+
+            // Assert
+            count.Should().Be(1);
+            (await GetItemColumnAsync(firstSlug, "author")).Should().Be("First Fixed");
+            (await _repository.GetByIdAsync(firstId, TestContext.Current.CancellationToken))!
+                .Status.Should().Be(ContentReviewStatus.Approved);
+            var reviews = await _repository.GetByStatusAsync(ct: TestContext.Current.CancellationToken);
+            var lateReview = reviews.Should().ContainSingle(r => r.Slug == lateSlug).Subject;
+            lateReview.Status.Should().Be(ContentReviewStatus.Pending);
+            lateReview.ReviewedAt.Should().BeNull();
+            (await GetItemColumnAsync(lateSlug, "author")).Should().Be("Late Original");
+        }
+        finally
+        {
+            await _fixture.Connection.ExecuteAsync("""
+                DROP TRIGGER enqueue_late_content_review ON content_items;
+                DROP FUNCTION pg_temp.enqueue_late_content_review();
+                """);
+        }
+    }
+
+    [Fact]
     public async Task ApproveAllAsync_NoPendingReviews_ReturnsZero()
     {
         // Act

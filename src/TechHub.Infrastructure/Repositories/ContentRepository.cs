@@ -1519,39 +1519,6 @@ public sealed class ContentRepository : IContentRepository
     // ==================== Admin Methods ====================
 
     /// <inheritdoc/>
-    public async Task<TechHub.Core.Models.Admin.ContentItemAiMetadataResult?> GetAiMetadataAsync(
-        string collectionName,
-        string slug,
-        CancellationToken ct = default)
-    {
-        const string Sql = @"
-SELECT collection_name AS CollectionName, slug AS Slug, ai_metadata::text AS AiMetadata
-FROM content_items
-WHERE collection_name = @CollectionName AND slug = @Slug
-LIMIT 1";
-
-        return await Connection.QueryFirstOrDefaultAsync<TechHub.Core.Models.Admin.ContentItemAiMetadataResult>(
-            new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug }, cancellationToken: ct));
-    }
-
-    /// <inheritdoc/>
-    public async Task<bool> UpdateAiMetadataAsync(
-        string collectionName,
-        string slug,
-        string aiMetadata,
-        CancellationToken ct = default)
-    {
-        const string Sql = @"
-UPDATE content_items
-SET ai_metadata = @AiMetadata::jsonb, updated_at = NOW()
-WHERE collection_name = @CollectionName AND slug = @Slug";
-
-        var rows = await Connection.ExecuteAsync(
-            new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug, AiMetadata = aiMetadata }, cancellationToken: ct));
-        return rows > 0;
-    }
-
-    /// <inheritdoc/>
     public async Task<TechHub.Core.Models.Admin.ContentItemEditData?> GetEditDataAsync(
         string collectionName,
         string slug,
