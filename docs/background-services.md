@@ -60,7 +60,7 @@ Disabled services stay alive and still react to manual triggers.
 
 Admins start runs from the dashboard or the `/api/admin/*` endpoints (see [admin.md](admin.md#background-jobs)). Triggers return immediately with `202 Accepted` and the work happens on the service's own loop.
 
-- Each service runs one job at a time. A trigger that arrives during a run queues at most one follow-up run.
+- Each service runs one job at a time. The newsletter service queues every manual trigger in arrival order, preserving each request's run kind, recipient and sections, including triggers received during an active send. Other services queue at most one follow-up run.
 - Cancel stops the currently running content processing, roundup generation or content fixer run. The job is recorded as `aborted`. The newsletter service has no cancel.
 - Jobs are stored in `content_processing_jobs` with a type (`content-processing`, `roundup-generation`, `content-cleanup`, `ad-hoc-processing`), a trigger (`scheduled` or `manual`), a status (`running`, `completed`, `failed`, `aborted`), counters and a log shown on the dashboard.
 - Newsletter manual triggers also exist (weekly or daily run, and test sends) and are recorded in the send log instead.

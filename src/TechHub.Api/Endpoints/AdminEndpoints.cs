@@ -998,6 +998,7 @@ public static partial class AdminEndpoints
     private static async Task<IResult> AddVscodeUpdateAsync(
         VscodeUpdateRequest request,
         IGhcFeatureRepository ghcRepo,
+        IContentRepository contentRepo,
         CancellationToken ct)
     {
         if (string.IsNullOrWhiteSpace(request.CollectionName) || string.IsNullOrWhiteSpace(request.Slug))
@@ -1005,7 +1006,15 @@ public static partial class AdminEndpoints
             return Results.BadRequest("CollectionName and Slug are required.");
         }
 
-        await ghcRepo.AddVscodeUpdateItemAsync(request.CollectionName.Trim().Sanitize(), request.Slug.Trim().Sanitize(), ct);
+        var collectionName = request.CollectionName.Trim().Sanitize();
+        var slug = request.Slug.Trim().Sanitize();
+
+        if (await contentRepo.GetEditDataAsync(collectionName, slug, ct) is null)
+        {
+            return Results.NotFound();
+        }
+
+        await ghcRepo.AddVscodeUpdateItemAsync(collectionName, slug, ct);
         return Results.NoContent();
     }
 

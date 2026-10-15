@@ -149,15 +149,23 @@ public class NewsletterBackgroundServiceTests
     }
 
     [Fact]
-    public async Task TriggerImmediateRun_AfterTriggerTestSend_RunsManualSendInsteadOfTestSend()
+    public async Task TriggerImmediateRun_AfterTriggerTestSend_RunsBothRequestsInOrder()
     {
-        // Arrange — both triggers are issued before the service starts, so the loop sees only the final state:
-        // TriggerImmediateRun must discard the pending test send
+        // Arrange
         var reportSent = NewSignal();
-        var newsletterService = new Mock<INewsletterService>();
-        newsletterService.Setup(s => s.SendDailyOverviewAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()))
+        var sequence = new MockSequence();
+        var newsletterService = new Mock<INewsletterService>(MockBehavior.Strict);
+        newsletterService.InSequence(sequence)
+            .Setup(s => s.SendTestWeeklyAsync(
+                It.Is<IReadOnlyList<string>>(sections => sections.SequenceEqual(new[] { "ai" })),
+                "recipient@example.com",
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync(true);
-        newsletterService.Setup(s => s.SendAdminStatusReportAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()))
+        newsletterService.InSequence(sequence)
+            .Setup(s => s.SendDailyOverviewAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(true);
+        newsletterService.InSequence(sequence)
+            .Setup(s => s.SendAdminStatusReportAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()))
             .Returns(() =>
             {
                 reportSent.TrySetResult();
@@ -177,7 +185,74 @@ public class NewsletterBackgroundServiceTests
         newsletterService.Verify(s => s.SendDailyOverviewAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()), Times.Once);
         newsletterService.Verify(
             s => s.SendTestWeeklyAsync(It.IsAny<IReadOnlyList<string>>(), It.IsAny<string>(), It.IsAny<CancellationToken>()),
-            Times.Never);
+            Times.Once);
+        newsletterService.Verify(s => s.SendAdminStatusReportAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task ManualTriggers_DuringActiveSend_PreserveEveryRequestAndPayloadInOrder()
+    {
+        // Arrange
+        var firstSendStarted = NewSignal();
+        var releaseFirstSend = NewSignal();
+        var allRequestsCompleted = NewSignal();
+        var sequence = new MockSequence();
+        var newsletterService = new Mock<INewsletterService>(MockBehavior.Strict);
+        newsletterService.InSequence(sequence)
+            .Setup(s => s.SendTestWeeklyAsync(
+                It.Is<IReadOnlyList<string>>(sections => sections.SequenceEqual(new[] { "ai" })),
+                "first@example.com",
+                It.IsAny<CancellationToken>()))
+            .Returns(async () =>
+            {
+                firstSendStarted.TrySetResult();
+                await WaitAsync(releaseFirstSend);
+                return true;
+            });
+        newsletterService.InSequence(sequence)
+            .Setup(s => s.SendTestDailyEmailAsync(
+                It.Is<IReadOnlyList<string>>(sections => sections.SequenceEqual(new[] { "dotnet", "azure" })),
+                "second@example.com",
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync(true);
+        newsletterService.InSequence(sequence)
+            .Setup(s => s.SendDailyOverviewAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(true);
+        newsletterService.InSequence(sequence)
+            .Setup(s => s.SendAdminStatusReportAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()))
+            .Returns(() =>
+            {
+                allRequestsCompleted.TrySetResult();
+                return Task.FromResult(true);
+            });
+        using var sut = CreateSut(CompletedStartupState(), newsletterService.Object);
+
+        // Act
+        await sut.StartAsync(TestContext.Current.CancellationToken);
+        try
+        {
+            sut.TriggerTestSend("first@example.com", ["ai"], "weekly");
+            await WaitAsync(firstSendStarted);
+            sut.TriggerTestSend("second@example.com", ["dotnet", "azure"], "daily");
+            sut.TriggerImmediateRun("daily");
+            releaseFirstSend.TrySetResult();
+            await WaitAsync(allRequestsCompleted);
+        }
+        finally
+        {
+            releaseFirstSend.TrySetResult();
+            await sut.StopAsync(CancellationToken.None);
+        }
+
+        // Assert
+        newsletterService.Verify(
+            s => s.SendTestWeeklyAsync(It.IsAny<IReadOnlyList<string>>(), It.IsAny<string>(), It.IsAny<CancellationToken>()),
+            Times.Once);
+        newsletterService.Verify(
+            s => s.SendTestDailyEmailAsync(It.IsAny<IReadOnlyList<string>>(), It.IsAny<string>(), It.IsAny<CancellationToken>()),
+            Times.Once);
+        newsletterService.Verify(s => s.SendDailyOverviewAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()), Times.Once);
+        newsletterService.Verify(s => s.SendAdminStatusReportAsync(It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()), Times.Once);
     }
 
     [Fact]

@@ -108,15 +108,21 @@ public sealed class ContentReviewRepository : IContentReviewRepository
     /// <inheritdoc/>
     public async Task<bool> ApproveAsync(long id, CancellationToken ct = default)
     {
-        // Fetch the review
-        var review = await GetByIdAsync(id, ct);
-        if (review is null || review.Status != ContentReviewStatus.Pending)
+        if (_connection.State != ConnectionState.Open)
+        {
+            _connection.Open();
+        }
+
+        using var transaction = _connection.BeginTransaction();
+        var pending = await GetPendingForApprovalAsync(id, 1, transaction, ct);
+        var review = pending.SingleOrDefault();
+        if (review is null)
         {
             return false;
         }
 
         // Apply the change depending on type
-        await ApplyChangeAsync(review, ct);
+        await ApplyChangeAsync(review, transaction, ct);
 
         // Mark as approved
         const string Sql = """
@@ -126,7 +132,10 @@ public sealed class ContentReviewRepository : IContentReviewRepository
             """;
 
         var rows = await _connection.ExecuteAsync(
-            new CommandDefinition(Sql, new { Id = id }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { Id = id }, transaction: transaction, cancellationToken: ct));
+
+        ct.ThrowIfCancellationRequested();
+        transaction.Commit();
 
         if (rows > 0)
         {
@@ -160,12 +169,17 @@ public sealed class ContentReviewRepository : IContentReviewRepository
     /// <inheritdoc/>
     public async Task<int> ApproveAllAsync(CancellationToken ct = default)
     {
-        // Fetch all pending reviews
-        var pending = await GetByStatusAsync(ContentReviewStatus.Pending, limit: 10000, ct: ct);
+        if (_connection.State != ConnectionState.Open)
+        {
+            _connection.Open();
+        }
+
+        using var transaction = _connection.BeginTransaction();
+        var pending = await GetPendingForApprovalAsync(null, 10000, transaction, ct);
 
         foreach (var review in pending)
         {
-            await ApplyChangeAsync(review, ct);
+            await ApplyChangeAsync(review, transaction, ct);
         }
 
         const string Sql = """
@@ -175,7 +189,11 @@ public sealed class ContentReviewRepository : IContentReviewRepository
             """;
 
         var rows = await _connection.ExecuteAsync(
-            new CommandDefinition(Sql, new { Ids = pending.Select(r => r.Id).ToArray() }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { Ids = pending.Select(r => r.Id).ToArray() },
+                transaction: transaction, cancellationToken: ct));
+
+        ct.ThrowIfCancellationRequested();
+        transaction.Commit();
 
         _logger.LogInformation("Approved all {Count} pending reviews", rows);
         return rows;
@@ -239,7 +257,26 @@ public sealed class ContentReviewRepository : IContentReviewRepository
 
     // ── Internal helpers ─────────────────────────────────────────────────────
 
-    private async Task ApplyChangeAsync(ContentReview review, CancellationToken ct)
+    private async Task<IReadOnlyList<ContentReview>> GetPendingForApprovalAsync(
+        long? id, int limit, IDbTransaction transaction, CancellationToken ct)
+    {
+        // Lock the selected batch so concurrent approval, rejection, or edits cannot change it.
+        const string Sql = """
+            SELECT id, slug, collection_name AS CollectionName, change_type AS ChangeType,
+                   original_value AS OriginalValue, fixed_value AS FixedValue, status
+            FROM content_reviews
+            WHERE status = 'pending' AND (@Id IS NULL OR id = @Id)
+            ORDER BY created_at DESC, id DESC
+            LIMIT @Limit
+            FOR UPDATE
+            """;
+
+        return (await _connection.QueryAsync<ContentReview>(
+            new CommandDefinition(Sql, new { Id = id, Limit = limit },
+                transaction: transaction, cancellationToken: ct))).ToList();
+    }
+
+    private async Task ApplyChangeAsync(ContentReview review, IDbTransaction transaction, CancellationToken ct)
     {
         // Validation reviews are informational — approving acknowledges the issue,
         // but there is no automatic fix to apply.
@@ -268,6 +305,82 @@ public sealed class ContentReviewRepository : IContentReviewRepository
                 Value = value,
                 Collection = review.CollectionName,
                 Slug = review.Slug
-            }, cancellationToken: ct));
+            }, transaction: transaction, cancellationToken: ct));
+
+        if (review.ChangeType == ContentReviewChangeType.Tags)
+        {
+            await RebuildExpandedTagsAsync(review, transaction, ct);
+        }
+    }
+
+    private async Task RebuildExpandedTagsAsync(ContentReview review, IDbTransaction transaction, CancellationToken ct)
+    {
+        var item = await _connection.QuerySingleOrDefaultAsync<TagFlagsRow>(new CommandDefinition(
+            @"SELECT date_epoch AS DateEpoch, sections_bitmask AS SectionsBitmask,
+                     is_ai AS IsAi, is_azure AS IsAzure, is_dotnet AS IsDotnet,
+                     is_devops AS IsDevops, is_github_copilot AS IsGithubCopilot,
+                     is_ml AS IsMl, is_security AS IsSecurity
+              FROM content_items
+              WHERE collection_name = @Collection AND slug = @Slug",
+            new { Collection = review.CollectionName, Slug = review.Slug },
+            transaction: transaction,
+            cancellationToken: ct));
+
+        if (item is null)
+        {
+            return;
+        }
+
+        await _connection.ExecuteAsync(new CommandDefinition(
+            "DELETE FROM content_tags_expanded WHERE collection_name = @Collection AND slug = @Slug",
+            new { Collection = review.CollectionName, Slug = review.Slug },
+            transaction: transaction,
+            cancellationToken: ct));
+
+        var tags = (review.FixedValue ?? string.Empty)
+            .Split(',', StringSplitOptions.RemoveEmptyEntries)
+            .Select(t => t.Trim())
+            .Where(t => t.Length > 0)
+            .ToList();
+
+        if (tags.Count == 0)
+        {
+            return;
+        }
+
+        var tagRows = ContentItemWriteRepository.BuildTagWords(
+            tags, review.CollectionName, review.Slug, item.DateEpoch,
+            item.IsAi, item.IsAzure, item.IsDotnet, item.IsDevops,
+            item.IsGithubCopilot, item.IsMl, item.IsSecurity, item.SectionsBitmask);
+
+        foreach (var row in tagRows)
+        {
+            await _connection.ExecuteAsync(new CommandDefinition(
+                @"INSERT INTO content_tags_expanded
+                    (collection_name, slug, tag_word, tag_display, is_full_tag,
+                     date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                     is_ml, is_security, sections_bitmask)
+                  VALUES
+                    (@CollectionName, @Slug, @TagWord, @TagDisplay, @IsFullTag,
+                     @DateEpoch, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
+                     @IsMl, @IsSecurity, @Bitmask)
+                  ON CONFLICT DO NOTHING",
+                row,
+                transaction: transaction,
+                cancellationToken: ct));
+        }
+    }
+
+    private sealed class TagFlagsRow
+    {
+        public long DateEpoch { get; init; }
+        public int SectionsBitmask { get; init; }
+        public bool IsAi { get; init; }
+        public bool IsAzure { get; init; }
+        public bool IsDotnet { get; init; }
+        public bool IsDevops { get; init; }
+        public bool IsGithubCopilot { get; init; }
+        public bool IsMl { get; init; }
+        public bool IsSecurity { get; init; }
     }
 }

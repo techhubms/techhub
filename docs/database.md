@@ -92,7 +92,7 @@ See [src/TechHub.Infrastructure/Data/Migrations/postgres/](../src/TechHub.Infras
 
 The schema is managed by numbered SQL scripts (`001_`, `002_`, ...) that are embedded in the Infrastructure assembly.
 
-- **Runner**: `MigrationRunner` executes the scripts in filename order and records each executed script name in the `_migrations` table, so every script runs once.
+- **Runner**: `MigrationRunner` executes the scripts in ordinal filename order, independent of the current culture, and records each executed filename in the `_migrations` table, so every script runs once. Legacy rows containing full embedded resource names are also recognized and left unchanged; only new executions use filenames.
 - **When**: The API runs pending migrations on startup through `StartupBackgroundService`. Migrations are never applied by hand.
 - **Locking**: A process-wide lock prevents concurrent runs.
 - **Fail-fast**: A failing script is logged and the exception stops the application, so a half-migrated database never serves traffic. The API `/health` endpoint reports unhealthy until startup completes (see [health-checks.md](health-checks.md)).

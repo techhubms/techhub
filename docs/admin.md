@@ -59,6 +59,8 @@ Trigger endpoints return `202 Accepted` immediately and run on the background se
 
 The content fixer can propose changes as reviews instead of applying them (see [content-processing.md](content-processing.md)). These endpoints work through the queue.
 
+Approval applies content changes, replaces the expanded tag index for tag reviews, and marks the selected reviews approved as one atomic operation. A failed approval leaves the content, tag index, and review statuses unchanged. Bulk approval only resolves the fetched batch; reviews created while it runs remain pending. Expanded tags retain the item's date and section metadata, and approving empty tags clears the old index entries.
+
 | Endpoint | Purpose | Notes |
 |----------|---------|-------|
 | `GET /reviews?status&limit` | List reviews | `status` is `pending`, `approved` or `rejected` (else `400`). `limit` is 1-1000, default 100. |
@@ -80,7 +82,7 @@ The content fixer can propose changes as reviews instead of applying them (see [
 | `PUT /api/ghc-features/{slug}/thumbnail?collection&itemSlug` | Choose the thumbnail link | `204`, `400` or `404` |
 | `DELETE /ghc-features/{slug}` | Delete the `videos` content item with that slug | `204` or `404` |
 | `GET /vscode-updates` | Paged list of VS Code update items | `page`, `pageSize` (1-500, default 100), `search` |
-| `POST /vscode-updates` | Register an existing content item as a VS Code update | Body: `collectionName`, `slug`. `204` or `400`. |
+| `POST /vscode-updates` | Register an existing content item as a VS Code update | Body: `collectionName`, `slug`. `204` on success, `400` for invalid input, `404` for an unknown item. |
 | `DELETE /vscode-updates?collection&slug` | Remove from the list (the content item stays) | `204`, `400` or `404` |
 
 The GitHub Copilot feature endpoints live under `/api/ghc-features` (not `/api/admin`). Their `GET` is public and the write operations require `AdminOnly`. The public `GET /api/vscode-updates` is capped at 100 items.

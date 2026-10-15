@@ -142,6 +142,16 @@ public class AdminVscodeUpdatesEndpointsTests : IClassFixture<TechHubIntegration
     }
 
     [Fact]
+    public async Task AddVscodeUpdate_NonExistentContentItem_ReturnsNotFound()
+    {
+        // Act
+        var response = await AddAsync($"does-not-exist-{NewId()}");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
     public async Task AddVscodeUpdate_CalledTwice_IsIdempotent()
     {
         // Arrange
