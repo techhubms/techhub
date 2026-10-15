@@ -1009,7 +1009,7 @@ public static partial class AdminEndpoints
         var collectionName = request.CollectionName.Trim().Sanitize();
         var slug = request.Slug.Trim().Sanitize();
 
-        if (await contentRepo.GetAiMetadataAsync(collectionName, slug, ct) is null)
+        if (await contentRepo.GetEditDataAsync(collectionName, slug, ct) is null)
         {
             return Results.NotFound();
         }
