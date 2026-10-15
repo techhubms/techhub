@@ -113,14 +113,6 @@ public static partial class AdminEndpoints
 
         // ── Content item editing ─────────────────────────────────────────────
 
-        group.MapGet("/content-items/ai-metadata", GetContentItemAiMetadataAsync)
-            .WithName("GetContentItemAiMetadata")
-            .WithSummary("Get the ai_metadata JSON for a content item by primary key");
-
-        group.MapPut("/content-items/ai-metadata", UpdateContentItemAiMetadataAsync)
-            .WithName("UpdateContentItemAiMetadata")
-            .WithSummary("Update the ai_metadata JSON for a content item by primary key");
-
         group.MapGet("/content-items/edit-data", GetContentItemEditDataAsync)
             .WithName("GetContentItemEditData")
             .WithSummary("Get all editable fields for a content item by primary key");
@@ -556,64 +548,6 @@ public static partial class AdminEndpoints
         await repo.UpsertAsync(key, existing.Description, request.JsonData, ct);
         var updated = await repo.GetByKeyAsync(key, ct);
         return Results.Ok(updated);
-    }
-
-    // ── Content item ai_metadata handlers ────────────────────────────────────
-
-    private static async Task<IResult> GetContentItemAiMetadataAsync(
-        IContentRepository contentRepo,
-        CancellationToken ct,
-        string? collection = null,
-        string? slug = null)
-    {
-        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
-        {
-            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
-        }
-
-        collection = collection.Trim().Sanitize();
-        slug = slug.Trim().Sanitize();
-        var item = await contentRepo.GetAiMetadataAsync(collection, slug, ct);
-        return item is null ? Results.NotFound() : Results.Ok(item);
-    }
-
-    private static async Task<IResult> UpdateContentItemAiMetadataAsync(
-        ContentItemMetadataRequest request,
-        IContentRepository contentRepo,
-        CancellationToken ct,
-        string? collection = null,
-        string? slug = null)
-    {
-        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
-        {
-            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
-        }
-
-        collection = collection.Trim().Sanitize();
-        slug = slug.Trim().Sanitize();
-
-        if (string.IsNullOrWhiteSpace(request.AiMetadata))
-        {
-            return Results.BadRequest("AiMetadata is required.");
-        }
-
-        try
-        {
-            System.Text.Json.JsonDocument.Parse(request.AiMetadata);
-        }
-        catch (System.Text.Json.JsonException)
-        {
-            return Results.BadRequest("AiMetadata must be valid JSON.");
-        }
-
-        var updated = await contentRepo.UpdateAiMetadataAsync(collection, slug, request.AiMetadata, ct);
-        if (!updated)
-        {
-            return Results.NotFound();
-        }
-
-        contentRepo.InvalidateCachedData();
-        return Results.NoContent();
     }
 
     private static async Task<IResult> GetContentItemEditDataAsync(
