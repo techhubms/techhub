@@ -343,9 +343,11 @@
         {
             await Api.UpdateNewsletterSubscriberAsync(id, _editDisplayName, weekly, daily);
             _editing = null;
-            await RefreshAsync();
-            _message = "Subscriber updated.";
-            _isError = false;
+            if (await RefreshAsync())
+            {
+                _message = "Subscriber updated.";
+                _isError = false;
+            }
         }
         catch (OperationCanceledException)
         {

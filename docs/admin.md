@@ -113,7 +113,7 @@ All pages render interactively on the server inside the admin layout. Unauthenti
 | `/admin/custom-pages` | Edit the raw JSON behind the custom pages |
 | `/admin/copilot-features` | Edit GitHub Copilot features (description, release date, plans, GHES support) and their linked content and thumbnail |
 | `/admin/vscode-updates` | Add or remove items on the VS Code Updates page |
-| `/admin/newsletter` | Subscribers, test sends and send log. Deleting requires inline confirmation. Test sends require an entered recipient email; none is prefilled. Refresh, delete, edit and test-send failures show generic errors, and a failed refresh after deletion does not show deletion success. See [newsletter.md](newsletter.md). |
+| `/admin/newsletter` | Subscribers, test sends and send log. Deleting requires inline confirmation. Test sends require an entered recipient email; none is prefilled. Refresh, delete, edit and test-send failures show generic errors, and a failed refresh after a deletion or edit does not show a success message. See [newsletter.md](newsletter.md). |
 | `/admin/settings` | Enable or disable scheduled jobs and invalidate all caches |
 | `/admin/statistics` | Content and database statistics |
 | `/admin/login` | Sign-in entry point |

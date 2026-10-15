@@ -400,6 +400,24 @@ public class AdminNewsletterTests : AdminPageTestBase
     }
 
     [Fact]
+    public void Save_RefreshFails_PreservesRefreshErrorInsteadOfShowingSuccess()
+    {
+        // Arrange
+        SetupData(subscribers: [CreateSubscriber(7, "jane@example.com")]);
+        var cut = Render<AdminNewsletter>();
+        OpenEditModal(cut);
+        _api.Setup(x => x.GetNewsletterSubscribersAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<bool?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("internal refresh failure"));
+
+        // Act
+        cut.Find(".admin-modal-footer .btn").Click();
+
+        // Assert
+        cut.Find(".admin-alert-error").TextContent.Should().Be("Failed to refresh newsletter data.");
+        cut.FindAll(".admin-alert-success").Should().BeEmpty();
+    }
+
+    [Fact]
     public void Edit_CancelButton_ClosesModalWithoutCallingApi()
     {
         // Arrange
