@@ -13,9 +13,16 @@
         {
             <p class="subscribe-intro">Processing your unsubscribe request…</p>
         }
-        else
+        else if (_message is not null)
         {
             <div class="subscribe-alert @(_success ? "subscribe-alert-success" : "subscribe-alert-error")">@_message</div>
+        }
+        else
+        {
+            <p class="subscribe-intro">Click Unsubscribe to stop receiving the TechHub newsletter.</p>
+            <div class="subscribe-actions">
+                <button type="button" class="btn" @onclick="UnsubscribeAsync">Unsubscribe</button>
+            </div>
         }
     </section>
 </main>
@@ -27,26 +34,32 @@
     [SupplyParameterFromQuery(Name = "token")]
     public string? Token { get; set; }
 
-    private bool _loading = true;
+    private bool _loading;
     private bool _success;
-    private string _message = "Something went wrong while unsubscribing.";
+    private string? _message;
     private bool _handled;
 
-    protected override async Task OnParametersSetAsync()
+    protected override void OnParametersSet()
     {
         if (_handled)
         {
             return;
         }
 
-        _handled = true;
-        if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Token))
+        _message = string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Token)
+            ? "Invalid unsubscribe link."
+            : null;
+    }
+
+    private async Task UnsubscribeAsync()
+    {
+        if (_handled || string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Token))
         {
-            _message = "Invalid unsubscribe link.";
-            _loading = false;
             return;
         }
 
+        _handled = true;
+        _loading = true;
         try
         {
             await Api.UnsubscribeNewsletterAsync(Email, Token);

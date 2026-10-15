@@ -27,7 +27,7 @@ flowchart LR
 1. **Subscribe** (`/newsletter/subscribe`): The visitor enters an email, an optional display name and sections. The API creates an unconfirmed subscriber and sends a confirmation email. Nothing else is sent until the address is confirmed.
 2. **Confirm** (`/newsletter/confirm`): The link in the confirmation email activates the subscription. Opening it again reports that the subscription is already confirmed.
 3. **Manage** (`/newsletter/manage`): With a valid link the subscriber edits the display name and sections. Without a link the page asks for an email address and sends a management link. The response never reveals whether the address is subscribed.
-4. **Unsubscribe** (`/newsletter/unsubscribe`): The unsubscribe happens as soon as the page loads with a valid link. The subscriber row is kept with an `unsubscribed_at` timestamp, and the same address can subscribe again later as a new row.
+4. **Unsubscribe** (`/newsletter/unsubscribe`): Opening the link shows a confirmation button without changing the subscription, so email link scanners cannot unsubscribe subscribers by loading the page. Clicking **Unsubscribe** submits a POST request. The subscriber row is kept with an `unsubscribed_at` timestamp, and the same address can subscribe again later as a new row.
 
 Subscribing again with an address that is already confirmed does not change its preferences. Subscribers change them through the manage page instead. Re-submitting the form for an unconfirmed address updates the pending name and sections and resends the confirmation email.
 
@@ -110,7 +110,7 @@ Manual triggers run asynchronously on the background service. A manual daily tri
 | `/newsletter/subscribe` | Subscribe form with weekly and daily section pickers |
 | `/newsletter/confirm` | Confirmation result page |
 | `/newsletter/manage` | Request a management link, or edit preferences when opened with a valid link |
-| `/newsletter/unsubscribe` | Unsubscribe result page |
+| `/newsletter/unsubscribe` | Unsubscribe confirmation and result page |
 | `/admin/newsletter` | Admin page: subscriber list with search and confirmed filter, edit and delete, test sends, send log. See [admin.md](admin.md). |
 
 The Web app calls the API through `ITechHubApiClient`. Routing rules for these pages are in [url-routing.md](url-routing.md).
