@@ -26,6 +26,19 @@ public class SafeMarkupTests : BunitContext
     }
 
     [Fact]
+    public void Render_SingleQuotedHashLink_IsRewrittenToCurrentPathPlusHash()
+    {
+        // Arrange
+        NavigateTo("/github-copilot/blogs/my-post");
+
+        // Act
+        var cut = RenderHtml("""<a href='#section-1'>Jump</a>""");
+
+        // Assert
+        cut.Find("a").GetAttribute("href").Should().Be("/github-copilot/blogs/my-post#section-1");
+    }
+
+    [Fact]
     public void Render_HashLinkOnPageWithQuery_PreservesQueryString()
     {
         // Arrange
@@ -35,6 +48,20 @@ public class SafeMarkupTests : BunitContext
         var cut = RenderHtml("""<a href="#top">Top</a>""");
 
         // Assert
+        cut.Find("a").GetAttribute("href").Should().Be("/ai/news?tags=azure&page=2#top");
+    }
+
+    [Fact]
+    public void Render_HashLinkOnPageWithQuery_HtmlEncodesQueryStringInMarkup()
+    {
+        // Arrange
+        NavigateTo("/ai/news?tags=azure&page=2");
+
+        // Act
+        var cut = RenderHtml("""<a href="#top">Top</a>""");
+
+        // Assert
+        cut.Markup.Should().Contain("""href="/ai/news?tags=azure&amp;page=2#top"""");
         cut.Find("a").GetAttribute("href").Should().Be("/ai/news?tags=azure&page=2#top");
     }
 
