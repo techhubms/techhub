@@ -67,7 +67,7 @@ public class CustomPageDataRepositoryTests
     }
 
     [Fact]
-    public async Task UpsertAsync_ExistingKey_KeepsOriginalDescription()
+    public async Task UpsertAsync_ExistingKey_UpdatesDescription()
     {
         // Arrange
         await _repository.UpsertAsync("handbook", "Original description", "{}", TestContext.Current.CancellationToken);
@@ -76,8 +76,8 @@ public class CustomPageDataRepositoryTests
         await _repository.UpsertAsync("handbook", "Different description", """{"v":2}""", TestContext.Current.CancellationToken);
         var entry = await _repository.GetByKeyAsync("handbook", TestContext.Current.CancellationToken);
 
-        // Assert — the conflict clause only replaces json_data and updated_at
-        entry!.Description.Should().Be("Original description");
+        // Assert — the conflict clause also replaces description
+        entry!.Description.Should().Be("Different description");
     }
 
     [Fact]
