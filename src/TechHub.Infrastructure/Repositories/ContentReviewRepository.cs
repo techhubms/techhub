@@ -171,11 +171,11 @@ public sealed class ContentReviewRepository : IContentReviewRepository
         const string Sql = """
             UPDATE content_reviews
             SET status = 'approved', reviewed_at = NOW()
-            WHERE status = 'pending'
+            WHERE status = 'pending' AND id = ANY(@Ids)
             """;
 
         var rows = await _connection.ExecuteAsync(
-            new CommandDefinition(Sql, cancellationToken: ct));
+            new CommandDefinition(Sql, new { Ids = pending.Select(r => r.Id).ToArray() }, cancellationToken: ct));
 
         _logger.LogInformation("Approved all {Count} pending reviews", rows);
         return rows;

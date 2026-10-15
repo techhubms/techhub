@@ -505,22 +505,6 @@ internal interface ITechHubApiClient
     Task<CustomPageEntry> UpdateCustomPageAsync(string key, string jsonData, CancellationToken cancellationToken = default);
 
     // ================================================================
-    // Admin – Content item ai_metadata endpoints
-    // ================================================================
-
-    /// <summary>
-    /// Get the ai_metadata JSON for a content item by its primary key.
-    /// GET /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
-    /// </summary>
-    Task<ContentItemAiMetadataResult?> GetContentItemAiMetadataAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Update the ai_metadata JSON for a content item by its primary key.
-    /// PUT /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
-    /// </summary>
-    Task UpdateContentItemAiMetadataAsync(string collectionName, string slug, string aiMetadata, CancellationToken cancellationToken = default);
-
-    // ================================================================
     // Admin – Content item editing endpoints
     // ================================================================
 

@@ -108,7 +108,7 @@ All environments use the same script. It appends a new secret without invalidati
 ./scripts/Manage-EntraId.ps1 -Environment production -RemoveExpired
 ```
 
-For staging and production, the script pushes `AZURE_AD_TENANT_ID`, `AZURE_AD_CLIENT_ID`, and the client secret (`AZURE_AD_CLIENT_SECRET`) to the GitHub Actions environment of the same name via `gh secret set`. Only the production client secret is used by the pipeline. There is no separate staging Azure environment (the `staging` GitHub environment only provides the OIDC subject for PR previews, which have the admin dashboard authentication disabled), and no workflow reads the tenant and client ID secrets, because those identifiers are set in the Bicep parameter file.
+For staging and production, the script pushes only the client secret (`AZURE_AD_CLIENT_SECRET` by default) to the GitHub Actions environment of the same name via `gh secret set`. Only the production client secret is used by the pipeline. The tenant and client IDs are configured in the Bicep parameter file, not written to GitHub secrets. There is no separate staging Azure environment. The `staging` GitHub environment is retained for the OIDC subject used by PR previews, which have admin authentication disabled.
 
 ## Infrastructure
 

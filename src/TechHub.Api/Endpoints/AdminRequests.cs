@@ -22,12 +22,6 @@ public sealed class CustomPageUpdateRequest
     public string? JsonData { get; init; }
 }
 
-/// <summary>DTO for updating a content item's ai_metadata JSON.</summary>
-public sealed class ContentItemMetadataRequest
-{
-    public string? AiMetadata { get; init; }
-}
-
 /// <summary>DTO for updating a background job's enabled state.</summary>
 public sealed class JobSettingUpdateRequest
 {

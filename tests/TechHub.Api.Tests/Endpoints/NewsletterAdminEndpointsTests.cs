@@ -128,6 +128,56 @@ public class NewsletterAdminEndpointsTests : IClassFixture<TechHubIntegrationTes
     }
 
     [Fact]
+    public async Task UpdateSubscriber_NormalizesAndDeduplicatesValidSections()
+    {
+        // Arrange
+        var prefix = NewPrefix();
+        var id = await InsertSubscriberAsync($"{prefix}@example.com");
+
+        // Act
+        var response = await _client.PutAsJsonAsync(
+            $"/api/admin/newsletter/subscribers/{id}",
+            new
+            {
+                DisplayName = "Normalized Sections",
+                WeeklySections = new[] { " AI ", "azure", "ai", " ALL ", "unknown-section" },
+                DailySections = new[] { " GITHUB-COPILOT ", "github-copilot", " all ", "unknown-section" }
+            },
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var subscriber = (await GetSubscribersAsync($"search={prefix}")).Should().ContainSingle().Subject;
+        subscriber.WeeklySections.Should().Equal("ai", "azure");
+        subscriber.DailySections.Should().Equal("github-copilot");
+    }
+
+    [Fact]
+    public async Task UpdateSubscriber_OnlyUnknownSections_PersistsEmptyLists()
+    {
+        // Arrange
+        var prefix = NewPrefix();
+        var id = await InsertSubscriberAsync($"{prefix}@example.com");
+
+        // Act
+        var response = await _client.PutAsJsonAsync(
+            $"/api/admin/newsletter/subscribers/{id}",
+            new
+            {
+                DisplayName = "No Valid Sections",
+                WeeklySections = new[] { "unknown-weekly-section" },
+                DailySections = new[] { "unknown-daily-section" }
+            },
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var subscriber = (await GetSubscribersAsync($"search={prefix}")).Should().ContainSingle().Subject;
+        subscriber.WeeklySections.Should().BeEmpty();
+        subscriber.DailySections.Should().BeEmpty();
+    }
+
+    [Fact]
     public async Task UpdateSubscriber_UnknownId_ReturnsNotFound()
     {
         // Act
