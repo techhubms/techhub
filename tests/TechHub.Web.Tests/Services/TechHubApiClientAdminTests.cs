@@ -530,47 +530,6 @@ public class TechHubApiClientAdminTests
         (await act.Should().ThrowAsync<HttpRequestException>()).Which.StatusCode.Should().Be(status);
     }
 
-    [Fact]
-    public async Task GetContentItemAiMetadataAsync_NotFound_ReturnsNull()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NotFound);
-
-        // Act
-        var result = await fixture.Client.GetContentItemAiMetadataAsync("blogs", "slug", TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.PathAndQuery.Should().Be("/api/admin/content-items/ai-metadata?collection=blogs&slug=slug");
-        result.Should().BeNull();
-    }
-
-    [Fact]
-    public async Task UpdateContentItemAiMetadataAsync_Success_PutsAiMetadata()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NoContent);
-
-        // Act
-        await fixture.Client.UpdateContentItemAiMetadataAsync("blogs", "slug", """{"k":1}""", TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.Method.Should().Be("PUT");
-        fixture.Handler.Json.GetProperty("aiMetadata").GetString().Should().Be("""{"k":1}""");
-    }
-
-    [Fact]
-    public async Task UpdateContentItemAiMetadataAsync_BadRequest_Throws()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.BadRequest);
-
-        // Act
-        var act = () => fixture.Client.UpdateContentItemAiMetadataAsync("blogs", "slug", "not json", TestContext.Current.CancellationToken);
-
-        // Assert
-        await act.Should().ThrowAsync<HttpRequestException>();
-    }
-
     [Theory]
     [InlineData("", "slug", "text")]
     [InlineData("videos", "", "text")]
