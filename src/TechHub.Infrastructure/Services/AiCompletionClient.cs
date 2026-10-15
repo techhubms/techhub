@@ -14,7 +14,7 @@ namespace TechHub.Infrastructure.Services;
 
 /// <summary>
 /// Typed HTTP client that sends chat completion requests to Azure AI Foundry (OpenAI).
-/// Authenticates using a managed identity token (Entra ID) via <see cref="DefaultAzureCredential"/>
+/// Authenticates using an injected <see cref="TokenCredential"/> or a shared <see cref="DefaultAzureCredential"/>
 /// with the <c>https://cognitiveservices.azure.com/.default</c> scope.
 /// In production, the App Service site's user-assigned managed identity is granted the
 /// <c>Cognitive Services OpenAI User</c> role on the AI Foundry account.
@@ -34,11 +34,13 @@ public sealed class AiCompletionClient : IAiCompletionClient
     private readonly HttpClient _httpClient;
     private readonly AiCategorizationOptions _options;
     private readonly ILogger<AiCompletionClient> _logger;
+    private readonly TokenCredential _credential;
 
     public AiCompletionClient(
         HttpClient httpClient,
         IOptions<AiCategorizationOptions> options,
-        ILogger<AiCompletionClient> logger)
+        ILogger<AiCompletionClient> logger,
+        TokenCredential? credential = null)
     {
         ArgumentNullException.ThrowIfNull(httpClient);
         ArgumentNullException.ThrowIfNull(options);
@@ -47,6 +49,7 @@ public sealed class AiCompletionClient : IAiCompletionClient
         _httpClient = httpClient;
         _options = options.Value;
         _logger = logger;
+        _credential = credential ?? _sharedCredential;
     }
 
     /// <inheritdoc />
@@ -61,7 +64,7 @@ public sealed class AiCompletionClient : IAiCompletionClient
         // DefaultAzureCredential caches the token internally and refreshes it before expiry,
         // so this call is cheap on subsequent requests.
         var tokenRequestContext = new TokenRequestContext(_cognitiveServicesScope);
-        var accessToken = await _sharedCredential.GetTokenAsync(tokenRequestContext, ct);
+        var accessToken = await _credential.GetTokenAsync(tokenRequestContext, ct);
         request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken.Token);
 
         request.Content = new StringContent(jsonBody, Encoding.UTF8, new MediaTypeHeaderValue("application/json"));
