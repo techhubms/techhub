@@ -395,7 +395,7 @@ public class AdminNewsletterTests : AdminPageTestBase
         cut.Find(".admin-modal-footer .btn").Click();
 
         // Assert
-        cut.Find(".admin-alert-error").TextContent.Should().Contain("Failed to update subscriber: boom");
+        cut.Find(".admin-alert-error").TextContent.Should().Be("Failed to update subscriber.");
         cut.FindAll(".admin-modal").Should().ContainSingle();
     }
 

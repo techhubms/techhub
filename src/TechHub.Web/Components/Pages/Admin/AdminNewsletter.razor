@@ -335,12 +335,13 @@
             return;
         }
 
+        var id = _editing.Id;
         var weekly = ParseSections(_editWeekly);
         var daily = ParseSections(_editDaily);
 
         try
         {
-            await Api.UpdateNewsletterSubscriberAsync(_editing.Id, _editDisplayName, weekly, daily);
+            await Api.UpdateNewsletterSubscriberAsync(id, _editDisplayName, weekly, daily);
             _editing = null;
             await RefreshAsync();
             _message = "Subscriber updated.";
@@ -352,7 +353,8 @@
         }
         catch (HttpRequestException ex)
         {
-            _message = $"Failed to update subscriber: {ex.Message}";
+            Logger.LogError(ex, "Failed to update newsletter subscriber {Id}", id);
+            _message = "Failed to update subscriber.";
             _isError = true;
         }
     }
