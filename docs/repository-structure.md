@@ -165,7 +165,6 @@ PowerShell automation scripts for development, deployment, and maintenance. All 
 - **`Sync-KeyVaultSecrets.ps1`** - Writes application secrets from environment variables to Key Vault
 - **`Renew-WildcardCertificates.ps1`** - Renews the Let's Encrypt wildcard certificates and imports them into Key Vault and App Service
 - **`Migrate-KeyVaultSecrets.ps1`** - Legacy one-off copy from `kv-techhub-shared` to `kv-techhub-prod`
-- **`Cleanup-ContainerRegistry.ps1`** - Legacy cleanup for the retired Azure Container Registry (images now live on `ghcr.io`)
 
 See [scripts/AGENTS.md](../scripts/AGENTS.md) for scripting guidelines and patterns.
 
