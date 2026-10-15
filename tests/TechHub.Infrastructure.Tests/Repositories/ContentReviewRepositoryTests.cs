@@ -222,6 +222,139 @@ public class ContentReviewRepositoryTests
 
     // ── ApproveAsync ───────────────────────────────────────────────────────
 
+    [Theory]
+    [InlineData(false, ",AI,GitHub Copilot,")]
+    [InlineData(true, ",AI,GitHub Copilot,")]
+    [InlineData(false, "")]
+    [InlineData(true, "")]
+    public async Task Approve_TagsReview_ReplacesExpandedTagsAndPreservesMetadata(bool bulk, string fixedTags)
+    {
+        // Arrange
+        var slug = await SeedContentItemAsync(tagsCsv: ",Old,");
+        await SeedExpandedTagsAsync(slug);
+        await _fixture.Connection.ExecuteAsync("""
+            UPDATE content_items
+            SET sections_bitmask = 127, is_azure = TRUE, is_dotnet = TRUE, is_devops = TRUE,
+                is_github_copilot = TRUE, is_ml = TRUE, is_security = TRUE
+            WHERE collection_name = @Collection AND slug = @Slug
+            """, new { Collection, Slug = slug });
+        var id = await CreateReviewAsync(slug, ContentReviewChangeType.Tags, ",Old,", fixedTags);
+
+        // Act
+        if (bulk)
+        {
+            (await _repository.ApproveAllAsync(TestContext.Current.CancellationToken)).Should().Be(1);
+        }
+        else
+        {
+            (await _repository.ApproveAsync(id, TestContext.Current.CancellationToken)).Should().BeTrue();
+        }
+
+        // Assert
+        (await GetItemColumnAsync(slug, "tags_csv")).Should().Be(fixedTags);
+        var rows = await GetExpandedTagsAsync(slug);
+        if (fixedTags.Length == 0)
+        {
+            rows.Should().BeEmpty();
+        }
+        else
+        {
+            rows.Select(r => (r.TagWord, r.TagDisplay, r.IsFullTag)).Should().BeEquivalentTo(
+                new[]
+                {
+                    ("ai", "AI", true),
+                    ("github copilot", "GitHub Copilot", true),
+                    ("github", "GitHub", false),
+                    ("copilot", "Copilot", false)
+                });
+            rows.Should().OnlyContain(r =>
+                r.DateEpoch == 1747699200 && r.SectionsBitmask == 127 &&
+                r.IsAi && r.IsAzure && r.IsDotnet && r.IsDevops &&
+                r.IsGithubCopilot && r.IsMl && r.IsSecurity);
+        }
+
+        var review = await _repository.GetByIdAsync(id, TestContext.Current.CancellationToken);
+        review!.Status.Should().Be(ContentReviewStatus.Approved);
+        review.ReviewedAt.Should().NotBeNull();
+    }
+
+    [Theory]
+    [InlineData(false, false)]
+    [InlineData(true, false)]
+    [InlineData(false, true)]
+    [InlineData(true, true)]
+    public async Task Approve_DatabaseFailure_RollsBackContentExpandedTagsAndReviewStatus(bool bulk, bool failStatusUpdate)
+    {
+        // Arrange
+        var slug = await SeedContentItemAsync(tagsCsv: ",Old,");
+        await SeedExpandedTagsAsync(slug);
+        var id = await CreateReviewAsync(slug, ContentReviewChangeType.Tags, ",Old,", ",AI,GitHub Copilot,");
+        var authorSlug = await SeedContentItemAsync();
+        var authorId = bulk
+            ? await CreateReviewAsync(authorSlug, ContentReviewChangeType.Author, "Original Author", "Fixed Author")
+            : (long?)null;
+        await _fixture.Connection.ExecuteAsync("""
+            CREATE FUNCTION pg_temp.fail_review_approval() RETURNS trigger
+            LANGUAGE plpgsql AS $$
+            BEGIN
+                RAISE EXCEPTION 'Approval regression failure';
+            END;
+            $$;
+            """);
+        var triggerSql = failStatusUpdate
+            ? """
+              CREATE TRIGGER fail_review_approval
+              BEFORE UPDATE OF status ON content_reviews
+              FOR EACH ROW WHEN (NEW.status = 'approved')
+              EXECUTE FUNCTION pg_temp.fail_review_approval();
+              """
+            : """
+              CREATE TRIGGER fail_review_approval
+              BEFORE INSERT ON content_tags_expanded
+              FOR EACH ROW WHEN (NEW.tag_word = 'github')
+              EXECUTE FUNCTION pg_temp.fail_review_approval();
+              """;
+        await _fixture.Connection.ExecuteAsync(triggerSql);
+
+        try
+        {
+            // Act
+            Func<Task> act = async () =>
+            {
+                if (bulk)
+                {
+                    await _repository.ApproveAllAsync(TestContext.Current.CancellationToken);
+                }
+                else
+                {
+                    await _repository.ApproveAsync(id, TestContext.Current.CancellationToken);
+                }
+            };
+
+            // Assert
+            await act.Should().ThrowAsync<PostgresException>().WithMessage("*Approval regression failure*");
+            (await GetItemColumnAsync(slug, "tags_csv")).Should().Be(",Old,");
+            var rows = await GetExpandedTagsAsync(slug);
+            rows.Should().ContainSingle().Which.TagWord.Should().Be("old");
+            var review = await _repository.GetByIdAsync(id, TestContext.Current.CancellationToken);
+            review!.Status.Should().Be(ContentReviewStatus.Pending);
+            review.ReviewedAt.Should().BeNull();
+            (await GetItemColumnAsync(authorSlug, "author")).Should().Be("Original Author");
+            if (authorId.HasValue)
+            {
+                var authorReview = await _repository.GetByIdAsync(authorId.Value, TestContext.Current.CancellationToken);
+                authorReview!.Status.Should().Be(ContentReviewStatus.Pending);
+                authorReview.ReviewedAt.Should().BeNull();
+            }
+        }
+        finally
+        {
+            await _fixture.Connection.ExecuteAsync(
+                $"DROP TRIGGER fail_review_approval ON {(failStatusUpdate ? "content_reviews" : "content_tags_expanded")}; " +
+                "DROP FUNCTION pg_temp.fail_review_approval();");
+        }
+    }
+
     [Fact]
     public async Task ApproveAsync_TagsReview_AppliesFixedTagsAndMarksApproved()
     {
@@ -632,6 +765,38 @@ public class ContentReviewRepositoryTests
 
     private async Task<long> CreateReviewAsync(string slug, string changeType, string original, string fixedValue) =>
         await _repository.CreateAsync(slug, Collection, changeType, original, fixedValue, ct: TestContext.Current.CancellationToken);
+
+    private async Task SeedExpandedTagsAsync(string slug) =>
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO content_tags_expanded
+                (collection_name, slug, tag_word, tag_display, is_full_tag, date_epoch, sections_bitmask, is_ai)
+            VALUES (@Collection, @Slug, 'old', 'Old', TRUE, 1747699200, 1, TRUE)
+            """, new { Collection, Slug = slug });
+
+    private async Task<IReadOnlyList<ExpandedTagRow>> GetExpandedTagsAsync(string slug) =>
+        (await _fixture.Connection.QueryAsync<ExpandedTagRow>("""
+            SELECT tag_word AS TagWord, tag_display AS TagDisplay, is_full_tag AS IsFullTag,
+                   date_epoch AS DateEpoch, sections_bitmask AS SectionsBitmask,
+                   is_ai AS IsAi, is_azure AS IsAzure, is_dotnet AS IsDotnet, is_devops AS IsDevops,
+                   is_github_copilot AS IsGithubCopilot, is_ml AS IsMl, is_security AS IsSecurity
+            FROM content_tags_expanded WHERE collection_name = @Collection AND slug = @Slug
+            """, new { Collection, Slug = slug })).ToList();
+
+    private sealed class ExpandedTagRow
+    {
+        public string TagWord { get; init; } = string.Empty;
+        public string TagDisplay { get; init; } = string.Empty;
+        public bool IsFullTag { get; init; }
+        public long DateEpoch { get; init; }
+        public int SectionsBitmask { get; init; }
+        public bool IsAi { get; init; }
+        public bool IsAzure { get; init; }
+        public bool IsDotnet { get; init; }
+        public bool IsDevops { get; init; }
+        public bool IsGithubCopilot { get; init; }
+        public bool IsMl { get; init; }
+        public bool IsSecurity { get; init; }
+    }
 
     private async Task<string?> GetItemColumnAsync(string slug, string column) =>
         await _fixture.Connection.ExecuteScalarAsync<string?>(

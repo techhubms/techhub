@@ -59,6 +59,8 @@ Trigger endpoints return `202 Accepted` immediately and run on the background se
 
 The content fixer can propose changes as reviews instead of applying them (see [content-processing.md](content-processing.md)). These endpoints work through the queue.
 
+Approval applies content changes, replaces the expanded tag index for tag reviews, and marks the selected reviews approved as one atomic operation. A failed approval leaves the content, tag index, and review statuses unchanged. Bulk approval only resolves the fetched batch; reviews created while it runs remain pending. Expanded tags retain the item's date and section metadata, and approving empty tags clears the old index entries.
+
 | Endpoint | Purpose | Notes |
 |----------|---------|-------|
 | `GET /reviews?status&limit` | List reviews | `status` is `pending`, `approved` or `rejected` (else `400`). `limit` is 1-1000, default 100. |
