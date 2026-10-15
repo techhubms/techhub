@@ -1603,61 +1603,6 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     // ================================================================
-    // Admin – Content item ai_metadata methods
-    // ================================================================
-
-    /// <summary>
-    /// Get the ai_metadata JSON for a content item by primary key.
-    /// GET /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
-    /// </summary>
-    public virtual async Task<ContentItemAiMetadataResult?> GetContentItemAiMetadataAsync(
-        string collectionName,
-        string slug,
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            return await _httpClient.GetFromJsonAsync<ContentItemAiMetadataResult>(
-                $"/api/admin/content-items/ai-metadata?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
-                cancellationToken);
-        }
-        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
-        {
-            return null;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch ai_metadata for {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
-            throw;
-        }
-    }
-
-    /// <summary>
-    /// Update the ai_metadata JSON for a content item by primary key.
-    /// PUT /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
-    /// </summary>
-    public virtual async Task UpdateContentItemAiMetadataAsync(
-        string collectionName,
-        string slug,
-        string aiMetadata,
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            using var response = await _httpClient.PutAsJsonAsync(
-                $"/api/admin/content-items/ai-metadata?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
-                new { AiMetadata = aiMetadata },
-                cancellationToken);
-            response.EnsureSuccessStatusCode();
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to update ai_metadata for {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
-            throw;
-        }
-    }
-
-    // ================================================================
     // Admin – Content item editing methods
     // ================================================================
 

@@ -102,7 +102,6 @@ See [docs/repository-structure.md](../docs/repository-structure.md) for the comp
 ### Legacy (one-off)
 
 - **Migrate-KeyVaultSecrets.ps1**: One-time copy of secrets from `kv-techhub-shared` to `kv-techhub-prod`. Only relevant to the old shared-resource-group setup.
-- **Cleanup-ContainerRegistry.ps1**: Cleans untagged manifests in the retired Azure Container Registry. Images now live on `ghcr.io`, where retention is handled by the CD and CI workflows.
 
 ### CD Pipeline Deployment Strategy
 

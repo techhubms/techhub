@@ -116,18 +116,6 @@ public interface IContentRepository
     // ==================== Admin Methods ====================
 
     /// <summary>
-    /// Get the ai_metadata JSON for a content item identified by its primary key.
-    /// Returns null if no item with that key exists.
-    /// </summary>
-    Task<ContentItemAiMetadataResult?> GetAiMetadataAsync(string collectionName, string slug, CancellationToken ct = default);
-
-    /// <summary>
-    /// Update the ai_metadata JSON column for a content item identified by its primary key.
-    /// Returns true if found and updated, false if not found.
-    /// </summary>
-    Task<bool> UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadata, CancellationToken ct = default);
-
-    /// <summary>
     /// Get all editable fields for a content item identified by its primary key.
     /// Returns null if no item with that key exists.
     /// </summary>
