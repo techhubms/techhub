@@ -27,7 +27,7 @@
 
     /// <summary>
     /// Fix hash-only links to work around &lt;base href="/"&gt; issue.
-    /// Replaces href="#section" with href="/current/path#section".
+    /// Replaces quoted hash-only hrefs with the current path and the original fragment.
     /// </summary>
     private string FixHashLinks(string? html)
     {
@@ -40,12 +40,14 @@
         var uri = new Uri(Navigation.Uri);
         var currentPathWithQuery = uri.AbsolutePath + uri.Query;
 
-        // Replace href="#..." with href="/current/path?query#..."
+        var encodedPathWithQuery = System.Text.Encodings.Web.HtmlEncoder.Default.Encode(currentPathWithQuery);
+
+        // Replace quoted href="#..." and href='#...' with the current path and query.
         // Only match hash-only links, not full URLs with hashes
         return System.Text.RegularExpressions.Regex.Replace(
             html,
-            @"href=""(#[^""]+)""",
-            match => $@"href=""{currentPathWithQuery}{match.Groups[1].Value}"""
+            @"href=([""'])(#[^""']+)\1",
+            match => $@"href={match.Groups[1].Value}{encodedPathWithQuery}{match.Groups[2].Value}{match.Groups[1].Value}"
         );
     }
 }
