@@ -17,7 +17,7 @@ namespace TechHub.Web.Tests.Components.Pages.Admin;
 /// </summary>
 public class AdminNewsletterTests : AdminPageTestBase
 {
-    private const string DefaultTestEmail = "whistler112@gmail.com";
+    private const string TestEmail = "newsletter-test@example.com";
 
     private readonly Mock<ITechHubApiClient> _api = new();
 
@@ -146,7 +146,7 @@ public class AdminNewsletterTests : AdminPageTestBase
     }
 
     [Fact]
-    public void Render_ApiFails_ShowsErrorWithMessageAndNoRows()
+    public void Render_ApiFails_ShowsGenericErrorAndNoRows()
     {
         // Arrange
         _api.Setup(x => x.GetNewsletterSubscribersAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<bool?>(), It.IsAny<CancellationToken>()))
@@ -156,7 +156,7 @@ public class AdminNewsletterTests : AdminPageTestBase
         var cut = Render<AdminNewsletter>();
 
         // Assert
-        cut.Find(".admin-alert-error").TextContent.Should().Contain("Failed to refresh newsletter data: down");
+        cut.Find(".admin-alert-error").TextContent.Should().Be("Failed to refresh newsletter data.");
         SubscriberRows(cut).Should().BeEmpty();
     }
 
@@ -395,8 +395,26 @@ public class AdminNewsletterTests : AdminPageTestBase
         cut.Find(".admin-modal-footer .btn").Click();
 
         // Assert
-        cut.Find(".admin-alert-error").TextContent.Should().Contain("Failed to update subscriber: boom");
+        cut.Find(".admin-alert-error").TextContent.Should().Be("Failed to update subscriber.");
         cut.FindAll(".admin-modal").Should().ContainSingle();
+    }
+
+    [Fact]
+    public void Save_RefreshFails_PreservesRefreshErrorInsteadOfShowingSuccess()
+    {
+        // Arrange
+        SetupData(subscribers: [CreateSubscriber(7, "jane@example.com")]);
+        var cut = Render<AdminNewsletter>();
+        OpenEditModal(cut);
+        _api.Setup(x => x.GetNewsletterSubscribersAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<bool?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("internal refresh failure"));
+
+        // Act
+        cut.Find(".admin-modal-footer .btn").Click();
+
+        // Assert
+        cut.Find(".admin-alert-error").TextContent.Should().Be("Failed to refresh newsletter data.");
+        cut.FindAll(".admin-alert-success").Should().BeEmpty();
     }
 
     [Fact]
@@ -469,7 +487,7 @@ public class AdminNewsletterTests : AdminPageTestBase
     // ── Delete ──────────────────────────────────────────────────────────────
 
     [Fact]
-    public void Delete_Click_DeletesSubscriberReloadsAndShowsSuccess()
+    public void Delete_Confirmed_DeletesSubscriberReloadsAndShowsSuccess()
     {
         // Arrange
         SetupData(subscribers: [CreateSubscriber(1, "a@example.com"), CreateSubscriber(2, "b@example.com")]);
@@ -478,12 +496,67 @@ public class AdminNewsletterTests : AdminPageTestBase
 
         // Act
         cut.FindAll("button.admin-link-btn-danger")[0].Click();
+        cut.FindAll("button.admin-link-btn-danger")[0].Click();
 
         // Assert
         _api.Verify(x => x.DeleteNewsletterSubscriberAsync(1, It.IsAny<CancellationToken>()), Times.Once);
         SubscriberRows(cut).Should().ContainSingle().Which.TextContent.Should().Contain("b@example.com");
         var alert = cut.Find(".admin-alert-success");
         alert.TextContent.Should().Be("Subscriber deleted.");
+    }
+
+    [Fact]
+    public void Delete_Click_RequiresConfirmationWithoutCallingApi()
+    {
+        // Arrange
+        SetupData(subscribers: [CreateSubscriber(1, "a@example.com"), CreateSubscriber(2, "b@example.com")]);
+        var cut = Render<AdminNewsletter>();
+
+        // Act
+        cut.FindAll("button.admin-link-btn-danger")[0].Click();
+
+        // Assert
+        SubscriberRows(cut)[0].TextContent.Should().Contain("Delete this subscriber?");
+        SubscriberRows(cut)[1].TextContent.Should().NotContain("Delete this subscriber?");
+        cut.FindAll("button.admin-link-btn-danger")[0].TextContent.Should().Be("Confirm");
+        _api.Verify(x => x.DeleteNewsletterSubscriberAsync(It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public void Delete_Cancel_KeepsSubscriberWithoutCallingApi()
+    {
+        // Arrange
+        SetupData(subscribers: [CreateSubscriber(1, "a@example.com")]);
+        var cut = Render<AdminNewsletter>();
+        cut.Find("button.admin-link-btn-danger").Click();
+
+        // Act
+        cut.FindAll("button.admin-link-btn").Single(button => button.TextContent == "Cancel").Click();
+
+        // Assert
+        SubscriberRows(cut).Should().ContainSingle();
+        SubscriberRows(cut)[0].TextContent.Should().NotContain("Delete this subscriber?");
+        cut.Find("button.admin-link-btn-danger").TextContent.Should().Be("Delete");
+        _api.Verify(x => x.DeleteNewsletterSubscriberAsync(It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public void Delete_RefreshFails_PreservesRefreshErrorInsteadOfShowingSuccess()
+    {
+        // Arrange
+        SetupData(subscribers: [CreateSubscriber(1, "a@example.com")]);
+        var cut = Render<AdminNewsletter>();
+        _api.Setup(x => x.GetNewsletterSubscribersAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<bool?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("internal refresh failure"));
+        cut.Find("button.admin-link-btn-danger").Click();
+
+        // Act
+        cut.Find("button.admin-link-btn-danger").Click();
+
+        // Assert
+        _api.Verify(x => x.DeleteNewsletterSubscriberAsync(1, It.IsAny<CancellationToken>()), Times.Once);
+        cut.Find(".admin-alert-error").TextContent.Should().Be("Failed to refresh newsletter data.");
+        cut.FindAll(".admin-alert-success").Should().BeEmpty();
     }
 
     [Fact]
@@ -497,9 +570,10 @@ public class AdminNewsletterTests : AdminPageTestBase
 
         // Act
         cut.Find("button.admin-link-btn-danger").Click();
+        cut.Find("button.admin-link-btn-danger").Click();
 
         // Assert
-        cut.Find(".admin-alert-error").TextContent.Should().Be("cannot delete");
+        cut.Find(".admin-alert-error").TextContent.Should().Be("Failed to delete subscriber.");
         SubscriberRows(cut).Should().ContainSingle();
         _api.Verify(x => x.GetNewsletterSubscribersAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<bool?>(), It.IsAny<CancellationToken>()), Times.Once);
     }
@@ -600,15 +674,15 @@ public class AdminNewsletterTests : AdminPageTestBase
     }
 
     [Fact]
-    public void Render_Defaults_TestButtonsEnabledWithPrefilledEmail()
+    public void Render_Defaults_TestEmailEmptyAndTestButtonsDisabled()
     {
         // Act
         var cut = Render<AdminNewsletter>();
 
         // Assert
-        cut.Find("#testEmail").GetAttribute("value").Should().Be(DefaultTestEmail);
-        TestButton(cut, "Test Weekly").HasAttribute("disabled").Should().BeFalse();
-        TestButton(cut, "Test Daily").HasAttribute("disabled").Should().BeFalse();
+        cut.Find("#testEmail").GetAttribute("value").Should().BeNullOrEmpty();
+        TestButton(cut, "Test Weekly").HasAttribute("disabled").Should().BeTrue();
+        TestButton(cut, "Test Daily").HasAttribute("disabled").Should().BeTrue();
     }
 
     [Theory]
@@ -632,6 +706,8 @@ public class AdminNewsletterTests : AdminPageTestBase
     {
         // Arrange
         var cut = Render<AdminNewsletter>();
+        cut.Find("#testEmail").Change(TestEmail);
+        TestButton(cut, "Test Weekly").HasAttribute("disabled").Should().BeFalse();
 
         // Act
         var checkboxCount = cut.FindAll(".admin-checkbox-item input").Count;
@@ -672,6 +748,7 @@ public class AdminNewsletterTests : AdminPageTestBase
     {
         // Arrange
         var cut = Render<AdminNewsletter>();
+        cut.Find("#testEmail").Change(TestEmail);
         cut.FindAll(".admin-checkbox-item input")[0].Change(false);
 
         // Act
@@ -679,7 +756,7 @@ public class AdminNewsletterTests : AdminPageTestBase
 
         // Assert
         _api.Verify(x => x.TriggerNewsletterTestSendAsync(
-            DefaultTestEmail,
+            TestEmail,
             It.Is<IReadOnlyList<string>>(l => l.SequenceEqual(new[] { "azure" })),
             "weekly",
             It.IsAny<CancellationToken>()), Times.Once);
@@ -690,6 +767,7 @@ public class AdminNewsletterTests : AdminPageTestBase
     {
         // Arrange
         var cut = Render<AdminNewsletter>();
+        cut.Find("#testEmail").Change(TestEmail);
         cut.FindAll(".admin-checkbox-item input")[0].Change(false);
         cut.FindAll(".admin-checkbox-item input")[0].Change(true);
 
@@ -711,12 +789,13 @@ public class AdminNewsletterTests : AdminPageTestBase
         _api.Setup(x => x.TriggerNewsletterTestSendAsync(It.IsAny<string>(), It.IsAny<IReadOnlyList<string>>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ThrowsAsync(new HttpRequestException("smtp unavailable"));
         var cut = Render<AdminNewsletter>();
+        cut.Find("#testEmail").Change(TestEmail);
 
         // Act
         TestButton(cut, "Test Weekly").Click();
 
         // Assert
-        cut.Find(".admin-alert-error").TextContent.Should().Be("smtp unavailable");
+        cut.Find(".admin-alert-error").TextContent.Should().Be("Failed to trigger test weekly send.");
         cut.FindAll(".admin-alert-success").Should().BeEmpty();
     }
 
@@ -727,6 +806,7 @@ public class AdminNewsletterTests : AdminPageTestBase
         _api.Setup(x => x.TriggerNewsletterTestSendAsync(It.IsAny<string>(), It.IsAny<IReadOnlyList<string>>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ThrowsAsync(new HttpRequestException("smtp unavailable"));
         var cut = Render<AdminNewsletter>();
+        cut.Find("#testEmail").Change(TestEmail);
         TestButton(cut, "Test Weekly").Click();
         cut.FindAll(".admin-alert-error").Should().ContainSingle();
         _api.Setup(x => x.TriggerNewsletterTestSendAsync(It.IsAny<string>(), It.IsAny<IReadOnlyList<string>>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))

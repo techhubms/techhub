@@ -5,6 +5,7 @@
 @using TechHub.Core.Models.Admin
 @using TechHub.Web.Services
 @inject ITechHubApiClient Api
+@inject ILogger<AdminNewsletter> Logger
 @inherits PageComponentBase
 
 <PageTitle>Newsletter — TechHub Admin</PageTitle>
@@ -104,8 +105,17 @@
                         <td class="admin-cell-send-status">@RenderSendStatus(subscriber.LastDailySentAt, subscriber.LastDailySucceeded)</td>
                         <td class="admin-cell-send-status">@RenderSendStatus(subscriber.LastWeeklySentAt, subscriber.LastWeeklySucceeded)</td>
                         <td>
-                            <button class="admin-link-btn" @onclick="() => StartEdit(subscriber)">Edit</button>
-                            <button class="admin-link-btn admin-link-btn-danger" @onclick="() => DeleteAsync(subscriber.Id)">Delete</button>
+                            @if (_confirmDeleteId == subscriber.Id)
+                            {
+                                <span>Delete this subscriber?</span>
+                                <button class="admin-link-btn admin-link-btn-danger" @onclick="() => DeleteAsync(subscriber.Id)">Confirm</button>
+                                <button class="admin-link-btn" @onclick="() => _confirmDeleteId = null">Cancel</button>
+                            }
+                            else
+                            {
+                                <button class="admin-link-btn" @onclick="() => StartEdit(subscriber)">Edit</button>
+                                <button class="admin-link-btn admin-link-btn-danger" @onclick="() => _confirmDeleteId = subscriber.Id">Delete</button>
+                            }
                         </td>
                     </tr>
                 }
@@ -182,7 +192,8 @@
     private readonly HashSet<string> _testSections = [];
     private string? _search;
     private string? _confirmedFilter;
-    private string? _testEmail = "whistler112@gmail.com";
+    private string? _testEmail;
+    private long? _confirmDeleteId;
     private bool _loading;
     private string? _message;
     private bool _isError;
@@ -209,7 +220,7 @@
         await RefreshAsync();
     }
 
-    private async Task RefreshAsync()
+    private async Task<bool> RefreshAsync()
     {
         _loading = true;
         _message = null;
@@ -233,13 +244,17 @@
         }
         catch (HttpRequestException ex)
         {
-            _message = $"Failed to refresh newsletter data: {ex.Message}";
+            Logger.LogError(ex, "Failed to refresh newsletter data");
+            _message = "Failed to refresh newsletter data.";
             _isError = true;
+            return false;
         }
         finally
         {
             _loading = false;
         }
+
+        return true;
     }
 
     private async Task TriggerTestSendAsync(string kind)
@@ -257,7 +272,8 @@
         }
         catch (HttpRequestException ex)
         {
-            _message = ex.Message;
+            Logger.LogError(ex, "Failed to trigger newsletter test {Kind} send", kind);
+            _message = $"Failed to trigger test {kind} send.";
             _isError = true;
         }
     }
@@ -276,12 +292,16 @@
 
     private async Task DeleteAsync(long id)
     {
+        _confirmDeleteId = null;
+
         try
         {
             await Api.DeleteNewsletterSubscriberAsync(id);
-            await RefreshAsync();
-            _message = "Subscriber deleted.";
-            _isError = false;
+            if (await RefreshAsync())
+            {
+                _message = "Subscriber deleted.";
+                _isError = false;
+            }
         }
         catch (OperationCanceledException)
         {
@@ -289,7 +309,8 @@
         }
         catch (HttpRequestException ex)
         {
-            _message = ex.Message;
+            Logger.LogError(ex, "Failed to delete newsletter subscriber {Id}", id);
+            _message = "Failed to delete subscriber.";
             _isError = true;
         }
     }
@@ -314,16 +335,19 @@
             return;
         }
 
+        var id = _editing.Id;
         var weekly = ParseSections(_editWeekly);
         var daily = ParseSections(_editDaily);
 
         try
         {
-            await Api.UpdateNewsletterSubscriberAsync(_editing.Id, _editDisplayName, weekly, daily);
+            await Api.UpdateNewsletterSubscriberAsync(id, _editDisplayName, weekly, daily);
             _editing = null;
-            await RefreshAsync();
-            _message = "Subscriber updated.";
-            _isError = false;
+            if (await RefreshAsync())
+            {
+                _message = "Subscriber updated.";
+                _isError = false;
+            }
         }
         catch (OperationCanceledException)
         {
@@ -331,7 +355,8 @@
         }
         catch (HttpRequestException ex)
         {
-            _message = $"Failed to update subscriber: {ex.Message}";
+            Logger.LogError(ex, "Failed to update newsletter subscriber {Id}", id);
+            _message = "Failed to update subscriber.";
             _isError = true;
         }
     }
