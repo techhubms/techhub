@@ -75,7 +75,7 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
 
         // Assert
         var recorded = await GetRecordedScriptNamesAsync(connection);
-        recorded.Should().BeEquivalentTo(GetEmbeddedMigrationNames());
+        recorded.Should().BeEquivalentTo(GetEmbeddedMigrationFileNames());
     }
 
     [Fact]
@@ -128,7 +128,7 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
     public async Task RunMigrationsAsync_ExistingDatabase_RemovesOnlyInertContentCleanupSetting(bool cleanupSettingExists)
     {
         // Arrange - defer the removal migration to reproduce an already-deployed database.
-        const string RemovalScriptName = MigrationResourcePrefix + "048_remove_content_cleanup_job_setting.sql";
+        const string RemovalScriptName = "048_remove_content_cleanup_job_setting.sql";
         var ct = TestContext.Current.CancellationToken;
         await using var connection = await OpenFreshDatabaseAsync(ct);
         await connection.ExecuteAsync(
@@ -199,16 +199,19 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
         enabled.Should().BeTrue();
     }
 
-    [Fact]
-    public async Task RunMigrationsAsync_AllScriptsAlreadyRecorded_SkipsThemRegardlessOfCase()
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public async Task RunMigrationsAsync_AllScriptsAlreadyRecorded_SkipsThemRegardlessOfCase(bool legacyResourceNames)
     {
         // Arrange — track every script as executed without creating any schema
         var ct = TestContext.Current.CancellationToken;
         await using var connection = await OpenFreshDatabaseAsync(ct);
         await connection.ExecuteAsync(
             "CREATE TABLE _migrations (script_name TEXT PRIMARY KEY, executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW())");
-        foreach (var name in GetEmbeddedMigrationNames())
+        foreach (var fileName in GetEmbeddedMigrationFileNames())
         {
+            var name = legacyResourceNames ? MigrationResourcePrefix + fileName : fileName;
             await connection.ExecuteAsync(
                 "INSERT INTO _migrations (script_name) VALUES (@Name)", new { Name = name.ToUpperInvariant() });
         }
@@ -219,6 +222,37 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
         // Assert
         (await TableExistsAsync(connection, "content_items")).Should().BeFalse("no script should have been executed");
         (await GetRecordedScriptNamesAsync(connection)).Should().HaveCount(GetEmbeddedMigrationNames().Length);
+    }
+
+    [Fact]
+    public async Task RunMigrationsAsync_LegacyTrackingRows_RecordsOnlyPendingScriptByFilename()
+    {
+        // Arrange
+        const string PendingScriptName = "048_remove_content_cleanup_job_setting.sql";
+        var ct = TestContext.Current.CancellationToken;
+        await using var connection = await OpenFreshDatabaseAsync(ct);
+        await CreateRunner(connection).RunMigrationsAsync(ct);
+        await connection.ExecuteAsync(
+            "UPDATE _migrations SET script_name = @Prefix || script_name",
+            new { Prefix = MigrationResourcePrefix });
+        await connection.ExecuteAsync(
+            "DELETE FROM _migrations WHERE script_name = @Name",
+            new { Name = MigrationResourcePrefix + PendingScriptName });
+        await connection.ExecuteAsync(
+            "UPDATE background_job_settings SET enabled = TRUE WHERE job_name = 'ContentProcessor'");
+        var before = await GetRecordedExecutionsAsync(connection);
+
+        // Act
+        await CreateRunner(connection).RunMigrationsAsync(ct);
+        await CreateRunner(connection).RunMigrationsAsync(ct);
+
+        // Assert
+        var after = await GetRecordedExecutionsAsync(connection);
+        after.Should().ContainSingle(row => row.ScriptName == PendingScriptName);
+        after.Where(row => row.ScriptName != PendingScriptName)
+            .Should().Equal(before, "legacy tracking rows must not be rewritten or re-executed");
+        (await connection.ExecuteScalarAsync<bool>(
+            "SELECT enabled FROM background_job_settings WHERE job_name = 'ContentProcessor'")).Should().BeTrue();
     }
 
     [Fact]
@@ -280,7 +314,7 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
         await runner.RunMigrationsAsync(ct);
 
         // Assert
-        (await GetRecordedScriptNamesAsync(connection)).Should().BeEquivalentTo(GetEmbeddedMigrationNames());
+        (await GetRecordedScriptNamesAsync(connection)).Should().BeEquivalentTo(GetEmbeddedMigrationFileNames());
     }
 
     [Fact]
@@ -323,7 +357,7 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
 
             // Assert
             var recorded = await GetRecordedScriptNamesAsync(connections[0]);
-            recorded.Should().BeEquivalentTo(GetEmbeddedMigrationNames());
+            recorded.Should().BeEquivalentTo(GetEmbeddedMigrationFileNames());
             recorded.Should().OnlyHaveUniqueItems();
         }
         finally
@@ -352,6 +386,9 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
                            && name.EndsWith(".sql", StringComparison.Ordinal))
             .OrderBy(name => name, StringComparer.Ordinal)
             .ToArray();
+
+    private static string[] GetEmbeddedMigrationFileNames() =>
+        GetEmbeddedMigrationNames().Select(name => name[MigrationResourcePrefix.Length..]).ToArray();
 
     private static async Task<List<string>> GetRecordedScriptNamesAsync(NpgsqlConnection connection) =>
         (await connection.QueryAsync<string>("SELECT script_name FROM _migrations ORDER BY script_name")).ToList();
