@@ -52,8 +52,8 @@ public class AiCompletionClientTests
     public async Task SendCompletionAsync_Success_SendsAuthenticatedJsonRequestAndReturnsBody()
     {
         // Arrange
-        const string jsonBody = """{"messages":[]}""";
-        const string responseBody = """{"choices":[]}""";
+        const string JsonBody = """{"messages":[]}""";
+        const string ResponseBody = """{"choices":[]}""";
         var credential = new StubTokenCredential();
         Task<string>? sentBody = null;
         using var handler = new StubHttpMessageHandler(request =>
@@ -63,21 +63,21 @@ public class AiCompletionClientTests
             request.Headers.Authorization.Should().Be(new AuthenticationHeaderValue("Bearer", "test-token"));
             request.Content!.Headers.ContentType!.MediaType.Should().Be("application/json");
             sentBody = request.Content.ReadAsStringAsync(CancellationToken.None);
-            return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(responseBody) };
+            return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(ResponseBody) };
         });
         using var httpClient = new HttpClient(handler);
         var client = CreateClient(httpClient, credential);
         using var cts = new CancellationTokenSource();
 
         // Act
-        var result = await client.SendCompletionAsync(jsonBody, cts.Token);
+        var result = await client.SendCompletionAsync(JsonBody, cts.Token);
 
         // Assert
         result.IsRateLimited.Should().BeFalse();
-        result.ResponseBody.Should().Be(responseBody);
+        result.ResponseBody.Should().Be(ResponseBody);
         result.RetryAfterSeconds.Should().BeNull();
         result.ContentFilterMessage.Should().BeNull();
-        (await sentBody!).Should().Be(jsonBody);
+        (await sentBody!).Should().Be(JsonBody);
         credential.Scopes.Should().Equal("https://cognitiveservices.azure.com/.default");
         credential.CancellationToken.Should().Be(cts.Token);
         handler.RequestedUrls.Should().ContainSingle();
