@@ -1,9 +1,8 @@
 ---
 name: address-th-review-comments
-description: "Reviews all open review comment threads, CodeQL code scanning alerts, and GitHub Advanced Security alerts on the current branch's pull request, analyses each one, applies code fixes where needed, replies to each thread explaining what was done or why it was ignored, resolves each thread after replying, then commits and pushes directly."
-model: Claude Sonnet 4.6
+description: Reviews all open review comment threads, CodeQL code scanning alerts, and GitHub Advanced Security alerts on the current branch's pull request, analyses each one, applies code fixes where needed, replies to each thread explaining what was done or why it was ignored, resolves each thread after replying, then commits and pushes directly.
+disable-model-invocation: true
 ---
-
 # Address PR Review Comments, CodeQL Alerts, and Advanced Security Alerts
 
 **🚨 CRITICAL**: Read this entire prompt from start to finish before executing any step.
