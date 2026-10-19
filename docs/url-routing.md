@@ -196,7 +196,7 @@ The 404 and 405 responses produced by this re-execution path are suppressed from
 
 ### HSTS
 
-`UseHsts` adds `Strict-Transport-Security: max-age=31536000` to all HTTPS responses, telling browsers to connect only over HTTPS for the next year. Non-development only.
+`UseHsts` adds `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload` to all HTTPS responses, telling browsers to connect only over HTTPS for the next year and to apply that policy to subdomains. Non-development only. The `preload` directive does not submit the domain to the preload list; that requires a separate submission after a stable deployment.
 
 ### Security Headers
 
