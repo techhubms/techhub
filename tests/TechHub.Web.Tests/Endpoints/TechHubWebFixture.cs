@@ -49,8 +49,7 @@ internal sealed class TechHubWebFactory(string environment) : WebApplicationFact
             services.AddHttpClient<TechHubApiClient>().ConfigurePrimaryHttpMessageHandler(() => new StubApiHandler());
             services.AddHttpClient<ApiHealthCheck>().ConfigurePrimaryHttpMessageHandler(() => new StubApiHandler());
 
-            // Without Azure AD configuration Program.cs registers only the cookie scheme, so /admin/logout
-            // would fail looking up the OpenIdConnect sign-out handler.
+            // Register a recording OIDC scheme so tests can verify federated sign-out without Azure AD.
             services.AddAuthentication().AddScheme<AuthenticationSchemeOptions, RecordingOidcHandler>("OpenIdConnect", _ => { });
         });
     }
