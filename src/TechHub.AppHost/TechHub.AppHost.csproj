@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" />
+    <!-- Override Aspire's transitive dependency until it includes the fix for GHSA-qhrr-8q5h-9q3h. -->
+    <PackageReference Include="MessagePack" />
     <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
     <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
     <PackageReference Include="YamlDotNet" />
