@@ -46,7 +46,7 @@
         // Only match hash-only links, not full URLs with hashes
         return System.Text.RegularExpressions.Regex.Replace(
             html,
-            @"href=([""'])(#[^""']+)\1",
+            @"href=([""'])(#(?:(?!\1)[\s\S])+)\1",
             match => $@"href={match.Groups[1].Value}{encodedPathWithQuery}{match.Groups[2].Value}{match.Groups[1].Value}"
         );
     }
