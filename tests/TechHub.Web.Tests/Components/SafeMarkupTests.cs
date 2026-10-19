@@ -26,6 +26,50 @@ public class SafeMarkupTests : BunitContext
     }
 
     [Fact]
+    public void Render_SingleQuotedHashLink_IsRewrittenToCurrentPathPlusHash()
+    {
+        // Arrange
+        NavigateTo("/github-copilot/blogs/my-post");
+
+        // Act
+        var cut = RenderHtml("""<a href='#section-1'>Jump</a>""");
+
+        // Assert
+        cut.Find("a").GetAttribute("href").Should().Be("/github-copilot/blogs/my-post#section-1");
+    }
+
+    [Theory]
+    [InlineData("<a href=\"#what's-new\">Jump</a>", "#what's-new")]
+    [InlineData("<a href='#say-\"hello\"'>Jump</a>", "#say-\"hello\"")]
+    public void Render_HashLinkContainingOppositeQuote_IsRewritten(string html, string fragment)
+    {
+        // Arrange
+        NavigateTo("/docs");
+
+        // Act
+        var cut = RenderHtml(html);
+
+        // Assert
+        cut.Find("a").GetAttribute("href").Should().Be($"/docs{fragment}");
+    }
+
+    [Fact]
+    public void Render_MixedQuotedLinks_PreservesAttributeBoundaries()
+    {
+        // Arrange
+        NavigateTo("/docs");
+
+        // Act
+        var cut = RenderHtml("<a href=\"#what's-new\" title=\"First\">1</a><a href='#say-\"hello\"' title='Second'>2</a>");
+
+        // Assert
+        cut.FindAll("a").Select(a => a.GetAttribute("href"))
+            .Should().Equal("/docs#what's-new", "/docs#say-\"hello\"");
+        cut.FindAll("a").Select(a => a.GetAttribute("title"))
+            .Should().Equal("First", "Second");
+    }
+
+    [Fact]
     public void Render_HashLinkOnPageWithQuery_PreservesQueryString()
     {
         // Arrange
@@ -35,6 +79,20 @@ public class SafeMarkupTests : BunitContext
         var cut = RenderHtml("""<a href="#top">Top</a>""");
 
         // Assert
+        cut.Find("a").GetAttribute("href").Should().Be("/ai/news?tags=azure&page=2#top");
+    }
+
+    [Fact]
+    public void Render_HashLinkOnPageWithQuery_HtmlEncodesQueryStringInMarkup()
+    {
+        // Arrange
+        NavigateTo("/ai/news?tags=azure&page=2");
+
+        // Act
+        var cut = RenderHtml("""<a href="#top">Top</a>""");
+
+        // Assert
+        cut.Markup.Should().Contain("href=\"/ai/news?tags=azure&amp;page=2#top\"");
         cut.Find("a").GetAttribute("href").Should().Be("/ai/news?tags=azure&page=2#top");
     }
 
