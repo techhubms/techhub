@@ -29,10 +29,6 @@ Describe "Deploy-PrPreview" {
         $cli = New-CliFake
 
         Mock Start-Sleep { }
-        Mock Start-Job { [pscustomobject]@{ Id = 1 } }
-        Mock Stop-Job { }
-        Mock Receive-Job { 'container log line' }
-        Mock Remove-Job { }
         Mock az { Invoke-CliFake -Fake $cli -Command 'az' -Arguments $args }
         Mock gh { Invoke-CliFake -Fake $cli -Command 'gh' -Arguments $args }
 
@@ -43,6 +39,8 @@ Describe "Deploy-PrPreview" {
         Add-CliRule $cli 'az' '^az identity show --name id-techhub-pr' 'principal-1234'
         Add-CliRule $cli 'az' '^az postgres flexible-server microsoft-entra-admin list' '[]'
         Add-CliRule $cli 'az' '^az deployment group create' $bicepOutput
+        Add-CliRule $cli 'az' '^az webapp show -n ' '{"id":"/subs/x/sites/preview","state":"Running","defaultHostName":"preview.azurewebsites.net","linuxFxVersion":"DOCKER|ghcr.io/owner/image:t1"}'
+        Add-CliRule $cli 'az' '^az monitor activity-log list' '[]'
     }
 
     AfterEach {
@@ -376,13 +374,36 @@ Describe "Deploy-PrPreview" {
             (Start-PrPreview @{ PrNumber = 42; Action = 'deploy'; Tag = 't1' }).ExitCode | Should -Be 1
         }
 
-        It "Dumps diagnostics for both sites and exits 1 when the version gate fails" {
+        It "Dumps ARM diagnostics without contacting SCM and exits 1 when the version gate fails" {
             $result = Start-PrPreview @{ PrNumber = 42; Action = 'deploy'; Tag = 't1' } -WaitExitCode 1
 
             $result.ExitCode | Should -Be 1
             @(Get-CliCalls $cli '^az webapp show -n app-techhub-web-pr-42') | Should -HaveCount 1
             @(Get-CliCalls $cli '^az webapp show -n app-techhub-api-pr-42') | Should -HaveCount 1
-            Should -Invoke Start-Job -Times 2 -Exactly
+            @(Get-CliCalls $cli '^az monitor activity-log list --resource-id /subs/x/sites/preview --offset 1h') | Should -HaveCount 2
+            @(Get-CliCalls $cli '^az webapp log') | Should -BeNullOrEmpty
+            $result.Output | Should -Match 'SCM access is denied'
+        }
+
+        It "Reports diagnostic failures without masking the failed version gate" {
+            Add-CliRule $cli 'az' '^az monitor activity-log list' 'activity log unavailable' -ExitCode 1 -First
+
+            $result = Start-PrPreview @{ PrNumber = 42; Action = 'deploy'; Tag = 't1' } -WaitExitCode 1
+
+            $result.ExitCode | Should -Be 1
+            $result.Output | Should -Match 'Could not fetch activity log'
+            @(Get-CliCalls $cli '^az webapp show -n ') | Should -HaveCount 2
+        }
+
+        It "Reports site status failures without contacting SCM or masking the failed version gate" {
+            Add-CliRule $cli 'az' '^az webapp show -n ' 'site status unavailable' -ExitCode 1 -First
+
+            $result = Start-PrPreview @{ PrNumber = 42; Action = 'deploy'; Tag = 't1' } -WaitExitCode 1
+
+            $result.ExitCode | Should -Be 1
+            $result.Output | Should -Match 'Could not fetch site status'
+            @(Get-CliCalls $cli '^az monitor activity-log list') | Should -BeNullOrEmpty
+            @(Get-CliCalls $cli '^az webapp log') | Should -BeNullOrEmpty
         }
 
         It "Never touches production app names" {

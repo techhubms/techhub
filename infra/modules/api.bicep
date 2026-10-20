@@ -233,6 +233,10 @@ resource api 'Microsoft.Web/sites@2023-12-01' = {
       http20Enabled: true
       minTlsVersion: '1.2'
       ftpsState: 'Disabled'
+      // Container deployments use ARM, not SCM/Kudu.
+      scmIpSecurityRestrictionsUseMain: false
+      scmIpSecurityRestrictions: []
+      scmIpSecurityRestrictionsDefaultAction: 'Deny'
       cors: {
         allowedOrigins: corsOrigins
         supportCredentials: false
@@ -261,6 +265,28 @@ resource vnetIntegration 'Microsoft.Web/sites/networkConfig@2023-12-01' = {
     subnetResourceId: vnetIntegrationSubnetId
     swiftSupported: true
   }
+}
+
+resource scmPublishingPolicy 'Microsoft.Web/sites/basicPublishingCredentialsPolicies@2023-12-01' = {
+  parent: api
+  name: 'scm'
+  properties: {
+    allow: false
+  }
+  dependsOn: [
+    vnetIntegration
+  ]
+}
+
+resource ftpPublishingPolicy 'Microsoft.Web/sites/basicPublishingCredentialsPolicies@2023-12-01' = {
+  parent: api
+  name: 'ftp'
+  properties: {
+    allow: false
+  }
+  dependsOn: [
+    scmPublishingPolicy
+  ]
 }
 
 output fqdn string = api.properties.defaultHostName

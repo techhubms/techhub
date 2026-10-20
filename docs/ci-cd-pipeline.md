@@ -6,6 +6,13 @@ Tech Hub uses GitHub Actions for continuous integration (CI) and continuous depl
 
 All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infrastructure.ps1` and `scripts/Deploy-Application.ps1`) that can be run both locally and from GitHub Actions workflows.
 
+Production and PR-preview deployments authenticate with OIDC and use Azure Resource Manager
+to provision sites or update container images. They do not use SCM/Kudu uploads or publishing
+credentials. SCM access is denied and basic publishing authentication is disabled on both
+apps. PR-preview failure diagnostics use site state and recent management activity instead
+of SCM container log streaming. See [App Service publishing and diagnostics](network-architecture.md#app-service-publishing-and-diagnostics)
+for the operational trade-offs.
+
 ## Workflows
 
 The pipeline is split into two separate workflows to keep the GitHub Actions overview clean:
