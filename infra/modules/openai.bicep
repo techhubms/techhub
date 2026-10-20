@@ -5,19 +5,37 @@ param openAiName string
 @allowed(['S0'])
 param sku string = 'S0'
 
-@description('GPT model deployment name')
-param deploymentName string = 'gpt-5.2'
-
-@description('GPT model name')
-param modelName string = 'gpt-5.2'
-
-@description('GPT model version')
-param modelVersion string = '2025-12-11'
-
-@description('Model capacity (TPM in thousands)')
-@minValue(1)
-@maxValue(1000)
-param modelCapacity int = 100
+@description('Model deployments on the account. capacity is in thousands of tokens per minute (TPM). The first entry is reported as the primary deployment output.')
+param modelDeployments array = [
+  {
+    // Previous single-model pipeline; kept as the rollback target for the three-model pipeline (issue #581).
+    name: 'gpt-5.2'
+    model: 'gpt-5.2'
+    version: '2025-12-11'
+    capacity: 200
+  }
+  {
+    // Step 1: classification (structured JSON).
+    name: 'gpt-6-luna'
+    model: 'gpt-6-luna'
+    version: '2026-09-22'
+    capacity: 200
+  }
+  {
+    // Step 2: article rewrite, and roundup metadata.
+    name: 'gpt-6.1-sol'
+    model: 'gpt-6.1-sol'
+    version: '2026-09-29'
+    capacity: 200
+  }
+  {
+    // Step 3: weekly roundup writer.
+    name: 'gpt-6-astra'
+    model: 'gpt-6-astra'
+    version: '2026-09-03'
+    capacity: 100
+  }
+]
 
 @description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
 param adminIpAddresses string[] = []
@@ -69,8 +87,8 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
 
 // Private endpoint — gives App Service sites a private IP path to AI Foundry, removing the need
 // for the fully-open public endpoint that previously had no IP restriction at all.
-// Explicitly depends on raiPolicy and modelDeployment (not just openAiAccount): creating either
-// of those child resources briefly flips the account's provisioningState back to "Accepted"
+// Explicitly depends on raiPolicy and every model deployment (not just openAiAccount): creating
+// any of those child resources briefly flips the account's provisioningState back to "Accepted"
 // while it applies, and without this dependsOn Bicep deploys the private endpoint in parallel,
 // intermittently hitting that window and failing with AccountProvisioningStateInvalid
 // ("...in state Accepted") — seen in prod deployments on 2026-08-06.
@@ -169,24 +187,26 @@ resource raiPolicy 'Microsoft.CognitiveServices/accounts/raiPolicies@2025-06-01'
   }
 }
 
-// GPT Model Deployment
-resource modelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' = {
+// GPT model deployments. Deployed one at a time: parallel writes on a single account conflict
+// (the account is locked while each deployment applies).
+@batchSize(1)
+resource modelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' = [for deployment in modelDeployments: {
   parent: openAiAccount
-  name: deploymentName
+  name: deployment.name
   sku: {
     name: 'GlobalStandard'
-    capacity: modelCapacity
+    capacity: deployment.capacity
   }
   properties: {
     model: {
       format: 'OpenAI'
-      name: modelName
-      version: modelVersion
+      name: deployment.model
+      version: deployment.version
     }
     versionUpgradeOption: 'OnceNewDefaultVersionAvailable'
     raiPolicyName: raiPolicy.name
   }
-}
+}]
 
 // Note: Defender for AI settings are managed by Azure Policy / portal.
 // Explicitly deploying defenderForAISettings via ARM causes validation errors (715-123420).
@@ -195,4 +215,5 @@ resource modelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-
 output openAiName string = openAiAccount.name
 output openAiEndpoint string = openAiAccount.properties.endpoint
 output openAiId string = openAiAccount.id
-output deploymentName string = modelDeployment.name
+output deploymentName string = modelDeployments[0].name
+output deploymentNames string[] = [for deployment in modelDeployments: deployment.name]
