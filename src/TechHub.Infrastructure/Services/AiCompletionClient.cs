@@ -58,7 +58,7 @@ public sealed class AiCompletionClient : IAiCompletionClient
         using var request = new HttpRequestMessage(
             HttpMethod.Post,
             string.Create(CultureInfo.InvariantCulture,
-                $"{_options.Endpoint.TrimEnd('/')}/openai/deployments/{_options.DeploymentName}/chat/completions?api-version={_options.ApiVersion}"));
+                $"{_options.Endpoint.TrimEnd('/')}/openai/v1/chat/completions"));
 
         // Acquire a managed identity / user token for the Cognitive Services scope.
         // DefaultAzureCredential caches the token internally and refreshes it before expiry,

@@ -8,17 +8,11 @@ public class AiCategorizationOptions
     /// <summary>Configuration section name.</summary>
     public const string SectionName = "AiCategorization";
 
-    /// <summary>Azure OpenAI endpoint URL (e.g. https://oai-techhub-prod.openai.azure.com/).</summary>
+    /// <summary>Azure AI Foundry endpoint URL (e.g. https://oai-techhub-prod.openai.azure.com/).</summary>
     public string Endpoint { get; init; } = string.Empty;
 
-    /// <summary>Azure OpenAI deployment name (e.g. gpt-4.1).</summary>
-    public string DeploymentName { get; init; } = string.Empty;
-
-    /// <summary>Azure OpenAI REST API version (e.g. 2025-04-01-preview).</summary>
-    public string ApiVersion { get; init; } = string.Empty;
-
-    /// <summary>Maximum content length in characters sent to the AI model.</summary>
-    public int MaxContentLength { get; init; } = 200_000;
+    /// <summary>Model, reasoning effort and service tier per pipeline step.</summary>
+    public AiProfilesOptions Profiles { get; init; } = new();
 
     /// <summary>Delay in seconds between AI API calls to prevent rate limiting.</summary>
     public int RateLimitDelaySeconds { get; init; } = 15;

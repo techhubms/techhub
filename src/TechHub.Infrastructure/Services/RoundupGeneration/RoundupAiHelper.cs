@@ -15,19 +15,23 @@ internal sealed class RoundupAiHelper
 {
     private readonly IAiCompletionClient _aiClient;
     private readonly RoundupGeneratorOptions _options;
+    private readonly AiProfilesOptions _profiles;
     private readonly ILogger<RoundupAiHelper> _logger;
 
     public RoundupAiHelper(
         IAiCompletionClient aiClient,
         RoundupGeneratorOptions options,
+        AiCategorizationOptions aiOptions,
         ILogger<RoundupAiHelper> logger)
     {
         ArgumentNullException.ThrowIfNull(aiClient);
         ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(aiOptions);
         ArgumentNullException.ThrowIfNull(logger);
 
         _aiClient = aiClient;
         _options = options;
+        _profiles = aiOptions.Profiles;
         _logger = logger;
     }
 
@@ -57,19 +61,10 @@ internal sealed class RoundupAiHelper
         string systemMessage,
         string userMessage,
         string stepName,
+        AiProfile profile,
         CancellationToken ct)
     {
-        var requestBody = new
-        {
-            messages = new[]
-            {
-                new { role = "system", content = systemMessage },
-                new { role = "user", content = userMessage }
-            },
-            max_completion_tokens = 8000
-        };
-
-        var json = JsonSerializer.Serialize(requestBody, JsonOptions);
+        var json = AiRequestBodyBuilder.Build(_profiles.Get(profile), systemMessage, userMessage, 8000);
 
         for (var attempt = 0; attempt < _options.MaxRetries; attempt++)
         {

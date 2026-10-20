@@ -19,6 +19,8 @@ public static class RoundupGenerationExtensions
         // Unwrapped options for internal step classes
         services.AddScoped(sp =>
             sp.GetRequiredService<Microsoft.Extensions.Options.IOptions<RoundupGeneratorOptions>>().Value);
+        services.AddScoped(sp =>
+            sp.GetRequiredService<Microsoft.Extensions.Options.IOptions<AiCategorizationOptions>>().Value);
 
         // Internal step classes
         services.AddScoped<RoundupAiHelper>();

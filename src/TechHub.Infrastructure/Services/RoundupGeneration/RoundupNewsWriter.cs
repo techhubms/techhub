@@ -69,7 +69,7 @@ internal sealed class RoundupNewsWriter
             var userMessage = string.Create(CultureInfo.InvariantCulture,
                 $"ARTICLE ANALYSIS RESULTS FOR {displayName} SECTION TO TRANSFORM INTO NEWS-STYLE CONTENT:\n\n{sectionInput}");
 
-            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 1 - " + displayName, ct);
+            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 1 - " + displayName, AiProfile.RoundupNewsWriter, ct);
             if (response is not null)
             {
                 responses.Add(response);

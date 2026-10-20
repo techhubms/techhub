@@ -59,7 +59,7 @@ internal sealed class RoundupMetadataGenerator
 
         for (var attempt = 0; attempt < _options.MaxRetries; attempt++)
         {
-            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 4", ct);
+            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 4", AiProfile.RoundupMetadata, ct);
 
             if (response is not null)
             {

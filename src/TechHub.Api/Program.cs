@@ -213,14 +213,15 @@ builder.Services.AddHttpClient<IYouTubeTagClient, YouTubeTagClient>()
 builder.Services.AddHttpClient<IAiCompletionClient, AiCompletionClient>()
     .ConfigureHttpClient(client =>
     {
-        client.Timeout = TimeSpan.FromSeconds(120);
+        // Flex requests can queue for minutes before they are served, so the HTTP timeout is generous.
+        client.Timeout = TimeSpan.FromMinutes(15);
     })
     .AddStandardResilienceHandler(options =>
     {
         // No Polly-level retries — AiCategorizationService handles retries with rate limit awareness
-        options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(120);
-        options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(120);
-        options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(240);
+        options.TotalRequestTimeout.Timeout = TimeSpan.FromMinutes(15);
+        options.AttemptTimeout.Timeout = TimeSpan.FromMinutes(15);
+        options.CircuitBreaker.SamplingDuration = TimeSpan.FromMinutes(30);
         options.Retry.MaxRetryAttempts = 1;
         options.Retry.ShouldHandle = _ => ValueTask.FromResult(false);
     });

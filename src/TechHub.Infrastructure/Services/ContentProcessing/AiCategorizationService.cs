@@ -3,7 +3,6 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -24,12 +23,6 @@ public sealed class AiCategorizationService : IAiCategorizationService
     private readonly ILogger<AiCategorizationService> _logger;
 
     private static readonly string _systemMessage = LoadSystemMessage();
-
-    private static readonly JsonSerializerOptions _jsonOptions = new()
-    {
-        PropertyNameCaseInsensitive = true,
-        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-    };
 
     /// <summary>
     /// Valid section names that map to database boolean columns and bitmask positions.
@@ -71,18 +64,11 @@ public sealed class AiCategorizationService : IAiCategorizationService
         var estimatedPromptTokens = (_systemMessage.Length + userContent.Length) / 4;
         var completionTokens = Math.Max(2000, estimatedPromptTokens / 2);
 
-        var requestBody = new
-        {
-            messages = new[]
-            {
-                new { role = "system", content = _systemMessage },
-                new { role = "user", content = userContent }
-            },
-            temperature = 0.1,
-            max_completion_tokens = completionTokens
-        };
-
-        var json = JsonSerializer.Serialize(requestBody, _jsonOptions);
+        var json = AiRequestBodyBuilder.Build(
+            _options.Profiles.Classification,
+            _systemMessage,
+            userContent,
+            completionTokens);
         var attempt = 0;
 
         while (attempt < _options.MaxRetries)

@@ -19,13 +19,28 @@ public class AiCategorizationServiceTests
 {
     private readonly Mock<IAiCompletionClient> _aiClient = new();
 
+    private static readonly AiProfilesOptions _testProfiles = new()
+    {
+        Classification = new AiProfileOptions { DeploymentName = "test-classification" },
+        Rewrite = new AiProfileOptions { DeploymentName = "test-rewrite" },
+        RoundupNewsWriter = new AiProfileOptions { DeploymentName = "test-roundup-writer" },
+        RoundupMetadata = new AiProfileOptions { DeploymentName = "test-roundup-metadata" }
+    };
+
     private AiCategorizationService CreateSut(AiCategorizationOptions? opts = null)
     {
-        var options = opts ?? new AiCategorizationOptions
+        var source = opts ?? new AiCategorizationOptions
         {
             MaxRetries = 1,
-            RateLimitDelaySeconds = 0,
-            MaxContentLength = 200_000
+            RateLimitDelaySeconds = 0
+        };
+
+        var options = new AiCategorizationOptions
+        {
+            Endpoint = source.Endpoint,
+            MaxRetries = source.MaxRetries,
+            RateLimitDelaySeconds = source.RateLimitDelaySeconds,
+            Profiles = _testProfiles
         };
 
         return new AiCategorizationService(

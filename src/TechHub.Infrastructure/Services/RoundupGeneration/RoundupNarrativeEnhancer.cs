@@ -70,7 +70,7 @@ internal sealed class RoundupNarrativeEnhancer
             $"PREVIOUS WEEK'S {displayName} SECTION:\n{previousRoundupContent}\n\n---\n\n" +
             $"CURRENT WEEK'S {displayName} SECTION CONTENT TO ENHANCE:\n{step3Content}";
 
-        var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 2 - " + displayName, ct);
+        var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 2 - " + displayName, AiProfile.RoundupNewsWriter, ct);
 
         await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds), ct);
 

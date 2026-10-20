@@ -88,6 +88,14 @@ public class RoundupGeneratorServiceTests
         var aiHelper = new RoundupAiHelper(
             _aiClient.Object,
             options,
+            new AiCategorizationOptions
+            {
+                Profiles = new AiProfilesOptions
+                {
+                    RoundupNewsWriter = new AiProfileOptions { DeploymentName = "test-roundup-writer" },
+                    RoundupMetadata = new AiProfileOptions { DeploymentName = "test-roundup-metadata" }
+                }
+            },
             NullLogger<RoundupAiHelper>.Instance);
 
         var newsWriter = new RoundupNewsWriter(

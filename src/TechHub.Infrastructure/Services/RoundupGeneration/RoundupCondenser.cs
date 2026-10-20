@@ -38,7 +38,7 @@ internal sealed class RoundupCondenser
 
         var userMessage = $"WELL-ORGANIZED ROUNDUP CONTENT TO CONDENSE:\n\n{content}";
 
-        var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 3", ct);
+        var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 3", AiProfile.RoundupNewsWriter, ct);
 
         if (response is null)
         {
