@@ -19,4 +19,16 @@ public class AiCategorizationOptions
 
     /// <summary>Maximum number of retries on transient failures.</summary>
     public int MaxRetries { get; init; } = 3;
+
+    /// <summary>How long a Flex request keeps retrying on Flex while capacity is unavailable (429).</summary>
+    public TimeSpan FlexMaxWait { get; init; } = TimeSpan.FromMinutes(30);
+
+    /// <summary>Shortest wait between Flex retries; also the base of the exponential backoff when no Retry-After is given.</summary>
+    public TimeSpan FlexMinRetryDelay { get; init; } = TimeSpan.FromSeconds(30);
+
+    /// <summary>Longest wait between Flex retries.</summary>
+    public TimeSpan FlexMaxRetryDelay { get; init; } = TimeSpan.FromMinutes(2);
+
+    /// <summary>Whether a Flex request that is still rate limited after <see cref="FlexMaxWait"/> is sent once more on the Standard tier.</summary>
+    public bool FlexFallbackToDefaultTier { get; init; } = true;
 }

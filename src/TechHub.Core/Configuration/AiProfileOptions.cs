@@ -35,9 +35,6 @@ public sealed class AiProfileOptions
     /// <summary>Service tier: <c>default</c> (Standard) or <c>flex</c>.</summary>
     public string ServiceTier { get; init; } = "default";
 
-    /// <summary>Whether a request that cannot get Flex capacity is retried on the Standard tier.</summary>
-    public bool FallbackToDefaultTier { get; init; } = true;
-
     /// <summary>Gets a value indicating whether this profile runs on the Flex tier.</summary>
     public bool IsFlex => string.Equals(ServiceTier, FlexTier, StringComparison.OrdinalIgnoreCase);
 }

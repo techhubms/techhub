@@ -1,8 +1,10 @@
+using System.Diagnostics;
 using System.Globalization;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using Azure.Core;
 using Azure.Identity;
 using Microsoft.Extensions.Logging;
@@ -54,6 +56,88 @@ public sealed class AiCompletionClient : IAiCompletionClient
 
     /// <inheritdoc />
     public async Task<AiCompletionResult> SendCompletionAsync(string jsonBody, CancellationToken ct = default)
+    {
+        if (!IsFlexRequest(jsonBody))
+        {
+            return await SendOnceAsync(jsonBody, ct);
+        }
+
+        // Flex has no guaranteed capacity: a 429 means "no capacity right now", not "slow down".
+        // Keep trying on Flex (it is half the price) and only pay the Standard price when it stays unavailable.
+        var started = Stopwatch.GetTimestamp();
+        var attempt = 0;
+
+        while (true)
+        {
+            var result = await SendOnceAsync(jsonBody, ct);
+            if (!result.IsRateLimited)
+            {
+                return result;
+            }
+
+            var delay = GetFlexRetryDelay(result.RetryAfterSeconds, attempt++);
+            var elapsed = Stopwatch.GetElapsedTime(started);
+            if (elapsed + delay > _options.FlexMaxWait)
+            {
+                break;
+            }
+
+            _logger.LogInformation("AI Flex capacity unavailable, retrying on Flex in {Delay}s (waited {Elapsed}s so far)",
+                (int)delay.TotalSeconds, (int)elapsed.TotalSeconds);
+            await Task.Delay(delay, ct);
+        }
+
+        if (!_options.FlexFallbackToDefaultTier)
+        {
+            _logger.LogWarning("AI Flex capacity still unavailable after {Wait}s, giving up (fallback to Standard is disabled)",
+                (int)_options.FlexMaxWait.TotalSeconds);
+            return new AiCompletionResult(IsRateLimited: true, ResponseBody: null);
+        }
+
+        _logger.LogWarning("AI Flex capacity still unavailable after {Wait}s, falling back to the Standard tier",
+            (int)_options.FlexMaxWait.TotalSeconds);
+        return await SendOnceAsync(RemoveServiceTier(jsonBody), ct);
+    }
+
+    private TimeSpan GetFlexRetryDelay(int? retryAfterSeconds, int attempt)
+    {
+        var delay = retryAfterSeconds.HasValue
+            ? TimeSpan.FromSeconds(retryAfterSeconds.Value)
+            : TimeSpan.FromTicks(_options.FlexMinRetryDelay.Ticks * (1L << Math.Min(attempt, 10)));
+
+        if (delay < _options.FlexMinRetryDelay)
+        {
+            return _options.FlexMinRetryDelay;
+        }
+
+        return delay > _options.FlexMaxRetryDelay ? _options.FlexMaxRetryDelay : delay;
+    }
+
+    private static bool IsFlexRequest(string jsonBody)
+    {
+        try
+        {
+            return JsonNode.Parse(jsonBody) is JsonObject body
+                && string.Equals(body["service_tier"]?.GetValue<string>(), AiProfileOptions.FlexTier, StringComparison.OrdinalIgnoreCase);
+        }
+        catch (JsonException)
+        {
+            return false;
+        }
+        catch (InvalidOperationException)
+        {
+            return false;
+        }
+    }
+
+    private static string RemoveServiceTier(string jsonBody)
+    {
+        var body = JsonNode.Parse(jsonBody)!.AsObject();
+        body.Remove("service_tier");
+        return body.ToJsonString();
+    }
+
+    private async Task<AiCompletionResult> SendOnceAsync(string jsonBody, CancellationToken ct)
     {
         using var request = new HttpRequestMessage(
             HttpMethod.Post,
@@ -110,7 +194,42 @@ public sealed class AiCompletionClient : IAiCompletionClient
 
         response.EnsureSuccessStatusCode();
         var responseJson = await response.Content.ReadAsStringAsync(ct);
+        LogUsage(jsonBody, responseJson);
         return new AiCompletionResult(IsRateLimited: false, ResponseBody: responseJson);
+    }
+
+    /// <summary>
+    /// Logs token usage and the tier that actually served the call, so the real cost of each step can be checked.
+    /// Never throws: a response without usage information is simply not logged.
+    /// </summary>
+    private void LogUsage(string requestJson, string responseJson)
+    {
+        try
+        {
+            var request = JsonNode.Parse(requestJson) as JsonObject;
+            if (JsonNode.Parse(responseJson) is not JsonObject response || response["usage"] is not JsonObject usage)
+            {
+                return;
+            }
+
+            _logger.LogInformation(
+                "AI usage: model {Model}, requested tier {RequestedTier}, served tier {ServedTier}, prompt {PromptTokens} tokens (cached {CachedTokens}), completion {CompletionTokens} tokens (reasoning {ReasoningTokens})",
+                response["model"]?.GetValue<string>() ?? request?["model"]?.GetValue<string>() ?? "unknown",
+                request?["service_tier"]?.GetValue<string>() ?? "default",
+                response["service_tier"]?.GetValue<string>() ?? "unknown",
+                usage["prompt_tokens"]?.GetValue<int>() ?? 0,
+                (usage["prompt_tokens_details"] as JsonObject)?["cached_tokens"]?.GetValue<int>() ?? 0,
+                usage["completion_tokens"]?.GetValue<int>() ?? 0,
+                (usage["completion_tokens_details"] as JsonObject)?["reasoning_tokens"]?.GetValue<int>() ?? 0);
+        }
+        catch (JsonException)
+        {
+            // Usage logging is best-effort; the caller reports malformed responses.
+        }
+        catch (InvalidOperationException)
+        {
+            // Same: unexpected usage shape must not fail the call.
+        }
     }
 
     /// <summary>
