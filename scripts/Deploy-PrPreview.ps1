@@ -169,43 +169,45 @@ function Get-AppServicePlanSiteCount {
 function Write-WebAppDiagnostics {
     <#
     .SYNOPSIS
-        Dumps the current site state and a short tail of container logs for an App Service site.
-        Used when warmup fails to help triage image-pull errors, crash loops, or startup failures.
+        Dumps site state and recent ARM activity without accessing the blocked SCM endpoint.
     #>
     param([string]$AppName, [string]$ResourceGroup)
 
     try {
-        $site = az webapp show -n $AppName -g $ResourceGroup `
-            --query "{state:state, defaultHostName:defaultHostName, linuxFxVersion:siteConfig.linuxFxVersion}" `
-            -o json 2>$null | ConvertFrom-Json -ErrorAction SilentlyContinue
-        if ($site) {
-            Write-Host ""
-            Write-Host "Site status for ${AppName}:" -ForegroundColor Yellow
-            Write-Host "  State           : $($site.state)" -ForegroundColor Gray
-            Write-Host "  Image           : $($site.linuxFxVersion)" -ForegroundColor Gray
-            Write-Host "  Default host    : $($site.defaultHostName)" -ForegroundColor Gray
+        $siteJson = az webapp show -n $AppName -g $ResourceGroup `
+            --query "{id:id, state:state, defaultHostName:defaultHostName, linuxFxVersion:siteConfig.linuxFxVersion}" `
+            -o json
+        if ($LASTEXITCODE -ne 0) {
+            throw "Azure CLI exited with code $LASTEXITCODE."
         }
+        $site = $siteJson | ConvertFrom-Json
+        if (-not $site -or [string]::IsNullOrWhiteSpace($site.id)) {
+            throw "Azure CLI returned no site resource ID."
+        }
+        Write-Host ""
+        Write-Host "Site status for ${AppName}:" -ForegroundColor Yellow
+        Write-Host "  State           : $($site.state)" -ForegroundColor Gray
+        Write-Host "  Image           : $($site.linuxFxVersion)" -ForegroundColor Gray
+        Write-Host "  Default host    : $($site.defaultHostName)" -ForegroundColor Gray
     }
     catch {
-        Write-Detail "Could not fetch site status for ${AppName}: $_"
+        Write-Warn "Could not fetch site status for ${AppName}: $_"
+        return
     }
 
     try {
         Write-Host ""
-        Write-Host "Recent container logs for ${AppName} (10s tail):" -ForegroundColor Yellow
-        # `az webapp log tail` streams indefinitely, so run it as a background job and
-        # capture a short window of output rather than blocking the pipeline.
-        $logJob = Start-Job -ScriptBlock {
-            param($n, $g)
-            az webapp log tail --name $n --resource-group $g 2>&1
-        } -ArgumentList $AppName, $ResourceGroup
-        Start-Sleep -Seconds 10
-        Stop-Job $logJob -ErrorAction SilentlyContinue | Out-Null
-        Receive-Job $logJob | ForEach-Object { Write-Host $_ }
-        Remove-Job $logJob -Force -ErrorAction SilentlyContinue
+        Write-Host "Recent management activity for ${AppName} (last hour):" -ForegroundColor Yellow
+        Write-Detail "SCM access is denied; container log streaming, SSH, and Kudu console are unavailable."
+        az monitor activity-log list --resource-id $site.id --offset 1h `
+            --query "[].{time:eventTimestamp, operation:operationName.localizedValue, status:status.localizedValue, details:properties}" `
+            -o json
+        if ($LASTEXITCODE -ne 0) {
+            throw "Azure CLI exited with code $LASTEXITCODE."
+        }
     }
     catch {
-        Write-Detail "Could not fetch container logs for ${AppName}: $_"
+        Write-Warn "Could not fetch activity log for ${AppName}: $_"
     }
 }
 

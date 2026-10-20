@@ -173,6 +173,10 @@ resource web 'Microsoft.Web/sites@2023-12-01' = {
       http20Enabled: true
       minTlsVersion: '1.2'
       ftpsState: 'Disabled'
+      // SCM must not inherit the public-facing Web app's ingress rules.
+      scmIpSecurityRestrictionsUseMain: false
+      scmIpSecurityRestrictions: []
+      scmIpSecurityRestrictionsDefaultAction: 'Deny'
       // WebSockets are required for Blazor InteractiveServer's SignalR circuit; supported on
       // Linux App Service from the Basic tier up.
       webSocketsEnabled: true
@@ -193,10 +197,32 @@ resource vnetIntegration 'Microsoft.Web/sites/networkConfig@2023-12-01' = {
   }
 }
 
+resource scmPublishingPolicy 'Microsoft.Web/sites/basicPublishingCredentialsPolicies@2023-12-01' = {
+  parent: web
+  name: 'scm'
+  properties: {
+    allow: false
+  }
+  dependsOn: [
+    vnetIntegration
+  ]
+}
+
+resource ftpPublishingPolicy 'Microsoft.Web/sites/basicPublishingCredentialsPolicies@2023-12-01' = {
+  parent: web
+  name: 'ftp'
+  properties: {
+    allow: false
+  }
+  dependsOn: [
+    scmPublishingPolicy
+  ]
+}
+
 // Wildcard custom domain bindings (e.g. *.hub.ms, *.xebia.ms), SNI-bound to the matching
 // certificate imported from Key Vault. The domain's DNS (CNAME/TXT verification) must already
 // point at this app's default hostname before these bindings will succeed.
-// batchSize(1) + explicit dependsOn on vnetIntegration serialize all writes to the site:
+// batchSize(1) + explicit dependsOn on ftpPublishingPolicy serialize all writes to the site:
 // without this, ARM fires the networkConfig update and the hostNameBindings updates (and each
 // binding against the next) concurrently, and App Service rejects the overlapping ones with
 // "Cannot modify this site because another operation is in progress" (Code: Conflict) — a
@@ -211,7 +237,7 @@ resource hostNameBindings 'Microsoft.Web/sites/hostNameBindings@2023-12-01' = [f
     hostNameType: 'Verified'
   }
   dependsOn: [
-    vnetIntegration
+    ftpPublishingPolicy
   ]
 }]
 

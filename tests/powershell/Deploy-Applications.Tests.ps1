@@ -57,6 +57,40 @@ Describe "Deploy-Applications" {
         foreach ($root in $sandboxes) { Remove-ScriptSandbox $root }
     }
 
+    Context "Bicep publishing access" {
+        It "Denies all SCM traffic independently of application ingress for <Module>" -ForEach @(
+            @{ Module = 'api' }
+            @{ Module = 'web' }
+        ) {
+            $template = Get-Content (Join-Path $PSScriptRoot "../../infra/modules/$Module.bicep") -Raw
+
+            $template | Should -Match "scmIpSecurityRestrictionsUseMain:\s*false"
+            $template | Should -Match "scmIpSecurityRestrictions:\s*\[\s*\]"
+            $template | Should -Match "scmIpSecurityRestrictionsDefaultAction:\s*'Deny'"
+            $template | Should -Match "ftpsState:\s*'Disabled'"
+        }
+
+        It "Disables both basic publishing policies for <Module>" -ForEach @(
+            @{ Module = 'api' }
+            @{ Module = 'web' }
+        ) {
+            $template = Get-Content (Join-Path $PSScriptRoot "../../infra/modules/$Module.bicep") -Raw
+
+            foreach ($policy in @('scm', 'ftp')) {
+                $template | Should -Match "resource \w+ 'Microsoft.Web/sites/basicPublishingCredentialsPolicies@2023-12-01' = \{\s+parent: $Module\s+name: '$policy'\s+properties: \{\s+allow: false"
+            }
+        }
+
+        It "Applies the same hardened modules to production and PR previews" {
+            foreach ($file in @('applications', 'pr-applications')) {
+                $template = Get-Content (Join-Path $PSScriptRoot "../../infra/$file.bicep") -Raw
+
+                $template | Should -Match "module apiApp './modules/api.bicep'"
+                $template | Should -Match "module webApp './modules/web.bicep'"
+            }
+        }
+    }
+
     Context "Parameters" {
         It "Defaults Mode to whatif and restricts it to validate, whatif and deploy" {
             $mode = Get-ScriptParameter $realScript 'Mode'

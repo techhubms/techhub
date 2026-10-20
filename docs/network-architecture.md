@@ -103,6 +103,23 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 | Log Analytics | Public ingestion + query enabled | RBAC-protected |
 | App Insights | Public ingestion + query enabled | RBAC-protected; browser JS SDK over public internet |
 
+### App Service Publishing and Diagnostics
+
+Both API and Web apps deny all SCM/Kudu traffic with rules independent of application ingress.
+This applies to production and PR previews. SCM and FTP basic publishing authentication are
+disabled, and FTP/FTPS is disabled. No additional private endpoints are provisioned.
+
+GitHub Actions uses OIDC-authenticated Azure Resource Manager deployments and container image
+updates, not Kudu uploads or publish profiles, so deployment does not require SCM access.
+The public Web endpoint and the API's subnet-restricted application endpoint are unchanged.
+
+Kudu console, App Service SSH, and SCM-based log streaming are unavailable, including from
+admin IPs. PR deployment failures report site state and recent management activity instead
+of container log streams. Management activity does not include container stdout or startup
+logs. Production application telemetry remains available through Application Insights and
+Log Analytics. Diagnostic access requiring SCM needs a deliberate, temporary access-rule
+change that is removed afterwards.
+
 ## Key Vault
 
 The production Key Vault (`kv-techhub-prod`) stores:
