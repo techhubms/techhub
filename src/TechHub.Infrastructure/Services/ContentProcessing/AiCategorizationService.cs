@@ -35,6 +35,8 @@ public sealed class AiCategorizationService : IAiCategorizationService
 
     private static readonly string _classifySystemMessage = LoadClassifySystemMessage();
     private static readonly string _rewriteSystemMessage = LoadResource("content-rewrite-system.md");
+    private static readonly string _timelineSystemMessage = LoadResource("content-timeline-extract-system.md")
+        .Replace("{{TIMELINE_RULES}}", LoadResource("content-timeline-rules.md").TrimEnd(), StringComparison.Ordinal);
 
     private static readonly HashSet<string> _validSections = new(ClassificationSchema.Sections, StringComparer.OrdinalIgnoreCase);
 
@@ -67,6 +69,56 @@ public sealed class AiCategorizationService : IAiCategorizationService
 
         var call = await SendWithRetryAsync(json, item, "Classification", ct);
         return call.Failure ?? ParseClassification(call.ResponseBody!, item);
+    }
+
+    /// <inheritdoc />
+    public async Task<TimelineExtractionResult> ExtractTimelineEventsAsync(RawFeedItem item, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(item);
+
+        var userMessage = BuildTimelineExtractionPrompt(item);
+        var json = AiRequestBodyBuilder.Build(
+            _options.Profiles.Classification,
+            _timelineSystemMessage,
+            userMessage,
+            ClassificationMaxCompletionTokens,
+            item.IsInteractive,
+            ClassificationSchema.BuildTimelineResponseFormat());
+
+        var call = await SendWithRetryAsync(json, item, "Timeline extraction", ct);
+        if (call.Failure is not null)
+        {
+            return new TimelineExtractionResult { IsFailure = true, Explanation = call.Failure.Explanation };
+        }
+
+        var choice = ReadChoice(call.ResponseBody!, item);
+        if (choice.Failure is not null)
+        {
+            return new TimelineExtractionResult { IsFailure = true, Explanation = choice.Failure.Explanation };
+        }
+
+        try
+        {
+            var jsonContent = ExtractJsonFromResponse(choice.Content!);
+            if (string.IsNullOrWhiteSpace(jsonContent))
+            {
+                return new TimelineExtractionResult { IsFailure = true, Explanation = "AI response did not contain valid JSON" };
+            }
+
+            using var doc = JsonDocument.Parse(JsonEscapeSanitizer.SanitizeJsonEscapes(jsonContent));
+            if (!doc.RootElement.TryGetProperty("timeline_events", out var eventsProp) || eventsProp.ValueKind != JsonValueKind.Array)
+            {
+                return new TimelineExtractionResult { IsFailure = true, Explanation = "AI response has no timeline_events array" };
+            }
+
+            var events = TimelineEventParser.Parse(eventsProp, TimelineEventParser.GetBrusselsDate(item.PublishedAt), _logger, item.ExternalUrl);
+            return new TimelineExtractionResult { Events = events };
+        }
+        catch (JsonException ex)
+        {
+            _logger.LogError(ex, "Failed to parse timeline extraction JSON for {Url}", item.ExternalUrl.Sanitize());
+            return new TimelineExtractionResult { IsFailure = true, Explanation = $"Failed to parse AI response: {ex.Message}" };
+        }
     }
 
     /// <inheritdoc />
@@ -544,6 +596,22 @@ public sealed class AiCategorizationService : IAiCategorizationService
         sb.AppendLine(CultureInfo.InvariantCulture, $"FALLBACK_AUTHOR: {item.FeedLevelAuthor}");
 
         AppendSourceContent(sb, item);
+        return sb.ToString();
+    }
+
+    internal static string BuildTimelineExtractionPrompt(RawFeedItem item)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("Please extract the timeline events from the following article.");
+        sb.AppendLine();
+        sb.AppendLine(CultureInfo.InvariantCulture, $"FEED: {item.FeedName}");
+        sb.AppendLine(CultureInfo.InvariantCulture, $"COLLECTION: {item.CollectionName}");
+        sb.AppendLine(CultureInfo.InvariantCulture, $"URL: {item.ExternalUrl}");
+        sb.AppendLine(CultureInfo.InvariantCulture, $"DATE: {item.PublishedAt.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}");
+        sb.AppendLine(CultureInfo.InvariantCulture, $"TITLE: {item.Title}");
+        sb.AppendLine();
+        sb.AppendLine("CONTENT:");
+        sb.AppendLine(item.FullContent);
         return sb.ToString();
     }
 

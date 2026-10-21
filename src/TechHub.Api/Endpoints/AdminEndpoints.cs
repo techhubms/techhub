@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc;
 using TechHub.Api.Services;
@@ -43,6 +44,10 @@ public static partial class AdminEndpoints
         group.MapPost("/content-fixer/trigger", TriggerContentFixerAsync)
             .WithName("TriggerContentFixer")
             .WithSummary("Trigger a bulk content fix run (tags, authors, markdown)");
+
+        group.MapPost("/timeline-backfill/trigger", TriggerTimelineBackfill)
+            .WithName("TriggerTimelineBackfill")
+            .WithSummary("Trigger a scan of stored articles for timeline events (preview, GA, deprecation, ...)");
 
         group.MapPost("/processing/cancel", CancelRunningJobAsync)
             .WithName("CancelRunningJob")
@@ -279,12 +284,52 @@ public static partial class AdminEndpoints
         return Results.Accepted(value: new { message = "Content fixer run triggered" });
     }
 
+    private static IResult TriggerTimelineBackfill(
+        TimelineBackfillBackgroundService backfillService,
+        TimelineBackfillRequestDto? request)
+    {
+        DateOnly? publishedAfter = null;
+        if (!string.IsNullOrWhiteSpace(request?.PublishedAfter))
+        {
+            if (!DateOnly.TryParseExact(request.PublishedAfter.Trim(), "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed))
+            {
+                return Results.BadRequest("PublishedAfter must be a date in the format yyyy-MM-dd.");
+            }
+
+            publishedAfter = parsed;
+        }
+
+        if (request?.Limit is <= 0)
+        {
+            return Results.BadRequest("Limit must be greater than zero.");
+        }
+
+        var collection = request?.Collection?.Trim().ToLowerInvariant();
+        if (!string.IsNullOrEmpty(collection) && !Regex.IsMatch(collection, "^[a-z0-9-]+$", RegexOptions.None, TimeSpan.FromSeconds(1)))
+        {
+            return Results.BadRequest("Collection may only contain lowercase letters, digits and hyphens.");
+        }
+
+        var queued = backfillService.TriggerImmediateRun(new TimelineBackfillRequest
+        {
+            Force = request?.Force ?? false,
+            PublishedAfter = publishedAfter,
+            Collection = string.IsNullOrEmpty(collection) ? null : collection,
+            Limit = request?.Limit
+        });
+
+        return queued
+            ? Results.Accepted(value: new { message = "Timeline backfill triggered" })
+            : Results.Conflict(new { message = "A timeline backfill is already queued" });
+    }
+
     private static IResult CancelRunningJobAsync(
         ContentProcessingBackgroundService backgroundService,
         RoundupGeneratorBackgroundService roundupService,
-        ContentFixerBackgroundService contentFixerService)
+        ContentFixerBackgroundService contentFixerService,
+        TimelineBackfillBackgroundService backfillService)
     {
-        var cancelled = backgroundService.CancelCurrentRun() | roundupService.CancelCurrentRun() | contentFixerService.CancelCurrentRun();
+        var cancelled = backgroundService.CancelCurrentRun() | roundupService.CancelCurrentRun() | contentFixerService.CancelCurrentRun() | backfillService.CancelCurrentRun();
         if (!cancelled)
         {
             return Results.Ok(new { message = "No running job to cancel" });

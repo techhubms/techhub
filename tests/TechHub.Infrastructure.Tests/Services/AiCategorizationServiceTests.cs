@@ -585,6 +585,111 @@ public class AiCategorizationServiceTests
         await act.Should().ThrowAsync<HttpRequestException>();
     }
 
+    // ── Timeline extraction (backfill) ────────────────────────────────────────
+
+    private const string ExplicitEventJson = """
+        {"kind":"retirement","product":"Azure OpenAI","feature":"v1 API","description":"Is retired",
+         "date_source":"explicit","date":"2026-06-01","date_precision":"day","quote":"retires on June 1"}
+        """;
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_ReturnsParsedEventsAndMakesOneCallWithoutRewrite()
+    {
+        SetupResponses(Wrap($$"""{"timeline_events":[{{ExplicitEventJson}}]}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeFalse();
+        var e = result.Events.Should().ContainSingle().Subject;
+        e.Kind.Should().Be("retirement");
+        e.Date.Should().Be(new DateOnly(2026, 6, 1));
+        _requests.Should().ContainSingle();
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_UsesClassificationProfileAndTimelineOnlySchema()
+    {
+        SetupResponses(Wrap("""{"timeline_events":[]}"""));
+
+        await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        var body = Parse(_requests[0]);
+        body.GetProperty("model").GetString().Should().Be(ClassifyDeployment);
+        var schema = body.GetProperty("response_format").GetProperty("json_schema");
+        schema.GetProperty("strict").GetBoolean().Should().BeTrue();
+        schema.GetProperty("schema").GetProperty("required").EnumerateArray().Select(e => e.GetString()).Should().Equal("timeline_events");
+        body.GetProperty("messages")[0].GetProperty("content").GetString().Should().Contain("timeline_events").And.NotContain("{{TIMELINE_RULES}}");
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_PromptContainsStoredContentAndPublicationDate()
+    {
+        SetupResponses(Wrap("""{"timeline_events":[]}"""));
+
+        await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        var user = Parse(_requests[0]).GetProperty("messages")[1].GetProperty("content").GetString();
+        user.Should().Contain("DATE: 2026-03-14").And.Contain("TITLE: Test Article").And.Contain("Full article text");
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_PublicationDatedEvent_UsesTheBrusselsPublicationDate()
+    {
+        const string Event = """
+            {"kind":"ga","product":"X","feature":null,"description":"Is GA","date_source":"publication","date":null,"date_precision":null,"quote":null}
+            """;
+        SetupResponses(Wrap($$"""{"timeline_events":[{{Event}}]}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        result.Events.Should().ContainSingle().Which.Date.Should().Be(new DateOnly(2026, 3, 15));
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_NoEvents_ReturnsEmptySuccess()
+    {
+        SetupResponses(Wrap("""{"timeline_events":[]}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeFalse();
+        result.Events.Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_MissingEventsArray_Fails()
+    {
+        SetupResponses(Wrap("""{"something":"else"}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_IncompleteResponse_Fails()
+    {
+        SetupResponses(Wrap("""{"timeline_events":[]}""", finishReason: "length"));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("incomplete");
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_ContentFilter_Fails()
+    {
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, null, ContentFilterMessage: "blocked"));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Be("blocked");
+    }
+
     // ── Prompts ───────────────────────────────────────────────────────────────
 
     [Fact]

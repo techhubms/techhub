@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -37,6 +37,7 @@
     <EmbeddedResource Include="Data\Resources\content-classify-system.md" />
     <EmbeddedResource Include="Data\Resources\content-rewrite-system.md" />
     <EmbeddedResource Include="Data\Resources\content-timeline-rules.md" />
+    <EmbeddedResource Include="Data\Resources\content-timeline-extract-system.md" />
     <EmbeddedResource Include="Data\Resources\roundup-news-writer-system.md" />
     <EmbeddedResource Include="Data\Resources\roundup-metadata-generator-system.md" />
     <EmbeddedResource Include="Data\Resources\newsletter-template.html" />

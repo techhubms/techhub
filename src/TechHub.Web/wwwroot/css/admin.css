@@ -428,6 +428,11 @@ select.admin-input {
     color: #6ee7b7;
 }
 
+.admin-badge-timeline {
+    background: color-mix(in srgb, #8b5cf6 15%, transparent);
+    color: #c4b5fd;
+}
+
 .admin-badge-adhoc {
     background: color-mix(in srgb, #ec4899 15%, transparent);
     color: #f9a8d4;

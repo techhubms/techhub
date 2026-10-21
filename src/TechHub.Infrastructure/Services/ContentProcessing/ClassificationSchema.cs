@@ -25,10 +25,8 @@ internal static class ClassificationSchema
         var significance = StringEnum(RoundupMetadata.ValidSignificance.Order(StringComparer.Ordinal), includeNull: true);
         var contentKinds = StringEnum(RoundupMetadata.ValidContentKinds.Order(StringComparer.Ordinal), includeNull: true);
         var lifecycles = StringEnum(RoundupMetadata.ValidLifecycles.Order(StringComparer.Ordinal), includeNull: true);
-        var eventKinds = StringEnum(TimelineEvent.ValidKinds.Order(StringComparer.Ordinal));
-        var precisions = StringEnum(TimelineEvent.ValidPrecisions.Order(StringComparer.Ordinal), includeNull: true);
-        var dateSources = StringEnum([TimelineEvent.DateSourceExplicit, TimelineEvent.DateSourcePublication]);
         var roles = StringEnum([RoundupMetadata.RoleLead, RoundupMetadata.RoleBrief]);
+        var timelineEvents = TimelineEventsSchema();
 
         var json = $$"""
             {
@@ -66,24 +64,7 @@ internal static class ClassificationSchema
                     "content_kind": { "type": ["string", "null"], "enum": {{contentKinds}} },
                     "lifecycle": { "type": ["string", "null"], "enum": {{lifecycles}} },
                     "products": { "type": "array", "items": { "type": "string" } },
-                    "timeline_events": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": ["kind", "product", "feature", "description", "date_source", "date", "date_precision", "quote"],
-                        "properties": {
-                          "kind": { "type": "string", "enum": {{eventKinds}} },
-                          "product": { "type": "string" },
-                          "feature": { "type": ["string", "null"] },
-                          "description": { "type": "string" },
-                          "date_source": { "type": "string", "enum": {{dateSources}} },
-                          "date": { "type": ["string", "null"] },
-                          "date_precision": { "type": ["string", "null"], "enum": {{precisions}} },
-                          "quote": { "type": ["string", "null"] }
-                        }
-                      }
-                    }
+                    "timeline_events": {{timelineEvents}}
                   }
                 }
               }
@@ -91,6 +72,60 @@ internal static class ClassificationSchema
             """;
 
         return JsonNode.Parse(json)!.AsObject();
+    }
+
+    /// <summary>
+    /// Builds the <c>response_format</c> of the timeline-only extraction used by the backfill job.
+    /// </summary>
+    public static JsonObject BuildTimelineResponseFormat()
+    {
+        var json = $$"""
+            {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "timeline_extraction",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["timeline_events"],
+                  "properties": {
+                    "timeline_events": {{TimelineEventsSchema()}}
+                  }
+                }
+              }
+            }
+            """;
+
+        return JsonNode.Parse(json)!.AsObject();
+    }
+
+    private static string TimelineEventsSchema()
+    {
+        var eventKinds = StringEnum(TimelineEvent.ValidKinds.Order(StringComparer.Ordinal));
+        var precisions = StringEnum(TimelineEvent.ValidPrecisions.Order(StringComparer.Ordinal), includeNull: true);
+        var dateSources = StringEnum([TimelineEvent.DateSourceExplicit, TimelineEvent.DateSourcePublication]);
+
+        return $$"""
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["kind", "product", "feature", "description", "date_source", "date", "date_precision", "quote"],
+                "properties": {
+                  "kind": { "type": "string", "enum": {{eventKinds}} },
+                  "product": { "type": "string" },
+                  "feature": { "type": ["string", "null"] },
+                  "description": { "type": "string" },
+                  "date_source": { "type": "string", "enum": {{dateSources}} },
+                  "date": { "type": ["string", "null"] },
+                  "date_precision": { "type": ["string", "null"], "enum": {{precisions}} },
+                  "quote": { "type": ["string", "null"] }
+                }
+              }
+            }
+            """;
     }
 
     private static string StringEnum(IEnumerable<string> values, bool includeNull = false)

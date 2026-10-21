@@ -75,6 +75,32 @@ public class TechHubStubbedExternalServicesApiFactory : TechHubIntegrationTestAp
         public Task<CategorizationResult> ClassifyAsync(RawFeedItem item, CancellationToken ct = default)
             => CategorizeAsync(item, ct);
 
+        public Task<TimelineExtractionResult> ExtractTimelineEventsAsync(RawFeedItem item, CancellationToken ct = default)
+        {
+            ArgumentNullException.ThrowIfNull(item);
+
+            if (item.ExternalUrl.Contains(AiFailureMarker, StringComparison.Ordinal))
+            {
+                return Task.FromResult(new TimelineExtractionResult { IsFailure = true, Explanation = "Stubbed extraction failure" });
+            }
+
+            return Task.FromResult(new TimelineExtractionResult
+            {
+                Events =
+                [
+                    new TimelineEvent
+                    {
+                        Kind = "ga",
+                        Product = "Backfill Product",
+                        Description = "Stubbed backfill event",
+                        Date = new DateOnly(2026, 3, 10),
+                        DatePrecision = "day",
+                        DateSource = TimelineEvent.DateSourceExplicit
+                    }
+                ]
+            });
+        }
+
         public Task<CategorizationResult> CategorizeAsync(RawFeedItem item, CancellationToken ct = default)
         {
             ArgumentNullException.ThrowIfNull(item);

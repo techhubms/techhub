@@ -110,6 +110,93 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
     }
 
     /// <inheritdoc />
+    public async Task<IReadOnlyList<TimelineBackfillCandidate>> GetBackfillCandidatesAsync(
+        TimelineBackfillRequest request,
+        int promptVersion,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+
+        const string Sql = """
+            SELECT ci.collection_name AS CollectionName,
+                   ci.slug            AS Slug
+            FROM content_items ci
+            LEFT JOIN content_timeline_extractions x
+              ON x.collection_name = ci.collection_name AND x.item_slug = ci.slug
+            WHERE ci.collection_name <> 'roundups'
+              AND (@Force OR x.item_slug IS NULL OR x.prompt_version < @PromptVersion)
+              AND (@Collection::text IS NULL OR ci.collection_name = @Collection::text)
+              AND (@AfterEpoch::bigint IS NULL OR ci.date_epoch >= @AfterEpoch::bigint)
+            ORDER BY ci.date_epoch DESC, ci.slug
+            LIMIT @Limit::int
+            """;
+
+        long? afterEpoch = null;
+        if (request.PublishedAfter is { } after)
+        {
+            var brussels = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+            afterEpoch = new DateTimeOffset(after.ToDateTime(TimeOnly.MinValue), brussels.GetUtcOffset(after.ToDateTime(TimeOnly.MinValue))).ToUnixTimeSeconds();
+        }
+
+        var rows = await _connection.QueryAsync<TimelineBackfillCandidate>(new CommandDefinition(
+            Sql,
+            new
+            {
+                request.Force,
+                PromptVersion = promptVersion,
+                Collection = string.IsNullOrWhiteSpace(request.Collection) ? null : request.Collection.Trim().ToLowerInvariant(),
+                AfterEpoch = afterEpoch,
+                Limit = request.Limit
+            },
+            cancellationToken: ct));
+
+        return rows.ToList();
+    }
+
+    /// <inheritdoc />
+    public async Task<TimelineBackfillItem?> GetItemForExtractionAsync(string collectionName, string slug, CancellationToken ct = default)
+    {
+        const string Sql = """
+            SELECT collection_name AS CollectionName,
+                   slug            AS Slug,
+                   title           AS Title,
+                   content         AS Content,
+                   external_url    AS ExternalUrl,
+                   feed_name       AS FeedName,
+                   date_epoch      AS DateEpoch
+            FROM content_items
+            WHERE collection_name = @CollectionName AND slug = @Slug
+            """;
+
+        var row = await _connection.QuerySingleOrDefaultAsync<ExtractionRow>(new CommandDefinition(
+            Sql, new { CollectionName = collectionName, Slug = slug }, cancellationToken: ct));
+
+        return row is null
+            ? null
+            : new TimelineBackfillItem
+            {
+                CollectionName = row.CollectionName,
+                Slug = row.Slug,
+                Title = row.Title,
+                Content = row.Content,
+                ExternalUrl = row.ExternalUrl ?? string.Empty,
+                FeedName = row.FeedName ?? "TechHub",
+                DateEpoch = row.DateEpoch
+            };
+    }
+
+    private sealed class ExtractionRow
+    {
+        public string CollectionName { get; init; } = string.Empty;
+        public string Slug { get; init; } = string.Empty;
+        public string Title { get; init; } = string.Empty;
+        public string Content { get; init; } = string.Empty;
+        public string? ExternalUrl { get; init; }
+        public string? FeedName { get; init; }
+        public long DateEpoch { get; init; }
+    }
+
+    /// <inheritdoc />
     public async Task<IReadOnlyList<StoredTimelineEvent>> GetEventsForItemAsync(
         string collectionName,
         string slug,

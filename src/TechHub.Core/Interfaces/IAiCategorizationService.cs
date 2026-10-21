@@ -15,6 +15,12 @@ public interface IAiCategorizationService
     Task<CategorizationResult> ClassifyAsync(RawFeedItem item, CancellationToken ct = default);
 
     /// <summary>
+    /// Extracts only the timeline events from an already stored article (used by the timeline backfill job).
+    /// The article is not classified or rewritten.
+    /// </summary>
+    Task<TimelineExtractionResult> ExtractTimelineEventsAsync(RawFeedItem item, CancellationToken ct = default);
+
+    /// <summary>
     /// Classifies <paramref name="item"/> (step 1) and, only when it is included, rewrites it into the article
     /// markdown (step 2). Returns a <see cref="CategorizationResult"/> containing the processed item (or <c>null</c>
     /// if excluded) and the AI's explanation. A failing rewrite fails the whole item.

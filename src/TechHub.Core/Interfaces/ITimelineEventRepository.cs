@@ -28,6 +28,19 @@ public interface ITimelineEventRepository
         int promptVersion,
         CancellationToken ct = default);
 
+    /// <summary>
+    /// Gets the articles the backfill still has to scan: never scanned, or scanned with an older prompt version
+    /// (or all of them when <see cref="TimelineBackfillRequest.Force"/> is set), newest first.
+    /// Roundups are never scanned.
+    /// </summary>
+    Task<IReadOnlyList<TimelineBackfillCandidate>> GetBackfillCandidatesAsync(
+        TimelineBackfillRequest request,
+        int promptVersion,
+        CancellationToken ct = default);
+
+    /// <summary>Loads the stored text of an article for extraction, or <c>null</c> when it no longer exists.</summary>
+    Task<TimelineBackfillItem?> GetItemForExtractionAsync(string collectionName, string slug, CancellationToken ct = default);
+
     /// <summary>Gets the events stored for an article, ordered by date.</summary>
     Task<IReadOnlyList<StoredTimelineEvent>> GetEventsForItemAsync(string collectionName, string slug, CancellationToken ct = default);
 }

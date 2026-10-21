@@ -17,6 +17,9 @@ public class AiCategorizationOptions
     /// <summary>Delay in seconds between AI API calls to prevent rate limiting.</summary>
     public int RateLimitDelaySeconds { get; init; } = 15;
 
+    /// <summary>Delay in seconds between articles during the timeline backfill.</summary>
+    public int TimelineBackfillDelaySeconds { get; init; } = 2;
+
     /// <summary>Maximum number of retries on transient failures.</summary>
     public int MaxRetries { get; init; } = 3;
 
