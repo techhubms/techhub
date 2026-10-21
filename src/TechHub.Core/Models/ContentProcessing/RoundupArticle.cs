@@ -9,6 +9,9 @@ public sealed record RoundupArticle
     /// <summary>Section this article was registered under (e.g. "ai", "azure", "dotnet").</summary>
     public required string SectionName { get; init; }
 
+    /// <summary>Primary section of the article, where it always gets a full write-up.</summary>
+    public string PrimarySectionName { get; init; } = string.Empty;
+
     /// <summary>Article title.</summary>
     public required string Title { get; init; }
 

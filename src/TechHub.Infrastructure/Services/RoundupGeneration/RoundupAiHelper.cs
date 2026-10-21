@@ -13,6 +13,9 @@ namespace TechHub.Infrastructure.Services.RoundupGeneration;
 /// </summary>
 internal sealed class RoundupAiHelper
 {
+    // Covers reasoning tokens as well as the visible roundup text.
+    private const int MaxCompletionTokens = 32_000;
+
     private readonly IAiCompletionClient _aiClient;
     private readonly RoundupGeneratorOptions _options;
     private readonly AiProfilesOptions _profiles;
@@ -62,9 +65,10 @@ internal sealed class RoundupAiHelper
         string userMessage,
         string stepName,
         AiProfile profile,
-        CancellationToken ct)
+        CancellationToken ct,
+        object? responseFormat = null)
     {
-        var json = AiRequestBodyBuilder.Build(_profiles.Get(profile), systemMessage, userMessage, 8000);
+        var json = AiRequestBodyBuilder.Build(_profiles.Get(profile), systemMessage, userMessage, MaxCompletionTokens, responseFormat: responseFormat);
 
         for (var attempt = 0; attempt < _options.MaxRetries; attempt++)
         {

@@ -21,11 +21,8 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
     private readonly IAiCategorizationService _aiService;
     private readonly IContentItemWriteRepository _writeRepo;
     private readonly RoundupNewsWriter _newsWriter;
-    private readonly RoundupNarrativeEnhancer _narrativeEnhancer;
-    private readonly RoundupCondenser _condenser;
     private readonly RoundupMetadataGenerator _metadataGenerator;
     private readonly AppSettings _settings;
-    private readonly RoundupGeneratorOptions _options;
     private readonly ILogger<RoundupGeneratorService> _logger;
 
     public RoundupGeneratorService(
@@ -34,11 +31,8 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         IAiCategorizationService aiService,
         IContentItemWriteRepository writeRepo,
         RoundupNewsWriter newsWriter,
-        RoundupNarrativeEnhancer narrativeEnhancer,
-        RoundupCondenser condenser,
         RoundupMetadataGenerator metadataGenerator,
         IOptions<AppSettings> settings,
-        RoundupGeneratorOptions options,
         ILogger<RoundupGeneratorService> logger)
     {
         ArgumentNullException.ThrowIfNull(roundupRepo);
@@ -46,11 +40,8 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         ArgumentNullException.ThrowIfNull(aiService);
         ArgumentNullException.ThrowIfNull(writeRepo);
         ArgumentNullException.ThrowIfNull(newsWriter);
-        ArgumentNullException.ThrowIfNull(narrativeEnhancer);
-        ArgumentNullException.ThrowIfNull(condenser);
         ArgumentNullException.ThrowIfNull(metadataGenerator);
         ArgumentNullException.ThrowIfNull(settings);
-        ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
         _roundupRepo = roundupRepo;
@@ -58,11 +49,8 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         _aiService = aiService;
         _writeRepo = writeRepo;
         _newsWriter = newsWriter;
-        _narrativeEnhancer = narrativeEnhancer;
-        _condenser = condenser;
         _metadataGenerator = metadataGenerator;
         _settings = settings.Value;
-        _options = options;
         _logger = logger;
     }
 
@@ -161,54 +149,57 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         }
 
         lp.Report($"Using {sectionArticles.Count} articles for section '{sectionName}'");
-        var sectionArticlesBySection = new Dictionary<string, IReadOnlyList<RoundupArticle>>(StringComparer.OrdinalIgnoreCase)
-        {
-            [sectionName] = sectionArticles
-        };
-
         var weekDescription = string.Create(CultureInfo.InvariantCulture,
             $"the week of {weekStart.ToString("MMMM d", CultureInfo.InvariantCulture)} to {weekEnd.ToString("MMMM d, yyyy", CultureInfo.InvariantCulture)}");
 
         var writingGuidelines = _writingGuidelines.Value;
 
-        lp.Report($"Step 1/5 ({sectionName}): Creating news-like stories");
-        var sectionStories = await _newsWriter.WriteAsync(sectionArticlesBySection, weekDescription, writingGuidelines, lp, ct);
-        if (string.IsNullOrWhiteSpace(sectionStories))
+        var (lead, brief) = RoundupArticleSelector.Split(sectionArticles, sectionName);
+
+        lp.Report($"Writer ({sectionName}): creating the topics from {lead.Count} lead articles ({brief.Count} one-line mentions)");
+
+        var sectionTitle = _settings.Content.Sections.TryGetValue(sectionName, out var sectionConfig) ? sectionConfig.Title : sectionName;
+        var sectionTitles = _settings.Content.Sections.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Title, StringComparer.OrdinalIgnoreCase);
+
+        var writerContent = string.Empty;
+        if (lead.Count > 0)
         {
-            _logger.LogError("Step 1 produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
-            return RoundupGenerationOutcome.ContentGenerationFailed;
+            var previousHeadings = RoundupHeadings.Extract(await _roundupRepo.GetPreviousRoundupContentAsync(sectionName, weekStart, ct));
+            var written = await _newsWriter.WriteAsync(sectionName, lead, previousHeadings, weekDescription, writingGuidelines, ct);
+            if (string.IsNullOrWhiteSpace(written))
+            {
+                _logger.LogError("The writer produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
+                return RoundupGenerationOutcome.ContentGenerationFailed;
+            }
+
+            writerContent = written;
         }
 
-        lp.Report($"Step 2/5 ({sectionName}): Adding ongoing narrative");
-        var narrativeContent = await _narrativeEnhancer.EnhanceAsync(sectionStories, sectionName, weekStart, writingGuidelines, lp, ct);
-        if (string.IsNullOrWhiteSpace(narrativeContent))
+        var (completeContent, appended) = RoundupBlocksBuilder.EnsureLeadLinks(writerContent, lead, sectionTitle);
+        if (appended.Count > 0)
         {
-            _logger.LogError("Step 2 produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
-            return RoundupGenerationOutcome.ContentGenerationFailed;
+            _logger.LogWarning("The writer left out {Count} lead articles for section {SectionName}; appended them to the other news: {Titles}",
+                appended.Count, sectionName, string.Join("; ", appended.Select(a => a.Title)));
         }
 
-        string condensedContent;
-        if (_options.CondensingEnabled)
-        {
-            lp.Report($"Step 3/5 ({sectionName}): Condensing content");
-            condensedContent = await _condenser.CondenseAsync(narrativeContent, writingGuidelines, ct);
-        }
-        else
-        {
-            lp.Report($"Step 3/5 ({sectionName}): Condensing skipped (disabled)");
-            condensedContent = narrativeContent;
-        }
+        var alsoRelevant = RoundupBlocksBuilder.BuildAlsoRelevant(brief, publishDate, sectionTitles);
+        var datesToKnow = RoundupBlocksBuilder.BuildDatesToKnow(
+            await _roundupRepo.GetUpcomingDateEventsAsync(sectionName, weekStart, weekEnd, ct) ?? [], weekEnd);
 
-        lp.Report($"Step 4/5 ({sectionName}): Generating metadata");
-        var metadata = await _metadataGenerator.GenerateAsync(condensedContent, sectionName, weekDescription, writingGuidelines, ct);
+        // A section without lead articles has no written topics; the metadata then describes the one-line mentions.
+        var metadataInput = string.IsNullOrWhiteSpace(completeContent) ? alsoRelevant : completeContent;
 
-        lp.Report($"Step 5/5 ({sectionName}): Building final content");
-        var tableOfContents = RoundupContentBuilder.BuildTableOfContents(condensedContent);
-        var fullContent = RoundupContentBuilder.BuildFullContent(condensedContent, metadata.Introduction, tableOfContents);
+        lp.Report($"Metadata ({sectionName}): generating title, tags and introduction");
+        var metadata = await _metadataGenerator.GenerateAsync(metadataInput, sectionName, weekDescription, writingGuidelines, ct);
+
+        lp.Report($"Building the final content for section {sectionName}");
+        var sectionContent = string.Join("\n\n", new[] { completeContent.Trim(), alsoRelevant, datesToKnow }.Where(b => !string.IsNullOrWhiteSpace(b)));
+        var tableOfContents = RoundupContentBuilder.BuildTableOfContents(sectionContent);
+        var fullContent = RoundupContentBuilder.BuildFullContent(sectionContent, metadata.Introduction, tableOfContents);
         fullContent = _contentFixer.RepairMarkdown(fullContent);
 
         lp.Report($"Writing roundup to database for section '{sectionName}'");
-        var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, sectionArticlesBySection.Keys);
+        var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, [sectionName]);
         var normalizedTags = TagNormalizer.NormalizeTags(tagsWithSections);
         await _roundupRepo.WriteRoundupAsync(sectionName, slug, publishDate, metadata.Title, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
 

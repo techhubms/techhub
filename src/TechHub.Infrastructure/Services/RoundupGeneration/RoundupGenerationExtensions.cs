@@ -24,10 +24,7 @@ public static class RoundupGenerationExtensions
 
         // Internal step classes
         services.AddScoped<RoundupAiHelper>();
-        services.AddScoped<RoundupRelevanceFilter>();
         services.AddScoped<RoundupNewsWriter>();
-        services.AddScoped<RoundupNarrativeEnhancer>();
-        services.AddScoped<RoundupCondenser>();
         services.AddScoped<RoundupMetadataGenerator>();
 
         // Orchestrator

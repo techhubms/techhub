@@ -38,8 +38,6 @@
     <EmbeddedResource Include="Data\Resources\content-rewrite-system.md" />
     <EmbeddedResource Include="Data\Resources\content-timeline-rules.md" />
     <EmbeddedResource Include="Data\Resources\roundup-news-writer-system.md" />
-    <EmbeddedResource Include="Data\Resources\roundup-narrative-enhancer-system.md" />
-    <EmbeddedResource Include="Data\Resources\roundup-condenser-system.md" />
     <EmbeddedResource Include="Data\Resources\roundup-metadata-generator-system.md" />
     <EmbeddedResource Include="Data\Resources\newsletter-template.html" />
     <EmbeddedResource Include="Data\Resources\newsletter-subscriber-footer.html" />

@@ -9,24 +9,6 @@ namespace TechHub.Core.Interfaces;
 public interface ISectionRoundupRepository
 {
     /// <summary>
-    /// Returns all articles from <c>content_items</c> created during the given week,
-    /// grouped by section name (e.g. "github-copilot", "ai", "azure").
-    /// Items missing AI metadata are included with <see cref="RoundupArticle.NeedsAiMetadata"/> set to <c>true</c>.
-    /// Roundups are excluded to prevent circular inclusion.
-    /// </summary>
-    /// <param name="weekStart">Monday of the ISO week.</param>
-    /// <param name="weekEnd">Sunday of the ISO week (inclusive).</param>
-    /// <param name="ct">Cancellation token.</param>
-    /// <returns>
-    /// Dictionary keyed by section name, where each value is the ordered list of articles.
-    /// Articles are ordered by relevance (high first) then by time sensitivity.
-    /// </returns>
-    Task<IReadOnlyDictionary<string, IReadOnlyList<RoundupArticle>>> GetArticlesForWeekAsync(
-        DateOnly weekStart,
-        DateOnly weekEnd,
-        CancellationToken ct = default);
-
-    /// <summary>
     /// Returns all articles from <c>content_items</c> created during the given week that belong to a specific section flag
     /// (for example <c>is_devops</c> for "devops"), ordered by creation time.
     /// </summary>
@@ -35,6 +17,16 @@ public interface ISectionRoundupRepository
     /// <param name="weekEnd">Sunday of the ISO week (inclusive).</param>
     /// <param name="ct">Cancellation token.</param>
     Task<IReadOnlyList<RoundupArticle>> GetArticlesForSectionForWeekAsync(
+        string sectionName,
+        DateOnly weekStart,
+        DateOnly weekEnd,
+        CancellationToken ct = default);
+
+    /// <summary>
+    /// Returns the dated lifecycle events that articles of the given section, created during the week, state for
+    /// dates after the week (deadlines and upcoming releases). Ordered by event date.
+    /// </summary>
+    Task<IReadOnlyList<RoundupDateEvent>> GetUpcomingDateEventsAsync(
         string sectionName,
         DateOnly weekStart,
         DateOnly weekEnd,
