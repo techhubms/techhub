@@ -60,26 +60,26 @@ public class ModelEvaluationTests
         return connection;
     }
 
-    private static AiProfilesOptions Profiles(string rewriteEffort = "low") => new()
+    private static AiProfilesOptions Profiles(string rewriteEffort = "low", AiProfileOptions? classification = null) => new()
     {
-        Classification = new AiProfileOptions { DeploymentName = "gpt-6-luna", ReasoningEffort = "low" },
+        Classification = classification ?? new AiProfileOptions { DeploymentName = "gpt-6-luna", ReasoningEffort = "low" },
         Rewrite = new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = rewriteEffort },
         RoundupNewsWriter = new AiProfileOptions { DeploymentName = "gpt-6-astra", ReasoningEffort = "medium" },
         RoundupMetadata = new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = "low" }
     };
 
-    private static AiCategorizationOptions Options(string rewriteEffort = "low") => new()
+    private static AiCategorizationOptions Options(string rewriteEffort = "low", AiProfileOptions? classification = null) => new()
     {
         Endpoint = Endpoint,
         MaxRetries = 3,
         RateLimitDelaySeconds = 5,
         TimelineBackfillDelaySeconds = 0,
-        Profiles = Profiles(rewriteEffort)
+        Profiles = Profiles(rewriteEffort, classification)
     };
 
-    private static (AiCategorizationService Service, UsageRecorder Recorder) CreateAi(string rewriteEffort = "low", UsageRecorder? shared = null)
+    private static (AiCategorizationService Service, UsageRecorder Recorder) CreateAi(string rewriteEffort = "low", UsageRecorder? shared = null, AiProfileOptions? classification = null)
     {
-        var options = Options(rewriteEffort);
+        var options = Options(rewriteEffort, classification);
         var inner = new AiCompletionClient(
             new HttpClient { Timeout = TimeSpan.FromMinutes(15) },
             Microsoft.Extensions.Options.Options.Create(options),
@@ -291,6 +291,111 @@ public class ModelEvaluationTests
         File.WriteAllText(Path.Combine(OutDir(), "classification.md"), report.ToString());
         Console.WriteLine(report.ToString());
         rows.Should().NotBeEmpty();
+    }
+
+    // ── Stage 1b: control run on a frozen sample ─────────────────────────────
+
+    private sealed record Verdict(bool Failed, bool Included, string Primary, IReadOnlySet<string> Sections);
+
+    private static Verdict ToVerdict(CategorizationResult result) =>
+        result.IsFailure || result.Item is null
+            ? new Verdict(result.IsFailure, false, "", new HashSet<string>())
+            : new Verdict(false, true, result.Item.PrimarySectionName, result.Item.Sections.ToHashSet(StringComparer.Ordinal));
+
+    private static string Compare(string label, IReadOnlyList<StoredItem> items, IReadOnlyList<Verdict> a, IReadOnlyList<Verdict> b)
+    {
+        var pairs = Enumerable.Range(0, items.Count).Where(i => !a[i].Failed && !b[i].Failed).ToList();
+        var sameInclusion = pairs.Count(i => a[i].Included == b[i].Included);
+        var both = pairs.Where(i => a[i].Included && b[i].Included).ToList();
+        var samePrimary = both.Count(i => a[i].Primary == b[i].Primary);
+        var sameSections = both.Count(i => a[i].Sections.SetEquals(b[i].Sections));
+        return $"| {label} | {pairs.Count} | {sameInclusion}/{pairs.Count} | {samePrimary}/{both.Count} | {sameSections}/{both.Count} |";
+    }
+
+    /// <summary>
+    /// Classifies a frozen sample (saved in .tmp/eval/golden-classification.json) with gpt-6-luna twice and with gpt-5.2
+    /// using the same new prompt. Differences between the two luna runs measure the noise of the model itself, so only
+    /// differences larger than that can be attributed to a model change.
+    /// </summary>
+    [Fact]
+    public async Task ModelEvaluation_ClassificationControl()
+    {
+        RequireEnabled();
+        var ct = TestContext.Current.CancellationToken;
+        using var db = OpenLocalDb();
+
+        var goldenPath = Path.Combine(OutDir(), "golden-classification.json");
+        List<StoredItem> items;
+        if (File.Exists(goldenPath))
+        {
+            var urls = JsonSerializer.Deserialize<string[]>(File.ReadAllText(goldenPath))!;
+            var found = (await db.QueryAsync<StoredItem>("""
+                SELECT collection_name AS CollectionName, slug AS Slug, title AS Title, content AS Content,
+                       external_url AS ExternalUrl, COALESCE(feed_name, 'Feed') AS FeedName, date_epoch AS DateEpoch,
+                       primary_section_name AS PrimarySectionName, sections_bitmask AS SectionsBitmask, COALESCE(tags_csv, '') AS TagsCsv
+                FROM content_items WHERE external_url = ANY(@Urls)
+                """, new { Urls = urls })).ToDictionary(i => i.ExternalUrl, StringComparer.Ordinal);
+            items = urls.Where(found.ContainsKey).Select(u => found[u]).ToList();
+        }
+        else
+        {
+            items = [];
+            items.AddRange(await SampleAsync(db, "news", 40));
+            items.AddRange(await SampleAsync(db, "blogs", 25));
+            items.AddRange(await SampleAsync(db, "community", 20));
+            items.AddRange(await SampleAsync(db, "videos", 15));
+            File.WriteAllText(goldenPath, JsonSerializer.Serialize(items.Select(i => i.ExternalUrl)));
+        }
+
+        var runs = new Dictionary<string, List<Verdict>>();
+        var recorders = new Dictionary<string, UsageRecorder>();
+        var configs = new (string Name, AiProfileOptions? Profile)[]
+        {
+            ("luna-run-1", null),
+            ("luna-run-2", null),
+            ("gpt-5.2", new AiProfileOptions { DeploymentName = "gpt-5.2" })
+        };
+
+        foreach (var (name, profile) in configs)
+        {
+            var (ai, recorder) = CreateAi(classification: profile);
+            var verdicts = new List<Verdict>();
+            foreach (var item in items)
+            {
+                verdicts.Add(ToVerdict(await ai.ClassifyAsync(item.ToRaw(), ct)));
+            }
+
+            runs[name] = verdicts;
+            recorders[name] = recorder;
+        }
+
+        var production = items.Select(i => new Verdict(false, true, i.PrimarySectionName, i.Sections)).ToList();
+
+        var report = new StringBuilder();
+        report.AppendLine("# Classification control run (frozen sample)");
+        report.AppendLine();
+        report.AppendLine(CultureInfo.InvariantCulture, $"Sample: {items.Count} articles that production included, frozen in `.tmp/eval/golden-classification.json`.");
+        report.AppendLine("All runs use the new classify prompt. Production = the stored result made by the old prompt and gpt-5.2.");
+        report.AppendLine();
+        report.AppendLine("| Compared | Compared articles | Same include/exclude | Same primary section | Same section set |");
+        report.AppendLine("|---|---|---|---|---|");
+        report.AppendLine(Compare("luna run 1 vs luna run 2 (noise)", items, runs["luna-run-1"], runs["luna-run-2"]));
+        report.AppendLine(Compare("luna run 1 vs production", items, runs["luna-run-1"], production));
+        report.AppendLine(Compare("luna run 2 vs production", items, runs["luna-run-2"], production));
+        report.AppendLine(Compare("gpt-5.2 (new prompt) vs production", items, runs["gpt-5.2"], production));
+        report.AppendLine(Compare("luna run 1 vs gpt-5.2 (new prompt)", items, runs["luna-run-1"], runs["gpt-5.2"]));
+        report.AppendLine();
+        report.AppendLine("How to read this: if `gpt-5.2 (new prompt) vs production` is about as low as `luna vs production`, the difference comes from the new prompt, not from the model. If luna vs luna is far below 100%, part of every difference is plain randomness.");
+        foreach (var (name, recorder) in recorders)
+        {
+            report.AppendLine();
+            report.AppendLine(CultureInfo.InvariantCulture, $"## Usage {name}");
+            report.AppendLine(recorder.Summary());
+        }
+
+        File.WriteAllText(Path.Combine(OutDir(), "classification-control.md"), report.ToString());
+        Console.WriteLine(report.ToString());
+        items.Should().NotBeEmpty();
     }
 
     // ── Stage 2: rewrite ─────────────────────────────────────────────────────

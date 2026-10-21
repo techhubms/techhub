@@ -412,6 +412,7 @@ tool to use before changing a model or a prompt. The stages call the real models
 | Stage (test name) | Question | Output in `.tmp/eval/` |
 |---|---|---|
 | `ModelEvaluation_Classification` | Does the classification agree with production? 100 stored articles (included in production) and 50 re-fetched skipped URLs (excluded in production) | `classification.md` |
+| `ModelEvaluation_ClassificationControl` | How much of the disagreement is noise or caused by the prompt, not the model? Classifies a frozen set of 100 stored articles with `gpt-6-luna` twice and with `gpt-5.2` using the new prompt | `classification-control.md`, `golden-classification.json` (the frozen sample) |
 | `ModelEvaluation_Rewrite` | How do the rewrite model at `low` and `medium` reasoning compare with the stored text? About 12 re-fetched articles | `rewrite.md`, `rewrite/*.md` (stored, low and medium side by side) |
 | `ModelEvaluation_Timeline` | Are the extracted dates right? About 50 articles | `timeline.md` |
 | `ModelEvaluation_Roundups` | Do the roundups of the latest week with a production roundup improve? Regenerates all sections locally | `roundups.md`, `roundups/production`, `roundups/new` |
@@ -433,7 +434,7 @@ How to read the results:
 - A disagreement is not an error: the baseline is the production model, not the truth. Review the listed disagreements by hand
 - 100 articles means roughly ±5 percentage points of uncertainty on an agreement percentage
 - The stored text of included articles is already rewritten and has no feed data, so classifying it is somewhat easier than classifying a raw feed item. The skipped-URL check uses the real original articles
-- Each run samples different articles (`ORDER BY random()`). To compare two models, compare their reports on the same run, or freeze the sample first
+- Each run samples different articles (`ORDER BY random()`). To compare two models, compare their reports on the same run. `ModelEvaluation_ClassificationControl` freezes its sample in `.tmp/eval/golden-classification.json` (delete the file to draw a new sample), so it can be repeated after a prompt change
 
 ## Troubleshooting
 
