@@ -105,15 +105,7 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
         var tagsCsv = tags.Count > 0 ? $",{string.Join(",", tags)}," : string.Empty;
 
         var aiMetadataJson = item.RoundupMetadata != null
-            ? JsonSerializer.Serialize(new
-            {
-                roundup_summary = item.RoundupMetadata.Summary,
-                key_topics = item.RoundupMetadata.KeyTopics,
-                roundup_relevance = item.RoundupMetadata.Relevance,
-                topic_type = item.RoundupMetadata.TopicType,
-                impact_level = item.RoundupMetadata.ImpactLevel,
-                time_sensitivity = item.RoundupMetadata.TimeSensitivity
-            }, _jsonOptions)
+            ? SerializeAiMetadata(item.RoundupMetadata)
             : null;
 
         const string Upsert = @"
@@ -225,6 +217,39 @@ UPDATE content_items
             Sql,
             new { CollectionName = collectionName, Slug = slug, AiMetadata = aiMetadataJson },
             cancellationToken: ct));
+    }
+
+    /// <summary>
+    /// Serializes roundup metadata to the <c>ai_metadata</c> JSON: schema version 2 stores the classification output
+    /// (key facts, significance, section roles, ...), version 1 the original summary-based fields.
+    /// </summary>
+    internal static string SerializeAiMetadata(RoundupMetadata metadata)
+    {
+        ArgumentNullException.ThrowIfNull(metadata);
+
+        if (metadata.SchemaVersion >= RoundupMetadata.CurrentSchemaVersion)
+        {
+            return JsonSerializer.Serialize(new
+            {
+                schema_version = metadata.SchemaVersion,
+                key_facts = metadata.KeyFacts,
+                significance = metadata.Significance,
+                content_kind = metadata.ContentKind,
+                lifecycle = metadata.Lifecycle,
+                products = metadata.Products,
+                section_roles = metadata.SectionRoles
+            }, _jsonOptions);
+        }
+
+        return JsonSerializer.Serialize(new
+        {
+            roundup_summary = metadata.Summary,
+            key_topics = metadata.KeyTopics,
+            roundup_relevance = metadata.Relevance,
+            topic_type = metadata.TopicType,
+            impact_level = metadata.ImpactLevel,
+            time_sensitivity = metadata.TimeSensitivity
+        }, _jsonOptions);
     }
 
     internal static List<object> BuildTagWords(

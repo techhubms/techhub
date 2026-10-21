@@ -62,6 +62,11 @@ public sealed class ProcessedContentItem
     public RoundupMetadata? RoundupMetadata { get; init; }
 
     /// <summary>
+    /// Dated lifecycle events (preview, GA, deprecation, ...) the article states, extracted by the classification step.
+    /// </summary>
+    public IReadOnlyList<TimelineEvent> TimelineEvents { get; init; } = [];
+
+    /// <summary>
     /// Creates a copy of this item with the specified subcollection name.
     /// </summary>
     public ProcessedContentItem WithSubcollectionName(string subcollectionName)
@@ -82,7 +87,8 @@ public sealed class ProcessedContentItem
             Sections = Sections,
             PrimarySectionName = PrimarySectionName,
             ContentHash = ContentHash,
-            RoundupMetadata = RoundupMetadata
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
         };
     }
 
@@ -107,7 +113,34 @@ public sealed class ProcessedContentItem
             Sections = Sections,
             PrimarySectionName = PrimarySectionName,
             ContentHash = ContentHash,
-            RoundupMetadata = RoundupMetadata
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
+        };
+    }
+
+    /// <summary>
+    /// Creates a copy of this item with the rewritten content and the content hash computed over it.
+    /// </summary>
+    public ProcessedContentItem WithRewrittenContent(string content, string contentHash)
+    {
+        return new ProcessedContentItem
+        {
+            Slug = Slug,
+            Title = Title,
+            Content = content,
+            Excerpt = Excerpt,
+            DateEpoch = DateEpoch,
+            CollectionName = CollectionName,
+            SubcollectionName = SubcollectionName,
+            ExternalUrl = ExternalUrl,
+            Author = Author,
+            FeedName = FeedName,
+            Tags = Tags,
+            Sections = Sections,
+            PrimarySectionName = PrimarySectionName,
+            ContentHash = contentHash,
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
         };
     }
 
@@ -133,7 +166,8 @@ public sealed class ProcessedContentItem
             Sections = Sections,
             PrimarySectionName = PrimarySectionName,
             ContentHash = ContentHash,
-            RoundupMetadata = RoundupMetadata
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
         };
     }
 
@@ -158,7 +192,8 @@ public sealed class ProcessedContentItem
             Sections = Sections,
             PrimarySectionName = PrimarySectionName,
             ContentHash = ContentHash,
-            RoundupMetadata = RoundupMetadata
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
         };
     }
 }

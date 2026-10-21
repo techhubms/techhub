@@ -699,7 +699,8 @@ public static partial class AdminEndpoints
             FeedLevelAuthor = existing.Author,
             FeedTags = existing.Tags.ToList(),
             FullContent = request.Transcript.Trim(),
-            SkipSalesPitchCheck = true
+            SkipSalesPitchCheck = true,
+            IsInteractive = true
         };
 
         CategorizationResult categorizationResult;

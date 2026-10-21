@@ -840,7 +840,7 @@ public class RoundupGeneratorServiceTests
             .ReturnsAsync(articles);
 
         _aiCategorizationService
-            .Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult
             {
                 Explanation = "ok",
@@ -857,11 +857,9 @@ public class RoundupGeneratorServiceTests
                     ContentHash = "abc123",
                     RoundupMetadata = new RoundupMetadata
                     {
-                        Summary = "Summary",
-                        Relevance = "high",
-                        TopicType = "news",
-                        ImpactLevel = "medium",
-                        TimeSensitivity = "this-week"
+                        SchemaVersion = RoundupMetadata.CurrentSchemaVersion,
+                        KeyFacts = ["A fact."],
+                        Significance = "high"
                     }
                 }
             });
@@ -892,6 +890,10 @@ public class RoundupGeneratorServiceTests
 
         // Neither message should appear with doneCount=0
         progressMessages.Should().NotContain(m => m.Contains("0/2"));
+
+        // The backfill only classifies; it never rewrites the stored article
+        _aiCategorizationService.Verify(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
+        _aiCategorizationService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Never);
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────────

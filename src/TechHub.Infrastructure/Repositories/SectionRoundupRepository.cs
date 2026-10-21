@@ -195,7 +195,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             }
         }
 
-        return new RoundupArticle
+        var article = new RoundupArticle
         {
             SectionName = row.SectionName,
             Title = row.Title,
@@ -209,11 +209,27 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             TopicType = meta?.TopicType ?? "news",
             ImpactLevel = meta?.ImpactLevel ?? "medium",
             TimeSensitivity = meta?.TimeSensitivity ?? "this-week",
-            NeedsAiMetadata = meta is null,
+            NeedsAiMetadata = meta is null || meta.SchemaVersion < RoundupMetadata.CurrentSchemaVersion,
             Content = row.Content,
             FeedName = row.FeedName,
             DateEpoch = row.DateEpoch
         };
+
+        if (meta is not null && meta.SchemaVersion >= RoundupMetadata.CurrentSchemaVersion)
+        {
+            article = article.WithMetadata(new RoundupMetadata
+            {
+                SchemaVersion = meta.SchemaVersion,
+                KeyFacts = meta.KeyFacts,
+                Significance = meta.Significance,
+                ContentKind = meta.ContentKind,
+                Lifecycle = meta.Lifecycle,
+                Products = meta.Products,
+                SectionRoles = meta.SectionRoles
+            });
+        }
+
+        return article;
     }
 
     // ── Private DTOs ──────────────────────────────────────────────────────────
@@ -233,6 +249,13 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
 
     private sealed class RoundupAiMetadata
     {
+        public int SchemaVersion { get; init; } = 1;
+        public IReadOnlyList<string> KeyFacts { get; init; } = [];
+        public string Significance { get; init; } = "medium";
+        public string ContentKind { get; init; } = "announcement";
+        public string Lifecycle { get; init; } = "none";
+        public IReadOnlyList<string> Products { get; init; } = [];
+        public Dictionary<string, string> SectionRoles { get; init; } = [];
         public string RoundupSummary { get; init; } = string.Empty;
         public IReadOnlyList<string> KeyTopics { get; init; } = [];
         public string RoundupRelevance { get; init; } = "medium";

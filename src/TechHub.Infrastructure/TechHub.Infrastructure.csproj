@@ -34,7 +34,9 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Data\Migrations\**\*.sql" />
-    <EmbeddedResource Include="Data\Resources\system-message.md" />
+    <EmbeddedResource Include="Data\Resources\content-classify-system.md" />
+    <EmbeddedResource Include="Data\Resources\content-rewrite-system.md" />
+    <EmbeddedResource Include="Data\Resources\content-timeline-rules.md" />
     <EmbeddedResource Include="Data\Resources\roundup-news-writer-system.md" />
     <EmbeddedResource Include="Data\Resources\roundup-narrative-enhancer-system.md" />
     <EmbeddedResource Include="Data\Resources\roundup-condenser-system.md" />

@@ -4,7 +4,7 @@ namespace TechHub.Core.Models.ContentProcessing;
 /// An article candidate read from the database for inclusion in a weekly roundup.
 /// Populated from <c>content_items</c> using section boolean columns and AI metadata.
 /// </summary>
-public sealed class RoundupArticle
+public sealed record RoundupArticle
 {
     /// <summary>Section this article was registered under (e.g. "ai", "azure", "dotnet").</summary>
     public required string SectionName { get; init; }
@@ -63,8 +63,54 @@ public sealed class RoundupArticle
     /// </summary>
     public string TimeSensitivity { get; init; } = "this-week";
 
-    /// <summary>Whether this article is missing AI metadata and needs on-the-fly backfill.</summary>
+    /// <summary>Whether this article is missing current (schema version 2) AI metadata and needs on-the-fly backfill.</summary>
     public bool NeedsAiMetadata { get; init; }
+
+    /// <summary>Concrete facts (versions, dates, numbers, names) from the article. From <c>ai_metadata.key_facts</c> (schema version 2).</summary>
+    public IReadOnlyList<string> KeyFacts { get; init; } = [];
+
+    /// <summary>Impact on developers: "high", "medium" or "low". From <c>ai_metadata.significance</c> (schema version 2).</summary>
+    public string Significance { get; init; } = "medium";
+
+    /// <summary>Kind of content. From <c>ai_metadata.content_kind</c> (schema version 2).</summary>
+    public string ContentKind { get; init; } = "announcement";
+
+    /// <summary>Product lifecycle stage. From <c>ai_metadata.lifecycle</c> (schema version 2).</summary>
+    public string Lifecycle { get; init; } = "none";
+
+    /// <summary>Official names of the products the article is about. From <c>ai_metadata.products</c> (schema version 2).</summary>
+    public IReadOnlyList<string> Products { get; init; } = [];
+
+    /// <summary>
+    /// Roundup role per section slug ("lead" or "brief"). From <c>ai_metadata.section_roles</c> (schema version 2).
+    /// Empty for articles without version 2 metadata.
+    /// </summary>
+    public IReadOnlyDictionary<string, string> SectionRoles { get; init; } = new Dictionary<string, string>();
+
+    /// <summary>
+    /// Returns a copy of this article with the fields derived from <paramref name="metadata"/>.
+    /// The summary-based fields are derived from the key facts so the roundup writer keeps working on them.
+    /// </summary>
+    public RoundupArticle WithMetadata(RoundupMetadata metadata)
+    {
+        ArgumentNullException.ThrowIfNull(metadata);
+
+        return this with
+        {
+            NeedsAiMetadata = false,
+            KeyFacts = metadata.KeyFacts,
+            Significance = metadata.Significance,
+            ContentKind = metadata.ContentKind,
+            Lifecycle = metadata.Lifecycle,
+            Products = metadata.Products,
+            SectionRoles = metadata.SectionRoles,
+            Summary = string.Join(" ", metadata.KeyFacts),
+            KeyTopics = metadata.Products,
+            Relevance = metadata.Significance,
+            TopicType = metadata.ContentKind,
+            ImpactLevel = metadata.Significance
+        };
+    }
 
     /// <summary>Full article content (for on-the-fly AI categorization when ai_metadata is NULL).</summary>
     public string Content { get; init; } = string.Empty;

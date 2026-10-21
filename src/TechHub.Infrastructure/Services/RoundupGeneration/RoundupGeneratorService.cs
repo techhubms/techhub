@@ -1,10 +1,10 @@
 using System.Globalization;
-using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.Infrastructure.Services.RoundupGeneration;
 
@@ -15,11 +15,6 @@ namespace TechHub.Infrastructure.Services.RoundupGeneration;
 internal sealed class RoundupGeneratorService : IRoundupGeneratorService
 {
     private static readonly Lazy<string> _writingGuidelines = RoundupAiHelper.LoadResource("roundup-writing-guidelines.md");
-
-    private static readonly JsonSerializerOptions _jsonOptions = new()
-    {
-        PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower
-    };
 
     private readonly ISectionRoundupRepository _roundupRepo;
     private readonly IContentFixerService _contentFixer;
@@ -266,41 +261,15 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     FullContent = article.Content
                 };
 
-                var result = await _aiService.CategorizeAsync(rawItem, ct);
+                var result = await _aiService.ClassifyAsync(rawItem, ct);
                 if (result.Item?.RoundupMetadata is { } meta)
                 {
-                    // Update only ai_metadata on the existing row (avoids PK/unique-constraint conflicts)
-                    var aiMetadataJson = System.Text.Json.JsonSerializer.Serialize(new
-                    {
-                        roundup_summary = meta.Summary,
-                        key_topics = meta.KeyTopics,
-                        roundup_relevance = meta.Relevance,
-                        topic_type = meta.TopicType,
-                        impact_level = meta.ImpactLevel,
-                        time_sensitivity = meta.TimeSensitivity
-                    }, _jsonOptions);
+                    // Update only ai_metadata on the existing row (avoids PK/unique-constraint conflicts).
+                    // Classification only: the stored article text is never rewritten by the backfill.
+                    await _writeRepo.UpdateAiMetadataAsync(
+                        article.CollectionName, article.Slug, ContentItemWriteRepository.SerializeAiMetadata(meta), ct);
 
-                    await _writeRepo.UpdateAiMetadataAsync(article.CollectionName, article.Slug, aiMetadataJson, ct);
-
-                    enriched[article.ExternalUrl] = new RoundupArticle
-                    {
-                        SectionName = article.SectionName,
-                        Title = article.Title,
-                        ExternalUrl = article.ExternalUrl,
-                        Slug = article.Slug,
-                        CollectionName = article.CollectionName,
-                        IsInternal = article.IsInternal,
-                        Content = article.Content,
-                        FeedName = article.FeedName,
-                        DateEpoch = article.DateEpoch,
-                        NeedsAiMetadata = false,
-                        Summary = meta.Summary,
-                        KeyTopics = meta.KeyTopics,
-                        Relevance = meta.Relevance,
-                        TopicType = meta.TopicType,
-                        ImpactLevel = meta.ImpactLevel,
-                        TimeSensitivity = meta.TimeSensitivity
-                    };
+                    enriched[article.ExternalUrl] = article.WithMetadata(meta);
 
                     _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
                 }
@@ -333,27 +302,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         foreach (var (sectionData, articles) in articlesBySection)
         {
             updated[sectionData] = articles
-                .Select(a => enriched.TryGetValue(a.ExternalUrl, out var e)
-                    ? new RoundupArticle
-                    {
-                        SectionName = a.SectionName,
-                        Title = e.Title,
-                        ExternalUrl = e.ExternalUrl,
-                        Slug = e.Slug,
-                        CollectionName = e.CollectionName,
-                        IsInternal = e.IsInternal,
-                        Content = e.Content,
-                        FeedName = e.FeedName,
-                        DateEpoch = e.DateEpoch,
-                        NeedsAiMetadata = false,
-                        Summary = e.Summary,
-                        KeyTopics = e.KeyTopics,
-                        Relevance = e.Relevance,
-                        TopicType = e.TopicType,
-                        ImpactLevel = e.ImpactLevel,
-                        TimeSensitivity = e.TimeSensitivity
-                    }
-                    : a)
+                .Select(a => enriched.TryGetValue(a.ExternalUrl, out var e) ? e with { SectionName = a.SectionName } : a)
                 .ToList();
         }
 

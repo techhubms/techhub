@@ -399,6 +399,7 @@ public sealed class ContentProcessingService
                 CollectionName = collectionName,
                 FeedItemData = feedItemData,
                 SkipSalesPitchCheck = true,
+                IsInteractive = true,
                 AuthorOverride = !string.IsNullOrWhiteSpace(authorOverride) ? authorOverride : null
             };
 
@@ -527,7 +528,8 @@ public sealed class ContentProcessingService
                         FeedName = raw.FeedName,
                         CollectionName = raw.CollectionName,
                         FullContent = raw.FullContent,
-                        SkipSalesPitchCheck = raw.SkipSalesPitchCheck
+                        SkipSalesPitchCheck = raw.SkipSalesPitchCheck,
+                        IsInteractive = raw.IsInteractive
                     };
                 }
             }
@@ -560,7 +562,8 @@ public sealed class ContentProcessingService
                     FeedName = raw.FeedName,
                     CollectionName = raw.CollectionName,
                     FullContent = manualTranscript,
-                    SkipSalesPitchCheck = raw.SkipSalesPitchCheck
+                    SkipSalesPitchCheck = raw.SkipSalesPitchCheck,
+                    IsInteractive = raw.IsInteractive
                 };
                 hasTranscript = true;
                 transcriptStatus = "manual transcript";

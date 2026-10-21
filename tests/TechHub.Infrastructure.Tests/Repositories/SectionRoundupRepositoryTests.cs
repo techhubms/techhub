@@ -194,6 +194,61 @@ public class SectionRoundupRepositoryTests
     }
 
     [Fact]
+    public async Task GetArticlesForSectionForWeekAsync_WithSchemaVersion2Metadata_ParsesRolesAndDoesNotNeedBackfill()
+    {
+        // Arrange
+        await SeedContentItemAsync("v2-article", "news", "V2 Article",
+            "https://example.com/v2-article", sections: ["azure", "devops"],
+            relevance: "medium",
+            createdAt: new DateTime(2025, 3, 27, 12, 0, 0, DateTimeKind.Utc));
+
+        var metadata = ContentItemWriteRepository.SerializeAiMetadata(new TechHub.Core.Models.ContentProcessing.RoundupMetadata
+        {
+            SchemaVersion = 2,
+            KeyFacts = ["Fact one.", "Fact two."],
+            Significance = "high",
+            ContentKind = "announcement",
+            Lifecycle = "ga",
+            Products = ["Azure Functions"],
+            SectionRoles = new Dictionary<string, string> { ["azure"] = "lead", ["devops"] = "brief" }
+        });
+        await _fixture.Connection.ExecuteAsync(
+            "UPDATE content_items SET ai_metadata = @Metadata::jsonb WHERE slug = 'v2-article'",
+            new { Metadata = metadata });
+
+        // Act
+        var articles = await _sut.GetArticlesForSectionForWeekAsync("devops", _weekStart, _weekEnd, CancellationToken.None);
+
+        // Assert
+        var article = articles.Should().ContainSingle(a => a.Slug == "v2-article").Subject;
+        article.NeedsAiMetadata.Should().BeFalse();
+        article.KeyFacts.Should().Equal("Fact one.", "Fact two.");
+        article.Significance.Should().Be("high");
+        article.Lifecycle.Should().Be("ga");
+        article.Products.Should().Equal("Azure Functions");
+        article.SectionRoles["devops"].Should().Be("brief");
+        article.SectionRoles["azure"].Should().Be("lead");
+    }
+
+    [Fact]
+    public async Task GetArticlesForSectionForWeekAsync_WithSchemaVersion1Metadata_NeedsBackfill()
+    {
+        // Arrange — the seed helper writes the original (version 1) summary-based metadata
+        await SeedContentItemAsync("v1-article", "news", "V1 Article",
+            "https://example.com/v1-article", sections: ["devops"],
+            relevance: "medium", summary: "Old summary",
+            createdAt: new DateTime(2025, 3, 27, 13, 0, 0, DateTimeKind.Utc));
+
+        // Act
+        var articles = await _sut.GetArticlesForSectionForWeekAsync("devops", _weekStart, _weekEnd, CancellationToken.None);
+
+        // Assert
+        var article = articles.Should().ContainSingle(a => a.Slug == "v1-article").Subject;
+        article.NeedsAiMetadata.Should().BeTrue();
+        article.Summary.Should().Be("Old summary");
+    }
+
+    [Fact]
     public async Task GetArticlesForSectionForWeekAsync_FiltersBySectionFlag()
     {
         // Arrange — primary section is azure, but item is also marked devops via section flags

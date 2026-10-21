@@ -72,6 +72,9 @@ public class TechHubStubbedExternalServicesApiFactory : TechHubIntegrationTestAp
 
     private sealed class StubAiCategorizationService : IAiCategorizationService
     {
+        public Task<CategorizationResult> ClassifyAsync(RawFeedItem item, CancellationToken ct = default)
+            => CategorizeAsync(item, ct);
+
         public Task<CategorizationResult> CategorizeAsync(RawFeedItem item, CancellationToken ct = default)
         {
             ArgumentNullException.ThrowIfNull(item);
