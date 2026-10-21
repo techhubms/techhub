@@ -15,7 +15,10 @@ public enum AiProfile
     RoundupNewsWriter,
 
     /// <summary>Generates roundup title, tags and introduction.</summary>
-    RoundupMetadata
+    RoundupMetadata,
+
+    /// <summary>Extracts dated timeline events from an already stored article (backfills, not the first processing).</summary>
+    TimelineExtraction
 }
 
 /// <summary>
@@ -56,6 +59,9 @@ public sealed class AiProfilesOptions
     /// <summary>Roundup metadata.</summary>
     public AiProfileOptions RoundupMetadata { get; init; } = new();
 
+    /// <summary>Timeline extraction from stored articles.</summary>
+    public AiProfileOptions TimelineExtraction { get; init; } = new();
+
     /// <summary>Returns the settings for <paramref name="profile"/>.</summary>
     public AiProfileOptions Get(AiProfile profile) => profile switch
     {
@@ -63,6 +69,7 @@ public sealed class AiProfilesOptions
         AiProfile.Rewrite => Rewrite,
         AiProfile.RoundupNewsWriter => RoundupNewsWriter,
         AiProfile.RoundupMetadata => RoundupMetadata,
+        AiProfile.TimelineExtraction => TimelineExtraction,
         _ => throw new ArgumentOutOfRangeException(nameof(profile), profile, "Unknown AI profile")
     };
 }

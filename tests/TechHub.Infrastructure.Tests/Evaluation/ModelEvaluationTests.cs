@@ -65,7 +65,8 @@ public class ModelEvaluationTests
         Classification = classification ?? new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = "low" },
         Rewrite = new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = rewriteEffort },
         RoundupNewsWriter = new AiProfileOptions { DeploymentName = "gpt-6-astra", ReasoningEffort = "medium" },
-        RoundupMetadata = new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = "low" }
+        RoundupMetadata = new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = "low" },
+        TimelineExtraction = new AiProfileOptions { DeploymentName = "gpt-6-luna", ReasoningEffort = "low" }
     };
 
     private static AiCategorizationOptions Options(string rewriteEffort = "low", AiProfileOptions? classification = null) => new()
@@ -621,7 +622,7 @@ public class ModelEvaluationTests
         items.AddRange(pinned.Where(p => items.All(i => i.Slug != p.Slug)));
 
         var report = new StringBuilder();
-        report.AppendLine("# Timeline extraction evaluation (gpt-6.1-sol)");
+        report.AppendLine("# Timeline extraction evaluation (gpt-6-luna)");
         report.AppendLine();
         var withEvents = 0;
         var total = 0;

@@ -2,7 +2,7 @@ Describe "Setup-UserSecrets" {
     BeforeAll {
         . $PSScriptRoot/TestHelpers.ps1
         $scriptPath = Join-Path $PSScriptRoot "../../scripts/Setup-UserSecrets.ps1"
-        $aiSettings = '[{"name":"AiCategorization__Endpoint","value":"https://ai.example.net"},{"name":"AiCategorization__Profiles__Classification__DeploymentName","value":"gpt-classify"},{"name":"AiCategorization__Profiles__Classification__ReasoningEffort","value":"low"},{"name":"AiCategorization__Profiles__Classification__ServiceTier","value":"flex"},{"name":"AiCategorization__Profiles__Rewrite__DeploymentName","value":"gpt-rewrite"},{"name":"AiCategorization__Profiles__Rewrite__ReasoningEffort","value":""},{"name":"AiCategorization__Profiles__Rewrite__ServiceTier","value":"default"},{"name":"Other","value":"x"}]'
+        $aiSettings = '[{"name":"AiCategorization__Endpoint","value":"https://ai.example.net"},{"name":"AiCategorization__Profiles__Classification__DeploymentName","value":"gpt-classify"},{"name":"AiCategorization__Profiles__Classification__ReasoningEffort","value":"low"},{"name":"AiCategorization__Profiles__Classification__ServiceTier","value":"flex"},{"name":"AiCategorization__Profiles__Rewrite__DeploymentName","value":"gpt-rewrite"},{"name":"AiCategorization__Profiles__Rewrite__ReasoningEffort","value":""},{"name":"AiCategorization__Profiles__Rewrite__ServiceTier","value":"default"},{"name":"AiCategorization__Profiles__TimelineExtraction__DeploymentName","value":"gpt-timeline"},{"name":"Other","value":"x"}]'
     }
 
     BeforeEach {
@@ -178,6 +178,7 @@ Describe "Setup-UserSecrets" {
                     'AiCategorization:Profiles:Classification:ServiceTier flex --project .*src/TechHub.Api'
                     'AiCategorization:Profiles:Rewrite:DeploymentName gpt-rewrite --project .*src/TechHub.Api'
                     'AiCategorization:Profiles:Rewrite:ServiceTier default --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:TimelineExtraction:DeploymentName gpt-timeline --project .*src/TechHub.Api'
                     'Newsletter:Endpoint https://acs.example.net --project .*src/TechHub.Api'
                     'Newsletter:SenderAddress noreply@example.net --project .*src/TechHub.Api'
                     'Newsletter:UnsubscribeSecret unsub-hmac-secret --project .*src/TechHub.Api'

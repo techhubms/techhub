@@ -41,7 +41,7 @@ param azureAdClientId string = ''
 @description('Azure AI Foundry endpoint URL')
 param aiCategorizationEndpoint string = ''
 
-@description('Model settings per AI pipeline step, keyed by profile name (Classification, Rewrite, RoundupNewsWriter, RoundupMetadata). Each value has deploymentName, reasoningEffort (empty to omit) and serviceTier (default or flex).')
+@description('Model settings per AI pipeline step, keyed by profile name (Classification, Rewrite, RoundupNewsWriter, RoundupMetadata, TimelineExtraction). Each value has deploymentName, reasoningEffort (empty to omit) and serviceTier (default or flex).')
 param aiProfiles object = {}
 
 @description('Whether scheduled content processing is enabled for this API app.')

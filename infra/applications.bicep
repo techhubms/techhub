@@ -101,6 +101,7 @@ var aiProfiles = {
   Rewrite: { deploymentName: 'gpt-6.1-sol', reasoningEffort: 'low', serviceTier: 'flex' }
   RoundupNewsWriter: { deploymentName: 'gpt-6-astra', reasoningEffort: 'medium', serviceTier: 'flex' }
   RoundupMetadata: { deploymentName: 'gpt-6.1-sol', reasoningEffort: 'low', serviceTier: 'flex' }
+  TimelineExtraction: { deploymentName: 'gpt-6-luna', reasoningEffort: 'low', serviceTier: 'flex' }
 }
 
 // ============================================================================

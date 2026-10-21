@@ -17,6 +17,7 @@ public class AiCategorizationServiceTests
 {
     private const string ClassifyDeployment = "test-classification";
     private const string RewriteDeployment = "test-rewrite";
+    private const string TimelineDeployment = "test-timeline";
 
     private readonly Mock<IAiCompletionClient> _aiClient = new();
     private readonly List<string> _requests = [];
@@ -30,7 +31,8 @@ public class AiCategorizationServiceTests
             Classification = new AiProfileOptions { DeploymentName = ClassifyDeployment, ServiceTier = "flex", ReasoningEffort = "low" },
             Rewrite = new AiProfileOptions { DeploymentName = RewriteDeployment, ServiceTier = "flex", ReasoningEffort = "low" },
             RoundupNewsWriter = new AiProfileOptions { DeploymentName = "w" },
-            RoundupMetadata = new AiProfileOptions { DeploymentName = "m" }
+            RoundupMetadata = new AiProfileOptions { DeploymentName = "m" },
+            TimelineExtraction = new AiProfileOptions { DeploymentName = TimelineDeployment, ServiceTier = "flex", ReasoningEffort = "low" }
         }
     };
 
@@ -607,14 +609,14 @@ public class AiCategorizationServiceTests
     }
 
     [Fact]
-    public async Task ExtractTimelineEventsAsync_UsesClassificationProfileAndTimelineOnlySchema()
+    public async Task ExtractTimelineEventsAsync_UsesTimelineExtractionProfileAndTimelineOnlySchema()
     {
         SetupResponses(Wrap("""{"timeline_events":[]}"""));
 
         await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
 
         var body = Parse(_requests[0]);
-        body.GetProperty("model").GetString().Should().Be(ClassifyDeployment);
+        body.GetProperty("model").GetString().Should().Be(TimelineDeployment);
         var schema = body.GetProperty("response_format").GetProperty("json_schema");
         schema.GetProperty("strict").GetBoolean().Should().BeTrue();
         schema.GetProperty("schema").GetProperty("required").EnumerateArray().Select(e => e.GetString()).Should().Equal("timeline_events");

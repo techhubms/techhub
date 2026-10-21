@@ -31,7 +31,7 @@
         AiCategorization:Endpoint        — Azure OpenAI endpoint URL (production)
         AiCategorization:Profiles:<Step>:DeploymentName / ReasoningEffort / ServiceTier
                                          — model settings of each AI step (production), for the steps
-                                           Classification, Rewrite, RoundupNewsWriter and RoundupMetadata
+                                           Classification, Rewrite, RoundupNewsWriter, RoundupMetadata and TimelineExtraction
         Newsletter:Endpoint              — ACS email endpoint URL (production)
         Newsletter:SenderAddress         — ACS sender address (production)
         Newsletter:UnsubscribeSecret     — HMAC secret for unsubscribe URLs (from Key Vault)
@@ -181,7 +181,7 @@ function Get-EnvVar($envVars, $name) {
 $aiEndpoint = Get-EnvVar $apiEnvVars 'AiCategorization__Endpoint'
 
 # Model settings per AI step: deployment name, reasoning effort and service tier.
-$aiProfileNames = @('Classification', 'Rewrite', 'RoundupNewsWriter', 'RoundupMetadata')
+$aiProfileNames = @('Classification', 'Rewrite', 'RoundupNewsWriter', 'RoundupMetadata', 'TimelineExtraction')
 $aiProfileSettings = @('DeploymentName', 'ReasoningEffort', 'ServiceTier')
 $aiProfiles = foreach ($profileName in $aiProfileNames) {
     foreach ($setting in $aiProfileSettings) {

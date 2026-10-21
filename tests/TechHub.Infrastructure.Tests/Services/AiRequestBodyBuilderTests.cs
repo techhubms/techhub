@@ -118,6 +118,7 @@ public class AiRequestBodyBuilderTests
     [InlineData(AiProfile.Rewrite)]
     [InlineData(AiProfile.RoundupNewsWriter)]
     [InlineData(AiProfile.RoundupMetadata)]
+    [InlineData(AiProfile.TimelineExtraction)]
     public void ProfilesGet_ReturnsTheMatchingProfile(AiProfile profile)
     {
         var profiles = new AiProfilesOptions
@@ -125,7 +126,8 @@ public class AiRequestBodyBuilderTests
             Classification = new AiProfileOptions { DeploymentName = "c" },
             Rewrite = new AiProfileOptions { DeploymentName = "r" },
             RoundupNewsWriter = new AiProfileOptions { DeploymentName = "w" },
-            RoundupMetadata = new AiProfileOptions { DeploymentName = "m" }
+            RoundupMetadata = new AiProfileOptions { DeploymentName = "m" },
+            TimelineExtraction = new AiProfileOptions { DeploymentName = "t" }
         };
 
         var expected = profile switch
@@ -133,6 +135,7 @@ public class AiRequestBodyBuilderTests
             AiProfile.Classification => "c",
             AiProfile.Rewrite => "r",
             AiProfile.RoundupNewsWriter => "w",
+            AiProfile.TimelineExtraction => "t",
             _ => "m"
         };
 

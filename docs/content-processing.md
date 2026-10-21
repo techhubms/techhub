@@ -163,6 +163,7 @@ identity in Azure, `az login` locally), so no API key is configured.
 | 2. Rewrite | `Rewrite` | Markdown body, only for included items | `gpt-6.1-sol` |
 | Roundup writer | `RoundupNewsWriter` | Roundup topics | `gpt-6-astra` |
 | Roundup metadata | `RoundupMetadata` | Title, tags and introduction (strict JSON) | `gpt-6.1-sol` |
+| Timeline extraction | `TimelineExtraction` | Timeline events only (strict JSON), from already stored articles: the timeline backfill job | `gpt-6-luna` |
 
 `CategorizeAsync` runs step 1 and, when the item is included, step 2. A failing rewrite fails the
 whole item; nothing is stored. `ClassifyAsync` runs step 1 only and is used by the roundup
@@ -175,7 +176,7 @@ Configured under `"AiCategorization"`:
 | Setting | Default | Description |
 |---|---|---|
 | `Endpoint` | empty | Azure AI Foundry endpoint URL |
-| `Profiles:<Step>:DeploymentName` | `gpt-5.2` in `appsettings.json` | Deployment used by the step (`Classification`, `Rewrite`, `RoundupNewsWriter`, `RoundupMetadata`) |
+| `Profiles:<Step>:DeploymentName` | `gpt-5.2` in `appsettings.json` | Deployment used by the step (`Classification`, `Rewrite`, `RoundupNewsWriter`, `RoundupMetadata`, `TimelineExtraction`) |
 | `Profiles:<Step>:ReasoningEffort` | empty (omitted) | `reasoning_effort` sent to the model, e.g. `low` or `medium` |
 | `Profiles:<Step>:ServiceTier` | `default` | `default` (Standard) or `flex` (50% cheaper, may queue) |
 | `MaxRetries` | `3` | Attempts per item on rate limits and transient failures |
@@ -399,7 +400,7 @@ Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`
 Existing articles are scanned by `TimelineBackfillBackgroundService`, a manual-trigger-only job (job type `timeline-backfill`). Use
 the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/timeline-backfill/trigger` (see [admin.md](admin.md)).
 
-- Reads the stored article text and sends it to the `Classification` profile with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`)
+- Reads the stored article text and sends it to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`)
 - Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again
 - Options: `force`, `publishedAfter` (yyyy-MM-dd), `collection` and `limit`. Newest articles come first
 - Resumable: an article is marked as scanned only after its events are stored, so a cancelled or failed run can simply be started again. A failing article is logged and left for the next run

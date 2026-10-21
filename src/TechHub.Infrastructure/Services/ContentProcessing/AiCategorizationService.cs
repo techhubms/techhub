@@ -78,7 +78,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
 
         var userMessage = BuildTimelineExtractionPrompt(item);
         var json = AiRequestBodyBuilder.Build(
-            _options.Profiles.Classification,
+            _options.Profiles.TimelineExtraction,
             _timelineSystemMessage,
             userMessage,
             ClassificationMaxCompletionTokens,
