@@ -159,7 +159,7 @@ identity in Azure, `az login` locally), so no API key is configured.
 
 | Step | Profile | Output | Model in production after go-live |
 |---|---|---|---|
-| 1. Classify | `Classification` | Strict JSON (JSON schema): include/exclude, explanation, title, author, sections, primary section, tags, excerpt, `section_roles`, `key_facts`, `significance`, `content_kind`, `lifecycle`, `products`, `timeline_events` | `gpt-6-luna` |
+| 1. Classify | `Classification` | Strict JSON (JSON schema): include/exclude, explanation, title, author, sections, primary section, tags, excerpt, `section_roles`, `key_facts`, `significance`, `content_kind`, `lifecycle`, `products`, `timeline_events` | `gpt-6.1-sol` |
 | 2. Rewrite | `Rewrite` | Markdown body, only for included items | `gpt-6.1-sol` |
 | Roundup writer | `RoundupNewsWriter` | Roundup topics | `gpt-6-astra` |
 | Roundup metadata | `RoundupMetadata` | Title, tags and introduction (strict JSON) | `gpt-6.1-sol` |
@@ -167,6 +167,8 @@ identity in Azure, `az login` locally), so no API key is configured.
 `CategorizeAsync` runs step 1 and, when the item is included, step 2. A failing rewrite fails the
 whole item; nothing is stored. `ClassifyAsync` runs step 1 only and is used by the roundup
 metadata backfill, which never rewrites stored articles.
+
+Classification runs on `gpt-6.1-sol` rather than the cheaper `gpt-6-luna` because the include/exclude decision needs the strictness of the old model: on 73 articles production had skipped, `gpt-6.1-sol` and `gpt-5.2` kept 95.9% excluded, `gpt-6-luna` only 89.0% (82.2% with `medium` reasoning). The `gpt-6-luna` deployment is kept as a spare. See [Evaluating Models](#evaluating-models).
 
 Configured under `"AiCategorization"`:
 
@@ -413,6 +415,7 @@ tool to use before changing a model or a prompt. The stages call the real models
 |---|---|---|
 | `ModelEvaluation_Classification` | Does the classification agree with production? 100 stored articles (included in production) and 50 re-fetched skipped URLs (excluded in production) | `classification.md` |
 | `ModelEvaluation_ClassificationControl` | How much of the disagreement is noise or caused by the prompt, not the model? Classifies a frozen set of 100 stored articles with `gpt-6-luna` twice and with `gpt-5.2` using the new prompt | `classification-control.md`, `golden-classification.json` (the frozen sample) |
+| `ModelEvaluation_SkippedControl` | Which models exclude what production excluded? Classifies about 70 frozen, re-fetched skipped URLs with `gpt-6-luna` (low, medium), `gpt-6.1-sol` and `gpt-5.2` | `skipped-control.md`, `golden-skipped.json` (the frozen article text) |
 | `ModelEvaluation_Rewrite` | How do the rewrite model at `low` and `medium` reasoning compare with the stored text? About 12 re-fetched articles | `rewrite.md`, `rewrite/*.md` (stored, low and medium side by side) |
 | `ModelEvaluation_Timeline` | Are the extracted dates right? About 50 articles | `timeline.md` |
 | `ModelEvaluation_Roundups` | Do the roundups of the latest week with a production roundup improve? Regenerates all sections locally | `roundups.md`, `roundups/production`, `roundups/new` |

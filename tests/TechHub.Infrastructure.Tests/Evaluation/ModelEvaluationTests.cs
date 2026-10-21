@@ -62,7 +62,7 @@ public class ModelEvaluationTests
 
     private static AiProfilesOptions Profiles(string rewriteEffort = "low", AiProfileOptions? classification = null) => new()
     {
-        Classification = classification ?? new AiProfileOptions { DeploymentName = "gpt-6-luna", ReasoningEffort = "low" },
+        Classification = classification ?? new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = "low" },
         Rewrite = new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = rewriteEffort },
         RoundupNewsWriter = new AiProfileOptions { DeploymentName = "gpt-6-astra", ReasoningEffort = "medium" },
         RoundupMetadata = new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = "low" }
@@ -189,7 +189,7 @@ public class ModelEvaluationTests
         var meanSectionJaccard = ok.Where(r => r.Result.Item is not null).Select(r => Jaccard(r.Result.Item!.Sections.ToHashSet(StringComparer.Ordinal), r.Item.Sections)).DefaultIfEmpty().Average();
         var meanTagJaccard = ok.Where(r => r.Result.Item is not null).Select(r => Jaccard(r.Result.Item!.Tags.Select(t => t.ToLowerInvariant()).ToHashSet(StringComparer.Ordinal), r.Item.Tags)).DefaultIfEmpty().Average();
 
-        report.AppendLine("# Classification evaluation (gpt-6-luna, reasoning low)");
+        report.AppendLine("# Classification evaluation (gpt-6.1-sol, reasoning low)");
         report.AppendLine();
         report.AppendLine("## Included articles (production said: included)");
         report.AppendLine();
@@ -359,8 +359,8 @@ public class ModelEvaluationTests
         var recorders = new Dictionary<string, UsageRecorder>();
         var configs = new (string Name, AiProfileOptions? Profile)[]
         {
-            ("luna-run-1", null),
-            ("luna-run-2", null),
+            ("luna-run-1", new AiProfileOptions { DeploymentName = "gpt-6-luna", ReasoningEffort = "low" }),
+            ("luna-run-2", new AiProfileOptions { DeploymentName = "gpt-6-luna", ReasoningEffort = "low" }),
             ("gpt-5.2", new AiProfileOptions { DeploymentName = "gpt-5.2" })
         };
 
@@ -621,7 +621,7 @@ public class ModelEvaluationTests
         items.AddRange(pinned.Where(p => items.All(i => i.Slug != p.Slug)));
 
         var report = new StringBuilder();
-        report.AppendLine("# Timeline extraction evaluation (gpt-6-luna)");
+        report.AppendLine("# Timeline extraction evaluation (gpt-6.1-sol)");
         report.AppendLine();
         var withEvents = 0;
         var total = 0;

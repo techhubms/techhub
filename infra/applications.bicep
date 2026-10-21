@@ -97,7 +97,7 @@ var prodDatabaseName = 'techhub'
 // Background steps run on the Flex tier (50% cheaper, may queue; the app falls back to Standard after 30 minutes).
 // Rollback: set the deploymentName of a step back to 'gpt-5.2' with serviceTier 'default' and redeploy Phase 2.
 var aiProfiles = {
-  Classification: { deploymentName: 'gpt-6-luna', reasoningEffort: 'low', serviceTier: 'flex' }
+  Classification: { deploymentName: 'gpt-6.1-sol', reasoningEffort: 'low', serviceTier: 'flex' }
   Rewrite: { deploymentName: 'gpt-6.1-sol', reasoningEffort: 'low', serviceTier: 'flex' }
   RoundupNewsWriter: { deploymentName: 'gpt-6-astra', reasoningEffort: 'medium', serviceTier: 'flex' }
   RoundupMetadata: { deploymentName: 'gpt-6.1-sol', reasoningEffort: 'low', serviceTier: 'flex' }
