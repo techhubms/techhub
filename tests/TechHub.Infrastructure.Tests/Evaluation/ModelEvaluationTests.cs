@@ -236,6 +236,14 @@ public class ModelEvaluationTests
             ORDER BY random() LIMIT 50
             """)).ToList();
 
+        // Borderline promotional articles that production skipped; they must stay excluded.
+        var pinnedUrls = new[]
+        {
+            "https://techcommunity.microsoft.com/t5/tools/the-22-identity-settings-i-check-on-every-entra-tenant-and-the/m-p/4562057#M210",
+            "https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-microsoft-iq-live-a-new-biweekly-series-for/ba-p/4543480"
+        };
+        skipped.AddRange(pinnedUrls.Where(u => skipped.All(s => s.Url != u)).Select(u => (u, (string?)"pinned", (string?)null, (string?)null)));
+
         var fetcher = CreateFetcher();
         var fetchFailed = 0;
         var agreeExcluded = 0;
@@ -398,6 +406,125 @@ public class ModelEvaluationTests
         items.Should().NotBeEmpty();
     }
 
+    private sealed record SkippedSample(string Url, string? Reason, string? Feed, string? Collection, string Content);
+
+    /// <summary>
+    /// Re-classifies a frozen set of articles that production skipped, using several models and reasoning levels with the
+    /// same prompt. It answers whether over-inclusion comes from the prompt or from the model. The fetched article text is
+    /// cached in .tmp/eval/golden-skipped.json (delete the file to draw a new sample).
+    /// </summary>
+    [Fact]
+    public async Task ModelEvaluation_SkippedControl()
+    {
+        RequireEnabled();
+        var ct = TestContext.Current.CancellationToken;
+        using var db = OpenLocalDb();
+
+        var goldenPath = Path.Combine(OutDir(), "golden-skipped.json");
+        List<SkippedSample> samples;
+        if (File.Exists(goldenPath))
+        {
+            samples = JsonSerializer.Deserialize<List<SkippedSample>>(File.ReadAllText(goldenPath))!;
+        }
+        else
+        {
+            var skipped = (await db.QueryAsync<(string Url, string? Reason, string? Feed, string? Collection)>("""
+                SELECT external_url, reason, feed_name, collection_name
+                FROM processed_urls
+                WHERE status = 'skipped' AND reason IS NOT NULL AND processed_at > NOW() - INTERVAL '90 days'
+                  AND external_url NOT ILIKE '%youtube.com%' AND external_url NOT ILIKE '%youtu.be%'
+                ORDER BY random() LIMIT 80
+                """)).ToList();
+            var fetcher = CreateFetcher();
+            samples = [];
+            foreach (var (url, reason, feed, collection) in skipped)
+            {
+                var raw = await fetcher.EnrichWithContentAsync(new RawFeedItem
+                {
+                    Title = url,
+                    ExternalUrl = url,
+                    PublishedAt = DateTimeOffset.UtcNow,
+                    FeedName = feed ?? "Feed",
+                    CollectionName = collection ?? "news"
+                }, ct);
+                if (!string.IsNullOrWhiteSpace(raw.FullContent))
+                {
+                    samples.Add(new SkippedSample(url, reason, feed, collection, raw.FullContent));
+                }
+            }
+
+            File.WriteAllText(goldenPath, JsonSerializer.Serialize(samples));
+        }
+
+        var configs = new (string Name, AiProfileOptions Profile)[]
+        {
+            ("luna-low", new AiProfileOptions { DeploymentName = "gpt-6-luna", ReasoningEffort = "low" }),
+            ("luna-medium", new AiProfileOptions { DeploymentName = "gpt-6-luna", ReasoningEffort = "medium" }),
+            ("sol-low", new AiProfileOptions { DeploymentName = "gpt-6.1-sol", ReasoningEffort = "low" }),
+            ("gpt-5.2", new AiProfileOptions { DeploymentName = "gpt-5.2" })
+        };
+
+        var included = new Dictionary<string, bool[]>();
+        var usage = new StringBuilder();
+        foreach (var (name, profile) in configs)
+        {
+            var (ai, recorder) = CreateAi(classification: profile);
+            var flags = new bool[samples.Count];
+            for (var i = 0; i < samples.Count; i++)
+            {
+                var s = samples[i];
+                var result = await ai.ClassifyAsync(new RawFeedItem
+                {
+                    Title = s.Url,
+                    ExternalUrl = s.Url,
+                    PublishedAt = DateTimeOffset.UtcNow,
+                    FeedName = s.Feed ?? "Feed",
+                    CollectionName = s.Collection ?? "news",
+                    FullContent = s.Content
+                }, ct);
+                flags[i] = !result.IsFailure && result.Item is not null;
+            }
+
+            included[name] = flags;
+            usage.AppendLine(CultureInfo.InvariantCulture, $"## Usage {name}");
+            usage.AppendLine(recorder.Summary());
+        }
+
+        var report = new StringBuilder();
+        report.AppendLine("# Skipped-URL control (frozen sample)");
+        report.AppendLine();
+        report.AppendLine(CultureInfo.InvariantCulture, $"{samples.Count} URLs that production skipped, article text frozen in `.tmp/eval/golden-skipped.json`. Same prompt for every configuration.");
+        report.AppendLine();
+        report.AppendLine("| Configuration | Stays excluded | Would be included |");
+        report.AppendLine("|---|---|---|");
+        foreach (var (name, _) in configs)
+        {
+            var n = included[name].Count(x => x);
+            report.AppendLine(CultureInfo.InvariantCulture, $"| {name} | {samples.Count - n}/{samples.Count} = {100.0 * (samples.Count - n) / samples.Count:F1}% | {n} |");
+        }
+
+        report.AppendLine();
+        report.AppendLine("## URLs included by at least one configuration");
+        report.AppendLine();
+        report.AppendLine("| URL | Production reason | " + string.Join(" | ", configs.Select(c => c.Name)) + " |");
+        report.AppendLine("|---|---|" + string.Join("|", configs.Select(_ => "---")) + "|");
+        for (var i = 0; i < samples.Count; i++)
+        {
+            if (configs.Any(c => included[c.Name][i]))
+            {
+                var reason = (samples[i].Reason ?? "").Replace("|", "/", StringComparison.Ordinal);
+                reason = reason.Length > 140 ? reason[..140] + "…" : reason;
+                report.AppendLine($"| {samples[i].Url} | {reason} | " + string.Join(" | ", configs.Select(c => included[c.Name][i] ? "INCLUDED" : "excluded")) + " |");
+            }
+        }
+
+        report.AppendLine();
+        report.Append(usage);
+        File.WriteAllText(Path.Combine(OutDir(), "skipped-control.md"), report.ToString());
+        Console.WriteLine(report.ToString());
+        samples.Should().NotBeEmpty();
+    }
+
     // ── Stage 2: rewrite ─────────────────────────────────────────────────────
 
     [Fact]
@@ -480,6 +607,18 @@ public class ModelEvaluationTests
         items.AddRange(await SampleAsync(db, "news", 25, 180, "AND (sections_bitmask & 16) > 0"));
         items.AddRange(await SampleAsync(db, "news", 15, 180, "AND (sections_bitmask & 16) = 0"));
         items.AddRange(await SampleAsync(db, "blogs", 10, 180));
+
+        // Articles that once produced wrong events: bundled release notes, a retrospective and a two-product announcement.
+        var pinned = await db.QueryAsync<StoredItem>("""
+            SELECT collection_name AS CollectionName, slug AS Slug, title AS Title, content AS Content,
+                   external_url AS ExternalUrl, COALESCE(feed_name, 'Feed') AS FeedName, date_epoch AS DateEpoch,
+                   primary_section_name AS PrimarySectionName, sections_bitmask AS SectionsBitmask, COALESCE(tags_csv, '') AS TagsCsv
+            FROM content_items
+            WHERE title ILIKE 'GitHub Copilot in Visual Studio Code, April releases'
+               OR title ILIKE 'What%s new across Microsoft SQL in 2026 so far%'
+               OR title ILIKE 'OpenAI%s GPT-6 Sol and GPT-6 Luna now available'
+            """);
+        items.AddRange(pinned.Where(p => items.All(i => i.Slug != p.Slug)));
 
         var report = new StringBuilder();
         report.AppendLine("# Timeline extraction evaluation (gpt-6-luna)");

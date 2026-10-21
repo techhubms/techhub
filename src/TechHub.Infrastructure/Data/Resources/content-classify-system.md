@@ -151,7 +151,8 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 - Content whose **primary purpose** is announcing or advertising a tool/framework the author created
 - Promotional content without educational value
 - Tool advertisements without technical depth
-
+- Announcements of an event, webinar, livestream or video series whose content is the schedule, speakers or a call to register, rather than technical content
+- Posts that present a list of tips, settings or checks mainly to promote the author's own product or service, even when the list itself is useful. The usefulness of the tips does not matter when the post exists to sell the product
 **CRITICAL: Minor self-promotion does NOT trigger this rule.**
 If the post is substantively educational (tutorials, how-to guides, configuration walkthroughs, etc.) and only *briefly* mentions a related tool or extension the author built (e.g., a short paragraph or closing mention with a link), the post should still be **included and categorized normally**. Apply this exclusion only when promotion is the dominant intent of the content.
 
