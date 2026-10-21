@@ -35,6 +35,7 @@ Examples:
 - Use clear headings, bullet points and code examples where relevant
 - Preserve all technical details, links and actionable insights
 - Ignore navigation, "Share", "Read more", contact sections and other elements that surround the main content of a webpage
+- Leave out lists of related or recommended posts (for example "Related reading", "You might also like", "More from this author"), comment sections, newsletter sign-ups, cookie notices and author bios. Keep a list of links only when it is part of the article itself, such as its own sources or references
 - Structure the text for use in a knowledge database
 - Follow the markdown formatting requirements at the end of this prompt
 
