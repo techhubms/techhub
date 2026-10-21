@@ -250,6 +250,7 @@ builder.Services.AddHostedService(sp => sp.GetRequiredService<ContentProcessingB
 
 // Content item write repository (scoped — reuses the scoped IDbConnection)
 builder.Services.AddScoped<IContentItemWriteRepository, ContentItemWriteRepository>();
+builder.Services.AddScoped<ITimelineEventRepository, TimelineEventRepository>();
 
 // Content fixer background service — manual trigger only, no periodic schedule
 builder.Services.AddSingleton<ContentFixerBackgroundService>();

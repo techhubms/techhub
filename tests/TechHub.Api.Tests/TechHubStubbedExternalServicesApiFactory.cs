@@ -116,7 +116,26 @@ public class TechHubStubbedExternalServicesApiFactory : TechHubIntegrationTestAp
                     Tags = ["AI"],
                     Sections = ["ai"],
                     PrimarySectionName = "ai",
-                    ContentHash = $"stub-hash-{slug}"
+                    ContentHash = $"stub-hash-{slug}",
+                    RoundupMetadata = new RoundupMetadata
+                    {
+                        SchemaVersion = RoundupMetadata.CurrentSchemaVersion,
+                        KeyFacts = ["Stubbed fact."],
+                        Significance = "medium",
+                        SectionRoles = new Dictionary<string, string> { ["ai"] = RoundupMetadata.RoleLead }
+                    },
+                    TimelineEvents =
+                    [
+                        new TimelineEvent
+                        {
+                            Kind = "ga",
+                            Product = "Stub Product",
+                            Description = "Stubbed event",
+                            Date = new DateOnly(2026, 3, 10),
+                            DatePrecision = "day",
+                            DateSource = TimelineEvent.DateSourceExplicit
+                        }
+                    ]
                 }
             });
         }

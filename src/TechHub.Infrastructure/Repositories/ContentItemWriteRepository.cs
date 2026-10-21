@@ -223,7 +223,7 @@ UPDATE content_items
     /// Serializes roundup metadata to the <c>ai_metadata</c> JSON: schema version 2 stores the classification output
     /// (key facts, significance, section roles, ...), version 1 the original summary-based fields.
     /// </summary>
-    internal static string SerializeAiMetadata(RoundupMetadata metadata)
+    public static string SerializeAiMetadata(RoundupMetadata metadata)
     {
         ArgumentNullException.ThrowIfNull(metadata);
 

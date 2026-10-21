@@ -31,6 +31,7 @@ public sealed class ContentProcessingService
     private readonly IAiCategorizationService _aiService;
     private readonly IYouTubeTagService _youtubeTagService;
     private readonly IContentItemWriteRepository _writeRepo;
+    private readonly ITimelineEventRepository _timelineRepo;
     private readonly IContentProcessingJobRepository _jobRepo;
     private readonly IProcessedUrlRepository _processedUrlRepo;
     private readonly IRssFeedConfigRepository _feedRepo;
@@ -45,6 +46,7 @@ public sealed class ContentProcessingService
         IAiCategorizationService aiService,
         IYouTubeTagService youtubeTagService,
         IContentItemWriteRepository writeRepo,
+        ITimelineEventRepository timelineRepo,
         IContentProcessingJobRepository jobRepo,
         IProcessedUrlRepository processedUrlRepo,
         IRssFeedConfigRepository feedRepo,
@@ -58,6 +60,7 @@ public sealed class ContentProcessingService
         ArgumentNullException.ThrowIfNull(aiService);
         ArgumentNullException.ThrowIfNull(youtubeTagService);
         ArgumentNullException.ThrowIfNull(writeRepo);
+        ArgumentNullException.ThrowIfNull(timelineRepo);
         ArgumentNullException.ThrowIfNull(jobRepo);
         ArgumentNullException.ThrowIfNull(processedUrlRepo);
         ArgumentNullException.ThrowIfNull(feedRepo);
@@ -71,6 +74,7 @@ public sealed class ContentProcessingService
         _aiService = aiService;
         _youtubeTagService = youtubeTagService;
         _writeRepo = writeRepo;
+        _timelineRepo = timelineRepo;
         _jobRepo = jobRepo;
         _processedUrlRepo = processedUrlRepo;
         _feedRepo = feedRepo;
@@ -706,6 +710,13 @@ public sealed class ContentProcessingService
         try
         {
             await _writeRepo.UpsertProcessedItemAsync(processed, ct);
+            await _timelineRepo.ReplaceEventsAsync(
+                processed.CollectionName,
+                processed.Slug,
+                processed.TimelineEvents,
+                ITimelineEventRepository.ExtractedFromSource,
+                ITimelineEventRepository.CurrentPromptVersion,
+                ct);
         }
         catch (DbException ex)
         {

@@ -6,6 +6,7 @@ using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
 using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
 using TechHub.Infrastructure.Services.ContentProcessing;
 
@@ -641,6 +642,7 @@ public static partial class AdminEndpoints
         ApplyTranscriptRequest request,
         IContentRepository contentRepo,
         IAiCategorizationService aiService,
+        ITimelineEventRepository timelineRepo,
         IContentFixerService contentFixer,
         CancellationToken ct,
         string? collection = null,
@@ -738,15 +740,7 @@ public static partial class AdminEndpoints
         string? newAiMetadata = existing.AiMetadata;
         if (processed.RoundupMetadata is not null)
         {
-            newAiMetadata = System.Text.Json.JsonSerializer.Serialize(new
-            {
-                roundup_summary = processed.RoundupMetadata.Summary,
-                key_topics = processed.RoundupMetadata.KeyTopics,
-                roundup_relevance = processed.RoundupMetadata.Relevance,
-                topic_type = processed.RoundupMetadata.TopicType,
-                impact_level = processed.RoundupMetadata.ImpactLevel,
-                time_sensitivity = processed.RoundupMetadata.TimeSensitivity
-            });
+            newAiMetadata = ContentItemWriteRepository.SerializeAiMetadata(processed.RoundupMetadata);
         }
 
         var updatedEditData = new ContentItemEditData
@@ -771,6 +765,15 @@ public static partial class AdminEndpoints
         {
             return Results.NotFound();
         }
+
+        // The transcript is the source text here, so the events are extracted from the source.
+        await timelineRepo.ReplaceEventsAsync(
+            collection,
+            slug,
+            processed.TimelineEvents,
+            ITimelineEventRepository.ExtractedFromSource,
+            ITimelineEventRepository.CurrentPromptVersion,
+            ct);
 
         contentRepo.InvalidateCachedData();
         return Results.Ok(updatedEditData);
