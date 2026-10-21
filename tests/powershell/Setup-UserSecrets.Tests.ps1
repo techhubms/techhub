@@ -2,7 +2,7 @@ Describe "Setup-UserSecrets" {
     BeforeAll {
         . $PSScriptRoot/TestHelpers.ps1
         $scriptPath = Join-Path $PSScriptRoot "../../scripts/Setup-UserSecrets.ps1"
-        $aiSettings = '[{"name":"AiCategorization__Endpoint","value":"https://ai.example.net"},{"name":"AiCategorization__DeploymentName","value":"gpt-test"},{"name":"Other","value":"x"}]'
+        $aiSettings = '[{"name":"AiCategorization__Endpoint","value":"https://ai.example.net"},{"name":"AiCategorization__Profiles__Classification__DeploymentName","value":"gpt-classify"},{"name":"AiCategorization__Profiles__Classification__ReasoningEffort","value":"low"},{"name":"AiCategorization__Profiles__Classification__ServiceTier","value":"flex"},{"name":"AiCategorization__Profiles__Rewrite__DeploymentName","value":"gpt-rewrite"},{"name":"AiCategorization__Profiles__Rewrite__ReasoningEffort","value":""},{"name":"AiCategorization__Profiles__Rewrite__ServiceTier","value":"default"},{"name":"Other","value":"x"}]'
     }
 
     BeforeEach {
@@ -152,6 +152,17 @@ Describe "Setup-UserSecrets" {
         }
     }
 
+    Context "AI profile secrets" {
+        It "Does not store empty or undefined profile settings" {
+            Invoke-ScriptUnderTest $scriptPath | Out-Null
+
+            $sets = @(Get-CliCalls $cli '^dotnet user-secrets set') -join "`n"
+            $sets | Should -Not -Match 'Profiles:Rewrite:ReasoningEffort'
+            $sets | Should -Not -Match 'Profiles:RoundupNewsWriter'
+            $sets | Should -Not -Match 'AiCategorization:DeploymentName'
+        }
+    }
+
     Context "User secrets" {
         It "Stores localhost Entra ID, production AI and newsletter values in the API project" {
             $result = Invoke-ScriptUnderTest $scriptPath
@@ -162,7 +173,11 @@ Describe "Setup-UserSecrets" {
                     'AzureAd:TenantId tenant-456 --project .*src/TechHub.Api'
                     'AzureAd:ClientId client-123 --project .*src/TechHub.Api'
                     'AiCategorization:Endpoint https://ai.example.net --project .*src/TechHub.Api'
-                    'AiCategorization:DeploymentName gpt-test --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Classification:DeploymentName gpt-classify --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Classification:ReasoningEffort low --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Classification:ServiceTier flex --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Rewrite:DeploymentName gpt-rewrite --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Rewrite:ServiceTier default --project .*src/TechHub.Api'
                     'Newsletter:Endpoint https://acs.example.net --project .*src/TechHub.Api'
                     'Newsletter:SenderAddress noreply@example.net --project .*src/TechHub.Api'
                     'Newsletter:UnsubscribeSecret unsub-hmac-secret --project .*src/TechHub.Api'

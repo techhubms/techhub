@@ -93,8 +93,14 @@ var prodIdentityName = 'id-techhub-prod'
 // Database name — must match the default in modules/postgres.bicep
 var prodDatabaseName = 'techhub'
 
-// OpenAI model deployment name — must match the default in modules/openai.bicep
-var openAiDeploymentModelName = 'gpt-5.2'
+// Model per AI pipeline step. The deployments are created by modules/openai.bicep (Phase 1).
+// Go-live of the three-model pipeline (issue #581) switches these values; until then every step uses gpt-5.2.
+var aiProfiles = {
+  Classification: { deploymentName: 'gpt-5.2', reasoningEffort: '', serviceTier: 'default' }
+  Rewrite: { deploymentName: 'gpt-5.2', reasoningEffort: '', serviceTier: 'default' }
+  RoundupNewsWriter: { deploymentName: 'gpt-5.2', reasoningEffort: '', serviceTier: 'default' }
+  RoundupMetadata: { deploymentName: 'gpt-5.2', reasoningEffort: '', serviceTier: 'default' }
+}
 
 // ============================================================================
 // Existing resource references — read outputs from Phase 1 infrastructure
@@ -139,11 +145,6 @@ resource postgresDatabase 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2
 resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' existing = {
   scope: resourceGroup
   name: openAiName
-}
-
-resource openAiModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' existing = {
-  parent: openAiAccount
-  name: openAiDeploymentModelName
 }
 
 // ============================================================================
@@ -194,7 +195,7 @@ module apiApp './modules/api.bicep' = {
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
     aiCategorizationEndpoint: openAiAccount.properties.endpoint
-    aiCategorizationDeploymentName: openAiModelDeployment.name
+    aiProfiles: aiProfiles
     contentProcessorEnabled: true
     roundupGeneratorEnabled: true
     newsletterScheduledSendEnabled: true
