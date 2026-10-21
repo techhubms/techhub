@@ -342,7 +342,8 @@ except `all`. For each section:
    sections is therefore loaded by each of them
 2. **Existing check** — Sections whose roundup for that week already exists are skipped
 3. **AI metadata backfill** — Articles without `schema_version` 2 metadata are classified on the fly
-   (classification only, never a rewrite) and their `ai_metadata` is updated
+   (classification only, never a rewrite). Their `ai_metadata` is updated and the timeline events the classification found are stored, so
+   the "Dates to know" block does not depend on the timeline backfill having run
 4. **Lead and brief split (code)** — The article's role for this section decides: `lead` articles get a full
    write-up, `brief` articles only a one-line mention. Lead articles are ordered by `significance`, then by first product
 5. **Writer (AI, one call)** — Writes the topics and "Other ... News" from the key facts of the lead articles.
@@ -402,6 +403,37 @@ the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/time
 - Resumable: an article is marked as scanned only after its events are stored, so a cancelled or failed run can simply be started again. A failing article is logged and left for the next run
 - Roundups are never scanned
 - The job log lists failures and progress every 25 articles. The job row shows events stored (Added), scanned articles without events (Skipped) and scanned articles (Fixed)
+
+## Evaluating Models
+
+`tests/TechHub.Infrastructure.Tests/Evaluation/ModelEvaluationTests.cs` compares the configured models with production on real data. It is the
+tool to use before changing a model or a prompt. The stages call the real models, cost money and are skipped unless `TECHHUB_EVAL=1` is set.
+
+| Stage (test name) | Question | Output in `.tmp/eval/` |
+|---|---|---|
+| `ModelEvaluation_Classification` | Does the classification agree with production? 100 stored articles (included in production) and 50 re-fetched skipped URLs (excluded in production) | `classification.md` |
+| `ModelEvaluation_Rewrite` | How do the rewrite model at `low` and `medium` reasoning compare with the stored text? About 12 re-fetched articles | `rewrite.md`, `rewrite/*.md` (stored, low and medium side by side) |
+| `ModelEvaluation_Timeline` | Are the extracted dates right? About 50 articles | `timeline.md` |
+| `ModelEvaluation_Roundups` | Do the roundups of the latest week with a production roundup improve? Regenerates all sections locally | `roundups.md`, `roundups/production`, `roundups/new` |
+
+Every report ends with the token usage per model (prompt, cached, completion and reasoning tokens), which feeds the cost estimate.
+
+How to run:
+
+1. Restore production into the local database: `./scripts/Restore-Database.ps1 -Target local -TablesOnly`. The restore copies only the content tables
+2. Start the app once (`Run -WithoutTests`, then `Stop-Servers`) so that pending migrations are applied; the restored `_migrations` table does not contain the newest ones
+3. Sign in with `az login` (an account with the `Cognitive Services OpenAI User` role and an allowed IP) and set `TECHHUB_EVAL=1`
+4. Run one stage: `Run -TestProject Infrastructure.Tests -TestName ModelEvaluation_Classification`
+
+The roundup stage deletes the local copy of that week's roundups before regenerating them (production copies are saved first), and it changes `ai_metadata` of the
+local articles. Never point it at a production database. Run it against a fresh restore if you want to compare again.
+
+How to read the results:
+
+- A disagreement is not an error: the baseline is the production model, not the truth. Review the listed disagreements by hand
+- 100 articles means roughly ±5 percentage points of uncertainty on an agreement percentage
+- The stored text of included articles is already rewritten and has no feed data, so classifying it is somewhat easier than classifying a raw feed item. The skipped-URL check uses the real original articles
+- Each run samples different articles (`ORDER BY random()`). To compare two models, compare their reports on the same run, or freeze the sample first
 
 ## Troubleshooting
 

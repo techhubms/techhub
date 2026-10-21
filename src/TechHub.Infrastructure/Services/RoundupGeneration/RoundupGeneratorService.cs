@@ -20,6 +20,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
     private readonly IContentFixerService _contentFixer;
     private readonly IAiCategorizationService _aiService;
     private readonly IContentItemWriteRepository _writeRepo;
+    private readonly ITimelineEventRepository _timelineRepo;
     private readonly RoundupNewsWriter _newsWriter;
     private readonly RoundupMetadataGenerator _metadataGenerator;
     private readonly AppSettings _settings;
@@ -30,6 +31,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         IContentFixerService contentFixer,
         IAiCategorizationService aiService,
         IContentItemWriteRepository writeRepo,
+        ITimelineEventRepository timelineRepo,
         RoundupNewsWriter newsWriter,
         RoundupMetadataGenerator metadataGenerator,
         IOptions<AppSettings> settings,
@@ -39,6 +41,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         ArgumentNullException.ThrowIfNull(contentFixer);
         ArgumentNullException.ThrowIfNull(aiService);
         ArgumentNullException.ThrowIfNull(writeRepo);
+        ArgumentNullException.ThrowIfNull(timelineRepo);
         ArgumentNullException.ThrowIfNull(newsWriter);
         ArgumentNullException.ThrowIfNull(metadataGenerator);
         ArgumentNullException.ThrowIfNull(settings);
@@ -48,6 +51,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         _contentFixer = contentFixer;
         _aiService = aiService;
         _writeRepo = writeRepo;
+        _timelineRepo = timelineRepo;
         _newsWriter = newsWriter;
         _metadataGenerator = metadataGenerator;
         _settings = settings.Value;
@@ -259,6 +263,16 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     // Classification only: the stored article text is never rewritten by the backfill.
                     await _writeRepo.UpdateAiMetadataAsync(
                         article.CollectionName, article.Slug, ContentItemWriteRepository.SerializeAiMetadata(meta), ct);
+
+                    // The classification already extracted the timeline events of the article: keep them, so the
+                    // "Dates to know" block of this roundup does not depend on the timeline backfill job having run.
+                    await _timelineRepo.ReplaceEventsAsync(
+                        article.CollectionName,
+                        article.Slug,
+                        result.Item.TimelineEvents,
+                        ITimelineEventRepository.ExtractedFromStoredContent,
+                        ITimelineEventRepository.CurrentPromptVersion,
+                        ct);
 
                     enriched[article.ExternalUrl] = article.WithMetadata(meta);
 

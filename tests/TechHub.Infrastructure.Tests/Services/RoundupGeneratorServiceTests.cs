@@ -25,6 +25,7 @@ public class RoundupGeneratorServiceTests
     private readonly Mock<IAiCompletionClient> _aiClient = new();
     private readonly Mock<IAiCategorizationService> _aiCategorizationService = new();
     private readonly Mock<IContentItemWriteRepository> _writeRepo = new();
+    private readonly Mock<ITimelineEventRepository> _timelineRepo = new();
 
     private readonly List<(string Model, string UserMessage)> _aiCalls = [];
     private readonly List<string> _aiRequests = [];
@@ -116,6 +117,7 @@ public class RoundupGeneratorServiceTests
             contentFixerMock.Object,
             _aiCategorizationService.Object,
             _writeRepo.Object,
+            _timelineRepo.Object,
             newsWriter,
             metadataGenerator,
             appSettingsOptions,
@@ -537,6 +539,49 @@ public class RoundupGeneratorServiceTests
         _aiCategorizationService.Verify(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
         _aiCategorizationService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Never);
         _writeRepo.Verify(w => w.UpdateAiMetadataAsync("news", It.IsAny<string>(), It.Is<string>(j => j.Contains("\"schema_version\":2")), It.IsAny<CancellationToken>()), Times.Exactly(2));
+    }
+
+    [Fact]
+    public async Task GenerateAsync_BackfillKeepsTheTimelineEventsOfTheClassification()
+    {
+        var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000 };
+        SetupArticles("ai", needing, Article("ai", 1));
+        var timelineEvent = new TimelineEvent
+        {
+            Kind = "retirement",
+            Product = "Azure OpenAI",
+            Description = "Is shut down",
+            Date = new DateOnly(2026, 6, 1),
+            DatePrecision = "day",
+            DateSource = "explicit"
+        };
+        _aiCategorizationService
+            .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult
+            {
+                Explanation = "ok",
+                Item = new ProcessedContentItem
+                {
+                    Slug = "article-10",
+                    Title = "t",
+                    Excerpt = "e",
+                    DateEpoch = 0,
+                    CollectionName = "news",
+                    ExternalUrl = "https://example.com/10",
+                    FeedName = "Feed",
+                    PrimarySectionName = "ai",
+                    ContentHash = "h",
+                    RoundupMetadata = new RoundupMetadata { SchemaVersion = 2, KeyFacts = ["A fact."], SectionRoles = new Dictionary<string, string> { ["ai"] = "lead" } },
+                    TimelineEvents = [timelineEvent]
+                }
+            });
+        SetupAi();
+
+        await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
+
+        _timelineRepo.Verify(r => r.ReplaceEventsAsync(
+            "news", "article-10", It.Is<IReadOnlyList<TimelineEvent>>(e => e.Count == 1 && e[0].Kind == "retirement"),
+            ITimelineEventRepository.ExtractedFromStoredContent, ITimelineEventRepository.CurrentPromptVersion, It.IsAny<CancellationToken>()), Times.Once);
     }
 
     [Fact]
