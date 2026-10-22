@@ -310,6 +310,23 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
     }
 
     [Fact]
+    public async Task RunAsync_WhenTheAiTimesOutWithoutRunCancellation_CountsItAsFailedAndContinues()
+    {
+        await SeedAsync("a1", dateEpoch: 1_760_000_000);
+        await SeedAsync("a2", dateEpoch: 1_750_000_000);
+        var calls = 0;
+        _ai.Setup(s => s.ExtractTimelineEventsAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .Returns(() => ++calls == 1
+                ? throw new TaskCanceledException("The request was canceled due to the configured HttpClient.Timeout")
+                : Task.FromResult(new TimelineExtractionResult()));
+
+        var result = await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        result.Failed.Should().Be(1);
+        result.Scanned.Should().Be(1);
+    }
+
+    [Fact]
     public async Task RunAsync_WhenCancelled_StopsAndTheNextRunResumesWithTheRest()
     {
         await SeedAsync("a1", dateEpoch: 1_760_000_000);

@@ -246,16 +246,31 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
     }
 
     /// <inheritdoc />
-    public async Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, CancellationToken ct = default)
+    public async Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, long expectedRevision, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(timeline);
 
         using var transaction = BeginTransaction();
         try
         {
+            // Lock the article first, then compare: an edit that committed meanwhile is visible and an edit that is
+            // still running blocks here until it has committed.
+            var currentRevision = await _connection.QuerySingleOrDefaultAsync<long?>(new CommandDefinition(
+                $"SELECT {TimelineEventWriter.RevisionExpression} FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug FOR NO KEY UPDATE",
+                new { CollectionName = collectionName, Slug = slug },
+                transaction,
+                cancellationToken: ct));
+
+            if (currentRevision != expectedRevision)
+            {
+                transaction.Rollback();
+                return false;
+            }
+
             await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct);
             await TimelineEventWriter.ReplaceAsync(_connection, transaction, collectionName, slug, timeline, ct);
             transaction.Commit();
+            return true;
         }
         catch
         {

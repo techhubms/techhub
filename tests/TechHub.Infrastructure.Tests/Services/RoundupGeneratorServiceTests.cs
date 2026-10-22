@@ -36,6 +36,10 @@ public class RoundupGeneratorServiceTests
         _roundupRepo
             .Setup(r => r.GetArticlesForSectionForWeekAsync(It.IsAny<string>(), It.IsAny<DateOnly>(), It.IsAny<DateOnly>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync([]);
+
+        _writeRepo
+            .Setup(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(true);
     }
 
     private static readonly DateOnly _weekStart = new(2025, 4, 7);    // Monday
@@ -571,13 +575,13 @@ public class RoundupGeneratorServiceTests
 
         _aiCategorizationService.Verify(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
         _aiCategorizationService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Never);
-        _writeRepo.Verify(w => w.UpdateAiMetadataAsync("news", It.IsAny<string>(), It.Is<string>(j => j.Contains("\"schema_version\":2")), It.IsAny<TimelineEventReplacement>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", It.IsAny<string>(), It.Is<string>(j => j.Contains("\"schema_version\":2")), It.IsAny<TimelineEventReplacement>(), It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
     }
 
     [Fact]
     public async Task GenerateAsync_BackfillKeepsTheTimelineEventsOfTheClassification()
     {
-        var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000 };
+        var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };
         SetupArticles("ai", needing, Article("ai", 1));
         var timelineEvent = new TimelineEvent
         {
@@ -612,12 +616,48 @@ public class RoundupGeneratorServiceTests
 
         await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
 
-        _writeRepo.Verify(w => w.UpdateAiMetadataAsync(
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync(
             "news", "article-10", It.IsAny<string>(),
             It.Is<TimelineEventReplacement>(t => t.Events.Count == 1 && t.Events[0].Kind == "retirement"
                 && t.ExtractedFrom == ITimelineEventRepository.ExtractedFromStoredContent
                 && t.PromptVersion == ITimelineEventRepository.CurrentPromptVersion),
+            4242L,
             It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task GenerateAsync_BackfillSkipsTheArticleWhenItChangedDuringClassification()
+    {
+        var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };
+        SetupArticles("ai", needing, Article("ai", 1));
+        _writeRepo
+            .Setup(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(false);
+        _aiCategorizationService
+            .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult
+            {
+                Explanation = "ok",
+                Item = new ProcessedContentItem
+                {
+                    Slug = "article-10",
+                    Title = "t",
+                    Excerpt = "e",
+                    DateEpoch = 0,
+                    CollectionName = "news",
+                    ExternalUrl = "https://example.com/10",
+                    FeedName = "Feed",
+                    PrimarySectionName = "ai",
+                    ContentHash = "h",
+                    RoundupMetadata = new RoundupMetadata { SchemaVersion = 2, KeyFacts = ["A stale fact."], SectionRoles = new Dictionary<string, string> { ["ai"] = "lead" } }
+                }
+            });
+        SetupAi();
+
+        await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
+
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", "article-10", It.IsAny<string>(), It.IsAny<TimelineEventReplacement>(), 4242L, It.IsAny<CancellationToken>()), Times.Once);
+        _aiRequests.Should().NotContain(r => r.Contains("A stale fact."), "metadata classified from outdated text must not be used");
     }
 
     [Fact]

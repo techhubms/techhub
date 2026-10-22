@@ -74,7 +74,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             return [];
         }
 
-        const string Sql = """
+        const string Sql = $"""
             SELECT
                 @SectionName            AS SectionName,
                 ci.primary_section_name AS PrimarySectionName,
@@ -86,7 +86,8 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                 ci.excerpt              AS Excerpt,
                 ci.content              AS Content,
                 ci.feed_name            AS FeedName,
-                ci.date_epoch           AS DateEpoch
+                ci.date_epoch           AS DateEpoch,
+                {TimelineEventWriter.RevisionExpression} AS Revision
             FROM content_items ci
             WHERE ci.created_at >= @WeekStart
               AND ci.created_at < @WeekEndExclusive
@@ -148,7 +149,8 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             Excerpt = row.Excerpt,
             Content = row.Content,
             FeedName = row.FeedName,
-            DateEpoch = row.DateEpoch
+            DateEpoch = row.DateEpoch,
+            Revision = row.Revision
         };
 
         if (meta is not null && meta.SchemaVersion >= RoundupMetadata.CurrentSchemaVersion)
@@ -183,6 +185,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         public string Content { get; init; } = string.Empty;
         public string FeedName { get; init; } = string.Empty;
         public long DateEpoch { get; init; }
+        public long Revision { get; init; }
     }
 
     private sealed class RoundupAiMetadata

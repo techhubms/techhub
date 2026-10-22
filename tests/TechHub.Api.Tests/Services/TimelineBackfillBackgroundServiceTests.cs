@@ -80,7 +80,7 @@ public class TimelineBackfillBackgroundServiceTests
     public async Task CancelCurrentRun_RacingWithCompletion_NeverThrows()
     {
         // Arrange: runs that finish immediately while another thread keeps cancelling
-        var runCompleted = new SemaphoreSlim(0);
+        using var runCompleted = new SemaphoreSlim(0);
         var jobRepo = CreateJobRepo();
         jobRepo.Setup(r => r.CompleteAsync(It.IsAny<long>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<int>(), It.IsAny<CancellationToken>()))
             .Returns(() =>

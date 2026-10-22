@@ -306,8 +306,9 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     // The classification already extracted the timeline events of the article: keep them, so the
                     // "Dates to know" block of this roundup does not depend on the timeline backfill job having run.
                     // Metadata and events are stored in one transaction, so a failing event write leaves the article
-                    // on its previous metadata version and the backfill retries it.
-                    await _writeRepo.UpdateAiMetadataAsync(
+                    // on its previous metadata version and the backfill retries it. The write is skipped when the
+                    // article was edited (e.g. a transcript was applied) while the classification ran.
+                    var stored = await _writeRepo.UpdateAiMetadataIfUnchangedAsync(
                         article.CollectionName,
                         article.Slug,
                         ContentItemWriteRepository.SerializeAiMetadata(meta),
@@ -315,11 +316,19 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                             result.Item.TimelineEvents,
                             ITimelineEventRepository.ExtractedFromStoredContent,
                             ITimelineEventRepository.CurrentPromptVersion),
+                        article.Revision,
                         ct);
 
-                    enriched[article.ExternalUrl] = article.WithMetadata(meta);
+                    if (!stored)
+                    {
+                        _logger.LogInformation("Skipped AI metadata backfill for {Slug} in {Collection}: the article changed during classification", article.Slug, article.CollectionName);
+                    }
+                    else
+                    {
+                        enriched[article.ExternalUrl] = article.WithMetadata(meta);
 
-                    _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
+                        _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
+                    }
                 }
                 else
                 {

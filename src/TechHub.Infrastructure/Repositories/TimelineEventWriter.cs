@@ -10,6 +10,12 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 internal static class TimelineEventWriter
 {
+    /// <summary>
+    /// SQL expression for the opaque revision of a <c>content_items</c> row: microseconds since the epoch of
+    /// <c>updated_at</c>, which every edit of an article sets to NOW().
+    /// </summary>
+    public const string RevisionExpression = "COALESCE((EXTRACT(EPOCH FROM updated_at) * 1000000)::bigint, 0)";
+
     public static async Task ReplaceAsync(
         IDbConnection connection,
         IDbTransaction transaction,

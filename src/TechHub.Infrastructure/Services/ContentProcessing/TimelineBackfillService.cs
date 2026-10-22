@@ -113,7 +113,7 @@ public sealed class TimelineBackfillService : ITimelineBackfillService
                     withEvents++;
                 }
             }
-            catch (Exception ex) when (ex is not OperationCanceledException)
+            catch (Exception ex) when (!(ex is OperationCanceledException && ct.IsCancellationRequested))
             {
                 failed++;
                 _logger.LogWarning(ex, "Timeline backfill failed for {Collection}/{Slug}", candidate.CollectionName.Sanitize(), candidate.Slug.Sanitize());

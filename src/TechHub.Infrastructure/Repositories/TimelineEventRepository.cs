@@ -11,8 +11,7 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public sealed class TimelineEventRepository : ITimelineEventRepository
 {
-    // Microseconds since the epoch of updated_at, which every edit of an article sets to NOW().
-    private const string RevisionExpression = "COALESCE((EXTRACT(EPOCH FROM updated_at) * 1000000)::bigint, 0)";
+    private const string RevisionExpression = TimelineEventWriter.RevisionExpression;
 
     private readonly IDbConnection _connection;
 

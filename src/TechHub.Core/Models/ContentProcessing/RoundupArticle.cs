@@ -126,4 +126,11 @@ public sealed record RoundupArticle
 
     /// <summary>Unix epoch publication date (for on-the-fly AI categorization when ai_metadata is NULL).</summary>
     public long DateEpoch { get; init; }
+
+    /// <summary>
+    /// Opaque version of the stored article at the time it was read (changes whenever the article is edited).
+    /// The metadata backfill passes it to <see cref="TechHub.Core.Interfaces.IContentItemWriteRepository.UpdateAiMetadataIfUnchangedAsync"/>
+    /// so metadata classified from outdated text is discarded.
+    /// </summary>
+    public long Revision { get; init; }
 }

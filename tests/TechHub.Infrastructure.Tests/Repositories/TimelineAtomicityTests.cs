@@ -119,14 +119,16 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
     }
 
     [Fact]
-    public async Task UpdateAiMetadataAsync_WhenTheEventWriteFails_KeepsThePreviousMetadataAndEvents()
+    public async Task UpdateAiMetadataIfUnchangedAsync_WhenTheEventWriteFails_KeepsThePreviousMetadataAndEvents()
     {
         var slug = await SeedAsync();
         await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, 1, TestContext.Current.CancellationToken);
+        var revision = (await _timelineRepo.GetItemForExtractionAsync(Collection, slug, TestContext.Current.CancellationToken))!.Revision;
 
-        var act = () => _writeRepo.UpdateAiMetadataAsync(
+        var act = () => _writeRepo.UpdateAiMetadataIfUnchangedAsync(
             Collection, slug, """{"schema_version":2}""",
             new TimelineEventReplacement([BrokenEvent()], ITimelineEventRepository.ExtractedFromStoredContent, 2),
+            revision,
             TestContext.Current.CancellationToken);
 
         await act.Should().ThrowAsync<PostgresException>();
@@ -138,20 +140,45 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
     }
 
     [Fact]
-    public async Task UpdateAiMetadataAsync_WithEvents_StoresBothTogether()
+    public async Task UpdateAiMetadataIfUnchangedAsync_WithEvents_StoresBothTogether()
     {
         var slug = await SeedAsync();
+        var revision = (await _timelineRepo.GetItemForExtractionAsync(Collection, slug, TestContext.Current.CancellationToken))!.Revision;
 
-        await _writeRepo.UpdateAiMetadataAsync(
+        var stored = await _writeRepo.UpdateAiMetadataIfUnchangedAsync(
             Collection, slug, """{"schema_version":2}""",
             new TimelineEventReplacement([Event("retirement")], ITimelineEventRepository.ExtractedFromStoredContent, 1),
+            revision,
             TestContext.Current.CancellationToken);
 
+        stored.Should().BeTrue();
         var metadata = await _fixture.Connection.ExecuteScalarAsync<string?>(
             "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug", new { Collection, Slug = slug });
         metadata.Should().Contain("schema_version");
         (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken))
             .Should().ContainSingle().Which.ExtractedFrom.Should().Be(ITimelineEventRepository.ExtractedFromStoredContent);
+    }
+
+    [Fact]
+    public async Task UpdateAiMetadataIfUnchangedAsync_WhenTheArticleWasEditedMeanwhile_StoresNothing()
+    {
+        var slug = await SeedAsync();
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, 1, TestContext.Current.CancellationToken);
+        var revision = (await _timelineRepo.GetItemForExtractionAsync(Collection, slug, TestContext.Current.CancellationToken))!.Revision;
+        await _contentRepo.UpdateEditDataAsync(Collection, slug, EditData(slug), TestContext.Current.CancellationToken);
+
+        var stored = await _writeRepo.UpdateAiMetadataIfUnchangedAsync(
+            Collection, slug, """{"schema_version":2}""",
+            new TimelineEventReplacement([Event("retirement")], ITimelineEventRepository.ExtractedFromStoredContent, 2),
+            revision,
+            TestContext.Current.CancellationToken);
+
+        stored.Should().BeFalse();
+        var metadata = await _fixture.Connection.ExecuteScalarAsync<string?>(
+            "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug", new { Collection, Slug = slug });
+        metadata.Should().BeNull("metadata classified from outdated text must not be stored");
+        (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken))
+            .Should().ContainSingle().Which.Kind.Should().Be("preview");
     }
 
     [Fact]

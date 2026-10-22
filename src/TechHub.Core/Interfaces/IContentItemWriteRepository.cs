@@ -31,6 +31,9 @@ public interface IContentItemWriteRepository
     /// <summary>
     /// Updates the <c>ai_metadata</c> column and replaces the timeline events of the item in one transaction,
     /// so a failing event write leaves the previous metadata in place and the backfill can retry.
+    /// Only applies when the article is still at <paramref name="expectedRevision"/> (<see cref="RoundupArticle.Revision"/>),
+    /// checked under the article's write lock. Returns <c>false</c> and changes nothing when the article was edited
+    /// after it was read, so metadata and events classified from outdated text are never stored.
     /// </summary>
-    Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, CancellationToken ct = default);
+    Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, long expectedRevision, CancellationToken ct = default);
 }
