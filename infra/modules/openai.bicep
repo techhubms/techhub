@@ -15,14 +15,14 @@ param modelDeployments array = [
     capacity: 200
   }
   {
-    // Step 1: classification (structured JSON).
+    // Timeline extraction from stored articles (backfill).
     name: 'gpt-6-luna'
     model: 'gpt-6-luna'
     version: '2026-09-22'
     capacity: 200
   }
   {
-    // Step 2: article rewrite, and roundup metadata.
+    // Classification (structured JSON), article rewrite and roundup metadata.
     name: 'gpt-6.1-sol'
     model: 'gpt-6.1-sol'
     version: '2026-09-29'

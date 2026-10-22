@@ -157,7 +157,7 @@ calls the Azure AI Foundry v1 chat completions API (`{Endpoint}/openai/v1/chat/c
 deployment goes in the request `model`). The client authenticates with Microsoft Entra ID (managed
 identity in Azure, `az login` locally), so no API key is configured.
 
-| Step | Profile | Output | Model in production after go-live |
+| Step | Profile | Output | Model |
 |---|---|---|---|
 | 1. Classify | `Classification` | Strict JSON (JSON schema): include/exclude, explanation, title, author, sections, primary section, tags, excerpt, `section_roles`, `key_facts`, `significance`, `content_kind`, `lifecycle`, `products`, `timeline_events` | `gpt-6.1-sol` |
 | 2. Rewrite | `Rewrite` | Markdown body, only for included items | `gpt-6.1-sol` |
@@ -169,16 +169,16 @@ identity in Azure, `az login` locally), so no API key is configured.
 whole item; nothing is stored. `ClassifyAsync` runs step 1 only and is used by the roundup
 metadata backfill, which never rewrites stored articles.
 
-Classification runs on `gpt-6.1-sol` rather than the cheaper `gpt-6-luna` because the include/exclude decision needs the strictness of the old model: on 73 articles production had skipped, `gpt-6.1-sol` and `gpt-5.2` kept 95.9% excluded, `gpt-6-luna` only 89.0% (82.2% with `medium` reasoning). The `gpt-6-luna` deployment is kept as a spare. See [Evaluating Models](#evaluating-models).
+Classification runs on `gpt-6.1-sol` rather than the cheaper `gpt-6-luna` because the include/exclude decision needs the strictness of the old model: on 73 articles production had skipped, `gpt-6.1-sol` and `gpt-5.2` kept 95.9% excluded, `gpt-6-luna` only 89.0% (82.2% with `medium` reasoning). The `gpt-6-luna` deployment serves the timeline extraction. See [Evaluating Models](#evaluating-models).
 
 Configured under `"AiCategorization"`:
 
 | Setting | Default | Description |
 |---|---|---|
 | `Endpoint` | empty | Azure AI Foundry endpoint URL |
-| `Profiles:<Step>:DeploymentName` | `gpt-5.2` in `appsettings.json` | Deployment used by the step (`Classification`, `Rewrite`, `RoundupNewsWriter`, `RoundupMetadata`, `TimelineExtraction`) |
-| `Profiles:<Step>:ReasoningEffort` | empty (omitted) | `reasoning_effort` sent to the model, e.g. `low` or `medium` |
-| `Profiles:<Step>:ServiceTier` | `default` | `default` (Standard) or `flex` (50% cheaper, may queue) |
+| `Profiles:<Step>:DeploymentName` | the models of the table above in `appsettings.json` | Deployment used by the step (`Classification`, `Rewrite`, `RoundupNewsWriter`, `RoundupMetadata`, `TimelineExtraction`) |
+| `Profiles:<Step>:ReasoningEffort` | `low` (`medium` for the roundup writer) in `appsettings.json`; empty omits it | `reasoning_effort` sent to the model, e.g. `low` or `medium` |
+| `Profiles:<Step>:ServiceTier` | `flex` in `appsettings.json` | `default` (Standard) or `flex` (50% cheaper, may queue) |
 | `MaxRetries` | `3` | Attempts per item on rate limits and transient failures |
 | `RateLimitDelaySeconds` | `15` | Wait between attempts on a rate limit without a `Retry-After` header (multiplied by the attempt number) |
 | `FlexMaxWait` | `00:30:00` | How long a Flex request keeps retrying on Flex before it falls back |
