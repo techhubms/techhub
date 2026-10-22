@@ -533,7 +533,7 @@ public sealed class ContentProcessingService
                     };
                 }
             }
-            catch (Exception ex) when (ex is not OperationCanceledException)
+            catch (Exception ex) when (!(ex is OperationCanceledException && ct.IsCancellationRequested))
             {
                 _logger.LogWarning(ex, "Failed to fetch YouTube tags for {Url}", raw.ExternalUrl);
                 logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ YouTube tag fetch failed: {ex.Message}"));
@@ -586,7 +586,7 @@ public sealed class ContentProcessingService
             {
                 raw = await _articleService.EnrichWithContentAsync(raw, ct);
             }
-            catch (Exception ex) when (ex is not OperationCanceledException)
+            catch (Exception ex) when (!(ex is OperationCanceledException && ct.IsCancellationRequested))
             {
                 _logger.LogWarning(ex, "Failed to enrich content for {Url}", raw.ExternalUrl);
                 logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ Content enrichment failed: {ex.Message.Sanitize()}"));

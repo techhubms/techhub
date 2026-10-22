@@ -336,7 +336,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                 }
             }
 #pragma warning disable CA1031 // Best-effort: continue with other articles if one fails
-            catch (Exception ex) when (ex is not OperationCanceledException)
+            catch (Exception ex) when (!(ex is OperationCanceledException && ct.IsCancellationRequested))
             {
                 errorCount++;
                 _logger.LogWarning(ex, "Failed to backfill AI metadata for {Slug} in {Collection}", article.Slug, article.CollectionName);

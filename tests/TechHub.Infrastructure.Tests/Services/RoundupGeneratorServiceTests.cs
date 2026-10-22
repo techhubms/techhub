@@ -626,6 +626,24 @@ public class RoundupGeneratorServiceTests
     }
 
     [Fact]
+    public async Task GenerateAsync_BackfillTimeoutWithoutRunCancellation_CountsAsFailedAndContinuesWithTheNextArticle()
+    {
+        var needing = Enumerable.Range(0, 2).Select(i => Article("ai", 10 + i) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000 }).ToArray();
+        SetupArticles("ai", [.. needing, Article("ai", 1)]);
+        var calls = 0;
+        _aiCategorizationService
+            .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .Returns(() => ++calls == 1
+                ? throw new TaskCanceledException("The request was canceled due to the configured HttpClient.Timeout")
+                : Task.FromResult(new CategorizationResult { Explanation = "no metadata", Item = null }));
+        SetupAi();
+
+        await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
+
+        _aiCategorizationService.Verify(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
+    }
+
+    [Fact]
     public async Task GenerateAsync_BackfillSkipsTheArticleWhenItChangedDuringClassification()
     {
         var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };
