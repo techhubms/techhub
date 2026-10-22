@@ -115,6 +115,9 @@ public sealed record RoundupArticle
         };
     }
 
+    /// <summary>Stored excerpt. The article text continues after it, so a milestone can be stated only here.</summary>
+    public string Excerpt { get; init; } = string.Empty;
+
     /// <summary>Full article content (for on-the-fly AI categorization when ai_metadata is NULL).</summary>
     public string Content { get; init; } = string.Empty;
 

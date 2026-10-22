@@ -56,6 +56,16 @@ public class ModelEvaluationTests
         return path;
     }
 
+    private static string OutFile(string fileName)
+    {
+        if (Path.IsPathRooted(fileName))
+        {
+            throw new ArgumentException("File name must be relative.", nameof(fileName));
+        }
+
+        return Path.Join(OutDir(), fileName);
+    }
+
     private static NpgsqlConnection OpenLocalDb()
     {
         using var doc = JsonDocument.Parse(File.ReadAllText(Path.Join(RepoRoot(), "src", "TechHub.Api", "appsettings.Development.json")));
@@ -311,7 +321,7 @@ public class ModelEvaluationTests
 
         report.AppendLine();
         report.AppendLine(recorder.Summary());
-        File.WriteAllText(Path.Combine(OutDir(), "classification.md"), report.ToString());
+        File.WriteAllText(OutFile("classification.md"), report.ToString());
         Console.WriteLine(report.ToString());
         rows.Should().NotBeEmpty();
     }
@@ -347,7 +357,7 @@ public class ModelEvaluationTests
         var ct = TestContext.Current.CancellationToken;
         using var db = OpenLocalDb();
 
-        var goldenPath = Path.Combine(OutDir(), "golden-classification.json");
+        var goldenPath = OutFile("golden-classification.json");
         List<StoredItem> items;
         if (File.Exists(goldenPath))
         {
@@ -416,7 +426,7 @@ public class ModelEvaluationTests
             report.AppendLine(recorder.Summary());
         }
 
-        File.WriteAllText(Path.Combine(OutDir(), "classification-control.md"), report.ToString());
+        File.WriteAllText(OutFile("classification-control.md"), report.ToString());
         Console.WriteLine(report.ToString());
         items.Should().NotBeEmpty();
     }
@@ -435,7 +445,7 @@ public class ModelEvaluationTests
         var ct = TestContext.Current.CancellationToken;
         using var db = OpenLocalDb();
 
-        var goldenPath = Path.Combine(OutDir(), "golden-skipped.json");
+        var goldenPath = OutFile("golden-skipped.json");
         List<SkippedSample> samples;
         if (File.Exists(goldenPath))
         {
@@ -535,7 +545,7 @@ public class ModelEvaluationTests
 
         report.AppendLine();
         report.Append(usage);
-        File.WriteAllText(Path.Combine(OutDir(), "skipped-control.md"), report.ToString());
+        File.WriteAllText(OutFile("skipped-control.md"), report.ToString());
         Console.WriteLine(report.ToString());
         samples.Should().NotBeEmpty();
     }
@@ -603,7 +613,7 @@ public class ModelEvaluationTests
         report.AppendLine();
         report.AppendLine("## Usage, reasoning medium");
         report.AppendLine(recorderMedium.Summary());
-        File.WriteAllText(Path.Combine(OutDir(), "rewrite.md"), report.ToString());
+        File.WriteAllText(OutFile("rewrite.md"), report.ToString());
         Console.WriteLine(report.ToString());
         done.Should().BeGreaterThan(0);
     }
@@ -692,7 +702,7 @@ public class ModelEvaluationTests
         header.AppendLine();
         header.AppendLine(recorder.Summary());
         var text = report.ToString().Insert(report.ToString().IndexOf('\n', StringComparison.Ordinal) + 1, "\n" + header);
-        File.WriteAllText(Path.Combine(OutDir(), "timeline.md"), text);
+        File.WriteAllText(OutFile("timeline.md"), text);
         Console.WriteLine(header.ToString());
         items.Should().NotBeEmpty();
     }
@@ -792,7 +802,7 @@ public class ModelEvaluationTests
             report.AppendLine("- " + line);
         }
 
-        File.WriteAllText(Path.Combine(OutDir(), "roundups.md"), report.ToString());
+        File.WriteAllText(OutFile("roundups.md"), report.ToString());
         Console.WriteLine(report.ToString());
         outcome.Result.Should().Be(RoundupGenerationResult.Generated);
     }

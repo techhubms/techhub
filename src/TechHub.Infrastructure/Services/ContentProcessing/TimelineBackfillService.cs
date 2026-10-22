@@ -89,13 +89,22 @@ public sealed class TimelineBackfillService : ITimelineBackfillService
                     continue;
                 }
 
-                await _timelineRepo.ReplaceEventsAsync(
+                var stored = await _timelineRepo.ReplaceEventsIfUnchangedAsync(
                     candidate.CollectionName,
                     candidate.Slug,
                     result.Events,
                     ITimelineEventRepository.ExtractedFromStoredContent,
                     ITimelineEventRepository.CurrentPromptVersion,
+                    item.Revision,
                     ct);
+
+                if (!stored)
+                {
+                    // Edited (e.g. a transcript was applied) while the extraction ran: the result is for outdated text.
+                    // Leave the article unscanned so the next run extracts from the new text.
+                    await log($"SKIPPED {candidate.CollectionName}/{candidate.Slug}: the article changed during extraction");
+                    continue;
+                }
 
                 scanned++;
                 eventsStored += result.Events.Count;

@@ -97,6 +97,18 @@ public class SectionRoundupRepositoryTests
     }
 
     [Fact]
+    public async Task GetArticlesForSectionForWeekAsync_ReturnsTheStoredExcerpt()
+    {
+        await SeedContentItemAsync("excerpt-article", "news", "Excerpt Article",
+            "https://example.com/excerpt", sections: ["ai"],
+            excerpt: "GA ships on 1 June 2026.");
+
+        var articles = await _sut.GetArticlesForSectionForWeekAsync("ai", _weekStart, _weekEnd, CancellationToken.None);
+
+        articles.Should().Contain(a => a.Slug == "excerpt-article").Which.Excerpt.Should().Be("GA ships on 1 June 2026.");
+    }
+
+    [Fact]
     public async Task GetArticlesForSectionForWeekAsync_OutsideDateRange_ReturnsEmpty()
     {
         // Arrange — item created outside the queried week
@@ -350,7 +362,8 @@ public class SectionRoundupRepositoryTests
         string relevance = "high",
         string summary = "",
         IEnumerable<string>? keyTopics = null,
-        DateTime? createdAt = null)
+        DateTime? createdAt = null,
+        string excerpt = "")
     {
         var topics = keyTopics?.ToList() ?? [];
 
@@ -418,13 +431,14 @@ public class SectionRoundupRepositoryTests
                  primary_section_name, external_url, author, feed_name, tags_csv,
                  is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security,
                  sections_bitmask, content_hash, ai_metadata, created_at)
-            VALUES (@Slug, @Collection, @Title, '', '', 1743278400,
+            VALUES (@Slug, @Collection, @Title, '', @Excerpt, 1743278400,
                     @PrimarySection, @ExternalUrl, 'Author', 'Feed', '',
                     @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc, @IsMl, @IsSecurity,
                     @Bitmask, @Hash, @AiMetadata::jsonb, @CreatedAt)
             ON CONFLICT (collection_name, slug) DO UPDATE SET
                 ai_metadata = EXCLUDED.ai_metadata,
                 title       = EXCLUDED.title,
+                excerpt     = EXCLUDED.excerpt,
                 primary_section_name = EXCLUDED.primary_section_name,
                 is_ai       = EXCLUDED.is_ai,
                 is_azure    = EXCLUDED.is_azure,
@@ -441,6 +455,7 @@ public class SectionRoundupRepositoryTests
                 Slug = slug,
                 Collection = collection,
                 Title = title,
+                Excerpt = excerpt,
                 ExternalUrl = externalUrl,
                 IsAi = isAi,
                 IsAzure = isAzure,

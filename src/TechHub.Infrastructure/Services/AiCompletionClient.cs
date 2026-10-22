@@ -101,16 +101,16 @@ public sealed class AiCompletionClient : IAiCompletionClient
 
     private TimeSpan GetFlexRetryDelay(int? retryAfterSeconds, int attempt)
     {
-        var delay = retryAfterSeconds.HasValue
-            ? TimeSpan.FromSeconds(retryAfterSeconds.Value)
-            : TimeSpan.FromTicks(_options.FlexMinRetryDelay.Ticks * (1L << Math.Min(attempt, 10)));
-
-        if (delay < _options.FlexMinRetryDelay)
+        // A server-provided Retry-After is honored in full (the FlexMaxWait check decides whether to keep waiting);
+        // only the locally calculated backoff is capped.
+        if (retryAfterSeconds.HasValue)
         {
-            return _options.FlexMinRetryDelay;
+            var requested = TimeSpan.FromSeconds(retryAfterSeconds.Value);
+            return requested < _options.FlexMinRetryDelay ? _options.FlexMinRetryDelay : requested;
         }
 
-        return delay > _options.FlexMaxRetryDelay ? _options.FlexMaxRetryDelay : delay;
+        var backoff = TimeSpan.FromTicks(_options.FlexMinRetryDelay.Ticks * (1L << Math.Min(attempt, 10)));
+        return backoff > _options.FlexMaxRetryDelay ? _options.FlexMaxRetryDelay : backoff;
     }
 
     private static bool IsFlexRequest(string jsonBody)

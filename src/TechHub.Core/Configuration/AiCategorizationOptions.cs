@@ -29,7 +29,7 @@ public class AiCategorizationOptions
     /// <summary>Shortest wait between Flex retries; also the base of the exponential backoff when no Retry-After is given.</summary>
     public TimeSpan FlexMinRetryDelay { get; init; } = TimeSpan.FromSeconds(30);
 
-    /// <summary>Longest wait between Flex retries.</summary>
+    /// <summary>Longest wait between locally calculated Flex retries. A server-provided Retry-After is never shortened.</summary>
     public TimeSpan FlexMaxRetryDelay { get; init; } = TimeSpan.FromMinutes(2);
 
     /// <summary>Whether a Flex request that is still rate limited after <see cref="FlexMaxWait"/> is sent once more on the Standard tier.</summary>

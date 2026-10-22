@@ -122,6 +122,39 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
     }
 
     [Fact]
+    public async Task RunAsync_ArticleEditedDuringExtraction_DiscardsTheStaleResultAndLeavesItUnscanned()
+    {
+        await SeedAsync("a1");
+        var edited = false;
+        _ai.Setup(s => s.ExtractTimelineEventsAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .Callback<RawFeedItem, CancellationToken>((_, _) =>
+            {
+                // Simulates an admin applying a transcript while the extraction of the old text is running
+                if (!edited)
+                {
+                    edited = true;
+                    _fixture.Connection.Execute(
+                        "UPDATE content_items SET content = 'New text from a transcript', updated_at = clock_timestamp() WHERE collection_name = @Collection AND slug = 'a1'",
+                        new { Collection = _collection });
+                }
+            })
+            .ReturnsAsync(new TimelineExtractionResult { Events = [Event("preview")] });
+
+        var first = await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        first.Scanned.Should().Be(0);
+        first.EventsStored.Should().Be(0);
+        (await _timelineRepo.GetEventsForItemAsync(_collection, "a1", TestContext.Current.CancellationToken)).Should().BeEmpty();
+        (await ExtractionCountAsync()).Should().Be(0, "a stale result must not be recorded as a current-version scan");
+        _log.Should().Contain(l => l.StartsWith("SKIPPED", StringComparison.Ordinal) && l.Contains("a1", StringComparison.Ordinal));
+
+        var second = await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        second.Scanned.Should().Be(1);
+        (await _timelineRepo.GetEventsForItemAsync(_collection, "a1", TestContext.Current.CancellationToken)).Should().ContainSingle();
+    }
+
+    [Fact]
     public async Task RunAsync_ArticleWithoutEvents_IsStillMarkedAsScanned()
     {
         await SeedAsync("a1");

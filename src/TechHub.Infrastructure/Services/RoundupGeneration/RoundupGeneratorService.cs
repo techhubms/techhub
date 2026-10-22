@@ -294,7 +294,9 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     PublishedAt = DateTimeOffset.FromUnixTimeSeconds(article.DateEpoch),
                     FeedName = article.FeedName,
                     CollectionName = article.CollectionName,
-                    FullContent = article.Content
+                    FullContent = string.IsNullOrWhiteSpace(article.Excerpt)
+                        ? article.Content
+                        : $"{article.Excerpt}\n\n{article.Content}"
                 };
 
                 var result = await _aiService.ClassifyAsync(rawItem, ct);

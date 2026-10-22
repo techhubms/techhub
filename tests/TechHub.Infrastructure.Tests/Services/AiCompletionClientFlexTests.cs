@@ -70,6 +70,34 @@ public class AiCompletionClientFlexTests
     }
 
     [Fact]
+    public async Task SendCompletionAsync_FlexRetryAfterBeyondMaxRetryDelay_IsNotShortened()
+    {
+        // Arrange: the server asks for 3s, longer than FlexMaxRetryDelay (20ms) and FlexMaxWait (200ms).
+        var bodies = new List<string>();
+        using var handler = new RecordingHandler(bodies, request =>
+        {
+            if (RequestedTier(request) != "flex")
+            {
+                return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(OkResponse) };
+            }
+
+            var response = new HttpResponseMessage(HttpStatusCode.TooManyRequests);
+            response.Headers.TryAddWithoutValidation("Retry-After", "3");
+            return response;
+        });
+        var client = CreateClient(handler, FastOptions());
+
+        // Act
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
+
+        // Assert: waiting would exceed FlexMaxWait, so there is no second Flex attempt before the fallback.
+        result.ResponseBody.Should().Be(OkResponse);
+        bodies.Should().HaveCount(2);
+        RequestedTier(bodies[0]).Should().Be("flex");
+        RequestedTier(bodies[1]).Should().Be("default");
+    }
+
+    [Fact]
     public async Task SendCompletionAsync_FlexStaysRateLimited_FallsBackToStandardTier()
     {
         // Arrange

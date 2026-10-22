@@ -194,13 +194,32 @@ internal static class RoundupBlocksBuilder
     /// <summary>
     /// Whether <paramref name="url"/> is the complete destination of a Markdown link (<c>[text](url)</c>, optionally with a
     /// title) or an autolink (<c>&lt;url&gt;</c>). A mere substring is not enough: a link to <c>https://example.com/10</c>
-    /// must not count as a link to <c>https://example.com/1</c>.
+    /// must not count as a link to <c>https://example.com/1</c>. Scheme and host compare case-insensitively; the path,
+    /// query and fragment are case-sensitive.
     /// </summary>
     private static bool IsLinked(string content, string url)
     {
-        var escaped = Regex.Escape(url);
+        var escaped = EscapeUrlForMatching(url);
         var pattern = $$"""\]\(\s*<?{{escaped}}>?\s*(?:"[^"]*"|'[^']*')?\s*\)|<{{escaped}}>""";
-        return Regex.IsMatch(content, pattern, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant, TimeSpan.FromSeconds(1));
+        return Regex.IsMatch(content, pattern, RegexOptions.CultureInvariant, TimeSpan.FromSeconds(1));
+    }
+
+    private static string EscapeUrlForMatching(string url)
+    {
+        const string SchemeSeparator = "://";
+        var authorityStart = url.IndexOf(SchemeSeparator, StringComparison.Ordinal);
+        if (authorityStart < 0)
+        {
+            return Regex.Escape(url);
+        }
+
+        var authorityEnd = url.IndexOfAny(['/', '?', '#'], authorityStart + SchemeSeparator.Length);
+        if (authorityEnd < 0)
+        {
+            authorityEnd = url.Length;
+        }
+
+        return $"(?i:{Regex.Escape(url[..authorityEnd])}){Regex.Escape(url[authorityEnd..])}";
     }
 
     private static string EndWithPeriod(string text) =>

@@ -11,6 +11,9 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public sealed class TimelineEventRepository : ITimelineEventRepository
 {
+    // Microseconds since the epoch of updated_at, which every edit of an article sets to NOW().
+    private const string RevisionExpression = "COALESCE((EXTRACT(EPOCH FROM updated_at) * 1000000)::bigint, 0)";
+
     private readonly IDbConnection _connection;
 
     public TimelineEventRepository(IDbConnection connection)
@@ -51,6 +54,62 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                 ct);
 
             transaction.Commit();
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
+    }
+
+    /// <inheritdoc />
+    public async Task<bool> ReplaceEventsIfUnchangedAsync(
+        string collectionName,
+        string slug,
+        IReadOnlyList<TimelineEvent> events,
+        string extractedFrom,
+        int promptVersion,
+        long expectedRevision,
+        CancellationToken ct = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
+        ArgumentException.ThrowIfNullOrWhiteSpace(slug);
+        ArgumentNullException.ThrowIfNull(events);
+        ArgumentException.ThrowIfNullOrWhiteSpace(extractedFrom);
+
+        if (_connection.State != ConnectionState.Open)
+        {
+            _connection.Open();
+        }
+
+        using var transaction = _connection.BeginTransaction();
+
+        try
+        {
+            // Lock the article first, then compare: an edit that committed meanwhile is visible and an edit that is
+            // still running blocks here until it has committed.
+            var currentRevision = await _connection.QuerySingleOrDefaultAsync<long?>(new CommandDefinition(
+                $"SELECT {RevisionExpression} FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug FOR NO KEY UPDATE",
+                new { CollectionName = collectionName, Slug = slug },
+                transaction,
+                cancellationToken: ct));
+
+            if (currentRevision != expectedRevision)
+            {
+                transaction.Rollback();
+                return false;
+            }
+
+            await TimelineEventWriter.ReplaceAsync(
+                _connection,
+                transaction,
+                collectionName,
+                slug,
+                new TimelineEventReplacement(events, extractedFrom, promptVersion),
+                ct);
+
+            transaction.Commit();
+            return true;
         }
         catch
         {
@@ -106,7 +165,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
     /// <inheritdoc />
     public async Task<TimelineBackfillItem?> GetItemForExtractionAsync(string collectionName, string slug, CancellationToken ct = default)
     {
-        const string Sql = """
+        const string Sql = $"""
             SELECT collection_name AS CollectionName,
                    slug            AS Slug,
                    title           AS Title,
@@ -114,7 +173,8 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                    content         AS Content,
                    external_url    AS ExternalUrl,
                    feed_name       AS FeedName,
-                   date_epoch      AS DateEpoch
+                   date_epoch      AS DateEpoch,
+                   {RevisionExpression} AS Revision
             FROM content_items
             WHERE collection_name = @CollectionName AND slug = @Slug
             """;
@@ -133,7 +193,8 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                 Content = row.Content,
                 ExternalUrl = row.ExternalUrl ?? string.Empty,
                 FeedName = row.FeedName ?? "TechHub",
-                DateEpoch = row.DateEpoch
+                DateEpoch = row.DateEpoch,
+                Revision = row.Revision
             };
     }
 
@@ -147,6 +208,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         public string? ExternalUrl { get; init; }
         public string? FeedName { get; init; }
         public long DateEpoch { get; init; }
+        public long Revision { get; init; }
     }
 
     /// <inheritdoc />

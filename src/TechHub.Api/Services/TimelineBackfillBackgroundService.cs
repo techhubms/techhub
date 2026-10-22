@@ -17,8 +17,11 @@ public sealed class TimelineBackfillBackgroundService : BackgroundService
 
     private volatile TaskCompletionSource<TimelineBackfillRequest> _manualTrigger = new(TaskCreationOptions.RunContinuationsAsynchronously);
 
+    // Guards assignment, cancellation and disposal of _runCts so a cancel can never hit a disposed source.
+    private readonly object _runCtsLock = new();
+
 #pragma warning disable CA2213 // Disposed in RunOnceAsync finally block
-    private volatile CancellationTokenSource? _runCts;
+    private CancellationTokenSource? _runCts;
 #pragma warning restore CA2213
 
     public TimelineBackfillBackgroundService(
@@ -58,13 +61,16 @@ public sealed class TimelineBackfillBackgroundService : BackgroundService
     /// </summary>
     public bool CancelCurrentRun()
     {
-        var cts = _runCts;
-        if (cts is null || cts.IsCancellationRequested)
+        lock (_runCtsLock)
         {
-            return false;
+            if (_runCts is null || _runCts.IsCancellationRequested)
+            {
+                return false;
+            }
+
+            _runCts.Cancel();
         }
 
-        cts.Cancel();
         _logger.LogInformation("Admin-triggered cancellation of timeline backfill run");
         return true;
     }
@@ -87,8 +93,13 @@ public sealed class TimelineBackfillBackgroundService : BackgroundService
 #pragma warning disable CA1031 // Catch-all intentional: background loop must not crash the host
     private async Task RunOnceAsync(TimelineBackfillRequest request, CancellationToken ct)
     {
-        _runCts = CancellationTokenSource.CreateLinkedTokenSource(ct);
-        var runToken = _runCts.Token;
+        var runCts = CancellationTokenSource.CreateLinkedTokenSource(ct);
+        lock (_runCtsLock)
+        {
+            _runCts = runCts;
+        }
+
+        var runToken = runCts.Token;
         try
         {
             await using var scope = _serviceProvider.CreateAsyncScope();
@@ -129,14 +140,23 @@ public sealed class TimelineBackfillBackgroundService : BackgroundService
         {
             // Shutting down — expected
         }
+        catch (OperationCanceledException)
+        {
+            // Admin cancellation before the job row existed (e.g. while it was being created): nothing to abort
+            _logger.LogInformation("Timeline backfill cancelled by admin before the job started");
+        }
         catch (Exception ex) when (ex is not OperationCanceledException)
         {
             _logger.LogError(ex, "Unexpected exception in TimelineBackfillBackgroundService");
         }
         finally
         {
-            _runCts.Dispose();
-            _runCts = null;
+            lock (_runCtsLock)
+            {
+                _runCts = null;
+            }
+
+            runCts.Dispose();
         }
     }
 #pragma warning restore CA1031

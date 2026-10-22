@@ -185,11 +185,22 @@ public class RoundupBlocksBuilderTests
     }
 
     [Fact]
-    public void EnsureLeadLinks_MatchesUrlsCaseInsensitively()
+    public void EnsureLeadLinks_MatchesSchemeAndHostCaseInsensitively()
     {
         var (_, appended) = RoundupBlocksBuilder.EnsureLeadLinks("- [x](HTTPS://EXAMPLE.COM/1)", [Article(1)], "AI");
 
         appended.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void EnsureLeadLinks_PathCasing_DistinguishesArticles()
+    {
+        var upper = Article(1) with { ExternalUrl = "https://example.com/Release", Title = "Upper" };
+        var lower = Article(2) with { ExternalUrl = "https://example.com/release", Title = "Lower" };
+
+        var (_, appended) = RoundupBlocksBuilder.EnsureLeadLinks("- [Upper](https://example.com/Release)", [upper, lower], "AI");
+
+        appended.Should().ContainSingle().Which.ExternalUrl.Should().Be("https://example.com/release");
     }
 
     [Fact]

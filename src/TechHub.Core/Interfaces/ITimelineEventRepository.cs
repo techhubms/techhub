@@ -29,6 +29,20 @@ public interface ITimelineEventRepository
         CancellationToken ct = default);
 
     /// <summary>
+    /// Like <see cref="ReplaceEventsAsync"/>, but only when the article is still at <paramref name="expectedRevision"/>
+    /// (<see cref="TimelineBackfillItem.Revision"/>), checked under the article's write lock. Returns <c>false</c> and
+    /// changes nothing when the article was edited after it was read, so events from outdated text are never stored.
+    /// </summary>
+    Task<bool> ReplaceEventsIfUnchangedAsync(
+        string collectionName,
+        string slug,
+        IReadOnlyList<TimelineEvent> events,
+        string extractedFrom,
+        int promptVersion,
+        long expectedRevision,
+        CancellationToken ct = default);
+
+    /// <summary>
     /// Gets the articles the backfill still has to scan: never scanned, or scanned with an older prompt version
     /// (or all of them when <see cref="TimelineBackfillRequest.Force"/> is set), newest first.
     /// Roundups are never scanned.

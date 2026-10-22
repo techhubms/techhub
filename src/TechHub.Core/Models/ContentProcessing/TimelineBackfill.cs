@@ -47,6 +47,12 @@ public sealed record TimelineBackfillItem
 
     /// <summary>Publication date as Unix epoch seconds.</summary>
     public required long DateEpoch { get; init; }
+
+    /// <summary>
+    /// Opaque version of the stored article (changes whenever the article is edited). Pass it to
+    /// <see cref="TechHub.Core.Interfaces.ITimelineEventRepository.ReplaceEventsIfUnchangedAsync"/> so events extracted from outdated text are discarded.
+    /// </summary>
+    public required long Revision { get; init; }
 }
 
 /// <summary>Outcome of a timeline backfill run.</summary>

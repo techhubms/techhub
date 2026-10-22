@@ -621,6 +621,24 @@ public class RoundupGeneratorServiceTests
     }
 
     [Fact]
+    public async Task GenerateAsync_BackfillPrependsTheExcerptToTheClassifiedText()
+    {
+        var needing = Article("ai", 10) with { NeedsAiMetadata = true, Excerpt = "GA ships on 1 June 2026.", Content = "body text", FeedName = "Feed", DateEpoch = 1_700_000_000 };
+        SetupArticles("ai", needing, Article("ai", 1));
+        RawFeedItem? classified = null;
+        _aiCategorizationService
+            .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .Callback<RawFeedItem, CancellationToken>((item, _) => classified = item)
+            .ReturnsAsync(new CategorizationResult { Explanation = "no metadata", Item = null });
+        SetupAi();
+
+        await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
+
+        classified.Should().NotBeNull();
+        classified!.FullContent.Should().Be("GA ships on 1 June 2026.\n\nbody text");
+    }
+
+    [Fact]
     public async Task GenerateAsync_WhenBackfillClassificationFails_StillGeneratesTheRoundup()
     {
         SetupArticles("ai", Article("ai", 1) with { NeedsAiMetadata = true, Content = "text" });

@@ -185,7 +185,7 @@ Configured under `"AiCategorization"`:
 | `MaxRetries` | `3` | Attempts per item on rate limits and transient failures |
 | `RateLimitDelaySeconds` | `15` | Wait between attempts on a rate limit without a `Retry-After` header (multiplied by the attempt number) |
 | `FlexMaxWait` | `00:30:00` | How long a Flex request keeps retrying on Flex before it falls back |
-| `FlexMinRetryDelay` / `FlexMaxRetryDelay` | `00:00:30` / `00:02:00` | Backoff bounds between Flex retries |
+| `FlexMinRetryDelay` / `FlexMaxRetryDelay` | `00:00:30` / `00:02:00` | Backoff bounds between Flex retries. `FlexMaxRetryDelay` caps only the calculated backoff; a server `Retry-After` is honored in full (and the request falls back when that wait would exceed `FlexMaxWait`) |
 | `FlexFallbackToDefaultTier` | `true` | After `FlexMaxWait`, send the request once on the Standard tier. When `false`, the request is reported as rate limited |
 | `TimelineBackfillDelaySeconds` | `2` | Wait between articles during the timeline backfill |
 

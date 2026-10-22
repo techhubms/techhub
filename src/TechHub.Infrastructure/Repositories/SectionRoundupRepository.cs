@@ -83,6 +83,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                 ci.slug                 AS Slug,
                 ci.collection_name      AS CollectionName,
                 ci.ai_metadata          AS AiMetadataJson,
+                ci.excerpt              AS Excerpt,
                 ci.content              AS Content,
                 ci.feed_name            AS FeedName,
                 ci.date_epoch           AS DateEpoch
@@ -144,6 +145,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             ImpactLevel = meta?.ImpactLevel ?? "medium",
             TimeSensitivity = meta?.TimeSensitivity ?? "this-week",
             NeedsAiMetadata = meta is null || meta.SchemaVersion < RoundupMetadata.CurrentSchemaVersion,
+            Excerpt = row.Excerpt,
             Content = row.Content,
             FeedName = row.FeedName,
             DateEpoch = row.DateEpoch
@@ -177,6 +179,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         public string Slug { get; init; } = string.Empty;
         public string CollectionName { get; init; } = string.Empty;
         public string? AiMetadataJson { get; init; }
+        public string Excerpt { get; init; } = string.Empty;
         public string Content { get; init; } = string.Empty;
         public string FeedName { get; init; } = string.Empty;
         public long DateEpoch { get; init; }
