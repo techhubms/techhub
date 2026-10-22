@@ -10,18 +10,17 @@ namespace TechHub.Infrastructure.Services.ContentProcessing;
 /// </summary>
 internal static class ClassificationSchema
 {
-    /// <summary>Valid section slugs. Any other section returned by the AI is rejected.</summary>
-    public static readonly IReadOnlyList<string> Sections =
-        ["ai", "azure", "dotnet", "devops", "github-copilot", "ml", "security"];
-
     /// <summary>
     /// Builds the <c>response_format</c> object. A new instance is returned for every call because
     /// <see cref="JsonNode"/> instances can only have a single parent.
     /// </summary>
-    public static JsonObject BuildResponseFormat()
+    /// <param name="sectionNames">The section slugs the AI may return, taken from the configured sections.</param>
+    public static JsonObject BuildResponseFormat(IReadOnlyList<string> sectionNames)
     {
-        var sections = StringEnum(Sections);
-        var nullableSections = StringEnum(Sections, includeNull: true);
+        ArgumentNullException.ThrowIfNull(sectionNames);
+
+        var sections = StringEnum(sectionNames);
+        var nullableSections = StringEnum(sectionNames, includeNull: true);
         var significance = StringEnum(RoundupMetadata.ValidSignificance.Order(StringComparer.Ordinal), includeNull: true);
         var contentKinds = StringEnum(RoundupMetadata.ValidContentKinds.Order(StringComparer.Ordinal), includeNull: true);
         var lifecycles = StringEnum(RoundupMetadata.ValidLifecycles.Order(StringComparer.Ordinal), includeNull: true);

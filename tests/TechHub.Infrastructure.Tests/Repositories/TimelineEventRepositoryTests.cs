@@ -130,6 +130,50 @@ public class TimelineEventRepositoryTests : IClassFixture<DatabaseFixture<Timeli
     }
 
     [Fact]
+    public async Task ReplaceEventsAsync_WhileAnotherTransactionHoldsTheArticle_WaitsForIt()
+    {
+        var slug = await SeedItemAsync();
+        await using var other = await _fixture.DataSource.OpenConnectionAsync(TestContext.Current.CancellationToken);
+        await using var otherTransaction = await other.BeginTransactionAsync(TestContext.Current.CancellationToken);
+        await other.ExecuteAsync(
+            "SELECT 1 FROM content_items WHERE collection_name = 'news' AND slug = @Slug FOR NO KEY UPDATE",
+            new { Slug = slug }, otherTransaction);
+
+        await using var connection = await _fixture.DataSource.OpenConnectionAsync(TestContext.Current.CancellationToken);
+        var replace = new TimelineEventRepository(connection)
+            .ReplaceEventsAsync("news", slug, [Event()], "source", 1, TestContext.Current.CancellationToken);
+
+        await Task.Delay(500, TestContext.Current.CancellationToken);
+        replace.IsCompleted.Should().BeFalse("replacements of the same article must run one after the other");
+
+        await otherTransaction.CommitAsync(TestContext.Current.CancellationToken);
+        await replace;
+        (await _sut.GetEventsForItemAsync("news", slug, TestContext.Current.CancellationToken)).Should().ContainSingle();
+    }
+
+    [Fact]
+    public async Task ReplaceEventsAsync_ConcurrentReplacements_LeaveExactlyOneEventSet()
+    {
+        var slug = await SeedItemAsync();
+
+        var replacements = Enumerable.Range(0, 8).Select(async i =>
+        {
+            await using var connection = await _fixture.DataSource.OpenConnectionAsync(TestContext.Current.CancellationToken);
+            await new TimelineEventRepository(connection).ReplaceEventsAsync(
+                "news", slug, [Event(kind: "ga", feature: $"first {i}"), Event(kind: "preview", feature: $"second {i}")],
+                "source", 1, TestContext.Current.CancellationToken);
+        });
+        await Task.WhenAll(replacements);
+
+        var stored = await _sut.GetEventsForItemAsync("news", slug, TestContext.Current.CancellationToken);
+        stored.Should().HaveCount(2);
+        stored.Select(e => e.Feature!.Split(' ')[1]).Distinct().Should().ContainSingle("both events must come from the same replacement");
+        var found = await _fixture.Connection.ExecuteScalarAsync<int>(
+            "SELECT events_found FROM content_timeline_extractions WHERE item_slug = @Slug", new { Slug = slug });
+        found.Should().Be(stored.Count);
+    }
+
+    [Fact]
     public async Task ReplaceEventsAsync_ForUnknownItem_ThrowsAndStoresNothing()
     {
         var slug = $"missing-{Guid.NewGuid():N}";

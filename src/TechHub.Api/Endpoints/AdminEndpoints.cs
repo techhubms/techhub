@@ -329,7 +329,13 @@ public static partial class AdminEndpoints
         ContentFixerBackgroundService contentFixerService,
         TimelineBackfillBackgroundService backfillService)
     {
-        var cancelled = backgroundService.CancelCurrentRun() | roundupService.CancelCurrentRun() | contentFixerService.CancelCurrentRun() | backfillService.CancelCurrentRun();
+        // Every service must be asked to cancel, so evaluate each call before combining the results.
+        var backgroundCancelled = backgroundService.CancelCurrentRun();
+        var roundupCancelled = roundupService.CancelCurrentRun();
+        var contentFixerCancelled = contentFixerService.CancelCurrentRun();
+        var backfillCancelled = backfillService.CancelCurrentRun();
+
+        var cancelled = backgroundCancelled || roundupCancelled || contentFixerCancelled || backfillCancelled;
         if (!cancelled)
         {
             return Results.Ok(new { message = "No running job to cancel" });
@@ -687,7 +693,6 @@ public static partial class AdminEndpoints
         ApplyTranscriptRequest request,
         IContentRepository contentRepo,
         IAiCategorizationService aiService,
-        ITimelineEventRepository timelineRepo,
         IContentFixerService contentFixer,
         CancellationToken ct,
         string? collection = null,
@@ -805,20 +810,21 @@ public static partial class AdminEndpoints
             ExternalUrl = existing.ExternalUrl
         };
 
-        var updated = await contentRepo.UpdateEditDataAsync(collection, slug, updatedEditData, ct);
+        // The transcript is the source text here, so the events are extracted from the source. They are stored in the
+        // same transaction as the edit: when that fails the previous text and events stay in place.
+        var updated = await contentRepo.UpdateEditDataAsync(
+            collection,
+            slug,
+            updatedEditData,
+            new TimelineEventReplacement(
+                processed.TimelineEvents,
+                ITimelineEventRepository.ExtractedFromSource,
+                ITimelineEventRepository.CurrentPromptVersion),
+            ct);
         if (!updated)
         {
             return Results.NotFound();
         }
-
-        // The transcript is the source text here, so the events are extracted from the source.
-        await timelineRepo.ReplaceEventsAsync(
-            collection,
-            slug,
-            processed.TimelineEvents,
-            ITimelineEventRepository.ExtractedFromSource,
-            ITimelineEventRepository.CurrentPromptVersion,
-            ct);
 
         contentRepo.InvalidateCachedData();
         return Results.Ok(updatedEditData);

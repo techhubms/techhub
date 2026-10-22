@@ -48,6 +48,38 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
     {
         ArgumentNullException.ThrowIfNull(item);
 
+        using var transaction = BeginTransaction();
+        try
+        {
+            await UpsertAsync(item, transaction, ct);
+            await TimelineEventWriter.ReplaceAsync(
+                _connection,
+                transaction,
+                item.CollectionName,
+                item.Slug,
+                new TimelineEventReplacement(item.TimelineEvents, ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion),
+                ct);
+            transaction.Commit();
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
+    }
+
+    private IDbTransaction BeginTransaction()
+    {
+        if (_connection.State != ConnectionState.Open)
+        {
+            _connection.Open();
+        }
+
+        return _connection.BeginTransaction();
+    }
+
+    private async Task UpsertAsync(ProcessedContentItem item, IDbTransaction transaction, CancellationToken ct)
+    {
         // Compute section booleans and bitmask from section names
         var sectionSet = new HashSet<string>(item.Sections, StringComparer.OrdinalIgnoreCase);
         var isAi = sectionSet.Contains("ai");
@@ -162,12 +194,14 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
                 ContentHash = item.ContentHash,
                 AiMetadata = aiMetadataJson
             },
+            transaction,
             cancellationToken: ct));
 
         // Rebuild expanded tags
         await _connection.ExecuteAsync(new CommandDefinition(
             "DELETE FROM content_tags_expanded WHERE collection_name = @Collection AND slug = @Slug",
             new { Collection = item.CollectionName, Slug = item.Slug },
+            transaction,
             cancellationToken: ct));
 
         if (tags.Count > 0)
@@ -187,6 +221,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
                          @IsMl, @IsSecurity, @Bitmask)
                       ON CONFLICT DO NOTHING",
                     row,
+                    transaction,
                     cancellationToken: ct));
             }
         }
@@ -197,6 +232,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
             await _connection.ExecuteAsync(new CommandDefinition(
                 "INSERT INTO vscode_update_items (collection_name, slug) VALUES (@Collection, @Slug) ON CONFLICT DO NOTHING",
                 new { Collection = item.CollectionName, Slug = item.Slug },
+                transaction,
                 cancellationToken: ct));
         }
 
@@ -205,6 +241,30 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
 
     /// <inheritdoc />
     public async Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, CancellationToken ct = default)
+    {
+        await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction: null, ct);
+    }
+
+    /// <inheritdoc />
+    public async Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(timeline);
+
+        using var transaction = BeginTransaction();
+        try
+        {
+            await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct);
+            await TimelineEventWriter.ReplaceAsync(_connection, transaction, collectionName, slug, timeline, ct);
+            transaction.Commit();
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
+    }
+
+    private async Task ExecuteUpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, IDbTransaction? transaction, CancellationToken ct)
     {
         const string Sql = @"
 UPDATE content_items
@@ -216,6 +276,7 @@ UPDATE content_items
         await _connection.ExecuteAsync(new CommandDefinition(
             Sql,
             new { CollectionName = collectionName, Slug = slug, AiMetadata = aiMetadataJson },
+            transaction,
             cancellationToken: ct));
     }
 

@@ -32,26 +32,37 @@ public sealed class AiCategorizationService : IAiCategorizationService
     private readonly IAiCompletionClient _completionClient;
     private readonly AiCategorizationOptions _options;
     private readonly ILogger<AiCategorizationService> _logger;
+    private readonly IReadOnlyList<string> _sectionNames;
+    private readonly HashSet<string> _validSections;
 
     private static readonly string _classifySystemMessage = LoadClassifySystemMessage();
     private static readonly string _rewriteSystemMessage = LoadResource("content-rewrite-system.md");
     private static readonly string _timelineSystemMessage = LoadResource("content-timeline-extract-system.md")
         .Replace("{{TIMELINE_RULES}}", LoadResource("content-timeline-rules.md").TrimEnd(), StringComparison.Ordinal);
 
-    private static readonly HashSet<string> _validSections = new(ClassificationSchema.Sections, StringComparer.OrdinalIgnoreCase);
-
     public AiCategorizationService(
         IAiCompletionClient completionClient,
         IOptions<AiCategorizationOptions> options,
+        IOptions<AppSettings> appSettings,
         ILogger<AiCategorizationService> logger)
     {
         ArgumentNullException.ThrowIfNull(completionClient);
         ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(appSettings);
         ArgumentNullException.ThrowIfNull(logger);
 
         _completionClient = completionClient;
         _options = options.Value;
         _logger = logger;
+
+        // The configured sections minus the "all" pseudo-section. Ordered so the schema (and the prompt cache) is stable.
+        _sectionNames = appSettings.Value.Content.Sections
+            .Where(s => !string.Equals(s.Key, "all", StringComparison.OrdinalIgnoreCase))
+            .OrderBy(s => s.Value.Order)
+            .ThenBy(s => s.Key, StringComparer.Ordinal)
+            .Select(s => s.Key)
+            .ToList();
+        _validSections = new HashSet<string>(_sectionNames, StringComparer.OrdinalIgnoreCase);
     }
 
     /// <inheritdoc />
@@ -65,7 +76,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
             BuildUserPrompt(item),
             ClassificationMaxCompletionTokens,
             item.IsInteractive,
-            ClassificationSchema.BuildResponseFormat());
+            ClassificationSchema.BuildResponseFormat(_sectionNames));
 
         var call = await SendWithRetryAsync(json, item, "Classification", ct);
         return call.Failure ?? ParseClassification(call.ResponseBody!, item);

@@ -65,7 +65,6 @@ public class ContentProcessingServiceTests
             _aiService.Object,
             _youtubeTagService.Object,
             _writeRepo,
-            _timelineRepo,
             _jobRepo,
             _processedUrlRepo,
             _feedRepo.Object,

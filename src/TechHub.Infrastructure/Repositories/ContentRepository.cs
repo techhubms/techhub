@@ -1601,11 +1601,31 @@ LIMIT 1";
     }
 
     /// <inheritdoc/>
-    public async Task<bool> UpdateEditDataAsync(
+    public Task<bool> UpdateEditDataAsync(
         string collectionName,
         string slug,
         TechHub.Core.Models.Admin.ContentItemEditData editData,
         CancellationToken ct = default)
+        => UpdateEditDataCoreAsync(collectionName, slug, editData, timeline: null, ct);
+
+    /// <inheritdoc/>
+    public Task<bool> UpdateEditDataAsync(
+        string collectionName,
+        string slug,
+        TechHub.Core.Models.Admin.ContentItemEditData editData,
+        TechHub.Core.Models.ContentProcessing.TimelineEventReplacement timeline,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(timeline);
+        return UpdateEditDataCoreAsync(collectionName, slug, editData, timeline, ct);
+    }
+
+    private async Task<bool> UpdateEditDataCoreAsync(
+        string collectionName,
+        string slug,
+        TechHub.Core.Models.Admin.ContentItemEditData editData,
+        TechHub.Core.Models.ContentProcessing.TimelineEventReplacement? timeline,
+        CancellationToken ct)
     {
         ArgumentNullException.ThrowIfNull(editData);
 
@@ -1706,6 +1726,11 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
                         parameters,
                         transaction: transaction,
                         cancellationToken: ct));
+
+                if (timeline is not null)
+                {
+                    await TimelineEventWriter.ReplaceAsync(Connection, transaction, collectionName, slug, timeline, ct);
+                }
             }
 
             transaction.Commit();

@@ -42,63 +42,13 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
 
         try
         {
-            await _connection.ExecuteAsync(new CommandDefinition(
-                "DELETE FROM content_timeline_events WHERE collection_name = @CollectionName AND item_slug = @Slug",
-                new { CollectionName = collectionName, Slug = slug },
+            await TimelineEventWriter.ReplaceAsync(
+                _connection,
                 transaction,
-                cancellationToken: ct));
-
-            foreach (var timelineEvent in events)
-            {
-                await _connection.ExecuteAsync(new CommandDefinition(
-                    """
-                    INSERT INTO content_timeline_events
-                        (collection_name, item_slug, kind, product, feature, description,
-                         event_date, date_precision, date_source, quote, extracted_from)
-                    VALUES
-                        (@CollectionName, @Slug, @Kind, @Product, @Feature, @Description,
-                         @EventDate, @DatePrecision, @DateSource, @Quote, @ExtractedFrom)
-                    """,
-                    new
-                    {
-                        CollectionName = collectionName,
-                        Slug = slug,
-                        timelineEvent.Kind,
-                        timelineEvent.Product,
-                        timelineEvent.Feature,
-                        timelineEvent.Description,
-                        EventDate = timelineEvent.Date.ToDateTime(TimeOnly.MinValue),
-                        timelineEvent.DatePrecision,
-                        timelineEvent.DateSource,
-                        timelineEvent.Quote,
-                        ExtractedFrom = extractedFrom
-                    },
-                    transaction,
-                    cancellationToken: ct));
-            }
-
-            await _connection.ExecuteAsync(new CommandDefinition(
-                """
-                INSERT INTO content_timeline_extractions
-                    (collection_name, item_slug, prompt_version, events_found, extracted_from, extracted_at)
-                VALUES
-                    (@CollectionName, @Slug, @PromptVersion, @EventsFound, @ExtractedFrom, NOW())
-                ON CONFLICT (collection_name, item_slug) DO UPDATE SET
-                    prompt_version = EXCLUDED.prompt_version,
-                    events_found   = EXCLUDED.events_found,
-                    extracted_from = EXCLUDED.extracted_from,
-                    extracted_at   = NOW()
-                """,
-                new
-                {
-                    CollectionName = collectionName,
-                    Slug = slug,
-                    PromptVersion = promptVersion,
-                    EventsFound = events.Count,
-                    ExtractedFrom = extractedFrom
-                },
-                transaction,
-                cancellationToken: ct));
+                collectionName,
+                slug,
+                new TimelineEventReplacement(events, extractedFrom, promptVersion),
+                ct);
 
             transaction.Commit();
         }
@@ -160,6 +110,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             SELECT collection_name AS CollectionName,
                    slug            AS Slug,
                    title           AS Title,
+                   excerpt         AS Excerpt,
                    content         AS Content,
                    external_url    AS ExternalUrl,
                    feed_name       AS FeedName,
@@ -178,6 +129,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                 CollectionName = row.CollectionName,
                 Slug = row.Slug,
                 Title = row.Title,
+                Excerpt = row.Excerpt ?? string.Empty,
                 Content = row.Content,
                 ExternalUrl = row.ExternalUrl ?? string.Empty,
                 FeedName = row.FeedName ?? "TechHub",
@@ -190,6 +142,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         public string CollectionName { get; init; } = string.Empty;
         public string Slug { get; init; } = string.Empty;
         public string Title { get; init; } = string.Empty;
+        public string? Excerpt { get; init; }
         public string Content { get; init; } = string.Empty;
         public string? ExternalUrl { get; init; }
         public string? FeedName { get; init; }

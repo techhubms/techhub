@@ -76,7 +76,9 @@ public sealed class TimelineBackfillService : ITimelineBackfillService
                     PublishedAt = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch),
                     FeedName = item.FeedName,
                     CollectionName = item.CollectionName,
-                    FullContent = item.Content
+                    FullContent = string.IsNullOrWhiteSpace(item.Excerpt)
+                        ? item.Content
+                        : $"{item.Excerpt}\n\n{item.Content}"
                 };
 
                 var result = await _aiService.ExtractTimelineEventsAsync(raw, ct);

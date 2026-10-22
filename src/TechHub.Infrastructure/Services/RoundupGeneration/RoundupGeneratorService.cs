@@ -20,7 +20,6 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
     private readonly IContentFixerService _contentFixer;
     private readonly IAiCategorizationService _aiService;
     private readonly IContentItemWriteRepository _writeRepo;
-    private readonly ITimelineEventRepository _timelineRepo;
     private readonly RoundupNewsWriter _newsWriter;
     private readonly RoundupMetadataGenerator _metadataGenerator;
     private readonly AppSettings _settings;
@@ -31,7 +30,6 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         IContentFixerService contentFixer,
         IAiCategorizationService aiService,
         IContentItemWriteRepository writeRepo,
-        ITimelineEventRepository timelineRepo,
         RoundupNewsWriter newsWriter,
         RoundupMetadataGenerator metadataGenerator,
         IOptions<AppSettings> settings,
@@ -41,7 +39,6 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         ArgumentNullException.ThrowIfNull(contentFixer);
         ArgumentNullException.ThrowIfNull(aiService);
         ArgumentNullException.ThrowIfNull(writeRepo);
-        ArgumentNullException.ThrowIfNull(timelineRepo);
         ArgumentNullException.ThrowIfNull(newsWriter);
         ArgumentNullException.ThrowIfNull(metadataGenerator);
         ArgumentNullException.ThrowIfNull(settings);
@@ -51,7 +48,6 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         _contentFixer = contentFixer;
         _aiService = aiService;
         _writeRepo = writeRepo;
-        _timelineRepo = timelineRepo;
         _newsWriter = newsWriter;
         _metadataGenerator = metadataGenerator;
         _settings = settings.Value;
@@ -67,6 +63,10 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         var failedGenerationCount = 0;
         var sectionsWithArticlesCount = 0;
         var totalArticles = 0;
+
+        // Roundups that exist or will exist once the prepared ones are written: only those may be linked as "full story".
+        var availableRoundupSections = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var prepared = new List<PreparedRoundup>();
 
         var sectionSlugs = _settings.Content.Sections
             .OrderBy(kvp => kvp.Value.Order)
@@ -99,18 +99,29 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                 ? enriched
                 : sectionArticles;
 
-            var sectionResult = await GenerateSectionRoundupAsync(sectionName, enrichedSectionArticles, weekStart, weekEnd, jobId, lp, ct);
-            switch (sectionResult.Result)
+            var section = await PrepareSectionRoundupAsync(sectionName, enrichedSectionArticles, weekStart, weekEnd, lp, ct);
+            switch (section.Outcome.Result)
             {
                 case RoundupGenerationResult.Generated:
-                    generatedSlugs.AddRange(sectionResult.Slugs);
+                    prepared.Add(section.Roundup!);
+                    availableRoundupSections.Add(sectionName);
                     break;
                 case RoundupGenerationResult.AlreadyExists:
+                    availableRoundupSections.Add(sectionName);
                     break;
                 case RoundupGenerationResult.ContentGenerationFailed:
                     failedGenerationCount++;
                     break;
             }
+        }
+
+        // The roundups are only written now that it is known which of them exist: a one-line mention in one roundup
+        // links to the full story in another roundup, which must not point at a roundup that failed to generate.
+        var sectionTitles = _settings.Content.Sections.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Title, StringComparer.OrdinalIgnoreCase);
+        foreach (var roundup in prepared)
+        {
+            ct.ThrowIfCancellationRequested();
+            generatedSlugs.Add(await WriteSectionRoundupAsync(roundup, sectionTitles, availableRoundupSections, jobId, lp, ct));
         }
 
         lp.Report($"Loaded {totalArticles} articles across {sectionsWithArticlesCount} sections");
@@ -134,12 +145,23 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         return RoundupGenerationOutcome.AlreadyExists;
     }
 
-    private async Task<RoundupGenerationOutcome> GenerateSectionRoundupAsync(
+    /// <summary>A section roundup that is fully generated but not written yet, because its links depend on the other sections.</summary>
+    private sealed record PreparedRoundup(
+        string SectionName,
+        string Slug,
+        DateOnly PublishDate,
+        string LeadContent,
+        IReadOnlyList<RoundupArticle> BriefArticles,
+        string DatesToKnow,
+        RoundupMetadataGenerator.RoundupMetadataAi Metadata);
+
+    private sealed record SectionPreparation(RoundupGenerationOutcome Outcome, PreparedRoundup? Roundup = null);
+
+    private async Task<SectionPreparation> PrepareSectionRoundupAsync(
         string sectionName,
         IReadOnlyList<RoundupArticle> sectionArticles,
         DateOnly weekStart,
         DateOnly weekEnd,
-        long? jobId,
         LoggingProgress lp,
         CancellationToken ct)
     {
@@ -149,7 +171,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         if (await _roundupRepo.RoundupExistsAsync(sectionName, slug, ct))
         {
             _logger.LogInformation("Roundup for section {SectionName} in week {WeekStart} already exists (slug={Slug}), skipping", sectionName, weekStart, slug);
-            return RoundupGenerationOutcome.AlreadyExists;
+            return new SectionPreparation(RoundupGenerationOutcome.AlreadyExists);
         }
 
         lp.Report($"Using {sectionArticles.Count} articles for section '{sectionName}'");
@@ -173,7 +195,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
             if (string.IsNullOrWhiteSpace(written))
             {
                 _logger.LogError("The writer produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
-                return RoundupGenerationOutcome.ContentGenerationFailed;
+                return new SectionPreparation(RoundupGenerationOutcome.ContentGenerationFailed);
             }
 
             writerContent = written;
@@ -186,18 +208,37 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                 appended.Count, sectionName, string.Join("; ", appended.Select(a => a.Title)));
         }
 
-        var alsoRelevant = RoundupBlocksBuilder.BuildAlsoRelevant(brief, publishDate, sectionTitles);
         var datesToKnow = RoundupBlocksBuilder.BuildDatesToKnow(
             await _roundupRepo.GetUpcomingDateEventsAsync(sectionName, weekStart, weekEnd, ct) ?? [], weekEnd);
 
         // A section without lead articles has no written topics; the metadata then describes the one-line mentions.
-        var metadataInput = string.IsNullOrWhiteSpace(completeContent) ? alsoRelevant : completeContent;
+        // Only the text matters here, so the mentions are built as if every roundup exists.
+        var metadataInput = string.IsNullOrWhiteSpace(completeContent)
+            ? RoundupBlocksBuilder.BuildAlsoRelevant(brief, publishDate, sectionTitles, sectionTitles.Keys.ToHashSet(StringComparer.OrdinalIgnoreCase))
+            : completeContent;
 
         lp.Report($"Metadata ({sectionName}): generating title, tags and introduction");
         var metadata = await _metadataGenerator.GenerateAsync(metadataInput, sectionName, weekDescription, writingGuidelines, ct);
 
+        return new SectionPreparation(
+            RoundupGenerationOutcome.Generated(slug),
+            new PreparedRoundup(sectionName, slug, publishDate, completeContent, brief, datesToKnow, metadata));
+    }
+
+    private async Task<string> WriteSectionRoundupAsync(
+        PreparedRoundup roundup,
+        IReadOnlyDictionary<string, string> sectionTitles,
+        IReadOnlySet<string> availableRoundupSections,
+        long? jobId,
+        LoggingProgress lp,
+        CancellationToken ct)
+    {
+        var sectionName = roundup.SectionName;
+        var metadata = roundup.Metadata;
+
         lp.Report($"Building the final content for section {sectionName}");
-        var sectionContent = string.Join("\n\n", new[] { completeContent.Trim(), alsoRelevant, datesToKnow }.Where(b => !string.IsNullOrWhiteSpace(b)));
+        var alsoRelevant = RoundupBlocksBuilder.BuildAlsoRelevant(roundup.BriefArticles, roundup.PublishDate, sectionTitles, availableRoundupSections);
+        var sectionContent = string.Join("\n\n", new[] { roundup.LeadContent.Trim(), alsoRelevant, roundup.DatesToKnow }.Where(b => !string.IsNullOrWhiteSpace(b)));
         var tableOfContents = RoundupContentBuilder.BuildTableOfContents(sectionContent);
         var fullContent = RoundupContentBuilder.BuildFullContent(sectionContent, metadata.Introduction, tableOfContents);
         fullContent = _contentFixer.RepairMarkdown(fullContent);
@@ -205,10 +246,10 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         lp.Report($"Writing roundup to database for section '{sectionName}'");
         var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, [sectionName]);
         var normalizedTags = TagNormalizer.NormalizeTags(tagsWithSections);
-        await _roundupRepo.WriteRoundupAsync(sectionName, slug, publishDate, metadata.Title, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
+        await _roundupRepo.WriteRoundupAsync(sectionName, roundup.Slug, roundup.PublishDate, metadata.Title, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
 
-        lp.Report($"Roundup for section '{sectionName}' in week {weekStart}\u2013{weekEnd} written successfully (slug={slug})");
-        return RoundupGenerationOutcome.Generated(slug);
+        lp.Report($"Roundup for section '{sectionName}' written successfully (slug={roundup.Slug})");
+        return roundup.Slug;
     }
 
     /// <summary>
@@ -259,19 +300,19 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                 var result = await _aiService.ClassifyAsync(rawItem, ct);
                 if (result.Item?.RoundupMetadata is { } meta)
                 {
-                    // Update only ai_metadata on the existing row (avoids PK/unique-constraint conflicts).
                     // Classification only: the stored article text is never rewritten by the backfill.
-                    await _writeRepo.UpdateAiMetadataAsync(
-                        article.CollectionName, article.Slug, ContentItemWriteRepository.SerializeAiMetadata(meta), ct);
-
                     // The classification already extracted the timeline events of the article: keep them, so the
                     // "Dates to know" block of this roundup does not depend on the timeline backfill job having run.
-                    await _timelineRepo.ReplaceEventsAsync(
+                    // Metadata and events are stored in one transaction, so a failing event write leaves the article
+                    // on its previous metadata version and the backfill retries it.
+                    await _writeRepo.UpdateAiMetadataAsync(
                         article.CollectionName,
                         article.Slug,
-                        result.Item.TimelineEvents,
-                        ITimelineEventRepository.ExtractedFromStoredContent,
-                        ITimelineEventRepository.CurrentPromptVersion,
+                        ContentItemWriteRepository.SerializeAiMetadata(meta),
+                        new TimelineEventReplacement(
+                            result.Item.TimelineEvents,
+                            ITimelineEventRepository.ExtractedFromStoredContent,
+                            ITimelineEventRepository.CurrentPromptVersion),
                         ct);
 
                     enriched[article.ExternalUrl] = article.WithMetadata(meta);

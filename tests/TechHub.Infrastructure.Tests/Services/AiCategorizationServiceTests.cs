@@ -36,9 +36,30 @@ public class AiCategorizationServiceTests
         }
     };
 
-    private AiCategorizationService CreateSut(AiCategorizationOptions? options = null) => new(
+    private static readonly string[] _configuredSections = ["ai", "azure", "dotnet", "devops", "github-copilot", "ml", "security"];
+
+    private static IOptions<AppSettings> TestAppSettings(params string[] sections) => Options.Create(new AppSettings
+    {
+        BaseUrl = "https://localhost:5003",
+        Content = new ContentSettings
+        {
+            Sections = new[] { "all" }.Concat(sections).ToDictionary(
+                name => name,
+                name => new SectionConfig
+                {
+                    Title = name,
+                    Description = name,
+                    Url = $"/{name}",
+                    Tag = name,
+                    Collections = []
+                })
+        }
+    });
+
+    private AiCategorizationService CreateSut(AiCategorizationOptions? options = null, string[]? sections = null) => new(
         _aiClient.Object,
         Options.Create(options ?? _defaultOptions),
+        TestAppSettings(sections ?? _configuredSections),
         NullLogger<AiCategorizationService>.Instance);
 
     private static RawFeedItem CreateRawItem(string url = "https://example.com/article", bool interactive = false) => new()
@@ -240,6 +261,44 @@ public class AiCategorizationServiceTests
         var required = schema.GetProperty("required").EnumerateArray().Select(e => e.GetString()).ToList();
         required.Should().BeEquivalentTo(properties);
         schema.GetProperty("additionalProperties").GetBoolean().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_SchemaSectionsComeFromTheConfiguredSectionsWithoutAll()
+    {
+        SetupResponses(Wrap(ExcludedJson));
+
+        await CreateSut(sections: ["quantum", "ai"]).ClassifyAsync(CreateRawItem());
+
+        var properties = Parse(_requests[0]).GetProperty("response_format").GetProperty("json_schema")
+            .GetProperty("schema").GetProperty("properties");
+        var sections = properties.GetProperty("sections").GetProperty("items").GetProperty("enum")
+            .EnumerateArray().Select(e => e.GetString()).ToList();
+        sections.Should().BeEquivalentTo(["ai", "quantum"]);
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_SectionAddedToConfiguration_IsAccepted()
+    {
+        SetupResponses(Wrap(ClassificationJson(
+            sectionsJson: """["quantum"]""",
+            primary: "quantum",
+            rolesJson: """[{"section":"quantum","role":"lead"}]""")));
+
+        var result = await CreateSut(sections: ["ai", "quantum"]).ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_SectionRemovedFromConfiguration_IsRejected()
+    {
+        SetupResponses(Wrap(ClassificationJson()));
+
+        var result = await CreateSut(sections: ["ai"]).ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("invalid sections");
     }
 
     [Fact]

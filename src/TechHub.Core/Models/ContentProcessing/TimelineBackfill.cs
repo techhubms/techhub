@@ -33,6 +33,9 @@ public sealed record TimelineBackfillItem
     /// <summary>Article title.</summary>
     public required string Title { get; init; }
 
+    /// <summary>The stored excerpt. The article text continues after it, so events can be stated only here.</summary>
+    public string Excerpt { get; init; } = string.Empty;
+
     /// <summary>The stored article text.</summary>
     public required string Content { get; init; }
 

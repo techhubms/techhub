@@ -25,7 +25,6 @@ public class RoundupGeneratorServiceTests
     private readonly Mock<IAiCompletionClient> _aiClient = new();
     private readonly Mock<IAiCategorizationService> _aiCategorizationService = new();
     private readonly Mock<IContentItemWriteRepository> _writeRepo = new();
-    private readonly Mock<ITimelineEventRepository> _timelineRepo = new();
 
     private readonly List<(string Model, string UserMessage)> _aiCalls = [];
     private readonly List<string> _aiRequests = [];
@@ -117,7 +116,6 @@ public class RoundupGeneratorServiceTests
             contentFixerMock.Object,
             _aiCategorizationService.Object,
             _writeRepo.Object,
-            _timelineRepo.Object,
             newsWriter,
             metadataGenerator,
             appSettingsOptions,
@@ -256,6 +254,7 @@ public class RoundupGeneratorServiceTests
     [Fact]
     public async Task GenerateAsync_BriefArticle_IsNotSentToTheWriterButListedUnderAlsoRelevant()
     {
+        SetupArticles("ai", Article("ai", 3));
         SetupArticles("azure",
             Article("azure", 1),
             Article("azure", 2, role: "brief", primary: "ai", facts: ["Brief fact"]));
@@ -263,14 +262,48 @@ public class RoundupGeneratorServiceTests
 
         await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
 
-        var writerMessage = _aiCalls.Single(c => c.Model == WriterDeployment).UserMessage;
+        var writerMessage = _aiCalls.Single(c => c.Model == WriterDeployment && c.UserMessage.Contains("Article 1", StringComparison.Ordinal)).UserMessage;
         writerMessage.Should().Contain("Article 1");
         writerMessage.Should().NotContain("Article 2");
 
-        var content = _written.Single().Content;
+        var content = _written.Single(w => w.Section == "azure").Content;
         content.Should().Contain("## Also relevant this week");
         content.Should().Contain("- [Article 2](https://example.com/2): Brief fact.");
         content.Should().Contain("[Artificial Intelligence roundup](/ai/roundups/weekly-ai-roundup-2025-04-14)");
+    }
+
+    [Fact]
+    public async Task GenerateAsync_PrimaryRoundupFailsToGenerate_DoesNotLinkTheFullStory()
+    {
+        SetupArticles("ai", Article("ai", 3));
+        SetupArticles("azure",
+            Article("azure", 1),
+            Article("azure", 2, role: "brief", primary: "ai", facts: ["Brief fact"]));
+        SetupAi(writer: user => user.Contains("Article 3", StringComparison.Ordinal) ? string.Empty : DefaultWriter(user));
+
+        var result = await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
+
+        result.Result.Should().Be(RoundupGenerationResult.Generated);
+        var azure = _written.Should().ContainSingle().Which;
+        azure.Section.Should().Be("azure");
+        azure.Content.Should().Contain("- [Article 2](https://example.com/2): Brief fact.");
+        azure.Content.Should().NotContain("Full story");
+        azure.Content.Should().NotContain("/ai/roundups/");
+    }
+
+    [Fact]
+    public async Task GenerateAsync_PrimaryRoundupAlreadyExists_StillLinksTheFullStory()
+    {
+        SetupArticles("ai", Article("ai", 3));
+        SetupArticles("azure",
+            Article("azure", 1),
+            Article("azure", 2, role: "brief", primary: "ai", facts: ["Brief fact"]));
+        _roundupRepo.Setup(r => r.RoundupExistsAsync("ai", "weekly-ai-roundup-2025-04-14", It.IsAny<CancellationToken>())).ReturnsAsync(true);
+        SetupAi();
+
+        await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
+
+        _written.Should().ContainSingle().Which.Content.Should().Contain("/ai/roundups/weekly-ai-roundup-2025-04-14");
     }
 
     [Fact]
@@ -538,7 +571,7 @@ public class RoundupGeneratorServiceTests
 
         _aiCategorizationService.Verify(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
         _aiCategorizationService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Never);
-        _writeRepo.Verify(w => w.UpdateAiMetadataAsync("news", It.IsAny<string>(), It.Is<string>(j => j.Contains("\"schema_version\":2")), It.IsAny<CancellationToken>()), Times.Exactly(2));
+        _writeRepo.Verify(w => w.UpdateAiMetadataAsync("news", It.IsAny<string>(), It.Is<string>(j => j.Contains("\"schema_version\":2")), It.IsAny<TimelineEventReplacement>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
     }
 
     [Fact]
@@ -579,9 +612,12 @@ public class RoundupGeneratorServiceTests
 
         await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
 
-        _timelineRepo.Verify(r => r.ReplaceEventsAsync(
-            "news", "article-10", It.Is<IReadOnlyList<TimelineEvent>>(e => e.Count == 1 && e[0].Kind == "retirement"),
-            ITimelineEventRepository.ExtractedFromStoredContent, ITimelineEventRepository.CurrentPromptVersion, It.IsAny<CancellationToken>()), Times.Once);
+        _writeRepo.Verify(w => w.UpdateAiMetadataAsync(
+            "news", "article-10", It.IsAny<string>(),
+            It.Is<TimelineEventReplacement>(t => t.Events.Count == 1 && t.Events[0].Kind == "retirement"
+                && t.ExtractedFrom == ITimelineEventRepository.ExtractedFromStoredContent
+                && t.PromptVersion == ITimelineEventRepository.CurrentPromptVersion),
+            It.IsAny<CancellationToken>()), Times.Once);
     }
 
     [Fact]

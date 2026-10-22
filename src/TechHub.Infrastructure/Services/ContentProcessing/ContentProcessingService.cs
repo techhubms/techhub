@@ -31,7 +31,6 @@ public sealed class ContentProcessingService
     private readonly IAiCategorizationService _aiService;
     private readonly IYouTubeTagService _youtubeTagService;
     private readonly IContentItemWriteRepository _writeRepo;
-    private readonly ITimelineEventRepository _timelineRepo;
     private readonly IContentProcessingJobRepository _jobRepo;
     private readonly IProcessedUrlRepository _processedUrlRepo;
     private readonly IRssFeedConfigRepository _feedRepo;
@@ -46,7 +45,6 @@ public sealed class ContentProcessingService
         IAiCategorizationService aiService,
         IYouTubeTagService youtubeTagService,
         IContentItemWriteRepository writeRepo,
-        ITimelineEventRepository timelineRepo,
         IContentProcessingJobRepository jobRepo,
         IProcessedUrlRepository processedUrlRepo,
         IRssFeedConfigRepository feedRepo,
@@ -60,7 +58,6 @@ public sealed class ContentProcessingService
         ArgumentNullException.ThrowIfNull(aiService);
         ArgumentNullException.ThrowIfNull(youtubeTagService);
         ArgumentNullException.ThrowIfNull(writeRepo);
-        ArgumentNullException.ThrowIfNull(timelineRepo);
         ArgumentNullException.ThrowIfNull(jobRepo);
         ArgumentNullException.ThrowIfNull(processedUrlRepo);
         ArgumentNullException.ThrowIfNull(feedRepo);
@@ -74,7 +71,6 @@ public sealed class ContentProcessingService
         _aiService = aiService;
         _youtubeTagService = youtubeTagService;
         _writeRepo = writeRepo;
-        _timelineRepo = timelineRepo;
         _jobRepo = jobRepo;
         _processedUrlRepo = processedUrlRepo;
         _feedRepo = feedRepo;
@@ -706,17 +702,11 @@ public sealed class ContentProcessingService
         // Normalize tags (fix casing, remove noise, deduplicate)
         processed = processed.WithTags(TagNormalizer.NormalizeTags(processed.Tags));
 
-        // Write to database
+        // Write to database: the article and its timeline events are stored in one transaction. When it fails nothing
+        // is saved, so the URL is not marked as existing and a retry can still process it.
         try
         {
             await _writeRepo.UpsertProcessedItemAsync(processed, ct);
-            await _timelineRepo.ReplaceEventsAsync(
-                processed.CollectionName,
-                processed.Slug,
-                processed.TimelineEvents,
-                ITimelineEventRepository.ExtractedFromSource,
-                ITimelineEventRepository.CurrentPromptVersion,
-                ct);
         }
         catch (DbException ex)
         {

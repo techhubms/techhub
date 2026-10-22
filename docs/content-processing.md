@@ -61,8 +61,9 @@ content current. The pipeline is implemented entirely in C# and runs inside `Tec
 4. **AI rewrite** — Only for included items, a second model writes the cleaned-up markdown body
    (`content-rewrite-system.md`) that continues from the excerpt
 5. **Deduplication** — Checks `processed_urls` table to skip already-attempted URLs
-6. **Database write** — Upserts into `content_items` + `content_tags_expanded`, replaces the
-   article's rows in `content_timeline_events`, and records the run in `content_processing_jobs`
+6. **Database write** — Upserts into `content_items` + `content_tags_expanded` and replaces the
+   article's rows in `content_timeline_events` in one transaction (a failed event write stores nothing, so the
+   URL is retried on the next run), and records the run in `content_processing_jobs`
 
 Items that the AI determines are off-topic or low quality are skipped and recorded in
 `processed_urls` with status `skipped`.
@@ -169,6 +170,8 @@ identity in Azure, `az login` locally), so no API key is configured.
 whole item; nothing is stored. `ClassifyAsync` runs step 1 only and is used by the roundup
 metadata backfill, which never rewrites stored articles.
 
+The sections the classification may return (the `enum` of the JSON schema and the validation of the answer) are the configured
+sections in `AppSettings:Content:Sections`, without `all`. Adding or removing a section in configuration therefore changes both together.
 Classification runs on `gpt-6.1-sol` rather than the cheaper `gpt-6-luna` because the include/exclude decision needs the strictness of the old model: on 73 articles production had skipped, `gpt-6.1-sol` and `gpt-5.2` kept 95.9% excluded, `gpt-6-luna` only 89.0% (82.2% with `medium` reasoning). The `gpt-6-luna` deployment serves the timeline extraction. See [Evaluating Models](#evaluating-models).
 
 Configured under `"AiCategorization"`:
@@ -345,16 +348,21 @@ except `all`. For each section:
    sections is therefore loaded by each of them
 2. **Existing check** — Sections whose roundup for that week already exists are skipped
 3. **AI metadata backfill** — Articles without `schema_version` 2 metadata are classified on the fly
-   (classification only, never a rewrite). Their `ai_metadata` is updated and the timeline events the classification found are stored, so
-   the "Dates to know" block does not depend on the timeline backfill having run
+   (classification only, never a rewrite). Their `ai_metadata` is updated and the timeline events the classification found are stored
+   in the same transaction, so the "Dates to know" block does not depend on the timeline backfill having run, and a failed event
+   write leaves the article on its old metadata version so it is retried
 4. **Lead and brief split (code)** — The article's role for this section decides: `lead` articles get a full
    write-up, `brief` articles only a one-line mention. Lead articles are ordered by `significance`, then by first product
 5. **Writer (AI, one call)** — Writes the topics and "Other ... News" from the key facts of the lead articles.
    It also receives only the headings of the previous week's roundup for an occasional "following last week's ..." sentence
-6. **Completeness check (code)** — Every lead article must be linked. Links the writer left out are appended to the "Other ... News" section, and a warning is logged
+6. **Completeness check (code)** — Every lead article must be linked, as the complete destination of a Markdown link (a URL that is only a prefix of another linked URL does not count). Links the writer left out are appended to the "Other ... News" section, and a warning is logged
 7. **Metadata (AI, one call)** — Title, tags and introduction as strict JSON
-8. **Code-built blocks** — "Also relevant this week" (brief articles, each with its first key fact and a link to the roundup that covers it in full) and "Dates to know" (see below), followed by the table of contents built from the `##`/`###` headers
+8. **Code-built blocks** — "Also relevant this week" (brief articles, each with its first key fact and, when the roundup of its primary section exists, a link to it for the full story) and "Dates to know" (see below), followed by the table of contents built from the `##`/`###` headers
 9. **DB write** — Upserts one roundup per section into `content_items` + `content_tags_expanded`
+
+Steps 1–7 run for every section first and nothing is written yet. Steps 8–9 run afterwards, once it is known which roundups exist
+(already stored, or generated in this run), so a one-line mention never links to a roundup that failed to generate; it then keeps the
+source-article link without the "Full story" sentence. The consequence is that a run that is cancelled before the writing phase stores no roundups of that run.
 
 **Dates to know** comes from `content_timeline_events` of the section's articles of the week, for dates after the roundup week:
 *Deadlines* are `deprecation`, `retirement`, `end-of-support`, `breaking-change` and `pricing-change`;
@@ -392,7 +400,7 @@ Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`
 
 - **Dates come from code when they are "now".** When an article says a feature "is now generally available", the model reports `date_source: publication` and no date; code fills in the article's publication date (Europe/Brussels). Explicit dates are validated, and coarse dates are normalized to the first day of the month or quarter. Events with an unparseable date are skipped and logged.
 - **No quote check.** The `quote` is stored for spot checks. If the model proves unreliable, add a check that the quote appears in the article.
-- **Reprocessing replaces events.** An article's events are replaced in one transaction whenever it is processed again, or when a transcript is applied.
+- **Reprocessing replaces events.** An article's events are replaced whenever it is processed again, or when a transcript is applied. This happens in the same transaction as the article write (processing, transcript edit, roundup metadata backfill), so a failing event write never leaves a saved article with stale events or a scanned marker that does not match them. Replacements of the same article are serialized with a row lock on the article, so concurrent runs cannot store two event sets.
 - **Write-only for now.** The only reader is the roundup "Dates to know" block. The table is the basis for making the GitHub Copilot features page dynamic later.
 
 ### Timeline Backfill
@@ -400,7 +408,7 @@ Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`
 Existing articles are scanned by `TimelineBackfillBackgroundService`, a manual-trigger-only job (job type `timeline-backfill`). Use
 the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/timeline-backfill/trigger` (see [admin.md](admin.md)).
 
-- Reads the stored article text and sends it to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`)
+- Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`)
 - Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again
 - Options: `force`, `publishedAfter` (yyyy-MM-dd), `collection` and `limit`. Newest articles come first
 - Resumable: an article is marked as scanned only after its events are stored, so a cancelled or failed run can simply be started again. A failing article is logged and left for the next run

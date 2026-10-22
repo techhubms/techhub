@@ -42,16 +42,16 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
         return Task.CompletedTask;
     }
 
-    private async Task SeedAsync(string slug, long dateEpoch = 1_750_000_000, string? collection = null)
+    private async Task SeedAsync(string slug, long dateEpoch = 1_750_000_000, string? collection = null, string excerpt = "")
     {
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO content_items
                 (slug, collection_name, title, content, excerpt, date_epoch, primary_section_name,
                  external_url, author, feed_name, tags_csv, content_hash)
-            VALUES (@Slug, @Collection, @Title, 'Stored text of the article', '', @DateEpoch, 'ai',
+            VALUES (@Slug, @Collection, @Title, 'Stored text of the article', @Excerpt, @DateEpoch, 'ai',
                     @Url, 'Author', 'Feed', '', 'hash')
             """,
-            new { Slug = slug, Collection = collection ?? _collection, Title = $"Title {slug}", DateEpoch = dateEpoch, Url = $"https://example.com/{collection ?? _collection}/{slug}" });
+            new { Slug = slug, Collection = collection ?? _collection, Title = $"Title {slug}", Excerpt = excerpt, DateEpoch = dateEpoch, Url = $"https://example.com/{collection ?? _collection}/{slug}" });
     }
 
     private static TimelineEvent Event(string kind = "ga") => new()
@@ -104,6 +104,21 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
         sent!.FullContent.Should().Be("Stored text of the article");
         sent.PublishedAt.ToUnixTimeSeconds().Should().Be(1_750_000_000);
         sent.IsInteractive.Should().BeFalse("the backfill runs in the background and may use Flex");
+    }
+
+    [Fact]
+    public async Task RunAsync_IncludesTheStoredExcerptBeforeTheStoredText()
+    {
+        await SeedAsync("a1", excerpt: "General availability starts on 1 June 2026.");
+        RawFeedItem? sent = null;
+        _ai.Setup(s => s.ExtractTimelineEventsAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .Callback<RawFeedItem, CancellationToken>((raw, _) => sent = raw)
+            .ReturnsAsync(new TimelineExtractionResult());
+
+        await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        sent.Should().NotBeNull();
+        sent!.FullContent.Should().Be("General availability starts on 1 June 2026.\n\nStored text of the article");
     }
 
     [Fact]

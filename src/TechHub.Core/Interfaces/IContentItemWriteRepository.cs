@@ -14,8 +14,10 @@ public interface IContentItemWriteRepository
     Task<bool> ExistsByExternalUrlAsync(string externalUrl, CancellationToken ct = default);
 
     /// <summary>
-    /// Upserts a processed content item into <c>content_items</c> and rebuilds
-    /// its entries in <c>content_tags_expanded</c>.
+    /// Upserts a processed content item into <c>content_items</c>, rebuilds its entries in
+    /// <c>content_tags_expanded</c> and replaces its timeline events (<see cref="ProcessedContentItem.TimelineEvents"/>,
+    /// extracted from the source), all in one transaction: when any step fails the item is not stored at all,
+    /// so processing it again can still succeed.
     /// </summary>
     Task UpsertProcessedItemAsync(ProcessedContentItem item, CancellationToken ct = default);
 
@@ -25,4 +27,10 @@ public interface IContentItemWriteRepository
     /// Used by the roundup backfill to avoid duplicate-key conflicts on <c>external_url</c>.
     /// </summary>
     Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, CancellationToken ct = default);
+
+    /// <summary>
+    /// Updates the <c>ai_metadata</c> column and replaces the timeline events of the item in one transaction,
+    /// so a failing event write leaves the previous metadata in place and the backfill can retry.
+    /// </summary>
+    Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, CancellationToken ct = default);
 }

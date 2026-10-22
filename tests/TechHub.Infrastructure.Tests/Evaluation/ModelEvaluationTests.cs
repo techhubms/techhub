@@ -78,6 +78,15 @@ public class ModelEvaluationTests
         Profiles = Profiles(rewriteEffort, classification)
     };
 
+    private static IOptions<AppSettings> LoadAppSettings()
+    {
+        using var settingsDoc = JsonDocument.Parse(File.ReadAllText(Path.Combine(RepoRoot(), "src", "TechHub.Api", "appsettings.json")));
+        var contentSettings = JsonSerializer.Deserialize<ContentSettings>(
+            settingsDoc.RootElement.GetProperty("AppSettings").GetProperty("Content").GetRawText(),
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
+        return Microsoft.Extensions.Options.Options.Create(new AppSettings { Content = contentSettings, BaseUrl = "https://localhost:5003" });
+    }
+
     private static (AiCategorizationService Service, UsageRecorder Recorder) CreateAi(string rewriteEffort = "low", UsageRecorder? shared = null, AiProfileOptions? classification = null)
     {
         var options = Options(rewriteEffort, classification);
@@ -87,7 +96,7 @@ public class ModelEvaluationTests
             NullLogger<AiCompletionClient>.Instance);
         var recorder = shared ?? new UsageRecorder();
         recorder.Inner = inner;
-        var service = new AiCategorizationService(recorder, Microsoft.Extensions.Options.Options.Create(options), NullLogger<AiCategorizationService>.Instance);
+        var service = new AiCategorizationService(recorder, Microsoft.Extensions.Options.Options.Create(options), LoadAppSettings(), NullLogger<AiCategorizationService>.Instance);
         return (service, recorder);
     }
 
@@ -720,18 +729,13 @@ public class ModelEvaluationTests
         var logger = NullLogger<RoundupAiHelper>.Instance;
         var aiHelper = new RoundupAiHelper(recorder, roundupOptions, aiOptions, logger);
 
-        using var settingsDoc = JsonDocument.Parse(File.ReadAllText(Path.Combine(RepoRoot(), "src", "TechHub.Api", "appsettings.json")));
-        var contentSettings = JsonSerializer.Deserialize<ContentSettings>(
-            settingsDoc.RootElement.GetProperty("AppSettings").GetProperty("Content").GetRawText(),
-            new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
-        var appSettings = Microsoft.Extensions.Options.Options.Create(new AppSettings { Content = contentSettings, BaseUrl = "https://localhost:5003" });
+        var appSettings = LoadAppSettings();
 
         var generator = new RoundupGeneratorService(
             new SectionRoundupRepository(db, NullLogger<SectionRoundupRepository>.Instance),
             new ContentFixerService(db, null, NullLogger<ContentFixerService>.Instance),
             ai,
             new ContentItemWriteRepository(db, NullLogger<ContentItemWriteRepository>.Instance),
-            new TimelineEventRepository(db),
             new RoundupNewsWriter(aiHelper, appSettings, roundupOptions, NullLogger<RoundupNewsWriter>.Instance),
             new RoundupMetadataGenerator(aiHelper, roundupOptions, appSettings, NullLogger<RoundupMetadataGenerator>.Instance),
             appSettings,

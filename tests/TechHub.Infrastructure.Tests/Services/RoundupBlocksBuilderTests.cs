@@ -128,14 +128,14 @@ public class RoundupBlocksBuilderTests
     [Fact]
     public void BuildAlsoRelevant_NoBriefArticles_ReturnsEmpty()
     {
-        RoundupBlocksBuilder.BuildAlsoRelevant([], new DateOnly(2025, 4, 14), new Dictionary<string, string>()).Should().BeEmpty();
+        RoundupBlocksBuilder.BuildAlsoRelevant([], new DateOnly(2025, 4, 14), new Dictionary<string, string>(), new HashSet<string>()).Should().BeEmpty();
     }
 
     [Fact]
     public void BuildAlsoRelevant_WithoutKeyFacts_StillListsTheLinkAndTheRoundup()
     {
         var result = RoundupBlocksBuilder.BuildAlsoRelevant(
-            [Article(1)], new DateOnly(2025, 4, 14), new Dictionary<string, string> { ["ai"] = "Artificial Intelligence" });
+            [Article(1)], new DateOnly(2025, 4, 14), new Dictionary<string, string> { ["ai"] = "Artificial Intelligence" }, new HashSet<string> { "ai" });
 
         result.Should().Contain("- [Article 1](https://example.com/1) Full story in the [Artificial Intelligence roundup](/ai/roundups/weekly-ai-roundup-2025-04-14).");
     }
@@ -144,9 +144,21 @@ public class RoundupBlocksBuilderTests
     public void BuildAlsoRelevant_EndsTheKeyFactWithAPeriod()
     {
         var result = RoundupBlocksBuilder.BuildAlsoRelevant(
-            [Article(1, facts: ["It is generally available"])], new DateOnly(2025, 4, 14), new Dictionary<string, string>());
+            [Article(1, facts: ["It is generally available"])], new DateOnly(2025, 4, 14), new Dictionary<string, string>(), new HashSet<string> { "ai" });
 
         result.Should().Contain("): It is generally available. Full story in the [ai roundup]");
+    }
+
+    [Fact]
+    public void BuildAlsoRelevant_PrimaryRoundupDoesNotExist_KeepsTheSourceLinkWithoutTheFullStoryClaim()
+    {
+        var result = RoundupBlocksBuilder.BuildAlsoRelevant(
+            [Article(1, facts: ["It is generally available"])], new DateOnly(2025, 4, 14),
+            new Dictionary<string, string> { ["ai"] = "Artificial Intelligence" }, new HashSet<string> { "azure" });
+
+        result.Should().Contain("- [Article 1](https://example.com/1): It is generally available.");
+        result.Should().NotContain("Full story");
+        result.Should().NotContain("/ai/roundups/");
     }
 
     // ── Completeness ──────────────────────────────────────────────────────────
@@ -178,6 +190,34 @@ public class RoundupBlocksBuilderTests
         var (_, appended) = RoundupBlocksBuilder.EnsureLeadLinks("- [x](HTTPS://EXAMPLE.COM/1)", [Article(1)], "AI");
 
         appended.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void EnsureLeadLinks_OverlappingUrls_DoNotCountAsLinked()
+    {
+        var (content, appended) = RoundupBlocksBuilder.EnsureLeadLinks("- [Ten](https://example.com/10)", [Article(1), Article(10)], "AI");
+
+        appended.Should().ContainSingle().Which.ExternalUrl.Should().Be("https://example.com/1");
+        content.Should().Contain("[Article 1](https://example.com/1)");
+    }
+
+    [Theory]
+    [InlineData("- [x](https://example.com/1 \"Title\")")]
+    [InlineData("- [x](<https://example.com/1>)")]
+    [InlineData("Read <https://example.com/1> now")]
+    public void EnsureLeadLinks_LinkVariants_CountAsLinked(string input)
+    {
+        var (_, appended) = RoundupBlocksBuilder.EnsureLeadLinks(input, [Article(1)], "AI");
+
+        appended.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void EnsureLeadLinks_UrlOnlyMentionedAsPlainText_DoesNotCountAsLinked()
+    {
+        var (_, appended) = RoundupBlocksBuilder.EnsureLeadLinks("See https://example.com/1 for details", [Article(1)], "AI");
+
+        appended.Should().ContainSingle();
     }
 
     // ── Headings ──────────────────────────────────────────────────────────────

@@ -1,5 +1,6 @@
 using System.Globalization;
 using System.Text;
+using System.Text.RegularExpressions;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Services.RoundupGeneration;
@@ -38,7 +39,7 @@ internal static class RoundupBlocksBuilder
         ArgumentNullException.ThrowIfNull(leadArticles);
 
         var missing = leadArticles
-            .Where(a => !content.Contains(a.ExternalUrl, StringComparison.OrdinalIgnoreCase))
+            .Where(a => !IsLinked(content, a.ExternalUrl))
             .ToList();
 
         if (missing.Count == 0)
@@ -79,19 +80,23 @@ internal static class RoundupBlocksBuilder
     }
 
     /// <summary>
-    /// Builds the "Also relevant this week" block: one line per brief article, with its first key fact and a link to the
-    /// roundup of its primary section, where it gets the full write-up. Returns an empty string when there are none.
+    /// Builds the "Also relevant this week" block: one line per brief article, with its first key fact and, when the roundup
+    /// of its primary section exists, a link to it where the article gets the full write-up. Without that roundup the line
+    /// keeps the source-article link only. Returns an empty string when there are no brief articles.
     /// </summary>
     /// <param name="briefArticles">Articles that only get a one-line mention here.</param>
     /// <param name="publishDate">Publish date of the roundups of this week, used to link to the other section's roundup.</param>
     /// <param name="sectionTitles">Display titles by section slug.</param>
+    /// <param name="availableRoundupSections">Sections whose roundup of this week exists or is being written.</param>
     public static string BuildAlsoRelevant(
         IReadOnlyList<RoundupArticle> briefArticles,
         DateOnly publishDate,
-        IReadOnlyDictionary<string, string> sectionTitles)
+        IReadOnlyDictionary<string, string> sectionTitles,
+        IReadOnlySet<string> availableRoundupSections)
     {
         ArgumentNullException.ThrowIfNull(briefArticles);
         ArgumentNullException.ThrowIfNull(sectionTitles);
+        ArgumentNullException.ThrowIfNull(availableRoundupSections);
 
         if (briefArticles.Count == 0)
         {
@@ -112,7 +117,7 @@ internal static class RoundupBlocksBuilder
                 sb.Append(": ").Append(EndWithPeriod(fact.Trim()));
             }
 
-            if (!string.IsNullOrWhiteSpace(article.PrimarySectionName))
+            if (!string.IsNullOrWhiteSpace(article.PrimarySectionName) && availableRoundupSections.Contains(article.PrimarySectionName))
             {
                 var title = sectionTitles.TryGetValue(article.PrimarySectionName, out var t) ? t : article.PrimarySectionName;
                 var slug = RoundupContentBuilder.BuildSlug(publishDate, article.PrimarySectionName);
@@ -184,6 +189,18 @@ internal static class RoundupBlocksBuilder
             sb.AppendLine(CultureInfo.InvariantCulture,
                 $"- **{FormatDate(e.Date, e.DatePrecision)}**: {subject}: {EndWithPeriod(e.Description.Trim())} ([{e.SourceTitle}]({e.SourceUrl}))");
         }
+    }
+
+    /// <summary>
+    /// Whether <paramref name="url"/> is the complete destination of a Markdown link (<c>[text](url)</c>, optionally with a
+    /// title) or an autolink (<c>&lt;url&gt;</c>). A mere substring is not enough: a link to <c>https://example.com/10</c>
+    /// must not count as a link to <c>https://example.com/1</c>.
+    /// </summary>
+    private static bool IsLinked(string content, string url)
+    {
+        var escaped = Regex.Escape(url);
+        var pattern = $$"""\]\(\s*<?{{escaped}}>?\s*(?:"[^"]*"|'[^']*')?\s*\)|<{{escaped}}>""";
+        return Regex.IsMatch(content, pattern, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant, TimeSpan.FromSeconds(1));
     }
 
     private static string EndWithPeriod(string text) =>
