@@ -258,8 +258,8 @@ finally {
 }
 
 # --- Helper to set a secret ---
-function Set-Secret($project, $key, $value) {
-    if ([string]::IsNullOrWhiteSpace($value)) {
+function Set-Secret($project, $key, $value, [switch]$AllowEmpty) {
+    if ($null -eq $value -or (-not $AllowEmpty -and [string]::IsNullOrWhiteSpace($value))) {
         Write-Host "  [WARN] $key — value is empty, skipping" -ForegroundColor Yellow
         return
     }
@@ -288,10 +288,11 @@ Write-Host "Setting TechHub.Api user secrets..." -ForegroundColor Cyan
 Set-Secret $apiProject "AzureAd:TenantId" $tenantId
 Set-Secret $apiProject "AzureAd:ClientId" $clientId
 Set-Secret $apiProject "AiCategorization:Endpoint" $aiEndpoint
-# Settings the app does not define (for example an empty reasoning effort) are left to appsettings.json.
+# Settings the app does not define at all are left to appsettings.json. An explicitly empty value (for example
+# no reasoning effort) is stored as empty so local runs match production instead of falling back to appsettings.json.
 foreach ($aiProfile in $aiProfiles) {
-    if (-not [string]::IsNullOrWhiteSpace($aiProfile.Value)) {
-        Set-Secret $apiProject $aiProfile.Key $aiProfile.Value
+    if ($null -ne $aiProfile.Value) {
+        Set-Secret $apiProject $aiProfile.Key $aiProfile.Value -AllowEmpty
     }
 }
 Set-Secret $apiProject "Newsletter:Endpoint" $newsletterEndpoint

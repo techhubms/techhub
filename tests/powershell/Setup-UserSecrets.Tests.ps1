@@ -153,13 +153,28 @@ Describe "Setup-UserSecrets" {
     }
 
     Context "AI profile secrets" {
-        It "Does not store empty or undefined profile settings" {
+        It "Does not store undefined profile settings" {
             Invoke-ScriptUnderTest $scriptPath | Out-Null
 
             $sets = @(Get-CliCalls $cli '^dotnet user-secrets set') -join "`n"
-            $sets | Should -Not -Match 'Profiles:Rewrite:ReasoningEffort'
             $sets | Should -Not -Match 'Profiles:RoundupNewsWriter'
             $sets | Should -Not -Match 'AiCategorization:DeploymentName'
+        }
+
+        It "Stores an explicitly empty production setting so the local profile matches production" {
+            Invoke-ScriptUnderTest $scriptPath | Out-Null
+
+            @(Get-CliCalls $cli '^dotnet user-secrets set AiCategorization:Profiles:Rewrite:ReasoningEffort  --project .*src/TechHub.Api') | Should -HaveCount 1
+        }
+
+        It "Replaces a previously stored value with an empty one when -Force is used" {
+            Add-CliRule $cli 'dotnet' 'user-secrets list --project .*TechHub\.Api' 'AiCategorization:Profiles:Rewrite:ReasoningEffort = low'
+
+            Invoke-ScriptUnderTest $scriptPath | Out-Null
+            @(Get-CliCalls $cli '^dotnet user-secrets set AiCategorization:Profiles:Rewrite:ReasoningEffort') | Should -BeNullOrEmpty
+
+            Invoke-ScriptUnderTest $scriptPath @{ Force = $true } | Out-Null
+            @(Get-CliCalls $cli '^dotnet user-secrets set AiCategorization:Profiles:Rewrite:ReasoningEffort  --project') | Should -HaveCount 1
         }
     }
 

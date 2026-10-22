@@ -1277,7 +1277,28 @@ public class ContentProcessingServiceTests
             ContentHash = $"hash-{testId}",
             Sections = ["ai"],
             PrimarySectionName = "ai",
-            Tags = []
+            Tags = [],
+            TimelineEvents =
+            [
+                new TimelineEvent
+                {
+                    Kind = "ga",
+                    Product = "GitHub Copilot",
+                    Description = "Is generally available today",
+                    Date = new DateOnly(2026, 1, 20),
+                    DatePrecision = "day",
+                    DateSource = TimelineEvent.DateSourcePublication
+                },
+                new TimelineEvent
+                {
+                    Kind = "retirement",
+                    Product = "GitHub Copilot",
+                    Description = "Old model retires",
+                    Date = new DateOnly(2026, 3, 10),
+                    DatePrecision = "day",
+                    DateSource = TimelineEvent.DateSourceExplicit
+                }
+            ]
         };
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
@@ -1298,6 +1319,11 @@ public class ContentProcessingServiceTests
         storedEpoch.Should().NotBeNull("item should have been written to DB");
         storedEpoch!.Value.Should().Be(frozenNow.ToUnixTimeSeconds(),
             "future-dated items must be capped to the processing time");
+
+        // Publication-dated events follow the capped date (Brussels); explicit dates are preserved
+        var events = await _timelineRepo.GetEventsForItemAsync("blogs", slug, CancellationToken.None);
+        events.Single(e => e.Kind == "ga").EventDate.Should().Be(new DateOnly(2026, 1, 15));
+        events.Single(e => e.Kind == "retirement").EventDate.Should().Be(new DateOnly(2026, 3, 10));
     }
 
     // ── ProcessSingleAsync Job Tracking ────────────────────────────────────

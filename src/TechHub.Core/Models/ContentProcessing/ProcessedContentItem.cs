@@ -5,6 +5,8 @@ namespace TechHub.Core.Models.ContentProcessing;
 /// </summary>
 public sealed class ProcessedContentItem
 {
+    private static readonly TimeZoneInfo _brusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+
     /// <summary>URL-friendly slug derived from the title and date.</summary>
     public required string Slug { get; init; }
 
@@ -146,10 +148,15 @@ public sealed class ProcessedContentItem
 
     /// <summary>
     /// Creates a copy of this item with the specified date epoch.
-    /// Used to cap future-dated items to the processing date.
+    /// Used to cap future-dated items to the processing date. Timeline events dated from the publication date
+    /// (<see cref="TimelineEvent.DateSourcePublication"/>) move to the new Europe/Brussels publication date;
+    /// events with explicit dates are kept as they are.
     /// </summary>
     public ProcessedContentItem WithDateEpoch(long dateEpoch)
     {
+        var publicationDate = DateOnly.FromDateTime(
+            TimeZoneInfo.ConvertTime(DateTimeOffset.FromUnixTimeSeconds(dateEpoch), _brusselsTimeZone).DateTime);
+
         return new ProcessedContentItem
         {
             Slug = Slug,
@@ -168,6 +175,8 @@ public sealed class ProcessedContentItem
             ContentHash = ContentHash,
             RoundupMetadata = RoundupMetadata,
             TimelineEvents = TimelineEvents
+                .Select(e => e.DateSource == TimelineEvent.DateSourcePublication ? e with { Date = publicationDate } : e)
+                .ToList()
         };
     }
 
