@@ -600,9 +600,9 @@ public class ModelEvaluationTests
             }
 
             done++;
-            File.WriteAllText(Path.Combine(dir, Path.GetFileName($"{done:00}-{stored.Slug}.current.md")), $"# {stored.Title}\n\n{stored.Content}");
-            File.WriteAllText(Path.Combine(dir, Path.GetFileName($"{done:00}-{stored.Slug}.low.md")), $"# {lowResult.Item.Title}\n\n> {lowResult.Item.Excerpt}\n\n{lowResult.Item.Content}");
-            File.WriteAllText(Path.Combine(dir, Path.GetFileName($"{done:00}-{stored.Slug}.medium.md")), $"# {mediumResult.Item.Title}\n\n> {mediumResult.Item.Excerpt}\n\n{mediumResult.Item.Content}");
+            File.WriteAllText(Path.Join(dir, Path.GetFileName($"{done:00}-{stored.Slug}.current.md")), $"# {stored.Title}\n\n{stored.Content}");
+            File.WriteAllText(Path.Join(dir, Path.GetFileName($"{done:00}-{stored.Slug}.low.md")), $"# {lowResult.Item.Title}\n\n> {lowResult.Item.Excerpt}\n\n{lowResult.Item.Content}");
+            File.WriteAllText(Path.Join(dir, Path.GetFileName($"{done:00}-{stored.Slug}.medium.md")), $"# {mediumResult.Item.Title}\n\n> {mediumResult.Item.Excerpt}\n\n{mediumResult.Item.Content}");
             report.AppendLine(CultureInfo.InvariantCulture,
                 $"| {stored.Title} | {Words(stored.Content)} | {Words(lowResult.Item.Content)} | {watchLow.Elapsed.TotalSeconds:F0} | {Words(mediumResult.Item.Content)} | {watchMedium.Elapsed.TotalSeconds:F0} |");
         }

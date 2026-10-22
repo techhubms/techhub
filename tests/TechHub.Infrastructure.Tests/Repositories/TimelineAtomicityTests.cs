@@ -178,7 +178,7 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
             "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug", new { Collection, Slug = slug });
         metadata.Should().BeNull("metadata classified from outdated text must not be stored");
         (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken))
-            .Should().ContainSingle().Which.Kind.Should().Be("preview");
+            .Should().BeEmpty("the edit removed the events of the previous text and the stale classification must not bring new ones");
     }
 
     [Fact]
@@ -227,6 +227,38 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
 
         updated.Should().BeFalse();
         (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task UpdateEditDataAsync_WithoutReplacement_WhenTheTextChanged_InvalidatesTheEventsSoTheBackfillScansItAgain()
+    {
+        var slug = await SeedAsync();
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+        var request = new TimelineBackfillRequest { Collection = Collection };
+        (await _timelineRepo.GetBackfillCandidatesAsync(request, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken))
+            .Should().NotContain(c => c.Slug == slug, "a scanned article is not a candidate");
+
+        var updated = await _contentRepo.UpdateEditDataAsync(Collection, slug, EditData(slug), TestContext.Current.CancellationToken);
+
+        updated.Should().BeTrue();
+        (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().BeEmpty();
+        (await _timelineRepo.GetBackfillCandidatesAsync(request, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken))
+            .Should().Contain(c => c.Slug == slug, "an edited article must be scanned again by an ordinary backfill run");
+    }
+
+    [Fact]
+    public async Task UpdateEditDataAsync_WithoutReplacement_WhenOnlyOtherFieldsChanged_KeepsTheEventsAndMarker()
+    {
+        var slug = await SeedAsync();
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+        var unchangedText = EditData(slug) with { Title = "Original title", Excerpt = "Original excerpt", Content = "Original text", DateEpoch = 1743278400, Author = "Someone else" };
+
+        var updated = await _contentRepo.UpdateEditDataAsync(Collection, slug, unchangedText, TestContext.Current.CancellationToken);
+
+        updated.Should().BeTrue();
+        (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().ContainSingle();
+        (await _timelineRepo.GetBackfillCandidatesAsync(new TimelineBackfillRequest { Collection = Collection }, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken))
+            .Should().NotContain(c => c.Slug == slug);
     }
 
     private static ContentItemEditData EditData(string slug) => new()

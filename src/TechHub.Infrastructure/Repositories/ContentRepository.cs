@@ -1702,6 +1702,11 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         using var transaction = Connection.BeginTransaction();
         try
         {
+            if (timeline is null)
+            {
+                await InvalidateTimelineWhenExtractionInputsChangeAsync(collectionName, slug, editData, transaction, ct);
+            }
+
             var rows = await Connection.ExecuteAsync(
                 new CommandDefinition(ItemSql, parameters, transaction: transaction, cancellationToken: ct));
 
@@ -1753,6 +1758,56 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             transaction.Rollback();
             throw;
         }
+    }
+
+    /// <summary>
+    /// An edit without a timeline replacement must not leave events extracted from the previous text behind: when the
+    /// title, excerpt, text or publication date changes, the events and the extraction marker are removed so an
+    /// ordinary backfill run scans the article again. Edits of other fields keep them.
+    /// </summary>
+    private async Task InvalidateTimelineWhenExtractionInputsChangeAsync(
+        string collectionName,
+        string slug,
+        TechHub.Core.Models.Admin.ContentItemEditData editData,
+        System.Data.IDbTransaction transaction,
+        CancellationToken ct)
+    {
+        var parameters = new
+        {
+            CollectionName = collectionName,
+            Slug = slug,
+            editData.Title,
+            editData.Excerpt,
+            editData.Content,
+            editData.DateEpoch
+        };
+
+        // Lock the article first so a concurrent backfill write has committed before the comparison below.
+        await Connection.ExecuteAsync(new CommandDefinition(
+            "SELECT 1 FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug FOR NO KEY UPDATE",
+            parameters,
+            transaction,
+            cancellationToken: ct));
+
+        const string Changed = @"
+EXISTS (SELECT 1 FROM content_items ci
+         WHERE ci.collection_name = @CollectionName AND ci.slug = @Slug
+           AND (ci.title      IS DISTINCT FROM @Title
+             OR ci.excerpt    IS DISTINCT FROM @Excerpt
+             OR ci.content    IS DISTINCT FROM @Content
+             OR ci.date_epoch IS DISTINCT FROM @DateEpoch))";
+
+        await Connection.ExecuteAsync(new CommandDefinition(
+            $"DELETE FROM content_timeline_events WHERE collection_name = @CollectionName AND item_slug = @Slug AND {Changed}",
+            parameters,
+            transaction,
+            cancellationToken: ct));
+
+        await Connection.ExecuteAsync(new CommandDefinition(
+            $"DELETE FROM content_timeline_extractions WHERE collection_name = @CollectionName AND item_slug = @Slug AND {Changed}",
+            parameters,
+            transaction,
+            cancellationToken: ct));
     }
 
     // ==================== Admin Content Items ====================

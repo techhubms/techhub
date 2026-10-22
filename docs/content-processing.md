@@ -410,6 +410,7 @@ the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/time
 
 - Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`)
 - Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again
+- An admin edit that changes the title, excerpt, text or publication date (without extracting new events itself) removes the article's events and scan marker in the same transaction, so an ordinary run scans the edited article again
 - Options: `force`, `publishedAfter` (yyyy-MM-dd), `collection` and `limit`. Newest articles come first
 - Resumable: an article is marked as scanned only after its events are stored, so a cancelled or failed run can simply be started again. A failing article is logged and left for the next run
 - Roundups are never scanned
