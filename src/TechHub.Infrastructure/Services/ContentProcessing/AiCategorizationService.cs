@@ -603,7 +603,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
         sb.AppendLine(CultureInfo.InvariantCulture, $"FEED: {item.FeedName}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"COLLECTION: {item.CollectionName}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"URL: {item.ExternalUrl}");
-        sb.AppendLine(CultureInfo.InvariantCulture, $"DATE: {item.PublishedAt.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}");
+        sb.AppendLine(CultureInfo.InvariantCulture, $"DATE: {TimelineEventParser.GetBrusselsDate(item.PublishedAt).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"FALLBACK_AUTHOR: {item.FeedLevelAuthor}");
 
         AppendSourceContent(sb, item);
@@ -618,7 +618,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
         sb.AppendLine(CultureInfo.InvariantCulture, $"FEED: {item.FeedName}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"COLLECTION: {item.CollectionName}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"URL: {item.ExternalUrl}");
-        sb.AppendLine(CultureInfo.InvariantCulture, $"DATE: {item.PublishedAt.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}");
+        sb.AppendLine(CultureInfo.InvariantCulture, $"DATE: {TimelineEventParser.GetBrusselsDate(item.PublishedAt).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"TITLE: {item.Title}");
         sb.AppendLine();
         sb.AppendLine("CONTENT:");
@@ -639,7 +639,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
         sb.AppendLine(CultureInfo.InvariantCulture, $"FEED: {item.FeedName}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"COLLECTION: {item.CollectionName}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"URL: {item.ExternalUrl}");
-        sb.AppendLine(CultureInfo.InvariantCulture, $"DATE: {item.PublishedAt.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}");
+        sb.AppendLine(CultureInfo.InvariantCulture, $"DATE: {TimelineEventParser.GetBrusselsDate(item.PublishedAt).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}");
 
         AppendSourceContent(sb, item);
         return sb.ToString();

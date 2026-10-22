@@ -511,6 +511,32 @@ public class AiCategorizationServiceTests
     }
 
     [Fact]
+    public void PromptBuilders_ItemPublishedJustBeforeUtcMidnight_UseBrusselsDate()
+    {
+        // 14 March 23:30 UTC is already 15 March in Brussels; the prompt must agree with the parser's publication date.
+        var item = CreateRawItem();
+        item.PublishedAt.Should().Be(new DateTimeOffset(2026, 3, 14, 23, 30, 0, TimeSpan.Zero));
+        var classified = new ProcessedContentItem
+        {
+            Slug = "s",
+            Title = "t",
+            Author = "a",
+            Excerpt = "e",
+            DateEpoch = item.PublishedAt.ToUnixTimeSeconds(),
+            CollectionName = item.CollectionName,
+            ExternalUrl = item.ExternalUrl,
+            FeedName = item.FeedName,
+            PrimarySectionName = "ai",
+            ContentHash = "h",
+            Sections = ["ai"]
+        };
+
+        AiCategorizationService.BuildUserPrompt(item).Should().Contain("DATE: 2026-03-15");
+        AiCategorizationService.BuildTimelineExtractionPrompt(item).Should().Contain("DATE: 2026-03-15");
+        AiCategorizationService.BuildRewritePrompt(item, classified).Should().Contain("DATE: 2026-03-15");
+    }
+
+    [Fact]
     public async Task ClassifyAsync_EventWithBadDate_IsSkippedButItemSucceeds()
     {
         const string Events = """
@@ -690,7 +716,7 @@ public class AiCategorizationServiceTests
         await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
 
         var user = Parse(_requests[0]).GetProperty("messages")[1].GetProperty("content").GetString();
-        user.Should().Contain("DATE: 2026-03-14").And.Contain("TITLE: Test Article").And.Contain("Full article text");
+        user.Should().Contain("DATE: 2026-03-15").And.Contain("TITLE: Test Article").And.Contain("Full article text");
     }
 
     [Fact]
