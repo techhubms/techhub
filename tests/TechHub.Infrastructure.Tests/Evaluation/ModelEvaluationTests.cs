@@ -46,14 +46,19 @@ public class ModelEvaluationTests
 
     private static string OutDir(string sub = "")
     {
-        var path = Path.Combine(RepoRoot(), ".tmp", "eval", sub);
+        if (Path.IsPathRooted(sub))
+        {
+            throw new ArgumentException("Sub-directory must be a relative path.", nameof(sub));
+        }
+
+        var path = Path.Join(RepoRoot(), ".tmp", "eval", sub);
         Directory.CreateDirectory(path);
         return path;
     }
 
     private static NpgsqlConnection OpenLocalDb()
     {
-        using var doc = JsonDocument.Parse(File.ReadAllText(Path.Combine(RepoRoot(), "src", "TechHub.Api", "appsettings.Development.json")));
+        using var doc = JsonDocument.Parse(File.ReadAllText(Path.Join(RepoRoot(), "src", "TechHub.Api", "appsettings.Development.json")));
         var connectionString = doc.RootElement.GetProperty("Database").GetProperty("ConnectionString").GetString()!;
         var connection = new NpgsqlConnection(connectionString);
         connection.Open();
@@ -80,7 +85,7 @@ public class ModelEvaluationTests
 
     private static IOptions<AppSettings> LoadAppSettings()
     {
-        using var settingsDoc = JsonDocument.Parse(File.ReadAllText(Path.Combine(RepoRoot(), "src", "TechHub.Api", "appsettings.json")));
+        using var settingsDoc = JsonDocument.Parse(File.ReadAllText(Path.Join(RepoRoot(), "src", "TechHub.Api", "appsettings.json")));
         var contentSettings = JsonSerializer.Deserialize<ContentSettings>(
             settingsDoc.RootElement.GetProperty("AppSettings").GetProperty("Content").GetRawText(),
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;

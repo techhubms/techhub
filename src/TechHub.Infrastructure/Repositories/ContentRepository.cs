@@ -1059,14 +1059,25 @@ public sealed class ContentRepository : IContentRepository
 
         sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
 
-        // GROUP BY to prevent duplicates when item matches multiple tags
-        sql.Append(" GROUP BY collection_name, slug");
+        var hasSearchQuery = !string.IsNullOrWhiteSpace(request.Query);
 
-        // HAVING COUNT(*) = @tagCount ensures ALL tags must match (AND logic)
-        // For single tag: COUNT = 1
-        // For multiple tags (e.g., tags=ai,azure): COUNT = 2 (item must have both)
-        sql.Append(" HAVING COUNT(*) = @tagCount");
-        parameters.Add("tagCount", request.Tags!.Count);
+        // With an FTS query and a single tag, the (collection_name, slug, tag_word) primary key already
+        // guarantees one row per item, so GROUP BY/HAVING is redundant. Keeping it makes the planner
+        // estimate ~9 rows instead of thousands, which picks a nested loop of per-row content_items
+        // lookups (each re-evaluating the tsvector filter) instead of a hash join with the GIN index.
+        var needsGrouping = !hasSearchQuery || request.Tags!.Count > 1;
+
+        if (needsGrouping)
+        {
+            // GROUP BY to prevent duplicates when item matches multiple tags
+            sql.Append(" GROUP BY collection_name, slug");
+
+            // HAVING COUNT(*) = @tagCount ensures ALL tags must match (AND logic)
+            // For single tag: COUNT = 1
+            // For multiple tags (e.g., tags=ai,azure): COUNT = 2 (item must have both)
+            sql.Append(" HAVING COUNT(*) = @tagCount");
+            parameters.Add("tagCount", request.Tags!.Count);
+        }
 
         // PERFORMANCE OPTIMIZATION: Apply ORDER BY + LIMIT in subquery
         // Since content_tags_expanded has date_epoch, we can sort and limit HERE
@@ -1078,9 +1089,10 @@ public sealed class ContentRepository : IContentRepository
         // that further reduces results. If we LIMIT here, we may exclude items that would
         // match the FTS filter, causing the combined tags+search query to incorrectly
         // return zero results (the FTS-matching items get pruned before FTS runs).
-        sql.Append(" ORDER BY MAX(date_epoch) DESC");
-        if (string.IsNullOrWhiteSpace(request.Query))
+        // With a search query the outer query orders by relevance, so ordering inside the IN subquery is useless.
+        if (!hasSearchQuery)
         {
+            sql.Append(" ORDER BY MAX(date_epoch) DESC");
             sql.Append(" LIMIT @take OFFSET @skip");
             // Note: @take and @skip are added by caller
         }
