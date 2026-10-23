@@ -503,6 +503,23 @@ public class RoundupGeneratorServiceTests
     // ── Failures ──────────────────────────────────────────────────────────────
 
     [Fact]
+    public async Task GenerateAsync_WhenWriterResponseIsTruncated_ReturnsContentGenerationFailedAndWritesNothing()
+    {
+        SetupArticles("ai", Article("ai", 1));
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, """{"choices":[{"finish_reason":"length","message":{"content":"## Topic\n\nPartial story"}}]}"""));
+
+        var result = await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
+
+        result.Result.Should().Be(RoundupGenerationResult.ContentGenerationFailed);
+        _written.Should().BeEmpty();
+        _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(), It.IsAny<string>(), It.IsAny<DateOnly>(), It.IsAny<string>(), It.IsAny<string>(),
+            It.IsAny<string>(), It.IsAny<IReadOnlyList<string>>(), It.IsAny<long?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
     public async Task GenerateAsync_WhenWriterCallFails_ReturnsContentGenerationFailedAndWritesNothing()
     {
         SetupArticles("ai", Article("ai", 1));

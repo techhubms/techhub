@@ -354,7 +354,8 @@ except `all`. For each section:
 4. **Lead and brief split (code)** — The article's role for this section decides: `lead` articles get a full
    write-up, `brief` articles only a one-line mention. Lead articles are ordered by `significance`, then by first product
 5. **Writer (AI, one call)** — Writes the topics and "Other ... News" from the key facts of the lead articles.
-   It also receives only the headings of the previous week's roundup for an occasional "following last week's ..." sentence
+   It also receives only the headings of the previous week's roundup for an occasional "following last week's ..." sentence.
+   A response that does not finish normally is treated as a failed section; partial text is not saved.
 6. **Completeness check (code)** — Every lead article must be linked, as the complete destination of a Markdown link (a URL that is only a prefix of another linked URL does not count). Links the writer left out are appended to the "Other ... News" section, and a warning is logged
 7. **Metadata (AI, one call)** — Title, tags and introduction as strict JSON
 8. **Code-built blocks** — "Also relevant this week" (brief articles, each with its first key fact and, when the roundup of its primary section exists, a link to it for the full story) and "Dates to know" (see below), followed by the table of contents built from the `##`/`###` headers

@@ -114,8 +114,19 @@ internal sealed class RoundupAiHelper
             // return improperly escaped characters (e.g. \. instead of \\.) in the content field.
             responseJson = JsonEscapeSanitizer.SanitizeJsonEscapes(responseJson);
             using var doc = JsonDocument.Parse(responseJson);
-            return doc.RootElement
-                .GetProperty("choices")[0]
+            var choice = doc.RootElement.GetProperty("choices")[0];
+            if (choice.TryGetProperty("finish_reason", out var finishReasonElement)
+                && finishReasonElement.ValueKind == JsonValueKind.String)
+            {
+                var finishReason = finishReasonElement.GetString();
+                if (finishReason is not null && !string.Equals(finishReason, "stop", StringComparison.OrdinalIgnoreCase))
+                {
+                    _logger.LogWarning("AI response has unexpected finish_reason '{FinishReason}'", finishReason);
+                    return null;
+                }
+            }
+
+            return choice
                 .GetProperty("message")
                 .GetProperty("content")
                 .GetString();
