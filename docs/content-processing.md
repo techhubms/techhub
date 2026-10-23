@@ -192,7 +192,7 @@ Configured under `"AiCategorization"`:
 Behavior worth knowing:
 
 - **Per-step models**: Models, reasoning effort and service tier are configuration only. Switching a step to another deployment, or back to `gpt-5.2` with `ServiceTier: default`, needs no code change. No `temperature` is sent.
-- **Flex**: A `429` on a Flex request means "no capacity right now". The client keeps retrying on Flex, then falls back to the Standard tier. Interactive calls (ad-hoc URL add, apply transcript) always use the Standard tier so an admin never waits in a queue.
+- **Flex**: A `429` on a Flex request means "no capacity right now". The client keeps retrying on Flex, then falls back to the Standard tier. Rate-limit responses do not count as circuit-breaker failures, so sustained capacity shortages cannot block retries or fallback; other transient failures still count. Interactive calls (ad-hoc URL add, apply transcript) always use the Standard tier so an admin never waits in a queue.
 - **Usage logging**: Every successful call logs the model, requested and served tier, prompt and cached tokens, and completion and reasoning tokens, so the real cost can be checked.
 - **Retries**: A `429` on the Standard tier waits for the server's `Retry-After` value when present. Network errors and timeouts back off 5 seconds times the attempt number. The HTTP client itself does not retry; its timeout is 15 minutes because Flex can queue.
 - **Non-retryable responses**: Content filter blocks and context-length errors return immediately and are recorded as failures with the Azure message.

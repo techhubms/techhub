@@ -222,6 +222,12 @@ builder.Services.AddHttpClient<IAiCompletionClient, AiCompletionClient>()
         options.TotalRequestTimeout.Timeout = TimeSpan.FromMinutes(15);
         options.AttemptTimeout.Timeout = TimeSpan.FromMinutes(15);
         options.CircuitBreaker.SamplingDuration = TimeSpan.FromMinutes(30);
+        // Capacity limits must not open the circuit and block Flex retries or Standard-tier fallback.
+        var shouldHandle = options.CircuitBreaker.ShouldHandle;
+        options.CircuitBreaker.ShouldHandle = args =>
+            args.Outcome.Result?.StatusCode == System.Net.HttpStatusCode.TooManyRequests
+                ? ValueTask.FromResult(false)
+                : shouldHandle(args);
         options.Retry.MaxRetryAttempts = 1;
         options.Retry.ShouldHandle = _ => ValueTask.FromResult(false);
     });
