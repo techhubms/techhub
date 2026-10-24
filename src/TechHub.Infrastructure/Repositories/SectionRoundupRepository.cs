@@ -60,74 +60,6 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     }
 
     /// <inheritdoc />
-    public async Task<IReadOnlyDictionary<string, IReadOnlyList<RoundupArticle>>> GetArticlesForWeekAsync(
-        DateOnly weekStart,
-        DateOnly weekEnd,
-        CancellationToken ct = default)
-    {
-        // Use primary_section_name so each article appears in exactly one section.
-        // This prevents the same article from being counted multiple times and gives
-        // the AI a clearer signal of what content belongs where.
-        const string Sql = @"
-            SELECT
-                ci.primary_section_name AS SectionName,
-                ci.title                AS Title,
-                ci.external_url         AS ExternalUrl,
-                ci.slug                 AS Slug,
-                ci.collection_name      AS CollectionName,
-                ci.ai_metadata          AS AiMetadataJson,
-                ci.content              AS Content,
-                ci.feed_name            AS FeedName,
-                ci.date_epoch           AS DateEpoch
-            FROM content_items ci
-            WHERE ci.created_at >= @WeekStart
-              AND ci.created_at < @WeekEndExclusive
-              AND ci.collection_name != 'roundups'
-              AND ci.primary_section_name IS NOT NULL
-              AND ci.primary_section_name != 'all'
-            ORDER BY ci.primary_section_name, ci.created_at";
-
-        // WeekEnd is Sunday (inclusive) — add 1 day for exclusive upper bound.
-        var rows = await _connection.QueryAsync<RoundupRow>(new CommandDefinition(
-            Sql,
-            new
-            {
-                WeekStart = weekStart.ToDateTime(TimeOnly.MinValue),
-                WeekEndExclusive = weekEnd.AddDays(1).ToDateTime(TimeOnly.MinValue)
-            },
-            cancellationToken: ct));
-
-        var grouped = new Dictionary<string, List<RoundupArticle>>(StringComparer.OrdinalIgnoreCase);
-
-        foreach (var row in rows)
-        {
-            var article = ParseRow(row);
-            if (article is null)
-            {
-                continue;
-            }
-
-            if (!grouped.TryGetValue(row.SectionName, out var list))
-            {
-                list = [];
-                grouped[row.SectionName] = list;
-            }
-
-            list.Add(article);
-        }
-
-        _logger.LogInformation(
-            "Loaded roundup articles for week {WeekStart}–{WeekEnd}: {SectionCount} sections, {ArticleCount} total",
-            weekStart, weekEnd,
-            grouped.Count,
-            grouped.Values.Sum(l => l.Count));
-
-        return grouped.ToDictionary(
-            kvp => kvp.Key,
-            kvp => (IReadOnlyList<RoundupArticle>)kvp.Value);
-    }
-
-    /// <inheritdoc />
     public async Task<IReadOnlyList<RoundupArticle>> GetArticlesForSectionForWeekAsync(
         string sectionName,
         DateOnly weekStart,
@@ -142,17 +74,20 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             return [];
         }
 
-        const string Sql = """
+        const string Sql = $"""
             SELECT
                 @SectionName            AS SectionName,
+                ci.primary_section_name AS PrimarySectionName,
                 ci.title                AS Title,
                 ci.external_url         AS ExternalUrl,
                 ci.slug                 AS Slug,
                 ci.collection_name      AS CollectionName,
                 ci.ai_metadata          AS AiMetadataJson,
+                ci.excerpt              AS Excerpt,
                 ci.content              AS Content,
                 ci.feed_name            AS FeedName,
-                ci.date_epoch           AS DateEpoch
+                ci.date_epoch           AS DateEpoch,
+                {TimelineEventWriter.RevisionExpression} AS Revision
             FROM content_items ci
             WHERE ci.created_at >= @WeekStart
               AND ci.created_at < @WeekEndExclusive
@@ -195,9 +130,10 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             }
         }
 
-        return new RoundupArticle
+        var article = new RoundupArticle
         {
             SectionName = row.SectionName,
+            PrimarySectionName = row.PrimarySectionName,
             Title = row.Title,
             ExternalUrl = row.ExternalUrl,
             Slug = row.Slug,
@@ -209,11 +145,29 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             TopicType = meta?.TopicType ?? "news",
             ImpactLevel = meta?.ImpactLevel ?? "medium",
             TimeSensitivity = meta?.TimeSensitivity ?? "this-week",
-            NeedsAiMetadata = meta is null,
+            NeedsAiMetadata = meta is null || meta.SchemaVersion < RoundupMetadata.CurrentSchemaVersion,
+            Excerpt = row.Excerpt,
             Content = row.Content,
             FeedName = row.FeedName,
-            DateEpoch = row.DateEpoch
+            DateEpoch = row.DateEpoch,
+            Revision = row.Revision
         };
+
+        if (meta is not null && meta.SchemaVersion >= RoundupMetadata.CurrentSchemaVersion)
+        {
+            article = article.WithMetadata(new RoundupMetadata
+            {
+                SchemaVersion = meta.SchemaVersion,
+                KeyFacts = meta.KeyFacts,
+                Significance = meta.Significance,
+                ContentKind = meta.ContentKind,
+                Lifecycle = meta.Lifecycle,
+                Products = meta.Products,
+                SectionRoles = meta.SectionRoles
+            });
+        }
+
+        return article;
     }
 
     // ── Private DTOs ──────────────────────────────────────────────────────────
@@ -221,18 +175,28 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     private sealed class RoundupRow
     {
         public string SectionName { get; init; } = string.Empty;
+        public string PrimarySectionName { get; init; } = string.Empty;
         public string Title { get; init; } = string.Empty;
         public string ExternalUrl { get; init; } = string.Empty;
         public string Slug { get; init; } = string.Empty;
         public string CollectionName { get; init; } = string.Empty;
         public string? AiMetadataJson { get; init; }
+        public string Excerpt { get; init; } = string.Empty;
         public string Content { get; init; } = string.Empty;
         public string FeedName { get; init; } = string.Empty;
         public long DateEpoch { get; init; }
+        public long Revision { get; init; }
     }
 
     private sealed class RoundupAiMetadata
     {
+        public int SchemaVersion { get; init; } = 1;
+        public IReadOnlyList<string> KeyFacts { get; init; } = [];
+        public string Significance { get; init; } = "medium";
+        public string ContentKind { get; init; } = "announcement";
+        public string Lifecycle { get; init; } = "none";
+        public IReadOnlyList<string> Products { get; init; } = [];
+        public Dictionary<string, string> SectionRoles { get; init; } = [];
         public string RoundupSummary { get; init; } = string.Empty;
         public IReadOnlyList<string> KeyTopics { get; init; } = [];
         public string RoundupRelevance { get; init; } = "medium";
@@ -242,6 +206,76 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     }
 
     // ── ISectionRoundupRepository additional methods ──────────────────────────
+
+    /// <inheritdoc />
+    public async Task<IReadOnlyList<RoundupDateEvent>> GetUpcomingDateEventsAsync(
+        string sectionName,
+        DateOnly weekStart,
+        DateOnly weekEnd,
+        CancellationToken ct = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+
+        if (!_sectionBits.TryGetValue(sectionName.ToLowerInvariant().Trim(), out var sectionBit))
+        {
+            return [];
+        }
+
+        const string Sql = """
+            SELECT e.kind           AS Kind,
+                   e.product        AS Product,
+                   e.feature        AS Feature,
+                   e.description    AS Description,
+                   e.event_date     AS EventDate,
+                   e.date_precision AS DatePrecision,
+                   ci.title         AS SourceTitle,
+                   ci.external_url  AS SourceUrl
+            FROM content_timeline_events e
+            JOIN content_items ci
+              ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
+            WHERE ci.created_at >= @WeekStart
+              AND ci.created_at < @WeekEndExclusive
+              AND ci.collection_name != 'roundups'
+              AND (ci.sections_bitmask & @SectionBit) > 0
+              AND e.event_date > @WeekEnd
+            ORDER BY e.event_date, e.id
+            """;
+
+        var rows = await _connection.QueryAsync<DateEventRow>(new CommandDefinition(
+            Sql,
+            new
+            {
+                WeekStart = weekStart.ToDateTime(TimeOnly.MinValue),
+                WeekEndExclusive = weekEnd.AddDays(1).ToDateTime(TimeOnly.MinValue),
+                WeekEnd = weekEnd.ToDateTime(TimeOnly.MinValue),
+                SectionBit = sectionBit
+            },
+            cancellationToken: ct));
+
+        return rows.Select(r => new RoundupDateEvent
+        {
+            Kind = r.Kind,
+            Product = r.Product,
+            Feature = r.Feature,
+            Description = r.Description,
+            Date = DateOnly.FromDateTime(r.EventDate),
+            DatePrecision = r.DatePrecision,
+            SourceTitle = r.SourceTitle,
+            SourceUrl = r.SourceUrl
+        }).ToList();
+    }
+
+    private sealed class DateEventRow
+    {
+        public string Kind { get; init; } = string.Empty;
+        public string Product { get; init; } = string.Empty;
+        public string? Feature { get; init; }
+        public string Description { get; init; } = string.Empty;
+        public DateTime EventDate { get; init; }
+        public string DatePrecision { get; init; } = string.Empty;
+        public string SourceTitle { get; init; } = string.Empty;
+        public string SourceUrl { get; init; } = string.Empty;
+    }
 
     /// <inheritdoc />
     public async Task<bool> RoundupExistsAsync(string sectionName, string slug, CancellationToken ct = default)
@@ -271,8 +305,10 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         sectionName = sectionName.ToLowerInvariant().Trim();
         var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
             OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
-        var weekStartDt = weekStart.ToDateTime(TimeOnly.MinValue);
-        var weekStartEpoch = (long)TimeZoneInfo.ConvertTimeToUtc(weekStartDt, brusselsZone)
+        // Roundups are stamped 09:00 on the Monday they are published. The roundup that precedes the week starting
+        // on weekStart was published on that very Monday, so the cutoff is the start of the next day.
+        var cutoffDt = weekStart.AddDays(1).ToDateTime(TimeOnly.MinValue);
+        var weekStartEpoch = (long)TimeZoneInfo.ConvertTimeToUtc(cutoffDt, brusselsZone)
             .Subtract(DateTime.UnixEpoch).TotalSeconds;
 
         var content = await _connection.QueryFirstOrDefaultAsync<string>(new CommandDefinition(

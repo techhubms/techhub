@@ -115,7 +115,6 @@ module apiApp './modules/api.bicep' = {
     azureAdTenantId: '' // AAD admin dashboard not needed for PR environments
     azureAdClientId: ''
     aiCategorizationEndpoint: '' // AI categorization disabled (background jobs are off)
-    aiCategorizationDeploymentName: ''
     contentProcessorEnabled: false
     roundupGeneratorEnabled: false
     newsletterScheduledSendEnabled: false

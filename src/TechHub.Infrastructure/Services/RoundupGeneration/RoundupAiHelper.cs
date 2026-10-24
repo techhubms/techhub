@@ -13,21 +13,28 @@ namespace TechHub.Infrastructure.Services.RoundupGeneration;
 /// </summary>
 internal sealed class RoundupAiHelper
 {
+    // Covers reasoning tokens as well as the visible roundup text.
+    private const int MaxCompletionTokens = 32_000;
+
     private readonly IAiCompletionClient _aiClient;
     private readonly RoundupGeneratorOptions _options;
+    private readonly AiProfilesOptions _profiles;
     private readonly ILogger<RoundupAiHelper> _logger;
 
     public RoundupAiHelper(
         IAiCompletionClient aiClient,
         RoundupGeneratorOptions options,
+        AiCategorizationOptions aiOptions,
         ILogger<RoundupAiHelper> logger)
     {
         ArgumentNullException.ThrowIfNull(aiClient);
         ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(aiOptions);
         ArgumentNullException.ThrowIfNull(logger);
 
         _aiClient = aiClient;
         _options = options;
+        _profiles = aiOptions.Profiles;
         _logger = logger;
     }
 
@@ -57,19 +64,11 @@ internal sealed class RoundupAiHelper
         string systemMessage,
         string userMessage,
         string stepName,
-        CancellationToken ct)
+        AiProfile profile,
+        CancellationToken ct,
+        object? responseFormat = null)
     {
-        var requestBody = new
-        {
-            messages = new[]
-            {
-                new { role = "system", content = systemMessage },
-                new { role = "user", content = userMessage }
-            },
-            max_completion_tokens = 8000
-        };
-
-        var json = JsonSerializer.Serialize(requestBody, JsonOptions);
+        var json = AiRequestBodyBuilder.Build(_profiles.Get(profile), systemMessage, userMessage, MaxCompletionTokens, responseFormat: responseFormat);
 
         for (var attempt = 0; attempt < _options.MaxRetries; attempt++)
         {
@@ -115,8 +114,19 @@ internal sealed class RoundupAiHelper
             // return improperly escaped characters (e.g. \. instead of \\.) in the content field.
             responseJson = JsonEscapeSanitizer.SanitizeJsonEscapes(responseJson);
             using var doc = JsonDocument.Parse(responseJson);
-            return doc.RootElement
-                .GetProperty("choices")[0]
+            var choice = doc.RootElement.GetProperty("choices")[0];
+            if (choice.TryGetProperty("finish_reason", out var finishReasonElement)
+                && finishReasonElement.ValueKind == JsonValueKind.String)
+            {
+                var finishReason = finishReasonElement.GetString();
+                if (finishReason is not null && !string.Equals(finishReason, "stop", StringComparison.OrdinalIgnoreCase))
+                {
+                    _logger.LogWarning("AI response has unexpected finish_reason '{FinishReason}'", finishReason);
+                    return null;
+                }
+            }
+
+            return choice
                 .GetProperty("message")
                 .GetProperty("content")
                 .GetString();

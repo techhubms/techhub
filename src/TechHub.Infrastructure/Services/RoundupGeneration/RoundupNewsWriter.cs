@@ -8,7 +8,7 @@ using TechHub.Core.Models.ContentProcessing;
 namespace TechHub.Infrastructure.Services.RoundupGeneration;
 
 /// <summary>
-/// Step 3: Creates news-like stories per section using AI.
+/// Writes the topics of a section roundup in one AI call, from the key facts of the articles that get a full write-up.
 /// </summary>
 internal sealed class RoundupNewsWriter
 {
@@ -37,93 +37,86 @@ internal sealed class RoundupNewsWriter
     }
 
     /// <summary>
-    /// Iterates sections in config order, builds input for each, and calls AI to produce news-like content.
+    /// Writes the section content. Returns <c>null</c> when the AI call failed.
     /// </summary>
-    public async Task<string> WriteAsync(
-        Dictionary<string, IReadOnlyList<RoundupArticle>> filtered,
+    /// <param name="sectionSlug">Section slug, e.g. "github-copilot".</param>
+    /// <param name="leadArticles">Articles that get a full write-up, in the order they should be considered.</param>
+    /// <param name="previousHeadings">Headings of last week's roundup for this section, or empty.</param>
+    /// <param name="weekDescription">Human-readable description of the week.</param>
+    /// <param name="writingGuidelines">The writing style guidelines.</param>
+    /// <param name="ct">Cancellation token.</param>
+    public async Task<string?> WriteAsync(
+        string sectionSlug,
+        IReadOnlyList<RoundupArticle> leadArticles,
+        string previousHeadings,
         string weekDescription,
         string writingGuidelines,
-        LoggingProgress lp,
         CancellationToken ct)
     {
+        var displayName = _settings.Content.Sections.TryGetValue(sectionSlug, out var sectionConfig)
+            ? sectionConfig.Title
+            : sectionSlug;
+
         var systemMessage = _systemPrompt.Value
             .Replace("{WeekDescription}", weekDescription, StringComparison.Ordinal)
+            .Replace("{SectionName}", displayName, StringComparison.Ordinal)
             .Replace("{WritingStyleGuidelines}", writingGuidelines, StringComparison.Ordinal);
 
-        var responses = new List<string>();
+        var userMessage = BuildUserMessage(displayName, leadArticles, previousHeadings);
 
-        foreach (var (sectionSlug, articles) in filtered)
+        var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Writer - " + displayName, AiProfile.RoundupNewsWriter, ct);
+        if (response is null)
         {
-            if (!_settings.Content.Sections.TryGetValue(sectionSlug, out var sectionConfig))
-            {
-                _logger.LogWarning("Step 1: Section {Section} not found in config, skipping", sectionSlug);
-                continue;
-            }
-
-            var displayName = sectionConfig.Title;
-
-            lp.Report($"Processing section {displayName} ({articles.Count} articles)");
-
-            var sectionInput = BuildSectionInput(displayName, articles);
-
-            var userMessage = string.Create(CultureInfo.InvariantCulture,
-                $"ARTICLE ANALYSIS RESULTS FOR {displayName} SECTION TO TRANSFORM INTO NEWS-STYLE CONTENT:\n\n{sectionInput}");
-
-            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 1 - " + displayName, ct);
-            if (response is not null)
-            {
-                responses.Add(response);
-                lp.Report($"Section {displayName} complete");
-            }
-            else
-            {
-                _logger.LogWarning("Step 1: Section {Section} AI call failed, skipping section", displayName);
-            }
-
-            await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds), ct);
+            _logger.LogWarning("Roundup writer: AI call failed for section {Section}", displayName);
         }
 
-        return string.Join("\n\n", responses);
+        await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds), ct);
+        return response;
     }
 
-    internal static string BuildSectionInput(string displayName, IReadOnlyList<RoundupArticle> articles)
+    internal static string BuildUserMessage(string displayName, IReadOnlyList<RoundupArticle> articles, string previousHeadings)
     {
         var sb = new StringBuilder();
-        sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"## {displayName}"));
+        sb.AppendLine(CultureInfo.InvariantCulture, $"ARTICLES FOR THE {displayName} SECTION:");
         sb.AppendLine();
 
         foreach (var article in articles)
         {
-            sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"ARTICLE: {article.Title}"));
-            sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"SUMMARY: {article.Summary}"));
-            sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"RELEVANCE: {article.Relevance}"));
+            sb.AppendLine(CultureInfo.InvariantCulture, $"ARTICLE: {article.Title}");
+            sb.AppendLine(CultureInfo.InvariantCulture, $"SIGNIFICANCE: {article.Significance}");
 
-            if (!string.IsNullOrEmpty(article.TopicType))
+            if (!string.Equals(article.Lifecycle, "none", StringComparison.Ordinal))
             {
-                sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"TYPE: {article.TopicType}"));
+                sb.AppendLine(CultureInfo.InvariantCulture, $"LIFECYCLE: {article.Lifecycle}");
             }
 
-            if (!string.IsNullOrEmpty(article.ImpactLevel))
+            if (article.Products.Count > 0)
             {
-                sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"IMPACT: {article.ImpactLevel}"));
+                sb.AppendLine(CultureInfo.InvariantCulture, $"PRODUCTS: {string.Join(", ", article.Products)}");
             }
 
-            if (!string.IsNullOrEmpty(article.TimeSensitivity))
+            if (article.KeyFacts.Count > 0)
             {
-                sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"TIMING: {article.TimeSensitivity}"));
+                sb.AppendLine("KEY FACTS:");
+                foreach (var fact in article.KeyFacts)
+                {
+                    sb.AppendLine(CultureInfo.InvariantCulture, $"- {fact}");
+                }
+            }
+            else
+            {
+                // Articles whose metadata could not be backfilled still have the older summary.
+                sb.AppendLine(CultureInfo.InvariantCulture, $"SUMMARY: {article.Summary}");
             }
 
-            if (article.KeyTopics.Count > 0)
-            {
-                sb.AppendLine(string.Create(CultureInfo.InvariantCulture,
-                    $"KEY_TOPICS: {string.Join(", ", article.KeyTopics)}"));
-            }
-
-            var link = string.Create(CultureInfo.InvariantCulture,
-                            $"[{article.Title}]({article.ExternalUrl})");
-
-            sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"LINK: {link}"));
+            sb.AppendLine(CultureInfo.InvariantCulture, $"LINK: [{article.Title}]({article.ExternalUrl})");
             sb.AppendLine();
+        }
+
+        if (!string.IsNullOrWhiteSpace(previousHeadings))
+        {
+            sb.AppendLine("LAST WEEK'S HEADINGS FOR THIS SECTION (context only):");
+            sb.AppendLine(previousHeadings);
         }
 
         return sb.ToString();

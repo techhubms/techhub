@@ -27,6 +27,10 @@ Unit and integration tests for the Infrastructure layer. Validates repositories,
 - Use `DatabaseFixture` with Testcontainers for repository tests (lives in this project)
 - Use `StubHttpMessageHandler` (in `Services/`) to test HTTP clients without a network; `MigrationDatabaseFixture` (in `Data/`) hands out a fresh empty database per test for migration tests
 
+## Model Evaluation
+
+`Evaluation/ModelEvaluationTests.cs` is not a regression test: it measures the AI pipeline against a restored production database and the real models, and is skipped unless `TECHHUB_EVAL=1` is set. Never run it in CI. See [Evaluating Models](../../docs/content-processing.md#evaluating-models).
+
 ## Test Data
 
 Repository tests use the content in `tests/TechHub.TestUtilities/TestCollections/`, seeded into the Testcontainers database by `TestCollectionsSeeder` (see [TechHub.TestUtilities/AGENTS.md](../TechHub.TestUtilities/AGENTS.md)).

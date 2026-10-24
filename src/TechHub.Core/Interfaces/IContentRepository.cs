@@ -128,6 +128,18 @@ public interface IContentRepository
     Task<bool> UpdateEditDataAsync(string collectionName, string slug, ContentItemEditData editData, CancellationToken ct = default);
 
     /// <summary>
+    /// Updates the editable fields of a content item and replaces its timeline events in one transaction,
+    /// so a failing event write leaves the previous text and events in place.
+    /// Returns true if found and updated, false if not found (nothing is written then).
+    /// </summary>
+    Task<bool> UpdateEditDataAsync(
+        string collectionName,
+        string slug,
+        ContentItemEditData editData,
+        TechHub.Core.Models.ContentProcessing.TimelineEventReplacement timeline,
+        CancellationToken ct = default);
+
+    /// <summary>
     /// Gets a paged list of content items for the admin listing page with optional filters.
     /// </summary>
     Task<PagedResult<ContentItemListItem>> GetContentItemsPagedAsync(

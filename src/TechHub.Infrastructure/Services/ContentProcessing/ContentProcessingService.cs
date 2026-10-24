@@ -399,6 +399,7 @@ public sealed class ContentProcessingService
                 CollectionName = collectionName,
                 FeedItemData = feedItemData,
                 SkipSalesPitchCheck = true,
+                IsInteractive = true,
                 AuthorOverride = !string.IsNullOrWhiteSpace(authorOverride) ? authorOverride : null
             };
 
@@ -527,11 +528,12 @@ public sealed class ContentProcessingService
                         FeedName = raw.FeedName,
                         CollectionName = raw.CollectionName,
                         FullContent = raw.FullContent,
-                        SkipSalesPitchCheck = raw.SkipSalesPitchCheck
+                        SkipSalesPitchCheck = raw.SkipSalesPitchCheck,
+                        IsInteractive = raw.IsInteractive
                     };
                 }
             }
-            catch (Exception ex) when (ex is not OperationCanceledException)
+            catch (Exception ex) when (!(ex is OperationCanceledException && ct.IsCancellationRequested))
             {
                 _logger.LogWarning(ex, "Failed to fetch YouTube tags for {Url}", raw.ExternalUrl);
                 logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ YouTube tag fetch failed: {ex.Message}"));
@@ -560,7 +562,8 @@ public sealed class ContentProcessingService
                     FeedName = raw.FeedName,
                     CollectionName = raw.CollectionName,
                     FullContent = manualTranscript,
-                    SkipSalesPitchCheck = raw.SkipSalesPitchCheck
+                    SkipSalesPitchCheck = raw.SkipSalesPitchCheck,
+                    IsInteractive = raw.IsInteractive
                 };
                 hasTranscript = true;
                 transcriptStatus = "manual transcript";
@@ -583,7 +586,7 @@ public sealed class ContentProcessingService
             {
                 raw = await _articleService.EnrichWithContentAsync(raw, ct);
             }
-            catch (Exception ex) when (ex is not OperationCanceledException)
+            catch (Exception ex) when (!(ex is OperationCanceledException && ct.IsCancellationRequested))
             {
                 _logger.LogWarning(ex, "Failed to enrich content for {Url}", raw.ExternalUrl);
                 logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ Content enrichment failed: {ex.Message.Sanitize()}"));
@@ -699,7 +702,8 @@ public sealed class ContentProcessingService
         // Normalize tags (fix casing, remove noise, deduplicate)
         processed = processed.WithTags(TagNormalizer.NormalizeTags(processed.Tags));
 
-        // Write to database
+        // Write to database: the article and its timeline events are stored in one transaction. When it fails nothing
+        // is saved, so the URL is not marked as existing and a retry can still process it.
         try
         {
             await _writeRepo.UpsertProcessedItemAsync(processed, ct);

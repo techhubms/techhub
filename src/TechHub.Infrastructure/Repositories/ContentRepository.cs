@@ -1059,14 +1059,25 @@ public sealed class ContentRepository : IContentRepository
 
         sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
 
-        // GROUP BY to prevent duplicates when item matches multiple tags
-        sql.Append(" GROUP BY collection_name, slug");
+        var hasSearchQuery = !string.IsNullOrWhiteSpace(request.Query);
 
-        // HAVING COUNT(*) = @tagCount ensures ALL tags must match (AND logic)
-        // For single tag: COUNT = 1
-        // For multiple tags (e.g., tags=ai,azure): COUNT = 2 (item must have both)
-        sql.Append(" HAVING COUNT(*) = @tagCount");
-        parameters.Add("tagCount", request.Tags!.Count);
+        // With an FTS query and a single tag, the (collection_name, slug, tag_word) primary key already
+        // guarantees one row per item, so GROUP BY/HAVING is redundant. Keeping it makes the planner
+        // estimate ~9 rows instead of thousands, which picks a nested loop of per-row content_items
+        // lookups (each re-evaluating the tsvector filter) instead of a hash join with the GIN index.
+        var needsGrouping = !hasSearchQuery || request.Tags!.Count > 1;
+
+        if (needsGrouping)
+        {
+            // GROUP BY to prevent duplicates when item matches multiple tags
+            sql.Append(" GROUP BY collection_name, slug");
+
+            // HAVING COUNT(*) = @tagCount ensures ALL tags must match (AND logic)
+            // For single tag: COUNT = 1
+            // For multiple tags (e.g., tags=ai,azure): COUNT = 2 (item must have both)
+            sql.Append(" HAVING COUNT(*) = @tagCount");
+            parameters.Add("tagCount", request.Tags!.Count);
+        }
 
         // PERFORMANCE OPTIMIZATION: Apply ORDER BY + LIMIT in subquery
         // Since content_tags_expanded has date_epoch, we can sort and limit HERE
@@ -1078,9 +1089,10 @@ public sealed class ContentRepository : IContentRepository
         // that further reduces results. If we LIMIT here, we may exclude items that would
         // match the FTS filter, causing the combined tags+search query to incorrectly
         // return zero results (the FTS-matching items get pruned before FTS runs).
-        sql.Append(" ORDER BY MAX(date_epoch) DESC");
-        if (string.IsNullOrWhiteSpace(request.Query))
+        // With a search query the outer query orders by relevance, so ordering inside the IN subquery is useless.
+        if (!hasSearchQuery)
         {
+            sql.Append(" ORDER BY MAX(date_epoch) DESC");
             sql.Append(" LIMIT @take OFFSET @skip");
             // Note: @take and @skip are added by caller
         }
@@ -1601,11 +1613,31 @@ LIMIT 1";
     }
 
     /// <inheritdoc/>
-    public async Task<bool> UpdateEditDataAsync(
+    public Task<bool> UpdateEditDataAsync(
         string collectionName,
         string slug,
         TechHub.Core.Models.Admin.ContentItemEditData editData,
         CancellationToken ct = default)
+        => UpdateEditDataCoreAsync(collectionName, slug, editData, timeline: null, ct);
+
+    /// <inheritdoc/>
+    public Task<bool> UpdateEditDataAsync(
+        string collectionName,
+        string slug,
+        TechHub.Core.Models.Admin.ContentItemEditData editData,
+        TechHub.Core.Models.ContentProcessing.TimelineEventReplacement timeline,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(timeline);
+        return UpdateEditDataCoreAsync(collectionName, slug, editData, timeline, ct);
+    }
+
+    private async Task<bool> UpdateEditDataCoreAsync(
+        string collectionName,
+        string slug,
+        TechHub.Core.Models.Admin.ContentItemEditData editData,
+        TechHub.Core.Models.ContentProcessing.TimelineEventReplacement? timeline,
+        CancellationToken ct)
     {
         ArgumentNullException.ThrowIfNull(editData);
 
@@ -1670,6 +1702,11 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         using var transaction = Connection.BeginTransaction();
         try
         {
+            if (timeline is null)
+            {
+                await InvalidateTimelineWhenExtractionInputsChangeAsync(collectionName, slug, editData, transaction, ct);
+            }
+
             var rows = await Connection.ExecuteAsync(
                 new CommandDefinition(ItemSql, parameters, transaction: transaction, cancellationToken: ct));
 
@@ -1706,6 +1743,11 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
                         parameters,
                         transaction: transaction,
                         cancellationToken: ct));
+
+                if (timeline is not null)
+                {
+                    await TimelineEventWriter.ReplaceAsync(Connection, transaction, collectionName, slug, timeline, ct);
+                }
             }
 
             transaction.Commit();
@@ -1716,6 +1758,56 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             transaction.Rollback();
             throw;
         }
+    }
+
+    /// <summary>
+    /// An edit without a timeline replacement must not leave events extracted from the previous text behind: when the
+    /// title, excerpt, text or publication date changes, the events and the extraction marker are removed so an
+    /// ordinary backfill run scans the article again. Edits of other fields keep them.
+    /// </summary>
+    private async Task InvalidateTimelineWhenExtractionInputsChangeAsync(
+        string collectionName,
+        string slug,
+        TechHub.Core.Models.Admin.ContentItemEditData editData,
+        System.Data.IDbTransaction transaction,
+        CancellationToken ct)
+    {
+        var parameters = new
+        {
+            CollectionName = collectionName,
+            Slug = slug,
+            editData.Title,
+            editData.Excerpt,
+            editData.Content,
+            editData.DateEpoch
+        };
+
+        // Lock the article first so a concurrent backfill write has committed before the comparison below.
+        await Connection.ExecuteAsync(new CommandDefinition(
+            "SELECT 1 FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug FOR NO KEY UPDATE",
+            parameters,
+            transaction,
+            cancellationToken: ct));
+
+        const string Changed = @"
+EXISTS (SELECT 1 FROM content_items ci
+         WHERE ci.collection_name = @CollectionName AND ci.slug = @Slug
+           AND (ci.title      IS DISTINCT FROM @Title
+             OR ci.excerpt    IS DISTINCT FROM @Excerpt
+             OR ci.content    IS DISTINCT FROM @Content
+             OR ci.date_epoch IS DISTINCT FROM @DateEpoch))";
+
+        await Connection.ExecuteAsync(new CommandDefinition(
+            $"DELETE FROM content_timeline_events WHERE collection_name = @CollectionName AND item_slug = @Slug AND {Changed}",
+            parameters,
+            transaction,
+            cancellationToken: ct));
+
+        await Connection.ExecuteAsync(new CommandDefinition(
+            $"DELETE FROM content_timeline_extractions WHERE collection_name = @CollectionName AND item_slug = @Slug AND {Changed}",
+            parameters,
+            transaction,
+            cancellationToken: ct));
     }
 
     // ==================== Admin Content Items ====================

@@ -213,14 +213,21 @@ builder.Services.AddHttpClient<IYouTubeTagClient, YouTubeTagClient>()
 builder.Services.AddHttpClient<IAiCompletionClient, AiCompletionClient>()
     .ConfigureHttpClient(client =>
     {
-        client.Timeout = TimeSpan.FromSeconds(120);
+        // Flex requests can queue for minutes before they are served, so the HTTP timeout is generous.
+        client.Timeout = TimeSpan.FromMinutes(15);
     })
     .AddStandardResilienceHandler(options =>
     {
         // No Polly-level retries — AiCategorizationService handles retries with rate limit awareness
-        options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(120);
-        options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(120);
-        options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(240);
+        options.TotalRequestTimeout.Timeout = TimeSpan.FromMinutes(15);
+        options.AttemptTimeout.Timeout = TimeSpan.FromMinutes(15);
+        options.CircuitBreaker.SamplingDuration = TimeSpan.FromMinutes(30);
+        // Capacity limits must not open the circuit and block Flex retries or Standard-tier fallback.
+        var shouldHandle = options.CircuitBreaker.ShouldHandle;
+        options.CircuitBreaker.ShouldHandle = args =>
+            args.Outcome.Result?.StatusCode == System.Net.HttpStatusCode.TooManyRequests
+                ? ValueTask.FromResult(false)
+                : shouldHandle(args);
         options.Retry.MaxRetryAttempts = 1;
         options.Retry.ShouldHandle = _ => ValueTask.FromResult(false);
     });
@@ -249,10 +256,14 @@ builder.Services.AddHostedService(sp => sp.GetRequiredService<ContentProcessingB
 
 // Content item write repository (scoped — reuses the scoped IDbConnection)
 builder.Services.AddScoped<IContentItemWriteRepository, ContentItemWriteRepository>();
+builder.Services.AddScoped<ITimelineEventRepository, TimelineEventRepository>();
+builder.Services.AddScoped<ITimelineBackfillService, TimelineBackfillService>();
 
 // Content fixer background service — manual trigger only, no periodic schedule
 builder.Services.AddSingleton<ContentFixerBackgroundService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<ContentFixerBackgroundService>());
+builder.Services.AddSingleton<TimelineBackfillBackgroundService>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<TimelineBackfillBackgroundService>());
 
 // ─── Roundup Generator Pipeline ──────────────────────────────────────────────
 builder.Services.Configure<RoundupGeneratorOptions>(

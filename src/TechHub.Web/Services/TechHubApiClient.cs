@@ -1079,6 +1079,33 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
+    /// Trigger a scan of stored articles for timeline events.
+    /// POST /api/admin/timeline-backfill/trigger
+    /// </summary>
+    public virtual async Task TriggerTimelineBackfillAsync(
+        bool force = false,
+        string? publishedAfter = null,
+        string? collection = null,
+        int? limit = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Triggering timeline backfill");
+            using var response = await _httpClient.PostAsJsonAsync(
+                "/api/admin/timeline-backfill/trigger",
+                new { force, publishedAfter, collection, limit },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to trigger timeline backfill");
+            throw;
+        }
+    }
+
+    /// <summary>
     /// Cancel the currently running background job.
     /// POST /api/admin/processing/cancel
     /// </summary>

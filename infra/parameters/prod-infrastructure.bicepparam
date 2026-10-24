@@ -19,7 +19,7 @@ param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-prod'
-param openAiModelCapacity = 200
+// Model deployments (names, versions, capacity) are defined in modules/openai.bicep
 // Admin IP allow-list — grants firewall access to PostgreSQL, Key Vault, and AI Foundry.
 // MUST be set via ADMIN_IP_ADDRESSES env var — no default to prevent leaking IPs into git.
 param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES')

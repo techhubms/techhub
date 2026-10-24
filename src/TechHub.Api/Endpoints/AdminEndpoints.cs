@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc;
 using TechHub.Api.Services;
@@ -6,6 +7,7 @@ using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
 using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
 using TechHub.Infrastructure.Services.ContentProcessing;
 
@@ -42,6 +44,10 @@ public static partial class AdminEndpoints
         group.MapPost("/content-fixer/trigger", TriggerContentFixerAsync)
             .WithName("TriggerContentFixer")
             .WithSummary("Trigger a bulk content fix run (tags, authors, markdown)");
+
+        group.MapPost("/timeline-backfill/trigger", TriggerTimelineBackfill)
+            .WithName("TriggerTimelineBackfill")
+            .WithSummary("Trigger a scan of stored articles for timeline events (preview, GA, deprecation, ...)");
 
         group.MapPost("/processing/cancel", CancelRunningJobAsync)
             .WithName("CancelRunningJob")
@@ -278,12 +284,58 @@ public static partial class AdminEndpoints
         return Results.Accepted(value: new { message = "Content fixer run triggered" });
     }
 
+    private static IResult TriggerTimelineBackfill(
+        TimelineBackfillBackgroundService backfillService,
+        TimelineBackfillRequestDto? request)
+    {
+        DateOnly? publishedAfter = null;
+        if (!string.IsNullOrWhiteSpace(request?.PublishedAfter))
+        {
+            if (!DateOnly.TryParseExact(request.PublishedAfter.Trim(), "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed))
+            {
+                return Results.BadRequest("PublishedAfter must be a date in the format yyyy-MM-dd.");
+            }
+
+            publishedAfter = parsed;
+        }
+
+        if (request?.Limit is <= 0)
+        {
+            return Results.BadRequest("Limit must be greater than zero.");
+        }
+
+        var collection = request?.Collection?.Trim().ToLowerInvariant();
+        if (!string.IsNullOrEmpty(collection) && !Regex.IsMatch(collection, "^[a-z0-9-]+$", RegexOptions.None, TimeSpan.FromSeconds(1)))
+        {
+            return Results.BadRequest("Collection may only contain lowercase letters, digits and hyphens.");
+        }
+
+        var queued = backfillService.TriggerImmediateRun(new TimelineBackfillRequest
+        {
+            Force = request?.Force ?? false,
+            PublishedAfter = publishedAfter,
+            Collection = string.IsNullOrEmpty(collection) ? null : collection,
+            Limit = request?.Limit
+        });
+
+        return queued
+            ? Results.Accepted(value: new { message = "Timeline backfill triggered" })
+            : Results.Conflict(new { message = "A timeline backfill is already queued" });
+    }
+
     private static IResult CancelRunningJobAsync(
         ContentProcessingBackgroundService backgroundService,
         RoundupGeneratorBackgroundService roundupService,
-        ContentFixerBackgroundService contentFixerService)
+        ContentFixerBackgroundService contentFixerService,
+        TimelineBackfillBackgroundService backfillService)
     {
-        var cancelled = backgroundService.CancelCurrentRun() | roundupService.CancelCurrentRun() | contentFixerService.CancelCurrentRun();
+        // Every service must be asked to cancel, so evaluate each call before combining the results.
+        var backgroundCancelled = backgroundService.CancelCurrentRun();
+        var roundupCancelled = roundupService.CancelCurrentRun();
+        var contentFixerCancelled = contentFixerService.CancelCurrentRun();
+        var backfillCancelled = backfillService.CancelCurrentRun();
+
+        var cancelled = backgroundCancelled || roundupCancelled || contentFixerCancelled || backfillCancelled;
         if (!cancelled)
         {
             return Results.Ok(new { message = "No running job to cancel" });
@@ -699,7 +751,8 @@ public static partial class AdminEndpoints
             FeedLevelAuthor = existing.Author,
             FeedTags = existing.Tags.ToList(),
             FullContent = request.Transcript.Trim(),
-            SkipSalesPitchCheck = true
+            SkipSalesPitchCheck = true,
+            IsInteractive = true
         };
 
         CategorizationResult categorizationResult;
@@ -737,15 +790,7 @@ public static partial class AdminEndpoints
         string? newAiMetadata = existing.AiMetadata;
         if (processed.RoundupMetadata is not null)
         {
-            newAiMetadata = System.Text.Json.JsonSerializer.Serialize(new
-            {
-                roundup_summary = processed.RoundupMetadata.Summary,
-                key_topics = processed.RoundupMetadata.KeyTopics,
-                roundup_relevance = processed.RoundupMetadata.Relevance,
-                topic_type = processed.RoundupMetadata.TopicType,
-                impact_level = processed.RoundupMetadata.ImpactLevel,
-                time_sensitivity = processed.RoundupMetadata.TimeSensitivity
-            });
+            newAiMetadata = ContentItemWriteRepository.SerializeAiMetadata(processed.RoundupMetadata);
         }
 
         var updatedEditData = new ContentItemEditData
@@ -765,7 +810,17 @@ public static partial class AdminEndpoints
             ExternalUrl = existing.ExternalUrl
         };
 
-        var updated = await contentRepo.UpdateEditDataAsync(collection, slug, updatedEditData, ct);
+        // The transcript is the source text here, so the events are extracted from the source. They are stored in the
+        // same transaction as the edit: when that fails the previous text and events stay in place.
+        var updated = await contentRepo.UpdateEditDataAsync(
+            collection,
+            slug,
+            updatedEditData,
+            new TimelineEventReplacement(
+                processed.TimelineEvents,
+                ITimelineEventRepository.ExtractedFromSource,
+                ITimelineEventRepository.CurrentPromptVersion),
+            ct);
         if (!updated)
         {
             return Results.NotFound();

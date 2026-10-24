@@ -11,1363 +11,835 @@ using TechHub.Infrastructure.Services.ContentProcessing;
 namespace TechHub.Infrastructure.Tests.Services;
 
 /// <summary>
-/// Unit tests for <see cref="AiCategorizationService"/>.
-/// Mocks the AI completion client to verify parsing, slug generation,
-/// skip handling, roundup metadata extraction, and error resilience.
+/// Unit tests for <see cref="AiCategorizationService"/>: the classify step (strict JSON) and the rewrite step (markdown).
 /// </summary>
 public class AiCategorizationServiceTests
 {
+    private const string ClassifyDeployment = "test-classification";
+    private const string RewriteDeployment = "test-rewrite";
+    private const string TimelineDeployment = "test-timeline";
+
     private readonly Mock<IAiCompletionClient> _aiClient = new();
+    private readonly List<string> _requests = [];
 
-    private AiCategorizationService CreateSut(AiCategorizationOptions? opts = null)
+    private static readonly AiCategorizationOptions _defaultOptions = new()
     {
-        var options = opts ?? new AiCategorizationOptions
+        MaxRetries = 1,
+        RateLimitDelaySeconds = 0,
+        Profiles = new AiProfilesOptions
         {
-            MaxRetries = 1,
-            RateLimitDelaySeconds = 0,
-            MaxContentLength = 200_000
-        };
+            Classification = new AiProfileOptions { DeploymentName = ClassifyDeployment, ServiceTier = "flex", ReasoningEffort = "low" },
+            Rewrite = new AiProfileOptions { DeploymentName = RewriteDeployment, ServiceTier = "flex", ReasoningEffort = "low" },
+            RoundupNewsWriter = new AiProfileOptions { DeploymentName = "w" },
+            RoundupMetadata = new AiProfileOptions { DeploymentName = "m" },
+            TimelineExtraction = new AiProfileOptions { DeploymentName = TimelineDeployment, ServiceTier = "flex", ReasoningEffort = "low" }
+        }
+    };
 
-        return new AiCategorizationService(
-            _aiClient.Object,
-            Options.Create(options),
-            NullLogger<AiCategorizationService>.Instance);
+    private static readonly string[] _configuredSections = ["ai", "azure", "dotnet", "devops", "github-copilot", "ml", "security"];
+
+    private static IOptions<AppSettings> TestAppSettings(params string[] sections) => Options.Create(new AppSettings
+    {
+        BaseUrl = "https://localhost:5003",
+        Content = new ContentSettings
+        {
+            Sections = new[] { "all" }.Concat(sections).ToDictionary(
+                name => name,
+                name => new SectionConfig
+                {
+                    Title = name,
+                    Description = name,
+                    Url = $"/{name}",
+                    Tag = name,
+                    Collections = []
+                })
+        }
+    });
+
+    private AiCategorizationService CreateSut(AiCategorizationOptions? options = null, string[]? sections = null) => new(
+        _aiClient.Object,
+        Options.Create(options ?? _defaultOptions),
+        TestAppSettings(sections ?? _configuredSections),
+        NullLogger<AiCategorizationService>.Instance);
+
+    private static RawFeedItem CreateRawItem(string url = "https://example.com/article", bool interactive = false) => new()
+    {
+        Title = "Test Article",
+        ExternalUrl = url,
+        PublishedAt = new DateTimeOffset(2026, 3, 14, 23, 30, 0, TimeSpan.Zero),
+        FeedItemData = "A test description",
+        FeedName = "Test Feed",
+        CollectionName = "blogs",
+        FullContent = "Full article text",
+        IsInteractive = interactive
+    };
+
+    private static string Wrap(string content, string finishReason = "stop")
+    {
+        var serialized = JsonSerializer.Serialize(content);
+        return $$$"""{"choices":[{"finish_reason":"{{{finishReason}}}","message":{"content":{{{serialized}}}}}]}""";
     }
 
-    private static RawFeedItem CreateRawItem(
-        string url = "https://example.com/article",
-        string title = "Test Article") => new()
-        {
-            Title = title,
-            ExternalUrl = url,
-            PublishedAt = new DateTimeOffset(2025, 6, 15, 12, 0, 0, TimeSpan.Zero),
-            FeedItemData = "A test description",
-            FeedName = "Test Feed",
-            CollectionName = "blogs"
-        };
-
-    private static string WrapInAiResponse(string jsonContent)
+    private static string ClassificationJson(
+        string? sectionsJson = null,
+        string primary = "ai",
+        string? rolesJson = null,
+        string? keyFactsJson = null,
+        string significance = "medium",
+        string? eventsJson = null,
+        string title = "Azure OpenAI Basics",
+        string? excerptJson = null)
     {
-        var serialized = JsonSerializer.Serialize(jsonContent);
-        return $$$"""{"choices":[{"message":{"content":{{{serialized}}}}}]}""";
-    }
+        sectionsJson ??= """["ai","azure"]""";
+        rolesJson ??= """[{"section":"ai","role":"lead"},{"section":"azure","role":"brief"}]""";
+        keyFactsJson ??= """["Feature X is generally available.","It costs 5 dollars."]""";
+        eventsJson ??= "[]";
+        excerptJson ??= "\"Jane explains the basics.\"";
 
-    // ── Included Item Parsing ─────────────────────────────────────────────────
-
-    [Fact]
-    public async Task CategorizeAsync_WithIncludedItem_ReturnsProcessedItem()
-    {
-        // Arrange
-        var aiJson = """
+        return $$"""
             {
-                "included": true,
-                "title": "Azure AI Foundry Update",
-                "excerpt": "New features in Azure AI Foundry",
-                "collection": "news",
-                "sections": ["ai", "azure"],
-                "tags": ["azure", "ai-foundry"],
-                "author": "Microsoft",
-                "primary_section": "ai",
-                "content": "Full markdown content here.",
-                "explanation": "relevant Azure AI content",
-                "roundup": {
-                    "summary": "Azure AI Foundry gets new features.",
-                    "key_topics": ["AI Foundry", "Azure"],
-                    "relevance": "high",
-                    "topic_type": "announcement",
-                    "impact_level": "high",
-                    "time_sensitivity": "immediate"
-                }
+              "included": true,
+              "explanation": "Set ai (primary), azure because it covers Azure OpenAI.",
+              "title": "{{title}}",
+              "author": "Jane Smith",
+              "sections": {{sectionsJson}},
+              "primary_section": "{{primary}}",
+              "tags": ["Azure OpenAI Service", "C#"],
+              "excerpt": {{excerptJson}},
+              "section_roles": {{rolesJson}},
+              "key_facts": {{keyFactsJson}},
+              "significance": "{{significance}}",
+              "content_kind": "tutorial",
+              "lifecycle": "ga",
+              "products": ["Azure OpenAI Service"],
+              "timeline_events": {{eventsJson}}
             }
             """;
+    }
+
+    private const string ExcludedJson = """
+        {"included":false,"explanation":"Sales Pitches. Promotional content.","title":null,"author":null,"sections":[],
+         "primary_section":null,"tags":[],"excerpt":null,"section_roles":[],"key_facts":[],"significance":null,
+         "content_kind":null,"lifecycle":null,"products":[],"timeline_events":[]}
+        """;
+
+    private void SetupResponses(params string[] responses)
+    {
+        var queue = new Queue<string>(responses);
         _aiClient
             .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+            .Returns<string, CancellationToken>((json, _) =>
+            {
+                _requests.Add(json);
+                return Task.FromResult(new AiCompletionResult(false, queue.Dequeue()));
+            });
+    }
 
-        var sut = CreateSut();
+    private static JsonElement Parse(string json) => JsonDocument.Parse(json).RootElement.Clone();
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+    private static bool HasServiceTier(string requestJson) => Parse(requestJson).TryGetProperty("service_tier", out _);
 
-        // Assert
-        result.Item.Should().NotBeNull();
-        result.Item!.Title.Should().Be("Azure AI Foundry Update");
-        result.Item.Excerpt.Should().Be("New features in Azure AI Foundry");
-        result.Item.CollectionName.Should().Be("blogs");
-        result.Item.Sections.Should().BeEquivalentTo(["ai", "azure"]);
-        result.Item.Tags.Should().BeEquivalentTo(["azure", "ai-foundry"]);
+    // ── Call plan ─────────────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task CategorizeAsync_ExcludedItem_MakesExactlyOneCallOnTheClassificationDeployment()
+    {
+        SetupResponses(Wrap(ExcludedJson));
+
+        var result = await CreateSut().CategorizeAsync(CreateRawItem());
+
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeFalse();
+        result.Explanation.Should().StartWith("Sales Pitches");
+        _requests.Should().ContainSingle();
+        Parse(_requests[0]).GetProperty("model").GetString().Should().Be(ClassifyDeployment);
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_IncludedItem_CallsClassificationThenRewrite()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("Rewritten body."));
+
+        var result = await CreateSut().CategorizeAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeFalse();
+        _requests.Should().HaveCount(2);
+        Parse(_requests[0]).GetProperty("model").GetString().Should().Be(ClassifyDeployment);
+        Parse(_requests[1]).GetProperty("model").GetString().Should().Be(RewriteDeployment);
+        result.Item!.Content.Should().Be("Rewritten body.");
+        result.Item.Title.Should().Be("Azure OpenAI Basics");
+        result.Item.Slug.Should().Be("azure-openai-basics");
+        result.Item.Excerpt.Should().Be("Jane explains the basics.");
         result.Item.PrimarySectionName.Should().Be("ai");
-        result.Item.Content.Should().Be("Full markdown content here.");
-        result.Explanation.Should().Be("relevant Azure AI content");
     }
 
-    // ── Roundup Metadata Extraction ───────────────────────────────────────────
-
     [Fact]
-    public async Task CategorizeAsync_WithRoundupMetadata_ExtractsAllFields()
+    public async Task ClassifyAsync_IncludedItem_MakesOneCallAndNeverRewrites()
     {
-        // Arrange
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Copilot Studio GA",
-                "excerpt": "Copilot Studio is now generally available",
-                "collection": "news",
-                "sections": ["ai", "github-copilot"],
-                "tags": ["copilot"],
-                "primary_section": "github-copilot",
-                "content": "Content",
-                "explanation": "Included",
-                "roundup": {
-                    "summary": "Copilot Studio reaches GA with new agent capabilities.",
-                    "key_topics": ["Copilot Studio", "Agents"],
-                    "relevance": "high",
-                    "topic_type": "ga-release",
-                    "impact_level": "high",
-                    "time_sensitivity": "immediate"
-                }
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+        SetupResponses(Wrap(ClassificationJson()));
 
-        var sut = CreateSut();
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert
         result.Item.Should().NotBeNull();
-        var meta = result.Item!.RoundupMetadata;
-        meta.Should().NotBeNull();
-        meta!.Summary.Should().Be("Copilot Studio reaches GA with new agent capabilities.");
-        meta.KeyTopics.Should().BeEquivalentTo(["Copilot Studio", "Agents"]);
-        meta.Relevance.Should().Be("high");
-        meta.TopicType.Should().Be("ga-release");
-        meta.ImpactLevel.Should().Be("high");
-        meta.TimeSensitivity.Should().Be("immediate");
+        result.Item!.Content.Should().BeEmpty();
+        _requests.Should().ContainSingle();
     }
 
     [Fact]
-    public async Task CategorizeAsync_WithoutRoundupMetadata_ReturnsNullRoundupMetadata()
+    public async Task CategorizeAsync_RewriteFailure_FailsTheWholeItem()
     {
-        // Arrange — no "roundup" property
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Some Article",
-                "excerpt": "An article",
-                "collection": "blogs",
-                "sections": ["dotnet"],
-                "tags": ["csharp"],
-                "primary_section": "dotnet",
-                "content": "Content",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+        SetupResponses(Wrap(ClassificationJson()), Wrap("partial", finishReason: "length"));
 
-        var sut = CreateSut();
+        var result = await CreateSut().CategorizeAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert
-        result.Item.Should().NotBeNull();
-        result.Item!.RoundupMetadata.Should().BeNull();
-    }
-
-    // ── Excluded Item Handling ──────────────────────────────────────────────────
-
-    [Fact]
-    public async Task CategorizeAsync_WithExplanationOnly_ReturnsNullItem()
-    {
-        // Arrange — AI returns Option B (explanation only, no content fields)
-        var aiJson = """
-            {
-                "included": false,
-                "explanation": "sales pitch without educational value"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — legitimate AI exclusion (Option B), not a failure
+        result.IsFailure.Should().BeTrue();
         result.Item.Should().BeNull();
+        result.Explanation.Should().StartWith("Rewrite failed");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_RewriteReturnsEmpty_FailsTheWholeItem()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("   "));
+
+        var result = await CreateSut().CategorizeAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+        result.Item.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_RewriteWrappedInMarkdownFence_UnwrapsIt()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("```markdown\n## Heading\n\nText\n```"));
+
+        var result = await CreateSut().CategorizeAsync(CreateRawItem());
+
+        result.Item!.Content.Should().Be("## Heading\n\nText");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_ContentHashIsComputedOverTheRewrittenContent()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("Body one."));
+        var first = await CreateSut().CategorizeAsync(CreateRawItem());
+        _requests.Clear();
+        SetupResponses(Wrap(ClassificationJson()), Wrap("Body two."));
+
+        var second = await CreateSut().CategorizeAsync(CreateRawItem());
+
+        first.Item!.ContentHash.Should().NotBe(second.Item!.ContentHash);
+    }
+
+    // ── Request shape ─────────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task ClassifyAsync_SendsStrictJsonSchemaAndFlexTier()
+    {
+        SetupResponses(Wrap(ExcludedJson));
+
+        await CreateSut().ClassifyAsync(CreateRawItem());
+
+        var body = Parse(_requests[0]);
+        body.GetProperty("service_tier").GetString().Should().Be("flex");
+        body.GetProperty("reasoning_effort").GetString().Should().Be("low");
+        body.TryGetProperty("temperature", out _).Should().BeFalse();
+        var format = body.GetProperty("response_format");
+        format.GetProperty("type").GetString().Should().Be("json_schema");
+        format.GetProperty("json_schema").GetProperty("strict").GetBoolean().Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_SchemaListsEveryPropertyAsRequired()
+    {
+        SetupResponses(Wrap(ExcludedJson));
+
+        await CreateSut().ClassifyAsync(CreateRawItem());
+
+        var schema = Parse(_requests[0]).GetProperty("response_format").GetProperty("json_schema").GetProperty("schema");
+        var properties = schema.GetProperty("properties").EnumerateObject().Select(p => p.Name).ToList();
+        var required = schema.GetProperty("required").EnumerateArray().Select(e => e.GetString()).ToList();
+        required.Should().BeEquivalentTo(properties);
+        schema.GetProperty("additionalProperties").GetBoolean().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_SchemaSectionsComeFromTheConfiguredSectionsWithoutAll()
+    {
+        SetupResponses(Wrap(ExcludedJson));
+
+        await CreateSut(sections: ["quantum", "ai"]).ClassifyAsync(CreateRawItem());
+
+        var properties = Parse(_requests[0]).GetProperty("response_format").GetProperty("json_schema")
+            .GetProperty("schema").GetProperty("properties");
+        var sections = properties.GetProperty("sections").GetProperty("items").GetProperty("enum")
+            .EnumerateArray().Select(e => e.GetString()).ToList();
+        sections.Should().BeEquivalentTo(["ai", "quantum"]);
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_SectionAddedToConfiguration_IsAccepted()
+    {
+        SetupResponses(Wrap(ClassificationJson(
+            sectionsJson: """["quantum"]""",
+            primary: "quantum",
+            rolesJson: """[{"section":"quantum","role":"lead"}]""")));
+
+        var result = await CreateSut(sections: ["ai", "quantum"]).ClassifyAsync(CreateRawItem());
+
         result.IsFailure.Should().BeFalse();
-        result.Explanation.Should().Contain("sales pitch");
     }
 
     [Fact]
-    public async Task CategorizeAsync_WithNoTitleAndNoSections_ReturnsNullItem()
+    public async Task ClassifyAsync_SectionRemovedFromConfiguration_IsRejected()
     {
-        // Arrange — AI returns explanation only (Option B response), no content fields
-        var aiJson = """
-            {
-                "included": false,
-                "explanation": "not relevant to developer audience"
-            }
+        SetupResponses(Wrap(ClassificationJson()));
+
+        var result = await CreateSut(sections: ["ai"]).ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("invalid sections");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_RewriteRequestHasNoResponseFormat()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("Body."));
+
+        await CreateSut().CategorizeAsync(CreateRawItem());
+
+        Parse(_requests[1]).TryGetProperty("response_format", out _).Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_RewritePromptContainsClassificationResultAndSource()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("Body."));
+
+        await CreateSut().CategorizeAsync(CreateRawItem());
+
+        var userMessage = Parse(_requests[1]).GetProperty("messages")[1].GetProperty("content").GetString();
+        userMessage.Should().Contain("TITLE: Azure OpenAI Basics");
+        userMessage.Should().Contain("EXCERPT: Jane explains the basics.");
+        userMessage.Should().Contain("Full article text");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_InteractiveItem_UsesStandardTierForBothCalls()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("Body."));
+
+        await CreateSut().CategorizeAsync(CreateRawItem(interactive: true));
+
+        _requests.Should().HaveCount(2);
+        _requests.Should().OnlyContain(r => !HasServiceTier(r));
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_BackgroundItem_UsesFlexTierForBothCalls()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("Body."));
+
+        await CreateSut().CategorizeAsync(CreateRawItem());
+
+        _requests.Should().OnlyContain(r => Parse(r).GetProperty("service_tier").GetString() == "flex");
+    }
+
+    // ── Validation ────────────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task ClassifyAsync_PrimarySectionNotInSections_Fails()
+    {
+        SetupResponses(Wrap(ClassificationJson(primary: "security")));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("not in sections");
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_InvalidSection_Fails()
+    {
+        SetupResponses(Wrap(ClassificationJson(sectionsJson: """["ai","cooking"]""")));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("invalid sections");
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_NoKeyFacts_Fails()
+    {
+        SetupResponses(Wrap(ClassificationJson(keyFactsJson: "[]")));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("key facts");
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_InvalidSignificance_Fails()
+    {
+        SetupResponses(Wrap(ClassificationJson(significance: "critical")));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("significance");
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_EmptyExcerpt_Fails()
+    {
+        SetupResponses(Wrap(ClassificationJson(excerptJson: "null")));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_ExcludedWithoutExplanation_Fails()
+    {
+        SetupResponses(Wrap("""{"included":false,"explanation":""}"""));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_MissingIncludedFlag_Fails()
+    {
+        SetupResponses(Wrap("""{"explanation":"x"}"""));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_InvalidJson_Fails()
+    {
+        SetupResponses(Wrap("this is not json"));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+    }
+
+    // ── Section roles ─────────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task ClassifyAsync_PrimarySectionIsAlwaysLeadEvenWhenAiSaysBrief()
+    {
+        SetupResponses(Wrap(ClassificationJson(rolesJson: """[{"section":"ai","role":"brief"},{"section":"azure","role":"brief"}]""")));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        var roles = result.Item!.RoundupMetadata!.SectionRoles;
+        roles["ai"].Should().Be("lead");
+        roles["azure"].Should().Be("brief");
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_SectionWithoutRole_DefaultsToLead()
+    {
+        SetupResponses(Wrap(ClassificationJson(rolesJson: """[{"section":"ai","role":"lead"}]""")));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.Item!.RoundupMetadata!.SectionRoles["azure"].Should().Be("lead");
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_RoleForSectionOutsideSections_Fails()
+    {
+        SetupResponses(Wrap(ClassificationJson(rolesJson: """[{"section":"security","role":"lead"}]""")));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_InvalidRole_Fails()
+    {
+        SetupResponses(Wrap(ClassificationJson(rolesJson: """[{"section":"ai","role":"headline"}]""")));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_StoresSchemaVersion2Metadata()
+    {
+        SetupResponses(Wrap(ClassificationJson()));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
+        var meta = result.Item!.RoundupMetadata!;
+        meta.SchemaVersion.Should().Be(RoundupMetadata.CurrentSchemaVersion);
+        meta.KeyFacts.Should().HaveCount(2);
+        meta.Significance.Should().Be("medium");
+        meta.ContentKind.Should().Be("tutorial");
+        meta.Lifecycle.Should().Be("ga");
+        meta.Products.Should().Equal("Azure OpenAI Service");
+    }
+
+    // ── Timeline events ───────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task ClassifyAsync_PublicationDatedEvent_UsesBrusselsPublicationDate()
+    {
+        const string Events = """
+            [{"kind":"ga","product":"Azure OpenAI Service","feature":null,"description":"Becomes GA",
+              "date_source":"publication","date":null,"date_precision":null,"quote":"is now generally available"}]
             """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+        SetupResponses(Wrap(ClassificationJson(eventsJson: Events)));
 
-        var sut = CreateSut();
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+        // Published 14 March 23:30 UTC, which is already 15 March in Brussels.
+        var e = result.Item!.TimelineEvents.Should().ContainSingle().Subject;
+        e.Date.Should().Be(new DateOnly(2026, 3, 15));
+        e.DateSource.Should().Be("publication");
+    }
 
-        // Assert — legitimate AI exclusion (Option B), not a failure
-        result.Item.Should().BeNull();
+    [Fact]
+    public void PromptBuilders_ItemPublishedJustBeforeUtcMidnight_UseBrusselsDate()
+    {
+        // 14 March 23:30 UTC is already 15 March in Brussels; the prompt must agree with the parser's publication date.
+        var item = CreateRawItem();
+        item.PublishedAt.Should().Be(new DateTimeOffset(2026, 3, 14, 23, 30, 0, TimeSpan.Zero));
+        var classified = new ProcessedContentItem
+        {
+            Slug = "s",
+            Title = "t",
+            Author = "a",
+            Excerpt = "e",
+            DateEpoch = item.PublishedAt.ToUnixTimeSeconds(),
+            CollectionName = item.CollectionName,
+            ExternalUrl = item.ExternalUrl,
+            FeedName = item.FeedName,
+            PrimarySectionName = "ai",
+            ContentHash = "h",
+            Sections = ["ai"]
+        };
+
+        AiCategorizationService.BuildUserPrompt(item).Should().Contain("DATE: 2026-03-15");
+        AiCategorizationService.BuildTimelineExtractionPrompt(item).Should().Contain("DATE: 2026-03-15");
+        AiCategorizationService.BuildRewritePrompt(item, classified).Should().Contain("DATE: 2026-03-15");
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_EventWithBadDate_IsSkippedButItemSucceeds()
+    {
+        const string Events = """
+            [{"kind":"ga","product":"X","feature":null,"description":"d","date_source":"explicit","date":"soon","date_precision":"day","quote":null}]
+            """;
+        SetupResponses(Wrap(ClassificationJson(eventsJson: Events)));
+
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+
         result.IsFailure.Should().BeFalse();
-        result.Explanation.Should().Contain("not relevant");
+        result.Item!.TimelineEvents.Should().BeEmpty();
     }
 
-    // ── Slug Generation ───────────────────────────────────────────────────────
+    // ── Author ────────────────────────────────────────────────────────────────
 
     [Fact]
-    public async Task CategorizeAsync_GeneratesTitleOnlySlug()
+    public async Task ClassifyAsync_AuthorOverrideWinsOverAiAuthor()
     {
-        // Arrange
-        var aiJson = """
-            {
-                "included": true,
-                "title": "What's New in .NET 10?",
-                "excerpt": "Overview of .NET 10 features",
-                "collection": "blogs",
-                "sections": ["dotnet"],
-                "tags": ["dotnet"],
-                "primary_section": "dotnet",
-                "content": "Content",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+        SetupResponses(Wrap(ClassificationJson()));
+        var raw = new RawFeedItem
+        {
+            Title = "t",
+            ExternalUrl = "https://example.com/a",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "f",
+            CollectionName = "blogs",
+            AuthorOverride = "Override Author"
+        };
 
-        var sut = CreateSut();
-        var item = CreateRawItem(); // PublishedAt = 2025-06-15
+        var result = await CreateSut().ClassifyAsync(raw);
 
-        // Act
-        var result = await sut.CategorizeAsync(item, CancellationToken.None);
-
-        // Assert — slug is title-only (no date prefix)
-        result.Item.Should().NotBeNull();
-        result.Item!.Slug.Should().Be("what-s-new-in-net-10");
+        result.Item!.Author.Should().Be("Override Author");
     }
 
-    // ── Content Hash ──────────────────────────────────────────────────────────
-
     [Fact]
-    public async Task CategorizeAsync_ComputesContentHash()
+    public async Task ClassifyAsync_NoAiAuthor_FallsBackToFeedLevelAuthor()
     {
-        // Arrange
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Hash Test",
-                "excerpt": "Testing hash",
-                "collection": "blogs",
-                "sections": ["ai"],
-                "tags": ["ai-hash"],
-                "primary_section": "ai",
-                "content": "Some content",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+        SetupResponses(Wrap(ClassificationJson().Replace("\"author\": \"Jane Smith\"", "\"author\": null", StringComparison.Ordinal)));
+        var raw = new RawFeedItem
+        {
+            Title = "t",
+            ExternalUrl = "https://example.com/a",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "f",
+            CollectionName = "blogs",
+            FeedLevelAuthor = "Feed Author"
+        };
 
-        var sut = CreateSut();
+        var result = await CreateSut().ClassifyAsync(raw);
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert
-        result.Item.Should().NotBeNull();
-        result.Item!.ContentHash.Should().NotBeNullOrWhiteSpace();
-        result.Item.ContentHash.Should().HaveLength(64); // SHA-256 hex string
+        result.Item!.Author.Should().Be("Feed Author");
     }
 
-    // ── JSON Wrapped in Markdown Code Fence ───────────────────────────────────
+    // ── Transport failures ────────────────────────────────────────────────────
 
     [Fact]
-    public async Task CategorizeAsync_HandlesJsonWrappedInCodeFence()
+    public async Task ClassifyAsync_FinishReasonLength_Fails()
     {
-        // Arrange — AI sometimes wraps JSON in ```json ... ```
-        var wrappedJson = """
-            ```json
-            {
-                "included": true,
-                "title": "Code Fence Article",
-                "excerpt": "Wrapped in fence",
-                "collection": "news",
-                "sections": ["azure"],
-                "tags": ["azure"],
-                "primary_section": "azure",
-                "content": "Content",
-                "explanation": "Included"
-            }
-            ```
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(wrappedJson)));
+        SetupResponses(Wrap(ExcludedJson, finishReason: "length"));
 
-        var sut = CreateSut();
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert
-        result.Item.Should().NotBeNull();
-        result.Item!.Title.Should().Be("Code Fence Article");
-    }
-
-    // ── Error Handling ────────────────────────────────────────────────────────
-
-    [Fact]
-    public async Task CategorizeAsync_WhenAiReturnsEmptyContent_ReturnsNullItemWithFinishReason()
-    {
-        // Arrange — AI returns empty content string with unknown finish_reason
-        var response = """{"choices":[{"message":{"content":""},"finish_reason":"stop"}]}""";
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, response));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: AI returned no content, explanation includes the finish_reason
-        result.Item.Should().BeNull();
         result.IsFailure.Should().BeTrue();
-        result.Explanation.Should().Contain("empty", because: "should describe the empty response");
-        result.Explanation.Should().Contain("stop", because: "should include the finish_reason for diagnostics");
+        result.Explanation.Should().Contain("incomplete");
     }
 
     [Fact]
-    public async Task CategorizeAsync_WhenFinishReasonIsLengthWithEmptyContent_ShowsFinishReasonAndUsage()
+    public async Task ClassifyAsync_EmptyContent_Fails()
     {
-        // Arrange — AI returned finish_reason: length but content is empty (model ran out of tokens before producing output)
-        var response = """{"choices":[{"message":{"content":null},"finish_reason":"length"}],"usage":{"prompt_tokens":3800,"completion_tokens":0,"total_tokens":3800}}""";
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, response));
+        SetupResponses("""{"choices":[{"finish_reason":"stop","message":{"content":""}}]}""");
 
-        var sut = CreateSut();
+        var result = await CreateSut().ClassifyAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — explanation includes the finish_reason and token usage so you can see what went wrong
-        result.Item.Should().BeNull();
         result.IsFailure.Should().BeTrue();
-        result.Explanation.Should().Contain("empty", because: "content was empty");
-        result.Explanation.Should().Contain("length", because: "finish_reason should be included verbatim");
-        result.Explanation.Should().Contain("3800", because: "token usage should be included for diagnostics");
+        result.Explanation.Should().Contain("empty");
     }
 
     [Fact]
-    public async Task CategorizeAsync_WhenFinishReasonIsLength_IncludesTokenUsageInExplanation()
+    public async Task ClassifyAsync_ContentFilter_FailsWithoutRetry()
     {
-        // Arrange — AI response has non-empty content but finish_reason is "length" (truncated), with usage info
-        var response = """{"choices":[{"message":{"content":"{ \"title\": \"Trunca"},"finish_reason":"length"}],"usage":{"prompt_tokens":3800,"completion_tokens":200,"total_tokens":4000}}""";
         _aiClient
             .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, response));
+            .ReturnsAsync(new AiCompletionResult(false, null, ContentFilterMessage: "blocked"));
 
-        var sut = CreateSut();
+        var result = await CreateSut(new AiCategorizationOptions { MaxRetries = 3, RateLimitDelaySeconds = 0, Profiles = _defaultOptions.Profiles })
+            .ClassifyAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — should include finish_reason and token usage info for diagnostics
-        result.Item.Should().BeNull();
         result.IsFailure.Should().BeTrue();
-        result.Explanation.Should().Contain("incomplete", because: "non-stop finish_reason means the response is incomplete");
-        result.Explanation.Should().Contain("length", because: "finish_reason should be included verbatim");
-        result.Explanation.Should().Contain("3800", because: "prompt token count helps diagnose why length was exceeded");
-        result.Explanation.Should().Contain("200", because: "completion token count shows how much was generated before cutoff");
+        result.Explanation.Should().Be("blocked");
+        _aiClient.Verify(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Once);
     }
 
     [Fact]
-    public async Task CategorizeAsync_WhenFinishReasonIsContentFilter_ReturnsContentFilterFailure()
+    public async Task ClassifyAsync_RateLimitedThenSuccess_Retries()
     {
-        // Arrange — Azure OpenAI returns 200 OK but finish_reason is "content_filter" with null content
-        var response = """{"choices":[{"message":{"content":null},"finish_reason":"content_filter"}]}""";
+        var calls = 0;
         _aiClient
             .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, response));
+            .ReturnsAsync(() => ++calls == 1
+                ? new AiCompletionResult(true, null, RetryAfterSeconds: 0)
+                : new AiCompletionResult(false, Wrap(ExcludedJson)));
 
-        var sut = CreateSut();
+        var result = await CreateSut(new AiCategorizationOptions { MaxRetries = 3, RateLimitDelaySeconds = 0, Profiles = _defaultOptions.Profiles })
+            .ClassifyAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+        result.IsFailure.Should().BeFalse();
+        calls.Should().Be(2);
+    }
 
-        // Assert — explanation includes the finish_reason so you can see it was content_filter
-        result.Item.Should().BeNull();
+    [Fact]
+    public async Task ClassifyAsync_AllRetriesRateLimited_Fails()
+    {
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(true, null, RetryAfterSeconds: 0));
+
+        var result = await CreateSut(new AiCategorizationOptions { MaxRetries = 2, RateLimitDelaySeconds = 0, Profiles = _defaultOptions.Profiles })
+            .ClassifyAsync(CreateRawItem());
+
         result.IsFailure.Should().BeTrue();
-        result.Explanation.Should().Contain("content_filter", because: "finish_reason should be included verbatim in the explanation");
+        result.Explanation.Should().Contain("failed after 2 attempts");
     }
 
     [Fact]
-    public async Task CategorizeAsync_WhenFinishReasonIsLength_ReturnsIncompleteFailure()
+    public async Task ClassifyAsync_HttpFailureOnLastAttempt_Throws()
     {
-        // Arrange — AI response was truncated due to max_completion_tokens
-        var response = """{"choices":[{"message":{"content":"{ \"title\": \"Trunca"},"finish_reason":"length"}]}""";
         _aiClient
             .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, response));
+            .ThrowsAsync(new HttpRequestException("boom"));
 
-        var sut = CreateSut();
+        var act = () => CreateSut().ClassifyAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — explanation includes finish_reason verbatim
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-        result.Explanation.Should().Contain("incomplete", because: "non-stop finish_reason means the response is incomplete");
-        result.Explanation.Should().Contain("length", because: "finish_reason should appear verbatim");
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WhenFinishReasonIsContentFilterWithEmptyString_ReturnsContentFilterFailure()
-    {
-        // Arrange — finish_reason content_filter with empty string content (not null)
-        var response = """{"choices":[{"message":{"content":""},"finish_reason":"content_filter"}]}""";
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, response));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — explanation includes the finish_reason verbatim
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-        result.Explanation.Should().Contain("content_filter", because: "finish_reason should appear in the explanation");
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WhenFinishReasonIsStop_ProcessesNormally()
-    {
-        // Arrange — normal response with finish_reason "stop"
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Normal Article",
-                "excerpt": "Normal excerpt",
-                "collection": "blogs",
-                "sections": ["ai"],
-                "tags": ["ai-test"],
-                "primary_section": "ai",
-                "content": "Normal content",
-                "explanation": "Included"
-            }
-            """;
-        var serialized = JsonSerializer.Serialize(aiJson);
-        var response = $$$"""{"choices":[{"message":{"content":{{{serialized}}}},"finish_reason":"stop"}]}""";
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, response));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — should process normally when finish_reason is "stop"
-        result.Item.Should().NotBeNull();
-        result.Item!.Title.Should().Be("Normal Article");
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WhenAiReturnsInvalidJson_ReturnsNullItem()
-    {
-        // Arrange — response body contains non-JSON text
-        var invalidJson = "This is not valid JSON at all";
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(invalidJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: response was not valid JSON
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WhenAllRetriesFail_ThrowsOnLastAttempt()
-    {
-        // Arrange — HTTP exception on every attempt
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ThrowsAsync(new HttpRequestException("Service unavailable"));
-
-        // With MaxRetries=1, the single attempt throws and is not caught
-        var sut = CreateSut(new AiCategorizationOptions { MaxRetries = 1, RateLimitDelaySeconds = 0 });
-
-        // Act & Assert — exception propagates on the last attempt
-        var act = () => sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
         await act.Should().ThrowAsync<HttpRequestException>();
     }
 
+    // ── Timeline extraction (backfill) ────────────────────────────────────────
+
+    private const string ExplicitEventJson = """
+        {"kind":"retirement","product":"Azure OpenAI","feature":"v1 API","description":"Is retired",
+         "date_source":"explicit","date":"2026-06-01","date_precision":"day","quote":"retires on June 1"}
+        """;
+
     [Fact]
-    public async Task CategorizeAsync_WhenTimeoutOnNonFinalAttempt_Retries()
+    public async Task ExtractTimelineEventsAsync_ReturnsParsedEventsAndMakesOneCallWithoutRewrite()
     {
-        // Arrange — first call times out, second succeeds
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Timeout Retry Article",
-                "excerpt": "After timeout retry",
-                "collection": "news",
-                "sections": ["ai"],
-                "tags": ["ai-retry"],
-                "primary_section": "ai",
-                "content": "Content",
-                "explanation": "Included"
-            }
+        SetupResponses(Wrap($$"""{"timeline_events":[{{ExplicitEventJson}}]}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        result.IsFailure.Should().BeFalse();
+        var e = result.Events.Should().ContainSingle().Subject;
+        e.Kind.Should().Be("retirement");
+        e.Date.Should().Be(new DateOnly(2026, 6, 1));
+        _requests.Should().ContainSingle();
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_UsesTimelineExtractionProfileAndTimelineOnlySchema()
+    {
+        SetupResponses(Wrap("""{"timeline_events":[]}"""));
+
+        await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        var body = Parse(_requests[0]);
+        body.GetProperty("model").GetString().Should().Be(TimelineDeployment);
+        var schema = body.GetProperty("response_format").GetProperty("json_schema");
+        schema.GetProperty("strict").GetBoolean().Should().BeTrue();
+        schema.GetProperty("schema").GetProperty("required").EnumerateArray().Select(e => e.GetString()).Should().Equal("timeline_events");
+        body.GetProperty("messages")[0].GetProperty("content").GetString().Should().Contain("timeline_events").And.NotContain("{{TIMELINE_RULES}}");
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_PromptContainsStoredContentAndPublicationDate()
+    {
+        SetupResponses(Wrap("""{"timeline_events":[]}"""));
+
+        await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
+        var user = Parse(_requests[0]).GetProperty("messages")[1].GetProperty("content").GetString();
+        user.Should().Contain("DATE: 2026-03-15").And.Contain("TITLE: Test Article").And.Contain("Full article text");
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_PublicationDatedEvent_UsesTheBrusselsPublicationDate()
+    {
+        const string Event = """
+            {"kind":"ga","product":"X","feature":null,"description":"Is GA","date_source":"publication","date":null,"date_precision":null,"quote":null}
             """;
+        SetupResponses(Wrap($$"""{"timeline_events":[{{Event}}]}"""));
 
-        var callCount = 0;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(() =>
-            {
-                callCount++;
-                if (callCount == 1)
-                {
-                    throw new TaskCanceledException("The operation was canceled.", new TimeoutException());
-                }
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
 
-                return new AiCompletionResult(false, WrapInAiResponse(aiJson));
-            });
-
-        var sut = CreateSut(new AiCategorizationOptions { MaxRetries = 3, RateLimitDelaySeconds = 0 });
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert
-        result.Item.Should().NotBeNull();
-        result.Item!.Title.Should().Be("Timeout Retry Article");
-        callCount.Should().Be(2);
+        result.Events.Should().ContainSingle().Which.Date.Should().Be(new DateOnly(2026, 3, 15));
     }
 
     [Fact]
-    public async Task CategorizeAsync_WhenAllRetriesRateLimited_ReturnsNullItem()
+    public async Task ExtractTimelineEventsAsync_NoEvents_ReturnsEmptySuccess()
     {
-        // Arrange — every attempt rate-limited
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(true, null));
+        SetupResponses(Wrap("""{"timeline_events":[]}"""));
 
-        var sut = CreateSut(new AiCategorizationOptions { MaxRetries = 2, RateLimitDelaySeconds = 0 });
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+        result.IsFailure.Should().BeFalse();
+        result.Events.Should().BeEmpty();
+    }
 
-        // Assert — failure: exhausted retries, returns null with explanation
-        result.Item.Should().BeNull();
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_MissingEventsArray_Fails()
+    {
+        SetupResponses(Wrap("""{"something":"else"}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+
         result.IsFailure.Should().BeTrue();
-        result.Explanation.Should().Contain("failed after");
     }
 
-    // ── Rate Limiting ─────────────────────────────────────────────────────────
-
     [Fact]
-    public async Task CategorizeAsync_WhenRateLimited_RetriesAndSucceeds()
+    public async Task ExtractTimelineEventsAsync_IncompleteResponse_Fails()
     {
-        // Arrange — first call rate-limited, second succeeds
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Rate Limited Article",
-                "excerpt": "After retry",
-                "collection": "news",
-                "sections": ["ai"],
-                "tags": ["ai-rate"],
-                "primary_section": "ai",
-                "content": "Content",
-                "explanation": "Included"
-            }
-            """;
+        SetupResponses(Wrap("""{"timeline_events":[]}""", finishReason: "length"));
 
-        var callCount = 0;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(() =>
-            {
-                callCount++;
-                return callCount == 1
-                    ? new AiCompletionResult(true, null)
-                    : new AiCompletionResult(false, WrapInAiResponse(aiJson));
-            });
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
 
-        var sut = CreateSut(new AiCategorizationOptions { MaxRetries = 3, RateLimitDelaySeconds = 0 });
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert
-        result.Item.Should().NotBeNull();
-        result.Item!.Title.Should().Be("Rate Limited Article");
-        callCount.Should().Be(2);
-    }
-
-    // ── Content Filter ────────────────────────────────────────────────────────
-
-    [Fact]
-    public async Task CategorizeAsync_WhenContextLengthExceeded_ReturnsNullItemWithExplanation()
-    {
-        // Arrange — AI client returns context length exceeded result
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, null, ContentFilterMessage: "Content too large for AI model context window"));
-
-        var sut = CreateSut(new AiCategorizationOptions { MaxRetries = 3, RateLimitDelaySeconds = 0 });
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: content exceeded context window
-        result.Item.Should().BeNull();
         result.IsFailure.Should().BeTrue();
-        result.Explanation.Should().Contain("too large");
-        _aiClient.Verify(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Once);
+        result.Explanation.Should().Contain("incomplete");
     }
 
-    // ── Content Filter ────────────────────────────────────────────────────────
-
     [Fact]
-    public async Task CategorizeAsync_WhenContentFilterTriggered_ReturnsNullItemWithExplanation()
+    public async Task ExtractTimelineEventsAsync_ContentFilter_Fails()
     {
-        // Arrange — AI client returns content filter result
         _aiClient
             .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, null, ContentFilterMessage: "Content blocked by Azure AI content filter"));
+            .ReturnsAsync(new AiCompletionResult(false, null, ContentFilterMessage: "blocked"));
 
-        var sut = CreateSut(new AiCategorizationOptions { MaxRetries = 3, RateLimitDelaySeconds = 0 });
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
 
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: content filter blocked the request
-        result.Item.Should().BeNull();
         result.IsFailure.Should().BeTrue();
-        result.Explanation.Should().Contain("content filter");
-        _aiClient.Verify(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Once);
+        result.Explanation.Should().Be("blocked");
     }
 
-    // ── User Prompt Construction ──────────────────────────────────────────────
+    // ── Prompts ───────────────────────────────────────────────────────────────
 
     [Fact]
-    public async Task CategorizeAsync_IncludesFeedTagsInPrompt()
+    public void BuildUserPrompt_WithSkipSalesPitchCheck_IncludesOverride()
     {
-        // Arrange
-        var aiJson = """
-            { "included": false, "explanation": "Excluded" }
-            """;
-        string? capturedBody = null;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .Callback<string, CancellationToken>((body, _) => capturedBody = body)
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
         var item = new RawFeedItem
         {
-            Title = "Tagged Article",
-            ExternalUrl = "https://example.com/tagged",
+            Title = "t",
+            ExternalUrl = "https://example.com/a",
             PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "Feed",
+            FeedName = "f",
             CollectionName = "blogs",
-            FeedTags = ["azure", "copilot", "security"]
+            SkipSalesPitchCheck = true
         };
 
-        // Act
-        await sut.CategorizeAsync(item, CancellationToken.None);
-
-        // Assert — user content should include feed tags
-        capturedBody.Should().NotBeNull();
-        using var doc = JsonDocument.Parse(capturedBody!);
-        var userContent = doc.RootElement
-            .GetProperty("messages")[1]
-            .GetProperty("content")
-            .GetString();
-        userContent.Should().Contain("FEED TAGS: azure, copilot, security");
+        AiCategorizationService.BuildUserPrompt(item).Should().Contain("PROCESSING_OVERRIDE: SkipSalesPitchCheck=true");
     }
 
-    // ── Validation: Incomplete AI Responses ───────────────────────────────────
+    [Fact]
+    public void BuildUserPrompt_WithoutSkipSalesPitchCheck_OmitsOverride()
+    {
+        AiCategorizationService.BuildUserPrompt(CreateRawItem()).Should().NotContain("PROCESSING_OVERRIDE");
+    }
+
+    [Fact]
+    public void BuildUserPrompt_YouTubeItem_LabelsContentAsTranscript()
+    {
+        var item = new RawFeedItem
+        {
+            Title = "t",
+            ExternalUrl = "https://www.youtube.com/watch?v=abc",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "f",
+            CollectionName = "videos",
+            FullContent = "spoken words"
+        };
+
+        AiCategorizationService.BuildUserPrompt(item).Should().Contain("TRANSCRIPT:");
+    }
+
+    [Fact]
+    public void BuildUserPrompt_IncludesFeedTags()
+    {
+        var item = new RawFeedItem
+        {
+            Title = "t",
+            ExternalUrl = "https://example.com/a",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "f",
+            CollectionName = "blogs",
+            FeedTags = ["Azure", "AI"]
+        };
+
+        AiCategorizationService.BuildUserPrompt(item).Should().Contain("FEED TAGS: Azure, AI");
+    }
 
     [Theory]
-    [InlineData("", "An excerpt", """["ai"]""", """["ai-tag"]""", "Content", "missing title")]
-    [InlineData("Title", "", """["ai"]""", """["ai-tag"]""", "Content", "missing excerpt")]
-    [InlineData("Title", "An excerpt", """["ai"]""", """["ai-tag"]""", "", "missing content")]
-    [InlineData("Title", "An excerpt", """[]""", """["ai-tag"]""", "Content", "missing sections")]
-    [InlineData("Title", "An excerpt", """["ai"]""", """[]""", "Content", "missing tags")]
-    [InlineData("Title", "An excerpt", """["invalid-section"]""", """["tag"]""", "Content", "invalid sections")]
-    [InlineData("Title", "An excerpt", """["ai", "fake"]""", """["tag"]""", "Content", "mix of valid and invalid sections")]
-    public async Task CategorizeAsync_WithMissingRequiredField_ReturnsNullItem(
-        string title, string excerpt, string sectionsJson,
-        string tagsJson, string content, string scenario)
+    [InlineData("plain text", "plain text")]
+    [InlineData("```markdown\nBody\n```", "Body")]
+    [InlineData("```md\nBody\n```", "Body")]
+    [InlineData("Intro\n```csharp\ncode\n```\nOutro", "Intro\n```csharp\ncode\n```\nOutro")]
+    public void UnwrapMarkdownFence_OnlyRemovesAFenceAroundTheWholeAnswer(string input, string expected)
     {
-        // Arrange — AI returns a response with one or more required fields missing or invalid
-        var aiJson = $$"""
-            {
-                "included": true,
-                "title": "{{title}}",
-                "excerpt": "{{excerpt}}",
-                "sections": {{sectionsJson}},
-                "tags": {{tagsJson}},
-                "primary_section": "ai",
-                "content": "{{content}}",
-                "explanation": "relevant content"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: incomplete AI response is a failure, not a skip
-        result.Item.Should().BeNull(scenario);
-        result.IsFailure.Should().BeTrue(scenario);
-        result.Explanation.Should().NotBeNullOrWhiteSpace();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithAllRequiredFieldsFilled_ReturnsItem()
-    {
-        // Arrange — sanity check: a fully valid response still works
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Valid Article",
-                "excerpt": "A great excerpt",
-                "collection": "blogs",
-                "sections": ["dotnet"],
-                "tags": ["csharp"],
-                "primary_section": "dotnet",
-                "content": "Full content with substance",
-                "explanation": "relevant .NET content about C# patterns"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — valid item should still be returned
-        result.Item.Should().NotBeNull();
-        result.Item!.Title.Should().Be("Valid Article");
-        result.Item.Content.Should().Be("Full content with substance");
-    }
-
-    // ── Primary Section Passthrough ───────────────────────────────────────────
-
-    [Fact]
-    public async Task CategorizeAsync_PassesThroughAiPrimarySection()
-    {
-        // Arrange — AI returns primary_section, it should be used as-is
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Azure ML Article",
-                "excerpt": "About Azure ML",
-                "collection": "blogs",
-                "sections": ["azure", "ml"],
-                "tags": ["machine-learning"],
-                "primary_section": "ml",
-                "content": "Content about ML on Azure",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — AI's primary section choice should be preserved
-        result.Item.Should().NotBeNull();
-        result.Item!.PrimarySectionName.Should().Be("ml");
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithNoPrimarySection_RejectsItem()
-    {
-        // Arrange — AI omits primary_section
-        var aiJson = """
-            {
-                "included": true,
-                "title": "No Primary",
-                "excerpt": "Missing primary",
-                "collection": "blogs",
-                "sections": ["ai", "azure"],
-                "tags": ["cloud"],
-                "content": "Content",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: missing primary_section
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithInvalidPrimarySection_RejectsItem()
-    {
-        // Arrange — AI returns an invalid primary_section not in the known list
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Invalid Primary",
-                "excerpt": "Bad primary section",
-                "collection": "blogs",
-                "sections": ["ai"],
-                "tags": ["cloud"],
-                "primary_section": "made-up-section",
-                "content": "Content",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: invalid primary_section
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithPrimarySectionNotInSections_RejectsItem()
-    {
-        // Arrange — AI returns primary_section that is valid but not in sections list
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Mismatched Primary",
-                "excerpt": "Primary not in sections",
-                "collection": "blogs",
-                "sections": ["ai", "azure"],
-                "tags": ["cloud"],
-                "primary_section": "dotnet",
-                "content": "Content",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: primary_section not in sections array
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithWhitespaceOnlyTags_ReturnsNullItem()
-    {
-        // Arrange — AI returns tags that are all whitespace
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Whitespace Tags",
-                "excerpt": "An excerpt",
-                "collection": "blogs",
-                "sections": ["ai"],
-                "tags": ["  ", "", " "],
-                "primary_section": "ai",
-                "content": "Content",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: whitespace-only tags
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithIncludedFalse_AndExplanation_TreatsAsSkip()
-    {
-        // Arrange — AI explicitly marks content as excluded with the included flag
-        var aiJson = """
-            {
-                "included": false,
-                "title": "Announcing TypeScript 6.0",
-                "explanation": "No categories found. Content is about TypeScript 6.0 and does not substantially cover any predefined Microsoft technology categories."
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — legitimate skip (AI explicitly excluded), not a failure
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeFalse();
-        result.Explanation.Should().Contain("No categories found");
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithIncludedFalse_NoExplanation_TreatsAsFailure()
-    {
-        // Arrange — AI explicitly marks content as excluded but provides no explanation
-        var aiJson = """
-            {
-                "included": false
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: excluded without explanation
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithIncludedTrue_NoSections_TreatsAsFailure()
-    {
-        // Arrange — AI says included but provides no sections
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Some Article",
-                "content": "Full content here",
-                "sections": [],
-                "explanation": "relevant content"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: included but no sections
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithNoIncludedFlag_NoSections_NoExplanation_TreatsAsFailure()
-    {
-        // Arrange — legacy response: no included flag, no sections, no explanation
-        var aiJson = """
-            {
-                "title": "Some Article",
-                "content": "Full content here",
-                "sections": []
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: no way to determine intent
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithNoIncludedFlag_NoSections_WithExplanation_TreatsAsSkip()
-    {
-        // Arrange — legacy response: no included flag, no sections, but has explanation
-        var aiJson = """
-            {
-                "title": "TypeScript Release",
-                "explanation": "Not relevant to any predefined category."
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — skip: legacy response with explanation
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeFalse();
-        result.Explanation.Should().Contain("Not relevant");
-    }
-
-    // ── Author Resolution ──────────────────────────────────────────────────────
-
-    [Fact]
-    public async Task CategorizeAsync_WithAiAuthor_UsesAiAuthor()
-    {
-        // Arrange — AI determines a specific author from the content/transcript
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Building APIs with .NET",
-                "excerpt": "Liuba Gontha walks through building APIs",
-                "collection": "videos",
-                "sections": ["dotnet"],
-                "tags": ["ASP.NET Core"],
-                "primary_section": "dotnet",
-                "author": "Liuba Gontha",
-                "content": "Content about APIs",
-                "explanation": ".NET content"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-        var item = new RawFeedItem
-        {
-            Title = "Building APIs with .NET",
-            ExternalUrl = "https://www.youtube.com/watch?v=abc123",
-            PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "Rob Bos YouTube",
-            CollectionName = "videos",
-            FeedLevelAuthor = "Rob Bos"
-        };
-
-        // Act
-        var result = await sut.CategorizeAsync(item, CancellationToken.None);
-
-        // Assert — AI-determined author takes precedence over feed-level author
-        result.Item.Should().NotBeNull();
-        result.Item!.Author.Should().Be("Liuba Gontha");
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithNoAiAuthor_FallsBackToFeedLevelAuthor()
-    {
-        // Arrange — AI omits the author field
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Azure Updates",
-                "excerpt": "Latest Azure updates",
-                "collection": "news",
-                "sections": ["azure"],
-                "tags": ["Azure"],
-                "primary_section": "azure",
-                "content": "Content about Azure",
-                "explanation": "Azure content"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-        var item = new RawFeedItem
-        {
-            Title = "Azure Updates",
-            ExternalUrl = "https://example.com/azure",
-            PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "Azure Blog",
-            CollectionName = "news",
-            FeedLevelAuthor = "Azure Team"
-        };
-
-        // Act
-        var result = await sut.CategorizeAsync(item, CancellationToken.None);
-
-        // Assert — falls back to FeedLevelAuthor when AI returns no author
-        result.Item.Should().NotBeNull();
-        result.Item!.Author.Should().Be("Azure Team");
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithAuthorOverride_UsesOverrideRegardlessOfAiAuthor()
-    {
-        // Arrange — AI returns its own author, but an operator-supplied override is set
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Build Something Great",
-                "excerpt": "A walkthrough by John",
-                "collection": "videos",
-                "sections": ["dotnet"],
-                "tags": ["dotnet"],
-                "primary_section": "dotnet",
-                "author": "John AI-Extracted",
-                "content": "Content here",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-        var item = new RawFeedItem
-        {
-            Title = "Build Something Great",
-            ExternalUrl = "https://example.com/build",
-            PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "TechHub",
-            CollectionName = "videos",
-            FeedLevelAuthor = "Feed Level Author",
-            AuthorOverride = "Scott Hanselman"
-        };
-
-        // Act
-        var result = await sut.CategorizeAsync(item, CancellationToken.None);
-
-        // Assert — AuthorOverride takes precedence over both AI-extracted author and FeedLevelAuthor
-        result.Item.Should().NotBeNull();
-        result.Item!.Author.Should().Be("Scott Hanselman");
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithExcerptOnly_NoContent_RejectsItem()
-    {
-        // Arrange — excerpt is present but content is empty
-        var aiJson = """
-            {
-                "included": true,
-                "title": "Excerpt Only",
-                "excerpt": "A solid excerpt",
-                "collection": "videos",
-                "sections": ["ai"],
-                "tags": ["azure-ai"],
-                "primary_section": "ai",
-                "content": "",
-                "explanation": "Included"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — failure: no fallbacks, missing content means rejection
-        result.Item.Should().BeNull();
-        result.IsFailure.Should().BeTrue();
-    }
-
-    // ── Invalid JSON Escape in Outer API Response ─────────────────────────────
-
-    [Fact]
-    public async Task CategorizeAsync_WhenOuterResponseContainsInvalidEscapes_SanitizesAndParses()
-    {
-        // Arrange — Simulate Azure OpenAI returning an improperly escaped response
-        // where \. appears in the outer JSON (invalid JSON escape).
-        // This reproduces the production error: "'.' is an invalid escapable character within a JSON string"
-        // Build a raw response that has \. in it (invalid JSON escape in the outer response)
-        // We manually construct this instead of using WrapInAiResponse to simulate the bug.
-        var rawResponse = "{\"choices\":[{\"message\":{\"content\":\"{\\\"included\\\": true, \\\"title\\\": \\\"Regex in .NET\\\", \\\"excerpt\\\": \\\"Using regex patterns like foo\\.bar\\\", \\\"collection\\\": \\\"blogs\\\", \\\"sections\\\": [\\\"dotnet\\\"], \\\"tags\\\": [\\\"regex\\\", \\\"dotnet\\\"], \\\"primary_section\\\": \\\"dotnet\\\", \\\"content\\\": \\\"Match URLs with patterns like https://example\\.com/path\\\", \\\"explanation\\\": \\\"relevant .NET content\\\"}\"},\"finish_reason\":\"stop\"}]}";
-
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, rawResponse));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — should successfully parse despite invalid escape in outer JSON
-        result.Item.Should().NotBeNull();
-        result.Item!.Title.Should().Be("Regex in .NET");
-        result.Item.Sections.Should().Contain("dotnet");
-        result.IsFailure.Should().BeFalse();
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WhenInnerContentContainsValidDoubleBackslashS_ParsesSuccessfully()
-    {
-        // Arrange — AI correctly escapes a regex pattern (\s) as \\s in its JSON output.
-        // The previous sanitizer regex incorrectly matched the second \+s in \\s and stripped
-        // the backslash, turning valid \\s into invalid \s → JsonException:
-        //   "'s' is an invalid escapable character within a JSON string"
-        var aiJson = """
-            {
-                "included": true,
-                "title": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
-                "excerpt": "How attackers exploit \\s+ patterns in AI pipelines",
-                "collection": "blogs",
-                "sections": ["security"],
-                "tags": ["security", "ai"],
-                "primary_section": "security",
-                "content": "Regex like \\s+ and \\w+ are used in shell injection attacks",
-                "explanation": "relevant security content"
-            }
-            """;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-
-        // Act
-        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
-
-        // Assert — should parse successfully, not fail with "'s' is an invalid escapable character"
-        result.IsFailure.Should().BeFalse();
-        result.Item.Should().NotBeNull();
-        result.Item!.Title.Should().Be("When prompts become shells: RCE vulnerabilities in AI agent frameworks");
-        result.Item.Sections.Should().Contain("security");
-    }
-
-    // ── SkipSalesPitchCheck Override ──────────────────────────────────────────
-
-    [Fact]
-    public void BuildUserPrompt_WithSkipSalesPitchCheckFalse_DoesNotIncludeOverride()
-    {
-        // Arrange — default item without the flag
-        var item = CreateRawItem();
-
-        // Act
-        var prompt = AiCategorizationService.BuildUserPrompt(item);
-
-        // Assert — no override line in the prompt
-        prompt.Should().NotContain("PROCESSING_OVERRIDE");
-        prompt.Should().NotContain("SkipSalesPitchCheck");
-    }
-
-    [Fact]
-    public void BuildUserPrompt_WithSkipSalesPitchCheckTrue_IncludesOverrideLine()
-    {
-        // Arrange — item with the flag set (manual operation)
-        var item = new RawFeedItem
-        {
-            Title = "My Awesome Tool Launch",
-            ExternalUrl = "https://example.com/tool",
-            PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "TechHub",
-            CollectionName = "blogs",
-            SkipSalesPitchCheck = true
-        };
-
-        // Act
-        var prompt = AiCategorizationService.BuildUserPrompt(item);
-
-        // Assert — override line is present with the correct instruction
-        prompt.Should().Contain("PROCESSING_OVERRIDE: SkipSalesPitchCheck=true");
-        prompt.Should().Contain("Sales Pitches");
-        // Regular content fields should still be present
-        prompt.Should().Contain("FEED: TechHub");
-        prompt.Should().Contain("COLLECTION: blogs");
-    }
-
-    [Fact]
-    public async Task CategorizeAsync_WithSkipSalesPitchCheck_SendsOverrideInPromptToAi()
-    {
-        // Arrange — capture what was sent to the AI client
-        var aiJson = """{ "included": false, "explanation": "Excluded" }""";
-        string? capturedBody = null;
-        _aiClient
-            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .Callback<string, CancellationToken>((body, _) => capturedBody = body)
-            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
-
-        var sut = CreateSut();
-        var item = new RawFeedItem
-        {
-            Title = "Author's Own Tool",
-            ExternalUrl = "https://example.com/tool",
-            PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "TechHub",
-            CollectionName = "news",
-            SkipSalesPitchCheck = true
-        };
-
-        // Act
-        await sut.CategorizeAsync(item, CancellationToken.None);
-
-        // Assert — the user message sent to the AI must contain the override
-        capturedBody.Should().NotBeNull();
-        using var doc = JsonDocument.Parse(capturedBody!);
-        var userContent = doc.RootElement
-            .GetProperty("messages")[1]
-            .GetProperty("content")
-            .GetString();
-        userContent.Should().Contain("PROCESSING_OVERRIDE: SkipSalesPitchCheck=true");
+        AiCategorizationService.UnwrapMarkdownFence(input).Should().Be(expected);
     }
 }

@@ -1,5 +1,6 @@
 using System.Globalization;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -7,7 +8,7 @@ using TechHub.Core.Configuration;
 namespace TechHub.Infrastructure.Services.RoundupGeneration;
 
 /// <summary>
-/// Step 7: Generates roundup metadata (title, tags, introduction) using AI.
+/// Generates roundup metadata (title, tags, introduction) using AI.
 /// </summary>
 internal sealed class RoundupMetadataGenerator
 {
@@ -55,11 +56,11 @@ internal sealed class RoundupMetadataGenerator
 
         var userMessage = string.Create(CultureInfo.InvariantCulture,
             $"Generate metadata for the {sectionTag} section roundup covering {weekDescription} based on this condensed content:\n\n" +
-            $"{condensedContent}\n\nReturn only JSON with fields: title, tags, introduction");
+            $"{condensedContent}");
 
         for (var attempt = 0; attempt < _options.MaxRetries; attempt++)
         {
-            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 4", ct);
+            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Metadata", AiProfile.RoundupMetadata, ct, MetadataResponseFormat());
 
             if (response is not null)
             {
@@ -74,12 +75,12 @@ internal sealed class RoundupMetadataGenerator
                 }
                 catch (JsonException ex)
                 {
-                    _logger.LogWarning(ex, "Step 4: Failed to parse metadata JSON (attempt {Attempt})", attempt + 1);
+                    _logger.LogWarning(ex, "Metadata: failed to parse JSON (attempt {Attempt})", attempt + 1);
                 }
             }
         }
 
-        _logger.LogWarning("Step 4: Metadata generation failed after retries, using fallback metadata");
+        _logger.LogWarning("Metadata generation failed after retries, using fallback metadata");
         return new RoundupMetadataAi
         {
             Title = string.Create(CultureInfo.InvariantCulture, $"Weekly {sectionTag} Roundup"),
@@ -87,6 +88,27 @@ internal sealed class RoundupMetadataGenerator
             Introduction = string.Create(CultureInfo.InvariantCulture, $"Welcome to this week's {sectionTag} roundup covering {weekDescription}.")
         };
     }
+
+    // Strict schema: the response is always valid JSON with exactly these fields.
+    private static JsonObject MetadataResponseFormat() => JsonNode.Parse("""
+        {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "roundup_metadata",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["title", "tags", "introduction"],
+              "properties": {
+                "title": { "type": "string" },
+                "tags": { "type": "array", "items": { "type": "string" } },
+                "introduction": { "type": "string" }
+              }
+            }
+          }
+        }
+        """)!.AsObject();
 
     /// <summary>
     /// AI-generated metadata for a weekly roundup.

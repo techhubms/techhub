@@ -2,7 +2,9 @@ using Dapper;
 using FluentAssertions;
 using Microsoft.Extensions.Logging.Abstractions;
 using Npgsql;
+using TechHub.Core.Interfaces;
 using TechHub.Core.Models.Admin;
+using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 
@@ -388,6 +390,68 @@ public class ContentReviewRepositoryTests
         approved.Should().BeTrue();
         (await GetItemColumnAsync(slug, "content")).Should().Be("Fixed **body**");
     }
+
+    [Fact]
+    public async Task ApproveAsync_MarkdownReview_InvalidatesTimelineEventsSoTheBackfillScansTheArticleAgain()
+    {
+        // Arrange — an article that was scanned for timeline events with its original text
+        var slug = await SeedContentItemAsync(content: "Original body");
+        var timelineRepo = new TimelineEventRepository(_fixture.Connection);
+        await timelineRepo.ReplaceEventsAsync(Collection, slug, [CreateEvent("preview")], ITimelineEventRepository.ExtractedFromSource,
+            ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+        var request = new TimelineBackfillRequest { Collection = Collection };
+        (await timelineRepo.GetBackfillCandidatesAsync(request, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken))
+            .Should().NotContain(c => c.Slug == slug, "a scanned article is not a candidate");
+        var id = await CreateReviewAsync(slug, ContentReviewChangeType.Markdown, "Original body", "Fixed **body**");
+
+        // Act
+        await _repository.ApproveAsync(id, TestContext.Current.CancellationToken);
+
+        // Assert — the events of the old text are gone and an ordinary backfill run picks the article up again
+        (await timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().BeEmpty();
+        (await timelineRepo.GetBackfillCandidatesAsync(request, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken))
+            .Should().Contain(c => c.Slug == slug, "an article whose text changed must be scanned again by an ordinary backfill run");
+    }
+
+    [Fact]
+    public async Task ApproveAsync_MarkdownReviewWithUnchangedText_KeepsTheTimelineEvents()
+    {
+        var slug = await SeedContentItemAsync(content: "Same body");
+        var timelineRepo = new TimelineEventRepository(_fixture.Connection);
+        await timelineRepo.ReplaceEventsAsync(Collection, slug, [CreateEvent("preview")], ITimelineEventRepository.ExtractedFromSource,
+            ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+        var id = await CreateReviewAsync(slug, ContentReviewChangeType.Markdown, "Same body", "Same body");
+
+        await _repository.ApproveAsync(id, TestContext.Current.CancellationToken);
+
+        (await timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().ContainSingle();
+        (await timelineRepo.GetBackfillCandidatesAsync(new TimelineBackfillRequest { Collection = Collection }, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken))
+            .Should().NotContain(c => c.Slug == slug);
+    }
+
+    [Fact]
+    public async Task ApproveAsync_TagsReview_KeepsTheTimelineEvents()
+    {
+        var slug = await SeedContentItemAsync();
+        var timelineRepo = new TimelineEventRepository(_fixture.Connection);
+        await timelineRepo.ReplaceEventsAsync(Collection, slug, [CreateEvent("preview")], ITimelineEventRepository.ExtractedFromSource,
+            ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+        var id = await CreateReviewAsync(slug, ContentReviewChangeType.Tags, ",AI,", ",AI,GitHub Copilot,");
+
+        await _repository.ApproveAsync(id, TestContext.Current.CancellationToken);
+
+        (await timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().ContainSingle();
+    }
+
+    private static TimelineEvent CreateEvent(string kind) => new()
+    {
+        Kind = kind,
+        Product = "GitHub Copilot",
+        Description = $"{kind} happens",
+        Date = new DateOnly(2026, 3, 10),
+        DatePrecision = "day",
+        DateSource = "explicit"
+    };
 
     [Fact]
     public async Task ApproveAsync_AuthorReview_AppliesFixedAuthor()

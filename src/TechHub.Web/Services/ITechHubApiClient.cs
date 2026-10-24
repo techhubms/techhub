@@ -360,6 +360,18 @@ internal interface ITechHubApiClient
     Task TriggerContentFixerAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Trigger a scan of stored articles for timeline events (preview, GA, deprecation, ...).
+    /// Resumable: articles that were scanned before are skipped unless <paramref name="force"/> is set.
+    /// POST /api/admin/timeline-backfill/trigger
+    /// </summary>
+    /// <param name="force">Scan articles that were already scanned again.</param>
+    /// <param name="publishedAfter">Only articles published on or after this date (yyyy-MM-dd).</param>
+    /// <param name="collection">Only articles of this collection.</param>
+    /// <param name="limit">Maximum number of articles to scan.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    Task TriggerTimelineBackfillAsync(bool force = false, string? publishedAfter = null, string? collection = null, int? limit = null, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Cancel the currently running background job.
     /// POST /api/admin/processing/cancel
     /// </summary>

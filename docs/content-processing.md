@@ -53,11 +53,17 @@ content current. The pipeline is implemented entirely in C# and runs inside `Tec
 2. **Content fetching** — Fetches the full article HTML for non-YouTube items. **YouTube video items
    are processed using available metadata only** (title, description, feed tags, YouTube API tags) —
    automatic transcript fetching is intentionally disabled to avoid blocking in cloud environments
-3. **AI categorization** — Sends content to Azure OpenAI (`AiCategorizationService`) using the
-   system prompt embedded in `TechHub.Infrastructure/Data/Resources/system-message.md`
-4. **Deduplication** — Checks `processed_urls` table to skip already-attempted URLs
-5. **Database write** — Upserts into `content_items` + `content_tags_expanded`; records the run
-   in `content_processing_jobs`
+3. **AI classification** — Sends content to Azure AI Foundry (`AiCategorizationService`) with the
+   classify prompt `TechHub.Infrastructure/Data/Resources/content-classify-system.md`. The answer is
+   strict JSON: include or exclude, sections, tags, excerpt, roundup metadata and timeline events
+   (see [AI Categorization Service](#ai-categorization-service)). Items that are excluded stop here
+   and cost one cheap call
+4. **AI rewrite** — Only for included items, a second model writes the cleaned-up markdown body
+   (`content-rewrite-system.md`) that continues from the excerpt
+5. **Deduplication** — Checks `processed_urls` table to skip already-attempted URLs
+6. **Database write** — Upserts into `content_items` + `content_tags_expanded` and replaces the
+   article's rows in `content_timeline_events` in one transaction (a failed event write stores nothing, so the
+   URL is retried on the next run), and records the run in `content_processing_jobs`
 
 Items that the AI determines are off-topic or low quality are skipped and recorded in
 `processed_urls` with status `skipped`.
@@ -125,7 +131,7 @@ RSS feeds are stored in the `rss_feed_configs` database table and managed direct
 
 ### AI Content Analysis
 
-The system analyzes content using `src/TechHub.Infrastructure/Data/Resources/system-message.md`.
+The classification step analyzes content using `src/TechHub.Infrastructure/Data/Resources/content-classify-system.md`.
 
 **Exclusion Rules** (applied first — if any apply, item is skipped):
 
@@ -147,40 +153,66 @@ The system analyzes content using `src/TechHub.Infrastructure/Data/Resources/sys
 
 ### AI Categorization Service
 
-`AiCategorizationService` sends each item to an Azure OpenAI chat deployment through
-`AiCompletionClient`. The client authenticates with Microsoft Entra ID (managed identity in Azure,
-`az login` locally), so no API key is configured. Configured under `"AiCategorization"`:
+`AiCategorizationService` processes each item in two AI steps through `AiCompletionClient`, which
+calls the Azure AI Foundry v1 chat completions API (`{Endpoint}/openai/v1/chat/completions`, the
+deployment goes in the request `model`). The client authenticates with Microsoft Entra ID (managed
+identity in Azure, `az login` locally), so no API key is configured.
+
+| Step | Profile | Output | Model |
+|---|---|---|---|
+| 1. Classify | `Classification` | Strict JSON (JSON schema): include/exclude, explanation, title, author, sections, primary section, tags, excerpt, `section_roles`, `key_facts`, `significance`, `content_kind`, `lifecycle`, `products`, `timeline_events` | `gpt-6.1-sol` |
+| 2. Rewrite | `Rewrite` | Markdown body, only for included items | `gpt-6.1-sol` |
+| Roundup writer | `RoundupNewsWriter` | Roundup topics | `gpt-6-astra` |
+| Roundup metadata | `RoundupMetadata` | Title, tags and introduction (strict JSON) | `gpt-6.1-sol` |
+| Timeline extraction | `TimelineExtraction` | Timeline events only (strict JSON), from already stored articles: the timeline backfill job | `gpt-6-luna` |
+
+`CategorizeAsync` runs step 1 and, when the item is included, step 2. A failing rewrite fails the
+whole item; nothing is stored. `ClassifyAsync` runs step 1 only and is used by the roundup
+metadata backfill, which never rewrites stored articles.
+
+The sections the classification may return (the `enum` of the JSON schema and the validation of the answer) are the configured
+sections in `AppSettings:Content:Sections`, without `all`. Adding or removing a section in configuration therefore changes both together.
+Classification runs on `gpt-6.1-sol` rather than the cheaper `gpt-6-luna` because the include/exclude decision needs the strictness of the old model: on 73 articles production had skipped, `gpt-6.1-sol` and `gpt-5.2` kept 95.9% excluded, `gpt-6-luna` only 89.0% (82.2% with `medium` reasoning). The `gpt-6-luna` deployment serves the timeline extraction. See [Evaluating Models](#evaluating-models).
+
+Configured under `"AiCategorization"`:
 
 | Setting | Default | Description |
 |---|---|---|
-| `Endpoint` | empty | Azure OpenAI endpoint URL |
-| `DeploymentName` | `gpt-5.2` in `appsettings.json` | Chat deployment to call |
-| `ApiVersion` | `2025-04-01-preview` in `appsettings.json` | Azure OpenAI REST API version |
+| `Endpoint` | empty | Azure AI Foundry endpoint URL |
+| `Profiles:<Step>:DeploymentName` | the models of the table above in `appsettings.json` | Deployment used by the step (`Classification`, `Rewrite`, `RoundupNewsWriter`, `RoundupMetadata`, `TimelineExtraction`) |
+| `Profiles:<Step>:ReasoningEffort` | `low` (`medium` for the roundup writer) in `appsettings.json`; empty omits it | `reasoning_effort` sent to the model, e.g. `low` or `medium` |
+| `Profiles:<Step>:ServiceTier` | `flex` in `appsettings.json` | `default` (Standard) or `flex` (50% cheaper, may queue) |
 | `MaxRetries` | `3` | Attempts per item on rate limits and transient failures |
 | `RateLimitDelaySeconds` | `15` | Wait between attempts on a rate limit without a `Retry-After` header (multiplied by the attempt number) |
-| `MaxContentLength` | `200000` | Declared in the options class, but nothing reads it today, so content is not truncated by this setting |
+| `FlexMaxWait` | `00:30:00` | How long a Flex request keeps retrying on Flex before it falls back |
+| `FlexMinRetryDelay` / `FlexMaxRetryDelay` | `00:00:30` / `00:02:00` | Backoff bounds between Flex retries. `FlexMaxRetryDelay` caps only the calculated backoff; a server `Retry-After` is honored in full (and the request falls back when that wait would exceed `FlexMaxWait`) |
+| `FlexFallbackToDefaultTier` | `true` | After `FlexMaxWait`, send the request once on the Standard tier. When `false`, the request is reported as rate limited |
+| `TimelineBackfillDelaySeconds` | `2` | Wait between articles during the timeline backfill |
 
 Behavior worth knowing:
 
-- **Retries**: A `429` waits for the server's `Retry-After` value when present. Network errors and timeouts back off 5 seconds times the attempt number. The HTTP client itself does not retry, so all retry logic lives in the service.
+- **Per-step models**: Models, reasoning effort and service tier are configuration only. Switching a step to another deployment, or back to `gpt-5.2` with `ServiceTier: default`, needs no code change. No `temperature` is sent.
+- **Flex**: A `429` on a Flex request means "no capacity right now". The client keeps retrying on Flex, then falls back to the Standard tier. Rate-limit responses do not count as circuit-breaker failures, so sustained capacity shortages cannot block retries or fallback; other transient failures still count. Interactive calls (ad-hoc URL add, apply transcript) always use the Standard tier so an admin never waits in a queue.
+- **Usage logging**: Every successful call logs the model, requested and served tier, prompt and cached tokens, and completion and reasoning tokens, so the real cost can be checked.
+- **Retries**: A `429` on the Standard tier waits for the server's `Retry-After` value when present. Network errors and timeouts back off 5 seconds times the attempt number. The HTTP client itself does not retry; its timeout is 15 minutes because Flex can queue.
 - **Non-retryable responses**: Content filter blocks and context-length errors return immediately and are recorded as failures with the Azure message.
-- **Response validation**: Responses that are empty, cut off (`finish_reason` other than `stop`), or not valid JSON are recorded as failures. A JSON sanitizer repairs invalid escape sequences before parsing.
-- **Section filter**: Sections returned by the AI that are not one of the seven configured sections are discarded.
-- **Content hash**: `content_hash` is the SHA-256 of title, content and excerpt.
+- **Response validation**: Responses that are empty, cut off (`finish_reason` other than `stop`) or not valid JSON are failures. A JSON sanitizer repairs invalid escape sequences before parsing. The classification is validated in code: sections must be one of the seven configured sections, the primary section must be one of the item's sections, `section_roles` may only name the item's sections, and the primary section is always `lead`.
+- **Content hash**: `content_hash` is the SHA-256 of title, rewritten content and excerpt.
 
 ### Roundup Metadata
 
-The AI extracts roundup metadata for each included item (stored in `ai_metadata` JSONB column):
+The classification step stores roundup metadata in the `ai_metadata` JSONB column with `schema_version = 2`:
 
-- `roundup_summary` — 1-2 sentence ready-to-use summary
-- `key_topics` — e.g. `["MCP", "Semantic Kernel", "RAG"]`
-- `roundup_relevance` — `high` / `medium` / `low`
-- `topic_type` — `announcement`, `tutorial`, `ga-release`, etc.
-- `impact_level` — significance rating
-- `time_sensitivity` — `immediate` / `this-week` / `this-month` / `long-term`
+- `key_facts` — 2 to 5 concrete facts (versions, dates, numbers) the roundup writer uses as its only source of such details
+- `significance` — `high` / `medium` / `low`: impact on developers, used to order articles in a roundup
+- `content_kind` — `announcement`, `tutorial`, `analysis`, `case-study`, `reference` or `event`
+- `lifecycle` — `new`, `preview`, `ga`, `update`, `deprecation`, `retirement` or `none`
+- `products` — 1 to 3 official product names, most relevant first. Related articles are sorted next to each other by their first product
+- `section_roles` — per section `lead` (full write-up in that section's roundup) or `brief` (one-line mention). The primary section is always `lead`; another section is `lead` only when the article has a distinct angle for its readers; when in doubt it is `lead`
 
-The weekly roundup generation passes this metadata (including the relevance label) to the AI
-prompt, but it does not use relevance to select articles (see [Roundup Pipeline](#roundup-pipeline)).
+Rows with the older summary-based metadata (no `schema_version`, `roundup_summary`, `key_topics`, ...)
+count as missing: the roundup generator re-classifies them on the fly (classification only) the first time
+they appear in a roundup.
 
 ### Admin Dashboard
 
@@ -188,6 +220,7 @@ The admin area at `/admin` provides:
 
 - **Dashboard** — Recent processing job history with status, duration, log output
 - **Run Now** button — Triggers an immediate out-of-schedule run
+- **Backfill Timeline** button — Starts the timeline backfill (see [Timeline Events](#timeline-events))
 - **RSS Feeds** — Full CRUD management of feed configurations
 - **Processed URLs** — Browse all processed URLs with status/reason; remove entries to retry
 - **Reviews** — Content review queue for proposed fixer changes (approve/reject before applying)
@@ -312,24 +345,33 @@ except `all`. For each section:
 
 1. **Article loading** — Queries `content_items` for items in that section (`sections_bitmask`),
    excluding roundups, with `created_at` inside the target week. An item that belongs to several
-   sections is therefore used by each of them
-2. **AI metadata backfill** — Any articles missing `ai_metadata` are categorized on-the-fly before proceeding
-3. **Existing check** — Sections whose roundup for that week already exists are skipped
-4. **Step 1/5** — AI creates news-style narrative stories per section
-5. **Step 2/5** — AI adds continuity by comparing with the previous week's roundup
-6. **Step 3/5** — AI condenses the content paragraph-by-paragraph. Skipped when `CondensingEnabled` is `false`
-7. **Step 4/5** — AI generates metadata: `title`, `tags`, `introduction`
-8. **Step 5/5** — Table of contents is built from `##`/`###` headers (pure C#)
+   sections is therefore loaded by each of them
+2. **Existing check** — Sections whose roundup for that week already exists are skipped
+3. **AI metadata backfill** — Articles without `schema_version` 2 metadata are classified on the fly
+   (classification only, never a rewrite). Their `ai_metadata` is updated and the timeline events the classification found are stored
+   in the same transaction, so the "Dates to know" block does not depend on the timeline backfill having run, and a failed event
+   write leaves the article on its old metadata version so it is retried
+4. **Lead and brief split (code)** — The article's role for this section decides: `lead` articles get a full
+   write-up, `brief` articles only a one-line mention. Lead articles are ordered by `significance`, then by first product
+5. **Writer (AI, one call)** — Writes the topics and "Other ... News" from the key facts of the lead articles.
+   It also receives only the headings of the previous week's roundup for an occasional "following last week's ..." sentence.
+   A response that does not finish normally is treated as a failed section; partial text is not saved.
+6. **Completeness check (code)** — Every lead article must be linked, as the complete destination of a Markdown link (a URL that is only a prefix of another linked URL does not count). Links the writer left out are appended to the "Other ... News" section, and a warning is logged
+7. **Metadata (AI, one call)** — Title, tags and introduction as strict JSON
+8. **Code-built blocks** — "Also relevant this week" (brief articles, each with its first key fact and, when the roundup of its primary section exists, a link to it for the full story) and "Dates to know" (see below), followed by the table of contents built from the `##`/`###` headers
 9. **DB write** — Upserts one roundup per section into `content_items` + `content_tags_expanded`
 
-**Relevance is not used for selection.** A `RoundupRelevanceFilter` (high relevance always, filled up
-to `MinArticlesPerSection` with medium and low) is registered in dependency injection, but the
-generator never calls it. All articles of the week go to the AI, each labelled with its
-`roundup_relevance`. As a result `MinArticlesPerSection` has no effect today, and the
-`NoArticlesAfterFiltering` outcome is never produced.
+Steps 1–7 run for every section first and nothing is written yet. Steps 8–9 run afterwards, once it is known which roundups exist
+(already stored, or generated in this run), so a one-line mention never links to a roundup that failed to generate; it then keeps the
+source-article link without the "Full story" sentence. The consequence is that a run that is cancelled before the writing phase stores no roundups of that run.
 
-Writing style guidelines (`docs/writing-style-guidelines.md`) are injected into every AI step
-prompt to ensure consistent tone and style throughout the roundup.
+**Dates to know** comes from `content_timeline_events` of the section's articles of the week, for dates after the roundup week:
+*Deadlines* are `deprecation`, `retirement`, `end-of-support`, `breaking-change` and `pricing-change`;
+*Coming up* are `preview`, `ga`, `launch` and `release`. Duplicates are merged and each group shows at most ten dates. The block is
+omitted when there is nothing to report.
+
+Writing style guidelines (`docs/writing-style-guidelines.md`) are injected into the writer and metadata prompts
+to ensure consistent tone and style throughout the roundup.
 
 ### Roundup Configuration
 
@@ -339,10 +381,74 @@ Configured under `"RoundupGenerator"` in `appsettings.json`:
 |---|---|---|
 | `Enabled` | `false` (`true` in Production) | Enables scheduled roundup generation. Manual triggers ignore it |
 | `RunHourUtc` | `8` | UTC hour to fire on Monday |
-| `MinArticlesPerSection` | `10` | Used only by the unused relevance filter, so it currently has no effect |
-| `CondensingEnabled` | `true` in code, `false` in `appsettings.json` | Runs the condensing step (step 3). The shipped configuration skips it |
 | `RateLimitDelaySeconds` | `15` | Delay between AI calls |
 | `MaxRetries` | `3` | Max retries per AI call |
+
+The models used by the writer and metadata steps are configured in the `RoundupNewsWriter` and `RoundupMetadata` profiles
+(see [AI Categorization Service](#ai-categorization-service)).
+
+## Timeline Events
+
+Articles often state dated lifecycle events: a feature goes to preview, becomes generally available, a version
+is deprecated or retired. The classification step extracts them and the application stores them with the article they come from.
+
+| Table | Purpose |
+|---|---|
+| `content_timeline_events` | One row per event: `kind`, `product`, `feature`, `description`, `event_date`, `date_precision` (`day`/`month`/`quarter`), `date_source`, `quote`, `extracted_from`, with a cascading foreign key to the source article |
+| `content_timeline_extractions` | One row per scanned article with the `prompt_version` and the number of events found, so the backfill is resumable |
+
+Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`, `retirement`, `end-of-support`, `breaking-change`, `pricing-change` and `event`.
+
+- **Dates come from code when they are "now".** When an article says a feature "is now generally available", the model reports `date_source: publication` and no date; code fills in the article's publication date (Europe/Brussels). Explicit dates are validated, and coarse dates are normalized to the first day of the month or quarter. Events with an unparseable date are skipped and logged.
+- **No quote check.** The `quote` is stored for spot checks. If the model proves unreliable, add a check that the quote appears in the article.
+- **Reprocessing replaces events.** An article's events are replaced whenever it is processed again, or when a transcript is applied. This happens in the same transaction as the article write (processing, transcript edit, roundup metadata backfill), so a failing event write never leaves a saved article with stale events or a scanned marker that does not match them. Replacements of the same article are serialized with a row lock on the article, so concurrent runs cannot store two event sets.
+- **Write-only for now.** The only reader is the roundup "Dates to know" block. The table is the basis for making the GitHub Copilot features page dynamic later.
+
+### Timeline Backfill
+
+Existing articles are scanned by `TimelineBackfillBackgroundService`, a manual-trigger-only job (job type `timeline-backfill`). Use
+the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/timeline-backfill/trigger` (see [admin.md](admin.md)).
+
+- Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`)
+- Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again
+- An admin edit that changes the title, excerpt, text or publication date (without extracting new events itself) removes the article's events and scan marker in the same transaction, so an ordinary run scans the edited article again
+- Options: `force`, `publishedAfter` (yyyy-MM-dd), `collection` and `limit`. Newest articles come first
+- Resumable: an article is marked as scanned only after its events are stored, so a cancelled or failed run can simply be started again. A failing article is logged and left for the next run
+- Roundups are never scanned
+- The job log lists failures and progress every 25 articles. The job row shows events stored (Added), scanned articles without events (Skipped) and scanned articles (Fixed)
+
+## Evaluating Models
+
+`tests/TechHub.Infrastructure.Tests/Evaluation/ModelEvaluationTests.cs` compares the configured models with production on real data. It is the
+tool to use before changing a model or a prompt. The stages call the real models, cost money and are skipped unless `TECHHUB_EVAL=1` is set.
+
+| Stage (test name) | Question | Output in `.tmp/eval/` |
+|---|---|---|
+| `ModelEvaluation_Classification` | Does the classification agree with production? 100 stored articles (included in production) and 50 re-fetched skipped URLs (excluded in production) | `classification.md` |
+| `ModelEvaluation_ClassificationControl` | How much of the disagreement is noise or caused by the prompt, not the model? Classifies a frozen set of 100 stored articles with `gpt-6-luna` twice and with `gpt-5.2` using the new prompt | `classification-control.md`, `golden-classification.json` (the frozen sample) |
+| `ModelEvaluation_SkippedControl` | Which models exclude what production excluded? Classifies about 70 frozen, re-fetched skipped URLs with `gpt-6-luna` (low, medium), `gpt-6.1-sol` and `gpt-5.2` | `skipped-control.md`, `golden-skipped.json` (the frozen article text) |
+| `ModelEvaluation_Rewrite` | How do the rewrite model at `low` and `medium` reasoning compare with the stored text? About 12 re-fetched articles | `rewrite.md`, `rewrite/*.md` (stored, low and medium side by side) |
+| `ModelEvaluation_Timeline` | Are the extracted dates right? About 50 articles | `timeline.md` |
+| `ModelEvaluation_Roundups` | Do the roundups of the latest week with a production roundup improve? Regenerates all sections locally | `roundups.md`, `roundups/production`, `roundups/new` |
+
+Every report ends with the token usage per model (prompt, cached, completion and reasoning tokens), which feeds the cost estimate.
+
+How to run:
+
+1. Restore production into the local database: `./scripts/Restore-Database.ps1 -Target local -TablesOnly`. The restore copies only the content tables
+2. Start the app once (`Run -WithoutTests`, then `Stop-Servers`) so that pending migrations are applied; the restored `_migrations` table does not contain the newest ones
+3. Sign in with `az login` (an account with the `Cognitive Services OpenAI User` role and an allowed IP) and set `TECHHUB_EVAL=1`
+4. Run one stage: `Run -TestProject Infrastructure.Tests -TestName ModelEvaluation_Classification`
+
+The roundup stage deletes the local copy of that week's roundups before regenerating them (production copies are saved first), and it changes `ai_metadata` of the
+local articles. Never point it at a production database. Run it against a fresh restore if you want to compare again.
+
+How to read the results:
+
+- A disagreement is not an error: the baseline is the production model, not the truth. Review the listed disagreements by hand
+- 100 articles means roughly ±5 percentage points of uncertainty on an agreement percentage
+- The stored text of included articles is already rewritten and has no feed data, so classifying it is somewhat easier than classifying a raw feed item. The skipped-URL check uses the real original articles
+- Each run samples different articles (`ORDER BY random()`). To compare two models, compare their reports on the same run. `ModelEvaluation_ClassificationControl` freezes its sample in `.tmp/eval/golden-classification.json` (delete the file to draw a new sample), so it can be repeated after a prompt change
 
 ## Troubleshooting
 

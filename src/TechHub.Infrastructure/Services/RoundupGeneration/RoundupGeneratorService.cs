@@ -1,10 +1,10 @@
 using System.Globalization;
-using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.Infrastructure.Services.RoundupGeneration;
 
@@ -16,21 +16,13 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
 {
     private static readonly Lazy<string> _writingGuidelines = RoundupAiHelper.LoadResource("roundup-writing-guidelines.md");
 
-    private static readonly JsonSerializerOptions _jsonOptions = new()
-    {
-        PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower
-    };
-
     private readonly ISectionRoundupRepository _roundupRepo;
     private readonly IContentFixerService _contentFixer;
     private readonly IAiCategorizationService _aiService;
     private readonly IContentItemWriteRepository _writeRepo;
     private readonly RoundupNewsWriter _newsWriter;
-    private readonly RoundupNarrativeEnhancer _narrativeEnhancer;
-    private readonly RoundupCondenser _condenser;
     private readonly RoundupMetadataGenerator _metadataGenerator;
     private readonly AppSettings _settings;
-    private readonly RoundupGeneratorOptions _options;
     private readonly ILogger<RoundupGeneratorService> _logger;
 
     public RoundupGeneratorService(
@@ -39,11 +31,8 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         IAiCategorizationService aiService,
         IContentItemWriteRepository writeRepo,
         RoundupNewsWriter newsWriter,
-        RoundupNarrativeEnhancer narrativeEnhancer,
-        RoundupCondenser condenser,
         RoundupMetadataGenerator metadataGenerator,
         IOptions<AppSettings> settings,
-        RoundupGeneratorOptions options,
         ILogger<RoundupGeneratorService> logger)
     {
         ArgumentNullException.ThrowIfNull(roundupRepo);
@@ -51,11 +40,8 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         ArgumentNullException.ThrowIfNull(aiService);
         ArgumentNullException.ThrowIfNull(writeRepo);
         ArgumentNullException.ThrowIfNull(newsWriter);
-        ArgumentNullException.ThrowIfNull(narrativeEnhancer);
-        ArgumentNullException.ThrowIfNull(condenser);
         ArgumentNullException.ThrowIfNull(metadataGenerator);
         ArgumentNullException.ThrowIfNull(settings);
-        ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
         _roundupRepo = roundupRepo;
@@ -63,11 +49,8 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         _aiService = aiService;
         _writeRepo = writeRepo;
         _newsWriter = newsWriter;
-        _narrativeEnhancer = narrativeEnhancer;
-        _condenser = condenser;
         _metadataGenerator = metadataGenerator;
         _settings = settings.Value;
-        _options = options;
         _logger = logger;
     }
 
@@ -80,6 +63,10 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         var failedGenerationCount = 0;
         var sectionsWithArticlesCount = 0;
         var totalArticles = 0;
+
+        // Roundups that exist or will exist once the prepared ones are written: only those may be linked as "full story".
+        var availableRoundupSections = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var prepared = new List<PreparedRoundup>();
 
         var sectionSlugs = _settings.Content.Sections
             .OrderBy(kvp => kvp.Value.Order)
@@ -112,18 +99,29 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                 ? enriched
                 : sectionArticles;
 
-            var sectionResult = await GenerateSectionRoundupAsync(sectionName, enrichedSectionArticles, weekStart, weekEnd, jobId, lp, ct);
-            switch (sectionResult.Result)
+            var section = await PrepareSectionRoundupAsync(sectionName, enrichedSectionArticles, weekStart, weekEnd, lp, ct);
+            switch (section.Outcome.Result)
             {
                 case RoundupGenerationResult.Generated:
-                    generatedSlugs.AddRange(sectionResult.Slugs);
+                    prepared.Add(section.Roundup!);
+                    availableRoundupSections.Add(sectionName);
                     break;
                 case RoundupGenerationResult.AlreadyExists:
+                    availableRoundupSections.Add(sectionName);
                     break;
                 case RoundupGenerationResult.ContentGenerationFailed:
                     failedGenerationCount++;
                     break;
             }
+        }
+
+        // The roundups are only written now that it is known which of them exist: a one-line mention in one roundup
+        // links to the full story in another roundup, which must not point at a roundup that failed to generate.
+        var sectionTitles = _settings.Content.Sections.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Title, StringComparer.OrdinalIgnoreCase);
+        foreach (var roundup in prepared)
+        {
+            ct.ThrowIfCancellationRequested();
+            generatedSlugs.Add(await WriteSectionRoundupAsync(roundup, sectionTitles, availableRoundupSections, jobId, lp, ct));
         }
 
         lp.Report($"Loaded {totalArticles} articles across {sectionsWithArticlesCount} sections");
@@ -147,12 +145,23 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         return RoundupGenerationOutcome.AlreadyExists;
     }
 
-    private async Task<RoundupGenerationOutcome> GenerateSectionRoundupAsync(
+    /// <summary>A section roundup that is fully generated but not written yet, because its links depend on the other sections.</summary>
+    private sealed record PreparedRoundup(
+        string SectionName,
+        string Slug,
+        DateOnly PublishDate,
+        string LeadContent,
+        IReadOnlyList<RoundupArticle> BriefArticles,
+        string DatesToKnow,
+        RoundupMetadataGenerator.RoundupMetadataAi Metadata);
+
+    private sealed record SectionPreparation(RoundupGenerationOutcome Outcome, PreparedRoundup? Roundup = null);
+
+    private async Task<SectionPreparation> PrepareSectionRoundupAsync(
         string sectionName,
         IReadOnlyList<RoundupArticle> sectionArticles,
         DateOnly weekStart,
         DateOnly weekEnd,
-        long? jobId,
         LoggingProgress lp,
         CancellationToken ct)
     {
@@ -162,63 +171,85 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         if (await _roundupRepo.RoundupExistsAsync(sectionName, slug, ct))
         {
             _logger.LogInformation("Roundup for section {SectionName} in week {WeekStart} already exists (slug={Slug}), skipping", sectionName, weekStart, slug);
-            return RoundupGenerationOutcome.AlreadyExists;
+            return new SectionPreparation(RoundupGenerationOutcome.AlreadyExists);
         }
 
         lp.Report($"Using {sectionArticles.Count} articles for section '{sectionName}'");
-        var sectionArticlesBySection = new Dictionary<string, IReadOnlyList<RoundupArticle>>(StringComparer.OrdinalIgnoreCase)
-        {
-            [sectionName] = sectionArticles
-        };
-
         var weekDescription = string.Create(CultureInfo.InvariantCulture,
             $"the week of {weekStart.ToString("MMMM d", CultureInfo.InvariantCulture)} to {weekEnd.ToString("MMMM d, yyyy", CultureInfo.InvariantCulture)}");
 
         var writingGuidelines = _writingGuidelines.Value;
 
-        lp.Report($"Step 1/5 ({sectionName}): Creating news-like stories");
-        var sectionStories = await _newsWriter.WriteAsync(sectionArticlesBySection, weekDescription, writingGuidelines, lp, ct);
-        if (string.IsNullOrWhiteSpace(sectionStories))
+        var (lead, brief) = RoundupArticleSelector.Split(sectionArticles, sectionName);
+
+        lp.Report($"Writer ({sectionName}): creating the topics from {lead.Count} lead articles ({brief.Count} one-line mentions)");
+
+        var sectionTitle = _settings.Content.Sections.TryGetValue(sectionName, out var sectionConfig) ? sectionConfig.Title : sectionName;
+        var sectionTitles = _settings.Content.Sections.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Title, StringComparer.OrdinalIgnoreCase);
+
+        var writerContent = string.Empty;
+        if (lead.Count > 0)
         {
-            _logger.LogError("Step 1 produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
-            return RoundupGenerationOutcome.ContentGenerationFailed;
+            var previousHeadings = RoundupHeadings.Extract(await _roundupRepo.GetPreviousRoundupContentAsync(sectionName, weekStart, ct));
+            var written = await _newsWriter.WriteAsync(sectionName, lead, previousHeadings, weekDescription, writingGuidelines, ct);
+            if (string.IsNullOrWhiteSpace(written))
+            {
+                _logger.LogError("The writer produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
+                return new SectionPreparation(RoundupGenerationOutcome.ContentGenerationFailed);
+            }
+
+            writerContent = written;
         }
 
-        lp.Report($"Step 2/5 ({sectionName}): Adding ongoing narrative");
-        var narrativeContent = await _narrativeEnhancer.EnhanceAsync(sectionStories, sectionName, weekStart, writingGuidelines, lp, ct);
-        if (string.IsNullOrWhiteSpace(narrativeContent))
+        var (completeContent, appended) = RoundupBlocksBuilder.EnsureLeadLinks(writerContent, lead, sectionTitle);
+        if (appended.Count > 0)
         {
-            _logger.LogError("Step 2 produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
-            return RoundupGenerationOutcome.ContentGenerationFailed;
+            _logger.LogWarning("The writer left out {Count} lead articles for section {SectionName}; appended them to the other news: {Titles}",
+                appended.Count, sectionName, string.Join("; ", appended.Select(a => a.Title)));
         }
 
-        string condensedContent;
-        if (_options.CondensingEnabled)
-        {
-            lp.Report($"Step 3/5 ({sectionName}): Condensing content");
-            condensedContent = await _condenser.CondenseAsync(narrativeContent, writingGuidelines, ct);
-        }
-        else
-        {
-            lp.Report($"Step 3/5 ({sectionName}): Condensing skipped (disabled)");
-            condensedContent = narrativeContent;
-        }
+        var datesToKnow = RoundupBlocksBuilder.BuildDatesToKnow(
+            await _roundupRepo.GetUpcomingDateEventsAsync(sectionName, weekStart, weekEnd, ct) ?? [], weekEnd);
 
-        lp.Report($"Step 4/5 ({sectionName}): Generating metadata");
-        var metadata = await _metadataGenerator.GenerateAsync(condensedContent, sectionName, weekDescription, writingGuidelines, ct);
+        // A section without lead articles has no written topics; the metadata then describes the one-line mentions.
+        // Only the text matters here, so the mentions are built as if every roundup exists.
+        var metadataInput = string.IsNullOrWhiteSpace(completeContent)
+            ? RoundupBlocksBuilder.BuildAlsoRelevant(brief, publishDate, sectionTitles, sectionTitles.Keys.ToHashSet(StringComparer.OrdinalIgnoreCase))
+            : completeContent;
 
-        lp.Report($"Step 5/5 ({sectionName}): Building final content");
-        var tableOfContents = RoundupContentBuilder.BuildTableOfContents(condensedContent);
-        var fullContent = RoundupContentBuilder.BuildFullContent(condensedContent, metadata.Introduction, tableOfContents);
+        lp.Report($"Metadata ({sectionName}): generating title, tags and introduction");
+        var metadata = await _metadataGenerator.GenerateAsync(metadataInput, sectionName, weekDescription, writingGuidelines, ct);
+
+        return new SectionPreparation(
+            RoundupGenerationOutcome.Generated(slug),
+            new PreparedRoundup(sectionName, slug, publishDate, completeContent, brief, datesToKnow, metadata));
+    }
+
+    private async Task<string> WriteSectionRoundupAsync(
+        PreparedRoundup roundup,
+        IReadOnlyDictionary<string, string> sectionTitles,
+        IReadOnlySet<string> availableRoundupSections,
+        long? jobId,
+        LoggingProgress lp,
+        CancellationToken ct)
+    {
+        var sectionName = roundup.SectionName;
+        var metadata = roundup.Metadata;
+
+        lp.Report($"Building the final content for section {sectionName}");
+        var alsoRelevant = RoundupBlocksBuilder.BuildAlsoRelevant(roundup.BriefArticles, roundup.PublishDate, sectionTitles, availableRoundupSections);
+        var sectionContent = string.Join("\n\n", new[] { roundup.LeadContent.Trim(), alsoRelevant, roundup.DatesToKnow }.Where(b => !string.IsNullOrWhiteSpace(b)));
+        var tableOfContents = RoundupContentBuilder.BuildTableOfContents(sectionContent);
+        var fullContent = RoundupContentBuilder.BuildFullContent(sectionContent, metadata.Introduction, tableOfContents);
         fullContent = _contentFixer.RepairMarkdown(fullContent);
 
         lp.Report($"Writing roundup to database for section '{sectionName}'");
-        var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, sectionArticlesBySection.Keys);
+        var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, [sectionName]);
         var normalizedTags = TagNormalizer.NormalizeTags(tagsWithSections);
-        await _roundupRepo.WriteRoundupAsync(sectionName, slug, publishDate, metadata.Title, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
+        await _roundupRepo.WriteRoundupAsync(sectionName, roundup.Slug, roundup.PublishDate, metadata.Title, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
 
-        lp.Report($"Roundup for section '{sectionName}' in week {weekStart}\u2013{weekEnd} written successfully (slug={slug})");
-        return RoundupGenerationOutcome.Generated(slug);
+        lp.Report($"Roundup for section '{sectionName}' written successfully (slug={roundup.Slug})");
+        return roundup.Slug;
     }
 
     /// <summary>
@@ -263,46 +294,41 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     PublishedAt = DateTimeOffset.FromUnixTimeSeconds(article.DateEpoch),
                     FeedName = article.FeedName,
                     CollectionName = article.CollectionName,
-                    FullContent = article.Content
+                    FullContent = string.IsNullOrWhiteSpace(article.Excerpt)
+                        ? article.Content
+                        : $"{article.Excerpt}\n\n{article.Content}"
                 };
 
-                var result = await _aiService.CategorizeAsync(rawItem, ct);
+                var result = await _aiService.ClassifyAsync(rawItem, ct);
                 if (result.Item?.RoundupMetadata is { } meta)
                 {
-                    // Update only ai_metadata on the existing row (avoids PK/unique-constraint conflicts)
-                    var aiMetadataJson = System.Text.Json.JsonSerializer.Serialize(new
+                    // Classification only: the stored article text is never rewritten by the backfill.
+                    // The classification already extracted the timeline events of the article: keep them, so the
+                    // "Dates to know" block of this roundup does not depend on the timeline backfill job having run.
+                    // Metadata and events are stored in one transaction, so a failing event write leaves the article
+                    // on its previous metadata version and the backfill retries it. The write is skipped when the
+                    // article was edited (e.g. a transcript was applied) while the classification ran.
+                    var stored = await _writeRepo.UpdateAiMetadataIfUnchangedAsync(
+                        article.CollectionName,
+                        article.Slug,
+                        ContentItemWriteRepository.SerializeAiMetadata(meta),
+                        new TimelineEventReplacement(
+                            result.Item.TimelineEvents,
+                            ITimelineEventRepository.ExtractedFromStoredContent,
+                            ITimelineEventRepository.CurrentPromptVersion),
+                        article.Revision,
+                        ct);
+
+                    if (!stored)
                     {
-                        roundup_summary = meta.Summary,
-                        key_topics = meta.KeyTopics,
-                        roundup_relevance = meta.Relevance,
-                        topic_type = meta.TopicType,
-                        impact_level = meta.ImpactLevel,
-                        time_sensitivity = meta.TimeSensitivity
-                    }, _jsonOptions);
-
-                    await _writeRepo.UpdateAiMetadataAsync(article.CollectionName, article.Slug, aiMetadataJson, ct);
-
-                    enriched[article.ExternalUrl] = new RoundupArticle
+                        _logger.LogInformation("Skipped AI metadata backfill for {Slug} in {Collection}: the article changed during classification", article.Slug, article.CollectionName);
+                    }
+                    else
                     {
-                        SectionName = article.SectionName,
-                        Title = article.Title,
-                        ExternalUrl = article.ExternalUrl,
-                        Slug = article.Slug,
-                        CollectionName = article.CollectionName,
-                        IsInternal = article.IsInternal,
-                        Content = article.Content,
-                        FeedName = article.FeedName,
-                        DateEpoch = article.DateEpoch,
-                        NeedsAiMetadata = false,
-                        Summary = meta.Summary,
-                        KeyTopics = meta.KeyTopics,
-                        Relevance = meta.Relevance,
-                        TopicType = meta.TopicType,
-                        ImpactLevel = meta.ImpactLevel,
-                        TimeSensitivity = meta.TimeSensitivity
-                    };
+                        enriched[article.ExternalUrl] = article.WithMetadata(meta);
 
-                    _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
+                        _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
+                    }
                 }
                 else
                 {
@@ -310,7 +336,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                 }
             }
 #pragma warning disable CA1031 // Best-effort: continue with other articles if one fails
-            catch (Exception ex) when (ex is not OperationCanceledException)
+            catch (Exception ex) when (!(ex is OperationCanceledException && ct.IsCancellationRequested))
             {
                 errorCount++;
                 _logger.LogWarning(ex, "Failed to backfill AI metadata for {Slug} in {Collection}", article.Slug, article.CollectionName);
@@ -333,27 +359,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         foreach (var (sectionData, articles) in articlesBySection)
         {
             updated[sectionData] = articles
-                .Select(a => enriched.TryGetValue(a.ExternalUrl, out var e)
-                    ? new RoundupArticle
-                    {
-                        SectionName = a.SectionName,
-                        Title = e.Title,
-                        ExternalUrl = e.ExternalUrl,
-                        Slug = e.Slug,
-                        CollectionName = e.CollectionName,
-                        IsInternal = e.IsInternal,
-                        Content = e.Content,
-                        FeedName = e.FeedName,
-                        DateEpoch = e.DateEpoch,
-                        NeedsAiMetadata = false,
-                        Summary = e.Summary,
-                        KeyTopics = e.KeyTopics,
-                        Relevance = e.Relevance,
-                        TopicType = e.TopicType,
-                        ImpactLevel = e.ImpactLevel,
-                        TimeSensitivity = e.TimeSensitivity
-                    }
-                    : a)
+                .Select(a => enriched.TryGetValue(a.ExternalUrl, out var e) ? e with { SectionName = a.SectionName } : a)
                 .ToList();
         }
 

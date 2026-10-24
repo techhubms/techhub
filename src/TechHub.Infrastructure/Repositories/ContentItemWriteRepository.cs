@@ -48,6 +48,38 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
     {
         ArgumentNullException.ThrowIfNull(item);
 
+        using var transaction = BeginTransaction();
+        try
+        {
+            await UpsertAsync(item, transaction, ct);
+            await TimelineEventWriter.ReplaceAsync(
+                _connection,
+                transaction,
+                item.CollectionName,
+                item.Slug,
+                new TimelineEventReplacement(item.TimelineEvents, ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion),
+                ct);
+            transaction.Commit();
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
+    }
+
+    private IDbTransaction BeginTransaction()
+    {
+        if (_connection.State != ConnectionState.Open)
+        {
+            _connection.Open();
+        }
+
+        return _connection.BeginTransaction();
+    }
+
+    private async Task UpsertAsync(ProcessedContentItem item, IDbTransaction transaction, CancellationToken ct)
+    {
         // Compute section booleans and bitmask from section names
         var sectionSet = new HashSet<string>(item.Sections, StringComparer.OrdinalIgnoreCase);
         var isAi = sectionSet.Contains("ai");
@@ -105,15 +137,7 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
         var tagsCsv = tags.Count > 0 ? $",{string.Join(",", tags)}," : string.Empty;
 
         var aiMetadataJson = item.RoundupMetadata != null
-            ? JsonSerializer.Serialize(new
-            {
-                roundup_summary = item.RoundupMetadata.Summary,
-                key_topics = item.RoundupMetadata.KeyTopics,
-                roundup_relevance = item.RoundupMetadata.Relevance,
-                topic_type = item.RoundupMetadata.TopicType,
-                impact_level = item.RoundupMetadata.ImpactLevel,
-                time_sensitivity = item.RoundupMetadata.TimeSensitivity
-            }, _jsonOptions)
+            ? SerializeAiMetadata(item.RoundupMetadata)
             : null;
 
         const string Upsert = @"
@@ -170,12 +194,14 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
                 ContentHash = item.ContentHash,
                 AiMetadata = aiMetadataJson
             },
+            transaction,
             cancellationToken: ct));
 
         // Rebuild expanded tags
         await _connection.ExecuteAsync(new CommandDefinition(
             "DELETE FROM content_tags_expanded WHERE collection_name = @Collection AND slug = @Slug",
             new { Collection = item.CollectionName, Slug = item.Slug },
+            transaction,
             cancellationToken: ct));
 
         if (tags.Count > 0)
@@ -195,6 +221,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
                          @IsMl, @IsSecurity, @Bitmask)
                       ON CONFLICT DO NOTHING",
                     row,
+                    transaction,
                     cancellationToken: ct));
             }
         }
@@ -205,6 +232,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
             await _connection.ExecuteAsync(new CommandDefinition(
                 "INSERT INTO vscode_update_items (collection_name, slug) VALUES (@Collection, @Slug) ON CONFLICT DO NOTHING",
                 new { Collection = item.CollectionName, Slug = item.Slug },
+                transaction,
                 cancellationToken: ct));
         }
 
@@ -213,6 +241,45 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
 
     /// <inheritdoc />
     public async Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, CancellationToken ct = default)
+    {
+        await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction: null, ct);
+    }
+
+    /// <inheritdoc />
+    public async Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, long expectedRevision, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(timeline);
+
+        using var transaction = BeginTransaction();
+        try
+        {
+            // Lock the article first, then compare: an edit that committed meanwhile is visible and an edit that is
+            // still running blocks here until it has committed.
+            var currentRevision = await _connection.QuerySingleOrDefaultAsync<long?>(new CommandDefinition(
+                $"SELECT {TimelineEventWriter.RevisionExpression} FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug FOR NO KEY UPDATE",
+                new { CollectionName = collectionName, Slug = slug },
+                transaction,
+                cancellationToken: ct));
+
+            if (currentRevision != expectedRevision)
+            {
+                transaction.Rollback();
+                return false;
+            }
+
+            await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct);
+            await TimelineEventWriter.ReplaceAsync(_connection, transaction, collectionName, slug, timeline, ct);
+            transaction.Commit();
+            return true;
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
+    }
+
+    private async Task ExecuteUpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, IDbTransaction? transaction, CancellationToken ct)
     {
         const string Sql = @"
 UPDATE content_items
@@ -224,7 +291,41 @@ UPDATE content_items
         await _connection.ExecuteAsync(new CommandDefinition(
             Sql,
             new { CollectionName = collectionName, Slug = slug, AiMetadata = aiMetadataJson },
+            transaction,
             cancellationToken: ct));
+    }
+
+    /// <summary>
+    /// Serializes roundup metadata to the <c>ai_metadata</c> JSON: schema version 2 stores the classification output
+    /// (key facts, significance, section roles, ...), version 1 the original summary-based fields.
+    /// </summary>
+    public static string SerializeAiMetadata(RoundupMetadata metadata)
+    {
+        ArgumentNullException.ThrowIfNull(metadata);
+
+        if (metadata.SchemaVersion >= RoundupMetadata.CurrentSchemaVersion)
+        {
+            return JsonSerializer.Serialize(new
+            {
+                schema_version = metadata.SchemaVersion,
+                key_facts = metadata.KeyFacts,
+                significance = metadata.Significance,
+                content_kind = metadata.ContentKind,
+                lifecycle = metadata.Lifecycle,
+                products = metadata.Products,
+                section_roles = metadata.SectionRoles
+            }, _jsonOptions);
+        }
+
+        return JsonSerializer.Serialize(new
+        {
+            roundup_summary = metadata.Summary,
+            key_topics = metadata.KeyTopics,
+            roundup_relevance = metadata.Relevance,
+            topic_type = metadata.TopicType,
+            impact_level = metadata.ImpactLevel,
+            time_sensitivity = metadata.TimeSensitivity
+        }, _jsonOptions);
     }
 
     internal static List<object> BuildTagWords(

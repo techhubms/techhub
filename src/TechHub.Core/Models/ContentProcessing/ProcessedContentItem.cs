@@ -5,6 +5,8 @@ namespace TechHub.Core.Models.ContentProcessing;
 /// </summary>
 public sealed class ProcessedContentItem
 {
+    private static readonly TimeZoneInfo _brusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+
     /// <summary>URL-friendly slug derived from the title and date.</summary>
     public required string Slug { get; init; }
 
@@ -62,6 +64,11 @@ public sealed class ProcessedContentItem
     public RoundupMetadata? RoundupMetadata { get; init; }
 
     /// <summary>
+    /// Dated lifecycle events (preview, GA, deprecation, ...) the article states, extracted by the classification step.
+    /// </summary>
+    public IReadOnlyList<TimelineEvent> TimelineEvents { get; init; } = [];
+
+    /// <summary>
     /// Creates a copy of this item with the specified subcollection name.
     /// </summary>
     public ProcessedContentItem WithSubcollectionName(string subcollectionName)
@@ -82,7 +89,8 @@ public sealed class ProcessedContentItem
             Sections = Sections,
             PrimarySectionName = PrimarySectionName,
             ContentHash = ContentHash,
-            RoundupMetadata = RoundupMetadata
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
         };
     }
 
@@ -107,16 +115,48 @@ public sealed class ProcessedContentItem
             Sections = Sections,
             PrimarySectionName = PrimarySectionName,
             ContentHash = ContentHash,
-            RoundupMetadata = RoundupMetadata
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
+        };
+    }
+
+    /// <summary>
+    /// Creates a copy of this item with the rewritten content and the content hash computed over it.
+    /// </summary>
+    public ProcessedContentItem WithRewrittenContent(string content, string contentHash)
+    {
+        return new ProcessedContentItem
+        {
+            Slug = Slug,
+            Title = Title,
+            Content = content,
+            Excerpt = Excerpt,
+            DateEpoch = DateEpoch,
+            CollectionName = CollectionName,
+            SubcollectionName = SubcollectionName,
+            ExternalUrl = ExternalUrl,
+            Author = Author,
+            FeedName = FeedName,
+            Tags = Tags,
+            Sections = Sections,
+            PrimarySectionName = PrimarySectionName,
+            ContentHash = contentHash,
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
         };
     }
 
     /// <summary>
     /// Creates a copy of this item with the specified date epoch.
-    /// Used to cap future-dated items to the processing date.
+    /// Used to cap future-dated items to the processing date. Timeline events dated from the publication date
+    /// (<see cref="TimelineEvent.DateSourcePublication"/>) move to the new Europe/Brussels publication date;
+    /// events with explicit dates are kept as they are.
     /// </summary>
     public ProcessedContentItem WithDateEpoch(long dateEpoch)
     {
+        var publicationDate = DateOnly.FromDateTime(
+            TimeZoneInfo.ConvertTime(DateTimeOffset.FromUnixTimeSeconds(dateEpoch), _brusselsTimeZone).DateTime);
+
         return new ProcessedContentItem
         {
             Slug = Slug,
@@ -133,7 +173,10 @@ public sealed class ProcessedContentItem
             Sections = Sections,
             PrimarySectionName = PrimarySectionName,
             ContentHash = ContentHash,
-            RoundupMetadata = RoundupMetadata
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
+                .Select(e => e.DateSource == TimelineEvent.DateSourcePublication ? e with { Date = publicationDate } : e)
+                .ToList()
         };
     }
 
@@ -158,7 +201,8 @@ public sealed class ProcessedContentItem
             Sections = Sections,
             PrimarySectionName = PrimarySectionName,
             ContentHash = ContentHash,
-            RoundupMetadata = RoundupMetadata
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = TimelineEvents
         };
     }
 }
