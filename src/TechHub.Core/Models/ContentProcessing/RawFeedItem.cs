@@ -66,4 +66,10 @@ public sealed class RawFeedItem
     /// and <see cref="FeedLevelAuthor"/>.
     /// </summary>
     public string? AuthorOverride { get; init; }
+
+    /// <summary>
+    /// When <c>true</c> an operator is waiting for the result (ad-hoc add, apply transcript).
+    /// AI calls for such items always use the Standard service tier instead of Flex, so they are not queued.
+    /// </summary>
+    public bool IsInteractive { get; init; }
 }

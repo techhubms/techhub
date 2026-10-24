@@ -7,6 +7,22 @@ public sealed class ApplyTranscriptRequest
     public string? Transcript { get; init; }
 }
 
+/// <summary>DTO for starting the timeline backfill job.</summary>
+public sealed class TimelineBackfillRequestDto
+{
+    /// <summary>Scan articles that were already scanned again.</summary>
+    public bool Force { get; init; }
+
+    /// <summary>Only articles published on or after this date (yyyy-MM-dd).</summary>
+    public string? PublishedAfter { get; init; }
+
+    /// <summary>Only articles of this collection (e.g. "news").</summary>
+    public string? Collection { get; init; }
+
+    /// <summary>Maximum number of articles to scan.</summary>
+    public int? Limit { get; init; }
+}
+
 /// <summary>DTO for creating/updating RSS feed configurations.</summary>
 public sealed class FeedConfigRequest
 {

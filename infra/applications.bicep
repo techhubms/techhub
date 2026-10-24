@@ -93,8 +93,16 @@ var prodIdentityName = 'id-techhub-prod'
 // Database name — must match the default in modules/postgres.bicep
 var prodDatabaseName = 'techhub'
 
-// OpenAI model deployment name — must match the default in modules/openai.bicep
-var openAiDeploymentModelName = 'gpt-5.2'
+// Model per AI pipeline step (issue #581, option B). The deployments are created by modules/openai.bicep (Phase 1).
+// Background steps run on the Flex tier (50% cheaper, may queue; the app falls back to Standard after 30 minutes).
+// Rollback: set the deploymentName of a step back to 'gpt-5.2' with serviceTier 'default' and redeploy Phase 2.
+var aiProfiles = {
+  Classification: { deploymentName: 'gpt-6.1-sol', reasoningEffort: 'low', serviceTier: 'flex' }
+  Rewrite: { deploymentName: 'gpt-6.1-sol', reasoningEffort: 'low', serviceTier: 'flex' }
+  RoundupNewsWriter: { deploymentName: 'gpt-6-astra', reasoningEffort: 'medium', serviceTier: 'flex' }
+  RoundupMetadata: { deploymentName: 'gpt-6.1-sol', reasoningEffort: 'low', serviceTier: 'flex' }
+  TimelineExtraction: { deploymentName: 'gpt-6-luna', reasoningEffort: 'low', serviceTier: 'flex' }
+}
 
 // ============================================================================
 // Existing resource references — read outputs from Phase 1 infrastructure
@@ -139,11 +147,6 @@ resource postgresDatabase 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2
 resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' existing = {
   scope: resourceGroup
   name: openAiName
-}
-
-resource openAiModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' existing = {
-  parent: openAiAccount
-  name: openAiDeploymentModelName
 }
 
 // ============================================================================
@@ -194,7 +197,7 @@ module apiApp './modules/api.bicep' = {
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
     aiCategorizationEndpoint: openAiAccount.properties.endpoint
-    aiCategorizationDeploymentName: openAiModelDeployment.name
+    aiProfiles: aiProfiles
     contentProcessorEnabled: true
     roundupGeneratorEnabled: true
     newsletterScheduledSendEnabled: true

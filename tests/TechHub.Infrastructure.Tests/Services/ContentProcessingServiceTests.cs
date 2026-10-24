@@ -31,6 +31,7 @@ public class ContentProcessingServiceTests
     private readonly ContentProcessingJobRepository _jobRepo;
     private readonly ProcessedUrlRepository _processedUrlRepo;
     private readonly ContentItemWriteRepository _writeRepo;
+    private readonly TimelineEventRepository _timelineRepo;
     private readonly Mock<IRssFeedConfigRepository> _feedRepo = new();
 
     public ContentProcessingServiceTests(DatabaseFixture<ContentProcessingServiceTests> fixture)
@@ -41,6 +42,7 @@ public class ContentProcessingServiceTests
         _jobRepo = new ContentProcessingJobRepository(fixture.Connection, new PostgresConnectionFactory(fixture.DataSource), NullLogger<ContentProcessingJobRepository>.Instance);
         _processedUrlRepo = new ProcessedUrlRepository(fixture.Connection, NullLogger<ProcessedUrlRepository>.Instance);
         _writeRepo = new ContentItemWriteRepository(fixture.Connection, NullLogger<ContentItemWriteRepository>.Instance);
+        _timelineRepo = new TimelineEventRepository(fixture.Connection);
     }
 
     private ContentProcessingService CreateService(ContentProcessorOptions? options = null, TimeProvider? timeProvider = null)
@@ -181,6 +183,56 @@ public class ContentProcessingServiceTests
         // URL should now be recorded in processed_urls
         var exists = await _processedUrlRepo.ExistsAsync(Url, CancellationToken.None);
         exists.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task RunAsync_IncludedItemWithTimelineEvents_StoresThemWithTheArticle()
+    {
+        // Arrange
+        const string Url = "https://example.com/timeline-pipeline-item";
+        const string Slug = "timeline-pipeline-item";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(Url);
+
+        TimelineEvent Event(string kind) => new()
+        {
+            Kind = kind,
+            Product = "GitHub Copilot",
+            Description = $"{kind} happens",
+            Date = new DateOnly(2026, 3, 10),
+            DatePrecision = "day",
+            DateSource = "explicit"
+        };
+
+        var processed = CreateProcessedItem(Url, Slug).WithTags(["csharp"]);
+        var withEvents = new ProcessedContentItem
+        {
+            Slug = processed.Slug,
+            Title = processed.Title,
+            Excerpt = processed.Excerpt,
+            DateEpoch = processed.DateEpoch,
+            CollectionName = processed.CollectionName,
+            ExternalUrl = processed.ExternalUrl,
+            FeedName = processed.FeedName,
+            ContentHash = processed.ContentHash,
+            Sections = processed.Sections,
+            PrimarySectionName = processed.PrimarySectionName,
+            Tags = processed.Tags,
+            TimelineEvents = [Event("preview"), Event("ga")]
+        };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = withEvents, Explanation = "relevant content" });
+
+        // Act
+        await CreateService().RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — events are stored with the article
+        var stored = await _timelineRepo.GetEventsForItemAsync("blogs", Slug, CancellationToken.None);
+        stored.Select(e => e.Kind).Should().BeEquivalentTo("preview", "ga");
+        stored.Should().OnlyContain(e => e.ExtractedFrom == "source");
     }
 
     [Fact]
@@ -1225,7 +1277,28 @@ public class ContentProcessingServiceTests
             ContentHash = $"hash-{testId}",
             Sections = ["ai"],
             PrimarySectionName = "ai",
-            Tags = []
+            Tags = [],
+            TimelineEvents =
+            [
+                new TimelineEvent
+                {
+                    Kind = "ga",
+                    Product = "GitHub Copilot",
+                    Description = "Is generally available today",
+                    Date = new DateOnly(2026, 1, 20),
+                    DatePrecision = "day",
+                    DateSource = TimelineEvent.DateSourcePublication
+                },
+                new TimelineEvent
+                {
+                    Kind = "retirement",
+                    Product = "GitHub Copilot",
+                    Description = "Old model retires",
+                    Date = new DateOnly(2026, 3, 10),
+                    DatePrecision = "day",
+                    DateSource = TimelineEvent.DateSourceExplicit
+                }
+            ]
         };
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
@@ -1246,6 +1319,11 @@ public class ContentProcessingServiceTests
         storedEpoch.Should().NotBeNull("item should have been written to DB");
         storedEpoch!.Value.Should().Be(frozenNow.ToUnixTimeSeconds(),
             "future-dated items must be capped to the processing time");
+
+        // Publication-dated events follow the capped date (Brussels); explicit dates are preserved
+        var events = await _timelineRepo.GetEventsForItemAsync("blogs", slug, CancellationToken.None);
+        events.Single(e => e.Kind == "ga").EventDate.Should().Be(new DateOnly(2026, 1, 15));
+        events.Single(e => e.Kind == "retirement").EventDate.Should().Be(new DateOnly(2026, 3, 10));
     }
 
     // ── ProcessSingleAsync Job Tracking ────────────────────────────────────

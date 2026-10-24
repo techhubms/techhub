@@ -299,6 +299,11 @@ public sealed class ContentReviewRepository : IContentReviewRepository
             WHERE collection_name = @Collection AND slug = @Slug
             """;
 
+        if (review.ChangeType == ContentReviewChangeType.Markdown)
+        {
+            await InvalidateTimelineWhenContentChangesAsync(review, transaction, ct);
+        }
+
         await _connection.ExecuteAsync(
             new CommandDefinition(sql, new
             {
@@ -311,6 +316,40 @@ public sealed class ContentReviewRepository : IContentReviewRepository
         {
             await RebuildExpandedTagsAsync(review, transaction, ct);
         }
+    }
+
+    /// <summary>
+    /// Approving a markdown review replaces the article text, so the timeline events extracted from the old text and
+    /// the extraction marker are removed and an ordinary backfill run scans the article again. An approval that leaves
+    /// the text unchanged keeps them. The article row is locked first (like an admin edit) so a concurrent backfill
+    /// write has committed before the comparison.
+    /// </summary>
+    private async Task InvalidateTimelineWhenContentChangesAsync(ContentReview review, IDbTransaction transaction, CancellationToken ct)
+    {
+        var parameters = new { Collection = review.CollectionName, Slug = review.Slug, Value = review.FixedValue };
+
+        await _connection.ExecuteAsync(new CommandDefinition(
+            "SELECT 1 FROM content_items WHERE collection_name = @Collection AND slug = @Slug FOR NO KEY UPDATE",
+            parameters,
+            transaction: transaction,
+            cancellationToken: ct));
+
+        const string Changed = @"
+EXISTS (SELECT 1 FROM content_items ci
+         WHERE ci.collection_name = @Collection AND ci.slug = @Slug
+           AND ci.content IS DISTINCT FROM @Value)";
+
+        await _connection.ExecuteAsync(new CommandDefinition(
+            $"DELETE FROM content_timeline_events WHERE collection_name = @Collection AND item_slug = @Slug AND {Changed}",
+            parameters,
+            transaction: transaction,
+            cancellationToken: ct));
+
+        await _connection.ExecuteAsync(new CommandDefinition(
+            $"DELETE FROM content_timeline_extractions WHERE collection_name = @Collection AND item_slug = @Slug AND {Changed}",
+            parameters,
+            transaction: transaction,
+            cancellationToken: ct));
     }
 
     private async Task RebuildExpandedTagsAsync(ContentReview review, IDbTransaction transaction, CancellationToken ct)

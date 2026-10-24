@@ -1513,6 +1513,54 @@ public class TechHubApiClientAdminTests
     }
 
     [Fact]
+    public async Task TriggerTimelineBackfillAsync_PostsTheOptionsToTheTriggerRoute()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.Accepted);
+
+        // Act
+        await fixture.Client.TriggerTimelineBackfillAsync(
+            force: true, publishedAfter: "2026-01-01", collection: "news", limit: 50, cancellationToken: TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("POST");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/timeline-backfill/trigger");
+        using var body = System.Text.Json.JsonDocument.Parse(fixture.Handler.Body!);
+        body.RootElement.GetProperty("force").GetBoolean().Should().BeTrue();
+        body.RootElement.GetProperty("publishedAfter").GetString().Should().Be("2026-01-01");
+        body.RootElement.GetProperty("collection").GetString().Should().Be("news");
+        body.RootElement.GetProperty("limit").GetInt32().Should().Be(50);
+    }
+
+    [Fact]
+    public async Task TriggerTimelineBackfillAsync_WithoutOptions_PostsDefaults()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.Accepted);
+
+        // Act
+        await fixture.Client.TriggerTimelineBackfillAsync(cancellationToken: TestContext.Current.CancellationToken);
+
+        // Assert
+        using var body = System.Text.Json.JsonDocument.Parse(fixture.Handler.Body!);
+        body.RootElement.GetProperty("force").GetBoolean().Should().BeFalse();
+        body.RootElement.GetProperty("limit").ValueKind.Should().Be(System.Text.Json.JsonValueKind.Null);
+    }
+
+    [Fact]
+    public async Task TriggerTimelineBackfillAsync_ServerError_Throws()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.InternalServerError);
+
+        // Act
+        var act = () => fixture.Client.TriggerTimelineBackfillAsync(cancellationToken: TestContext.Current.CancellationToken);
+
+        // Assert
+        await act.Should().ThrowAsync<HttpRequestException>();
+    }
+
+    [Fact]
     public async Task GetDatabaseStatisticsAsync_ServerError_Throws()
     {
         // Arrange

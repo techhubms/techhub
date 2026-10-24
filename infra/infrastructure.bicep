@@ -52,9 +52,6 @@ param postgresAdminPassword string = ''
 @description('Azure AI Foundry (OpenAI) resource name')
 param openAiName string = 'oai-techhub-prod'
 
-@description('Azure AI Foundry model capacity (TPM in thousands)')
-param openAiModelCapacity int = 100
-
 @description('Comma-separated admin IP addresses for PostgreSQL and Key Vault firewall rules')
 @minLength(7)
 param adminIpAddresses string
@@ -193,7 +190,6 @@ module openai './modules/openai.bicep' = {
   params: {
     location: location
     openAiName: openAiName
-    modelCapacity: openAiModelCapacity
     adminIpAddresses: adminIpList
     // App Service reaches AI Foundry over a private endpoint in the dedicated subnet —
     // no fully-open public access needed for application traffic.

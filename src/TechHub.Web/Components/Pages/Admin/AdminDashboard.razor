@@ -48,6 +48,17 @@
                     <span>▶ Run Cleanup</span>
                 }
             </button>
+            <button class="btn" @onclick="TriggerTimelineBackfillAsync" disabled="@_triggeringTimelineBackfill"
+                    title="Scan stored articles for dated lifecycle events (preview, GA, deprecation, ...). Resumable.">
+                @if (_triggeringTimelineBackfill)
+                {
+                    <span>Triggering…</span>
+                }
+                else
+                {
+                    <span>▶ Backfill Timeline</span>
+                }
+            </button>
             @if (HasRunningJob)
             {
                 <button class="btn-danger" @onclick="CancelRunningJobAsync" disabled="@_cancelling">
@@ -145,7 +156,7 @@
                                 @job.ErrorCount
                             </td>
                             <td class="admin-cell-number">
-                                @if (job.JobType == ContentProcessingJobType.ContentCleanup)
+                                @if (job.JobType is ContentProcessingJobType.ContentCleanup or ContentProcessingJobType.TimelineBackfill)
                                 {
                                     @job.ItemsFixed
                                 }
@@ -155,7 +166,7 @@
                                 }
                             </td>
                             <td>
-                                @if (job.JobType != ContentProcessingJobType.ContentCleanup)
+                                @if (job.JobType is not (ContentProcessingJobType.ContentCleanup or ContentProcessingJobType.TimelineBackfill))
                                 {
                                     <a class="admin-link-btn" href="@($"/admin/processed-urls?jobId={job.Id}")"
                                        title="Show URLs processed by this job">View Processed</a>
@@ -190,6 +201,7 @@
     private bool _triggeringProcessing;
     private bool _triggeringRoundup;
     private bool _triggeringContentFixer;
+    private bool _triggeringTimelineBackfill;
     private bool _cancelling;
     private string? _error;
     private string? _triggerMessage;
@@ -340,6 +352,35 @@
         }
     }
 
+    private async Task TriggerTimelineBackfillAsync()
+    {
+        _triggeringTimelineBackfill = true;
+        _triggerMessage = null;
+
+        try
+        {
+            await Api.TriggerTimelineBackfillAsync();
+            _triggerError = false;
+
+            await Task.Delay(500);
+            await LoadJobsAsync();
+            StartPollingIfRunning();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _triggerMessage = $"Failed to trigger timeline backfill: {ex.Message}";
+            _triggerError = true;
+        }
+        finally
+        {
+            _triggeringTimelineBackfill = false;
+        }
+    }
+
     private async Task CancelRunningJobAsync()
     {
         _cancelling = true;
@@ -430,6 +471,7 @@
         ContentProcessingJobType.RoundupGeneration => "Roundup",
         ContentProcessingJobType.ContentCleanup => "Cleanup",
         ContentProcessingJobType.AdHocProcessing => "Ad-hoc",
+        ContentProcessingJobType.TimelineBackfill => "Timeline",
         _ => jobType
     };
 
@@ -439,6 +481,7 @@
         ContentProcessingJobType.RoundupGeneration => "roundup",
         ContentProcessingJobType.ContentCleanup => "cleanup",
         ContentProcessingJobType.AdHocProcessing => "adhoc",
+        ContentProcessingJobType.TimelineBackfill => "timeline",
         _ => "unknown"
     };
 

@@ -2,7 +2,9 @@ using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
 using FluentAssertions;
+using Microsoft.Extensions.DependencyInjection;
 using TechHub.Api.Tests.TestSupport;
+using TechHub.Core.Interfaces;
 using TechHub.Core.Models.Admin;
 
 namespace TechHub.Api.Tests.Endpoints;
@@ -380,6 +382,15 @@ public class AdminContentItemsEndpointsTests : IClassFixture<TechHubStubbedExter
         var stored = await GetEditDataAsync(slug);
         stored.Title.Should().Be(TechHubStubbedExternalServicesApiFactory.AiTitle);
         stored.Sections.Should().Contain("ai");
+        using var metadata = JsonDocument.Parse(stored.AiMetadata!);
+        metadata.RootElement.GetProperty("schema_version").GetInt32().Should().Be(2);
+        metadata.RootElement.GetProperty("key_facts")[0].GetString().Should().Be("Stubbed fact.");
+
+        using var scope = _factory.Services.CreateScope();
+        var timeline = scope.ServiceProvider.GetRequiredService<ITimelineEventRepository>();
+        var events = await timeline.GetEventsForItemAsync(VideosCollection, slug, TestContext.Current.CancellationToken);
+        events.Should().ContainSingle().Which.Product.Should().Be("Stub Product");
+        events[0].ExtractedFrom.Should().Be("source");
     }
 
     // ── Helpers ──────────────────────────────────────────────────────────────

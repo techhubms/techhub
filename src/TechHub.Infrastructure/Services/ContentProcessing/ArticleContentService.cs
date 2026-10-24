@@ -71,7 +71,8 @@ public sealed partial class ArticleContentService : IArticleContentService
                 FeedName = item.FeedName,
                 CollectionName = item.CollectionName,
                 FullContent = mainContent,
-                SkipSalesPitchCheck = item.SkipSalesPitchCheck
+                SkipSalesPitchCheck = item.SkipSalesPitchCheck,
+                IsInteractive = item.IsInteractive
             };
         }
         catch (OperationCanceledException) when (ct.IsCancellationRequested)

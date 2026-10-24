@@ -14,7 +14,7 @@ Data access using PostgreSQL with generated tsvector full-text search, markdown 
 TechHub.Infrastructure/
 ├── Data/                    # Connection factory, SQL dialect, DapperExtensions (query logging), MigrationRunner
 │   ├── Migrations/          # Embedded SQL migration scripts (postgres/)
-│   ├── Resources/           # Embedded AI prompts (system-message.md, roundup-*-system.md) and newsletter HTML templates
+│   ├── Resources/           # Embedded AI prompts (content-classify-system.md, content-rewrite-system.md, content-timeline-*.md, roundup-*-system.md) and newsletter HTML templates
 │   └── Roundups/            # SQL scripts for roundup content (per section and all-roundups)
 ├── Repositories/            # Repository implementations (PostgreSQL + Dapper): content, write, jobs, processed URLs, reviews, feeds, roundups, GHC features, custom pages, newsletter subscribers, background job settings
 ├── Services/                # Markdown, RSS, ContentFixerService, DatabaseStatisticsService, AiCompletionClient, JsonEscapeSanitizer, ContentSyncService (test-only)

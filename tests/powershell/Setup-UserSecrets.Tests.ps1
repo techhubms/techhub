@@ -2,7 +2,7 @@ Describe "Setup-UserSecrets" {
     BeforeAll {
         . $PSScriptRoot/TestHelpers.ps1
         $scriptPath = Join-Path $PSScriptRoot "../../scripts/Setup-UserSecrets.ps1"
-        $aiSettings = '[{"name":"AiCategorization__Endpoint","value":"https://ai.example.net"},{"name":"AiCategorization__DeploymentName","value":"gpt-test"},{"name":"Other","value":"x"}]'
+        $aiSettings = '[{"name":"AiCategorization__Endpoint","value":"https://ai.example.net"},{"name":"AiCategorization__Profiles__Classification__DeploymentName","value":"gpt-classify"},{"name":"AiCategorization__Profiles__Classification__ReasoningEffort","value":"low"},{"name":"AiCategorization__Profiles__Classification__ServiceTier","value":"flex"},{"name":"AiCategorization__Profiles__Rewrite__DeploymentName","value":"gpt-rewrite"},{"name":"AiCategorization__Profiles__Rewrite__ReasoningEffort","value":""},{"name":"AiCategorization__Profiles__Rewrite__ServiceTier","value":"default"},{"name":"AiCategorization__Profiles__TimelineExtraction__DeploymentName","value":"gpt-timeline"},{"name":"Other","value":"x"}]'
     }
 
     BeforeEach {
@@ -152,6 +152,32 @@ Describe "Setup-UserSecrets" {
         }
     }
 
+    Context "AI profile secrets" {
+        It "Does not store undefined profile settings" {
+            Invoke-ScriptUnderTest $scriptPath | Out-Null
+
+            $sets = @(Get-CliCalls $cli '^dotnet user-secrets set') -join "`n"
+            $sets | Should -Not -Match 'Profiles:RoundupNewsWriter'
+            $sets | Should -Not -Match 'AiCategorization:DeploymentName'
+        }
+
+        It "Stores an explicitly empty production setting so the local profile matches production" {
+            Invoke-ScriptUnderTest $scriptPath | Out-Null
+
+            @(Get-CliCalls $cli '^dotnet user-secrets set AiCategorization:Profiles:Rewrite:ReasoningEffort  --project .*src/TechHub.Api') | Should -HaveCount 1
+        }
+
+        It "Replaces a previously stored value with an empty one when -Force is used" {
+            Add-CliRule $cli 'dotnet' 'user-secrets list --project .*TechHub\.Api' 'AiCategorization:Profiles:Rewrite:ReasoningEffort = low'
+
+            Invoke-ScriptUnderTest $scriptPath | Out-Null
+            @(Get-CliCalls $cli '^dotnet user-secrets set AiCategorization:Profiles:Rewrite:ReasoningEffort') | Should -BeNullOrEmpty
+
+            Invoke-ScriptUnderTest $scriptPath @{ Force = $true } | Out-Null
+            @(Get-CliCalls $cli '^dotnet user-secrets set AiCategorization:Profiles:Rewrite:ReasoningEffort  --project') | Should -HaveCount 1
+        }
+    }
+
     Context "User secrets" {
         It "Stores localhost Entra ID, production AI and newsletter values in the API project" {
             $result = Invoke-ScriptUnderTest $scriptPath
@@ -162,7 +188,12 @@ Describe "Setup-UserSecrets" {
                     'AzureAd:TenantId tenant-456 --project .*src/TechHub.Api'
                     'AzureAd:ClientId client-123 --project .*src/TechHub.Api'
                     'AiCategorization:Endpoint https://ai.example.net --project .*src/TechHub.Api'
-                    'AiCategorization:DeploymentName gpt-test --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Classification:DeploymentName gpt-classify --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Classification:ReasoningEffort low --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Classification:ServiceTier flex --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Rewrite:DeploymentName gpt-rewrite --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:Rewrite:ServiceTier default --project .*src/TechHub.Api'
+                    'AiCategorization:Profiles:TimelineExtraction:DeploymentName gpt-timeline --project .*src/TechHub.Api'
                     'Newsletter:Endpoint https://acs.example.net --project .*src/TechHub.Api'
                     'Newsletter:SenderAddress noreply@example.net --project .*src/TechHub.Api'
                     'Newsletter:UnsubscribeSecret unsub-hmac-secret --project .*src/TechHub.Api'

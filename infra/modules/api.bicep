@@ -41,8 +41,8 @@ param azureAdClientId string = ''
 @description('Azure AI Foundry endpoint URL')
 param aiCategorizationEndpoint string = ''
 
-@description('Azure AI Foundry deployment name')
-param aiCategorizationDeploymentName string = ''
+@description('Model settings per AI pipeline step, keyed by profile name (Classification, Rewrite, RoundupNewsWriter, RoundupMetadata, TimelineExtraction). Each value has deploymentName, reasoningEffort (empty to omit) and serviceTier (default or flex).')
+param aiProfiles object = {}
 
 @description('Whether scheduled content processing is enabled for this API app.')
 param contentProcessorEnabled bool = true
@@ -164,10 +164,6 @@ var staticEnvVars = [
     value: aiCategorizationEndpoint
   }
   {
-    name: 'AiCategorization__DeploymentName'
-    value: aiCategorizationDeploymentName
-  }
-  {
     name: 'ContentProcessor__Enabled'
     value: contentProcessorEnabled ? 'true' : 'false'
   }
@@ -205,6 +201,22 @@ var staticEnvVars = [
   }
 ]
 
+// One set of AiCategorization__Profiles__<Profile>__<Setting> app settings per AI pipeline step.
+var aiProfileEnvVars = flatten(map(items(aiProfiles), profile => [
+  {
+    name: 'AiCategorization__Profiles__${profile.key}__DeploymentName'
+    value: profile.value.deploymentName
+  }
+  {
+    name: 'AiCategorization__Profiles__${profile.key}__ReasoningEffort'
+    value: profile.value.reasoningEffort
+  }
+  {
+    name: 'AiCategorization__Profiles__${profile.key}__ServiceTier'
+    value: profile.value.serviceTier
+  }
+]))
+
 resource api 'Microsoft.Web/sites@2023-12-01' = {
   name: siteName
   location: location
@@ -241,7 +253,7 @@ resource api 'Microsoft.Web/sites@2023-12-01' = {
         allowedOrigins: corsOrigins
         supportCredentials: false
       }
-      appSettings: concat(staticEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars)
+      appSettings: concat(staticEnvVars, aiProfileEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars)
       // Deny all public inbound traffic except from the Web app's VNet integration subnet —
       // keeps the API reachable only from the Web app's subnet, never from the public internet.
       ipSecurityRestrictions: [

@@ -59,7 +59,7 @@ public class AiCompletionClientTests
         using var handler = new StubHttpMessageHandler(request =>
         {
             request.Method.Should().Be(HttpMethod.Post);
-            request.RequestUri.Should().Be("https://ai.example.com/openai/deployments/test-model/chat/completions?api-version=2025-04-01-preview");
+            request.RequestUri.Should().Be("https://ai.example.com/openai/v1/chat/completions");
             request.Headers.Authorization.Should().Be(new AuthenticationHeaderValue("Bearer", "test-token"));
             request.Content!.Headers.ContentType!.MediaType.Should().Be("application/json");
             sentBody = request.Content.ReadAsStringAsync(CancellationToken.None);
@@ -293,9 +293,7 @@ public class AiCompletionClientTests
     {
         return new AiCompletionClient(httpClient, Options.Create(new AiCategorizationOptions
         {
-            Endpoint = "https://ai.example.com/",
-            DeploymentName = "test-model",
-            ApiVersion = "2025-04-01-preview"
+            Endpoint = "https://ai.example.com/"
         }), NullLogger<AiCompletionClient>.Instance, credential ?? new StubTokenCredential());
     }
 

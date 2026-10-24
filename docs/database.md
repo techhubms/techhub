@@ -41,11 +41,13 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 
 | Table | Purpose |
 |-------|--------|
-| `content_items` | All content with denormalized section flags and bitmask. Also holds the generated `search_vector` column used for full-text search and the optional `ai_metadata` JSON |
+| `content_items` | All content with denormalized section flags and bitmask. Also holds the generated `search_vector` column used for full-text search and the optional `ai_metadata` JSON (roundup metadata, `schema_version` 2: key facts, significance, section roles, ...) |
 | `content_tags_expanded` | Word-level tag matching (denormalized for fast filtering) |
 | `rss_feed_configs` | RSS feed configuration (URL, name, collection, enabled flag) |
 | `processed_urls` | Tracks processed/skipped/failed URLs for the content pipeline |
-| `content_processing_jobs` | Audit log of background job runs (content processing, content fixer, roundup generation) |
+| `content_processing_jobs` | Audit log of background job runs (content processing, content fixer, roundup generation, timeline backfill) |
+| `content_timeline_events` | Dated lifecycle events (preview, GA, deprecation, ...) that articles state, one row per event with a cascading foreign key to the source article (see [content-processing.md](content-processing.md#timeline-events)) |
+| `content_timeline_extractions` | Which articles have been scanned for timeline events, with the prompt version, so the backfill job is resumable |
 | `content_reviews` | Review queue for content fixer changes (tags, markdown, author) awaiting approval |
 | `custom_page_data` | JSON data for custom pages (editable from admin UI) |
 | `background_job_settings` | Per-job enabled flag that gates scheduled runs (see [content-processing.md](content-processing.md#scheduling)) |

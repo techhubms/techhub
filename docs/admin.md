@@ -23,7 +23,8 @@ Trigger endpoints return `202 Accepted` immediately and run on the background se
 | `POST /roundup/trigger` | Generate the previous week's roundups now | `202` |
 | `POST /roundup/regenerate?collection&slug` | Delete one roundup and regenerate that week | `collection` must be `roundups` and `slug` must match `weekly-{section}-roundup-YYYY-MM-DD`, otherwise `400`. `202` on success. |
 | `POST /content-fixer/trigger` | Run the bulk content fixer (tags, authors, markdown) | `202` |
-| `POST /processing/cancel` | Cancel the currently running processing, roundup or fixer run | `200` in both cases ("Cancellation requested" or "No running job to cancel"). Does not cancel the newsletter or ad-hoc URL runs. |
+| `POST /timeline-backfill/trigger` | Scan stored articles for timeline events (see [content-processing.md](content-processing.md#timeline-events)). Optional JSON body: `force` (scan scanned articles again), `publishedAfter` (`yyyy-MM-dd`), `collection` (lowercase letters, digits, hyphens) and `limit` (> 0) | `202`. `400` for an invalid option. `409` when a run is already queued |
+| `POST /processing/cancel` | Cancel the currently running processing, roundup, fixer or timeline backfill run | `200` in both cases ("Cancellation requested" or "No running job to cancel"). Does not cancel the newsletter or ad-hoc URL runs. |
 | `GET /processing/jobs?count` | Recent job history (all job types) | Default 20, clamped to 1-100 |
 | `GET /processing/jobs/{id}` | One job with its log | `404` if unknown |
 | `GET /job-settings` | List scheduled-job enable flags | |

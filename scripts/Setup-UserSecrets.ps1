@@ -29,7 +29,9 @@
         AzureAd:TenantId                — Entra ID tenant (from current Azure CLI session)
         AzureAd:ClientId                — Localhost app registration client ID
         AiCategorization:Endpoint        — Azure OpenAI endpoint URL (production)
-        AiCategorization:DeploymentName  — Azure OpenAI deployment name (production)
+        AiCategorization:Profiles:<Step>:DeploymentName / ReasoningEffort / ServiceTier
+                                         — model settings of each AI step (production), for the steps
+                                           Classification, Rewrite, RoundupNewsWriter, RoundupMetadata and TimelineExtraction
         Newsletter:Endpoint              — ACS email endpoint URL (production)
         Newsletter:SenderAddress         — ACS sender address (production)
         Newsletter:UnsubscribeSecret     — HMAC secret for unsubscribe URLs (from Key Vault)
@@ -177,10 +179,24 @@ function Get-EnvVar($envVars, $name) {
 }
 
 $aiEndpoint = Get-EnvVar $apiEnvVars 'AiCategorization__Endpoint'
-$aiDeployment = Get-EnvVar $apiEnvVars 'AiCategorization__DeploymentName'
+
+# Model settings per AI step: deployment name, reasoning effort and service tier.
+$aiProfileNames = @('Classification', 'Rewrite', 'RoundupNewsWriter', 'RoundupMetadata', 'TimelineExtraction')
+$aiProfileSettings = @('DeploymentName', 'ReasoningEffort', 'ServiceTier')
+$aiProfiles = foreach ($profileName in $aiProfileNames) {
+    foreach ($setting in $aiProfileSettings) {
+        [pscustomobject]@{
+            Key   = "AiCategorization:Profiles:${profileName}:${setting}"
+            Value = Get-EnvVar $apiEnvVars "AiCategorization__Profiles__${profileName}__${setting}"
+        }
+    }
+}
 
 Write-Host "  AI Endpoint:   $aiEndpoint" -ForegroundColor Gray
-Write-Host "  AI Deployment: $aiDeployment" -ForegroundColor Gray
+foreach ($profileName in $aiProfileNames) {
+    $deployment = ($aiProfiles | Where-Object { $_.Key -eq "AiCategorization:Profiles:${profileName}:DeploymentName" }).Value
+    Write-Host "  AI ${profileName}: $deployment" -ForegroundColor Gray
+}
 
 # --- Fetch secrets from Key Vault ---
 Write-Host ""
@@ -242,8 +258,8 @@ finally {
 }
 
 # --- Helper to set a secret ---
-function Set-Secret($project, $key, $value) {
-    if ([string]::IsNullOrWhiteSpace($value)) {
+function Set-Secret($project, $key, $value, [switch]$AllowEmpty) {
+    if ($null -eq $value -or (-not $AllowEmpty -and [string]::IsNullOrWhiteSpace($value))) {
         Write-Host "  [WARN] $key — value is empty, skipping" -ForegroundColor Yellow
         return
     }
@@ -272,7 +288,13 @@ Write-Host "Setting TechHub.Api user secrets..." -ForegroundColor Cyan
 Set-Secret $apiProject "AzureAd:TenantId" $tenantId
 Set-Secret $apiProject "AzureAd:ClientId" $clientId
 Set-Secret $apiProject "AiCategorization:Endpoint" $aiEndpoint
-Set-Secret $apiProject "AiCategorization:DeploymentName" $aiDeployment
+# Settings the app does not define at all are left to appsettings.json. An explicitly empty value (for example
+# no reasoning effort) is stored as empty so local runs match production instead of falling back to appsettings.json.
+foreach ($aiProfile in $aiProfiles) {
+    if ($null -ne $aiProfile.Value) {
+        Set-Secret $apiProject $aiProfile.Key $aiProfile.Value -AllowEmpty
+    }
+}
 Set-Secret $apiProject "Newsletter:Endpoint" $newsletterEndpoint
 Set-Secret $apiProject "Newsletter:SenderAddress" $newsletterSenderAddress
 Set-Secret $apiProject "Newsletter:UnsubscribeSecret" $newsletterUnsubscribeSecret
