@@ -357,7 +357,9 @@ except `all`. For each section:
    It also receives only the headings of the previous week's roundup for an occasional "following last week's ..." sentence.
    A response that does not finish normally is treated as a failed section; partial text is not saved.
 6. **Completeness check (code)** — Every lead article must be linked, as the complete destination of a Markdown link (a URL that is only a prefix of another linked URL does not count). Links the writer left out are appended to the "Other ... News" section, and a warning is logged
-7. **Metadata (AI, one call)** — Title, tags and introduction as strict JSON
+7. **Metadata (AI, one call)** — Title, tags and introduction as strict JSON. The introduction is an executive summary
+   (3–5 sentences) of the most important developments of the week, based on the written topics. It names concrete news
+   rather than listing what the roundup covers
 8. **Code-built blocks** — "Also relevant this week" (brief articles, each with its first key fact and, when the roundup of its primary section exists, a link to it for the full story) and "Dates to know" (see below), followed by the table of contents built from the `##`/`###` headers
 9. **DB write** — Upserts one roundup per section into `content_items` + `content_tags_expanded`
 

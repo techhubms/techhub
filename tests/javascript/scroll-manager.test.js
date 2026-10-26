@@ -471,6 +471,49 @@ describe('scroll-manager.js', () => {
             window.history.pushState(null, '', '/all#section-one');
             expect(window.scrollTo).not.toHaveBeenCalledWith(0, 0);
         });
+
+        it('pushState right after markScriptsReady does not leave the spinner active or navigation locked', () => {
+            vi.useFakeTimers();
+            window.markScriptsReady();
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=1');
+
+            vi.advanceTimersByTime(2000);
+
+            const spinner = document.getElementById('nav-spinner');
+            expect(spinner === null || !spinner.classList.contains('active')).toBe(true);
+            expect(mod.isNavigating()).toBe(false);
+        });
+
+        it('pushState without a preceding markScriptsReady still shows the spinner after the delay', () => {
+            vi.useFakeTimers();
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=1');
+
+            vi.advanceTimersByTime(1000);
+
+            expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(true);
+            expect(mod.isNavigating()).toBe('forward');
+        });
+
+        it('pushState long after the last markScriptsReady still shows the spinner', () => {
+            vi.useFakeTimers();
+            window.markScriptsReady();
+            vi.advanceTimersByTime(600);
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=1');
+
+            vi.advanceTimersByTime(1000);
+
+            expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(true);
+        });
+
+        it('markScriptsReady after pushState hides an active spinner', () => {
+            vi.useFakeTimers();
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=1');
+            vi.advanceTimersByTime(1000);
+
+            window.markScriptsReady();
+
+            expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(false);
+        });
     });
 
     // =========================================================================

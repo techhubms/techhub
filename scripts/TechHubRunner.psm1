@@ -1203,14 +1203,38 @@ function Run {
             $webConsolePath = Join-Path $logDir "web-console.log"
             
             # Start API in background using PowerShell job
+            # appsettings.Production.json deliberately has an empty connection string (Azure injects it),
+            # so point the locally published API at the docker-compose PostgreSQL container.
+            $localDbConnectionString = "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
             Start-Job -ScriptBlock {
-                param($dir, $dll, $env, $logPath)
+                param($dir, $dll, $env, $logPath, $dbConnectionString)
                 Set-Location $dir
                 $env:ASPNETCORE_ENVIRONMENT = $env
                 $env:ASPNETCORE_URLS = "https://localhost:5001"
+                if (-not $env:Database__ConnectionString) {
+                    $env:Database__ConnectionString = $dbConnectionString
+                }
                 & dotnet exec $dll *> $logPath
-            } -ArgumentList $publishApiDir, (Join-Path $publishApiDir "TechHub.Api.dll"), $Environment, $apiConsolePath | Out-Null
+            } -ArgumentList $publishApiDir, (Join-Path $publishApiDir "TechHub.Api.dll"), $Environment, $apiConsolePath, $localDbConnectionString | Out-Null
             Write-Info "API starting in background..."
+
+            # The Web pre-loads SectionCache once at startup and only retries every 5 minutes,
+            # so it must not start before the API accepts requests (Development gets this from Aspire WaitFor).
+            $apiWaitDeadline = (Get-Date).AddSeconds(90)
+            $apiReady = $false
+            while ((Get-Date) -lt $apiWaitDeadline) {
+                $apiHealthOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:5001/health" 2>&1
+                if ($LASTEXITCODE -eq 0 -and $apiHealthOutput -match "200$") {
+                    $apiReady = $true
+                    break
+                }
+                Start-Sleep -Seconds 1
+            }
+            if (-not $apiReady) {
+                Write-Error "API did not become healthy within 90 seconds. See $apiConsolePath"
+                return $false
+            }
+            Write-Info "API is healthy"
             
             # Start Web in background using PowerShell job
             Start-Job -ScriptBlock {
@@ -1604,6 +1628,15 @@ function Run {
             }
             # Set buildResult for restart logic (publish always rebuilds)
             $buildResult = @{ Success = $true; SrcRebuilt = $true }
+
+            # Publish only builds Api and Web. Test binaries (bin/Release) are needed to run tests,
+            # so build the full solution in Release (incremental; src projects are already built).
+            if (-not $WithoutTests) {
+                $testBuildResult = Invoke-Build
+                if ($testBuildResult.Success -eq $false) {
+                    return $false
+                }
+            }
         }
         else {
             # Development: Build only

@@ -98,6 +98,11 @@ function to also call `restoreScrollPosition()`. The lifecycle:
 
 Every page **must** call `markScriptsReady` — enforced by a convention test.
 
+**Ready-before-pushState race:** for Interactive Server navigation the page can render and call `markScriptsReady` *before* the
+client's `pushState` runs. Nothing would then hide a spinner armed by `pushState`, so it would appear after 1 s and stay until the
+10 s safety timeout. The patched `markScriptsReady` records `lastReadyAt`; a cross-page `pushState` within 500 ms of it still
+scrolls to top but does not set `navigating = 'forward'`, reset `__scriptsReady` or show the spinner.
+
 ### `allComponentsReady` Gate
 
 `markScriptsReady` doesn't restore immediately — it waits for all layout-affecting

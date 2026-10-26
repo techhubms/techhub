@@ -139,6 +139,10 @@ const NAV_SPINNER_ID = 'nav-spinner';
 let navSpinnerShowTimeout = null;
 let navSpinnerSafetyTimeout = null;
 
+// A markScriptsReady this recent before a cross-page pushState belongs to that navigation.
+let lastReadyAt = -Infinity;
+const STALE_READY_WINDOW_MS = 500;
+
 function showNavSpinner() {
     if (!document.getElementById(NAV_SPINNER_ID)) {
         const el = document.createElement('div');
@@ -339,10 +343,15 @@ history.pushState = function (...args) {
             document.documentElement.classList.remove('is-scrolling');
             window.scrollTo({ top: 0, behavior: 'instant' });
             lastSettledScrollY = 0;
-            navigating = 'forward';
-            // Block WaitForBlazorReadyAsync immediately — don't wait for enhancedload.
-            window.__scriptsReady = false;
-            showNavSpinner();
+            // The server can render the target page and fire markScriptsReady before the
+            // client's pushState runs. No further markScriptsReady will follow, so arming
+            // the spinner / navigating lock would leave the spinner stuck until the safety timeout.
+            if (Date.now() - lastReadyAt >= STALE_READY_WINDOW_MS) {
+                navigating = 'forward';
+                // Block WaitForBlazorReadyAsync immediately — don't wait for enhancedload.
+                window.__scriptsReady = false;
+                showNavSpinner();
+            }
         }
     }
     // Hash-only: navigating stays false, scroll handlers keep running
@@ -395,6 +404,7 @@ window.addEventListener('popstate', () => {
 function patchMarkScriptsReady() {
     const original = window.markScriptsReady;
     window.markScriptsReady = function () {
+        lastReadyAt = Date.now();
         hideNavSpinner();
         if (typeof original === 'function') original();
     };
