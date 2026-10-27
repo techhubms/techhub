@@ -42,10 +42,11 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | `Run -TestProject E2E -TestName BackNav -NetworkProfile slow3g -RepeatTests 5` | Combine network profile + repeat for targeted flaky-test investigation. |
 | `Run -Docker` | Run ALL services (API + Web + PostgreSQL + Aspire Dashboard) via docker compose containers (production-like). |
 | `Run -BuildOnly` | Build only, then exit (no tests, no servers). |
-| `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). Also accepts `Staging` and `Development` (default). |
+| `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). Also accepts `Staging` and `Development` (default). The published API gets the local docker-compose PostgreSQL connection string via `Database__ConnectionString` (unless already set), because `appsettings.Production.json` leaves it empty; in that case the PostgreSQL container is started first with `Start-PostgresContainer`. |
 | `Stop-Servers` (without Run in front!) | Stops the servers directly. |
 | `Stop-OrphanedTestProcesses` | Stops leftover test host processes from earlier runs. `Run` calls it automatically. |
 | `Start-McpInspector` | Starts the MCP Inspector (`npx @modelcontextprotocol/inspector@2.10.1`, pinned version) for testing the local MCP server at `https://localhost:5003/mcp`. Accepts the local dev certificate and doesn't open a browser automatically. |
+| `Start-PostgresContainer` | Starts the local docker-compose PostgreSQL container and waits until it is healthy. Used by `Run` in Development mode and in Production/Staging mode (unless `Database__ConnectionString` is already set); call it directly when you only need the database. |
 
 ### Testing a Remote Deployment
 

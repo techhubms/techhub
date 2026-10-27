@@ -125,7 +125,7 @@ PowerShell automation scripts for development, deployment, and maintenance. All 
 
 #### Development and local data
 
-- **`TechHubRunner.psm1`** - **PRIMARY BUILD/RUN/TEST MODULE** - exports `Run`, `Stop-Servers`, `Stop-OrphanedTestProcesses`, and `Start-McpInspector`
+- **`TechHubRunner.psm1`** - **PRIMARY BUILD/RUN/TEST MODULE** - exports `Run`, `Stop-Servers`, `Stop-OrphanedTestProcesses`, `Start-McpInspector`, and `Start-PostgresContainer`
   - `Run` - Build, test, and start servers (use this for all build/test operations)
   - `Run -WithoutTests` - Start servers without running tests
   - `Run -TestProject <name>` - Run specific test project

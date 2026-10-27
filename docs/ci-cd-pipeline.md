@@ -176,7 +176,7 @@ Run only after the quality gate passes, and never on PRs.
 2. **Deploy & E2E Tests (Production)** - Infrastructure + application deployment, followed by E2E tests in the same job
    - Uses GitHub environment protection (at least 1 required reviewer)
    - Automatically detects whether `infra/` or `scripts/` files have changed since the last successful deploy:
-     - **Full deploy** (infrastructure changed): installs the `Az.PostgreSql` PowerShell module, runs `Deploy-Infrastructure.ps1` (Phase 1: Bicep infra), then `Deploy-Applications.ps1` (Phase 2: API + Web App Service Bicep)
+     - **Full deploy** (infrastructure changed): installs the `Az.PostgreSql` PowerShell module (with retries, since PowerShell Gallery downloads fail intermittently), runs `Deploy-Infrastructure.ps1` (Phase 1: Bicep infra), then `Deploy-Applications.ps1` (Phase 2: API + Web App Service Bicep)
      - **Fast update** (no infrastructure changes): runs `Deploy-Application.ps1` - updates the App Service sites' container image tags only (`az webapp config set`), no Bicep evaluation
    - `Deploy-Application.ps1` also sets the `DEPLOY_IMAGE_TAG` app setting and runs the [post-deploy gate](#post-deploy-gate)
    - Creates an Application Insights release annotation (see [Release Annotations](#release-annotations))

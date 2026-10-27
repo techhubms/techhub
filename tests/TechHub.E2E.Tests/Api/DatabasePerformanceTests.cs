@@ -52,10 +52,12 @@ public class DatabasePerformanceTests : IDisposable
     // aggregation pattern. The _maxAcceptableMs threshold accounts for this.
     //
     // Localhost multiplier: dev containers and local machines have shared, slower I/O compared
-    // to dedicated database servers. Apply a 2x multiplier to avoid flaky failures from
-    // infrastructure variance (these tests only run locally, never in CI).
-    private const int LocalhostMultiplier = 2;
-    private static readonly int _maxAcceptableMs = 200 * LocalhostMultiplier;
+    // to dedicated database servers, and single measurements regularly spike to 3-4x their usual
+    // time (GC, background jobs, other tests). Apply a 4x multiplier so these tests only catch
+    // real regressions (a missing index costs seconds, not milliseconds) and leave headroom for
+    // database growth (these tests only run locally, never in CI).
+    private const int LocalhostMultiplier = 4;
+    private static readonly int _maxAcceptableMs = 125 * LocalhostMultiplier;
     private static readonly int _maxFtsMs = 250 * LocalhostMultiplier;
     private static readonly int _maxTagsToCountMs = 300 * LocalhostMultiplier;
 
