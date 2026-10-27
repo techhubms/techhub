@@ -141,8 +141,9 @@ let navSpinnerSafetyTimeout = null;
 
 // A markScriptsReady signal can belong to the navigation whose pushState follows it (the server
 // renders the target page before the client's pushState runs). It is only attributed to a
-// navigation when it is unclaimed (not consumed by an earlier navigation, a click that started a
-// new navigation, or a finished navigation) and recent.
+// navigation when it is unclaimed (not consumed by an earlier pushState or discarded by a click
+// that started a new navigation) and recent. Finishing the active navigation does NOT discard it:
+// the same signal that completes the active navigation can belong to a still-pending pushState.
 let unclaimedReadyAt = -Infinity;
 const READY_BEFORE_PUSHSTATE_WINDOW_MS = 500;
 
@@ -306,7 +307,6 @@ window.__restoreScrollPosition = restoreScrollPosition;
  */
 function finishNavigation() {
     navigating = false;
-    discardUnclaimedReady();
 
     // Run scroll-end work once at the final position (TOC highlight, etc.)
     onScrollEnd();

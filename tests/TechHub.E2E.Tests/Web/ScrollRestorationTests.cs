@@ -52,4 +52,33 @@ public class ScrollRestorationTests : PlaywrightTestBase
             (object)500.0,
             onTimeout: "() => JSON.stringify({scrollY: window.scrollY, maxScroll: document.documentElement.scrollHeight - window.innerHeight, savedPositions: window.__savedScrollPositions})");
     }
+
+    [Fact]
+    public async Task ReadyBeforePushState_WhileNavigationActive_DoesNotRearmSpinnerOrReadinessLock()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync("/github-copilot/vscode-updates");
+
+        // Act — reproduce the race with the real markScriptsReady callback: a forward navigation is
+        // active (armed by pushState), the destination signals ready (which completes the active
+        // navigation synchronously via __restoreScrollPosition), and only then does the destination's
+        // pushState run.
+        var scriptsReadyAfterPushState = await Page.EvaluateAsync<bool?>(@"async () => {
+            history.pushState(null, '', location.pathname + '?e2e-nav=1');
+            window.markScriptsReady();
+            await new Promise(resolve => {
+                const check = () => window.__scriptsReady === true ? resolve() : setTimeout(check, 10);
+                check();
+            });
+            history.pushState(null, '', location.pathname + '?e2e-nav=2');
+            return window.__scriptsReady;
+        }");
+
+        // Assert
+        scriptsReadyAfterPushState.Should().BeTrue(
+            "a pushState right after the ready signal that completed the active navigation must not reset __scriptsReady, " +
+            "because no further markScriptsReady will follow to clear it");
+        await Page.WaitForBlazorReadyAsync();
+        await Assertions.Expect(Page.Locator("#nav-spinner.active")).ToHaveCountAsync(0);
+    }
 }

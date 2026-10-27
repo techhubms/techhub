@@ -45,6 +45,7 @@ function createTocAndContent() {
 describe('scroll-manager.js', () => {
     let mod;
     let originalPushState;
+    let pageMarkScriptsReady;
 
     beforeEach(async () => {
         document.body.innerHTML = '';
@@ -57,11 +58,13 @@ describe('scroll-manager.js', () => {
         delete window.TechHub;
         delete window.__savedScrollPositions;
         delete window.__restoreScrollPosition;
+        delete window.__scriptsReady;
         delete window.__e2eSignal;
         delete window.navigation;
 
         globalThis.Blazor = { addEventListener: vi.fn() };
-        window.markScriptsReady = vi.fn();
+        pageMarkScriptsReady = vi.fn();
+        window.markScriptsReady = pageMarkScriptsReady;
 
         Object.defineProperty(window, 'scrollY', {
             value: 0, writable: true, configurable: true,
@@ -537,6 +540,47 @@ describe('scroll-manager.js', () => {
             window.markScriptsReady();
 
             expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(false);
+        });
+
+        it('ready signal that completes an active navigation is still claimed by the pending pushState', () => {
+            vi.useFakeTimers();
+            // Real page-scripts.js markScriptsReady calls __restoreScrollPosition synchronously.
+            pageMarkScriptsReady.mockImplementation(() => {
+                window.__scriptsReady = true;
+                window.__restoreScrollPosition();
+            });
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=1');
+            expect(mod.isNavigating()).toBe('forward');
+
+            window.markScriptsReady();
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=2');
+            vi.advanceTimersByTime(2000);
+
+            const spinner = document.getElementById('nav-spinner');
+            expect(spinner === null || !spinner.classList.contains('active')).toBe(true);
+            expect(mod.isNavigating()).toBe(false);
+            expect(window.__scriptsReady).toBe(true);
+        });
+
+        it('ready signal that completes a beforeenhancedload navigation is claimed by the following pushState', () => {
+            vi.useFakeTimers();
+            pageMarkScriptsReady.mockImplementation(() => {
+                window.__scriptsReady = true;
+                window.__restoreScrollPosition();
+            });
+            const beforeEnhancedLoad = globalThis.Blazor.addEventListener.mock.calls
+                .find(([name]) => name === 'beforeenhancedload')[1];
+            beforeEnhancedLoad();
+            expect(mod.isNavigating()).toBe('forward');
+
+            window.markScriptsReady();
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=1');
+            vi.advanceTimersByTime(2000);
+
+            const spinner = document.getElementById('nav-spinner');
+            expect(spinner === null || !spinner.classList.contains('active')).toBe(true);
+            expect(mod.isNavigating()).toBe(false);
+            expect(window.__scriptsReady).toBe(true);
         });
     });
 
