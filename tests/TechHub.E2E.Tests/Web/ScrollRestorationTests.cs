@@ -64,7 +64,9 @@ public class ScrollRestorationTests : PlaywrightTestBase
         // navigation synchronously via __restoreScrollPosition), and only then does the destination's
         // pushState run.
         var scriptsReadyAfterPushState = await Page.EvaluateAsync<bool?>(@"async () => {
+            document.body.dispatchEvent(new MouseEvent('click', { bubbles: true }));
             history.pushState(null, '', location.pathname + '?e2e-nav=1');
+            if (window.__scriptsReady !== false) throw new Error('The first pushState must arm navigation readiness');
             window.markScriptsReady();
             await new Promise(resolve => {
                 const check = () => window.__scriptsReady === true ? resolve() : setTimeout(check, 10);
