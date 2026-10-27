@@ -606,7 +606,22 @@ jobs:
       - name: Install Az.PostgreSql module
         if: steps.changes.outputs.infra-changed == 'true'
         shell: pwsh
-        run: Install-Module Az.PostgreSql -Force -Scope CurrentUser -ErrorAction Stop
+        run: |
+          # PowerShell Gallery downloads fail intermittently ("Source Location ... is not valid"), so retry with backoff
+          $maxAttempts = 5
+          for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {
+            try {
+              Install-Module Az.PostgreSql -Force -Scope CurrentUser -Repository PSGallery -ErrorAction Stop
+              Write-Host "Az.PostgreSql $((Get-InstalledModule Az.PostgreSql).Version) installed (attempt $attempt)"
+              break
+            }
+            catch {
+              if ($attempt -eq $maxAttempts) { throw }
+              $delay = 15 * $attempt
+              Write-Warning "Attempt $attempt/$maxAttempts failed: $($_.Exception.Message). Retrying in $delay s..."
+              Start-Sleep -Seconds $delay
+            }
+          }
 
       - name: Deploy infrastructure (Phase 1)
         if: steps.changes.outputs.infra-changed == 'true'
