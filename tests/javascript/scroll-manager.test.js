@@ -505,6 +505,30 @@ describe('scroll-manager.js', () => {
             expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(true);
         });
 
+        it('slow navigation started by a click right after the previous page signalled ready still shows the spinner', () => {
+            vi.useFakeTimers();
+            window.markScriptsReady();
+            document.body.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=1');
+
+            vi.advanceTimersByTime(1000);
+
+            expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(true);
+            expect(mod.isNavigating()).toBe('forward');
+        });
+
+        it('a ready signal is consumed by one navigation and does not suppress the next one', () => {
+            vi.useFakeTimers();
+            window.markScriptsReady();
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=1');
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=2');
+
+            vi.advanceTimersByTime(1000);
+
+            expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(true);
+            expect(mod.isNavigating()).toBe('forward');
+        });
+
         it('markScriptsReady after pushState hides an active spinner', () => {
             vi.useFakeTimers();
             window.history.pushState(null, '', '/admin/processed-urls?jobId=1');

@@ -160,6 +160,50 @@ function Start-McpInspector {
     }
 }
 
+function Start-PostgresContainer {
+    <#
+    .SYNOPSIS
+        Starts the local docker-compose PostgreSQL container and waits until it is healthy.
+
+    .DESCRIPTION
+        Ensures the bind-mounted data directory (.databases/postgres) exists, runs
+        'docker compose up -d postgres' and polls the container health status until it is
+        healthy. Safe to call when the container is already running.
+
+    .PARAMETER TimeoutSeconds
+        Maximum number of seconds to wait for the container to become healthy (default 30).
+
+    .OUTPUTS
+        [bool] $true when PostgreSQL is healthy, $false when it did not become healthy in time.
+
+    .EXAMPLE
+        Start-PostgresContainer
+    #>
+    param(
+        [int]$TimeoutSeconds = 30
+    )
+
+    $workspaceRoot = Split-Path $PSScriptRoot -Parent
+    $postgresDir = Join-Path (Join-Path $workspaceRoot ".databases") "postgres"
+    if (-not (Test-Path $postgresDir)) {
+        New-Item -Path $postgresDir -ItemType Directory -Force | Out-Null
+    }
+
+    Write-Host "  Ensuring PostgreSQL container is running..." -ForegroundColor Gray
+    docker compose up -d postgres 2>&1 | Out-Null
+
+    for ($attempt = 1; $attempt -le $TimeoutSeconds; $attempt++) {
+        $health = docker inspect --format='{{.State.Health.Status}}' techhub-postgres 2>$null
+        if ($health -eq "healthy") {
+            Write-Host "  PostgreSQL is ready" -ForegroundColor Gray
+            return $true
+        }
+        Start-Sleep -Seconds 1
+    }
+
+    Write-Host "✗ PostgreSQL container failed to become healthy within ${TimeoutSeconds}s" -ForegroundColor Red
+    return $false
+}
 # Stop all orphaned test-related processes (browsers, test runners)
 function Stop-AllOrphanedProcesses {
     param(
@@ -1178,11 +1222,12 @@ function Run {
         }
         # Production/Staging mode: Run from published DLLs (real deployment simulation)
         elseif ($Environment -eq "Production" -or $Environment -eq "Staging") {
-            # Ensure .databases directory exists for PostgreSQL data
-            $databasesDir = Join-Path $workspaceRoot ".databases"
-            $postgresDir = Join-Path $databasesDir "postgres"
-            if (-not (Test-Path $postgresDir)) {
-                New-Item -Path $postgresDir -ItemType Directory -Force | Out-Null
+            # The published API falls back to the docker-compose PostgreSQL (see below) unless a
+            # connection string is supplied, so only then does the container need to be running.
+            if (-not $env:Database__ConnectionString) {
+                if (-not (Start-PostgresContainer)) {
+                    return $false
+                }
             }
             
             # Verify publish artifacts exist
@@ -1251,36 +1296,12 @@ function Run {
             # Development: Use Aspire AppHost orchestration in background
             $appHostDir = Split-Path $appHostProjectPath -Parent
             
-            # Ensure PostgreSQL container is running (required for Development mode)
-            $databasesDir = Join-Path $workspaceRoot ".databases"
-            $postgresDir = Join-Path $databasesDir "postgres"
-            if (-not (Test-Path $postgresDir)) {
-                New-Item -Path $postgresDir -ItemType Directory -Force | Out-Null
-            }
-            
-            Write-Info "Ensuring PostgreSQL container is running..."
-            docker compose up -d postgres 2>&1 | Out-Null
-            
-            # Wait for PostgreSQL to be healthy
-            $pgMaxAttempts = 30
-            $pgAttempt = 0
-            $pgReady = $false
-            while ($pgAttempt -lt $pgMaxAttempts) {
-                $pgAttempt++
-                $pgHealthy = docker inspect --format='{{.State.Health.Status}}' techhub-postgres 2>$null
-                if ($pgHealthy -eq "healthy") {
-                    $pgReady = $true
-                    break
-                }
-                Start-Sleep -Seconds 1
-            }
-            
-            if (-not $pgReady) {
-                Write-Error "PostgreSQL container failed to become healthy within ${pgMaxAttempts}s"
+            # Required for Development mode
+            if (-not (Start-PostgresContainer)) {
                 return $false
             }
-            Write-Info "PostgreSQL is ready"
             
+
             # Start dotnet watch in background using PowerShell job
             Start-Job -ScriptBlock {
                 param($dir, $project, $launchProfile, $config, $logPath)
@@ -1864,4 +1885,4 @@ function Run {
 }
 
 # Export functions
-Export-ModuleMember -Function Run, Stop-Servers, Stop-OrphanedTestProcesses, Start-McpInspector
+Export-ModuleMember -Function Run, Stop-Servers, Stop-OrphanedTestProcesses, Start-McpInspector, Start-PostgresContainer

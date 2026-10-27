@@ -100,8 +100,11 @@ Every page **must** call `markScriptsReady` — enforced by a convention test.
 
 **Ready-before-pushState race:** for Interactive Server navigation the page can render and call `markScriptsReady` *before* the
 client's `pushState` runs. Nothing would then hide a spinner armed by `pushState`, so it would appear after 1 s and stay until the
-10 s safety timeout. The patched `markScriptsReady` records `lastReadyAt`; a cross-page `pushState` within 500 ms of it still
-scrolls to top but does not set `navigating = 'forward'`, reset `__scriptsReady` or show the spinner.
+10 s safety timeout. The patched `markScriptsReady` records an *unclaimed* ready signal; a cross-page `pushState` within 500 ms of
+it claims that signal, still scrolls to top, but does not set `navigating = 'forward'`, reset `__scriptsReady` or show the spinner.
+The signal is consumed per navigation: it is discarded when a navigation claims it, when the user clicks (a signal from before
+the click cannot belong to the new navigation), on `beforeenhancedload` and when a navigation finishes. A slow navigation that
+starts right after the previous page signalled ready therefore still shows the spinner.
 
 ### `allComponentsReady` Gate
 

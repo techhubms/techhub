@@ -73,7 +73,7 @@ See [docs/repository-structure.md](../docs/repository-structure.md) for the comp
 
 ### Development
 
-- **TechHubRunner.psm1**: Exports `Run`, `Stop-Servers`, `Stop-OrphanedTestProcesses`, and `Start-McpInspector`. Auto-imported in every session (see [docs/running-and-testing.md](../docs/running-and-testing.md)).
+- **TechHubRunner.psm1**: Exports `Run`, `Stop-Servers`, `Stop-OrphanedTestProcesses`, `Start-McpInspector`, and `Start-PostgresContainer`. Auto-imported in every session (see [docs/running-and-testing.md](../docs/running-and-testing.md)).
 - **Restore-Database.ps1**: Dumps the production database and restores it locally (`-Target local`) or only dumps to `.tmp/` (`-Target disk`).
 - **Invoke-Sql.ps1**: Runs one SQL query against the local PostgreSQL container. Extend it for specific local-query use cases.
 - **Setup-UserSecrets.ps1**: Fills .NET user secrets for local development (localhost Entra ID app, AI, and newsletter settings) from Azure.

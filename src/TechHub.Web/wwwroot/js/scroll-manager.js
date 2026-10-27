@@ -139,9 +139,25 @@ const NAV_SPINNER_ID = 'nav-spinner';
 let navSpinnerShowTimeout = null;
 let navSpinnerSafetyTimeout = null;
 
-// A markScriptsReady this recent before a cross-page pushState belongs to that navigation.
-let lastReadyAt = -Infinity;
-const STALE_READY_WINDOW_MS = 500;
+// A markScriptsReady signal can belong to the navigation whose pushState follows it (the server
+// renders the target page before the client's pushState runs). It is only attributed to a
+// navigation when it is unclaimed (not consumed by an earlier navigation, a click that started a
+// new navigation, or a finished navigation) and recent.
+let unclaimedReadyAt = -Infinity;
+const READY_BEFORE_PUSHSTATE_WINDOW_MS = 500;
+
+function discardUnclaimedReady() {
+    unclaimedReadyAt = -Infinity;
+}
+
+function claimRecentReady() {
+    const isRecent = Date.now() - unclaimedReadyAt < READY_BEFORE_PUSHSTATE_WINDOW_MS;
+    discardUnclaimedReady();
+    return isRecent;
+}
+
+// A ready signal from before the user started a navigation can never belong to it.
+document.addEventListener('click', discardUnclaimedReady, true);
 
 function showNavSpinner() {
     if (!document.getElementById(NAV_SPINNER_ID)) {
@@ -290,6 +306,7 @@ window.__restoreScrollPosition = restoreScrollPosition;
  */
 function finishNavigation() {
     navigating = false;
+    discardUnclaimedReady();
 
     // Run scroll-end work once at the final position (TOC highlight, etc.)
     onScrollEnd();
@@ -346,7 +363,7 @@ history.pushState = function (...args) {
             // The server can render the target page and fire markScriptsReady before the
             // client's pushState runs. No further markScriptsReady will follow, so arming
             // the spinner / navigating lock would leave the spinner stuck until the safety timeout.
-            if (Date.now() - lastReadyAt >= STALE_READY_WINDOW_MS) {
+            if (!claimRecentReady()) {
                 navigating = 'forward';
                 // Block WaitForBlazorReadyAsync immediately — don't wait for enhancedload.
                 window.__scriptsReady = false;
@@ -404,7 +421,7 @@ window.addEventListener('popstate', () => {
 function patchMarkScriptsReady() {
     const original = window.markScriptsReady;
     window.markScriptsReady = function () {
-        lastReadyAt = Date.now();
+        unclaimedReadyAt = Date.now();
         hideNavSpinner();
         if (typeof original === 'function') original();
     };
@@ -447,6 +464,7 @@ function setupBlazorListeners() {
             // traversal (back/forward) sets navigating='traverse' via popstate before
             // this event fires, so the guard prevents us resetting scroll on back-nav.
             if (navigating) return;
+            discardUnclaimedReady();
             // Save position BEFORE scrollTo(0) zeroes lastSettledScrollY.
             // pushState fires later but skips re-save when navigating='forward'.
             saveScrollPosition();
