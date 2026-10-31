@@ -53,7 +53,7 @@ RETURNING id";
         const string Sql = @"
 UPDATE content_processing_jobs SET
     completed_at    = NOW(),
-    duration_ms     = EXTRACT(MILLISECONDS FROM (NOW() - started_at))::BIGINT,
+    duration_ms     = (EXTRACT(EPOCH FROM (NOW() - started_at)) * 1000)::BIGINT,
     status          = 'completed',
     feeds_processed = @FeedsProcessed,
     items_added     = @ItemsAdded,
@@ -88,7 +88,7 @@ WHERE id = @JobId";
         const string Sql = @"
 UPDATE content_processing_jobs SET
     completed_at    = NOW(),
-    duration_ms     = EXTRACT(MILLISECONDS FROM (NOW() - started_at))::BIGINT,
+    duration_ms     = (EXTRACT(EPOCH FROM (NOW() - started_at)) * 1000)::BIGINT,
     status          = 'failed',
     feeds_processed = @FeedsProcessed,
     items_added     = @ItemsAdded,
@@ -237,7 +237,7 @@ WHERE id = @JobId AND status = 'running'";
         const string Sql = @"
 UPDATE content_processing_jobs SET
     completed_at    = NOW(),
-    duration_ms     = EXTRACT(MILLISECONDS FROM (NOW() - started_at))::BIGINT,
+    duration_ms     = (EXTRACT(EPOCH FROM (NOW() - started_at)) * 1000)::BIGINT,
     status          = 'aborted',
     feeds_processed = @FeedsProcessed,
     items_added     = @ItemsAdded,
@@ -272,7 +272,7 @@ WHERE id = @JobId AND status = 'running'";
         const string Sql = @"
 UPDATE content_processing_jobs SET
     completed_at = NOW(),
-    duration_ms  = EXTRACT(MILLISECONDS FROM (NOW() - started_at))::BIGINT,
+    duration_ms  = (EXTRACT(EPOCH FROM (NOW() - started_at)) * 1000)::BIGINT,
     status       = 'aborted',
     log_output   = COALESCE(log_output, '') || E'\n[Startup] Job aborted — server was restarted while job was running.'
 WHERE status = 'running'";

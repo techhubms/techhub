@@ -124,6 +124,7 @@ builder.Services.AddTransient<IMigrationRunner, MigrationRunner>();
 
 // RSS feed config repository (database-backed)
 builder.Services.AddScoped<IRssFeedConfigRepository, RssFeedConfigRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 // Custom page data repository (database-backed)
 builder.Services.AddScoped<ICustomPageDataRepository, CustomPageDataRepository>();
@@ -210,6 +211,7 @@ builder.Services.AddHttpClient<IYouTubeTagClient, YouTubeTagClient>()
         options.Retry.BackoffType = DelayBackoffType.Exponential;
     });
 
+builder.Services.AddSingleton<AiFlexCapacityTracker>();
 builder.Services.AddHttpClient<IAiCompletionClient, AiCompletionClient>()
     .ConfigureHttpClient(client =>
     {

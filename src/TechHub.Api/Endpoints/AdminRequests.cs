@@ -32,6 +32,24 @@ public sealed class FeedConfigRequest
     public bool Enabled { get; init; } = true;
 }
 
+/// <summary>DTO for naming a product, or a product name (add, rename, ignore).</summary>
+public sealed class ProductNameRequest
+{
+    public string? Name { get; init; }
+}
+
+/// <summary>DTO for adding an alias to a product.</summary>
+public sealed class ProductAliasRequest
+{
+    public string? Alias { get; init; }
+}
+
+/// <summary>DTO for merging a product into another product.</summary>
+public sealed class ProductMergeRequest
+{
+    public long TargetId { get; init; }
+}
+
 /// <summary>DTO for updating custom page raw JSON.</summary>
 public sealed class CustomPageUpdateRequest
 {

@@ -83,6 +83,10 @@ public static partial class AdminEndpoints
             .WithName("DeleteRssFeedConfig")
             .WithSummary("Delete an RSS feed configuration");
 
+        // ── Product catalog ──────────────────────────────────────────────────
+
+        group.MapAdminProductEndpoints();
+
         // ── Database statistics ──────────────────────────────────────────────
 
         group.MapGet("/statistics", GetStatisticsAsync)

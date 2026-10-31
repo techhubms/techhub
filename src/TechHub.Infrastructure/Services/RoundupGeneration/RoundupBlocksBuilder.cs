@@ -169,7 +169,6 @@ internal static class RoundupBlocksBuilder
         .DistinctBy(e => (e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date))
         .OrderBy(e => e.Date)
         .ThenBy(e => e.Product, StringComparer.OrdinalIgnoreCase)
-        .Take(MaxDatesPerGroup)
         .ToList();
 
     private static void AppendGroup(StringBuilder sb, string title, List<RoundupDateEvent> events)
@@ -183,13 +182,65 @@ internal static class RoundupBlocksBuilder
         sb.AppendLine(CultureInfo.InvariantCulture, $"### {title}");
         sb.AppendLine();
 
-        foreach (var e in events)
+        // One article that gives several events the same date and kind (a release with several features, a support end for
+        // several products) is one line, not one line per event.
+        var lines = events
+            .GroupBy(e => (e.Date, e.DatePrecision, e.Kind, e.SourceUrl))
+            .Take(MaxDatesPerGroup);
+
+        foreach (var line in lines)
         {
-            var subject = string.IsNullOrWhiteSpace(e.Feature) ? e.Product : $"{e.Product} {e.Feature}";
-            sb.AppendLine(CultureInfo.InvariantCulture,
-                $"- **{FormatDate(e.Date, e.DatePrecision)}**: {subject}: {EndWithPeriod(e.Description.Trim())} ([{e.SourceTitle}]({e.SourceUrl}))");
+            var first = line.First();
+            var date = FormatDate(first.Date, first.DatePrecision);
+            var source = string.Create(CultureInfo.InvariantCulture, $"[{first.SourceTitle}]({first.SourceUrl})");
+
+            if (line.Count() == 1)
+            {
+                sb.AppendLine(CultureInfo.InvariantCulture,
+                    $"- **{date}**: {Subject(first)}: {EndWithPeriod(first.Description.Trim())} ({source})");
+            }
+            else
+            {
+                sb.AppendLine(CultureInfo.InvariantCulture,
+                    $"- **{date}**: {KindLabel(first.Kind)} \u2014 {MergedSubjects(line)} ({source})");
+            }
         }
     }
+
+    // A feature that already names the product ("GitHub" + "Legacy GitHub app") is not prefixed with it again.
+    private static string Subject(RoundupDateEvent e) =>
+        string.IsNullOrWhiteSpace(e.Feature) ? e.Product
+        : e.Feature.Contains(e.Product, StringComparison.OrdinalIgnoreCase) ? e.Feature
+        : $"{e.Product} {e.Feature}";
+
+    private static string MergedSubjects(IEnumerable<RoundupDateEvent> events) => string.Join("; ", events
+        .GroupBy(e => e.Product, StringComparer.OrdinalIgnoreCase)
+        .OrderBy(g => g.Key, StringComparer.OrdinalIgnoreCase)
+        .Select(g =>
+        {
+            var features = g
+                .Select(e => e.Feature)
+                .Where(f => !string.IsNullOrWhiteSpace(f))
+                .Select(f => f!.Trim())
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .OrderBy(f => f, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+            return features.Count == 0 ? g.Key : $"{g.Key}: {string.Join(", ", features)}";
+        }));
+
+    private static string KindLabel(string kind) => kind switch
+    {
+        "deprecation" => "Deprecation",
+        "retirement" => "Retirement",
+        "end-of-support" => "End of support",
+        "breaking-change" => "Breaking change",
+        "pricing-change" => "Pricing change",
+        "preview" => "Preview",
+        "ga" => "GA",
+        "launch" => "Launch",
+        "release" => "Release",
+        _ => kind
+    };
 
     /// <summary>
     /// Whether <paramref name="url"/> is the complete destination of a Markdown link (<c>[text](url)</c>, optionally with a

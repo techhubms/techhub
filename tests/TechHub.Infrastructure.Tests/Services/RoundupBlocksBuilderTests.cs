@@ -17,7 +17,8 @@ public class RoundupBlocksBuilderTests
         string product = "Product",
         string? feature = null,
         string date = "2025-06-01",
-        string precision = "day") => new()
+        string precision = "day",
+        string sourceUrl = "https://example.com/source") => new()
         {
             Kind = kind,
             Product = product,
@@ -26,7 +27,7 @@ public class RoundupBlocksBuilderTests
             Date = DateOnly.Parse(date, System.Globalization.CultureInfo.InvariantCulture),
             DatePrecision = precision,
             SourceTitle = "Source",
-            SourceUrl = "https://example.com/source"
+            SourceUrl = sourceUrl
         };
 
     private static RoundupArticle Article(int index, string primary = "ai", string[]? facts = null) => new()
@@ -101,6 +102,56 @@ public class RoundupBlocksBuilderTests
 
         result.Split('\n').Count(l => l.StartsWith("- ", StringComparison.Ordinal)).Should().Be(2);
         result.IndexOf("A:", StringComparison.Ordinal).Should().BeLessThan(result.IndexOf("B:", StringComparison.Ordinal));
+    }
+
+    [Fact]
+    public void BuildDatesToKnow_EventsOfOneArticleWithTheSameDateAndKind_BecomeOneLine()
+    {
+        var result = RoundupBlocksBuilder.BuildDatesToKnow(
+        [
+            Event(kind: "ga", product: "Copilot Studio", feature: "Topics", date: "2025-06-01"),
+            Event(kind: "ga", product: "Copilot Studio", feature: "Evaluations", date: "2025-06-01"),
+            Event(kind: "ga", product: "Copilot Studio", feature: "Connected agents", date: "2025-06-01")
+        ], _weekEnd);
+
+        var lines = result.Split('\n').Where(l => l.StartsWith("- ", StringComparison.Ordinal)).ToList();
+        lines.Should().ContainSingle();
+        lines[0].Should().Contain("**1 June 2025**").And.Contain("Copilot Studio: Connected agents, Evaluations, Topics").And.Contain("[Source](https://example.com/source)");
+        lines[0].Should().NotContain("Something happens", "one description cannot describe several events");
+    }
+
+    [Fact]
+    public void BuildDatesToKnow_MergedLineNamesEveryProduct()
+    {
+        var result = RoundupBlocksBuilder.BuildDatesToKnow(
+        [
+            Event(product: "Azure App Service", feature: "Java 8 support", date: "2027-09-01"),
+            Event(product: "Azure Functions", feature: "Java 8 support", date: "2027-09-01")
+        ], _weekEnd);
+
+        var lines = result.Split('\n').Where(l => l.StartsWith("- ", StringComparison.Ordinal)).ToList();
+        lines.Should().ContainSingle();
+        lines[0].Should().Contain("Azure App Service: Java 8 support; Azure Functions: Java 8 support");
+    }
+
+    [Fact]
+    public void BuildDatesToKnow_EventsOfDifferentArticlesStaySeparate()
+    {
+        var result = RoundupBlocksBuilder.BuildDatesToKnow(
+        [
+            Event(product: "A", sourceUrl: "https://example.com/one"),
+            Event(product: "B", sourceUrl: "https://example.com/two")
+        ], _weekEnd);
+
+        result.Split('\n').Count(l => l.StartsWith("- ", StringComparison.Ordinal)).Should().Be(2);
+    }
+
+    [Fact]
+    public void BuildDatesToKnow_FeatureThatContainsTheProductName_DoesNotRepeatIt()
+    {
+        var result = RoundupBlocksBuilder.BuildDatesToKnow([Event(product: "GitHub", feature: "Legacy GitHub app for Microsoft Teams")], _weekEnd);
+
+        result.Should().Contain(": Legacy GitHub app for Microsoft Teams: ").And.NotContain("GitHub Legacy GitHub");
     }
 
     [Fact]

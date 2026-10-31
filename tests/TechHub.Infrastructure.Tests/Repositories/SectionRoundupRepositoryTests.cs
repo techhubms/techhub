@@ -199,9 +199,8 @@ public class SectionRoundupRepositoryTests
             Products = ["Azure Functions"],
             SectionRoles = new Dictionary<string, string> { ["azure"] = "lead", ["devops"] = "brief" }
         });
-        await _fixture.Connection.ExecuteAsync(
-            "UPDATE content_items SET ai_metadata = @Metadata::jsonb WHERE slug = 'v2-article'",
-            new { Metadata = metadata });
+        await new ContentItemWriteRepository(_fixture.Connection, NullLogger<ContentItemWriteRepository>.Instance)
+            .UpdateAiMetadataAsync("news", "v2-article", metadata, TestContext.Current.CancellationToken);
 
         // Act
         var articles = await _sut.GetArticlesForSectionForWeekAsync("devops", _weekStart, _weekEnd, CancellationToken.None);

@@ -33,6 +33,8 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
     public static TheoryData<string, string> AdminRoutes => new()
     {
         { "GET", "/api/admin/feeds" },
+        { "GET", "/api/admin/products" },
+        { "POST", "/api/admin/products/1/merge" },
         { "GET", "/api/admin/statistics" },
         { "POST", "/api/admin/cache/invalidate" },
         { "GET", "/api/admin/newsletter/subscribers" },
@@ -83,6 +85,7 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
 
     [Theory]
     [InlineData("/api/admin/feeds")]
+    [InlineData("/api/admin/products")]
     [InlineData("/api/admin/statistics")]
     [InlineData("/api/admin/newsletter/subscribers")]
     public async Task AdminRoute_WithAdminScope_ReturnsOk(string route)

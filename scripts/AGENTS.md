@@ -76,7 +76,7 @@ See [docs/repository-structure.md](../docs/repository-structure.md) for the comp
 - **TechHubRunner.psm1**: Exports `Run`, `Stop-Servers`, `Stop-OrphanedTestProcesses`, `Start-McpInspector`, and `Start-PostgresContainer`. Auto-imported in every session (see [docs/running-and-testing.md](../docs/running-and-testing.md)).
 - **Restore-Database.ps1**: Dumps the production database and restores it locally (`-Target local`) or only dumps to `.tmp/` (`-Target disk`).
 - **Invoke-Sql.ps1**: Runs one SQL query against the local PostgreSQL container. Extend it for specific local-query use cases.
-- **Setup-UserSecrets.ps1**: Fills .NET user secrets for local development (localhost Entra ID app, AI, and newsletter settings) from Azure.
+- **Setup-UserSecrets.ps1**: Fills .NET user secrets for local development (localhost Entra ID app, AI endpoint, newsletter unsubscribe secret) from Azure. Never sets the newsletter email endpoint or sender, and does not copy plain configuration such as AI model settings.
 - **Generate-DevCertificate.ps1**, **Normalize-Images.ps1**: HTTPS dev certificate and image normalization helpers.
 - **Fetch-VideoTranscripts.ps1**: Backfills video transcripts with yt-dlp through the admin API. Defaults to the local API (`https://localhost:5001`).
 

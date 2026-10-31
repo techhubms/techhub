@@ -20,6 +20,7 @@ public class AdminLayoutTests : BunitContext
         "/admin/feeds",
         "/admin/processed-urls",
         "/admin/content-items",
+        "/admin/products",
         "/admin/newsletter",
         "/admin/reviews",
         "/admin/custom-pages",

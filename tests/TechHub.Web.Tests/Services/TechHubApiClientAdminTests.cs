@@ -1737,6 +1737,184 @@ public class TechHubApiClientAdminTests
         (await act.Should().ThrowAsync<HttpRequestException>()).Which.StatusCode.Should().Be(status);
     }
 
+    // ── Product catalog ──────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task GetProductsAsync_WithSearch_EscapesTheSearchAndReturnsProducts()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """[{"id":1,"name":"Microsoft Foundry","itemCount":3,"eventCount":2,"aliases":[{"id":9,"alias":"Azure AI Foundry"}]}]""");
+
+        // Act
+        var products = await fixture.Client.GetProductsAsync("a&b c", TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products?search=a%26b%20c");
+        var product = products.Should().ContainSingle().Subject;
+        product.Name.Should().Be("Microsoft Foundry");
+        product.Aliases.Should().ContainSingle().Which.Alias.Should().Be("Azure AI Foundry");
+    }
+
+    [Fact]
+    public async Task GetProductAsync_NotFound_ReturnsNull()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.NotFound);
+
+        // Act
+        var product = await fixture.Client.GetProductAsync(3, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/3");
+        product.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task CreateProductAsync_Success_PostsTheNameAndReturnsTheProduct()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.Created, """{"id":4,"name":"Flint","aliases":[],"articles":[],"events":[]}""");
+
+        // Act
+        var product = await fixture.Client.CreateProductAsync("Flint", TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("POST");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products");
+        fixture.Handler.Json.GetProperty("name").GetString().Should().Be("Flint");
+        product.Id.Should().Be(4);
+    }
+
+    [Fact]
+    public async Task CreateProductAsync_Conflict_ThrowsWithTheServerMessage()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.Conflict, "\"'Flint' is already used by 'Flint Pro'.\"");
+
+        // Act
+        var act = () => fixture.Client.CreateProductAsync("Flint", TestContext.Current.CancellationToken);
+
+        // Assert
+        var exception = (await act.Should().ThrowAsync<HttpRequestException>()).Which;
+        exception.StatusCode.Should().Be(HttpStatusCode.Conflict);
+        exception.Message.Should().Be("'Flint' is already used by 'Flint Pro'.");
+    }
+
+    [Fact]
+    public async Task DeleteProductAsync_ErrorWithoutPlainMessage_ThrowsWithTheStatusCode()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.BadRequest, """{"title":"Bad Request"}""");
+
+        // Act
+        var act = () => fixture.Client.DeleteProductAsync(3, TestContext.Current.CancellationToken);
+
+        // Assert
+        (await act.Should().ThrowAsync<HttpRequestException>()).Which.Message.Should().Contain("400");
+        fixture.Handler.Method.Should().Be("DELETE");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/3");
+    }
+
+    [Fact]
+    public async Task RenameProductAsync_PutsTheNameToTheIdRoute()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """{"id":5,"name":"Foundry","aliases":[],"articles":[],"events":[]}""");
+
+        // Act
+        var product = await fixture.Client.RenameProductAsync(5, "Foundry", TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("PUT");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5");
+        fixture.Handler.Json.GetProperty("name").GetString().Should().Be("Foundry");
+        product.Name.Should().Be("Foundry");
+    }
+
+    [Fact]
+    public async Task AddProductAliasAsync_PostsTheAlias()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """{"id":5,"name":"Microsoft Foundry","aliases":[],"articles":[],"events":[]}""");
+
+        // Act
+        await fixture.Client.AddProductAliasAsync(5, "Azure AI Foundry", TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("POST");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/aliases");
+        fixture.Handler.Json.GetProperty("alias").GetString().Should().Be("Azure AI Foundry");
+    }
+
+    [Fact]
+    public async Task RemoveProductAliasAsync_DeletesTheAliasRoute()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.NoContent, "");
+
+        // Act
+        await fixture.Client.RemoveProductAliasAsync(5, 9, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("DELETE");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/aliases/9");
+    }
+
+    [Fact]
+    public async Task MergeProductAsync_PostsTheTargetId()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """{"id":6,"name":"Azure Functions","aliases":[],"articles":[],"events":[]}""");
+
+        // Act
+        var target = await fixture.Client.MergeProductAsync(5, 6, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/merge");
+        fixture.Handler.Json.GetProperty("targetId").GetInt64().Should().Be(6);
+        target.Id.Should().Be(6);
+    }
+
+    [Fact]
+    public async Task IgnoreAndUnignoreProductName_UseTheIgnoredRoute()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.NoContent, "");
+
+        // Act
+        await fixture.Client.IgnoreProductNameAsync("Microsoft Ignite", TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("POST");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/ignored");
+        fixture.Handler.Json.GetProperty("name").GetString().Should().Be("Microsoft Ignite");
+
+        // Act
+        await fixture.Client.UnignoreProductNameAsync("Microsoft Ignite", TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("DELETE");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/ignored?name=Microsoft%20Ignite");
+    }
+
+    [Fact]
+    public async Task GetUnmatchedAndIgnoredProductNamesAsync_ReturnTheLists()
+    {
+        // Arrange
+        using var unmatched = Fixture.Create(body: """[{"name":"Flint","itemCount":2,"eventCount":1}]""");
+        using var ignored = Fixture.Create(body: """["Microsoft Azure"]""");
+
+        // Act
+        var unmatchedNames = await unmatched.Client.GetUnmatchedProductNamesAsync(TestContext.Current.CancellationToken);
+        var ignoredNames = await ignored.Client.GetIgnoredProductNamesAsync(TestContext.Current.CancellationToken);
+
+        // Assert
+        unmatched.Handler.PathAndQuery.Should().Be("/api/admin/products/unmatched");
+        unmatchedNames.Should().ContainSingle().Which.ItemCount.Should().Be(2);
+        ignored.Handler.PathAndQuery.Should().Be("/api/admin/products/ignored");
+        ignoredNames.Should().Equal("Microsoft Azure");
+    }
+
     // ── Helpers ─────────────────────────────────────────────────────────────
 
     private static Task InvokeTriggerAsync(TechHubApiClient client, string path) => path switch

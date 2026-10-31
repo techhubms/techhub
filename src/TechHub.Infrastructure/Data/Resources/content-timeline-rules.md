@@ -1,8 +1,10 @@
 #### timeline_events (array of objects)
 
-Dated lifecycle events of a product or feature that the article itself states. They feed two things: a timeline of the milestones of a product (when it was announced, released, changed fundamentally or retired), and a "dates to know" list in weekly roundups with upcoming deadlines, retirements and launches. Accuracy matters more than completeness. Return an empty array when the article states no such event, which is the normal outcome for most articles.
+Dated lifecycle events of a product or feature that the article itself states. They feed two things: a timeline of the milestones of a product (when it was announced, released, changed fundamentally or retired), and a "dates to know" list in weekly roundups with upcoming deadlines, retirements and launches. Accuracy matters: never invent an event. Return an empty array when the article states no such event, which is the normal outcome for most articles.
 
-What deserves an event is a milestone: something a reader would still want to find on a timeline a year from now, or would need to plan around. Typical milestones are a new product, a new model, a capability that changes what the product can do, a preview or general availability of something people wait for, a deprecation, a retirement, a breaking change, a pricing change and a conference. Day-to-day improvements are not milestones, even when the article calls them "new": quality-of-life changes, settings, UI tweaks, an existing feature that also handles one more case, speed-ups and bug fixes. When unsure, ask whether you would mention it when telling a colleague what changed in this product this year; if not, leave it out.
+Deadlines are the exception to being selective. A deprecation, retirement, end of support, breaking change or pricing change with a stated date is always an event, in any kind of article (a tutorial, a community post, a migration guide, a release-notes post), because readers must plan around it and a missed one cannot be recovered. The milestone test below applies to everything else.
+
+What else deserves an event is a milestone: something a reader would still want to find on a timeline a year from now, or would need to plan around. Typical milestones are a new product, a new model, a capability that changes what the product can do, a preview or general availability of something people wait for, a conference. Day-to-day improvements are not milestones, even when the article calls them "new": quality-of-life changes, settings, UI tweaks, an existing feature that also handles one more case, speed-ups and bug fixes. When unsure, ask whether you would mention it when telling a colleague what changed in this product this year; if not, leave it out.
 
 Each event has these fields:
 
@@ -29,6 +31,8 @@ Each event has these fields:
 Rules:
 
 - Only report events the article states as fact. Never infer a date from the article's publication date unless the article says the event happens now.
+- A plan with a stated date uses the kind of the planned event, not `announced`: "expected to be generally available at Ignite on November 16" is a `ga` event with `explicit` date 2026-11-16 (or whatever the date is). Use `announced` only for a roadmap item without a date, or when the announcement itself is the milestone.
+- A post that summarizes a period (a weekly update, a newsletter, "this week in ...", a show or video that covers several announcements) does not say that things happen now. Report an event from such a post only when it states the day the event happened or will happen (`explicit`); never use `publication` for it.
 - Relative dates ("next week", "in Q3") count only when the article gives enough information to determine the date; otherwise skip the event.
 - Report events about Microsoft and GitHub products, and about the open-source ecosystem around them. Skip events that are only about third-party products.
 - Do not report events from opinion pieces, tutorials or retrospectives unless they announce something new.

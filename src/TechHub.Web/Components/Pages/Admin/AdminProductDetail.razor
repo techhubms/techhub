@@ -1,0 +1,365 @@
+@page "/admin/products/{Id:long}"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using System.Globalization
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject NavigationManager Navigation
+@inject PersistentComponentState ApplicationState
+@inherits PageComponentBase
+
+<PageTitle>@(_product?.Name ?? "Product") — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">@(_product?.Name ?? "Product")</h1>
+            <p class="admin-page-subtitle">Aliases, linked articles and linked dates of this product</p>
+        </div>
+        <div class="admin-actions">
+            <a href="/admin/products" class="btn-secondary">← All products</a>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading product…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_product == null)
+    {
+        <div class="admin-empty" id="product-not-found">Product not found.</div>
+    }
+    else
+    {
+        <h2 class="admin-section-title">Name and aliases</h2>
+
+        <div class="admin-inline-form">
+            <label class="admin-label" for="productName">Name</label>
+            <input id="productName" class="admin-input" @bind="_newName" />
+            <button class="btn-secondary" disabled="@_busy" @onclick="RenameAsync">Rename</button>
+        </div>
+        <p class="admin-result-summary">The old name becomes an alias, so articles that use it stay linked.</p>
+
+        @if (_product.Aliases.Count == 0)
+        {
+            <div class="admin-empty" id="aliases-empty">No aliases.</div>
+        }
+        else
+        {
+            <ul class="admin-plain-list" id="aliases-list">
+                @foreach (var alias in _product.Aliases)
+                {
+                    <li>
+                        @alias.Alias
+                        <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => RemoveAliasAsync(alias)">Remove</button>
+                    </li>
+                }
+            </ul>
+        }
+
+        <div class="admin-inline-form">
+            <label class="admin-label" for="newAlias">Add alias</label>
+            <input id="newAlias" class="admin-input" @bind="_newAlias" placeholder="Another name for this product" />
+            <button class="btn-secondary" disabled="@_busy" @onclick="AddAliasAsync">Add alias</button>
+        </div>
+
+        <h2 class="admin-section-title">Merge or delete</h2>
+
+        <div class="admin-inline-form">
+            <label class="admin-label" for="mergeTarget">Merge into</label>
+            <input id="mergeTarget" class="admin-input" list="merge-targets" @bind="_mergeTarget" placeholder="Product to merge into" />
+            <button class="btn-secondary" disabled="@(_busy || string.IsNullOrWhiteSpace(_mergeTarget))" @onclick="() => _pendingAction = PendingAction.Merge">Merge…</button>
+            <button class="btn-secondary" disabled="@_busy" @onclick="() => _pendingAction = PendingAction.Delete">Delete…</button>
+        </div>
+        <datalist id="merge-targets">
+            @foreach (var other in _otherProducts)
+            {
+                <option value="@other.Name"></option>
+            }
+        </datalist>
+
+        @if (_pendingAction == PendingAction.Merge)
+        {
+            <div class="admin-alert admin-alert-error" id="confirm-merge" role="alert">
+                Merge '@_product.Name' into '@_mergeTarget.Trim()'? The name and aliases of '@_product.Name' become aliases of '@_mergeTarget.Trim()' and this product is removed.
+                <button class="btn" disabled="@_busy" @onclick="MergeAsync">Confirm merge</button>
+                <button class="btn-secondary" @onclick="CancelPendingAction">Cancel</button>
+            </div>
+        }
+        else if (_pendingAction == PendingAction.Delete)
+        {
+            <div class="admin-alert admin-alert-error" id="confirm-delete" role="alert">
+                Delete '@_product.Name'? Its article links (@_product.Articles.Count) and dates (@_product.Events.Count) become unmatched again.
+                <button class="btn" disabled="@_busy" @onclick="DeleteAsync">Confirm delete</button>
+                <button class="btn-secondary" @onclick="CancelPendingAction">Cancel</button>
+            </div>
+        }
+
+        <h2 class="admin-section-title">Dates (@_product.Events.Count)</h2>
+
+        @if (_product.Events.Count == 0)
+        {
+            <div class="admin-empty" id="events-empty">No dates are linked to this product.</div>
+        }
+        else
+        {
+            <div class="admin-jobs-table-wrapper">
+                <table class="admin-table" id="events-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Kind</th>
+                            <th>Feature</th>
+                            <th>What happens</th>
+                            <th>Article</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in _product.Events)
+                        {
+                            <tr>
+                                <td class="admin-cell-mono">@FormatEventDate(item)</td>
+                                <td>@item.Kind</td>
+                                <td>@item.Feature</td>
+                                <td>@item.Description</td>
+                                <td><a href="/admin/content-preview/@item.CollectionName/@item.ItemSlug">@item.ItemTitle</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        <h2 class="admin-section-title">Articles (@_product.Articles.Count)</h2>
+
+        @if (_product.Articles.Count == 0)
+        {
+            <div class="admin-empty" id="articles-empty">No articles are linked to this product.</div>
+        }
+        else
+        {
+            <div class="admin-jobs-table-wrapper">
+                <table class="admin-table" id="articles-table">
+                    <thead>
+                        <tr>
+                            <th>Published</th>
+                            <th>Article</th>
+                            <th>Name used</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var article in _product.Articles)
+                        {
+                            <tr>
+                                <td class="admin-cell-mono">@DateHelper.FormatDateIso(article.DateEpoch)</td>
+                                <td><a href="/admin/content-preview/@article.CollectionName/@article.Slug">@article.Title</a></td>
+                                <td>@article.ProductName</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    private enum PendingAction
+    {
+        None,
+        Merge,
+        Delete
+    }
+
+    [Parameter] public long Id { get; set; }
+
+    private bool _loading = true;
+    private bool _busy;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private ProductDetail? _product;
+    private IReadOnlyList<ProductSummary> _otherProducts = [];
+    private string _newName = string.Empty;
+    private string _newAlias = string.Empty;
+    private string _mergeTarget = string.Empty;
+    private PendingAction _pendingAction;
+    private long _loadedId;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+        _loadedId = Id;
+
+        if (ApplicationState.TryTakeFromJson<ProductDetail>($"admin-product-{Id}", out var product) && product != null
+            && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductSummary>>($"admin-product-{Id}-others", out var others) && others != null)
+        {
+            _product = product;
+            _otherProducts = others;
+            _newName = product.Name;
+            _loading = false;
+            return;
+        }
+
+        await LoadAsync();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        // A merge navigates to the target product on the same component instance.
+        if (_loadedId != Id)
+        {
+            _loadedId = Id;
+            await LoadAsync();
+        }
+    }
+
+    private Task PersistState()
+    {
+        if (_product != null)
+        {
+            ApplicationState.PersistAsJson($"admin-product-{Id}", _product);
+            ApplicationState.PersistAsJson($"admin-product-{Id}-others", _otherProducts);
+        }
+
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+    }
+
+    private async Task LoadAsync()
+    {
+        _loading = true;
+        _error = null;
+        _message = null;
+        _mergeTarget = string.Empty;
+        _pendingAction = PendingAction.None;
+
+        try
+        {
+            _product = await Api.GetProductAsync(Id);
+            if (_product != null)
+            {
+                _otherProducts = (await Api.GetProductsAsync()).Where(p => p.Id != Id).ToList();
+                _newName = _product.Name;
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load product: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private void CancelPendingAction() => _pendingAction = PendingAction.None;
+
+    private Task RenameAsync() =>
+        RunAsync(async () =>
+        {
+            _product = await Api.RenameProductAsync(Id, _newName);
+            _newName = _product.Name;
+            return $"Renamed to '{_product.Name}'.";
+        });
+
+    private Task AddAliasAsync() =>
+        RunAsync(async () =>
+        {
+            var alias = _newAlias.Trim();
+            _product = await Api.AddProductAliasAsync(Id, _newAlias);
+            _newAlias = string.Empty;
+            return $"Alias '{alias}' added.";
+        });
+
+    private Task RemoveAliasAsync(ProductAlias alias) =>
+        RunAsync(async () =>
+        {
+            await Api.RemoveProductAliasAsync(Id, alias.Id);
+            _product = await Api.GetProductAsync(Id);
+            return $"Alias '{alias.Alias}' removed. Articles and dates that used it are unmatched again.";
+        });
+
+    private Task MergeAsync()
+    {
+        var targetName = _mergeTarget.Trim();
+        var target = _otherProducts.FirstOrDefault(p => string.Equals(p.Name, targetName, StringComparison.OrdinalIgnoreCase));
+        if (target is null)
+        {
+            _pendingAction = PendingAction.None;
+            _message = $"'{targetName}' is not a product. Pick a product from the list.";
+            _messageIsError = true;
+            return Task.CompletedTask;
+        }
+
+        return RunAsync(async () =>
+        {
+            var merged = await Api.MergeProductAsync(Id, target.Id);
+            Navigation.NavigateTo($"/admin/products/{merged.Id}");
+            return $"Merged into '{merged.Name}'.";
+        });
+    }
+
+    private Task DeleteAsync() =>
+        RunAsync(async () =>
+        {
+            await Api.DeleteProductAsync(Id);
+            Navigation.NavigateTo("/admin/products");
+            return "Product deleted.";
+        });
+
+    private async Task RunAsync(Func<Task<string>> change)
+    {
+        _busy = true;
+        _message = null;
+
+        try
+        {
+            _message = await change();
+            _messageIsError = false;
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = ex.Message;
+            _messageIsError = true;
+        }
+        finally
+        {
+            _busy = false;
+            _pendingAction = PendingAction.None;
+        }
+    }
+
+    private static string FormatEventDate(ProductEventLink item) => item.DatePrecision switch
+    {
+        "month" => item.EventDate.ToString("yyyy-MM", CultureInfo.InvariantCulture),
+        "quarter" => $"{item.EventDate.Year}-Q{(item.EventDate.Month - 1) / 3 + 1}",
+        _ => item.EventDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)
+    };
+}

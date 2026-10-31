@@ -330,6 +330,17 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                         _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
                     }
                 }
+                else if (result.Item is null && !result.IsFailure)
+                {
+                    // The current classifier would exclude this stored article, so there is no roundup metadata to enrich.
+                    // Store neutral metadata: otherwise it is classified again in every section and on every run.
+                    // It has no section roles, so it stays a lead (never a missing story), ordered last as low significance.
+                    var neutral = new RoundupMetadata { SchemaVersion = RoundupMetadata.CurrentSchemaVersion, Significance = "low" };
+                    await _writeRepo.UpdateAiMetadataAsync(article.CollectionName, article.Slug, ContentItemWriteRepository.SerializeAiMetadata(neutral), ct);
+                    enriched[article.ExternalUrl] = article.WithMetadata(neutral);
+
+                    lp.Report($"AI metadata backfill: {article.Slug} would be excluded by the classifier ({result.Explanation}); stored neutral metadata");
+                }
                 else
                 {
                     _logger.LogDebug("AI categorization returned no metadata for {Slug} — using defaults", article.Slug);

@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Logging;
+using Polly.Timeout;
 using TechHub.Core.Interfaces;
 
 namespace TechHub.Infrastructure.Services.ContentProcessing;
@@ -30,7 +31,10 @@ public sealed class RssFeedClient : IRssFeedClient
         {
             return await _httpClient.GetStringAsync(url, ct);
         }
-        catch (HttpRequestException ex)
+        // A slow feed is an expected failure: the Polly timeout (TimeoutRejectedException) and HttpClient.Timeout
+        // (TaskCanceledException) must not abort the whole run, so only caller cancellation propagates.
+        catch (Exception ex) when (ex is HttpRequestException or TimeoutRejectedException
+            || (ex is OperationCanceledException && !ct.IsCancellationRequested))
         {
             _logger.LogError(ex, "Failed to download feed from {Url}", url);
             return null;

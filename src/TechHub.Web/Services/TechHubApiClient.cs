@@ -1403,6 +1403,228 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     // ================================================================
+    // Product catalog methods
+    // ================================================================
+
+    /// <summary>
+    /// Get the products with aliases and usage counts.
+    /// GET /api/admin/products
+    /// </summary>
+    public virtual async Task<IReadOnlyList<ProductSummary>> GetProductsAsync(
+        string? search = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var url = string.IsNullOrWhiteSpace(search)
+                ? "/api/admin/products"
+                : $"/api/admin/products?search={Uri.EscapeDataString(search.Trim())}";
+            return await _httpClient.GetFromJsonAsync<IReadOnlyList<ProductSummary>>(url, cancellationToken) ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch products");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get a product with its aliases, linked articles and linked dates.
+    /// GET /api/admin/products/{id}
+    /// </summary>
+    public virtual async Task<ProductDetail?> GetProductAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<ProductDetail>($"/api/admin/products/{id}", cancellationToken);
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return null;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch product {ProductId}", id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get the product names that are not in the catalog yet.
+    /// GET /api/admin/products/unmatched
+    /// </summary>
+    public virtual async Task<IReadOnlyList<UnmatchedProductName>> GetUnmatchedProductNamesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<IReadOnlyList<UnmatchedProductName>>(
+                "/api/admin/products/unmatched", cancellationToken) ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch unmatched product names");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get the names that are marked as not being a product.
+    /// GET /api/admin/products/ignored
+    /// </summary>
+    public virtual async Task<IReadOnlyList<string>> GetIgnoredProductNamesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<IReadOnlyList<string>>(
+                "/api/admin/products/ignored", cancellationToken) ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch ignored product names");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Add a product.
+    /// POST /api/admin/products
+    /// </summary>
+    public virtual async Task<ProductDetail> CreateProductAsync(
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync("/api/admin/products", new { name }, cancellationToken);
+        return await ReadProductDetailAsync(response, "create product", cancellationToken);
+    }
+
+    /// <summary>
+    /// Rename a product.
+    /// PUT /api/admin/products/{id}
+    /// </summary>
+    public virtual async Task<ProductDetail> RenameProductAsync(
+        long id,
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/products/{id}", new { name }, cancellationToken);
+        return await ReadProductDetailAsync(response, "rename product", cancellationToken);
+    }
+
+    /// <summary>
+    /// Delete a product.
+    /// DELETE /api/admin/products/{id}
+    /// </summary>
+    public virtual async Task DeleteProductAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/{id}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "delete product", cancellationToken);
+    }
+
+    /// <summary>
+    /// Add an alias to a product.
+    /// POST /api/admin/products/{id}/aliases
+    /// </summary>
+    public virtual async Task<ProductDetail> AddProductAliasAsync(
+        long id,
+        string aliasName,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{id}/aliases", new { alias = aliasName }, cancellationToken);
+        return await ReadProductDetailAsync(response, "add product alias", cancellationToken);
+    }
+
+    /// <summary>
+    /// Remove an alias from a product.
+    /// DELETE /api/admin/products/{id}/aliases/{aliasId}
+    /// </summary>
+    public virtual async Task RemoveProductAliasAsync(
+        long id,
+        long aliasId,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/{id}/aliases/{aliasId}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "remove product alias", cancellationToken);
+    }
+
+    /// <summary>
+    /// Merge a product into another product.
+    /// POST /api/admin/products/{id}/merge
+    /// </summary>
+    public virtual async Task<ProductDetail> MergeProductAsync(
+        long sourceId,
+        long targetId,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{sourceId}/merge", new { targetId }, cancellationToken);
+        return await ReadProductDetailAsync(response, "merge product", cancellationToken);
+    }
+
+    /// <summary>
+    /// Mark a name as not being a product.
+    /// POST /api/admin/products/ignored
+    /// </summary>
+    public virtual async Task IgnoreProductNameAsync(
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync("/api/admin/products/ignored", new { name }, cancellationToken);
+        await EnsureProductSuccessAsync(response, "ignore product name", cancellationToken);
+    }
+
+    /// <summary>
+    /// Put an ignored name back in the review queue.
+    /// DELETE /api/admin/products/ignored
+    /// </summary>
+    public virtual async Task UnignoreProductNameAsync(
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/ignored?name={Uri.EscapeDataString(name)}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "unignore product name", cancellationToken);
+    }
+
+    private async Task<ProductDetail> ReadProductDetailAsync(
+        HttpResponseMessage response,
+        string operation,
+        CancellationToken cancellationToken)
+    {
+        await EnsureProductSuccessAsync(response, operation, cancellationToken);
+        return await response.Content.ReadFromJsonAsync<ProductDetail>(cancellationToken)
+            ?? throw new InvalidOperationException($"API returned null for {operation}");
+    }
+
+    /// <summary>Throws an <see cref="HttpRequestException"/> that carries the message the API returned, so the admin sees why a change was refused.</summary>
+    private async Task EnsureProductSuccessAsync(
+        HttpResponseMessage response,
+        string operation,
+        CancellationToken cancellationToken)
+    {
+        if (response.IsSuccessStatusCode)
+        {
+            return;
+        }
+
+        string? message = null;
+        try
+        {
+            message = await response.Content.ReadFromJsonAsync<string>(cancellationToken);
+        }
+        catch (System.Text.Json.JsonException)
+        {
+            // The body is not a plain message (for example a problem details response); the status code is reported instead.
+        }
+
+        _logger.LogWarning("Failed to {Operation}: {StatusCode}", operation, (int)response.StatusCode);
+        throw new HttpRequestException(message ?? $"Request failed with status {(int)response.StatusCode}.", null, response.StatusCode);
+    }
+
+    // ================================================================
     // Database statistics methods
     // ================================================================
 

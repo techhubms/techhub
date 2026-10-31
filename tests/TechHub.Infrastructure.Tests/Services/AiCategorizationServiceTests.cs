@@ -777,6 +777,86 @@ public class AiCategorizationServiceTests
         result.Explanation.Should().Be("blocked");
     }
 
+    // ── Missed deadlines ──────────────────────────────────────────────────────
+
+    private static RawFeedItem ItemWithContent(string content) => new()
+    {
+        Title = "Test Article",
+        ExternalUrl = "https://example.com/article",
+        PublishedAt = new DateTimeOffset(2026, 10, 21, 10, 0, 0, TimeSpan.Zero),
+        FeedItemData = "A test description",
+        FeedName = "Test Feed",
+        CollectionName = "community",
+        FullContent = content
+    };
+
+    private const string DeadlineText = "Microsoft Foundry is retiring workflows on December 1, 2026. After that date the designer is not supported.";
+
+    private const string DecemberRetirementJson = """
+        {"kind":"retirement","product":"Microsoft Foundry","feature":"Workflows","description":"Workflows are retired",
+         "date_source":"explicit","date":"2026-12-01","date_precision":"day","quote":"retiring workflows on December 1, 2026"}
+        """;
+
+    [Fact]
+    public async Task ClassifyAsync_DeadlineInTheTextWithoutAnEvent_AddsTheEventsOfAFocusedExtraction()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap($$"""{"timeline_events":[{{DecemberRetirementJson}}]}"""));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText));
+
+        result.IsFailure.Should().BeFalse();
+        result.Item!.TimelineEvents.Should().ContainSingle().Which.Date.Should().Be(new DateOnly(2026, 12, 1));
+        _requests.Should().HaveCount(2);
+        Parse(_requests[1]).GetProperty("model").GetString().Should().Be(TimelineDeployment);
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_DeadlineAlreadyHasAnEvent_MakesNoSecondCall()
+    {
+        SetupResponses(Wrap(ClassificationJson(eventsJson: $"[{DecemberRetirementJson}]")));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText));
+
+        result.Item!.TimelineEvents.Should().ContainSingle();
+        _requests.Should().ContainSingle();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_DeadlineInAnExcludedItem_MakesNoSecondCall()
+    {
+        SetupResponses(Wrap(ExcludedJson));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText));
+
+        result.Item.Should().BeNull();
+        _requests.Should().ContainSingle();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_FocusedExtractionReturnsAnInvalidAnswer_KeepsTheClassification()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("""{"timeline_events":[]}""", finishReason: "length"));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText));
+
+        result.IsFailure.Should().BeFalse();
+        result.Item!.TimelineEvents.Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_FocusedExtractionRepeatsAnExistingEvent_DoesNotDuplicateIt()
+    {
+        const string OtherDate = """
+            {"kind":"retirement","product":"Microsoft Foundry","feature":"Workflows","description":"Workflows are retired",
+             "date_source":"explicit","date":"2026-11-15","date_precision":"day","quote":"q"}
+            """;
+        SetupResponses(Wrap(ClassificationJson(eventsJson: $"[{OtherDate}]")), Wrap($$"""{"timeline_events":[{{DecemberRetirementJson}}]}"""));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText));
+
+        result.Item!.TimelineEvents.Should().ContainSingle();
+    }
+
     // ── Prompts ───────────────────────────────────────────────────────────────
 
     [Fact]

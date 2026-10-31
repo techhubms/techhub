@@ -99,6 +99,27 @@ The GitHub Copilot feature endpoints live under `/api/ghc-features` (not `/api/a
 
 Subscriber management, send log and manual sends are under `/api/admin/newsletter`. They are documented in [newsletter.md](newsletter.md#api).
 
+### Product Catalog
+
+The catalog links the product names the AI returns to curated products (see [content-processing.md](content-processing.md#product-catalog)). Endpoints under `/api/admin/products`:
+
+| Endpoint | Purpose | Result |
+|---|---|---|
+| `GET /products` | Products with aliases and the number of linked articles and dates. Optional `search` on name or alias | `200`, `400` for a search over 200 characters |
+| `GET /products/{id}` | A product with its aliases, linked articles and linked dates | `200`, `404` |
+| `POST /products` | Add a product (`name`) | `201` with the product, `400` for an empty or too long name, `409` when the name is already a product or an alias |
+| `PUT /products/{id}` | Rename (`name`). The old name becomes an alias | `200`, `400`, `404`, `409` |
+| `DELETE /products/{id}` | Delete a product and its aliases. Its articles and dates become unmatched again | `204`, `404` |
+| `POST /products/{id}/aliases` | Add an alias (`alias`) | `200` with the product, `400`, `404`, `409` |
+| `DELETE /products/{id}/aliases/{aliasId}` | Remove an alias | `204`, `404` |
+| `POST /products/{id}/merge` | Merge into another product (`targetId`). The name and aliases become aliases of the target | `200` with the target, `400` when merging into itself, `404` |
+| `GET /products/unmatched` | The review queue: names that are not in the catalog and not ignored, with the number of articles and dates, most used first | `200` |
+| `GET /products/ignored` | The names that are marked as not being a product | `200` |
+| `POST /products/ignored` | Mark a name as not being a product (`name`) | `204`, `400`, `409` when it is a product or an alias |
+| `DELETE /products/ignored?name=` | Put an ignored name back in the review queue | `204`, `404` |
+
+Error responses carry a plain message that the admin pages show.
+
 ## Admin Pages
 
 All pages render interactively on the server inside the admin layout. Unauthenticated visitors see the sign-in form instead of the page content, and the Web app re-challenges signed-in users whose cached token is gone (for example after a server restart).
@@ -107,6 +128,8 @@ All pages render interactively on the server inside the admin layout. Unauthenti
 |------|---------|
 | `/admin` | Dashboard: job history with live logs, buttons to trigger processing, roundup generation and the content fixer, and to cancel the running job |
 | `/admin/feeds` | Add, edit, enable or disable and delete RSS feeds |
+| `/admin/products` | Product catalog: the review queue of product names that are not in the catalog yet, the product list with search, and the names that are not products (see [Product Catalog](#product-catalog)) |
+| `/admin/products/{id}` | One product: rename, aliases, merge into another product, delete, and the linked dates and articles |
 | `/admin/processed-urls` | Search the URL ledger by status, feed, collection, section or job. Remove entries to retry them, clear all failed entries, and open the item editor. |
 | `/admin/content-items` | Browse and filter content, edit or delete items, add a URL through the pipeline (the add-content dialog), and regenerate a roundup |
 | `/admin/content-preview/{collection}/{slug}` | Render an item's markdown as it will appear on the site |

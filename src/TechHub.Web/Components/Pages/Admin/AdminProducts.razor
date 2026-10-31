@@ -1,0 +1,344 @@
+@page "/admin/products"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
+@inherits PageComponentBase
+
+<PageTitle>Products — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Products</h1>
+            <p class="admin-page-subtitle">The AI returns product names as free text. Link them to a product here, so articles and dates are grouped per product.</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn" @onclick="ShowAddForm">+ Add Product</button>
+            <button class="btn-secondary" @onclick="LoadAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @if (_showAddForm)
+    {
+        <div class="admin-modal-backdrop" @onclick="CancelAddForm" @onkeydown="HandleKeyDown" role="dialog" aria-modal="true" aria-labelledby="product-editor-title" tabindex="-1">
+            <div class="admin-modal" @onclick:stopPropagation>
+                <div class="admin-modal-header">
+                    <h2 id="product-editor-title" class="admin-modal-title">Add Product</h2>
+                    <button class="admin-modal-close" @onclick="CancelAddForm" aria-label="Close editor">×</button>
+                </div>
+                <div class="admin-modal-body">
+                    <div class="admin-form-group">
+                        <label class="admin-label" for="productName">Name</label>
+                        <input id="productName" class="admin-input" @bind="_newProductName" placeholder="e.g. Microsoft Foundry" />
+                    </div>
+                </div>
+                <div class="admin-modal-footer">
+                    <button class="btn" @onclick="AddProductAsync" disabled="@_busy">Save</button>
+                    <button class="btn-secondary" @onclick="CancelAddForm">Cancel</button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading products…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else
+    {
+        <h2 class="admin-section-title">To review (@(_unmatched?.Count ?? 0))</h2>
+        <p class="admin-result-summary">Names the AI returned that are not a product or an alias yet. Add one as a product, add it as an alias of a product, or mark it as not a product.</p>
+
+        @if (_unmatched == null || _unmatched.Count == 0)
+        {
+            <div class="admin-empty" id="unmatched-empty">Nothing to review.</div>
+        }
+        else
+        {
+            <div class="admin-jobs-table-wrapper">
+                <table class="admin-table" id="unmatched-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Articles</th>
+                            <th>Dates</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var name in _unmatched)
+                        {
+                            <tr>
+                                <td>@name.Name</td>
+                                <td class="admin-cell-mono">@name.ItemCount</td>
+                                <td class="admin-cell-mono">@name.EventCount</td>
+                                <td>
+                                    <div class="admin-inline-form">
+                                        <button class="admin-link-btn" disabled="@_busy" @onclick="() => AddAsProductAsync(name.Name)">Add as product</button>
+                                        <input class="admin-input" list="product-names" placeholder="Alias of…" aria-label="Alias of product for @name.Name"
+                                               value="@GetAliasTarget(name.Name)" @onchange="e => SetAliasTarget(name.Name, e.Value?.ToString())" />
+                                        <button class="admin-link-btn" disabled="@(_busy || string.IsNullOrWhiteSpace(GetAliasTarget(name.Name)))" @onclick="() => AddAsAliasAsync(name.Name)">Add as alias</button>
+                                        <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => IgnoreAsync(name.Name)">Not a product</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        <datalist id="product-names">
+            @foreach (var product in _products)
+            {
+                <option value="@product.Name"></option>
+            }
+        </datalist>
+
+        <h2 class="admin-section-title">Products (@_products.Count)</h2>
+
+        <div class="admin-filters">
+            <div class="admin-filter-group">
+                <label class="admin-label" for="productSearch">Search name or alias</label>
+                <input id="productSearch" class="admin-input" @bind="_search" @bind:event="oninput" placeholder="Search products…" />
+            </div>
+        </div>
+
+        @if (FilteredProducts.Count == 0)
+        {
+            <div class="admin-empty" id="products-empty">No products found.</div>
+        }
+        else
+        {
+            <p class="admin-result-summary">Showing @VisibleProducts.Count of @FilteredProducts.Count products</p>
+            <div class="admin-jobs-table-wrapper">
+                <table class="admin-table" id="products-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Aliases</th>
+                            <th>Articles</th>
+                            <th>Dates</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var product in VisibleProducts)
+                        {
+                            <tr>
+                                <td>@product.Name</td>
+                                <td>@string.Join(", ", product.Aliases.Select(a => a.Alias))</td>
+                                <td class="admin-cell-mono">@product.ItemCount</td>
+                                <td class="admin-cell-mono">@product.EventCount</td>
+                                <td><a class="admin-link-btn" href="/admin/products/@product.Id">Open</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        <details class="admin-details">
+            <summary>Names that are not products (@(_ignored?.Count ?? 0))</summary>
+            @if (_ignored == null || _ignored.Count == 0)
+            {
+                <div class="admin-empty">No names are ignored.</div>
+            }
+            else
+            {
+                <ul class="admin-plain-list">
+                    @foreach (var name in _ignored)
+                    {
+                        <li>
+                            @name
+                            <button class="admin-link-btn" disabled="@_busy" @onclick="() => UnignoreAsync(name)">Restore</button>
+                        </li>
+                    }
+                </ul>
+            }
+        </details>
+    }
+</div>
+
+@code {
+    private const int MaxVisibleProducts = 200;
+
+    private bool _loading = true;
+    private bool _busy;
+    private bool _showAddForm;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private string _search = string.Empty;
+    private string _newProductName = string.Empty;
+    private IReadOnlyList<ProductSummary> _products = [];
+    private IReadOnlyList<UnmatchedProductName>? _unmatched;
+    private IReadOnlyList<string>? _ignored;
+    private readonly Dictionary<string, string> _aliasTargets = new(StringComparer.OrdinalIgnoreCase);
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    private IReadOnlyList<ProductSummary> FilteredProducts =>
+        string.IsNullOrWhiteSpace(_search)
+            ? _products
+            : _products.Where(p =>
+                p.Name.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase)
+                || p.Aliases.Any(a => a.Alias.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase))).ToList();
+
+    private IReadOnlyList<ProductSummary> VisibleProducts => FilteredProducts.Take(MaxVisibleProducts).ToList();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<ProductSummary>>("admin-products", out var products) && products != null
+            && ApplicationState.TryTakeFromJson<IReadOnlyList<UnmatchedProductName>>("admin-products-unmatched", out var unmatched) && unmatched != null
+            && ApplicationState.TryTakeFromJson<IReadOnlyList<string>>("admin-products-ignored", out var ignored) && ignored != null)
+        {
+            _products = products;
+            _unmatched = unmatched;
+            _ignored = ignored;
+            _loading = false;
+            return;
+        }
+
+        await LoadAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (_unmatched != null && _ignored != null)
+        {
+            ApplicationState.PersistAsJson("admin-products", _products);
+            ApplicationState.PersistAsJson("admin-products-unmatched", _unmatched);
+            ApplicationState.PersistAsJson("admin-products-ignored", _ignored);
+        }
+
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+    }
+
+    private async Task LoadAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            _products = await Api.GetProductsAsync();
+            _unmatched = await Api.GetUnmatchedProductNamesAsync();
+            _ignored = await Api.GetIgnoredProductNamesAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load products: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private string GetAliasTarget(string name) => _aliasTargets.TryGetValue(name, out var target) ? target : string.Empty;
+
+    private void SetAliasTarget(string name, string? target) => _aliasTargets[name] = target ?? string.Empty;
+
+    private void ShowAddForm()
+    {
+        _newProductName = string.Empty;
+        _showAddForm = true;
+        _message = null;
+    }
+
+    private void CancelAddForm() => _showAddForm = false;
+
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Escape")
+        {
+            CancelAddForm();
+        }
+    }
+
+    private async Task AddProductAsync()
+    {
+        if (await RunAsync(() => Api.CreateProductAsync(_newProductName), $"Product '{_newProductName.Trim()}' added."))
+        {
+            _showAddForm = false;
+        }
+    }
+
+    private Task AddAsProductAsync(string name) =>
+        RunAsync(() => Api.CreateProductAsync(name), $"Product '{name}' added.");
+
+    private Task AddAsAliasAsync(string name)
+    {
+        var targetName = GetAliasTarget(name).Trim();
+        var target = _products.FirstOrDefault(p => string.Equals(p.Name, targetName, StringComparison.OrdinalIgnoreCase));
+        if (target is null)
+        {
+            _message = $"'{targetName}' is not a product. Pick a product from the list.";
+            _messageIsError = true;
+            return Task.CompletedTask;
+        }
+
+        return RunAsync(() => Api.AddProductAliasAsync(target.Id, name), $"'{name}' is now an alias of '{target.Name}'.");
+    }
+
+    private Task IgnoreAsync(string name) =>
+        RunAsync(() => Api.IgnoreProductNameAsync(name), $"'{name}' is marked as not a product.");
+
+    private Task UnignoreAsync(string name) =>
+        RunAsync(() => Api.UnignoreProductNameAsync(name), $"'{name}' is back in the review queue when it is used.");
+
+    private async Task<bool> RunAsync(Func<Task> change, string successMessage)
+    {
+        _busy = true;
+        _message = null;
+
+        try
+        {
+            await change();
+            _message = successMessage;
+            _messageIsError = false;
+            await LoadAsync();
+            return true;
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = ex.Message;
+            _messageIsError = true;
+            return false;
+        }
+        finally
+        {
+            _busy = false;
+        }
+    }
+}

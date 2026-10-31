@@ -1744,6 +1744,8 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
                         transaction: transaction,
                         cancellationToken: ct));
 
+                await ProductLinkWriter.ReplaceItemLinksAsync(Connection, transaction, collectionName, slug, ct);
+
                 if (timeline is not null)
                 {
                     await TimelineEventWriter.ReplaceAsync(Connection, transaction, collectionName, slug, timeline, ct);

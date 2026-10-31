@@ -184,7 +184,8 @@ Configured under `"AiCategorization"`:
 | `Profiles:<Step>:ServiceTier` | `flex` in `appsettings.json` | `default` (Standard) or `flex` (50% cheaper, may queue) |
 | `MaxRetries` | `3` | Attempts per item on rate limits and transient failures |
 | `RateLimitDelaySeconds` | `15` | Wait between attempts on a rate limit without a `Retry-After` header (multiplied by the attempt number) |
-| `FlexMaxWait` | `00:30:00` | How long a Flex request keeps retrying on Flex before it falls back |
+| `FlexMaxWait` | `00:05:00` | How long a Flex request keeps retrying on Flex before it falls back |
+| `FlexUnavailableCooldown` | `00:15:00` | After a Flex request gave up, later requests within this period try Flex once and fall back at the first `429` instead of waiting `FlexMaxWait` again. `00:00:00` disables this |
 | `FlexMinRetryDelay` / `FlexMaxRetryDelay` | `00:00:30` / `00:02:00` | Backoff bounds between Flex retries. `FlexMaxRetryDelay` caps only the calculated backoff; a server `Retry-After` is honored in full (and the request falls back when that wait would exceed `FlexMaxWait`) |
 | `FlexFallbackToDefaultTier` | `true` | After `FlexMaxWait`, send the request once on the Standard tier. When `false`, the request is reported as rate limited |
 | `TimelineBackfillDelaySeconds` | `2` | Wait between articles during the timeline backfill |
@@ -192,7 +193,7 @@ Configured under `"AiCategorization"`:
 Behavior worth knowing:
 
 - **Per-step models**: Models, reasoning effort and service tier are configuration only. Switching a step to another deployment, or back to `gpt-5.2` with `ServiceTier: default`, needs no code change. No `temperature` is sent.
-- **Flex**: A `429` on a Flex request means "no capacity right now". The client keeps retrying on Flex, then falls back to the Standard tier. Rate-limit responses do not count as circuit-breaker failures, so sustained capacity shortages cannot block retries or fallback; other transient failures still count. Interactive calls (ad-hoc URL add, apply transcript) always use the Standard tier so an admin never waits in a queue.
+- **Flex**: A `429` on a Flex request means "no capacity right now". The client keeps retrying on Flex for `FlexMaxWait`, then falls back to the Standard tier. A shared `AiFlexCapacityTracker` (singleton) remembers the fallback for `FlexUnavailableCooldown`, so during a Flex shortage the items that follow do not each wait out `FlexMaxWait` (an item takes two calls, classify and rewrite) but probe Flex once and fall back at once; a Flex call that succeeds clears the state. Rate-limit responses do not count as circuit-breaker failures, so sustained capacity shortages cannot block retries or fallback; other transient failures still count. Interactive calls (ad-hoc URL add, apply transcript) always use the Standard tier so an admin never waits in a queue.
 - **Usage logging**: Every successful call logs the model, requested and served tier, prompt and cached tokens, and completion and reasoning tokens, so the real cost can be checked.
 - **Retries**: A `429` on the Standard tier waits for the server's `Retry-After` value when present. Network errors and timeouts back off 5 seconds times the attempt number. The HTTP client itself does not retry; its timeout is 15 minutes because Flex can queue.
 - **Non-retryable responses**: Content filter blocks and context-length errors return immediately and are recorded as failures with the Azure message.
@@ -212,7 +213,10 @@ The classification step stores roundup metadata in the `ai_metadata` JSONB colum
 
 Rows with the older summary-based metadata (no `schema_version`, `roundup_summary`, `key_topics`, ...)
 count as missing: the roundup generator re-classifies them on the fly (classification only) the first time
-they appear in a roundup.
+they appear in a roundup. When the current classifier would exclude such a stored article (for example a promotional teaser from before the
+stricter rules), there is nothing to enrich: the generator stores neutral version 2 metadata (no key facts or roles, `low` significance) and
+logs the exclusion reason in the job log, so the article is not classified again for every section and every run. It stays a lead article.
+A classification that fails (timeout, invalid answer) stores nothing and is retried.
 
 ### Admin Dashboard
 
@@ -229,7 +233,8 @@ See [admin-authentication.md](admin-authentication.md) for authentication setup.
 
 ### Error Handling
 
-- **Feed unavailability**: Individual feed failures do not stop the pipeline; other feeds continue
+- **Feed unavailability**: Individual feed failures do not stop the pipeline; other feeds continue. This includes a feed that is too slow (the resilience timeout and `HttpClient.Timeout` are treated like a failed download); only cancellation of the run itself stops it
+- **Job duration**: `duration_ms` of a job is the elapsed wall time (`EXTRACT(EPOCH ...)`), including the time spent waiting on AI calls
 - **Content fetch failures**: Non-fatal; pipeline falls back to RSS metadata only
 - **YouTube videos**: Processed using only available metadata (no automatic transcript fetch);
   transcripts can be provided manually via the admin UI or batch script
@@ -369,8 +374,9 @@ source-article link without the "Full story" sentence. The consequence is that a
 
 **Dates to know** comes from `content_timeline_events` of the section's articles of the week, for dates after the roundup week:
 *Deadlines* are `deprecation`, `retirement`, `end-of-support`, `breaking-change` and `pricing-change`;
-*Coming up* are `preview`, `ga`, `launch` and `release`. Duplicates are merged and each group shows at most ten dates. The block is
-omitted when there is nothing to report.
+*Coming up* are `preview`, `ga`, `launch` and `release`. Duplicates are merged. Events of one article with the same date and kind become one line
+("**26 October 2026**: GA — Microsoft Copilot Studio: Agent lifecycle management, Connected agents, Evaluations, Topics"), a feature that already
+names its product is not prefixed with it, and each group shows at most ten lines. The block is omitted when there is nothing to report.
 
 Writing style guidelines (`docs/writing-style-guidelines.md`) are injected into the writer and metadata prompts
 to ensure consistent tone and style throughout the roundup.
@@ -396,15 +402,17 @@ is deprecated or retired. The classification step extracts them and the applicat
 
 | Table | Purpose |
 |---|---|
-| `content_timeline_events` | One row per event: `kind`, `product`, `feature`, `description`, `event_date`, `date_precision` (`day`/`month`/`quarter`), `date_source`, `quote`, `extracted_from`, with a cascading foreign key to the source article |
+| `content_timeline_events` | One row per event: `kind`, `product` (as the AI wrote it), `product_id` (the catalog product), `feature`, `description`, `event_date`, `date_precision` (`day`/`month`/`quarter`), `date_source`, `quote`, `extracted_from`, with a cascading foreign key to the source article |
 | `content_timeline_extractions` | One row per scanned article with the `prompt_version` and the number of events found, so the backfill is resumable |
 
 Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`, `retirement`, `end-of-support`, `breaking-change`, `pricing-change` and `event`.
 
 - **Dates come from code when they are "now".** When an article says a feature "is now generally available", the model reports `date_source: publication` and no date; code fills in the article's publication date (Europe/Brussels). Explicit dates are validated, and coarse dates are normalized to the first day of the month or quarter. Events with an unparseable date are skipped and logged.
+- **Deadlines are never optional.** The rules tell the model to always report a deprecation, retirement, end of support, breaking change or pricing change with a stated date, in any kind of article; the milestone test applies to everything else. A plan with a stated date uses the kind of the planned event (`ga` for "expected to be generally available on ..."), not `announced`, and a post that summarizes a period (weekly update, newsletter, video covering several announcements) never gets `publication` dates.
+- **Safety net for missed deadlines.** `TimelineDeadlineGuard` checks the text after the classification: when it names a future date (up to five years ahead) within 150 characters of a deadline phrase (retire, deprecate, end of support, sunset, no longer supported, ...) and no extracted event has that date, the article gets a second, focused extraction on the cheap `TimelineExtraction` profile, and the new events are added. It runs for processing and for the roundup metadata backfill; an invalid answer of the second call is ignored.
 - **No quote check.** The `quote` is stored for spot checks. If the model proves unreliable, add a check that the quote appears in the article.
 - **Reprocessing replaces events.** An article's events are replaced whenever it is processed again, or when a transcript is applied. This happens in the same transaction as the article write (processing, transcript edit, roundup metadata backfill), so a failing event write never leaves a saved article with stale events or a scanned marker that does not match them. Replacements of the same article are serialized with a row lock on the article, so concurrent runs cannot store two event sets.
-- **Write-only for now.** The only reader is the roundup "Dates to know" block. The table is the basis for making the GitHub Copilot features page dynamic later.
+- **Read by the roundup and the admin.** The roundup "Dates to know" block reads the events, and the admin products page lists them per product (see [Product Catalog](#product-catalog)). The table is the basis for making the GitHub Copilot features page dynamic later.
 
 ### Timeline Backfill
 
@@ -412,12 +420,36 @@ Existing articles are scanned by `TimelineBackfillBackgroundService`, a manual-t
 the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/timeline-backfill/trigger` (see [admin.md](admin.md)).
 
 - Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`)
-- Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again
+- Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again (version 2 added the deadline and digest rules, so articles scanned before it are scanned again by the next run)
 - An admin edit that changes the title, excerpt, text or publication date (without extracting new events itself) removes the article's events and scan marker in the same transaction, so an ordinary run scans the edited article again
 - Options: `force`, `publishedAfter` (yyyy-MM-dd), `collection` and `limit`. Newest articles come first
 - Resumable: an article is marked as scanned only after its events are stored, so a cancelled or failed run can simply be started again. A failing article is logged and left for the next run
 - Roundups are never scanned
 - The job log lists failures and progress every 25 articles. The job row shows events stored (Added), scanned articles without events (Skipped) and scanned articles (Fixed)
+
+## Product Catalog
+
+The classification and the timeline extraction return product names as free text (`ai_metadata.products` and
+the `product` of an event). The names stay as the AI wrote them; a curated catalog on top links them to one
+product, so "Azure AI Foundry" and "Microsoft Foundry" are the same product wherever they are used.
+
+| Table | Purpose |
+|---|---|
+| `products` | The curated product names, unique ignoring case |
+| `product_aliases` | Other names for a product (old names, spelling variants), unique ignoring case and never equal to a product name |
+| `ignored_product_names` | Names the AI returns that are not products (an event, an umbrella brand), so they stay out of the review queue |
+| `content_item_products` | The product names an article lists in classifier order, with the product each matches. `product_id` is empty while the name is not in the catalog |
+| `content_timeline_events.product_id` | The product of an event. The raw `product` text stays on the event |
+
+An article is about several products and a product has many articles. An event belongs to one article and one product,
+so a product's dates always lead back to the article that states them (for example the announcement of a retirement).
+
+- **Matching is a text match.** A name matches a product by its name or an alias, ignoring case and extra whitespace (the database function `find_product_id`). There is no fuzzy matching and no AI in this step, so matches never need a review.
+- **Links follow the AI output.** Whenever an article's `ai_metadata` is written (processing, roundup metadata backfill, admin edit) its links are replaced, and event writes set `product_id` the same way.
+- **Catalog changes relink everything.** Adding a product or alias, renaming, merging, removing and deleting re-evaluate all links in the same transaction. A rename keeps the old name as an alias, and a merge turns the merged product and its aliases into aliases of the target, so nothing becomes unmatched by accident.
+- **Review queue.** Names that match nothing and are not ignored are the products to review: add one as a product, add it as an alias of a product, or mark it as not a product. The queue is derived from the links, so unmatched names never pollute the catalog.
+- **Starting set.** Migration `051_seed_product_catalog` seeds the products found in the production data with their aliases and ignored names, and links the existing articles and events.
+- **Readers.** The roundup uses the canonical names (grouping and ordering by product, "Dates to know") and falls back to the AI's text for unmatched names. The admin products page shows the articles and dates per product. See [admin.md](admin.md#product-catalog).
 
 ## Evaluating Models
 

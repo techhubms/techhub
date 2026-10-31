@@ -8,7 +8,7 @@ namespace TechHub.Core.Interfaces;
 public interface ITimelineEventRepository
 {
     /// <summary>Version of the extraction prompt and rules. Bump it to let the backfill job re-extract older articles.</summary>
-    const int CurrentPromptVersion = 1;
+    const int CurrentPromptVersion = 2;
 
     /// <summary>Events were extracted while the article was processed (the source text was available).</summary>
     const string ExtractedFromSource = "source";

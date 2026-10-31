@@ -72,7 +72,7 @@ This creates (on first run):
 4. A service principal with "assignment required" enabled
 5. Assigns the current user to the enterprise app
 
-The script outputs the registration details and points to `Setup-UserSecrets.ps1`, which fills all local user secrets (AzureAd settings, plus the AI and newsletter settings from Azure):
+The script outputs the registration details and points to `Setup-UserSecrets.ps1`, which fills the local user secrets (AzureAd settings, the AI endpoint and the newsletter unsubscribe secret). It never sets the newsletter email endpoint or sender, so a local run cannot send email:
 
 ```powershell
 ./scripts/Setup-UserSecrets.ps1

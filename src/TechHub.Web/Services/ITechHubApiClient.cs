@@ -456,6 +456,82 @@ internal interface ITechHubApiClient
     /// </summary>
     Task DeleteFeedConfigAsync(long id, CancellationToken cancellationToken = default);
 
+    // ================================================================
+    // Product catalog endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get the products with aliases and usage counts, optionally filtered on name or alias.
+    /// GET /api/admin/products
+    /// </summary>
+    Task<IReadOnlyList<ProductSummary>> GetProductsAsync(string? search = null, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a product with its aliases, linked articles and linked dates, or null if it does not exist.
+    /// GET /api/admin/products/{id}
+    /// </summary>
+    Task<ProductDetail?> GetProductAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the product names the AI returned that are not in the catalog yet.
+    /// GET /api/admin/products/unmatched
+    /// </summary>
+    Task<IReadOnlyList<UnmatchedProductName>> GetUnmatchedProductNamesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the names that are marked as not being a product.
+    /// GET /api/admin/products/ignored
+    /// </summary>
+    Task<IReadOnlyList<string>> GetIgnoredProductNamesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add a product. Throws <see cref="HttpRequestException"/> with the server message when the name is not allowed.
+    /// POST /api/admin/products
+    /// </summary>
+    Task<ProductDetail> CreateProductAsync(string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Rename a product; the old name becomes an alias.
+    /// PUT /api/admin/products/{id}
+    /// </summary>
+    Task<ProductDetail> RenameProductAsync(long id, string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a product; its articles and dates become unmatched.
+    /// DELETE /api/admin/products/{id}
+    /// </summary>
+    Task DeleteProductAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add an alias to a product.
+    /// POST /api/admin/products/{id}/aliases
+    /// </summary>
+    Task<ProductDetail> AddProductAliasAsync(long id, string aliasName, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Remove an alias from a product.
+    /// DELETE /api/admin/products/{id}/aliases/{aliasId}
+    /// </summary>
+    Task RemoveProductAliasAsync(long id, long aliasId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Merge a product into another product and return the target.
+    /// POST /api/admin/products/{id}/merge
+    /// </summary>
+    Task<ProductDetail> MergeProductAsync(long sourceId, long targetId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Mark a name as not being a product.
+    /// POST /api/admin/products/ignored
+    /// </summary>
+    Task IgnoreProductNameAsync(string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Put an ignored name back in the review queue.
+    /// DELETE /api/admin/products/ignored
+    /// </summary>
+    Task UnignoreProductNameAsync(string name, CancellationToken cancellationToken = default);
+
     /// <summary>
     /// Get database statistics for the admin dashboard.
     /// GET /api/admin/statistics

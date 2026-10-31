@@ -62,6 +62,28 @@ public class AdminPageTests : PlaywrightTestBase
     }
 
     [Fact]
+    public async Task AdminProducts_WithoutAuth_ShowsLoginForm()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/admin/products");
+
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "TechHub Admin");
+    }
+
+    [Fact]
+    public async Task AdminProductDetail_WithoutAuth_ShowsLoginForm()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/admin/products/1");
+
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "TechHub Admin");
+    }
+
+    [Fact]
     public async Task AdminStatistics_WithoutAuth_ShowsLoginForm()
     {
         // Act

@@ -52,6 +52,7 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
         try
         {
             await UpsertAsync(item, transaction, ct);
+            await ProductLinkWriter.ReplaceItemLinksAsync(_connection, transaction, item.CollectionName, item.Slug, ct);
             await TimelineEventWriter.ReplaceAsync(
                 _connection,
                 transaction,
@@ -242,7 +243,17 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
     /// <inheritdoc />
     public async Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, CancellationToken ct = default)
     {
-        await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction: null, ct);
+        using var transaction = BeginTransaction();
+        try
+        {
+            await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct);
+            transaction.Commit();
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
     }
 
     /// <inheritdoc />
@@ -279,7 +290,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
         }
     }
 
-    private async Task ExecuteUpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, IDbTransaction? transaction, CancellationToken ct)
+    private async Task ExecuteUpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, IDbTransaction transaction, CancellationToken ct)
     {
         const string Sql = @"
 UPDATE content_items
@@ -288,11 +299,16 @@ UPDATE content_items
  WHERE collection_name = @CollectionName
    AND slug           = @Slug";
 
-        await _connection.ExecuteAsync(new CommandDefinition(
+        var rows = await _connection.ExecuteAsync(new CommandDefinition(
             Sql,
             new { CollectionName = collectionName, Slug = slug, AiMetadata = aiMetadataJson },
             transaction,
             cancellationToken: ct));
+
+        if (rows > 0)
+        {
+            await ProductLinkWriter.ReplaceItemLinksAsync(_connection, transaction, collectionName, slug, ct);
+        }
     }
 
     /// <summary>

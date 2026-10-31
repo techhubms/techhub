@@ -87,6 +87,10 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                 ci.content              AS Content,
                 ci.feed_name            AS FeedName,
                 ci.date_epoch           AS DateEpoch,
+                (SELECT COALESCE(array_agg(COALESCE(p.name, l.product_name) ORDER BY l.position), ARRAY[]::text[])
+                   FROM content_item_products l
+                   LEFT JOIN products p ON p.id = l.product_id
+                  WHERE l.collection_name = ci.collection_name AND l.item_slug = ci.slug) AS ProductNames,
                 {TimelineEventWriter.RevisionExpression} AS Revision
             FROM content_items ci
             WHERE ci.created_at >= @WeekStart
@@ -162,7 +166,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                 Significance = meta.Significance,
                 ContentKind = meta.ContentKind,
                 Lifecycle = meta.Lifecycle,
-                Products = meta.Products,
+                Products = row.ProductNames,
                 SectionRoles = meta.SectionRoles
             });
         }
@@ -185,6 +189,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         public string Content { get; init; } = string.Empty;
         public string FeedName { get; init; } = string.Empty;
         public long DateEpoch { get; init; }
+        public string[] ProductNames { get; init; } = [];
         public long Revision { get; init; }
     }
 
@@ -223,7 +228,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
 
         const string Sql = """
             SELECT e.kind           AS Kind,
-                   e.product        AS Product,
+                   COALESCE(p.name, e.product) AS Product,
                    e.feature        AS Feature,
                    e.description    AS Description,
                    e.event_date     AS EventDate,
@@ -231,6 +236,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                    ci.title         AS SourceTitle,
                    ci.external_url  AS SourceUrl
             FROM content_timeline_events e
+            LEFT JOIN products p ON p.id = e.product_id
             JOIN content_items ci
               ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
             WHERE ci.created_at >= @WeekStart

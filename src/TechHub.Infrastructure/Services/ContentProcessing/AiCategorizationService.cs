@@ -79,7 +79,50 @@ public sealed class AiCategorizationService : IAiCategorizationService
             ClassificationSchema.BuildResponseFormat(_sectionNames));
 
         var call = await SendWithRetryAsync(json, item, "Classification", ct);
-        return call.Failure ?? ParseClassification(call.ResponseBody!, item);
+        var classification = call.Failure ?? ParseClassification(call.ResponseBody!, item);
+        return await AddMissedDeadlinesAsync(item, classification, ct);
+    }
+
+    /// <summary>
+    /// When the text names a future date next to a deadline phrase (retirement, end of support, ...) that no event of the
+    /// classification covers, asks the focused timeline extraction (the cheap step) and adds the events it finds.
+    /// A second extraction that returns an invalid answer is ignored; transport errors surface like in any other AI call.
+    /// </summary>
+    private async Task<CategorizationResult> AddMissedDeadlinesAsync(RawFeedItem source, CategorizationResult classification, CancellationToken ct)
+    {
+        if (classification.Item is not { } included || string.IsNullOrWhiteSpace(source.FullContent))
+        {
+            return classification;
+        }
+
+        var publicationDate = TimelineEventParser.GetBrusselsDate(source.PublishedAt);
+        if (!TimelineDeadlineGuard.MissesDeadline(source.FullContent, included.TimelineEvents, publicationDate))
+        {
+            return classification;
+        }
+
+        _logger.LogInformation("The text of {Url} names a deadline that the classification has no event for, running the focused timeline extraction", source.ExternalUrl.Sanitize());
+        var extraction = await ExtractTimelineEventsAsync(source, ct);
+        if (extraction.IsFailure)
+        {
+            return classification;
+        }
+
+        var known = included.TimelineEvents.Select(e => (e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant())).ToHashSet();
+        var added = extraction.Events
+            .Where(e => known.Add((e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant())))
+            .ToList();
+
+        if (added.Count == 0)
+        {
+            return classification;
+        }
+
+        return new CategorizationResult
+        {
+            Item = included.WithTimelineEvents([.. included.TimelineEvents, .. added]),
+            Explanation = classification.Explanation
+        };
     }
 
     /// <inheritdoc />
