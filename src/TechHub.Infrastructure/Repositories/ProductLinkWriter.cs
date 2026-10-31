@@ -50,12 +50,17 @@ internal static class ProductLinkWriter
                 WHERE name <> ''
                 ORDER BY lower(name), ordinal
             )
-            INSERT INTO content_item_products (collection_name, item_slug, product_name, position, product_id)
+            INSERT INTO content_item_products (collection_name, item_slug, product_name, position)
             SELECT @CollectionName, @Slug, name,
-                   (ROW_NUMBER() OVER (ORDER BY ordinal))::int - 1,
-                   find_product_id(name)
+                   (ROW_NUMBER() OVER (ORDER BY ordinal))::int - 1
             FROM firsts
             """,
+            parameters,
+            transaction,
+            cancellationToken: ct));
+
+        await connection.ExecuteAsync(new CommandDefinition(
+            "SELECT relink_item_products(@CollectionName, @Slug)",
             parameters,
             transaction,
             cancellationToken: ct));

@@ -31,6 +31,15 @@ public interface IProductRepository
     Task<ProductOperationResult> AddAliasAsync(long id, string aliasName, CancellationToken ct = default);
 
     /// <summary>
+    /// Adds an alias that implies a plan or surface: 'GitHub Copilot Business' is GitHub Copilot in the plan Business.
+    /// A null <paramref name="qualifierId"/> adds a plain alias.
+    /// </summary>
+    Task<ProductOperationResult> AddAliasAsync(long id, string aliasName, long? qualifierId, CancellationToken ct = default);
+
+    /// <summary>Sets or clears the plan or surface an alias implies.</summary>
+    Task<ProductOperationResult> SetAliasQualifierAsync(long id, long aliasId, long? qualifierId, CancellationToken ct = default);
+
+    /// <summary>
     /// Makes a product a child of another product (GitHub Copilot CLI belongs to GitHub Copilot), or top-level when
     /// <paramref name="parentId"/> is null. A product cannot be its own ancestor.
     /// </summary>

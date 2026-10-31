@@ -223,6 +223,8 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                    kind            AS Kind,
                    product         AS Product,
                    feature         AS Feature,
+                   plans           AS Plans,
+                   surfaces        AS Surfaces,
                    description     AS Description,
                    event_date      AS EventDate,
                    date_precision  AS DatePrecision,
@@ -245,6 +247,8 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             Kind = r.Kind,
             Product = r.Product,
             Feature = r.Feature,
+            Plans = r.Plans,
+            Surfaces = r.Surfaces,
             Description = r.Description,
             EventDate = DateOnly.FromDateTime(r.EventDate),
             DatePrecision = r.DatePrecision,
@@ -262,6 +266,8 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         public string Kind { get; init; } = string.Empty;
         public string Product { get; init; } = string.Empty;
         public string? Feature { get; init; }
+        public string[] Plans { get; init; } = [];
+        public string[] Surfaces { get; init; } = [];
         public string Description { get; init; } = string.Empty;
         public DateTime EventDate { get; init; }
         public string DatePrecision { get; init; } = string.Empty;

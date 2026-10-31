@@ -452,6 +452,18 @@ product that matches their name; a parent shows the articles and dates of all it
 link), and the counts on the product list include them. A product cannot be its own ancestor; deleting a parent makes its children
 top-level and merging a product moves its children to the target.
 
+### Plans and Surfaces
+
+GitHub Copilot is available in plans (Free, Pro, Pro+, Business, Enterprise) and on surfaces (Visual Studio Code, JetBrains IDEs, GitHub.com, ...),
+and a feature can be in preview on one and generally available on another. Those are not products of their own, so they are a controlled
+vocabulary of qualifiers (`product_qualifiers`, kind `plan` or `surface`, with aliases such as "VS Code") that events and product aliases carry.
+
+- **The AI keeps its raw names.** A timeline event has `plans` and `surfaces` arrays with the names as the article gives them, and the product name may include the tier ("GitHub Copilot Business"). Nothing is simplified at write time
+- **Aliases can imply a qualifier.** The product alias "GitHub Copilot Business" belongs to GitHub Copilot and implies the plan Business, so simplifying the name to the product loses nothing. The qualifier shows on the article link and on the event
+- **Matching** uses the same text match as products (`find_qualifier_id`, `find_product_qualifier_id`). The SQL functions `relink_item_products` and `relink_timeline_events` rebuild the links when an article or event is written and when the catalog changes
+- **Review queue.** Plan and surface names that match nothing are listed on `/admin/products/qualifiers`: add one as a plan or surface, or as an alias of an existing one
+- **Prompt version.** Adding `plans` and `surfaces` to the extraction raised `CurrentPromptVersion` to 3, so the timeline backfill scans articles that were scanned with an older version again
+
 - **Matching is a text match.** A name matches a product by its name or an alias, ignoring case and extra whitespace (the database function `find_product_id`). There is no fuzzy matching and no AI in this step, so matches never need a review.
 - **Links follow the AI output.** Whenever an article's `ai_metadata` is written (processing, roundup metadata backfill, admin edit) its links are replaced, and event writes set `product_id` the same way.
 - **Catalog changes relink everything.** Adding a product or alias, renaming, merging, removing and deleting re-evaluate all links in the same transaction. A rename keeps the old name as an alias, and a merge turns the merged product and its aliases into aliases of the target, so nothing becomes unmatched by accident.

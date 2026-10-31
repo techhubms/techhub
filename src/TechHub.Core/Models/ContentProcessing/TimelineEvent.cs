@@ -33,6 +33,12 @@ public sealed record TimelineEvent
     /// <summary>Official feature name within the product, or <c>null</c> when the event is about the whole product.</summary>
     public string? Feature { get; init; }
 
+    /// <summary>The subscription plans the event applies to (Free, Pro, Business, ...), as the article names them. Empty when it applies to all.</summary>
+    public IReadOnlyList<string> Plans { get; init; } = [];
+
+    /// <summary>The surfaces the event applies to (Visual Studio Code, JetBrains IDEs, github.com, ...), as the article names them. Empty when it applies to all.</summary>
+    public IReadOnlyList<string> Surfaces { get; init; } = [];
+
     /// <summary>One line describing what happens.</summary>
     public required string Description { get; init; }
 

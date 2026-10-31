@@ -51,10 +51,10 @@ internal static class TimelineEventWriter
             await connection.ExecuteAsync(new CommandDefinition(
                 """
                 INSERT INTO content_timeline_events
-                    (collection_name, item_slug, kind, product, product_id, feature, description,
+                    (collection_name, item_slug, kind, product, feature, plans, surfaces, description,
                      event_date, date_precision, date_source, quote, extracted_from)
                 VALUES
-                    (@CollectionName, @Slug, @Kind, @Product, find_product_id(@Product), @Feature, @Description,
+                    (@CollectionName, @Slug, @Kind, @Product, @Feature, @Plans, @Surfaces, @Description,
                      @EventDate, @DatePrecision, @DateSource, @Quote, @ExtractedFrom)
                 """,
                 new
@@ -64,6 +64,8 @@ internal static class TimelineEventWriter
                     timelineEvent.Kind,
                     timelineEvent.Product,
                     timelineEvent.Feature,
+                    Plans = timelineEvent.Plans.ToArray(),
+                    Surfaces = timelineEvent.Surfaces.ToArray(),
                     timelineEvent.Description,
                     EventDate = timelineEvent.Date.ToDateTime(TimeOnly.MinValue),
                     timelineEvent.DatePrecision,
@@ -74,6 +76,12 @@ internal static class TimelineEventWriter
                 transaction,
                 cancellationToken: ct));
         }
+
+        await connection.ExecuteAsync(new CommandDefinition(
+            "SELECT relink_timeline_events(@CollectionName, @Slug)",
+            new { CollectionName = collectionName, Slug = slug },
+            transaction,
+            cancellationToken: ct));
 
         await connection.ExecuteAsync(new CommandDefinition(
             """

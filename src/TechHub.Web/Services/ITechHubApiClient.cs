@@ -539,6 +539,60 @@ internal interface ITechHubApiClient
     Task UnignoreProductNameAsync(string name, CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Add an alias that implies a plan or surface ('GitHub Copilot Business' is GitHub Copilot in the plan Business).
+    /// POST /api/admin/products/{id}/aliases
+    /// </summary>
+    Task<ProductDetail> AddProductAliasAsync(long id, string aliasName, long? qualifierId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Set or clear the plan or surface an alias implies.
+    /// PUT /api/admin/products/{id}/aliases/{aliasId}/qualifier
+    /// </summary>
+    Task<ProductDetail> SetProductAliasQualifierAsync(long id, long aliasId, long? qualifierId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the plans and surfaces with their aliases and usage counts.
+    /// GET /api/admin/qualifiers
+    /// </summary>
+    Task<IReadOnlyList<ProductQualifier>> GetQualifiersAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the plan and surface names the AI returned that are not in the vocabulary yet.
+    /// GET /api/admin/qualifiers/unmatched
+    /// </summary>
+    Task<IReadOnlyList<UnmatchedQualifierName>> GetUnmatchedQualifierNamesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add a plan or surface. Throws <see cref="HttpRequestException"/> with the server message when the name is not allowed.
+    /// POST /api/admin/qualifiers
+    /// </summary>
+    Task<ProductQualifier> CreateQualifierAsync(string kind, string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Rename a plan or surface; the old name becomes an alias.
+    /// PUT /api/admin/qualifiers/{id}
+    /// </summary>
+    Task<ProductQualifier> RenameQualifierAsync(long id, string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a plan or surface and its aliases.
+    /// DELETE /api/admin/qualifiers/{id}
+    /// </summary>
+    Task DeleteQualifierAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add an alias to a plan or surface.
+    /// POST /api/admin/qualifiers/{id}/aliases
+    /// </summary>
+    Task<ProductQualifier> AddQualifierAliasAsync(long id, string aliasName, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Remove an alias from a plan or surface.
+    /// DELETE /api/admin/qualifiers/{id}/aliases/{aliasId}
+    /// </summary>
+    Task RemoveQualifierAliasAsync(long id, long aliasId, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Get database statistics for the admin dashboard.
     /// GET /api/admin/statistics
     /// </summary>

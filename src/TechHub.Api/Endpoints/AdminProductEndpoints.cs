@@ -58,6 +58,12 @@ internal static class AdminProductEndpoints
             .Produces(StatusCodes.Status404NotFound)
             .Produces(StatusCodes.Status409Conflict);
 
+        group.MapPut("/products/{id:long}/aliases/{aliasId:long}/qualifier", SetAliasQualifierAsync)
+            .WithName("SetProductAliasQualifier")
+            .WithSummary("Set or clear the plan or surface an alias implies")
+            .Produces<ProductDetail>()
+            .Produces(StatusCodes.Status404NotFound);
+
         group.MapDelete("/products/{id:long}/aliases/{aliasId:long}", RemoveAliasAsync)
             .WithName("RemoveProductAlias")
             .WithSummary("Remove an alias from a product")
@@ -160,7 +166,18 @@ internal static class AdminProductEndpoints
         IProductRepository repository,
         CancellationToken ct)
     {
-        var result = await repository.AddAliasAsync(id, request.Alias?.Trim().Sanitize() ?? string.Empty, ct);
+        var result = await repository.AddAliasAsync(id, request.Alias?.Trim().Sanitize() ?? string.Empty, request.QualifierId, ct);
+        return await ToDetailResultAsync(result, repository, ct);
+    }
+
+    private static async Task<IResult> SetAliasQualifierAsync(
+        long id,
+        long aliasId,
+        ProductAliasQualifierRequest request,
+        IProductRepository repository,
+        CancellationToken ct)
+    {
+        var result = await repository.SetAliasQualifierAsync(id, aliasId, request.QualifierId, ct);
         return await ToDetailResultAsync(result, repository, ct);
     }
 

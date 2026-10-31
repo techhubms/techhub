@@ -64,6 +64,15 @@
                 {
                     <li>
                         @alias.Alias
+                        <select class="admin-input" aria-label="Plan or surface of @alias.Alias" disabled="@_busy"
+                                value="@(alias.QualifierId?.ToString(CultureInfo.InvariantCulture) ?? string.Empty)"
+                                @onchange="e => SetAliasQualifierAsync(alias, e.Value?.ToString())">
+                            <option value="">No plan or surface</option>
+                            @foreach (var qualifier in _qualifiers)
+                            {
+                                <option value="@qualifier.Id">@qualifier.Name (@qualifier.Kind)</option>
+                            }
+                        </select>
                         <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => RemoveAliasAsync(alias)">Remove</button>
                     </li>
                 }
@@ -73,8 +82,16 @@
         <div class="admin-inline-form">
             <label class="admin-label" for="newAlias">Add alias</label>
             <input id="newAlias" class="admin-input" @bind="_newAlias" placeholder="Another name for this product" />
+            <select id="newAliasQualifier" class="admin-input" aria-label="Plan or surface the alias implies" @bind="_newAliasQualifierId">
+                <option value="">No plan or surface</option>
+                @foreach (var qualifier in _qualifiers)
+                {
+                    <option value="@qualifier.Id">@qualifier.Name (@qualifier.Kind)</option>
+                }
+            </select>
             <button class="btn-secondary" disabled="@_busy" @onclick="AddAliasAsync">Add alias</button>
         </div>
+        <p class="admin-result-summary">An alias can imply a plan or surface: 'GitHub Copilot Business' is GitHub Copilot in the plan Business. <a href="/admin/products/qualifiers">Manage plans and surfaces</a></p>
 
         <h2 class="admin-section-title">Hierarchy</h2>
 
@@ -150,6 +167,10 @@
                             }
                             <th>Kind</th>
                             <th>Feature</th>
+                            @if (ShowEventQualifiers)
+                            {
+                                <th>Plans and surfaces</th>
+                            }
                             <th>What happens</th>
                             <th>Article</th>
                         </tr>
@@ -165,6 +186,10 @@
                                 }
                                 <td>@item.Kind</td>
                                 <td>@item.Feature</td>
+                                @if (ShowEventQualifiers)
+                                {
+                                    <td>@string.Join(", ", item.Qualifiers.Select(q => q.Name))</td>
+                                }
                                 <td>@item.Description</td>
                                 <td><a href="/admin/content-preview/@item.CollectionName/@item.ItemSlug">@item.ItemTitle</a></td>
                             </tr>
@@ -193,6 +218,10 @@
                                 <th>Product</th>
                             }
                             <th>Name used</th>
+                            @if (ShowArticleQualifiers)
+                            {
+                                <th>Plan or surface</th>
+                            }
                         </tr>
                     </thead>
                     <tbody>
@@ -206,6 +235,10 @@
                                     <td>@article.CatalogName</td>
                                 }
                                 <td>@article.ProductName</td>
+                                @if (ShowArticleQualifiers)
+                                {
+                                    <td>@article.QualifierName</td>
+                                }
                             </tr>
                         }
                     </tbody>
@@ -234,6 +267,8 @@
     private IReadOnlyList<ProductSummary> _otherProducts = [];
     private string _newName = string.Empty;
     private string _newAlias = string.Empty;
+    private string _newAliasQualifierId = string.Empty;
+    private IReadOnlyList<ProductQualifier> _qualifiers = [];
     private string _parentName = string.Empty;
     private string _mergeTarget = string.Empty;
     private PendingAction _pendingAction;
@@ -245,16 +280,22 @@
         _product != null
         && (_product.Articles.Any(a => a.CatalogName != _product.Name) || _product.Events.Any(e => e.CatalogName != _product.Name));
 
+    private bool ShowEventQualifiers => _product != null && _product.Events.Any(e => e.Qualifiers.Count > 0);
+
+    private bool ShowArticleQualifiers => _product != null && _product.Articles.Any(a => a.QualifierName != null);
+
     protected override async Task OnInitializedAsync()
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
         _loadedId = Id;
 
         if (ApplicationState.TryTakeFromJson<ProductDetail>($"admin-product-{Id}", out var product) && product != null
-            && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductSummary>>($"admin-product-{Id}-others", out var others) && others != null)
+            && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductSummary>>($"admin-product-{Id}-others", out var others) && others != null
+            && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductQualifier>>($"admin-product-{Id}-qualifiers", out var qualifiers) && qualifiers != null)
         {
             _product = product;
             _otherProducts = others;
+            _qualifiers = qualifiers;
             _newName = product.Name;
             _parentName = product.Parent?.Name ?? string.Empty;
             _loading = false;
@@ -280,6 +321,7 @@
         {
             ApplicationState.PersistAsJson($"admin-product-{Id}", _product);
             ApplicationState.PersistAsJson($"admin-product-{Id}-others", _otherProducts);
+            ApplicationState.PersistAsJson($"admin-product-{Id}-qualifiers", _qualifiers);
         }
 
         return Task.CompletedTask;
@@ -304,6 +346,7 @@
             if (_product != null)
             {
                 _otherProducts = (await Api.GetProductsAsync()).Where(p => p.Id != Id).ToList();
+                _qualifiers = await Api.GetQualifiersAsync();
                 _newName = _product.Name;
                 _parentName = _product.Parent?.Name ?? string.Empty;
             }
@@ -361,9 +404,19 @@
         RunAsync(async () =>
         {
             var alias = _newAlias.Trim();
-            _product = await Api.AddProductAliasAsync(Id, _newAlias);
+            long? qualifierId = long.TryParse(_newAliasQualifierId, CultureInfo.InvariantCulture, out var parsed) ? parsed : null;
+            _product = await Api.AddProductAliasAsync(Id, _newAlias, qualifierId);
             _newAlias = string.Empty;
+            _newAliasQualifierId = string.Empty;
             return $"Alias '{alias}' added.";
+        });
+
+    private Task SetAliasQualifierAsync(ProductAlias alias, string? qualifierId) =>
+        RunAsync(async () =>
+        {
+            long? parsed = long.TryParse(qualifierId, CultureInfo.InvariantCulture, out var id) ? id : null;
+            _product = await Api.SetProductAliasQualifierAsync(Id, alias.Id, parsed);
+            return parsed is null ? $"Alias '{alias.Alias}' no longer implies a plan or surface." : $"Alias '{alias.Alias}' implies a plan or surface now.";
         });
 
     private Task RemoveAliasAsync(ProductAlias alias) =>

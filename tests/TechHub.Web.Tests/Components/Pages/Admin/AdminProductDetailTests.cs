@@ -22,6 +22,8 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Detail());
         _api.Setup(x => x.GetProductsAsync(It.IsAny<string?>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync([new ProductSummary { Id = 5, Name = "Microsoft Foundry" }, new ProductSummary { Id = 6, Name = "Azure Functions" }]);
+        _api.Setup(x => x.GetQualifiersAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync([new ProductQualifier { Id = 21, Kind = "plan", Name = "Business" }, new ProductQualifier { Id = 22, Kind = "surface", Name = "JetBrains IDEs" }]);
     }
 
     [Fact]
@@ -141,7 +143,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Arrange
         var updated = Detail();
         updated.Aliases = [.. updated.Aliases, new ProductAlias { Id = 2, Alias = "Foundry" }];
-        _api.Setup(x => x.AddProductAliasAsync(5, "Foundry", It.IsAny<CancellationToken>())).ReturnsAsync(updated);
+        _api.Setup(x => x.AddProductAliasAsync(5, "Foundry", null, It.IsAny<CancellationToken>())).ReturnsAsync(updated);
         var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
         cut.Find("#newAlias").Change("Foundry");
 
@@ -272,6 +274,71 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Assert
         cut.Find(".admin-alert-error").TextContent.Should().Contain("'Nonexistent' is not a product.");
         _api.Verify(x => x.SetProductParentAsync(It.IsAny<long>(), It.IsAny<long?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public void Render_ShowsThePlanOrSurfaceOfAliasesArticlesAndDates()
+    {
+        // Arrange
+        var detail = Detail();
+        detail.Aliases = [new ProductAlias { Id = 1, Alias = "GitHub Copilot Business", QualifierId = 21, QualifierName = "Business", QualifierKind = "plan" }];
+        detail.Articles[0].QualifierName = "Business";
+        detail.Events[0].Qualifiers = [new QualifierReference { Id = 21, Kind = "plan", Name = "Business" }, new QualifierReference { Id = 22, Kind = "surface", Name = "JetBrains IDEs" }];
+        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
+
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Find("#aliases-list select").GetAttribute("value").Should().Be("21");
+        cut.Find("#events-table thead").TextContent.Should().Contain("Plans and surfaces");
+        cut.Find("#events-table tbody").TextContent.Should().Contain("Business, JetBrains IDEs");
+        cut.Find("#articles-table thead").TextContent.Should().Contain("Plan or surface");
+        cut.Find("#articles-table tbody").TextContent.Should().Contain("Business");
+    }
+
+    [Fact]
+    public void Render_WithoutQualifiers_HidesTheQualifierColumns()
+    {
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Find("#events-table thead").TextContent.Should().NotContain("Plans and surfaces");
+        cut.Find("#articles-table thead").TextContent.Should().NotContain("Plan or surface");
+    }
+
+    [Fact]
+    public void AddAlias_WithAPlanOrSurface_PassesTheQualifierToTheApi()
+    {
+        // Arrange
+        _api.Setup(x => x.AddProductAliasAsync(5, "Foundry Business", 21, It.IsAny<CancellationToken>())).ReturnsAsync(Detail());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#newAlias").Change("Foundry Business");
+        cut.Find("#newAliasQualifier").Change("21");
+
+        // Act
+        cut.FindAll(".admin-inline-form button").Single(b => b.TextContent == "Add alias").Click();
+
+        // Assert
+        _api.Verify(x => x.AddProductAliasAsync(5, "Foundry Business", 21, It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public void SetAliasQualifier_CallsTheApiAndClearsWhenNoneIsChosen()
+    {
+        // Arrange
+        _api.Setup(x => x.SetProductAliasQualifierAsync(5, 1, 22, It.IsAny<CancellationToken>())).ReturnsAsync(Detail());
+        _api.Setup(x => x.SetProductAliasQualifierAsync(5, 1, null, It.IsAny<CancellationToken>())).ReturnsAsync(Detail());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Act
+        cut.Find("#aliases-list select").Change("22");
+        cut.Find("#aliases-list select").Change("");
+
+        // Assert
+        _api.Verify(x => x.SetProductAliasQualifierAsync(5, 1, 22, It.IsAny<CancellationToken>()), Times.Once);
+        _api.Verify(x => x.SetProductAliasQualifierAsync(5, 1, null, It.IsAny<CancellationToken>()), Times.Once);
     }
 
     [Fact]

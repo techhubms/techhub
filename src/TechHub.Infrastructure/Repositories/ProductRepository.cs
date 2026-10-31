@@ -18,13 +18,7 @@ public sealed class ProductRepository : IProductRepository
     /// <summary>Longest product name or alias that is accepted.</summary>
     public const int MaxNameLength = 200;
 
-    private const string RelinkSql = """
-        UPDATE content_item_products SET product_id = find_product_id(product_name)
-        WHERE product_id IS DISTINCT FROM find_product_id(product_name);
-
-        UPDATE content_timeline_events SET product_id = find_product_id(product)
-        WHERE product_id IS DISTINCT FROM find_product_id(product);
-        """;
+    private const string RelinkSql = CatalogRelink.Sql;
 
     private const string NameInUseSql = """
         SELECT p.name AS Name FROM products p WHERE lower(p.name) = lower(@Name)
@@ -114,9 +108,11 @@ public sealed class ProductRepository : IProductRepository
                    ci.title          AS Title,
                    ci.date_epoch     AS DateEpoch,
                    l.product_name    AS ProductName,
-                   p.name            AS CatalogName
+                   p.name            AS CatalogName,
+                   q.name            AS QualifierName
             FROM content_item_products l
             JOIN products p ON p.id = l.product_id
+            LEFT JOIN product_qualifiers q ON q.id = l.qualifier_id
             JOIN content_items ci ON ci.collection_name = l.collection_name AND ci.slug = l.item_slug
             WHERE l.product_id IN (SELECT product_tree_ids(@Id))
             ORDER BY ci.date_epoch DESC, ci.slug, l.position
@@ -144,7 +140,24 @@ public sealed class ProductRepository : IProductRepository
             ORDER BY e.event_date, e.id
             """;
 
-        var events = await _connection.QueryAsync<EventRow>(new CommandDefinition(EventsSql, new { Id = id }, cancellationToken: ct));
+        var events = (await _connection.QueryAsync<EventRow>(new CommandDefinition(EventsSql, new { Id = id }, cancellationToken: ct))).ToList();
+
+        const string EventQualifiersSql = """
+            SELECT eq.event_id AS EventId, q.id AS Id, q.kind AS Kind, q.name AS Name
+            FROM content_timeline_event_qualifiers eq
+            JOIN product_qualifiers q ON q.id = eq.qualifier_id
+            WHERE eq.event_id = ANY(@EventIds)
+            ORDER BY q.kind, lower(q.name)
+            """;
+
+        var qualifierRows = await _connection.QueryAsync<EventQualifierRow>(new CommandDefinition(
+            EventQualifiersSql, new { EventIds = events.Select(e => e.Id).ToArray() }, cancellationToken: ct));
+        var qualifiers = qualifierRows
+            .GroupBy(r => r.EventId)
+            .ToDictionary(
+                g => g.Key,
+                g => (IReadOnlyList<QualifierReference>)g.Select(r => new QualifierReference { Id = r.Id, Kind = r.Kind, Name = r.Name }).ToList());
+
         product.Events = events.Select(e => new ProductEventLink
         {
             Id = e.Id,
@@ -157,7 +170,8 @@ public sealed class ProductRepository : IProductRepository
             ItemSlug = e.ItemSlug,
             ItemTitle = e.ItemTitle,
             ProductName = e.ProductName,
-            CatalogName = e.CatalogName
+            CatalogName = e.CatalogName,
+            Qualifiers = qualifiers.TryGetValue(e.Id, out var eventQualifiers) ? eventQualifiers : []
         }).ToList();
 
         return product;
@@ -283,6 +297,10 @@ public sealed class ProductRepository : IProductRepository
 
     /// <inheritdoc />
     public Task<ProductOperationResult> AddAliasAsync(long id, string aliasName, CancellationToken ct = default) =>
+        AddAliasAsync(id, aliasName, null, ct);
+
+    /// <inheritdoc />
+    public Task<ProductOperationResult> AddAliasAsync(long id, string aliasName, long? qualifierId, CancellationToken ct = default) =>
         InTransactionAsync(async transaction =>
         {
             if (Normalize(aliasName) is not { } normalized)
@@ -300,9 +318,14 @@ public sealed class ProductRepository : IProductRepository
                 return ProductOperationResult.Conflict($"'{normalized}' is already used by '{owner}'.");
             }
 
+            if (qualifierId is { } qualifier && !await QualifierExistsAsync(qualifier, transaction, ct))
+            {
+                return ProductOperationResult.NotFound("Plan or surface not found.");
+            }
+
             await _connection.ExecuteAsync(new CommandDefinition(
-                "INSERT INTO product_aliases (product_id, alias) VALUES (@Id, @Alias)",
-                new { Id = id, Alias = normalized },
+                "INSERT INTO product_aliases (product_id, alias, qualifier_id) VALUES (@Id, @Alias, @QualifierId)",
+                new { Id = id, Alias = normalized, QualifierId = qualifierId },
                 transaction,
                 cancellationToken: ct));
 
@@ -352,6 +375,31 @@ public sealed class ProductRepository : IProductRepository
                 cancellationToken: ct));
 
             _logger.LogInformation("Set parent of product {ProductId} to {ParentId}", id, parentId);
+            return ProductOperationResult.Success(id);
+        });
+
+    /// <inheritdoc />
+    public Task<ProductOperationResult> SetAliasQualifierAsync(long id, long aliasId, long? qualifierId, CancellationToken ct = default) =>
+        InTransactionAsync(async transaction =>
+        {
+            if (qualifierId is { } qualifier && !await QualifierExistsAsync(qualifier, transaction, ct))
+            {
+                return ProductOperationResult.NotFound("Plan or surface not found.");
+            }
+
+            var rows = await _connection.ExecuteAsync(new CommandDefinition(
+                "UPDATE product_aliases SET qualifier_id = @QualifierId WHERE id = @AliasId AND product_id = @Id",
+                new { Id = id, AliasId = aliasId, QualifierId = qualifierId },
+                transaction,
+                cancellationToken: ct));
+            if (rows == 0)
+            {
+                return ProductOperationResult.NotFound("Alias not found.");
+            }
+
+            await RelinkAsync(transaction, ct);
+
+            _logger.LogInformation("Set qualifier of alias {AliasId} of product {ProductId} to {QualifierId}", aliasId, id, qualifierId);
             return ProductOperationResult.Success(id);
         });
 
@@ -530,10 +578,12 @@ public sealed class ProductRepository : IProductRepository
     private async Task<Dictionary<long, IReadOnlyList<ProductAlias>>> GetAliasesAsync(long[] productIds, CancellationToken ct)
     {
         const string Sql = """
-            SELECT id AS Id, product_id AS ProductId, alias AS Alias
-            FROM product_aliases
-            WHERE product_id = ANY(@ProductIds)
-            ORDER BY lower(alias), alias
+            SELECT a.id AS Id, a.product_id AS ProductId, a.alias AS Alias,
+                   a.qualifier_id AS QualifierId, q.name AS QualifierName, q.kind AS QualifierKind
+            FROM product_aliases a
+            LEFT JOIN product_qualifiers q ON q.id = a.qualifier_id
+            WHERE a.product_id = ANY(@ProductIds)
+            ORDER BY lower(a.alias), a.alias
             """;
 
         var rows = await _connection.QueryAsync<AliasRow>(new CommandDefinition(Sql, new { ProductIds = productIds }, cancellationToken: ct));
@@ -541,8 +591,19 @@ public sealed class ProductRepository : IProductRepository
             .GroupBy(r => r.ProductId)
             .ToDictionary(
                 g => g.Key,
-                g => (IReadOnlyList<ProductAlias>)g.Select(r => new ProductAlias { Id = r.Id, Alias = r.Alias }).ToList());
+                g => (IReadOnlyList<ProductAlias>)g.Select(r => new ProductAlias
+                {
+                    Id = r.Id,
+                    Alias = r.Alias,
+                    QualifierId = r.QualifierId,
+                    QualifierName = r.QualifierName,
+                    QualifierKind = r.QualifierKind
+                }).ToList());
     }
+
+    private Task<bool> QualifierExistsAsync(long id, IDbTransaction transaction, CancellationToken ct) =>
+        _connection.ExecuteScalarAsync<bool>(new CommandDefinition(
+            "SELECT EXISTS (SELECT 1 FROM product_qualifiers WHERE id = @Id)", new { Id = id }, transaction, cancellationToken: ct));
 
     private Task<string?> GetNameAsync(long id, IDbTransaction transaction, CancellationToken ct) =>
         _connection.QuerySingleOrDefaultAsync<string?>(new CommandDefinition(
@@ -610,6 +671,17 @@ public sealed class ProductRepository : IProductRepository
         public long Id { get; init; }
         public long ProductId { get; init; }
         public string Alias { get; init; } = string.Empty;
+        public long? QualifierId { get; init; }
+        public string? QualifierName { get; init; }
+        public string? QualifierKind { get; init; }
+    }
+
+    private sealed class EventQualifierRow
+    {
+        public long EventId { get; init; }
+        public long Id { get; init; }
+        public string Kind { get; init; } = string.Empty;
+        public string Name { get; init; } = string.Empty;
     }
 
     private sealed class EventRow

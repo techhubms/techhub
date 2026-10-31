@@ -51,6 +51,7 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 | `products` | Curated product catalog: canonical product names, with an optional parent product (see [content-processing.md](content-processing.md#product-catalog)) |
 | `product_aliases` | Other names for a product; a name the AI returns that matches an alias is linked to the product |
 | `ignored_product_names` | Names the AI returns that are not products, kept out of the review queue |
+| `product_qualifiers` | Vocabulary of plans and surfaces (`kind`), with `product_qualifier_aliases` for other names. Product aliases, article links and timeline events carry them (`content_timeline_event_qualifiers`), see [content-processing.md](content-processing.md#plans-and-surfaces) |
 | `content_item_products` | The product names an article lists, linked to the catalog (`product_id` is empty for names that are not in the catalog), with a cascading foreign key to the article |
 | `content_reviews` | Review queue for content fixer changes (tags, markdown, author) awaiting approval |
 | `custom_page_data` | JSON data for custom pages (editable from admin UI) |

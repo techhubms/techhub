@@ -8,6 +8,15 @@ public sealed class ProductAlias
 
     /// <summary>The alternative name.</summary>
     public string Alias { get; set; } = string.Empty;
+
+    /// <summary>Id of the plan or surface this alias implies ('GitHub Copilot Business' implies the plan Business), or null.</summary>
+    public long? QualifierId { get; set; }
+
+    /// <summary>Name of the plan or surface this alias implies, or null.</summary>
+    public string? QualifierName { get; set; }
+
+    /// <summary>Kind of the qualifier this alias implies (plan or surface), or null.</summary>
+    public string? QualifierKind { get; set; }
 }
 
 /// <summary>A product of the catalog by id and name, used for the parent and children of a product.</summary>
@@ -65,6 +74,9 @@ public sealed class ProductArticleLink
 
     /// <summary>The catalog product the name matches: the product itself or one of its children.</summary>
     public string CatalogName { get; set; } = string.Empty;
+
+    /// <summary>The plan or surface the name implies ('GitHub Copilot Business' implies the plan Business), or null.</summary>
+    public string? QualifierName { get; set; }
 }
 
 /// <summary>A timeline event (important date) of a product and the article it comes from.</summary>
@@ -102,6 +114,9 @@ public sealed class ProductEventLink
 
     /// <summary>The catalog product the name matches: the product itself or one of its children.</summary>
     public string CatalogName { get; set; } = string.Empty;
+
+    /// <summary>The plans and surfaces the event applies to, from the AI's plans and surfaces and from the product name.</summary>
+    public IReadOnlyList<QualifierReference> Qualifiers { get; set; } = [];
 }
 
 /// <summary>A product with its aliases, parent and children, linked articles and linked dates.</summary>

@@ -23,6 +23,12 @@ public sealed record StoredTimelineEvent
     /// <summary>Official feature name, or <c>null</c> for the whole product.</summary>
     public string? Feature { get; init; }
 
+    /// <summary>The plans the event is limited to, as the AI returned them. Empty when it applies to all.</summary>
+    public IReadOnlyList<string> Plans { get; init; } = [];
+
+    /// <summary>The surfaces the event is limited to, as the AI returned them. Empty when it applies everywhere.</summary>
+    public IReadOnlyList<string> Surfaces { get; init; } = [];
+
     /// <summary>One line describing what happens.</summary>
     public required string Description { get; init; }
 
