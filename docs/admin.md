@@ -109,6 +109,7 @@ The catalog links the product names the AI returns to curated products (see [con
 | `GET /products/{id}` | A product with its aliases, linked articles and linked dates | `200`, `404` |
 | `POST /products` | Add a product (`name`) | `201` with the product, `400` for an empty or too long name, `409` when the name is already a product or an alias |
 | `PUT /products/{id}` | Rename (`name`). The old name becomes an alias | `200`, `400`, `404`, `409` |
+| `PUT /products/{id}/parent` | Make the product a child of another product (`parentId`), or top-level when `parentId` is null | `200` with the product, `400` for its own parent or a descendant, `404` |
 | `DELETE /products/{id}` | Delete a product and its aliases. Its articles and dates become unmatched again | `204`, `404` |
 | `POST /products/{id}/aliases` | Add an alias (`alias`) | `200` with the product, `400`, `404`, `409` |
 | `DELETE /products/{id}/aliases/{aliasId}` | Remove an alias | `204`, `404` |
@@ -129,7 +130,7 @@ All pages render interactively on the server inside the admin layout. Unauthenti
 | `/admin` | Dashboard: job history with live logs, buttons to trigger processing, roundup generation and the content fixer, and to cancel the running job |
 | `/admin/feeds` | Add, edit, enable or disable and delete RSS feeds |
 | `/admin/products` | Product catalog: the review queue of product names that are not in the catalog yet, the product list with search, and the names that are not products (see [Product Catalog](#product-catalog)) |
-| `/admin/products/{id}` | One product: rename, aliases, merge into another product, delete, and the linked dates and articles |
+| `/admin/products/{id}` | One product: rename, aliases, parent and children, merge into another product, delete, and the linked dates and articles (including those of its child products) |
 | `/admin/processed-urls` | Search the URL ledger by status, feed, collection, section or job. Remove entries to retry them, clear all failed entries, and open the item editor. |
 | `/admin/content-items` | Browse and filter content, edit or delete items, add a URL through the pipeline (the add-content dialog), and regenerate a roundup |
 | `/admin/content-preview/{collection}/{slug}` | Render an item's markdown as it will appear on the site |

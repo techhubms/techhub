@@ -157,6 +157,53 @@ public class AdminProductsEndpointsTests : IClassFixture<TechHubIntegrationTestA
     }
 
     [Fact]
+    public async Task SetParent_ShowsTheParentOnTheChildAndTheChildOnTheParent()
+    {
+        var parent = await CreateAsync();
+        var child = await CreateAsync();
+
+        var response = await _client.PutAsJsonAsync($"/api/admin/products/{child.Id}/parent", new { parentId = parent.Id }, Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var detail = await response.Content.ReadFromJsonAsync<ProductDetail>(Ct);
+        detail!.Parent!.Id.Should().Be(parent.Id);
+        var parentDetail = await _client.GetFromJsonAsync<ProductDetail>($"/api/admin/products/{parent.Id}", Ct);
+        parentDetail!.Children.Should().ContainSingle(c => c.Id == child.Id);
+    }
+
+    [Fact]
+    public async Task SetParent_WithoutParentId_MakesTheProductTopLevel()
+    {
+        var parent = await CreateAsync();
+        var child = await CreateAsync();
+        (await _client.PutAsJsonAsync($"/api/admin/products/{child.Id}/parent", new { parentId = parent.Id }, Ct)).StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var response = await _client.PutAsJsonAsync($"/api/admin/products/{child.Id}/parent", new { parentId = (long?)null }, Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        (await response.Content.ReadFromJsonAsync<ProductDetail>(Ct))!.Parent.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task SetParent_ToItself_ReturnsBadRequest()
+    {
+        var product = await CreateAsync();
+
+        var response = await _client.PutAsJsonAsync($"/api/admin/products/{product.Id}/parent", new { parentId = product.Id }, Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task SetParent_WithUnknownProduct_ReturnsNotFound()
+    {
+        var product = await CreateAsync();
+
+        (await _client.PutAsJsonAsync("/api/admin/products/999999999/parent", new { parentId = product.Id }, Ct)).StatusCode.Should().Be(HttpStatusCode.NotFound);
+        (await _client.PutAsJsonAsync($"/api/admin/products/{product.Id}/parent", new { parentId = 999999999 }, Ct)).StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
     public async Task MergeProduct_MakesTheSourceAnAliasOfTheTarget()
     {
         var source = await CreateAsync();

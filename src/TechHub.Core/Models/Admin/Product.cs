@@ -10,6 +10,16 @@ public sealed class ProductAlias
     public string Alias { get; set; } = string.Empty;
 }
 
+/// <summary>A product of the catalog by id and name, used for the parent and children of a product.</summary>
+public sealed class ProductReference
+{
+    /// <summary>Database primary key.</summary>
+    public long Id { get; set; }
+
+    /// <summary>The canonical product name.</summary>
+    public string Name { get; set; } = string.Empty;
+}
+
 /// <summary>A product of the catalog with the number of articles and timeline events that are linked to it.</summary>
 public sealed class ProductSummary
 {
@@ -19,10 +29,16 @@ public sealed class ProductSummary
     /// <summary>The canonical product name.</summary>
     public string Name { get; set; } = string.Empty;
 
-    /// <summary>Number of articles that are about this product.</summary>
+    /// <summary>Id of the parent product, or null for a top-level product.</summary>
+    public long? ParentId { get; set; }
+
+    /// <summary>Name of the parent product, or null for a top-level product.</summary>
+    public string? ParentName { get; set; }
+
+    /// <summary>Number of articles that are about this product or one of its child products.</summary>
     public int ItemCount { get; set; }
 
-    /// <summary>Number of timeline events (dates) that are about this product.</summary>
+    /// <summary>Number of timeline events (dates) that are about this product or one of its child products.</summary>
     public int EventCount { get; set; }
 
     /// <summary>Other names for this product.</summary>
@@ -44,8 +60,11 @@ public sealed class ProductArticleLink
     /// <summary>Publication date of the article as unix epoch seconds.</summary>
     public long DateEpoch { get; set; }
 
-    /// <summary>The name the AI used in this article, which matches the product by name or alias.</summary>
+    /// <summary>The name the AI used in this article, which matches a product by name or alias.</summary>
     public string ProductName { get; set; } = string.Empty;
+
+    /// <summary>The catalog product the name matches: the product itself or one of its children.</summary>
+    public string CatalogName { get; set; } = string.Empty;
 }
 
 /// <summary>A timeline event (important date) of a product and the article it comes from.</summary>
@@ -80,9 +99,12 @@ public sealed class ProductEventLink
 
     /// <summary>The name the AI used for the product in this event.</summary>
     public string ProductName { get; set; } = string.Empty;
+
+    /// <summary>The catalog product the name matches: the product itself or one of its children.</summary>
+    public string CatalogName { get; set; } = string.Empty;
 }
 
-/// <summary>A product with its aliases, linked articles and linked dates.</summary>
+/// <summary>A product with its aliases, parent and children, linked articles and linked dates.</summary>
 public sealed class ProductDetail
 {
     /// <summary>Database primary key.</summary>
@@ -91,13 +113,19 @@ public sealed class ProductDetail
     /// <summary>The canonical product name.</summary>
     public string Name { get; set; } = string.Empty;
 
+    /// <summary>The product this product belongs to, or null for a top-level product.</summary>
+    public ProductReference? Parent { get; set; }
+
+    /// <summary>The products that belong to this product, by name.</summary>
+    public IReadOnlyList<ProductReference> Children { get; set; } = [];
+
     /// <summary>Other names for this product.</summary>
     public IReadOnlyList<ProductAlias> Aliases { get; set; } = [];
 
-    /// <summary>Articles that are about this product, newest first.</summary>
+    /// <summary>Articles that are about this product or one of its descendants, newest first.</summary>
     public IReadOnlyList<ProductArticleLink> Articles { get; set; } = [];
 
-    /// <summary>Timeline events of this product, by date.</summary>
+    /// <summary>Timeline events of this product and its descendants, by date.</summary>
     public IReadOnlyList<ProductEventLink> Events { get; set; } = [];
 }
 

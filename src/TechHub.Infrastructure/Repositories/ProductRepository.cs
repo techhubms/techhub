@@ -49,11 +49,23 @@ public sealed class ProductRepository : IProductRepository
     public async Task<IReadOnlyList<ProductSummary>> GetProductsAsync(string? search = null, CancellationToken ct = default)
     {
         const string Sql = """
+            WITH RECURSIVE tree (root_id, id) AS (
+                SELECT id, id FROM products
+                UNION
+                SELECT t.root_id, p.id FROM products p JOIN tree t ON p.parent_product_id = t.id
+            )
             SELECT p.id   AS Id,
                    p.name AS Name,
-                   (SELECT COUNT(DISTINCT (l.collection_name, l.item_slug)) FROM content_item_products l WHERE l.product_id = p.id)::int AS ItemCount,
-                   (SELECT COUNT(*) FROM content_timeline_events e WHERE e.product_id = p.id)::int AS EventCount
+                   p.parent_product_id AS ParentId,
+                   parent.name AS ParentName,
+                   (SELECT COUNT(DISTINCT (l.collection_name, l.item_slug))
+                      FROM tree t JOIN content_item_products l ON l.product_id = t.id
+                     WHERE t.root_id = p.id)::int AS ItemCount,
+                   (SELECT COUNT(*)
+                      FROM tree t JOIN content_timeline_events e ON e.product_id = t.id
+                     WHERE t.root_id = p.id)::int AS EventCount
             FROM products p
+            LEFT JOIN products parent ON parent.id = p.parent_product_id
             WHERE @Pattern::text IS NULL
                OR p.name ILIKE @Pattern::text
                OR EXISTS (SELECT 1 FROM product_aliases a WHERE a.product_id = p.id AND a.alias ILIKE @Pattern::text)
@@ -86,16 +98,28 @@ public sealed class ProductRepository : IProductRepository
         var aliases = await GetAliasesAsync([id], ct);
         product.Aliases = aliases.TryGetValue(id, out var list) ? list : [];
 
+        product.Parent = await _connection.QuerySingleOrDefaultAsync<ProductReference>(new CommandDefinition(
+            "SELECT p.id AS Id, p.name AS Name FROM products c JOIN products p ON p.id = c.parent_product_id WHERE c.id = @Id",
+            new { Id = id },
+            cancellationToken: ct));
+
+        product.Children = (await _connection.QueryAsync<ProductReference>(new CommandDefinition(
+            "SELECT id AS Id, name AS Name FROM products WHERE parent_product_id = @Id ORDER BY lower(name), name",
+            new { Id = id },
+            cancellationToken: ct))).ToList();
+
         const string ArticlesSql = """
             SELECT l.collection_name AS CollectionName,
                    l.item_slug       AS Slug,
                    ci.title          AS Title,
                    ci.date_epoch     AS DateEpoch,
-                   l.product_name    AS ProductName
+                   l.product_name    AS ProductName,
+                   p.name            AS CatalogName
             FROM content_item_products l
+            JOIN products p ON p.id = l.product_id
             JOIN content_items ci ON ci.collection_name = l.collection_name AND ci.slug = l.item_slug
-            WHERE l.product_id = @Id
-            ORDER BY ci.date_epoch DESC, ci.slug
+            WHERE l.product_id IN (SELECT product_tree_ids(@Id))
+            ORDER BY ci.date_epoch DESC, ci.slug, l.position
             """;
 
         product.Articles = (await _connection.QueryAsync<ProductArticleLink>(
@@ -111,10 +135,12 @@ public sealed class ProductRepository : IProductRepository
                    e.collection_name AS CollectionName,
                    e.item_slug      AS ItemSlug,
                    ci.title         AS ItemTitle,
-                   e.product        AS ProductName
+                   e.product        AS ProductName,
+                   p.name           AS CatalogName
             FROM content_timeline_events e
+            JOIN products p ON p.id = e.product_id
             JOIN content_items ci ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
-            WHERE e.product_id = @Id
+            WHERE e.product_id IN (SELECT product_tree_ids(@Id))
             ORDER BY e.event_date, e.id
             """;
 
@@ -130,7 +156,8 @@ public sealed class ProductRepository : IProductRepository
             CollectionName = e.CollectionName,
             ItemSlug = e.ItemSlug,
             ItemTitle = e.ItemTitle,
-            ProductName = e.ProductName
+            ProductName = e.ProductName,
+            CatalogName = e.CatalogName
         }).ToList();
 
         return product;
@@ -287,6 +314,48 @@ public sealed class ProductRepository : IProductRepository
         });
 
     /// <inheritdoc />
+    public Task<ProductOperationResult> SetParentAsync(long id, long? parentId, CancellationToken ct = default) =>
+        InTransactionAsync(async transaction =>
+        {
+            if (await GetNameAsync(id, transaction, ct) is null)
+            {
+                return ProductOperationResult.NotFound("Product not found.");
+            }
+
+            if (parentId is { } parent)
+            {
+                if (parent == id)
+                {
+                    return ProductOperationResult.Invalid("A product cannot be its own parent.");
+                }
+
+                if (await GetNameAsync(parent, transaction, ct) is null)
+                {
+                    return ProductOperationResult.NotFound("Parent product not found.");
+                }
+
+                var isDescendant = await _connection.ExecuteScalarAsync<bool>(new CommandDefinition(
+                    "SELECT EXISTS (SELECT 1 FROM product_tree_ids(@Id) AS t (id) WHERE t.id = @ParentId)",
+                    new { Id = id, ParentId = parent },
+                    transaction,
+                    cancellationToken: ct));
+                if (isDescendant)
+                {
+                    return ProductOperationResult.Invalid("A product cannot be moved under one of its own child products.");
+                }
+            }
+
+            await _connection.ExecuteAsync(new CommandDefinition(
+                "UPDATE products SET parent_product_id = @ParentId, updated_at = NOW() WHERE id = @Id",
+                new { Id = id, ParentId = parentId },
+                transaction,
+                cancellationToken: ct));
+
+            _logger.LogInformation("Set parent of product {ProductId} to {ParentId}", id, parentId);
+            return ProductOperationResult.Success(id);
+        });
+
+    /// <inheritdoc />
     public Task<ProductOperationResult> RemoveAliasAsync(long id, long aliasId, CancellationToken ct = default) =>
         InTransactionAsync(async transaction =>
         {
@@ -324,6 +393,25 @@ public sealed class ProductRepository : IProductRepository
 
             await _connection.ExecuteAsync(new CommandDefinition(
                 "UPDATE product_aliases SET product_id = @TargetId WHERE product_id = @SourceId",
+                new { SourceId = sourceId, TargetId = targetId },
+                transaction,
+                cancellationToken: ct));
+
+            // The children of the source move to the target. A child that is the target or one of its ancestors (the
+            // target is a descendant of the source) takes the place of the source in the hierarchy instead.
+            await _connection.ExecuteAsync(new CommandDefinition(
+                """
+                WITH RECURSIVE up (id) AS (
+                    SELECT @TargetId
+                    UNION
+                    SELECT p.parent_product_id FROM products p JOIN up ON p.id = up.id WHERE p.parent_product_id IS NOT NULL
+                )
+                UPDATE products c
+                SET parent_product_id = CASE
+                    WHEN c.id IN (SELECT id FROM up) THEN (SELECT s.parent_product_id FROM products s WHERE s.id = @SourceId)
+                    ELSE @TargetId END
+                WHERE c.parent_product_id = @SourceId
+                """,
                 new { SourceId = sourceId, TargetId = targetId },
                 transaction,
                 cancellationToken: ct));
@@ -536,5 +624,6 @@ public sealed class ProductRepository : IProductRepository
         public string ItemSlug { get; init; } = string.Empty;
         public string ItemTitle { get; init; } = string.Empty;
         public string ProductName { get; init; } = string.Empty;
+        public string CatalogName { get; init; } = string.Empty;
     }
 }

@@ -64,6 +64,13 @@ internal static class AdminProductEndpoints
             .Produces(StatusCodes.Status204NoContent)
             .Produces(StatusCodes.Status404NotFound);
 
+        group.MapPut("/products/{id:long}/parent", SetParentAsync)
+            .WithName("SetProductParent")
+            .WithSummary("Make a product a child of another product, or top-level when the parent is empty")
+            .Produces<ProductDetail>()
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
         group.MapPost("/products/{id:long}/merge", MergeProductAsync)
             .WithName("MergeProduct")
             .WithSummary("Merge a product into another product")
@@ -165,6 +172,16 @@ internal static class AdminProductEndpoints
     {
         var result = await repository.RemoveAliasAsync(id, aliasId, ct);
         return result.Succeeded ? Results.NoContent() : ToErrorResult(result);
+    }
+
+    private static async Task<IResult> SetParentAsync(
+        long id,
+        ProductParentRequest request,
+        IProductRepository repository,
+        CancellationToken ct)
+    {
+        var result = await repository.SetParentAsync(id, request.ParentId, ct);
+        return await ToDetailResultAsync(result, repository, ct);
     }
 
     private static async Task<IResult> MergeProductAsync(

@@ -170,6 +170,111 @@ public class AdminProductDetailTests : AdminPageTestBase
     }
 
     [Fact]
+    public void Render_ShowsTheParentAndTheChildrenOfTheProduct()
+    {
+        // Arrange
+        var detail = Detail();
+        detail.Parent = new ProductReference { Id = 6, Name = "Azure Functions" };
+        detail.Children = [new ProductReference { Id = 7, Name = "Foundry Agent Service" }];
+        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
+
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Find("#parentName").GetAttribute("value").Should().Be("Azure Functions");
+        cut.Find("#children-list a").GetAttribute("href").Should().Be("/admin/products/7");
+        cut.Find("#children-list a").TextContent.Should().Be("Foundry Agent Service");
+    }
+
+    [Fact]
+    public void Render_ProductWithoutChildren_ShowsEmptyMessage()
+    {
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Find("#children-empty").Should().NotBeNull();
+        cut.Find("#parentName").GetAttribute("value").Should().BeNullOrEmpty();
+    }
+
+    [Fact]
+    public void Render_LinksOfChildProducts_ShowWhichProductTheyAreAbout()
+    {
+        // Arrange
+        var detail = Detail();
+        detail.Articles = [.. detail.Articles, new ProductArticleLink { CollectionName = "news", Slug = "agent-post", Title = "Agent post", DateEpoch = 1_767_225_600, ProductName = "Foundry Agent Service", CatalogName = "Microsoft Foundry Agent Service" }];
+        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
+
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Find("#articles-table thead").TextContent.Should().Contain("Product");
+        cut.FindAll("#articles-table tbody tr").Select(r => r.TextContent).Should().Contain(t => t.Contains("Microsoft Foundry Agent Service"));
+    }
+
+    [Fact]
+    public void Render_WhenAllLinksAreAboutTheProductItself_HidesTheProductColumn()
+    {
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Find("#articles-table thead").TextContent.Should().NotContain("Product");
+        cut.Find("#events-table thead").TextContent.Should().NotContain("Product");
+    }
+
+    [Fact]
+    public void SetParent_CallsTheApiWithTheParentAndShowsTheResult()
+    {
+        // Arrange
+        var updated = Detail();
+        updated.Parent = new ProductReference { Id = 6, Name = "Azure Functions" };
+        _api.Setup(x => x.SetProductParentAsync(5, 6, It.IsAny<CancellationToken>())).ReturnsAsync(updated);
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#parentName").Change("azure functions");
+
+        // Act
+        cut.FindAll(".admin-inline-form button").Single(b => b.TextContent == "Set parent").Click();
+
+        // Assert
+        _api.Verify(x => x.SetProductParentAsync(5, 6, It.IsAny<CancellationToken>()), Times.Once);
+        cut.Find(".admin-alert-success").TextContent.Should().Contain("belongs to 'Azure Functions'");
+    }
+
+    [Fact]
+    public void SetParent_WithEmptyName_MakesTheProductTopLevel()
+    {
+        // Arrange
+        _api.Setup(x => x.SetProductParentAsync(5, null, It.IsAny<CancellationToken>())).ReturnsAsync(Detail());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#parentName").Change(" ");
+
+        // Act
+        cut.FindAll(".admin-inline-form button").Single(b => b.TextContent == "Set parent").Click();
+
+        // Assert
+        _api.Verify(x => x.SetProductParentAsync(5, null, It.IsAny<CancellationToken>()), Times.Once);
+        cut.Find(".admin-alert-success").TextContent.Should().Contain("top-level product");
+    }
+
+    [Fact]
+    public void SetParent_ToUnknownProduct_ShowsErrorWithoutCallingTheApi()
+    {
+        // Arrange
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#parentName").Change("Nonexistent");
+
+        // Act
+        cut.FindAll(".admin-inline-form button").Single(b => b.TextContent == "Set parent").Click();
+
+        // Assert
+        cut.Find(".admin-alert-error").TextContent.Should().Contain("'Nonexistent' is not a product.");
+        _api.Verify(x => x.SetProductParentAsync(It.IsAny<long>(), It.IsAny<long?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
     public void Merge_AsksForConfirmationBeforeCallingTheApi_AndThenNavigatesToTheTarget()
     {
         // Arrange
@@ -252,7 +357,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         Aliases = [new ProductAlias { Id = 1, Alias = "Azure AI Foundry" }],
         Articles =
         [
-            new ProductArticleLink { CollectionName = "news", Slug = "intro-post", Title = "Intro post", DateEpoch = 1_767_225_600, ProductName = "Azure AI Foundry" }
+            new ProductArticleLink { CollectionName = "news", Slug = "intro-post", Title = "Intro post", DateEpoch = 1_767_225_600, ProductName = "Azure AI Foundry", CatalogName = "Microsoft Foundry" }
         ],
         Events =
         [
@@ -267,7 +372,8 @@ public class AdminProductDetailTests : AdminPageTestBase
                 CollectionName = "news",
                 ItemSlug = "retirement-post",
                 ItemTitle = "Retirement post",
-                ProductName = "Azure AI Foundry"
+                ProductName = "Azure AI Foundry",
+                CatalogName = "Microsoft Foundry"
             }
         ]
     };

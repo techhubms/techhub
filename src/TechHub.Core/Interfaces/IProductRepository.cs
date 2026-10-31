@@ -30,12 +30,18 @@ public interface IProductRepository
     /// <summary>Adds an alias to a product. Articles and events that use the alias are linked to the product.</summary>
     Task<ProductOperationResult> AddAliasAsync(long id, string aliasName, CancellationToken ct = default);
 
+    /// <summary>
+    /// Makes a product a child of another product (GitHub Copilot CLI belongs to GitHub Copilot), or top-level when
+    /// <paramref name="parentId"/> is null. A product cannot be its own ancestor.
+    /// </summary>
+    Task<ProductOperationResult> SetParentAsync(long id, long? parentId, CancellationToken ct = default);
+
     /// <summary>Removes an alias from a product. Articles and events that used it become unmatched.</summary>
     Task<ProductOperationResult> RemoveAliasAsync(long id, long aliasId, CancellationToken ct = default);
 
     /// <summary>
     /// Merges <paramref name="sourceId"/> into <paramref name="targetId"/>: the name and aliases of the source become
-    /// aliases of the target and the source product is removed.
+    /// aliases of the target, its child products move to the target and the source product is removed.
     /// </summary>
     Task<ProductOperationResult> MergeAsync(long sourceId, long targetId, CancellationToken ct = default);
 

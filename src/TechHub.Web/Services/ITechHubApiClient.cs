@@ -515,6 +515,12 @@ internal interface ITechHubApiClient
     Task RemoveProductAliasAsync(long id, long aliasId, CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Make a product a child of another product, or top-level when <paramref name="parentId"/> is null.
+    /// PUT /api/admin/products/{id}/parent
+    /// </summary>
+    Task<ProductDetail> SetProductParentAsync(long id, long? parentId, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Merge a product into another product and return the target.
     /// POST /api/admin/products/{id}/merge
     /// </summary>

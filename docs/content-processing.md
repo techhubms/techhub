@@ -435,7 +435,7 @@ product, so "Azure AI Foundry" and "Microsoft Foundry" are the same product wher
 
 | Table | Purpose |
 |---|---|
-| `products` | The curated product names, unique ignoring case |
+| `products` | The curated product names, unique ignoring case. A product can have a parent (`parent_product_id`) |
 | `product_aliases` | Other names for a product (old names, spelling variants), unique ignoring case and never equal to a product name |
 | `ignored_product_names` | Names the AI returns that are not products (an event, an umbrella brand), so they stay out of the review queue |
 | `content_item_products` | The product names an article lists in classifier order, with the product each matches. `product_id` is empty while the name is not in the catalog |
@@ -443,6 +443,14 @@ product, so "Azure AI Foundry" and "Microsoft Foundry" are the same product wher
 
 An article is about several products and a product has many articles. An event belongs to one article and one product,
 so a product's dates always lead back to the article that states them (for example the announcement of a retirement).
+
+### Hierarchy
+
+Azure products are separate services, but a product like GitHub Copilot is a family: the CLI, the coding agent and code review are
+products of their own that belong to GitHub Copilot. A product can have a parent. Articles and events keep linking to the most specific
+product that matches their name; a parent shows the articles and dates of all its descendants (with the specific product named per
+link), and the counts on the product list include them. A product cannot be its own ancestor; deleting a parent makes its children
+top-level and merging a product moves its children to the target.
 
 - **Matching is a text match.** A name matches a product by its name or an alias, ignoring case and extra whitespace (the database function `find_product_id`). There is no fuzzy matching and no AI in this step, so matches never need a review.
 - **Links follow the AI output.** Whenever an article's `ai_metadata` is written (processing, roundup metadata backfill, admin edit) its links are replaced, and event writes set `product_id` the same way.

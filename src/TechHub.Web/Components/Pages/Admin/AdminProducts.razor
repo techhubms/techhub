@@ -131,6 +131,7 @@
                     <thead>
                         <tr>
                             <th>Name</th>
+                            <th>Belongs to</th>
                             <th>Aliases</th>
                             <th>Articles</th>
                             <th>Dates</th>
@@ -142,6 +143,7 @@
                         {
                             <tr>
                                 <td>@product.Name</td>
+                                <td>@product.ParentName</td>
                                 <td>@string.Join(", ", product.Aliases.Select(a => a.Alias))</td>
                                 <td class="admin-cell-mono">@product.ItemCount</td>
                                 <td class="admin-cell-mono">@product.EventCount</td>

@@ -50,6 +50,12 @@ public sealed class ProductMergeRequest
     public long TargetId { get; init; }
 }
 
+/// <summary>DTO for setting the parent of a product; a null parent makes the product top-level.</summary>
+public sealed class ProductParentRequest
+{
+    public long? ParentId { get; init; }
+}
+
 /// <summary>DTO for updating custom page raw JSON.</summary>
 public sealed class CustomPageUpdateRequest
 {

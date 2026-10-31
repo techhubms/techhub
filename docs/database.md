@@ -48,7 +48,7 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 | `content_processing_jobs` | Audit log of background job runs (content processing, content fixer, roundup generation, timeline backfill) |
 | `content_timeline_events` | Dated lifecycle events (preview, GA, deprecation, ...) that articles state, one row per event with a cascading foreign key to the source article and a link to the catalog product (see [content-processing.md](content-processing.md#timeline-events)) |
 | `content_timeline_extractions` | Which articles have been scanned for timeline events, with the prompt version, so the backfill job is resumable |
-| `products` | Curated product catalog: canonical product names (see [content-processing.md](content-processing.md#product-catalog)) |
+| `products` | Curated product catalog: canonical product names, with an optional parent product (see [content-processing.md](content-processing.md#product-catalog)) |
 | `product_aliases` | Other names for a product; a name the AI returns that matches an alias is linked to the product |
 | `ignored_product_names` | Names the AI returns that are not products, kept out of the review queue |
 | `content_item_products` | The product names an article lists, linked to the catalog (`product_id` is empty for names that are not in the catalog), with a cascading foreign key to the article |

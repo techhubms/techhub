@@ -76,6 +76,29 @@
             <button class="btn-secondary" disabled="@_busy" @onclick="AddAliasAsync">Add alias</button>
         </div>
 
+        <h2 class="admin-section-title">Hierarchy</h2>
+
+        <div class="admin-inline-form">
+            <label class="admin-label" for="parentName">Belongs to</label>
+            <input id="parentName" class="admin-input" list="merge-targets" @bind="_parentName" placeholder="No parent (top-level product)" />
+            <button class="btn-secondary" disabled="@_busy" @onclick="SetParentAsync">Set parent</button>
+        </div>
+        <p class="admin-result-summary">A product that belongs to another product (GitHub Copilot CLI to GitHub Copilot) shows up in the articles and dates of its parent.</p>
+
+        @if (_product.Children.Count == 0)
+        {
+            <div class="admin-empty" id="children-empty">No child products.</div>
+        }
+        else
+        {
+            <ul class="admin-plain-list" id="children-list">
+                @foreach (var child in _product.Children)
+                {
+                    <li><a href="/admin/products/@child.Id">@child.Name</a></li>
+                }
+            </ul>
+        }
+
         <h2 class="admin-section-title">Merge or delete</h2>
 
         <div class="admin-inline-form">
@@ -121,6 +144,10 @@
                     <thead>
                         <tr>
                             <th>Date</th>
+                            @if (ShowCatalogColumn)
+                            {
+                                <th>Product</th>
+                            }
                             <th>Kind</th>
                             <th>Feature</th>
                             <th>What happens</th>
@@ -132,6 +159,10 @@
                         {
                             <tr>
                                 <td class="admin-cell-mono">@FormatEventDate(item)</td>
+                                @if (ShowCatalogColumn)
+                                {
+                                    <td>@item.CatalogName</td>
+                                }
                                 <td>@item.Kind</td>
                                 <td>@item.Feature</td>
                                 <td>@item.Description</td>
@@ -157,6 +188,10 @@
                         <tr>
                             <th>Published</th>
                             <th>Article</th>
+                            @if (ShowCatalogColumn)
+                            {
+                                <th>Product</th>
+                            }
                             <th>Name used</th>
                         </tr>
                     </thead>
@@ -166,6 +201,10 @@
                             <tr>
                                 <td class="admin-cell-mono">@DateHelper.FormatDateIso(article.DateEpoch)</td>
                                 <td><a href="/admin/content-preview/@article.CollectionName/@article.Slug">@article.Title</a></td>
+                                @if (ShowCatalogColumn)
+                                {
+                                    <td>@article.CatalogName</td>
+                                }
                                 <td>@article.ProductName</td>
                             </tr>
                         }
@@ -195,10 +234,16 @@
     private IReadOnlyList<ProductSummary> _otherProducts = [];
     private string _newName = string.Empty;
     private string _newAlias = string.Empty;
+    private string _parentName = string.Empty;
     private string _mergeTarget = string.Empty;
     private PendingAction _pendingAction;
     private long _loadedId;
     private PersistingComponentStateSubscription? _persistSubscription;
+
+    // Links of child products show which product they are about.
+    private bool ShowCatalogColumn =>
+        _product != null
+        && (_product.Articles.Any(a => a.CatalogName != _product.Name) || _product.Events.Any(e => e.CatalogName != _product.Name));
 
     protected override async Task OnInitializedAsync()
     {
@@ -211,6 +256,7 @@
             _product = product;
             _otherProducts = others;
             _newName = product.Name;
+            _parentName = product.Parent?.Name ?? string.Empty;
             _loading = false;
             return;
         }
@@ -259,6 +305,7 @@
             {
                 _otherProducts = (await Api.GetProductsAsync()).Where(p => p.Id != Id).ToList();
                 _newName = _product.Name;
+                _parentName = _product.Parent?.Name ?? string.Empty;
             }
         }
         catch (OperationCanceledException)
@@ -284,6 +331,31 @@
             _newName = _product.Name;
             return $"Renamed to '{_product.Name}'.";
         });
+
+    private Task SetParentAsync()
+    {
+        var parentName = _parentName.Trim();
+        long? parentId = null;
+        if (parentName.Length > 0)
+        {
+            var parent = _otherProducts.FirstOrDefault(p => string.Equals(p.Name, parentName, StringComparison.OrdinalIgnoreCase));
+            if (parent is null)
+            {
+                _message = $"'{parentName}' is not a product. Pick a product from the list.";
+                _messageIsError = true;
+                return Task.CompletedTask;
+            }
+
+            parentId = parent.Id;
+        }
+
+        return RunAsync(async () =>
+        {
+            _product = await Api.SetProductParentAsync(Id, parentId);
+            _parentName = _product.Parent?.Name ?? string.Empty;
+            return _product.Parent is null ? "The product is a top-level product now." : $"The product belongs to '{_product.Parent.Name}' now.";
+        });
+    }
 
     private Task AddAliasAsync() =>
         RunAsync(async () =>

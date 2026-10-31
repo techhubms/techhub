@@ -1553,6 +1553,19 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
+    /// Make a product a child of another product, or top-level when the parent is null.
+    /// PUT /api/admin/products/{id}/parent
+    /// </summary>
+    public virtual async Task<ProductDetail> SetProductParentAsync(
+        long id,
+        long? parentId,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/products/{id}/parent", new { parentId }, cancellationToken);
+        return await ReadProductDetailAsync(response, "set product parent", cancellationToken);
+    }
+
+    /// <summary>
     /// Merge a product into another product.
     /// POST /api/admin/products/{id}/merge
     /// </summary>

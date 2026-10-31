@@ -1861,6 +1861,36 @@ public class TechHubApiClientAdminTests
     }
 
     [Fact]
+    public async Task SetProductParentAsync_PutsTheParentIdToTheParentRoute()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """{"id":5,"name":"GitHub Copilot CLI","parent":{"id":6,"name":"GitHub Copilot"},"children":[],"aliases":[],"articles":[],"events":[]}""");
+
+        // Act
+        var product = await fixture.Client.SetProductParentAsync(5, 6, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("PUT");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/parent");
+        fixture.Handler.Json.GetProperty("parentId").GetInt64().Should().Be(6);
+        product.Parent!.Name.Should().Be("GitHub Copilot");
+    }
+
+    [Fact]
+    public async Task SetProductParentAsync_WithoutParent_SendsANullParentId()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """{"id":5,"name":"GitHub Copilot CLI","children":[],"aliases":[],"articles":[],"events":[]}""");
+
+        // Act
+        var product = await fixture.Client.SetProductParentAsync(5, null, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Json.GetProperty("parentId").ValueKind.Should().Be(System.Text.Json.JsonValueKind.Null);
+        product.Parent.Should().BeNull();
+    }
+
+    [Fact]
     public async Task MergeProductAsync_PostsTheTargetId()
     {
         // Arrange
