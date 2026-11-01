@@ -127,7 +127,7 @@ Vanilla JS event listeners attached via `addEventListener` or `initXxx()` functi
 - **Browser-native features** with no C# equivalent (scroll events, resize, history API)
 - **Third-party widget initialization** (e.g., Highlight.js, Mermaid)
 
-**Coordination with existing JS init functions**: If an element is handled by Blazor `@onclick` but a JS init function would also try to attach a listener, add `data-initialized="blazor"` to the element. The existing `data-initialized` guard in `initExpandableBadges` and `initFeatureFilters` will skip it.
+**Coordination with existing JS init functions**: If an element is handled by Blazor `@onclick` but a JS init function would also try to attach a listener, add `data-initialized="blazor"` to the element. The existing `data-initialized` guard in `initExpandableBadges` will skip it.
 
 ### External CDN Libraries
 
@@ -179,7 +179,7 @@ CDN config is bridged from C# via an inline script in App.razor (`window.TechHub
 | `GitHubCopilotGettingStarted.razor` | `initHighlighting`, `initTocScrollSpy` | No |
 | `GitHubCopilotVSCodeUpdates.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | Yes |
 | `AISDLC.razor` | `initMermaid`, `initTocScrollSpy` | No |
-| `GitHubCopilotFeatures.razor` | *(none in `PageScripts`)* — filters use Blazor `@onclick`; it calls the `scrollTierCardIntoView` and `preventScrollOnExpand` globals from `page-scripts.js` through JS interop | No |
+| `GitHubCopilotFeatures.razor` | *(none in `PageScripts`)* — cards expand with Blazor `@onclick`; it calls the `preventScrollOnExpand` global from `page-scripts.js` through JS interop | No |
 
 All other pages (`SectionCollection`, `Authors`, `About`, `McpInfo`, `Newsletter*`, `Admin*`, `Error`, `NotFound`, and the `GitHubCopilotDiscord` and `GitHubCopilotToolTips` pages) declare no scripts, so the base class only calls `markScriptsReady`.
 

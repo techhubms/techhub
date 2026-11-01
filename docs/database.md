@@ -52,14 +52,12 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 | `product_aliases` | Other names for a product; a name the AI returns that matches an alias is linked to the product |
 | `ignored_product_names` | Names the AI returns that are not products, kept out of the review queue |
 | `product_qualifiers` | Vocabulary of plans and surfaces (`kind`), with `product_qualifier_aliases` for other names. Product aliases, article links and timeline events carry them (`content_timeline_event_qualifiers`), see [content-processing.md](content-processing.md#plans-and-surfaces) |
-| `product_features` | Curated features of a product, with `product_feature_aliases` for other names. Timeline events link to one through `feature_id`, see [content-processing.md](content-processing.md#features). The features of GitHub Copilot also carry the data of the features page: `slug`, `description`, `ghes_support`, `release_date` |
+| `product_features` | Curated features of a product, with `product_feature_aliases` for other names. Timeline events link to one through `feature_id`, see [content-processing.md](content-processing.md#features). The features of GitHub Copilot also carry the data of the features page: `slug`, `description`, `release_date` |
 | `product_feature_content` | Links features to content items (many-to-many) with a thumbnail flag and sort order. Used by the GitHub Copilot features page |
 | `content_item_products` | The product names an article lists, linked to the catalog (`product_id` is empty for names that are not in the catalog), with a cascading foreign key to the article |
 | `content_reviews` | Review queue for content fixer changes (tags, markdown, author) awaiting approval |
 | `custom_page_data` | JSON data for custom pages (editable from admin UI) |
 | `background_job_settings` | Per-job enabled flag that gates scheduled runs (see [content-processing.md](content-processing.md#scheduling)) |
-| `ghc_features` | Superseded by `product_features` (migration 055 copied it). No longer read or written, to be dropped in a later migration |
-| `ghc_feature_content` | Superseded by `product_feature_content` (migration 055 copied it). No longer read or written, to be dropped in a later migration |
 | `vscode_update_items` | Membership set of content items shown on the VS Code Updates page |
 | `newsletter_subscribers` | Newsletter subscribers with confirmation state and section preferences |
 | `newsletter_send_log` | One row per newsletter send, used to prevent duplicate sends |

@@ -161,7 +161,7 @@ All pages render interactively on the server inside the admin layout. Unauthenti
 | `/admin/content-preview/{collection}/{slug}` | Render an item's markdown as it will appear on the site |
 | `/admin/reviews` | Approve, reject or edit content fixer proposals, singly or in bulk, with a markdown preview |
 | `/admin/custom-pages` | Edit the raw JSON behind the custom pages |
-| `/admin/copilot-features` | Edit the GitHub Copilot features of the catalog (description, release date, GHES support) and their linked content and thumbnail. Features without linked content are not shown on the features page. New features are added on the product page |
+| `/admin/copilot-features` | Edit the GitHub Copilot features of the catalog (description, release date) and their linked content and thumbnail. Features without linked content are not shown on the features page. New features are added on the product page |
 | `/admin/vscode-updates` | Add or remove items on the VS Code Updates page |
 | `/admin/newsletter` | Subscribers, test sends and send log. Deleting requires inline confirmation. Test sends require an entered recipient email; none is prefilled. Refresh, delete, edit and test-send failures show generic errors, and a failed refresh after a deletion or edit does not show a success message. See [newsletter.md](newsletter.md). |
 | `/admin/settings` | Enable or disable scheduled jobs and invalidate all caches |

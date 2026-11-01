@@ -21,11 +21,6 @@ public record GhcFeature
     public long? ReleaseDate { get; init; }
 
     /// <summary>
-    /// Whether this feature is available in GitHub Enterprise Server (GHES).
-    /// </summary>
-    public bool GhesSupport { get; init; }
-
-    /// <summary>
     /// Content items (videos, blog posts, etc.) associated with this feature.
     /// Populated only in joined queries; empty list by default.
     /// </summary>

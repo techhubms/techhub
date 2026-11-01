@@ -62,8 +62,7 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
             Slug = slug,
             Title = "Persisted Feature",
             Description = "Persisted description",
-            ReleaseDate = 1700000000,
-            GhesSupport = true
+            ReleaseDate = 1700000000
         };
 
         // Act
@@ -76,7 +75,6 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         stored!.Title.Should().Be("Persisted Feature");
         stored.Description.Should().Be("Persisted description");
         stored.ReleaseDate.Should().Be(1700000000);
-        stored.GhesSupport.Should().BeTrue();
     }
 
     [Fact]
@@ -88,8 +86,7 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         {
             Slug = slug,
             Title = "Updated Title",
-            Description = "Updated description",
-            GhesSupport = true
+            Description = "Updated description"
         };
 
         // Act
@@ -102,7 +99,6 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         matches.Should().ContainSingle("PUT on an existing slug must update, not duplicate");
         matches[0].Title.Should().Be("Updated Title");
         matches[0].Description.Should().Be("Updated description");
-        matches[0].GhesSupport.Should().BeTrue();
     }
 
     [Fact]

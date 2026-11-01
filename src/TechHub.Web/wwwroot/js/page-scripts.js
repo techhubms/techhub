@@ -282,7 +282,6 @@ export async function initTocScrollSpy() {
  */
 export async function initCustomPages() {
     const collapsibleElements = document.querySelector('[data-collapsible]');
-    const featureSections = document.querySelector('.features-video-section');
 
     // Only detect expandable badges that need JS handling — Blazor-managed
     // badges (in SectionCard) use @onclick and are skipped by initExpandableBadges
@@ -292,7 +291,7 @@ export async function initCustomPages() {
     const uninitializedExpand = expandableElements &&
         document.querySelector('[data-expand-target]:not([data-initialized])');
 
-    if (!collapsibleElements && !uninitializedExpand && !featureSections) return;
+    if (!collapsibleElements && !uninitializedExpand) return;
 
     try {
         const module = await import('./custom-pages.js');
@@ -302,9 +301,6 @@ export async function initCustomPages() {
         }
         if (uninitializedExpand) {
             module.initExpandableBadges();
-        }
-        if (featureSections) {
-            module.initFeatureFilters();
         }
     } catch (error) {
         console.error('Failed to load custom pages:', error);
@@ -392,38 +388,6 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 }, true);
-
-/**
- * After a tier filter is selected, scroll the sidebar tier list back to the top
- * so the active card is visible without jumping the main content.
- * Also blurs the focused button so Blazor's post-render focus management
- * does not scroll the main content to keep the button in view.
- */
-window.scrollTierCardIntoView = function(tierId) {
-    // Blur whichever element triggered this so Blazor doesn't scroll to it after re-render
-    if (document.activeElement instanceof HTMLElement) {
-        document.activeElement.blur();
-    }
-    const scroll = document.querySelector('.features-tiers-scroll');
-    if (!scroll) return;
-    if (!tierId) {
-        // No active tier — scroll back to top
-        scroll.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-    }
-    // Scroll so the active card sits at the top of the sidebar container.
-    // Use getBoundingClientRect() to get the card's position relative to the
-    // scroll container viewport, then add the current scrollTop to convert to
-    // scroll-offset coordinates. card.offsetTop is relative to the nearest
-    // positioned ancestor which may not be the scroll container itself.
-    const card = document.getElementById('tier-' + tierId);
-    if (card) {
-        const cardRect = card.getBoundingClientRect();
-        const scrollRect = scroll.getBoundingClientRect();
-        const offsetTop = scroll.scrollTop + (cardRect.top - scrollRect.top);
-        scroll.scrollTo({ top: offsetTop, behavior: 'smooth' });
-    }
-};
 
 /**
  * Capture the current scroll position and restore it after the next frame.

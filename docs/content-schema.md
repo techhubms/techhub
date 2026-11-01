@@ -98,7 +98,7 @@ External-linking collections (`news`, `blogs`, `community`) use `external_url` f
 
 ## GitHub Copilot Features
 
-The features on the `/github-copilot/features` timeline page are the features of the GitHub Copilot product in the product catalog (see [Product Catalog](content-processing.md#product-catalog)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. Until migration 055 they lived in `ghc_features` and `ghc_feature_content`; those two tables are copied into the catalog and are no longer read or written.
+The features on the `/github-copilot/features` timeline page are the features of the GitHub Copilot product in the product catalog (see [Product Catalog](content-processing.md#product-catalog)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. Until migration 055 they lived in `ghc_features` and `ghc_feature_content`; migration 056 dropped those two tables.
 
 ### `product_features` table
 
@@ -112,10 +112,9 @@ The features of a product. The page lists the features of GitHub Copilot and its
 | `slug` | `text` | Unique slug: the anchor on the page and the address of the feature in the GHC features API. Generated from the name when not given |
 | `description` | `text` | Short description shown in the expanded feature |
 | `release_date` | `bigint` | Unix epoch timestamp of the release (nullable). When empty the page uses the first `launch`, `preview`, `ga` or `release` event of the feature |
-| `ghes_support` | `boolean` | Whether GHES is supported |
 | `created_at` / `updated_at` | `timestamptz` | Audit timestamps |
 
-The subscription plans of a feature are not stored. The page no longer filters on plans.
+The subscription plans of a feature and whether GitHub Enterprise Server supports it are not stored. The page has no filters.
 
 ### `product_feature_content` table
 

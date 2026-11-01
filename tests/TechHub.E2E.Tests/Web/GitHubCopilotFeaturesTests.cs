@@ -230,18 +230,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_Timeline_ShouldHave_GhesBadges()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Some timeline entries should have GHES badges
-        var ghesBadges = Page.Locator(".features-timeline-entry .badge-success");
-        var ghesBadgeCount = await ghesBadges.CountAsync();
-        ghesBadgeCount.Should().BeGreaterThan(0, "At least one timeline entry should have a GHES badge");
-    }
-
-    [Fact]
     public async Task GitHubCopilotFeatures_Timeline_ShouldHave_VideoBadges()
     {
         // Arrange
@@ -260,25 +248,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_ShouldDisplay_GlobalFilterBar()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Global filter bar should exist
-        var filterBar = Page.Locator(".features-timeline-filters");
-        await filterBar.AssertElementVisibleAsync();
-
-        // Should have an "All" button
-        var allButton = filterBar.Locator("button:has-text('All')");
-        await Assertions.Expect(allButton).ToBeVisibleAsync();
-
-        // Should have a GHES toggle switch (label element, not button)
-        var ghesToggle = filterBar.Locator(".features-ghes-toggle");
-        await Assertions.Expect(ghesToggle).ToBeVisibleAsync();
-    }
-
-    [Fact]
     public async Task GitHubCopilotFeatures_Intro_ShouldDisplay_Links()
     {
         // Arrange
@@ -293,92 +262,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var linkCount = await links.CountAsync();
         linkCount.Should().BeGreaterThanOrEqualTo(2, "Expected links to pricing and plan details");
 
-        // Note about GHES should NOT be visible initially (only shown when GHES filter is active)
-        var note = Page.Locator(".custom-page-note");
-        await Assertions.Expect(note).ToHaveCountAsync(0);
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_GhesFilter_ShouldShow_Note()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-        await Page.WaitForBlazorReadyAsync();
-
-        // Note should not be visible before toggling GHES filter
-        var note = Page.Locator(".custom-page-note");
-        await Assertions.Expect(note).ToHaveCountAsync(0);
-
-        // Act - Enable the GHES filter
-        // Inner assertion uses a short timeout so ClickAndExpectAsync can retry quickly if
-        // the click is silently lost during Blazor hydration on slow WAN environments.
-        var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
-        await ghesToggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator(".custom-page-note"))
-                .ToBeVisibleAsync());
-
-        // Assert - Note should now be visible below the filter bar
-        await Assertions.Expect(note).ToBeVisibleAsync();
-        var noteText = await note.TextContentAsync();
-        noteText.Should().Contain("Note:", "Expected note section to be clearly marked");
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_GhesFilter_ShouldFilter_Timeline()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-        await Page.WaitForBlazorReadyAsync();
-
-        // Get initial entry count and count of GHES-supported entries before filtering
-        var countBefore = await Page.Locator(".features-timeline-entry").CountAsync();
-        countBefore.Should().BeGreaterThan(0, "Should have timeline entries before filtering");
-
-        // Count how many entries already show the GHES badge — these are the entries
-        // that should remain visible after the GHES filter is applied.
-        var ghesCountBefore = await Page.Locator(".features-timeline-entry:has(.badge-success)").CountAsync();
-
-        // Act - Click the GHES toggle and wait for entries to be filtered.
-        // ClickAndExpectAsync retries [click + assertion] to handle:
-        //   1. Blazor Server hydration race: under slow3g, the initial render diff (55 entries)
-        //      can take 1-3 s to apply after __blazorServerReady fires, creating a window where
-        //      clicks are silently lost before @onclick handlers are fully attached.
-        //   2. Slow SignalR: the assertion waits for the server-side re-render to arrive.
-        // ToHaveCountAsync is Blazor-only — native browser behavior cannot remove timeline
-        // entries from the DOM — making it immune to the label→checkbox native toggle.
-        var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
-        await ghesToggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator(".features-timeline-entry"))
-                .ToHaveCountAsync(ghesCountBefore));
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_ClearFilter_ShouldRestore_AllEntries()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        var allEntries = Page.Locator(".features-timeline-entry");
-        var totalCount = await allEntries.CountAsync();
-
-        // Apply a filter using the GHES toggle switch.
-        // Wait for entry count to drop — a Blazor-only DOM change, immune to native browser toggle.
-        var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
-        var ghesCount = await Page.Locator(".features-timeline-entry:has(.badge-success)").CountAsync();
-        await ghesToggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator(".features-timeline-entry"))
-                .ToHaveCountAsync(ghesCount));
-
-        // Act - Click the "All" button to clear filters
-        var allButton = Page.Locator(".features-timeline-filters button:has-text('All')");
-        await allButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(allButton).ToHaveClassAsync(
-                new Regex("active")));
-
-        // Assert - Entry count should be restored
-        var restoredEntries = Page.Locator(".features-timeline-entry");
-        var restoredCount = await restoredEntries.CountAsync();
-        restoredCount.Should().Be(totalCount, "Clearing filters should restore all timeline entries");
     }
 
     [Fact]
@@ -490,15 +373,15 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_FilterBar_ShouldNotHave_TierButtons()
+    public async Task GitHubCopilotFeatures_ShouldNotHave_FilterBarOrGhesBadges()
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Only the "All" button and the GHES toggle are left
-        var filterButtons = Page.Locator(".features-timeline-filters button");
-        await Assertions.Expect(filterButtons).ToHaveCountAsync(1);
-        await Assertions.Expect(filterButtons.First).ToHaveTextAsync("All");
+        // Assert - The catalog has no plans or GHES flag per feature, so there is nothing to filter on
+        await Assertions.Expect(Page.Locator(".features-timeline-entry").First).ToBeVisibleAsync();
+        await Assertions.Expect(Page.Locator(".features-timeline-filters")).ToHaveCountAsync(0);
+        await Assertions.Expect(Page.Locator(".features-timeline-entry .badge-success")).ToHaveCountAsync(0);
     }
 
     [Fact]

@@ -8,7 +8,6 @@ public record FeaturesPageData
     public required string Title { get; init; }
     public required string Description { get; init; }
     public required string Intro { get; init; }
-    public required string Note { get; init; }
     public required FeaturesLinks Links { get; init; }
     public BillingNotice? BillingNotice { get; init; }
     public required List<SubscriptionTier> SubscriptionTiers { get; init; }
@@ -87,9 +86,6 @@ public record TimelineFeature
 
     /// <summary>Subscription tiers this feature is available in (e.g., "Free", "Pro", "Business", "Pro+", "Enterprise").</summary>
     public required List<string> Plans { get; init; }
-
-    /// <summary>Whether this feature is available in GitHub Enterprise Server (GHES).</summary>
-    public bool GhesSupport { get; init; }
 
     /// <summary>
     /// Optional slug of the related ghc-features video content item.

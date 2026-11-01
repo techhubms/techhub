@@ -16,7 +16,7 @@
     <div class="admin-page-header">
         <div>
             <h1 class="admin-page-title">Copilot Features</h1>
-            <p class="admin-page-subtitle">The features of GitHub Copilot in the catalog — description, release date, GHES support, and linked content. New features are added on the product page</p>
+            <p class="admin-page-subtitle">The features of GitHub Copilot in the catalog — description, release date, and linked content. New features are added on the product page</p>
         </div>
         <div class="admin-actions">
             <button class="btn-secondary" @onclick="LoadFeaturesAsync">⟳ Refresh</button>
@@ -53,7 +53,6 @@
                         <th>Title</th>
                         <th>Slug</th>
                         <th>Release</th>
-                        <th>GHES</th>
                         <th>Content Links</th>
                         <th>Actions</th>
                     </tr>
@@ -74,16 +73,6 @@
                                 else
                                 {
                                     <span style="color:var(--color-text-secondary)">—</span>
-                                }
-                            </td>
-                            <td>
-                                @if (item.GhesSupport)
-                                {
-                                    <span class="badge-success">✓</span>
-                                }
-                                else
-                                {
-                                    <span class="admin-cell-mono">—</span>
                                 }
                             </td>
                             <td>@item.ContentLinks.Count link@(item.ContentLinks.Count == 1 ? "" : "s")</td>
@@ -127,13 +116,6 @@
                                @onchange="e => _editingReleaseDate = e.Value?.ToString()" />
                         <span class="features-field-hint">Leave blank to use the first launch, preview or GA date of the events of the feature.</span>
                     </div>
-                </div>
-
-                <div class="features-editor-options">
-                    <label class="features-ghes-label">
-                        <input type="checkbox" @bind="_editingGhesSupport" />
-                        <span>GHES Support</span>
-                    </label>
                 </div>
 
                 @* ── Content links ── *@
@@ -297,7 +279,6 @@
     private GhcFeature? _editing;
     private string _editingDescription = string.Empty;
     private string? _editingReleaseDate;
-    private bool _editingGhesSupport;
     private List<GhcFeatureContentLink> _editingLinks = [];
     private bool _saving;
     private bool _confirmingDelete;
@@ -366,7 +347,6 @@
         _editingReleaseDate = item.ReleaseDate is long ts
             ? DateTimeOffset.FromUnixTimeSeconds(ts).ToOffset(TimeSpan.FromHours(1)).ToString("yyyy-MM-dd")
             : null;
-        _editingGhesSupport = item.GhesSupport;
         _editingLinks = [.. item.ContentLinks];
         _linkSearchQuery = string.Empty;
         _linkSearchCollection = string.Empty;
@@ -417,8 +397,7 @@
             var updated = _editing with
             {
                 Description = _editingDescription.Trim(),
-                ReleaseDate = ParseReleaseDate(),
-                GhesSupport = _editingGhesSupport
+                ReleaseDate = ParseReleaseDate()
             };
 
             await Api.UpsertGhcFeatureAsync(updated);

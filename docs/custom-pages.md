@@ -63,7 +63,7 @@ Retrieves the structured data required to render the corresponding custom page.
 
 **Endpoint**: `GET /api/custom-pages/features`
 **Data Model**: `FeaturesPageData`
-**Description**: An interactive feature timeline showing the chronological evolution of GitHub Copilot features. Includes subscription tier definitions for the sidebar and a `timelineFeatures` array with per-feature release dates, plan availability, GHES support, and optional links to related video content.
+**Description**: An interactive feature timeline showing the chronological evolution of GitHub Copilot features. Includes subscription tier definitions for the sidebar and a `timelineFeatures` array with per-feature release dates, plan availability, and optional links to related video content.
 
 ### GenAI Basics
 
@@ -145,14 +145,14 @@ Some custom pages are populated by specialized video content tracked in dedicate
 
 **Location**: Features are the features of the GitHub Copilot product in the catalog (`product_features`) and link to content items (usually videos under `collection_name = 'videos'`) through the `product_feature_content` table.
 
-New features are added on the GitHub Copilot product page of the admin (see [admin.md](admin.md)). The Copilot features admin page edits their description, release date, GHES flag and linked content through the [GHC features API](content-api.md#ghc-features-api). The test-only `ContentSyncService` can also seed them from fixture files, but production never does.
+New features are added on the GitHub Copilot product page of the admin (see [admin.md](admin.md)). The Copilot features admin page edits their description, release date and linked content through the [GHC features API](content-api.md#ghc-features-api). The test-only `ContentSyncService` can also seed them from fixture files, but production never does.
 
 **Features**:
 
 - Populates the features timeline page at `/github-copilot/features` (via `/api/ghc-features`)
 - Only features with at least one linked content item are listed; the others stay in the catalog and appear as soon as content is linked
-- Each feature has a release date (set by an admin, else taken from its timeline events) and a GHES support flag. See [content-schema.md](content-schema.md#github-copilot-features)
-- The subscription tier cards in the sidebar describe the plans; they do not filter the timeline. Only the GHES toggle filters
+- Each feature has a release date (set by an admin, else taken from its timeline events). See [content-schema.md](content-schema.md#github-copilot-features)
+- The subscription tier cards in the sidebar describe the plans; they do not filter the timeline. The page has no filters
 - Linked content items appear in the expanded feature detail, and the item marked as thumbnail supplies the video thumbnail
 - Items with YouTube URLs display video thumbnails and link to the video page
 

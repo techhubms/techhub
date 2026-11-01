@@ -342,7 +342,6 @@ Returns the features of GitHub Copilot (and its child products), newest release 
     "title": "GitHub Copilot Free Plan",
     "description": "Free tier for individual developers.",
     "releaseDate": 1700000000,
-    "ghesSupport": false,
     "contentLinks": [
       {
         "featureSlug": "copilot-free-plan",

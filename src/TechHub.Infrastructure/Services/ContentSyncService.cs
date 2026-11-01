@@ -758,7 +758,6 @@ public class ContentSyncService : IContentSyncService
             if (string.Equals(parsed.SubcollectionName, "ghc-features", StringComparison.OrdinalIgnoreCase))
             {
                 var title = parsed.FrontMatter.GetValueOrDefault("title", "")?.ToString() ?? "";
-                var ghesSupport = GetBooleanFromFrontMatter(parsed.FrontMatter, "ghes_support");
 
                 if (string.IsNullOrWhiteSpace(title))
                 {
@@ -766,23 +765,15 @@ public class ContentSyncService : IContentSyncService
                         $"Missing required 'title' in frontmatter for ghc-features file: {parsed.Slug}.");
                 }
 
-                if (!parsed.FrontMatter.ContainsKey("ghes_support"))
-                {
-                    throw new InvalidOperationException(
-                        $"Missing required 'ghes_support' in frontmatter for ghc-features file: {parsed.Slug}. " +
-                        "Specify 'ghes_support: true' or 'ghes_support: false'.");
-                }
-
                 await _connection.ExecuteAsync("""
-                    INSERT INTO product_features (product_id, name, slug, description, release_date, ghes_support)
-                    SELECT p.id, @Title, @Slug, @Description, @ReleaseDate, @GhesSupport
+                    INSERT INTO product_features (product_id, name, slug, description, release_date)
+                    SELECT p.id, @Title, @Slug, @Description, @ReleaseDate
                     FROM products p
                     WHERE lower(p.name) = 'github copilot'
                     ON CONFLICT (slug) DO UPDATE SET
                         name = @Title,
                         description = @Description,
                         release_date = @ReleaseDate,
-                        ghes_support = @GhesSupport,
                         updated_at = NOW()
                     """,
                     new
@@ -790,8 +781,7 @@ public class ContentSyncService : IContentSyncService
                         Slug = parsed.Slug,
                         Title = title,
                         Description = parsed.Excerpt,
-                        ReleaseDate = parsed.DateEpoch,
-                        GhesSupport = ghesSupport
+                        ReleaseDate = parsed.DateEpoch
                     },
                     transaction);
 
@@ -992,24 +982,6 @@ public class ContentSyncService : IContentSyncService
         }
 
         return new List<string>();
-    }
-
-    private static bool GetBooleanFromFrontMatter(Dictionary<string, object?> frontMatter, string key)
-    {
-        if (frontMatter.TryGetValue(key, out var value) && value != null)
-        {
-            if (value is bool b)
-            {
-                return b;
-            }
-
-            if (bool.TryParse(value.ToString(), out var parsed))
-            {
-                return parsed;
-            }
-        }
-
-        return false;
     }
 
     private static (string excerpt, string content) ExtractExcerptAndContent(string fileContent)

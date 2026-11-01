@@ -35,8 +35,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Slug = slug,
             Title = "Test Feature Insert",
             Description = "Short excerpt",
-            ReleaseDate = 1_700_000_000L,
-            GhesSupport = true
+            ReleaseDate = 1_700_000_000L
         };
 
         // Act
@@ -46,13 +45,12 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         result.Should().BeTrue("upsert of a new feature should return true");
 
         var row = await _fixture.Connection.QueryFirstOrDefaultAsync<dynamic>(
-            "SELECT name, description, release_date, ghes_support FROM product_features WHERE slug = @Slug",
+            "SELECT name, description, release_date FROM product_features WHERE slug = @Slug",
             new { Slug = slug });
         ((object?)row).Should().NotBeNull("the inserted row must exist in product_features");
         ((string)row!.name).Should().Be("Test Feature Insert");
         ((string)row.description).Should().Be("Short excerpt");
         ((long?)row.release_date).Should().Be(1_700_000_000L);
-        ((bool)row.ghes_support).Should().BeTrue();
     }
 
     [Fact]
@@ -65,8 +63,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Slug = slug,
             Title = "Original Title",
             Description = "Original excerpt",
-            ReleaseDate = null,
-            GhesSupport = false
+            ReleaseDate = null
         };
         await _repository.UpsertFeatureAsync(initial, CancellationToken.None);
 
@@ -75,8 +72,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Slug = slug,
             Title = "Updated Title",
             Description = "Updated excerpt",
-            ReleaseDate = 1_800_000_000L,
-            GhesSupport = true
+            ReleaseDate = 1_800_000_000L
         };
 
         // Act
@@ -85,12 +81,25 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         // Assert
         result.Should().BeTrue();
         var row = await _fixture.Connection.QueryFirstAsync<dynamic>(
-            "SELECT name, description, release_date, ghes_support FROM product_features WHERE slug = @Slug",
+            "SELECT name, description, release_date FROM product_features WHERE slug = @Slug",
             new { Slug = slug });
         ((string)row.name).Should().Be("Updated Title");
         ((string)row.description).Should().Be("Updated excerpt");
         ((long?)row.release_date).Should().Be(1_800_000_000L);
-        ((bool)row.ghes_support).Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task Schema_HasNoLegacyGhcTablesOrGhesColumn()
+    {
+        // Act
+        var legacy = (await _fixture.Connection.QueryAsync<string>(
+            @"SELECT table_name || '.' || column_name FROM information_schema.columns
+              WHERE table_schema = current_schema()
+                AND (table_name IN ('ghc_features', 'ghc_feature_content')
+                     OR (table_name = 'product_features' AND column_name = 'ghes_support'))")).ToList();
+
+        // Assert
+        legacy.Should().BeEmpty("migration 056 drops the ghc_ tables and the GHES flag");
     }
 
     [Fact]
@@ -286,8 +295,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Slug = slug,
             Title = "Get All Test",
             Description = "Excerpt for get all",
-            ReleaseDate = 1_700_000_000L,
-            GhesSupport = false
+            ReleaseDate = 1_700_000_000L
         };
         await _repository.UpsertFeatureAsync(feature, CancellationToken.None);
 
@@ -299,7 +307,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var found = all.FirstOrDefault(f => f.Slug == slug);
         found.Should().NotBeNull("the newly inserted feature must be returned by GetAllFeaturesAsync");
         found!.Title.Should().Be("Get All Test");
-        found.GhesSupport.Should().BeFalse();
     }
 
     [Fact]
@@ -309,8 +316,8 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var slugOlder = $"ghc-test-order-older-{Guid.NewGuid():N}";
         var slugNewer = $"ghc-test-order-newer-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slugOlder, Title = "Older", Description = "", GhesSupport = false, ReleaseDate = 1_600_000_000L }, CancellationToken.None);
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slugNewer, Title = "Newer", Description = "", GhesSupport = false, ReleaseDate = 1_900_000_000L }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slugOlder, Title = "Older", Description = "", ReleaseDate = 1_600_000_000L }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slugNewer, Title = "Newer", Description = "", ReleaseDate = 1_900_000_000L }, CancellationToken.None);
 
         // Act
         var all = await _repository.GetAllFeaturesAsync(CancellationToken.None);
@@ -333,7 +340,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Slug = slug,
             Title = "By Slug Feature",
             Description = "excerpt",
-            GhesSupport = true,
             ReleaseDate = 1_750_000_000L
         }, CancellationToken.None);
 
@@ -344,7 +350,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         feature.Should().NotBeNull();
         feature!.Slug.Should().Be(slug);
         feature.Title.Should().Be("By Slug Feature");
-        feature.GhesSupport.Should().BeTrue();
         feature.ReleaseDate.Should().Be(1_750_000_000L);
     }
 
@@ -365,7 +370,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
     {
         // Arrange
         var slug = $"ghc-test-delete-{Guid.NewGuid():N}";
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = "To Delete", Description = "", GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = "To Delete", Description = "" }, CancellationToken.None);
 
         // Act
         var deleted = await _repository.DeleteFeatureAsync(slug, CancellationToken.None);
@@ -396,7 +401,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var featureSlug = $"ghc-test-link-{Guid.NewGuid():N}";
         var itemSlug = $"ghc-link-item-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Link Feature", Description = "", GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Link Feature", Description = "" }, CancellationToken.None);
 
         // Insert a minimal content item so the FK is satisfied
         await _fixture.Connection.ExecuteAsync(@"
@@ -424,7 +429,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var item1Slug = $"ghc-thumb-item1-{Guid.NewGuid():N}";
         var item2Slug = $"ghc-thumb-item2-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Thumb Feature", Description = "", GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Thumb Feature", Description = "" }, CancellationToken.None);
 
         foreach (var itemSlug in new[] { item1Slug, item2Slug })
         {
@@ -460,7 +465,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var featureSlug = $"ghc-test-rmlink-{Guid.NewGuid():N}";
         var itemSlug = $"ghc-rmlink-item-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Remove Link Feature", Description = "", GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Remove Link Feature", Description = "" }, CancellationToken.None);
 
         await _fixture.Connection.ExecuteAsync(@"
             INSERT INTO content_items (slug, collection_name, title, excerpt, content, date_epoch,
@@ -534,7 +539,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var normalSlug = $"ghc-normal-item-{Guid.NewGuid():N}";
         var thumbSlug = $"ghc-thumb-item-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Computed Thumb", Description = "", GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Computed Thumb", Description = "" }, CancellationToken.None);
 
         foreach (var (itemSlug, isThumbnail, sortOrder) in new[] { (normalSlug, false, 2), (thumbSlug, true, 1) })
         {

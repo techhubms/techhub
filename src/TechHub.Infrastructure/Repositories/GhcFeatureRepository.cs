@@ -22,7 +22,6 @@ SELECT
         SELECT EXTRACT(EPOCH FROM MIN(e.event_date))::bigint
         FROM content_timeline_events e
         WHERE e.feature_id = f.id AND e.kind IN ('launch', 'preview', 'ga', 'release'))) AS ReleaseDate,
-    f.ghes_support AS GhesSupport,
     l.collection_name AS LinkCollectionName,
     l.item_slug       AS LinkItemSlug,
     l.is_thumbnail    AS LinkIsThumbnail,
@@ -131,9 +130,9 @@ ORDER BY l.sort_order, l.item_slug";
             {
                 await _connection.ExecuteAsync(
                     new CommandDefinition(
-                        @"INSERT INTO product_features (product_id, name, slug, description, release_date, ghes_support)
-                          VALUES (@ProductId, @Title, @Slug, @Description, @ReleaseDate, @GhesSupport)",
-                        new { ProductId = productId, Title = title, feature.Slug, feature.Description, feature.ReleaseDate, feature.GhesSupport },
+                        @"INSERT INTO product_features (product_id, name, slug, description, release_date)
+                          VALUES (@ProductId, @Title, @Slug, @Description, @ReleaseDate)",
+                        new { ProductId = productId, Title = title, feature.Slug, feature.Description, feature.ReleaseDate },
                         transaction: tx,
                         cancellationToken: ct));
             }
@@ -162,10 +161,9 @@ ORDER BY l.sort_order, l.item_slug";
                               name         = @Title,
                               description  = @Description,
                               release_date = @ReleaseDate,
-                              ghes_support = @GhesSupport,
                               updated_at   = NOW()
                           WHERE id = @Id",
-                        new { existing.Id, Title = title, feature.Description, feature.ReleaseDate, feature.GhesSupport },
+                        new { existing.Id, Title = title, feature.Description, feature.ReleaseDate },
                         transaction: tx,
                         cancellationToken: ct));
             }
@@ -395,7 +393,6 @@ LIMIT @PageSize OFFSET @Offset";
         string Title,
         string? Description,
         long? ReleaseDate,
-        bool GhesSupport,
         string? LinkCollectionName,
         string? LinkItemSlug,
         bool? LinkIsThumbnail,
@@ -428,8 +425,7 @@ LIMIT @PageSize OFFSET @Offset";
                     Slug = row.Slug,
                     Title = row.Title,
                     Description = row.Description ?? string.Empty,
-                    ReleaseDate = row.ReleaseDate,
-                    GhesSupport = row.GhesSupport
+                    ReleaseDate = row.ReleaseDate
                 };
 
                 entry = (feature, []);
