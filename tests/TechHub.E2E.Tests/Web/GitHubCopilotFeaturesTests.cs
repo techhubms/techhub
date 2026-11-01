@@ -230,18 +230,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_TimelineEntry_ShouldHave_PlanBadges()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Timeline entries should have plan badges
-        var planBadges = Page.Locator(".features-timeline-entry .badge-plan");
-        var badgeCount = await planBadges.CountAsync();
-        badgeCount.Should().BeGreaterThan(0, "At least one timeline entry should have plan badges");
-    }
-
-    [Fact]
     public async Task GitHubCopilotFeatures_Timeline_ShouldHave_GhesBadges()
     {
         // Arrange
@@ -365,30 +353,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_TierFilter_ShouldFilter_Timeline()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Get total entry count first
-        var allEntries = Page.Locator(".features-timeline-entry");
-        var totalCount = await allEntries.CountAsync();
-        totalCount.Should().BeGreaterThan(0);
-
-        // Act - Click the Free tier filter (most restrictive: only Free-tagged features are shown)
-        var freeButton = Page.Locator(".features-timeline-filters button:has-text('Free')");
-        await freeButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(freeButton).ToHaveClassAsync(
-                new Regex("active")));
-
-        // Assert - Filtering by Free tier must strictly reduce the count
-        var filteredEntries = Page.Locator(".features-timeline-entry");
-        var filteredCount = await filteredEntries.CountAsync();
-        filteredCount.Should().BeLessThan(totalCount,
-            "Filtering by Free tier should show fewer entries than unfiltered (only Free-tagged features)");
-    }
-
-    [Fact]
     public async Task GitHubCopilotFeatures_ClearFilter_ShouldRestore_AllEntries()
     {
         // Arrange
@@ -505,25 +469,47 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_TierCard_Click_ShouldFilter_Timeline()
+    public async Task GitHubCopilotFeatures_TierCards_ShouldBeInformationalOnly()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+        await Page.WaitForBlazorReadyAsync();
+        var entries = Page.Locator(".features-timeline-entry");
+        var countBefore = await entries.CountAsync();
+
+        // Act - The tier cards describe the plans; they no longer filter the timeline
+        var freeTierCard = Page.Locator("aside.sidebar #tier-free");
+        await Assertions.Expect(freeTierCard).ToBeVisibleAsync();
+        await freeTierCard.ClickAsync();
+
+        // Assert
+        (await freeTierCard.EvaluateAsync<string>("e => e.tagName")).Should().Be("DIV", "a tier card is not a button");
+        await Assertions.Expect(freeTierCard.Locator(".features-tier-link")).ToHaveCountAsync(0);
+        await Assertions.Expect(freeTierCard).Not.ToHaveClassAsync(new Regex("active"));
+        (await entries.CountAsync()).Should().Be(countBefore, "clicking a tier card must not filter the timeline");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_FilterBar_ShouldNotHave_TierButtons()
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        var sidebar = Page.Locator("aside.sidebar");
-        var freeTierCard = sidebar.Locator("#tier-free");
-        await Assertions.Expect(freeTierCard).ToBeVisibleAsync();
-
-        // Act - Click Free tier card in sidebar
-        await freeTierCard.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(freeTierCard).ToHaveClassAsync(
-                new Regex("active")));
-
-        // Assert - Free tier filter should also be active in the main filter bar
-        var freeFilterBtn = Page.Locator(".features-timeline-filters button:has-text('Free')");
-        await Assertions.Expect(freeFilterBtn).ToHaveClassAsync(new Regex("active"));
+        // Assert - Only the "All" button and the GHES toggle are left
+        var filterButtons = Page.Locator(".features-timeline-filters button");
+        await Assertions.Expect(filterButtons).ToHaveCountAsync(1);
+        await Assertions.Expect(filterButtons.First).ToHaveTextAsync("All");
     }
 
+    [Fact]
+    public async Task GitHubCopilotFeatures_Timeline_ShouldNotHave_PlanBadges()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - The features come from the catalog, which has no plans per feature
+        await Assertions.Expect(Page.Locator(".features-timeline-entry .badge-plan")).ToHaveCountAsync(0);
+    }
     [Fact]
     public async Task GitHubCopilotFeatures_ShouldDisplay_BillingNotice()
     {
@@ -542,44 +528,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var links = billingNotice.Locator("a[href]");
         var linkCount = await links.CountAsync();
         linkCount.Should().BeGreaterThanOrEqualTo(4, "Billing notice should contain at least 4 reference links");
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_PlanBadges_ShouldHave_TierColors()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // The first entry auto-expands on page load (expandedFeatureId = firstFeature.Slug).
-        // Only click to expand if it isn't already expanded — clicking an already-expanded
-        // entry would collapse it, causing the plan-badge assertions below to fail because
-        // the detail section would no longer be visible (source of flakiness).
-        var firstEntry = Page.Locator(".features-timeline-entry").First;
-        var firstCard = firstEntry.Locator(".features-timeline-card");
-        await Page.WaitForBlazorReadyAsync();
-        var ariaExpanded = await firstCard.GetAttributeAsync("aria-expanded");
-        if (ariaExpanded != "true")
-        {
-            var header = firstEntry.Locator(".features-timeline-header");
-            await header.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(firstCard).ToHaveAttributeAsync("aria-expanded", "true"));
-        }
-
-        // Assert - Plan badges should be present and have tier-specific color classes (badge-plan-*)
-        var planBadges = firstEntry.Locator(".badge-plan");
-        var badgeCount = await planBadges.CountAsync();
-
-        badgeCount.Should().BeGreaterThan(0, "Timeline entries should always render plan badges");
-
-        // Every badge must have a tier-specific CSS class
-        var tierColorPattern = new Regex(@"badge-plan-(free|student|pro|business|proplus|enterprise)");
-        for (var i = 0; i < badgeCount; i++)
-        {
-            var badge = planBadges.Nth(i);
-            var badgeClass = await badge.GetAttributeAsync("class");
-            badgeClass.Should().MatchRegex(tierColorPattern,
-                $"Plan badge {i} should have a tier-specific color class");
-        }
     }
 
     [Fact]

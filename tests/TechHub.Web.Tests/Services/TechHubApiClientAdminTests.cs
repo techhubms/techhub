@@ -599,7 +599,7 @@ public class TechHubApiClientAdminTests
     {
         // Arrange
         using var fixture = Fixture.Create(HttpStatusCode.NoContent);
-        var feature = new GhcFeature { Slug = "agent\r\n-mode", Title = "Agent mode", Plans = ["Pro"] };
+        var feature = new GhcFeature { Slug = "agent\r\n-mode", Title = "Agent mode" };
 
         // Act
         var result = await fixture.Client.UpsertGhcFeatureAsync(feature, TestContext.Current.CancellationToken);

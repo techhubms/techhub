@@ -98,32 +98,35 @@ External-linking collections (`news`, `blogs`, `community`) use `external_url` f
 
 ## GitHub Copilot Features
 
-GitHub Copilot features are an independent entity, not content items. Each feature is a row in `ghc_features` and can link to any number of content items (typically videos) through `ghc_feature_content`. The features appear on the `/github-copilot/features` timeline page. Feature metadata is stored in dedicated tables:
+The features on the `/github-copilot/features` timeline page are the features of the GitHub Copilot product in the product catalog (see [Product Catalog](content-processing.md#product-catalog)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. Until migration 055 they lived in `ghc_features` and `ghc_feature_content`; those two tables are copied into the catalog and are no longer read or written.
 
-### `ghc_features` table
+### `product_features` table
 
-Stores metadata for each GHC feature release:
+The features of a product. The page lists the features of GitHub Copilot and its child products that have at least one content link:
 
 | Column | Type | Description |
 |---|---|---|
-| `slug` | `text` PK | Unique feature identifier. Independent of `content_items.slug` |
-| `title` | `text` | Feature release title |
-| `description` | `text` | Short description (renamed from `excerpt` in migration 022) |
-| `release_date` | `bigint` | Unix epoch timestamp of the release (nullable) |
-| `plans` | `text` | Comma-separated list of every plan that includes the feature: `Free`, `Student`, `Pro`, `Business`, `Pro+`, `Enterprise` |
+| `id` | `bigint` PK | Identifier |
+| `product_id` | `bigint` FK → `products.id` | The product the feature belongs to |
+| `name` | `text` | Feature name, unique per product ignoring case. Shown as the title on the page |
+| `slug` | `text` | Unique slug: the anchor on the page and the address of the feature in the GHC features API. Generated from the name when not given |
+| `description` | `text` | Short description shown in the expanded feature |
+| `release_date` | `bigint` | Unix epoch timestamp of the release (nullable). When empty the page uses the first `launch`, `preview`, `ga` or `release` event of the feature |
 | `ghes_support` | `boolean` | Whether GHES is supported |
 | `created_at` / `updated_at` | `timestamptz` | Audit timestamps |
 
-### `ghc_feature_content` table
+The subscription plans of a feature are not stored. The page no longer filters on plans.
 
-Links a GHC feature to one or more content items (videos, blogs):
+### `product_feature_content` table
+
+Links a feature to one or more content items (videos, blogs):
 
 | Column | Type | Description |
 |---|---|---|
-| `feature_slug` | `text` FK → `ghc_features.slug` | The feature this link belongs to |
+| `feature_id` | `bigint` FK → `product_features.id` | The feature this link belongs to |
 | `collection_name` | `text` | Collection of the linked content item |
 | `item_slug` | `text` | Slug of the linked content item |
-| `is_thumbnail` | `boolean` | Whether this item is the feature's thumbnail |
+| `is_thumbnail` | `boolean` | Whether this item is the feature's thumbnail (at most one per feature) |
 | `sort_order` | `int` | Display order |
 
 ### `vscode_update_items` table
@@ -143,7 +146,7 @@ This table is populated automatically by:
 
 ### API
 
-The `GET /api/ghc-features` endpoint returns all GHC features with their content links. See [content-api.md](content-api.md#ghc-features-api) for details.
+The `GET /api/ghc-features` endpoint returns the features of GitHub Copilot with their content links. See [content-api.md](content-api.md#ghc-features-api) for details.
 
 ## Test Fixture Format
 

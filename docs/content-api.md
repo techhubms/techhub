@@ -326,12 +326,12 @@ curl -k "https://localhost:5001/api/sections/all/collections/all/tags?maxTags=30
 
 ## GHC Features API
 
-Endpoints for GitHub Copilot feature metadata stored in the `ghc_features` table.
+Endpoints for the features of GitHub Copilot shown on the features page. They are the features of the GitHub Copilot product in the catalog (`product_features`, with `product_feature_content` for the content they link to).
 See [content-schema.md](content-schema.md#github-copilot-features) for the schema.
 
 ### GET /api/ghc-features
 
-Returns all GHC features with their content links. Public endpoint (no authentication required).
+Returns the features of GitHub Copilot (and its child products), newest release first, with their content links. `title` is the name of the catalog feature. `releaseDate` is the date set for the feature, else the first launch, preview, ga or release date of its timeline events. Features without content links are included. Public endpoint (no authentication required).
 
 **Response**: `200 OK`
 
@@ -342,7 +342,6 @@ Returns all GHC features with their content links. Public endpoint (no authentic
     "title": "GitHub Copilot Free Plan",
     "description": "Free tier for individual developers.",
     "releaseDate": 1700000000,
-    "plans": ["Free", "Pro"],
     "ghesSupport": false,
     "contentLinks": [
       {
@@ -362,15 +361,15 @@ Returns all GHC features with their content links. Public endpoint (no authentic
 
 ### PUT /api/ghc-features/{slug}
 
-Create or update a GHC feature. **Requires AdminOnly authorization.**
+Create or update a feature of GitHub Copilot, addressed by slug. **Requires AdminOnly authorization.**
 
-**Body**: `GhcFeature` JSON (same schema as GET response item). `slug` in the body must match the URL, `title` is required and `plans` must be an array (use `[]` when no plan applies).
+**Body**: `GhcFeature` JSON (same schema as GET response item). `slug` in the body must match the URL and `title` is required. A new `title` keeps the old name as an alias of the feature, so the timeline events that use it stay linked.
 
-**Response**: `204 No Content` or `400 Bad Request` (slug mismatch, empty title or null plans)
+**Response**: `204 No Content`, `400 Bad Request` (slug mismatch or empty title) or `409 Conflict` (the title is used by another feature or alias of GitHub Copilot, or the slug belongs to a feature of another product)
 
 ### DELETE /api/ghc-features/{slug}
 
-Delete a GHC feature and its content links. **Requires AdminOnly authorization.**
+Delete a feature of GitHub Copilot and its content links. The timeline events of the feature lose their feature link. **Requires AdminOnly authorization.**
 
 **Response**: `204 No Content` or `404 Not Found`
 

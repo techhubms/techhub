@@ -16,7 +16,7 @@
     <div class="admin-page-header">
         <div>
             <h1 class="admin-page-title">Copilot Features</h1>
-            <p class="admin-page-subtitle">Manage GitHub Copilot features — description, release date, plans, GHES support, and linked content</p>
+            <p class="admin-page-subtitle">The features of GitHub Copilot in the catalog — description, release date, GHES support, and linked content. New features are added on the product page</p>
         </div>
         <div class="admin-actions">
             <button class="btn-secondary" @onclick="LoadFeaturesAsync">⟳ Refresh</button>
@@ -53,7 +53,6 @@
                         <th>Title</th>
                         <th>Slug</th>
                         <th>Release</th>
-                        <th class="features-plans-col">Plans</th>
                         <th>GHES</th>
                         <th>Content Links</th>
                         <th>Actions</th>
@@ -76,14 +75,6 @@
                                 {
                                     <span style="color:var(--color-text-secondary)">—</span>
                                 }
-                            </td>
-                            <td>
-                                <div class="features-plans-badges">
-                                    @foreach (var plan in item.Plans)
-                                    {
-                                        <span class="features-plan-badge features-plan-badge-@plan.ToLowerInvariant().Replace("+", "plus").Replace(" ", "-")">@plan</span>
-                                    }
-                                </div>
                             </td>
                             <td>
                                 @if (item.GhesSupport)
@@ -134,26 +125,9 @@
                         <input id="edit-release-date" type="date" class="admin-input features-date-input"
                                value="@_editingReleaseDate"
                                @onchange="e => _editingReleaseDate = e.Value?.ToString()" />
-                        <span class="features-field-hint">Leave blank if not yet released.</span>
+                        <span class="features-field-hint">Leave blank to use the first launch, preview or GA date of the events of the feature.</span>
                     </div>
                 </div>
-
-                @* ── Plans ── *@
-                <fieldset class="features-plans-fieldset">
-                    <legend class="features-plans-legend">Subscription Plans</legend>
-                    <div class="features-plans-checkboxes">
-                        @foreach (var plan in _allPlans)
-                        {
-                            var planChecked = _editingPlans.Contains(plan);
-                            <label class="features-plan-checkbox-label">
-                                <input type="checkbox"
-                                       checked="@planChecked"
-                                       @onchange="() => TogglePlan(plan)" />
-                                <span class="features-plan-badge features-plan-badge-@plan.ToLowerInvariant().Replace("+", "plus").Replace(" ", "-")">@plan</span>
-                            </label>
-                        }
-                    </div>
-                </fieldset>
 
                 <div class="features-editor-options">
                     <label class="features-ghes-label">
@@ -313,8 +287,6 @@
 }
 
 @code {
-    private static readonly string[] _allPlans = ["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"];
-
     private bool _loading = true;
     private string? _error;
     private string? _message;
@@ -325,7 +297,6 @@
     private GhcFeature? _editing;
     private string _editingDescription = string.Empty;
     private string? _editingReleaseDate;
-    private HashSet<string> _editingPlans = [];
     private bool _editingGhesSupport;
     private List<GhcFeatureContentLink> _editingLinks = [];
     private bool _saving;
@@ -395,7 +366,6 @@
         _editingReleaseDate = item.ReleaseDate is long ts
             ? DateTimeOffset.FromUnixTimeSeconds(ts).ToOffset(TimeSpan.FromHours(1)).ToString("yyyy-MM-dd")
             : null;
-        _editingPlans = [.. item.Plans];
         _editingGhesSupport = item.GhesSupport;
         _editingLinks = [.. item.ContentLinks];
         _linkSearchQuery = string.Empty;
@@ -413,18 +383,6 @@
         _editorOpen = false;
         _editing = null;
         _confirmingDelete = false;
-    }
-
-    private void TogglePlan(string plan)
-    {
-        if (_editingPlans.Contains(plan))
-        {
-            _editingPlans.Remove(plan);
-        }
-        else
-        {
-            _editingPlans.Add(plan);
-        }
     }
 
     private long? ParseReleaseDate()
@@ -460,7 +418,6 @@
             {
                 Description = _editingDescription.Trim(),
                 ReleaseDate = ParseReleaseDate(),
-                Plans = [.. _editingPlans],
                 GhesSupport = _editingGhesSupport
             };
 

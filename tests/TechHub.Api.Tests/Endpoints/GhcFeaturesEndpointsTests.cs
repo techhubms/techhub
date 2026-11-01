@@ -7,7 +7,7 @@ using TechHub.Core.Models;
 namespace TechHub.Api.Tests.Endpoints;
 
 /// <summary>
-/// Integration tests for the /api/ghc-features endpoints (feature CRUD, content links, thumbnail).
+/// Integration tests for the /api/ghc-features endpoints (the features of GitHub Copilot in the catalog: CRUD, content links, thumbnail).
 /// GET is public; all writes require AdminOnly authorization (enforcement is covered by the admin authorization tests).
 /// Test data is seeded from TestCollections/_videos/ghc-features/*.md; every write test creates
 /// its own uniquely named feature / content items so tests are independent of each other.
@@ -63,7 +63,6 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
             Title = "Persisted Feature",
             Description = "Persisted description",
             ReleaseDate = 1700000000,
-            Plans = ["Free", "Pro"],
             GhesSupport = true
         };
 
@@ -77,7 +76,6 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         stored!.Title.Should().Be("Persisted Feature");
         stored.Description.Should().Be("Persisted description");
         stored.ReleaseDate.Should().Be(1700000000);
-        stored.Plans.Should().BeEquivalentTo(["Free", "Pro"]);
         stored.GhesSupport.Should().BeTrue();
     }
 
@@ -91,7 +89,6 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
             Slug = slug,
             Title = "Updated Title",
             Description = "Updated description",
-            Plans = ["Enterprise"],
             GhesSupport = true
         };
 
@@ -105,7 +102,6 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         matches.Should().ContainSingle("PUT on an existing slug must update, not duplicate");
         matches[0].Title.Should().Be("Updated Title");
         matches[0].Description.Should().Be("Updated description");
-        matches[0].Plans.Should().BeEquivalentTo(["Enterprise"]);
         matches[0].GhesSupport.Should().BeTrue();
     }
 
@@ -115,7 +111,7 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         // Arrange
         var urlSlug = NewFeatureSlug();
         var bodySlug = NewFeatureSlug();
-        var feature = new GhcFeature { Slug = bodySlug, Title = "Mismatch", Plans = [] };
+        var feature = new GhcFeature { Slug = bodySlug, Title = "Mismatch" };
 
         // Act
         var response = await _client.PutAsJsonAsync(
@@ -134,7 +130,7 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     {
         // Arrange
         var slug = NewFeatureSlug();
-        var feature = new GhcFeature { Slug = slug, Title = title, Plans = [] };
+        var feature = new GhcFeature { Slug = slug, Title = title };
 
         // Act
         var response = await PutFeatureAsync(feature);
@@ -145,18 +141,18 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     }
 
     [Fact]
-    public async Task UpsertGhcFeature_NullPlans_ReturnsBadRequestAndDoesNotPersist()
+    public async Task UpsertGhcFeature_TitleOfAnotherFeature_ReturnsConflictAndDoesNotPersist()
     {
-        // Arrange — an explicit JSON null for Plans must be rejected (empty array is the valid "no plans" value)
+        // Arrange
+        var title = $"Taken Title {NewId()}";
+        await CreateFeatureAsync(title);
         var slug = NewFeatureSlug();
-        var body = new { Slug = slug, Title = "Null Plans", Plans = (string[]?)null };
 
         // Act
-        var response = await _client.PutAsJsonAsync(
-            $"/api/ghc-features/{slug}", body, TestContext.Current.CancellationToken);
+        var response = await PutFeatureAsync(new GhcFeature { Slug = slug, Title = title });
 
         // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        response.StatusCode.Should().Be(HttpStatusCode.Conflict);
         (await GetFeatureAsync(slug)).Should().BeNull();
     }
 
@@ -425,10 +421,10 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
 
     private static string NewFeatureSlug() => $"ghc-test-{NewId()}";
 
-    private async Task<string> CreateFeatureAsync(string title = "Test Feature")
+    private async Task<string> CreateFeatureAsync(string? title = null)
     {
         var slug = NewFeatureSlug();
-        var response = await PutFeatureAsync(new GhcFeature { Slug = slug, Title = title, Plans = [] });
+        var response = await PutFeatureAsync(new GhcFeature { Slug = slug, Title = title ?? $"Test Feature {NewId()}" });
         response.StatusCode.Should().Be(HttpStatusCode.NoContent);
         return slug;
     }

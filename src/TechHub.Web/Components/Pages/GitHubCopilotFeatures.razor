@@ -29,13 +29,7 @@
                         <div class="features-tiers-scroll">
                             @foreach (var tier in pageData.SubscriptionTiers)
                             {
-                                <button type="button"
-                                        id="tier-@tier.Id"
-                                        class="features-tier-card @(activeTierId == tier.Id ? "active" : "")"
-                                        data-initialized="blazor"
-                                        @onclick="() => SetTierFilter(tier.Id)"
-                                        @onclick:stopPropagation="true"
-                                        @onclick:preventDefault="true">
+                                <div id="tier-@tier.Id" class="features-tier-card">
                                     <h3>@tier.Name</h3>
                                     <p class="features-tier-tagline">@tier.Tagline</p>
                                     <ul class="features-tier-features">
@@ -44,8 +38,7 @@
                                             <li>@feature</li>
                                         }
                                     </ul>
-                                    <span class="features-tier-link">Filter timeline →</span>
-                                </button>
+                                </div>
                             }
                         </div>
                     </nav>
@@ -78,22 +71,13 @@
 
                 @if (videoItems.Count > 0)
                 {
-                    <div class="features-timeline-filters" role="group" aria-label="Filter features by subscription tier">
+                    <div class="features-timeline-filters" role="group" aria-label="Filter features">
                         <button type="button"
-                                class="features-filter-btn @(activeTierId == null && !ghesFilterActive ? "active" : "")"
+                                class="features-filter-btn @(!ghesFilterActive ? "active" : "")"
                                 data-initialized="blazor"
                                 @onclick="ClearFilters"
                                 @onclick:stopPropagation="true"
                                 @onclick:preventDefault="true">All</button>
-                        @foreach (var tier in pageData.SubscriptionTiers)
-                        {
-                            <button type="button"
-                                    class="features-filter-btn @(activeTierId == tier.Id ? "active" : "")"
-                                    data-initialized="blazor"
-                                    @onclick="() => SetTierFilter(tier.Id)"
-                                    @onclick:stopPropagation="true"
-                                    @onclick:preventDefault="true">@tier.Name</button>
-                        }
                         <label class="features-ghes-toggle" data-filter="ghes"
                                data-initialized="blazor"
                                @onclick="ToggleGhesFilter"
@@ -170,10 +154,6 @@
 
                                                                 <div id="feature-detail-@feature.Slug" class="features-timeline-detail @(isExpanded ? "expanded" : "")">
                                                                     <div class="features-timeline-detail-badges">
-                                                                        @foreach (var plan in feature.Plans)
-                                                                        {
-                                                                            <span class="badge-plan badge-plan-@GetPlanCssClass(plan)">@plan</span>
-                                                                        }
                                                                         @if (feature.GhesSupport)
                                                                         {
                                                                             <span class="badge-success">✓ GHES</span>
@@ -258,7 +238,6 @@ else if (_notFound)
     private List<GhcFeature> videoItems = new();
     private PersistingComponentStateSubscription? _persistSubscription;
 
-    private string? activeTierId;
     private bool ghesFilterActive;
     private string? expandedFeatureId;
     // Tracks which feature slugs have been expanded at least once.
@@ -270,15 +249,8 @@ else if (_notFound)
     [CascadingParameter]
     public HttpContext? HttpContext { get; set; }
 
-    private async Task SetTierFilter(string tierId)
-    {
-        activeTierId = activeTierId == tierId ? null : tierId;
-        await JS.InvokeVoidAsync("scrollTierCardIntoView", activeTierId);
-    }
-
     private async Task ClearFilters()
     {
-        activeTierId = null;
         ghesFilterActive = false;
         await JS.InvokeVoidAsync("scrollTierCardIntoView", (object?)null);
     }
@@ -320,16 +292,6 @@ else if (_notFound)
     private IEnumerable<GhcFeature> GetFilteredTimeline()
     {
         IEnumerable<GhcFeature> features = videoItems;
-
-        if (activeTierId != null)
-        {
-            var tierName = pageData?.SubscriptionTiers
-                .FirstOrDefault(t => t.Id == activeTierId)?.Name;
-            if (tierName != null)
-            {
-                features = features.Where(f => f.Plans.Contains(tierName, StringComparer.OrdinalIgnoreCase));
-            }
-        }
 
         if (ghesFilterActive)
         {
@@ -394,12 +356,6 @@ else if (_notFound)
         return releaseDate;
     }
 
-    /// <summary>
-    /// Converts a subscription plan name to a CSS-safe class suffix (e.g. "Pro+" → "proplus").
-    /// </summary>
-    private static string GetPlanCssClass(string plan) =>
-        plan.ToLowerInvariant().Replace("+", "plus", StringComparison.Ordinal);
-
     protected override async Task OnInitializedAsync()
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
@@ -429,7 +385,9 @@ else if (_notFound)
             }
 
             var allFeatures = await ApiClient.GetGhcFeaturesAsync();
+            // Only features with content (a video or post) are listed; the others stay in the catalog.
             videoItems = (allFeatures ?? Enumerable.Empty<GhcFeature>())
+                .Where(f => f.ContentLinks.Count > 0)
                 .OrderByDescending(f => f.ReleaseDate ?? 0)
                 .ToList();
             expandedFeatureId = videoItems.FirstOrDefault()?.Slug;

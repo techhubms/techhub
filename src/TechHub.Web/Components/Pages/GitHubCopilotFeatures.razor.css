@@ -108,21 +108,8 @@
               box-shadow var(--duration-normal) var(--easing-ease-out);
   color: inherit;
   text-decoration: none;
-  cursor: pointer;
   text-align: left;
   width: 100%;
-}
-
-@media (hover: hover) {
-  .features-tier-card:hover {
-    border-color: var(--color-purple-medium);
-    box-shadow: var(--shadow-md);
-  }
-}
-
-.features-tier-card.active {
-  border-color: var(--color-purple-bright);
-  background: var(--color-purple-bg-subtle);
 }
 
 .features-tier-card h3 {
@@ -136,16 +123,6 @@
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-1);
   line-height: var(--line-height-normal);
-}
-
-.features-tier-link {
-  display: inline-block;
-  margin-top: auto;
-  padding-top: var(--spacing-1);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-purple-bright);
-  text-decoration: none;
 }
 
 .features-tier-features {
@@ -457,58 +434,7 @@ html.keyboard-nav .features-timeline-card:focus-visible {
   transform: rotate(180deg);
 }
 
-/* Plan badges */
-.badge-plan {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem var(--spacing-1);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  border-radius: var(--radius-sm);
-  background: var(--color-bg-emphasis);
-  border: 1px solid var(--color-border-default);
-  color: var(--color-text-secondary);
-  white-space: nowrap;
-  line-height: 1;
-}
-
-.badge-plan-free {
-  background: var(--color-blue-light-bg);
-  color: var(--color-purple-bright);
-  border-color: var(--color-purple-border-subtle);
-}
-
-.badge-plan-student {
-  background: var(--color-green-dark-bg);
-  color: var(--color-green-light);
-  border-color: var(--color-green-light-border);
-}
-
-.badge-plan-pro {
-  background: var(--color-purple-bg-subtle);
-  color: var(--color-purple-bright);
-  border-color: var(--color-purple-border);
-}
-
-.badge-plan-business {
-  background: var(--color-amber-bg);
-  color: var(--color-amber);
-  border-color: var(--color-amber-border);
-}
-
-.badge-plan-proplus {
-  background: var(--color-purple-bg-dark);
-  color: var(--color-purple-bright);
-  border-color: var(--color-purple-border);
-}
-
-.badge-plan-enterprise {
-  background: var(--color-red-bg);
-  color: var(--color-red);
-  border-color: var(--color-red-light-border);
-}
-
-/* Normalize Video badge size to match plan badges in the collapsed header */
+/* Normalize Video badge size in the collapsed header */
 .features-timeline-badges .badge-info {
   display: inline-flex;
   align-items: center;

@@ -1,13 +1,15 @@
+using System.Globalization;
 using Dapper;
 using FluentAssertions;
 using TechHub.Core.Models;
+using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
 /// <summary>
 /// Integration tests for <see cref="GhcFeatureRepository"/>.
-/// Covers the ghc_features, ghc_feature_content, and vscode_update_items tables.
+/// Covers the features of GitHub Copilot in the catalog (product_features, product_feature_content) and vscode_update_items.
 /// Each test uses unique slugs to avoid cross-test contamination in the shared database.
 /// </summary>
 public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatureRepositoryTests>>
@@ -34,7 +36,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Title = "Test Feature Insert",
             Description = "Short excerpt",
             ReleaseDate = 1_700_000_000L,
-            Plans = ["Free", "Pro"],
             GhesSupport = true
         };
 
@@ -45,13 +46,12 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         result.Should().BeTrue("upsert of a new feature should return true");
 
         var row = await _fixture.Connection.QueryFirstOrDefaultAsync<dynamic>(
-            "SELECT slug, title, description, release_date, plans, ghes_support FROM ghc_features WHERE slug = @Slug",
+            "SELECT name, description, release_date, ghes_support FROM product_features WHERE slug = @Slug",
             new { Slug = slug });
-        ((object?)row).Should().NotBeNull("the inserted row must exist in ghc_features");
-        ((string)row!.title).Should().Be("Test Feature Insert");
+        ((object?)row).Should().NotBeNull("the inserted row must exist in product_features");
+        ((string)row!.name).Should().Be("Test Feature Insert");
         ((string)row.description).Should().Be("Short excerpt");
         ((long?)row.release_date).Should().Be(1_700_000_000L);
-        ((string)row.plans).Should().Be("Free,Pro");
         ((bool)row.ghes_support).Should().BeTrue();
     }
 
@@ -66,7 +66,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Title = "Original Title",
             Description = "Original excerpt",
             ReleaseDate = null,
-            Plans = ["Enterprise"],
             GhesSupport = false
         };
         await _repository.UpsertFeatureAsync(initial, CancellationToken.None);
@@ -77,7 +76,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Title = "Updated Title",
             Description = "Updated excerpt",
             ReleaseDate = 1_800_000_000L,
-            Plans = ["Free", "Enterprise"],
             GhesSupport = true
         };
 
@@ -87,37 +85,193 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         // Assert
         result.Should().BeTrue();
         var row = await _fixture.Connection.QueryFirstAsync<dynamic>(
-            "SELECT title, description, release_date, plans, ghes_support FROM ghc_features WHERE slug = @Slug",
+            "SELECT name, description, release_date, ghes_support FROM product_features WHERE slug = @Slug",
             new { Slug = slug });
-        ((string)row.title).Should().Be("Updated Title");
+        ((string)row.name).Should().Be("Updated Title");
         ((string)row.description).Should().Be("Updated excerpt");
         ((long?)row.release_date).Should().Be(1_800_000_000L);
-        ((string)row.plans).Should().Be("Free,Enterprise");
         ((bool)row.ghes_support).Should().BeTrue();
     }
 
     [Fact]
-    public async Task UpsertFeatureAsync_EmptyPlans_PersistsEmptyString()
+    public async Task UpsertFeatureAsync_NewFeature_IsAFeatureOfGitHubCopilot()
     {
         // Arrange
-        var slug = $"ghc-test-no-plans-{Guid.NewGuid():N}";
-        var feature = new GhcFeature
-        {
-            Slug = slug,
-            Title = "No Plans Feature",
-            Description = "Excerpt",
-            Plans = [],
-            GhesSupport = false
-        };
+        var slug = $"ghc-test-product-{Guid.NewGuid():N}";
 
         // Act
-        await _repository.UpsertFeatureAsync(feature, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = $"Product feature {slug}" }, CancellationToken.None);
 
         // Assert
-        var plans = await _fixture.Connection.QueryFirstAsync<string>(
-            "SELECT plans FROM ghc_features WHERE slug = @Slug",
+        var product = await _fixture.Connection.QueryFirstAsync<string>(
+            "SELECT p.name FROM product_features f JOIN products p ON p.id = f.product_id WHERE f.slug = @Slug",
             new { Slug = slug });
-        plans.Should().BeEmpty("empty plans list should persist as empty string");
+        product.Should().Be("GitHub Copilot");
+    }
+
+    [Fact]
+    public async Task UpsertFeatureAsync_NewTitle_KeepsTheOldNameAsAliasSoEventLinksStay()
+    {
+        // Arrange
+        var slug = $"ghc-test-rename-{Guid.NewGuid():N}";
+        var oldTitle = $"Old name {slug}";
+        var newTitle = $"New name {slug}";
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = oldTitle }, CancellationToken.None);
+
+        // Act
+        var result = await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = newTitle }, CancellationToken.None);
+
+        // Assert
+        result.Should().BeTrue();
+        var aliases = await _fixture.Connection.QueryAsync<string>(
+            "SELECT a.alias FROM product_feature_aliases a JOIN product_features f ON f.id = a.feature_id WHERE f.slug = @Slug",
+            new { Slug = slug });
+        aliases.Should().Equal(oldTitle);
+    }
+
+    [Fact]
+    public async Task UpsertFeatureAsync_TitleOfAnotherFeature_ReturnsFalseAndChangesNothing()
+    {
+        // Arrange
+        var title = $"Taken title {Guid.NewGuid():N}";
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = $"ghc-test-taken-{Guid.NewGuid():N}", Title = title }, CancellationToken.None);
+        var slug = $"ghc-test-other-{Guid.NewGuid():N}";
+
+        // Act
+        var result = await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = title.ToUpperInvariant() }, CancellationToken.None);
+
+        // Assert
+        result.Should().BeFalse();
+        (await _repository.GetFeatureBySlugAsync(slug, CancellationToken.None)).Should().BeNull();
+    }
+
+    [Fact]
+    public async Task UpsertFeatureAsync_SlugOfAFeatureOfAnotherProduct_ReturnsFalse()
+    {
+        // Arrange
+        var other = await CreateFeatureOfAnotherProductAsync();
+
+        // Act
+        var result = await _repository.UpsertFeatureAsync(new GhcFeature { Slug = other.Slug, Title = $"Hijack {other.Slug}" }, CancellationToken.None);
+
+        // Assert
+        result.Should().BeFalse();
+        var name = await _fixture.Connection.QueryFirstAsync<string>("SELECT name FROM product_features WHERE slug = @Slug", new { other.Slug });
+        name.Should().Be(other.Name);
+    }
+
+    [Fact]
+    public async Task UpsertFeatureAsync_EmptyTitle_ReturnsFalse()
+    {
+        // Act
+        var result = await _repository.UpsertFeatureAsync(new GhcFeature { Slug = $"ghc-test-empty-{Guid.NewGuid():N}", Title = "   " }, CancellationToken.None);
+
+        // Assert
+        result.Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task UpsertFeatureAsync_LinksTheTimelineEventsThatUseTheTitle()
+    {
+        // Arrange
+        var title = $"Linked feature {Guid.NewGuid():N}";
+        var itemSlug = await SeedNewsItemAsync();
+        var timeline = new TimelineEventRepository(_fixture.Connection);
+        await timeline.ReplaceEventsAsync("news", itemSlug, [GaEvent("GitHub Copilot", title, "2026-03-10")], "source", 3, CancellationToken.None);
+
+        // Act
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = $"ghc-test-linked-{Guid.NewGuid():N}", Title = title }, CancellationToken.None);
+
+        // Assert
+        var linked = await _fixture.Connection.QueryFirstAsync<bool>(
+            "SELECT feature_id IS NOT NULL FROM content_timeline_events WHERE collection_name = 'news' AND item_slug = @Slug",
+            new { Slug = itemSlug });
+        linked.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task GetAllFeaturesAsync_FeatureOfAnotherProduct_IsNotReturned()
+    {
+        // Arrange
+        var other = await CreateFeatureOfAnotherProductAsync();
+
+        // Act
+        var all = await _repository.GetAllFeaturesAsync(CancellationToken.None);
+
+        // Assert
+        all.Should().NotContain(f => f.Slug == other.Slug);
+    }
+
+    [Fact]
+    public async Task GetAllFeaturesAsync_FeatureOfAChildProduct_IsReturned()
+    {
+        // Arrange
+        var slug = $"ghc-test-child-{Guid.NewGuid():N}";
+        await _fixture.Connection.ExecuteAsync(
+            @"INSERT INTO product_features (product_id, name, slug)
+              SELECT id, @Name, @Slug FROM products WHERE lower(name) = 'github copilot cli'",
+            new { Name = $"Child feature {slug}", Slug = slug });
+
+        // Act
+        var all = await _repository.GetAllFeaturesAsync(CancellationToken.None);
+
+        // Assert
+        all.Should().Contain(f => f.Slug == slug);
+    }
+
+    [Fact]
+    public async Task GetAllFeaturesAsync_NoReleaseDate_FallsBackOnTheFirstLaunchPreviewOrGaEvent()
+    {
+        // Arrange
+        var title = $"Dated by events {Guid.NewGuid():N}";
+        var slug = $"ghc-test-dated-{Guid.NewGuid():N}";
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = title }, CancellationToken.None);
+        var itemSlug = await SeedNewsItemAsync();
+        var timeline = new TimelineEventRepository(_fixture.Connection);
+        await timeline.ReplaceEventsAsync("news", itemSlug,
+            [GaEvent("GitHub Copilot", title, "2026-05-20"), GaEvent("GitHub Copilot", title, "2026-03-10", "preview"), GaEvent("GitHub Copilot", title, "2025-01-01", "retirement")],
+            "source", 3, CancellationToken.None);
+
+        // Act
+        var feature = await _repository.GetFeatureBySlugAsync(slug, CancellationToken.None);
+
+        // Assert
+        feature!.ReleaseDate.Should().Be(new DateTimeOffset(2026, 3, 10, 0, 0, 0, TimeSpan.Zero).ToUnixTimeSeconds());
+    }
+
+    [Fact]
+    public async Task GetAllFeaturesAsync_ReleaseDateOfTheFeature_WinsOverTheEvents()
+    {
+        // Arrange
+        var title = $"Dated by admin {Guid.NewGuid():N}";
+        var slug = $"ghc-test-admin-date-{Guid.NewGuid():N}";
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = title, ReleaseDate = 1_700_000_000L }, CancellationToken.None);
+        var itemSlug = await SeedNewsItemAsync();
+        var timeline = new TimelineEventRepository(_fixture.Connection);
+        await timeline.ReplaceEventsAsync("news", itemSlug, [GaEvent("GitHub Copilot", title, "2026-05-20")], "source", 3, CancellationToken.None);
+
+        // Act
+        var feature = await _repository.GetFeatureBySlugAsync(slug, CancellationToken.None);
+
+        // Assert
+        feature!.ReleaseDate.Should().Be(1_700_000_000L);
+    }
+
+    [Fact]
+    public async Task CatalogFeature_CreatedOnTheProductPage_GetsASlugAndAppearsInTheFeatures()
+    {
+        // Arrange
+        var productId = await _fixture.Connection.QueryFirstAsync<long>("SELECT id FROM products WHERE lower(name) = 'github copilot'");
+        var features = new ProductFeatureRepository(_fixture.Connection, Microsoft.Extensions.Logging.Abstractions.NullLogger<ProductFeatureRepository>.Instance);
+        var name = $"Catalog feature {Guid.NewGuid():N}";
+
+        // Act
+        var created = await features.CreateAsync(productId, name, CancellationToken.None);
+
+        // Assert
+        created.Succeeded.Should().BeTrue(created.Message);
+        var all = await _repository.GetAllFeaturesAsync(CancellationToken.None);
+        all.Should().ContainSingle(f => f.Title == name).Which.Slug.Should().StartWith("catalog-feature-");
     }
 
     // ── GetAllFeaturesAsync ───────────────────────────────────────────────────
@@ -133,7 +287,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Title = "Get All Test",
             Description = "Excerpt for get all",
             ReleaseDate = 1_700_000_000L,
-            Plans = ["Pro"],
             GhesSupport = false
         };
         await _repository.UpsertFeatureAsync(feature, CancellationToken.None);
@@ -146,7 +299,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var found = all.FirstOrDefault(f => f.Slug == slug);
         found.Should().NotBeNull("the newly inserted feature must be returned by GetAllFeaturesAsync");
         found!.Title.Should().Be("Get All Test");
-        found.Plans.Should().Equal(["Pro"]);
         found.GhesSupport.Should().BeFalse();
     }
 
@@ -157,8 +309,8 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var slugOlder = $"ghc-test-order-older-{Guid.NewGuid():N}";
         var slugNewer = $"ghc-test-order-newer-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slugOlder, Title = "Older", Description = "", Plans = [], GhesSupport = false, ReleaseDate = 1_600_000_000L }, CancellationToken.None);
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slugNewer, Title = "Newer", Description = "", Plans = [], GhesSupport = false, ReleaseDate = 1_900_000_000L }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slugOlder, Title = "Older", Description = "", GhesSupport = false, ReleaseDate = 1_600_000_000L }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slugNewer, Title = "Newer", Description = "", GhesSupport = false, ReleaseDate = 1_900_000_000L }, CancellationToken.None);
 
         // Act
         var all = await _repository.GetAllFeaturesAsync(CancellationToken.None);
@@ -181,7 +333,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             Slug = slug,
             Title = "By Slug Feature",
             Description = "excerpt",
-            Plans = ["Free", "Business"],
             GhesSupport = true,
             ReleaseDate = 1_750_000_000L
         }, CancellationToken.None);
@@ -193,7 +344,6 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         feature.Should().NotBeNull();
         feature!.Slug.Should().Be(slug);
         feature.Title.Should().Be("By Slug Feature");
-        feature.Plans.Should().Equal(["Free", "Business"]);
         feature.GhesSupport.Should().BeTrue();
         feature.ReleaseDate.Should().Be(1_750_000_000L);
     }
@@ -215,7 +365,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
     {
         // Arrange
         var slug = $"ghc-test-delete-{Guid.NewGuid():N}";
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = "To Delete", Description = "", Plans = [], GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = slug, Title = "To Delete", Description = "", GhesSupport = false }, CancellationToken.None);
 
         // Act
         var deleted = await _repository.DeleteFeatureAsync(slug, CancellationToken.None);
@@ -223,8 +373,8 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         // Assert
         deleted.Should().BeTrue();
         var exists = await _fixture.Connection.QueryFirstAsync<bool>(
-            "SELECT EXISTS(SELECT 1 FROM ghc_features WHERE slug = @Slug)", new { Slug = slug });
-        exists.Should().BeFalse("deleted feature should no longer exist in ghc_features");
+            "SELECT EXISTS(SELECT 1 FROM product_features WHERE slug = @Slug)", new { Slug = slug });
+        exists.Should().BeFalse("deleted feature should no longer exist in product_features");
     }
 
     [Fact]
@@ -246,7 +396,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var featureSlug = $"ghc-test-link-{Guid.NewGuid():N}";
         var itemSlug = $"ghc-link-item-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Link Feature", Description = "", Plans = [], GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Link Feature", Description = "", GhesSupport = false }, CancellationToken.None);
 
         // Insert a minimal content item so the FK is satisfied
         await _fixture.Connection.ExecuteAsync(@"
@@ -274,7 +424,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var item1Slug = $"ghc-thumb-item1-{Guid.NewGuid():N}";
         var item2Slug = $"ghc-thumb-item2-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Thumb Feature", Description = "", Plans = [], GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Thumb Feature", Description = "", GhesSupport = false }, CancellationToken.None);
 
         foreach (var itemSlug in new[] { item1Slug, item2Slug })
         {
@@ -310,7 +460,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var featureSlug = $"ghc-test-rmlink-{Guid.NewGuid():N}";
         var itemSlug = $"ghc-rmlink-item-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Remove Link Feature", Description = "", Plans = [], GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Remove Link Feature", Description = "", GhesSupport = false }, CancellationToken.None);
 
         await _fixture.Connection.ExecuteAsync(@"
             INSERT INTO content_items (slug, collection_name, title, excerpt, content, date_epoch,
@@ -384,7 +534,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var normalSlug = $"ghc-normal-item-{Guid.NewGuid():N}";
         var thumbSlug = $"ghc-thumb-item-{Guid.NewGuid():N}";
 
-        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Computed Thumb", Description = "", Plans = [], GhesSupport = false }, CancellationToken.None);
+        await _repository.UpsertFeatureAsync(new GhcFeature { Slug = featureSlug, Title = "Computed Thumb", Description = "", GhesSupport = false }, CancellationToken.None);
 
         foreach (var (itemSlug, isThumbnail, sortOrder) in new[] { (normalSlug, false, 2), (thumbSlug, true, 1) })
         {
@@ -406,5 +556,41 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         feature!.ThumbnailLink.Should().NotBeNull("ThumbnailLink should return the link marked as thumbnail");
         feature.ThumbnailLink!.ItemSlug.Should().Be(thumbSlug);
         feature.ThumbnailLink.IsThumbnail.Should().BeTrue();
+    }
+
+    // ── Helpers ───────────────────────────────────────────────────────────────
+
+    private static TimelineEvent GaEvent(string product, string feature, string date, string kind = "ga") => new()
+    {
+        Kind = kind,
+        Product = product,
+        Feature = feature,
+        Description = $"{kind} of {feature}",
+        Date = DateOnly.Parse(date, CultureInfo.InvariantCulture),
+        DatePrecision = "day",
+        DateSource = "explicit",
+        Quote = null
+    };
+
+    private async Task<string> SeedNewsItemAsync()
+    {
+        var slug = $"ghc-event-item-{Guid.NewGuid():N}";
+        await _fixture.Connection.ExecuteAsync(@"
+            INSERT INTO content_items (slug, collection_name, title, excerpt, content, date_epoch,
+                primary_section_name, external_url, author, feed_name, tags_csv, content_hash)
+            VALUES (@Slug, 'news', 'Event item', '', '', 1743278400, 'ai', @Url, '', 'Test Feed', '', @Hash)",
+            new { Slug = slug, Url = $"https://example.com/{slug}", Hash = Guid.NewGuid().ToString() });
+        return slug;
+    }
+
+    private async Task<(string Slug, string Name)> CreateFeatureOfAnotherProductAsync()
+    {
+        var slug = $"other-product-feature-{Guid.NewGuid():N}";
+        var name = $"Other product feature {slug}";
+        await _fixture.Connection.ExecuteAsync(
+            @"INSERT INTO product_features (product_id, name, slug)
+              SELECT id, @Name, @Slug FROM products WHERE lower(name) = 'microsoft fabric'",
+            new { Name = name, Slug = slug });
+        return (slug, name);
     }
 }

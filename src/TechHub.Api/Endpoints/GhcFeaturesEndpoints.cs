@@ -3,7 +3,7 @@ using TechHub.Core.Interfaces;
 namespace TechHub.Api.Endpoints;
 
 /// <summary>
-/// Public endpoints for GitHub Copilot feature data (ghc_features table).
+/// Endpoints for the features of GitHub Copilot shown on the features page (features of the GitHub Copilot product in the catalog).
 /// </summary>
 public static class GhcFeaturesEndpoints
 {
@@ -84,13 +84,10 @@ public static class GhcFeaturesEndpoints
             return Results.BadRequest("Title is required.");
         }
 
-        if (feature.Plans == null)
-        {
-            return Results.BadRequest("Plans must not be null. Provide an empty array [] if no plans apply.");
-        }
-
-        await repo.UpsertFeatureAsync(feature, ct);
-        return Results.NoContent();
+        var saved = await repo.UpsertFeatureAsync(feature, ct);
+        return saved
+            ? Results.NoContent()
+            : Results.Conflict("The feature was not saved: the title is used by another GitHub Copilot feature, or the slug belongs to another product.");
     }
 
     private static async Task<IResult> DeleteFeatureAsync(

@@ -37,7 +37,7 @@ public class ContentSyncService : IContentSyncService
         List<string> Tags,
         string ContentHash,
         // Identifies the dedicated lookup table target inferred from the file path.
-        // "ghc-features" → writes to ghc_features + ghc_feature_content.
+        // "ghc-features" → writes to product_features + product_feature_content.
         // "vscode-updates" → writes to vscode_update_items.
         // Not stored in content_items; used only to drive lookup table insertions.
         string? SubcollectionName = null);
@@ -752,26 +752,18 @@ public class ContentSyncService : IContentSyncService
                     transaction);
             }
 
-            // Populate ghc_features and ghc_feature_content tables for ghc-features items.
+            // Populate the GitHub Copilot features (product_features + product_feature_content) for ghc-features items.
             // Each markdown file in _videos/ghc-features/ represents both a content item and a
             // GHC feature entity. The feature links back to its own content item as the thumbnail.
             if (string.Equals(parsed.SubcollectionName, "ghc-features", StringComparison.OrdinalIgnoreCase))
             {
                 var title = parsed.FrontMatter.GetValueOrDefault("title", "")?.ToString() ?? "";
-                var plans = GetPlansFromFrontMatter(parsed.FrontMatter);
                 var ghesSupport = GetBooleanFromFrontMatter(parsed.FrontMatter, "ghes_support");
 
                 if (string.IsNullOrWhiteSpace(title))
                 {
                     throw new InvalidOperationException(
                         $"Missing required 'title' in frontmatter for ghc-features file: {parsed.Slug}.");
-                }
-
-                if (string.IsNullOrWhiteSpace(plans))
-                {
-                    throw new InvalidOperationException(
-                        $"Missing or empty required 'plans' in frontmatter for ghc-features file: {parsed.Slug}. " +
-                        "Specify at least one plan (e.g. 'plans: [Free, Pro]').");
                 }
 
                 if (!parsed.FrontMatter.ContainsKey("ghes_support"))
@@ -782,13 +774,14 @@ public class ContentSyncService : IContentSyncService
                 }
 
                 await _connection.ExecuteAsync("""
-                    INSERT INTO ghc_features (slug, title, description, release_date, plans, ghes_support)
-                    VALUES (@Slug, @Title, @Description, @ReleaseDate, @Plans, @GhesSupport)
+                    INSERT INTO product_features (product_id, name, slug, description, release_date, ghes_support)
+                    SELECT p.id, @Title, @Slug, @Description, @ReleaseDate, @GhesSupport
+                    FROM products p
+                    WHERE lower(p.name) = 'github copilot'
                     ON CONFLICT (slug) DO UPDATE SET
-                        title = @Title,
+                        name = @Title,
                         description = @Description,
                         release_date = @ReleaseDate,
-                        plans = @Plans,
                         ghes_support = @GhesSupport,
                         updated_at = NOW()
                     """,
@@ -798,14 +791,15 @@ public class ContentSyncService : IContentSyncService
                         Title = title,
                         Description = parsed.Excerpt,
                         ReleaseDate = parsed.DateEpoch,
-                        Plans = plans,
                         GhesSupport = ghesSupport
                     },
                     transaction);
 
                 await _connection.ExecuteAsync("""
-                    INSERT INTO ghc_feature_content (feature_slug, collection_name, item_slug, is_thumbnail, sort_order)
-                    VALUES (@FeatureSlug, @CollectionName, @ItemSlug, TRUE, 0)
+                    INSERT INTO product_feature_content (feature_id, collection_name, item_slug, is_thumbnail, sort_order)
+                    SELECT f.id, @CollectionName, @ItemSlug, TRUE, 0
+                    FROM product_features f
+                    WHERE f.slug = @FeatureSlug
                     ON CONFLICT DO NOTHING
                     """,
                     new
@@ -998,16 +992,6 @@ public class ContentSyncService : IContentSyncService
         }
 
         return new List<string>();
-    }
-
-    private static string GetPlansFromFrontMatter(Dictionary<string, object?> frontMatter)
-    {
-        if (frontMatter.TryGetValue("plans", out var value) && value is IEnumerable<object> list)
-        {
-            return string.Join(",", list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)));
-        }
-
-        return string.Empty;
     }
 
     private static bool GetBooleanFromFrontMatter(Dictionary<string, object?> frontMatter, string key)

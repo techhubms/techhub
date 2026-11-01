@@ -3,22 +3,26 @@ using TechHub.Core.Models;
 namespace TechHub.Core.Interfaces;
 
 /// <summary>
-/// Repository for the <c>ghc_features</c>, <c>ghc_feature_content</c>, and
-/// <c>vscode_update_items</c> tables.
+/// Repository for the features of GitHub Copilot shown on the features page: the features of the GitHub Copilot product in
+/// the catalog (<c>product_features</c> and <c>product_feature_content</c>), plus the <c>vscode_update_items</c> table.
 /// </summary>
 public interface IGhcFeatureRepository
 {
     // ── GHC Features ──────────────────────────────────────────────────────────
 
-    /// <summary>Returns all features ordered by release_date DESC, created_at DESC, slug.</summary>
+    /// <summary>
+    /// Returns the features of GitHub Copilot (including its child products) with their content links, newest release date
+    /// first, then newest created.
+    /// </summary>
     Task<IReadOnlyList<GhcFeature>> GetAllFeaturesAsync(CancellationToken ct = default);
 
     /// <summary>Returns a single feature by slug, or null if not found.</summary>
     Task<GhcFeature?> GetFeatureBySlugAsync(string slug, CancellationToken ct = default);
 
     /// <summary>
-    /// Inserts or updates a feature. Returns true if a row was affected.
-    /// Plans CSV is built from <see cref="GhcFeature.Plans"/>.
+    /// Inserts or updates a feature of GitHub Copilot, addressed by slug: the title is the name of the catalog feature (a new
+    /// title keeps the old name as an alias), and the links of the timeline events are refreshed. Returns false when nothing
+    /// was saved: the title is empty or already used by another feature, or the slug belongs to another product.
     /// </summary>
     Task<bool> UpsertFeatureAsync(GhcFeature feature, CancellationToken ct = default);
 

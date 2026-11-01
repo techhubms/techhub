@@ -76,7 +76,7 @@ Approval applies content changes, replaces the expanded tag index for tag review
 |----------|---------|-------|
 | `GET /custom-pages`, `GET /custom-pages/{key}` | List entries or read raw JSON | `404` for unknown key |
 | `PUT /custom-pages/{key}` | Replace the JSON of an existing entry | `400` for empty or invalid JSON, `404` if the key does not exist (entries cannot be created here). See [custom-pages.md](custom-pages.md). |
-| `PUT /api/ghc-features/{slug}` | Create or update a GitHub Copilot feature | `400` for slug mismatch, empty title or null plans. `204`. |
+| `PUT /api/ghc-features/{slug}` | Create or update a feature of GitHub Copilot (a feature in the product catalog) | `400` for slug mismatch or empty title, `409` when the title is used by another feature or the slug belongs to another product. `204`. |
 | `DELETE /api/ghc-features/{slug}` | Delete a feature | `204` or `404` |
 | `POST /api/ghc-features/{slug}/content-links` | Link a content item to a feature | Body: `collectionName`, `itemSlug`, `isThumbnail`, `sortOrder`. `400` or `404`, `204` on success. |
 | `DELETE /api/ghc-features/{slug}/content-links?collection&itemSlug` | Remove a link | `204`, `400` or `404` |
@@ -161,7 +161,7 @@ All pages render interactively on the server inside the admin layout. Unauthenti
 | `/admin/content-preview/{collection}/{slug}` | Render an item's markdown as it will appear on the site |
 | `/admin/reviews` | Approve, reject or edit content fixer proposals, singly or in bulk, with a markdown preview |
 | `/admin/custom-pages` | Edit the raw JSON behind the custom pages |
-| `/admin/copilot-features` | Edit GitHub Copilot features (description, release date, plans, GHES support) and their linked content and thumbnail |
+| `/admin/copilot-features` | Edit the GitHub Copilot features of the catalog (description, release date, GHES support) and their linked content and thumbnail. Features without linked content are not shown on the features page. New features are added on the product page |
 | `/admin/vscode-updates` | Add or remove items on the VS Code Updates page |
 | `/admin/newsletter` | Subscribers, test sends and send log. Deleting requires inline confirmation. Test sends require an entered recipient email; none is prefilled. Refresh, delete, edit and test-send failures show generic errors, and a failed refresh after a deletion or edit does not show a success message. See [newsletter.md](newsletter.md). |
 | `/admin/settings` | Enable or disable scheduled jobs and invalidate all caches |
