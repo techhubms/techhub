@@ -2020,6 +2020,78 @@ public class TechHubApiClientAdminTests
     }
 
     [Fact]
+    public async Task GetProductFeaturesAsync_ReturnsTheFeaturesAndTheNamesToReview()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """{"features":[{"id":3,"productId":5,"name":"Agent mode","eventCount":2,"aliases":[{"id":4,"alias":"autopilot"}]}],"unmatched":[{"name":"Plan mode","eventCount":1}]}""");
+
+        // Act
+        var overview = await fixture.Client.GetProductFeaturesAsync(5, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features");
+        overview.Features.Should().ContainSingle().Which.Aliases.Should().ContainSingle().Which.Alias.Should().Be("autopilot");
+        overview.Unmatched.Should().ContainSingle().Which.Name.Should().Be("Plan mode");
+    }
+
+    [Fact]
+    public async Task CreateAndRenameProductFeatureAsync_UseTheFeatureRoutes()
+    {
+        // Arrange
+        const string Body = """{"features":[],"unmatched":[]}""";
+        using var create = Fixture.Create(body: Body);
+        using var rename = Fixture.Create(body: Body);
+
+        // Act
+        await create.Client.CreateProductFeatureAsync(5, "Agent mode", TestContext.Current.CancellationToken);
+        await rename.Client.RenameProductFeatureAsync(5, 3, "Agent", TestContext.Current.CancellationToken);
+
+        // Assert
+        create.Handler.Method.Should().Be("POST");
+        create.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features");
+        create.Handler.Json.GetProperty("name").GetString().Should().Be("Agent mode");
+        rename.Handler.Method.Should().Be("PUT");
+        rename.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features/3");
+        rename.Handler.Json.GetProperty("name").GetString().Should().Be("Agent");
+    }
+
+    [Fact]
+    public async Task CreateProductFeatureAsync_Conflict_ThrowsWithTheServerMessage()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.Conflict, "\"'Agent mode' is already used by 'Agent mode'.\"");
+
+        // Act
+        var act = () => fixture.Client.CreateProductFeatureAsync(5, "Agent mode", TestContext.Current.CancellationToken);
+
+        // Assert
+        (await act.Should().ThrowAsync<HttpRequestException>()).Which.Message.Should().Contain("already used");
+    }
+
+    [Fact]
+    public async Task DeleteAndAliasProductFeatureAsync_UseTheFeatureRoutes()
+    {
+        // Arrange
+        using var delete = Fixture.Create(HttpStatusCode.NoContent, "");
+        using var add = Fixture.Create(body: """{"features":[],"unmatched":[]}""");
+        using var remove = Fixture.Create(HttpStatusCode.NoContent, "");
+
+        // Act
+        await delete.Client.DeleteProductFeatureAsync(5, 3, TestContext.Current.CancellationToken);
+        await add.Client.AddProductFeatureAliasAsync(5, 3, "autopilot", TestContext.Current.CancellationToken);
+        await remove.Client.RemoveProductFeatureAliasAsync(5, 3, 4, TestContext.Current.CancellationToken);
+
+        // Assert
+        delete.Handler.Method.Should().Be("DELETE");
+        delete.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features/3");
+        add.Handler.Method.Should().Be("POST");
+        add.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features/3/aliases");
+        add.Handler.Json.GetProperty("alias").GetString().Should().Be("autopilot");
+        remove.Handler.Method.Should().Be("DELETE");
+        remove.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features/3/aliases/4");
+    }
+
+    [Fact]
     public async Task MergeProductAsync_PostsTheTargetId()
     {
         // Arrange

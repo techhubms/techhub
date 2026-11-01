@@ -91,6 +91,9 @@ public sealed class ProductEventLink
     /// <summary>Feature the event is about, or null for the whole product.</summary>
     public string? Feature { get; set; }
 
+    /// <summary>The curated feature the feature text matches, or null when it matches none.</summary>
+    public string? FeatureName { get; set; }
+
     /// <summary>What happens on the date.</summary>
     public string Description { get; set; } = string.Empty;
 

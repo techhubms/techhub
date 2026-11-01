@@ -116,6 +116,120 @@
             </ul>
         }
 
+        <h2 class="admin-section-title">Features (@_features.Features.Count)</h2>
+        <p class="admin-result-summary">The AI returns the feature of a date as free text. Curated features group those names, so the dates of one feature can be compared across surfaces and plans.</p>
+
+        <div class="admin-inline-form">
+            <label class="admin-label" for="newFeature">Add feature</label>
+            <input id="newFeature" class="admin-input" @bind="_newFeature" placeholder="e.g. Agent mode" />
+            <button class="btn-secondary" disabled="@_busy" @onclick="AddFeatureAsync">Add feature</button>
+        </div>
+
+        @if (_features.Features.Count == 0)
+        {
+            <div class="admin-empty" id="features-empty">No features yet.</div>
+        }
+        else
+        {
+            @foreach (var feature in _features.Features)
+            {
+                <details class="admin-details" id="feature-@feature.Id">
+                    <summary>
+                        @feature.Name
+                        <span class="admin-cell-mono"> — @feature.EventCount dates</span>
+                        @if (feature.Aliases.Count > 0)
+                        {
+                            <span> (@string.Join(", ", feature.Aliases.Select(a => a.Alias)))</span>
+                        }
+                    </summary>
+
+                    <div class="admin-inline-form">
+                        <label class="admin-label" for="feature-name-@feature.Id">Name</label>
+                        <input id="feature-name-@feature.Id" class="admin-input" value="@GetFeatureRename(feature)" @onchange="e => SetFeatureRename(feature, e.Value?.ToString())" />
+                        <button class="btn-secondary" disabled="@_busy" @onclick="() => RenameFeatureAsync(feature)">Rename</button>
+                    </div>
+
+                    @if (feature.Aliases.Count > 0)
+                    {
+                        <ul class="admin-plain-list">
+                            @foreach (var alias in feature.Aliases)
+                            {
+                                <li>
+                                    @alias.Alias
+                                    <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => RemoveFeatureAliasAsync(feature, alias)">Remove</button>
+                                </li>
+                            }
+                        </ul>
+                    }
+
+                    <div class="admin-inline-form">
+                        <label class="admin-label" for="feature-alias-@feature.Id">Add alias</label>
+                        <input id="feature-alias-@feature.Id" class="admin-input" value="@GetFeatureAlias(feature)" @onchange="e => SetFeatureAlias(feature, e.Value?.ToString())" placeholder="Another name" />
+                        <button class="btn-secondary" disabled="@_busy" @onclick="() => AddFeatureAliasAsync(feature)">Add alias</button>
+                    </div>
+
+                    <div class="admin-inline-form">
+                        @if (_pendingFeatureDelete == feature.Id)
+                        {
+                            <span class="admin-alert admin-alert-error" role="alert">
+                                Delete '@feature.Name'? Its dates keep their text and become unmatched.
+                                <button class="btn" disabled="@_busy" @onclick="() => DeleteFeatureAsync(feature)">Confirm delete</button>
+                                <button class="btn-secondary" @onclick="() => _pendingFeatureDelete = null">Cancel</button>
+                            </span>
+                        }
+                        else
+                        {
+                            <button class="btn-secondary" disabled="@_busy" @onclick="() => _pendingFeatureDelete = feature.Id">Delete…</button>
+                        }
+                    </div>
+                </details>
+            }
+        }
+
+        <h3 class="admin-section-title">Features to review (@_features.Unmatched.Count)</h3>
+
+        @if (_features.Unmatched.Count == 0)
+        {
+            <div class="admin-empty" id="features-unmatched-empty">Nothing to review.</div>
+        }
+        else
+        {
+            <div class="admin-jobs-table-wrapper">
+                <table class="admin-table" id="features-unmatched-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Dates</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var name in _features.Unmatched)
+                        {
+                            <tr>
+                                <td>@name.Name</td>
+                                <td class="admin-cell-mono">@name.EventCount</td>
+                                <td>
+                                    <div class="admin-inline-form">
+                                        <button class="admin-link-btn" disabled="@_busy" @onclick="() => AddUnmatchedAsFeatureAsync(name.Name)">Add as feature</button>
+                                        <input class="admin-input" list="feature-names" placeholder="Alias of…" aria-label="Alias of feature for @name.Name"
+                                               value="@GetUnmatchedTarget(name.Name)" @onchange="e => SetUnmatchedTarget(name.Name, e.Value?.ToString())" />
+                                        <button class="admin-link-btn" disabled="@(_busy || string.IsNullOrWhiteSpace(GetUnmatchedTarget(name.Name)))" @onclick="() => AddUnmatchedAsAliasAsync(name.Name)">Add as alias</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <datalist id="feature-names">
+                @foreach (var feature in _features.Features)
+                {
+                    <option value="@feature.Name"></option>
+                }
+            </datalist>
+        }
+
         <h2 class="admin-section-title">Merge or delete</h2>
 
         <div class="admin-inline-form">
@@ -145,6 +259,54 @@
                 Delete '@_product.Name'? Its article links (@_product.Articles.Count) and dates (@_product.Events.Count) become unmatched again.
                 <button class="btn" disabled="@_busy" @onclick="DeleteAsync">Confirm delete</button>
                 <button class="btn-secondary" @onclick="CancelPendingAction">Cancel</button>
+            </div>
+        }
+
+        <h2 class="admin-section-title">Features by surface</h2>
+        <p class="admin-result-summary">Per feature, what happened on which surface. Dates that name no surface are listed under all surfaces.</p>
+
+        @if (FeatureGrid.Count == 0)
+        {
+            <div class="admin-empty" id="feature-grid-empty">No dates with a feature.</div>
+        }
+        else
+        {
+            <div class="admin-jobs-table-wrapper">
+                <table class="admin-table" id="feature-grid">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>All surfaces</th>
+                            @foreach (var surface in GridSurfaces)
+                            {
+                                <th>@surface</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var row in FeatureGrid)
+                        {
+                            <tr>
+                                <td>@row.Key</td>
+                                <td>
+                                    @foreach (var item in row.Where(e => !HasSurface(e)))
+                                    {
+                                        <div>@DescribeEvent(item)</div>
+                                    }
+                                </td>
+                                @foreach (var surface in GridSurfaces)
+                                {
+                                    <td>
+                                        @foreach (var item in row.Where(e => HasSurface(e, surface)))
+                                        {
+                                            <div>@DescribeEvent(item)</div>
+                                        }
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
         }
 
@@ -185,7 +347,7 @@
                                     <td>@item.CatalogName</td>
                                 }
                                 <td>@item.Kind</td>
-                                <td>@item.Feature</td>
+                                <td>@(item.FeatureName ?? item.Feature)</td>
                                 @if (ShowEventQualifiers)
                                 {
                                     <td>@string.Join(", ", item.Qualifiers.Select(q => q.Name))</td>
@@ -269,6 +431,12 @@
     private string _newAlias = string.Empty;
     private string _newAliasQualifierId = string.Empty;
     private IReadOnlyList<ProductQualifier> _qualifiers = [];
+    private ProductFeatureOverview _features = new();
+    private string _newFeature = string.Empty;
+    private long? _pendingFeatureDelete;
+    private readonly Dictionary<long, string> _featureRenames = [];
+    private readonly Dictionary<long, string> _featureAliases = [];
+    private readonly Dictionary<string, string> _unmatchedTargets = new(StringComparer.OrdinalIgnoreCase);
     private string _parentName = string.Empty;
     private string _mergeTarget = string.Empty;
     private PendingAction _pendingAction;
@@ -284,6 +452,37 @@
 
     private bool ShowArticleQualifiers => _product != null && _product.Articles.Any(a => a.QualifierName != null);
 
+    // One row per feature (curated name, else the AI's text); the columns are the surfaces named by the dates.
+    private IReadOnlyList<IGrouping<string, ProductEventLink>> FeatureGrid =>
+        _product == null
+            ? []
+            : _product.Events
+                .Where(e => !string.IsNullOrWhiteSpace(e.FeatureName ?? e.Feature))
+                .GroupBy(e => (e.FeatureName ?? e.Feature)!.Trim(), StringComparer.OrdinalIgnoreCase)
+                .OrderBy(g => g.Key, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+    private IReadOnlyList<string> GridSurfaces =>
+        _product == null
+            ? []
+            : _product.Events
+                .SelectMany(e => e.Qualifiers.Where(q => q.Kind == QualifierKinds.Surface).Select(q => q.Name))
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .Order(StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+    private static bool HasSurface(ProductEventLink item) => item.Qualifiers.Any(q => q.Kind == QualifierKinds.Surface);
+
+    private static bool HasSurface(ProductEventLink item, string surface) =>
+        item.Qualifiers.Any(q => q.Kind == QualifierKinds.Surface && string.Equals(q.Name, surface, StringComparison.OrdinalIgnoreCase));
+
+    private static string DescribeEvent(ProductEventLink item)
+    {
+        var plans = item.Qualifiers.Where(q => q.Kind == QualifierKinds.Plan).Select(q => q.Name).ToList();
+        var date = FormatEventDate(item);
+        return plans.Count == 0 ? $"{item.Kind} {date}" : $"{item.Kind} {date} ({string.Join(", ", plans)})";
+    }
+
     protected override async Task OnInitializedAsync()
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
@@ -291,11 +490,13 @@
 
         if (ApplicationState.TryTakeFromJson<ProductDetail>($"admin-product-{Id}", out var product) && product != null
             && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductSummary>>($"admin-product-{Id}-others", out var others) && others != null
-            && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductQualifier>>($"admin-product-{Id}-qualifiers", out var qualifiers) && qualifiers != null)
+            && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductQualifier>>($"admin-product-{Id}-qualifiers", out var qualifiers) && qualifiers != null
+            && ApplicationState.TryTakeFromJson<ProductFeatureOverview>($"admin-product-{Id}-features", out var features) && features != null)
         {
             _product = product;
             _otherProducts = others;
             _qualifiers = qualifiers;
+            _features = features;
             _newName = product.Name;
             _parentName = product.Parent?.Name ?? string.Empty;
             _loading = false;
@@ -322,6 +523,7 @@
             ApplicationState.PersistAsJson($"admin-product-{Id}", _product);
             ApplicationState.PersistAsJson($"admin-product-{Id}-others", _otherProducts);
             ApplicationState.PersistAsJson($"admin-product-{Id}-qualifiers", _qualifiers);
+            ApplicationState.PersistAsJson($"admin-product-{Id}-features", _features);
         }
 
         return Task.CompletedTask;
@@ -347,6 +549,8 @@
             {
                 _otherProducts = (await Api.GetProductsAsync()).Where(p => p.Id != Id).ToList();
                 _qualifiers = await Api.GetQualifiersAsync();
+                _features = await Api.GetProductFeaturesAsync(Id);
+                _pendingFeatureDelete = null;
                 _newName = _product.Name;
                 _parentName = _product.Parent?.Name ?? string.Empty;
             }
@@ -426,6 +630,94 @@
             _product = await Api.GetProductAsync(Id);
             return $"Alias '{alias.Alias}' removed. Articles and dates that used it are unmatched again.";
         });
+
+    private string GetFeatureRename(ProductFeature feature) => _featureRenames.TryGetValue(feature.Id, out var name) ? name : feature.Name;
+
+    private void SetFeatureRename(ProductFeature feature, string? name) => _featureRenames[feature.Id] = name ?? string.Empty;
+
+    private string GetFeatureAlias(ProductFeature feature) => _featureAliases.TryGetValue(feature.Id, out var alias) ? alias : string.Empty;
+
+    private void SetFeatureAlias(ProductFeature feature, string? alias) => _featureAliases[feature.Id] = alias ?? string.Empty;
+
+    private string GetUnmatchedTarget(string name) => _unmatchedTargets.TryGetValue(name, out var target) ? target : string.Empty;
+
+    private void SetUnmatchedTarget(string name, string? target) => _unmatchedTargets[name] = target ?? string.Empty;
+
+    // The dates show the curated feature, so the product is loaded again after every feature change.
+    private async Task ReloadAfterFeatureChangeAsync(ProductFeatureOverview? overview = null)
+    {
+        _featureRenames.Clear();
+        _pendingFeatureDelete = null;
+        _features = overview ?? await Api.GetProductFeaturesAsync(Id);
+        _product = await Api.GetProductAsync(Id) ?? _product;
+    }
+
+    private Task AddFeatureAsync() =>
+        RunAsync(async () =>
+        {
+            var name = _newFeature.Trim();
+            await ReloadAfterFeatureChangeAsync(await Api.CreateProductFeatureAsync(Id, _newFeature));
+            _newFeature = string.Empty;
+            return $"Feature '{name}' added.";
+        });
+
+    private Task RenameFeatureAsync(ProductFeature feature) =>
+        RunAsync(async () =>
+        {
+            var name = GetFeatureRename(feature).Trim();
+            await ReloadAfterFeatureChangeAsync(await Api.RenameProductFeatureAsync(Id, feature.Id, name));
+            return $"Renamed to '{name}'.";
+        });
+
+    private Task AddFeatureAliasAsync(ProductFeature feature) =>
+        RunAsync(async () =>
+        {
+            var alias = GetFeatureAlias(feature).Trim();
+            await ReloadAfterFeatureChangeAsync(await Api.AddProductFeatureAliasAsync(Id, feature.Id, alias));
+            _featureAliases.Remove(feature.Id);
+            return $"Alias '{alias}' added to '{feature.Name}'.";
+        });
+
+    private Task RemoveFeatureAliasAsync(ProductFeature feature, FeatureAlias alias) =>
+        RunAsync(async () =>
+        {
+            await Api.RemoveProductFeatureAliasAsync(Id, feature.Id, alias.Id);
+            await ReloadAfterFeatureChangeAsync();
+            return $"Alias '{alias.Alias}' removed from '{feature.Name}'.";
+        });
+
+    private Task DeleteFeatureAsync(ProductFeature feature) =>
+        RunAsync(async () =>
+        {
+            await Api.DeleteProductFeatureAsync(Id, feature.Id);
+            await ReloadAfterFeatureChangeAsync();
+            return $"'{feature.Name}' deleted.";
+        });
+
+    private Task AddUnmatchedAsFeatureAsync(string name) =>
+        RunAsync(async () =>
+        {
+            await ReloadAfterFeatureChangeAsync(await Api.CreateProductFeatureAsync(Id, name));
+            return $"Feature '{name}' added.";
+        });
+
+    private Task AddUnmatchedAsAliasAsync(string name)
+    {
+        var targetName = GetUnmatchedTarget(name).Trim();
+        var target = _features.Features.FirstOrDefault(f => string.Equals(f.Name, targetName, StringComparison.OrdinalIgnoreCase));
+        if (target is null)
+        {
+            _message = $"'{targetName}' is not a feature of this product. Pick a feature from the list.";
+            _messageIsError = true;
+            return Task.CompletedTask;
+        }
+
+        return RunAsync(async () =>
+        {
+            await ReloadAfterFeatureChangeAsync(await Api.AddProductFeatureAliasAsync(Id, target.Id, name));
+            return $"'{name}' is now an alias of '{target.Name}'.";
+        });
+    }
 
     private Task MergeAsync()
     {

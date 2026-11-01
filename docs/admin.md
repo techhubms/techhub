@@ -134,6 +134,17 @@ The vocabulary of plans and surfaces (see [Plans and Surfaces](content-processin
 | `POST /qualifiers/{id}/aliases` | Add an alias (`alias`) | `200` with the qualifier, `400`, `404`, `409` |
 | `DELETE /qualifiers/{id}/aliases/{aliasId}` | Remove an alias | `204`, `404` |
 
+The curated features of a product (see [Features](content-processing.md#features)) are managed under `/api/admin/products/{productId}/features`. Every call addresses a feature together with its product, so a feature of another product is never touched:
+
+| Endpoint | Purpose | Result |
+|---|---|---|
+| `GET /products/{productId}/features` | The features with aliases and number of dates, and the feature names of the dates of the product (and its children) that match no feature | `200` |
+| `POST /products/{productId}/features` | Add a feature (`name`) | `201` with the overview, `400`, `404`, `409` |
+| `PUT /products/{productId}/features/{id}` | Rename (`name`). The old name becomes an alias | `200` with the overview, `400`, `404`, `409` |
+| `DELETE /products/{productId}/features/{id}` | Delete a feature and its aliases. Its dates keep their text and become unmatched | `204`, `404` |
+| `POST /products/{productId}/features/{id}/aliases` | Add an alias (`alias`) | `200` with the overview, `400`, `404`, `409` |
+| `DELETE /products/{productId}/features/{id}/aliases/{aliasId}` | Remove an alias | `204`, `404` |
+
 ## Admin Pages
 
 All pages render interactively on the server inside the admin layout. Unauthenticated visitors see the sign-in form instead of the page content, and the Web app re-challenges signed-in users whose cached token is gone (for example after a server restart).
@@ -143,7 +154,7 @@ All pages render interactively on the server inside the admin layout. Unauthenti
 | `/admin` | Dashboard: job history with live logs, buttons to trigger processing, roundup generation and the content fixer, and to cancel the running job |
 | `/admin/feeds` | Add, edit, enable or disable and delete RSS feeds |
 | `/admin/products` | Product catalog: the review queue of product names that are not in the catalog yet, the product list with search, and the names that are not products (see [Product Catalog](#product-catalog)) |
-| `/admin/products/{id}` | One product: rename, aliases (each can imply a plan or surface), parent and children, merge into another product, delete, and the linked dates and articles (including those of its child products) |
+| `/admin/products/{id}` | One product: rename, aliases (each can imply a plan or surface), parent and children, curated features with their review queue, merge into another product, delete, the features by surface overview and the linked dates and articles (including those of its child products) |
 | `/admin/products/qualifiers` | Plans and surfaces: the review queue of unmatched names and the vocabulary with its aliases |
 | `/admin/processed-urls` | Search the URL ledger by status, feed, collection, section or job. Remove entries to retry them, clear all failed entries, and open the item editor. |
 | `/admin/content-items` | Browse and filter content, edit or delete items, add a URL through the pipeline (the add-content dialog), and regenerate a roundup |

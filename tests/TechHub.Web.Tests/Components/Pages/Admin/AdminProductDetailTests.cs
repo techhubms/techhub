@@ -24,6 +24,7 @@ public class AdminProductDetailTests : AdminPageTestBase
             .ReturnsAsync([new ProductSummary { Id = 5, Name = "Microsoft Foundry" }, new ProductSummary { Id = 6, Name = "Azure Functions" }]);
         _api.Setup(x => x.GetQualifiersAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync([new ProductQualifier { Id = 21, Kind = "plan", Name = "Business" }, new ProductQualifier { Id = 22, Kind = "surface", Name = "JetBrains IDEs" }]);
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(new ProductFeatureOverview());
     }
 
     [Fact]
@@ -342,6 +343,205 @@ public class AdminProductDetailTests : AdminPageTestBase
     }
 
     [Fact]
+    public void Render_ShowsTheFeaturesWithAliasesAndTheNamesToReview()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Markup.Should().Contain("Features (1)").And.Contain("Features to review (1)");
+        var summary = cut.Find("#feature-31 summary").TextContent;
+        summary.Should().Contain("Agent mode").And.Contain("4 dates").And.Contain("autopilot");
+        cut.FindAll("#features-unmatched-table tbody tr").Should().ContainSingle().Which.TextContent.Should().Contain("Plan mode").And.Contain("2");
+    }
+
+    [Fact]
+    public void Render_WithoutFeatures_ShowsEmptyMessages()
+    {
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Find("#features-empty").Should().NotBeNull();
+        cut.Find("#features-unmatched-empty").Should().NotBeNull();
+    }
+
+    [Fact]
+    public void FeatureGrid_ListsTheDatesPerFeatureUnderTheirSurfaceOrAllSurfaces()
+    {
+        // Arrange
+        var detail = Detail();
+        detail.Events =
+        [
+            Event(1, "preview", "Agent mode", "Agent mode", "2026-03-10", [new QualifierReference { Id = 22, Kind = "surface", Name = "JetBrains IDEs" }]),
+            Event(2, "ga", "agent mode", "Agent mode", "2026-04-20", [new QualifierReference { Id = 20, Kind = "surface", Name = "Visual Studio Code" }, new QualifierReference { Id = 21, Kind = "plan", Name = "Business" }]),
+            Event(3, "launch", "Unmatched text", null, "2026-05-01", []),
+            Event(4, "ga", null, null, "2026-06-01", [])
+        ];
+        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
+
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.FindAll("#feature-grid thead th").Select(h => h.TextContent).Should().Equal("Feature", "All surfaces", "JetBrains IDEs", "Visual Studio Code");
+        var rows = cut.FindAll("#feature-grid tbody tr");
+        rows.Should().HaveCount(2);
+        var agent = rows.Single(r => r.QuerySelector("td")!.TextContent == "Agent mode").QuerySelectorAll("td");
+        agent[1].TextContent.Trim().Should().BeEmpty();
+        agent[2].TextContent.Trim().Should().Be("preview 2026-03-10");
+        agent[3].TextContent.Trim().Should().Be("ga 2026-04-20 (Business)");
+        var unmatched = rows.Single(r => r.QuerySelector("td")!.TextContent == "Unmatched text").QuerySelectorAll("td");
+        unmatched[1].TextContent.Trim().Should().Be("launch 2026-05-01");
+    }
+
+    [Fact]
+    public void FeatureGrid_WithoutDatesThatHaveAFeature_ShowsEmptyMessage()
+    {
+        // Arrange
+        var detail = Detail();
+        foreach (var item in detail.Events)
+        {
+            item.Feature = null;
+        }
+
+        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
+
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Find("#feature-grid-empty").Should().NotBeNull();
+    }
+
+    [Fact]
+    public void AddFeature_CallsTheApiAndShowsTheOverview()
+    {
+        // Arrange
+        _api.Setup(x => x.CreateProductFeatureAsync(5, "Agent mode", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#newFeature").Change("Agent mode");
+
+        // Act
+        cut.FindAll(".admin-inline-form button").Single(b => b.TextContent == "Add feature").Click();
+
+        // Assert
+        _api.Verify(x => x.CreateProductFeatureAsync(5, "Agent mode", It.IsAny<CancellationToken>()), Times.Once);
+        cut.Find(".admin-alert-success").TextContent.Should().Contain("Feature 'Agent mode' added.");
+        cut.Find("#feature-31").Should().NotBeNull();
+    }
+
+    [Fact]
+    public void AddFeature_Refused_ShowsTheServerMessage()
+    {
+        // Arrange
+        _api.Setup(x => x.CreateProductFeatureAsync(5, It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("'Agent mode' is already used by 'Agent mode'."));
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#newFeature").Change("Agent mode");
+
+        // Act
+        cut.FindAll(".admin-inline-form button").Single(b => b.TextContent == "Add feature").Click();
+
+        // Assert
+        cut.Find(".admin-alert-error").TextContent.Should().Contain("already used");
+    }
+
+    [Fact]
+    public void RenameFeature_CallsTheApi()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        _api.Setup(x => x.RenameProductFeatureAsync(5, 31, "Agent", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#feature-name-31").Change("Agent");
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Rename").Click();
+
+        // Assert
+        _api.Verify(x => x.RenameProductFeatureAsync(5, 31, "Agent", It.IsAny<CancellationToken>()), Times.Once);
+        cut.Find(".admin-alert-success").TextContent.Should().Contain("Renamed to 'Agent'.");
+    }
+
+    [Fact]
+    public void FeatureAlias_AddAndRemoveCallTheApi()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        _api.Setup(x => x.AddProductFeatureAliasAsync(5, 31, "auto", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#feature-alias-31").Change("auto");
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Add alias").Click();
+        cut.FindAll("#feature-31 li button").Single(b => b.TextContent == "Remove").Click();
+
+        // Assert
+        _api.Verify(x => x.AddProductFeatureAliasAsync(5, 31, "auto", It.IsAny<CancellationToken>()), Times.Once);
+        _api.Verify(x => x.RemoveProductFeatureAliasAsync(5, 31, 41, It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public void DeleteFeature_AsksForConfirmationBeforeCallingTheApi()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Delete…").Click();
+
+        // Assert — nothing happens until confirmed
+        cut.Find("#feature-31 .admin-alert-error").TextContent.Should().Contain("Delete 'Agent mode'?");
+        _api.Verify(x => x.DeleteProductFeatureAsync(It.IsAny<long>(), It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Never);
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Confirm delete").Click();
+
+        // Assert
+        _api.Verify(x => x.DeleteProductFeatureAsync(5, 31, It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public void ReviewQueue_AddAsFeatureAndAsAlias_CallTheApi()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        _api.Setup(x => x.CreateProductFeatureAsync(5, "Plan mode", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        _api.Setup(x => x.AddProductFeatureAliasAsync(5, 31, "Plan mode", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Act
+        cut.FindAll("#features-unmatched-table button").Single(b => b.TextContent == "Add as feature").Click();
+        cut.Find("#features-unmatched-table input").Change("agent MODE");
+        cut.FindAll("#features-unmatched-table button").Single(b => b.TextContent == "Add as alias").Click();
+
+        // Assert
+        _api.Verify(x => x.CreateProductFeatureAsync(5, "Plan mode", It.IsAny<CancellationToken>()), Times.Once);
+        _api.Verify(x => x.AddProductFeatureAliasAsync(5, 31, "Plan mode", It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public void ReviewQueue_AddAsAliasOfUnknownFeature_ShowsErrorWithoutCallingTheApi()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#features-unmatched-table input").Change("Nonexistent");
+
+        // Act
+        cut.FindAll("#features-unmatched-table button").Single(b => b.TextContent == "Add as alias").Click();
+
+        // Assert
+        cut.Find(".admin-alert-error").TextContent.Should().Contain("'Nonexistent' is not a feature of this product.");
+        _api.Verify(x => x.AddProductFeatureAliasAsync(It.IsAny<long>(), It.IsAny<long>(), It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
     public void Merge_AsksForConfirmationBeforeCallingTheApi_AndThenNavigatesToTheTarget()
     {
         // Arrange
@@ -416,6 +616,39 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Verify(x => x.DeleteProductAsync(5, It.IsAny<CancellationToken>()), Times.Once);
         Services.GetRequiredService<NavigationManager>().Uri.Should().EndWith("/admin/products");
     }
+
+    private static ProductFeatureOverview Overview() => new()
+    {
+        Features =
+        [
+            new ProductFeature
+            {
+                Id = 31,
+                ProductId = 5,
+                Name = "Agent mode",
+                EventCount = 4,
+                Aliases = [new FeatureAlias { Id = 41, Alias = "autopilot" }]
+            }
+        ],
+        Unmatched = [new UnmatchedFeatureName { Name = "Plan mode", EventCount = 2 }]
+    };
+
+    private static ProductEventLink Event(long id, string kind, string? feature, string? featureName, string date, IReadOnlyList<QualifierReference> qualifiers) => new()
+    {
+        Id = id,
+        Kind = kind,
+        Feature = feature,
+        FeatureName = featureName,
+        Description = $"{kind} of {feature}",
+        EventDate = DateOnly.Parse(date, System.Globalization.CultureInfo.InvariantCulture),
+        DatePrecision = "day",
+        CollectionName = "news",
+        ItemSlug = $"post-{id}",
+        ItemTitle = $"Post {id}",
+        ProductName = "Microsoft Foundry",
+        CatalogName = "Microsoft Foundry",
+        Qualifiers = qualifiers
+    };
 
     private static ProductDetail Detail() => new()
     {

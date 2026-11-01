@@ -464,6 +464,17 @@ vocabulary of qualifiers (`product_qualifiers`, kind `plan` or `surface`, with a
 - **Review queue.** Plan and surface names that match nothing are listed on `/admin/products/qualifiers`: add one as a plan or surface, or as an alias of an existing one
 - **Prompt version.** Adding `plans` and `surfaces` to the extraction raised `CurrentPromptVersion` to 3, so the timeline backfill scans articles that were scanned with an older version again
 
+### Features
+
+The `feature` of a timeline event stays as the AI wrote it. A curated feature (`product_features`, with aliases) belongs to a product and groups
+those names: "Agent mode" and "agent-mode" are one feature. An event matches a feature of its own product first and then the features of its
+parent products (a feature defined on GitHub Copilot matches the events of GitHub Copilot CLI), by name or alias, ignoring case and extra whitespace.
+`content_timeline_events.feature_id` holds the match and the raw text stays on the event.
+
+- **Review queue.** Feature names of the dates of a product (and its children) that match no feature are listed on the product page: add one as a feature, or as an alias of a feature of the product
+- **Starting set.** Migration `054_product_features` seeds the features of GitHub Copilot from the curated features page (`ghc_features`)
+- **Features by surface.** The product page shows per feature what happened on which surface (and in which plans), so a feature that is in preview in JetBrains IDEs but generally available in Visual Studio Code is visible at a glance
+
 - **Matching is a text match.** A name matches a product by its name or an alias, ignoring case and extra whitespace (the database function `find_product_id`). There is no fuzzy matching and no AI in this step, so matches never need a review.
 - **Links follow the AI output.** Whenever an article's `ai_metadata` is written (processing, roundup metadata backfill, admin edit) its links are replaced, and event writes set `product_id` the same way.
 - **Catalog changes relink everything.** Adding a product or alias, renaming, merging, removing and deleting re-evaluate all links in the same transaction. A rename keeps the old name as an alias, and a merge turns the merged product and its aliases into aliases of the target, so nothing becomes unmatched by accident.

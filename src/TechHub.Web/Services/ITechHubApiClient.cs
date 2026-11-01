@@ -593,6 +593,42 @@ internal interface ITechHubApiClient
     Task RemoveQualifierAliasAsync(long id, long aliasId, CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Get the curated features of a product and the feature names of its dates that are not curated yet.
+    /// GET /api/admin/products/{productId}/features
+    /// </summary>
+    Task<ProductFeatureOverview> GetProductFeaturesAsync(long productId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add a feature to a product and return the updated overview.
+    /// POST /api/admin/products/{productId}/features
+    /// </summary>
+    Task<ProductFeatureOverview> CreateProductFeatureAsync(long productId, string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Rename a feature; the old name becomes an alias.
+    /// PUT /api/admin/products/{productId}/features/{id}
+    /// </summary>
+    Task<ProductFeatureOverview> RenameProductFeatureAsync(long productId, long id, string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a feature and its aliases.
+    /// DELETE /api/admin/products/{productId}/features/{id}
+    /// </summary>
+    Task DeleteProductFeatureAsync(long productId, long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add an alias to a feature and return the updated overview.
+    /// POST /api/admin/products/{productId}/features/{id}/aliases
+    /// </summary>
+    Task<ProductFeatureOverview> AddProductFeatureAliasAsync(long productId, long id, string aliasName, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Remove an alias from a feature.
+    /// DELETE /api/admin/products/{productId}/features/{id}/aliases/{aliasId}
+    /// </summary>
+    Task RemoveProductFeatureAliasAsync(long productId, long id, long aliasId, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Get database statistics for the admin dashboard.
     /// GET /api/admin/statistics
     /// </summary>

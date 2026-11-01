@@ -125,6 +125,7 @@ public sealed class ProductRepository : IProductRepository
             SELECT e.id             AS Id,
                    e.kind           AS Kind,
                    e.feature        AS Feature,
+                   f.name           AS FeatureName,
                    e.description    AS Description,
                    e.event_date     AS EventDate,
                    e.date_precision AS DatePrecision,
@@ -135,6 +136,7 @@ public sealed class ProductRepository : IProductRepository
                    p.name           AS CatalogName
             FROM content_timeline_events e
             JOIN products p ON p.id = e.product_id
+            LEFT JOIN product_features f ON f.id = e.feature_id
             JOIN content_items ci ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
             WHERE e.product_id IN (SELECT product_tree_ids(@Id))
             ORDER BY e.event_date, e.id
@@ -163,6 +165,7 @@ public sealed class ProductRepository : IProductRepository
             Id = e.Id,
             Kind = e.Kind,
             Feature = e.Feature,
+            FeatureName = e.FeatureName,
             Description = e.Description,
             EventDate = DateOnly.FromDateTime(e.EventDate),
             DatePrecision = e.DatePrecision,
@@ -689,6 +692,7 @@ public sealed class ProductRepository : IProductRepository
         public long Id { get; init; }
         public string Kind { get; init; } = string.Empty;
         public string? Feature { get; init; }
+        public string? FeatureName { get; init; }
         public string Description { get; init; } = string.Empty;
         public DateTime EventDate { get; init; }
         public string DatePrecision { get; init; } = string.Empty;

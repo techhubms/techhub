@@ -87,6 +87,7 @@ public static partial class AdminEndpoints
 
         group.MapAdminProductEndpoints();
         group.MapAdminQualifierEndpoints();
+        group.MapAdminFeatureEndpoints();
 
         // ── Database statistics ──────────────────────────────────────────────
 

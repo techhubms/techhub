@@ -1742,6 +1742,104 @@ public class TechHubApiClient : ITechHubApiClient
             ?? throw new InvalidOperationException($"API returned null for {operation}");
     }
 
+    /// <summary>
+    /// Get the curated features of a product and the feature names of its dates that are not curated yet.
+    /// GET /api/admin/products/{productId}/features
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> GetProductFeaturesAsync(
+        long productId,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<ProductFeatureOverview>(
+                $"/api/admin/products/{productId}/features", cancellationToken) ?? new ProductFeatureOverview();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch features of product {ProductId}", productId);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Add a feature to a product.
+    /// POST /api/admin/products/{productId}/features
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> CreateProductFeatureAsync(
+        long productId,
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{productId}/features", new { name }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "create feature", cancellationToken);
+    }
+
+    /// <summary>
+    /// Rename a feature.
+    /// PUT /api/admin/products/{productId}/features/{id}
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> RenameProductFeatureAsync(
+        long productId,
+        long id,
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/products/{productId}/features/{id}", new { name }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "rename feature", cancellationToken);
+    }
+
+    /// <summary>
+    /// Delete a feature.
+    /// DELETE /api/admin/products/{productId}/features/{id}
+    /// </summary>
+    public virtual async Task DeleteProductFeatureAsync(
+        long productId,
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/{productId}/features/{id}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "delete feature", cancellationToken);
+    }
+
+    /// <summary>
+    /// Add an alias to a feature.
+    /// POST /api/admin/products/{productId}/features/{id}/aliases
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> AddProductFeatureAliasAsync(
+        long productId,
+        long id,
+        string aliasName,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{productId}/features/{id}/aliases", new { alias = aliasName }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "add feature alias", cancellationToken);
+    }
+
+    /// <summary>
+    /// Remove an alias from a feature.
+    /// DELETE /api/admin/products/{productId}/features/{id}/aliases/{aliasId}
+    /// </summary>
+    public virtual async Task RemoveProductFeatureAliasAsync(
+        long productId,
+        long id,
+        long aliasId,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/{productId}/features/{id}/aliases/{aliasId}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "remove feature alias", cancellationToken);
+    }
+
+    private async Task<ProductFeatureOverview> ReadFeatureOverviewAsync(
+        HttpResponseMessage response,
+        string operation,
+        CancellationToken cancellationToken)
+    {
+        await EnsureProductSuccessAsync(response, operation, cancellationToken);
+        return await response.Content.ReadFromJsonAsync<ProductFeatureOverview>(cancellationToken)
+            ?? throw new InvalidOperationException($"API returned null for {operation}");
+    }
+
     private async Task<ProductDetail> ReadProductDetailAsync(
         HttpResponseMessage response,
         string operation,
