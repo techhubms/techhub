@@ -42,4 +42,4 @@ Rules:
 - Retrospectives and "what's new so far" overviews list changes from many earlier months: do not report events from them unless the post itself announces the event now
 - One sentence that covers several products or models (for example two new models announced together) gives one event per product
 - Order events by importance. One event per product, feature and kind, unless the article gives different dates for different plans or surfaces: then report one event per date, each with its own `plans` and `surfaces`
-- A plan or surface is not part of the product name: keep the product as the article names it and put the limitation in `plans` or `surfaces`
+- Put a plan or surface limitation in `plans` or `surfaces`, even when the product name also contains it ("GitHub Copilot Business" with `plans` ["Business"]); the product name stays as the article names it
