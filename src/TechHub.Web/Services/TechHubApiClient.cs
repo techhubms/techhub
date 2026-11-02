@@ -457,6 +457,51 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
+    /// Get the timeline of a section.
+    /// GET /api/sections/{sectionName}/timeline
+    /// </summary>
+    public virtual async Task<IReadOnlyList<TimelineEntry>> GetSectionTimelineAsync(
+        string sectionName,
+        DateOnly? fromDate = null,
+        DateOnly? toDate = null,
+        IReadOnlyList<string>? kinds = null,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+        sectionName = sectionName.Sanitize();
+
+        var queryParams = new List<string>();
+        if (fromDate.HasValue)
+        {
+            queryParams.Add($"from={fromDate.Value:yyyy-MM-dd}");
+        }
+
+        if (toDate.HasValue)
+        {
+            queryParams.Add($"to={toDate.Value:yyyy-MM-dd}");
+        }
+
+        if (kinds is { Count: > 0 })
+        {
+            queryParams.Add($"kinds={Uri.EscapeDataString(string.Join(",", kinds))}");
+        }
+
+        var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : string.Empty;
+        var url = $"/api/sections/{Uri.EscapeDataString(sectionName)}/timeline{queryString}";
+
+        try
+        {
+            _logger.LogDebug("Fetching timeline for section {SectionName}", sectionName);
+            return await _httpClient.GetFromJsonAsync<IReadOnlyList<TimelineEntry>>(url, cancellationToken) ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch the timeline of section {SectionName}", sectionName);
+            throw;
+        }
+    }
+
+    /// <summary>
     /// Get tag cloud for specified scope.
     /// Uses /api/sections/{sectionName}/collections/{collectionName}/tags endpoint.
     /// Pass "all" as collectionName for section-level tag cloud.

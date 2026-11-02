@@ -515,18 +515,7 @@ public sealed class ContentRepository : IContentRepository
     {
         ArgumentNullException.ThrowIfNull(section);
 
-        var sectionNormalized = section.ToLowerInvariant().Trim();
-        return sectionNormalized switch
-        {
-            "ai" => 1,
-            "azure" => 2,
-            "dotnet" => 4,
-            "devops" => 8,
-            "github-copilot" => 16,
-            "ml" => 32,
-            "security" => 64,
-            _ => 0
-        };
+        return SectionBitmasks.For(section);
     }
 
     /// <summary>

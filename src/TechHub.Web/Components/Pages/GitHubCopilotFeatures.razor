@@ -69,117 +69,62 @@
                     </div>
                 }
 
-                @if (videoItems.Count > 0)
-                {
-                    <div class="features-timeline" aria-label="GitHub Copilot feature timeline">
-                        @foreach (var yearGroup in GetGroupedTimeline())
+                <TimelineView Entries="timelineEntries"
+                              AriaLabel="GitHub Copilot feature timeline"
+                              EmptyText="No features are available at this time."
+                              ExpandFirst="true">
+                    <Detail Context="entry">
+                        @{
+                            var feature = featuresBySlug[entry.Id];
+                            var thumbnailLink = feature.ThumbnailLink ?? feature.ContentLinks.FirstOrDefault();
+                            var videoId = thumbnailLink != null ? GetYouTubeVideoId(thumbnailLink.ItemExternalUrl) : null;
+                            var videoHref = thumbnailLink != null ? $"/{SectionName}/{thumbnailLink.CollectionName}/{thumbnailLink.ItemSlug}" : null;
+                            var relatedLinks = feature.ContentLinks
+                                .Where(l => l != thumbnailLink)
+                                .OrderBy(l => l.SortOrder)
+                                .ToList();
+                        }
+                        @if (!string.IsNullOrEmpty(videoId) && videoHref != null)
                         {
-                            <div class="features-timeline-year-group">
-                                <h2 class="features-timeline-year-label" aria-label="@(yearGroup.Key == "TBA" ? "Date to be announced" : $"Year {yearGroup.Key}")">@(yearGroup.Key == "TBA" ? "Date TBA" : yearGroup.Key)</h2>
-                                <div class="features-timeline-year-entries">
-                                    @foreach (var monthGroup in yearGroup.GroupBy(f => GetReleaseYearMonth(f)).OrderByDescending(g => g.Key))
+                            <div class="timeline-video">
+                                <a href="@videoHref" class="feature-card-thumbnail" @onclick:stopPropagation="true">
+                                    <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="@feature.Title video thumbnail" loading="lazy" />
+                                    <div class="feature-card-play-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                </a>
+                                <a href="@videoHref" class="timeline-video-link" @onclick:stopPropagation="true">Watch full video →</a>
+                            </div>
+                        }
+                        @if (relatedLinks.Count > 0)
+                        {
+                            <div class="timeline-related" @onclick:stopPropagation="true">
+                                <p class="timeline-related-label">Related videos</p>
+                                <div class="timeline-related-grid">
+                                    @foreach (var link in relatedLinks)
                                     {
-                                        <div class="features-timeline-month-row">
-                                            <div class="features-timeline-node">
-                                                <div class="features-timeline-dot" aria-hidden="true"></div>
-                                                @if (monthGroup.Key != "TBA")
-                                                {
-                                                    <time class="features-timeline-date" datetime="@(monthGroup.Key.Length == 7 ? monthGroup.Key + "-01" : "")">@FormatReleaseDate(monthGroup.Key)</time>
-                                                }
-                                            </div>
-                                            <div class="features-timeline-month-cards">
-                                                @foreach (var feature in monthGroup)
-                                                {
-                                                    var thumbnailLink = feature.ThumbnailLink ?? feature.ContentLinks.FirstOrDefault();
-                                                    var isExpanded = expandedFeatureId == feature.Slug;
-                                                    var videoId = thumbnailLink != null ? GetYouTubeVideoId(thumbnailLink.ItemExternalUrl) : null;
-                                                    var videoHref = thumbnailLink != null ? $"/{SectionName}/{thumbnailLink.CollectionName}/{thumbnailLink.ItemSlug}" : null;
-
-                                                    <div class="features-timeline-entry @(isExpanded ? "expanded" : "")" id="feature-@feature.Slug">
-                                                        <div class="features-timeline-card card"
-                                                             role="button"
-                                                             tabindex="0"
-                                                             aria-expanded="@isExpanded.ToString().ToLowerInvariant()"
-                                                             aria-controls="feature-detail-@feature.Slug"
-                                                             data-initialized="blazor"
-                                                             @onclick="() => ToggleFeature(feature.Slug)"
-                                                             @onkeydown="(e) => HandleFeatureKeyDown(e, feature.Slug)">
-                                                            <div class="features-timeline-header">
-                                                                <div class="features-timeline-header-content">
-                                                                    <h3 class="features-timeline-name">@feature.Title</h3>
-                                                                    <div class="features-timeline-badges">
-                                                                        @if (feature.ContentLinks.Any(l => GetYouTubeVideoId(l.ItemExternalUrl) != null))
-                                                                        {
-                                                                            <span class="badge-info">▶ Video</span>
-                                                                        }
-                                                                    </div>
-                                                                </div>
-                                                                <span class="features-timeline-expand-icon" aria-hidden="true">▼</span>
-                                                            </div>
-
-                                                            <div id="feature-detail-@feature.Slug" class="features-timeline-detail @(isExpanded ? "expanded" : "")">
-                                                                <p class="features-timeline-description">@feature.Description</p>
-                                                                @if (_loadedSlugs.Contains(feature.Slug) && !string.IsNullOrEmpty(videoId) && videoHref != null)
-                                                                {
-                                                                    <div class="features-timeline-video">
-                                                                        <a href="@videoHref" class="feature-card-thumbnail" @onclick:stopPropagation="true">
-                                                                            <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="@feature.Title video thumbnail" loading="lazy" />
-                                                                            <div class="feature-card-play-icon">
-                                                                                <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M8 5v14l11-7z"/></svg>
-                                                                            </div>
-                                                                        </a>
-                                                                        <a href="@videoHref" class="features-timeline-video-link" @onclick:stopPropagation="true">Watch full video →</a>
-                                                                    </div>
-                                                                }
-                                                                @{
-                                                                    var relatedLinks = feature.ContentLinks
-                                                                        .Where(l => l != thumbnailLink)
-                                                                        .OrderBy(l => l.SortOrder)
-                                                                        .ToList();
-                                                                }
-                                                                @if (_loadedSlugs.Contains(feature.Slug) && relatedLinks.Count > 0)
-                                                                {
-                                                                    <div class="features-timeline-related" @onclick:stopPropagation="true">
-                                                                        <p class="features-timeline-related-label">Related videos</p>
-                                                                        <div class="features-timeline-related-grid">
-                                                                            @foreach (var link in relatedLinks)
-                                                                            {
-                                                                                var relVideoId = GetYouTubeVideoId(link.ItemExternalUrl);
-                                                                                var relHref = $"/{SectionName}/{link.CollectionName}/{link.ItemSlug}";
-                                                                                <a href="@relHref" class="features-timeline-related-card" @onclick:stopPropagation="true">
-                                                                                    @if (!string.IsNullOrEmpty(relVideoId))
-                                                                                    {
-                                                                                        <div class="features-timeline-related-thumb">
-                                                                                            <img src="https://img.youtube.com/vi/@relVideoId/mqdefault.jpg"
-                                                                                                 alt="@link.ItemTitle"
-                                                                                                 loading="lazy" />
-                                                                                            <div class="features-timeline-related-play">
-                                                                                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M8 5v14l11-7z"/></svg>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    }
-                                                                                    <span class="features-timeline-related-card-title">@link.ItemTitle</span>
-                                                                                </a>
-                                                                            }
-                                                                        </div>
-                                                                    </div>
-                                                                }
-                                                            </div>
-                                                        </div>
+                                        var relVideoId = GetYouTubeVideoId(link.ItemExternalUrl);
+                                        var relHref = $"/{SectionName}/{link.CollectionName}/{link.ItemSlug}";
+                                        <a href="@relHref" class="timeline-related-card" @onclick:stopPropagation="true">
+                                            @if (!string.IsNullOrEmpty(relVideoId))
+                                            {
+                                                <div class="timeline-related-thumb">
+                                                    <img src="https://img.youtube.com/vi/@relVideoId/mqdefault.jpg"
+                                                         alt="@link.ItemTitle"
+                                                         loading="lazy" />
+                                                    <div class="timeline-related-play">
+                                                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M8 5v14l11-7z"/></svg>
                                                     </div>
-                                                }
-                                            </div>
-                                        </div>
+                                                </div>
+                                            }
+                                            <span class="timeline-related-card-title">@link.ItemTitle</span>
+                                        </a>
                                     }
                                 </div>
                             </div>
                         }
-                    </div>
-                }
-                else
-                {
-                    <p class="features-timeline-empty">No features are available at this time.</p>
-                }
+                    </Detail>
+                </TimelineView>
             </div>
         </article>
     </main>
@@ -194,57 +139,12 @@ else if (_notFound)
     private FeaturesPageData? pageData;
     private bool _notFound;
     private List<GhcFeature> videoItems = new();
+    private List<TimelineViewEntry> timelineEntries = [];
+    private Dictionary<string, GhcFeature> featuresBySlug = new(StringComparer.Ordinal);
     private PersistingComponentStateSubscription? _persistSubscription;
-
-    private string? expandedFeatureId;
-    // Tracks which feature slugs have been expanded at least once.
-    // Images are only rendered after a card is opened, preventing all YouTube
-    // thumbnails from loading on page load. Slugs are never removed so images
-    // stay in the DOM during the collapse animation.
-    private readonly HashSet<string> _loadedSlugs = [];
 
     [CascadingParameter]
     public HttpContext? HttpContext { get; set; }
-
-    private async Task ToggleFeature(string featureSlug)
-    {
-        await JS.InvokeVoidAsync("preventScrollOnExpand");
-        expandedFeatureId = expandedFeatureId == featureSlug ? null : featureSlug;
-        // Mark as loaded so thumbnails render — they stay rendered after collapse too,
-        // which keeps them in the DOM during the collapse animation.
-        _loadedSlugs.Add(featureSlug);
-    }
-
-    private async Task HandleFeatureKeyDown(KeyboardEventArgs e, string featureSlug)
-    {
-        if (e.Key == "Enter" || e.Key == " ")
-        {
-            await ToggleFeature(featureSlug);
-        }
-    }
-
-    /// <summary>Converts a GhcFeature's release date (Unix epoch) to a "YYYY-MM" string for grouping.</summary>
-    private static string GetReleaseYearMonth(GhcFeature f)
-    {
-        if (!f.ReleaseDate.HasValue)
-        {
-            return "TBA";
-        }
-
-        var date = DateTimeOffset.FromUnixTimeSeconds(f.ReleaseDate.Value).UtcDateTime;
-        return $"{date.Year:D4}-{date.Month:D2}";
-    }
-
-    private List<IGrouping<string, GhcFeature>> GetGroupedTimeline()
-    {
-        return videoItems
-            .OrderBy(f => f.ReleaseDate.HasValue ? 1 : 0)
-            .ThenByDescending(f => f.ReleaseDate ?? 0)
-            .GroupBy(f => f.ReleaseDate.HasValue
-                ? DateTimeOffset.FromUnixTimeSeconds(f.ReleaseDate.Value).UtcDateTime.Year.ToString()
-                : "TBA")
-            .ToList();
-    }
 
     /// <summary>
     /// Extract YouTube video ID from a URL (supports youtu.be and youtube.com formats).
@@ -274,20 +174,22 @@ else if (_notFound)
         return null;
     }
 
-    /// <summary>
-    /// Formats a "YYYY-MM" release date string as a human-readable month abbreviation.
-    /// </summary>
-    private static string FormatReleaseDate(string releaseDate)
+    /// <summary>The features as timeline cards: newest release first, features without a release date last.</summary>
+    private void BuildTimeline()
     {
-        if (releaseDate.Length >= 7 &&
-            int.TryParse(releaseDate[5..7], out var month) &&
-            month is >= 1 and <= 12)
-        {
-            return System.Globalization.CultureInfo.InvariantCulture
-                .DateTimeFormat.GetAbbreviatedMonthName(month);
-        }
-
-        return releaseDate;
+        featuresBySlug = videoItems.GroupBy(f => f.Slug, StringComparer.Ordinal).ToDictionary(g => g.Key, g => g.First(), StringComparer.Ordinal);
+        timelineEntries = videoItems
+            .OrderBy(f => f.ReleaseDate.HasValue ? 0 : 1)
+            .ThenByDescending(f => f.ReleaseDate ?? 0)
+            .Select(f => new TimelineViewEntry
+            {
+                Id = f.Slug,
+                Title = f.Title,
+                Date = f.ReleaseDate.HasValue ? DateOnly.FromDateTime(DateTimeOffset.FromUnixTimeSeconds(f.ReleaseDate.Value).UtcDateTime) : null,
+                Description = f.Description,
+                Badges = f.ContentLinks.Any(l => GetYouTubeVideoId(l.ItemExternalUrl) != null) ? [new TimelineViewBadge("▶ Video")] : []
+            })
+            .ToList();
     }
 
     protected override async Task OnInitializedAsync()
@@ -298,8 +200,7 @@ else if (_notFound)
         {
             pageData = restored.PageData;
             videoItems = restored.VideoItems ?? new();
-            expandedFeatureId = videoItems.FirstOrDefault()?.Slug;
-            if (expandedFeatureId != null) _loadedSlugs.Add(expandedFeatureId);
+            BuildTimeline();
             return;
         }
 
@@ -324,8 +225,7 @@ else if (_notFound)
                 .Where(f => f.ContentLinks.Count > 0)
                 .OrderByDescending(f => f.ReleaseDate ?? 0)
                 .ToList();
-            expandedFeatureId = videoItems.FirstOrDefault()?.Slug;
-            if (expandedFeatureId != null) _loadedSlugs.Add(expandedFeatureId);
+            BuildTimeline();
         }
         catch (Exception ex)
         {

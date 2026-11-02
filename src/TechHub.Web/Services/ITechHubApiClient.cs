@@ -126,6 +126,17 @@ internal interface ITechHubApiClient
     /// </summary>
     Task<IEnumerable<GhcFeature>?> GetGhcFeaturesAsync(CancellationToken cancellationToken = default);
 
+    /// <summary>
+    /// Get the timeline of a section: the dated events (preview, GA, deprecation, ...) of its articles, newest first.
+    /// GET /api/sections/{sectionName}/timeline
+    /// </summary>
+    Task<IReadOnlyList<TimelineEntry>> GetSectionTimelineAsync(
+        string sectionName,
+        DateOnly? fromDate = null,
+        DateOnly? toDate = null,
+        IReadOnlyList<string>? kinds = null,
+        CancellationToken cancellationToken = default);
+
     // ================================================================
     // Tag cloud endpoint (unified scope)
     // ================================================================

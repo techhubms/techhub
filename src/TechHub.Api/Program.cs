@@ -377,6 +377,7 @@ api.MapRssEndpoints();
 api.MapSitemapEndpoints();
 api.MapAuthorEndpoints();
 api.MapGhcFeaturesEndpoints();
+api.MapTimelineEndpoints();
 api.MapAdminEndpoints();
 api.MapNewsletterEndpoints();
 

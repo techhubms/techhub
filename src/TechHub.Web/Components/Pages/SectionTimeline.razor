@@ -1,0 +1,284 @@
+@page "/{SectionName}/timeline"
+@using System.Globalization
+@using TechHub.Core.Models
+@using TechHub.Core.Models.ContentProcessing
+@using TechHub.Web.Services
+@implements IDisposable
+@inherits PageComponentBase
+
+@inject ITechHubApiClient ApiClient
+@inject SectionCache SectionCache
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<SectionTimeline> Logger
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@PageTitleText</PageTitle>
+
+@if (sectionData is not null)
+{
+    <SeoMetaTags
+        Title="@PageTitleText"
+        Description="@SeoDescription"
+        ContentType="SeoMetaTags.SeoContentType.Website" />
+
+    <main class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarToggle />
+            <MobileSidebarToolbar>
+                <MobileSidebarPanel Label="Show" Icon="filter" HasActiveFilter="@(_activeKinds is not null)">
+                    <nav class="sidebar-section" aria-label="Kinds of dates">
+                        <h2 class="sidebar-h2">Show</h2>
+                        <div class="timeline-filter">
+                            @foreach (var filter in Filters)
+                            {
+                                var isActive = filter.Value == _activeKinds;
+                                <a href="@BuildHref(filter.Value, _showAll)"
+                                   class="timeline-filter-link @(isActive ? "active" : "")"
+                                   aria-current="@(isActive ? "true" : null)">@filter.Label</a>
+                            }
+                        </div>
+                    </nav>
+                </MobileSidebarPanel>
+            </MobileSidebarToolbar>
+        </aside>
+
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 id="skiptohere" class="page-h1">Timeline</h1>
+            </div>
+
+            <div class="timeline-page-intro">
+                <p>@SeoDescription</p>
+            </div>
+
+            <TimelineView Entries="_viewEntries"
+                          AriaLabel="@($"{sectionData.Title} timeline")"
+                          EmptyText="No dates found for this selection.">
+                <Detail Context="entry">
+                    <ul class="timeline-sources" aria-label="Sources">
+                        @foreach (var source in _entriesById[entry.Id].Sources)
+                        {
+                            var href = source.GetHref();
+                            var isExternal = href.StartsWith("http", StringComparison.OrdinalIgnoreCase);
+                            <li>
+                                <a href="@href"
+                                   target="@(isExternal ? "_blank" : null)"
+                                   rel="@(isExternal ? "noopener noreferrer" : null)"
+                                   @onclick:stopPropagation="true">@source.Title</a>
+                            </li>
+                        }
+                    </ul>
+                </Detail>
+            </TimelineView>
+
+            <p class="timeline-page-window">
+                @if (_entries.Count >= MaxEntries)
+                {
+                    <span>Showing the newest @MaxEntries dates.</span>
+                }
+                @if (_showAll)
+                {
+                    <a href="@BuildHref(_activeKinds, false)">Show only the last 12 months</a>
+                }
+                else
+                {
+                    <a href="@BuildHref(_activeKinds, true)">Show earlier dates</a>
+                }
+            </p>
+        </article>
+    </main>
+}
+else
+{
+    <NotFoundContent />
+}
+
+@code {
+    // The API returns at most this many entries, newest first.
+    private const int MaxEntries = 200;
+
+    private static readonly TimeZoneInfo BrusselsTz =
+        TimeZoneInfo.TryFindSystemTimeZoneById("Europe/Brussels", out var tz) ? tz : TimeZoneInfo.Utc;
+
+    private static readonly IReadOnlyList<KindFilter> Filters =
+    [
+        new("All", null),
+        new("Releases", "announced,preview,ga,launch,release"),
+        new("Deprecations", "deprecation,retirement,end-of-support,breaking-change"),
+        new("Other", "pricing-change,event")
+    ];
+
+    private static readonly Dictionary<string, (string Label, string CssClass)> KindBadges = new(StringComparer.Ordinal)
+    {
+        ["announced"] = ("Announced", "badge-info"),
+        ["preview"] = ("Preview", "badge-info"),
+        ["ga"] = ("GA", "badge-success"),
+        ["launch"] = ("Launch", "badge-success"),
+        ["release"] = ("Release", "badge-success"),
+        ["deprecation"] = ("Deprecation", "badge-warning"),
+        ["retirement"] = ("Retirement", "badge-warning"),
+        ["end-of-support"] = ("End of support", "badge-warning"),
+        ["breaking-change"] = ("Breaking change", "badge-warning"),
+        ["pricing-change"] = ("Pricing change", "badge-muted"),
+        ["event"] = ("Event", "badge-muted")
+    };
+
+    private TechHub.Core.Models.Section? sectionData;
+    private IReadOnlyList<TimelineEntry> _entries = [];
+    private IReadOnlyList<TimelineViewEntry> _viewEntries = [];
+    private Dictionary<string, TimelineEntry> _entriesById = new(StringComparer.Ordinal);
+    private string? _activeKinds;
+    private bool _showAll;
+    private string? _loadedKey;
+    private bool _notFound;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    [Parameter]
+    public string SectionName { get; set; } = null!;
+
+    /// <summary>Comma separated event kinds to show, for example <c>deprecation,retirement</c>.</summary>
+    [SupplyParameterFromQuery(Name = "kinds")]
+    public string? KindsParam { get; set; }
+
+    /// <summary><c>all</c> shows every date; otherwise the last 12 months and everything after them.</summary>
+    [SupplyParameterFromQuery(Name = "since")]
+    public string? SinceParam { get; set; }
+
+    protected override bool IsNotFound => _notFound;
+
+    private string PageTitleText => $"Timeline - {sectionData?.Title ?? SectionName} - Tech Hub";
+
+    private string SeoDescription =>
+        $"The dates that articles in {sectionData?.Title ?? SectionName} give: what moves to preview or general availability, and what is deprecated or retired. " +
+        "The same date, stated by several articles, is shown once. Open a card to see where it comes from.";
+
+    protected override void OnInitialized()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        sectionData = SectionCache.GetSectionByName(SectionName);
+        if (sectionData is null)
+        {
+            _notFound = true;
+            return;
+        }
+
+        _activeKinds = NormalizeKinds(KindsParam);
+        _showAll = string.Equals(SinceParam, "all", StringComparison.OrdinalIgnoreCase);
+
+        var key = $"{sectionData.Name}|{_activeKinds}|{_showAll}";
+        if (key == _loadedKey)
+        {
+            return;
+        }
+
+        _loadedKey = key;
+
+        if (ApplicationState.TryTakeFromJson<PersistedTimeline>("section-timeline", out var restored) && restored?.Key == key)
+        {
+            SetEntries(restored.Entries);
+            return;
+        }
+
+        try
+        {
+            var from = _showAll ? (DateOnly?)null : Today().AddMonths(-12);
+            var kinds = _activeKinds?.Split(',');
+            SetEntries(await ApiClient.GetSectionTimelineAsync(sectionData.Name, from, null, kinds));
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+
+    private void SetEntries(IReadOnlyList<TimelineEntry> entries)
+    {
+        _entries = entries;
+        var indexed = entries
+            .Select((entry, index) => (Id: index.ToString(CultureInfo.InvariantCulture), Entry: entry))
+            .ToList();
+        _entriesById = indexed.ToDictionary(x => x.Id, x => x.Entry, StringComparer.Ordinal);
+        _viewEntries = indexed.Select(x => ToViewEntry(x.Id, x.Entry)).ToList();
+    }
+
+    private static TimelineViewEntry ToViewEntry(string id, TimelineEntry entry)
+    {
+        var badges = new List<TimelineViewBadge>();
+        var kind = KindBadges.TryGetValue(entry.Kind, out var known) ? known : (Label: entry.Kind, CssClass: "badge-muted");
+        badges.Add(new TimelineViewBadge(kind.Label, kind.CssClass));
+        badges.AddRange(entry.Plans.Select(p => new TimelineViewBadge(p, "badge-muted")));
+        badges.AddRange(entry.Surfaces.Select(s => new TimelineViewBadge(s, "badge-muted")));
+
+        return new TimelineViewEntry
+        {
+            Id = id,
+            Title = entry.Feature is null ? entry.Product : $"{entry.Product}: {entry.Feature}",
+            Date = entry.Date,
+            DateLabel = FormatDate(entry),
+            Description = entry.Description,
+            Badges = badges
+        };
+    }
+
+    /// <summary>The date as precisely as the article states it: a day, a month or a quarter.</summary>
+    private static string FormatDate(TimelineEntry entry) => entry.DatePrecision switch
+    {
+        "quarter" => $"Q{(entry.Date.Month - 1) / 3 + 1} {entry.Date.Year}",
+        "month" => entry.Date.ToString("MMM yyyy", CultureInfo.InvariantCulture),
+        _ => entry.Date.ToString("d MMM yyyy", CultureInfo.InvariantCulture)
+    };
+
+    /// <summary>Keeps the valid kinds of the query string, in the order given, or <c>null</c> when none is valid.</summary>
+    private static string? NormalizeKinds(string? kinds)
+    {
+        var valid = (kinds ?? string.Empty)
+            .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+            .Where(TimelineEvent.ValidKinds.Contains)
+            .Distinct(StringComparer.Ordinal)
+            .ToList();
+        return valid.Count == 0 ? null : string.Join(',', valid);
+    }
+
+    private static DateOnly Today() => DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTz).DateTime);
+
+    private string BuildHref(string? kinds, bool showAll)
+    {
+        var query = new List<string>();
+        if (kinds is not null)
+        {
+            query.Add($"kinds={kinds}");
+        }
+
+        if (showAll)
+        {
+            query.Add("since=all");
+        }
+
+        return $"/{SectionName}/timeline" + (query.Count > 0 ? "?" + string.Join('&', query) : string.Empty);
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("section-timeline", new PersistedTimeline { Key = _loadedKey ?? string.Empty, Entries = _entries });
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    private sealed record KindFilter(string Label, string? Value);
+
+    private sealed class PersistedTimeline
+    {
+        public string Key { get; set; } = string.Empty;
+        public IReadOnlyList<TimelineEntry> Entries { get; set; } = [];
+    }
+}

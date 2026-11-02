@@ -1,6 +1,8 @@
 using System.Data;
+using System.Globalization;
 using Dapper;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Repositories;
@@ -256,6 +258,147 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             Quote = r.Quote,
             ExtractedFrom = r.ExtractedFrom
         }).ToList();
+    }
+
+    /// <inheritdoc />
+    public async Task<IReadOnlyList<TimelineEntry>> GetTimelineAsync(TimelineRequest request, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+        ArgumentException.ThrowIfNullOrWhiteSpace(request.SectionName);
+
+        var sectionName = request.SectionName.ToLowerInvariant().Trim();
+        var sectionBits = sectionName == "all" ? SectionBitmasks.AllSections : SectionBitmasks.For(sectionName);
+        if (sectionBits == 0)
+        {
+            return [];
+        }
+
+        const string Sql = """
+            SELECT e.id              AS Id,
+                   e.kind            AS Kind,
+                   e.event_date      AS EventDate,
+                   e.date_precision  AS DatePrecision,
+                   e.description     AS Description,
+                   e.product_id      AS ProductId,
+                   COALESCE(p.name, e.product) AS Product,
+                   e.feature_id      AS FeatureId,
+                   COALESCE(f.name, e.feature) AS Feature,
+                   e.collection_name AS CollectionName,
+                   e.item_slug       AS ItemSlug,
+                   ci.title          AS ItemTitle,
+                   ci.external_url   AS ItemExternalUrl,
+                   ci.primary_section_name AS ItemPrimarySectionName,
+                   ci.date_epoch     AS ItemDateEpoch
+            FROM content_timeline_events e
+            JOIN content_items ci ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
+            LEFT JOIN products p ON p.id = e.product_id
+            LEFT JOIN product_features f ON f.id = e.feature_id
+            WHERE ci.collection_name <> 'roundups'
+              AND (ci.sections_bitmask & @SectionBits) > 0
+              AND (@From::date IS NULL OR e.event_date >= @From::date)
+              AND (@To::date IS NULL OR e.event_date <= @To::date)
+              AND (cardinality(@Kinds::text[]) = 0 OR e.kind = ANY(@Kinds::text[]))
+            ORDER BY ci.date_epoch, e.id
+            """;
+
+        var rows = (await _connection.QueryAsync<TimelineRow>(new CommandDefinition(
+            Sql,
+            new
+            {
+                SectionBits = sectionBits,
+                From = request.From?.ToDateTime(TimeOnly.MinValue),
+                To = request.To?.ToDateTime(TimeOnly.MinValue),
+                Kinds = (request.Kinds ?? []).ToArray()
+            },
+            cancellationToken: ct))).ToList();
+
+        if (rows.Count == 0)
+        {
+            return [];
+        }
+
+        const string QualifiersSql = """
+            SELECT eq.event_id AS EventId, q.kind AS Kind, q.name AS Name
+            FROM content_timeline_event_qualifiers eq
+            JOIN product_qualifiers q ON q.id = eq.qualifier_id
+            WHERE eq.event_id = ANY(@EventIds)
+            """;
+
+        var qualifiers = (await _connection.QueryAsync<TimelineQualifierRow>(new CommandDefinition(
+            QualifiersSql, new { EventIds = rows.Select(r => r.Id).ToArray() }, cancellationToken: ct)))
+            .ToLookup(q => q.EventId);
+
+        // The same event stated by several articles is one entry. Rows are ordered by article date, so the first row of a
+        // group is the oldest article and supplies the description.
+        return rows
+            .GroupBy(r => (r.EventDate, r.Kind, Product: r.ProductId?.ToString(CultureInfo.InvariantCulture) ?? r.Product.ToLowerInvariant(), Feature: (r.FeatureId?.ToString(CultureInfo.InvariantCulture) ?? r.Feature?.ToLowerInvariant()) ?? string.Empty))
+            .Select(g =>
+            {
+                var first = g.First();
+                var groupQualifiers = g.SelectMany(r => qualifiers[r.Id]).ToList();
+                return new TimelineEntry
+                {
+                    Date = DateOnly.FromDateTime(first.EventDate),
+                    DatePrecision = first.DatePrecision,
+                    Kind = first.Kind,
+                    Product = first.Product,
+                    ProductId = first.ProductId,
+                    Feature = first.Feature,
+                    Description = first.Description,
+                    Plans = QualifierNames(groupQualifiers, "plan"),
+                    Surfaces = QualifierNames(groupQualifiers, "surface"),
+                    Sources = g
+                        .Select(r => new TimelineEntrySource
+                        {
+                            CollectionName = r.CollectionName,
+                            Slug = r.ItemSlug,
+                            Title = r.ItemTitle,
+                            ExternalUrl = r.ItemExternalUrl,
+                            PrimarySectionName = r.ItemPrimarySectionName
+                        })
+                        .DistinctBy(s => (s.CollectionName, s.Slug))
+                        .ToList()
+                };
+            })
+            .OrderByDescending(e => e.Date)
+            .ThenBy(e => e.Product, StringComparer.OrdinalIgnoreCase)
+            .ThenBy(e => e.Feature, StringComparer.OrdinalIgnoreCase)
+            .ThenBy(e => e.Kind, StringComparer.Ordinal)
+            .ToList();
+    }
+
+    private static List<string> QualifierNames(IEnumerable<TimelineQualifierRow> qualifiers, string kind) =>
+        qualifiers
+            .Where(q => q.Kind == kind)
+            .Select(q => q.Name)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .Order(StringComparer.OrdinalIgnoreCase)
+            .ToList();
+
+    private sealed class TimelineRow
+    {
+        public long Id { get; init; }
+        public string Kind { get; init; } = string.Empty;
+        public DateTime EventDate { get; init; }
+        public string DatePrecision { get; init; } = string.Empty;
+        public string Description { get; init; } = string.Empty;
+        public long? ProductId { get; init; }
+        public string Product { get; init; } = string.Empty;
+        public long? FeatureId { get; init; }
+        public string? Feature { get; init; }
+        public string CollectionName { get; init; } = string.Empty;
+        public string ItemSlug { get; init; } = string.Empty;
+        public string ItemTitle { get; init; } = string.Empty;
+        public string? ItemExternalUrl { get; init; }
+        public string? ItemPrimarySectionName { get; init; }
+        public long ItemDateEpoch { get; init; }
+    }
+
+    private sealed class TimelineQualifierRow
+    {
+        public long EventId { get; init; }
+        public string Kind { get; init; } = string.Empty;
+        public string Name { get; init; } = string.Empty;
     }
 
     private sealed class StoredTimelineEventRow

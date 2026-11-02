@@ -25,11 +25,12 @@ While most content in Tech Hub is standard markdown served via generic item endp
 | Section | Custom Pages |
 |---|---|
 | `all` | Content by Author (`/all/authors`) |
-| `github-copilot` | Features, VS Code Updates, Getting Started, Levels of Enlightenment, The GitHub Copilot Handbook, Tool Tips, Discord |
-| `ai` | GenAI Basics, GenAI Advanced, GenAI Applied, AI SDLC |
-| `devops` | DX, SPACE & DORA |
+| `github-copilot` | Features, VS Code Updates, Getting Started, Levels of Enlightenment, The GitHub Copilot Handbook, Tool Tips, Discord, Timeline |
+| `ai` | GenAI Basics, GenAI Advanced, GenAI Applied, AI SDLC, Timeline |
+| `devops` | DX, SPACE & DORA, Timeline |
+| `ml`, `azure`, `dotnet`, `security` | Timeline |
 
-This is 13 custom page collections across 4 sections. Not every one has an endpoint below. The authors page uses the [authors API](content-api.md#authors), VS Code Updates uses its own public endpoint (see [Implementation](#implementation)), and Discord is a static page.
+This is 20 custom page collections across 8 sections. Not every one has an endpoint below. The authors page uses the [authors API](content-api.md#authors), VS Code Updates uses its own public endpoint (see [Implementation](#implementation)), Discord is a static page, and the section timelines use the [timeline API](content-api.md#timeline-api) (see [Section Timelines](content-processing.md#section-timelines)).
 
 ## Endpoints
 
@@ -210,7 +211,7 @@ Add the `Order` property to custom page collections in `appsettings.json`:
 }
 ```
 
-All 13 custom page collections across 4 sections (`all`, `github-copilot`, `ai`, `devops`) use this pattern.
+All 20 custom page collections across 8 sections use this pattern.
 
 ### Ordering Rules
 

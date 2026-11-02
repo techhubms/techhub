@@ -1,0 +1,226 @@
+/* Shared timeline: years, months and expandable cards. Page-specific detail content is styled by the page that renders it. */
+/* ─── Timeline Layout ────────────────────────────────────────────── */
+
+.timeline {
+  position: relative;
+  margin-bottom: var(--spacing-6);
+}
+
+.timeline-empty {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  padding: var(--spacing-4) 0;
+}
+
+/* Year group: heading above entries */
+.timeline-year-group {
+  margin-bottom: var(--spacing-6);
+}
+
+/* Year label as a block heading (no absolute positioning — avoids overlapping first bullet) */
+.timeline-year-label {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-purple-bright);
+  margin: 0 0 var(--spacing-3) 0;
+  line-height: 1;
+}
+
+/* Entries indented under the year heading */
+.timeline-year-entries {
+  padding-left: var(--spacing-8);
+}
+
+/* ─── Month Row ──────────────────────────────────────────────────── */
+
+/* Each month is a row: node (dot + date) on the left, cards grid on the right */
+.timeline-month-row {
+  display: flex;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+/* Node: dot marker + month abbreviation, pulled left to sit on the border line */
+.timeline-node {
+  flex-shrink: 0;
+  width: var(--spacing-8);
+  margin-left: calc(-1 * var(--spacing-8) - 2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.35rem;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-purple-medium);
+  border: 2px solid var(--color-bg-default);
+  box-shadow: 0 0 0 2px var(--color-purple-medium);
+  flex-shrink: 0;
+}
+
+.timeline-date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  margin-top: var(--spacing-1);
+  text-align: center;
+}
+
+/* ─── Month Cards Grid ───────────────────────────────────────────── */
+
+/* Features in the same month stack vertically — each card is full width */
+.timeline-month-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  min-width: 0;
+}
+
+/* ─── Timeline Entry / Card ──────────────────────────────────────── */
+
+.timeline-entry {
+  min-width: 0;
+}
+
+.timeline-entry.expanded .timeline-dot {
+  background: var(--color-purple-bright);
+  box-shadow: 0 0 0 2px var(--color-purple-bright);
+}
+
+.timeline-card {
+  padding: var(--spacing-2) var(--spacing-3);
+  box-sizing: border-box;
+  min-height: 0;
+  cursor: pointer;
+}
+
+/* Suppress article-body h3 padding-bottom inside timeline cards */
+.timeline-card h3 {
+  padding-bottom: 0;
+}
+
+.timeline-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  pointer-events: none;
+}
+
+/* Left side: title + badges, can wrap to second row if needed */
+.timeline-header-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-1) var(--spacing-3);
+}
+
+@media (hover: hover) {
+  .timeline-card:hover .timeline-name {
+    color: var(--color-purple-bright);
+  }
+}
+
+html.keyboard-nav .timeline-card:focus-visible {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: var(--radius-sm);
+}
+
+.timeline-name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-emphasis);
+  margin: 0;
+  /* Grow to fill row, but shrink before badges wrap */
+  flex: 1 1 160px;
+  min-width: 0;
+  transition: color var(--duration-normal) var(--easing-ease-out);
+}
+
+.timeline-entry-date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.timeline-badges {
+  display: flex;
+  gap: var(--spacing-1);
+  flex-wrap: wrap;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Chevron aligned with badge row */
+.timeline-expand-icon {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+  transition: transform 150ms ease-in-out;
+  display: inline-block;
+}
+
+.timeline-entry.expanded .timeline-expand-icon {
+  transform: rotate(180deg);
+}
+
+/* Normalize Video badge size in the collapsed header */
+.timeline-badges span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem var(--spacing-1);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+/* ─── Expandable Feature Detail ──────────────────────────────────── */
+
+.timeline-detail {
+  overflow: hidden;
+  max-height: 0;
+  /* ease-out on collapse: fast start so it responds immediately after the round-trip */
+  transition: max-height 200ms ease-out;
+}
+
+.timeline-detail.expanded {
+  max-height: 900px;
+  /* ease-in on expand: slow start is fine, content appearing feels immediate anyway */
+  transition: max-height 300ms ease-in;
+}
+
+.timeline-description {
+  margin: var(--spacing-2) 0 0 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .timeline-year-entries {
+    padding-left: var(--spacing-6);
+  }
+
+  .timeline-node {
+    width: var(--spacing-6);
+    margin-left: calc(-1 * var(--spacing-6) - 2px);
+  }
+}
+
+@media print {
+  .timeline-detail {
+    max-height: none;
+  }
+}

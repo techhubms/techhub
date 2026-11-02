@@ -1,3 +1,4 @@
+using TechHub.Core.Models;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Core.Interfaces;
@@ -57,4 +58,10 @@ public interface ITimelineEventRepository
 
     /// <summary>Gets the events stored for an article, ordered by date.</summary>
     Task<IReadOnlyList<StoredTimelineEvent>> GetEventsForItemAsync(string collectionName, string slug, CancellationToken ct = default);
+
+    /// <summary>
+    /// Gets the timeline of a section: the events of its articles (roundups excluded), newest first, with the same event
+    /// stated by several articles merged into one entry. Returns nothing for an unknown section.
+    /// </summary>
+    Task<IReadOnlyList<TimelineEntry>> GetTimelineAsync(TimelineRequest request, CancellationToken ct = default);
 }

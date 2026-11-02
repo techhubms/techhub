@@ -168,16 +168,16 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - Timeline should exist and have entries
-        var timeline = Page.Locator(".features-timeline");
+        var timeline = Page.Locator(".timeline");
         await timeline.AssertElementVisibleAsync();
 
         // Should have at least one year group
-        var yearGroups = Page.Locator(".features-timeline-year-group");
+        var yearGroups = Page.Locator(".timeline-year-group");
         var yearGroupCount = await yearGroups.CountAsync();
         yearGroupCount.Should().BeGreaterThan(0, "Timeline should have at least one year group");
 
         // Should have timeline entries
-        var entries = Page.Locator(".features-timeline-entry");
+        var entries = Page.Locator(".timeline-entry");
         var entryCount = await entries.CountAsync();
         entryCount.Should().BeGreaterThan(0, "Timeline should have at least one feature entry");
     }
@@ -189,7 +189,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - Year labels should be visible
-        var yearLabels = Page.Locator(".features-timeline-year-label");
+        var yearLabels = Page.Locator(".timeline-year-label");
         var count = await yearLabels.CountAsync();
         count.Should().BeGreaterThan(0, "Timeline should have year labels");
 
@@ -206,27 +206,27 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - Each timeline entry should have the required structural elements
-        var firstEntry = Page.Locator(".features-timeline-entry").First;
+        var firstEntry = Page.Locator(".timeline-entry").First;
         await Assertions.Expect(firstEntry).ToBeVisibleAsync();
 
         // Should have feature name (always visible in header)
-        await Assertions.Expect(firstEntry.Locator(".features-timeline-name")).ToBeVisibleAsync();
+        await Assertions.Expect(firstEntry.Locator(".timeline-name")).ToBeVisibleAsync();
 
         // The date is in the month-row node (shared for all entries in the same month),
         // not inside the individual entry card — look at the timeline level
-        await Assertions.Expect(Page.Locator(".features-timeline-date").First).ToBeVisibleAsync();
+        await Assertions.Expect(Page.Locator(".timeline-date").First).ToBeVisibleAsync();
 
         // Description is inside the expandable section — expand an entry to reveal it.
         // The first entry auto-expands on page load (expandedFeatureId = firstFeature.Slug),
         // so use the second entry (Nth(1)) which starts collapsed. Nth() is a stable locator
         // that keeps targeting the same DOM element even after class changes — unlike
         // :not(.expanded) which would drift to a different element once the class is added.
-        var entryToExpand = Page.Locator(".features-timeline-entry").Nth(1);
-        await entryToExpand.Locator(".features-timeline-header").ClickAndExpectAsync(async () =>
+        var entryToExpand = Page.Locator(".timeline-entry").Nth(1);
+        await entryToExpand.Locator(".timeline-header").ClickAndExpectAsync(async () =>
             await Assertions.Expect(entryToExpand).ToHaveClassAsync(
                 new Regex("expanded")));
 
-        await Assertions.Expect(entryToExpand.Locator(".features-timeline-description")).ToBeVisibleAsync();
+        await Assertions.Expect(entryToExpand.Locator(".timeline-description")).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -236,7 +236,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - Some timeline entries should have video badges
-        var videoBadges = Page.Locator(".features-timeline-entry .badge-info");
+        var videoBadges = Page.Locator(".timeline-entry .badge-info");
         var videoBadgeCount = await videoBadges.CountAsync();
 
         // On PR preview environments the migration data may have no linked video slugs yet,
@@ -273,7 +273,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
 
         // Don't assume a fixed index is collapsed. Data can contain duplicate slugs,
         // which may cause multiple entries to start expanded.
-        var entries = Page.Locator(".features-timeline-entry");
+        var entries = Page.Locator(".timeline-entry");
         var entryCount = await entries.CountAsync();
         entryCount.Should().BeGreaterThan(0, "timeline should contain entries");
 
@@ -281,7 +281,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         for (var i = 0; i < entryCount; i++)
         {
             var ariaExpanded = await entries.Nth(i)
-                .Locator(".features-timeline-card")
+                .Locator(".timeline-card")
                 .GetAttributeAsync("aria-expanded");
 
             if (ariaExpanded == "false")
@@ -295,12 +295,12 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
             "No collapsed timeline entry found to validate expand/collapse behavior");
 
         var testEntry = entries.Nth(collapsedEntryIndex);
-        var testCard = testEntry.Locator(".features-timeline-card");
+        var testCard = testEntry.Locator(".timeline-card");
         await Assertions.Expect(testEntry).ToBeVisibleAsync();
         await Assertions.Expect(testCard).ToHaveAttributeAsync("aria-expanded", "false");
 
         // Act - Click to expand
-        var header = testEntry.Locator(".features-timeline-header");
+        var header = testEntry.Locator(".timeline-header");
         await header.ClickAndExpectAsync(async () =>
             await Assertions.Expect(testCard).ToHaveAttributeAsync(
                 "aria-expanded", "true"));
@@ -320,7 +320,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Find the first entry that has a YouTube thumbnail rendered in the DOM.
         // Entries may have ContentLinks (badge-info) but no YouTube URL — only entries where
         // GetYouTubeVideoId returns a non-null value will have the img element in the DOM.
-        var entryWithVideo = Page.Locator(".features-timeline-entry:has(.feature-card-thumbnail img)").First;
+        var entryWithVideo = Page.Locator(".timeline-entry:has(.feature-card-thumbnail img)").First;
         var entryCount = await entryWithVideo.CountAsync();
 
         // On PR preview environments feature video slugs may not have YouTube external URLs — skip gracefully.
@@ -332,11 +332,11 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
 
         // Ensure the entry is expanded — the first video item auto-expands on load,
         // so only click the header if this particular entry is not yet expanded.
-        var entryCard = entryWithVideo.Locator(".features-timeline-card");
+        var entryCard = entryWithVideo.Locator(".timeline-card");
         var ariaExpanded = await entryCard.GetAttributeAsync("aria-expanded");
         if (ariaExpanded != "true")
         {
-            var header = entryWithVideo.Locator(".features-timeline-header");
+            var header = entryWithVideo.Locator(".timeline-header");
             await header.ClickAndExpectAsync(async () =>
                 await Assertions.Expect(entryCard).ToHaveAttributeAsync(
                     "aria-expanded", "true"));
@@ -357,7 +357,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
         await Page.WaitForBlazorReadyAsync();
-        var entries = Page.Locator(".features-timeline-entry");
+        var entries = Page.Locator(".timeline-entry");
         var countBefore = await entries.CountAsync();
 
         // Act - The tier cards describe the plans; they no longer filter the timeline
@@ -379,9 +379,9 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - The catalog has no plans or GHES flag per feature, so there is nothing to filter on
-        await Assertions.Expect(Page.Locator(".features-timeline-entry").First).ToBeVisibleAsync();
-        await Assertions.Expect(Page.Locator(".features-timeline-filters")).ToHaveCountAsync(0);
-        await Assertions.Expect(Page.Locator(".features-timeline-entry .badge-success")).ToHaveCountAsync(0);
+        await Assertions.Expect(Page.Locator(".timeline-entry").First).ToBeVisibleAsync();
+        await Assertions.Expect(Page.Locator(".timeline-filters")).ToHaveCountAsync(0);
+        await Assertions.Expect(Page.Locator(".timeline-entry .badge-success")).ToHaveCountAsync(0);
     }
 
     [Fact]
@@ -391,7 +391,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - The features come from the catalog, which has no plans per feature
-        await Assertions.Expect(Page.Locator(".features-timeline-entry .badge-plan")).ToHaveCountAsync(0);
+        await Assertions.Expect(Page.Locator(".timeline-entry .badge-plan")).ToHaveCountAsync(0);
     }
     [Fact]
     public async Task GitHubCopilotFeatures_ShouldDisplay_BillingNotice()

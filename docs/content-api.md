@@ -324,6 +324,53 @@ Get tag cloud with quantile-based sizing for visual representation.
 curl -k "https://localhost:5001/api/sections/all/collections/all/tags?maxTags=30"
 ```
 
+## Timeline API
+
+The dated events (preview, GA, deprecation, ...) that the articles of a section state. See [Section Timelines](content-processing.md#section-timelines) for how they are built.
+
+### GET /api/sections/{sectionName}/timeline
+
+Returns the timeline of a section, newest first. Articles that state the same event (same date, kind, product and feature) are merged into one entry. Roundups are not used. Public endpoint (no authentication required).
+
+**Query parameters** (all optional):
+
+| Parameter | Description |
+|---|---|
+| `from` / `to` | Only events on or after / before this date (`yyyy-MM-dd`). A reversed range is swapped |
+| `kinds` | Comma separated event kinds: `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`, `retirement`, `end-of-support`, `breaking-change`, `pricing-change`, `event` |
+| `take` | Maximum number of entries, 1-500 (default 200). The newest entries are kept |
+
+**Response**: `200 OK`
+
+```json
+[
+  {
+    "date": "2026-03-10",
+    "datePrecision": "day",
+    "kind": "ga",
+    "product": "GitHub Copilot",
+    "productId": 12,
+    "feature": "Agent mode",
+    "description": "Agent mode is generally available.",
+    "plans": ["Pro"],
+    "surfaces": ["Visual Studio Code"],
+    "sources": [
+      {
+        "collectionName": "news",
+        "slug": "agent-mode-ga",
+        "title": "Agent mode is GA",
+        "externalUrl": "https://example.com/agent-mode",
+        "primarySectionName": "github-copilot"
+      }
+    ]
+  }
+]
+```
+
+`product` and `feature` are the catalog names, or the AI's text when they are not in the catalog (then `productId` is `null`). `sources` are the articles that state the event, oldest first.
+
+**Errors**: `400` for an invalid section name, date, kind or `take`. `404` for an unknown section.
+
 ## GHC Features API
 
 Endpoints for the features of GitHub Copilot shown on the features page. They are the features of the GitHub Copilot product in the catalog (`product_features`, with `product_feature_content` for the content they link to).

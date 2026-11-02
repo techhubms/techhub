@@ -1,0 +1,88 @@
+/* ============================================================================
+   Section Timeline Page Styles
+
+   Page-specific pieces only: the kind filter, the intro and the source list of an expanded card.
+   The timeline itself is styled by TimelineView.razor.css.
+   ============================================================================ */
+
+.timeline-page-intro {
+  margin-bottom: var(--spacing-5);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+}
+
+.timeline-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+.timeline-filter-link {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-1) var(--spacing-2);
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+  .timeline-filter-link:hover {
+    background: var(--color-bg-hover-subtle);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-emphasis);
+  }
+}
+
+html.keyboard-nav .timeline-filter-link:focus-visible {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.timeline-filter-link.active {
+  background: var(--color-purple-dark);
+  border-color: var(--color-purple-bright);
+  color: var(--color-text-on-emphasis);
+}
+
+.timeline-sources {
+  list-style: none;
+  margin: var(--spacing-2) 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+}
+
+.timeline-sources a {
+  color: var(--color-purple-bright);
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .timeline-sources a:hover {
+    text-decoration: underline;
+  }
+}
+
+.timeline-page-window {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin: var(--spacing-4) 0 var(--spacing-6) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.timeline-page-window a {
+  color: var(--color-purple-bright);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}

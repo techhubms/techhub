@@ -118,7 +118,7 @@ Scripts expose a small set of globals for Blazor JS interop and tests.
 |--------|-----------|---------|
 | `initHighlighting`, `initMermaid`, `initTocScrollSpy`, `initCustomPages` | `page-scripts.js` | Page init functions invoked by `PageComponentBase` |
 | `markScriptsLoading`, `markScriptsReady` | `page-scripts.js` (`markScriptsReady` is wrapped by `scroll-manager.js`) | Script lifecycle signals |
-| `preventScrollOnExpand` | `page-scripts.js` | Used by the GitHub Copilot Features page to keep scroll stable when expanding cards |
+| `preventScrollOnExpand` | `page-scripts.js` | Used by `TimelineView` (section timelines and the GitHub Copilot Features page) to keep scroll stable when expanding cards |
 | `TechHub.sidebar` (`isCollapsed`, `toggle`) | `sidebar-toggle.js` | Desktop sidebar collapse, called by `SidebarToggle` |
 | `TechHub.heroBanner` (`setCollapsed`, `setHash`) | `hero-banner.js` | Cookie persistence for `HeroBanner` |
 | `TechHub.scrollToTopAndClearHash` | `scroll-manager.js` | Scroll to top and remove the URL hash |

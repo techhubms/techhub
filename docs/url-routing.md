@@ -463,6 +463,7 @@ After the auth and rate-limiting phase, requests reach the registered endpoints:
 | `/mcp` (GET from a browser; MCP clients POST to the same path) | `McpInfo.razor` |
 | `/newsletter/subscribe`, `/newsletter/confirm`, `/newsletter/manage`, `/newsletter/unsubscribe` | Newsletter pages, see [newsletter.md](newsletter.md) |
 | `/all/authors` and `/all/authors/{authorName}` | `Authors.razor` |
+| `/{section}/timeline` (every section except `all`) | `SectionTimeline.razor` |
 | `/github-copilot/features`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord`, `/vscode-updates[/{slug}]` | GitHub Copilot custom pages |
 | `/ai/genai-basics`, `/genai-applied`, `/genai-advanced`, `/sdlc` | AI custom pages |
 | `/devops/dx-space` | `DXSpace.razor` |

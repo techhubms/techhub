@@ -1,0 +1,161 @@
+@using System.Globalization
+@inject IJSRuntime JS
+
+@if (Entries.Count == 0)
+{
+    <p class="timeline-empty">@EmptyText</p>
+}
+else
+{
+    <div class="timeline" aria-label="@AriaLabel">
+        @foreach (var yearGroup in _years)
+        {
+            <div class="timeline-year-group">
+                <h2 class="timeline-year-label" aria-label="@(yearGroup.IsUndated ? "Date to be announced" : $"Year {yearGroup.Label}")">@(yearGroup.IsUndated ? "Date TBA" : yearGroup.Label)</h2>
+                <div class="timeline-year-entries">
+                    @foreach (var monthGroup in yearGroup.Months)
+                    {
+                        <div class="timeline-month-row">
+                            <div class="timeline-node">
+                                <div class="timeline-dot" aria-hidden="true"></div>
+                                @if (monthGroup.Month is { } month)
+                                {
+                                    <time class="timeline-date" datetime="@month.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)">@month.ToString("MMM", CultureInfo.InvariantCulture)</time>
+                                }
+                            </div>
+                            <div class="timeline-month-cards">
+                                @foreach (var entry in monthGroup.Entries)
+                                {
+                                    var isExpanded = _expandedId == entry.Id;
+
+                                    <div class="timeline-entry @(isExpanded ? "expanded" : "")" id="timeline-entry-@entry.Id">
+                                        <div class="timeline-card card"
+                                             role="button"
+                                             tabindex="0"
+                                             aria-expanded="@isExpanded.ToString().ToLowerInvariant()"
+                                             aria-controls="timeline-detail-@entry.Id"
+                                             data-initialized="blazor"
+                                             @onclick="() => ToggleAsync(entry.Id)"
+                                             @onkeydown="(e) => HandleKeyDownAsync(e, entry.Id)">
+                                            <div class="timeline-header">
+                                                <div class="timeline-header-content">
+                                                    <h3 class="timeline-name">@entry.Title</h3>
+                                                    @if (entry.DateLabel is not null)
+                                                    {
+                                                        <span class="timeline-entry-date">@entry.DateLabel</span>
+                                                    }
+                                                    <div class="timeline-badges">
+                                                        @foreach (var badge in entry.Badges)
+                                                        {
+                                                            <span class="@badge.CssClass">@badge.Text</span>
+                                                        }
+                                                    </div>
+                                                </div>
+                                                <span class="timeline-expand-icon" aria-hidden="true">▼</span>
+                                            </div>
+
+                                            <div id="timeline-detail-@entry.Id" class="timeline-detail @(isExpanded ? "expanded" : "")">
+                                                @if (!string.IsNullOrWhiteSpace(entry.Description))
+                                                {
+                                                    <p class="timeline-description">@entry.Description</p>
+                                                }
+                                                @if (Detail is not null && _loadedIds.Contains(entry.Id))
+                                                {
+                                                    @Detail(entry)
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<YearGroup> _years = [];
+    private string? _expandedId;
+    private bool _initialExpansionDone;
+
+    // Entries whose detail has been shown at least once. The detail is only rendered for these, so heavy content
+    // (for example video thumbnails) is not loaded for every card on page load. Ids are never removed, so the
+    // detail stays in the DOM during the collapse animation.
+    private readonly HashSet<string> _loadedIds = [];
+
+    /// <summary>The cards, newest first. Entries without a date go to a "Date TBA" group at the end.</summary>
+    [Parameter, EditorRequired]
+    public IReadOnlyList<TimelineViewEntry> Entries { get; set; } = [];
+
+    [Parameter]
+    public string AriaLabel { get; set; } = "Timeline";
+
+    [Parameter]
+    public string EmptyText { get; set; } = "Nothing to show.";
+
+    /// <summary>Extra content shown in the expanded card, below the description. Rendered after the card was opened once.</summary>
+    [Parameter]
+    public RenderFragment<TimelineViewEntry>? Detail { get; set; }
+
+    /// <summary>Opens the first card when the timeline is first shown.</summary>
+    [Parameter]
+    public bool ExpandFirst { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        _years = Group(Entries);
+
+        if (ExpandFirst && !_initialExpansionDone && _years.Count > 0)
+        {
+            _initialExpansionDone = true;
+            _expandedId = _years[0].Months[0].Entries[0].Id;
+            _loadedIds.Add(_expandedId);
+        }
+    }
+
+    private async Task ToggleAsync(string id)
+    {
+        await JS.InvokeVoidAsync("preventScrollOnExpand");
+        _expandedId = _expandedId == id ? null : id;
+        _loadedIds.Add(id);
+    }
+
+    private async Task HandleKeyDownAsync(KeyboardEventArgs e, string id)
+    {
+        if (e.Key is "Enter" or " ")
+        {
+            await ToggleAsync(id);
+        }
+    }
+
+    private static List<YearGroup> Group(IReadOnlyList<TimelineViewEntry> entries)
+    {
+        var dated = entries
+            .Where(e => e.Date.HasValue)
+            .GroupBy(e => e.Date!.Value.Year)
+            .OrderByDescending(g => g.Key)
+            .Select(year => new YearGroup(
+                year.Key.ToString(CultureInfo.InvariantCulture),
+                false,
+                year.GroupBy(e => new DateOnly(e.Date!.Value.Year, e.Date.Value.Month, 1))
+                    .OrderByDescending(m => m.Key)
+                    .Select(m => new MonthGroup(m.Key, m.ToList()))
+                    .ToList()))
+            .ToList();
+
+        var undated = entries.Where(e => !e.Date.HasValue).ToList();
+        if (undated.Count > 0)
+        {
+            dated.Add(new YearGroup("TBA", true, [new MonthGroup(null, undated)]));
+        }
+
+        return dated;
+    }
+
+    private sealed record YearGroup(string Label, bool IsUndated, List<MonthGroup> Months);
+
+    private sealed record MonthGroup(DateOnly? Month, List<TimelineViewEntry> Entries);
+}

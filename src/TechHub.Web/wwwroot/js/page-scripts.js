@@ -380,11 +380,11 @@ window.initCustomPages = initCustomPages;
 
 /**
  * Prevent the browser from scrolling the page when Space is pressed on a
- * features-timeline-card element (role="button" div).
+ * timeline-card element (role="button" div).
  * Fires in the capture phase so it takes effect before Blazor's event dispatch.
  */
 document.addEventListener('keydown', function(e) {
-    if (e.key === ' ' && e.target instanceof Element && e.target.classList.contains('features-timeline-card')) {
+    if (e.key === ' ' && e.target instanceof Element && e.target.classList.contains('timeline-card')) {
         e.preventDefault();
     }
 }, true);
