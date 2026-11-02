@@ -109,9 +109,9 @@ The features of a product. The page lists the features of GitHub Copilot and its
 | `id` | `bigint` PK | Identifier |
 | `product_id` | `bigint` FK → `products.id` | The product the feature belongs to |
 | `name` | `text` | Feature name, unique per product ignoring case. Shown as the title on the page |
-| `slug` | `text` | Unique slug: the anchor on the page and the address of the feature in the GHC features API. Generated from the name when not given |
+| `slug` | `text` | Unique slug: the anchor on the page. Generated from the name when not given |
 | `description` | `text` | Short description shown in the expanded feature |
-| `release_date` | `bigint` | Unix epoch timestamp of the release (nullable). When empty the page uses the first `launch`, `preview`, `ga` or `release` event of the feature |
+| `release_date` | `bigint` | Unix epoch timestamp of midnight UTC of the release date (nullable). When empty the page uses the first `launch`, `preview`, `ga` or `release` event of the feature |
 | `created_at` / `updated_at` | `timestamptz` | Audit timestamps |
 
 The subscription plans of a feature and whether GitHub Enterprise Server supports it are not stored. The page has no filters.

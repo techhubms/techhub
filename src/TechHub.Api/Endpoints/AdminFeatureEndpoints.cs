@@ -41,6 +41,34 @@ internal static class AdminFeatureEndpoints
             .Produces(StatusCodes.Status204NoContent)
             .Produces(StatusCodes.Status404NotFound);
 
+        group.MapPut("/products/{productId:long}/features/{id:long}/details", UpdateDetailsAsync)
+            .WithName("UpdateProductFeatureDetails")
+            .WithSummary("Set the description and the release date of a feature")
+            .Produces<ProductFeatureOverview>()
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
+        group.MapPost("/products/{productId:long}/features/{id:long}/content", AddContentAsync)
+            .WithName("AddProductFeatureContent")
+            .WithSummary("Link a content item (video, post) to a feature, optionally as its thumbnail")
+            .Produces<ProductFeatureOverview>()
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
+        group.MapDelete("/products/{productId:long}/features/{id:long}/content", RemoveContentAsync)
+            .WithName("RemoveProductFeatureContent")
+            .WithSummary("Remove the link between a feature and a content item")
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
+        group.MapPut("/products/{productId:long}/features/{id:long}/thumbnail", SetThumbnailAsync)
+            .WithName("SetProductFeatureThumbnail")
+            .WithSummary("Make a linked content item the thumbnail of a feature")
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
         group.MapPost("/products/{productId:long}/features/{id:long}/aliases", AddAliasAsync)
             .WithName("AddProductFeatureAlias")
             .WithSummary("Add an alias to a feature")
@@ -88,6 +116,62 @@ internal static class AdminFeatureEndpoints
     private static async Task<IResult> DeleteFeatureAsync(long productId, long id, IProductFeatureRepository repository, CancellationToken ct)
     {
         var result = await repository.DeleteAsync(productId, id, ct);
+        return result.Succeeded ? Results.NoContent() : ToErrorResult(result);
+    }
+
+    private static async Task<IResult> UpdateDetailsAsync(
+        long productId,
+        long id,
+        FeatureDetailsRequest request,
+        IProductFeatureRepository repository,
+        CancellationToken ct)
+    {
+        var result = await repository.UpdateDetailsAsync(productId, id, request.Description, request.ReleaseDate, ct);
+        return await ToOverviewResultAsync(result, productId, repository, ct);
+    }
+
+    private static async Task<IResult> AddContentAsync(
+        long productId,
+        long id,
+        FeatureContentRequest request,
+        IProductFeatureRepository repository,
+        CancellationToken ct)
+    {
+        var result = await repository.AddContentAsync(productId, id, request.CollectionName?.Trim() ?? string.Empty, request.ItemSlug?.Trim() ?? string.Empty, request.IsThumbnail, ct);
+        return await ToOverviewResultAsync(result, productId, repository, ct);
+    }
+
+    private static async Task<IResult> RemoveContentAsync(
+        long productId,
+        long id,
+        IProductFeatureRepository repository,
+        CancellationToken ct,
+        string? collection = null,
+        string? itemSlug = null)
+    {
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(itemSlug))
+        {
+            return Results.BadRequest("The 'collection' and 'itemSlug' query parameters are required.");
+        }
+
+        var result = await repository.RemoveContentAsync(productId, id, collection.Trim(), itemSlug.Trim(), ct);
+        return result.Succeeded ? Results.NoContent() : ToErrorResult(result);
+    }
+
+    private static async Task<IResult> SetThumbnailAsync(
+        long productId,
+        long id,
+        IProductFeatureRepository repository,
+        CancellationToken ct,
+        string? collection = null,
+        string? itemSlug = null)
+    {
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(itemSlug))
+        {
+            return Results.BadRequest("The 'collection' and 'itemSlug' query parameters are required.");
+        }
+
+        var result = await repository.SetThumbnailAsync(productId, id, collection.Trim(), itemSlug.Trim(), ct);
         return result.Succeeded ? Results.NoContent() : ToErrorResult(result);
     }
 

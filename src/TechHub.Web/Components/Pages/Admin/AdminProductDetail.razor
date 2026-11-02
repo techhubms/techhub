@@ -169,6 +169,125 @@
                     </div>
 
                     <div class="admin-inline-form">
+                        <label class="admin-label" for="feature-description-@feature.Id">Description</label>
+                        <textarea id="feature-description-@feature.Id" class="admin-input feature-description" rows="3"
+                                  placeholder="Shown when the feature card is opened on the features page"
+                                  value="@GetFeatureDescription(feature)" @onchange="e => SetFeatureDescription(feature, e.Value?.ToString())"></textarea>
+                    </div>
+
+                    <div class="admin-inline-form">
+                        <label class="admin-label" for="feature-release-@feature.Id">Release date</label>
+                        <input id="feature-release-@feature.Id" type="date" class="admin-input"
+                               value="@GetFeatureReleaseDate(feature)" @onchange="e => SetFeatureReleaseDate(feature, e.Value?.ToString())" />
+                        <button class="btn-secondary" disabled="@_busy" @onclick="() => SaveFeatureDetailsAsync(feature)">Save details</button>
+                    </div>
+                    <p class="admin-result-summary">Leave the release date empty to use the first launch, preview, GA or release date of its dates.</p>
+
+                    <h3 class="admin-section-title">Content (@feature.Content.Count)</h3>
+
+                    @if (feature.Content.Count == 0)
+                    {
+                        <div class="admin-empty" id="feature-content-empty-@feature.Id">No linked content.</div>
+                    }
+                    else
+                    {
+                        <div class="admin-jobs-table-wrapper">
+                            <table class="admin-table" id="feature-content-@feature.Id">
+                                <thead>
+                                    <tr>
+                                        <th>Thumbnail</th>
+                                        <th>Title</th>
+                                        <th>Item</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var link in feature.Content)
+                                    {
+                                        <tr>
+                                            <td class="feature-content-thumbnail">
+                                                @if (link.IsThumbnail)
+                                                {
+                                                    <span class="badge-success" title="Thumbnail of the feature">★</span>
+                                                }
+                                                else
+                                                {
+                                                    <button class="admin-link-btn" title="Make this the thumbnail" aria-label="Make @link.Title the thumbnail" disabled="@_busy" @onclick="() => SetFeatureThumbnailAsync(feature, link)">☆</button>
+                                                }
+                                            </td>
+                                            <td><a href="/admin/content-preview/@link.CollectionName/@link.ItemSlug">@link.Title</a></td>
+                                            <td class="admin-cell-mono">@link.CollectionName/@link.ItemSlug</td>
+                                            <td>
+                                                <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => RemoveFeatureContentAsync(feature, link)">Remove</button>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+
+                    <div class="admin-inline-form">
+                        <label class="admin-label" for="feature-content-search-@feature.Id">Link content</label>
+                        <input id="feature-content-search-@feature.Id" class="admin-input feature-content-search" placeholder="Search by title or slug…"
+                               value="@GetContentQuery(feature)" @onchange="e => SetContentQuery(feature, e.Value?.ToString())" />
+                        <select class="admin-input" aria-label="Collection to search" value="@GetContentCollection(feature)" @onchange="e => SetContentCollection(feature, e.Value?.ToString())">
+                            <option value="">All collections</option>
+                            <option value="videos">videos</option>
+                            <option value="blogs">blogs</option>
+                            <option value="news">news</option>
+                        </select>
+                        <button class="btn-secondary" disabled="@_busy" @onclick="() => SearchFeatureContentAsync(feature)">Search</button>
+                    </div>
+
+                    @if (_contentSearchFeatureId == feature.Id)
+                    {
+                        @if (_contentSearchError != null)
+                        {
+                            <div class="admin-alert admin-alert-error" role="alert">@_contentSearchError</div>
+                        }
+                        else if (_contentResults.Count == 0)
+                        {
+                            <div class="admin-empty" id="feature-content-results-empty-@feature.Id">No content found.</div>
+                        }
+                        else
+                        {
+                            <div class="admin-jobs-table-wrapper">
+                                <table class="admin-table" id="feature-content-results-@feature.Id">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th>Item</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var result in _contentResults)
+                                        {
+                                            var linked = feature.Content.Any(l => l.CollectionName == result.CollectionName && l.ItemSlug == result.Slug);
+                                            <tr class="@(linked ? "feature-content-linked" : null)">
+                                                <td>@result.Title</td>
+                                                <td class="admin-cell-mono">@result.CollectionName/@result.Slug</td>
+                                                <td>
+                                                    @if (linked)
+                                                    {
+                                                        <span class="admin-cell-mono">linked</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <button class="admin-link-btn" disabled="@_busy" @onclick="() => AddFeatureContentAsync(feature, result, false)">+ Link</button>
+                                                        <button class="admin-link-btn" disabled="@_busy" @onclick="() => AddFeatureContentAsync(feature, result, true)">★ Thumbnail</button>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                    }
+
+                    <div class="admin-inline-form">
                         @if (_pendingFeatureDelete == feature.Id)
                         {
                             <span class="admin-alert admin-alert-error" role="alert">
@@ -436,6 +555,13 @@
     private long? _pendingFeatureDelete;
     private readonly Dictionary<long, string> _featureRenames = [];
     private readonly Dictionary<long, string> _featureAliases = [];
+    private readonly Dictionary<long, string> _featureDescriptions = [];
+    private readonly Dictionary<long, string> _featureReleaseDates = [];
+    private readonly Dictionary<long, string> _contentQueries = [];
+    private readonly Dictionary<long, string> _contentCollections = [];
+    private long? _contentSearchFeatureId;
+    private string? _contentSearchError;
+    private IReadOnlyList<ContentItemListItem> _contentResults = [];
     private readonly Dictionary<string, string> _unmatchedTargets = new(StringComparer.OrdinalIgnoreCase);
     private string _parentName = string.Empty;
     private string _mergeTarget = string.Empty;
@@ -639,6 +765,23 @@
 
     private void SetFeatureAlias(ProductFeature feature, string? alias) => _featureAliases[feature.Id] = alias ?? string.Empty;
 
+    private string GetFeatureDescription(ProductFeature feature) => _featureDescriptions.TryGetValue(feature.Id, out var text) ? text : feature.Description;
+
+    private void SetFeatureDescription(ProductFeature feature, string? text) => _featureDescriptions[feature.Id] = text ?? string.Empty;
+
+    private string GetFeatureReleaseDate(ProductFeature feature) =>
+        _featureReleaseDates.TryGetValue(feature.Id, out var date) ? date : feature.ReleaseDate?.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) ?? string.Empty;
+
+    private void SetFeatureReleaseDate(ProductFeature feature, string? date) => _featureReleaseDates[feature.Id] = date ?? string.Empty;
+
+    private string GetContentQuery(ProductFeature feature) => _contentQueries.TryGetValue(feature.Id, out var query) ? query : string.Empty;
+
+    private void SetContentQuery(ProductFeature feature, string? query) => _contentQueries[feature.Id] = query ?? string.Empty;
+
+    private string GetContentCollection(ProductFeature feature) => _contentCollections.TryGetValue(feature.Id, out var collection) ? collection : string.Empty;
+
+    private void SetContentCollection(ProductFeature feature, string? collection) => _contentCollections[feature.Id] = collection ?? string.Empty;
+
     private string GetUnmatchedTarget(string name) => _unmatchedTargets.TryGetValue(name, out var target) ? target : string.Empty;
 
     private void SetUnmatchedTarget(string name, string? target) => _unmatchedTargets[name] = target ?? string.Empty;
@@ -692,6 +835,88 @@
             await Api.DeleteProductFeatureAsync(Id, feature.Id);
             await ReloadAfterFeatureChangeAsync();
             return $"'{feature.Name}' deleted.";
+        });
+
+    private Task SaveFeatureDetailsAsync(ProductFeature feature)
+    {
+        var dateText = GetFeatureReleaseDate(feature).Trim();
+        DateOnly? releaseDate = null;
+        if (dateText.Length > 0)
+        {
+            if (!DateOnly.TryParseExact(dateText, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed))
+            {
+                _message = $"'{dateText}' is not a date. Use yyyy-MM-dd.";
+                _messageIsError = true;
+                return Task.CompletedTask;
+            }
+
+            releaseDate = parsed;
+        }
+
+        var description = GetFeatureDescription(feature).Trim();
+        return RunAsync(async () =>
+        {
+            _features = await Api.UpdateProductFeatureDetailsAsync(Id, feature.Id, description, releaseDate);
+            _featureDescriptions.Remove(feature.Id);
+            _featureReleaseDates.Remove(feature.Id);
+            return $"Details of '{feature.Name}' saved.";
+        });
+    }
+
+    private async Task SearchFeatureContentAsync(ProductFeature feature)
+    {
+        var query = GetContentQuery(feature).Trim();
+        if (query.Length == 0)
+        {
+            return;
+        }
+
+        _contentSearchFeatureId = feature.Id;
+        _contentSearchError = null;
+        _contentResults = [];
+        _busy = true;
+
+        try
+        {
+            var collection = GetContentCollection(feature);
+            var page = await Api.GetContentItemsAsync(page: 1, pageSize: 20, search: query, collectionName: string.IsNullOrEmpty(collection) ? null : collection);
+            _contentResults = [.. page.Items ?? []];
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _contentSearchError = $"Search failed: {ex.Message}";
+        }
+        finally
+        {
+            _busy = false;
+        }
+    }
+
+    private Task AddFeatureContentAsync(ProductFeature feature, ContentItemListItem item, bool asThumbnail) =>
+        RunAsync(async () =>
+        {
+            _features = await Api.AddProductFeatureContentAsync(Id, feature.Id, item.CollectionName, item.Slug, asThumbnail);
+            return asThumbnail ? $"'{item.Title}' linked to '{feature.Name}' as its thumbnail." : $"'{item.Title}' linked to '{feature.Name}'.";
+        });
+
+    private Task RemoveFeatureContentAsync(ProductFeature feature, ProductFeatureContent link) =>
+        RunAsync(async () =>
+        {
+            await Api.RemoveProductFeatureContentAsync(Id, feature.Id, link.CollectionName, link.ItemSlug);
+            _features = await Api.GetProductFeaturesAsync(Id);
+            return $"'{link.Title}' is no longer linked to '{feature.Name}'.";
+        });
+
+    private Task SetFeatureThumbnailAsync(ProductFeature feature, ProductFeatureContent link) =>
+        RunAsync(async () =>
+        {
+            await Api.SetProductFeatureThumbnailAsync(Id, feature.Id, link.CollectionName, link.ItemSlug);
+            _features = await Api.GetProductFeaturesAsync(Id);
+            return $"'{link.Title}' is the thumbnail of '{feature.Name}' now.";
         });
 
     private Task AddUnmatchedAsFeatureAsync(string name) =>

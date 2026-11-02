@@ -4,7 +4,8 @@ namespace TechHub.Core.Interfaces;
 
 /// <summary>
 /// Repository for the features of GitHub Copilot shown on the features page: the features of the GitHub Copilot product in
-/// the catalog (<c>product_features</c> and <c>product_feature_content</c>), plus the <c>vscode_update_items</c> table.
+/// the catalog (<c>product_features</c> and <c>product_feature_content</c>, edited through <see cref="IProductFeatureRepository"/>), plus the
+/// <c>vscode_update_items</c> table.
 /// </summary>
 public interface IGhcFeatureRepository
 {
@@ -18,48 +19,6 @@ public interface IGhcFeatureRepository
 
     /// <summary>Returns a single feature by slug, or null if not found.</summary>
     Task<GhcFeature?> GetFeatureBySlugAsync(string slug, CancellationToken ct = default);
-
-    /// <summary>
-    /// Inserts or updates a feature of GitHub Copilot, addressed by slug: the title is the name of the catalog feature (a new
-    /// title keeps the old name as an alias), and the links of the timeline events are refreshed. Returns false when nothing
-    /// was saved: the title is empty or already used by another feature, or the slug belongs to another product.
-    /// </summary>
-    Task<bool> UpsertFeatureAsync(GhcFeature feature, CancellationToken ct = default);
-
-    /// <summary>Deletes a feature and its content links. Returns true if a row was deleted.</summary>
-    Task<bool> DeleteFeatureAsync(string slug, CancellationToken ct = default);
-
-    // ── Content links ─────────────────────────────────────────────────────────
-
-    /// <summary>
-    /// Adds a content link. If <paramref name="isThumbnail"/> is true, clears any existing
-    /// thumbnail link first (enforcing the one-thumbnail-per-feature constraint).
-    /// Returns true if the link was inserted.
-    /// </summary>
-    Task<bool> AddContentLinkAsync(
-        string featureSlug,
-        string collectionName,
-        string itemSlug,
-        bool isThumbnail,
-        int sortOrder,
-        CancellationToken ct = default);
-
-    /// <summary>Removes a content link. Returns true if a row was deleted.</summary>
-    Task<bool> RemoveContentLinkAsync(
-        string featureSlug,
-        string collectionName,
-        string itemSlug,
-        CancellationToken ct = default);
-
-    /// <summary>
-    /// Marks the specified link as the thumbnail for the feature, clearing any previous thumbnail.
-    /// Returns true if the update succeeded.
-    /// </summary>
-    Task<bool> SetThumbnailAsync(
-        string featureSlug,
-        string collectionName,
-        string itemSlug,
-        CancellationToken ct = default);
 
     // ── VS Code Updates ────────────────────────────────────────────────────────
 

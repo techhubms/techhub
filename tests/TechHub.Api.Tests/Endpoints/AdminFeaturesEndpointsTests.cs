@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
+using TechHub.Api.Tests.TestSupport;
 using TechHub.Core.Models.Admin;
 
 namespace TechHub.Api.Tests.Endpoints;
@@ -11,12 +12,16 @@ namespace TechHub.Api.Tests.Endpoints;
 /// </summary>
 public class AdminFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
 {
+    private const string VideosCollection = "videos";
+
     private readonly HttpClient _client;
+    private readonly TechHubIntegrationTestApiFactory _factory;
 
     public AdminFeaturesEndpointsTests(TechHubIntegrationTestApiFactory factory)
     {
         ArgumentNullException.ThrowIfNull(factory);
 
+        _factory = factory;
         _client = factory.CreateClient();
     }
 
@@ -164,5 +169,177 @@ public class AdminFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestA
         deleted.StatusCode.Should().Be(HttpStatusCode.NoContent);
         again.StatusCode.Should().Be(HttpStatusCode.NotFound);
         (await _client.GetFromJsonAsync<ProductFeatureOverview>($"/api/admin/products/{productId}/features", Ct))!.Features.Should().BeEmpty();
+    }
+
+    // ── Details ──────────────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task UpdateDetails_StoresTheDescriptionAndTheReleaseDate_AndNullClearsTheDate()
+    {
+        var (productId, feature) = await CreateFeatureAsync();
+
+        var response = await _client.PutAsJsonAsync($"{FeatureUrl(productId, feature.Id)}/details", new { description = "  Described  ", releaseDate = "2026-03-10" }, Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var stored = (await response.Content.ReadFromJsonAsync<ProductFeatureOverview>(Ct))!.Features.Single();
+        stored.Description.Should().Be("Described");
+        stored.ReleaseDate.Should().Be(new DateOnly(2026, 3, 10));
+
+        var cleared = await _client.PutAsJsonAsync($"{FeatureUrl(productId, feature.Id)}/details", new { description = "", releaseDate = (string?)null }, Ct);
+
+        var clearedFeature = (await cleared.Content.ReadFromJsonAsync<ProductFeatureOverview>(Ct))!.Features.Single();
+        clearedFeature.Description.Should().BeEmpty();
+        clearedFeature.ReleaseDate.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task UpdateDetails_WithATooLongDescription_ReturnsBadRequest()
+    {
+        var (productId, feature) = await CreateFeatureAsync();
+
+        var response = await _client.PutAsJsonAsync($"{FeatureUrl(productId, feature.Id)}/details", new { description = new string('x', 4001) }, Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task UpdateDetails_OfAnUnknownFeature_ReturnsNotFound()
+    {
+        var productId = await CreateProductAsync();
+
+        var response = await _client.PutAsJsonAsync($"{FeatureUrl(productId, long.MaxValue)}/details", new { description = "Text" }, Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    // ── Content ──────────────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task AddContent_LinksTheItemAndReturnsTheOverview_AndASecondThumbnailReplacesTheFirst()
+    {
+        var (productId, feature) = await CreateFeatureAsync();
+        var first = await SeedVideoAsync();
+        var second = await SeedVideoAsync();
+
+        var firstOverview = await AddContentAsync(productId, feature.Id, first, isThumbnail: true);
+        var secondOverview = await AddContentAsync(productId, feature.Id, second, isThumbnail: true);
+
+        var link = firstOverview.Features.Single().Content.Should().ContainSingle().Subject;
+        link.CollectionName.Should().Be(VideosCollection);
+        link.ItemSlug.Should().Be(first);
+        link.Title.Should().Be($"Video {first}");
+        link.IsThumbnail.Should().BeTrue();
+        var links = secondOverview.Features.Single().Content;
+        links.Should().HaveCount(2);
+        links.Single(l => l.ItemSlug == first).IsThumbnail.Should().BeFalse();
+        links.Single(l => l.ItemSlug == second).IsThumbnail.Should().BeTrue();
+    }
+
+    [Theory]
+    [InlineData("", "some-item")]
+    [InlineData("videos", "")]
+    [InlineData("  ", "  ")]
+    public async Task AddContent_WithBlankValues_ReturnsBadRequest(string collectionName, string itemSlug)
+    {
+        var (productId, feature) = await CreateFeatureAsync();
+
+        var response = await _client.PostAsJsonAsync($"{FeatureUrl(productId, feature.Id)}/content", new { collectionName, itemSlug }, Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task AddContent_ForAnUnknownItemOrFeature_ReturnsNotFoundAndLinksNothing()
+    {
+        var (productId, feature) = await CreateFeatureAsync();
+        var video = await SeedVideoAsync();
+
+        var unknownItem = await _client.PostAsJsonAsync($"{FeatureUrl(productId, feature.Id)}/content", new { collectionName = VideosCollection, itemSlug = $"missing-{Guid.NewGuid():N}" }, Ct);
+        var unknownFeature = await _client.PostAsJsonAsync($"{FeatureUrl(productId, long.MaxValue)}/content", new { collectionName = VideosCollection, itemSlug = video }, Ct);
+
+        unknownItem.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        unknownFeature.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        (await _client.GetFromJsonAsync<ProductFeatureOverview>($"/api/admin/products/{productId}/features", Ct))!.Features.Single().Content.Should().BeEmpty();
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("?collection=videos")]
+    [InlineData("?itemSlug=some-item")]
+    [InlineData("?collection=%20&itemSlug=%20")]
+    public async Task RemoveContent_MissingOrBlankQuery_ReturnsBadRequest(string query)
+    {
+        var (productId, feature) = await CreateFeatureAsync();
+
+        var response = await _client.DeleteAsync($"{FeatureUrl(productId, feature.Id)}/content{query}", Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task RemoveContent_RemovesOnlyThatLink_AndAnUnlinkedItemReturnsNotFound()
+    {
+        var (productId, feature) = await CreateFeatureAsync();
+        var removed = await SeedVideoAsync();
+        var kept = await SeedVideoAsync();
+        await AddContentAsync(productId, feature.Id, removed);
+        await AddContentAsync(productId, feature.Id, kept);
+
+        var response = await _client.DeleteAsync($"{FeatureUrl(productId, feature.Id)}/content?collection={VideosCollection}&itemSlug={Uri.EscapeDataString(removed)}", Ct);
+        var again = await _client.DeleteAsync($"{FeatureUrl(productId, feature.Id)}/content?collection={VideosCollection}&itemSlug={Uri.EscapeDataString(removed)}", Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
+        again.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        (await _client.GetFromJsonAsync<ProductFeatureOverview>($"/api/admin/products/{productId}/features", Ct))!
+            .Features.Single().Content.Select(c => c.ItemSlug).Should().Equal(kept);
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("?collection=videos")]
+    [InlineData("?itemSlug=some-item")]
+    [InlineData("?collection=%20&itemSlug=%20")]
+    public async Task SetThumbnail_MissingOrBlankQuery_ReturnsBadRequest(string query)
+    {
+        var (productId, feature) = await CreateFeatureAsync();
+
+        var response = await _client.PutAsync($"{FeatureUrl(productId, feature.Id)}/thumbnail{query}", null, Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task SetThumbnail_MovesTheThumbnail_AndAnUnlinkedItemReturnsNotFound()
+    {
+        var (productId, feature) = await CreateFeatureAsync();
+        var current = await SeedVideoAsync();
+        var next = await SeedVideoAsync();
+        var unlinked = await SeedVideoAsync();
+        await AddContentAsync(productId, feature.Id, current, isThumbnail: true);
+        await AddContentAsync(productId, feature.Id, next);
+
+        var unknown = await _client.PutAsync($"{FeatureUrl(productId, feature.Id)}/thumbnail?collection={VideosCollection}&itemSlug={Uri.EscapeDataString(unlinked)}", null, Ct);
+        var moved = await _client.PutAsync($"{FeatureUrl(productId, feature.Id)}/thumbnail?collection={VideosCollection}&itemSlug={Uri.EscapeDataString(next)}", null, Ct);
+
+        unknown.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        moved.StatusCode.Should().Be(HttpStatusCode.NoContent);
+        var content = (await _client.GetFromJsonAsync<ProductFeatureOverview>($"/api/admin/products/{productId}/features", Ct))!.Features.Single().Content;
+        content.Single(c => c.IsThumbnail).ItemSlug.Should().Be(next);
+    }
+
+    private static string FeatureUrl(long productId, long id) => $"/api/admin/products/{productId}/features/{id}";
+
+    private async Task<string> SeedVideoAsync()
+    {
+        var slug = $"feature-video-{Guid.NewGuid():N}";
+        await ContentItemSeeder.InsertAsync(_factory.Services, VideosCollection, slug, $"/all/videos/{slug}", title: $"Video {slug}");
+        return slug;
+    }
+
+    private async Task<ProductFeatureOverview> AddContentAsync(long productId, long id, string itemSlug, bool isThumbnail = false)
+    {
+        var response = await _client.PostAsJsonAsync($"{FeatureUrl(productId, id)}/content", new { collectionName = VideosCollection, itemSlug, isThumbnail }, Ct);
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        return (await response.Content.ReadFromJsonAsync<ProductFeatureOverview>(Ct))!;
     }
 }

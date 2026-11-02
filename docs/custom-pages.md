@@ -146,7 +146,7 @@ Some custom pages are populated by specialized video content tracked in dedicate
 
 **Location**: Features are the features of the GitHub Copilot product in the catalog (`product_features`) and link to content items (usually videos under `collection_name = 'videos'`) through the `product_feature_content` table.
 
-New features are added on the GitHub Copilot product page of the admin (see [admin.md](admin.md)). The Copilot features admin page edits their description, release date and linked content through the [GHC features API](content-api.md#ghc-features-api). The test-only `ContentSyncService` can also seed them from fixture files, but production never does.
+New features are added on the GitHub Copilot product page of the admin (see [admin.md](admin.md)). Their description, release date and linked content are edited on the same product page (see [admin.md](admin.md)); the public [GHC features API](content-api.md#ghc-features-api) reads them. The test-only `ContentSyncService` can also seed them from fixture files, but production never does.
 
 **Features**:
 

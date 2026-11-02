@@ -70,6 +70,21 @@ public sealed class ProductParentRequest
     public long? ParentId { get; init; }
 }
 
+/// <summary>DTO for setting the description and the release date of a feature; a null release date clears it.</summary>
+public sealed class FeatureDetailsRequest
+{
+    public string? Description { get; init; }
+    public DateOnly? ReleaseDate { get; init; }
+}
+
+/// <summary>DTO for linking a content item to a feature.</summary>
+public sealed class FeatureContentRequest
+{
+    public string? CollectionName { get; init; }
+    public string? ItemSlug { get; init; }
+    public bool IsThumbnail { get; init; }
+}
+
 /// <summary>DTO for updating custom page raw JSON.</summary>
 public sealed class CustomPageUpdateRequest
 {

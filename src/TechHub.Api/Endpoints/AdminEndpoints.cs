@@ -197,12 +197,6 @@ public static partial class AdminEndpoints
             .WithName("PreviewMarkdown")
             .WithSummary("Render raw markdown to HTML for preview");
 
-        // ── GHC feature plans (legacy routes removed — now managed via /api/ghc-features) ──
-
-        group.MapDelete("/ghc-features/{slug}", DeleteGhcFeatureAsync)
-            .WithName("AdminDeleteGhcFeature")
-            .WithSummary("Delete a ghc-features video from the database");
-
         // ── VS Code updates ──────────────────────────────────────────────────
 
         group.MapGet("/vscode-updates", GetVscodeUpdatesAsync)
@@ -1012,23 +1006,6 @@ public static partial class AdminEndpoints
         slug = slug.Trim().Sanitize();
 
         var deleted = await contentRepo.DeleteContentItemAsync(collection, slug, ct);
-        if (!deleted)
-        {
-            return Results.NotFound();
-        }
-
-        contentRepo.InvalidateCachedData();
-        return Results.NoContent();
-    }
-
-    private static async Task<IResult> DeleteGhcFeatureAsync(
-        string slug,
-        IContentRepository contentRepo,
-        CancellationToken ct)
-    {
-        slug = slug.Trim().Sanitize();
-
-        var deleted = await contentRepo.DeleteContentItemAsync("videos", slug, ct);
         if (!deleted)
         {
             return Results.NotFound();

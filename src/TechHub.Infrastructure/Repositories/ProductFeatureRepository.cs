@@ -14,6 +14,9 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public sealed class ProductFeatureRepository : IProductFeatureRepository
 {
+    /// <summary>The longest description of a feature, in characters.</summary>
+    public const int MaxDescriptionLength = 4000;
+
     private readonly IDbConnection _connection;
     private readonly ILogger<ProductFeatureRepository> _logger;
 
@@ -30,17 +33,29 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
     public async Task<ProductFeatureOverview> GetOverviewAsync(long productId, CancellationToken ct = default)
     {
         const string FeaturesSql = """
-            SELECT f.id         AS Id,
-                   f.product_id AS ProductId,
-                   f.name       AS Name,
+            SELECT f.id           AS Id,
+                   f.product_id   AS ProductId,
+                   f.name         AS Name,
+                   f.description  AS Description,
+                   f.release_date AS ReleaseDate,
                    (SELECT COUNT(*) FROM content_timeline_events e WHERE e.feature_id = f.id)::int AS EventCount
             FROM product_features f
             WHERE f.product_id = @ProductId
             ORDER BY lower(f.name), f.name
             """;
 
-        var features = (await _connection.QueryAsync<ProductFeature>(
-            new CommandDefinition(FeaturesSql, new { ProductId = productId }, cancellationToken: ct))).ToList();
+        var features = (await _connection.QueryAsync<FeatureRow>(
+                new CommandDefinition(FeaturesSql, new { ProductId = productId }, cancellationToken: ct)))
+            .Select(r => new ProductFeature
+            {
+                Id = r.Id,
+                ProductId = r.ProductId,
+                Name = r.Name,
+                Description = r.Description ?? string.Empty,
+                ReleaseDate = r.ReleaseDate is { } epoch ? ToDate(epoch) : null,
+                EventCount = r.EventCount
+            })
+            .ToList();
 
         var aliasRows = await _connection.QueryAsync<AliasRow>(new CommandDefinition(
             """
@@ -55,9 +70,36 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
         var aliases = aliasRows
             .GroupBy(a => a.FeatureId)
             .ToDictionary(g => g.Key, g => (IReadOnlyList<FeatureAlias>)g.Select(a => new FeatureAlias { Id = a.Id, Alias = a.Alias }).ToList());
+
+        var contentRows = await _connection.QueryAsync<ContentRow>(new CommandDefinition(
+            """
+            SELECT l.feature_id AS FeatureId, l.collection_name AS CollectionName, l.item_slug AS ItemSlug,
+                   ci.title AS Title, l.is_thumbnail AS IsThumbnail, l.sort_order AS SortOrder
+            FROM product_feature_content l
+            JOIN product_features f ON f.id = l.feature_id
+            JOIN content_items ci ON ci.collection_name = l.collection_name AND ci.slug = l.item_slug
+            WHERE f.product_id = @ProductId
+            ORDER BY l.sort_order, l.item_slug
+            """,
+            new { ProductId = productId },
+            cancellationToken: ct));
+        var content = contentRows
+            .GroupBy(c => c.FeatureId)
+            .ToDictionary(
+                g => g.Key,
+                g => (IReadOnlyList<ProductFeatureContent>)g.Select(c => new ProductFeatureContent
+                {
+                    CollectionName = c.CollectionName,
+                    ItemSlug = c.ItemSlug,
+                    Title = c.Title,
+                    IsThumbnail = c.IsThumbnail,
+                    SortOrder = c.SortOrder
+                }).ToList());
+
         foreach (var feature in features)
         {
             feature.Aliases = aliases.TryGetValue(feature.Id, out var list) ? list : [];
+            feature.Content = content.TryGetValue(feature.Id, out var links) ? links : [];
         }
 
         const string UnmatchedSql = """
@@ -234,6 +276,137 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
             return ProductOperationResult.Success(id);
         });
 
+    /// <inheritdoc />
+    public Task<ProductOperationResult> UpdateDetailsAsync(long productId, long id, string? description, DateOnly? releaseDate, CancellationToken ct = default) =>
+        InTransactionAsync(async transaction =>
+        {
+            var text = description?.Trim() ?? string.Empty;
+            if (text.Length > MaxDescriptionLength)
+            {
+                return ProductOperationResult.Invalid($"The description can be at most {MaxDescriptionLength} characters.");
+            }
+
+            var rows = await _connection.ExecuteAsync(new CommandDefinition(
+                """
+                UPDATE product_features
+                SET description = @Description, release_date = @ReleaseDate, updated_at = NOW()
+                WHERE id = @Id AND product_id = @ProductId
+                """,
+                new { Id = id, ProductId = productId, Description = text, ReleaseDate = releaseDate is { } date ? ToEpoch(date) : (long?)null },
+                transaction,
+                cancellationToken: ct));
+            if (rows == 0)
+            {
+                return ProductOperationResult.NotFound("Feature not found.");
+            }
+
+            _logger.LogInformation("Updated the details of feature {FeatureId}", id);
+            return ProductOperationResult.Success(id);
+        });
+
+    /// <inheritdoc />
+    public Task<ProductOperationResult> AddContentAsync(long productId, long id, string collectionName, string itemSlug, bool isThumbnail, CancellationToken ct = default) =>
+        InTransactionAsync(async transaction =>
+        {
+            if (string.IsNullOrWhiteSpace(collectionName) || string.IsNullOrWhiteSpace(itemSlug))
+            {
+                return ProductOperationResult.Invalid("A collection and a slug are required.");
+            }
+
+            if (await GetNameAsync(productId, id, transaction, ct) is null)
+            {
+                return ProductOperationResult.NotFound("Feature not found.");
+            }
+
+            var itemExists = await _connection.ExecuteScalarAsync<bool>(new CommandDefinition(
+                "SELECT EXISTS (SELECT 1 FROM content_items WHERE collection_name = @CollectionName AND slug = @ItemSlug)",
+                new { CollectionName = collectionName, ItemSlug = itemSlug },
+                transaction,
+                cancellationToken: ct));
+            if (!itemExists)
+            {
+                return ProductOperationResult.NotFound("Content item not found.");
+            }
+
+            if (isThumbnail)
+            {
+                await ClearThumbnailAsync(id, transaction, ct);
+            }
+
+            await _connection.ExecuteAsync(new CommandDefinition(
+                """
+                INSERT INTO product_feature_content (feature_id, collection_name, item_slug, is_thumbnail, sort_order)
+                VALUES (@Id, @CollectionName, @ItemSlug, @IsThumbnail,
+                        COALESCE((SELECT MAX(sort_order) + 1 FROM product_feature_content WHERE feature_id = @Id), 0))
+                ON CONFLICT (feature_id, collection_name, item_slug) DO UPDATE SET is_thumbnail = EXCLUDED.is_thumbnail
+                """,
+                new { Id = id, CollectionName = collectionName, ItemSlug = itemSlug, IsThumbnail = isThumbnail },
+                transaction,
+                cancellationToken: ct));
+
+            _logger.LogInformation("Linked {Collection}/{Slug} to feature {FeatureId}", collectionName.Sanitize(), itemSlug.Sanitize(), id);
+            return ProductOperationResult.Success(id);
+        });
+
+    /// <inheritdoc />
+    public Task<ProductOperationResult> RemoveContentAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken ct = default) =>
+        InTransactionAsync(async transaction =>
+        {
+            var rows = await _connection.ExecuteAsync(new CommandDefinition(
+                """
+                DELETE FROM product_feature_content l
+                USING product_features f
+                WHERE l.feature_id = f.id AND f.id = @Id AND f.product_id = @ProductId
+                  AND l.collection_name = @CollectionName AND l.item_slug = @ItemSlug
+                """,
+                new { Id = id, ProductId = productId, CollectionName = collectionName, ItemSlug = itemSlug },
+                transaction,
+                cancellationToken: ct));
+            if (rows == 0)
+            {
+                return ProductOperationResult.NotFound("Link not found.");
+            }
+
+            _logger.LogInformation("Unlinked {Collection}/{Slug} from feature {FeatureId}", collectionName.Sanitize(), itemSlug.Sanitize(), id);
+            return ProductOperationResult.Success(id);
+        });
+
+    /// <inheritdoc />
+    public Task<ProductOperationResult> SetThumbnailAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken ct = default) =>
+        InTransactionAsync(async transaction =>
+        {
+            if (await GetNameAsync(productId, id, transaction, ct) is null)
+            {
+                return ProductOperationResult.NotFound("Feature not found.");
+            }
+
+            await ClearThumbnailAsync(id, transaction, ct);
+
+            var rows = await _connection.ExecuteAsync(new CommandDefinition(
+                """
+                UPDATE product_feature_content SET is_thumbnail = TRUE
+                WHERE feature_id = @Id AND collection_name = @CollectionName AND item_slug = @ItemSlug
+                """,
+                new { Id = id, CollectionName = collectionName, ItemSlug = itemSlug },
+                transaction,
+                cancellationToken: ct));
+
+            // Returning a failure rolls back the cleared thumbnail.
+            return rows == 0 ? ProductOperationResult.NotFound("Link not found.") : ProductOperationResult.Success(id);
+        });
+
+    private Task<int> ClearThumbnailAsync(long id, IDbTransaction transaction, CancellationToken ct) =>
+        _connection.ExecuteAsync(new CommandDefinition(
+            "UPDATE product_feature_content SET is_thumbnail = FALSE WHERE feature_id = @Id AND is_thumbnail",
+            new { Id = id },
+            transaction,
+            cancellationToken: ct));
+
+    // The release date is stored as the epoch seconds of midnight UTC of the date, like the dates of the timeline events.
+    private static DateOnly ToDate(long epochSeconds) => DateOnly.FromDateTime(DateTimeOffset.FromUnixTimeSeconds(epochSeconds).UtcDateTime);
+
+    private static long ToEpoch(DateOnly date) => new DateTimeOffset(date.ToDateTime(TimeOnly.MinValue), TimeSpan.Zero).ToUnixTimeSeconds();
+
     private Task<bool> ProductExistsAsync(long productId, IDbTransaction transaction, CancellationToken ct) =>
         _connection.ExecuteScalarAsync<bool>(new CommandDefinition(
             "SELECT EXISTS (SELECT 1 FROM products WHERE id = @Id)", new { Id = productId }, transaction, cancellationToken: ct));
@@ -309,6 +482,26 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
     private static ProductOperationResult InvalidName() =>
         ProductOperationResult.Invalid($"A name is required and can be at most {ProductRepository.MaxNameLength} characters.");
+
+    private sealed class FeatureRow
+    {
+        public long Id { get; init; }
+        public long ProductId { get; init; }
+        public string Name { get; init; } = string.Empty;
+        public string? Description { get; init; }
+        public long? ReleaseDate { get; init; }
+        public int EventCount { get; init; }
+    }
+
+    private sealed class ContentRow
+    {
+        public long FeatureId { get; init; }
+        public string CollectionName { get; init; } = string.Empty;
+        public string ItemSlug { get; init; } = string.Empty;
+        public string Title { get; init; } = string.Empty;
+        public bool IsThumbnail { get; init; }
+        public int SortOrder { get; init; }
+    }
 
     private sealed class AliasRow
     {

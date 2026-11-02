@@ -374,6 +374,7 @@ Returns the timeline of a section, newest first. Articles that state the same ev
 ## GHC Features API
 
 Endpoints for the features of GitHub Copilot shown on the features page. They are the features of the GitHub Copilot product in the catalog (`product_features`, with `product_feature_content` for the content they link to).
+The features are edited on the product page of the admin, through `/api/admin/products/{productId}/features` (see [admin.md](admin.md#product-catalog)); this endpoint only reads them.
 See [content-schema.md](content-schema.md#github-copilot-features) for the schema.
 
 ### GET /api/ghc-features
@@ -404,44 +405,6 @@ Returns the features of GitHub Copilot (and its child products), newest release 
   }
 ]
 ```
-
-### PUT /api/ghc-features/{slug}
-
-Create or update a feature of GitHub Copilot, addressed by slug. **Requires AdminOnly authorization.**
-
-**Body**: `GhcFeature` JSON (same schema as GET response item). `slug` in the body must match the URL and `title` is required. A new `title` keeps the old name as an alias of the feature, so the timeline events that use it stay linked.
-
-**Response**: `204 No Content`, `400 Bad Request` (slug mismatch or empty title) or `409 Conflict` (the title is used by another feature or alias of GitHub Copilot, or the slug belongs to a feature of another product)
-
-### DELETE /api/ghc-features/{slug}
-
-Delete a feature of GitHub Copilot and its content links. The timeline events of the feature lose their feature link. **Requires AdminOnly authorization.**
-
-**Response**: `204 No Content` or `404 Not Found`
-
-### POST /api/ghc-features/{slug}/content-links
-
-Link a content item (usually a video) to a feature. **Requires AdminOnly authorization.**
-
-**Body**: `{ "collectionName": "videos", "itemSlug": "intro-to-copilot-free", "isThumbnail": false, "sortOrder": 0 }`. `collectionName` and `itemSlug` are required. Linking an item again updates its `isThumbnail` and `sortOrder`, and setting `isThumbnail` clears the previous thumbnail.
-
-**Response**: `204 No Content`, `400 Bad Request` (missing fields), or `404 Not Found` (feature or content item does not exist)
-
-### DELETE /api/ghc-features/{slug}/content-links
-
-Remove a content link. **Requires AdminOnly authorization.**
-
-**Query Parameters**: `collection` and `itemSlug` (both required)
-
-**Response**: `204 No Content`, `400 Bad Request` (missing parameters), or `404 Not Found`
-
-### PUT /api/ghc-features/{slug}/thumbnail
-
-Mark one of the feature's existing content links as its thumbnail. A feature has at most one thumbnail. **Requires AdminOnly authorization.**
-
-**Query Parameters**: `collection` and `itemSlug` (both required)
-
-**Response**: `204 No Content`, `400 Bad Request` (missing parameters), or `404 Not Found` (the link does not exist)
 
 ## VS Code Updates API
 

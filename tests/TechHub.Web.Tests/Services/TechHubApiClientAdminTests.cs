@@ -592,183 +592,6 @@ public class TechHubApiClientAdminTests
         await act.Should().ThrowAsync<InvalidOperationException>();
     }
 
-    // ── GitHub Copilot features ─────────────────────────────────────────────
-
-    [Fact]
-    public async Task UpsertGhcFeatureAsync_Success_PutsFeatureAndSanitizesSlug()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NoContent);
-        var feature = new GhcFeature { Slug = "agent\r\n-mode", Title = "Agent mode" };
-
-        // Act
-        var result = await fixture.Client.UpsertGhcFeatureAsync(feature, TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.Method.Should().Be("PUT");
-        fixture.Handler.PathAndQuery.Should().Be("/api/ghc-features/agent-mode");
-        fixture.Handler.Json.GetProperty("title").GetString().Should().Be("Agent mode");
-        result.Should().BeTrue();
-    }
-
-    [Theory]
-    [InlineData(HttpStatusCode.BadRequest)]
-    [InlineData(HttpStatusCode.NotFound)]
-    [InlineData(HttpStatusCode.InternalServerError)]
-    public async Task UpsertGhcFeatureAsync_ErrorStatus_Throws(HttpStatusCode status)
-    {
-        // Arrange
-        using var fixture = Fixture.Create(status);
-
-        // Act
-        var act = () => fixture.Client.UpsertGhcFeatureAsync(new GhcFeature { Slug = "s", Title = "t" }, TestContext.Current.CancellationToken);
-
-        // Assert
-        (await act.Should().ThrowAsync<HttpRequestException>()).Which.StatusCode.Should().Be(status);
-    }
-
-    [Fact]
-    public async Task UpsertGhcFeatureAsync_NullFeature_ThrowsArgumentNull()
-    {
-        // Arrange
-        using var fixture = Fixture.Create();
-
-        // Act
-        var act = () => fixture.Client.UpsertGhcFeatureAsync(null!, TestContext.Current.CancellationToken);
-
-        // Assert
-        await act.Should().ThrowAsync<ArgumentNullException>();
-    }
-
-    [Fact]
-    public async Task DeleteGhcFeatureAsync_NotFound_ReturnsFalse()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NotFound);
-
-        // Act
-        var result = await fixture.Client.DeleteGhcFeatureAsync("missing", TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.Method.Should().Be("DELETE");
-        fixture.Handler.PathAndQuery.Should().Be("/api/admin/ghc-features/missing");
-        result.Should().BeFalse();
-    }
-
-    [Fact]
-    public async Task DeleteGhcFeatureAsync_Success_ReturnsTrueAndSanitizesSlug()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NoContent);
-
-        // Act
-        var result = await fixture.Client.DeleteGhcFeatureAsync("agent\r\n-mode", TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.PathAndQuery.Should().Be("/api/admin/ghc-features/agent-mode");
-        result.Should().BeTrue();
-    }
-
-    [Fact]
-    public async Task DeleteGhcFeatureAsync_ServerError_Throws()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.InternalServerError);
-
-        // Act
-        var act = () => fixture.Client.DeleteGhcFeatureAsync("s", TestContext.Current.CancellationToken);
-
-        // Assert
-        await act.Should().ThrowAsync<HttpRequestException>();
-    }
-
-    [Fact]
-    public async Task AddGhcFeatureContentLinkAsync_Success_PostsLink()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NoContent);
-
-        // Act
-        await fixture.Client.AddGhcFeatureContentLinkAsync("feat", "videos", "vid-1", true, 3, TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.Method.Should().Be("POST");
-        fixture.Handler.PathAndQuery.Should().Be("/api/ghc-features/feat/content-links");
-        fixture.Handler.Json.GetProperty("collectionName").GetString().Should().Be("videos");
-        fixture.Handler.Json.GetProperty("itemSlug").GetString().Should().Be("vid-1");
-        fixture.Handler.Json.GetProperty("isThumbnail").GetBoolean().Should().BeTrue();
-        fixture.Handler.Json.GetProperty("sortOrder").GetInt32().Should().Be(3);
-    }
-
-    [Theory]
-    [InlineData(HttpStatusCode.BadRequest)]
-    [InlineData(HttpStatusCode.NotFound)]
-    public async Task AddGhcFeatureContentLinkAsync_ErrorStatus_Throws(HttpStatusCode status)
-    {
-        // Arrange
-        using var fixture = Fixture.Create(status);
-
-        // Act
-        var act = () => fixture.Client.AddGhcFeatureContentLinkAsync("feat", "videos", "v", false, 0, TestContext.Current.CancellationToken);
-
-        // Assert
-        (await act.Should().ThrowAsync<HttpRequestException>()).Which.StatusCode.Should().Be(status);
-    }
-
-    [Fact]
-    public async Task RemoveGhcFeatureContentLinkAsync_Success_DeletesWithEscapedQuery()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NoContent);
-
-        // Act
-        await fixture.Client.RemoveGhcFeatureContentLinkAsync("feat", "videos", "a b", TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.Method.Should().Be("DELETE");
-        fixture.Handler.PathAndQuery.Should().Be("/api/ghc-features/feat/content-links?collection=videos&itemSlug=a%20b");
-    }
-
-    [Fact]
-    public async Task RemoveGhcFeatureContentLinkAsync_NotFound_Throws()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NotFound);
-
-        // Act
-        var act = () => fixture.Client.RemoveGhcFeatureContentLinkAsync("feat", "videos", "v", TestContext.Current.CancellationToken);
-
-        // Assert
-        await act.Should().ThrowAsync<HttpRequestException>();
-    }
-
-    [Fact]
-    public async Task SetGhcFeatureThumbnailAsync_Success_PutsWithQuery()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NoContent);
-
-        // Act
-        await fixture.Client.SetGhcFeatureThumbnailAsync("feat", "videos", "vid-1", TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.Method.Should().Be("PUT");
-        fixture.Handler.PathAndQuery.Should().Be("/api/ghc-features/feat/thumbnail?collection=videos&itemSlug=vid-1");
-    }
-
-    [Fact]
-    public async Task SetGhcFeatureThumbnailAsync_NotFound_Throws()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.NotFound);
-
-        // Act
-        var act = () => fixture.Client.SetGhcFeatureThumbnailAsync("feat", "videos", "v", TestContext.Current.CancellationToken);
-
-        // Assert
-        await act.Should().ThrowAsync<HttpRequestException>();
-    }
-
     // ── Ad-hoc URL processing and title fetch ───────────────────────────────
 
     [Fact]
@@ -2017,6 +1840,107 @@ public class TechHubApiClientAdminTests
         add.Handler.Json.GetProperty("alias").GetString().Should().Be("Teams");
         remove.Handler.Method.Should().Be("DELETE");
         remove.Handler.PathAndQuery.Should().Be("/api/admin/qualifiers/7/aliases/3");
+    }
+
+    [Fact]
+    public async Task GetProductFeaturesAsync_ReturnsTheDetailsAndTheContentOfAFeature()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """{"features":[{"id":3,"productId":5,"name":"Agent mode","description":"Works alone","releaseDate":"2026-03-10","eventCount":0,"aliases":[],"content":[{"collectionName":"videos","itemSlug":"intro","title":"Intro","isThumbnail":true,"sortOrder":0}]}],"unmatched":[]}""");
+
+        // Act
+        var overview = await fixture.Client.GetProductFeaturesAsync(5, TestContext.Current.CancellationToken);
+
+        // Assert
+        var feature = overview.Features.Should().ContainSingle().Subject;
+        feature.Description.Should().Be("Works alone");
+        feature.ReleaseDate.Should().Be(new DateOnly(2026, 3, 10));
+        var link = feature.Content.Should().ContainSingle().Subject;
+        (link.CollectionName, link.ItemSlug, link.Title, link.IsThumbnail).Should().Be(("videos", "intro", "Intro", true));
+    }
+
+    [Fact]
+    public async Task UpdateProductFeatureDetailsAsync_PutsTheDescriptionAndTheDate_AndNullClearsTheDate()
+    {
+        // Arrange
+        const string Body = """{"features":[],"unmatched":[]}""";
+        using var set = Fixture.Create(body: Body);
+        using var clear = Fixture.Create(body: Body);
+
+        // Act
+        await set.Client.UpdateProductFeatureDetailsAsync(5, 3, "Text", new DateOnly(2026, 3, 10), TestContext.Current.CancellationToken);
+        await clear.Client.UpdateProductFeatureDetailsAsync(5, 3, "", null, TestContext.Current.CancellationToken);
+
+        // Assert
+        set.Handler.Method.Should().Be("PUT");
+        set.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features/3/details");
+        set.Handler.Json.GetProperty("description").GetString().Should().Be("Text");
+        set.Handler.Json.GetProperty("releaseDate").GetString().Should().Be("2026-03-10");
+        clear.Handler.Json.GetProperty("releaseDate").GetRawText().Should().Be("null");
+    }
+
+    [Fact]
+    public async Task AddProductFeatureContentAsync_PostsTheLink()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """{"features":[],"unmatched":[]}""");
+
+        // Act
+        await fixture.Client.AddProductFeatureContentAsync(5, 3, "videos", "intro", true, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("POST");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features/3/content");
+        fixture.Handler.Json.GetProperty("collectionName").GetString().Should().Be("videos");
+        fixture.Handler.Json.GetProperty("itemSlug").GetString().Should().Be("intro");
+        fixture.Handler.Json.GetProperty("isThumbnail").GetBoolean().Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task RemoveProductFeatureContentAsync_DeletesWithTheEscapedQuery()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.NoContent, "");
+
+        // Act
+        await fixture.Client.RemoveProductFeatureContentAsync(5, 3, "videos", "a b", TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("DELETE");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features/3/content?collection=videos&itemSlug=a%20b");
+    }
+
+    [Fact]
+    public async Task SetProductFeatureThumbnailAsync_PutsWithTheEscapedQuery()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.NoContent, "");
+
+        // Act
+        await fixture.Client.SetProductFeatureThumbnailAsync(5, 3, "videos", "a b", TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("PUT");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/features/3/thumbnail?collection=videos&itemSlug=a%20b");
+    }
+
+    [Fact]
+    public async Task ProductFeatureContentCalls_NotFound_ThrowWithTheServerMessage()
+    {
+        // Arrange
+        using var add = Fixture.Create(HttpStatusCode.NotFound, "\"Content item not found.\"");
+        using var remove = Fixture.Create(HttpStatusCode.NotFound, "\"Link not found.\"");
+        using var thumbnail = Fixture.Create(HttpStatusCode.NotFound, "\"Link not found.\"");
+
+        // Act
+        var addAct = () => add.Client.AddProductFeatureContentAsync(5, 3, "videos", "x", false, TestContext.Current.CancellationToken);
+        var removeAct = () => remove.Client.RemoveProductFeatureContentAsync(5, 3, "videos", "x", TestContext.Current.CancellationToken);
+        var thumbnailAct = () => thumbnail.Client.SetProductFeatureThumbnailAsync(5, 3, "videos", "x", TestContext.Current.CancellationToken);
+
+        // Assert
+        (await addAct.Should().ThrowAsync<HttpRequestException>()).Which.Message.Should().Contain("Content item not found.");
+        (await removeAct.Should().ThrowAsync<HttpRequestException>()).Which.Message.Should().Contain("Link not found.");
+        (await thumbnailAct.Should().ThrowAsync<HttpRequestException>()).Which.Message.Should().Contain("Link not found.");
     }
 
     [Fact]

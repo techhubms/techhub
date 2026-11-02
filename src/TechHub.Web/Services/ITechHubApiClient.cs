@@ -640,6 +640,30 @@ internal interface ITechHubApiClient
     Task RemoveProductFeatureAliasAsync(long productId, long id, long aliasId, CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Set the description and the release date of a feature (a null release date clears it) and return the updated overview.
+    /// PUT /api/admin/products/{productId}/features/{id}/details
+    /// </summary>
+    Task<ProductFeatureOverview> UpdateProductFeatureDetailsAsync(long productId, long id, string description, DateOnly? releaseDate, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Link a content item to a feature, optionally as its thumbnail, and return the updated overview.
+    /// POST /api/admin/products/{productId}/features/{id}/content
+    /// </summary>
+    Task<ProductFeatureOverview> AddProductFeatureContentAsync(long productId, long id, string collectionName, string itemSlug, bool isThumbnail, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Remove the link between a feature and a content item.
+    /// DELETE /api/admin/products/{productId}/features/{id}/content?collection={collection}&amp;itemSlug={itemSlug}
+    /// </summary>
+    Task RemoveProductFeatureContentAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Make a linked content item the thumbnail of a feature.
+    /// PUT /api/admin/products/{productId}/features/{id}/thumbnail?collection={collection}&amp;itemSlug={itemSlug}
+    /// </summary>
+    Task SetProductFeatureThumbnailAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Get database statistics for the admin dashboard.
     /// GET /api/admin/statistics
     /// </summary>
@@ -830,38 +854,6 @@ internal interface ITechHubApiClient
     /// POST /api/admin/content-items/preview-markdown
     /// </summary>
     Task<string> PreviewMarkdownAsync(string markdown, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Upsert a GHC feature (create or update metadata).
-    /// PUT /api/ghc-features/{slug}
-    /// Returns true on success (HTTP 2xx). The API always returns 204 No Content.
-    /// </summary>
-    Task<bool> UpsertGhcFeatureAsync(GhcFeature feature, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Delete a ghc-features video from the database.
-    /// DELETE /api/admin/ghc-features/{slug}
-    /// Returns false when the item was not found (HTTP 404).
-    /// </summary>
-    Task<bool> DeleteGhcFeatureAsync(string slug, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Add a content link to a GHC feature.
-    /// POST /api/ghc-features/{slug}/content-links
-    /// </summary>
-    Task AddGhcFeatureContentLinkAsync(string featureSlug, string collectionName, string itemSlug, bool isThumbnail, int sortOrder, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Remove a content link from a GHC feature.
-    /// DELETE /api/ghc-features/{slug}/content-links?collection={collection}&amp;itemSlug={itemSlug}
-    /// </summary>
-    Task RemoveGhcFeatureContentLinkAsync(string featureSlug, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Set the thumbnail for a GHC feature.
-    /// PUT /api/ghc-features/{slug}/thumbnail?collection={collection}&amp;itemSlug={itemSlug}
-    /// </summary>
-    Task SetGhcFeatureThumbnailAsync(string featureSlug, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Get VS Code Update items for the public VS Code Updates page.

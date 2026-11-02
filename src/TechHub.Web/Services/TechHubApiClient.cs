@@ -1875,6 +1875,72 @@ public class TechHubApiClient : ITechHubApiClient
         await EnsureProductSuccessAsync(response, "remove feature alias", cancellationToken);
     }
 
+    /// <summary>
+    /// Set the description and the release date of a feature.
+    /// PUT /api/admin/products/{productId}/features/{id}/details
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> UpdateProductFeatureDetailsAsync(
+        long productId,
+        long id,
+        string description,
+        DateOnly? releaseDate,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/products/{productId}/features/{id}/details", new { description, releaseDate }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "update feature details", cancellationToken);
+    }
+
+    /// <summary>
+    /// Link a content item to a feature.
+    /// POST /api/admin/products/{productId}/features/{id}/content
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> AddProductFeatureContentAsync(
+        long productId,
+        long id,
+        string collectionName,
+        string itemSlug,
+        bool isThumbnail,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{productId}/features/{id}/content", new { collectionName, itemSlug, isThumbnail }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "add feature content", cancellationToken);
+    }
+
+    /// <summary>
+    /// Remove the link between a feature and a content item.
+    /// DELETE /api/admin/products/{productId}/features/{id}/content
+    /// </summary>
+    public virtual async Task RemoveProductFeatureContentAsync(
+        long productId,
+        long id,
+        string collectionName,
+        string itemSlug,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync(
+            $"/api/admin/products/{productId}/features/{id}/content?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
+            cancellationToken);
+        await EnsureProductSuccessAsync(response, "remove feature content", cancellationToken);
+    }
+
+    /// <summary>
+    /// Make a linked content item the thumbnail of a feature.
+    /// PUT /api/admin/products/{productId}/features/{id}/thumbnail
+    /// </summary>
+    public virtual async Task SetProductFeatureThumbnailAsync(
+        long productId,
+        long id,
+        string collectionName,
+        string itemSlug,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsync(
+            $"/api/admin/products/{productId}/features/{id}/thumbnail?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
+            null,
+            cancellationToken);
+        await EnsureProductSuccessAsync(response, "set feature thumbnail", cancellationToken);
+    }
+
     private async Task<ProductFeatureOverview> ReadFeatureOverviewAsync(
         HttpResponseMessage response,
         string operation,
@@ -2578,125 +2644,6 @@ public class TechHubApiClient : ITechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to preview markdown");
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task<bool> UpsertGhcFeatureAsync(
-        GhcFeature feature,
-        CancellationToken cancellationToken = default)
-    {
-        ArgumentNullException.ThrowIfNull(feature);
-        var slug = feature.Slug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.PutAsJsonAsync(
-                $"/api/ghc-features/{Uri.EscapeDataString(slug)}",
-                feature,
-                cancellationToken);
-            response.EnsureSuccessStatusCode();
-            return response.IsSuccessStatusCode;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to upsert ghc-feature {Slug}", slug);
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task<bool> DeleteGhcFeatureAsync(
-        string slug,
-        CancellationToken cancellationToken = default)
-    {
-        slug = slug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.DeleteAsync(
-                $"/api/admin/ghc-features/{Uri.EscapeDataString(slug)}",
-                cancellationToken);
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                return false;
-            }
-
-            response.EnsureSuccessStatusCode();
-            return true;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to delete ghc-feature slug {Slug}", slug);
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task AddGhcFeatureContentLinkAsync(
-        string featureSlug,
-        string collectionName,
-        string itemSlug,
-        bool isThumbnail,
-        int sortOrder,
-        CancellationToken cancellationToken = default)
-    {
-        featureSlug = featureSlug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.PostAsJsonAsync(
-                $"/api/ghc-features/{Uri.EscapeDataString(featureSlug)}/content-links",
-                new { CollectionName = collectionName, ItemSlug = itemSlug, IsThumbnail = isThumbnail, SortOrder = sortOrder },
-                cancellationToken);
-            response.EnsureSuccessStatusCode();
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to add content link to ghc-feature {Slug}", featureSlug);
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task RemoveGhcFeatureContentLinkAsync(
-        string featureSlug,
-        string collectionName,
-        string itemSlug,
-        CancellationToken cancellationToken = default)
-    {
-        featureSlug = featureSlug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.DeleteAsync(
-                $"/api/ghc-features/{Uri.EscapeDataString(featureSlug)}/content-links?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
-                cancellationToken);
-            response.EnsureSuccessStatusCode();
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to remove content link from ghc-feature {Slug}", featureSlug);
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task SetGhcFeatureThumbnailAsync(
-        string featureSlug,
-        string collectionName,
-        string itemSlug,
-        CancellationToken cancellationToken = default)
-    {
-        featureSlug = featureSlug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.PutAsync(
-                $"/api/ghc-features/{Uri.EscapeDataString(featureSlug)}/thumbnail?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
-                null,
-                cancellationToken);
-            response.EnsureSuccessStatusCode();
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to set thumbnail for ghc-feature {Slug}", featureSlug);
             throw;
         }
     }

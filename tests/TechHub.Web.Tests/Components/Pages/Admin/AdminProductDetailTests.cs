@@ -3,6 +3,7 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
+using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 using TechHub.Web.Components.Pages.Admin;
 using TechHub.Web.Services;
@@ -507,6 +508,191 @@ public class AdminProductDetailTests : AdminPageTestBase
     }
 
     [Fact]
+    public void FeatureDetails_ShowTheDescriptionTheReleaseDateAndTheLinkedContent()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+
+        // Act
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Assert
+        cut.Find("#feature-description-31").GetAttribute("value").Should().Be("Works on its own");
+        cut.Find("#feature-release-31").GetAttribute("value").Should().Be("2026-03-10");
+        var rows = cut.FindAll("#feature-content-31 tbody tr");
+        rows.Should().HaveCount(2);
+        rows[0].QuerySelector("a")!.GetAttribute("href").Should().Be("/admin/content-preview/videos/intro");
+        rows[0].QuerySelector("a")!.TextContent.Should().Be("Intro video");
+        rows[0].QuerySelector(".badge-success").Should().NotBeNull("the first link is the thumbnail");
+        rows[1].QuerySelector(".badge-success").Should().BeNull();
+        cut.Markup.Should().Contain("Content (2)");
+    }
+
+    [Fact]
+    public void SaveDetails_SendsTheDescriptionAndTheDate()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        _api.Setup(x => x.UpdateProductFeatureDetailsAsync(5, 31, "New text", new DateOnly(2026, 4, 1), It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#feature-description-31").Change("  New text ");
+        cut.Find("#feature-release-31").Change("2026-04-01");
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Save details").Click();
+
+        // Assert
+        _api.Verify(x => x.UpdateProductFeatureDetailsAsync(5, 31, "New text", new DateOnly(2026, 4, 1), It.IsAny<CancellationToken>()), Times.Once);
+        cut.Find(".admin-alert-success").TextContent.Should().Contain("Details of 'Agent mode' saved.");
+    }
+
+    [Fact]
+    public void SaveDetails_WithAnEmptyDate_ClearsTheReleaseDate()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        _api.Setup(x => x.UpdateProductFeatureDetailsAsync(5, 31, "Works on its own", null, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#feature-release-31").Change(string.Empty);
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Save details").Click();
+
+        // Assert
+        _api.Verify(x => x.UpdateProductFeatureDetailsAsync(5, 31, "Works on its own", null, It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public void SaveDetails_WithAnInvalidDate_ShowsErrorWithoutCallingTheApi()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#feature-release-31").Change("31-12-2025");
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Save details").Click();
+
+        // Assert
+        cut.Find(".admin-alert-error").TextContent.Should().Contain("'31-12-2025' is not a date.");
+        _api.Verify(x => x.UpdateProductFeatureDetailsAsync(It.IsAny<long>(), It.IsAny<long>(), It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public void SaveDetails_ApiFails_ShowsTheError()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        _api.Setup(x => x.UpdateProductFeatureDetailsAsync(It.IsAny<long>(), It.IsAny<long>(), It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("The description can be at most 4000 characters."));
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Save details").Click();
+
+        // Assert
+        cut.Find(".admin-alert-error").TextContent.Should().Contain("at most 4000 characters");
+    }
+
+    [Fact]
+    public void FeatureContent_SearchListsTheResults_AndLinkingCallsTheApi()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        _api.Setup(x => x.GetContentItemsAsync(1, 20, "agent", "videos", It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new PagedResult<ContentItemListItem>
+            {
+                Items = [CreateItem("videos", "intro", "Intro video"), CreateItem("videos", "new-video", "New video")],
+                TotalCount = 2
+            });
+        _api.Setup(x => x.AddProductFeatureContentAsync(5, 31, "videos", "new-video", true, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#feature-content-search-31").Change("agent");
+        cut.Find("#feature-31 select").Change("videos");
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Search").Click();
+
+        // Assert — an item that is linked already cannot be linked again
+        var results = cut.FindAll("#feature-content-results-31 tbody tr");
+        results.Should().HaveCount(2);
+        results[0].TextContent.Should().Contain("linked");
+        results[0].QuerySelectorAll("button").Should().BeEmpty();
+
+        // Act
+        results[1].QuerySelectorAll("button").Single(b => b.TextContent.Contains("Thumbnail")).Click();
+
+        // Assert
+        _api.Verify(x => x.AddProductFeatureContentAsync(5, 31, "videos", "new-video", true, It.IsAny<CancellationToken>()), Times.Once);
+        cut.Find(".admin-alert-success").TextContent.Should().Contain("'New video' linked to 'Agent mode' as its thumbnail.");
+    }
+
+    [Fact]
+    public void FeatureContent_SearchWithoutResults_ShowsAMessage()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        _api.Setup(x => x.GetContentItemsAsync(1, 20, "nothing", null, It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new PagedResult<ContentItemListItem> { Items = [], TotalCount = 0 });
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#feature-content-search-31").Change("nothing");
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Search").Click();
+
+        // Assert
+        cut.Find("#feature-content-results-empty-31").TextContent.Should().Contain("No content found.");
+    }
+
+    [Fact]
+    public void FeatureContent_SearchFails_ShowsTheError()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        _api.Setup(x => x.GetContentItemsAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("boom"));
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        cut.Find("#feature-content-search-31").Change("agent");
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Search").Click();
+
+        // Assert
+        cut.Find("#feature-31 .admin-alert-error").TextContent.Should().Contain("Search failed: boom");
+    }
+
+    [Fact]
+    public void FeatureContent_SearchWithAnEmptyQuery_DoesNothing()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Act
+        cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Search").Click();
+
+        // Assert
+        _api.Verify(x => x.GetContentItemsAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public void FeatureContent_RemoveAndMakeThumbnail_CallTheApiAndReload()
+    {
+        // Arrange
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Act
+        cut.FindAll("#feature-content-31 tbody tr")[1].QuerySelector("button[title='Make this the thumbnail']")!.Click();
+        cut.FindAll("#feature-content-31 tbody tr")[1].QuerySelectorAll("button").Single(b => b.TextContent == "Remove").Click();
+
+        // Assert
+        _api.Verify(x => x.SetProductFeatureThumbnailAsync(5, 31, "videos", "demo", It.IsAny<CancellationToken>()), Times.Once);
+        _api.Verify(x => x.RemoveProductFeatureContentAsync(5, 31, "videos", "demo", It.IsAny<CancellationToken>()), Times.Once);
+        _api.Verify(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>()), Times.Exactly(3));
+    }
+
+    [Fact]
     public void ReviewQueue_AddAsFeatureAndAsAlias_CallTheApi()
     {
         // Arrange
@@ -631,6 +817,37 @@ public class AdminProductDetailTests : AdminPageTestBase
             }
         ],
         Unmatched = [new UnmatchedFeatureName { Name = "Plan mode", EventCount = 2 }]
+    };
+
+    private static ProductFeatureOverview OverviewWithDetails() => new()
+    {
+        Features =
+        [
+            new ProductFeature
+            {
+                Id = 31,
+                ProductId = 5,
+                Name = "Agent mode",
+                Description = "Works on its own",
+                ReleaseDate = new DateOnly(2026, 3, 10),
+                Content =
+                [
+                    new ProductFeatureContent { CollectionName = "videos", ItemSlug = "intro", Title = "Intro video", IsThumbnail = true, SortOrder = 0 },
+                    new ProductFeatureContent { CollectionName = "videos", ItemSlug = "demo", Title = "Demo video", IsThumbnail = false, SortOrder = 1 }
+                ]
+            }
+        ]
+    };
+
+    private static ContentItemListItem CreateItem(string collection, string slug, string title) => new()
+    {
+        Slug = slug,
+        CollectionName = collection,
+        Title = title,
+        Author = "Author",
+        FeedName = "Feed",
+        ExternalUrl = "https://example.com/item",
+        PrimarySectionName = "ai"
     };
 
     private static ProductEventLink Event(long id, string kind, string? feature, string? featureName, string date, IReadOnlyList<QualifierReference> qualifiers) => new()

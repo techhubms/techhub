@@ -42,11 +42,10 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
         { "GET", "/api/admin/statistics" },
         { "POST", "/api/admin/cache/invalidate" },
         { "GET", "/api/admin/newsletter/subscribers" },
-        { "PUT", "/api/ghc-features/some-feature" },
-        { "DELETE", "/api/ghc-features/some-feature" },
-        { "POST", "/api/ghc-features/some-feature/content-links" },
-        { "DELETE", "/api/ghc-features/some-feature/content-links" },
-        { "PUT", "/api/ghc-features/some-feature/thumbnail" }
+        { "PUT", "/api/admin/products/1/features/2/details" },
+        { "POST", "/api/admin/products/1/features/2/content" },
+        { "DELETE", "/api/admin/products/1/features/2/content" },
+        { "PUT", "/api/admin/products/1/features/2/thumbnail" }
     };
 
     public static TheoryData<string> PublicRoutes => new()

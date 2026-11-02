@@ -24,7 +24,6 @@ public class AdminLayoutTests : BunitContext
         "/admin/newsletter",
         "/admin/reviews",
         "/admin/custom-pages",
-        "/admin/copilot-features",
         "/admin/vscode-updates",
         "/admin/statistics",
         "/admin/settings",

@@ -70,23 +70,17 @@ Approval applies content changes, replaces the expanded tag index for tag review
 | `POST /reviews/approve-all`, `POST /reviews/reject-all` | Resolve all pending reviews | `200` with the count |
 | `PUT /reviews/{id}` | Edit the proposed value of a pending review | `400` if `fixedValue` is missing, `404` if unknown |
 
-### Custom pages, GitHub Copilot features and VS Code updates
+### Custom pages and VS Code updates
 
 | Endpoint | Purpose | Notes |
 |----------|---------|-------|
 | `GET /custom-pages`, `GET /custom-pages/{key}` | List entries or read raw JSON | `404` for unknown key |
 | `PUT /custom-pages/{key}` | Replace the JSON of an existing entry | `400` for empty or invalid JSON, `404` if the key does not exist (entries cannot be created here). See [custom-pages.md](custom-pages.md). |
-| `PUT /api/ghc-features/{slug}` | Create or update a feature of GitHub Copilot (a feature in the product catalog) | `400` for slug mismatch or empty title, `409` when the title is used by another feature or the slug belongs to another product. `204`. |
-| `DELETE /api/ghc-features/{slug}` | Delete a feature | `204` or `404` |
-| `POST /api/ghc-features/{slug}/content-links` | Link a content item to a feature | Body: `collectionName`, `itemSlug`, `isThumbnail`, `sortOrder`. `400` or `404`, `204` on success. |
-| `DELETE /api/ghc-features/{slug}/content-links?collection&itemSlug` | Remove a link | `204`, `400` or `404` |
-| `PUT /api/ghc-features/{slug}/thumbnail?collection&itemSlug` | Choose the thumbnail link | `204`, `400` or `404` |
-| `DELETE /ghc-features/{slug}` | Delete the `videos` content item with that slug | `204` or `404` |
 | `GET /vscode-updates` | Paged list of VS Code update items | `page`, `pageSize` (1-500, default 100), `search` |
 | `POST /vscode-updates` | Register an existing content item as a VS Code update | Body: `collectionName`, `slug`. `204` on success, `400` for invalid input, `404` for an unknown item. |
 | `DELETE /vscode-updates?collection&slug` | Remove from the list (the content item stays) | `204`, `400` or `404` |
 
-The GitHub Copilot feature endpoints live under `/api/ghc-features` (not `/api/admin`). Their `GET` is public and the write operations require `AdminOnly`. The public `GET /api/vscode-updates` is capped at 100 items.
+The public `GET /api/vscode-updates` is capped at 100 items. The GitHub Copilot features are edited under `/api/admin/products/{productId}/features` (see [Product Catalog](#product-catalog)); the public `GET /api/ghc-features` only reads them.
 
 ### Operations
 
@@ -144,6 +138,10 @@ The curated features of a product (see [Features](content-processing.md#features
 | `DELETE /products/{productId}/features/{id}` | Delete a feature and its aliases. Its dates keep their text and become unmatched | `204`, `404` |
 | `POST /products/{productId}/features/{id}/aliases` | Add an alias (`alias`) | `200` with the overview, `400`, `404`, `409` |
 | `DELETE /products/{productId}/features/{id}/aliases/{aliasId}` | Remove an alias | `204`, `404` |
+| `PUT /products/{productId}/features/{id}/details` | Set the description (at most 4000 characters) and the release date (`yyyy-MM-dd`, empty clears it: the features page then uses the first launch, preview, GA or release date of the dates) | `200` with the overview, `400`, `404` |
+| `POST /products/{productId}/features/{id}/content` | Link a content item (video, post) to a feature (`collectionName`, `itemSlug`, `isThumbnail`). Setting `isThumbnail` clears the previous thumbnail | `200` with the overview, `400`, `404` (feature or item) |
+| `DELETE /products/{productId}/features/{id}/content?collection&itemSlug` | Remove a link; the content item stays | `204`, `400`, `404` |
+| `PUT /products/{productId}/features/{id}/thumbnail?collection&itemSlug` | Make a linked item the thumbnail | `204`, `400`, `404` |
 
 ## Admin Pages
 
@@ -154,14 +152,13 @@ All pages render interactively on the server inside the admin layout. Unauthenti
 | `/admin` | Dashboard: job history with live logs, buttons to trigger processing, roundup generation and the content fixer, and to cancel the running job |
 | `/admin/feeds` | Add, edit, enable or disable and delete RSS feeds |
 | `/admin/products` | Product catalog: the review queue of product names that are not in the catalog yet, the product list with search, and the names that are not products (see [Product Catalog](#product-catalog)) |
-| `/admin/products/{id}` | One product: rename, aliases (each can imply a plan or surface), parent and children, curated features with their review queue, merge into another product, delete, the features by surface overview and the linked dates and articles (including those of its child products) |
+| `/admin/products/{id}` | One product: rename, aliases (each can imply a plan or surface), parent and children, curated features with their review queue, the description, release date and linked content (videos and posts, one of them the thumbnail) of each feature, merge into another product, delete, the features by surface overview and the linked dates and articles (including those of its child products) |
 | `/admin/products/qualifiers` | Plans and surfaces: the review queue of unmatched names and the vocabulary with its aliases |
 | `/admin/processed-urls` | Search the URL ledger by status, feed, collection, section or job. Remove entries to retry them, clear all failed entries, and open the item editor. |
 | `/admin/content-items` | Browse and filter content, edit or delete items, add a URL through the pipeline (the add-content dialog), and regenerate a roundup |
 | `/admin/content-preview/{collection}/{slug}` | Render an item's markdown as it will appear on the site |
 | `/admin/reviews` | Approve, reject or edit content fixer proposals, singly or in bulk, with a markdown preview |
 | `/admin/custom-pages` | Edit the raw JSON behind the custom pages |
-| `/admin/copilot-features` | Edit the GitHub Copilot features of the catalog (description, release date) and their linked content and thumbnail. Features without linked content are not shown on the features page. New features are added on the product page |
 | `/admin/vscode-updates` | Add or remove items on the VS Code Updates page |
 | `/admin/newsletter` | Subscribers, test sends and send log. Deleting requires inline confirmation. Test sends require an entered recipient email; none is prefilled. Refresh, delete, edit and test-send failures show generic errors, and a failed refresh after a deletion or edit does not show a success message. See [newsletter.md](newsletter.md). |
 | `/admin/settings` | Enable or disable scheduled jobs and invalidate all caches |

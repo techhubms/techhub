@@ -263,6 +263,160 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
         (await _sut.GetOverviewAsync(owner.Id, Ct)).Features.Should().ContainSingle().Which.Name.Should().Be("Agent mode");
     }
 
+    // ── Details and content ───────────────────────────────────────────────────
+
+    [Fact]
+    public async Task UpdateDetails_SetsTheDescriptionAndTheReleaseDate_AndNullClearsTheDate()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Agent mode");
+
+        var saved = await _sut.UpdateDetailsAsync(product.Id, feature, "  Works on its own.  ", new DateOnly(2026, 3, 10), Ct);
+
+        saved.Succeeded.Should().BeTrue(saved.Message);
+        var stored = (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single();
+        stored.Description.Should().Be("Works on its own.");
+        stored.ReleaseDate.Should().Be(new DateOnly(2026, 3, 10));
+        (await _fixture.Connection.ExecuteScalarAsync<long>("SELECT release_date FROM product_features WHERE id = @Id", new { Id = feature }))
+            .Should().Be(new DateTimeOffset(2026, 3, 10, 0, 0, 0, TimeSpan.Zero).ToUnixTimeSeconds(), "the date is stored as midnight UTC");
+
+        (await _sut.UpdateDetailsAsync(product.Id, feature, null, null, Ct)).Succeeded.Should().BeTrue();
+
+        var cleared = (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single();
+        cleared.Description.Should().BeEmpty();
+        cleared.ReleaseDate.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task UpdateDetails_WithATooLongDescription_IsInvalidAndChangesNothing()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Agent mode");
+        (await _sut.UpdateDetailsAsync(product.Id, feature, "Short", null, Ct)).Succeeded.Should().BeTrue();
+
+        var result = await _sut.UpdateDetailsAsync(product.Id, feature, new string('x', ProductFeatureRepository.MaxDescriptionLength + 1), null, Ct);
+
+        result.Status.Should().Be(ProductOperationStatus.Invalid);
+        (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Description.Should().Be("Short");
+    }
+
+    [Fact]
+    public async Task AddContent_LinksAfterTheExistingLinks_AndTheOverviewShowsTheTitles()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Agent mode");
+        var first = await SeedVideoAsync("First video");
+        var second = await SeedVideoAsync("Second video");
+
+        (await _sut.AddContentAsync(product.Id, feature, "videos", first, false, Ct)).Succeeded.Should().BeTrue();
+        (await _sut.AddContentAsync(product.Id, feature, "videos", second, false, Ct)).Succeeded.Should().BeTrue();
+
+        var content = (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Content;
+        content.Select(c => (c.ItemSlug, c.Title, c.IsThumbnail)).Should().Equal((first, "First video", false), (second, "Second video", false));
+        content.Select(c => c.SortOrder).Should().BeInAscendingOrder().And.OnlyHaveUniqueItems();
+    }
+
+    [Fact]
+    public async Task AddContent_AsThumbnail_ReplacesThePreviousThumbnail()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Agent mode");
+        var first = await SeedVideoAsync("First video");
+        var second = await SeedVideoAsync("Second video");
+        (await _sut.AddContentAsync(product.Id, feature, "videos", first, true, Ct)).Succeeded.Should().BeTrue();
+
+        (await _sut.AddContentAsync(product.Id, feature, "videos", second, true, Ct)).Succeeded.Should().BeTrue();
+
+        var content = (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Content;
+        content.Single(c => c.ItemSlug == first).IsThumbnail.Should().BeFalse();
+        content.Single(c => c.ItemSlug == second).IsThumbnail.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task AddContent_ForAnUnknownItemFeatureOrBlankValues_LinksNothing()
+    {
+        var product = await CreateProductAsync();
+        var other = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Agent mode");
+        var video = await SeedVideoAsync("Video");
+
+        (await _sut.AddContentAsync(product.Id, feature, "videos", $"missing-{Guid.NewGuid():N}", false, Ct)).Status.Should().Be(ProductOperationStatus.NotFound);
+        (await _sut.AddContentAsync(product.Id, long.MaxValue, "videos", video, false, Ct)).Status.Should().Be(ProductOperationStatus.NotFound);
+        (await _sut.AddContentAsync(other.Id, feature, "videos", video, false, Ct)).Status.Should().Be(ProductOperationStatus.NotFound);
+        (await _sut.AddContentAsync(product.Id, feature, " ", video, false, Ct)).Status.Should().Be(ProductOperationStatus.Invalid);
+        (await _sut.AddContentAsync(product.Id, feature, "videos", " ", false, Ct)).Status.Should().Be(ProductOperationStatus.Invalid);
+
+        (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Content.Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task RemoveContent_RemovesOnlyThatLink_AndKeepsTheContentItem()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Agent mode");
+        var removed = await SeedVideoAsync("Removed video");
+        var kept = await SeedVideoAsync("Kept video");
+        (await _sut.AddContentAsync(product.Id, feature, "videos", removed, false, Ct)).Succeeded.Should().BeTrue();
+        (await _sut.AddContentAsync(product.Id, feature, "videos", kept, false, Ct)).Succeeded.Should().BeTrue();
+
+        (await _sut.RemoveContentAsync(product.Id, feature, "videos", removed, Ct)).Succeeded.Should().BeTrue();
+
+        (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Content.Select(c => c.ItemSlug).Should().Equal(kept);
+        (await _fixture.Connection.ExecuteScalarAsync<bool>("SELECT EXISTS (SELECT 1 FROM content_items WHERE slug = @Slug)", new { Slug = removed })).Should().BeTrue();
+        (await _sut.RemoveContentAsync(product.Id, feature, "videos", removed, Ct)).Status.Should().Be(ProductOperationStatus.NotFound);
+    }
+
+    [Fact]
+    public async Task SetThumbnail_MovesTheThumbnail_AndAnUnknownLinkKeepsThePreviousOne()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Agent mode");
+        var current = await SeedVideoAsync("Current");
+        var next = await SeedVideoAsync("Next");
+        var unlinked = await SeedVideoAsync("Unlinked");
+        (await _sut.AddContentAsync(product.Id, feature, "videos", current, true, Ct)).Succeeded.Should().BeTrue();
+        (await _sut.AddContentAsync(product.Id, feature, "videos", next, false, Ct)).Succeeded.Should().BeTrue();
+
+        (await _sut.SetThumbnailAsync(product.Id, feature, "videos", unlinked, Ct)).Status.Should().Be(ProductOperationStatus.NotFound);
+        (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Content.Single(c => c.IsThumbnail).ItemSlug.Should().Be(current);
+
+        (await _sut.SetThumbnailAsync(product.Id, feature, "videos", next, Ct)).Succeeded.Should().BeTrue();
+
+        (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Content.Single(c => c.IsThumbnail).ItemSlug.Should().Be(next);
+    }
+
+    [Fact]
+    public async Task Operations_OnTheDetailsAndContentOfAFeatureOfAnotherProduct_AreNotFound()
+    {
+        var owner = await CreateProductAsync();
+        var other = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(owner.Id, "Agent mode");
+        var video = await SeedVideoAsync("Video");
+        (await _sut.AddContentAsync(owner.Id, feature, "videos", video, true, Ct)).Succeeded.Should().BeTrue();
+
+        (await _sut.UpdateDetailsAsync(other.Id, feature, "Hijacked", null, Ct)).Status.Should().Be(ProductOperationStatus.NotFound);
+        (await _sut.RemoveContentAsync(other.Id, feature, "videos", video, Ct)).Status.Should().Be(ProductOperationStatus.NotFound);
+        (await _sut.SetThumbnailAsync(other.Id, feature, "videos", video, Ct)).Status.Should().Be(ProductOperationStatus.NotFound);
+
+        var stored = (await _sut.GetOverviewAsync(owner.Id, Ct)).Features.Single();
+        stored.Description.Should().BeEmpty();
+        stored.Content.Should().ContainSingle().Which.IsThumbnail.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task Delete_RemovesTheContentLinksOfTheFeatureButNotTheContent()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Doomed");
+        var video = await SeedVideoAsync("Video");
+        (await _sut.AddContentAsync(product.Id, feature, "videos", video, false, Ct)).Succeeded.Should().BeTrue();
+
+        (await _sut.DeleteAsync(product.Id, feature, Ct)).Succeeded.Should().BeTrue();
+
+        (await _fixture.Connection.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM product_feature_content WHERE feature_id = @Id", new { Id = feature })).Should().Be(0);
+        (await _fixture.Connection.ExecuteScalarAsync<bool>("SELECT EXISTS (SELECT 1 FROM content_items WHERE slug = @Slug)", new { Slug = video })).Should().BeTrue();
+    }
+
     // ── Helpers ───────────────────────────────────────────────────────────────
 
     private static string UniqueName(string prefix) => $"{prefix}-{Guid.NewGuid():N}";
@@ -290,6 +444,20 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
                     @Url, 'Author', 'Feed', '', 'hash', 1, NOW())
             """,
             new { Slug = slug, Url = $"https://example.com/{slug}" });
+        return slug;
+    }
+
+    private async Task<string> SeedVideoAsync(string title)
+    {
+        var slug = $"feature-video-{Guid.NewGuid():N}";
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch, primary_section_name,
+                 external_url, author, feed_name, tags_csv, content_hash, sections_bitmask, created_at)
+            VALUES (@Slug, 'videos', @Title, '', '', 1743278400, 'ai',
+                    @Url, 'Author', 'Feed', '', 'hash', 1, NOW())
+            """,
+            new { Slug = slug, Title = title, Url = $"https://example.com/{slug}" });
         return slug;
     }
 

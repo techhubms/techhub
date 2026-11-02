@@ -293,7 +293,7 @@ Generated from the directory contents (`list_dir` on `Components/`). Re-check th
 | `NewsletterSubscribe`, `NewsletterConfirm`, `NewsletterManage`, `NewsletterUnsubscribe` | `/newsletter/subscribe`, `/confirm`, `/manage`, `/unsubscribe` (see [docs/newsletter.md](../../docs/newsletter.md)) |
 | `Admin*` (`Components/Pages/Admin/`) | `/admin` and `/admin/*`, rendered with `AdminLayout` (see [docs/admin.md](../../docs/admin.md) and [docs/admin-authentication.md](../../docs/admin-authentication.md)) |
 
-Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `AdminCopilotFeatures`, `AdminCustomPages`, `AdminFeeds`, `AdminLogin` (+ `AdminLoginContent`), `AdminNewsletter`, `AdminProcessedUrls`, `AdminProductDetail`, `AdminProducts`, `AdminQualifiers`, `AdminReviews`, `AdminSettings`, `AdminStatistics`, `AdminVscodeUpdates`. They declare `@rendermode InteractiveServer` explicitly.
+Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `AdminCustomPages`, `AdminFeeds`, `AdminLogin` (+ `AdminLoginContent`), `AdminNewsletter`, `AdminProcessedUrls`, `AdminProductDetail`, `AdminProducts`, `AdminQualifiers`, `AdminReviews`, `AdminSettings`, `AdminStatistics`, `AdminVscodeUpdates`. They declare `@rendermode InteractiveServer` explicitly.
 
 **Sidebar**: `SidebarToggle`, `MobileSidebarToolbar`, `MobileSidebarPanel`, `SidebarSearch`, `SidebarTagCloud`, `SidebarToc`, `DateRangeSlider`
 

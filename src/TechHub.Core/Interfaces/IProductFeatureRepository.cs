@@ -3,7 +3,7 @@ using TechHub.Core.Models.Admin;
 namespace TechHub.Core.Interfaces;
 
 /// <summary>
-/// Admin operations on the curated features of a product (<c>product_features</c>). The AI returns the feature of an
+/// Admin operations on the curated features of a product (<c>product_features</c>) and the content they link to. The AI returns the feature of an
 /// event as free text; the features link those names to one feature per product, so the events of a feature can be
 /// compared across surfaces and plans. Every change updates the links of the events. A feature is always addressed
 /// together with its product, so a feature of another product is never touched.
@@ -27,4 +27,19 @@ public interface IProductFeatureRepository
 
     /// <summary>Removes an alias from a feature. Events that used it become unmatched.</summary>
     Task<ProductOperationResult> RemoveAliasAsync(long productId, long id, long aliasId, CancellationToken ct = default);
+
+    /// <summary>Sets the description and the release date of a feature. A null release date makes the page use the dates of the events.</summary>
+    Task<ProductOperationResult> UpdateDetailsAsync(long productId, long id, string? description, DateOnly? releaseDate, CancellationToken ct = default);
+
+    /// <summary>
+    /// Links a content item to a feature, after the links it already has. With <paramref name="isThumbnail"/> the link becomes the
+    /// thumbnail and the previous thumbnail is cleared. Linking an item again only updates its thumbnail flag.
+    /// </summary>
+    Task<ProductOperationResult> AddContentAsync(long productId, long id, string collectionName, string itemSlug, bool isThumbnail, CancellationToken ct = default);
+
+    /// <summary>Removes the link between a feature and a content item. The content item stays.</summary>
+    Task<ProductOperationResult> RemoveContentAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken ct = default);
+
+    /// <summary>Makes a linked content item the thumbnail of the feature, clearing the previous thumbnail.</summary>
+    Task<ProductOperationResult> SetThumbnailAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken ct = default);
 }
