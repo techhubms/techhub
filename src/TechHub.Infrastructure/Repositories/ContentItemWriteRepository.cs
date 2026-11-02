@@ -82,50 +82,14 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
     private async Task UpsertAsync(ProcessedContentItem item, IDbTransaction transaction, CancellationToken ct)
     {
         // Compute section booleans and bitmask from section names
-        var sectionSet = new HashSet<string>(item.Sections, StringComparer.OrdinalIgnoreCase);
-        var isAi = sectionSet.Contains("ai");
-        var isAzure = sectionSet.Contains("azure");
-        var isDotnet = sectionSet.Contains("dotnet");
-        var isDevops = sectionSet.Contains("devops");
-        var isGhc = sectionSet.Contains("github-copilot");
-        var isMl = sectionSet.Contains("ml");
-        var isSecurity = sectionSet.Contains("security");
-
-        var bitmask = 0;
-        if (isAi)
-        {
-            bitmask |= 1;
-        }
-
-        if (isAzure)
-        {
-            bitmask |= 2;
-        }
-
-        if (isDotnet)
-        {
-            bitmask |= 4;
-        }
-
-        if (isDevops)
-        {
-            bitmask |= 8;
-        }
-
-        if (isGhc)
-        {
-            bitmask |= 16;
-        }
-
-        if (isMl)
-        {
-            bitmask |= 32;
-        }
-
-        if (isSecurity)
-        {
-            bitmask |= 64;
-        }
+        var bitmask = SectionBitmasks.For(item.Sections);
+        var isAi = SectionBitmasks.Has(bitmask, SectionBitmasks.Ai);
+        var isAzure = SectionBitmasks.Has(bitmask, SectionBitmasks.Azure);
+        var isDotnet = SectionBitmasks.Has(bitmask, SectionBitmasks.Dotnet);
+        var isDevops = SectionBitmasks.Has(bitmask, SectionBitmasks.Devops);
+        var isGhc = SectionBitmasks.Has(bitmask, SectionBitmasks.GithubCopilot);
+        var isMl = SectionBitmasks.Has(bitmask, SectionBitmasks.Ml);
+        var isSecurity = SectionBitmasks.Has(bitmask, SectionBitmasks.Security);
 
         // Ensure the collection-name tag (e.g. "News", "Blogs") is always present.
         var tags = new List<string>(item.Tags);

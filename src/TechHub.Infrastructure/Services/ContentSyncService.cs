@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.Infrastructure.Services;
 
@@ -649,16 +650,17 @@ public class ContentSyncService : IContentSyncService
             // Build tags_csv for in-memory parsing: ",AI,GitHub Copilot,DevOps,"
             var tagsCsv = parsed.Tags.Count > 0 ? $",{string.Join(",", parsed.Tags)}," : "";
 
-            // Build section boolean flags
+            // Build the sections bitmask and the section boolean flags from it
+            var sectionsBitmask = SectionBitmasks.For(parsed.Sections);
             var sectionBools = new
             {
-                IsAi = parsed.Sections.Contains("ai"),
-                IsAzure = parsed.Sections.Contains("azure"),
-                IsDotNet = parsed.Sections.Contains("dotnet"),
-                IsDevOps = parsed.Sections.Contains("devops"),
-                IsGitHubCopilot = parsed.Sections.Contains("github-copilot"),
-                IsMl = parsed.Sections.Contains("ml"),
-                IsSecurity = parsed.Sections.Contains("security")
+                IsAi = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Ai),
+                IsAzure = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Azure),
+                IsDotNet = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Dotnet),
+                IsDevOps = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Devops),
+                IsGitHubCopilot = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.GithubCopilot),
+                IsMl = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Ml),
+                IsSecurity = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Security)
             };
 
             // Convert to integers for TagWord records
@@ -675,15 +677,6 @@ public class ContentSyncService : IContentSyncService
 
             // Upsert main content item with section booleans
             var insertContentStopwatch = Stopwatch.StartNew();
-
-            // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
-            var sectionsBitmask = (sectionInts.IsAi * 1) +
-                                  (sectionInts.IsAzure * 2) +
-                                  (sectionInts.IsDotNet * 4) +
-                                  (sectionInts.IsDevOps * 8) +
-                                  (sectionInts.IsGitHubCopilot * 16) +
-                                  (sectionInts.IsMl * 32) +
-                                  (sectionInts.IsSecurity * 64);
 
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
@@ -820,15 +813,6 @@ public class ContentSyncService : IContentSyncService
             {
                 var tagTrimmed = tag.Trim();
 
-                // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
-                var bitmask = (sectionInts.IsAi * 1) +
-                              (sectionInts.IsAzure * 2) +
-                              (sectionInts.IsDotNet * 4) +
-                              (sectionInts.IsDevOps * 8) +
-                              (sectionInts.IsGitHubCopilot * 16) +
-                              (sectionInts.IsMl * 32) +
-                              (sectionInts.IsSecurity * 64);
-
                 // Add the full tag (lowercase in tag_word for querying, original case in tag_display for display)
                 tagWords.Add(new TagWord(
                     parsed.CollectionName,
@@ -844,7 +828,7 @@ public class ContentSyncService : IContentSyncService
                     sectionInts.IsGitHubCopilot,
                     sectionInts.IsMl,
                     sectionInts.IsSecurity,
-                    bitmask
+                    sectionsBitmask
                 ));
 
                 // Also expand tags into words for subset matching
@@ -873,7 +857,7 @@ public class ContentSyncService : IContentSyncService
                         sectionInts.IsGitHubCopilot,
                         sectionInts.IsMl,
                         sectionInts.IsSecurity,
-                        bitmask
+                        sectionsBitmask
                     ));
                 }
             }

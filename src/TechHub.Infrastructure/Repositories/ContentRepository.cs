@@ -487,38 +487,6 @@ public sealed class ContentRepository : IContentRepository
     }
 
     /// <summary>
-    /// Calculate bitmask value for section filtering.
-    /// Bit 0 (1) = AI, Bit 1 (2) = Azure, Bit 2 (4) = .NET, Bit 3 (8) = DevOps,
-    /// Bit 4 (16) = GitHub Copilot, Bit 5 (32) = ML, Bit 6 (64) = Security.
-    /// </summary>
-    /// <param name="sections">Collection of section names to include in bitmask</param>
-    /// <returns>Integer bitmask with bits set for each matching section</returns>
-    private static int CalculateSectionBitmask(IEnumerable<string> sections)
-    {
-        ArgumentNullException.ThrowIfNull(sections);
-
-        var bitmask = 0;
-        foreach (var section in sections)
-        {
-            bitmask |= CalculateSectionBitmask(section);
-        }
-
-        return bitmask;
-    }
-
-    /// <summary>
-    /// Calculate bitmask value for a single section.
-    /// </summary>
-    /// <param name="section">Section name</param>
-    /// <returns>Integer bitmask value for the section (0 if unknown)</returns>
-    private static int CalculateSectionBitmask(string section)
-    {
-        ArgumentNullException.ThrowIfNull(section);
-
-        return SectionBitmasks.For(section);
-    }
-
-    /// <summary>
     /// Get facet counts for tags, collections, and sections within the filtered scope.
     /// Uses standard SQL.
     /// </summary>
@@ -585,21 +553,12 @@ public sealed class ContentRepository : IContentRepository
             // whereClause is either "WHERE ..." or "". When non-empty, append AND for bitmask filter.
             // When empty, start with WHERE for bitmask filter.
             var bitmaskPrefix = string.IsNullOrEmpty(whereClause) ? "WHERE" : $"{whereClause} AND";
-            var sectionsSql = $@"
-                SELECT 'ai' AS Value, COUNT(*) AS Count FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 1) > 0
-                UNION ALL
-                SELECT 'azure', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 2) > 0
-                UNION ALL
-                SELECT 'dotnet', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 4) > 0
-                UNION ALL
-                SELECT 'devops', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 8) > 0
-                UNION ALL
-                SELECT 'github-copilot', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 16) > 0
-                UNION ALL
-                SELECT 'ml', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 32) > 0
-                UNION ALL
-                SELECT 'security', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 64) > 0
-                ORDER BY Count DESC, Value";
+            var sectionCounts = string.Join(
+                " UNION ALL ",
+                SectionBitmasks.All.Select(s => string.Create(
+                    CultureInfo.InvariantCulture,
+                    $"SELECT '{s.Name}' AS Value, COUNT(*) AS Count FROM content_items c {bitmaskPrefix} (c.sections_bitmask & {s.Bit}) > 0")));
+            var sectionsSql = $"{sectionCounts} ORDER BY Count DESC, Value";
 
             var sections = await Connection.QueryWithLoggingAsync<FacetValue>(
                 new CommandDefinition(sectionsSql, parameters, cancellationToken: ct),
@@ -665,7 +624,7 @@ public sealed class ContentRepository : IContentRepository
         if (!string.IsNullOrWhiteSpace(request.SectionName) &&
             !request.SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            var bitmask = CalculateSectionBitmask(request.SectionName);
+            var bitmask = SectionBitmasks.For(request.SectionName);
             if (bitmask > 0)
             {
                 filters.Add($"(sections_bitmask & {bitmask}) > 0");
@@ -943,7 +902,7 @@ public sealed class ContentRepository : IContentRepository
 
         if (request.Sections != null && request.Sections.Count > 0)
         {
-            var sectionBitmask = CalculateSectionBitmask(request.Sections);
+            var sectionBitmask = SectionBitmasks.For(request.Sections);
             if (sectionBitmask > 0)
             {
                 whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
@@ -1008,7 +967,7 @@ public sealed class ContentRepository : IContentRepository
         if (request.Sections != null && request.Sections.Count > 0 &&
             !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase)))
         {
-            var sectionBitmask = CalculateSectionBitmask(request.Sections);
+            var sectionBitmask = SectionBitmasks.For(request.Sections);
             if (sectionBitmask > 0)
             {
                 whereClauses.Add($"(sections_bitmask & {sectionBitmask}) > 0");
@@ -1225,7 +1184,7 @@ public sealed class ContentRepository : IContentRepository
 
             if (hasSections)
             {
-                var sectionBitmask = CalculateSectionBitmask(request.Sections!);
+                var sectionBitmask = SectionBitmasks.For(request.Sections!);
                 if (sectionBitmask > 0)
                 {
                     whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
@@ -1413,7 +1372,7 @@ public sealed class ContentRepository : IContentRepository
 
         if (hasSections)
         {
-            var sectionBitmask = CalculateSectionBitmask(request.Sections!);
+            var sectionBitmask = SectionBitmasks.For(request.Sections!);
             if (sectionBitmask > 0)
             {
                 whereClauses.Add($"(c.sections_bitmask & {sectionBitmask}) > 0");
@@ -1473,7 +1432,7 @@ public sealed class ContentRepository : IContentRepository
     {
         if (hasSections)
         {
-            var sectionBitmask = CalculateSectionBitmask(request.Sections!);
+            var sectionBitmask = SectionBitmasks.For(request.Sections!);
             if (sectionBitmask > 0)
             {
                 sql.Append(CultureInfo.InvariantCulture, $" AND (c.sections_bitmask & {sectionBitmask}) > 0");
@@ -1641,7 +1600,7 @@ LIMIT 1";
         var isGhc = editData.Sections.Contains("github-copilot");
         var isMl = editData.Sections.Contains("ml");
         var isSecurity = editData.Sections.Contains("security");
-        var bitmask = CalculateSectionBitmask(editData.Sections);
+        var bitmask = SectionBitmasks.For(editData.Sections);
 
         const string ItemSql = @"
 UPDATE content_items
