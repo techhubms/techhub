@@ -293,13 +293,15 @@ Generated from the directory contents (`list_dir` on `Components/`). Re-check th
 | `NewsletterSubscribe`, `NewsletterConfirm`, `NewsletterManage`, `NewsletterUnsubscribe` | `/newsletter/subscribe`, `/confirm`, `/manage`, `/unsubscribe` (see [docs/newsletter.md](../../docs/newsletter.md)) |
 | `Admin*` (`Components/Pages/Admin/`) | `/admin` and `/admin/*`, rendered with `AdminLayout` (see [docs/admin.md](../../docs/admin.md) and [docs/admin-authentication.md](../../docs/admin-authentication.md)) |
 
-Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `AdminCustomPages`, `AdminFeeds`, `AdminLogin` (+ `AdminLoginContent`), `AdminNewsletter`, `AdminProcessedUrls`, `AdminProductDetail`, `AdminProducts`, `AdminQualifiers`, `AdminReviews`, `AdminSettings`, `AdminStatistics`, `AdminVscodeUpdates`. They declare `@rendermode InteractiveServer` explicitly.
+Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `AdminCustomPages`, `AdminFeeds`, `AdminLogin` (+ `AdminLoginContent`), `AdminNewsletter`, `AdminNewsletterSendLog`, `AdminProcessedUrls`, `AdminProductDetail` (tabs through the optional `Tab` route parameter: general, `features`, `activity`), `AdminProducts`, `AdminQualifiers`, `AdminReviews` (composes `ReviewOverview` and `ContentFixReviews`), `AdminSettings`, `AdminStatistics`, `AdminVscodeUpdates`. They declare `@rendermode InteractiveServer` explicitly. The admin menu (top-level groups and their sub menu pages) is defined in `Components/Layout/AdminNavigation.cs`: add a new admin page there as well. A page puts its Refresh button in `AdminSubbarAction` so it shows in the sub menu bar.
 
 **Sidebar**: `SidebarToggle`, `MobileSidebarToolbar`, `MobileSidebarPanel`, `SidebarSearch`, `SidebarTagCloud`, `SidebarToc`, `DateRangeSlider`
 
 **Content**: `SectionCard`, `SectionCardsGrid`, `ContentItemCard`, `ContentItemsGrid`, `ContentItemDetail`, `HeroBanner`, `SafeMarkup`, `ReviewDiff` (uses `Helpers/DiffHelper.cs`), `TimelineView` (year / month / card timeline: pass `TimelineViewEntry` values and an optional `Detail` fragment for extra card content, as the GitHub Copilot features page does for its videos)
 
 **Admin modals**: `AddContentModal`, `ContentItemEditorModal`, `JsonEditorModal`
+
+**Admin review components**: `ReviewOverview` (review cards, product-name queue, plans and surfaces and features to review; data in `ReviewOverviewData`) and `ContentFixReviews` (content fixer proposals with the Run Cleanup button)
 
 **Unused components** (exist, but no page or component renders them; keep or delete deliberately): `ResponsiveImage`, `MobileSidebarCollapse` (only tests render it), `SidebarRssLinks`
 

@@ -67,6 +67,22 @@ public sealed class UnmatchedFeatureName
     public int EventCount { get; set; }
 }
 
+/// <summary>A product with dates whose feature name matches none of its features yet.</summary>
+public sealed class ProductUnmatchedFeatures
+{
+    /// <summary>The product the dates are linked to.</summary>
+    public long ProductId { get; set; }
+
+    /// <summary>The name of the product.</summary>
+    public string ProductName { get; set; } = string.Empty;
+
+    /// <summary>Number of different feature names (ignoring case and extra whitespace) to review.</summary>
+    public int NameCount { get; set; }
+
+    /// <summary>Number of timeline events with such a name.</summary>
+    public int EventCount { get; set; }
+}
+
 /// <summary>The curated features of a product and the feature names of its dates that are not curated yet.</summary>
 public sealed class ProductFeatureOverview
 {

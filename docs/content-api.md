@@ -330,7 +330,7 @@ The dated events (preview, GA, deprecation, ...) that the articles of a section 
 
 ### GET /api/sections/{sectionName}/timeline
 
-Returns the timeline of a section, newest first. Articles that state the same event (same date, kind, product and feature) are merged into one entry. Roundups are not used. Public endpoint (no authentication required).
+Returns the timeline of a section, newest first. Only articles whose primary section is the requested section are used (`all` uses every article). Articles that state the same event (same date, kind, product and feature) are merged into one entry. Roundups are not used. Public endpoint (no authentication required).
 
 **Query parameters** (all optional):
 

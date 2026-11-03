@@ -1788,6 +1788,25 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
+    /// Get the products that have dates with a feature name that matches no feature yet.
+    /// GET /api/admin/products/features/unmatched
+    /// </summary>
+    public virtual async Task<IReadOnlyList<ProductUnmatchedFeatures>> GetUnmatchedFeaturesSummaryAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<List<ProductUnmatchedFeatures>>(
+                "/api/admin/products/features/unmatched", cancellationToken) ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch the products with features to review");
+            throw;
+        }
+    }
+
+    /// <summary>
     /// Get the curated features of a product and the feature names of its dates that are not curated yet.
     /// GET /api/admin/products/{productId}/features
     /// </summary>

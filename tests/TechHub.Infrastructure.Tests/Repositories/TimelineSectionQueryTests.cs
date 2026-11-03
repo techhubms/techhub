@@ -28,17 +28,17 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
 
     private static string NewProduct() => $"Timeline Product {Guid.NewGuid():N}";
 
-    private async Task<string> SeedItemAsync(int sectionsBitmask = AiBit, string collection = "news", string title = "Timeline article", long dateEpoch = 1743278400)
+    private async Task<string> SeedItemAsync(int sectionsBitmask = AiBit, string collection = "news", string title = "Timeline article", long dateEpoch = 1743278400, string primarySection = "ai")
     {
         var slug = $"timeline-section-{Guid.NewGuid():N}";
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO content_items
                 (slug, collection_name, title, content, excerpt, date_epoch, primary_section_name,
                  external_url, author, feed_name, tags_csv, sections_bitmask, content_hash)
-            VALUES (@Slug, @Collection, @Title, '', '', @DateEpoch, 'ai',
+            VALUES (@Slug, @Collection, @Title, '', '', @DateEpoch, @PrimarySection,
                     @Url, 'Author', 'Feed', '', @Bitmask, 'hash')
             """,
-            new { Slug = slug, Collection = collection, Title = title, DateEpoch = dateEpoch, Url = $"https://example.com/{slug}", Bitmask = sectionsBitmask });
+            new { Slug = slug, Collection = collection, Title = title, DateEpoch = dateEpoch, PrimarySection = primarySection, Url = $"https://example.com/{slug}", Bitmask = sectionsBitmask });
         return slug;
     }
 
@@ -78,13 +78,27 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
     {
         var product = NewProduct();
         var aiItem = await SeedItemAsync(AiBit);
-        var azureItem = await SeedItemAsync(AzureBit);
+        var azureItem = await SeedItemAsync(AzureBit, primarySection: "azure");
         await StoreAsync("news", aiItem, Event(product, "Older", date: "2026-01-05"), Event(product, "Newer", date: "2026-04-20"));
         await StoreAsync("news", azureItem, Event(product, "Elsewhere", date: "2026-02-01"));
 
         var entries = await TimelineAsync("ai", product);
 
         entries.Select(e => e.Feature).Should().Equal("Newer", "Older");
+    }
+
+    [Fact]
+    public async Task GetTimelineAsync_OnlyUsesArticlesWhosePrimarySectionIsTheSection()
+    {
+        var product = NewProduct();
+        var aiItem = await SeedItemAsync(AiBit | AzureBit, primarySection: "ai");
+        var azureItem = await SeedItemAsync(AiBit | AzureBit, primarySection: "azure");
+        await StoreAsync("news", aiItem, Event(product, "Primary"));
+        await StoreAsync("news", azureItem, Event(product, "Secondary"));
+
+        var entries = await TimelineAsync("ai", product);
+
+        entries.Select(e => e.Feature).Should().Equal(["Primary"], "an article that only touches a section states events about other products");
     }
 
     [Fact]
@@ -192,7 +206,7 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
     {
         var product = NewProduct();
         var aiItem = await SeedItemAsync(AiBit);
-        var azureItem = await SeedItemAsync(AzureBit);
+        var azureItem = await SeedItemAsync(AzureBit, primarySection: "azure");
         await StoreAsync("news", aiItem, Event(product, "In AI"));
         await StoreAsync("news", azureItem, Event(product, "In Azure"));
 

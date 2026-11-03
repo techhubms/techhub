@@ -206,7 +206,7 @@ else
         _viewEntries = indexed.Select(x => ToViewEntry(x.Id, x.Entry)).ToList();
     }
 
-    private static TimelineViewEntry ToViewEntry(string id, TimelineEntry entry)
+    private TimelineViewEntry ToViewEntry(string id, TimelineEntry entry)
     {
         var badges = new List<TimelineViewBadge>();
         var kind = KindBadges.TryGetValue(entry.Kind, out var known) ? known : (Label: entry.Kind, CssClass: "badge-muted");
@@ -217,13 +217,19 @@ else
         return new TimelineViewEntry
         {
             Id = id,
-            Title = entry.Feature is null ? entry.Product : $"{entry.Product}: {entry.Feature}",
+            Title = TitleOf(entry),
             Date = entry.Date,
             DateLabel = FormatDate(entry),
             Description = entry.Description,
             Badges = badges
         };
     }
+
+    /// <summary>"Product: Feature". The product is left out when it is the section itself: the page already says it ("Agent mode" instead of "GitHub Copilot: Agent mode").</summary>
+    private string TitleOf(TimelineEntry entry) =>
+        string.IsNullOrWhiteSpace(entry.Feature) || entry.Product.Equals(sectionData?.Title, StringComparison.OrdinalIgnoreCase)
+            ? (string.IsNullOrWhiteSpace(entry.Feature) ? entry.Product : entry.Feature)
+            : $"{entry.Product}: {entry.Feature}";
 
     /// <summary>The date as precisely as the article states it: a day, a month or a quarter.</summary>
     private static string FormatDate(TimelineEntry entry) => entry.DatePrecision switch

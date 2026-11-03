@@ -12,7 +12,7 @@ using TechHub.Web.Services;
 namespace TechHub.Web.Tests.Components.Pages.Admin;
 
 /// <summary>
-/// bUnit tests for AdminNewsletter.razor — subscriber list and filters, edit/save, delete, send log
+/// bUnit tests for AdminNewsletter.razor — subscriber list and filters, edit/save, delete
 /// and test-send triggering.
 /// </summary>
 public class AdminNewsletterTests : AdminPageTestBase
@@ -27,7 +27,6 @@ public class AdminNewsletterTests : AdminPageTestBase
 
         SetupData(
             subscribers: [],
-            sendLog: [],
             sections: [CreateSection("ai", "AI"), CreateSection("azure", "Azure")]);
     }
 
@@ -61,14 +60,13 @@ public class AdminNewsletterTests : AdminPageTestBase
     }
 
     [Fact]
-    public void Render_WithSubscribers_RequestsFirstPageOfFiveHundredAndTheSendLog()
+    public void Render_WithSubscribers_RequestsFirstPageOfFiveHundred()
     {
         // Act
         Render<AdminNewsletter>();
 
         // Assert
         _api.Verify(x => x.GetNewsletterSubscribersAsync(1, 500, null, null, It.IsAny<CancellationToken>()), Times.Once);
-        _api.Verify(x => x.GetNewsletterSendLogAsync(100, It.IsAny<CancellationToken>()), Times.Once);
     }
 
     [Fact]
@@ -578,58 +576,6 @@ public class AdminNewsletterTests : AdminPageTestBase
         _api.Verify(x => x.GetNewsletterSubscribersAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<bool?>(), It.IsAny<CancellationToken>()), Times.Once);
     }
 
-    // ── Send log ────────────────────────────────────────────────────────────
-
-    [Fact]
-    public void Render_WithSendLog_ShowsOneRowPerEntryWithFormattedValues()
-    {
-        // Arrange
-        SetupData(sendLog:
-        [
-            new NewsletterSendLogEntry
-            {
-                Id = 1,
-                SendKind = "weekly",
-                TargetKey = "2026-W28",
-                SentAt = new DateTimeOffset(2026, 7, 15, 15, 30, 45, TimeSpan.Zero),
-                RecipientCount = 120,
-                FailedCount = 3,
-                Status = "partial"
-            },
-            new NewsletterSendLogEntry
-            {
-                Id = 2,
-                SendKind = "daily",
-                TargetKey = "2026-07-14",
-                SentAt = new DateTimeOffset(2026, 7, 14, 6, 0, 0, TimeSpan.Zero),
-                RecipientCount = 5,
-                FailedCount = 0,
-                Status = "ok"
-            }
-        ]);
-
-        // Act
-        var cut = Render<AdminNewsletter>();
-
-        // Assert
-        var rows = SendLogRows(cut);
-        rows.Should().HaveCount(2);
-        rows[0].QuerySelectorAll("td").Select(c => c.TextContent)
-            .Should().Equal("2026-07-15 17:30:45", "weekly", "2026-W28", "120", "3", "partial");
-        rows[1].QuerySelectorAll("td")[4].TextContent.Should().Be("—", "no failures are shown as a dash");
-    }
-
-    [Fact]
-    public void Render_EmptySendLog_ShowsHeadingWithNoRows()
-    {
-        // Act
-        var cut = Render<AdminNewsletter>();
-
-        // Assert
-        cut.Find(".admin-newsletter-send-log-heading").TextContent.Should().Be("Send log");
-        SendLogRows(cut).Should().BeEmpty();
-    }
-
     // ── Test send ───────────────────────────────────────────────────────────
 
     [Fact]
@@ -825,8 +771,6 @@ public class AdminNewsletterTests : AdminPageTestBase
     private static List<IElement> SubscriberRows(IRenderedComponent<AdminNewsletter> cut) =>
         cut.FindAll(".admin-table")[0].QuerySelectorAll("tbody tr").ToList();
 
-    private static List<IElement> SendLogRows(IRenderedComponent<AdminNewsletter> cut) =>
-        cut.FindAll(".admin-table")[1].QuerySelectorAll("tbody tr").ToList();
 
     private static List<string> Stats(IRenderedComponent<AdminNewsletter> cut) =>
         cut.FindAll(".admin-stat-value").Select(e => e.TextContent).ToList();
@@ -874,7 +818,6 @@ public class AdminNewsletterTests : AdminPageTestBase
     /// <summary>Configures the API mock; arguments left <c>null</c> keep their previously configured value.</summary>
     private void SetupData(
         IReadOnlyList<NewsletterSubscriber>? subscribers = null,
-        IReadOnlyList<NewsletterSendLogEntry>? sendLog = null,
         IReadOnlyList<Section>? sections = null)
     {
         if (subscribers is not null)
@@ -883,10 +826,6 @@ public class AdminNewsletterTests : AdminPageTestBase
                 .ReturnsAsync(subscribers);
         }
 
-        if (sendLog is not null)
-        {
-            _api.Setup(x => x.GetNewsletterSendLogAsync(It.IsAny<int>(), It.IsAny<CancellationToken>())).ReturnsAsync(sendLog);
-        }
 
         if (sections is not null)
         {

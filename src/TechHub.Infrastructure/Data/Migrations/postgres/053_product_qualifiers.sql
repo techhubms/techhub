@@ -151,7 +151,8 @@ FROM (VALUES
 JOIN product_qualifiers q ON q.kind = v.kind AND lower(q.name) = lower(v.qualifier)
 ON CONFLICT (lower(alias)) DO NOTHING;
 
--- 'GitHub Copilot Business' is GitHub Copilot in the plan Business.
+-- 'GitHub Copilot Business' is GitHub Copilot in the plan Business. A bare 'Copilot Pro' is not mapped: Copilot also
+-- names Microsoft 365 Copilot, Microsoft Copilot and others.
 INSERT INTO product_aliases (product_id, alias, qualifier_id)
 SELECT p.id, v.alias, q.id
 FROM (VALUES
@@ -159,12 +160,7 @@ FROM (VALUES
     ('GitHub Copilot Pro', 'Pro'),
     ('GitHub Copilot Pro+', 'Pro+'),
     ('GitHub Copilot Business', 'Business'),
-    ('GitHub Copilot Enterprise', 'Enterprise'),
-    ('Copilot Free', 'Free'),
-    ('Copilot Pro', 'Pro'),
-    ('Copilot Pro+', 'Pro+'),
-    ('Copilot Business', 'Business'),
-    ('Copilot Enterprise', 'Enterprise')
+    ('GitHub Copilot Enterprise', 'Enterprise')
 ) AS v (alias, plan)
 JOIN products p ON lower(p.name) = 'github copilot'
 JOIN product_qualifiers q ON q.kind = 'plan' AND lower(q.name) = lower(v.plan)

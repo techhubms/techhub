@@ -23,7 +23,7 @@ public static class TimelineEndpoints
             .WithTags("Timeline")
             .WithName("GetSectionTimeline")
             .WithSummary("Get the timeline of a section")
-            .WithDescription("Returns the dated events of the articles of a section, newest first, with the same event stated by several articles merged. " +
+            .WithDescription("Returns the dated events of the articles whose primary section is the section, newest first, with the same event stated by several articles merged. " +
                 "Optional filters: from and to (yyyy-MM-dd), kinds (comma separated event kinds) and take (1-500, default 200). Roundups are not used.")
             .Produces<IReadOnlyList<TimelineEntry>>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status400BadRequest)

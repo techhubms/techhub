@@ -13,6 +13,9 @@ public interface IProductFeatureRepository
     /// <summary>Gets the features of a product with aliases and usage counts, and the feature names of its dates that are not curated yet.</summary>
     Task<ProductFeatureOverview> GetOverviewAsync(long productId, CancellationToken ct = default);
 
+    /// <summary>Gets the products that have dates with a feature name that matches no feature yet, with the most dates first.</summary>
+    Task<IReadOnlyList<ProductUnmatchedFeatures>> GetUnmatchedSummaryAsync(CancellationToken ct = default);
+
     /// <summary>Adds a feature to a product. Events of the product that use the name are linked to it.</summary>
     Task<ProductOperationResult> CreateAsync(long productId, string name, CancellationToken ct = default);
 

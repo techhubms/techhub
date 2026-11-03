@@ -6,6 +6,7 @@ INSERT INTO products (name) VALUES
     ('.NET Aspire'),
     ('.NET MAUI'),
     ('.NET MAUI CLI'),
+    ('Agent Host Protocol'),
     ('Ansys CFX'),
     ('Apache Artemis'),
     ('Apache Hadoop'),
@@ -46,6 +47,7 @@ INSERT INTO products (name) VALUES
     ('Azure Front Door'),
     ('Azure Functions'),
     ('Azure Government'),
+    ('Azure Identity'),
     ('Azure IoT Hub'),
     ('Azure IoT Operations'),
     ('Azure Key Vault'),
@@ -62,6 +64,7 @@ INSERT INTO products (name) VALUES
     ('Azure Private Link'),
     ('Azure Resource Graph'),
     ('Azure Resource Manager'),
+    ('Azure SDK'),
     ('Azure Service Bus'),
     ('Azure SQL Database'),
     ('Azure SQL Managed Instance'),
@@ -93,6 +96,7 @@ INSERT INTO products (name) VALUES
     ('GitHub Dependabot'),
     ('GitHub Enterprise'),
     ('GitHub Enterprise Cloud'),
+    ('GitHub Enterprise Local'),
     ('GitHub Enterprise Server'),
     ('GitHub Secret Protection'),
     ('GitHub Secret Scanning'),
@@ -108,6 +112,7 @@ INSERT INTO products (name) VALUES
     ('Microsoft Active Directory Certificate Services'),
     ('Microsoft Agent Framework'),
     ('Microsoft AI Diagnostic Orchestrator'),
+    ('Microsoft Azure'),
     ('Microsoft Azure Attestation'),
     ('Microsoft Azure Network Adapter'),
     ('Microsoft Build of OpenJDK'),
@@ -187,14 +192,18 @@ FROM (VALUES
     ('Azure Bicep', 'Bicep'),
     ('GitHub Enterprise Server', 'GHES'),
     ('Microsoft Team Foundation Server', 'Team Foundation Server'),
-    ('Azure Application Insights', 'Application Insights')
+    ('Azure Application Insights', 'Application Insights'),
+    ('Microsoft Azure', 'Azure'),
+    ('Agent Host Protocol', 'AHP')
 ) AS v (product, alias)
 JOIN products p ON lower(p.name) = lower(v.product)
 ON CONFLICT (lower(alias)) DO NOTHING;
 
+-- Not products: an event, the umbrella over the SQL products, and a setting of a virtual machine.
 INSERT INTO ignored_product_names (name) VALUES
     ('Microsoft Ignite'),
-    ('Microsoft Azure')
+    ('Microsoft SQL'),
+    ('Azure Accelerated Networking')
 ON CONFLICT (lower(name)) DO NOTHING;
 
 -- Link the existing articles: schema version 2 metadata lists the products of an article.

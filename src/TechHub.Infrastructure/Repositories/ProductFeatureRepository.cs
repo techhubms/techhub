@@ -30,6 +30,26 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
     }
 
     /// <inheritdoc />
+    public async Task<IReadOnlyList<ProductUnmatchedFeatures>> GetUnmatchedSummaryAsync(CancellationToken ct = default)
+    {
+        const string Sql = """
+            SELECT e.product_id AS ProductId,
+                   p.name AS ProductName,
+                   COUNT(DISTINCT catalog_key(e.feature))::int AS NameCount,
+                   COUNT(*)::int AS EventCount
+            FROM content_timeline_events e
+            JOIN products p ON p.id = e.product_id
+            WHERE e.feature_id IS NULL
+              AND btrim(COALESCE(e.feature, '')) <> ''
+            GROUP BY e.product_id, p.name
+            ORDER BY COUNT(*) DESC, p.name
+            """;
+
+        var rows = await _connection.QueryAsync<ProductUnmatchedFeatures>(new CommandDefinition(Sql, cancellationToken: ct));
+        return rows.ToList();
+    }
+
+    /// <inheritdoc />
     public async Task<ProductFeatureOverview> GetOverviewAsync(long productId, CancellationToken ct = default)
     {
         const string FeaturesSql = """

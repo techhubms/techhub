@@ -295,6 +295,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             LEFT JOIN product_features f ON f.id = e.feature_id
             WHERE ci.collection_name <> 'roundups'
               AND (ci.sections_bitmask & @SectionBits) > 0
+              AND (@PrimarySection::text IS NULL OR ci.primary_section_name = @PrimarySection::text)
               AND (@From::date IS NULL OR e.event_date >= @From::date)
               AND (@To::date IS NULL OR e.event_date <= @To::date)
               AND (cardinality(@Kinds::text[]) = 0 OR e.kind = ANY(@Kinds::text[]))
@@ -306,6 +307,8 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             new
             {
                 SectionBits = sectionBits,
+                // Only articles that are mainly about the section: an article that merely touches it states events about other products.
+                PrimarySection = sectionName == "all" ? null : sectionName,
                 From = request.From?.ToDateTime(TimeOnly.MinValue),
                 To = request.To?.ToDateTime(TimeOnly.MinValue),
                 Kinds = (request.Kinds ?? []).ToArray()

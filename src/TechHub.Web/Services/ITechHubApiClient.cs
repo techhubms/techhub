@@ -604,6 +604,12 @@ internal interface ITechHubApiClient
     Task RemoveQualifierAliasAsync(long id, long aliasId, CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Get the products that have dates with a feature name that matches no feature yet.
+    /// GET /api/admin/products/features/unmatched
+    /// </summary>
+    Task<IReadOnlyList<ProductUnmatchedFeatures>> GetUnmatchedFeaturesSummaryAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Get the curated features of a product and the feature names of its dates that are not curated yet.
     /// GET /api/admin/products/{productId}/features
     /// </summary>

@@ -39,6 +39,7 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
         { "GET", "/api/admin/qualifiers" },
         { "POST", "/api/admin/qualifiers" },
         { "GET", "/api/admin/products/1/features" },
+        { "GET", "/api/admin/products/features/unmatched" },
         { "GET", "/api/admin/statistics" },
         { "POST", "/api/admin/cache/invalidate" },
         { "GET", "/api/admin/newsletter/subscribers" },

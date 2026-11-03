@@ -132,6 +132,7 @@ The curated features of a product (see [Features](content-processing.md#features
 
 | Endpoint | Purpose | Result |
 |---|---|---|
+| `GET /products/features/unmatched` | The products that have dates with a feature name that matches no feature, with the number of different names and dates, most dates first. Feeds the review overview | `200` |
 | `GET /products/{productId}/features` | The features with aliases and number of dates, and the feature names of the dates of the product (and its children) that match no feature | `200` |
 | `POST /products/{productId}/features` | Add a feature (`name`) | `201` with the overview, `400`, `404`, `409` |
 | `PUT /products/{productId}/features/{id}` | Rename (`name`). The old name becomes an alias | `200` with the overview, `400`, `404`, `409` |
@@ -147,22 +148,41 @@ The curated features of a product (see [Features](content-processing.md#features
 
 All pages render interactively on the server inside the admin layout. Unauthenticated visitors see the sign-in form instead of the page content, and the Web app re-challenges signed-in users whose cached token is gone (for example after a server restart).
 
+### Navigation
+
+The menu has two levels. The top bar lists the groups; a bar below it is always shown and lists the pages of the active group, centred (a group with one page shows that page). The groups and pages are defined in `AdminNavigation` (`Components/Layout/AdminNavigation.cs`), which the layout renders and the layout tests cover.
+
+The right side of the second bar holds the actions of the current page, which is its **Refresh** button. Each page decides what refreshing does, so the button belongs to the page: it is wrapped in `AdminSubbarAction`, which the admin layout renders in the bar (a layout section) and which renders inline when a page is used outside the layout, for example in a component test.
+
+| Group | Pages |
+|---|---|
+| Automatic Processing | Dashboard, Feeds, Processed |
+| Content Management | Content, VSC Updates, Pages |
+| Product Management | Products, Plans & surfaces |
+| Reviews | Reviews |
+| Newsletter | Subscribers, Send log |
+| Stats | Stats |
+| Settings | Settings |
+
+### Pages
+
 | Page | Purpose |
 |------|---------|
-| `/admin` | Dashboard: job history with live logs, buttons to trigger processing, roundup generation and the content fixer, and to cancel the running job |
+| `/admin/reviews` | Everything that needs a decision, on one page: cards with the number of product names, plans and surfaces, features, content fixes and failed URLs to review, each linking to its queue. Below them: the product names to review (add as a product, add as an alias, or mark as not a product, with the list of names that are not products), the plan and surface names to review and the products with features to review (both link to the page where they are handled), and the content fixer proposals (approve, reject or edit them, singly or in bulk, with a markdown preview). **Run Cleanup** starts the content fixer from here |
+| `/admin` | Dashboard: job history with live logs, and a button to cancel the running job. Jobs started from Settings (processing, roundup, timeline backfill) and from Reviews (content cleanup) show up here while they run |
 | `/admin/feeds` | Add, edit, enable or disable and delete RSS feeds |
-| `/admin/products` | Product catalog: the review queue of product names that are not in the catalog yet, the product list with search, and the names that are not products (see [Product Catalog](#product-catalog)) |
-| `/admin/products/{id}` | One product: rename, aliases (each can imply a plan or surface), parent and children, curated features with their review queue, the description, release date and linked content (videos and posts, one of them the thumbnail) of each feature, merge into another product, delete, the features by surface overview and the linked dates and articles (including those of its child products) |
-| `/admin/products/qualifiers` | Plans and surfaces: the review queue of unmatched names and the vocabulary with its aliases |
 | `/admin/processed-urls` | Search the URL ledger by status, feed, collection, section or job. Remove entries to retry them, clear all failed entries, and open the item editor. |
 | `/admin/content-items` | Browse and filter content, edit or delete items, add a URL through the pipeline (the add-content dialog), and regenerate a roundup |
 | `/admin/content-preview/{collection}/{slug}` | Render an item's markdown as it will appear on the site |
-| `/admin/reviews` | Approve, reject or edit content fixer proposals, singly or in bulk, with a markdown preview |
-| `/admin/custom-pages` | Edit the raw JSON behind the custom pages |
 | `/admin/vscode-updates` | Add or remove items on the VS Code Updates page |
-| `/admin/newsletter` | Subscribers, test sends and send log. Deleting requires inline confirmation. Test sends require an entered recipient email; none is prefilled. Refresh, delete, edit and test-send failures show generic errors, and a failed refresh after a deletion or edit does not show a success message. See [newsletter.md](newsletter.md). |
-| `/admin/settings` | Enable or disable scheduled jobs and invalidate all caches |
+| `/admin/custom-pages` | Edit the raw JSON behind the custom pages |
+| `/admin/products` | Product list with search (name or alias; at most three aliases are shown, the rest on hover) and adding a product (see [Product Catalog](#product-catalog)) |
+| `/admin/products/{id}` | One product, in three tabs. **General** (`/admin/products/{id}`): rename, aliases (each can imply a plan or surface), parent and children, merge into another product and delete. **Features** (`/admin/products/{id}/features`): curated features with the description, release date and linked content (videos and posts, one of them the thumbnail) of each feature, the feature names to review and the features by surface overview. **Dates and articles** (`/admin/products/{id}/activity`): the linked dates and articles, including those of its child products |
+| `/admin/products/qualifiers` | Plans and surfaces: the review queue of unmatched names and the vocabulary with its aliases |
+| `/admin/newsletter` | Subscribers with search and confirmed filter, edit, delete and test sends. Deleting requires inline confirmation. Test sends require an entered recipient email; none is prefilled. Refresh, delete, edit and test-send failures show generic errors, and a failed refresh after a deletion or edit does not show a success message. See [newsletter.md](newsletter.md). |
+| `/admin/newsletter/send-log` | The last 100 newsletter sends with their recipient and failure counts |
 | `/admin/statistics` | Content and database statistics |
+| `/admin/settings` | Enable or disable scheduled jobs, start processing or roundup generation now, invalidate all caches and start the timeline backfill |
 | `/admin/login` | Sign-in entry point |
 
 The item editor (title, author, sections, tags, content, `ai_metadata`, and the transcript apply action for videos) is a shared dialog opened from the content items, processed URLs and reviews pages. AI metadata is read and saved together with the other editable fields through `GET` and `PUT /content-items/edit-data`.

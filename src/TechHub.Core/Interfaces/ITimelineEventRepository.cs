@@ -60,8 +60,9 @@ public interface ITimelineEventRepository
     Task<IReadOnlyList<StoredTimelineEvent>> GetEventsForItemAsync(string collectionName, string slug, CancellationToken ct = default);
 
     /// <summary>
-    /// Gets the timeline of a section: the events of its articles (roundups excluded), newest first, with the same event
-    /// stated by several articles merged into one entry. Returns nothing for an unknown section.
+    /// Gets the timeline of a section: the events of the articles whose primary section it is (every article for
+    /// <c>all</c>, roundups excluded), newest first, with the same event stated by several articles merged into one
+    /// entry. Returns nothing for an unknown section.
     /// </summary>
     Task<IReadOnlyList<TimelineEntry>> GetTimelineAsync(TimelineRequest request, CancellationToken ct = default);
 }

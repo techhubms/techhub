@@ -1959,6 +1959,21 @@ public class TechHubApiClientAdminTests
     }
 
     [Fact]
+    public async Task GetUnmatchedFeaturesSummaryAsync_ReturnsTheProductsWithNamesToReview()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """[{"productId":5,"productName":"GitHub Copilot","nameCount":3,"eventCount":7}]""");
+
+        // Act
+        var summary = await fixture.Client.GetUnmatchedFeaturesSummaryAsync(TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/features/unmatched");
+        var product = summary.Should().ContainSingle().Subject;
+        (product.ProductId, product.ProductName, product.NameCount, product.EventCount).Should().Be((5L, "GitHub Copilot", 3, 7));
+    }
+
+    [Fact]
     public async Task CreateAndRenameProductFeatureAsync_UseTheFeatureRoutes()
     {
         // Arrange

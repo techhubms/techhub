@@ -14,6 +14,11 @@ internal static class AdminFeatureEndpoints
     {
         ArgumentNullException.ThrowIfNull(group);
 
+        group.MapGet("/products/features/unmatched", GetUnmatchedSummaryAsync)
+            .WithName("GetUnmatchedFeaturesSummary")
+            .WithSummary("Get the products that have dates with a feature name that matches no feature yet")
+            .Produces<IReadOnlyList<ProductUnmatchedFeatures>>();
+
         group.MapGet("/products/{productId:long}/features", GetOverviewAsync)
             .WithName("GetProductFeatures")
             .WithSummary("Get the features of a product with aliases, and the feature names of its dates that are not curated yet")
@@ -83,6 +88,9 @@ internal static class AdminFeatureEndpoints
             .Produces(StatusCodes.Status204NoContent)
             .Produces(StatusCodes.Status404NotFound);
     }
+
+    private static async Task<IResult> GetUnmatchedSummaryAsync(IProductFeatureRepository repository, CancellationToken ct) =>
+        Results.Ok(await repository.GetUnmatchedSummaryAsync(ct));
 
     private static async Task<IResult> GetOverviewAsync(long productId, IProductFeatureRepository repository, CancellationToken ct) =>
         Results.Ok(await repository.GetOverviewAsync(productId, ct));

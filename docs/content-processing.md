@@ -223,11 +223,10 @@ A classification that fails (timeout, invalid answer) stores nothing and is retr
 The admin area at `/admin` provides:
 
 - **Dashboard** — Recent processing job history with status, duration, log output
-- **Run Now** button — Triggers an immediate out-of-schedule run
-- **Backfill Timeline** button — Starts the timeline backfill (see [Timeline Events](#timeline-events))
 - **RSS Feeds** — Full CRUD management of feed configurations
 - **Processed URLs** — Browse all processed URLs with status/reason; remove entries to retry
-- **Reviews** — Content review queue for proposed fixer changes (approve/reject before applying)
+- **Reviews** — One page for everything that needs a decision: the product names, plans, surfaces and features to review (see [Product Catalog](#product-catalog)), failed URLs, and the content review queue for proposed fixer changes (approve/reject before applying). The **Run Cleanup** button that starts the content fixer is here
+- **Settings** — Scheduled job switches, the **Run Processing** and **Run Roundup** buttons (immediate out-of-schedule runs), cache invalidation and the **Backfill Timeline** button (see [Timeline Events](#timeline-events))
 
 See [admin-authentication.md](admin-authentication.md) for authentication setup.
 
@@ -418,8 +417,8 @@ Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`
 
 `/{section}/timeline` shows the events of the articles of a section, newest first, grouped by year and month in the shared `TimelineView` component (the GitHub Copilot features page uses the same component). It is configured as a custom collection `timeline` in each section of `appsettings.json` (all sections except `all`), so it appears in the sub-navigation and on the section card.
 
-- **Source.** `GET /api/sections/{sectionName}/timeline` (see [content-api.md](content-api.md#timeline-api)) joins `content_timeline_events` with the articles of the section (`sections_bitmask`). Roundups are left out: they only repeat what their articles state.
-- **One entry per event.** Articles that state the same event (same date, kind, product and feature) are merged. The description comes from the oldest article, and every article is listed as a source when the card is opened. Products and features show their catalog names; plans and surfaces come from the catalog qualifiers of the event.
+- **Source.** `GET /api/sections/{sectionName}/timeline` (see [content-api.md](content-api.md#timeline-api)) joins `content_timeline_events` with the articles whose **primary** section is the section (`primary_section_name`; `all` uses every article). An article that only touches a section (for example a Fabric announcement also tagged GitHub Copilot) states events about other products, so its events stay off that section's timeline. Roundups are left out: they only repeat what their articles state.
+- **One entry per event.** Articles that state the same event (same date, kind, product and feature) are merged. The description comes from the oldest article, and every article is listed as a source when the card is opened. Products and features show their catalog names; a card is titled `Product: Feature`, or just the feature when the product is the section itself (`Agent mode` instead of `GitHub Copilot: Agent mode` on the GitHub Copilot timeline). Plans and surfaces come from the catalog qualifiers of the event.
 - **Window and filters.** The page shows the last 12 months and everything after them (deprecations are often in the future); `?since=all` shows every date. `?kinds=` filters on kinds, with the groups Releases (`announced`, `preview`, `ga`, `launch`, `release`), Deprecations (`deprecation`, `retirement`, `end-of-support`, `breaking-change`) and Other (`pricing-change`, `event`). The API returns at most 200 entries, so the page says so when it shows exactly that many.
 
 ### Timeline Backfill
@@ -469,7 +468,7 @@ vocabulary of qualifiers (`product_qualifiers`, kind `plan` or `surface`, with a
 - **The AI keeps its raw names.** A timeline event has `plans` and `surfaces` arrays with the names as the article gives them, and the product name may include the tier ("GitHub Copilot Business"). Nothing is simplified at write time
 - **Aliases can imply a qualifier.** The product alias "GitHub Copilot Business" belongs to GitHub Copilot and implies the plan Business, so simplifying the name to the product loses nothing. The qualifier shows on the article link and on the event
 - **Matching** uses the same text match as products (`find_qualifier_id`, `find_product_qualifier_id`). The SQL functions `relink_item_products` and `relink_timeline_events` rebuild the links when an article or event is written and when the catalog changes
-- **Review queue.** Plan and surface names that match nothing are listed on `/admin/products/qualifiers`: add one as a plan or surface, or as an alias of an existing one
+- **Review queue.** Plan and surface names that match nothing are listed on `/admin/products/qualifiers` (and counted on the Reviews page): add one as a plan or surface, or as an alias of an existing one
 - **Prompt version.** Adding `plans` and `surfaces` to the extraction raised `CurrentPromptVersion` to 3, so the timeline backfill scans articles that were scanned with an older version again
 
 ### Features
@@ -479,7 +478,7 @@ those names: "Agent mode" and "agent-mode" are one feature. An event matches a f
 parent products (a feature defined on GitHub Copilot matches the events of GitHub Copilot CLI), by name or alias, ignoring case and extra whitespace.
 `content_timeline_events.feature_id` holds the match and the raw text stays on the event.
 
-- **Review queue.** Feature names of the dates of a product (and its children) that match no feature are listed on the product page: add one as a feature, or as an alias of a feature of the product
+- **Review queue.** Feature names of the dates of a product (and its children) that match no feature are listed on the Features tab of the product (`/admin/products/{id}/features`): add one as a feature, or as an alias of a feature of the product. The Reviews page lists the products that have names to review and links to that tab
 - **Starting set.** Migration `054_product_features` seeded the features of GitHub Copilot from the curated features page (the former `ghc_features` table)
 - **The features page reads the catalog.** The `/github-copilot/features` timeline is the list of features of the GitHub Copilot product (and its child products). Migration `055_github_copilot_features_in_catalog` gave the features the data of the page (slug, description, release date) and a link table for videos (`product_feature_content`), and copied `ghc_features` into them; migration `056_drop_ghc_tables_and_ghes_support` dropped the old tables and the GHES flag. Only features with linked content are listed. The release date is the date set for the feature, else the first `launch`, `preview`, `ga` or `release` event of the feature. The subscription plans of a feature and its GitHub Enterprise Server support are not stored: the page has no filters
 - **Features by surface.** The product page shows per feature what happened on which surface (and in which plans), so a feature that is in preview in JetBrains IDEs but generally available in Visual Studio Code is visible at a glance
@@ -487,7 +486,7 @@ parent products (a feature defined on GitHub Copilot matches the events of GitHu
 - **Matching is a text match.** A name matches a product by its name or an alias, ignoring case and extra whitespace (the database function `find_product_id`). There is no fuzzy matching and no AI in this step, so matches never need a review.
 - **Links follow the AI output.** Whenever an article's `ai_metadata` is written (processing, roundup metadata backfill, admin edit) its links are replaced, and event writes set `product_id` the same way.
 - **Catalog changes relink everything.** Adding a product or alias, renaming, merging, removing and deleting re-evaluate all links in the same transaction. A rename keeps the old name as an alias, and a merge turns the merged product and its aliases into aliases of the target, so nothing becomes unmatched by accident.
-- **Review queue.** Names that match nothing and are not ignored are the products to review: add one as a product, add it as an alias of a product, or mark it as not a product. The queue is derived from the links, so unmatched names never pollute the catalog.
+- **Review queue.** Names that match nothing and are not ignored are the products to review, on the Reviews page (`/admin/reviews`): add one as a product, add it as an alias of a product, or mark it as not a product. The queue is derived from the links, so unmatched names never pollute the catalog.
 - **Starting set.** Migration `051_seed_product_catalog` seeds the products found in the production data with their aliases and ignored names, and links the existing articles and events.
 - **Readers.** The roundup uses the canonical names (grouping and ordering by product, "Dates to know") and falls back to the AI's text for unmatched names. The admin products page shows the articles and dates per product. See [admin.md](admin.md#product-catalog).
 

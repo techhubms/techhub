@@ -26,7 +26,7 @@ else
                             <div class="timeline-month-cards">
                                 @foreach (var entry in monthGroup.Entries)
                                 {
-                                    var isExpanded = _expandedId == entry.Id;
+                                    var isExpanded = _expandedIds.Contains(entry.Id);
 
                                     <div class="timeline-entry @(isExpanded ? "expanded" : "")" id="timeline-entry-@entry.Id">
                                         <div class="timeline-card card"
@@ -78,7 +78,7 @@ else
 
 @code {
     private List<YearGroup> _years = [];
-    private string? _expandedId;
+    private readonly HashSet<string> _expandedIds = [];
     private bool _initialExpansionDone;
 
     // Entries whose detail has been shown at least once. The detail is only rendered for these, so heavy content
@@ -111,15 +111,20 @@ else
         if (ExpandFirst && !_initialExpansionDone && _years.Count > 0)
         {
             _initialExpansionDone = true;
-            _expandedId = _years[0].Months[0].Entries[0].Id;
-            _loadedIds.Add(_expandedId);
+            var firstId = _years[0].Months[0].Entries[0].Id;
+            _expandedIds.Add(firstId);
+            _loadedIds.Add(firstId);
         }
     }
 
     private async Task ToggleAsync(string id)
     {
         await JS.InvokeVoidAsync("preventScrollOnExpand");
-        _expandedId = _expandedId == id ? null : id;
+        if (!_expandedIds.Remove(id))
+        {
+            _expandedIds.Add(id);
+        }
+
         _loadedIds.Add(id);
     }
 

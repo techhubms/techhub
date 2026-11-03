@@ -19,14 +19,20 @@ LANGUAGE sql STABLE AS $$
     SELECT id FROM tree
 $$;
 
--- The products of the GitHub Copilot family that are named in articles.
+-- The products of the GitHub Copilot family and the Azure SDK family (one SDK per language) that are named in articles.
 INSERT INTO products (name) VALUES
     ('GitHub Copilot Chat'),
     ('GitHub Copilot CLI'),
     ('GitHub Copilot code review'),
     ('GitHub Copilot coding agent'),
     ('GitHub Copilot Fusion'),
-    ('GitHub Copilot SDK')
+    ('GitHub Copilot SDK'),
+    ('Azure SDK for .NET'),
+    ('Azure SDK for C++'),
+    ('Azure SDK for Go'),
+    ('Azure SDK for Java'),
+    ('Azure SDK for JavaScript'),
+    ('Azure SDK for Python')
 ON CONFLICT (lower(name)) DO NOTHING;
 
 UPDATE products c SET parent_product_id = p.id
@@ -47,7 +53,14 @@ FROM (VALUES
     ('Microsoft Defender for Office 365', 'Microsoft Defender'),
     ('Microsoft Defender Vulnerability Management', 'Microsoft Defender'),
     ('Microsoft Defender XDR', 'Microsoft Defender'),
-    ('.NET MAUI CLI', '.NET MAUI')
+    ('.NET MAUI CLI', '.NET MAUI'),
+    ('Azure Identity', 'Azure SDK'),
+    ('Azure SDK for .NET', 'Azure SDK'),
+    ('Azure SDK for C++', 'Azure SDK'),
+    ('Azure SDK for Go', 'Azure SDK'),
+    ('Azure SDK for Java', 'Azure SDK'),
+    ('Azure SDK for JavaScript', 'Azure SDK'),
+    ('Azure SDK for Python', 'Azure SDK')
 ) AS v (child, parent)
 JOIN products p ON lower(p.name) = lower(v.parent)
 WHERE lower(c.name) = lower(v.child) AND c.parent_product_id IS NULL;

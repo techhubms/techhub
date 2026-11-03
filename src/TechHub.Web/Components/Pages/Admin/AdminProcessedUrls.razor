@@ -21,7 +21,7 @@
             <p class="admin-page-subtitle">View and manage URLs processed by the content pipeline — remove entries to retry on next run</p>
         </div>
         <div class="admin-actions">
-            <button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button>
+            <AdminSubbarAction><button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button></AdminSubbarAction>
             @if (_failedCount > 0)
             {
                 <button class="btn-danger" @onclick="DeleteAllFailedAsync" disabled="@_deleting">

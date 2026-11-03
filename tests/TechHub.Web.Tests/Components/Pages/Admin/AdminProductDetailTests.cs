@@ -28,16 +28,34 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(new ProductFeatureOverview());
     }
 
+    private IRenderedComponent<AdminProductDetail> RenderDetail(string? tab = null) =>
+        Render<AdminProductDetail>(p =>
+        {
+            p.Add(x => x.Id, 5);
+            if (tab is not null)
+            {
+                p.Add(x => x.Tab, tab);
+            }
+        });
+
     [Fact]
-    public void Render_ShowsAliasesDatesAndArticlesWithLinksToTheArticles()
+    public void Render_ShowsTheNameAndAliasesOnTheGeneralTab()
     {
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail();
 
         // Assert
         cut.Find("h1").TextContent.Should().Be("Microsoft Foundry");
         cut.Find("#aliases-list").TextContent.Should().Contain("Azure AI Foundry");
+    }
 
+    [Fact]
+    public void Render_ShowsDatesAndArticlesWithLinksToTheArticlesOnTheActivityTab()
+    {
+        // Act
+        var cut = RenderDetail("activity");
+
+        // Assert
         var eventRow = cut.FindAll("#events-table tbody tr").Should().ContainSingle().Subject;
         eventRow.TextContent.Should().Contain("2027-06-01").And.Contain("retirement").And.Contain("Foundry Classic retires");
         eventRow.QuerySelector("a")!.GetAttribute("href").Should().Be("/admin/content-preview/news/retirement-post");
@@ -47,6 +65,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         articleRow.TextContent.Should().Contain("Azure AI Foundry");
         articleRow.QuerySelector("a")!.GetAttribute("href").Should().Be("/admin/content-preview/news/intro-post");
         cut.Markup.Should().Contain("Dates (1)").And.Contain("Articles (1)");
+        cut.FindAll("#aliases-list").Should().BeEmpty("the names are on the general tab");
     }
 
     [Theory]
@@ -61,7 +80,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
 
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("activity");
 
         // Assert
         cut.Find("#events-table tbody tr td").TextContent.Should().Be(expected);
@@ -74,14 +93,45 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(new ProductDetail { Id = 5, Name = "Empty" });
 
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var general = RenderDetail();
+        var activity = RenderDetail("activity");
 
         // Assert
-        cut.Find("#aliases-empty").Should().NotBeNull();
-        cut.Find("#events-empty").Should().NotBeNull();
-        cut.Find("#articles-empty").Should().NotBeNull();
+        general.Find("#aliases-empty").Should().NotBeNull();
+        activity.Find("#events-empty").Should().NotBeNull();
+        activity.Find("#articles-empty").Should().NotBeNull();
     }
 
+    [Theory]
+    [InlineData(null, "General")]
+    [InlineData("features", "Features (0)")]
+    [InlineData("activity", "Dates and articles (2)")]
+    [InlineData("nonsense", "General")]
+    public void Render_MarksTheCurrentTabAndLinksToTheOthers(string? tab, string expectedActive)
+    {
+        // Act
+        var cut = RenderDetail(tab);
+
+        // Assert
+        var tabs = cut.FindAll(".admin-tabs a");
+        tabs.Select(a => a.GetAttribute("href")).Should().Equal("/admin/products/5", "/admin/products/5/features", "/admin/products/5/activity");
+        tabs.Select(a => a.TextContent).Should().Equal("General", "Features (0)", "Dates and articles (2)");
+        cut.FindAll(".admin-tab.active").Select(a => a.TextContent).Should().Equal(expectedActive);
+    }
+
+    [Fact]
+    public void Render_OnlyShowsTheSectionsOfTheCurrentTab()
+    {
+        // Act
+        var general = RenderDetail();
+        var features = RenderDetail("features");
+        var activity = RenderDetail("activity");
+
+        // Assert
+        general.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Name and aliases", "Hierarchy", "Merge or delete");
+        features.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Features (0)", "Features to review (0)", "Features by surface");
+        activity.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Dates (1)", "Articles (1)");
+    }
     [Fact]
     public void Render_UnknownProduct_ShowsNotFound()
     {
@@ -211,7 +261,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
 
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("activity");
 
         // Assert
         cut.Find("#articles-table thead").TextContent.Should().Contain("Product");
@@ -222,7 +272,7 @@ public class AdminProductDetailTests : AdminPageTestBase
     public void Render_WhenAllLinksAreAboutTheProductItself_HidesTheProductColumn()
     {
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("activity");
 
         // Assert
         cut.Find("#articles-table thead").TextContent.Should().NotContain("Product");
@@ -289,10 +339,11 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
 
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var general = RenderDetail();
+        var cut = RenderDetail("activity");
 
         // Assert
-        cut.Find("#aliases-list select").GetAttribute("value").Should().Be("21");
+        general.Find("#aliases-list select").GetAttribute("value").Should().Be("21");
         cut.Find("#events-table thead").TextContent.Should().Contain("Plans and surfaces");
         cut.Find("#events-table tbody").TextContent.Should().Contain("Business, JetBrains IDEs");
         cut.Find("#articles-table thead").TextContent.Should().Contain("Plan or surface");
@@ -303,7 +354,7 @@ public class AdminProductDetailTests : AdminPageTestBase
     public void Render_WithoutQualifiers_HidesTheQualifierColumns()
     {
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("activity");
 
         // Assert
         cut.Find("#events-table thead").TextContent.Should().NotContain("Plans and surfaces");
@@ -350,7 +401,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
 
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Assert
         cut.Markup.Should().Contain("Features (1)").And.Contain("Features to review (1)");
@@ -363,7 +414,7 @@ public class AdminProductDetailTests : AdminPageTestBase
     public void Render_WithoutFeatures_ShowsEmptyMessages()
     {
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Assert
         cut.Find("#features-empty").Should().NotBeNull();
@@ -385,7 +436,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
 
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Assert
         cut.FindAll("#feature-grid thead th").Select(h => h.TextContent).Should().Equal("Feature", "All surfaces", "JetBrains IDEs", "Visual Studio Code");
@@ -412,7 +463,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
 
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Assert
         cut.Find("#feature-grid-empty").Should().NotBeNull();
@@ -423,7 +474,7 @@ public class AdminProductDetailTests : AdminPageTestBase
     {
         // Arrange
         _api.Setup(x => x.CreateProductFeatureAsync(5, "Agent mode", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#newFeature").Change("Agent mode");
 
         // Act
@@ -441,7 +492,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Arrange
         _api.Setup(x => x.CreateProductFeatureAsync(5, It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ThrowsAsync(new HttpRequestException("'Agent mode' is already used by 'Agent mode'."));
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#newFeature").Change("Agent mode");
 
         // Act
@@ -457,7 +508,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Arrange
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
         _api.Setup(x => x.RenameProductFeatureAsync(5, 31, "Agent", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#feature-name-31").Change("Agent");
 
         // Act
@@ -474,7 +525,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Arrange
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
         _api.Setup(x => x.AddProductFeatureAliasAsync(5, 31, "auto", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#feature-alias-31").Change("auto");
 
         // Act
@@ -491,7 +542,7 @@ public class AdminProductDetailTests : AdminPageTestBase
     {
         // Arrange
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Act
         cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Delete…").Click();
@@ -514,7 +565,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
 
         // Act
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Assert
         cut.Find("#feature-description-31").GetAttribute("value").Should().Be("Works on its own");
@@ -534,7 +585,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Arrange
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
         _api.Setup(x => x.UpdateProductFeatureDetailsAsync(5, 31, "New text", new DateOnly(2026, 4, 1), It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#feature-description-31").Change("  New text ");
         cut.Find("#feature-release-31").Change("2026-04-01");
 
@@ -552,7 +603,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Arrange
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
         _api.Setup(x => x.UpdateProductFeatureDetailsAsync(5, 31, "Works on its own", null, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#feature-release-31").Change(string.Empty);
 
         // Act
@@ -567,7 +618,7 @@ public class AdminProductDetailTests : AdminPageTestBase
     {
         // Arrange
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#feature-release-31").Change("31-12-2025");
 
         // Act
@@ -585,7 +636,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
         _api.Setup(x => x.UpdateProductFeatureDetailsAsync(It.IsAny<long>(), It.IsAny<long>(), It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<CancellationToken>()))
             .ThrowsAsync(new HttpRequestException("The description can be at most 4000 characters."));
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Act
         cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Save details").Click();
@@ -606,7 +657,7 @@ public class AdminProductDetailTests : AdminPageTestBase
                 TotalCount = 2
             });
         _api.Setup(x => x.AddProductFeatureContentAsync(5, 31, "videos", "new-video", true, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#feature-content-search-31").Change("agent");
         cut.Find("#feature-31 select").Change("videos");
 
@@ -634,7 +685,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
         _api.Setup(x => x.GetContentItemsAsync(1, 20, "nothing", null, It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new PagedResult<ContentItemListItem> { Items = [], TotalCount = 0 });
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#feature-content-search-31").Change("nothing");
 
         // Act
@@ -651,7 +702,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
         _api.Setup(x => x.GetContentItemsAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
             .ThrowsAsync(new HttpRequestException("boom"));
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#feature-content-search-31").Change("agent");
 
         // Act
@@ -666,7 +717,7 @@ public class AdminProductDetailTests : AdminPageTestBase
     {
         // Arrange
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Act
         cut.FindAll("#feature-31 button").Single(b => b.TextContent == "Search").Click();
@@ -680,7 +731,7 @@ public class AdminProductDetailTests : AdminPageTestBase
     {
         // Arrange
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(OverviewWithDetails());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Act
         cut.FindAll("#feature-content-31 tbody tr")[1].QuerySelector("button[title='Make this the thumbnail']")!.Click();
@@ -699,7 +750,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
         _api.Setup(x => x.CreateProductFeatureAsync(5, "Plan mode", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
         _api.Setup(x => x.AddProductFeatureAliasAsync(5, 31, "Plan mode", It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
 
         // Act
         cut.FindAll("#features-unmatched-table button").Single(b => b.TextContent == "Add as feature").Click();
@@ -716,7 +767,7 @@ public class AdminProductDetailTests : AdminPageTestBase
     {
         // Arrange
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Overview());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        var cut = RenderDetail("features");
         cut.Find("#features-unmatched-table input").Change("Nonexistent");
 
         // Act

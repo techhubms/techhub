@@ -46,7 +46,47 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
     {
         var ignored = await _sut.GetIgnoredNamesAsync(Ct);
 
-        ignored.Should().Contain("Microsoft Ignite");
+        ignored.Should().Contain(["Microsoft Ignite", "Microsoft SQL", "Azure Accelerated Networking"]);
+        ignored.Should().NotContain("Microsoft Azure");
+    }
+
+    [Theory]
+    [InlineData("Microsoft Azure", "Azure")]
+    [InlineData("GitHub Enterprise Local", null)]
+    [InlineData("Agent Host Protocol", "AHP")]
+    [InlineData("Azure SDK", null)]
+    public async Task StartingCatalog_ContainsProductsThatAreNotAliasesOfAnotherProduct(string name, string? alias)
+    {
+        var products = await _sut.GetProductsAsync(name, Ct);
+
+        var product = products.Should().Contain(p => p.Name == name).Subject;
+        product.ParentName.Should().BeNull();
+        if (alias is not null)
+        {
+            product.Aliases.Select(a => a.Alias).Should().Contain(alias);
+        }
+    }
+
+    [Theory]
+    [InlineData("Azure Identity")]
+    [InlineData("Azure SDK for .NET")]
+    [InlineData("Azure SDK for Python")]
+    public async Task StartingCatalog_PutsAzureIdentityAndTheLanguageSdksUnderAzureSdk(string name)
+    {
+        var products = await _sut.GetProductsAsync(name, Ct);
+
+        products.Should().Contain(p => p.Name == name).Which.ParentName.Should().Be("Azure SDK");
+    }
+
+    [Fact]
+    public async Task StartingCatalog_DoesNotMapBareCopilotNamesToGitHubCopilot()
+    {
+        var products = await _sut.GetProductsAsync("GitHub Copilot", Ct);
+
+        var copilot = products.Should().Contain(p => p.Name == "GitHub Copilot").Subject;
+        var aliases = copilot.Aliases.Select(a => a.Alias).ToList();
+        aliases.Should().Contain("GitHub Copilot Business");
+        aliases.Should().NotContain(["Copilot Free", "Copilot Pro", "Copilot Pro+", "Copilot Business", "Copilot Enterprise"]);
     }
 
     // ── Links follow the AI output ────────────────────────────────────────────

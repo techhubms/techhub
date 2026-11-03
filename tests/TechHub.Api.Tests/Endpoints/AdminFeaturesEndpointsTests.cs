@@ -327,6 +327,15 @@ public class AdminFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestA
         content.Single(c => c.IsThumbnail).ItemSlug.Should().Be(next);
     }
 
+    [Fact]
+    public async Task GetUnmatchedSummary_ReturnsAList()
+    {
+        var response = await _client.GetAsync("/api/admin/products/features/unmatched", Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        (await response.Content.ReadFromJsonAsync<List<ProductUnmatchedFeatures>>(Ct)).Should().NotBeNull();
+    }
+
     private static string FeatureUrl(long productId, long id) => $"/api/admin/products/{productId}/features/{id}";
 
     private async Task<string> SeedVideoAsync()

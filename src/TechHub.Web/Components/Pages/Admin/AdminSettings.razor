@@ -21,7 +21,7 @@
             <p class="admin-page-subtitle">Enable or disable scheduled background jobs at runtime</p>
         </div>
         <div class="admin-actions">
-            <button class="btn-secondary" @onclick="LoadSettingsAsync">⟳ Refresh</button>
+            <AdminSubbarAction><button class="btn-secondary" @onclick="LoadSettingsAsync">⟳ Refresh</button></AdminSubbarAction>
         </div>
     </div>
 
@@ -29,6 +29,10 @@
     {
         <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
             @_message
+            @if (_messageLinksToDashboard)
+            {
+                <text> Follow it on the <a href="/admin">dashboard</a>.</text>
+            }
         </div>
     }
 
@@ -82,9 +86,26 @@
         </div>
 
         <p class="admin-page-subtitle" style="margin-top: var(--spacing-3);">
-            Disabling a job stops its scheduled runs. Manual triggers from the dashboard still work regardless of this setting.
+            Disabling a job stops its scheduled runs. Manual triggers (the dashboard, the backfill below) still work regardless of this setting.
         </p>
     }
+
+    <div class="admin-page-header" style="margin-top: var(--spacing-6);">
+        <div>
+            <h2 class="admin-page-title">Run Jobs</h2>
+            <p class="admin-page-subtitle">Start a job now, outside its schedule. Follow it on the dashboard.</p>
+        </div>
+        <div class="admin-actions">
+            <button id="run-processing" class="btn-secondary" @onclick="() => StartJobAsync(ProcessingJob, () => Api.TriggerContentProcessingAsync(), ProcessingStarted, ProcessingFailed)"
+                    title="Fetch the RSS feeds and process new articles" disabled="@(_startingJob != null)">
+                <span>@(_startingJob == ProcessingJob ? "Starting…" : "▶ Run Processing")</span>
+            </button>
+            <button id="run-roundup" class="btn-secondary" @onclick="() => StartJobAsync(RoundupJob, () => Api.TriggerRoundupGenerationAsync(), RoundupStarted, RoundupFailed)"
+                    title="Generate the roundups of the previous week" disabled="@(_startingJob != null)">
+                <span>@(_startingJob == RoundupJob ? "Starting…" : "▶ Run Roundup")</span>
+            </button>
+        </div>
+    </div>
 
     <div class="admin-page-header" style="margin-top: var(--spacing-6);">
         <div>
@@ -92,7 +113,7 @@
             <p class="admin-page-subtitle">Invalidate all server-side caches (API content cache, web section cache, and hero banner cache)</p>
         </div>
         <div class="admin-actions">
-            <button class="btn-secondary"
+            <button id="invalidate-caches" class="btn-secondary"
                     @onclick="InvalidateCachesAsync"
                     disabled="@_invalidating">
                 @if (_invalidating)
@@ -106,6 +127,20 @@
             </button>
         </div>
     </div>
+
+    <div class="admin-page-header" style="margin-top: var(--spacing-6);">
+        <div>
+            <h2 class="admin-page-title">Timeline Backfill</h2>
+            <p class="admin-page-subtitle">Scan stored articles for dated lifecycle events (preview, GA, deprecation, ...). Resumable: articles that were scanned already are skipped.</p>
+        </div>
+        <div class="admin-actions">
+            <button id="backfill-timeline" class="btn-secondary"
+                    @onclick="() => StartJobAsync(BackfillJob, () => Api.TriggerTimelineBackfillAsync(), BackfillStarted, BackfillFailed)"
+                    disabled="@(_startingJob != null)">
+                <span>@(_startingJob == BackfillJob ? "Starting…" : "▶ Backfill Timeline")</span>
+            </button>
+        </div>
+    </div>
 </div>
 
 @code {
@@ -116,6 +151,8 @@
     private bool _messageIsError;
     private string? _toggling;
     private bool _invalidating;
+    private string? _startingJob;
+    private bool _messageLinksToDashboard;
     private PersistingComponentStateSubscription _persistingSubscription;
 
     protected override async Task OnInitializedAsync()
@@ -144,6 +181,7 @@
         _loading = true;
         _error = null;
         _message = null;
+        _messageLinksToDashboard = false;
 
         try
         {
@@ -164,6 +202,7 @@
     {
         _toggling = setting.JobName;
         _message = null;
+        _messageLinksToDashboard = false;
 
         try
         {
@@ -191,6 +230,7 @@
     {
         _invalidating = true;
         _message = null;
+        _messageLinksToDashboard = false;
 
         try
         {
@@ -228,6 +268,40 @@
         }
     }
 
+    private const string ProcessingJob = "processing";
+    private const string RoundupJob = "roundup";
+    private const string BackfillJob = "backfill";
+    private const string ProcessingStarted = "Content processing started.";
+    private const string ProcessingFailed = "Failed to start the content processing.";
+    private const string RoundupStarted = "Roundup generation started.";
+    private const string RoundupFailed = "Failed to start the roundup generation.";
+    private const string BackfillStarted = "Timeline backfill started.";
+    private const string BackfillFailed = "Failed to start the timeline backfill.";
+
+    private async Task StartJobAsync(string job, Func<Task> trigger, string startedMessage, string failedMessage)
+    {
+        _startingJob = job;
+        _message = null;
+        _messageLinksToDashboard = false;
+
+        try
+        {
+            await trigger();
+            _message = startedMessage;
+            _messageIsError = false;
+            _messageLinksToDashboard = true;
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "{FailedMessage}", failedMessage);
+            _message = failedMessage;
+            _messageIsError = true;
+        }
+        finally
+        {
+            _startingJob = null;
+        }
+    }
     public void Dispose()
     {
         _persistingSubscription.Dispose();

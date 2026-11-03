@@ -139,6 +139,28 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
     }
 
     [Fact]
+    public async Task GetUnmatchedSummary_ListsTheProductsWithUnmatchedFeatureNames_MostEventsFirst()
+    {
+        var busy = await CreateProductAsync();
+        var quiet = await CreateProductAsync();
+        var done = await CreateProductAsync();
+        await CreateFeatureAsync(done.Id, "Matched");
+        var slug = await SeedItemAsync();
+        await _timelineRepository.ReplaceEventsAsync("news", slug,
+            [
+                Event(busy.Name, "Alpha", "ga"), Event(busy.Name, "alpha", "preview"), Event(busy.Name, "Beta", "ga"),
+                Event(quiet.Name, "Gamma", "ga"),
+                Event(done.Name, "matched", "ga"), Event(done.Name, null, "launch")
+            ], "source", 3, Ct);
+
+        var summary = await _sut.GetUnmatchedSummaryAsync(Ct);
+
+        var ours = summary.Where(s => s.ProductId == busy.Id || s.ProductId == quiet.Id || s.ProductId == done.Id).ToList();
+        ours.Select(s => (s.ProductId, s.ProductName, s.NameCount, s.EventCount)).Should().Equal(
+            (busy.Id, busy.Name, 2, 3),
+            (quiet.Id, quiet.Name, 1, 1));
+    }
+    [Fact]
     public async Task AddAlias_LinksTheEventsThatUseTheAlias_AndRemoveAliasUnlinksThem()
     {
         var product = await CreateProductAsync();

@@ -1,10 +1,15 @@
 @inherits LayoutComponentBase
 @using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Sections
 @inject NavigationManager Navigation
 
 <AuthorizeView>
     <Authorized>
         <PageTitle>Admin — TechHub</PageTitle>
+
+        @{
+            var (activeGroup, activeItem) = FindActive();
+        }
 
         <nav class="admin-nav" aria-label="Admin navigation">
             <div class="admin-nav-content">
@@ -14,19 +19,12 @@
                 </a>
 
                 <div class="admin-nav-links">
-                    <a href="/admin" class="admin-nav-link @NavLinkClass("/admin", exact: true)">Dashboard</a>
-                    <a href="/admin/feeds" class="admin-nav-link @NavLinkClass("/admin/feeds")">RSS Feeds</a>
-                    <a href="/admin/processed-urls" class="admin-nav-link @NavLinkClass("/admin/processed-urls")">Processed URLs</a>
-                    <a href="/admin/content-items" class="admin-nav-link @NavLinkClass("/admin/content-items")">Content Items</a>
-                    <a href="/admin/products" class="admin-nav-link @NavLinkClass("/admin/products")">Products</a>
-                    <a href="/admin/newsletter" class="admin-nav-link @NavLinkClass("/admin/newsletter")">Newsletter</a>
-                    <a href="/admin/reviews" class="admin-nav-link @NavLinkClass("/admin/reviews")">Reviews</a>
-                    <a href="/admin/custom-pages" class="admin-nav-link @NavLinkClass("/admin/custom-pages")">Custom Pages</a>
-                    <a href="/admin/vscode-updates" class="admin-nav-link @NavLinkClass("/admin/vscode-updates")">VS Code Updates</a>
-                    <a href="/admin/statistics" class="admin-nav-link @NavLinkClass("/admin/statistics")">Statistics</a>
-                    <a href="/admin/settings" class="admin-nav-link @NavLinkClass("/admin/settings")">Settings</a>
+                    @foreach (var group in AdminNavigation.Groups)
+                    {
+                        var isActive = ReferenceEquals(group, activeGroup);
+                        <a href="@group.Href" class="admin-nav-link @(isActive ? "active" : "")" aria-current="@(isActive ? "page" : null)">@group.Label</a>
+                    }
                 </div>
-
                 <div class="admin-nav-actions">
                     <form method="post" action="/admin/logout" class="admin-logout-form">
                         <AntiforgeryToken />
@@ -36,10 +34,30 @@
             </div>
         </nav>
 
+        @if (activeGroup is not null)
+        {
+            <nav class="admin-subnav" aria-label="@activeGroup.Label">
+                <div class="admin-subnav-content">
+                    <div class="admin-subnav-links">
+                        @foreach (var item in activeGroup.Items)
+                        {
+                            var isActive = ReferenceEquals(item, activeItem);
+                            <a href="@item.Href" class="admin-subnav-link @(isActive ? "active" : "")" aria-current="@(isActive ? "page" : null)">@item.Label</a>
+                        }
+                    </div>
+                    <div class="admin-subnav-actions">
+                        <SectionOutlet SectionName="@AdminSubbarAction.SectionName" />
+                    </div>
+                </div>
+            </nav>
+        }
+
         <main class="admin-main">
             <ErrorBoundary @ref="_errorBoundary">
                 <ChildContent>
-                    @Body
+                    <CascadingValue Name="@AdminSubbarAction.HostName" Value="true" IsFixed="true">
+                        @Body
+                    </CascadingValue>
                 </ChildContent>
                 <ErrorContent Context="ex">
                     <div class="admin-alert admin-alert-error" role="alert">
@@ -65,19 +83,10 @@
         _errorBoundary?.Recover();
     }
 
-    private string NavLinkClass(string href, bool exact = false)
+    private (AdminNavGroup? Group, AdminNavItem? Item) FindActive()
     {
-        var relativePath = Navigation.ToBaseRelativePath(Navigation.Uri);
-        var currentPath = "/" + relativePath.TrimEnd('/');
-        var targetPath = href.TrimEnd('/');
-
-        if (exact)
-        {
-            return string.Equals(currentPath, targetPath, StringComparison.OrdinalIgnoreCase)
-                ? "active" : "";
-        }
-
-        return currentPath.StartsWith(targetPath, StringComparison.OrdinalIgnoreCase)
-            ? "active" : "";
+        var path = AdminNavigation.NormalizePath(Navigation.ToBaseRelativePath(Navigation.Uri));
+        var group = AdminNavigation.FindGroup(path);
+        return (group, group?.FindItem(path));
     }
 }

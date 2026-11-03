@@ -104,7 +104,7 @@ public class TimelineViewTests : BunitContext
     }
 
     [Fact]
-    public void Click_OpeningACardCollapsesTheOtherOne()
+    public void Click_OpeningACardKeepsTheOtherOneOpen()
     {
         var cut = RenderTimeline([Entry("a", "First", new DateOnly(2026, 3, 10)), Entry("b", "Second", new DateOnly(2026, 2, 10))]);
 
@@ -112,7 +112,7 @@ public class TimelineViewTests : BunitContext
         cut.WaitForAssertion(() => cut.FindAll(".timeline-card")[0].GetAttribute("aria-expanded").Should().Be("true"));
         cut.FindAll(".timeline-card")[1].Click();
 
-        cut.WaitForAssertion(() => cut.FindAll(".timeline-card").Select(c => c.GetAttribute("aria-expanded")).Should().Equal("false", "true"));
+        cut.WaitForAssertion(() => cut.FindAll(".timeline-card").Select(c => c.GetAttribute("aria-expanded")).Should().Equal("true", "true"));
     }
 
     [Theory]

@@ -1,0 +1,25 @@
+@using Microsoft.AspNetCore.Components.Sections
+
+@* Places the content (usually the page's Refresh button) at the right of the admin sub menu bar. Outside the admin layout it renders inline. *@
+@if (InAdminLayout)
+{
+    <SectionContent SectionName="@SectionName">@ChildContent</SectionContent>
+}
+else
+{
+    @ChildContent
+}
+
+@code {
+    /// <summary>Name of the section that the admin layout renders in its sub menu bar.</summary>
+    public const string SectionName = "admin-subbar-actions";
+
+    /// <summary>Name of the cascading value with which the admin layout announces that it has the section.</summary>
+    public const string HostName = "AdminSubbarHost";
+
+    [CascadingParameter(Name = HostName)]
+    private bool InAdminLayout { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

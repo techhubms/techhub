@@ -14,11 +14,11 @@
     <div class="admin-page-header">
         <div>
             <h1 class="admin-page-title">Newsletter</h1>
-            <p class="admin-page-subtitle">Manage subscribers, remove bot signups, and trigger sends</p>
+            <p class="admin-page-subtitle">Manage subscribers, remove bot signups, and trigger test sends. The send log is on its own page.</p>
         </div>
         <div class="admin-actions">
 
-            <button class="btn-secondary" @onclick="RefreshAsync" disabled="@_loading">@(_loading ? "Refreshing…" : "⟳ Refresh")</button>
+            <AdminSubbarAction><button class="btn-secondary" @onclick="RefreshAsync" disabled="@_loading">@(_loading ? "Refreshing…" : "⟳ Refresh")</button></AdminSubbarAction>
         </div>
     </div>
 
@@ -122,35 +122,6 @@
             </tbody>
         </table>
     </div>
-
-    <h2 class="admin-section-title admin-newsletter-send-log-heading">Send log</h2>
-    <div class="admin-jobs-table-wrapper">
-        <table class="admin-table">
-            <thead>
-                <tr>
-                    <th>When</th>
-                    <th>Kind</th>
-                    <th>Target</th>
-                    <th>Sent</th>
-                    <th>Failed</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var log in _sendLog)
-                {
-                    <tr>
-                        <td class="admin-cell-mono">@DateHelper.FormatTimestamp(log.SentAt)</td>
-                        <td>@log.SendKind</td>
-                        <td class="admin-cell-mono">@log.TargetKey</td>
-                        <td>@log.RecipientCount</td>
-                        <td>@(log.FailedCount > 0 ? log.FailedCount.ToString() : "—")</td>
-                        <td>@log.Status</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
 </div>
 
 @if (_editing is not null)
@@ -187,7 +158,6 @@
 
 @code {
     private IReadOnlyList<NewsletterSubscriber> _subscribers = [];
-    private IReadOnlyList<NewsletterSendLogEntry> _sendLog = [];
     private IReadOnlyList<Section> _sections = [];
     private readonly HashSet<string> _testSections = [];
     private string? _search;
@@ -228,7 +198,6 @@
         try
         {
             _subscribers = await Api.GetNewsletterSubscribersAsync(pageSize: 500);
-            _sendLog = await Api.GetNewsletterSendLogAsync();
             if (_sections.Count == 0)
             {
                 _sections = await Api.GetNewsletterSectionsAsync() ?? [];

@@ -126,6 +126,26 @@ public class SectionTimelineTests : BunitContext
     }
 
     [Fact]
+    public void Render_ForTheProductOfTheSection_LeavesTheProductOutOfTheTitle()
+    {
+        _mockApiClient
+            .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(
+            [
+                GaEntry(product: "Artificial Intelligence", feature: "Agent mode", date: new DateOnly(2026, 3, 10)),
+                GaEntry(product: "Artificial Intelligence", feature: null, date: new DateOnly(2026, 3, 9)),
+                GaEntry(product: "Microsoft Foundry", feature: "Agent Service", date: new DateOnly(2026, 3, 8))
+            ]);
+
+        var cut = RenderPage();
+
+        cut.FindAll(".timeline-name").Select(n => n.TextContent).Should().Equal(
+            "Agent mode",
+            "Artificial Intelligence",
+            "Microsoft Foundry: Agent Service");
+    }
+
+    [Fact]
     public void ExpandingACard_ListsItsSources_ExternalOnesOpeningInANewTab()
     {
         var cut = RenderPage();
