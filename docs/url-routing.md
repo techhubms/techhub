@@ -284,6 +284,8 @@ All host comparisons are case-insensitive. Redirect URLs always use lowercase. T
 
 This ensures `/coding/2025-01-01-slug.html` → `/dotnet/slug` in one redirect.
 
+Two-segment paths are also checked against `_renamedCollections`, for a collection that was replaced by another one: `/github-copilot/features` (the former features page) redirects to `/github-copilot/timeline`.
+
 **5. Multi-segment validation** - validates the normalized path against `SectionCache`:
 
 - Framework paths (`_blazor`, `_framework`, `_content`) always pass
@@ -464,7 +466,7 @@ After the auth and rate-limiting phase, requests reach the registered endpoints:
 | `/newsletter/subscribe`, `/newsletter/confirm`, `/newsletter/manage`, `/newsletter/unsubscribe` | Newsletter pages, see [newsletter.md](newsletter.md) |
 | `/all/authors` and `/all/authors/{authorName}` | `Authors.razor` |
 | `/{section}/timeline` (every section except `all`) | `SectionTimeline.razor` |
-| `/github-copilot/features`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord`, `/vscode-updates[/{slug}]` | GitHub Copilot custom pages |
+| `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord`, `/vscode-updates[/{slug}]` | GitHub Copilot custom pages |
 | `/ai/genai-basics`, `/genai-applied`, `/genai-advanced`, `/sdlc` | AI custom pages |
 | `/devops/dx-space` | `DXSpace.razor` |
 | `/not-found` | `NotFound.razor` |

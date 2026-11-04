@@ -438,25 +438,6 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get GitHub Copilot features with their linked content.
-    /// </summary>
-    public virtual async Task<IEnumerable<GhcFeature>?> GetGhcFeaturesAsync(
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            return await _httpClient.GetFromJsonAsync<IEnumerable<GhcFeature>>(
-                "/api/ghc-features",
-                cancellationToken);
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch ghc-features");
-            throw;
-        }
-    }
-
-    /// <summary>
     /// Get the timeline of a section.
     /// GET /api/sections/{sectionName}/timeline
     /// </summary>
@@ -629,7 +610,7 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get Features page data
+    /// Get the GitHub Copilot subscription tiers, shown next to its timeline.
     /// </summary>
     public virtual async Task<FeaturesPageData?> GetFeaturesDataAsync(CancellationToken cancellationToken = default)
     {
@@ -1624,6 +1605,66 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
+    /// Get a page of the articles of a product, newest first.
+    /// GET /api/admin/products/{id}/articles
+    /// </summary>
+    public virtual async Task<PagedResult<ProductArticleLink>> GetProductArticlesAsync(
+        long id,
+        bool includeChildren,
+        int page,
+        int pageSize,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<PagedResult<ProductArticleLink>>(
+                $"/api/admin/products/{id}/articles?includeChildren={includeChildren.ToString().ToLowerInvariant()}&page={page}&pageSize={pageSize}",
+                cancellationToken) ?? new PagedResult<ProductArticleLink> { Items = [], TotalCount = 0 };
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch articles of product {ProductId}", id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get a page of the dates of a product, newest first.
+    /// GET /api/admin/products/{id}/events
+    /// </summary>
+    public virtual async Task<PagedResult<ProductEventLink>> GetProductEventsAsync(
+        long id,
+        bool includeChildren,
+        int page,
+        int pageSize,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<PagedResult<ProductEventLink>>(
+                $"/api/admin/products/{id}/events?includeChildren={includeChildren.ToString().ToLowerInvariant()}&page={page}&pageSize={pageSize}",
+                cancellationToken) ?? new PagedResult<ProductEventLink> { Items = [], TotalCount = 0 };
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch dates of product {ProductId}", id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Turn a child product into a feature of its parent and return the parent.
+    /// POST /api/admin/products/{id}/convert-to-feature
+    /// </summary>
+    public virtual async Task<ProductDetail> ConvertProductToFeatureAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsync($"/api/admin/products/{id}/convert-to-feature", content: null, cancellationToken);
+        return await ReadProductDetailAsync(response, "convert product to feature", cancellationToken);
+    }
+
+    /// <summary>
     /// Mark a name as not being a product.
     /// POST /api/admin/products/ignored
     /// </summary>
@@ -1645,146 +1686,6 @@ public class TechHubApiClient : ITechHubApiClient
     {
         using var response = await _httpClient.DeleteAsync($"/api/admin/products/ignored?name={Uri.EscapeDataString(name)}", cancellationToken);
         await EnsureProductSuccessAsync(response, "unignore product name", cancellationToken);
-    }
-
-    /// <summary>
-    /// Add an alias that implies a plan or surface.
-    /// POST /api/admin/products/{id}/aliases
-    /// </summary>
-    public virtual async Task<ProductDetail> AddProductAliasAsync(
-        long id,
-        string aliasName,
-        long? qualifierId,
-        CancellationToken cancellationToken = default)
-    {
-        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{id}/aliases", new { alias = aliasName, qualifierId }, cancellationToken);
-        return await ReadProductDetailAsync(response, "add product alias", cancellationToken);
-    }
-
-    /// <summary>
-    /// Set or clear the plan or surface an alias implies.
-    /// PUT /api/admin/products/{id}/aliases/{aliasId}/qualifier
-    /// </summary>
-    public virtual async Task<ProductDetail> SetProductAliasQualifierAsync(
-        long id,
-        long aliasId,
-        long? qualifierId,
-        CancellationToken cancellationToken = default)
-    {
-        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/products/{id}/aliases/{aliasId}/qualifier", new { qualifierId }, cancellationToken);
-        return await ReadProductDetailAsync(response, "set product alias qualifier", cancellationToken);
-    }
-
-    /// <summary>
-    /// Get the plans and surfaces with their aliases and usage counts.
-    /// GET /api/admin/qualifiers
-    /// </summary>
-    public virtual async Task<IReadOnlyList<ProductQualifier>> GetQualifiersAsync(
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            return await _httpClient.GetFromJsonAsync<IReadOnlyList<ProductQualifier>>(
-                "/api/admin/qualifiers", cancellationToken) ?? [];
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch plans and surfaces");
-            throw;
-        }
-    }
-
-    /// <summary>
-    /// Get the plan and surface names the AI returned that are not in the vocabulary yet.
-    /// GET /api/admin/qualifiers/unmatched
-    /// </summary>
-    public virtual async Task<IReadOnlyList<UnmatchedQualifierName>> GetUnmatchedQualifierNamesAsync(
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            return await _httpClient.GetFromJsonAsync<IReadOnlyList<UnmatchedQualifierName>>(
-                "/api/admin/qualifiers/unmatched", cancellationToken) ?? [];
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch unmatched plan and surface names");
-            throw;
-        }
-    }
-
-    /// <summary>
-    /// Add a plan or surface.
-    /// POST /api/admin/qualifiers
-    /// </summary>
-    public virtual async Task<ProductQualifier> CreateQualifierAsync(
-        string kind,
-        string name,
-        CancellationToken cancellationToken = default)
-    {
-        using var response = await _httpClient.PostAsJsonAsync("/api/admin/qualifiers", new { kind, name }, cancellationToken);
-        return await ReadQualifierAsync(response, "create plan or surface", cancellationToken);
-    }
-
-    /// <summary>
-    /// Rename a plan or surface.
-    /// PUT /api/admin/qualifiers/{id}
-    /// </summary>
-    public virtual async Task<ProductQualifier> RenameQualifierAsync(
-        long id,
-        string name,
-        CancellationToken cancellationToken = default)
-    {
-        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/qualifiers/{id}", new { name }, cancellationToken);
-        return await ReadQualifierAsync(response, "rename plan or surface", cancellationToken);
-    }
-
-    /// <summary>
-    /// Delete a plan or surface.
-    /// DELETE /api/admin/qualifiers/{id}
-    /// </summary>
-    public virtual async Task DeleteQualifierAsync(
-        long id,
-        CancellationToken cancellationToken = default)
-    {
-        using var response = await _httpClient.DeleteAsync($"/api/admin/qualifiers/{id}", cancellationToken);
-        await EnsureProductSuccessAsync(response, "delete plan or surface", cancellationToken);
-    }
-
-    /// <summary>
-    /// Add an alias to a plan or surface.
-    /// POST /api/admin/qualifiers/{id}/aliases
-    /// </summary>
-    public virtual async Task<ProductQualifier> AddQualifierAliasAsync(
-        long id,
-        string aliasName,
-        CancellationToken cancellationToken = default)
-    {
-        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/qualifiers/{id}/aliases", new { alias = aliasName }, cancellationToken);
-        return await ReadQualifierAsync(response, "add plan or surface alias", cancellationToken);
-    }
-
-    /// <summary>
-    /// Remove an alias from a plan or surface.
-    /// DELETE /api/admin/qualifiers/{id}/aliases/{aliasId}
-    /// </summary>
-    public virtual async Task RemoveQualifierAliasAsync(
-        long id,
-        long aliasId,
-        CancellationToken cancellationToken = default)
-    {
-        using var response = await _httpClient.DeleteAsync($"/api/admin/qualifiers/{id}/aliases/{aliasId}", cancellationToken);
-        await EnsureProductSuccessAsync(response, "remove plan or surface alias", cancellationToken);
-    }
-
-    private async Task<ProductQualifier> ReadQualifierAsync(
-        HttpResponseMessage response,
-        string operation,
-        CancellationToken cancellationToken)
-    {
-        await EnsureProductSuccessAsync(response, operation, cancellationToken);
-        return await response.Content.ReadFromJsonAsync<ProductQualifier>(cancellationToken)
-            ?? throw new InvalidOperationException($"API returned null for {operation}");
     }
 
     /// <summary>

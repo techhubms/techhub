@@ -23,9 +23,9 @@ public class AdminProductDetailTests : AdminPageTestBase
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(Detail());
         _api.Setup(x => x.GetProductsAsync(It.IsAny<string?>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync([new ProductSummary { Id = 5, Name = "Microsoft Foundry" }, new ProductSummary { Id = 6, Name = "Azure Functions" }]);
-        _api.Setup(x => x.GetQualifiersAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync([new ProductQualifier { Id = 21, Kind = "plan", Name = "Business" }, new ProductQualifier { Id = 22, Kind = "surface", Name = "JetBrains IDEs" }]);
         _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(new ProductFeatureOverview());
+        SetEvents(DefaultEvent());
+        SetArticles(DefaultArticle());
     }
 
     private IRenderedComponent<AdminProductDetail> RenderDetail(string? tab = null) =>
@@ -50,22 +50,105 @@ public class AdminProductDetailTests : AdminPageTestBase
     }
 
     [Fact]
-    public void Render_ShowsDatesAndArticlesWithLinksToTheArticlesOnTheActivityTab()
+    public void Render_ShowsTheDatesWithLinksToTheArticlesOnTheDatesTab()
     {
         // Act
-        var cut = RenderDetail("activity");
+        var cut = RenderDetail("dates");
 
         // Assert
         var eventRow = cut.FindAll("#events-table tbody tr").Should().ContainSingle().Subject;
         eventRow.TextContent.Should().Contain("2027-06-01").And.Contain("retirement").And.Contain("Foundry Classic retires");
         eventRow.QuerySelector("a")!.GetAttribute("href").Should().Be("/admin/content-preview/news/retirement-post");
         eventRow.QuerySelector("a")!.TextContent.Should().Be("Retirement post");
+        cut.FindAll("#articles-table").Should().BeEmpty("the articles are on their own tab");
+        cut.FindAll("#aliases-list").Should().BeEmpty("the names are on the general tab");
+    }
 
+    [Fact]
+    public void Render_ShowsTheArticlesWithLinksToThemOnTheArticlesTab()
+    {
+        // Act
+        var cut = RenderDetail("articles");
+
+        // Assert
         var articleRow = cut.FindAll("#articles-table tbody tr").Should().ContainSingle().Subject;
         articleRow.TextContent.Should().Contain("Azure AI Foundry");
         articleRow.QuerySelector("a")!.GetAttribute("href").Should().Be("/admin/content-preview/news/intro-post");
-        cut.Markup.Should().Contain("Dates (1)").And.Contain("Articles (1)");
-        cut.FindAll("#aliases-list").Should().BeEmpty("the names are on the general tab");
+        cut.FindAll("#events-table").Should().BeEmpty("the dates are on their own tab");
+    }
+
+    [Fact]
+    public void Render_LongListsArePaged_AndNextAndPreviousLoadTheOtherPages()
+    {
+        // Arrange
+        var detail = Detail();
+        detail.ArticleCount = 60;
+        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
+        _api.Setup(x => x.GetProductArticlesAsync(5, true, 1, 25, It.IsAny<CancellationToken>())).ReturnsAsync(Page<ProductArticleLink>([DefaultArticle()], 60));
+        _api.Setup(x => x.GetProductArticlesAsync(5, true, 2, 25, It.IsAny<CancellationToken>())).ReturnsAsync(Page<ProductArticleLink>([DefaultArticle()], 60));
+        var cut = RenderDetail("articles");
+
+        // Assert — first page
+        cut.Find("#product-pager .admin-pagination-info").TextContent.Should().Contain("Page 1 of 3").And.Contain("60");
+        cut.FindAll("#product-pager button").First().HasAttribute("disabled").Should().BeTrue();
+
+        // Act
+        cut.FindAll("#product-pager button").Last().Click();
+
+        // Assert
+        _api.Verify(x => x.GetProductArticlesAsync(5, true, 2, 25, It.IsAny<CancellationToken>()), Times.Once);
+        cut.Find("#product-pager .admin-pagination-info").TextContent.Should().Contain("Page 2 of 3");
+    }
+
+    [Fact]
+    public void Render_ShortListsHaveNoPager()
+    {
+        // Act
+        var cut = RenderDetail("dates");
+
+        // Assert
+        cut.FindAll("#product-pager").Should().BeEmpty();
+    }
+
+    [Fact]
+    public void ScopeFilter_IsOnlyOfferedForAProductWithChildren_AndExcludingThemReloadsThePage()
+    {
+        // Arrange
+        RenderDetail("dates").FindAll("#includeChildren").Should().BeEmpty();
+        _api.Invocations.Clear();
+
+        var detail = Detail();
+        detail.Children = [new ProductReference { Id = 7, Name = "Foundry Agent Service" }];
+        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
+        var cut = RenderDetail("dates");
+        _api.Verify(x => x.GetProductEventsAsync(5, true, 1, 25, It.IsAny<CancellationToken>()), Times.Once);
+
+        // Act
+        cut.Find("#includeChildren").Change(false);
+
+        // Assert
+        _api.Verify(x => x.GetProductEventsAsync(5, false, 1, 25, It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public void Render_OnlyLoadsTheDataOfTheActiveTab()
+    {
+        // Act
+        RenderDetail();
+
+        // Assert
+        _api.Verify(x => x.GetProductEventsAsync(It.IsAny<long>(), It.IsAny<bool>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<CancellationToken>()), Times.Never);
+        _api.Verify(x => x.GetProductArticlesAsync(It.IsAny<long>(), It.IsAny<bool>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public void Render_TheOldActivityAddressIsNoLongerATab()
+    {
+        // Act
+        var cut = RenderDetail("activity");
+
+        // Assert
+        cut.FindAll(".admin-tab.active").Select(a => a.TextContent).Should().Equal("General");
     }
 
     [Theory]
@@ -75,12 +158,12 @@ public class AdminProductDetailTests : AdminPageTestBase
     public void Render_FormatsTheDateByPrecision(string precision, string expected)
     {
         // Arrange
-        var detail = Detail();
-        detail.Events[0].DatePrecision = precision;
-        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
+        var dateEvent = DefaultEvent();
+        dateEvent.DatePrecision = precision;
+        SetEvents(dateEvent);
 
         // Act
-        var cut = RenderDetail("activity");
+        var cut = RenderDetail("dates");
 
         // Assert
         cut.Find("#events-table tbody tr td").TextContent.Should().Be(expected);
@@ -91,21 +174,25 @@ public class AdminProductDetailTests : AdminPageTestBase
     {
         // Arrange
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(new ProductDetail { Id = 5, Name = "Empty" });
+        SetEvents();
+        SetArticles();
 
         // Act
         var general = RenderDetail();
-        var activity = RenderDetail("activity");
+        var dates = RenderDetail("dates");
+        var articles = RenderDetail("articles");
 
         // Assert
         general.Find("#aliases-empty").Should().NotBeNull();
-        activity.Find("#events-empty").Should().NotBeNull();
-        activity.Find("#articles-empty").Should().NotBeNull();
+        dates.Find("#events-empty").Should().NotBeNull();
+        articles.Find("#articles-empty").Should().NotBeNull();
     }
 
     [Theory]
     [InlineData(null, "General")]
     [InlineData("features", "Features (0)")]
-    [InlineData("activity", "Dates and articles (2)")]
+    [InlineData("dates", "Dates (1)")]
+    [InlineData("articles", "Articles (1)")]
     [InlineData("nonsense", "General")]
     public void Render_MarksTheCurrentTabAndLinksToTheOthers(string? tab, string expectedActive)
     {
@@ -114,8 +201,9 @@ public class AdminProductDetailTests : AdminPageTestBase
 
         // Assert
         var tabs = cut.FindAll(".admin-tabs a");
-        tabs.Select(a => a.GetAttribute("href")).Should().Equal("/admin/products/5", "/admin/products/5/features", "/admin/products/5/activity");
-        tabs.Select(a => a.TextContent).Should().Equal("General", "Features (0)", "Dates and articles (2)");
+        tabs.Select(a => a.GetAttribute("href")).Should().Equal(
+            "/admin/products/5", "/admin/products/5/features", "/admin/products/5/dates", "/admin/products/5/articles");
+        tabs.Select(a => a.TextContent).Should().Equal("General", "Features (0)", "Dates (1)", "Articles (1)");
         cut.FindAll(".admin-tab.active").Select(a => a.TextContent).Should().Equal(expectedActive);
     }
 
@@ -125,12 +213,36 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Act
         var general = RenderDetail();
         var features = RenderDetail("features");
-        var activity = RenderDetail("activity");
+        var dates = RenderDetail("dates");
+        var articles = RenderDetail("articles");
 
         // Assert
-        general.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Name and aliases", "Hierarchy", "Merge or delete");
-        features.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Features (0)", "Features to review (0)", "Features by surface");
-        activity.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Dates (1)", "Articles (1)");
+        general.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Name and aliases", "Parent and child products", "Convert, merge or delete");
+        features.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Features (0)", "Features to review (0)");
+        dates.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Dates (1)");
+        articles.FindAll(".admin-section-title").Select(e => e.TextContent).Should().Equal("Articles (1)");
+    }
+
+    [Fact]
+    public void Render_ExplainsWhatMergeIntoDoes()
+    {
+        // Act
+        var cut = RenderDetail();
+
+        // Assert
+        var description = cut.Find("#merge-description").TextContent;
+        description.Should().Contain("Merge into").And.Contain("added twice").And.Contain("become aliases").And.Contain("Delete");
+    }
+
+    [Fact]
+    public void Render_ExplainsHowProductsAndFeaturesFitTogether()
+    {
+        // Act
+        var cut = RenderDetail();
+
+        // Assert
+        var glossary = cut.Find("#catalog-glossary").TextContent;
+        glossary.Should().Contain("Product").And.Contain("Feature").And.Contain("Date").And.NotContain("Surface");
     }
     [Fact]
     public void Render_UnknownProduct_ShowsNotFound()
@@ -195,7 +307,7 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Arrange
         var updated = Detail();
         updated.Aliases = [.. updated.Aliases, new ProductAlias { Id = 2, Alias = "Foundry" }];
-        _api.Setup(x => x.AddProductAliasAsync(5, "Foundry", null, It.IsAny<CancellationToken>())).ReturnsAsync(updated);
+        _api.Setup(x => x.AddProductAliasAsync(5, "Foundry", It.IsAny<CancellationToken>())).ReturnsAsync(updated);
         var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
         cut.Find("#newAlias").Change("Foundry");
 
@@ -257,11 +369,12 @@ public class AdminProductDetailTests : AdminPageTestBase
     {
         // Arrange
         var detail = Detail();
-        detail.Articles = [.. detail.Articles, new ProductArticleLink { CollectionName = "news", Slug = "agent-post", Title = "Agent post", DateEpoch = 1_767_225_600, ProductName = "Foundry Agent Service", CatalogName = "Microsoft Foundry Agent Service" }];
+        detail.Children = [new ProductReference { Id = 7, Name = "Microsoft Foundry Agent Service" }];
+        SetArticles(DefaultArticle(), new ProductArticleLink { CollectionName = "news", Slug = "agent-post", Title = "Agent post", DateEpoch = 1_767_225_600, ProductName = "Foundry Agent Service", CatalogName = "Microsoft Foundry Agent Service" });
         _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
 
         // Act
-        var cut = RenderDetail("activity");
+        var cut = RenderDetail("articles");
 
         // Assert
         cut.Find("#articles-table thead").TextContent.Should().Contain("Product");
@@ -269,14 +382,15 @@ public class AdminProductDetailTests : AdminPageTestBase
     }
 
     [Fact]
-    public void Render_WhenAllLinksAreAboutTheProductItself_HidesTheProductColumn()
+    public void Render_WhenTheProductHasNoChildren_HidesTheProductColumn()
     {
         // Act
-        var cut = RenderDetail("activity");
+        var articles = RenderDetail("articles");
+        var dates = RenderDetail("dates");
 
         // Assert
-        cut.Find("#articles-table thead").TextContent.Should().NotContain("Product");
-        cut.Find("#events-table thead").TextContent.Should().NotContain("Product");
+        articles.Find("#articles-table thead").TextContent.Should().NotContain("Product");
+        dates.Find("#events-table thead").TextContent.Should().NotContain("Product");
     }
 
     [Fact]
@@ -329,72 +443,6 @@ public class AdminProductDetailTests : AdminPageTestBase
     }
 
     [Fact]
-    public void Render_ShowsThePlanOrSurfaceOfAliasesArticlesAndDates()
-    {
-        // Arrange
-        var detail = Detail();
-        detail.Aliases = [new ProductAlias { Id = 1, Alias = "GitHub Copilot Business", QualifierId = 21, QualifierName = "Business", QualifierKind = "plan" }];
-        detail.Articles[0].QualifierName = "Business";
-        detail.Events[0].Qualifiers = [new QualifierReference { Id = 21, Kind = "plan", Name = "Business" }, new QualifierReference { Id = 22, Kind = "surface", Name = "JetBrains IDEs" }];
-        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
-
-        // Act
-        var general = RenderDetail();
-        var cut = RenderDetail("activity");
-
-        // Assert
-        general.Find("#aliases-list select").GetAttribute("value").Should().Be("21");
-        cut.Find("#events-table thead").TextContent.Should().Contain("Plans and surfaces");
-        cut.Find("#events-table tbody").TextContent.Should().Contain("Business, JetBrains IDEs");
-        cut.Find("#articles-table thead").TextContent.Should().Contain("Plan or surface");
-        cut.Find("#articles-table tbody").TextContent.Should().Contain("Business");
-    }
-
-    [Fact]
-    public void Render_WithoutQualifiers_HidesTheQualifierColumns()
-    {
-        // Act
-        var cut = RenderDetail("activity");
-
-        // Assert
-        cut.Find("#events-table thead").TextContent.Should().NotContain("Plans and surfaces");
-        cut.Find("#articles-table thead").TextContent.Should().NotContain("Plan or surface");
-    }
-
-    [Fact]
-    public void AddAlias_WithAPlanOrSurface_PassesTheQualifierToTheApi()
-    {
-        // Arrange
-        _api.Setup(x => x.AddProductAliasAsync(5, "Foundry Business", 21, It.IsAny<CancellationToken>())).ReturnsAsync(Detail());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
-        cut.Find("#newAlias").Change("Foundry Business");
-        cut.Find("#newAliasQualifier").Change("21");
-
-        // Act
-        cut.FindAll(".admin-inline-form button").Single(b => b.TextContent == "Add alias").Click();
-
-        // Assert
-        _api.Verify(x => x.AddProductAliasAsync(5, "Foundry Business", 21, It.IsAny<CancellationToken>()), Times.Once);
-    }
-
-    [Fact]
-    public void SetAliasQualifier_CallsTheApiAndClearsWhenNoneIsChosen()
-    {
-        // Arrange
-        _api.Setup(x => x.SetProductAliasQualifierAsync(5, 1, 22, It.IsAny<CancellationToken>())).ReturnsAsync(Detail());
-        _api.Setup(x => x.SetProductAliasQualifierAsync(5, 1, null, It.IsAny<CancellationToken>())).ReturnsAsync(Detail());
-        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
-
-        // Act
-        cut.Find("#aliases-list select").Change("22");
-        cut.Find("#aliases-list select").Change("");
-
-        // Assert
-        _api.Verify(x => x.SetProductAliasQualifierAsync(5, 1, 22, It.IsAny<CancellationToken>()), Times.Once);
-        _api.Verify(x => x.SetProductAliasQualifierAsync(5, 1, null, It.IsAny<CancellationToken>()), Times.Once);
-    }
-
-    [Fact]
     public void Render_ShowsTheFeaturesWithAliasesAndTheNamesToReview()
     {
         // Arrange
@@ -419,54 +467,6 @@ public class AdminProductDetailTests : AdminPageTestBase
         // Assert
         cut.Find("#features-empty").Should().NotBeNull();
         cut.Find("#features-unmatched-empty").Should().NotBeNull();
-    }
-
-    [Fact]
-    public void FeatureGrid_ListsTheDatesPerFeatureUnderTheirSurfaceOrAllSurfaces()
-    {
-        // Arrange
-        var detail = Detail();
-        detail.Events =
-        [
-            Event(1, "preview", "Agent mode", "Agent mode", "2026-03-10", [new QualifierReference { Id = 22, Kind = "surface", Name = "JetBrains IDEs" }]),
-            Event(2, "ga", "agent mode", "Agent mode", "2026-04-20", [new QualifierReference { Id = 20, Kind = "surface", Name = "Visual Studio Code" }, new QualifierReference { Id = 21, Kind = "plan", Name = "Business" }]),
-            Event(3, "launch", "Unmatched text", null, "2026-05-01", []),
-            Event(4, "ga", null, null, "2026-06-01", [])
-        ];
-        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
-
-        // Act
-        var cut = RenderDetail("features");
-
-        // Assert
-        cut.FindAll("#feature-grid thead th").Select(h => h.TextContent).Should().Equal("Feature", "All surfaces", "JetBrains IDEs", "Visual Studio Code");
-        var rows = cut.FindAll("#feature-grid tbody tr");
-        rows.Should().HaveCount(2);
-        var agent = rows.Single(r => r.QuerySelector("td")!.TextContent == "Agent mode").QuerySelectorAll("td");
-        agent[1].TextContent.Trim().Should().BeEmpty();
-        agent[2].TextContent.Trim().Should().Be("preview 2026-03-10");
-        agent[3].TextContent.Trim().Should().Be("ga 2026-04-20 (Business)");
-        var unmatched = rows.Single(r => r.QuerySelector("td")!.TextContent == "Unmatched text").QuerySelectorAll("td");
-        unmatched[1].TextContent.Trim().Should().Be("launch 2026-05-01");
-    }
-
-    [Fact]
-    public void FeatureGrid_WithoutDatesThatHaveAFeature_ShowsEmptyMessage()
-    {
-        // Arrange
-        var detail = Detail();
-        foreach (var item in detail.Events)
-        {
-            item.Feature = null;
-        }
-
-        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(detail);
-
-        // Act
-        var cut = RenderDetail("features");
-
-        // Assert
-        cut.Find("#feature-grid-empty").Should().NotBeNull();
     }
 
     [Fact]
@@ -779,6 +779,35 @@ public class AdminProductDetailTests : AdminPageTestBase
     }
 
     [Fact]
+    public void Convert_IsOnlyOfferedForAChildProduct_AsksForConfirmation_AndThenOpensTheFeaturesOfTheParent()
+    {
+        // Arrange
+        var withoutParent = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+        withoutParent.FindAll("#convert-button").Should().BeEmpty();
+
+        var child = new ProductDetail { Id = 5, Name = "GitHub Copilot coding agent", Parent = new ProductReference { Id = 6, Name = "GitHub Copilot" } };
+        _api.Setup(x => x.GetProductAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(child);
+        _api.Setup(x => x.ConvertProductToFeatureAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(new ProductDetail { Id = 6, Name = "GitHub Copilot" });
+        _api.Setup(x => x.GetProductAsync(6, It.IsAny<CancellationToken>())).ReturnsAsync(new ProductDetail { Id = 6, Name = "GitHub Copilot" });
+        var cut = Render<AdminProductDetail>(p => p.Add(x => x.Id, 5));
+
+        // Act
+        cut.Find("#convert-button").Click();
+
+        // Assert — nothing happens until confirmed
+        cut.Find("#convert-description").TextContent.Should().Contain("capability").And.Contain("aliases of that feature");
+        cut.Find("#confirm-convert").TextContent.Should().Contain("Convert 'GitHub Copilot coding agent' into a feature of 'GitHub Copilot'?");
+        _api.Verify(x => x.ConvertProductToFeatureAsync(It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Never);
+
+        // Act
+        cut.Find("#confirm-convert .btn").Click();
+
+        // Assert
+        _api.Verify(x => x.ConvertProductToFeatureAsync(5, It.IsAny<CancellationToken>()), Times.Once);
+        Services.GetRequiredService<NavigationManager>().Uri.Should().EndWith("/admin/products/6/features");
+    }
+
+    [Fact]
     public void Merge_AsksForConfirmationBeforeCallingTheApi_AndThenNavigatesToTheTarget()
     {
         // Arrange
@@ -901,48 +930,38 @@ public class AdminProductDetailTests : AdminPageTestBase
         PrimarySectionName = "ai"
     };
 
-    private static ProductEventLink Event(long id, string kind, string? feature, string? featureName, string date, IReadOnlyList<QualifierReference> qualifiers) => new()
-    {
-        Id = id,
-        Kind = kind,
-        Feature = feature,
-        FeatureName = featureName,
-        Description = $"{kind} of {feature}",
-        EventDate = DateOnly.Parse(date, System.Globalization.CultureInfo.InvariantCulture),
-        DatePrecision = "day",
-        CollectionName = "news",
-        ItemSlug = $"post-{id}",
-        ItemTitle = $"Post {id}",
-        ProductName = "Microsoft Foundry",
-        CatalogName = "Microsoft Foundry",
-        Qualifiers = qualifiers
-    };
-
     private static ProductDetail Detail() => new()
     {
         Id = 5,
         Name = "Microsoft Foundry",
         Aliases = [new ProductAlias { Id = 1, Alias = "Azure AI Foundry" }],
-        Articles =
-        [
-            new ProductArticleLink { CollectionName = "news", Slug = "intro-post", Title = "Intro post", DateEpoch = 1_767_225_600, ProductName = "Azure AI Foundry", CatalogName = "Microsoft Foundry" }
-        ],
-        Events =
-        [
-            new ProductEventLink
-            {
-                Id = 11,
-                Kind = "retirement",
-                Feature = "Classic",
-                Description = "Foundry Classic retires",
-                EventDate = new DateOnly(2027, 6, 1),
-                DatePrecision = "day",
-                CollectionName = "news",
-                ItemSlug = "retirement-post",
-                ItemTitle = "Retirement post",
-                ProductName = "Azure AI Foundry",
-                CatalogName = "Microsoft Foundry"
-            }
-        ]
+        ArticleCount = 1,
+        EventCount = 1
     };
+
+    private static ProductArticleLink DefaultArticle() =>
+        new() { CollectionName = "news", Slug = "intro-post", Title = "Intro post", DateEpoch = 1_767_225_600, ProductName = "Azure AI Foundry", CatalogName = "Microsoft Foundry" };
+
+    private static ProductEventLink DefaultEvent() => new()
+    {
+        Id = 11,
+        Kind = "retirement",
+        Feature = "Classic",
+        Description = "Foundry Classic retires",
+        EventDate = new DateOnly(2027, 6, 1),
+        DatePrecision = "day",
+        CollectionName = "news",
+        ItemSlug = "retirement-post",
+        ItemTitle = "Retirement post",
+        ProductName = "Azure AI Foundry",
+        CatalogName = "Microsoft Foundry"
+    };
+
+    private static PagedResult<T> Page<T>(IReadOnlyList<T> items, int? total = null) => new() { Items = items, TotalCount = total ?? items.Count };
+
+    private void SetEvents(params ProductEventLink[] events) =>
+        _api.Setup(x => x.GetProductEventsAsync(5, It.IsAny<bool>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<CancellationToken>())).ReturnsAsync(Page<ProductEventLink>(events));
+
+    private void SetArticles(params ProductArticleLink[] articles) =>
+        _api.Setup(x => x.GetProductArticlesAsync(5, It.IsAny<bool>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<CancellationToken>())).ReturnsAsync(Page<ProductArticleLink>(articles));
 }

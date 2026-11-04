@@ -62,7 +62,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions());
 
         // Act
-        var result = await client.SendCompletionAsync(FlexBody);
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.IsRateLimited.Should().BeFalse();
@@ -111,7 +111,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions(maxWait: TimeSpan.FromMilliseconds(40)));
 
         // Act
-        var result = await client.SendCompletionAsync(FlexBody);
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.ResponseBody.Should().Be(OkResponse);
@@ -132,7 +132,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions(maxWait: TimeSpan.FromMilliseconds(20)));
 
         // Act
-        await client.SendCompletionAsync(FlexBody);
+        await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         using var doc = JsonDocument.Parse(bodies[^1]);
@@ -149,7 +149,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions(maxWait: TimeSpan.FromMilliseconds(40), fallback: false));
 
         // Act
-        var result = await client.SendCompletionAsync(FlexBody);
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.IsRateLimited.Should().BeTrue();
@@ -165,7 +165,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions());
 
         // Act
-        var result = await client.SendCompletionAsync(StandardBody);
+        var result = await client.SendCompletionAsync(StandardBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.IsRateLimited.Should().BeTrue();
@@ -184,7 +184,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions());
 
         // Act
-        var result = await client.SendCompletionAsync(FlexBody);
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.ContentFilterMessage.Should().NotBeNull();
@@ -213,7 +213,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions(), logger);
 
         // Act
-        await client.SendCompletionAsync(FlexBody);
+        await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         var message = logger.Messages.Should().ContainSingle(m => m.Contains("AI usage", StringComparison.Ordinal)).Subject;
@@ -233,7 +233,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions());
 
         // Act
-        var result = await client.SendCompletionAsync(StandardBody);
+        var result = await client.SendCompletionAsync(StandardBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.ResponseBody.Should().Be("not json");

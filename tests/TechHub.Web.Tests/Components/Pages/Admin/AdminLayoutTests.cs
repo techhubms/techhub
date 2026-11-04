@@ -19,7 +19,6 @@ public class AdminLayoutTests : BunitContext
     [
         "/admin",
         "/admin/content-items",
-        "/admin/products",
         "/admin/reviews",
         "/admin/newsletter",
         "/admin/statistics",
@@ -105,9 +104,8 @@ public class AdminLayoutTests : BunitContext
     [InlineData("/admin/content-preview/news/some-item", "/admin/content-items")]
     [InlineData("/admin/vscode-updates", "/admin/content-items")]
     [InlineData("/admin/custom-pages", "/admin/content-items")]
-    [InlineData("/admin/products", "/admin/products")]
-    [InlineData("/admin/products/12/features", "/admin/products")]
-    [InlineData("/admin/products/qualifiers", "/admin/products")]
+    [InlineData("/admin/products", "/admin/content-items")]
+    [InlineData("/admin/products/12/features", "/admin/content-items")]
     [InlineData("/admin/newsletter/send-log", "/admin/newsletter")]
     [InlineData("/ADMIN/Settings", "/admin/settings")]
     public void Render_Authorized_MarksOnlyTheGroupOfTheCurrentPageAsActive(string currentPath, string expectedActiveHref)
@@ -127,10 +125,9 @@ public class AdminLayoutTests : BunitContext
     [Theory]
     [InlineData("/admin", new[] { "/admin", "/admin/feeds", "/admin/processed-urls" }, "/admin")]
     [InlineData("/admin/feeds", new[] { "/admin", "/admin/feeds", "/admin/processed-urls" }, "/admin/feeds")]
-    [InlineData("/admin/content-preview/news/some-item", new[] { "/admin/content-items", "/admin/vscode-updates", "/admin/custom-pages" }, "/admin/content-items")]
-    [InlineData("/admin/products", new[] { "/admin/products", "/admin/products/qualifiers" }, "/admin/products")]
-    [InlineData("/admin/products/12/features", new[] { "/admin/products", "/admin/products/qualifiers" }, "/admin/products")]
-    [InlineData("/admin/products/qualifiers", new[] { "/admin/products", "/admin/products/qualifiers" }, "/admin/products/qualifiers")]
+    [InlineData("/admin/content-preview/news/some-item", new[] { "/admin/content-items", "/admin/products", "/admin/vscode-updates", "/admin/custom-pages" }, "/admin/content-items")]
+    [InlineData("/admin/products", new[] { "/admin/content-items", "/admin/products", "/admin/vscode-updates", "/admin/custom-pages" }, "/admin/products")]
+    [InlineData("/admin/products/12/features", new[] { "/admin/content-items", "/admin/products", "/admin/vscode-updates", "/admin/custom-pages" }, "/admin/products")]
     [InlineData("/admin/newsletter", new[] { "/admin/newsletter", "/admin/newsletter/send-log" }, "/admin/newsletter")]
     [InlineData("/admin/newsletter/send-log", new[] { "/admin/newsletter", "/admin/newsletter/send-log" }, "/admin/newsletter/send-log")]
     public void Render_Authorized_ShowsTheSubMenuOfTheActiveGroupWithTheCurrentPageMarked(string currentPath, string[] expectedHrefs, string expectedActiveHref)

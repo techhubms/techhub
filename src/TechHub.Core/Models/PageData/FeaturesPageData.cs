@@ -1,7 +1,8 @@
 namespace TechHub.Core.Models;
 
 /// <summary>
-/// Data structure for the GitHub Copilot Features page
+/// Data structure of the GitHub Copilot subscriptions: the tiers shown in the sidebar of the GitHub Copilot timeline, with the
+/// intro and pricing links that go with them.
 /// </summary>
 public record FeaturesPageData
 {
@@ -11,14 +12,6 @@ public record FeaturesPageData
     public required FeaturesLinks Links { get; init; }
     public BillingNotice? BillingNotice { get; init; }
     public required List<SubscriptionTier> SubscriptionTiers { get; init; }
-    public IReadOnlyList<FeatureSection>? FeatureSections { get; init; }
-    public string? VideoCollection { get; init; }
-
-    /// <summary>
-    /// Chronological list of GitHub Copilot features for the timeline view.
-    /// Each entry includes an explicit release date, description, plan availability, and optional video reference.
-    /// </summary>
-    public List<TimelineFeature>? TimelineFeatures { get; init; }
 }
 
 public record FeaturesLinks
@@ -55,41 +48,4 @@ public record TierPrice
     public int? Yearly { get; init; }
     public bool PerUser { get; init; }
     public required string Currency { get; init; }
-}
-
-public record FeatureSection
-{
-    public required string Id { get; init; }
-    public required string Title { get; init; }
-    public required List<string> Plans { get; init; }
-}
-
-/// <summary>
-/// A single feature entry in the GitHub Copilot feature timeline.
-/// </summary>
-public record TimelineFeature
-{
-    /// <summary>Unique identifier for the feature (used as HTML anchor and filter key).</summary>
-    public required string Id { get; init; }
-
-    /// <summary>Display name of the feature.</summary>
-    public required string Name { get; init; }
-
-    /// <summary>
-    /// Release date in "YYYY-MM" format (e.g., "2024-05").
-    /// Used to sort and group the timeline chronologically.
-    /// </summary>
-    public required string ReleaseDate { get; init; }
-
-    /// <summary>Brief description of the feature shown on the timeline card.</summary>
-    public required string Description { get; init; }
-
-    /// <summary>Subscription tiers this feature is available in (e.g., "Free", "Pro", "Business", "Pro+", "Enterprise").</summary>
-    public required List<string> Plans { get; init; }
-
-    /// <summary>
-    /// Optional slug of the related ghc-features video content item.
-    /// When set, the video thumbnail and link are shown in the expanded feature detail.
-    /// </summary>
-    public string? VideoSlug { get; init; }
 }

@@ -5,7 +5,7 @@ namespace TechHub.Core.Interfaces;
 /// <summary>
 /// Admin operations on the curated features of a product (<c>product_features</c>) and the content they link to. The AI returns the feature of an
 /// event as free text; the features link those names to one feature per product, so the events of a feature can be
-/// compared across surfaces and plans. Every change updates the links of the events. A feature is always addressed
+/// compared. Every change updates the links of the events. A feature is always addressed
 /// together with its product, so a feature of another product is never touched.
 /// </summary>
 public interface IProductFeatureRepository

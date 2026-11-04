@@ -56,19 +56,15 @@ public static class AdminNavigation
         new("Automatic Processing",
         [
             new("Dashboard", "/admin", Exact: true),
-            new("Feeds", "/admin/feeds"),
+            new("RSS Feeds", "/admin/feeds"),
             new("Processed", "/admin/processed-urls")
         ]),
         new("Content Management",
         [
-            new("Content", "/admin/content-items", Also: ["/admin/content-preview"]),
-            new("VSC Updates", "/admin/vscode-updates"),
-            new("Pages", "/admin/custom-pages")
-        ]),
-        new("Product Management",
-        [
-            new("Products", "/admin/products", Except: ["/admin/products/qualifiers"]),
-            new("Plans & surfaces", "/admin/products/qualifiers")
+            new("Content Items", "/admin/content-items", Also: ["/admin/content-preview"]),
+            new("Products", "/admin/products"),
+            new("Visual Studio Code Updates", "/admin/vscode-updates"),
+            new("Custom Pages", "/admin/custom-pages")
         ]),
         new("Reviews", [new("Reviews", "/admin/reviews")]),
         new("Newsletter",

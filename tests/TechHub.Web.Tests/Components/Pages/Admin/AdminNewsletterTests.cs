@@ -4,7 +4,6 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using TechHub.Core.Models;
-using TechHub.Core.Models.Admin;
 using TechHub.TestUtilities.Builders;
 using TechHub.Web.Components.Pages.Admin;
 using TechHub.Web.Services;
@@ -771,7 +770,6 @@ public class AdminNewsletterTests : AdminPageTestBase
     private static List<IElement> SubscriberRows(IRenderedComponent<AdminNewsletter> cut) =>
         cut.FindAll(".admin-table")[0].QuerySelectorAll("tbody tr").ToList();
 
-
     private static List<string> Stats(IRenderedComponent<AdminNewsletter> cut) =>
         cut.FindAll(".admin-stat-value").Select(e => e.TextContent).ToList();
 
@@ -825,7 +823,6 @@ public class AdminNewsletterTests : AdminPageTestBase
             _api.Setup(x => x.GetNewsletterSubscribersAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<bool?>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(subscribers);
         }
-
 
         if (sections is not null)
         {

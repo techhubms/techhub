@@ -352,8 +352,6 @@ Returns the timeline of a section, newest first. Only articles whose primary sec
     "productId": 12,
     "feature": "Agent mode",
     "description": "Agent mode is generally available.",
-    "plans": ["Pro"],
-    "surfaces": ["Visual Studio Code"],
     "sources": [
       {
         "collectionName": "news",
@@ -370,41 +368,6 @@ Returns the timeline of a section, newest first. Only articles whose primary sec
 `product` and `feature` are the catalog names, or the AI's text when they are not in the catalog (then `productId` is `null`). `sources` are the articles that state the event, oldest first.
 
 **Errors**: `400` for an invalid section name, date, kind or `take`. `404` for an unknown section.
-
-## GHC Features API
-
-Endpoints for the features of GitHub Copilot shown on the features page. They are the features of the GitHub Copilot product in the catalog (`product_features`, with `product_feature_content` for the content they link to).
-The features are edited on the product page of the admin, through `/api/admin/products/{productId}/features` (see [admin.md](admin.md#product-catalog)); this endpoint only reads them.
-See [content-schema.md](content-schema.md#github-copilot-features) for the schema.
-
-### GET /api/ghc-features
-
-Returns the features of GitHub Copilot (and its child products), newest release first, with their content links. `title` is the name of the catalog feature. `releaseDate` is the date set for the feature, else the first launch, preview, ga or release date of its timeline events. Features without content links are included. Public endpoint (no authentication required).
-
-**Response**: `200 OK`
-
-```json
-[
-  {
-    "slug": "copilot-free-plan",
-    "title": "GitHub Copilot Free Plan",
-    "description": "Free tier for individual developers.",
-    "releaseDate": 1700000000,
-    "contentLinks": [
-      {
-        "featureSlug": "copilot-free-plan",
-        "collectionName": "videos",
-        "itemSlug": "intro-to-copilot-free",
-        "isThumbnail": true,
-        "sortOrder": 1,
-        "itemTitle": "Introduction to GitHub Copilot Free",
-        "itemExternalUrl": "https://youtube.com/watch?v=..."
-      }
-    ],
-    "thumbnailLink": { ... }
-  }
-]
-```
 
 ## VS Code Updates API
 

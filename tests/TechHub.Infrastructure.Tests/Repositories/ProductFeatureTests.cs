@@ -96,12 +96,12 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
         var product = await CreateProductAsync();
         await CreateFeatureAsync(product.Id, "Agent mode");
         var slug = await SeedItemAsync();
-        await _timelineRepository.ReplaceEventsAsync("news", slug, [Event(product.Name, "agent-mode-text", "ga"), Event(product.Name, "agent MODE", "preview")], "source", 3, Ct);
+        await _timelineRepository.ReplaceEventsAsync("news", slug, [Event(product.Name, "unrelated capability", "ga"), Event(product.Name, "agent MODE", "preview")], "source", 3, Ct);
 
-        var detail = (await _products.GetDetailAsync(product.Id, Ct))!;
+        var events = (await _products.GetEventsAsync(product.Id, true, 1, 100, Ct)).Items;
 
-        detail.Events.Should().Contain(e => e.Feature == "agent MODE" && e.FeatureName == "Agent mode");
-        detail.Events.Should().Contain(e => e.Feature == "agent-mode-text" && e.FeatureName == null);
+        events.Should().Contain(e => e.Feature == "agent MODE" && e.FeatureName == "Agent mode");
+        events.Should().Contain(e => e.Feature == "unrelated capability" && e.FeatureName == null);
     }
 
     // ── Catalog changes relink ────────────────────────────────────────────────
@@ -218,6 +218,130 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
         (await _products.DeleteAsync(product.Id, Ct)).Succeeded.Should().BeTrue();
 
         (await _fixture.Connection.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM product_features WHERE id = @Id", new { Id = feature })).Should().Be(0);
+    }
+
+    [Fact]
+    public async Task StartingCatalog_TheCopilotCapabilitiesAreFeaturesOfGitHubCopilotInsteadOfChildProducts()
+    {
+        var copilot = (await _products.GetProductsAsync("GitHub Copilot", Ct)).Single(p => p.Name == "GitHub Copilot");
+
+        var features = (await _sut.GetOverviewAsync(copilot.Id, Ct)).Features;
+
+        features.Select(f => f.Name).Should().Contain(["Code review", "SDK"]);
+        features.Where(f => f.Name is "Code review" or "SDK").Should().OnlyContain(f => f.Description != string.Empty);
+        features.Single(f => f.Name == "Code review").Aliases.Select(a => a.Alias).Should().Contain("Copilot code review");
+        (await _products.GetProductsAsync("GitHub Copilot", Ct)).Select(p => p.Name).Should().NotContain(
+            ["GitHub Copilot Chat", "GitHub Copilot code review", "GitHub Copilot coding agent", "GitHub Copilot SDK"]);
+        var detail = (await _products.GetDetailAsync(copilot.Id, Ct))!;
+        detail.Aliases.Select(a => a.Alias).Should().NotContain("GitHub Copilot coding agent", "a name of a feature is not a product alias");
+        features.Single(f => f.Name == "Code review").Aliases.Select(a => a.Alias).Should().Contain("GitHub Copilot code review");
+        features.SelectMany(f => f.Aliases).Select(a => a.Alias).Should().Contain("GitHub Copilot coding agent");
+    }
+
+    [Fact]
+    public async Task ConvertToFeature_MakesTheChildAFeatureOfItsParent_AndItsNamesKeepMatching()
+    {
+        var parent = await CreateProductAsync();
+        var childName = $"{parent.Name} agent {Guid.NewGuid():N}";
+        var child = await _products.CreateAsync(childName, Ct);
+        var childId = child.ProductId!.Value;
+        (await _products.SetParentAsync(childId, parent.Id, Ct)).Succeeded.Should().BeTrue();
+        var alias = UniqueName("Agent alias");
+        (await _products.AddAliasAsync(childId, alias, Ct)).Succeeded.Should().BeTrue();
+        var slug = await SeedItemAsync();
+        await _timelineRepository.ReplaceEventsAsync("news", slug,
+            [Event(childName, null, "ga"), Event(alias, "Own feature", "preview")], "source", 3, Ct);
+
+        var result = await _products.ConvertToFeatureAsync(childId, Ct);
+
+        result.Succeeded.Should().BeTrue(result.Message);
+        result.ProductId.Should().Be(parent.Id);
+        (await _products.GetDetailAsync(childId, Ct)).Should().BeNull();
+        var featureName = char.ToUpperInvariant(childName[(parent.Name.Length + 1)..][0]) + childName[(parent.Name.Length + 2)..];
+        var feature = (await _sut.GetOverviewAsync(parent.Id, Ct)).Features.Should().ContainSingle(f => f.Name == featureName).Subject;
+        (await _products.GetDetailAsync(parent.Id, Ct))!.Aliases.Should().BeEmpty("the names of the product are aliases of the feature, not of a product");
+        feature.Aliases.Select(a => a.Alias).Should().BeEquivalentTo([childName, alias]);
+        var events = await GetEventFeaturesAsync(slug);
+        events.Should().Equal((null!, feature.Id), ("Own feature", (long?)null));
+        (await _fixture.Connection.QueryAsync<long>("SELECT product_id FROM content_timeline_events WHERE item_slug = @Slug", new { Slug = slug }))
+            .Should().OnlyContain(id => id == parent.Id);
+    }
+
+    [Fact]
+    public async Task ConvertToFeature_ReusesAFeatureOfTheParentWithTheSameName_AndMovesTheChildrenOfTheChild()
+    {
+        var parent = await CreateProductAsync();
+        var child = (await _products.CreateAsync($"{parent.Name} Chat", Ct)).ProductId!.Value;
+        var grandchild = (await _products.CreateAsync(UniqueName("Grandchild"), Ct)).ProductId!.Value;
+        (await _products.SetParentAsync(child, parent.Id, Ct)).Succeeded.Should().BeTrue();
+        (await _products.SetParentAsync(grandchild, child, Ct)).Succeeded.Should().BeTrue();
+        var existing = await CreateFeatureAsync(parent.Id, "chat");
+
+        (await _products.ConvertToFeatureAsync(child, Ct)).Succeeded.Should().BeTrue();
+
+        (await _sut.GetOverviewAsync(parent.Id, Ct)).Features.Should().ContainSingle().Which.Id.Should().Be(existing);
+        (await _products.GetDetailAsync(grandchild, Ct))!.Parent!.Id.Should().Be(parent.Id);
+    }
+
+    [Fact]
+    public async Task ConvertToFeature_OfATopLevelOrUnknownProduct_IsRefused()
+    {
+        var product = await CreateProductAsync();
+
+        (await _products.ConvertToFeatureAsync(product.Id, Ct)).Status.Should().Be(ProductOperationStatus.Invalid);
+        (await _products.ConvertToFeatureAsync(long.MaxValue, Ct)).Status.Should().Be(ProductOperationStatus.NotFound);
+        (await _products.GetDetailAsync(product.Id, Ct)).Should().NotBeNull();
+    }
+
+    [Fact]
+    public async Task ReplaceEvents_AProductNameThatIsAFeatureAlias_LinksTheProductAndTheFeature_WithoutBeingAProductAlias()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Sidekick");
+        var name = $"{product.Name} sidekick";
+        (await _sut.AddAliasAsync(product.Id, feature, name, Ct)).Succeeded.Should().BeTrue();
+        var slug = await SeedItemAsync();
+
+        await _timelineRepository.ReplaceEventsAsync("news", slug, [Event(name, null, "ga"), Event(name, "Other text", "preview")], "source", 3, Ct);
+
+        (await _fixture.Connection.QueryAsync<long>("SELECT product_id FROM content_timeline_events WHERE item_slug = @Slug", new { Slug = slug }))
+            .Should().OnlyContain(id => id == product.Id);
+        (await GetEventFeaturesAsync(slug)).Should().Equal((null!, feature), ("Other text", (long?)null));
+        (await _products.GetDetailAsync(product.Id, Ct))!.Aliases.Should().BeEmpty();
+        (await _products.GetUnmatchedNamesAsync(Ct)).Should().NotContain(n => n.Name == name);
+    }
+
+    [Fact]
+    public async Task ReplaceEvents_AProductNameThatIsAProduct_DoesNotTakeTheFeatureOfTheSameName()
+    {
+        var product = await CreateProductAsync();
+        var other = await CreateProductAsync();
+        await CreateFeatureAsync(other.Id, product.Name);
+        var slug = await SeedItemAsync();
+
+        await _timelineRepository.ReplaceEventsAsync("news", slug, [Event(product.Name, null, "ga")], "source", 3, Ct);
+
+        (await _fixture.Connection.QueryAsync<long>("SELECT product_id FROM content_timeline_events WHERE item_slug = @Slug", new { Slug = slug }))
+            .Should().OnlyContain(id => id == product.Id);
+        (await GetEventFeaturesAsync(slug)).Should().Equal((null!, (long?)null));
+    }
+
+    [Fact]
+    public async Task MergeProduct_MovesTheFeaturesTheTargetDoesNotHave_AndTheEventsKeepTheirFeature()
+    {
+        var source = await CreateProductAsync();
+        var target = await CreateProductAsync();
+        var moved = await CreateFeatureAsync(source.Id, "Moved");
+        await CreateFeatureAsync(source.Id, "Shared");
+        var kept = await CreateFeatureAsync(target.Id, "shared");
+        var slug = await SeedItemAsync();
+        await _timelineRepository.ReplaceEventsAsync("news", slug, [Event(source.Name, "Moved", "ga"), Event(source.Name, "Shared", "preview")], "source", 3, Ct);
+
+        (await _products.MergeAsync(source.Id, target.Id, Ct)).Succeeded.Should().BeTrue();
+
+        var features = (await _sut.GetOverviewAsync(target.Id, Ct)).Features;
+        features.Select(f => f.Id).Should().BeEquivalentTo([moved, kept]);
+        (await GetEventFeaturesAsync(slug)).Should().Equal(("Moved", moved), ("Shared", kept));
     }
 
     // ── Names that are not allowed ────────────────────────────────────────────

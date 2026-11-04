@@ -121,12 +121,6 @@ internal interface ITechHubApiClient
     Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(IEnumerable<Section> sections, CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get GitHub Copilot features with their linked content.
-    /// GET /api/ghc-features
-    /// </summary>
-    Task<IEnumerable<GhcFeature>?> GetGhcFeaturesAsync(CancellationToken cancellationToken = default);
-
-    /// <summary>
     /// Get the timeline of a section: the dated events (preview, GA, deprecation, ...) of its articles, newest first.
     /// GET /api/sections/{sectionName}/timeline
     /// </summary>
@@ -206,7 +200,7 @@ internal interface ITechHubApiClient
     Task<LevelsPageData?> GetLevelsDataAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get GitHub Copilot Features page data.
+    /// Get the GitHub Copilot subscription tiers, shown next to its timeline.
     /// GET /api/custom-pages/features
     /// </summary>
     Task<FeaturesPageData?> GetFeaturesDataAsync(CancellationToken cancellationToken = default);
@@ -538,6 +532,24 @@ internal interface ITechHubApiClient
     Task<ProductDetail> MergeProductAsync(long sourceId, long targetId, CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Get a page of the articles of a product, newest first.
+    /// GET /api/admin/products/{id}/articles
+    /// </summary>
+    Task<PagedResult<ProductArticleLink>> GetProductArticlesAsync(long id, bool includeChildren, int page, int pageSize, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a page of the dates of a product, newest first.
+    /// GET /api/admin/products/{id}/events
+    /// </summary>
+    Task<PagedResult<ProductEventLink>> GetProductEventsAsync(long id, bool includeChildren, int page, int pageSize, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Turn a child product into a feature of its parent and return the parent.
+    /// POST /api/admin/products/{id}/convert-to-feature
+    /// </summary>
+    Task<ProductDetail> ConvertProductToFeatureAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Mark a name as not being a product.
     /// POST /api/admin/products/ignored
     /// </summary>
@@ -548,60 +560,6 @@ internal interface ITechHubApiClient
     /// DELETE /api/admin/products/ignored
     /// </summary>
     Task UnignoreProductNameAsync(string name, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Add an alias that implies a plan or surface ('GitHub Copilot Business' is GitHub Copilot in the plan Business).
-    /// POST /api/admin/products/{id}/aliases
-    /// </summary>
-    Task<ProductDetail> AddProductAliasAsync(long id, string aliasName, long? qualifierId, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Set or clear the plan or surface an alias implies.
-    /// PUT /api/admin/products/{id}/aliases/{aliasId}/qualifier
-    /// </summary>
-    Task<ProductDetail> SetProductAliasQualifierAsync(long id, long aliasId, long? qualifierId, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Get the plans and surfaces with their aliases and usage counts.
-    /// GET /api/admin/qualifiers
-    /// </summary>
-    Task<IReadOnlyList<ProductQualifier>> GetQualifiersAsync(CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Get the plan and surface names the AI returned that are not in the vocabulary yet.
-    /// GET /api/admin/qualifiers/unmatched
-    /// </summary>
-    Task<IReadOnlyList<UnmatchedQualifierName>> GetUnmatchedQualifierNamesAsync(CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Add a plan or surface. Throws <see cref="HttpRequestException"/> with the server message when the name is not allowed.
-    /// POST /api/admin/qualifiers
-    /// </summary>
-    Task<ProductQualifier> CreateQualifierAsync(string kind, string name, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Rename a plan or surface; the old name becomes an alias.
-    /// PUT /api/admin/qualifiers/{id}
-    /// </summary>
-    Task<ProductQualifier> RenameQualifierAsync(long id, string name, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Delete a plan or surface and its aliases.
-    /// DELETE /api/admin/qualifiers/{id}
-    /// </summary>
-    Task DeleteQualifierAsync(long id, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Add an alias to a plan or surface.
-    /// POST /api/admin/qualifiers/{id}/aliases
-    /// </summary>
-    Task<ProductQualifier> AddQualifierAliasAsync(long id, string aliasName, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Remove an alias from a plan or surface.
-    /// DELETE /api/admin/qualifiers/{id}/aliases/{aliasId}
-    /// </summary>
-    Task RemoveQualifierAliasAsync(long id, long aliasId, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Get the products that have dates with a feature name that matches no feature yet.

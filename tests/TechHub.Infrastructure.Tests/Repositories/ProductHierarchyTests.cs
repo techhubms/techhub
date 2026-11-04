@@ -35,13 +35,66 @@ public class ProductHierarchyTests : IClassFixture<DatabaseFixture<ProductHierar
         var products = await _sut.GetProductsAsync("GitHub Copilot", Ct);
 
         var copilot = products.Should().Contain(p => p.Name == "GitHub Copilot").Subject;
-        copilot.ParentId.Should().BeNull();
-        foreach (var child in new[] { "GitHub Copilot CLI", "GitHub Copilot coding agent", "GitHub Copilot Fusion" })
+        copilot.ParentName.Should().Be("GitHub");
+        foreach (var child in new[] { "GitHub Copilot CLI", "GitHub Copilot Workspace" })
         {
             var summary = products.Should().Contain(p => p.Name == child).Subject;
             summary.ParentId.Should().Be(copilot.Id);
             summary.ParentName.Should().Be("GitHub Copilot");
         }
+    }
+
+    [Fact]
+    public async Task StartingCatalog_GroupsTheFamiliesUnderTheirProducts()
+    {
+        var all = await _sut.GetProductsAsync(null, Ct);
+
+        var parents = all.ToDictionary(p => p.Name, p => p.ParentName);
+        parents["GitHub Actions"].Should().Be("GitHub");
+        parents["GitHub CodeQL"].Should().Be("GitHub Advanced Security");
+        parents["GitHub Enterprise Cloud"].Should().Be("GitHub Enterprise");
+        parents["Azure Pipelines"].Should().Be("Azure DevOps");
+        parents["Azure Blob Storage"].Should().Be("Azure Storage");
+        parents["Fabric Notebook Toolkit"].Should().Be("Microsoft Fabric");
+        parents["GitHub MCP Server"].Should().Be("GitHub");
+        parents["Microsoft Teams"].Should().Be("Microsoft 365");
+        parents["GitHub"].Should().BeNull();
+        parents["Microsoft Azure"].Should().BeNull();
+        parents["Azure Functions"].Should().Be("Microsoft Azure");
+        parents["Azure SDK"].Should().Be("Microsoft Azure");
+        parents["Azure Pipelines"].Should().Be("Azure DevOps");
+        parents["Azure DevOps"].Should().Be("Microsoft Azure");
+        parents["Microsoft Windows Server"].Should().Be("Microsoft Windows");
+        parents["Windows Terminal"].Should().Be("Microsoft Windows");
+        parents["ASP.NET Core"].Should().Be(".NET");
+        parents["Microsoft Entra ID"].Should().Be("Microsoft Azure");
+        parents["Microsoft Foundry"].Should().Be("Microsoft Azure");
+        parents["Foundry Local"].Should().Be("Microsoft Foundry");
+        parents["Microsoft Copilot Studio"].Should().Be("Microsoft Power Platform");
+        parents["Microsoft Copilot"].Should().BeNull();
+        parents.Should().NotContainKey("Microsoft Entra Agent ID", "it is a feature of Microsoft Entra ID");
+    }
+
+    [Fact]
+    public async Task StartingCatalog_MicrosoftEntraAgentIdIsAFeatureOfMicrosoftEntraId()
+    {
+        var entra = (await _sut.GetProductsAsync("Microsoft Entra ID", Ct)).Single(p => p.Name == "Microsoft Entra ID");
+
+        var features = (await new ProductFeatureRepository(_fixture.Connection, NullLogger<ProductFeatureRepository>.Instance).GetOverviewAsync(entra.Id, Ct)).Features;
+
+        features.Should().ContainSingle(f => f.Name == "Agent ID").Which.Aliases.Select(a => a.Alias)
+            .Should().Contain(["Microsoft Entra Agent ID", "Entra Agent ID"]);
+        (await _sut.GetDetailAsync(entra.Id, Ct))!.Aliases.Select(a => a.Alias).Should().NotContain(["Microsoft Entra Agent ID", "Entra Agent ID"]);
+    }
+
+    [Fact]
+    public async Task StartingCatalog_HasPopularProductsAndTheAliasesOfTheirShortNames()
+    {
+        var all = await _sut.GetProductsAsync(null, Ct);
+
+        all.Select(p => p.Name).Should().Contain(["GitHub Codespaces", "Model Context Protocol", "Azure OpenAI Service", "Microsoft 365 Copilot", "TypeScript"]);
+        all.Single(p => p.Name == "Model Context Protocol").Aliases.Select(a => a.Alias).Should().Contain("MCP");
+        all.Single(p => p.Name == "Microsoft SQL Server").Aliases.Select(a => a.Alias).Should().Contain("Microsoft SQL");
     }
 
     [Fact]
@@ -125,14 +178,61 @@ public class ProductHierarchyTests : IClassFixture<DatabaseFixture<ProductHierar
         await WriteProductsAsync(grandchildArticle, grandchild.Name);
         await _timelineRepository.ReplaceEventsAsync("news", childArticle, [Event(child.Name)], "source", 2, Ct);
 
+        var articles = (await _sut.GetArticlesAsync(parent.Id, true, 1, 100, Ct)).Items;
+        var events = (await _sut.GetEventsAsync(parent.Id, true, 1, 100, Ct)).Items;
+
+        articles.Select(a => a.Slug).Should().BeEquivalentTo(parentArticle, childArticle, grandchildArticle);
+        articles.Single(a => a.Slug == childArticle).CatalogName.Should().Be(child.Name);
+        events.Should().ContainSingle(e => e.ItemSlug == childArticle).Which.CatalogName.Should().Be(child.Name);
+
+        var childArticles = (await _sut.GetArticlesAsync(child.Id, true, 1, 100, Ct)).Items;
+        childArticles.Select(a => a.Slug).Should().BeEquivalentTo(childArticle, grandchildArticle);
+
         var detail = (await _sut.GetDetailAsync(parent.Id, Ct))!;
+        (detail.ArticleCount, detail.EventCount).Should().Be((3, 1));
+    }
 
-        detail.Articles.Select(a => a.Slug).Should().BeEquivalentTo(parentArticle, childArticle, grandchildArticle);
-        detail.Articles.Single(a => a.Slug == childArticle).CatalogName.Should().Be(child.Name);
-        detail.Events.Should().ContainSingle(e => e.ItemSlug == childArticle).Which.CatalogName.Should().Be(child.Name);
+    [Fact]
+    public async Task GetArticlesAndEvents_WithoutChildren_ListOnlyTheProductItself_AndPageTheResults()
+    {
+        var parent = await CreateProductAsync();
+        var child = await CreateProductAsync();
+        (await _sut.SetParentAsync(child.Id, parent.Id, Ct)).Succeeded.Should().BeTrue();
+        var parentArticle = await SeedItemAsync();
+        var childArticles = new[] { await SeedItemAsync(), await SeedItemAsync(), await SeedItemAsync() };
+        await WriteProductsAsync(parentArticle, parent.Name);
+        foreach (var slug in childArticles)
+        {
+            await WriteProductsAsync(slug, child.Name);
+            await _timelineRepository.ReplaceEventsAsync("news", slug, [Event(child.Name)], "source", 2, Ct);
+        }
 
-        var childDetail = (await _sut.GetDetailAsync(child.Id, Ct))!;
-        childDetail.Articles.Select(a => a.Slug).Should().BeEquivalentTo(childArticle, grandchildArticle);
+        var own = await _sut.GetArticlesAsync(parent.Id, includeChildren: false, 1, 10, Ct);
+        var ownEvents = await _sut.GetEventsAsync(parent.Id, includeChildren: false, 1, 10, Ct);
+        var firstPage = await _sut.GetArticlesAsync(parent.Id, includeChildren: true, 1, 3, Ct);
+        var secondPage = await _sut.GetArticlesAsync(parent.Id, includeChildren: true, 2, 3, Ct);
+        var eventsPage = await _sut.GetEventsAsync(parent.Id, includeChildren: true, 2, 2, Ct);
+
+        own.Items.Select(a => a.Slug).Should().Equal(parentArticle);
+        own.TotalCount.Should().Be(1);
+        ownEvents.TotalCount.Should().Be(0);
+        firstPage.TotalCount.Should().Be(4);
+        firstPage.Items.Should().HaveCount(3);
+        secondPage.Items.Should().HaveCount(1);
+        firstPage.Items.Concat(secondPage.Items).Select(a => a.Slug).Should().OnlyHaveUniqueItems();
+        eventsPage.TotalCount.Should().Be(3);
+        eventsPage.Items.Should().HaveCount(1);
+    }
+
+    [Fact]
+    public async Task GetArticles_CapsThePageSize()
+    {
+        var product = await CreateProductAsync();
+
+        var page = await _sut.GetArticlesAsync(product.Id, true, 1, int.MaxValue, Ct);
+
+        page.Items.Should().BeEmpty();
+        page.TotalCount.Should().Be(0);
     }
 
     [Fact]
@@ -152,6 +252,25 @@ public class ProductHierarchyTests : IClassFixture<DatabaseFixture<ProductHierar
         var summary = products.Should().ContainSingle(p => p.Id == parent.Id).Subject;
         summary.ItemCount.Should().Be(2);
         summary.EventCount.Should().Be(2);
+    }
+
+    [Fact]
+    public async Task GetProducts_CountsTheChildProductsAndTheFeaturesOfEachProduct()
+    {
+        var parent = await CreateProductAsync();
+        var child = await CreateProductAsync();
+        var grandchild = await CreateProductAsync();
+        (await _sut.SetParentAsync(child.Id, parent.Id, Ct)).Succeeded.Should().BeTrue();
+        (await _sut.SetParentAsync(grandchild.Id, child.Id, Ct)).Succeeded.Should().BeTrue();
+        await _fixture.Connection.ExecuteAsync(
+            "INSERT INTO product_features (product_id, name) VALUES (@ParentId, 'Agent mode'), (@ParentId, 'Plan mode'), (@ChildId, 'CLI mode')",
+            new { ParentId = parent.Id, ChildId = child.Id });
+
+        var parentSummary = (await _sut.GetProductsAsync(parent.Name, Ct)).Single(p => p.Id == parent.Id);
+        var childSummary = (await _sut.GetProductsAsync(child.Name, Ct)).Single(p => p.Id == child.Id);
+
+        (parentSummary.ChildCount, parentSummary.FeatureCount).Should().Be((1, 2), "only direct children and own features are counted");
+        (childSummary.ChildCount, childSummary.FeatureCount).Should().Be((1, 1));
     }
 
     [Fact]

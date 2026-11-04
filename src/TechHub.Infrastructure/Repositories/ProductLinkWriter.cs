@@ -10,8 +10,8 @@ namespace TechHub.Infrastructure.Repositories;
 internal static class ProductLinkWriter
 {
     /// <summary>
-    /// Replaces the product links of an article with the products in its stored <c>ai_metadata</c>. Only the current
-    /// metadata schema lists products; older or missing metadata leaves the article without product links.
+    /// Replaces the product links of an article with the products in its stored <c>ai_metadata</c>. Metadata without a
+    /// <c>products</c> array (the original summary-based schema) leaves the article without product links.
     /// </summary>
     public static async Task ReplaceItemLinksAsync(
         IDbConnection connection,
@@ -37,9 +37,7 @@ internal static class ProductLinkWriter
                 SELECT regexp_replace(btrim(n.name), '\s+', ' ', 'g') AS name, n.ordinal
                 FROM content_items ci
                 CROSS JOIN LATERAL jsonb_array_elements_text(
-                    CASE WHEN COALESCE((ci.ai_metadata ->> 'schema_version') ~ '^\d+$', FALSE)
-                              AND (ci.ai_metadata ->> 'schema_version')::int >= 2
-                              AND jsonb_typeof(ci.ai_metadata -> 'products') = 'array'
+                    CASE WHEN jsonb_typeof(ci.ai_metadata -> 'products') = 'array'
                          THEN ci.ai_metadata -> 'products'
                          ELSE '[]'::jsonb END) WITH ORDINALITY AS n (name, ordinal)
                 WHERE ci.collection_name = @CollectionName AND ci.slug = @Slug

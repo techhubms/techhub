@@ -13,7 +13,7 @@ namespace TechHub.Web.Tests.Components;
 
 /// <summary>
 /// bUnit tests for ReviewOverview.razor — the counts of everything that needs a review, the product names to review
-/// (with their actions), and the plans, surfaces and features to review.
+/// (with their actions), and the features to review.
 /// </summary>
 public class ReviewOverviewTests : AdminPageTestBase
 {
@@ -33,7 +33,6 @@ public class ReviewOverviewTests : AdminPageTestBase
         // Arrange
         Setup(
             unmatched: [Unmatched("Flint"), Unmatched("Osmos")],
-            qualifiers: [Qualifier("plan", "Team"), Qualifier("surface", "Zed"), Qualifier("surface", "Neovim")],
             features: [Features(1, "GitHub Copilot", names: 3, events: 5), Features(2, "Azure Functions", names: 1, events: 1)],
             pendingFixes: 7,
             failedUrls: 5);
@@ -43,9 +42,9 @@ public class ReviewOverviewTests : AdminPageTestBase
 
         // Assert
         var cards = cut.FindAll(".review-card");
-        cards.Select(c => c.GetAttribute("href")).Should().Equal("/admin/reviews#review-product-names", "/admin/reviews#review-qualifiers", "/admin/reviews#review-features", "/admin/reviews#review-content-fixes", "/admin/processed-urls?status=failed");
-        cards.Select(c => c.QuerySelector(".review-card-count")!.TextContent).Should().Equal("2", "3", "4", "7", "5");
-        cards.Select(c => c.QuerySelector(".review-card-label")!.TextContent).Should().Equal("Product names", "Plans and surfaces", "Features", "Content fixes", "Failed URLs");
+        cards.Select(c => c.GetAttribute("href")).Should().Equal("/admin/reviews#review-product-names", "/admin/reviews#review-features", "/admin/reviews#review-content-fixes", "/admin/processed-urls?status=failed");
+        cards.Select(c => c.QuerySelector(".review-card-count")!.TextContent).Should().Equal("2", "4", "7", "5");
+        cards.Select(c => c.QuerySelector(".review-card-label")!.TextContent).Should().Equal("Product names", "Features", "Content fixes", "Failed URLs");
         cards.Should().OnlyContain(c => !c.ClassList.Contains("review-card-clear"));
     }
 
@@ -56,9 +55,8 @@ public class ReviewOverviewTests : AdminPageTestBase
         var cut = Render<ReviewOverview>();
 
         // Assert
-        cut.FindAll(".review-card").Should().HaveCount(5).And.OnlyContain(c => c.ClassList.Contains("review-card-clear"));
+        cut.FindAll(".review-card").Should().HaveCount(4).And.OnlyContain(c => c.ClassList.Contains("review-card-clear"));
         cut.Find("#review-product-names-empty").TextContent.Should().Contain("Nothing to review.");
-        cut.Find("#review-qualifiers-empty").TextContent.Should().Contain("Nothing to review.");
         cut.Find("#review-features-empty").TextContent.Should().Contain("Nothing to review.");
     }
 
@@ -210,29 +208,13 @@ public class ReviewOverviewTests : AdminPageTestBase
         var cut = Render<ReviewOverview>();
 
         // Act
-        cut.Find(".admin-plain-list .admin-link-btn").Click();
+        cut.Find(".admin-entry-list .admin-link-btn").Click();
 
         // Assert
         _api.Verify(x => x.UnignoreProductNameAsync("Microsoft Azure", It.IsAny<CancellationToken>()), Times.Once);
     }
 
-    // ── Plans, surfaces and features ────────────────────────────────────────
-
-    [Fact]
-    public void Render_ListsThePlanAndSurfaceNamesToReviewWithALinkToWhereTheyAreHandled()
-    {
-        // Arrange
-        Setup(qualifiers: [new UnmatchedQualifierName { Kind = "plan", Name = "Team", EventCount = 4 }, new UnmatchedQualifierName { Kind = "surface", Name = "Zed", EventCount = 1 }]);
-
-        // Act
-        var cut = Render<ReviewOverview>();
-
-        // Assert
-        var rows = cut.FindAll("#review-qualifiers-table tbody tr");
-        rows.Select(r => string.Join("|", r.QuerySelectorAll("td").Select(c => c.TextContent))).Should().Equal("plan|Team|4", "surface|Zed|1");
-        cut.Find("#review-qualifiers a.btn-secondary").GetAttribute("href").Should().Be("/admin/products/qualifiers");
-        cut.Find("#review-qualifiers h2").TextContent.Should().Be("Plans and surfaces to review (2)");
-    }
+    // ── Features ───────────────────────────────────────────────────────────────────────────────────────────────────
 
     [Fact]
     public void Render_ListsTheProductsWithFeaturesToReviewWithALinkToTheirFeaturesTab()
@@ -257,8 +239,6 @@ public class ReviewOverviewTests : AdminPageTestBase
 
     private static UnmatchedProductName Unmatched(string name) => new() { Name = name, ItemCount = 1, EventCount = 0 };
 
-    private static UnmatchedQualifierName Qualifier(string kind, string name) => new() { Kind = kind, Name = name, EventCount = 1 };
-
     private static ProductUnmatchedFeatures Features(long productId, string productName, int names, int events) =>
         new() { ProductId = productId, ProductName = productName, NameCount = names, EventCount = events };
 
@@ -269,7 +249,6 @@ public class ReviewOverviewTests : AdminPageTestBase
         IReadOnlyList<ProductSummary>? products = null,
         IReadOnlyList<UnmatchedProductName>? unmatched = null,
         IReadOnlyList<string>? ignored = null,
-        IReadOnlyList<UnmatchedQualifierName>? qualifiers = null,
         IReadOnlyList<ProductUnmatchedFeatures>? features = null,
         int pendingFixes = 0,
         int failedUrls = 0)
@@ -277,7 +256,6 @@ public class ReviewOverviewTests : AdminPageTestBase
         _api.Setup(x => x.GetProductsAsync(It.IsAny<string?>(), It.IsAny<CancellationToken>())).ReturnsAsync(products ?? []);
         _api.Setup(x => x.GetUnmatchedProductNamesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(unmatched ?? []);
         _api.Setup(x => x.GetIgnoredProductNamesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(ignored ?? []);
-        _api.Setup(x => x.GetUnmatchedQualifierNamesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(qualifiers ?? []);
         _api.Setup(x => x.GetUnmatchedFeaturesSummaryAsync(It.IsAny<CancellationToken>())).ReturnsAsync(features ?? []);
         _api.Setup(x => x.GetContentReviewSummaryAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(new TechHub.Core.Models.Admin.ContentReviewSummary { Pending = pendingFixes });

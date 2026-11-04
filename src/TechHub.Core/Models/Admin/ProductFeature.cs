@@ -41,10 +41,10 @@ public sealed class ProductFeature
     /// <summary>The canonical feature name.</summary>
     public string Name { get; set; } = string.Empty;
 
-    /// <summary>Short description shown when the feature card is opened on the features page.</summary>
+    /// <summary>Short description of the feature.</summary>
     public string Description { get; set; } = string.Empty;
 
-    /// <summary>Release date set by an admin. When null the page uses the first launch, preview, ga or release date of the events.</summary>
+    /// <summary>Release date set by an admin.</summary>
     public DateOnly? ReleaseDate { get; set; }
 
     /// <summary>Number of timeline events (dates) that match this feature.</summary>

@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
+using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 
 namespace TechHub.Api.Tests.Endpoints;
@@ -216,6 +217,48 @@ public class AdminProductsEndpointsTests : IClassFixture<TechHubIntegrationTestA
         detail!.Id.Should().Be(target.Id);
         detail.Aliases.Select(a => a.Alias).Should().Equal(source.Name);
         (await _client.GetAsync($"/api/admin/products/{source.Id}", Ct)).StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task ConvertProductToFeature_MakesTheChildAFeatureOfTheParent()
+    {
+        var parent = await CreateAsync();
+        var child = await CreateAsync();
+        (await _client.PutAsJsonAsync($"/api/admin/products/{child.Id}/parent", new { parentId = parent.Id }, Ct)).StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var response = await _client.PostAsync($"/api/admin/products/{child.Id}/convert-to-feature", content: null, Ct);
+
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var detail = await response.Content.ReadFromJsonAsync<ProductDetail>(Ct);
+        detail!.Id.Should().Be(parent.Id);
+        detail.Children.Should().BeEmpty();
+        detail.Aliases.Should().BeEmpty("the names of the product are aliases of the feature, not of a product");
+        var features = await _client.GetFromJsonAsync<ProductFeatureOverview>($"/api/admin/products/{parent.Id}/features", Ct);
+        features!.Features.Should().ContainSingle(f => string.Equals(f.Name, child.Name, StringComparison.OrdinalIgnoreCase)
+            || f.Aliases.Any(a => a.Alias == child.Name));
+        (await _client.GetAsync($"/api/admin/products/{child.Id}", Ct)).StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task ConvertProductToFeature_OfATopLevelProduct_ReturnsBadRequest_AndUnknownReturnsNotFound()
+    {
+        var product = await CreateAsync();
+
+        (await _client.PostAsync($"/api/admin/products/{product.Id}/convert-to-feature", content: null, Ct)).StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        (await _client.PostAsync("/api/admin/products/999999999/convert-to-feature", content: null, Ct)).StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task GetProductArticlesAndEvents_ReturnAPagedResult_()
+    {
+        var product = await CreateAsync();
+
+        var articles = await _client.GetFromJsonAsync<PagedResult<ProductArticleLink>>($"/api/admin/products/{product.Id}/articles?includeChildren=false&page=1&pageSize=5", Ct);
+        var events = await _client.GetFromJsonAsync<PagedResult<ProductEventLink>>($"/api/admin/products/{product.Id}/events", Ct);
+
+        articles!.TotalCount.Should().Be(0);
+        articles.Items.Should().BeEmpty();
+        events!.TotalCount.Should().Be(0);
     }
 
     [Fact]

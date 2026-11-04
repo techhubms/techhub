@@ -48,9 +48,7 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
         string kind = "ga",
         string date = "2026-03-10",
         string precision = "day",
-        string? description = null,
-        IReadOnlyList<string>? plans = null,
-        IReadOnlyList<string>? surfaces = null) => new()
+        string? description = null) => new()
         {
             Kind = kind,
             Product = product,
@@ -58,9 +56,7 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
             Description = description ?? $"{kind} of {feature ?? product}",
             Date = DateOnly.Parse(date, CultureInfo.InvariantCulture),
             DatePrecision = precision,
-            DateSource = "explicit",
-            Plans = plans ?? [],
-            Surfaces = surfaces ?? []
+            DateSource = "explicit"
         };
 
     private Task StoreAsync(string collection, string slug, params TimelineEvent[] events) =>
@@ -167,7 +163,7 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
     }
 
     [Fact]
-    public async Task GetTimelineAsync_UsesCatalogNamesAndQualifiers()
+    public async Task GetTimelineAsync_UsesCatalogNames()
     {
         var product = NewProduct();
         await _fixture.Connection.ExecuteAsync("INSERT INTO products (name) VALUES (@Name)", new { Name = product });
@@ -175,15 +171,13 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
         await _fixture.Connection.ExecuteAsync(
             "INSERT INTO product_features (product_id, name) VALUES (@ProductId, 'Agent mode')", new { ProductId = productId });
         var item = await SeedItemAsync();
-        await StoreAsync("news", item, Event(product.ToUpperInvariant(), "agent MODE", plans: ["Copilot Pro", "Unknown plan"], surfaces: ["VS Code"]));
+        await StoreAsync("news", item, Event(product.ToUpperInvariant(), "agent MODE"));
 
         var entry = (await TimelineAsync("ai", product)).Should().ContainSingle().Subject;
 
         entry.Product.Should().Be(product, "the catalog spelling replaces the AI's text");
         entry.ProductId.Should().Be(productId);
         entry.Feature.Should().Be("Agent mode");
-        entry.Plans.Should().Equal("Pro");
-        entry.Surfaces.Should().Equal("Visual Studio Code");
     }
 
     [Fact]
@@ -197,8 +191,6 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
 
         entry.ProductId.Should().BeNull();
         entry.Feature.Should().BeNull();
-        entry.Plans.Should().BeEmpty();
-        entry.Surfaces.Should().BeEmpty();
     }
 
     [Fact]

@@ -8,14 +8,20 @@ namespace TechHub.Core.Interfaces;
 /// </summary>
 public interface ITimelineEventRepository
 {
-    /// <summary>Version of the extraction prompt and rules. Bump it to let the backfill job re-extract older articles.</summary>
-    const int CurrentPromptVersion = 3;
+    /// <summary>Version of the extraction prompt and rules (events and products). Bump it to let the backfill job re-extract older articles.</summary>
+    const int CurrentPromptVersion = 9;
 
     /// <summary>Events were extracted while the article was processed (the source text was available).</summary>
     const string ExtractedFromSource = "source";
 
     /// <summary>Events were extracted later from the stored article text by the backfill job.</summary>
     const string ExtractedFromStoredContent = "stored-content";
+
+    /// <summary>
+    /// Events that come from the catalog, not from an extraction: the dated features of the former GitHub Copilot features page.
+    /// Replacing the events of an article, and editing its text, leave them alone.
+    /// </summary>
+    const string ExtractedFromCatalog = "catalog";
 
     /// <summary>
     /// Replaces all events of an article and records that it was scanned, in one transaction.
@@ -33,6 +39,7 @@ public interface ITimelineEventRepository
     /// Like <see cref="ReplaceEventsAsync"/>, but only when the article is still at <paramref name="expectedRevision"/>
     /// (<see cref="TimelineBackfillItem.Revision"/>), checked under the article's write lock. Returns <c>false</c> and
     /// changes nothing when the article was edited after it was read, so events from outdated text are never stored.
+    /// When <paramref name="products"/> is set, the products of the article are replaced in the same transaction.
     /// </summary>
     Task<bool> ReplaceEventsIfUnchangedAsync(
         string collectionName,
@@ -41,6 +48,7 @@ public interface ITimelineEventRepository
         string extractedFrom,
         int promptVersion,
         long expectedRevision,
+        IReadOnlyList<string>? products = null,
         CancellationToken ct = default);
 
     /// <summary>

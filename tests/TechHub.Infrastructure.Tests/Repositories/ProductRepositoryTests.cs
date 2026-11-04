@@ -46,15 +46,13 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
     {
         var ignored = await _sut.GetIgnoredNamesAsync(Ct);
 
-        ignored.Should().Contain(["Microsoft Ignite", "Microsoft SQL", "Azure Accelerated Networking"]);
-        ignored.Should().NotContain("Microsoft Azure");
+        ignored.Should().Contain("Microsoft Ignite");
+        ignored.Should().NotContain(["Microsoft Azure", "Microsoft SQL", "Azure Accelerated Networking"], "the later seed made products or aliases of them");
     }
 
     [Theory]
     [InlineData("Microsoft Azure", "Azure")]
-    [InlineData("GitHub Enterprise Local", null)]
     [InlineData("Agent Host Protocol", "AHP")]
-    [InlineData("Azure SDK", null)]
     public async Task StartingCatalog_ContainsProductsThatAreNotAliasesOfAnotherProduct(string name, string? alias)
     {
         var products = await _sut.GetProductsAsync(name, Ct);
@@ -85,7 +83,6 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
 
         var copilot = products.Should().Contain(p => p.Name == "GitHub Copilot").Subject;
         var aliases = copilot.Aliases.Select(a => a.Alias).ToList();
-        aliases.Should().Contain("GitHub Copilot Business");
         aliases.Should().NotContain(["Copilot Free", "Copilot Pro", "Copilot Pro+", "Copilot Business", "Copilot Enterprise"]);
     }
 
@@ -215,7 +212,7 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
         var detail = (await _sut.GetDetailAsync(product.Id, Ct))!;
         detail.Name.Should().Be(newName);
         detail.Aliases.Select(a => a.Alias).Should().Equal(product.Name);
-        detail.Articles.Should().ContainSingle().Which.ProductName.Should().Be(product.Name);
+        (await _sut.GetArticlesAsync(product.Id, true, 1, 100, Ct)).Items.Should().ContainSingle().Which.ProductName.Should().Be(product.Name);
     }
 
     [Fact]
@@ -263,8 +260,8 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
         (await _sut.GetDetailAsync(source.Id, Ct)).Should().BeNull();
         var detail = (await _sut.GetDetailAsync(target.Id, Ct))!;
         detail.Aliases.Select(a => a.Alias).Should().BeEquivalentTo(source.Name, sourceAlias);
-        detail.Articles.Should().ContainSingle(a => a.Slug == slug);
-        detail.Events.Should().ContainSingle(e => e.ItemSlug == slug);
+        (await _sut.GetArticlesAsync(target.Id, true, 1, 100, Ct)).Items.Should().ContainSingle(a => a.Slug == slug);
+        (await _sut.GetEventsAsync(target.Id, true, 1, 100, Ct)).Items.Should().ContainSingle(e => e.ItemSlug == slug);
     }
 
     [Fact]
@@ -475,11 +472,12 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
         await _timelineRepository.ReplaceEventsAsync("news", newer,
             [Event(product.Name, kind: "ga", date: "2026-03-10")], "source", 2, Ct);
 
-        var detail = (await _sut.GetDetailAsync(product.Id, Ct))!;
+        var articles = (await _sut.GetArticlesAsync(product.Id, true, 1, 100, Ct)).Items;
+        var events = (await _sut.GetEventsAsync(product.Id, true, 1, 100, Ct)).Items;
 
-        detail.Articles.Select(a => a.Title).Should().Equal("Newer article", "Older article");
-        detail.Events.Select(e => (e.Kind, e.ItemTitle)).Should().Equal(("ga", "Newer article"), ("retirement", "Older article"));
-        detail.Events[0].EventDate.Should().Be(new DateOnly(2026, 3, 10));
+        articles.Select(a => a.Title).Should().Equal("Newer article", "Older article");
+        events.Select(e => (e.Kind, e.ItemTitle)).Should().Equal(("retirement", "Older article"), ("ga", "Newer article"));
+        events[1].EventDate.Should().Be(new DateOnly(2026, 3, 10));
     }
 
     [Fact]

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
+using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 
 namespace TechHub.Api.Endpoints;
@@ -13,6 +14,7 @@ namespace TechHub.Api.Endpoints;
 internal static class AdminProductEndpoints
 {
     private const int MaxSearchLength = 200;
+    private const int DefaultPageSize = 25;
 
     public static void MapAdminProductEndpoints(this RouteGroupBuilder group)
     {
@@ -20,7 +22,7 @@ internal static class AdminProductEndpoints
 
         group.MapGet("/products", GetProductsAsync)
             .WithName("GetProducts")
-            .WithSummary("Get the product catalog with aliases and the number of linked articles and dates")
+            .WithSummary("Get the product catalog with aliases and the number of features, child products, linked articles and linked dates")
             .Produces<IReadOnlyList<ProductSummary>>();
 
         group.MapGet("/products/{id:long}", GetProductAsync)
@@ -28,6 +30,16 @@ internal static class AdminProductEndpoints
             .WithSummary("Get a product with its aliases, linked articles and linked dates")
             .Produces<ProductDetail>()
             .Produces(StatusCodes.Status404NotFound);
+
+        group.MapGet("/products/{id:long}/articles", GetArticlesAsync)
+            .WithName("GetProductArticles")
+            .WithSummary("Get a page of the articles of a product, newest first, optionally with those of its child products")
+            .Produces<PagedResult<ProductArticleLink>>();
+
+        group.MapGet("/products/{id:long}/events", GetEventsAsync)
+            .WithName("GetProductEvents")
+            .WithSummary("Get a page of the dates of a product, newest first, optionally with those of its child products")
+            .Produces<PagedResult<ProductEventLink>>();
 
         group.MapPost("/products", CreateProductAsync)
             .WithName("CreateProduct")
@@ -58,12 +70,6 @@ internal static class AdminProductEndpoints
             .Produces(StatusCodes.Status404NotFound)
             .Produces(StatusCodes.Status409Conflict);
 
-        group.MapPut("/products/{id:long}/aliases/{aliasId:long}/qualifier", SetAliasQualifierAsync)
-            .WithName("SetProductAliasQualifier")
-            .WithSummary("Set or clear the plan or surface an alias implies")
-            .Produces<ProductDetail>()
-            .Produces(StatusCodes.Status404NotFound);
-
         group.MapDelete("/products/{id:long}/aliases/{aliasId:long}", RemoveAliasAsync)
             .WithName("RemoveProductAlias")
             .WithSummary("Remove an alias from a product")
@@ -80,6 +86,13 @@ internal static class AdminProductEndpoints
         group.MapPost("/products/{id:long}/merge", MergeProductAsync)
             .WithName("MergeProduct")
             .WithSummary("Merge a product into another product")
+            .Produces<ProductDetail>()
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
+        group.MapPost("/products/{id:long}/convert-to-feature", ConvertProductToFeatureAsync)
+            .WithName("ConvertProductToFeature")
+            .WithSummary("Turn a child product into a feature of its parent; returns the parent")
             .Produces<ProductDetail>()
             .Produces(StatusCodes.Status400BadRequest)
             .Produces(StatusCodes.Status404NotFound);
@@ -129,6 +142,24 @@ internal static class AdminProductEndpoints
         return product is null ? Results.NotFound() : Results.Ok(product);
     }
 
+    private static async Task<IResult> GetArticlesAsync(
+        long id,
+        IProductRepository repository,
+        CancellationToken ct,
+        bool includeChildren = true,
+        int page = 1,
+        int pageSize = DefaultPageSize) =>
+        Results.Ok(await repository.GetArticlesAsync(id, includeChildren, page, pageSize, ct));
+
+    private static async Task<IResult> GetEventsAsync(
+        long id,
+        IProductRepository repository,
+        CancellationToken ct,
+        bool includeChildren = true,
+        int page = 1,
+        int pageSize = DefaultPageSize) =>
+        Results.Ok(await repository.GetEventsAsync(id, includeChildren, page, pageSize, ct));
+
     private static async Task<IResult> CreateProductAsync(
         ProductNameRequest request,
         IProductRepository repository,
@@ -166,18 +197,7 @@ internal static class AdminProductEndpoints
         IProductRepository repository,
         CancellationToken ct)
     {
-        var result = await repository.AddAliasAsync(id, request.Alias?.Trim().Sanitize() ?? string.Empty, request.QualifierId, ct);
-        return await ToDetailResultAsync(result, repository, ct);
-    }
-
-    private static async Task<IResult> SetAliasQualifierAsync(
-        long id,
-        long aliasId,
-        ProductAliasQualifierRequest request,
-        IProductRepository repository,
-        CancellationToken ct)
-    {
-        var result = await repository.SetAliasQualifierAsync(id, aliasId, request.QualifierId, ct);
+        var result = await repository.AddAliasAsync(id, request.Alias?.Trim().Sanitize() ?? string.Empty, ct);
         return await ToDetailResultAsync(result, repository, ct);
     }
 
@@ -208,6 +228,12 @@ internal static class AdminProductEndpoints
         CancellationToken ct)
     {
         var result = await repository.MergeAsync(id, request.TargetId, ct);
+        return await ToDetailResultAsync(result, repository, ct);
+    }
+
+    private static async Task<IResult> ConvertProductToFeatureAsync(long id, IProductRepository repository, CancellationToken ct)
+    {
+        var result = await repository.ConvertToFeatureAsync(id, ct);
         return await ToDetailResultAsync(result, repository, ct);
     }
 

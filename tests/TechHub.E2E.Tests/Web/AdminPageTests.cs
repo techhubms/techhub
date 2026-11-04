@@ -84,10 +84,10 @@ public class AdminPageTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task AdminQualifiers_WithoutAuth_ShowsLoginForm()
+    public async Task AdminProductPlans_WithoutAuth_ShowsLoginForm()
     {
         // Act
-        await Page.GotoRelativeAsync("/admin/products/qualifiers");
+        await Page.GotoRelativeAsync("/admin/products/1/plans");
 
         // Assert
         await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");

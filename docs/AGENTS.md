@@ -57,7 +57,7 @@
 | **Security** | admin-authentication.md, input-validation-and-sanitization.md |
 | **Routing** | url-routing.md |
 | **Observability** | telemetry.md, google-analytics.md, query-logging.md |
-| **Content** | content-api.md, content-processing.md, content-schema.md, rss-feeds.md |
+| **Content** | content-api.md, content-processing.md, content-schema.md, product-catalog.md, rss-feeds.md |
 | **UI/UX** | design-system.md, page-structure.md, toc-component.md, render-modes.md |
 | **Features** | filtering.md, custom-pages.md, health-checks.md, newsletter.md, admin.md |
 | **Frontend** | javascript.md, caching.md, seo.md |

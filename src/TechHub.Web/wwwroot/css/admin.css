@@ -992,15 +992,66 @@ h2.admin-page-title {
     padding: var(--spacing-1) 0;
 }
 
+.admin-table td.admin-tree-cell {
+    padding-left: calc(var(--spacing-2) + var(--tree-depth, 0) * var(--spacing-4));
+}
+
+.admin-table td.admin-tree-child::before {
+    content: "↳ ";
+    color: var(--color-text-secondary);
+}
+
+.admin-row-context {
+    opacity: 0.6;
+}
+
+/* One entry per row: the text on the left, its actions on the right, a thin line between entries. */
+.admin-entry-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-3);
+}
+
+.admin-entry-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--spacing-2);
+    padding: var(--spacing-1) 0;
+    border-bottom: 1px solid var(--color-border-default);
+}
+
+.admin-entry-list li:last-child {
+    border-bottom: none;
+}
+
+.admin-entry-list .admin-link-btn {
+    margin-left: auto;
+}
+
+/* Compact list of collapsible entries: closed entries sit directly below each other, separated by a thin line. */
 .admin-details {
-    margin-top: var(--spacing-6);
+    margin-top: var(--spacing-2);
+}
+
+.admin-details + .admin-details {
+    margin-top: 0;
+    border-top: 1px solid var(--color-border-default);
 }
 
 .admin-details summary {
     cursor: pointer;
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-primary);
+    padding: var(--spacing-1) 0;
+}
+
+.admin-details[open] > summary {
     margin-bottom: var(--spacing-2);
+}
+
+.admin-details[open] {
+    padding-bottom: var(--spacing-2);
 }
 
 .admin-result-summary {

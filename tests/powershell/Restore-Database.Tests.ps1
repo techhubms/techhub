@@ -113,5 +113,9 @@ Describe "Restore-Database" {
         It "Should reset local database password after restore" {
             $content | Should -Match "ALTER ROLE.*WITH PASSWORD"
         }
+
+        It "Should leave the restored production data unaltered (no RSS feed disabling)" {
+            $content | Should -Not -Match 'UPDATE\s+rss_feed_configs'
+        }
     }
 }

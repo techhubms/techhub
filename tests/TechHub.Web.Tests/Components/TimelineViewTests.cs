@@ -5,7 +5,7 @@ using TechHub.Web.Components;
 namespace TechHub.Web.Tests.Components;
 
 /// <summary>
-/// Tests for TimelineView.razor - the year / month / card timeline shared by the section timelines and the GitHub Copilot features page.
+/// Tests for TimelineView.razor - the year / month / card timeline shared by the section timelines.
 /// </summary>
 public class TimelineViewTests : BunitContext
 {

@@ -98,27 +98,27 @@ External-linking collections (`news`, `blogs`, `community`) use `external_url` f
 
 ## GitHub Copilot Features
 
-The features on the `/github-copilot/features` timeline page are the features of the GitHub Copilot product in the product catalog (see [Product Catalog](content-processing.md#product-catalog)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. Until migration 055 they lived in `ghc_features` and `ghc_feature_content`; migration 056 dropped those two tables.
+The features of GitHub Copilot are features of the GitHub Copilot product in the product catalog (see [Product Catalog](product-catalog.md)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. They have no page of their own: their dates are events on the timeline of the GitHub Copilot section (see [Timeline Events](content-processing.md#timeline-events)). The former `/github-copilot/features` page redirects to that timeline. Until migration 055 the features lived in `ghc_features` and `ghc_feature_content`; migration 056 dropped those two tables and migration 062 turned the dated features into timeline events.
 
 ### `product_features` table
 
-The features of a product. The page lists the features of GitHub Copilot and its child products that have at least one content link:
+The features of a product:
 
 | Column | Type | Description |
 |---|---|---|
 | `id` | `bigint` PK | Identifier |
 | `product_id` | `bigint` FK → `products.id` | The product the feature belongs to |
-| `name` | `text` | Feature name, unique per product ignoring case. Shown as the title on the page |
-| `slug` | `text` | Unique slug: the anchor on the page. Generated from the name when not given |
-| `description` | `text` | Short description shown in the expanded feature |
-| `release_date` | `bigint` | Unix epoch timestamp of midnight UTC of the release date (nullable). When empty the page uses the first `launch`, `preview`, `ga` or `release` event of the feature |
+| `name` | `text` | Feature name, unique per product ignoring case |
+| `slug` | `text` | Unique slug. Generated from the name when not given |
+| `description` | `text` | Short description of the feature |
+| `release_date` | `bigint` | Unix epoch timestamp of midnight UTC of the release date (nullable) |
 | `created_at` / `updated_at` | `timestamptz` | Audit timestamps |
 
-The subscription plans of a feature and whether GitHub Enterprise Server supports it are not stored. The page has no filters.
+The subscription plans of a feature and whether GitHub Enterprise Server supports it are not stored.
 
 ### `product_feature_content` table
 
-Links a feature to one or more content items (videos, blogs):
+Links a feature to one or more content items (videos, blogs). The links are only edited in the admin; the timeline lists the items of an event as its sources instead:
 
 | Column | Type | Description |
 |---|---|---|
@@ -145,7 +145,7 @@ This table is populated automatically by:
 
 ### API
 
-The `GET /api/ghc-features` endpoint returns the features of GitHub Copilot with their content links. See [content-api.md](content-api.md#ghc-features-api) for details.
+The timeline of the section is read through `GET /api/sections/github-copilot/timeline` (see [content-api.md](content-api.md#timeline-api)). The features are edited through the admin API (see [admin.md](admin.md#product-catalog)).
 
 ## Test Fixture Format
 

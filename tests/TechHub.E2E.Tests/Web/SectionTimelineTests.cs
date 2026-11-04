@@ -53,6 +53,34 @@ public class SectionTimelineTests : PlaywrightTestBase
     }
 
     [Fact]
+    public async Task SectionTimeline_ForGitHubCopilot_ShouldShowTheSubscriptionTiersInTheSidebar()
+    {
+        await Page.GotoRelativeAsync(PageUrl);
+
+        var tiers = Page.Locator("aside.sidebar .features-tier-card");
+        Assert.SkipWhen(await tiers.CountAsync() == 0, "No subscription tiers on this environment");
+
+        await Assertions.Expect(Page.Locator("aside.sidebar .features-tiers-sidebar h2")).ToHaveTextAsync("Subscriptions");
+        (await tiers.CountAsync()).Should().BeGreaterThan(1, "the sidebar lists every subscription tier");
+    }
+
+    [Fact]
+    public async Task SectionTimeline_ForOtherSections_ShouldNotShowTheSubscriptionTiers()
+    {
+        await Page.GotoRelativeAsync("/ai/timeline");
+
+        await Assertions.Expect(Page.Locator(".features-tier-card")).ToHaveCountAsync(0);
+    }
+
+    [Fact]
+    public async Task OldFeaturesPage_ShouldRedirectToTheTimeline()
+    {
+        await Page.GotoRelativeAsync("/github-copilot/features");
+
+        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/github-copilot/timeline$"));
+    }
+
+    [Fact]
     public async Task SectionTimeline_Entry_ShouldExpand_AndListItsSources()
     {
         await Page.GotoRelativeAsync("/github-copilot/timeline?since=all");

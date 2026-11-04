@@ -14,9 +14,6 @@ public sealed class ReviewOverviewData
     /// <summary>Names marked as not a product.</summary>
     public IReadOnlyList<string> IgnoredProducts { get; set; } = [];
 
-    /// <summary>Plan and surface names that match nothing yet.</summary>
-    public IReadOnlyList<UnmatchedQualifierName> UnmatchedQualifiers { get; set; } = [];
-
     /// <summary>Products with feature names that match no feature yet.</summary>
     public IReadOnlyList<ProductUnmatchedFeatures> UnmatchedFeatures { get; set; } = [];
 

@@ -48,12 +48,11 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 | `content_processing_jobs` | Audit log of background job runs (content processing, content fixer, roundup generation, timeline backfill) |
 | `content_timeline_events` | Dated lifecycle events (preview, GA, deprecation, ...) that articles state, one row per event with a cascading foreign key to the source article and a link to the catalog product (see [content-processing.md](content-processing.md#timeline-events)) |
 | `content_timeline_extractions` | Which articles have been scanned for timeline events, with the prompt version, so the backfill job is resumable |
-| `products` | Curated product catalog: canonical product names, with an optional parent product (see [content-processing.md](content-processing.md#product-catalog)) |
+| `products` | Curated product catalog: canonical product names, with an optional parent product (see [product-catalog.md](product-catalog.md)) |
 | `product_aliases` | Other names for a product; a name the AI returns that matches an alias is linked to the product |
 | `ignored_product_names` | Names the AI returns that are not products, kept out of the review queue |
-| `product_qualifiers` | Vocabulary of plans and surfaces (`kind`), with `product_qualifier_aliases` for other names. Product aliases, article links and timeline events carry them (`content_timeline_event_qualifiers`), see [content-processing.md](content-processing.md#plans-and-surfaces) |
-| `product_features` | Curated features of a product, with `product_feature_aliases` for other names. Timeline events link to one through `feature_id`, see [content-processing.md](content-processing.md#features). The features of GitHub Copilot also carry the data of the features page: `slug`, `description`, `release_date` |
-| `product_feature_content` | Links features to content items (many-to-many) with a thumbnail flag and sort order. Used by the GitHub Copilot features page |
+| `product_features` | Curated features of a product, with `product_feature_aliases` for other names. Timeline events link to one through `feature_id`, see [content-processing.md](product-catalog.md#features). A feature also has a `slug`, a `description` and a `release_date` |
+| `product_feature_content` | Links features to content items (many-to-many) with a thumbnail flag and sort order. Edited in the admin; the timeline lists the items of an event as its sources |
 | `content_item_products` | The product names an article lists, linked to the catalog (`product_id` is empty for names that are not in the catalog), with a cascading foreign key to the article |
 | `content_reviews` | Review queue for content fixer changes (tags, markdown, author) awaiting approval |
 | `custom_page_data` | JSON data for custom pages (editable from admin UI) |
@@ -101,6 +100,7 @@ The schema is managed by numbered SQL scripts (`001_`, `002_`, ...) that are emb
 
 - **Runner**: `MigrationRunner` executes the scripts in ordinal filename order, independent of the current culture, and records each executed filename in the `_migrations` table, so every script runs once. Legacy rows containing full embedded resource names are also recognized and left unchanged; only new executions use filenames.
 - **When**: The API runs pending migrations on startup through `StartupBackgroundService`. Migrations are never applied by hand.
+- **Unreleased changes**: The product catalog is one script, `050_product_catalog.sql`, and stays one script until it is released: a change to the catalog before then is a change to that file, tested by applying it to a restored copy of the production database. After a release, changes are new scripts.
 - **Locking**: A process-wide lock prevents concurrent runs.
 - **Fail-fast**: A failing script is logged and the exception stops the application, so a half-migrated database never serves traffic. The API `/health` endpoint reports unhealthy until startup completes (see [health-checks.md](health-checks.md)).
 

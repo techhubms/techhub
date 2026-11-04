@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Npgsql;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
+using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 
 namespace TechHub.Infrastructure.Repositories;
@@ -17,6 +18,9 @@ public sealed class ProductRepository : IProductRepository
 {
     /// <summary>Longest product name or alias that is accepted.</summary>
     public const int MaxNameLength = 200;
+
+    /// <summary>Most articles or dates a single page of the product pages can hold.</summary>
+    public const int MaxPageSize = 100;
 
     private const string RelinkSql = CatalogRelink.Sql;
 
@@ -52,6 +56,8 @@ public sealed class ProductRepository : IProductRepository
                    p.name AS Name,
                    p.parent_product_id AS ParentId,
                    parent.name AS ParentName,
+                   (SELECT COUNT(*) FROM product_features f WHERE f.product_id = p.id)::int AS FeatureCount,
+                   (SELECT COUNT(*) FROM products c WHERE c.parent_product_id = p.id)::int AS ChildCount,
                    (SELECT COUNT(DISTINCT (l.collection_name, l.item_slug))
                       FROM tree t JOIN content_item_products l ON l.product_id = t.id
                      WHERE t.root_id = p.id)::int AS ItemCount,
@@ -102,26 +108,65 @@ public sealed class ProductRepository : IProductRepository
             new { Id = id },
             cancellationToken: ct))).ToList();
 
-        const string ArticlesSql = """
+        product.ArticleCount = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
+            "SELECT COUNT(*)::int FROM content_item_products l WHERE l.product_id IN (SELECT product_tree_ids(@Id))",
+            new { Id = id },
+            cancellationToken: ct));
+        product.EventCount = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
+            "SELECT COUNT(*)::int FROM content_timeline_events e WHERE e.product_id IN (SELECT product_tree_ids(@Id))",
+            new { Id = id },
+            cancellationToken: ct));
+
+        return product;
+    }
+
+    /// <inheritdoc />
+    public async Task<PagedResult<ProductArticleLink>> GetArticlesAsync(long id, bool includeChildren, int page, int pageSize, CancellationToken ct = default)
+    {
+        var scope = includeChildren ? "l.product_id IN (SELECT product_tree_ids(@Id))" : "l.product_id = @Id";
+        var (offset, limit) = PageBounds(page, pageSize);
+
+        var total = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
+            $"SELECT COUNT(*)::int FROM content_item_products l WHERE {scope}", new { Id = id }, cancellationToken: ct));
+
+        var items = await _connection.QueryAsync<ProductArticleLink>(new CommandDefinition(
+            $"""
             SELECT l.collection_name AS CollectionName,
                    l.item_slug       AS Slug,
                    ci.title          AS Title,
                    ci.date_epoch     AS DateEpoch,
                    l.product_name    AS ProductName,
-                   p.name            AS CatalogName,
-                   q.name            AS QualifierName
+                   p.name            AS CatalogName
             FROM content_item_products l
             JOIN products p ON p.id = l.product_id
-            LEFT JOIN product_qualifiers q ON q.id = l.qualifier_id
             JOIN content_items ci ON ci.collection_name = l.collection_name AND ci.slug = l.item_slug
-            WHERE l.product_id IN (SELECT product_tree_ids(@Id))
+            WHERE {scope}
             ORDER BY ci.date_epoch DESC, ci.slug, l.position
-            """;
+            OFFSET @Offset LIMIT @Limit
+            """,
+            new { Id = id, Offset = offset, Limit = limit },
+            cancellationToken: ct));
 
-        product.Articles = (await _connection.QueryAsync<ProductArticleLink>(
-            new CommandDefinition(ArticlesSql, new { Id = id }, cancellationToken: ct))).ToList();
+        return new PagedResult<ProductArticleLink> { Items = items.ToList(), TotalCount = total };
+    }
 
-        const string EventsSql = """
+    /// <inheritdoc />
+    public async Task<PagedResult<ProductEventLink>> GetEventsAsync(long id, bool includeChildren, int page, int pageSize, CancellationToken ct = default)
+    {
+        var scope = includeChildren ? "e.product_id IN (SELECT product_tree_ids(@Id))" : "e.product_id = @Id";
+        var (offset, limit) = PageBounds(page, pageSize);
+
+        var total = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
+            $"SELECT COUNT(*)::int FROM content_timeline_events e WHERE {scope}", new { Id = id }, cancellationToken: ct));
+
+        var items = await QueryEventsAsync(scope, "e.event_date DESC, e.id DESC OFFSET @Offset LIMIT @Limit", new { Id = id, Offset = offset, Limit = limit }, ct);
+        return new PagedResult<ProductEventLink> { Items = items, TotalCount = total };
+    }
+
+    private async Task<IReadOnlyList<ProductEventLink>> QueryEventsAsync(string where, string order, object parameters, CancellationToken ct)
+    {
+        var events = (await _connection.QueryAsync<EventRow>(new CommandDefinition(
+            $"""
             SELECT e.id             AS Id,
                    e.kind           AS Kind,
                    e.feature        AS Feature,
@@ -138,29 +183,13 @@ public sealed class ProductRepository : IProductRepository
             JOIN products p ON p.id = e.product_id
             LEFT JOIN product_features f ON f.id = e.feature_id
             JOIN content_items ci ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
-            WHERE e.product_id IN (SELECT product_tree_ids(@Id))
-            ORDER BY e.event_date, e.id
-            """;
+            WHERE {where}
+            ORDER BY {order}
+            """,
+            parameters,
+            cancellationToken: ct))).ToList();
 
-        var events = (await _connection.QueryAsync<EventRow>(new CommandDefinition(EventsSql, new { Id = id }, cancellationToken: ct))).ToList();
-
-        const string EventQualifiersSql = """
-            SELECT eq.event_id AS EventId, q.id AS Id, q.kind AS Kind, q.name AS Name
-            FROM content_timeline_event_qualifiers eq
-            JOIN product_qualifiers q ON q.id = eq.qualifier_id
-            WHERE eq.event_id = ANY(@EventIds)
-            ORDER BY q.kind, lower(q.name)
-            """;
-
-        var qualifierRows = await _connection.QueryAsync<EventQualifierRow>(new CommandDefinition(
-            EventQualifiersSql, new { EventIds = events.Select(e => e.Id).ToArray() }, cancellationToken: ct));
-        var qualifiers = qualifierRows
-            .GroupBy(r => r.EventId)
-            .ToDictionary(
-                g => g.Key,
-                g => (IReadOnlyList<QualifierReference>)g.Select(r => new QualifierReference { Id = r.Id, Kind = r.Kind, Name = r.Name }).ToList());
-
-        product.Events = events.Select(e => new ProductEventLink
+        return events.Select(e => new ProductEventLink
         {
             Id = e.Id,
             Kind = e.Kind,
@@ -173,11 +202,14 @@ public sealed class ProductRepository : IProductRepository
             ItemSlug = e.ItemSlug,
             ItemTitle = e.ItemTitle,
             ProductName = e.ProductName,
-            CatalogName = e.CatalogName,
-            Qualifiers = qualifiers.TryGetValue(e.Id, out var eventQualifiers) ? eventQualifiers : []
+            CatalogName = e.CatalogName
         }).ToList();
+    }
 
-        return product;
+    private static (int Offset, int Limit) PageBounds(int page, int pageSize)
+    {
+        var size = Math.Clamp(pageSize, 1, MaxPageSize);
+        return ((Math.Max(page, 1) - 1) * size, size);
     }
 
     /// <inheritdoc />
@@ -292,6 +324,7 @@ public sealed class ProductRepository : IProductRepository
             }
 
             await UnignoreAsync(normalized, transaction, ct);
+
             await RelinkAsync(transaction, ct);
 
             _logger.LogInformation("Renamed product {ProductId} from {OldName} to {NewName}", id, current.Sanitize(), normalized.Sanitize());
@@ -300,10 +333,6 @@ public sealed class ProductRepository : IProductRepository
 
     /// <inheritdoc />
     public Task<ProductOperationResult> AddAliasAsync(long id, string aliasName, CancellationToken ct = default) =>
-        AddAliasAsync(id, aliasName, null, ct);
-
-    /// <inheritdoc />
-    public Task<ProductOperationResult> AddAliasAsync(long id, string aliasName, long? qualifierId, CancellationToken ct = default) =>
         InTransactionAsync(async transaction =>
         {
             if (Normalize(aliasName) is not { } normalized)
@@ -321,14 +350,9 @@ public sealed class ProductRepository : IProductRepository
                 return ProductOperationResult.Conflict($"'{normalized}' is already used by '{owner}'.");
             }
 
-            if (qualifierId is { } qualifier && !await QualifierExistsAsync(qualifier, transaction, ct))
-            {
-                return ProductOperationResult.NotFound("Plan or surface not found.");
-            }
-
             await _connection.ExecuteAsync(new CommandDefinition(
-                "INSERT INTO product_aliases (product_id, alias, qualifier_id) VALUES (@Id, @Alias, @QualifierId)",
-                new { Id = id, Alias = normalized, QualifierId = qualifierId },
+                "INSERT INTO product_aliases (product_id, alias) VALUES (@Id, @Alias)",
+                new { Id = id, Alias = normalized },
                 transaction,
                 cancellationToken: ct));
 
@@ -382,31 +406,6 @@ public sealed class ProductRepository : IProductRepository
         });
 
     /// <inheritdoc />
-    public Task<ProductOperationResult> SetAliasQualifierAsync(long id, long aliasId, long? qualifierId, CancellationToken ct = default) =>
-        InTransactionAsync(async transaction =>
-        {
-            if (qualifierId is { } qualifier && !await QualifierExistsAsync(qualifier, transaction, ct))
-            {
-                return ProductOperationResult.NotFound("Plan or surface not found.");
-            }
-
-            var rows = await _connection.ExecuteAsync(new CommandDefinition(
-                "UPDATE product_aliases SET qualifier_id = @QualifierId WHERE id = @AliasId AND product_id = @Id",
-                new { Id = id, AliasId = aliasId, QualifierId = qualifierId },
-                transaction,
-                cancellationToken: ct));
-            if (rows == 0)
-            {
-                return ProductOperationResult.NotFound("Alias not found.");
-            }
-
-            await RelinkAsync(transaction, ct);
-
-            _logger.LogInformation("Set qualifier of alias {AliasId} of product {ProductId} to {QualifierId}", aliasId, id, qualifierId);
-            return ProductOperationResult.Success(id);
-        });
-
-    /// <inheritdoc />
     public Task<ProductOperationResult> RemoveAliasAsync(long id, long aliasId, CancellationToken ct = default) =>
         InTransactionAsync(async transaction =>
         {
@@ -448,6 +447,20 @@ public sealed class ProductRepository : IProductRepository
                 transaction,
                 cancellationToken: ct));
 
+            // Features that the target does not have by name move to the target. The ones it has already are dropped with the source.
+            await _connection.ExecuteAsync(new CommandDefinition(
+                """
+                UPDATE product_features s
+                SET product_id = @TargetId
+                WHERE s.product_id = @SourceId
+                  AND NOT EXISTS (
+                      SELECT 1 FROM product_features t
+                      WHERE t.product_id = @TargetId AND lower(t.name) = lower(s.name));
+                """,
+                new { SourceId = sourceId, TargetId = targetId },
+                transaction,
+                cancellationToken: ct));
+
             // The children of the source move to the target. A child that is the target or one of its ancestors (the
             // target is a descendant of the source) takes the place of the source in the hierarchy instead.
             await _connection.ExecuteAsync(new CommandDefinition(
@@ -484,6 +497,30 @@ public sealed class ProductRepository : IProductRepository
             _logger.LogInformation("Merged product {SourceId} ({SourceName}) into {TargetId} ({TargetName})",
                 sourceId, sourceName.Sanitize(), targetId, targetName.Sanitize());
             return ProductOperationResult.Success(targetId);
+        });
+
+    /// <inheritdoc />
+    public Task<ProductOperationResult> ConvertToFeatureAsync(long id, CancellationToken ct = default) =>
+        InTransactionAsync(async transaction =>
+        {
+            if (await GetNameAsync(id, transaction, ct) is not { } name)
+            {
+                return ProductOperationResult.NotFound("Product not found.");
+            }
+
+            var parentId = await _connection.QuerySingleOrDefaultAsync<long?>(new CommandDefinition(
+                "SELECT parent_product_id FROM products WHERE id = @Id", new { Id = id }, transaction, cancellationToken: ct));
+            if (parentId is not { } parent)
+            {
+                return ProductOperationResult.Invalid("Only a child product can become a feature of its parent. Make it a child of a product first.");
+            }
+
+            await _connection.ExecuteAsync(new CommandDefinition(
+                "SELECT convert_product_to_feature(@Id)", new { Id = id }, transaction, cancellationToken: ct));
+            await RelinkAsync(transaction, ct);
+
+            _logger.LogInformation("Converted product {ProductId} ({ProductName}) into a feature of {ParentId}", id, name.Sanitize(), parent);
+            return ProductOperationResult.Success(parent);
         });
 
     /// <inheritdoc />
@@ -581,10 +618,8 @@ public sealed class ProductRepository : IProductRepository
     private async Task<Dictionary<long, IReadOnlyList<ProductAlias>>> GetAliasesAsync(long[] productIds, CancellationToken ct)
     {
         const string Sql = """
-            SELECT a.id AS Id, a.product_id AS ProductId, a.alias AS Alias,
-                   a.qualifier_id AS QualifierId, q.name AS QualifierName, q.kind AS QualifierKind
+            SELECT a.id AS Id, a.product_id AS ProductId, a.alias AS Alias
             FROM product_aliases a
-            LEFT JOIN product_qualifiers q ON q.id = a.qualifier_id
             WHERE a.product_id = ANY(@ProductIds)
             ORDER BY lower(a.alias), a.alias
             """;
@@ -597,16 +632,9 @@ public sealed class ProductRepository : IProductRepository
                 g => (IReadOnlyList<ProductAlias>)g.Select(r => new ProductAlias
                 {
                     Id = r.Id,
-                    Alias = r.Alias,
-                    QualifierId = r.QualifierId,
-                    QualifierName = r.QualifierName,
-                    QualifierKind = r.QualifierKind
+                    Alias = r.Alias
                 }).ToList());
     }
-
-    private Task<bool> QualifierExistsAsync(long id, IDbTransaction transaction, CancellationToken ct) =>
-        _connection.ExecuteScalarAsync<bool>(new CommandDefinition(
-            "SELECT EXISTS (SELECT 1 FROM product_qualifiers WHERE id = @Id)", new { Id = id }, transaction, cancellationToken: ct));
 
     private Task<string?> GetNameAsync(long id, IDbTransaction transaction, CancellationToken ct) =>
         _connection.QuerySingleOrDefaultAsync<string?>(new CommandDefinition(
@@ -674,17 +702,6 @@ public sealed class ProductRepository : IProductRepository
         public long Id { get; init; }
         public long ProductId { get; init; }
         public string Alias { get; init; } = string.Empty;
-        public long? QualifierId { get; init; }
-        public string? QualifierName { get; init; }
-        public string? QualifierKind { get; init; }
-    }
-
-    private sealed class EventQualifierRow
-    {
-        public long EventId { get; init; }
-        public long Id { get; init; }
-        public string Kind { get; init; } = string.Empty;
-        public string Name { get; init; } = string.Empty;
     }
 
     private sealed class EventRow

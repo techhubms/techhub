@@ -1714,132 +1714,48 @@ public class TechHubApiClientAdminTests
     }
 
     [Fact]
-    public async Task AddProductAliasAsync_WithQualifier_PostsTheQualifierId()
+    public async Task GetProductArticlesAndEventsAsync_UseTheProductRoutesAndPassThePaging()
     {
         // Arrange
-        using var fixture = Fixture.Create(body: """{"id":5,"name":"GitHub Copilot","aliases":[],"articles":[],"events":[]}""");
+        using var articles = Fixture.Create(body: """{"items":[{"collectionName":"news","slug":"a","title":"A","dateEpoch":1,"productName":"X","catalogName":"X"}],"totalCount":40}""");
+        using var events = Fixture.Create(body: """{"items":[],"totalCount":0}""");
 
         // Act
-        await fixture.Client.AddProductAliasAsync(5, "GitHub Copilot Business", 21, TestContext.Current.CancellationToken);
+        var articlePage = await articles.Client.GetProductArticlesAsync(5, false, 2, 25, TestContext.Current.CancellationToken);
+        await events.Client.GetProductEventsAsync(5, true, 1, 10, TestContext.Current.CancellationToken);
+
+        // Assert
+        articles.Handler.PathAndQuery.Should().Be("/api/admin/products/5/articles?includeChildren=false&page=2&pageSize=25");
+        events.Handler.PathAndQuery.Should().Be("/api/admin/products/5/events?includeChildren=true&page=1&pageSize=10");
+        (articlePage.TotalCount, articlePage.Items.Count).Should().Be((40, 1));
+    }
+
+    [Fact]
+    public async Task ConvertProductToFeatureAsync_PostsToTheConvertRouteAndReturnsTheParent()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """{"id":6,"name":"GitHub Copilot","aliases":[],"articles":[],"events":[]}""");
+
+        // Act
+        var parent = await fixture.Client.ConvertProductToFeatureAsync(5, TestContext.Current.CancellationToken);
 
         // Assert
         fixture.Handler.Method.Should().Be("POST");
-        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/aliases");
-        fixture.Handler.Json.GetProperty("alias").GetString().Should().Be("GitHub Copilot Business");
-        fixture.Handler.Json.GetProperty("qualifierId").GetInt64().Should().Be(21);
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/convert-to-feature");
+        parent.Id.Should().Be(6);
     }
 
     [Fact]
-    public async Task SetProductAliasQualifierAsync_PutsTheQualifierToTheAliasRoute()
+    public async Task ConvertProductToFeatureAsync_Refused_ThrowsWithTheServerMessage()
     {
         // Arrange
-        using var fixture = Fixture.Create(body: """{"id":5,"name":"GitHub Copilot","aliases":[],"articles":[],"events":[]}""");
+        using var fixture = Fixture.Create(HttpStatusCode.BadRequest, "\"Only a child product can become a feature of its parent.\"");
 
         // Act
-        await fixture.Client.SetProductAliasQualifierAsync(5, 9, null, TestContext.Current.CancellationToken);
+        var act = () => fixture.Client.ConvertProductToFeatureAsync(5, TestContext.Current.CancellationToken);
 
         // Assert
-        fixture.Handler.Method.Should().Be("PUT");
-        fixture.Handler.PathAndQuery.Should().Be("/api/admin/products/5/aliases/9/qualifier");
-        fixture.Handler.Json.GetProperty("qualifierId").ValueKind.Should().Be(System.Text.Json.JsonValueKind.Null);
-    }
-
-    [Fact]
-    public async Task GetQualifiersAsync_ReturnsThePlansAndSurfacesWithAliases()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(body: """[{"id":1,"kind":"surface","name":"Visual Studio Code","eventCount":3,"itemCount":0,"aliases":[{"id":2,"alias":"VS Code"}]}]""");
-
-        // Act
-        var qualifiers = await fixture.Client.GetQualifiersAsync(TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.PathAndQuery.Should().Be("/api/admin/qualifiers");
-        var qualifier = qualifiers.Should().ContainSingle().Subject;
-        qualifier.Kind.Should().Be("surface");
-        qualifier.Aliases.Should().ContainSingle().Which.Alias.Should().Be("VS Code");
-    }
-
-    [Fact]
-    public async Task GetUnmatchedQualifierNamesAsync_ReturnsTheList()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(body: """[{"kind":"plan","name":"Team","eventCount":2}]""");
-
-        // Act
-        var names = await fixture.Client.GetUnmatchedQualifierNamesAsync(TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.PathAndQuery.Should().Be("/api/admin/qualifiers/unmatched");
-        names.Should().ContainSingle().Which.Name.Should().Be("Team");
-    }
-
-    [Fact]
-    public async Task CreateQualifierAsync_PostsTheKindAndName()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(body: """{"id":7,"kind":"plan","name":"Team","eventCount":0,"itemCount":0,"aliases":[]}""");
-
-        // Act
-        var qualifier = await fixture.Client.CreateQualifierAsync("plan", "Team", TestContext.Current.CancellationToken);
-
-        // Assert
-        fixture.Handler.Method.Should().Be("POST");
-        fixture.Handler.PathAndQuery.Should().Be("/api/admin/qualifiers");
-        fixture.Handler.Json.GetProperty("kind").GetString().Should().Be("plan");
-        fixture.Handler.Json.GetProperty("name").GetString().Should().Be("Team");
-        qualifier.Id.Should().Be(7);
-    }
-
-    [Fact]
-    public async Task CreateQualifierAsync_Conflict_ThrowsWithTheServerMessage()
-    {
-        // Arrange
-        using var fixture = Fixture.Create(HttpStatusCode.Conflict, "\"'Pro' is already used by 'Pro'.\"");
-
-        // Act
-        var act = () => fixture.Client.CreateQualifierAsync("plan", "Pro", TestContext.Current.CancellationToken);
-
-        // Assert
-        (await act.Should().ThrowAsync<HttpRequestException>()).Which.Message.Should().Contain("already used");
-    }
-
-    [Fact]
-    public async Task RenameAndDeleteQualifierAsync_UseTheIdRoute()
-    {
-        // Arrange
-        using var rename = Fixture.Create(body: """{"id":7,"kind":"plan","name":"Team","eventCount":0,"itemCount":0,"aliases":[]}""");
-        using var delete = Fixture.Create(HttpStatusCode.NoContent, "");
-
-        // Act
-        await rename.Client.RenameQualifierAsync(7, "Team", TestContext.Current.CancellationToken);
-        await delete.Client.DeleteQualifierAsync(7, TestContext.Current.CancellationToken);
-
-        // Assert
-        rename.Handler.Method.Should().Be("PUT");
-        rename.Handler.PathAndQuery.Should().Be("/api/admin/qualifiers/7");
-        rename.Handler.Json.GetProperty("name").GetString().Should().Be("Team");
-        delete.Handler.Method.Should().Be("DELETE");
-        delete.Handler.PathAndQuery.Should().Be("/api/admin/qualifiers/7");
-    }
-
-    [Fact]
-    public async Task AddAndRemoveQualifierAliasAsync_UseTheAliasRoutes()
-    {
-        // Arrange
-        using var add = Fixture.Create(body: """{"id":7,"kind":"plan","name":"Team","eventCount":0,"itemCount":0,"aliases":[]}""");
-        using var remove = Fixture.Create(HttpStatusCode.NoContent, "");
-
-        // Act
-        await add.Client.AddQualifierAliasAsync(7, "Teams", TestContext.Current.CancellationToken);
-        await remove.Client.RemoveQualifierAliasAsync(7, 3, TestContext.Current.CancellationToken);
-
-        // Assert
-        add.Handler.Method.Should().Be("POST");
-        add.Handler.PathAndQuery.Should().Be("/api/admin/qualifiers/7/aliases");
-        add.Handler.Json.GetProperty("alias").GetString().Should().Be("Teams");
-        remove.Handler.Method.Should().Be("DELETE");
-        remove.Handler.PathAndQuery.Should().Be("/api/admin/qualifiers/7/aliases/3");
+        (await act.Should().ThrowAsync<HttpRequestException>()).Which.Message.Should().Contain("Only a child product");
     }
 
     [Fact]

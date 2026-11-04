@@ -31,7 +31,6 @@
     {
         <div class="review-cards">
             @Card("/admin/reviews#review-product-names", "Product names", _data.UnmatchedProducts.Count, "not in the catalog yet")
-            @Card("/admin/reviews#review-qualifiers", "Plans and surfaces", _data.UnmatchedQualifiers.Count, "names that match nothing")
             @Card("/admin/reviews#review-features", "Features", FeatureNameCount, $"names in {_data.UnmatchedFeatures.Count} products")
             @Card("/admin/reviews#review-content-fixes", "Content fixes", _data.PendingContentFixes, "proposals to approve or reject")
             @Card("/admin/processed-urls?status=failed", "Failed URLs", _data.FailedUrls, "to retry or remove")
@@ -95,7 +94,7 @@
                 }
                 else
                 {
-                    <ul class="admin-plain-list">
+                    <ul class="admin-entry-list">
                         @foreach (var name in _data.IgnoredProducts)
                         {
                             <li>
@@ -106,45 +105,6 @@
                     </ul>
                 }
             </details>
-        </section>
-
-        <section class="admin-review-section" id="review-qualifiers">
-            <div class="admin-page-header">
-                <h2 class="admin-section-title">Plans and surfaces to review (@_data.UnmatchedQualifiers.Count)</h2>
-                <div class="admin-actions">
-                    <a href="/admin/products/qualifiers" class="btn-secondary">Review plans and surfaces →</a>
-                </div>
-            </div>
-            <p class="admin-result-summary">Plan and surface names of timeline dates that match no plan or surface. Add them as a plan or surface, or as an alias, on the plans and surfaces page.</p>
-
-            @if (_data.UnmatchedQualifiers.Count == 0)
-            {
-                <div class="admin-empty" id="review-qualifiers-empty">Nothing to review.</div>
-            }
-            else
-            {
-                <div class="admin-jobs-table-wrapper">
-                    <table class="admin-table" id="review-qualifiers-table">
-                        <thead>
-                            <tr>
-                                <th>Kind</th>
-                                <th>Name</th>
-                                <th>Dates</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var name in _data.UnmatchedQualifiers)
-                            {
-                                <tr>
-                                    <td>@name.Kind</td>
-                                    <td>@name.Name</td>
-                                    <td class="admin-cell-mono">@name.EventCount</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            }
         </section>
 
         <section class="admin-review-section" id="review-features">
@@ -265,7 +225,6 @@
                 Products = await Api.GetProductsAsync(),
                 UnmatchedProducts = await Api.GetUnmatchedProductNamesAsync(),
                 IgnoredProducts = await Api.GetIgnoredProductNamesAsync(),
-                UnmatchedQualifiers = await Api.GetUnmatchedQualifierNamesAsync(),
                 UnmatchedFeatures = await Api.GetUnmatchedFeaturesSummaryAsync(),
                 PendingContentFixes = (await Api.GetContentReviewSummaryAsync()).Pending,
                 FailedUrls = (await Api.GetProcessedUrlsAsync(1, 1, status: "failed")).TotalCount

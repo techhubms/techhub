@@ -565,7 +565,11 @@ if (-not $SkipRestore) {
         $postgresStatus = docker compose ps --status running postgres 2>&1
         if ($postgresStatus -notmatch 'techhub-postgres') {
             Write-Detail "Starting postgres container..."
-            docker compose up -d postgres 2>&1 | Out-Null
+            $composeOutput = docker compose up -d postgres 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                Write-Fail "Could not start the postgres container: $composeOutput"
+                exit 1
+            }
             # Wait for postgres to be ready
             $retries = 30
             $ready = $false
@@ -620,26 +624,6 @@ if (-not $SkipRestore) {
             exit 1
         }
         Write-Ok "Local password reset for role '$localUser'"
-
-        # Disable all RSS feeds so background processing doesn't run against
-        # restored production data in the local dev environment.
-        Write-Step "Disabling RSS feeds to prevent background processing"
-        $env:PGPASSWORD = $localPassword
-        & psql `
-            --host $targetPgEnv.PGHOST `
-            --port $targetPgEnv.PGPORT `
-            --username $localUser `
-            --dbname $targetPgEnv.PGDATABASE `
-            --no-password `
-            -c "UPDATE rss_feed_configs SET enabled = FALSE WHERE enabled = TRUE;"
-
-        if ($LASTEXITCODE -ne 0) {
-            Write-Host "   [WARN] Failed to disable RSS feeds — you may want to disable them manually from /admin/feeds" -ForegroundColor Yellow
-        }
-        else {
-            Write-Ok "All RSS feeds disabled (re-enable from /admin/feeds as needed)"
-        }
-        $env:PGPASSWORD = $null
     }
 }
 else {

@@ -194,7 +194,7 @@ public class ContentProcessingServiceTests
         var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
         var rawItem = CreateRawItem(Url);
 
-        TimelineEvent Event(string kind) => new()
+        static TimelineEvent Event(string kind) => new()
         {
             Kind = kind,
             Product = "GitHub Copilot",

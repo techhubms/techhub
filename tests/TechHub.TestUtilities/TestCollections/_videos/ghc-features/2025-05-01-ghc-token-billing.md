@@ -1,5 +1,5 @@
 ---
-title: "Token-Based Billing"
+title: "Token Billing Fixture"
 date: 2025-05-01
 primary_section: github-copilot
 section_names: [github-copilot, videos]

@@ -38,24 +38,10 @@ public sealed class ProductNameRequest
     public string? Name { get; init; }
 }
 
-/// <summary>DTO for adding an alias to a product, optionally implying a plan or surface.</summary>
+/// <summary>DTO for adding an alias to a product.</summary>
 public sealed class ProductAliasRequest
 {
     public string? Alias { get; init; }
-    public long? QualifierId { get; init; }
-}
-
-/// <summary>DTO for setting the plan or surface an alias implies; null clears it.</summary>
-public sealed class ProductAliasQualifierRequest
-{
-    public long? QualifierId { get; init; }
-}
-
-/// <summary>DTO for adding a plan or surface to the vocabulary.</summary>
-public sealed class QualifierCreateRequest
-{
-    public string? Kind { get; init; }
-    public string? Name { get; init; }
 }
 
 /// <summary>DTO for merging a product into another product.</summary>

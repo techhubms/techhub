@@ -8,15 +8,6 @@ public sealed class ProductAlias
 
     /// <summary>The alternative name.</summary>
     public string Alias { get; set; } = string.Empty;
-
-    /// <summary>Id of the plan or surface this alias implies ('GitHub Copilot Business' implies the plan Business), or null.</summary>
-    public long? QualifierId { get; set; }
-
-    /// <summary>Name of the plan or surface this alias implies, or null.</summary>
-    public string? QualifierName { get; set; }
-
-    /// <summary>Kind of the qualifier this alias implies (plan or surface), or null.</summary>
-    public string? QualifierKind { get; set; }
 }
 
 /// <summary>A product of the catalog by id and name, used for the parent and children of a product.</summary>
@@ -43,6 +34,12 @@ public sealed class ProductSummary
 
     /// <summary>Name of the parent product, or null for a top-level product.</summary>
     public string? ParentName { get; set; }
+
+    /// <summary>Number of curated features of this product (its own, not those of child products).</summary>
+    public int FeatureCount { get; set; }
+
+    /// <summary>Number of products that directly belong to this product.</summary>
+    public int ChildCount { get; set; }
 
     /// <summary>Number of articles that are about this product or one of its child products.</summary>
     public int ItemCount { get; set; }
@@ -74,9 +71,6 @@ public sealed class ProductArticleLink
 
     /// <summary>The catalog product the name matches: the product itself or one of its children.</summary>
     public string CatalogName { get; set; } = string.Empty;
-
-    /// <summary>The plan or surface the name implies ('GitHub Copilot Business' implies the plan Business), or null.</summary>
-    public string? QualifierName { get; set; }
 }
 
 /// <summary>A timeline event (important date) of a product and the article it comes from.</summary>
@@ -117,12 +111,12 @@ public sealed class ProductEventLink
 
     /// <summary>The catalog product the name matches: the product itself or one of its children.</summary>
     public string CatalogName { get; set; } = string.Empty;
-
-    /// <summary>The plans and surfaces the event applies to, from the AI's plans and surfaces and from the product name.</summary>
-    public IReadOnlyList<QualifierReference> Qualifiers { get; set; } = [];
 }
 
-/// <summary>A product with its aliases, parent and children, linked articles and linked dates.</summary>
+/// <summary>
+/// A product with its aliases, parent and children and the number of linked articles and dates. The articles and dates
+/// themselves are paged (see <c>IProductRepository.GetArticlesAsync</c>), because a parent like GitHub has thousands.
+/// </summary>
 public sealed class ProductDetail
 {
     /// <summary>Database primary key.</summary>
@@ -140,11 +134,11 @@ public sealed class ProductDetail
     /// <summary>Other names for this product.</summary>
     public IReadOnlyList<ProductAlias> Aliases { get; set; } = [];
 
-    /// <summary>Articles that are about this product or one of its descendants, newest first.</summary>
-    public IReadOnlyList<ProductArticleLink> Articles { get; set; } = [];
+    /// <summary>Number of article links of this product and its descendants.</summary>
+    public int ArticleCount { get; set; }
 
-    /// <summary>Timeline events of this product and its descendants, by date.</summary>
-    public IReadOnlyList<ProductEventLink> Events { get; set; } = [];
+    /// <summary>Number of timeline events (dates) of this product and its descendants.</summary>
+    public int EventCount { get; set; }
 }
 
 /// <summary>A product name the AI returned that is not in the catalog (and not ignored) yet.</summary>

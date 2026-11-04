@@ -1,5 +1,7 @@
 using System.Data;
+using System.Text.Json;
 using Dapper;
+using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Repositories;
@@ -41,7 +43,7 @@ internal static class TimelineEventWriter
             cancellationToken: ct));
 
         await connection.ExecuteAsync(new CommandDefinition(
-            "DELETE FROM content_timeline_events WHERE collection_name = @CollectionName AND item_slug = @Slug",
+            $"DELETE FROM content_timeline_events WHERE collection_name = @CollectionName AND item_slug = @Slug AND extracted_from <> '{ITimelineEventRepository.ExtractedFromCatalog}'",
             new { CollectionName = collectionName, Slug = slug },
             transaction,
             cancellationToken: ct));
@@ -51,10 +53,10 @@ internal static class TimelineEventWriter
             await connection.ExecuteAsync(new CommandDefinition(
                 """
                 INSERT INTO content_timeline_events
-                    (collection_name, item_slug, kind, product, feature, plans, surfaces, description,
+                    (collection_name, item_slug, kind, product, feature, description,
                      event_date, date_precision, date_source, quote, extracted_from)
                 VALUES
-                    (@CollectionName, @Slug, @Kind, @Product, @Feature, @Plans, @Surfaces, @Description,
+                    (@CollectionName, @Slug, @Kind, @Product, @Feature, @Description,
                      @EventDate, @DatePrecision, @DateSource, @Quote, @ExtractedFrom)
                 """,
                 new
@@ -64,8 +66,6 @@ internal static class TimelineEventWriter
                     timelineEvent.Kind,
                     timelineEvent.Product,
                     timelineEvent.Feature,
-                    Plans = timelineEvent.Plans.ToArray(),
-                    Surfaces = timelineEvent.Surfaces.ToArray(),
                     timelineEvent.Description,
                     EventDate = timelineEvent.Date.ToDateTime(TimeOnly.MinValue),
                     timelineEvent.DatePrecision,
@@ -82,6 +82,11 @@ internal static class TimelineEventWriter
             new { CollectionName = collectionName, Slug = slug },
             transaction,
             cancellationToken: ct));
+
+        if (replacement.Products is not null)
+        {
+            await ReplaceProductsAsync(connection, transaction, collectionName, slug, replacement.Products, ct);
+        }
 
         await connection.ExecuteAsync(new CommandDefinition(
             """
@@ -105,5 +110,36 @@ internal static class TimelineEventWriter
             },
             transaction,
             cancellationToken: ct));
+    }
+
+    /// <summary>
+    /// Stores the products in the <c>ai_metadata</c> of the article and relinks them to the catalog. An article without
+    /// metadata is left alone: the metadata marks it as classified, and a products-only object would hide that it still has to be.
+    /// <c>updated_at</c> stays as it is, because the revision of the article must keep describing its text.
+    /// </summary>
+    private static async Task ReplaceProductsAsync(
+        IDbConnection connection,
+        IDbTransaction transaction,
+        string collectionName,
+        string slug,
+        IReadOnlyList<string> products,
+        CancellationToken ct)
+    {
+        var rows = await connection.ExecuteAsync(new CommandDefinition(
+            """
+            UPDATE content_items
+               SET ai_metadata = ai_metadata || jsonb_build_object('products', @Products::jsonb)
+             WHERE collection_name = @CollectionName
+               AND slug = @Slug
+               AND ai_metadata IS NOT NULL
+            """,
+            new { CollectionName = collectionName, Slug = slug, Products = JsonSerializer.Serialize(products) },
+            transaction,
+            cancellationToken: ct));
+
+        if (rows > 0)
+        {
+            await ProductLinkWriter.ReplaceItemLinksAsync(connection, transaction, collectionName, slug, ct);
+        }
     }
 }

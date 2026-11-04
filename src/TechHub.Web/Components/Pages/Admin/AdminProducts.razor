@@ -14,13 +14,15 @@
     <div class="admin-page-header">
         <div>
             <h1 class="admin-page-title">Products</h1>
-            <p class="admin-page-subtitle">The curated products that articles and dates are grouped by. Names the AI returned that are not linked yet are on the <a href="/admin/reviews#review-product-names">Reviews</a> page.</p>
+            <p class="admin-page-subtitle">The curated products that articles and dates are grouped by. Names the AI returned that are not linked yet are on the <a href="/admin/reviews#review-product-names">Reviews</a> page. Articles and dates are counted including those of the child products.</p>
         </div>
         <div class="admin-actions">
             <button class="btn" @onclick="ShowAddForm">+ Add Product</button>
             <AdminSubbarAction><button class="btn-secondary" @onclick="LoadAsync">⟳ Refresh</button></AdminSubbarAction>
         </div>
     </div>
+
+    <CatalogGlossary />
 
     @if (_message != null)
     {
@@ -70,32 +72,35 @@
             </div>
         </div>
 
-        @if (FilteredProducts.Count == 0)
+        @if (Rows.Count == 0)
         {
             <div class="admin-empty" id="products-empty">No products found.</div>
         }
         else
         {
-            <p class="admin-result-summary">Showing @VisibleProducts.Count of @FilteredProducts.Count products</p>
+            <p class="admin-result-summary">@Rows.Count products@(IsSearching ? " (the parents of matches are shown dimmed)" : string.Empty). Child products are indented below their parent.</p>
             <div class="admin-jobs-table-wrapper">
                 <table class="admin-table" id="products-table">
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Belongs to</th>
                             <th>Aliases</th>
+                            <th>Child products</th>
+                            <th>Features</th>
                             <th>Articles</th>
                             <th>Dates</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var product in VisibleProducts)
+                        @foreach (var row in Rows)
                         {
-                            <tr>
-                                <td>@product.Name</td>
-                                <td>@product.ParentName</td>
+                            var product = row.Product;
+                            <tr class="@(row.IsMatch ? null : "admin-row-context")">
+                                <td class="admin-tree-cell @(row.Depth > 0 ? "admin-tree-child" : null)" style="--tree-depth: @row.Depth">@product.Name</td>
                                 <td class="admin-aliases" title="@AllAliases(product)">@AliasSummary(product)</td>
+                                <td class="admin-cell-mono">@product.ChildCount</td>
+                                <td class="admin-cell-mono">@product.FeatureCount</td>
                                 <td class="admin-cell-mono">@product.ItemCount</td>
                                 <td class="admin-cell-mono">@product.EventCount</td>
                                 <td><a class="admin-link-btn" href="/admin/products/@product.Id">Open</a></td>
@@ -109,7 +114,6 @@
 </div>
 
 @code {
-    private const int MaxVisibleProducts = 200;
     private const int MaxVisibleAliases = 3;
 
     private static string AllAliases(ProductSummary product) => string.Join(", ", product.Aliases.Select(a => a.Alias));
@@ -132,14 +136,77 @@
     private IReadOnlyList<ProductSummary> _products = [];
     private PersistingComponentStateSubscription? _persistSubscription;
 
-    private IReadOnlyList<ProductSummary> FilteredProducts =>
-        string.IsNullOrWhiteSpace(_search)
-            ? _products
-            : _products.Where(p =>
-                p.Name.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase)
-                || p.Aliases.Any(a => a.Alias.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase))).ToList();
+    private sealed record ProductRow(ProductSummary Product, int Depth, bool IsMatch);
 
-    private IReadOnlyList<ProductSummary> VisibleProducts => FilteredProducts.Take(MaxVisibleProducts).ToList();
+    private bool IsSearching => !string.IsNullOrWhiteSpace(_search);
+
+    private IReadOnlyList<ProductRow>? _rows;
+    private string? _rowsSearch;
+    private IReadOnlyList<ProductSummary>? _rowsProducts;
+
+    // The products as a tree: a parent is followed by its children, indented. A search keeps the parents of the matches so the nesting stays.
+    private IReadOnlyList<ProductRow> Rows
+    {
+        get
+        {
+            if (_rows is null || _rowsSearch != _search || !ReferenceEquals(_rowsProducts, _products))
+            {
+                _rows = BuildRows();
+                _rowsSearch = _search;
+                _rowsProducts = _products;
+            }
+
+            return _rows;
+        }
+    }
+
+    private List<ProductRow> BuildRows()
+    {
+        var byId = _products.ToDictionary(p => p.Id);
+        var search = _search.Trim();
+        var matches = IsSearching
+            ? _products.Where(p => p.Name.Contains(search, StringComparison.OrdinalIgnoreCase)
+                || p.Aliases.Any(a => a.Alias.Contains(search, StringComparison.OrdinalIgnoreCase))).Select(p => p.Id).ToHashSet()
+            : _products.Select(p => p.Id).ToHashSet();
+
+        var included = matches.ToHashSet();
+        foreach (var id in matches)
+        {
+            var parentId = byId[id].ParentId;
+            while (parentId is { } parent && byId.ContainsKey(parent) && included.Add(parent))
+            {
+                parentId = byId[parent].ParentId;
+            }
+        }
+
+        var children = _products
+            .Where(p => included.Contains(p.Id))
+            .ToLookup(p => p.ParentId is { } parent && included.Contains(parent) ? parent : (long?)null);
+
+        var rows = new List<ProductRow>();
+        var visited = new HashSet<long>();
+
+        void Add(ProductSummary product, int depth)
+        {
+            if (!visited.Add(product.Id))
+            {
+                return;
+            }
+
+            rows.Add(new ProductRow(product, depth, matches.Contains(product.Id)));
+            foreach (var child in children[product.Id].OrderBy(c => c.Name, StringComparer.OrdinalIgnoreCase))
+            {
+                Add(child, depth + 1);
+            }
+        }
+
+        foreach (var root in children[null].OrderBy(p => p.Name, StringComparer.OrdinalIgnoreCase))
+        {
+            Add(root, 0);
+        }
+
+        return rows;
+    }
 
     protected override async Task OnInitializedAsync()
     {

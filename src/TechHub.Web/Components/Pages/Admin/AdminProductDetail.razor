@@ -3,6 +3,7 @@
 @layout AdminLayout
 @rendermode InteractiveServer
 @using System.Globalization
+@using TechHub.Core.Models
 @using TechHub.Core.Models.Admin
 @using TechHub.Web.Services
 @implements IDisposable
@@ -23,6 +24,8 @@
             <a href="/admin/products" class="btn-secondary">← All products</a>
         </div>
     </div>
+
+    <CatalogGlossary />
 
     @if (_message != null)
     {
@@ -48,7 +51,8 @@
         <nav class="admin-tabs" aria-label="Sections of @_product.Name">
             <a class="admin-tab @(ActiveTab == ProductTab.General ? "active" : "")" href="/admin/products/@Id" aria-current="@(ActiveTab == ProductTab.General ? "page" : null)">General</a>
             <a class="admin-tab @(ActiveTab == ProductTab.Features ? "active" : "")" href="/admin/products/@Id/features" aria-current="@(ActiveTab == ProductTab.Features ? "page" : null)">Features (@_features.Features.Count)</a>
-            <a class="admin-tab @(ActiveTab == ProductTab.Activity ? "active" : "")" href="/admin/products/@Id/activity" aria-current="@(ActiveTab == ProductTab.Activity ? "page" : null)">Dates and articles (@(_product.Events.Count + _product.Articles.Count))</a>
+            <a class="admin-tab @(ActiveTab == ProductTab.Dates ? "active" : "")" href="/admin/products/@Id/dates" aria-current="@(ActiveTab == ProductTab.Dates ? "page" : null)">Dates (@_product.EventCount)</a>
+            <a class="admin-tab @(ActiveTab == ProductTab.Articles ? "active" : "")" href="/admin/products/@Id/articles" aria-current="@(ActiveTab == ProductTab.Articles ? "page" : null)">Articles (@_product.ArticleCount)</a>
         </nav>
         @if (ActiveTab == ProductTab.General)
         {
@@ -59,7 +63,7 @@
                 <input id="productName" class="admin-input" @bind="_newName" />
                 <button class="btn-secondary" disabled="@_busy" @onclick="RenameAsync">Rename</button>
             </div>
-            <p class="admin-result-summary">The old name becomes an alias, so articles that use it stay linked.</p>
+            <p class="admin-result-summary">Renaming keeps the old name as an alias: the AI may still use it.</p>
 
             @if (_product.Aliases.Count == 0)
             {
@@ -67,20 +71,13 @@
             }
             else
             {
-                <ul class="admin-plain-list" id="aliases-list">
+                <ul class="admin-entry-list" id="aliases-list">
                     @foreach (var alias in _product.Aliases)
                     {
                         <li>
-                            @alias.Alias
-                            <select class="admin-input" aria-label="Plan or surface of @alias.Alias" disabled="@_busy"
-                                    value="@(alias.QualifierId?.ToString(CultureInfo.InvariantCulture) ?? string.Empty)"
-                                    @onchange="e => SetAliasQualifierAsync(alias, e.Value?.ToString())">
-                                <option value="">No plan or surface</option>
-                                @foreach (var qualifier in _qualifiers)
-                                {
-                                    <option value="@qualifier.Id">@qualifier.Name (@qualifier.Kind)</option>
-                                }
-                            </select>
+                            <span>
+                                @alias.Alias
+                            </span>
                             <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => RemoveAliasAsync(alias)">Remove</button>
                         </li>
                     }
@@ -90,25 +87,18 @@
             <div class="admin-inline-form">
                 <label class="admin-label" for="newAlias">Add alias</label>
                 <input id="newAlias" class="admin-input" @bind="_newAlias" placeholder="Another name for this product" />
-                <select id="newAliasQualifier" class="admin-input" aria-label="Plan or surface the alias implies" @bind="_newAliasQualifierId">
-                    <option value="">No plan or surface</option>
-                    @foreach (var qualifier in _qualifiers)
-                    {
-                        <option value="@qualifier.Id">@qualifier.Name (@qualifier.Kind)</option>
-                    }
-                </select>
                 <button class="btn-secondary" disabled="@_busy" @onclick="AddAliasAsync">Add alias</button>
             </div>
-            <p class="admin-result-summary">An alias can imply a plan or surface: 'GitHub Copilot Business' is GitHub Copilot in the plan Business. <a href="/admin/products/qualifiers">Manage plans and surfaces</a></p>
+            <p class="admin-result-summary">An alias is another name the AI may use for this product. A name that includes a plan ('GitHub Copilot Business') can be an alias of the product too.</p>
 
-            <h2 class="admin-section-title">Hierarchy</h2>
+            <h2 class="admin-section-title">Parent and child products</h2>
 
             <div class="admin-inline-form">
                 <label class="admin-label" for="parentName">Belongs to</label>
                 <input id="parentName" class="admin-input" list="merge-targets" @bind="_parentName" placeholder="No parent (top-level product)" />
                 <button class="btn-secondary" disabled="@_busy" @onclick="SetParentAsync">Set parent</button>
             </div>
-            <p class="admin-result-summary">A product that belongs to another product (GitHub Copilot CLI to GitHub Copilot) shows up in the articles and dates of its parent.</p>
+            <p class="admin-result-summary">A product that belongs to another product (GitHub Copilot CLI to GitHub Copilot) shows up in the articles and dates of its parent. It also uses the features of its parent.</p>
 
             @if (_product.Children.Count == 0)
             {
@@ -116,7 +106,7 @@
             }
             else
             {
-                <ul class="admin-plain-list" id="children-list">
+                <ul class="admin-entry-list" id="children-list">
                     @foreach (var child in _product.Children)
                     {
                         <li><a href="/admin/products/@child.Id">@child.Name</a></li>
@@ -124,11 +114,35 @@
                 </ul>
             }
 
-            <h2 class="admin-section-title">Merge or delete</h2>
+            <h2 class="admin-section-title">Convert, merge or delete</h2>
 
+            @if (_product.Parent != null)
+            {
+                <p class="admin-result-summary" id="convert-description">
+                    <strong>Convert to feature</strong> is for a child product that is really a capability of '@_product.Parent.Name' (like GitHub Copilot coding agent). It becomes a feature of '@_product.Parent.Name', and its name and aliases become aliases of that feature (not of the product). The names keep matching: a product name that is not a product is looked up as a feature name, so articles and dates that use it are linked to '@_product.Parent.Name' and the feature.
+                    Its child products and features move to '@_product.Parent.Name'.
+                </p>
+                <div class="admin-inline-form">
+                    <button class="btn-secondary" id="convert-button" disabled="@_busy" @onclick="() => _pendingAction = PendingAction.Convert">Convert to feature of '@_product.Parent.Name'…</button>
+                </div>
+                @if (_pendingAction == PendingAction.Convert)
+                {
+                    <div class="admin-alert admin-alert-error" id="confirm-convert" role="alert">
+                        Convert '@_product.Name' into a feature of '@_product.Parent.Name'? This product is removed.
+                        <button class="btn" disabled="@_busy" @onclick="ConvertAsync">Confirm convert</button>
+                        <button class="btn-secondary" @onclick="CancelPendingAction">Cancel</button>
+                    </div>
+                }
+            }
+
+            <p class="admin-result-summary" id="merge-description">
+                <strong>Merge into</strong> is for a product that was added twice under different names. Pick the product to keep: '@_product.Name' and its aliases become aliases of that product, so its articles and dates move there.
+                Its child products and features move too, except those the other product already has by name. '@_product.Name' is removed afterwards.
+                <strong>Delete</strong> removes '@_product.Name' with its aliases and features; its articles and dates stay but are no longer linked to a product.
+            </p>
             <div class="admin-inline-form">
                 <label class="admin-label" for="mergeTarget">Merge into</label>
-                <input id="mergeTarget" class="admin-input" list="merge-targets" @bind="_mergeTarget" placeholder="Product to merge into" />
+                <input id="mergeTarget" class="admin-input" list="merge-targets" @bind="_mergeTarget" placeholder="Product to keep" />
                 <button class="btn-secondary" disabled="@(_busy || string.IsNullOrWhiteSpace(_mergeTarget))" @onclick="() => _pendingAction = PendingAction.Merge">Merge…</button>
                 <button class="btn-secondary" disabled="@_busy" @onclick="() => _pendingAction = PendingAction.Delete">Delete…</button>
             </div>
@@ -150,7 +164,7 @@
             else if (_pendingAction == PendingAction.Delete)
             {
                 <div class="admin-alert admin-alert-error" id="confirm-delete" role="alert">
-                    Delete '@_product.Name'? Its article links (@_product.Articles.Count) and dates (@_product.Events.Count) become unmatched again.
+                    Delete '@_product.Name'? Its aliases and features are deleted. Its article links (@_product.ArticleCount) and dates (@_product.EventCount) become unmatched again.
                     <button class="btn" disabled="@_busy" @onclick="DeleteAsync">Confirm delete</button>
                     <button class="btn-secondary" @onclick="CancelPendingAction">Cancel</button>
                 </div>
@@ -160,7 +174,7 @@
         @if (ActiveTab == ProductTab.Features)
         {
             <h2 class="admin-section-title">Features (@_features.Features.Count)</h2>
-            <p class="admin-result-summary">The AI returns the feature of a date as free text. Curated features group those names, so the dates of one feature can be compared across surfaces and plans.</p>
+            <p class="admin-result-summary">The AI returns the feature of a date as free text. Curated features group those names, so the dates of one feature can be compared.</p>
 
             <div class="admin-inline-form">
                 <label class="admin-label" for="newFeature">Add feature</label>
@@ -194,7 +208,7 @@
 
                         @if (feature.Aliases.Count > 0)
                         {
-                            <ul class="admin-plain-list">
+                            <ul class="admin-entry-list">
                                 @foreach (var alias in feature.Aliases)
                                 {
                                     <li>
@@ -214,7 +228,7 @@
                         <div class="admin-inline-form">
                             <label class="admin-label" for="feature-description-@feature.Id">Description</label>
                             <textarea id="feature-description-@feature.Id" class="admin-input feature-description" rows="3"
-                                      placeholder="Shown when the feature card is opened on the features page"
+                                      placeholder="A short description of the feature"
                                       value="@GetFeatureDescription(feature)" @onchange="e => SetFeatureDescription(feature, e.Value?.ToString())"></textarea>
                         </div>
 
@@ -391,61 +405,15 @@
                     }
                 </datalist>
             }
-
-            <h2 class="admin-section-title">Features by surface</h2>
-            <p class="admin-result-summary">Per feature, what happened on which surface. Dates that name no surface are listed under all surfaces.</p>
-
-            @if (FeatureGrid.Count == 0)
-            {
-                <div class="admin-empty" id="feature-grid-empty">No dates with a feature.</div>
-            }
-            else
-            {
-                <div class="admin-jobs-table-wrapper">
-                    <table class="admin-table" id="feature-grid">
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>All surfaces</th>
-                                @foreach (var surface in GridSurfaces)
-                                {
-                                    <th>@surface</th>
-                                }
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var row in FeatureGrid)
-                            {
-                                <tr>
-                                    <td>@row.Key</td>
-                                    <td>
-                                        @foreach (var item in row.Where(e => !HasSurface(e)))
-                                        {
-                                            <div>@DescribeEvent(item)</div>
-                                        }
-                                    </td>
-                                    @foreach (var surface in GridSurfaces)
-                                    {
-                                        <td>
-                                            @foreach (var item in row.Where(e => HasSurface(e, surface)))
-                                            {
-                                                <div>@DescribeEvent(item)</div>
-                                            }
-                                        </td>
-                                    }
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            }
         }
 
-        @if (ActiveTab == ProductTab.Activity)
+        @if (ActiveTab == ProductTab.Dates)
         {
-            <h2 class="admin-section-title">Dates (@_product.Events.Count)</h2>
+            <h2 class="admin-section-title">Dates (@_events.TotalCount)</h2>
+            <p class="admin-result-summary">Important dates the AI found in articles about this product@(ShowCatalogColumn ? " and its child products" : string.Empty), newest first.</p>
+            @ScopeFilter
 
-            @if (_product.Events.Count == 0)
+            @if (_events.Items.Count == 0)
             {
                 <div class="admin-empty" id="events-empty">No dates are linked to this product.</div>
             }
@@ -462,16 +430,12 @@
                                 }
                                 <th>Kind</th>
                                 <th>Feature</th>
-                                @if (ShowEventQualifiers)
-                                {
-                                    <th>Plans and surfaces</th>
-                                }
                                 <th>What happens</th>
                                 <th>Article</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in _product.Events)
+                            @foreach (var item in _events.Items)
                             {
                                 <tr>
                                     <td class="admin-cell-mono">@FormatEventDate(item)</td>
@@ -481,10 +445,6 @@
                                     }
                                     <td>@item.Kind</td>
                                     <td>@(item.FeatureName ?? item.Feature)</td>
-                                    @if (ShowEventQualifiers)
-                                    {
-                                        <td>@string.Join(", ", item.Qualifiers.Select(q => q.Name))</td>
-                                    }
                                     <td>@item.Description</td>
                                     <td><a href="/admin/content-preview/@item.CollectionName/@item.ItemSlug">@item.ItemTitle</a></td>
                                 </tr>
@@ -492,11 +452,17 @@
                         </tbody>
                     </table>
                 </div>
+                @Pager(_events.TotalCount)
             }
+        }
 
-            <h2 class="admin-section-title">Articles (@_product.Articles.Count)</h2>
+        @if (ActiveTab == ProductTab.Articles)
+        {
+            <h2 class="admin-section-title">Articles (@_articles.TotalCount)</h2>
+            <p class="admin-result-summary">Articles whose product names match this product@(ShowCatalogColumn ? " or one of its child products" : string.Empty), newest first.</p>
+            @ScopeFilter
 
-            @if (_product.Articles.Count == 0)
+            @if (_articles.Items.Count == 0)
             {
                 <div class="admin-empty" id="articles-empty">No articles are linked to this product.</div>
             }
@@ -513,14 +479,10 @@
                                     <th>Product</th>
                                 }
                                 <th>Name used</th>
-                                @if (ShowArticleQualifiers)
-                                {
-                                    <th>Plan or surface</th>
-                                }
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var article in _product.Articles)
+                            @foreach (var article in _articles.Items)
                             {
                                 <tr>
                                     <td class="admin-cell-mono">@DateHelper.FormatDateIso(article.DateEpoch)</td>
@@ -530,15 +492,12 @@
                                         <td>@article.CatalogName</td>
                                     }
                                     <td>@article.ProductName</td>
-                                    @if (ShowArticleQualifiers)
-                                    {
-                                        <td>@article.QualifierName</td>
-                                    }
                                 </tr>
                             }
                         </tbody>
                     </table>
                 </div>
+                @Pager(_articles.TotalCount)
             }
         }
     }
@@ -549,6 +508,7 @@
     {
         None,
         Merge,
+        Convert,
         Delete
     }
 
@@ -556,18 +516,20 @@
     {
         General,
         Features,
-        Activity
+        Dates,
+        Articles
     }
 
     [Parameter] public long Id { get; set; }
 
-    /// <summary>The tab from the URL: <c>features</c> or <c>activity</c>; anything else shows the general tab.</summary>
+    /// <summary>The tab from the URL: <c>features</c>, <c>dates</c> or <c>articles</c>; anything else shows the general tab.</summary>
     [Parameter] public string? Tab { get; set; }
 
     private ProductTab ActiveTab => Tab?.ToLowerInvariant() switch
     {
         "features" => ProductTab.Features,
-        "activity" => ProductTab.Activity,
+        "dates" => ProductTab.Dates,
+        "articles" => ProductTab.Articles,
         _ => ProductTab.General
     };
 
@@ -580,8 +542,6 @@
     private IReadOnlyList<ProductSummary> _otherProducts = [];
     private string _newName = string.Empty;
     private string _newAlias = string.Empty;
-    private string _newAliasQualifierId = string.Empty;
-    private IReadOnlyList<ProductQualifier> _qualifiers = [];
     private ProductFeatureOverview _features = new();
     private string _newFeature = string.Empty;
     private long? _pendingFeatureDelete;
@@ -599,47 +559,18 @@
     private string _mergeTarget = string.Empty;
     private PendingAction _pendingAction;
     private long _loadedId;
+    private ProductTab _loadedTab;
     private PersistingComponentStateSubscription? _persistSubscription;
 
-    // Links of child products show which product they are about.
-    private bool ShowCatalogColumn =>
-        _product != null
-        && (_product.Articles.Any(a => a.CatalogName != _product.Name) || _product.Events.Any(e => e.CatalogName != _product.Name));
+    private const int PageSize = 25;
 
-    private bool ShowEventQualifiers => _product != null && _product.Events.Any(e => e.Qualifiers.Count > 0);
+    private PagedResult<ProductEventLink> _events = new() { Items = [], TotalCount = 0 };
+    private PagedResult<ProductArticleLink> _articles = new() { Items = [], TotalCount = 0 };
+    private bool _includeChildren = true;
+    private int _page = 1;
 
-    private bool ShowArticleQualifiers => _product != null && _product.Articles.Any(a => a.QualifierName != null);
-
-    // One row per feature (curated name, else the AI's text); the columns are the surfaces named by the dates.
-    private IReadOnlyList<IGrouping<string, ProductEventLink>> FeatureGrid =>
-        _product == null
-            ? []
-            : _product.Events
-                .Where(e => !string.IsNullOrWhiteSpace(e.FeatureName ?? e.Feature))
-                .GroupBy(e => (e.FeatureName ?? e.Feature)!.Trim(), StringComparer.OrdinalIgnoreCase)
-                .OrderBy(g => g.Key, StringComparer.OrdinalIgnoreCase)
-                .ToList();
-
-    private IReadOnlyList<string> GridSurfaces =>
-        _product == null
-            ? []
-            : _product.Events
-                .SelectMany(e => e.Qualifiers.Where(q => q.Kind == QualifierKinds.Surface).Select(q => q.Name))
-                .Distinct(StringComparer.OrdinalIgnoreCase)
-                .Order(StringComparer.OrdinalIgnoreCase)
-                .ToList();
-
-    private static bool HasSurface(ProductEventLink item) => item.Qualifiers.Any(q => q.Kind == QualifierKinds.Surface);
-
-    private static bool HasSurface(ProductEventLink item, string surface) =>
-        item.Qualifiers.Any(q => q.Kind == QualifierKinds.Surface && string.Equals(q.Name, surface, StringComparison.OrdinalIgnoreCase));
-
-    private static string DescribeEvent(ProductEventLink item)
-    {
-        var plans = item.Qualifiers.Where(q => q.Kind == QualifierKinds.Plan).Select(q => q.Name).ToList();
-        var date = FormatEventDate(item);
-        return plans.Count == 0 ? $"{item.Kind} {date}" : $"{item.Kind} {date} ({string.Join(", ", plans)})";
-    }
+    // The product column shows which product a link of a child product is about.
+    private bool ShowCatalogColumn => _product != null && _includeChildren && _product.Children.Count > 0;
 
     protected override async Task OnInitializedAsync()
     {
@@ -648,15 +579,20 @@
 
         if (ApplicationState.TryTakeFromJson<ProductDetail>($"admin-product-{Id}", out var product) && product != null
             && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductSummary>>($"admin-product-{Id}-others", out var others) && others != null
-            && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductQualifier>>($"admin-product-{Id}-qualifiers", out var qualifiers) && qualifiers != null
             && ApplicationState.TryTakeFromJson<ProductFeatureOverview>($"admin-product-{Id}-features", out var features) && features != null)
         {
             _product = product;
             _otherProducts = others;
-            _qualifiers = qualifiers;
             _features = features;
             _newName = product.Name;
             _parentName = product.Parent?.Name ?? string.Empty;
+            _loadedTab = ActiveTab;
+            RestoreTabData();
+            if (!HasTabData())
+            {
+                await LoadTabAsync();
+            }
+
             _loading = false;
             return;
         }
@@ -672,6 +608,12 @@
             _loadedId = Id;
             await LoadAsync();
         }
+        else if (!_loading && _product != null && _loadedTab != ActiveTab)
+        {
+            _page = 1;
+            _loadedTab = ActiveTab;
+            await LoadTabAsync();
+        }
     }
 
     private Task PersistState()
@@ -680,12 +622,105 @@
         {
             ApplicationState.PersistAsJson($"admin-product-{Id}", _product);
             ApplicationState.PersistAsJson($"admin-product-{Id}-others", _otherProducts);
-            ApplicationState.PersistAsJson($"admin-product-{Id}-qualifiers", _qualifiers);
             ApplicationState.PersistAsJson($"admin-product-{Id}-features", _features);
+            switch (ActiveTab)
+            {
+                case ProductTab.Dates:
+                    ApplicationState.PersistAsJson($"admin-product-{Id}-events", _events);
+                    break;
+                case ProductTab.Articles:
+                    ApplicationState.PersistAsJson($"admin-product-{Id}-articles", _articles);
+                    break;
+            }
         }
 
         return Task.CompletedTask;
     }
+
+    // The articles and dates are paged or large, so only the active tab loads and persists its data.
+    private void RestoreTabData()
+    {
+        switch (ActiveTab)
+        {
+            case ProductTab.Dates when ApplicationState.TryTakeFromJson<PagedResult<ProductEventLink>>($"admin-product-{Id}-events", out var events) && events != null:
+                _events = events;
+                break;
+            case ProductTab.Articles when ApplicationState.TryTakeFromJson<PagedResult<ProductArticleLink>>($"admin-product-{Id}-articles", out var articles) && articles != null:
+                _articles = articles;
+                break;
+        }
+    }
+
+    private bool HasTabData() => ActiveTab switch
+    {
+        ProductTab.Dates => _events.TotalCount > 0 || _events.Items.Count > 0,
+        ProductTab.Articles => _articles.TotalCount > 0 || _articles.Items.Count > 0,
+        _ => true
+    };
+
+    private async Task LoadTabAsync()
+    {
+        try
+        {
+            switch (ActiveTab)
+            {
+                case ProductTab.Dates:
+                    _events = await Api.GetProductEventsAsync(Id, _includeChildren, _page, PageSize);
+                    break;
+                case ProductTab.Articles:
+                    _articles = await Api.GetProductArticlesAsync(Id, _includeChildren, _page, PageSize);
+                    break;
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load product: {ex.Message}";
+        }
+    }
+
+    private async Task GoToPageAsync(int page)
+    {
+        _busy = true;
+        _page = page;
+        await LoadTabAsync();
+        _busy = false;
+    }
+
+    private async Task SetIncludeChildrenAsync(bool includeChildren)
+    {
+        _includeChildren = includeChildren;
+        await GoToPageAsync(1);
+    }
+
+    private int PageCount(int total) => Math.Max(1, (total + PageSize - 1) / PageSize);
+
+    private RenderFragment ScopeFilter => @<text>
+        @if (_product != null && _product.Children.Count > 0)
+        {
+            <div class="admin-filters">
+                <label class="admin-label" for="includeChildren">
+                    <input id="includeChildren" type="checkbox" checked="@_includeChildren" disabled="@_busy"
+                           @onchange="e => SetIncludeChildrenAsync(e.Value is true)" />
+                    Include child products
+                </label>
+            </div>
+        }
+    </text>;
+
+    private RenderFragment Pager(int total) => @<text>
+        @if (total > PageSize)
+        {
+            <div class="admin-pagination" id="product-pager">
+                <button class="btn-secondary" disabled="@(_busy || _page <= 1)" @onclick="() => GoToPageAsync(_page - 1)">← Previous</button>
+                <span class="admin-pagination-info">Page @_page of @PageCount(total) (@total items)</span>
+                <button class="btn-secondary" disabled="@(_busy || _page >= PageCount(total))" @onclick="() => GoToPageAsync(_page + 1)">Next →</button>
+            </div>
+        }
+    </text>;
 
     public void Dispose()
     {
@@ -706,11 +741,13 @@
             if (_product != null)
             {
                 _otherProducts = (await Api.GetProductsAsync()).Where(p => p.Id != Id).ToList();
-                _qualifiers = await Api.GetQualifiersAsync();
                 _features = await Api.GetProductFeaturesAsync(Id);
                 _pendingFeatureDelete = null;
                 _newName = _product.Name;
                 _parentName = _product.Parent?.Name ?? string.Empty;
+                _loadedTab = ActiveTab;
+                _page = 1;
+                await LoadTabAsync();
             }
         }
         catch (OperationCanceledException)
@@ -766,19 +803,9 @@
         RunAsync(async () =>
         {
             var alias = _newAlias.Trim();
-            long? qualifierId = long.TryParse(_newAliasQualifierId, CultureInfo.InvariantCulture, out var parsed) ? parsed : null;
-            _product = await Api.AddProductAliasAsync(Id, _newAlias, qualifierId);
+            _product = await Api.AddProductAliasAsync(Id, _newAlias);
             _newAlias = string.Empty;
-            _newAliasQualifierId = string.Empty;
             return $"Alias '{alias}' added.";
-        });
-
-    private Task SetAliasQualifierAsync(ProductAlias alias, string? qualifierId) =>
-        RunAsync(async () =>
-        {
-            long? parsed = long.TryParse(qualifierId, CultureInfo.InvariantCulture, out var id) ? id : null;
-            _product = await Api.SetProductAliasQualifierAsync(Id, alias.Id, parsed);
-            return parsed is null ? $"Alias '{alias.Alias}' no longer implies a plan or surface." : $"Alias '{alias.Alias}' implies a plan or surface now.";
         });
 
     private Task RemoveAliasAsync(ProductAlias alias) =>
@@ -995,6 +1022,14 @@
             return $"Merged into '{merged.Name}'.";
         });
     }
+
+    private Task ConvertAsync() =>
+        RunAsync(async () =>
+        {
+            var parent = await Api.ConvertProductToFeatureAsync(Id);
+            Navigation.NavigateTo($"/admin/products/{parent.Id}/features");
+            return $"Converted into a feature of '{parent.Name}'.";
+        });
 
     private Task DeleteAsync() =>
         RunAsync(async () =>

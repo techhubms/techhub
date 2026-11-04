@@ -36,6 +36,7 @@
     <EmbeddedResource Include="Data\Migrations\**\*.sql" />
     <EmbeddedResource Include="Data\Resources\content-classify-system.md" />
     <EmbeddedResource Include="Data\Resources\content-rewrite-system.md" />
+    <EmbeddedResource Include="Data\Resources\content-catalog-rules.md" />
     <EmbeddedResource Include="Data\Resources\content-timeline-rules.md" />
     <EmbeddedResource Include="Data\Resources\content-timeline-extract-system.md" />
     <EmbeddedResource Include="Data\Resources\roundup-news-writer-system.md" />

@@ -340,7 +340,7 @@ EXISTS (SELECT 1 FROM content_items ci
            AND ci.content IS DISTINCT FROM @Value)";
 
         await _connection.ExecuteAsync(new CommandDefinition(
-            $"DELETE FROM content_timeline_events WHERE collection_name = @Collection AND item_slug = @Slug AND {Changed}",
+            $"DELETE FROM content_timeline_events WHERE collection_name = @Collection AND item_slug = @Slug AND extracted_from <> '{TechHub.Core.Interfaces.ITimelineEventRepository.ExtractedFromCatalog}' AND {Changed}",
             parameters,
             transaction: transaction,
             cancellationToken: ct));

@@ -40,6 +40,29 @@
                         </div>
                     </nav>
                 </MobileSidebarPanel>
+                @if (_tiers.Count > 0)
+                {
+                    <MobileSidebarPanel Label="Subscriptions" Icon="filter">
+                        <nav class="sidebar-section features-tiers-sidebar" aria-label="Subscriptions">
+                            <h2 class="sidebar-h2">Subscriptions</h2>
+                            <div class="features-tiers-scroll">
+                                @foreach (var tier in _tiers)
+                                {
+                                    <div id="tier-@tier.Id" class="features-tier-card">
+                                        <h3>@tier.Name</h3>
+                                        <p class="features-tier-tagline">@tier.Tagline</p>
+                                        <ul class="features-tier-features">
+                                            @foreach (var feature in tier.Features)
+                                            {
+                                                <li>@feature</li>
+                                            }
+                                        </ul>
+                                    </div>
+                                }
+                            </div>
+                        </nav>
+                    </MobileSidebarPanel>
+                }
             </MobileSidebarToolbar>
         </aside>
 
@@ -98,6 +121,9 @@ else
     // The API returns at most this many entries, newest first.
     private const int MaxEntries = 200;
 
+    // The section whose timeline shows the subscription tiers in the sidebar.
+    private const string TiersSectionName = "github-copilot";
+
     private static readonly TimeZoneInfo BrusselsTz =
         TimeZoneInfo.TryFindSystemTimeZoneById("Europe/Brussels", out var tz) ? tz : TimeZoneInfo.Utc;
 
@@ -126,6 +152,7 @@ else
 
     private TechHub.Core.Models.Section? sectionData;
     private IReadOnlyList<TimelineEntry> _entries = [];
+    private IReadOnlyList<SubscriptionTier> _tiers = [];
     private IReadOnlyList<TimelineViewEntry> _viewEntries = [];
     private Dictionary<string, TimelineEntry> _entriesById = new(StringComparer.Ordinal);
     private string? _activeKinds;
@@ -181,6 +208,7 @@ else
         if (ApplicationState.TryTakeFromJson<PersistedTimeline>("section-timeline", out var restored) && restored?.Key == key)
         {
             SetEntries(restored.Entries);
+            _tiers = restored.Tiers;
             return;
         }
 
@@ -189,6 +217,11 @@ else
             var from = _showAll ? (DateOnly?)null : Today().AddMonths(-12);
             var kinds = _activeKinds?.Split(',');
             SetEntries(await ApiClient.GetSectionTimelineAsync(sectionData.Name, from, null, kinds));
+
+            // The subscription tiers of GitHub Copilot sit next to its timeline, where the features page used to show them.
+            _tiers = string.Equals(sectionData.Name, TiersSectionName, StringComparison.Ordinal)
+                ? (await ApiClient.GetFeaturesDataAsync())?.SubscriptionTiers ?? []
+                : [];
         }
         catch (Exception ex)
         {
@@ -211,8 +244,6 @@ else
         var badges = new List<TimelineViewBadge>();
         var kind = KindBadges.TryGetValue(entry.Kind, out var known) ? known : (Label: entry.Kind, CssClass: "badge-muted");
         badges.Add(new TimelineViewBadge(kind.Label, kind.CssClass));
-        badges.AddRange(entry.Plans.Select(p => new TimelineViewBadge(p, "badge-muted")));
-        badges.AddRange(entry.Surfaces.Select(s => new TimelineViewBadge(s, "badge-muted")));
 
         return new TimelineViewEntry
         {
@@ -270,7 +301,7 @@ else
 
     private Task PersistState()
     {
-        ApplicationState.PersistAsJson("section-timeline", new PersistedTimeline { Key = _loadedKey ?? string.Empty, Entries = _entries });
+        ApplicationState.PersistAsJson("section-timeline", new PersistedTimeline { Key = _loadedKey ?? string.Empty, Entries = _entries, Tiers = _tiers });
         return Task.CompletedTask;
     }
 
@@ -286,5 +317,6 @@ else
     {
         public string Key { get; set; } = string.Empty;
         public IReadOnlyList<TimelineEntry> Entries { get; set; } = [];
+        public IReadOnlyList<SubscriptionTier> Tiers { get; set; } = [];
     }
 }

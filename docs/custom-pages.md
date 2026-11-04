@@ -25,7 +25,7 @@ While most content in Tech Hub is standard markdown served via generic item endp
 | Section | Custom Pages |
 |---|---|
 | `all` | Content by Author (`/all/authors`) |
-| `github-copilot` | Features, VS Code Updates, Getting Started, Levels of Enlightenment, The GitHub Copilot Handbook, Tool Tips, Discord, Timeline |
+| `github-copilot` | VS Code Updates, Getting Started, Levels of Enlightenment, The GitHub Copilot Handbook, Tool Tips, Discord, Timeline |
 | `ai` | GenAI Basics, GenAI Advanced, GenAI Applied, AI SDLC, Timeline |
 | `devops` | DX, SPACE & DORA, Timeline |
 | `ml`, `azure`, `dotnet`, `security` | Timeline |
@@ -115,7 +115,7 @@ If the data cannot be constructed or the page definition is missing.
 Custom pages content is hydrated from:
 
 1. **Database** (`custom_page_data` table) — JSON objects representing the structured data are stored directly in the database. Admin users can edit the JSON from the admin UI. This is the **only** source of truth for custom page data (database-first).
-2. **Aggregation of items** from standard collections (e.g., Features page aggregates data from collection items)
+2. **Aggregation of items** from standard collections (e.g., the timeline pages aggregate the dated events of collection items)
 
 ### Admin Management
 
@@ -142,20 +142,13 @@ See [src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs](../src/TechHub.Api/Endpo
 
 Some custom pages are populated by specialized video content tracked in dedicated database tables.
 
-### GitHub Copilot Features Content
+### GitHub Copilot Subscription Tiers
 
-**Location**: Features are the features of the GitHub Copilot product in the catalog (`product_features`) and link to content items (usually videos under `collection_name = 'videos'`) through the `product_feature_content` table.
+The former GitHub Copilot features page is gone: its features are events on the timeline of the section, and `/github-copilot/features` redirects to `/github-copilot/timeline`. See [Timeline Events](content-processing.md#timeline-events) and [content-schema.md](content-schema.md#github-copilot-features).
 
-New features are added on the GitHub Copilot product page of the admin (see [admin.md](admin.md)). Their description, release date and linked content are edited on the same product page (see [admin.md](admin.md)); the public [GHC features API](content-api.md#ghc-features-api) reads them. The test-only `ContentSyncService` can also seed them from fixture files, but production never does.
+The tiers (Free, Pro, Pro+, Business, Enterprise) come from the custom page data `githubcopilot-features` (`GET /api/custom-pages/features`, edited in the admin like the other custom page data). The timeline of the GitHub Copilot section shows them as cards in its sidebar, below the filter by kind of date; no other section does. The cards describe the plans: they do not filter the timeline.
 
-**Features**:
-
-- Populates the features timeline page at `/github-copilot/features` (via `/api/ghc-features`)
-- Only features with at least one linked content item are listed; the others stay in the catalog and appear as soon as content is linked
-- Each feature has a release date (set by an admin, else taken from its timeline events). See [content-schema.md](content-schema.md#github-copilot-features)
-- The subscription tier cards in the sidebar describe the plans; they do not filter the timeline. The page has no filters
-- Linked content items appear in the expanded feature detail, and the item marked as thumbnail supplies the video thumbnail
-- Items with YouTube URLs display video thumbnails and link to the video page
+New features are added on the GitHub Copilot product page of the admin (see [admin.md](admin.md)). A feature gets its place on the timeline through the dated events that name it; the test-only `ContentSyncService` can also seed features from fixture files, but production never does.
 
 ### VS Code Updates
 
@@ -177,7 +170,7 @@ Items are automatically identified based on feed name and title pattern rules co
 
 ## Custom Page Ordering
 
-Custom pages (non-collection pages like Features, Levels of Enlightenment, Handbook, etc.) support explicit ordering that controls their display in:
+Custom pages (non-collection pages like Levels of Enlightenment, Handbook, etc.) support explicit ordering that controls their display in:
 
 - Homepage section card badges
 - Horizontal sub-navigation bar
@@ -191,10 +184,10 @@ Add the `Order` property to custom page collections in `appsettings.json`:
   "Sections": {
     "github-copilot": {
       "Collections": {
-        "features": {
-          "Title": "Features",
-          "Url": "/github-copilot/features",
-          "Description": "GitHub Copilot features and capabilities",
+        "timeline": {
+          "Title": "Timeline",
+          "Url": "/github-copilot/timeline",
+          "Description": "The dates that articles state",
           "Custom": true,
           "Order": 1
         },

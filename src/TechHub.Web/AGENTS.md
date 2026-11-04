@@ -289,19 +289,19 @@ Generated from the directory contents (`list_dir` on `Components/`). Re-check th
 | `SectionTimeline` | `/{sectionName}/timeline` (the `timeline` custom collection of each section except `all`) |
 | `AISDLC` | `/ai/sdlc` |
 | `DXSpace` | `/devops/dx-space` |
-| `GitHubCopilotFeatures`, `GitHubCopilotVSCodeUpdates` (also `/{VideoSlug}`), `GitHubCopilotGettingStarted`, `GitHubCopilotLevels`, `GitHubCopilotHandbook`, `GitHubCopilotToolTips`, `GitHubCopilotDiscord` | `/github-copilot/features`, `/vscode-updates`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord` |
+| `GitHubCopilotVSCodeUpdates` (also `/{VideoSlug}`), `GitHubCopilotGettingStarted`, `GitHubCopilotLevels`, `GitHubCopilotHandbook`, `GitHubCopilotToolTips`, `GitHubCopilotDiscord` | `/vscode-updates`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord` |
 | `NewsletterSubscribe`, `NewsletterConfirm`, `NewsletterManage`, `NewsletterUnsubscribe` | `/newsletter/subscribe`, `/confirm`, `/manage`, `/unsubscribe` (see [docs/newsletter.md](../../docs/newsletter.md)) |
 | `Admin*` (`Components/Pages/Admin/`) | `/admin` and `/admin/*`, rendered with `AdminLayout` (see [docs/admin.md](../../docs/admin.md) and [docs/admin-authentication.md](../../docs/admin-authentication.md)) |
 
-Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `AdminCustomPages`, `AdminFeeds`, `AdminLogin` (+ `AdminLoginContent`), `AdminNewsletter`, `AdminNewsletterSendLog`, `AdminProcessedUrls`, `AdminProductDetail` (tabs through the optional `Tab` route parameter: general, `features`, `activity`), `AdminProducts`, `AdminQualifiers`, `AdminReviews` (composes `ReviewOverview` and `ContentFixReviews`), `AdminSettings`, `AdminStatistics`, `AdminVscodeUpdates`. They declare `@rendermode InteractiveServer` explicitly. The admin menu (top-level groups and their sub menu pages) is defined in `Components/Layout/AdminNavigation.cs`: add a new admin page there as well. A page puts its Refresh button in `AdminSubbarAction` so it shows in the sub menu bar.
+Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `AdminCustomPages`, `AdminFeeds`, `AdminLogin` (+ `AdminLoginContent`), `AdminNewsletter`, `AdminNewsletterSendLog`, `AdminProcessedUrls`, `AdminProductDetail` (tabs through the optional `Tab` route parameter: general, `features`, `plans`, `surfaces`, `dates`, `articles`), `AdminProducts` (a nested table: children are indented below their parent; with the shared `CatalogGlossary` explanation), `AdminReviews` (composes `ReviewOverview` and `ContentFixReviews`), `AdminSettings`, `AdminStatistics`, `AdminVscodeUpdates`. They declare `@rendermode InteractiveServer` explicitly. The admin menu (top-level groups and their sub menu pages) is defined in `Components/Layout/AdminNavigation.cs`: add a new admin page there as well. A page puts its Refresh button in `AdminSubbarAction` so it shows in the sub menu bar.
 
 **Sidebar**: `SidebarToggle`, `MobileSidebarToolbar`, `MobileSidebarPanel`, `SidebarSearch`, `SidebarTagCloud`, `SidebarToc`, `DateRangeSlider`
 
-**Content**: `SectionCard`, `SectionCardsGrid`, `ContentItemCard`, `ContentItemsGrid`, `ContentItemDetail`, `HeroBanner`, `SafeMarkup`, `ReviewDiff` (uses `Helpers/DiffHelper.cs`), `TimelineView` (year / month / card timeline: pass `TimelineViewEntry` values and an optional `Detail` fragment for extra card content, as the GitHub Copilot features page does for its videos)
+**Content**: `SectionCard`, `SectionCardsGrid`, `ContentItemCard`, `ContentItemsGrid`, `ContentItemDetail`, `HeroBanner`, `SafeMarkup`, `ReviewDiff` (uses `Helpers/DiffHelper.cs`), `TimelineView` (year / month / card timeline: pass `TimelineViewEntry` values and an optional `Detail` fragment for extra card content; the section timeline uses it for the sources of an event)
 
 **Admin modals**: `AddContentModal`, `ContentItemEditorModal`, `JsonEditorModal`
 
-**Admin review components**: `ReviewOverview` (review cards, product-name queue, plans and surfaces and features to review; data in `ReviewOverviewData`) and `ContentFixReviews` (content fixer proposals with the Run Cleanup button)
+**Admin review components**: `ReviewOverview` (review cards, product-name queue and features to review; data in `ReviewOverviewData`) and `ContentFixReviews` (content fixer proposals with the Run Cleanup button)
 
 **Unused components** (exist, but no page or component renders them; keep or delete deliberately): `ResponsiveImage`, `MobileSidebarCollapse` (only tests render it), `SidebarRssLinks`
 

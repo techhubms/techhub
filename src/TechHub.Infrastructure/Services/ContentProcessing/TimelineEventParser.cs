@@ -13,8 +13,6 @@ namespace TechHub.Infrastructure.Services.ContentProcessing;
 internal static class TimelineEventParser
 {
     private const int MaxEvents = 10;
-    private const int MaxQualifiersPerKind = 8;
-    private const int MaxQualifierLength = 100;
 
     private static readonly TimeZoneInfo _brusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
 
@@ -33,7 +31,7 @@ internal static class TimelineEventParser
         }
 
         var events = new List<TimelineEvent>();
-        var seen = new HashSet<(string Kind, string Product, string Feature, string Plans, string Surfaces)>();
+        var seen = new HashSet<(string Kind, string Product, string Feature, DateOnly Date)>();
 
         foreach (var element in eventsArray.EnumerateArray().Take(MaxEvents))
         {
@@ -47,8 +45,7 @@ internal static class TimelineEventParser
                 timelineEvent.Kind,
                 timelineEvent.Product.ToUpperInvariant(),
                 (timelineEvent.Feature ?? string.Empty).ToUpperInvariant(),
-                string.Join('|', timelineEvent.Plans.Order(StringComparer.OrdinalIgnoreCase)).ToUpperInvariant(),
-                string.Join('|', timelineEvent.Surfaces.Order(StringComparer.OrdinalIgnoreCase)).ToUpperInvariant());
+                timelineEvent.Date);
             if (seen.Add(key))
             {
                 events.Add(timelineEvent);
@@ -119,8 +116,6 @@ internal static class TimelineEventParser
             Kind = kind,
             Product = product,
             Feature = GetString(element, "feature"),
-            Plans = GetStrings(element, "plans"),
-            Surfaces = GetStrings(element, "surfaces"),
             Description = description,
             Date = date,
             DatePrecision = precision,
@@ -145,31 +140,5 @@ internal static class TimelineEventParser
         }
 
         return null;
-    }
-
-    private static List<string> GetStrings(JsonElement element, string name)
-    {
-        var values = new List<string>();
-        if (!element.TryGetProperty(name, out var property) || property.ValueKind != JsonValueKind.Array)
-        {
-            return values;
-        }
-
-        foreach (var item in property.EnumerateArray())
-        {
-            var value = item.ValueKind == JsonValueKind.String ? item.GetString()?.Trim() : null;
-            if (!string.IsNullOrEmpty(value) && value.Length <= MaxQualifierLength
-                && !values.Contains(value, StringComparer.OrdinalIgnoreCase))
-            {
-                values.Add(value);
-            }
-
-            if (values.Count == MaxQualifiersPerKind)
-            {
-                break;
-            }
-        }
-
-        return values;
     }
 }

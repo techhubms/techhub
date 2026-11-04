@@ -156,7 +156,9 @@ The classification step analyzes content using `src/TechHub.Infrastructure/Data/
 `AiCategorizationService` processes each item in two AI steps through `AiCompletionClient`, which
 calls the Azure AI Foundry v1 chat completions API (`{Endpoint}/openai/v1/chat/completions`, the
 deployment goes in the request `model`). The client authenticates with Microsoft Entra ID (managed
-identity in Azure, `az login` locally), so no API key is configured.
+identity in Azure, `az login` locally), so no API key is configured. The dev container sets
+`AZURE_TOKEN_CREDENTIALS=dev` (`.devcontainer/devcontainer.json`): without it the managed identity probe fails fatally inside the
+container and `DefaultAzureCredential` never reaches the Azure CLI credential.
 
 | Step | Profile | Output | Model |
 |---|---|---|---|
@@ -164,7 +166,7 @@ identity in Azure, `az login` locally), so no API key is configured.
 | 2. Rewrite | `Rewrite` | Markdown body, only for included items | `gpt-6.1-sol` |
 | Roundup writer | `RoundupNewsWriter` | Roundup topics | `gpt-6-astra` |
 | Roundup metadata | `RoundupMetadata` | Title, tags and introduction (strict JSON) | `gpt-6.1-sol` |
-| Timeline extraction | `TimelineExtraction` | Timeline events only (strict JSON), from already stored articles: the timeline backfill job | `gpt-6-luna` |
+| Timeline extraction | `TimelineExtraction` | Products and timeline events (strict JSON), from already stored articles: the timeline backfill job | `gpt-6-luna` |
 
 `CategorizeAsync` runs step 1 and, when the item is included, step 2. A failing rewrite fails the
 whole item; nothing is stored. `ClassifyAsync` runs step 1 only and is used by the roundup
@@ -225,7 +227,7 @@ The admin area at `/admin` provides:
 - **Dashboard** — Recent processing job history with status, duration, log output
 - **RSS Feeds** — Full CRUD management of feed configurations
 - **Processed URLs** — Browse all processed URLs with status/reason; remove entries to retry
-- **Reviews** — One page for everything that needs a decision: the product names, plans, surfaces and features to review (see [Product Catalog](#product-catalog)), failed URLs, and the content review queue for proposed fixer changes (approve/reject before applying). The **Run Cleanup** button that starts the content fixer is here
+- **Reviews** — One page for everything that needs a decision: the product names and features to review (see [Product Catalog](#product-catalog)), failed URLs, and the content review queue for proposed fixer changes (approve/reject before applying). The **Run Cleanup** button that starts the content fixer is here
 - **Settings** — Scheduled job switches, the **Run Processing** and **Run Roundup** buttons (immediate out-of-schedule runs), cache invalidation and the **Backfill Timeline** button (see [Timeline Events](#timeline-events))
 
 See [admin-authentication.md](admin-authentication.md) for authentication setup.
@@ -401,7 +403,7 @@ is deprecated or retired. The classification step extracts them and the applicat
 
 | Table | Purpose |
 |---|---|
-| `content_timeline_events` | One row per event: `kind`, `product` (as the AI wrote it), `product_id` (the catalog product), `feature`, `description`, `event_date`, `date_precision` (`day`/`month`/`quarter`), `date_source`, `quote`, `extracted_from`, with a cascading foreign key to the source article |
+| `content_timeline_events` | One row per event: `kind`, `product` (as the AI wrote it), `product_id` (the catalog product), `feature`, `description`, `event_date`, `date_precision` (`day`/`month`/`quarter`), `date_source`, `quote`, `extracted_from` (`source`, `stored-content`, or `catalog` for the dated features of the former features page, which the AI extraction and an edit of the article leave alone), with a cascading foreign key to the source article |
 | `content_timeline_extractions` | One row per scanned article with the `prompt_version` and the number of events found, so the backfill is resumable |
 
 Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`, `retirement`, `end-of-support`, `breaking-change`, `pricing-change` and `event`.
@@ -411,11 +413,11 @@ Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`
 - **Safety net for missed deadlines.** `TimelineDeadlineGuard` checks the text after the classification: when it names a future date (up to five years ahead) within 150 characters of a deadline phrase (retire, deprecate, end of support, sunset, no longer supported, ...) and no extracted event has that date, the article gets a second, focused extraction on the cheap `TimelineExtraction` profile, and the new events are added. It runs for processing and for the roundup metadata backfill; an invalid answer of the second call is ignored.
 - **No quote check.** The `quote` is stored for spot checks. If the model proves unreliable, add a check that the quote appears in the article.
 - **Reprocessing replaces events.** An article's events are replaced whenever it is processed again, or when a transcript is applied. This happens in the same transaction as the article write (processing, transcript edit, roundup metadata backfill), so a failing event write never leaves a saved article with stale events or a scanned marker that does not match them. Replacements of the same article are serialized with a row lock on the article, so concurrent runs cannot store two event sets.
-- **Read by the roundup and the admin.** The roundup "Dates to know" block reads the events, the admin products page lists them per product (see [Product Catalog](#product-catalog)), and every section has a public timeline page (see [Section Timelines](#section-timelines)). The GitHub Copilot features page reads its features from the catalog (see [Features](#features)).
+- **Read by the roundup and the admin.** The roundup "Dates to know" block reads the events, the admin products page lists them per product (see [Product Catalog](#product-catalog)), and every section has a public timeline page (see [Section Timelines](#section-timelines)). The features of GitHub Copilot are events of that timeline too (see [Features](product-catalog.md#features)).
 
 ### Section Timelines
 
-`/{section}/timeline` shows the events of the articles of a section, newest first, grouped by year and month in the shared `TimelineView` component (the GitHub Copilot features page uses the same component). It is configured as a custom collection `timeline` in each section of `appsettings.json` (all sections except `all`), so it appears in the sub-navigation and on the section card.
+`/{section}/timeline` shows the events of the articles of a section, newest first, grouped by year and month in the shared `TimelineView` component (the sidebar of the GitHub Copilot timeline also shows the subscription tiers, see [custom-pages.md](custom-pages.md)). It is configured as a custom collection `timeline` in each section of `appsettings.json` (all sections except `all`), so it appears in the sub-navigation and on the section card.
 
 - **Source.** `GET /api/sections/{sectionName}/timeline` (see [content-api.md](content-api.md#timeline-api)) joins `content_timeline_events` with the articles whose **primary** section is the section (`primary_section_name`; `all` uses every article). An article that only touches a section (for example a Fabric announcement also tagged GitHub Copilot) states events about other products, so its events stay off that section's timeline. Roundups are left out: they only repeat what their articles state.
 - **One entry per event.** Articles that state the same event (same date, kind, product and feature) are merged. The description comes from the oldest article, and every article is listed as a source when the card is opened. Products and features show their catalog names; a card is titled `Product: Feature`, or just the feature when the product is the section itself (`Agent mode` instead of `GitHub Copilot: Agent mode` on the GitHub Copilot timeline). Plans and surfaces come from the catalog qualifiers of the event.
@@ -424,10 +426,12 @@ Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`
 ### Timeline Backfill
 
 Existing articles are scanned by `TimelineBackfillBackgroundService`, a manual-trigger-only job (job type `timeline-backfill`). Use
-the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/timeline-backfill/trigger` (see [admin.md](admin.md)).
+the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/timeline-backfill/trigger` (see [admin.md](admin.md)). The same pass also
+names the products of the article again, so it is the way to refresh the product links of stored articles after the catalog rules change.
 
-- Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`)
-- Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again (version 2 added the deadline and digest rules, so articles scanned before it are scanned again by the next run)
+- Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and product names and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`) and its naming rules (`content-catalog-rules.md`, see [How the AI Is Asked](product-catalog.md#how-the-ai-is-asked))
+- Stores the products in the `products` array of the article's `ai_metadata` (whatever the schema version of the metadata) and relinks them to the catalog, in the same transaction as the events. The rest of the metadata and the revision of the article stay as they are. An article without metadata is scanned for events only: metadata marks an article as classified, so it is left for the roundup metadata backfill. An answer without a `products` property leaves the stored products alone
+- Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again (version 2 added the deadline and digest rules, version 3 plans and surfaces, version 4 the products and the shared naming rules, version 5 billing concepts as features, version 6 the rules as descriptions with examples instead of lists of names, version 7 that a billing model or a group of plans is no plan, version 8 dropped plans and surfaces, version 9 the "can you use it by itself?" rule for products and features, so articles scanned before it are scanned again by the next run)
 - An admin edit that changes the title, excerpt, text or publication date (without extracting new events itself) removes the article's events and scan marker in the same transaction, so an ordinary run scans the edited article again
 - Options: `force`, `publishedAfter` (yyyy-MM-dd), `collection` and `limit`. Newest articles come first
 - Resumable: an article is marked as scanned only after its events are stored, so a cancelled or failed run can simply be started again. A failing article is logged and left for the next run
@@ -436,59 +440,13 @@ the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/time
 
 ## Product Catalog
 
-The classification and the timeline extraction return product names as free text (`ai_metadata.products` and
-the `product` of an event). The names stay as the AI wrote them; a curated catalog on top links them to one
-product, so "Azure AI Foundry" and "Microsoft Foundry" are the same product wherever they are used.
+The classification and the timeline extraction return product and feature names as free text (`ai_metadata.products` and the `product` and `feature` of an event). The names stay as the AI wrote them; a curated catalog links them to one product and feature, so "Azure AI Foundry" and "Microsoft Foundry" are the same product wherever they are used. The catalog is described in [product-catalog.md](product-catalog.md):
 
-| Table | Purpose |
-|---|---|
-| `products` | The curated product names, unique ignoring case. A product can have a parent (`parent_product_id`) |
-| `product_aliases` | Other names for a product (old names, spelling variants), unique ignoring case and never equal to a product name |
-| `ignored_product_names` | Names the AI returns that are not products (an event, an umbrella brand), so they stay out of the review queue |
-| `content_item_products` | The product names an article lists in classifier order, with the product each matches. `product_id` is empty while the name is not in the catalog |
-| `content_timeline_events.product_id` | The product of an event. The raw `product` text stays on the event |
+- what a product, a child product and a feature are, and the question that tells them apart ("can you use it by itself?");
+- the naming rules that the prompts give the AI (`content-catalog-rules.md`, inserted into the classify and extraction prompts). The AI never receives the catalog;
+- how names are matched to the catalog (in the database, in tiers, never by an AI call), the links, the review queue and the starting catalog.
 
-An article is about several products and a product has many articles. An event belongs to one article and one product,
-so a product's dates always lead back to the article that states them (for example the announcement of a retirement).
-
-### Hierarchy
-
-Azure products are separate services, but a product like GitHub Copilot is a family: the CLI, the coding agent and code review are
-products of their own that belong to GitHub Copilot. A product can have a parent. Articles and events keep linking to the most specific
-product that matches their name; a parent shows the articles and dates of all its descendants (with the specific product named per
-link), and the counts on the product list include them. A product cannot be its own ancestor; deleting a parent makes its children
-top-level and merging a product moves its children to the target.
-
-### Plans and Surfaces
-
-GitHub Copilot is available in plans (Free, Pro, Pro+, Business, Enterprise) and on surfaces (Visual Studio Code, JetBrains IDEs, GitHub.com, ...),
-and a feature can be in preview on one and generally available on another. Those are not products of their own, so they are a controlled
-vocabulary of qualifiers (`product_qualifiers`, kind `plan` or `surface`, with aliases such as "VS Code") that events and product aliases carry.
-
-- **The AI keeps its raw names.** A timeline event has `plans` and `surfaces` arrays with the names as the article gives them, and the product name may include the tier ("GitHub Copilot Business"). Nothing is simplified at write time
-- **Aliases can imply a qualifier.** The product alias "GitHub Copilot Business" belongs to GitHub Copilot and implies the plan Business, so simplifying the name to the product loses nothing. The qualifier shows on the article link and on the event
-- **Matching** uses the same text match as products (`find_qualifier_id`, `find_product_qualifier_id`). The SQL functions `relink_item_products` and `relink_timeline_events` rebuild the links when an article or event is written and when the catalog changes
-- **Review queue.** Plan and surface names that match nothing are listed on `/admin/products/qualifiers` (and counted on the Reviews page): add one as a plan or surface, or as an alias of an existing one
-- **Prompt version.** Adding `plans` and `surfaces` to the extraction raised `CurrentPromptVersion` to 3, so the timeline backfill scans articles that were scanned with an older version again
-
-### Features
-
-The `feature` of a timeline event stays as the AI wrote it. A curated feature (`product_features`, with aliases) belongs to a product and groups
-those names: "Agent mode" and "agent-mode" are one feature. An event matches a feature of its own product first and then the features of its
-parent products (a feature defined on GitHub Copilot matches the events of GitHub Copilot CLI), by name or alias, ignoring case and extra whitespace.
-`content_timeline_events.feature_id` holds the match and the raw text stays on the event.
-
-- **Review queue.** Feature names of the dates of a product (and its children) that match no feature are listed on the Features tab of the product (`/admin/products/{id}/features`): add one as a feature, or as an alias of a feature of the product. The Reviews page lists the products that have names to review and links to that tab
-- **Starting set.** Migration `054_product_features` seeded the features of GitHub Copilot from the curated features page (the former `ghc_features` table)
-- **The features page reads the catalog.** The `/github-copilot/features` timeline is the list of features of the GitHub Copilot product (and its child products). Migration `055_github_copilot_features_in_catalog` gave the features the data of the page (slug, description, release date) and a link table for videos (`product_feature_content`), and copied `ghc_features` into them; migration `056_drop_ghc_tables_and_ghes_support` dropped the old tables and the GHES flag. Only features with linked content are listed. The release date is the date set for the feature, else the first `launch`, `preview`, `ga` or `release` event of the feature. The subscription plans of a feature and its GitHub Enterprise Server support are not stored: the page has no filters
-- **Features by surface.** The product page shows per feature what happened on which surface (and in which plans), so a feature that is in preview in JetBrains IDEs but generally available in Visual Studio Code is visible at a glance
-
-- **Matching is a text match.** A name matches a product by its name or an alias, ignoring case and extra whitespace (the database function `find_product_id`). There is no fuzzy matching and no AI in this step, so matches never need a review.
-- **Links follow the AI output.** Whenever an article's `ai_metadata` is written (processing, roundup metadata backfill, admin edit) its links are replaced, and event writes set `product_id` the same way.
-- **Catalog changes relink everything.** Adding a product or alias, renaming, merging, removing and deleting re-evaluate all links in the same transaction. A rename keeps the old name as an alias, and a merge turns the merged product and its aliases into aliases of the target, so nothing becomes unmatched by accident.
-- **Review queue.** Names that match nothing and are not ignored are the products to review, on the Reviews page (`/admin/reviews`): add one as a product, add it as an alias of a product, or mark it as not a product. The queue is derived from the links, so unmatched names never pollute the catalog.
-- **Starting set.** Migration `051_seed_product_catalog` seeds the products found in the production data with their aliases and ignored names, and links the existing articles and events.
-- **Readers.** The roundup uses the canonical names (grouping and ordering by product, "Dates to know") and falls back to the AI's text for unmatched names. The admin products page shows the articles and dates per product. See [admin.md](admin.md#product-catalog).
+Plans, surfaces, editions, models, regions and versions are not catalogued: the model writes them in the description of an event.
 
 ## Evaluating Models
 

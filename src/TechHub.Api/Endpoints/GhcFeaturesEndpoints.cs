@@ -3,34 +3,17 @@ using TechHub.Core.Interfaces;
 namespace TechHub.Api.Endpoints;
 
 /// <summary>
-/// Public endpoints for the features of GitHub Copilot shown on the features page (features of the GitHub Copilot product in
-/// the catalog) and for the VS Code updates. The features are edited on the product page of the admin
-/// (<c>/api/admin/products/{productId}/features</c>).
+/// Public endpoint for the VS Code updates page. (The features of GitHub Copilot are part of the catalog and shown on the
+/// timeline of the section; they are edited on the product page of the admin, <c>/api/admin/products/{productId}/features</c>.)
 /// </summary>
 public static class GhcFeaturesEndpoints
 {
     public static void MapGhcFeaturesEndpoints(this IEndpointRouteBuilder app)
     {
-        var group = app.MapGroup("/api/ghc-features")
-            .WithTags("GhcFeatures");
-
-        group.MapGet("/", GetAllFeaturesAsync)
-            .WithName("GetGhcFeatures")
-            .WithSummary("Get all GitHub Copilot features with their content links");
-
-        // ── VS Code Updates (public) ─────────────────────────────────────────
         app.MapGet("/api/vscode-updates", GetVscodeUpdatesPublicAsync)
             .WithTags("VscodeUpdates")
             .WithName("GetVscodeUpdatesPublic")
             .WithSummary("Get VS Code update items for the VS Code Updates page");
-    }
-
-    private static async Task<IResult> GetAllFeaturesAsync(
-        IGhcFeatureRepository repo,
-        CancellationToken ct)
-    {
-        var features = await repo.GetAllFeaturesAsync(ct);
-        return Results.Ok(features);
     }
 
     private static async Task<IResult> GetVscodeUpdatesPublicAsync(

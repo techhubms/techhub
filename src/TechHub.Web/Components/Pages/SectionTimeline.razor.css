@@ -86,3 +86,103 @@ html.keyboard-nav .timeline-filter-link:focus-visible {
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
 }
+
+/* ─── Subscription tiers (GitHub Copilot) ───────────────────────── */
+
+.features-tiers-sidebar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-4);
+}
+
+.features-tiers-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  position: sticky;
+  top: calc(var(--sticky-header-height) + var(--spacing-2));
+  max-height: calc(100vh - var(--sticky-header-height) - var(--spacing-6));
+  overflow-y: auto;
+  padding-right: var(--spacing-1);
+  min-height: 0;
+  scrollbar-width: thin;
+}
+
+.features-tiers-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.features-tiers-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.features-tiers-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-border-default);
+  border-radius: var(--radius-sm);
+}
+
+.features-tier-card {
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2);
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-align: left;
+  width: 100%;
+}
+
+.features-tier-card h3 {
+  font-size: var(--font-size-2xl);
+  margin: 0 0 var(--spacing-1) 0;
+  color: var(--color-purple-bright);
+}
+
+.features-tier-tagline {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-1);
+  line-height: var(--line-height-normal);
+}
+
+.features-tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.features-tier-features li {
+  padding: 0.2rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.features-tier-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-green-light);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 1292px) {
+  .features-tiers-scroll {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+}
+
+@media print {
+  .features-tier-card {
+    border-color: var(--color-print-border);
+    page-break-inside: avoid;
+  }
+}

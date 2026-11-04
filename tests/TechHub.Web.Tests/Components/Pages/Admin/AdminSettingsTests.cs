@@ -227,6 +227,22 @@ public class AdminSettingsTests : AdminPageTestBase
     }
 
     [Fact]
+    public void TimelineBackfill_WithPublishedAfterAndScanAgain_PassesTheOptions()
+    {
+        // Arrange
+        _api.Setup(x => x.TriggerTimelineBackfillAsync(true, "2026-10-28", null, null, It.IsAny<CancellationToken>())).Returns(Task.CompletedTask);
+        var cut = Render<AdminSettings>();
+        cut.Find("#backfill-published-after").Change("2026-10-28");
+        cut.Find("#backfill-force").Change(true);
+
+        // Act
+        cut.Find("#backfill-timeline").Click();
+
+        // Assert
+        _api.Verify(x => x.TriggerTimelineBackfillAsync(true, "2026-10-28", null, null, It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
     public void TimelineBackfill_ApiFails_ShowsErrorMessage()
     {
         // Arrange

@@ -22,13 +22,11 @@ public class TimelineEventParserTests
         string dateSource = "explicit",
         string? date = "2026-03-10",
         string? precision = "day",
-        string? quote = "It is now GA.",
-        string plans = "[]",
-        string surfaces = "[]")
+        string? quote = "It is now GA.")
     {
         static string Q(string? value) => value is null ? "null" : JsonSerializer.Serialize(value);
         return $$"""
-            {"kind":{{Q(kind)}},"product":{{Q(product)}},"feature":{{Q(feature)}},"plans":{{plans}},"surfaces":{{surfaces}},"description":{{Q(description)}},
+            {"kind":{{Q(kind)}},"product":{{Q(product)}},"feature":{{Q(feature)}},"description":{{Q(description)}},
              "date_source":{{Q(dateSource)}},"date":{{Q(date)}},"date_precision":{{Q(precision)}},"quote":{{Q(quote)}}}
             """;
     }
@@ -37,50 +35,14 @@ public class TimelineEventParserTests
         => TimelineEventParser.Parse(Array("[" + string.Join(",", events) + "]"), _publicationDate, NullLogger.Instance, "https://example.com/a");
 
     [Fact]
-    public void Parse_PlansAndSurfaces_AreKeptAsReturnedWithoutDuplicatesOrBlanks()
-    {
-        var result = Parse(Event(plans: """["Business", " Enterprise ", "business", "", "  "]""", surfaces: """["VS Code", "JetBrains IDEs"]"""));
-
-        var e = result.Should().ContainSingle().Subject;
-        e.Plans.Should().Equal("Business", "Enterprise");
-        e.Surfaces.Should().Equal("VS Code", "JetBrains IDEs");
-    }
-
-    [Fact]
-    public void Parse_WithoutPlansAndSurfaces_GivesEmptyLists()
-    {
-        var json = """[{"kind":"ga","product":"X","feature":null,"description":"d","date_source":"publication","date":null,"date_precision":null,"quote":null}]""";
-
-        var result = TimelineEventParser.Parse(Array(json), _publicationDate, NullLogger.Instance, "https://example.com/a");
-
-        var e = result.Should().ContainSingle().Subject;
-        e.Plans.Should().BeEmpty();
-        e.Surfaces.Should().BeEmpty();
-    }
-
-    [Fact]
-    public void Parse_PlansAndSurfaces_AreLimitedInNumberAndLength()
-    {
-        var many = string.Join(",", Enumerable.Range(1, 12).Select(i => $"\"Plan {i}\""));
-        var tooLong = new string('x', 101);
-
-        var result = Parse(Event(plans: $"[{many}]", surfaces: $"[\"{tooLong}\", \"Xcode\", 7, null]"));
-
-        var e = result.Should().ContainSingle().Subject;
-        e.Plans.Should().HaveCount(8);
-        e.Surfaces.Should().Equal("Xcode");
-    }
-
-    [Fact]
-    public void Parse_SameKindProductAndFeatureForDifferentSurfaces_KeepsBothEvents()
+    public void Parse_SameKindProductAndFeatureOnDifferentDates_KeepsBothEventsAndDropsTheRepeat()
     {
         var result = Parse(
-            Event(surfaces: """["Visual Studio Code"]""", date: "2026-03-10"),
-            Event(surfaces: """["JetBrains IDEs"]""", date: "2026-04-20"),
-            Event(surfaces: """["jetbrains ides"]""", date: "2026-05-01"));
+            Event(date: "2026-03-10"),
+            Event(date: "2026-04-20"),
+            Event(date: "2026-04-20", description: "Repeated"));
 
-        result.Should().HaveCount(2);
-        result.Select(e => e.Surfaces.Single()).Should().Equal("Visual Studio Code", "JetBrains IDEs");
+        result.Select(e => e.Date).Should().Equal(new DateOnly(2026, 3, 10), new DateOnly(2026, 4, 20));
     }
 
     [Fact]
@@ -177,9 +139,9 @@ public class TimelineEventParserTests
     }
 
     [Fact]
-    public void Parse_DuplicateKindProductFeature_KeepsFirst()
+    public void Parse_DuplicateKindProductFeatureAndDate_KeepsFirst()
     {
-        var result = Parse(Event(description: "first"), Event(description: "second", date: "2026-03-11"));
+        var result = Parse(Event(description: "first"), Event(description: "second", date: "2026-03-10"));
 
         result.Should().ContainSingle().Which.Description.Should().Be("first");
     }

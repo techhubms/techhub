@@ -788,12 +788,8 @@ Judge the impact on developers, not how long or well written the article is. Use
 
 #### products (array of strings, 1 to 3)
 
-The products the article is mainly about, most relevant first. Used to place related articles next to each other.
+The products the article is mainly about, most relevant first. Used to place related articles next to each other and to link the article to the product catalog. Only products: no features, plans, editors, models or versions. Follow the naming rules below.
 
-- Use the official, full product name including the vendor prefix: "GitHub Copilot", "GitHub Actions", "Azure Functions", "Microsoft Fabric", "Visual Studio Code", ".NET"
-- Name the product the way the article does, as complete as it is: when the article is about a plan or edition, include it ("GitHub Copilot Business", "GitHub Copilot Pro+"). The catalog maps these names to the base product, so do not drop the plan or edition yourself
-- Include the version when the article names one explicitly (".NET 9", ".NET 10", "Visual Studio 2026"); never add or guess a version
-- No acronyms or nicknames: "Azure Kubernetes Service", not "AKS"; "Visual Studio Code", not "VS Code"
-- A named feature belongs in `products` only when it has its own product identity (e.g. "GitHub Copilot coding agent", "Azure AI Foundry Agent Service"). Otherwise use the parent product.
+{{CATALOG_RULES}}
 
 {{TIMELINE_RULES}}

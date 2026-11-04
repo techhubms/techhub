@@ -239,7 +239,6 @@ public class TechHubApiClientTests
             Product = "GitHub Copilot",
             Feature = "Agent mode",
             Description = "Agent mode is generally available.",
-            Plans = ["Pro"],
             Sources = [new TimelineEntrySource { CollectionName = "news", Slug = "agent-mode-ga", Title = "Agent mode is GA", ExternalUrl = "https://example.com/agent-mode" }]
         };
         var responses = new Dictionary<string, Func<HttpResponseMessage>>(StringComparer.OrdinalIgnoreCase)
@@ -254,7 +253,6 @@ public class TechHubApiClientTests
         var result = entries.Should().ContainSingle().Subject;
         result.Date.Should().Be(new DateOnly(2026, 3, 10));
         result.Feature.Should().Be("Agent mode");
-        result.Plans.Should().Equal("Pro");
         result.Sources.Should().ContainSingle().Which.GetHref().Should().Be("https://example.com/agent-mode");
     }
 

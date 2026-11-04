@@ -261,6 +261,50 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
             .Should().NotContain(c => c.Slug == slug);
     }
 
+    [Fact]
+    public async Task ReplaceEventsAsync_KeepsTheEventsOfTheCatalogAndReplacesTheOthers()
+    {
+        var slug = await SeedAsync();
+        await InsertCatalogEventAsync(slug);
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("ga")], ITimelineEventRepository.ExtractedFromStoredContent, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+
+        var events = await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken);
+        events.Select(e => e.Kind).Should().BeEquivalentTo(["launch", "ga"], "the AI replaced its own preview event and left the curated one");
+    }
+
+    [Fact]
+    public async Task ReplaceEventsAsync_WithNoEvents_StillKeepsTheEventsOfTheCatalog()
+    {
+        var slug = await SeedAsync();
+        await InsertCatalogEventAsync(slug);
+
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [], ITimelineEventRepository.ExtractedFromStoredContent, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+
+        (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().ContainSingle().Which.Kind.Should().Be("launch");
+    }
+
+    [Fact]
+    public async Task UpdateEditDataAsync_WhenTheTextChanged_RemovesTheEventsOfTheTextButKeepsTheEventsOfTheCatalog()
+    {
+        var slug = await SeedAsync();
+        await InsertCatalogEventAsync(slug);
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+
+        await _contentRepo.UpdateEditDataAsync(Collection, slug, EditData(slug), TestContext.Current.CancellationToken);
+
+        (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().ContainSingle().Which.Kind.Should().Be("launch");
+    }
+
+    private async Task InsertCatalogEventAsync(string slug) => await _fixture.Connection.ExecuteAsync(
+        """
+        INSERT INTO content_timeline_events
+            (collection_name, item_slug, kind, product, feature, description, event_date, date_precision, date_source, extracted_from)
+        VALUES (@Collection, @Slug, 'launch', 'GitHub Copilot', 'Agent mode', 'Curated', DATE '2025-04-15', 'day', 'explicit', @ExtractedFrom)
+        """,
+        new { Collection, Slug = slug, ExtractedFrom = ITimelineEventRepository.ExtractedFromCatalog });
+
     private static ContentItemEditData EditData(string slug) => new()
     {
         CollectionName = Collection,

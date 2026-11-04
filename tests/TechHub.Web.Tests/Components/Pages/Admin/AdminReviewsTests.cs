@@ -27,7 +27,6 @@ public class AdminReviewsTests : AdminPageTestBase
         _api.Setup(x => x.GetProductsAsync(It.IsAny<string?>(), It.IsAny<CancellationToken>())).ReturnsAsync([]);
         _api.Setup(x => x.GetUnmatchedProductNamesAsync(It.IsAny<CancellationToken>())).ReturnsAsync([new UnmatchedProductName { Name = "Flint", ItemCount = 1 }]);
         _api.Setup(x => x.GetIgnoredProductNamesAsync(It.IsAny<CancellationToken>())).ReturnsAsync([]);
-        _api.Setup(x => x.GetUnmatchedQualifierNamesAsync(It.IsAny<CancellationToken>())).ReturnsAsync([]);
         _api.Setup(x => x.GetUnmatchedFeaturesSummaryAsync(It.IsAny<CancellationToken>())).ReturnsAsync([]);
         _api.Setup(x => x.GetContentReviewSummaryAsync(It.IsAny<CancellationToken>())).ReturnsAsync(new ContentReviewSummary { Pending = 1 });
         _api.Setup(x => x.GetProcessedUrlsAsync(1, 1, "failed", null, null, null, null, null, false, It.IsAny<CancellationToken>()))
@@ -44,7 +43,7 @@ public class AdminReviewsTests : AdminPageTestBase
 
         // Assert
         cut.Find("h1").TextContent.Should().Be("Reviews");
-        cut.FindAll(".review-card").Should().HaveCount(5);
+        cut.FindAll(".review-card").Should().HaveCount(4);
         cut.Find("#review-product-names-table").TextContent.Should().Contain("Flint");
         cut.Find("#review-content-fixes h2").TextContent.Should().Be("Content fixes");
         cut.Find("#run-cleanup").Should().NotBeNull();

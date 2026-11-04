@@ -36,8 +36,9 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
         { "GET", "/api/admin/products" },
         { "POST", "/api/admin/products/1/merge" },
         { "PUT", "/api/admin/products/1/parent" },
-        { "GET", "/api/admin/qualifiers" },
-        { "POST", "/api/admin/qualifiers" },
+        { "GET", "/api/admin/products/1/articles" },
+        { "GET", "/api/admin/products/1/events" },
+        { "POST", "/api/admin/products/1/convert-to-feature" },
         { "GET", "/api/admin/products/1/features" },
         { "GET", "/api/admin/products/features/unmatched" },
         { "GET", "/api/admin/statistics" },
@@ -52,7 +53,6 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
     public static TheoryData<string> PublicRoutes => new()
     {
         "/api/sections",
-        "/api/ghc-features/",
         "/api/vscode-updates",
         "/api/newsletter/sections"
     };
@@ -90,7 +90,6 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
     [Theory]
     [InlineData("/api/admin/feeds")]
     [InlineData("/api/admin/products")]
-    [InlineData("/api/admin/qualifiers")]
     [InlineData("/api/admin/statistics")]
     [InlineData("/api/admin/newsletter/subscribers")]
     public async Task AdminRoute_WithAdminScope_ReturnsOk(string route)

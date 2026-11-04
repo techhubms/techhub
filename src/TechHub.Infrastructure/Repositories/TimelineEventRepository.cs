@@ -71,6 +71,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         string extractedFrom,
         int promptVersion,
         long expectedRevision,
+        IReadOnlyList<string>? products = null,
         CancellationToken ct = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
@@ -106,7 +107,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                 transaction,
                 collectionName,
                 slug,
-                new TimelineEventReplacement(events, extractedFrom, promptVersion),
+                new TimelineEventReplacement(events, extractedFrom, promptVersion, products),
                 ct);
 
             transaction.Commit();
@@ -225,8 +226,6 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                    kind            AS Kind,
                    product         AS Product,
                    feature         AS Feature,
-                   plans           AS Plans,
-                   surfaces        AS Surfaces,
                    description     AS Description,
                    event_date      AS EventDate,
                    date_precision  AS DatePrecision,
@@ -249,8 +248,6 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             Kind = r.Kind,
             Product = r.Product,
             Feature = r.Feature,
-            Plans = r.Plans,
-            Surfaces = r.Surfaces,
             Description = r.Description,
             EventDate = DateOnly.FromDateTime(r.EventDate),
             DatePrecision = r.DatePrecision,
@@ -320,17 +317,6 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             return [];
         }
 
-        const string QualifiersSql = """
-            SELECT eq.event_id AS EventId, q.kind AS Kind, q.name AS Name
-            FROM content_timeline_event_qualifiers eq
-            JOIN product_qualifiers q ON q.id = eq.qualifier_id
-            WHERE eq.event_id = ANY(@EventIds)
-            """;
-
-        var qualifiers = (await _connection.QueryAsync<TimelineQualifierRow>(new CommandDefinition(
-            QualifiersSql, new { EventIds = rows.Select(r => r.Id).ToArray() }, cancellationToken: ct)))
-            .ToLookup(q => q.EventId);
-
         // The same event stated by several articles is one entry. Rows are ordered by article date, so the first row of a
         // group is the oldest article and supplies the description.
         return rows
@@ -338,7 +324,6 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             .Select(g =>
             {
                 var first = g.First();
-                var groupQualifiers = g.SelectMany(r => qualifiers[r.Id]).ToList();
                 return new TimelineEntry
                 {
                     Date = DateOnly.FromDateTime(first.EventDate),
@@ -348,8 +333,6 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                     ProductId = first.ProductId,
                     Feature = first.Feature,
                     Description = first.Description,
-                    Plans = QualifierNames(groupQualifiers, "plan"),
-                    Surfaces = QualifierNames(groupQualifiers, "surface"),
                     Sources = g
                         .Select(r => new TimelineEntrySource
                         {
@@ -370,14 +353,6 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             .ToList();
     }
 
-    private static List<string> QualifierNames(IEnumerable<TimelineQualifierRow> qualifiers, string kind) =>
-        qualifiers
-            .Where(q => q.Kind == kind)
-            .Select(q => q.Name)
-            .Distinct(StringComparer.OrdinalIgnoreCase)
-            .Order(StringComparer.OrdinalIgnoreCase)
-            .ToList();
-
     private sealed class TimelineRow
     {
         public long Id { get; init; }
@@ -397,13 +372,6 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         public long ItemDateEpoch { get; init; }
     }
 
-    private sealed class TimelineQualifierRow
-    {
-        public long EventId { get; init; }
-        public string Kind { get; init; } = string.Empty;
-        public string Name { get; init; } = string.Empty;
-    }
-
     private sealed class StoredTimelineEventRow
     {
         public long Id { get; init; }
@@ -412,8 +380,6 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         public string Kind { get; init; } = string.Empty;
         public string Product { get; init; } = string.Empty;
         public string? Feature { get; init; }
-        public string[] Plans { get; init; } = [];
-        public string[] Surfaces { get; init; } = [];
         public string Description { get; init; } = string.Empty;
         public DateTime EventDate { get; init; }
         public string DatePrecision { get; init; } = string.Empty;

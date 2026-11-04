@@ -23,7 +23,7 @@ Trigger endpoints return `202 Accepted` immediately and run on the background se
 | `POST /roundup/trigger` | Generate the previous week's roundups now | `202` |
 | `POST /roundup/regenerate?collection&slug` | Delete one roundup and regenerate that week | `collection` must be `roundups` and `slug` must match `weekly-{section}-roundup-YYYY-MM-DD`, otherwise `400`. `202` on success. |
 | `POST /content-fixer/trigger` | Run the bulk content fixer (tags, authors, markdown) | `202` |
-| `POST /timeline-backfill/trigger` | Scan stored articles for timeline events (see [content-processing.md](content-processing.md#timeline-events)). Optional JSON body: `force` (scan scanned articles again), `publishedAfter` (`yyyy-MM-dd`), `collection` (lowercase letters, digits, hyphens) and `limit` (> 0) | `202`. `400` for an invalid option. `409` when a run is already queued |
+| `POST /timeline-backfill/trigger` | Scan stored articles for timeline events and the products they are about (see [content-processing.md](content-processing.md#timeline-backfill)). Optional JSON body: `force` (scan scanned articles again), `publishedAfter` (`yyyy-MM-dd`), `collection` (lowercase letters, digits, hyphens) and `limit` (> 0) | `202`. `400` for an invalid option. `409` when a run is already queued |
 | `POST /processing/cancel` | Cancel the currently running processing, roundup, fixer or timeline backfill run | `200` in both cases ("Cancellation requested" or "No running job to cancel"). Does not cancel the newsletter or ad-hoc URL runs. |
 | `GET /processing/jobs?count` | Recent job history (all job types) | Default 20, clamped to 1-100 |
 | `GET /processing/jobs/{id}` | One job with its log | `404` if unknown |
@@ -80,7 +80,7 @@ Approval applies content changes, replaces the expanded tag index for tag review
 | `POST /vscode-updates` | Register an existing content item as a VS Code update | Body: `collectionName`, `slug`. `204` on success, `400` for invalid input, `404` for an unknown item. |
 | `DELETE /vscode-updates?collection&slug` | Remove from the list (the content item stays) | `204`, `400` or `404` |
 
-The public `GET /api/vscode-updates` is capped at 100 items. The GitHub Copilot features are edited under `/api/admin/products/{productId}/features` (see [Product Catalog](#product-catalog)); the public `GET /api/ghc-features` only reads them.
+The public `GET /api/vscode-updates` is capped at 100 items. The GitHub Copilot features are edited under `/api/admin/products/{productId}/features` (see [Product Catalog](#product-catalog)). The features have no public page of their own: they show up through the dated events that name them on the timeline.
 
 ### Operations
 
@@ -95,20 +95,22 @@ Subscriber management, send log and manual sends are under `/api/admin/newslette
 
 ### Product Catalog
 
-The catalog links the product names the AI returns to curated products (see [content-processing.md](content-processing.md#product-catalog)). Endpoints under `/api/admin/products`:
+The catalog links the product names the AI returns to curated products (see [product-catalog.md](product-catalog.md)). Endpoints under `/api/admin/products`:
 
 | Endpoint | Purpose | Result |
 |---|---|---|
-| `GET /products` | Products with aliases and the number of linked articles and dates. Optional `search` on name or alias | `200`, `400` for a search over 200 characters |
-| `GET /products/{id}` | A product with its aliases, linked articles and linked dates | `200`, `404` |
+| `GET /products` | Products with aliases and the number of features, child products, linked articles and dates (articles and dates include those of the child products). Optional `search` on name or alias | `200`, `400` for a search over 200 characters |
+| `GET /products/{id}` | A product with its aliases, parent, children and the number of linked articles and dates (including those of its descendants) | `200`, `404` |
+| `GET /products/{id}/articles?includeChildren&page&pageSize` | A page of the articles of the product, newest first. `includeChildren` (default true) adds those of its descendants. Default page size 25, at most 100 | `200` with `items` and `totalCount` |
+| `GET /products/{id}/events?includeChildren&page&pageSize` | A page of the dates of the product, newest first, with the same options | `200` with `items` and `totalCount` |
 | `POST /products` | Add a product (`name`) | `201` with the product, `400` for an empty or too long name, `409` when the name is already a product or an alias |
 | `PUT /products/{id}` | Rename (`name`). The old name becomes an alias | `200`, `400`, `404`, `409` |
 | `PUT /products/{id}/parent` | Make the product a child of another product (`parentId`), or top-level when `parentId` is null | `200` with the product, `400` for its own parent or a descendant, `404` |
-| `DELETE /products/{id}` | Delete a product and its aliases. Its articles and dates become unmatched again | `204`, `404` |
-| `POST /products/{id}/aliases` | Add an alias (`alias`), optionally implying a plan or surface (`qualifierId`) | `200` with the product, `400`, `404`, `409` |
-| `PUT /products/{id}/aliases/{aliasId}/qualifier` | Set or clear the plan or surface an alias implies (`qualifierId`) | `200` with the product, `404` |
+| `DELETE /products/{id}` | Delete a product with its aliases, features. Its articles and dates become unmatched again | `204`, `404` |
+| `POST /products/{id}/aliases` | Add an alias (`alias`) | `200` with the product, `400`, `404`, `409` |
 | `DELETE /products/{id}/aliases/{aliasId}` | Remove an alias | `204`, `404` |
-| `POST /products/{id}/merge` | Merge into another product (`targetId`). The name and aliases become aliases of the target | `200` with the target, `400` when merging into itself, `404` |
+| `POST /products/{id}/merge` | Merge into another product (`targetId`), for a product that was added twice. The name and aliases become aliases of the target; child products and features move to the target, except those it has by name already | `200` with the target, `400` when merging into itself, `404` |
+| `POST /products/{id}/convert-to-feature` | Turn a child product into a feature of its parent (see [Converting a product into a feature](product-catalog.md#converting-a-product-into-a-feature)). Its name and aliases become aliases of the feature, not of the product | `200` with the parent, `400` when the product has no parent, `404` |
 | `GET /products/unmatched` | The review queue: names that are not in the catalog and not ignored, with the number of articles and dates, most used first | `200` |
 | `GET /products/ignored` | The names that are marked as not being a product | `200` |
 | `POST /products/ignored` | Mark a name as not being a product (`name`) | `204`, `400`, `409` when it is a product or an alias |
@@ -116,19 +118,7 @@ The catalog links the product names the AI returns to curated products (see [con
 
 Error responses carry a plain message that the admin pages show.
 
-The vocabulary of plans and surfaces (see [Plans and Surfaces](content-processing.md#plans-and-surfaces)) is managed under `/api/admin/qualifiers`:
-
-| Endpoint | Purpose | Result |
-|---|---|---|
-| `GET /qualifiers` | Plans and surfaces with aliases and the number of linked dates and articles | `200` |
-| `GET /qualifiers/unmatched` | Plan and surface names the AI returned that are not in the vocabulary, most used first | `200` |
-| `POST /qualifiers` | Add a plan or surface (`kind` is `plan` or `surface`, `name`) | `201` with the qualifier, `400`, `409` |
-| `PUT /qualifiers/{id}` | Rename (`name`). The old name becomes an alias | `200`, `400`, `404`, `409` |
-| `DELETE /qualifiers/{id}` | Delete a qualifier and its aliases. Dates and product aliases lose it | `204`, `404` |
-| `POST /qualifiers/{id}/aliases` | Add an alias (`alias`) | `200` with the qualifier, `400`, `404`, `409` |
-| `DELETE /qualifiers/{id}/aliases/{aliasId}` | Remove an alias | `204`, `404` |
-
-The curated features of a product (see [Features](content-processing.md#features)) are managed under `/api/admin/products/{productId}/features`. Every call addresses a feature together with its product, so a feature of another product is never touched:
+The curated features of a product (see [Features](product-catalog.md#features)) are managed under `/api/admin/products/{productId}/features`. Every call addresses a feature together with its product, so a feature of another product is never touched:
 
 | Endpoint | Purpose | Result |
 |---|---|---|
@@ -139,7 +129,7 @@ The curated features of a product (see [Features](content-processing.md#features
 | `DELETE /products/{productId}/features/{id}` | Delete a feature and its aliases. Its dates keep their text and become unmatched | `204`, `404` |
 | `POST /products/{productId}/features/{id}/aliases` | Add an alias (`alias`) | `200` with the overview, `400`, `404`, `409` |
 | `DELETE /products/{productId}/features/{id}/aliases/{aliasId}` | Remove an alias | `204`, `404` |
-| `PUT /products/{productId}/features/{id}/details` | Set the description (at most 4000 characters) and the release date (`yyyy-MM-dd`, empty clears it: the features page then uses the first launch, preview, GA or release date of the dates) | `200` with the overview, `400`, `404` |
+| `PUT /products/{productId}/features/{id}/details` | Set the description (at most 4000 characters) and the release date (`yyyy-MM-dd`, empty clears it) | `200` with the overview, `400`, `404` |
 | `POST /products/{productId}/features/{id}/content` | Link a content item (video, post) to a feature (`collectionName`, `itemSlug`, `isThumbnail`). Setting `isThumbnail` clears the previous thumbnail | `200` with the overview, `400`, `404` (feature or item) |
 | `DELETE /products/{productId}/features/{id}/content?collection&itemSlug` | Remove a link; the content item stays | `204`, `400`, `404` |
 | `PUT /products/{productId}/features/{id}/thumbnail?collection&itemSlug` | Make a linked item the thumbnail | `204`, `400`, `404` |
@@ -156,9 +146,8 @@ The right side of the second bar holds the actions of the current page, which is
 
 | Group | Pages |
 |---|---|
-| Automatic Processing | Dashboard, Feeds, Processed |
-| Content Management | Content, VSC Updates, Pages |
-| Product Management | Products, Plans & surfaces |
+| Automatic Processing | Dashboard, RSS Feeds, Processed |
+| Content Management | Content Items, Products, Visual Studio Code Updates, Custom Pages |
 | Reviews | Reviews |
 | Newsletter | Subscribers, Send log |
 | Stats | Stats |
@@ -168,21 +157,20 @@ The right side of the second bar holds the actions of the current page, which is
 
 | Page | Purpose |
 |------|---------|
-| `/admin/reviews` | Everything that needs a decision, on one page: cards with the number of product names, plans and surfaces, features, content fixes and failed URLs to review, each linking to its queue. Below them: the product names to review (add as a product, add as an alias, or mark as not a product, with the list of names that are not products), the plan and surface names to review and the products with features to review (both link to the page where they are handled), and the content fixer proposals (approve, reject or edit them, singly or in bulk, with a markdown preview). **Run Cleanup** starts the content fixer from here |
+| `/admin/reviews` | Everything that needs a decision, on one page: cards with the number of product names, features, content fixes and failed URLs to review, each linking to its queue. Below them: the product names to review (add as a product, add as an alias, or mark as not a product, with the list of names that are not products), the products with features to review (linking to the page where they are handled), and the content fixer proposals (approve, reject or edit them, singly or in bulk, with a markdown preview). **Run Cleanup** starts the content fixer from here |
 | `/admin` | Dashboard: job history with live logs, and a button to cancel the running job. Jobs started from Settings (processing, roundup, timeline backfill) and from Reviews (content cleanup) show up here while they run |
 | `/admin/feeds` | Add, edit, enable or disable and delete RSS feeds |
 | `/admin/processed-urls` | Search the URL ledger by status, feed, collection, section or job. Remove entries to retry them, clear all failed entries, and open the item editor. |
 | `/admin/content-items` | Browse and filter content, edit or delete items, add a URL through the pipeline (the add-content dialog), and regenerate a roundup |
 | `/admin/content-preview/{collection}/{slug}` | Render an item's markdown as it will appear on the site |
-| `/admin/vscode-updates` | Add or remove items on the VS Code Updates page |
+| `/admin/vscode-updates` | Add or remove items on the Visual Studio Code Updates page |
 | `/admin/custom-pages` | Edit the raw JSON behind the custom pages |
-| `/admin/products` | Product list with search (name or alias; at most three aliases are shown, the rest on hover) and adding a product (see [Product Catalog](#product-catalog)) |
-| `/admin/products/{id}` | One product, in three tabs. **General** (`/admin/products/{id}`): rename, aliases (each can imply a plan or surface), parent and children, merge into another product and delete. **Features** (`/admin/products/{id}/features`): curated features with the description, release date and linked content (videos and posts, one of them the thumbnail) of each feature, the feature names to review and the features by surface overview. **Dates and articles** (`/admin/products/{id}/activity`): the linked dates and articles, including those of its child products |
-| `/admin/products/qualifiers` | Plans and surfaces: the review queue of unmatched names and the vocabulary with its aliases |
+| `/admin/products` | Product list with search (name or alias; at most three aliases are shown, the rest on hover), the number of child products, features, articles and dates of each product, a short explanation of how products and features fit together, and adding a product (see [Product Catalog](#product-catalog)) |
+| `/admin/products/{id}` | One product, in four tabs. **General** (`/admin/products/{id}`): rename, aliases, parent and child products, and convert to a feature of its parent (for a child product that is really a capability), merge into another product (for a product that was added twice) or delete. **Features** (`/admin/products/{id}/features`): curated features with the description, release date and linked content (videos and posts, one of them the thumbnail) of each feature and the feature names to review. **Dates** (`/admin/products/{id}/dates`) and **Articles** (`/admin/products/{id}/articles`): the linked dates and articles, 25 per page and newest first, with an "Include child products" checkbox for a product with children, so a parent like GitHub stays manageable; only the open tab loads its data |
 | `/admin/newsletter` | Subscribers with search and confirmed filter, edit, delete and test sends. Deleting requires inline confirmation. Test sends require an entered recipient email; none is prefilled. Refresh, delete, edit and test-send failures show generic errors, and a failed refresh after a deletion or edit does not show a success message. See [newsletter.md](newsletter.md). |
 | `/admin/newsletter/send-log` | The last 100 newsletter sends with their recipient and failure counts |
 | `/admin/statistics` | Content and database statistics |
-| `/admin/settings` | Enable or disable scheduled jobs, start processing or roundup generation now, invalidate all caches and start the timeline backfill |
+| `/admin/settings` | Enable or disable scheduled jobs, start processing or roundup generation now, invalidate all caches and start the timeline backfill (optionally from a publication date, or scanning again) |
 | `/admin/login` | Sign-in entry point |
 
 The item editor (title, author, sections, tags, content, `ai_metadata`, and the transcript apply action for videos) is a shared dialog opened from the content items, processed URLs and reviews pages. AI metadata is read and saved together with the other editable fields through `GET` and `PUT /content-items/edit-data`.

@@ -1748,7 +1748,7 @@ EXISTS (SELECT 1 FROM content_items ci
              OR ci.date_epoch IS DISTINCT FROM @DateEpoch))";
 
         await Connection.ExecuteAsync(new CommandDefinition(
-            $"DELETE FROM content_timeline_events WHERE collection_name = @CollectionName AND item_slug = @Slug AND {Changed}",
+            $"DELETE FROM content_timeline_events WHERE collection_name = @CollectionName AND item_slug = @Slug AND extracted_from <> '{TechHub.Core.Interfaces.ITimelineEventRepository.ExtractedFromCatalog}' AND {Changed}",
             parameters,
             transaction,
             cancellationToken: ct));

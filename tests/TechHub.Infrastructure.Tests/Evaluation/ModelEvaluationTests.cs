@@ -690,6 +690,7 @@ public class ModelEvaluationTests
         {
             // Not restored: the comparison with the curated features is then skipped.
         }
+
         var header = new StringBuilder();
         header.AppendLine(CultureInfo.InvariantCulture, $"Scanned {items.Count} articles: {withEvents} with events, {total} events in total.");
         header.AppendLine();

@@ -27,12 +27,6 @@ public sealed record TimelineEntry
     /// <summary>One line describing what happens, from the oldest article that states the event.</summary>
     public required string Description { get; init; }
 
-    /// <summary>The plans (Free, Pro, Business, ...) the event applies to. Empty when it applies to all or the plans are not in the catalog.</summary>
-    public IReadOnlyList<string> Plans { get; init; } = [];
-
-    /// <summary>The surfaces (Visual Studio Code, JetBrains IDEs, ...) the event applies to. Empty when it applies to all or the surfaces are not in the catalog.</summary>
-    public IReadOnlyList<string> Surfaces { get; init; } = [];
-
     /// <summary>The articles that state the event, oldest first.</summary>
     public required IReadOnlyList<TimelineEntrySource> Sources { get; init; }
 }
