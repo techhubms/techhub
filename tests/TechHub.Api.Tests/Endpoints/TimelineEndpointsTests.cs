@@ -42,7 +42,7 @@ public class TimelineEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     private async Task SeedAsync(string product, params TimelineEvent[] events)
     {
         var slug = $"timeline-api-{Guid.NewGuid():N}";
-        await ContentItemSeeder.InsertAsync(_factory.Services, "news", slug, $"https://example.com/{slug}", title: "Timeline API article");
+        await ContentItemSeeder.InsertAsync(_factory.Services, "news", slug, $"https://example.com/{slug}", title: $"Timeline API article about {product}");
 
         await using var scope = _factory.Services.CreateAsyncScope();
         var timeline = scope.ServiceProvider.GetRequiredService<ITimelineEventRepository>();
@@ -67,7 +67,7 @@ public class TimelineEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         entries[0].Date.Should().Be(new DateOnly(2026, 4, 20));
         entries[0].Kind.Should().Be("ga");
         entries[0].DatePrecision.Should().Be("day");
-        entries[0].Sources.Should().ContainSingle().Which.Title.Should().Be("Timeline API article");
+        entries[0].Sources.Should().ContainSingle().Which.Title.Should().Be($"Timeline API article about {product}");
     }
 
     [Fact]
@@ -91,12 +91,16 @@ public class TimelineEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     public async Task GetTimeline_WithTake_ReturnsTheNewestEntriesOnly()
     {
         var product = NewProduct();
-        await SeedAsync(product, Event(product, "A", date: "2099-01-01"), Event(product, "B", date: "2099-02-01"), Event(product, "C", date: "2099-03-01"));
+        await SeedAsync(product, Event(product, "Shared", date: "9998-12-30"));
+        await SeedAsync(product, Event(product, "Shared", date: "9998-12-30"));
+        await SeedAsync(product, Event(product, "Older", date: "9998-12-29"));
 
-        var response = await _client.GetFromJsonAsync<List<TimelineEntry>>("/api/sections/ai/timeline?take=2", TestContext.Current.CancellationToken);
+        var response = await _client.GetFromJsonAsync<List<TimelineEntry>>("/api/sections/ai/timeline?take=1", TestContext.Current.CancellationToken);
 
-        response.Should().HaveCount(2);
-        response!.Select(e => e.Feature).Should().Equal("C", "B");
+        var selected = response.Should().ContainSingle().Subject;
+        selected.Product.Should().Be(product);
+        selected.Feature.Should().Be("Shared");
+        selected.Sources.Should().HaveCount(2, "limiting distinct entries must retain every source for the selected event");
     }
 
     [Fact]

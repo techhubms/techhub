@@ -38,7 +38,7 @@ public class RoundupGeneratorServiceTests
             .ReturnsAsync([]);
 
         _writeRepo
-            .Setup(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
+            .Setup(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(true);
     }
 
@@ -592,7 +592,7 @@ public class RoundupGeneratorServiceTests
 
         _aiCategorizationService.Verify(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
         _aiCategorizationService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Never);
-        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", It.IsAny<string>(), It.Is<string>(j => j.Contains("\"schema_version\":2")), It.IsAny<TimelineEventReplacement>(), It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", It.IsAny<string>(), It.Is<string>(j => j.Contains("\"schema_version\":2")), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
     }
 
     [Fact]
@@ -666,7 +666,7 @@ public class RoundupGeneratorServiceTests
         var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };
         SetupArticles("ai", needing, Article("ai", 1));
         _writeRepo
-            .Setup(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
+            .Setup(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(false);
         _aiCategorizationService
             .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
@@ -691,14 +691,14 @@ public class RoundupGeneratorServiceTests
 
         await CreateSut().GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
 
-        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", "article-10", It.IsAny<string>(), It.IsAny<TimelineEventReplacement>(), 4242L, It.IsAny<CancellationToken>()), Times.Once);
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", "article-10", It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), 4242L, It.IsAny<CancellationToken>()), Times.Once);
         _aiRequests.Should().NotContain(r => r.Contains("A stale fact."), "metadata classified from outdated text must not be used");
     }
 
     [Fact]
     public async Task GenerateAsync_BackfillWhenClassifierExcludesTheStoredArticle_StoresNeutralMetadataSoItIsNotClassifiedAgain()
     {
-        var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000 };
+        var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };
         SetupArticles("ai", needing, Article("ai", 1));
         _aiCategorizationService
             .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
@@ -708,9 +708,37 @@ public class RoundupGeneratorServiceTests
         var progressMessages = new List<string>();
         await CreateSut().GenerateAsync(_weekStart, _weekEnd, new SynchronousProgress<string>(progressMessages.Add), ct: TestContext.Current.CancellationToken);
 
-        _writeRepo.Verify(w => w.UpdateAiMetadataAsync("news", "article-10", It.Is<string>(j => j.Contains("\"schema_version\":2") && j.Contains("\"significance\":\"low\"")), It.IsAny<CancellationToken>()), Times.Once);
-        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement>(), It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Never);
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync(
+            "news",
+            "article-10",
+            It.Is<string>(j => j.Contains("\"schema_version\":2") && j.Contains("\"significance\":\"low\"")),
+            It.Is<TimelineEventReplacement?>(timeline => timeline == null),
+            4242L,
+            It.IsAny<CancellationToken>()), Times.Once);
+        _writeRepo.Verify(w => w.UpdateAiMetadataAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
         progressMessages.Should().Contain(m => m.Contains("Sales Pitches", StringComparison.Ordinal), "the exclusion reason is visible in the job log");
+    }
+
+    [Fact]
+    public async Task GenerateAsync_BackfillWhenExcludedArticleChangedDuringClassification_DoesNotStoreOrEnrichIt()
+    {
+        var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };
+        SetupArticles("ai", needing, Article("ai", 1));
+        _writeRepo
+            .Setup(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(false);
+        _aiCategorizationService
+            .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Explanation = "Sales pitch", Item = null });
+        SetupAi();
+
+        var progressMessages = new List<string>();
+        await CreateSut().GenerateAsync(_weekStart, _weekEnd, new SynchronousProgress<string>(progressMessages.Add), ct: TestContext.Current.CancellationToken);
+
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync(
+            "news", "article-10", It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), 4242L, It.IsAny<CancellationToken>()), Times.Once);
+        _writeRepo.Verify(w => w.UpdateAiMetadataAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
+        progressMessages.Should().NotContain(m => m.Contains("would be excluded", StringComparison.Ordinal));
     }
 
     [Fact]

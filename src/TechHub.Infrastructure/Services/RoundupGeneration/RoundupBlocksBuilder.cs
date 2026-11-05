@@ -166,7 +166,7 @@ internal static class RoundupBlocksBuilder
 
     private static List<RoundupDateEvent> Group(IEnumerable<RoundupDateEvent> events, HashSet<string> kinds) => events
         .Where(e => kinds.Contains(e.Kind))
-        .DistinctBy(e => (e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date))
+        .DistinctBy(e => (e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date, e.Description.Trim()))
         .OrderBy(e => e.Date)
         .ThenBy(e => e.Product, StringComparer.OrdinalIgnoreCase)
         .ToList();
@@ -182,10 +182,9 @@ internal static class RoundupBlocksBuilder
         sb.AppendLine(CultureInfo.InvariantCulture, $"### {title}");
         sb.AppendLine();
 
-        // One article that gives several events the same date and kind (a release with several features, a support end for
-        // several products) is one line, not one line per event.
+        // Events with the same date, kind, source and description share a line; different descriptions stay separate so qualifiers survive.
         var lines = events
-            .GroupBy(e => (e.Date, e.DatePrecision, e.Kind, e.SourceUrl))
+            .GroupBy(e => (e.Date, e.DatePrecision, e.Kind, e.SourceUrl, Description: e.Description.Trim()))
             .Take(MaxDatesPerGroup);
 
         foreach (var line in lines)
@@ -202,7 +201,7 @@ internal static class RoundupBlocksBuilder
             else
             {
                 sb.AppendLine(CultureInfo.InvariantCulture,
-                    $"- **{date}**: {KindLabel(first.Kind)} \u2014 {MergedSubjects(line)} ({source})");
+                    $"- **{date}**: {KindLabel(first.Kind)} \u2014 {MergedSubjects(line)}: {EndWithPeriod(first.Description.Trim())} ({source})");
             }
         }
     }

@@ -160,6 +160,27 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
     }
 
     [Fact]
+    public async Task UpdateAiMetadataIfUnchangedAsync_WithoutTimelineReplacement_LeavesExistingEventsUnchanged()
+    {
+        var slug = await SeedAsync();
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, 1, TestContext.Current.CancellationToken);
+        var revision = (await _timelineRepo.GetItemForExtractionAsync(Collection, slug, TestContext.Current.CancellationToken))!.Revision;
+
+        var stored = await _writeRepo.UpdateAiMetadataIfUnchangedAsync(
+            Collection, slug, """{"schema_version":2}""",
+            null,
+            revision,
+            TestContext.Current.CancellationToken);
+
+        stored.Should().BeTrue();
+        var metadata = await _fixture.Connection.ExecuteScalarAsync<string?>(
+            "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug", new { Collection, Slug = slug });
+        metadata.Should().Contain("schema_version");
+        (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken))
+            .Should().ContainSingle().Which.Kind.Should().Be("preview");
+    }
+
+    [Fact]
     public async Task UpdateAiMetadataIfUnchangedAsync_WhenTheArticleWasEditedMeanwhile_StoresNothing()
     {
         var slug = await SeedAsync();

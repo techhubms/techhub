@@ -117,7 +117,7 @@ public class RoundupBlocksBuilderTests
         var lines = result.Split('\n').Where(l => l.StartsWith("- ", StringComparison.Ordinal)).ToList();
         lines.Should().ContainSingle();
         lines[0].Should().Contain("**1 June 2025**").And.Contain("Copilot Studio: Connected agents, Evaluations, Topics").And.Contain("[Source](https://example.com/source)");
-        lines[0].Should().NotContain("Something happens", "one description cannot describe several events");
+        lines[0].Should().Contain("Something happens");
     }
 
     [Fact]
@@ -132,6 +132,36 @@ public class RoundupBlocksBuilderTests
         var lines = result.Split('\n').Where(l => l.StartsWith("- ", StringComparison.Ordinal)).ToList();
         lines.Should().ContainSingle();
         lines[0].Should().Contain("Azure App Service: Java 8 support; Azure Functions: Java 8 support");
+    }
+
+    [Fact]
+    public void BuildDatesToKnow_MergedLineKeepsTheSharedDescription()
+    {
+        const string Description = "Java 8 support ends";
+        var result = RoundupBlocksBuilder.BuildDatesToKnow(
+        [
+            Event(product: "Azure App Service", date: "2027-09-01") with { Description = Description },
+            Event(product: "Azure Functions", date: "2027-09-01") with { Description = Description }
+        ], _weekEnd);
+
+        var lines = result.Split('\n').Where(l => l.StartsWith("- ", StringComparison.Ordinal)).ToList();
+        lines.Should().ContainSingle();
+        lines[0].Should().Contain("Java 8 support ends");
+    }
+
+    [Fact]
+    public void BuildDatesToKnow_EventsWithDifferentDescriptionsStaySeparate()
+    {
+        var result = RoundupBlocksBuilder.BuildDatesToKnow(
+        [
+            Event(product: "Azure App Service", date: "2027-09-01") with { Description = "Java 8 support ends" },
+            Event(product: "Azure Functions", date: "2027-09-01") with { Description = "Java 11 support ends" }
+        ], _weekEnd);
+
+        var lines = result.Split('\n').Where(l => l.StartsWith("- ", StringComparison.Ordinal)).ToList();
+        lines.Should().HaveCount(2);
+        lines[0].Should().Contain("Azure App Service").And.Contain("Java 8 support ends");
+        lines[1].Should().Contain("Azure Functions").And.Contain("Java 11 support ends");
     }
 
     [Fact]

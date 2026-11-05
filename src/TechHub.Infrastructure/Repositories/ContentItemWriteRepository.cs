@@ -221,10 +221,8 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
     }
 
     /// <inheritdoc />
-    public async Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, long expectedRevision, CancellationToken ct = default)
+    public async Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement? timeline, long expectedRevision, CancellationToken ct = default)
     {
-        ArgumentNullException.ThrowIfNull(timeline);
-
         using var transaction = BeginTransaction();
         try
         {
@@ -243,7 +241,11 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
             }
 
             await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct);
-            await TimelineEventWriter.ReplaceAsync(_connection, transaction, collectionName, slug, timeline, ct);
+            if (timeline is not null)
+            {
+                await TimelineEventWriter.ReplaceAsync(_connection, transaction, collectionName, slug, timeline, ct);
+            }
+
             transaction.Commit();
             return true;
         }

@@ -271,6 +271,34 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         }
 
         const string Sql = """
+            WITH eligible_events AS (
+                SELECT e.id,
+                       e.event_date,
+                       e.kind,
+                       COALESCE(e.product_id::text, lower(e.product)) AS product_key,
+                       COALESCE(f.id::text, lower(e.feature), '') AS feature_key,
+                       lower(COALESCE(p.name, e.product)) AS product_sort,
+                       lower(COALESCE(f.name, e.feature, '')) AS feature_sort
+                FROM content_timeline_events e
+                JOIN content_items ci ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
+                LEFT JOIN products p ON p.id = e.product_id
+                LEFT JOIN product_features f ON f.id = e.feature_id
+                WHERE ci.collection_name <> 'roundups'
+                  AND (ci.sections_bitmask & @SectionBits) > 0
+                  AND (@PrimarySection::text IS NULL OR ci.primary_section_name = @PrimarySection::text)
+                  AND (@From::date IS NULL OR e.event_date >= @From::date)
+                  AND (@To::date IS NULL OR e.event_date <= @To::date)
+                  AND (cardinality(@Kinds::text[]) = 0 OR e.kind = ANY(@Kinds::text[]))
+            ),
+            selected_groups AS (
+                SELECT event_date, kind, product_key, feature_key,
+                       MIN(product_sort) AS product_sort,
+                       MIN(feature_sort) AS feature_sort
+                FROM eligible_events
+                GROUP BY event_date, kind, product_key, feature_key
+                ORDER BY event_date DESC, product_sort, feature_sort, kind
+                LIMIT @Take
+            )
             SELECT e.id              AS Id,
                    e.kind            AS Kind,
                    e.event_date      AS EventDate,
@@ -286,16 +314,13 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                    ci.external_url   AS ItemExternalUrl,
                    ci.primary_section_name AS ItemPrimarySectionName,
                    ci.date_epoch     AS ItemDateEpoch
-            FROM content_timeline_events e
+            FROM eligible_events eligible
+            JOIN selected_groups selected
+              USING (event_date, kind, product_key, feature_key)
+            JOIN content_timeline_events e ON e.id = eligible.id
             JOIN content_items ci ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
             LEFT JOIN products p ON p.id = e.product_id
             LEFT JOIN product_features f ON f.id = e.feature_id
-            WHERE ci.collection_name <> 'roundups'
-              AND (ci.sections_bitmask & @SectionBits) > 0
-              AND (@PrimarySection::text IS NULL OR ci.primary_section_name = @PrimarySection::text)
-              AND (@From::date IS NULL OR e.event_date >= @From::date)
-              AND (@To::date IS NULL OR e.event_date <= @To::date)
-              AND (cardinality(@Kinds::text[]) = 0 OR e.kind = ANY(@Kinds::text[]))
             ORDER BY ci.date_epoch, e.id
             """;
 
@@ -308,7 +333,8 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                 PrimarySection = sectionName == "all" ? null : sectionName,
                 From = request.From?.ToDateTime(TimeOnly.MinValue),
                 To = request.To?.ToDateTime(TimeOnly.MinValue),
-                Kinds = (request.Kinds ?? []).ToArray()
+                Kinds = (request.Kinds ?? []).ToArray(),
+                Take = request.Take
             },
             cancellationToken: ct))).ToList();
 

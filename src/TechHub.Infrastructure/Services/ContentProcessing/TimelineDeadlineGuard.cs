@@ -15,6 +15,10 @@ internal static partial class TimelineDeadlineGuard
     private const int WindowLength = 150;
     private const int MaxYearsAhead = 5;
     private const string MonthNames = "January|February|March|April|May|June|July|August|September|October|November|December";
+    private static readonly HashSet<string> _deadlineKinds = new(StringComparer.Ordinal)
+    {
+        "deprecation", "retirement", "end-of-support", "breaking-change"
+    };
 
     /// <summary>
     /// Whether <paramref name="text"/> names a date after <paramref name="publicationDate"/> in the neighborhood of a deadline phrase
@@ -46,24 +50,36 @@ internal static partial class TimelineDeadlineGuard
     }
 
     private static bool IsCovered(DateOnly date, IReadOnlyList<TimelineEvent> events) => events.Any(e =>
-        e.Date == date || (e.DatePrecision != "day" && e.Date.Year == date.Year && e.Date.Month == date.Month));
+        _deadlineKinds.Contains(e.Kind)
+        && (e.Date == date || (e.DatePrecision != "day" && e.Date.Year == date.Year && e.Date.Month == date.Month)));
 
     private static IEnumerable<(DateOnly Date, int Index, int Length)> FindDates(string text)
     {
-        foreach (var match in MonthDayYear().Matches(text).Cast<Match>().Concat(DayMonthYear().Matches(text)))
-        {
-            if (TryBuild(match.Groups["y"].Value, match.Groups["m"].Value, match.Groups["d"].Value, out var date))
+        var textualDates = MonthDayYear().Matches(text).Cast<Match>()
+            .Concat(DayMonthYear().Matches(text))
+            .Select(match =>
             {
-                yield return (date, match.Index, match.Length);
-            }
+                var isValid = TryBuild(match.Groups["y"].Value, match.Groups["m"].Value, match.Groups["d"].Value, out var date);
+                return (Match: match, IsValid: isValid, Date: date);
+            })
+            .Where(parsed => parsed.IsValid);
+
+        foreach (var parsed in textualDates)
+        {
+            yield return (parsed.Date, parsed.Match.Index, parsed.Match.Length);
         }
 
-        foreach (var match in IsoDate().Matches(text).Cast<Match>())
-        {
-            if (DateOnly.TryParseExact(match.Value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
+        var isoDates = IsoDate().Matches(text).Cast<Match>()
+            .Select(match =>
             {
-                yield return (date, match.Index, match.Length);
-            }
+                var isValid = DateOnly.TryParseExact(match.Value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date);
+                return (Match: match, IsValid: isValid, Date: date);
+            })
+            .Where(parsed => parsed.IsValid);
+
+        foreach (var parsed in isoDates)
+        {
+            yield return (parsed.Date, parsed.Match.Index, parsed.Match.Length);
         }
     }
 

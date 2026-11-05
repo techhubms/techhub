@@ -64,7 +64,7 @@ Retrieves the structured data required to render the corresponding custom page.
 
 **Endpoint**: `GET /api/custom-pages/features`
 **Data Model**: `FeaturesPageData`
-**Description**: An interactive feature timeline showing the chronological evolution of GitHub Copilot features. Includes subscription tier definitions for the sidebar and a `timelineFeatures` array with per-feature release dates, plan availability, and optional links to related video content.
+**Description**: Subscription tier definitions, introductory text, and pricing links shown beside the GitHub Copilot timeline. Timeline events are provided by the [section timeline endpoint](content-api.md#timeline-api); this response does not contain per-feature release dates.
 
 ### GenAI Basics
 

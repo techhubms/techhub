@@ -216,7 +216,9 @@ else
 
         _loadedKey = key;
 
-        if (ApplicationState.TryTakeFromJson<PersistedTimeline>("section-timeline", out var restored) && restored?.Key == key)
+        if (ApplicationState.TryTakeFromJson<PersistedTimeline>("section-timeline", out var restored)
+            && restored is not null
+            && restored.Key == key)
         {
             SetEntries(restored.Entries);
             _tiers = restored.Tiers;

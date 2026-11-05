@@ -98,7 +98,7 @@ External-linking collections (`news`, `blogs`, `community`) use `external_url` f
 
 ## GitHub Copilot Features
 
-The features of GitHub Copilot are features of the GitHub Copilot product in the product catalog (see [Product Catalog](product-catalog.md)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. They have no page of their own: their dates are events on the timeline of the GitHub Copilot section (see [Timeline Events](content-processing.md#timeline-events)). The former `/github-copilot/features` page redirects to that timeline. Until migration 055 the features lived in `ghc_features` and `ghc_feature_content`; migration 056 dropped those two tables and migration 062 turned the dated features into timeline events.
+The features of GitHub Copilot are features of the GitHub Copilot product in the product catalog (see [Product Catalog](product-catalog.md)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. They have no page of their own: their dates are events on the timeline of the GitHub Copilot section (see [Timeline Events](content-processing.md#timeline-events)). The former `/github-copilot/features` page redirects to that timeline. The consolidated migration `050_product_catalog.sql` imports the legacy `ghc_features` and `ghc_feature_content` data into the catalog and timeline events, then drops the legacy tables.
 
 ### `product_features` table
 

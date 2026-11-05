@@ -83,10 +83,10 @@ public static class TimelineEndpoints
             return TypedResults.NotFound();
         }
 
-        var entries = await timelineRepository.GetTimelineAsync(new TimelineRequest(sectionName, fromDate, toDate, kindList), cancellationToken);
-
-        // The repository returns newest first, so the cap keeps the newest entries.
-        return TypedResults.Ok<IReadOnlyList<TimelineEntry>>(entries.Take(take ?? DefaultTake).ToList());
+        var entries = await timelineRepository.GetTimelineAsync(
+            new TimelineRequest(sectionName, fromDate, toDate, kindList, take ?? DefaultTake),
+            cancellationToken);
+        return TypedResults.Ok<IReadOnlyList<TimelineEntry>>(entries);
     }
 
     private static bool TryParseDate(string? value, out DateOnly? date)

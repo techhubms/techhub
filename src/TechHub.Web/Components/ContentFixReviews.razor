@@ -438,14 +438,23 @@
         }
     }
 
-    private async Task LoadSummaryAsync()    {
+    private async Task LoadSummaryAsync()
+    {
         try
         {
             _summary = await Api.GetContentReviewSummaryAsync();
         }
-        catch
+        catch (OperationCanceledException)
         {
-            // Summary is non-critical; page still works without it
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogWarning(ex, "Failed to load content review summary; the page will continue without it");
+        }
+        catch (System.Text.Json.JsonException ex)
+        {
+            Logger.LogWarning(ex, "Failed to load content review summary because the API response was malformed; the page will continue without it");
         }
     }
 
@@ -484,8 +493,13 @@
 
             await LoadDataAsync();
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
         {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to approve content review {ReviewId}", review.Id);
             ShowMessage($"Failed to approve: {ex.Message}", isError: true);
         }
         finally
@@ -514,8 +528,13 @@
 
             await LoadDataAsync();
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
         {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to reject content review {ReviewId}", review.Id);
             ShowMessage($"Failed to reject: {ex.Message}", isError: true);
         }
         finally
@@ -536,8 +555,18 @@
             ShowMessage($"Approved {count} reviews and applied changes", isError: false);
             await LoadDataAsync();
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
         {
+            throw;
+        }
+        catch (InvalidOperationException ex)
+        {
+            Logger.LogError(ex, "Failed to approve all content reviews due to an invalid state");
+            ShowMessage($"Failed to approve all: {ex.Message}", isError: true);
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to approve all content reviews");
             ShowMessage($"Failed to approve all: {ex.Message}", isError: true);
         }
         finally

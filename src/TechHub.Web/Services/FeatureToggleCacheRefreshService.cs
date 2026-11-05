@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace TechHub.Web.Services;
 
 /// <summary>
@@ -56,6 +58,10 @@ public sealed class FeatureToggleCacheRefreshService : BackgroundService
         catch (TaskCanceledException ex) when (!stoppingToken.IsCancellationRequested)
         {
             _logger.LogWarning(ex, "Refreshing the feature toggles timed out, will retry in {Interval}", _refreshInterval);
+        }
+        catch (JsonException ex)
+        {
+            _logger.LogWarning(ex, "Feature toggle refresh received malformed JSON, will retry in {Interval}", _refreshInterval);
         }
     }
 }

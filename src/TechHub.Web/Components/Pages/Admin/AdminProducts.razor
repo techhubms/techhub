@@ -170,12 +170,12 @@
             : _products.Select(p => p.Id).ToHashSet();
 
         var included = matches.ToHashSet();
-        foreach (var id in matches)
+        foreach (var initialParentId in matches.Select(id => byId[id].ParentId))
         {
-            var parentId = byId[id].ParentId;
-            while (parentId is { } parent && byId.ContainsKey(parent) && included.Add(parent))
+            var parentId = initialParentId;
+            while (parentId is { } parent && byId.TryGetValue(parent, out var parentProduct) && included.Add(parent))
             {
-                parentId = byId[parent].ParentId;
+                parentId = parentProduct.ParentId;
             }
         }
 

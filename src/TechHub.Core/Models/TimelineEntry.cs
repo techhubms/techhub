@@ -53,8 +53,10 @@ public sealed record TimelineEntrySource
 /// <param name="From">Only events on or after this date.</param>
 /// <param name="To">Only events on or before this date.</param>
 /// <param name="Kinds">Only these event kinds. Null or empty means every kind.</param>
+/// <param name="Take">Maximum number of distinct entries. Null leaves the result unbounded.</param>
 public sealed record TimelineRequest(
     string SectionName,
     DateOnly? From = null,
     DateOnly? To = null,
-    IReadOnlyList<string>? Kinds = null);
+    IReadOnlyList<string>? Kinds = null,
+    int? Take = null);

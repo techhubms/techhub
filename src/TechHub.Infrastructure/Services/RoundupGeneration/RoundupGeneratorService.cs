@@ -336,10 +336,23 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     // Store neutral metadata: otherwise it is classified again in every section and on every run.
                     // It has no section roles, so it stays a lead (never a missing story), ordered last as low significance.
                     var neutral = new RoundupMetadata { SchemaVersion = RoundupMetadata.CurrentSchemaVersion, Significance = "low" };
-                    await _writeRepo.UpdateAiMetadataAsync(article.CollectionName, article.Slug, ContentItemWriteRepository.SerializeAiMetadata(neutral), ct);
-                    enriched[article.ExternalUrl] = article.WithMetadata(neutral);
+                    var stored = await _writeRepo.UpdateAiMetadataIfUnchangedAsync(
+                        article.CollectionName,
+                        article.Slug,
+                        ContentItemWriteRepository.SerializeAiMetadata(neutral),
+                        null,
+                        article.Revision,
+                        ct);
 
-                    lp.Report($"AI metadata backfill: {article.Slug} would be excluded by the classifier ({result.Explanation}); stored neutral metadata");
+                    if (!stored)
+                    {
+                        _logger.LogInformation("Skipped AI metadata backfill for {Slug} in {Collection}: the article changed during classification", article.Slug, article.CollectionName);
+                    }
+                    else
+                    {
+                        enriched[article.ExternalUrl] = article.WithMetadata(neutral);
+                        lp.Report($"AI metadata backfill: {article.Slug} would be excluded by the classifier ({result.Explanation}); stored neutral metadata");
+                    }
                 }
                 else
                 {

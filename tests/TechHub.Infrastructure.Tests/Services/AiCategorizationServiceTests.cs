@@ -892,13 +892,23 @@ public class AiCategorizationServiceTests
     }
 
     [Fact]
-    public async Task ClassifyAsync_FocusedExtractionRepeatsAnExistingEvent_DoesNotDuplicateIt()
+    public async Task ClassifyAsync_FocusedExtractionFindsTheSameEventOnADifferentDate_KeepsBothDates()
     {
         const string OtherDate = """
             {"kind":"retirement","product":"Microsoft Foundry","feature":"Workflows","description":"Workflows are retired",
              "date_source":"explicit","date":"2026-11-15","date_precision":"day","quote":"q"}
             """;
         SetupResponses(Wrap(ClassificationJson(eventsJson: $"[{OtherDate}]")), Wrap($$"""{"timeline_events":[{{DecemberRetirementJson}}]}"""));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
+
+        result.Item!.TimelineEvents.Select(e => e.Date).Should().Equal(new DateOnly(2026, 11, 15), new DateOnly(2026, 12, 1));
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_FocusedExtractionRepeatsTheSameEventOnTheSameDate_DoesNotDuplicateIt()
+    {
+        SetupResponses(Wrap(ClassificationJson(eventsJson: $"[{DecemberRetirementJson}]")), Wrap($$"""{"timeline_events":[{{DecemberRetirementJson}}]}"""));
 
         var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
 

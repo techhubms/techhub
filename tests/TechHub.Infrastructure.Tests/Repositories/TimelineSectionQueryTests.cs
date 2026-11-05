@@ -145,6 +145,27 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
     }
 
     [Fact]
+    public async Task GetTimelineAsync_TakeLimitsDistinctGroupsAndKeepsAllSources()
+    {
+        var product = NewProduct();
+        var first = await SeedItemAsync(title: "First source");
+        var second = await SeedItemAsync(title: "Second source");
+        var older = await SeedItemAsync(title: "Older source");
+        await StoreAsync("news", first, Event(product, "Shared event", "ga", "9998-12-30"));
+        await StoreAsync("news", second, Event(product, "Shared event", "ga", "9998-12-30"));
+        await StoreAsync("news", older, Event(product, "Older event", "ga", "9998-12-29"));
+
+        var entries = await _sut.GetTimelineAsync(
+            new TimelineRequest("ai", Take: 1),
+            TestContext.Current.CancellationToken);
+
+        var selected = entries.Where(e => e.Product.Equals(product, StringComparison.OrdinalIgnoreCase))
+            .Should().ContainSingle().Subject;
+        selected.Feature.Should().Be("Shared event");
+        selected.Sources.Select(s => s.Title).Should().Equal("First source", "Second source");
+    }
+
+    [Fact]
     public async Task GetTimelineAsync_FiltersByDateRangeAndKinds()
     {
         var product = NewProduct();

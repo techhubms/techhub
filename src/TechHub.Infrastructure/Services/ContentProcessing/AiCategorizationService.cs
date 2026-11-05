@@ -107,9 +107,9 @@ public sealed class AiCategorizationService : IAiCategorizationService
             return classification;
         }
 
-        var known = included.TimelineEvents.Select(e => (e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant())).ToHashSet();
+        var known = included.TimelineEvents.Select(e => (e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date)).ToHashSet();
         var added = extraction.Events
-            .Where(e => known.Add((e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant())))
+            .Where(e => known.Add((e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date)))
             .ToList();
 
         if (added.Count == 0)

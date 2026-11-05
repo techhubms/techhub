@@ -140,14 +140,15 @@ else
     {
         var dated = entries
             .Where(e => e.Date.HasValue)
-            .GroupBy(e => e.Date!.Value.Year)
+            .Select(e => new { Entry = e, Date = e.Date ?? throw new InvalidOperationException("A dated timeline entry must have a date.") })
+            .GroupBy(e => e.Date.Year)
             .OrderByDescending(g => g.Key)
             .Select(year => new YearGroup(
                 year.Key.ToString(CultureInfo.InvariantCulture),
                 false,
-                year.GroupBy(e => new DateOnly(e.Date!.Value.Year, e.Date.Value.Month, 1))
+                year.GroupBy(e => new DateOnly(e.Date.Year, e.Date.Month, 1))
                     .OrderByDescending(m => m.Key)
-                    .Select(m => new MonthGroup(m.Key, m.ToList()))
+                    .Select(m => new MonthGroup(m.Key, m.Select(e => e.Entry).ToList()))
                     .ToList()))
             .ToList();
 

@@ -11,9 +11,9 @@ public class TimelineDeadlineGuardTests
 {
     private static readonly DateOnly _published = new(2026, 10, 21);
 
-    private static TimelineEvent Event(string date, string precision = "day") => new()
+    private static TimelineEvent Event(string date, string precision = "day", string kind = "retirement") => new()
     {
-        Kind = "retirement",
+        Kind = kind,
         Product = "Product",
         Description = "Is retired",
         Date = DateOnly.Parse(date, System.Globalization.CultureInfo.InvariantCulture),
@@ -37,6 +37,14 @@ public class TimelineDeadlineGuardTests
         var text = "Microsoft Foundry is retiring workflows on December 1, 2026.";
 
         TimelineDeadlineGuard.MissesDeadline(text, [Event("2026-12-01")], _published).Should().BeFalse();
+    }
+
+    [Fact]
+    public void MissesDeadline_UnrelatedEventHasTheDate_ReturnsTrue()
+    {
+        var text = "Microsoft Foundry is retiring workflows on December 1, 2026.";
+
+        TimelineDeadlineGuard.MissesDeadline(text, [Event("2026-12-01", kind: "ga")], _published).Should().BeTrue();
     }
 
     [Fact]
