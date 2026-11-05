@@ -587,8 +587,18 @@
             ShowMessage($"Rejected {count} reviews", isError: false);
             await LoadDataAsync();
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
         {
+            throw;
+        }
+        catch (InvalidOperationException ex)
+        {
+            Logger.LogError(ex, "Failed to reject all content reviews due to an invalid state");
+            ShowMessage($"Failed to reject all: {ex.Message}", isError: true);
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to reject all content reviews");
             ShowMessage($"Failed to reject all: {ex.Message}", isError: true);
         }
         finally
@@ -612,17 +622,15 @@
         try
         {
             var markdown = showOriginal ? review.OriginalValue : review.FixedValue;
-            if (showOriginal)
-            {
-                _previewHtml = markdown;
-            }
-            else
-            {
-                _previewHtml = await Api.PreviewMarkdownAsync(markdown);
-            }
+            _previewHtml = showOriginal ? markdown : await Api.PreviewMarkdownAsync(markdown);
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
         {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to render preview for content review {ReviewId}", review.Id);
             _previewHtml = $"Failed to render preview: {ex.Message}";
             _previewIsRaw = true;
         }

@@ -129,7 +129,12 @@
         {
             _toggles = await Api.GetFeatureTogglesAsync();
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to load the feature toggles");
+            _error = "Failed to load the feature toggles.";
+        }
+        catch (InvalidOperationException ex)
         {
             Logger.LogError(ex, "Failed to load the feature toggles");
             _error = "Failed to load the feature toggles.";
@@ -162,7 +167,13 @@
             _message = $"{toggle.Key} is now available to {Modes.First(m => m.Mode == mode).Label.ToLowerInvariant()}.";
             _messageIsError = false;
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to update feature toggle {FeatureKey}", toggle.Key);
+            _message = $"Failed to update {toggle.Key}.";
+            _messageIsError = true;
+        }
+        catch (InvalidOperationException ex)
         {
             Logger.LogError(ex, "Failed to update feature toggle {FeatureKey}", toggle.Key);
             _message = $"Failed to update {toggle.Key}.";

@@ -236,7 +236,11 @@ else
                 ? (await ApiClient.GetFeaturesDataAsync())?.SubscriptionTiers ?? []
                 : [];
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+        catch (InvalidOperationException ex)
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }

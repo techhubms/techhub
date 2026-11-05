@@ -300,7 +300,13 @@
             _messageIsError = false;
             _messageLinksToDashboard = true;
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "{FailedMessage}", failedMessage);
+            _message = failedMessage;
+            _messageIsError = true;
+        }
+        catch (InvalidOperationException ex)
         {
             Logger.LogError(ex, "{FailedMessage}", failedMessage);
             _message = failedMessage;
