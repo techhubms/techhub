@@ -18,6 +18,7 @@ public class SectionTimelineTests : PlaywrightTestBase
     [Fact]
     public async Task SectionTimeline_ShouldLoad_WithTitleAndSidebarLayout()
     {
+        await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync(PageUrl);
 
         await Assertions.Expect(Page).ToHaveTitleAsync(new Regex("Timeline - GitHub Copilot"));
@@ -28,6 +29,7 @@ public class SectionTimelineTests : PlaywrightTestBase
     [Fact]
     public async Task SectionTimeline_ShouldOffer_KindFiltersAndTheEarlierWindow()
     {
+        await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync(PageUrl);
 
         var filters = Page.Locator(".timeline-filter-link");
@@ -40,6 +42,7 @@ public class SectionTimelineTests : PlaywrightTestBase
     [Fact]
     public async Task SectionTimeline_KindFilter_ShouldNavigateAndMarkItActive()
     {
+        await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync(PageUrl);
 
         await Page.Locator(".timeline-filter-link", new() { HasText = "Deprecations" }).ClickAsync();
@@ -55,6 +58,7 @@ public class SectionTimelineTests : PlaywrightTestBase
     [Fact]
     public async Task SectionTimeline_ForGitHubCopilot_ShouldShowTheSubscriptionTiersInTheSidebar()
     {
+        await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync(PageUrl);
 
         var tiers = Page.Locator("aside.sidebar .features-tier-card");
@@ -67,6 +71,7 @@ public class SectionTimelineTests : PlaywrightTestBase
     [Fact]
     public async Task SectionTimeline_ForOtherSections_ShouldNotShowTheSubscriptionTiers()
     {
+        await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync("/ai/timeline");
 
         await Assertions.Expect(Page.Locator(".features-tier-card")).ToHaveCountAsync(0);
@@ -83,6 +88,7 @@ public class SectionTimelineTests : PlaywrightTestBase
     [Fact]
     public async Task SectionTimeline_Entry_ShouldExpand_AndListItsSources()
     {
+        await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync("/github-copilot/timeline?since=all");
         await Page.WaitForBlazorReadyAsync();
 
@@ -100,6 +106,7 @@ public class SectionTimelineTests : PlaywrightTestBase
     [Fact]
     public async Task SectionTimeline_ShouldBeLinked_FromTheSectionNavigation()
     {
+        await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync("/github-copilot");
 
         var link = Page.Locator("a[href='/github-copilot/timeline']").First;
@@ -109,6 +116,7 @@ public class SectionTimelineTests : PlaywrightTestBase
     [Fact]
     public async Task SectionTimeline_ShouldHave_NoConsoleErrors()
     {
+        await SkipUnlessTimelineIsOpenAsync();
         var consoleErrors = new List<string>();
         Page.Console += (_, msg) =>
         {
@@ -128,4 +136,47 @@ public class SectionTimelineTests : PlaywrightTestBase
 
         significantErrors.Should().BeEmpty("Page should load without JavaScript errors");
     }
+
+    // The timeline is behind a feature toggle: when it is not open to everyone, this anonymous browser must get a 404 and no buttons.
+    // Both outcomes are valid for an environment, so the tests that need the page skip, and the two tests below hold either way.
+    [Fact]
+    public async Task SectionTimeline_PageAndNavigationButton_ShouldAgreeWithTheFeatureToggle()
+    {
+        var isOpen = await IsTimelineOpenAsync();
+
+        await Page.GotoRelativeAsync("/github-copilot");
+        await Page.WaitForBlazorReadyAsync();
+
+        var link = Page.Locator("a[href='/github-copilot/timeline']");
+        if (isOpen)
+        {
+            (await link.CountAsync()).Should().BeGreaterThan(0, "the feature is open to everyone, so the button is there");
+        }
+        else
+        {
+            (await link.CountAsync()).Should().Be(0, "the feature is not open to everyone, so a visitor sees no button");
+        }
+    }
+
+    [Fact]
+    public async Task SectionTimeline_WhenNotOpenToEveryone_ShouldAnswerWithNotFoundAndShowNothingAboutLoggingIn()
+    {
+        Assert.SkipWhen(await IsTimelineOpenAsync(), "The timeline is open to everyone on this environment");
+
+        var response = await Page.APIGetAsync($"{BlazorHelpers.BaseUrl}{PageUrl}");
+        response.Status.Should().Be(404);
+
+        await Page.GotoRelativeAsync(PageUrl);
+        await Assertions.Expect(Page.Locator("h1.page-h1")).ToHaveTextAsync("Page Not Found");
+        (await Page.ContentAsync()).Should().NotContainEquivalentOf("log in").And.NotContainEquivalentOf("sign in");
+    }
+
+    private async Task<bool> IsTimelineOpenAsync()
+    {
+        var response = await Page.APIGetAsync($"{BlazorHelpers.BaseUrl}{PageUrl}");
+        return response.Status == 200;
+    }
+
+    private async Task SkipUnlessTimelineIsOpenAsync() =>
+        Assert.SkipUnless(await IsTimelineOpenAsync(), "The timeline is not open to everyone on this environment (feature toggle)");
 }

@@ -73,7 +73,11 @@ public static class AdminNavigation
             new("Send log", "/admin/newsletter/send-log")
         ]),
         new("Stats", [new("Stats", "/admin/statistics")]),
-        new("Settings", [new("Settings", "/admin/settings")])
+        new("Settings",
+        [
+            new("Settings", "/admin/settings"),
+            new("Feature toggles", "/admin/feature-toggles")
+        ])
     ];
 
     /// <summary>Turns an absolute or relative URL into the path used for matching: no query or fragment, no trailing slash.</summary>

@@ -2,11 +2,13 @@
 @using System.Globalization
 @using TechHub.Core.Models
 @using TechHub.Core.Models.ContentProcessing
+@using TechHub.Core.Models.FeatureToggles
 @using TechHub.Web.Services
 @implements IDisposable
 @inherits PageComponentBase
 
 @inject ITechHubApiClient ApiClient
+@inject IFeatureGate FeatureGate
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -187,6 +189,14 @@ else
 
     protected override async Task OnParametersSetAsync()
     {
+        // A feature that is off, or only on for admins, does not exist for this visitor
+        if (!await FeatureGate.IsEnabledAsync(FeatureKeys.Timeline))
+        {
+            sectionData = null;
+            _notFound = true;
+            return;
+        }
+
         sectionData = SectionCache.GetSectionByName(SectionName);
         if (sectionData is null)
         {
@@ -194,6 +204,7 @@ else
             return;
         }
 
+        _notFound = false;
         _activeKinds = NormalizeKinds(KindsParam);
         _showAll = string.Equals(SinceParam, "all", StringComparison.OrdinalIgnoreCase);
 

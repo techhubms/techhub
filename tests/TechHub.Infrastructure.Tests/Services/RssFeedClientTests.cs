@@ -22,13 +22,14 @@ public class RssFeedClientTests
         var xml = await client.FetchFeedXmlAsync("https://example.com/feed.xml", TestContext.Current.CancellationToken);
 
         // Assert
-        xml.Should().Be("<rss />");
+        xml.Failed.Should().BeFalse();
+        xml.Xml.Should().Be("<rss />");
     }
 
     [Theory]
-    [InlineData(HttpStatusCode.NotFound)]
-    [InlineData(HttpStatusCode.InternalServerError)]
-    public async Task FetchFeedXmlAsync_ErrorStatus_ReturnsNull(HttpStatusCode status)
+    [InlineData(HttpStatusCode.NotFound, "HTTP 404 (NotFound)")]
+    [InlineData(HttpStatusCode.InternalServerError, "HTTP 500 (InternalServerError)")]
+    public async Task FetchFeedXmlAsync_ErrorStatus_ReturnsFailureWithStatus(HttpStatusCode status, string expectedError)
     {
         // Arrange
         using var handler = new StubHttpMessageHandler(_ => new HttpResponseMessage(status));
@@ -38,11 +39,12 @@ public class RssFeedClientTests
         var xml = await client.FetchFeedXmlAsync("https://example.com/feed.xml", TestContext.Current.CancellationToken);
 
         // Assert
-        xml.Should().BeNull();
+        xml.Failed.Should().BeTrue();
+        xml.Error.Should().Be(expectedError);
     }
 
     [Fact]
-    public async Task FetchFeedXmlAsync_ConnectionFailure_ReturnsNull()
+    public async Task FetchFeedXmlAsync_ConnectionFailure_ReturnsFailure()
     {
         // Arrange
         using var handler = new StubHttpMessageHandler(_ => throw new HttpRequestException("blocked"));
@@ -52,11 +54,11 @@ public class RssFeedClientTests
         var xml = await client.FetchFeedXmlAsync("http://169.254.169.254/", TestContext.Current.CancellationToken);
 
         // Assert
-        xml.Should().BeNull();
+        xml.Error.Should().Be("Connection failed: blocked");
     }
 
     [Fact]
-    public async Task FetchFeedXmlAsync_ResilienceTimeout_ReturnsNull()
+    public async Task FetchFeedXmlAsync_ResilienceTimeout_ReturnsTimedOut()
     {
         // Arrange: the Polly timeout of the resilience handler is not an HttpRequestException
         using var handler = new StubHttpMessageHandler(_ => throw new TimeoutRejectedException("The operation didn't complete within the allowed timeout of '00:01:30'."));
@@ -66,11 +68,11 @@ public class RssFeedClientTests
         var xml = await client.FetchFeedXmlAsync("https://example.com/feed.xml", TestContext.Current.CancellationToken);
 
         // Assert
-        xml.Should().BeNull();
+        xml.Error.Should().Be("Timed out");
     }
 
     [Fact]
-    public async Task FetchFeedXmlAsync_HttpClientTimeout_ReturnsNull()
+    public async Task FetchFeedXmlAsync_HttpClientTimeout_ReturnsTimedOut()
     {
         // Arrange: HttpClient.Timeout surfaces as a TaskCanceledException that the caller did not request
         using var handler = new StubHttpMessageHandler(_ => throw new TaskCanceledException("timed out", new TimeoutException()));
@@ -80,7 +82,7 @@ public class RssFeedClientTests
         var xml = await client.FetchFeedXmlAsync("https://example.com/feed.xml", TestContext.Current.CancellationToken);
 
         // Assert
-        xml.Should().BeNull();
+        xml.Error.Should().Be("Timed out");
     }
 
     [Fact]

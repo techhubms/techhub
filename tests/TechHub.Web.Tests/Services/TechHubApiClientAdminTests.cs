@@ -1259,6 +1259,63 @@ public class TechHubApiClientAdminTests
     }
 
     [Fact]
+    public async Task GetFeatureTogglesAsync_Success_ReturnsTogglesWithTextualMode()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: """[{"key":"timeline","mode":"Admins","description":"Timeline"}]""");
+
+        // Act
+        var toggles = await fixture.Client.GetFeatureTogglesAsync(TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.PathAndQuery.Should().Be("/api/feature-toggles");
+        var toggle = toggles.Should().ContainSingle().Subject;
+        toggle.Key.Should().Be("timeline");
+        toggle.Mode.Should().Be(TechHub.Core.Models.FeatureToggles.FeatureToggleMode.Admins);
+    }
+
+    [Fact]
+    public async Task GetFeatureTogglesAsync_ServerError_Throws()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.InternalServerError);
+
+        // Act
+        var act = () => fixture.Client.GetFeatureTogglesAsync(TestContext.Current.CancellationToken);
+
+        // Assert
+        await act.Should().ThrowAsync<HttpRequestException>();
+    }
+
+    [Fact]
+    public async Task UpdateFeatureToggleAsync_Success_PutsTheModeAsText()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.NoContent);
+
+        // Act
+        await fixture.Client.UpdateFeatureToggleAsync("timeline", TechHub.Core.Models.FeatureToggles.FeatureToggleMode.Everyone, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.Method.Should().Be("PUT");
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/feature-toggles/timeline");
+        fixture.Handler.Json.GetProperty("mode").GetString().Should().Be("Everyone");
+    }
+
+    [Fact]
+    public async Task UpdateFeatureToggleAsync_NotFound_Throws()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(HttpStatusCode.NotFound);
+
+        // Act
+        var act = () => fixture.Client.UpdateFeatureToggleAsync("unknown", TechHub.Core.Models.FeatureToggles.FeatureToggleMode.Disabled, TestContext.Current.CancellationToken);
+
+        // Assert
+        await act.Should().ThrowAsync<HttpRequestException>();
+    }
+
+    [Fact]
     public async Task InvalidateCachesAsync_Success_PostsToInvalidateRoute()
     {
         // Arrange

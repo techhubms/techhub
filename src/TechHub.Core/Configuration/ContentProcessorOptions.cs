@@ -15,8 +15,8 @@ public class ContentProcessorOptions
     /// </summary>
     public bool Enabled { get; init; }
 
-    /// <summary>How often to run the content processing pipeline (in minutes).</summary>
-    public int IntervalMinutes { get; init; } = 60;
+    /// <summary>How often to check for feeds whose individual polling interval has elapsed (in minutes).</summary>
+    public int IntervalMinutes { get; init; } = 1;
 
     /// <summary>Maximum age in days for RSS items. Items older than this are skipped.</summary>
     public int ItemAgeLimitDays { get; init; } = 365;

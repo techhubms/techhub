@@ -30,6 +30,9 @@ public sealed class FeedConfigRequest
     public string? Url { get; init; }
     public string? OutputDir { get; init; }
     public bool Enabled { get; init; } = true;
+
+    /// <summary>Minutes between scheduled feed checks; defaults to 60 on create, preserved when omitted on update.</summary>
+    public int? PollingIntervalMinutes { get; init; }
 }
 
 /// <summary>DTO for naming a product, or a product name (add, rename, ignore).</summary>

@@ -179,7 +179,8 @@ public sealed class ContentRepository : IContentRepository
                     kvp.Value.Description,
                     displayName,
                     kvp.Value.Custom,
-                    kvp.Value.Order);
+                    kvp.Value.Order,
+                    kvp.Value.Feature);
             })
             .ToDictionary(c => c.Name);
 

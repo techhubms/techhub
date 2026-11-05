@@ -7,8 +7,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.Models;
+using TechHub.Core.Models.FeatureToggles;
 using TechHub.Web.Components.Pages;
 using TechHub.Web.Services;
+using TechHub.Web.Tests.TestSupport;
 
 namespace TechHub.Web.Tests.Components.Pages;
 
@@ -18,6 +20,7 @@ namespace TechHub.Web.Tests.Components.Pages;
 public class SectionTimelineTests : BunitContext
 {
     private readonly Mock<ITechHubApiClient> _mockApiClient = new();
+    private readonly FeatureGateSetup _features;
 
     public SectionTimelineTests()
     {
@@ -42,6 +45,7 @@ public class SectionTimelineTests : BunitContext
             ])
         ]);
         Services.AddSingleton(sectionCache);
+        _features = this.AddFeatureGate(isAdmin: false, (FeatureKeys.Timeline, FeatureToggleMode.Everyone));
 
         _mockApiClient
             .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
@@ -321,5 +325,60 @@ public class SectionTimelineTests : BunitContext
 
         cut.FindAll("main.page-with-sidebar").Should().BeEmpty();
         _mockApiClient.Verify(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Theory]
+    [InlineData(FeatureToggleMode.Disabled, false)]
+    [InlineData(FeatureToggleMode.Disabled, true)]
+    [InlineData(FeatureToggleMode.Admins, false)]
+    public void Render_WhenTheFeatureIsNotAvailableToTheVisitor_ShowsNotFoundAndDoesNotCallTheApi(FeatureToggleMode mode, bool isAdmin)
+    {
+        // Arrange
+        _features.SetToggles((FeatureKeys.Timeline, mode));
+        if (isAdmin)
+        {
+            _features.Authorization.SetAuthorized("admin@example.com");
+        }
+
+        Services.GetRequiredService<NavigationManager>().NavigateTo("/ai/timeline");
+
+        // Act
+        var cut = Render<SectionTimeline>(p => p.Add(x => x.SectionName, "ai"));
+
+        // Assert
+        cut.FindAll("main.page-with-sidebar").Should().BeEmpty();
+        cut.Markup.Should().Contain("Page Not Found");
+        _mockApiClient.Verify(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public void Render_WhenTheFeatureIsForAdminsAndTheVisitorIsAnAdmin_ShowsTheTimeline()
+    {
+        // Arrange
+        _features.SetToggles((FeatureKeys.Timeline, FeatureToggleMode.Admins));
+        _features.Authorization.SetAuthorized("admin@example.com");
+        Services.GetRequiredService<NavigationManager>().NavigateTo("/ai/timeline");
+
+        // Act
+        var cut = Render<SectionTimeline>(p => p.Add(x => x.SectionName, "ai"));
+
+        // Assert
+        cut.FindAll("main.page-with-sidebar").Should().HaveCount(1);
+        cut.Markup.Should().NotContain("Page Not Found");
+    }
+
+    [Fact]
+    public void Render_WhenTheFeatureIsForAdminsAndTheVisitorIsNot_ShowsNotFound()
+    {
+        // Arrange
+        _features.SetToggles((FeatureKeys.Timeline, FeatureToggleMode.Admins));
+        Services.GetRequiredService<NavigationManager>().NavigateTo("/ai/timeline");
+
+        // Act
+        var cut = Render<SectionTimeline>(p => p.Add(x => x.SectionName, "ai"));
+
+        // Assert
+        cut.FindAll("main.page-with-sidebar").Should().BeEmpty();
+        cut.Markup.Should().Contain("Page Not Found");
     }
 }

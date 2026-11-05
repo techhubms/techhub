@@ -36,6 +36,11 @@
 .PARAMETER SkipDump
     Skip the dump step and use the file at OutputPath (must already exist).
 
+.PARAMETER UseExistingDump
+    Skip downloading from production and reuse the newest db-restore-*.dump or db-backup-*.dump
+    file in the workspace .tmp/ directory, by last modification time. Fails if none exists.
+    Cannot be combined with OutputPath; use SkipDump with OutputPath to select a specific file.
+
 .PARAMETER SkipRestore
     Perform the dump but skip the restore step (dump only).
 
@@ -58,6 +63,10 @@
 .EXAMPLE
     # Restore a previously downloaded dump to local
     ./scripts/Restore-Database.ps1 -Target local -SkipDump -OutputPath .tmp/db-restore-20260101.dump
+
+.EXAMPLE
+    # Restore the latest saved dump without contacting production
+    ./scripts/Restore-Database.ps1 -Target local -UseExistingDump
 #>
 
 param(
@@ -73,6 +82,9 @@ param(
 
     [Parameter(Mandatory = $false)]
     [string]$OutputPath,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$UseExistingDump,
 
     [switch]$SkipDump,
     [switch]$SkipRestore,
@@ -99,7 +111,23 @@ if (-not (Test-Path $tmpDir)) {
 }
 
 $timestamp = Get-Date -Format 'yyyyMMddHHmmss'
-if (-not $OutputPath) {
+if ($UseExistingDump) {
+    if ($OutputPath) {
+        throw "UseExistingDump cannot be combined with OutputPath. Use -SkipDump -OutputPath to select a specific file."
+    }
+
+    $existingDumps = @(Get-ChildItem -LiteralPath $tmpDir -File |
+        Where-Object { $_.Name -like 'db-restore-*.dump' -or $_.Name -like 'db-backup-*.dump' } |
+        Sort-Object -Property @{ Expression = 'LastWriteTimeUtc'; Descending = $true }, FullName)
+
+    if ($existingDumps.Count -eq 0) {
+        throw "No existing database dump found in $tmpDir. Download one first without -UseExistingDump."
+    }
+
+    $OutputPath = $existingDumps[0].FullName
+    $SkipDump = [switch]$true
+}
+elseif (-not $OutputPath) {
     $prefix = if ($Target -eq 'disk') { 'db-backup' } else { 'db-restore' }
     $OutputPath = Join-Path $tmpDir "$prefix-$timestamp.dump"
 }

@@ -693,6 +693,16 @@ h2.admin-page-title {
     white-space: nowrap;
 }
 
+.admin-table td.feed-last-check {
+    max-width: 18rem;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+.feed-last-check .admin-status {
+    text-transform: none;
+}
+
 /* ─── Statistics Page ─────────────────────────────────────────────────────── */
 
 .admin-stats-grid {

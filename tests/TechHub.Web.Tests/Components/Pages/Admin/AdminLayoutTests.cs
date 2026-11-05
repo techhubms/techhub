@@ -130,6 +130,8 @@ public class AdminLayoutTests : BunitContext
     [InlineData("/admin/products/12/features", new[] { "/admin/content-items", "/admin/products", "/admin/vscode-updates", "/admin/custom-pages" }, "/admin/products")]
     [InlineData("/admin/newsletter", new[] { "/admin/newsletter", "/admin/newsletter/send-log" }, "/admin/newsletter")]
     [InlineData("/admin/newsletter/send-log", new[] { "/admin/newsletter", "/admin/newsletter/send-log" }, "/admin/newsletter/send-log")]
+    [InlineData("/admin/settings", new[] { "/admin/settings", "/admin/feature-toggles" }, "/admin/settings")]
+    [InlineData("/admin/feature-toggles", new[] { "/admin/settings", "/admin/feature-toggles" }, "/admin/feature-toggles")]
     public void Render_Authorized_ShowsTheSubMenuOfTheActiveGroupWithTheCurrentPageMarked(string currentPath, string[] expectedHrefs, string expectedActiveHref)
     {
         // Arrange
@@ -149,7 +151,6 @@ public class AdminLayoutTests : BunitContext
     [Theory]
     [InlineData("/admin/reviews", "/admin/reviews")]
     [InlineData("/admin/statistics", "/admin/statistics")]
-    [InlineData("/admin/settings", "/admin/settings")]
     public void Render_Authorized_OnAPageWithoutSiblings_ShowsTheSubMenuWithThatPage(string currentPath, string expectedHref)
     {
         // Arrange

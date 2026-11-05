@@ -1,6 +1,7 @@
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Core.Models.FeatureToggles;
 
 namespace TechHub.Web.Services;
 
@@ -749,6 +750,22 @@ internal interface ITechHubApiClient
     /// PUT /api/admin/job-settings/{jobName}
     /// </summary>
     Task UpdateJobSettingAsync(string jobName, bool enabled, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Feature toggles
+    // ================================================================
+
+    /// <summary>
+    /// Get who can use each feature: nobody, admins or everyone.
+    /// GET /api/feature-toggles
+    /// </summary>
+    Task<IReadOnlyList<FeatureToggle>> GetFeatureTogglesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Set who can use a feature.
+    /// PUT /api/admin/feature-toggles/{featureKey}
+    /// </summary>
+    Task UpdateFeatureToggleAsync(string featureKey, FeatureToggleMode mode, CancellationToken cancellationToken = default);
 
     // ================================================================
     // Admin – Cache management endpoints

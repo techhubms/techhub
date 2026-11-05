@@ -1,5 +1,7 @@
 @using TechHub.Core.Models
+@using TechHub.Web.Services
 @inject NavigationManager Navigation
+@inject IFeatureGate FeatureGate
 
 <div class="section-card-container">
     <a href="@Section.Url" class="section-card" aria-label="View @Section.Title section">
@@ -84,13 +86,19 @@
     
     private IReadOnlyList<Collection> CustomPages => 
         Section.Collections
-            .Where(c => c.IsCustom)
+            .Where(c => c.IsCustom && FeatureGate.IsEnabled(c.Feature, _isAdmin))
             .OrderBy(c => c.Order)
             .ThenBy(c => c.Title)
             .ToList();
     
     private readonly HashSet<string> _expandedSections = new();
     private string? _previousSectionName;
+    private bool _isAdmin;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _isAdmin = await FeatureGate.IsAdminAsync();
+    }
     
     protected override void OnParametersSet()
     {

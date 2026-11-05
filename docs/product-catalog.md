@@ -48,7 +48,9 @@ Ask the question, then check these signals. A single signal is a hint; several t
 |---|---|---|
 | GitHub Actions | Child product of GitHub | You use it without the rest of GitHub's tools: your pipeline is built with it |
 | GitHub CLI, GitHub Codespaces | Child products of GitHub | Installed or provisioned and billed on their own |
+| GitHub Copilot app | Child product of GitHub Copilot | A separate application that can be used on its own |
 | GitHub-hosted runners | Feature of GitHub Actions | You do not say that a pipeline is built with hosted runners; you build it with GitHub Actions and configure where it runs |
+| GitHub Enterprise Importer | Child product of GitHub Enterprise Cloud | A standalone migration tool for importing into GitHub Enterprise Cloud |
 | Secret scanning, code scanning | Features of the security product that contains them | Nobody buys secret scanning: they buy GitHub Advanced Security (or its parts GitHub Secret Protection and GitHub Code Security), and secret scanning is one of its features |
 | GitHub Copilot CLI | Child product of GitHub Copilot | A separate application that you install and start |
 | GitHub Copilot Fusion | Feature of GitHub Copilot | Not bought: you have a GitHub Copilot license and select Fusion when you use Copilot |

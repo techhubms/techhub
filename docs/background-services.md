@@ -7,7 +7,7 @@ The API runs several hosted services for startup work, content ingestion, roundu
 | Service | Project | Schedule | Gated by | Records a job row |
 |---------|---------|----------|----------|-------------------|
 | `StartupBackgroundService` | API | Once at startup | - | No |
-| `ContentProcessingBackgroundService` | API | At startup (when enabled), then every `IntervalMinutes` (default 60) | `ContentProcessor:Enabled` and DB setting `ContentProcessor` | `content-processing` |
+| `ContentProcessingBackgroundService` | API | Checks due feeds at startup (when enabled), then every `IntervalMinutes` (default 1) | `ContentProcessor:Enabled` and DB setting `ContentProcessor` | `content-processing` |
 | `RoundupGeneratorBackgroundService` | API | Mondays at `RunHourUtc` (default 08:00 UTC) | `RoundupGenerator:Enabled` and DB setting `RoundupGenerator` | `roundup-generation` |
 | `ContentFixerBackgroundService` | API | Manual trigger only | - | `content-cleanup` |
 | `NewsletterBackgroundService` | API | Every `CheckIntervalMinutes` (default 30) | `Newsletter:ScheduledSendEnabled` and DB setting `Newsletter` | No, uses `newsletter_send_log` |
@@ -28,7 +28,7 @@ The other API background services wait for `StartupStateService` before doing an
 
 ## Content Processing
 
-Fetches the enabled RSS feeds, categorizes new items with AI and writes them to `content_items`. It runs once right after startup when scheduled runs are enabled, then every `IntervalMinutes` using a periodic timer. After each run it clears the content cache, trims job history to `PurgeJobKeepCount` (500) and purges failed URL records older than `FailedUrlRetentionDays` (7) so they are retried. The pipeline itself is described in [content-processing.md](content-processing.md).
+Fetches due enabled RSS feeds, categorizes new items with AI and writes them to `content_items`. It checks right after startup when scheduled runs are enabled, then every `IntervalMinutes` (default 1) using a periodic timer. Each feed has its own polling interval (default 60 minutes), measured from its persisted last check, including failed downloads. Idle checks create no job. Manual triggers check all enabled feeds immediately. After each run it clears the content cache, trims job history to `PurgeJobKeepCount` (500) and purges failed URL records older than `FailedUrlRetentionDays` (7) so they are retried. The pipeline itself is described in [content-processing.md](content-processing.md).
 
 ## Roundup Generator
 

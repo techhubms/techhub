@@ -52,6 +52,10 @@
                             <input id="feedOutputDir" class="admin-input" @bind="_editingFeed!.OutputDir" placeholder="_blogs" />
                         </div>
                         <div class="admin-form-group">
+                            <label class="admin-label" for="feedPollingInterval">Polling interval (minutes)</label>
+                            <input id="feedPollingInterval" type="number" min="1" class="admin-input" @bind="_editingFeed!.PollingIntervalMinutes" />
+                        </div>
+                        <div class="admin-form-group">
                             <label class="admin-label">
                                 <input type="checkbox" @bind="_editingFeed!.Enabled" />
                                 Enabled
@@ -87,18 +91,25 @@
             <table class="admin-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>URL</th>
-                        <th>Output Dir</th>
-                        <th>Enabled</th>
+                        @foreach (var header in SortHeaders)
+                        {
+                            <th aria-sort="@(_sortColumn == header.Column ? (_sortDescending ? "descending" : "ascending") : null)">
+                                <button type="button" class="admin-link-btn" @onclick="() => SortBy(header.Column)">
+                                    @header.Label
+                                    @if (_sortColumn == header.Column)
+                                    {
+                                        <span aria-hidden="true">@(_sortDescending ? "▼" : "▲")</span>
+                                    }
+                                </button>
+                            </th>
+                        }
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var feed in _feeds)
+                    @foreach (var feed in GetSortedFeeds(_feeds))
                     {
-                        <tr>
+                        <tr @key="feed.Id">
                             <td class="admin-cell-mono">@feed.Id</td>
                             <td>@feed.Name</td>
                             <td class="admin-cell-url">@feed.Url</td>
@@ -108,9 +119,30 @@
                                     @(feed.Enabled ? "✓ Yes" : "✗ No")
                                 </span>
                             </td>
+                            <td class="admin-cell-mono feed-polling-interval">@feed.PollingIntervalMinutes min</td>
+                            <td class="admin-cell-mono feed-last-content" title="@(feed.LastContentAt is { } lastContent ? DateHelper.FormatTimestamp(lastContent) : "No content yet")">
+                                @(feed.LastContentAt is { } added ? DateHelper.FormatDateRelative(added.ToUnixTimeSeconds()) : "—")
+                            </td>
+                            <td class="feed-last-check">
+                                @if (feed.LastCheckedAt is not { } checkedAt)
+                                {
+                                    <span class="admin-cell-mono">—</span>
+                                }
+                                else
+                                {
+                                    <span class="admin-status @(feed.LastCheckError is null ? "admin-status-completed" : "admin-status-failed")"
+                                          title="@(feed.LastCheckError ?? "The feed was downloaded and parsed")">
+                                        @(feed.LastCheckError ?? "✓ OK")
+                                    </span>
+                                    <div class="admin-cell-mono">@DateHelper.FormatTimestamp(checkedAt)</div>
+                                }
+                            </td>
                             <td>
                                 <button class="admin-link-btn" @onclick="() => EditFeed(feed)">Edit</button>
-                                <button class="admin-link-btn admin-link-btn-danger" @onclick="() => DeleteFeedAsync(feed)">Delete</button>
+                                @if (!feed.HasContent)
+                                {
+                                    <button class="admin-link-btn admin-link-btn-danger" @onclick="() => DeleteFeedAsync(feed)">Delete</button>
+                                }
                             </td>
                         </tr>
                     }
@@ -121,6 +153,22 @@
 </div>
 
 @code {
+    private enum FeedSortColumn { Id, Name, Url, OutputDir, Enabled, PollingInterval, LastContent, LastCheck }
+
+    private static readonly (FeedSortColumn Column, string Label)[] SortHeaders =
+    [
+        (FeedSortColumn.Id, "ID"),
+        (FeedSortColumn.Name, "Name"),
+        (FeedSortColumn.Url, "URL"),
+        (FeedSortColumn.OutputDir, "Output Dir"),
+        (FeedSortColumn.Enabled, "Enabled"),
+        (FeedSortColumn.PollingInterval, "Polling interval"),
+        (FeedSortColumn.LastContent, "Last content"),
+        (FeedSortColumn.LastCheck, "Last check")
+    ];
+
+    private FeedSortColumn? _sortColumn;
+    private bool _sortDescending;
     private bool _loading = true;
     private bool _saving;
     private bool _showForm;
@@ -130,6 +178,31 @@
     private IReadOnlyList<FeedConfig>? _feeds;
     private FeedConfig? _editingFeed;
     private PersistingComponentStateSubscription? _persistSubscription;
+
+    private void SortBy(FeedSortColumn column)
+    {
+        _sortDescending = _sortColumn == column && !_sortDescending;
+        _sortColumn = column;
+    }
+
+    private IEnumerable<FeedConfig> GetSortedFeeds(IReadOnlyList<FeedConfig> feeds) => _sortColumn switch
+    {
+        FeedSortColumn.Id => OrderFeeds(feeds, f => f.Id),
+        FeedSortColumn.Name => OrderFeeds(feeds, f => f.Name, StringComparer.OrdinalIgnoreCase),
+        FeedSortColumn.Url => OrderFeeds(feeds, f => f.Url, StringComparer.OrdinalIgnoreCase),
+        FeedSortColumn.OutputDir => OrderFeeds(feeds, f => f.OutputDir, StringComparer.OrdinalIgnoreCase),
+        FeedSortColumn.Enabled => OrderFeeds(feeds, f => f.Enabled),
+        FeedSortColumn.PollingInterval => OrderFeeds(feeds, f => f.PollingIntervalMinutes),
+        FeedSortColumn.LastContent => OrderFeeds(feeds, f => f.LastContentAt),
+        FeedSortColumn.LastCheck => OrderFeeds(feeds, f => f.LastCheckedAt),
+        _ => feeds
+    };
+
+    private IOrderedEnumerable<FeedConfig> OrderFeeds<TKey>(
+        IEnumerable<FeedConfig> feeds, Func<FeedConfig, TKey> keySelector, IComparer<TKey>? comparer = null) =>
+        (_sortDescending
+            ? feeds.OrderByDescending(keySelector, comparer)
+            : feeds.OrderBy(keySelector, comparer)).ThenBy(f => f.Id);
 
     protected override async Task OnInitializedAsync()
     {
@@ -198,6 +271,7 @@
             Url = feed.Url,
             OutputDir = feed.OutputDir,
             Enabled = feed.Enabled,
+            PollingIntervalMinutes = feed.PollingIntervalMinutes,
         };
         _showForm = true;
         _message = null;
@@ -221,6 +295,13 @@
     {
         if (_editingFeed is null)
         {
+            return;
+        }
+
+        if (_editingFeed.PollingIntervalMinutes < 1)
+        {
+            _message = "Polling interval must be at least 1 minute.";
+            _messageIsError = true;
             return;
         }
 

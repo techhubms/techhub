@@ -7,8 +7,8 @@ namespace TechHub.Api.Services;
 
 /// <summary>
 /// Runs the content processing pipeline on a <see cref="PeriodicTimer"/> schedule.
-/// The interval is configured via <see cref="ContentProcessorOptions.IntervalMinutes"/> (default: 60).
-/// Also runs immediately on startup.
+/// Checks for due feeds via <see cref="ContentProcessorOptions.IntervalMinutes"/> (default: 1).
+/// Also checks immediately on startup, respecting each feed's persisted polling schedule.
 /// Invoked manually by the admin UI via <see cref="TriggerImmediateRun"/>.
 /// </summary>
 public sealed class ContentProcessingBackgroundService : BackgroundService
@@ -95,7 +95,7 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
         else
         {
             _logger.LogInformation(
-                "ContentProcessingBackgroundService started — interval: {Interval} minutes",
+                "ContentProcessingBackgroundService started — due-feed check interval: {Interval} minutes",
                 _options.IntervalMinutes);
 
             // Run once immediately on startup when enabled
@@ -162,11 +162,14 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
         {
             await using var scope = _serviceProvider.CreateAsyncScope();
             var service = scope.ServiceProvider.GetRequiredService<ContentProcessingService>();
-            await service.RunAsync(triggerType, _runCts.Token);
+            var jobStarted = await service.RunAsync(triggerType, _runCts.Token);
 
             // Invalidate content cache so new/updated items are served immediately
-            var contentRepo = scope.ServiceProvider.GetRequiredService<IContentRepository>();
-            contentRepo.InvalidateCachedData();
+            if (jobStarted)
+            {
+                var contentRepo = scope.ServiceProvider.GetRequiredService<IContentRepository>();
+                contentRepo.InvalidateCachedData();
+            }
         }
         catch (OperationCanceledException) when (ct.IsCancellationRequested)
         {

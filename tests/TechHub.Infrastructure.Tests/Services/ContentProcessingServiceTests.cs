@@ -117,7 +117,10 @@ public class ContentProcessingServiceTests
     public async Task RunAsync_CreatesAndCompletesJob()
     {
         // Arrange
-        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([]);
+        var feed = new FeedConfig { Id = 1, Name = "Empty feed" };
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Success([]));
 
         var sut = CreateService();
 
@@ -133,6 +136,104 @@ public class ContentProcessingServiceTests
     }
 
     // ── Dedup Logic ────────────────────────────────────────────────────────
+
+    [Theory]
+    [InlineData(59, false)]
+    [InlineData(60, true)]
+    [InlineData(61, true)]
+    public async Task RunAsync_ScheduledFeed_RespectsPollingBoundary(int elapsedMinutes, bool expectedCheck)
+    {
+        // Arrange
+        var now = new DateTimeOffset(2026, 11, 5, 12, 0, 0, TimeSpan.Zero);
+        var feed = new FeedConfig
+        {
+            Id = 1,
+            Name = "Hourly feed",
+            Url = "https://example.com/hourly",
+            OutputDir = "_blogs",
+            LastCheckedAt = now.AddMinutes(-elapsedMinutes)
+        };
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Success([]));
+        var before = await _jobRepo.GetRecentAsync(500, CancellationToken.None);
+
+        // Act
+        var jobStarted = await CreateService(timeProvider: new FrozenTimeProvider(now)).RunAsync("scheduled", CancellationToken.None);
+
+        // Assert
+        jobStarted.Should().Be(expectedCheck);
+        _rssService.Verify(r => r.IngestAsync(feed, It.IsAny<CancellationToken>()),
+            expectedCheck ? Times.Once() : Times.Never());
+        _feedRepo.Verify(r => r.RecordCheckAsync(feed.Id, null, It.IsAny<CancellationToken>()),
+            expectedCheck ? Times.Once() : Times.Never());
+        var after = await _jobRepo.GetRecentAsync(500, CancellationToken.None);
+        if (!expectedCheck)
+        {
+            after.Select(j => j.Id).Should().Equal(before.Select(j => j.Id), "idle scheduler ticks should not create jobs");
+        }
+    }
+
+    [Fact]
+    public async Task RunAsync_ScheduledFeeds_ChecksOnlyDueFeedsIncludingFailedChecks()
+    {
+        // Arrange
+        var now = new DateTimeOffset(2026, 11, 5, 12, 0, 0, TimeSpan.Zero);
+        var fast = new FeedConfig { Id = 1, Name = "Aggregate", PollingIntervalMinutes = 15, LastCheckedAt = now.AddMinutes(-15) };
+        var slow = new FeedConfig { Id = 2, Name = "Blog", PollingIntervalMinutes = 60, LastCheckedAt = now.AddMinutes(-15) };
+        var never = new FeedConfig { Id = 3, Name = "New feed" };
+        var failed = new FeedConfig { Id = 4, Name = "Failed", PollingIntervalMinutes = 15, LastCheckedAt = now.AddMinutes(-14), LastCheckError = "HTTP 503" };
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([fast, slow, never, failed]);
+        _rssService.Setup(r => r.IngestAsync(It.IsAny<FeedConfig>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Success([]));
+
+        // Act
+        await CreateService(timeProvider: new FrozenTimeProvider(now)).RunAsync("scheduled", CancellationToken.None);
+
+        // Assert
+        _rssService.Verify(r => r.IngestAsync(fast, It.IsAny<CancellationToken>()), Times.Once);
+        _rssService.Verify(r => r.IngestAsync(never, It.IsAny<CancellationToken>()), Times.Once);
+        _rssService.Verify(r => r.IngestAsync(slow, It.IsAny<CancellationToken>()), Times.Never);
+        _rssService.Verify(r => r.IngestAsync(failed, It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public async Task RunAsync_ManualTrigger_ChecksFeedEvenWhenNotDue()
+    {
+        // Arrange
+        var now = DateTimeOffset.UtcNow;
+        var feed = new FeedConfig { Id = 1, Name = "Manual", LastCheckedAt = now };
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Success([]));
+
+        // Act
+        await CreateService(timeProvider: new FrozenTimeProvider(now)).RunAsync("manual", CancellationToken.None);
+
+        // Assert
+        _rssService.Verify(r => r.IngestAsync(feed, It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task RunAsync_OverlappingFeeds_CategorizesSharedUrlOnlyOnce()
+    {
+        // Arrange
+        var url = $"https://example.com/shared-{Guid.NewGuid():N}";
+        var parent = new FeedConfig { Id = 1, Name = "Parent", PollingIntervalMinutes = 15 };
+        var child = new FeedConfig { Id = 2, Name = "Child" };
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([parent, child]);
+        _rssService.Setup(r => r.IngestAsync(It.IsAny<FeedConfig>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Success([CreateRawItem(url)]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = null, Explanation = "Not relevant" });
+
+        // Act
+        await CreateService().RunAsync("scheduled", CancellationToken.None);
+
+        // Assert
+        _aiService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Once);
+        (await _processedUrlRepo.GetStatusAsync(url, CancellationToken.None)).Should().Be("skipped");
+    }
 
     [Fact]
     public async Task RunAsync_SkipsItemsAlreadyProcessed()
@@ -402,6 +503,29 @@ public class ContentProcessingServiceTests
         jobs[0].ErrorCount.Should().BeGreaterThanOrEqualTo(1);
         jobs[0].ItemsAdded.Should().BeGreaterThanOrEqualTo(1);
         jobs[0].FeedsProcessed.Should().Be(2);
+    }
+
+    [Fact]
+    public async Task RunAsync_RecordsCheckResultOfEachFeed()
+    {
+        // Arrange
+        var brokenFeed = new FeedConfig { Id = 1, Name = "Broken", Url = "https://example.com/broken", OutputDir = "_blogs", Enabled = true };
+        var goodFeed = new FeedConfig { Id = 2, Name = "Good", Url = "https://example.com/good", OutputDir = "_news", Enabled = true };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([brokenFeed, goodFeed]);
+        _rssService.Setup(r => r.IngestAsync(brokenFeed, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Failure("Failed to download feed: HTTP 404 (NotFound)"));
+        _rssService.Setup(r => r.IngestAsync(goodFeed, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Success([]));
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert
+        _feedRepo.Verify(r => r.RecordCheckAsync(1, "Failed to download feed: HTTP 404 (NotFound)", It.IsAny<CancellationToken>()), Times.Once);
+        _feedRepo.Verify(r => r.RecordCheckAsync(2, null, It.IsAny<CancellationToken>()), Times.Once);
     }
 
     // ── MaxItemsPerRun ────────────────────────────────────────────────────

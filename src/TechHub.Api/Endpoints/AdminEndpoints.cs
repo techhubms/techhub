@@ -73,11 +73,13 @@ public static partial class AdminEndpoints
 
         group.MapPost("/feeds", CreateFeedAsync)
             .WithName("CreateRssFeedConfig")
-            .WithSummary("Create a new RSS feed configuration");
+            .WithSummary("Create a new RSS feed configuration")
+            .WithDescription("PollingIntervalMinutes must be positive and defaults to 60 when omitted.");
 
         group.MapPut("/feeds/{id:long}", UpdateFeedAsync)
             .WithName("UpdateRssFeedConfig")
-            .WithSummary("Update an existing RSS feed configuration");
+            .WithSummary("Update an existing RSS feed configuration")
+            .WithDescription("PollingIntervalMinutes must be positive; omitting it preserves the existing interval.");
 
         group.MapDelete("/feeds/{id:long}", DeleteFeedAsync)
             .WithName("DeleteRssFeedConfig")
@@ -87,6 +89,7 @@ public static partial class AdminEndpoints
 
         group.MapAdminProductEndpoints();
         group.MapAdminFeatureEndpoints();
+        group.MapAdminFeatureToggleEndpoints();
 
         // ── Database statistics ──────────────────────────────────────────────
 
@@ -389,6 +392,11 @@ public static partial class AdminEndpoints
         var url = request.Url?.Trim().Sanitize() ?? string.Empty;
         var outputDir = request.OutputDir?.Trim().Sanitize() ?? string.Empty;
 
+        if (request.PollingIntervalMinutes is < 1)
+        {
+            return Results.BadRequest("Polling interval must be at least 1 minute.");
+        }
+
         if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(url) || string.IsNullOrWhiteSpace(outputDir))
         {
             return Results.BadRequest("Name, Url and OutputDir are required.");
@@ -406,6 +414,7 @@ public static partial class AdminEndpoints
             Url = url,
             OutputDir = outputDir,
             Enabled = request.Enabled,
+            PollingIntervalMinutes = request.PollingIntervalMinutes ?? 60,
         };
 
         var id = await feedRepo.CreateAsync(feed, ct);
@@ -416,6 +425,7 @@ public static partial class AdminEndpoints
             Url = url,
             OutputDir = outputDir,
             Enabled = request.Enabled,
+            PollingIntervalMinutes = feed.PollingIntervalMinutes,
         };
         return Results.Created($"/api/admin/feeds/{id}", created);
     }
@@ -436,6 +446,11 @@ public static partial class AdminEndpoints
         var url = request.Url?.Trim().Sanitize() ?? string.Empty;
         var outputDir = request.OutputDir?.Trim().Sanitize() ?? string.Empty;
 
+        if (request.PollingIntervalMinutes is < 1)
+        {
+            return Results.BadRequest("Polling interval must be at least 1 minute.");
+        }
+
         if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(url) || string.IsNullOrWhiteSpace(outputDir))
         {
             return Results.BadRequest("Name, Url and OutputDir are required.");
@@ -454,6 +469,8 @@ public static partial class AdminEndpoints
             Url = url,
             OutputDir = outputDir,
             Enabled = request.Enabled,
+            HasContent = existing.HasContent,
+            PollingIntervalMinutes = request.PollingIntervalMinutes ?? existing.PollingIntervalMinutes,
         };
 
         var updated = await feedRepo.UpdateAsync(feed, ct);
@@ -465,6 +482,17 @@ public static partial class AdminEndpoints
         IRssFeedConfigRepository feedRepo,
         CancellationToken ct)
     {
+        var existing = await feedRepo.GetByIdAsync(id, ct);
+        if (existing is null)
+        {
+            return Results.NotFound();
+        }
+
+        if (existing.HasContent)
+        {
+            return Results.Conflict("Feed still has content or processed URLs and cannot be deleted.");
+        }
+
         var deleted = await feedRepo.DeleteAsync(id, ct);
         return deleted ? Results.NoContent() : Results.NotFound();
     }

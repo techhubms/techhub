@@ -6,7 +6,7 @@ This document defines the schema for `ContentItem` records stored in the Postgre
 
 The PostgreSQL database is the **single source of truth** for all content. There are no content files checked into the repository. Content enters the database through two paths:
 
-1. **RSS pipeline** — `ContentProcessingBackgroundService` fetches RSS feeds every 60 minutes (configurable), runs AI categorization via Azure OpenAI, and upserts into `content_items`. See [content-processing.md](content-processing.md).
+1. **RSS pipeline** — `ContentProcessingBackgroundService` fetches feeds when their individual polling interval is due (default 60 minutes), runs AI categorization via Azure OpenAI, and upserts into `content_items`. See [content-processing.md](content-processing.md).
 2. **Admin UI / ad-hoc processing** — Admins can submit individual URLs (including YouTube videos and GitHub Copilot Feature items) through the admin panel for immediate AI processing and insertion.
 
 > **Note**: `ContentSyncService` exists only for **integration tests**. It reads markdown fixture files under `tests/TechHub.TestUtilities/TestCollections/` and seeds the test database. It is never used in production or staging.

@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Logging;
 using Polly.Timeout;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Services.ContentProcessing;
 
@@ -25,19 +26,26 @@ public sealed class RssFeedClient : IRssFeedClient
     }
 
     /// <inheritdoc />
-    public async Task<string?> FetchFeedXmlAsync(string url, CancellationToken ct = default)
+    public async Task<FeedDownloadResult> FetchFeedXmlAsync(string url, CancellationToken ct = default)
     {
         try
         {
-            return await _httpClient.GetStringAsync(url, ct);
+            return FeedDownloadResult.Success(await _httpClient.GetStringAsync(url, ct));
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to download feed from {Url}", url);
+            return FeedDownloadResult.Failure(ex.StatusCode is { } status
+                ? $"HTTP {(int)status} ({status})"
+                : $"Connection failed: {ex.Message}");
         }
         // A slow feed is an expected failure: the Polly timeout (TimeoutRejectedException) and HttpClient.Timeout
         // (TaskCanceledException) must not abort the whole run, so only caller cancellation propagates.
-        catch (Exception ex) when (ex is HttpRequestException or TimeoutRejectedException
+        catch (Exception ex) when (ex is TimeoutRejectedException
             || (ex is OperationCanceledException && !ct.IsCancellationRequested))
         {
             _logger.LogError(ex, "Failed to download feed from {Url}", url);
-            return null;
+            return FeedDownloadResult.Failure("Timed out");
         }
     }
 }

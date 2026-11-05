@@ -26,6 +26,10 @@ The Web app signs users in via OIDC, then uses `ITokenAcquisition` to obtain an 
 - **`AdminOnly` policy** — Authorization policy on the API (`src/TechHub.Api/Authorization/AdminAuthorization.cs`) that requires `RequireAuthenticatedUser()` + `RequireScope()`
 - **Enterprise App** — "Assignment required" is enabled so only explicitly assigned users can sign in
 
+### Admin Detection on Public Pages
+
+The authentication cookie has path `/`, so the browser sends it to public pages too, and the Web app can tell an admin from any other visitor there. The public pages use this only to decide what to show (see [feature-toggles.md](feature-toggles.md)) and never show a sign-in link or any other sign of it.
+
 ### Logout
 
 `POST /admin/logout` requires a valid antiforgery token. Missing or invalid tokens return `400` without signing out. Valid requests clear the local authentication cookie and sign out through Entra ID when OIDC is registered. Without OIDC, logout clears only the local cookie and redirects to `/`.

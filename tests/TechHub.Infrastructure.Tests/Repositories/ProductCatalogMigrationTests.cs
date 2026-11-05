@@ -31,6 +31,8 @@ public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<Produc
     [InlineData("Azure AI Speech", "Azure AI Services")]
     [InlineData("Azure AI Vision", "Azure AI Services")]
     [InlineData("Microsoft Active Directory Certificate Services", "Active Directory")]
+    [InlineData("GitHub Copilot app", "GitHub Copilot")]
+    [InlineData("GitHub Enterprise Importer", "GitHub Enterprise Cloud")]
     [InlineData("NuGet MCP Server", "NuGet")]
     [InlineData("Microsoft Defender for Cloud", "Microsoft Defender")]
     public async Task Seed_ProductsAndTheirParents_AreInTheCatalog(string product, string parent)
@@ -150,12 +152,21 @@ public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<Produc
     [InlineData("GitHub CLI")]
     [InlineData("GitHub Codespaces")]
     [InlineData("GitHub Spark")]
+    [InlineData("GitHub Copilot app")]
     [InlineData("GitHub Copilot CLI")]
     [InlineData("Foundry Local")]
     [InlineData("Azure Functions Core Tools")]
     public async Task Seed_ThingsThatCanBeUsedByThemselves_AreProducts(string product)
     {
         (await MatchProductAsync(product)).Should().Be(product);
+    }
+
+    [Theory]
+    [InlineData("GitHub Copilot app", "GitHub Copilot app")]
+    [InlineData("Copilot app", "GitHub Copilot app")]
+    public async Task FindProductId_CopilotAppNames_MatchTheChildProduct(string name, string expected)
+    {
+        (await MatchProductAsync(name)).Should().Be(expected);
     }
 
     [Fact]

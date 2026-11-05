@@ -18,7 +18,7 @@ and writes directly to the database.
 
 | Environment | Content Source |
 |-------------|---------------|
-| Production | `ContentProcessingBackgroundService` writes RSS content directly every 60 minutes (`ContentProcessor:IntervalMinutes`) |
+| Production | `ContentProcessingBackgroundService` checks for due feeds every minute; each feed defaults to a 60-minute polling interval |
 | Staging | Scheduled processing is disabled. Data comes from a production snapshot (`scripts/Restore-Database.ps1`) |
 | PR previews | Scheduled jobs are disabled through environment variables. Manual triggers still work |
 | Local development | Scheduled processing is disabled. Data comes from a production snapshot |
@@ -35,9 +35,17 @@ To populate a local environment with real data, or to save a snapshot to disk:
 
 # Dump production data to .tmp/ without restoring
 ./scripts/Restore-Database.ps1 -Target disk
+
+# Restore the newest saved dump without downloading from production
+./scripts/Restore-Database.ps1 -Target local -UseExistingDump
 ```
 
 The `-Target` parameter accepts only `local` and `disk`. Requires VPN access to the production environment and PostgreSQL client tools installed.
+
+`-UseExistingDump` selects the most recently modified `db-restore-*.dump` or `db-backup-*.dump`
+file directly in the workspace `.tmp/` directory and skips production access. It fails explicitly
+when no saved dump exists. To choose a specific file instead, use `-SkipDump -OutputPath <file>`;
+`-UseExistingDump` cannot be combined with `-OutputPath`. Restoring still replaces the local database.
 
 ## RSS Feed Processing
 
@@ -47,20 +55,21 @@ content current. The pipeline is implemented entirely in C# and runs inside `Tec
 ### Content Processing Pipeline
 
 `ContentProcessingBackgroundService` (`IHostedService`) runs on a configurable schedule
-(default: every 60 minutes, see [Scheduling](#scheduling)) and performs:
+(default: checks for due feeds every minute, see [Scheduling](#scheduling)) and performs:
 
 1. **Feed ingestion** — Downloads and parses RSS/Atom XML from all enabled feeds in the database
-2. **Content fetching** — Fetches the full article HTML for non-YouTube items. **YouTube video items
+2. **Deduplication** — Checks `content_items` and `processed_urls` by external URL before fetching articles
+   or making AI calls. Identical URLs appearing in multiple feeds are processed once, including excluded items
+3. **Content fetching** — Fetches the full article HTML for non-YouTube items. **YouTube video items
    are processed using available metadata only** (title, description, feed tags, YouTube API tags) —
    automatic transcript fetching is intentionally disabled to avoid blocking in cloud environments
-3. **AI classification** — Sends content to Azure AI Foundry (`AiCategorizationService`) with the
+4. **AI classification** — Sends content to Azure AI Foundry (`AiCategorizationService`) with the
    classify prompt `TechHub.Infrastructure/Data/Resources/content-classify-system.md`. The answer is
    strict JSON: include or exclude, sections, tags, excerpt, roundup metadata and timeline events
    (see [AI Categorization Service](#ai-categorization-service)). Items that are excluded stop here
    and cost one cheap call
-4. **AI rewrite** — Only for included items, a second model writes the cleaned-up markdown body
+5. **AI rewrite** — Only for included items, a second model writes the cleaned-up markdown body
    (`content-rewrite-system.md`) that continues from the excerpt
-5. **Deduplication** — Checks `processed_urls` table to skip already-attempted URLs
 6. **Database write** — Upserts into `content_items` + `content_tags_expanded` and replaces the
    article's rows in `content_timeline_events` in one transaction (a failed event write stores nothing, so the
    URL is retried on the next run), and records the run in `content_processing_jobs`
@@ -119,6 +128,12 @@ RSS feeds are stored in the `rss_feed_configs` database table and managed direct
 **Optional Fields**:
 
 - **enabled**: Boolean to enable/disable feed (default: true)
+- **pollingIntervalMinutes**: Positive number of minutes between scheduled checks (default: 60).
+  Existing Microsoft Tech Community category/community aggregate feeds use 15 minutes; individual
+  board feeds and DevBlogs feeds use 60. The DevBlogs root feed is not an aggregate of its other blogs.
+  Maintainers can change any feed's interval in the add/edit dialog at `/admin/feeds`
+
+**Check status** (set by the pipeline, not editable): `last_checked_at` and `last_check_error`. Each run records, per enabled feed, when the feed was downloaded and why that failed (HTTP status, timeout, connection failure or parse error), or no error on success. The admin feeds page shows this, so a feed that returns 404 stands out.
 
 ### Adding New Feeds
 
@@ -128,6 +143,12 @@ RSS feeds are stored in the `rss_feed_configs` database table and managed direct
 2. Click "Add Feed"
 3. Fill in name, URL, output directory
 4. Save — the feed is picked up on the next scheduled run
+
+### Microsoft DevBlogs Feeds
+
+Each blog on `devblogs.microsoft.com` has its own feed at `https://devblogs.microsoft.com/<blog>/feed/`. The root feed (`https://devblogs.microsoft.com/feed/`) is only the main "Microsoft Developer Blog" (`/blog/` posts), not a roll-up of the others, so it does not overlap with the specific feeds. Posts that appear in two feeds are ingested once, because ingestion skips any external URL already in `content_items` or `processed_urls`.
+
+Feeds are added and disabled in numbered migrations (see `052_devblogs_feed_review.sql`). A migration only adds a feed when no row has its URL or its name yet, because both are unique and feeds are renamed or re-pointed in the admin. A blog whose feed redirects to another blog (the Semantic Kernel blog now redirects to the Agent Framework blog) or whose source was deleted is disabled, not removed, so its existing content keeps its feed name.
 
 ### AI Content Analysis
 
@@ -249,7 +270,7 @@ Configured under `"ContentProcessor"` in `appsettings.json`:
 | Setting | Default | Description |
 |---|---|---|
 | `Enabled` | `false` (`true` in Production) | Enables scheduled runs. Manual triggers ignore it |
-| `IntervalMinutes` | `60` | Time between scheduled runs |
+| `IntervalMinutes` | `1` | How often the scheduler checks for due feeds, not how often every feed is downloaded |
 | `ItemAgeLimitDays` | `365` | RSS items older than this are skipped at ingestion |
 | `RequestDelayMs` | `10000` | Delay between items within a run, to avoid AI and site rate limits |
 | `RequestTimeoutSeconds` | `30` | Declared in the options class, but the HTTP clients use fixed timeouts configured in the API startup |
@@ -311,7 +332,17 @@ Three hosted services in `TechHub.Api` run the background jobs. Each one waits f
 | `RoundupGeneratorBackgroundService` | Every Monday at `RunHourUtc` | `scheduled`, `manual` (including regenerate) |
 | `ContentFixerBackgroundService` | None | `manual` only |
 
-Every run is recorded in `content_processing_jobs` with one of these job types:
+Scheduled processing only downloads feeds whose `pollingIntervalMinutes` has elapsed since
+`lastCheckedAt`; never-checked feeds are due immediately. Failed downloads also advance the check
+timestamp, so retries respect the feed's interval. The schedule survives application restarts.
+An idle scheduler check creates no job. Manual runs check all enabled feeds regardless of interval,
+but still skip already-processed article URLs.
+
+Runs remain sequential: a long processing run can delay due feeds, so the interval is a target
+cadence, not an exact deadline. Shorter polling reduces the risk of missing items in limited RSS
+windows, but cannot guarantee complete coverage during outages or publishing bursts.
+
+Every actual run is recorded in `content_processing_jobs` with one of these job types:
 
 | Job type | Written by |
 |---|---|
@@ -417,7 +448,7 @@ Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`
 
 ### Section Timelines
 
-`/{section}/timeline` shows the events of the articles of a section, newest first, grouped by year and month in the shared `TimelineView` component (the sidebar of the GitHub Copilot timeline also shows the subscription tiers, see [custom-pages.md](custom-pages.md)). It is configured as a custom collection `timeline` in each section of `appsettings.json` (all sections except `all`), so it appears in the sub-navigation and on the section card.
+`/{section}/timeline` shows the events of the articles of a section, newest first, grouped by year and month in the shared `TimelineView` component (the sidebar of the GitHub Copilot timeline also shows the subscription tiers, see [custom-pages.md](custom-pages.md)). It is configured as a custom collection `timeline` in each section of `appsettings.json` (all sections except `all`), so it appears in the sub-navigation and on the section card. The collection has `"Feature": "timeline"`, so it is behind a feature toggle (see [feature-toggles.md](feature-toggles.md)): it starts as admins only, and for any other visitor the buttons are hidden and the page answers `404`.
 
 - **Source.** `GET /api/sections/{sectionName}/timeline` (see [content-api.md](content-api.md#timeline-api)) joins `content_timeline_events` with the articles whose **primary** section is the section (`primary_section_name`; `all` uses every article). An article that only touches a section (for example a Fabric announcement also tagged GitHub Copilot) states events about other products, so its events stay off that section's timeline. Roundups are left out: they only repeat what their articles state.
 - **One entry per event.** Articles that state the same event (same date, kind, product and feature) are merged. The description comes from the oldest article, and every article is listed as a source when the card is opened. Products and features show their catalog names; a card is titled `Product: Feature`, or just the feature when the product is the section itself (`Agent mode` instead of `GitHub Copilot: Agent mode` on the GitHub Copilot timeline). Plans and surfaces come from the catalog qualifiers of the event.

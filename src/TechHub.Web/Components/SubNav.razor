@@ -18,6 +18,7 @@
 @inject IJSRuntime JS
 @inject HomepageStatsState HomepageStats
 @inject ITechHubApiClient ApiClient
+@inject IFeatureGate FeatureGate
 @implements IDisposable
 
 @if (Section != null)
@@ -192,13 +193,14 @@ else if (Sections != null && HasHomepageContent)
                                              && !HomepageStats.TotalCount.HasValue;
 
     private bool dropdownOpen;
+    private bool _isAdmin;
 
     private IEnumerable<Collection> RegularCollections =>
     Section?.Collections?.Where(c => !c.IsCustom) ?? Enumerable.Empty<Collection>();
 
     private IEnumerable<Collection> CustomPages =>
     Section?.Collections?
-        .Where(c => c.IsCustom)
+        .Where(c => c.IsCustom && FeatureGate.IsEnabled(c.Feature, _isAdmin))
         .OrderBy(c => c.Order)
         .ThenBy(c => c.Title) ?? Enumerable.Empty<Collection>();
 
@@ -293,6 +295,11 @@ else if (Sections != null && HasHomepageContent)
     {
         Navigation.LocationChanged += OnLocationChanged;
         HomepageStats.OnChanged += OnHomepageStatsChanged;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _isAdmin = await FeatureGate.IsAdminAsync();
     }
 
     protected override async Task OnParametersSetAsync()

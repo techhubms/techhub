@@ -47,14 +47,16 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
         { "PUT", "/api/admin/products/1/features/2/details" },
         { "POST", "/api/admin/products/1/features/2/content" },
         { "DELETE", "/api/admin/products/1/features/2/content" },
-        { "PUT", "/api/admin/products/1/features/2/thumbnail" }
+        { "PUT", "/api/admin/products/1/features/2/thumbnail" },
+        { "PUT", "/api/admin/feature-toggles/timeline" }
     };
 
     public static TheoryData<string> PublicRoutes => new()
     {
         "/api/sections",
         "/api/vscode-updates",
-        "/api/newsletter/sections"
+        "/api/newsletter/sections",
+        "/api/feature-toggles"
     };
 
     [Theory]

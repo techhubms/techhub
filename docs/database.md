@@ -43,7 +43,7 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 |-------|--------|
 | `content_items` | All content with denormalized section flags and bitmask. Also holds the generated `search_vector` column used for full-text search and the optional `ai_metadata` JSON (roundup metadata, `schema_version` 2: key facts, significance, section roles, ...) |
 | `content_tags_expanded` | Word-level tag matching (denormalized for fast filtering) |
-| `rss_feed_configs` | RSS feed configuration (URL, name, collection, enabled flag) |
+| `rss_feed_configs` | RSS feed configuration (URL, name, collection, enabled flag, positive polling interval in minutes and last check result) |
 | `processed_urls` | Tracks processed/skipped/failed URLs for the content pipeline |
 | `content_processing_jobs` | Audit log of background job runs (content processing, content fixer, roundup generation, timeline backfill) |
 | `content_timeline_events` | Dated lifecycle events (preview, GA, deprecation, ...) that articles state, one row per event with a cascading foreign key to the source article and a link to the catalog product (see [content-processing.md](content-processing.md#timeline-events)) |
@@ -57,6 +57,7 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 | `content_reviews` | Review queue for content fixer changes (tags, markdown, author) awaiting approval |
 | `custom_page_data` | JSON data for custom pages (editable from admin UI) |
 | `background_job_settings` | Per-job enabled flag that gates scheduled runs (see [content-processing.md](content-processing.md#scheduling)) |
+| `feature_toggles` | Per-feature mode (`disabled`, `admins`, `everyone`) that decides who can use a feature (see [feature-toggles.md](feature-toggles.md)) |
 | `vscode_update_items` | Membership set of content items shown on the VS Code Updates page |
 | `newsletter_subscribers` | Newsletter subscribers with confirmation state and section preferences |
 | `newsletter_send_log` | One row per newsletter send, used to prevent duplicate sends |

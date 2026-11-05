@@ -2,6 +2,7 @@ using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Core.Models.FeatureToggles;
 
 namespace TechHub.Web.Services;
 
@@ -2339,6 +2340,57 @@ public class TechHubApiClient : ITechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to update job setting {JobName}", jobName.Sanitize());
+            throw;
+        }
+    }
+
+    // ================================================================
+    // Feature toggles
+    // ================================================================
+
+    /// <summary>
+    /// Get who can use each feature.
+    /// GET /api/feature-toggles
+    /// </summary>
+    public virtual async Task<IReadOnlyList<FeatureToggle>> GetFeatureTogglesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var toggles = await _httpClient.GetFromJsonAsync<IReadOnlyList<FeatureToggle>>(
+                "/api/feature-toggles",
+                cancellationToken);
+            return toggles ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch feature toggles");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Set who can use a feature.
+    /// PUT /api/admin/feature-toggles/{featureKey}
+    /// </summary>
+    public virtual async Task UpdateFeatureToggleAsync(
+        string featureKey,
+        FeatureToggleMode mode,
+        CancellationToken cancellationToken = default)
+    {
+        featureKey = featureKey.Sanitize();
+
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync(
+                $"/api/admin/feature-toggles/{Uri.EscapeDataString(featureKey)}",
+                new { Mode = mode },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update feature toggle {FeatureKey}", featureKey);
             throw;
         }
     }

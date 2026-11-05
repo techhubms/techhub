@@ -59,7 +59,7 @@
 | **Observability** | telemetry.md, google-analytics.md, query-logging.md |
 | **Content** | content-api.md, content-processing.md, content-schema.md, product-catalog.md, rss-feeds.md |
 | **UI/UX** | design-system.md, page-structure.md, toc-component.md, render-modes.md |
-| **Features** | filtering.md, custom-pages.md, health-checks.md, newsletter.md, admin.md |
+| **Features** | filtering.md, custom-pages.md, health-checks.md, newsletter.md, admin.md, feature-toggles.md |
 | **Frontend** | javascript.md, caching.md, seo.md |
 | **Testing** | testing-strategy.md, running-and-testing.md |
 | **Reference** | terminology.md, repository-structure.md, writing-style-guidelines.md |

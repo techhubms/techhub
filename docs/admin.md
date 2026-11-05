@@ -34,9 +34,9 @@ Trigger endpoints return `202 Accepted` immediately and run on the background se
 
 | Endpoint | Purpose | Notes |
 |----------|---------|-------|
-| `GET /feeds`, `GET /feeds/{id}` | List or read RSS feed configurations | `404` for unknown id |
-| `POST /feeds`, `PUT /feeds/{id}` | Create or update a feed | `name`, `url` and `outputDir` are required and `url` must be an absolute HTTP(S) URL, otherwise `400`. `201` on create, `404` on update of an unknown id. |
-| `DELETE /feeds/{id}` | Delete a feed | `204` or `404` |
+| `GET /feeds`, `GET /feeds/{id}` | List or read RSS feed configurations | `404` for unknown id. Each feed has a `hasContent` flag that is true while content items or processed URLs still reference it, `lastContentAt` (when its newest content item was added), `lastCheckedAt` and `lastCheckError` (the result of the last download by the content pipeline: null error means success). Each is null when it never happened. |
+| `POST /feeds`, `PUT /feeds/{id}` | Create or update a feed | `name`, `url` and `outputDir` are required and `url` must be an absolute HTTP(S) URL, otherwise `400`. `pollingIntervalMinutes` must be positive; defaults to 60 on create and is preserved when omitted on update. `201` on create, `404` on update of an unknown id. |
+| `DELETE /feeds/{id}` | Delete a feed | `204`, `404`, or `409` while the feed `hasContent` |
 | `GET /processed-urls` | Paged list of processed URLs | `page`, `pageSize` (1-500, default 100), `status` (`succeeded`, `skipped`, `failed`, else `400`), `search`, `feedName`, `collectionName`, `jobId`, `sectionName`, `primarySectionOnly` |
 | `DELETE /processed-urls?url` | Remove a processed URL and its content item so the next run retries it | `400` without `url`, `404` if unknown, `204` on success |
 | `DELETE /processed-urls/failed` | Remove all failed records | `200` with the deleted count |
@@ -88,6 +88,7 @@ The public `GET /api/vscode-updates` is capped at 100 items. The GitHub Copilot 
 |----------|---------|-------|
 | `POST /cache/invalidate` | Clear the API's entire in-memory cache | `200`. The settings page also refreshes the Web section and hero banner caches. |
 | `GET /statistics` | Content counts, database sizes and processing metrics | |
+| `GET /feature-toggles` is public; `PUT /feature-toggles/{featureKey}` | Set who can use a feature: `Disabled`, `Admins` or `Everyone` | `204`; `400` for an invalid key or mode; `404` for an unknown feature. See [feature-toggles.md](feature-toggles.md). |
 
 ### Newsletter
 
@@ -151,7 +152,7 @@ The right side of the second bar holds the actions of the current page, which is
 | Reviews | Reviews |
 | Newsletter | Subscribers, Send log |
 | Stats | Stats |
-| Settings | Settings |
+| Settings | Settings, Feature toggles |
 
 ### Pages
 
@@ -159,7 +160,7 @@ The right side of the second bar holds the actions of the current page, which is
 |------|---------|
 | `/admin/reviews` | Everything that needs a decision, on one page: cards with the number of product names, features, content fixes and failed URLs to review, each linking to its queue. Below them: the product names to review (add as a product, add as an alias, or mark as not a product, with the list of names that are not products), the products with features to review (linking to the page where they are handled), and the content fixer proposals (approve, reject or edit them, singly or in bulk, with a markdown preview). **Run Cleanup** starts the content fixer from here |
 | `/admin` | Dashboard: job history with live logs, and a button to cancel the running job. Jobs started from Settings (processing, roundup, timeline backfill) and from Reviews (content cleanup) show up here while they run |
-| `/admin/feeds` | Add, edit, enable or disable and delete RSS feeds |
+| `/admin/feeds` | Add, edit, enable or disable and delete RSS feeds. Click any data column heading to sort the loaded feeds ascending; click again for descending. Sorting needs no API request and stays selected after Refresh. Dates sort by their timestamps, not displayed text; missing dates come first ascending and last descending. The Last content column shows when the newest content item of the feed was added. The Last check column sorts by check time and shows whether the last download and parse by the content pipeline worked, or the error (for example `HTTP 404 (NotFound)`, `Timed out`), and when it ran. Disabled feeds are not checked, so they keep their last result. The Delete button only shows for feeds without content items or processed URLs. |
 | `/admin/processed-urls` | Search the URL ledger by status, feed, collection, section or job. Remove entries to retry them, clear all failed entries, and open the item editor. |
 | `/admin/content-items` | Browse and filter content, edit or delete items, add a URL through the pipeline (the add-content dialog), and regenerate a roundup |
 | `/admin/content-preview/{collection}/{slug}` | Render an item's markdown as it will appear on the site |
@@ -171,6 +172,7 @@ The right side of the second bar holds the actions of the current page, which is
 | `/admin/newsletter/send-log` | The last 100 newsletter sends with their recipient and failure counts |
 | `/admin/statistics` | Content and database statistics |
 | `/admin/settings` | Enable or disable scheduled jobs, start processing or roundup generation now, invalidate all caches and start the timeline backfill (optionally from a publication date, or scanning again) |
+| `/admin/feature-toggles` | Switch a feature off, show it to admins only, or open it to everyone (see [feature-toggles.md](feature-toggles.md)) |
 | `/admin/login` | Sign-in entry point |
 
 The item editor (title, author, sections, tags, content, `ai_metadata`, and the transcript apply action for videos) is a shared dialog opened from the content items, processed URLs and reviews pages. AI metadata is read and saved together with the other editable fields through `GET` and `PUT /content-items/edit-data`.
@@ -180,5 +182,6 @@ The item editor (title, author, sections, tags, content, `ai_metadata`, and the 
 - [admin-authentication.md](admin-authentication.md) - Entra ID sign-in, tokens and the `AdminOnly` policy
 - [background-services.md](background-services.md) - What the trigger, cancel and setting endpoints control
 - [content-processing.md](content-processing.md) - Pipeline, content fixer and review queue behavior
+- [feature-toggles.md](feature-toggles.md) - Switching features off, to admins only, or on for everyone
 - [newsletter.md](newsletter.md) - Newsletter feature
 - [custom-pages.md](custom-pages.md) - Custom page keys and data
