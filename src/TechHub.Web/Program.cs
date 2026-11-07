@@ -172,6 +172,11 @@ builder.Services.AddSingleton<HeroBannerCache>();
 // Background service to periodically refresh the HeroBannerCache from the API
 builder.Services.AddHostedService<HeroBannerCacheRefreshService>();
 
+// Feature toggles: cached copy of who can use which feature, refreshed from the API, and the per-visitor check on top of it
+builder.Services.AddSingleton<FeatureToggleCache>();
+builder.Services.AddHostedService<FeatureToggleCacheRefreshService>();
+builder.Services.AddScoped<IFeatureGate, FeatureGate>();
+
 // HTTP context accessor for reading cookies during SSR (e.g. sidebar collapsed state)
 builder.Services.AddHttpContextAccessor();
 

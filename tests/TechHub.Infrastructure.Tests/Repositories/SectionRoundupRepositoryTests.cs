@@ -153,6 +153,26 @@ public class SectionRoundupRepositoryTests
     }
 
     [Fact]
+    public async Task GetArticlesForSectionForWeekAsync_WithProductsOnlyAiMetadata_IncludesItemWithNeedsFlag()
+    {
+        // The timeline backfill stores only the products of an article that was never classified.
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name, tags_csv,
+                 sections_bitmask, content_hash, is_ai, ai_metadata, created_at)
+            VALUES ('products-only-article', 'news', 'Products Only Article', '', '', 1711699200,
+                    'ai', 'https://example.com/products-only', 'Author', 'Feed', '', 1, 'hash-products-only',
+                    TRUE, '{"products": ["GitHub Actions"]}'::jsonb, '2025-03-25T10:00:00Z')
+            ON CONFLICT (collection_name, slug) DO NOTHING
+            """);
+
+        var result = await GetAllSectionsAsync();
+
+        result["ai"].Should().Contain(a => a.Slug == "products-only-article").Which.NeedsAiMetadata.Should().BeTrue();
+    }
+
+    [Fact]
     public async Task GetArticlesForSectionForWeekAsync_WithAllRelevanceLevels_ReturnsAll()
     {
         // Arrange
@@ -199,9 +219,8 @@ public class SectionRoundupRepositoryTests
             Products = ["Azure Functions"],
             SectionRoles = new Dictionary<string, string> { ["azure"] = "lead", ["devops"] = "brief" }
         });
-        await _fixture.Connection.ExecuteAsync(
-            "UPDATE content_items SET ai_metadata = @Metadata::jsonb WHERE slug = 'v2-article'",
-            new { Metadata = metadata });
+        await new ContentItemWriteRepository(_fixture.Connection, NullLogger<ContentItemWriteRepository>.Instance)
+            .UpdateAiMetadataAsync("news", "v2-article", metadata, TestContext.Current.CancellationToken);
 
         // Act
         var articles = await _sut.GetArticlesForSectionForWeekAsync("devops", _weekStart, _weekEnd, CancellationToken.None);
@@ -285,9 +304,9 @@ public class SectionRoundupRepositoryTests
         // The roundup published on Monday 24 March (09:00) covers the week before and is the previous one
         // when generating the week that starts on Monday 24 March.
         await _fixture.Connection.ExecuteAsync("DELETE FROM content_items WHERE collection_name = 'roundups' AND primary_section_name = 'ml'");
-        await _sut.WriteRoundupAsync("ml", "weekly-ml-roundup-2025-03-17", new DateOnly(2025, 3, 17), "Two weeks back", "Older content", "intro", ["ML"]);
-        await _sut.WriteRoundupAsync("ml", "weekly-ml-roundup-2025-03-24", new DateOnly(2025, 3, 24), "Last week", "Last week content", "intro", ["ML"]);
-        await _sut.WriteRoundupAsync("ml", "weekly-ml-roundup-2025-03-31", new DateOnly(2025, 3, 31), "This week", "This week content", "intro", ["ML"]);
+        await _sut.WriteRoundupAsync("ml", "weekly-ml-roundup-2025-03-17", new DateOnly(2025, 3, 17), "Two weeks back", "Older content", "intro", ["ML"], ct: TestContext.Current.CancellationToken);
+        await _sut.WriteRoundupAsync("ml", "weekly-ml-roundup-2025-03-24", new DateOnly(2025, 3, 24), "Last week", "Last week content", "intro", ["ML"], ct: TestContext.Current.CancellationToken);
+        await _sut.WriteRoundupAsync("ml", "weekly-ml-roundup-2025-03-31", new DateOnly(2025, 3, 31), "This week", "This week content", "intro", ["ML"], ct: TestContext.Current.CancellationToken);
 
         // Act
         var previous = await _sut.GetPreviousRoundupContentAsync("ml", _weekStart, CancellationToken.None);

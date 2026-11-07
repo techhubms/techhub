@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
-using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Api.Tests.Services;

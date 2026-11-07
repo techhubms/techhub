@@ -33,13 +33,15 @@ public class AiCompletionClientFlexTests
     private static AiCompletionClient CreateClient(
         HttpMessageHandler handler,
         AiCategorizationOptions options,
-        ILogger<AiCompletionClient>? logger = null)
+        ILogger<AiCompletionClient>? logger = null,
+        AiFlexCapacityTracker? tracker = null)
     {
         return new AiCompletionClient(
             new HttpClient(handler),
             Options.Create(options),
             logger ?? NullLogger<AiCompletionClient>.Instance,
-            new StubTokenCredential());
+            new StubTokenCredential(),
+            tracker);
     }
 
     private static string RequestedTier(string body)
@@ -60,7 +62,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions());
 
         // Act
-        var result = await client.SendCompletionAsync(FlexBody);
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.IsRateLimited.Should().BeFalse();
@@ -109,7 +111,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions(maxWait: TimeSpan.FromMilliseconds(40)));
 
         // Act
-        var result = await client.SendCompletionAsync(FlexBody);
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.ResponseBody.Should().Be(OkResponse);
@@ -130,7 +132,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions(maxWait: TimeSpan.FromMilliseconds(20)));
 
         // Act
-        await client.SendCompletionAsync(FlexBody);
+        await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         using var doc = JsonDocument.Parse(bodies[^1]);
@@ -147,7 +149,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions(maxWait: TimeSpan.FromMilliseconds(40), fallback: false));
 
         // Act
-        var result = await client.SendCompletionAsync(FlexBody);
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.IsRateLimited.Should().BeTrue();
@@ -163,7 +165,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions());
 
         // Act
-        var result = await client.SendCompletionAsync(StandardBody);
+        var result = await client.SendCompletionAsync(StandardBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.IsRateLimited.Should().BeTrue();
@@ -182,7 +184,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions());
 
         // Act
-        var result = await client.SendCompletionAsync(FlexBody);
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.ContentFilterMessage.Should().NotBeNull();
@@ -211,7 +213,7 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions(), logger);
 
         // Act
-        await client.SendCompletionAsync(FlexBody);
+        await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
 
         // Assert
         var message = logger.Messages.Should().ContainSingle(m => m.Contains("AI usage", StringComparison.Ordinal)).Subject;
@@ -231,10 +233,96 @@ public class AiCompletionClientFlexTests
         var client = CreateClient(handler, FastOptions());
 
         // Act
-        var result = await client.SendCompletionAsync(StandardBody);
+        var result = await client.SendCompletionAsync(StandardBody, TestContext.Current.CancellationToken);
 
         // Assert
         result.ResponseBody.Should().Be("not json");
+    }
+
+    [Fact]
+    public async Task SendCompletionAsync_FlexFellBackRecently_NextCallFallsBackWithoutWaiting()
+    {
+        // Arrange: one shared tracker, as in production (singleton)
+        var bodies = new List<string>();
+        using var handler = new RecordingHandler(bodies, request =>
+            RequestedTier(request) == "flex"
+                ? new HttpResponseMessage(HttpStatusCode.TooManyRequests)
+                : new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(OkResponse) });
+        var options = FastOptions(maxWait: TimeSpan.FromMilliseconds(100));
+        var client = CreateClient(handler, options, tracker: new AiFlexCapacityTracker());
+        await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
+        bodies.Clear();
+
+        // Act
+        var result = await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
+
+        // Assert: a single Flex probe, then the Standard tier
+        result.ResponseBody.Should().Be(OkResponse);
+        bodies.Should().HaveCount(2);
+        RequestedTier(bodies[0]).Should().Be("flex");
+        RequestedTier(bodies[1]).Should().Be("default");
+    }
+
+    [Fact]
+    public async Task SendCompletionAsync_FlexServesAgainAfterFallback_WaitsFullWindowAgain()
+    {
+        // Arrange: Flex is unavailable for the first call only
+        var bodies = new List<string>();
+        var flexAvailable = false;
+        using var handler = new RecordingHandler(bodies, request =>
+            RequestedTier(request) == "flex" && !flexAvailable
+                ? new HttpResponseMessage(HttpStatusCode.TooManyRequests)
+                : new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(OkResponse) });
+        var tracker = new AiFlexCapacityTracker();
+        var client = CreateClient(handler, FastOptions(maxWait: TimeSpan.FromMilliseconds(40)), tracker: tracker);
+        await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
+        tracker.IsUnavailable.Should().BeTrue();
+        flexAvailable = true;
+
+        // Act
+        await client.SendCompletionAsync(FlexBody, TestContext.Current.CancellationToken);
+
+        // Assert: the successful Flex call clears the unavailable state
+        tracker.IsUnavailable.Should().BeFalse();
+    }
+
+    [Fact]
+    public void FlexCapacityTracker_CooldownExpires()
+    {
+        // Arrange
+        var time = new ManualTimeProvider();
+        var tracker = new AiFlexCapacityTracker(time);
+
+        // Act
+        tracker.MarkUnavailable(TimeSpan.FromMinutes(10));
+        var during = tracker.IsUnavailable;
+        time.Advance(TimeSpan.FromMinutes(11));
+
+        // Assert
+        during.Should().BeTrue();
+        tracker.IsUnavailable.Should().BeFalse();
+    }
+
+    [Fact]
+    public void FlexCapacityTracker_ZeroCooldown_DisablesTracking()
+    {
+        // Arrange
+        var tracker = new AiFlexCapacityTracker();
+
+        // Act
+        tracker.MarkUnavailable(TimeSpan.Zero);
+
+        // Assert
+        tracker.IsUnavailable.Should().BeFalse();
+    }
+
+    private sealed class ManualTimeProvider : TimeProvider
+    {
+        private DateTimeOffset _now = new(2026, 10, 31, 12, 0, 0, TimeSpan.Zero);
+
+        public override DateTimeOffset GetUtcNow() => _now;
+
+        public void Advance(TimeSpan by) => _now += by;
     }
 
     private sealed class RecordingHandler : HttpMessageHandler

@@ -2,7 +2,7 @@ Describe "Setup-UserSecrets" {
     BeforeAll {
         . $PSScriptRoot/TestHelpers.ps1
         $scriptPath = Join-Path $PSScriptRoot "../../scripts/Setup-UserSecrets.ps1"
-        $aiSettings = '[{"name":"AiCategorization__Endpoint","value":"https://ai.example.net"},{"name":"AiCategorization__Profiles__Classification__DeploymentName","value":"gpt-classify"},{"name":"AiCategorization__Profiles__Classification__ReasoningEffort","value":"low"},{"name":"AiCategorization__Profiles__Classification__ServiceTier","value":"flex"},{"name":"AiCategorization__Profiles__Rewrite__DeploymentName","value":"gpt-rewrite"},{"name":"AiCategorization__Profiles__Rewrite__ReasoningEffort","value":""},{"name":"AiCategorization__Profiles__Rewrite__ServiceTier","value":"default"},{"name":"AiCategorization__Profiles__TimelineExtraction__DeploymentName","value":"gpt-timeline"},{"name":"Other","value":"x"}]'
+        $aiSettings = '[{"name":"AiCategorization__Endpoint","value":"https://ai.example.net"},{"name":"AiCategorization__Profiles__Classification__DeploymentName","value":"gpt-classify"},{"name":"Other","value":"x"}]'
     }
 
     BeforeEach {
@@ -17,8 +17,6 @@ Describe "Setup-UserSecrets" {
         Add-CliRule $cli 'az' '^az account show --query tenantId' 'tenant-456'
         Add-CliRule $cli 'az' '^az ad app credential reset' '{"password":"super-secret-pw"}'
         Add-CliRule $cli 'az' '^az webapp config appsettings list' $aiSettings
-        Add-CliRule $cli 'az' 'secret show .*--name techhub-prod-newsletter-acs-endpoint' 'https://acs.example.net'
-        Add-CliRule $cli 'az' 'secret show .*--name techhub-prod-acs-sender-address' 'noreply@example.net'
         Add-CliRule $cli 'az' 'secret show .*--name techhub-prod-newsletter-unsubscribe-secret' 'unsub-hmac-secret'
     }
 
@@ -133,12 +131,12 @@ Describe "Setup-UserSecrets" {
             $result = Invoke-ScriptUnderTest $scriptPath
 
             @(Get-CliCalls $cli '^az keyvault network-rule') | Should -BeNullOrEmpty
-            @(Get-CliCalls $cli '^az keyvault secret show') | Should -HaveCount 3
+            @(Get-CliCalls $cli '^az keyvault secret show') | Should -HaveCount 1
             $result.Output | Should -Match 'Could not determine public IP'
         }
 
         It "Removes the firewall rule even when a secret lookup fails" {
-            Add-CliRule $cli 'az' 'secret show .*--name techhub-prod-newsletter-acs-endpoint' 'forbidden' -ExitCode 1 -First
+            Add-CliRule $cli 'az' 'secret show .*--name techhub-prod-newsletter-unsubscribe-secret' 'forbidden' -ExitCode 1 -First
 
             Invoke-ScriptUnderTest $scriptPath | Out-Null
 
@@ -152,29 +150,39 @@ Describe "Setup-UserSecrets" {
         }
     }
 
-    Context "AI profile secrets" {
-        It "Does not store undefined profile settings" {
+    Context "AI model settings" {
+        It "Never stores the newsletter endpoint or sender address, so a local run cannot send email" {
             Invoke-ScriptUnderTest $scriptPath | Out-Null
 
-            $sets = @(Get-CliCalls $cli '^dotnet user-secrets set') -join "`n"
-            $sets | Should -Not -Match 'Profiles:RoundupNewsWriter'
-            $sets | Should -Not -Match 'AiCategorization:DeploymentName'
+            @(Get-CliCalls $cli '^az keyvault secret show') -join "`n" | Should -Not -Match 'acs'
+            @(Get-CliCalls $cli '^dotnet user-secrets set') -join "`n" | Should -Not -Match 'Newsletter:(Endpoint|SenderAddress)'
         }
 
-        It "Stores an explicitly empty production setting so the local profile matches production" {
+        It "Removes the newsletter endpoint and sender address stored by an earlier version" {
+            Add-CliRule $cli 'dotnet' 'user-secrets list --project .*TechHub\.Api' "Newsletter:Endpoint = https://acs.example.net/`nNewsletter:SenderAddress = noreply@example.net`nNewsletter:UnsubscribeSecret = keep"
+
             Invoke-ScriptUnderTest $scriptPath | Out-Null
 
-            @(Get-CliCalls $cli '^dotnet user-secrets set AiCategorization:Profiles:Rewrite:ReasoningEffort  --project .*src/TechHub.Api') | Should -HaveCount 1
+            @(Get-CliCalls $cli '^dotnet user-secrets remove Newsletter:Endpoint --project .*src/TechHub.Api') | Should -HaveCount 1
+            @(Get-CliCalls $cli '^dotnet user-secrets remove Newsletter:SenderAddress --project .*src/TechHub.Api') | Should -HaveCount 1
+            @(Get-CliCalls $cli '^dotnet user-secrets remove Newsletter:UnsubscribeSecret') | Should -BeNullOrEmpty
         }
 
-        It "Replaces a previously stored value with an empty one when -Force is used" {
-            Add-CliRule $cli 'dotnet' 'user-secrets list --project .*TechHub\.Api' 'AiCategorization:Profiles:Rewrite:ReasoningEffort = low'
-
+        It "Does not store model settings, they are configuration in appsettings.json" {
             Invoke-ScriptUnderTest $scriptPath | Out-Null
-            @(Get-CliCalls $cli '^dotnet user-secrets set AiCategorization:Profiles:Rewrite:ReasoningEffort') | Should -BeNullOrEmpty
 
-            Invoke-ScriptUnderTest $scriptPath @{ Force = $true } | Out-Null
-            @(Get-CliCalls $cli '^dotnet user-secrets set AiCategorization:Profiles:Rewrite:ReasoningEffort  --project') | Should -HaveCount 1
+            @(Get-CliCalls $cli '^dotnet user-secrets set') -join "`n" | Should -Not -Match 'AiCategorization:Profiles'
+        }
+
+        It "Removes model settings stored by an earlier version of the script" {
+            Add-CliRule $cli 'dotnet' 'user-secrets list --project .*TechHub\.Api' "AiCategorization:Profiles:Rewrite:ServiceTier = flex`nAiCategorization:Profiles:Rewrite:ReasoningEffort = `nAzureAd:ClientId = old-client"
+
+            $result = Invoke-ScriptUnderTest $scriptPath
+
+            @(Get-CliCalls $cli '^dotnet user-secrets remove AiCategorization:Profiles:Rewrite:ServiceTier --project .*src/TechHub.Api') | Should -HaveCount 1
+            @(Get-CliCalls $cli '^dotnet user-secrets remove AiCategorization:Profiles:Rewrite:ReasoningEffort --project .*src/TechHub.Api') | Should -HaveCount 1
+            @(Get-CliCalls $cli '^dotnet user-secrets remove AzureAd') | Should -BeNullOrEmpty
+            $result.Output | Should -Match '\[REMOVE\] AiCategorization:Profiles:Rewrite:ServiceTier'
         }
     }
 
@@ -188,14 +196,6 @@ Describe "Setup-UserSecrets" {
                     'AzureAd:TenantId tenant-456 --project .*src/TechHub.Api'
                     'AzureAd:ClientId client-123 --project .*src/TechHub.Api'
                     'AiCategorization:Endpoint https://ai.example.net --project .*src/TechHub.Api'
-                    'AiCategorization:Profiles:Classification:DeploymentName gpt-classify --project .*src/TechHub.Api'
-                    'AiCategorization:Profiles:Classification:ReasoningEffort low --project .*src/TechHub.Api'
-                    'AiCategorization:Profiles:Classification:ServiceTier flex --project .*src/TechHub.Api'
-                    'AiCategorization:Profiles:Rewrite:DeploymentName gpt-rewrite --project .*src/TechHub.Api'
-                    'AiCategorization:Profiles:Rewrite:ServiceTier default --project .*src/TechHub.Api'
-                    'AiCategorization:Profiles:TimelineExtraction:DeploymentName gpt-timeline --project .*src/TechHub.Api'
-                    'Newsletter:Endpoint https://acs.example.net --project .*src/TechHub.Api'
-                    'Newsletter:SenderAddress noreply@example.net --project .*src/TechHub.Api'
                     'Newsletter:UnsubscribeSecret unsub-hmac-secret --project .*src/TechHub.Api'
                 )) {
                 $sets | Should -Match ([regex]::new("dotnet user-secrets set $expected"))
@@ -231,12 +231,12 @@ Describe "Setup-UserSecrets" {
         }
 
         It "Skips values that could not be fetched instead of storing empty secrets" {
-            Add-CliRule $cli 'az' 'secret show .*--name techhub-prod-newsletter-acs-endpoint' 'forbidden' -ExitCode 1 -First
+            Add-CliRule $cli 'az' 'secret show .*--name techhub-prod-newsletter-unsubscribe-secret' 'forbidden' -ExitCode 1 -First
 
             $result = Invoke-ScriptUnderTest $scriptPath
 
-            @(Get-CliCalls $cli '^dotnet user-secrets set Newsletter:Endpoint') | Should -BeNullOrEmpty
-            $result.Output | Should -Match 'Newsletter:Endpoint .*value is empty, skipping'
+            @(Get-CliCalls $cli '^dotnet user-secrets set Newsletter:UnsubscribeSecret') | Should -BeNullOrEmpty
+            $result.Output | Should -Match 'Newsletter:UnsubscribeSecret .*value is empty, skipping'
         }
 
         It "Exits 1 when the production app settings cannot be read" {

@@ -47,7 +47,7 @@ public static class CustomPagesEndpoints
 
         group.MapGet("/features", GetFeaturesData)
             .WithName("GetFeaturesData")
-            .WithSummary("Get GitHub Copilot Features page data")
+            .WithSummary("Get the GitHub Copilot subscription tiers (shown next to its timeline)")
             .WithDescription("Returns structured data for the GitHub Copilot Features custom page")
             .Produces<FeaturesPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);

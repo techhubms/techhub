@@ -181,6 +181,32 @@ public sealed class ProcessedContentItem
     }
 
     /// <summary>
+    /// Creates a copy of this item with the specified timeline events.
+    /// </summary>
+    public ProcessedContentItem WithTimelineEvents(IReadOnlyList<TimelineEvent> timelineEvents)
+    {
+        return new ProcessedContentItem
+        {
+            Slug = Slug,
+            Title = Title,
+            Content = Content,
+            Excerpt = Excerpt,
+            DateEpoch = DateEpoch,
+            CollectionName = CollectionName,
+            SubcollectionName = SubcollectionName,
+            ExternalUrl = ExternalUrl,
+            Author = Author,
+            FeedName = FeedName,
+            Tags = Tags,
+            Sections = Sections,
+            PrimarySectionName = PrimarySectionName,
+            ContentHash = ContentHash,
+            RoundupMetadata = RoundupMetadata,
+            TimelineEvents = timelineEvents
+        };
+    }
+
+    /// <summary>
     /// Creates a copy of this item with the specified tags.
     /// </summary>
     public ProcessedContentItem WithTags(IReadOnlyList<string> tags)

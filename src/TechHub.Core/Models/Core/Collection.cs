@@ -18,6 +18,11 @@ public record Collection
     /// </summary>
     public int Order { get; }
 
+    /// <summary>
+    /// Key of the feature toggle that decides who sees this collection, or null when it is always visible.
+    /// </summary>
+    public string? Feature { get; }
+
     public Collection(
         string name,
         string title,
@@ -25,7 +30,8 @@ public record Collection
         string description,
         string displayName,
         bool isCustom = false,
-        int order = 0)
+        int order = 0,
+        string? feature = null)
     {
         // Validate all required properties
         if (string.IsNullOrWhiteSpace(name))
@@ -70,6 +76,7 @@ public record Collection
         DisplayName = displayName;
         IsCustom = isCustom;
         Order = order;
+        Feature = feature;
     }
 
     /// <summary>

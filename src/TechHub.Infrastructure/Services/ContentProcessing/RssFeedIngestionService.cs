@@ -44,11 +44,11 @@ public sealed class RssFeedIngestionService : IRssFeedIngestionService
 
         _logger.LogInformation("Downloading RSS feed: {FeedName} ({Url})", feedConfig.Name, feedConfig.Url);
 
-        var xmlContent = await _feedClient.FetchFeedXmlAsync(feedConfig.Url, ct);
-        if (xmlContent is null)
+        var download = await _feedClient.FetchFeedXmlAsync(feedConfig.Url, ct);
+        if (download.Xml is not { } xmlContent)
         {
-            _logger.LogError("Failed to download feed {FeedName} from {Url}", feedConfig.Name, feedConfig.Url);
-            return FeedIngestionResult.Failure($"Failed to download feed from {feedConfig.Url}");
+            _logger.LogError("Failed to download feed {FeedName} from {Url}: {Error}", feedConfig.Name, feedConfig.Url, download.Error);
+            return FeedIngestionResult.Failure($"Failed to download feed: {download.Error}");
         }
 
         var cutoff = DateTimeOffset.UtcNow.AddDays(-_options.ItemAgeLimitDays);

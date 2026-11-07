@@ -127,7 +127,7 @@ public class AdminSettingsTests : AdminPageTestBase
         var cut = Render<AdminSettings>();
 
         // Act
-        cut.FindAll(".admin-actions .btn-secondary")[1].Click();
+        cut.Find("#invalidate-caches").Click();
 
         // Assert
         _api.Verify(x => x.InvalidateCachesAsync(It.IsAny<CancellationToken>()), Times.Once);
@@ -147,7 +147,7 @@ public class AdminSettingsTests : AdminPageTestBase
         var cut = Render<AdminSettings>();
 
         // Act
-        cut.FindAll(".admin-actions .btn-secondary")[1].Click();
+        cut.Find("#invalidate-caches").Click();
 
         // Assert
         _sectionCache.IsReady.Should().BeTrue("an empty API answer must not wipe the cache");
@@ -165,7 +165,7 @@ public class AdminSettingsTests : AdminPageTestBase
         var cut = Render<AdminSettings>();
 
         // Act
-        cut.FindAll(".admin-actions .btn-secondary")[1].Click();
+        cut.Find("#invalidate-caches").Click();
 
         // Assert
         cut.Find(".admin-alert-error").TextContent.Should().Contain("Failed to invalidate caches.");
@@ -173,6 +173,89 @@ public class AdminSettingsTests : AdminPageTestBase
         _api.Verify(x => x.GetAllSectionsAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    [Theory]
+    [InlineData("#run-processing", "Content processing started.")]
+    [InlineData("#run-roundup", "Roundup generation started.")]
+    public void RunJob_Click_StartsTheJobAndPointsToTheDashboard(string buttonSelector, string expectedMessage)
+    {
+        // Arrange
+        var cut = Render<AdminSettings>();
+
+        // Act
+        cut.Find(buttonSelector).Click();
+
+        // Assert
+        _api.Verify(x => x.TriggerContentProcessingAsync(It.IsAny<CancellationToken>()), buttonSelector == "#run-processing" ? Times.Once() : Times.Never());
+        _api.Verify(x => x.TriggerRoundupGenerationAsync(It.IsAny<CancellationToken>()), buttonSelector == "#run-roundup" ? Times.Once() : Times.Never());
+        var alert = cut.Find(".admin-alert-success");
+        alert.TextContent.Should().Contain(expectedMessage);
+        alert.QuerySelector("a")!.GetAttribute("href").Should().Be("/admin");
+    }
+
+    [Theory]
+    [InlineData("#run-processing", "Failed to start the content processing.")]
+    [InlineData("#run-roundup", "Failed to start the roundup generation.")]
+    public void RunJob_ApiFails_ShowsErrorMessage(string buttonSelector, string expectedMessage)
+    {
+        // Arrange
+        _api.Setup(x => x.TriggerContentProcessingAsync(It.IsAny<CancellationToken>())).ThrowsAsync(new HttpRequestException("boom"));
+        _api.Setup(x => x.TriggerRoundupGenerationAsync(It.IsAny<CancellationToken>())).ThrowsAsync(new HttpRequestException("boom"));
+        var cut = Render<AdminSettings>();
+
+        // Act
+        cut.Find(buttonSelector).Click();
+
+        // Assert
+        cut.Find(".admin-alert-error").TextContent.Should().Contain(expectedMessage);
+    }
+
+    [Fact]
+    public void TimelineBackfill_Click_StartsTheBackfillAndPointsToTheDashboard()
+    {
+        // Arrange
+        _api.Setup(x => x.TriggerTimelineBackfillAsync(false, null, null, null, It.IsAny<CancellationToken>())).Returns(Task.CompletedTask);
+        var cut = Render<AdminSettings>();
+
+        // Act
+        cut.Find("#backfill-timeline").Click();
+
+        // Assert
+        _api.Verify(x => x.TriggerTimelineBackfillAsync(false, null, null, null, It.IsAny<CancellationToken>()), Times.Once);
+        var alert = cut.Find(".admin-alert-success");
+        alert.TextContent.Should().Contain("Timeline backfill started");
+        alert.QuerySelector("a")!.GetAttribute("href").Should().Be("/admin");
+    }
+
+    [Fact]
+    public void TimelineBackfill_WithPublishedAfterAndScanAgain_PassesTheOptions()
+    {
+        // Arrange
+        _api.Setup(x => x.TriggerTimelineBackfillAsync(true, "2026-10-28", null, null, It.IsAny<CancellationToken>())).Returns(Task.CompletedTask);
+        var cut = Render<AdminSettings>();
+        cut.Find("#backfill-published-after").Change("2026-10-28");
+        cut.Find("#backfill-force").Change(true);
+
+        // Act
+        cut.Find("#backfill-timeline").Click();
+
+        // Assert
+        _api.Verify(x => x.TriggerTimelineBackfillAsync(true, "2026-10-28", null, null, It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public void TimelineBackfill_ApiFails_ShowsErrorMessage()
+    {
+        // Arrange
+        _api.Setup(x => x.TriggerTimelineBackfillAsync(It.IsAny<bool>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<int?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("boom"));
+        var cut = Render<AdminSettings>();
+
+        // Act
+        cut.Find("#backfill-timeline").Click();
+
+        // Assert
+        cut.Find(".admin-alert-error").TextContent.Should().Contain("Failed to start the timeline backfill.");
+    }
     private static BackgroundJobSetting CreateSetting(string name, bool enabled) =>
         new() { JobName = name, Enabled = enabled, Description = name + " job" };
 

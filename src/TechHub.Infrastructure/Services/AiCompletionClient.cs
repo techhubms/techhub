@@ -37,12 +37,14 @@ public sealed class AiCompletionClient : IAiCompletionClient
     private readonly AiCategorizationOptions _options;
     private readonly ILogger<AiCompletionClient> _logger;
     private readonly TokenCredential _credential;
+    private readonly AiFlexCapacityTracker _flexCapacity;
 
     public AiCompletionClient(
         HttpClient httpClient,
         IOptions<AiCategorizationOptions> options,
         ILogger<AiCompletionClient> logger,
-        TokenCredential? credential = null)
+        TokenCredential? credential = null,
+        AiFlexCapacityTracker? flexCapacity = null)
     {
         ArgumentNullException.ThrowIfNull(httpClient);
         ArgumentNullException.ThrowIfNull(options);
@@ -52,6 +54,7 @@ public sealed class AiCompletionClient : IAiCompletionClient
         _options = options.Value;
         _logger = logger;
         _credential = credential ?? _sharedCredential;
+        _flexCapacity = flexCapacity ?? new AiFlexCapacityTracker();
     }
 
     /// <inheritdoc />
@@ -64,20 +67,23 @@ public sealed class AiCompletionClient : IAiCompletionClient
 
         // Flex has no guaranteed capacity: a 429 means "no capacity right now", not "slow down".
         // Keep trying on Flex (it is half the price) and only pay the Standard price when it stays unavailable.
+        // While Flex is known to be unavailable, only one probe is made so a queue of items does not wait in turn.
         var started = Stopwatch.GetTimestamp();
         var attempt = 0;
+        var maxWait = _flexCapacity.IsUnavailable ? TimeSpan.Zero : _options.FlexMaxWait;
 
         while (true)
         {
             var result = await SendOnceAsync(jsonBody, ct);
             if (!result.IsRateLimited)
             {
+                _flexCapacity.MarkAvailable();
                 return result;
             }
 
             var delay = GetFlexRetryDelay(result.RetryAfterSeconds, attempt++);
             var elapsed = Stopwatch.GetElapsedTime(started);
-            if (elapsed + delay > _options.FlexMaxWait)
+            if (elapsed + delay > maxWait)
             {
                 break;
             }
@@ -87,15 +93,17 @@ public sealed class AiCompletionClient : IAiCompletionClient
             await Task.Delay(delay, ct);
         }
 
+        _flexCapacity.MarkUnavailable(_options.FlexUnavailableCooldown);
+
         if (!_options.FlexFallbackToDefaultTier)
         {
             _logger.LogWarning("AI Flex capacity still unavailable after {Wait}s, giving up (fallback to Standard is disabled)",
-                (int)_options.FlexMaxWait.TotalSeconds);
+                (int)maxWait.TotalSeconds);
             return new AiCompletionResult(IsRateLimited: true, ResponseBody: null);
         }
 
         _logger.LogWarning("AI Flex capacity still unavailable after {Wait}s, falling back to the Standard tier",
-            (int)_options.FlexMaxWait.TotalSeconds);
+            (int)maxWait.TotalSeconds);
         return await SendOnceAsync(RemoveServiceTier(jsonBody), ct);
     }
 

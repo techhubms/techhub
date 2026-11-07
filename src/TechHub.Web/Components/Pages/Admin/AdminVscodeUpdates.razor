@@ -12,21 +12,21 @@
 @inject NavigationManager Navigation
 @inherits PageComponentBase
 
-<PageTitle>VS Code Updates — TechHub Admin</PageTitle>
+<PageTitle>Visual Studio Code Updates — TechHub Admin</PageTitle>
 
 <div class="admin-page">
     <div class="admin-page-header">
         <div>
-            <h1 class="admin-page-title">VS Code Updates</h1>
+            <h1 class="admin-page-title">Visual Studio Code Updates</h1>
             <p class="admin-page-subtitle">
-                Manage the VS Code Updates list — items shown at <code>/github-copilot/vscode-updates</code>.
-                Items are added automatically when videos from Fokko's feed match the VS Code Updates subcollection rule.
+                Manage the Visual Studio Code Updates list — items shown at <code>/github-copilot/vscode-updates</code>.
+                Items are added automatically when videos from Fokko's feed match the Visual Studio Code Updates subcollection rule.
                 Use this page to add or remove items manually.
                 Items are sorted by VS Code version number extracted from the title (highest first), matching the order on the public page.
             </p>
         </div>
         <div class="admin-actions">
-            <button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button>
+            <AdminSubbarAction><button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button></AdminSubbarAction>
         </div>
     </div>
 
@@ -97,7 +97,7 @@
                             <td>
                                 <button class="admin-link-btn admin-link-btn-danger"
                                         @onclick="() => RemoveItemAsync(item)"
-                                        title="Remove from VS Code Updates list (does not delete the content item)">
+                                        title="Remove from Visual Studio Code Updates list (does not delete the content item)">
                                     Remove
                                 </button>
                             </td>
@@ -339,13 +339,13 @@
             var removed = await Api.RemoveVscodeUpdateItemAsync(item.CollectionName, item.Slug);
             if (removed)
             {
-                _message = $"Removed '{item.Title}' from VS Code Updates. The content item itself is unchanged.";
+                _message = $"Removed '{item.Title}' from Visual Studio Code Updates. The content item itself is unchanged.";
                 _messageIsError = false;
                 await LoadDataAsync();
             }
             else
             {
-                _message = "Item not found in VS Code Updates list (may have already been removed).";
+                _message = "Item not found in Visual Studio Code Updates list (may have already been removed).";
                 _messageIsError = true;
             }
         }
@@ -396,7 +396,7 @@
         try
         {
             await Api.AddVscodeUpdateItemAsync(item.CollectionName, item.Slug);
-            _message = $"Added '{item.Title}' to VS Code Updates.";
+            _message = $"Added '{item.Title}' to Visual Studio Code Updates.";
             _messageIsError = false;
             _addSearchResults = [];
             _addSearchQuery = string.Empty;

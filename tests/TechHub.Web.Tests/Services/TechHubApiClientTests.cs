@@ -228,6 +228,47 @@ public class TechHubApiClientTests
         payload.RootElement.GetProperty("dailySections")[0].GetString().Should().Be("dotnet");
     }
 
+    [Fact]
+    public async Task GetSectionTimelineAsync_SendsTheFiltersAndReturnsTheEntries()
+    {
+        var entry = new TimelineEntry
+        {
+            Date = new DateOnly(2026, 3, 10),
+            DatePrecision = "day",
+            Kind = "ga",
+            Product = "GitHub Copilot",
+            Feature = "Agent mode",
+            Description = "Agent mode is generally available.",
+            Sources = [new TimelineEntrySource { CollectionName = "news", Slug = "agent-mode-ga", Title = "Agent mode is GA", ExternalUrl = "https://example.com/agent-mode" }]
+        };
+        var responses = new Dictionary<string, Func<HttpResponseMessage>>(StringComparer.OrdinalIgnoreCase)
+        {
+            ["/api/sections/ai/timeline?from=2026-01-01&to=2026-12-31&kinds=ga%2Cpreview"] = () => CreateJsonResponse(new[] { entry })
+        };
+        using var httpClient = new HttpClient(new StubHandler(responses)) { BaseAddress = new Uri("https://localhost:5003") };
+        var sut = new TechHubApiClient(httpClient, NullLogger<TechHubApiClient>.Instance);
+
+        var entries = await sut.GetSectionTimelineAsync("ai", new DateOnly(2026, 1, 1), new DateOnly(2026, 12, 31), ["ga", "preview"], TestContext.Current.CancellationToken);
+
+        var result = entries.Should().ContainSingle().Subject;
+        result.Date.Should().Be(new DateOnly(2026, 3, 10));
+        result.Feature.Should().Be("Agent mode");
+        result.Sources.Should().ContainSingle().Which.GetHref().Should().Be("https://example.com/agent-mode");
+    }
+
+    [Fact]
+    public async Task GetSectionTimelineAsync_WithoutFilters_CallsTheBareEndpoint()
+    {
+        using var handler = new CapturingHandler();
+        using var httpClient = new HttpClient(handler) { BaseAddress = new Uri("https://localhost:5003") };
+        var sut = new TechHubApiClient(httpClient, NullLogger<TechHubApiClient>.Instance);
+
+        var entries = await sut.GetSectionTimelineAsync("github-copilot", cancellationToken: TestContext.Current.CancellationToken);
+
+        entries.Should().BeEmpty();
+        handler.LastRequest!.RequestUri!.PathAndQuery.Should().Be("/api/sections/github-copilot/timeline");
+    }
+
     private static ContentItem CreateRoundup(string slug, string sectionName, long dateEpoch) =>
         new(
             slug,

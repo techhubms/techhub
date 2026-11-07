@@ -62,6 +62,61 @@ public class AdminPageTests : PlaywrightTestBase
     }
 
     [Fact]
+    public async Task AdminProducts_WithoutAuth_ShowsLoginForm()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/admin/products");
+
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "TechHub Admin");
+    }
+
+    [Fact]
+    public async Task AdminProductDetail_WithoutAuth_ShowsLoginForm()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/admin/products/1");
+
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "TechHub Admin");
+    }
+
+    [Fact]
+    public async Task AdminProductPlans_WithoutAuth_ShowsLoginForm()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/admin/products/1/plans");
+
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "TechHub Admin");
+    }
+
+    [Fact]
+    public async Task AdminProductFeatures_WithoutAuth_ShowsLoginForm()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/admin/products/1/features");
+
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "TechHub Admin");
+    }
+
+    [Fact]
+    public async Task AdminReviews_WithoutAuth_ShowsLoginForm()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/admin/reviews");
+
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "TechHub Admin");
+    }
+
+    [Fact]
     public async Task AdminStatistics_WithoutAuth_ShowsLoginForm()
     {
         // Act
@@ -88,6 +143,17 @@ public class AdminPageTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/admin/newsletter");
+
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "TechHub Admin");
+    }
+
+    [Fact]
+    public async Task AdminNewsletterSendLog_WithoutAuth_ShowsLoginForm()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/admin/newsletter/send-log");
 
         // Assert
         await Assertions.Expect(Page).ToHaveTitleAsync("Admin Sign-in — TechHub");

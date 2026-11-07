@@ -3,6 +3,7 @@ using FluentAssertions;
 using TechHub.Core.Models;
 using TechHub.TestUtilities.Builders;
 using TechHub.Web.Components;
+using TechHub.Web.Tests.TestSupport;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -11,6 +12,10 @@ namespace TechHub.Web.Tests.Components;
 /// </summary>
 public class SectionCardsGridTests : BunitContext
 {
+    public SectionCardsGridTests()
+    {
+        this.AddFeatureGate();
+    }
     [Fact]
     public void Render_WithSections_RendersOneCardPerSectionInGivenOrder()
     {

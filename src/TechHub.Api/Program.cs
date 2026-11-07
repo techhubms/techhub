@@ -124,12 +124,17 @@ builder.Services.AddTransient<IMigrationRunner, MigrationRunner>();
 
 // RSS feed config repository (database-backed)
 builder.Services.AddScoped<IRssFeedConfigRepository, RssFeedConfigRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductFeatureRepository, ProductFeatureRepository>();
 
 // Custom page data repository (database-backed)
 builder.Services.AddScoped<ICustomPageDataRepository, CustomPageDataRepository>();
 
 // Background job settings repository (database-backed)
 builder.Services.AddScoped<IBackgroundJobSettingRepository, BackgroundJobSettingRepository>();
+
+// Feature toggles repository (database-backed)
+builder.Services.AddScoped<IFeatureToggleRepository, FeatureToggleRepository>();
 
 // ─── Content Processing Pipeline ─────────────────────────────────────────────
 // Configure content processing options (fails at startup if BrowserUserAgent is missing)
@@ -210,6 +215,7 @@ builder.Services.AddHttpClient<IYouTubeTagClient, YouTubeTagClient>()
         options.Retry.BackoffType = DelayBackoffType.Exponential;
     });
 
+builder.Services.AddSingleton<AiFlexCapacityTracker>();
 builder.Services.AddHttpClient<IAiCompletionClient, AiCompletionClient>()
     .ConfigureHttpClient(client =>
     {
@@ -373,6 +379,8 @@ api.MapRssEndpoints();
 api.MapSitemapEndpoints();
 api.MapAuthorEndpoints();
 api.MapGhcFeaturesEndpoints();
+api.MapTimelineEndpoints();
+api.MapFeatureToggleEndpoints();
 api.MapAdminEndpoints();
 api.MapNewsletterEndpoints();
 

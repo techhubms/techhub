@@ -61,7 +61,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         aiSection.Description.Should().Be("Your gateway to the AI revolution. From breakthrough announcements to practical tutorials, explore how artificial intelligence is reshaping the way we work and create.");
         aiSection.Url.Should().Be("/ai");
         aiSection.Name.Should().Be("ai");
-        aiSection.Collections.Should().HaveCount(9);
+        aiSection.Collections.Should().HaveCount(10);
         aiSection.Collections.Should().Contain(c => c.Name == "news");
         aiSection.Collections.Should().Contain(c => c.Name == "blogs");
         aiSection.Collections.Should().Contain(c => c.Name == "videos");
@@ -71,6 +71,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         aiSection.Collections.Should().Contain(c => c.Name == "genai-advanced");
         aiSection.Collections.Should().Contain(c => c.Name == "genai-applied");
         aiSection.Collections.Should().Contain(c => c.Name == "sdlc");
+        aiSection.Collections.Should().Contain(c => c.Name == "timeline" && c.IsCustom);
     }
 
     [Fact]
@@ -86,7 +87,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         section.Should().NotBeNull();
         section!.Name.Should().Be("ai");
         section.Title.Should().Be("Artificial Intelligence");
-        section.Collections.Should().HaveCount(9);
+        section.Collections.Should().HaveCount(10);
     }
 
     [Fact]
@@ -140,7 +141,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         collections.Should().Contain(c => c.Name == "videos");
         collections.Should().Contain(c => c.Name == "community");
         collections.Should().Contain(c => c.Name == "roundups");
-        collections.Should().Contain(c => c.Name == "features");
+        collections.Should().Contain(c => c.Name == "timeline");
+        collections.Should().NotContain(c => c.Name == "features", "the features page was replaced by the timeline");
         collections.Should().Contain(c => c.Name == "vscode-updates");
         collections.Should().Contain(c => c.Name == "levels-of-enlightenment");
         collections.Should().Contain(c => c.Name == "handbook");

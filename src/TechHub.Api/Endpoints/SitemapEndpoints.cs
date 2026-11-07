@@ -3,6 +3,7 @@ using System.Xml;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models.FeatureToggles;
 
 namespace TechHub.Api.Endpoints;
 
@@ -34,6 +35,7 @@ public static class SitemapEndpoints
 
     private static async Task<IResult> GetSitemap(
         IContentRepository contentRepository,
+        IFeatureToggleRepository featureToggleRepository,
         IOptions<AppSettings> settings)
     {
         var baseUrl = settings.Value.BaseUrl.TrimEnd('/');
@@ -41,14 +43,21 @@ public static class SitemapEndpoints
         var sections = await contentRepository.GetAllSectionsAsync();
         var contentItems = await contentRepository.GetSitemapItemsAsync();
 
-        var xml = BuildSitemapXml(baseUrl, sections, contentItems);
+        // A page of a feature that is not open to everyone is not for search engines either
+        var openFeatures = (await featureToggleRepository.GetAllAsync())
+            .Where(t => t.Mode == FeatureToggleMode.Everyone)
+            .Select(t => t.Key)
+            .ToHashSet(StringComparer.Ordinal);
+
+        var xml = BuildSitemapXml(baseUrl, sections, contentItems, openFeatures);
         return Results.Content(xml, "application/xml; charset=utf-8");
     }
 
     private static string BuildSitemapXml(
         string baseUrl,
         IReadOnlyList<Core.Models.Section> sections,
-        IReadOnlyList<Core.Models.SitemapItem> contentItems)
+        IReadOnlyList<Core.Models.SitemapItem> contentItems,
+        HashSet<string> openFeatures)
     {
         var settings = new XmlWriterSettings
         {
@@ -72,7 +81,7 @@ public static class SitemapEndpoints
             WriteUrl(writer, $"{baseUrl}{section.Url}", changeFreq: "daily", priority: "0.9");
 
             // Collection pages within this section
-            foreach (var collection in section.Collections)
+            foreach (var collection in section.Collections.Where(c => c.Feature is null || openFeatures.Contains(c.Feature)))
             {
                 WriteUrl(writer, $"{baseUrl}{collection.Url}", changeFreq: "daily", priority: "0.8");
             }

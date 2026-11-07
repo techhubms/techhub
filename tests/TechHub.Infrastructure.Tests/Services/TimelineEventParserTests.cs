@@ -35,6 +35,17 @@ public class TimelineEventParserTests
         => TimelineEventParser.Parse(Array("[" + string.Join(",", events) + "]"), _publicationDate, NullLogger.Instance, "https://example.com/a");
 
     [Fact]
+    public void Parse_SameKindProductAndFeatureOnDifferentDates_KeepsBothEventsAndDropsTheRepeat()
+    {
+        var result = Parse(
+            Event(date: "2026-03-10"),
+            Event(date: "2026-04-20"),
+            Event(date: "2026-04-20", description: "Repeated"));
+
+        result.Select(e => e.Date).Should().Equal(new DateOnly(2026, 3, 10), new DateOnly(2026, 4, 20));
+    }
+
+    [Fact]
     public void Parse_ExplicitDay_KeepsAllFields()
     {
         var result = Parse(Event());
@@ -128,9 +139,9 @@ public class TimelineEventParserTests
     }
 
     [Fact]
-    public void Parse_DuplicateKindProductFeature_KeepsFirst()
+    public void Parse_DuplicateKindProductFeatureAndDate_KeepsFirst()
     {
-        var result = Parse(Event(description: "first"), Event(description: "second", date: "2026-03-11"));
+        var result = Parse(Event(description: "first"), Event(description: "second", date: "2026-03-10"));
 
         result.Should().ContainSingle().Which.Description.Should().Be("first");
     }

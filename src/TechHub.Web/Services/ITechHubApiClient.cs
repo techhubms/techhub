@@ -1,6 +1,7 @@
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Core.Models.FeatureToggles;
 
 namespace TechHub.Web.Services;
 
@@ -121,10 +122,15 @@ internal interface ITechHubApiClient
     Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(IEnumerable<Section> sections, CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get GitHub Copilot features with their linked content.
-    /// GET /api/ghc-features
+    /// Get the timeline of a section: the dated events (preview, GA, deprecation, ...) of its articles, newest first.
+    /// GET /api/sections/{sectionName}/timeline
     /// </summary>
-    Task<IEnumerable<GhcFeature>?> GetGhcFeaturesAsync(CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<TimelineEntry>> GetSectionTimelineAsync(
+        string sectionName,
+        DateOnly? fromDate = null,
+        DateOnly? toDate = null,
+        IReadOnlyList<string>? kinds = null,
+        CancellationToken cancellationToken = default);
 
     // ================================================================
     // Tag cloud endpoint (unified scope)
@@ -195,7 +201,7 @@ internal interface ITechHubApiClient
     Task<LevelsPageData?> GetLevelsDataAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get GitHub Copilot Features page data.
+    /// Get the GitHub Copilot subscription tiers, shown next to its timeline.
     /// GET /api/custom-pages/features
     /// </summary>
     Task<FeaturesPageData?> GetFeaturesDataAsync(CancellationToken cancellationToken = default);
@@ -456,6 +462,172 @@ internal interface ITechHubApiClient
     /// </summary>
     Task DeleteFeedConfigAsync(long id, CancellationToken cancellationToken = default);
 
+    // ================================================================
+    // Product catalog endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get the products with aliases and usage counts, optionally filtered on name or alias.
+    /// GET /api/admin/products
+    /// </summary>
+    Task<IReadOnlyList<ProductSummary>> GetProductsAsync(string? search = null, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a product with its aliases, linked articles and linked dates, or null if it does not exist.
+    /// GET /api/admin/products/{id}
+    /// </summary>
+    Task<ProductDetail?> GetProductAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the product names the AI returned that are not in the catalog yet.
+    /// GET /api/admin/products/unmatched
+    /// </summary>
+    Task<IReadOnlyList<UnmatchedProductName>> GetUnmatchedProductNamesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the names that are marked as not being a product.
+    /// GET /api/admin/products/ignored
+    /// </summary>
+    Task<IReadOnlyList<string>> GetIgnoredProductNamesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add a product. Throws <see cref="HttpRequestException"/> with the server message when the name is not allowed.
+    /// POST /api/admin/products
+    /// </summary>
+    Task<ProductDetail> CreateProductAsync(string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Rename a product; the old name becomes an alias.
+    /// PUT /api/admin/products/{id}
+    /// </summary>
+    Task<ProductDetail> RenameProductAsync(long id, string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a product; its articles and dates become unmatched.
+    /// DELETE /api/admin/products/{id}
+    /// </summary>
+    Task DeleteProductAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add an alias to a product.
+    /// POST /api/admin/products/{id}/aliases
+    /// </summary>
+    Task<ProductDetail> AddProductAliasAsync(long id, string aliasName, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Remove an alias from a product.
+    /// DELETE /api/admin/products/{id}/aliases/{aliasId}
+    /// </summary>
+    Task RemoveProductAliasAsync(long id, long aliasId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Make a product a child of another product, or top-level when <paramref name="parentId"/> is null.
+    /// PUT /api/admin/products/{id}/parent
+    /// </summary>
+    Task<ProductDetail> SetProductParentAsync(long id, long? parentId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Merge a product into another product and return the target.
+    /// POST /api/admin/products/{id}/merge
+    /// </summary>
+    Task<ProductDetail> MergeProductAsync(long sourceId, long targetId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a page of the articles of a product, newest first.
+    /// GET /api/admin/products/{id}/articles
+    /// </summary>
+    Task<PagedResult<ProductArticleLink>> GetProductArticlesAsync(long id, bool includeChildren, int page, int pageSize, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a page of the dates of a product, newest first.
+    /// GET /api/admin/products/{id}/events
+    /// </summary>
+    Task<PagedResult<ProductEventLink>> GetProductEventsAsync(long id, bool includeChildren, int page, int pageSize, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Turn a child product into a feature of its parent and return the parent.
+    /// POST /api/admin/products/{id}/convert-to-feature
+    /// </summary>
+    Task<ProductDetail> ConvertProductToFeatureAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Mark a name as not being a product.
+    /// POST /api/admin/products/ignored
+    /// </summary>
+    Task IgnoreProductNameAsync(string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Put an ignored name back in the review queue.
+    /// DELETE /api/admin/products/ignored
+    /// </summary>
+    Task UnignoreProductNameAsync(string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the products that have dates with a feature name that matches no feature yet.
+    /// GET /api/admin/products/features/unmatched
+    /// </summary>
+    Task<IReadOnlyList<ProductUnmatchedFeatures>> GetUnmatchedFeaturesSummaryAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the curated features of a product and the feature names of its dates that are not curated yet.
+    /// GET /api/admin/products/{productId}/features
+    /// </summary>
+    Task<ProductFeatureOverview> GetProductFeaturesAsync(long productId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add a feature to a product and return the updated overview.
+    /// POST /api/admin/products/{productId}/features
+    /// </summary>
+    Task<ProductFeatureOverview> CreateProductFeatureAsync(long productId, string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Rename a feature; the old name becomes an alias.
+    /// PUT /api/admin/products/{productId}/features/{id}
+    /// </summary>
+    Task<ProductFeatureOverview> RenameProductFeatureAsync(long productId, long id, string name, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a feature and its aliases.
+    /// DELETE /api/admin/products/{productId}/features/{id}
+    /// </summary>
+    Task DeleteProductFeatureAsync(long productId, long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add an alias to a feature and return the updated overview.
+    /// POST /api/admin/products/{productId}/features/{id}/aliases
+    /// </summary>
+    Task<ProductFeatureOverview> AddProductFeatureAliasAsync(long productId, long id, string aliasName, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Remove an alias from a feature.
+    /// DELETE /api/admin/products/{productId}/features/{id}/aliases/{aliasId}
+    /// </summary>
+    Task RemoveProductFeatureAliasAsync(long productId, long id, long aliasId, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Set the description and the release date of a feature (a null release date clears it) and return the updated overview.
+    /// PUT /api/admin/products/{productId}/features/{id}/details
+    /// </summary>
+    Task<ProductFeatureOverview> UpdateProductFeatureDetailsAsync(long productId, long id, string description, DateOnly? releaseDate, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Link a content item to a feature, optionally as its thumbnail, and return the updated overview.
+    /// POST /api/admin/products/{productId}/features/{id}/content
+    /// </summary>
+    Task<ProductFeatureOverview> AddProductFeatureContentAsync(long productId, long id, string collectionName, string itemSlug, bool isThumbnail, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Remove the link between a feature and a content item.
+    /// DELETE /api/admin/products/{productId}/features/{id}/content?collection={collection}&amp;itemSlug={itemSlug}
+    /// </summary>
+    Task RemoveProductFeatureContentAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Make a linked content item the thumbnail of a feature.
+    /// PUT /api/admin/products/{productId}/features/{id}/thumbnail?collection={collection}&amp;itemSlug={itemSlug}
+    /// </summary>
+    Task SetProductFeatureThumbnailAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
+
     /// <summary>
     /// Get database statistics for the admin dashboard.
     /// GET /api/admin/statistics
@@ -580,6 +752,22 @@ internal interface ITechHubApiClient
     Task UpdateJobSettingAsync(string jobName, bool enabled, CancellationToken cancellationToken = default);
 
     // ================================================================
+    // Feature toggles
+    // ================================================================
+
+    /// <summary>
+    /// Get who can use each feature: nobody, admins or everyone.
+    /// GET /api/feature-toggles
+    /// </summary>
+    Task<IReadOnlyList<FeatureToggle>> GetFeatureTogglesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Set who can use a feature.
+    /// PUT /api/admin/feature-toggles/{featureKey}
+    /// </summary>
+    Task UpdateFeatureToggleAsync(string featureKey, FeatureToggleMode mode, CancellationToken cancellationToken = default);
+
+    // ================================================================
     // Admin – Cache management endpoints
     // ================================================================
 
@@ -647,38 +835,6 @@ internal interface ITechHubApiClient
     /// POST /api/admin/content-items/preview-markdown
     /// </summary>
     Task<string> PreviewMarkdownAsync(string markdown, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Upsert a GHC feature (create or update metadata).
-    /// PUT /api/ghc-features/{slug}
-    /// Returns true on success (HTTP 2xx). The API always returns 204 No Content.
-    /// </summary>
-    Task<bool> UpsertGhcFeatureAsync(GhcFeature feature, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Delete a ghc-features video from the database.
-    /// DELETE /api/admin/ghc-features/{slug}
-    /// Returns false when the item was not found (HTTP 404).
-    /// </summary>
-    Task<bool> DeleteGhcFeatureAsync(string slug, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Add a content link to a GHC feature.
-    /// POST /api/ghc-features/{slug}/content-links
-    /// </summary>
-    Task AddGhcFeatureContentLinkAsync(string featureSlug, string collectionName, string itemSlug, bool isThumbnail, int sortOrder, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Remove a content link from a GHC feature.
-    /// DELETE /api/ghc-features/{slug}/content-links?collection={collection}&amp;itemSlug={itemSlug}
-    /// </summary>
-    Task RemoveGhcFeatureContentLinkAsync(string featureSlug, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Set the thumbnail for a GHC feature.
-    /// PUT /api/ghc-features/{slug}/thumbnail?collection={collection}&amp;itemSlug={itemSlug}
-    /// </summary>
-    Task SetGhcFeatureThumbnailAsync(string featureSlug, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Get VS Code Update items for the public VS Code Updates page.

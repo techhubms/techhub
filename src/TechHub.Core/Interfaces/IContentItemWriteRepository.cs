@@ -29,11 +29,20 @@ public interface IContentItemWriteRepository
     Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, CancellationToken ct = default);
 
     /// <summary>
-    /// Updates the <c>ai_metadata</c> column and replaces the timeline events of the item in one transaction,
-    /// so a failing event write leaves the previous metadata in place and the backfill can retry.
+    /// Updates the <c>ai_metadata</c> column and optionally replaces the timeline events of the item in one transaction,
+    /// so a failing event write leaves the previous metadata in place and the backfill can retry. When
+    /// <paramref name="timeline"/> is <c>null</c>, existing timeline events are left unchanged.
     /// Only applies when the article is still at <paramref name="expectedRevision"/> (<see cref="RoundupArticle.Revision"/>),
     /// checked under the article's write lock. Returns <c>false</c> and changes nothing when the article was edited
     /// after it was read, so metadata and events classified from outdated text are never stored.
     /// </summary>
-    Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, long expectedRevision, CancellationToken ct = default);
+    Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement? timeline, long expectedRevision, CancellationToken ct = default);
+
+    /// <summary>
+    /// Like <see cref="UpdateAiMetadataIfUnchangedAsync"/> without timeline events, but the <c>products</c> of
+    /// <paramref name="aiMetadataJson"/> are replaced by the products stored at that moment, read under the article's
+    /// write lock. A concurrent timeline backfill stores products without changing the revision, so a snapshot
+    /// read earlier could be stale and would delete the product links that backfill just wrote.
+    /// </summary>
+    Task<bool> UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, long expectedRevision, CancellationToken ct = default);
 }

@@ -16,24 +16,6 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public sealed class SectionRoundupRepository : ISectionRoundupRepository
 {
-    private const int AiBit = 1 << 0;
-    private const int AzureBit = 1 << 1;
-    private const int DotnetBit = 1 << 2;
-    private const int DevopsBit = 1 << 3;
-    private const int GhcBit = 1 << 4;
-    private const int MlBit = 1 << 5;
-    private const int SecurityBit = 1 << 6;
-    private static readonly Dictionary<string, int> _sectionBits = new(StringComparer.OrdinalIgnoreCase)
-    {
-        ["ai"] = AiBit,
-        ["azure"] = AzureBit,
-        ["dotnet"] = DotnetBit,
-        ["devops"] = DevopsBit,
-        ["github-copilot"] = GhcBit,
-        ["ml"] = MlBit,
-        ["security"] = SecurityBit
-    };
-
     private readonly IDbConnection _connection;
     private readonly ILogger<SectionRoundupRepository> _logger;
 
@@ -69,7 +51,8 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
 
         var normalizedSection = sectionName.ToLowerInvariant().Trim();
-        if (!_sectionBits.TryGetValue(normalizedSection, out var sectionBit))
+        var sectionBit = SectionBitmasks.For(normalizedSection);
+        if (sectionBit == 0)
         {
             return [];
         }
@@ -87,6 +70,10 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                 ci.content              AS Content,
                 ci.feed_name            AS FeedName,
                 ci.date_epoch           AS DateEpoch,
+                (SELECT COALESCE(array_agg(COALESCE(p.name, l.product_name) ORDER BY l.position), ARRAY[]::text[])
+                   FROM content_item_products l
+                   LEFT JOIN products p ON p.id = l.product_id
+                  WHERE l.collection_name = ci.collection_name AND l.item_slug = ci.slug) AS ProductNames,
                 {TimelineEventWriter.RevisionExpression} AS Revision
             FROM content_items ci
             WHERE ci.created_at >= @WeekStart
@@ -146,6 +133,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             ImpactLevel = meta?.ImpactLevel ?? "medium",
             TimeSensitivity = meta?.TimeSensitivity ?? "this-week",
             NeedsAiMetadata = meta is null || meta.SchemaVersion < RoundupMetadata.CurrentSchemaVersion,
+            Products = row.ProductNames,
             Excerpt = row.Excerpt,
             Content = row.Content,
             FeedName = row.FeedName,
@@ -162,7 +150,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                 Significance = meta.Significance,
                 ContentKind = meta.ContentKind,
                 Lifecycle = meta.Lifecycle,
-                Products = meta.Products,
+                Products = row.ProductNames,
                 SectionRoles = meta.SectionRoles
             });
         }
@@ -185,6 +173,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         public string Content { get; init; } = string.Empty;
         public string FeedName { get; init; } = string.Empty;
         public long DateEpoch { get; init; }
+        public string[] ProductNames { get; init; } = [];
         public long Revision { get; init; }
     }
 
@@ -216,14 +205,15 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
 
-        if (!_sectionBits.TryGetValue(sectionName.ToLowerInvariant().Trim(), out var sectionBit))
+        var sectionBit = SectionBitmasks.For(sectionName);
+        if (sectionBit == 0)
         {
             return [];
         }
 
         const string Sql = """
             SELECT e.kind           AS Kind,
-                   e.product        AS Product,
+                   COALESCE(p.name, e.product) AS Product,
                    e.feature        AS Feature,
                    e.description    AS Description,
                    e.event_date     AS EventDate,
@@ -231,6 +221,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                    ci.title         AS SourceTitle,
                    ci.external_url  AS SourceUrl
             FROM content_timeline_events e
+            LEFT JOIN products p ON p.id = e.product_id
             JOIN content_items ci
               ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
             WHERE ci.created_at >= @WeekStart
@@ -491,14 +482,14 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     private static SectionFlags BuildSectionFlags(string sectionName)
     {
         var normalized = sectionName.ToLowerInvariant();
-        var bitmask = _sectionBits.TryGetValue(normalized, out var sectionBit) ? sectionBit : 0;
-        var isAi = (bitmask & AiBit) != 0;
-        var isAzure = (bitmask & AzureBit) != 0;
-        var isDotnet = (bitmask & DotnetBit) != 0;
-        var isDevops = (bitmask & DevopsBit) != 0;
-        var isGhc = (bitmask & GhcBit) != 0;
-        var isMl = (bitmask & MlBit) != 0;
-        var isSecurity = (bitmask & SecurityBit) != 0;
+        var bitmask = SectionBitmasks.For(normalized);
+        var isAi = SectionBitmasks.Has(bitmask, SectionBitmasks.Ai);
+        var isAzure = SectionBitmasks.Has(bitmask, SectionBitmasks.Azure);
+        var isDotnet = SectionBitmasks.Has(bitmask, SectionBitmasks.Dotnet);
+        var isDevops = SectionBitmasks.Has(bitmask, SectionBitmasks.Devops);
+        var isGhc = SectionBitmasks.Has(bitmask, SectionBitmasks.GithubCopilot);
+        var isMl = SectionBitmasks.Has(bitmask, SectionBitmasks.Ml);
+        var isSecurity = SectionBitmasks.Has(bitmask, SectionBitmasks.Security);
 
         return new SectionFlags(isAi, isAzure, isDotnet, isDevops, isGhc, isMl, isSecurity, bitmask);
     }

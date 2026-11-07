@@ -37,6 +37,9 @@ internal sealed class TechHubWebFactory(string environment) : WebApplicationFact
         // Read by Program.cs while building, so it must be a setting rather than a ConfigureAppConfiguration callback.
         builder.UseSetting("AppSettings:SkipFileLogging", "true");
 
+        // Azure AD stays off even when the developer's user secrets (Development) configure it, because the fake OIDC scheme below would clash with the real one.
+        builder.UseSetting("AzureAd:ClientId", string.Empty);
+
         // Added last, so values set through SetConfig win over appsettings and are read live by endpoints.
         builder.ConfigureAppConfiguration((_, configuration) => configuration.Add(new ProviderSource(_config)));
 

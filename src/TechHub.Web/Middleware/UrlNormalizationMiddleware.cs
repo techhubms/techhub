@@ -13,7 +13,8 @@ namespace TechHub.Web.Middleware;
 ///   1. Strip .html extension from each path segment
 ///   2. Strip YYYY-MM-DD- date prefixes from each path segment
 ///   3. Strip a trailing slash from the full path
-///   4. Rename legacy section names in the first path segment (for example /coding/* → /dotnet/*)
+///   4. Rename legacy section names in the first path segment (for example /coding/* → /dotnet/*), and
+///      collections that were replaced (/github-copilot/features → /github-copilot/timeline)
 ///
 /// After normalization:
 ///   - Multi-segment paths: validate segment[0] against known sections/pages and segment[1]
@@ -64,6 +65,14 @@ public partial class UrlNormalizationMiddleware
         new(StringComparer.OrdinalIgnoreCase)
         {
             ["coding"] = "dotnet",
+        };
+
+    // Collections that were replaced by another one ("section/collection" → new collection name). The features page
+    // of GitHub Copilot was replaced by the timeline of the section.
+    private static readonly Dictionary<string, string> _renamedCollections =
+        new(StringComparer.OrdinalIgnoreCase)
+        {
+            ["github-copilot/features"] = "timeline",
         };
 
     // Virtual sections that exist in the app's routing but are not stored in the API section cache.
@@ -149,6 +158,12 @@ public partial class UrlNormalizationMiddleware
         if (normalizedSegments.Length > 0 && _renamedSections.TryGetValue(normalizedSegments[0], out var newSectionName))
         {
             normalizedSegments[0] = newSectionName;
+        }
+
+        // The same for collections that were replaced by another one, for example the features page of GitHub Copilot.
+        if (normalizedSegments.Length == 2 && _renamedCollections.TryGetValue($"{normalizedSegments[0]}/{normalizedSegments[1]}", out var newCollectionName))
+        {
+            normalizedSegments[1] = newCollectionName;
         }
 
         var normalizedPath = "/" + string.Join("/", normalizedSegments);

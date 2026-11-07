@@ -60,11 +60,9 @@ public class TimelineEventRepositoryTests : IClassFixture<DatabaseFixture<Timeli
     {
         var slug = await SeedItemAsync();
 
-        await _sut.ReplaceEventsAsync("news", slug,
-            [Event(), Event(kind: "retirement", feature: null, date: "2026-12-01", precision: "month", source: "explicit", quote: null)],
-            ITimelineEventRepository.ExtractedFromSource, promptVersion: 3);
+        await _sut.ReplaceEventsAsync("news", slug, [Event(), Event(kind: "retirement", feature: null, date: "2026-12-01", precision: "month", source: "explicit", quote: null)], ITimelineEventRepository.ExtractedFromSource, promptVersion: 3, ct: TestContext.Current.CancellationToken);
 
-        var stored = await _sut.GetEventsForItemAsync("news", slug);
+        var stored = await _sut.GetEventsForItemAsync("news", slug, TestContext.Current.CancellationToken);
         stored.Should().HaveCount(2);
         var ga = stored[0];
         ga.Kind.Should().Be("ga");
@@ -90,11 +88,11 @@ public class TimelineEventRepositoryTests : IClassFixture<DatabaseFixture<Timeli
     public async Task ReplaceEventsAsync_CalledAgain_ReplacesTheEvents()
     {
         var slug = await SeedItemAsync();
-        await _sut.ReplaceEventsAsync("news", slug, [Event(), Event(kind: "preview")], "source", 1);
+        await _sut.ReplaceEventsAsync("news", slug, [Event(), Event(kind: "preview")], "source", 1, TestContext.Current.CancellationToken);
 
-        await _sut.ReplaceEventsAsync("news", slug, [Event(kind: "launch")], "stored-content", 2);
+        await _sut.ReplaceEventsAsync("news", slug, [Event(kind: "launch")], "stored-content", 2, TestContext.Current.CancellationToken);
 
-        var stored = await _sut.GetEventsForItemAsync("news", slug);
+        var stored = await _sut.GetEventsForItemAsync("news", slug, TestContext.Current.CancellationToken);
         stored.Should().ContainSingle().Which.Kind.Should().Be("launch");
         stored[0].ExtractedFrom.Should().Be("stored-content");
         var count = await _fixture.Connection.ExecuteScalarAsync<int>(
@@ -106,11 +104,11 @@ public class TimelineEventRepositoryTests : IClassFixture<DatabaseFixture<Timeli
     public async Task ReplaceEventsAsync_WithNoEvents_RemovesOldEventsAndRecordsZeroFound()
     {
         var slug = await SeedItemAsync();
-        await _sut.ReplaceEventsAsync("news", slug, [Event()], "source", 1);
+        await _sut.ReplaceEventsAsync("news", slug, [Event()], "source", 1, TestContext.Current.CancellationToken);
 
-        await _sut.ReplaceEventsAsync("news", slug, [], "source", 1);
+        await _sut.ReplaceEventsAsync("news", slug, [], "source", 1, TestContext.Current.CancellationToken);
 
-        (await _sut.GetEventsForItemAsync("news", slug)).Should().BeEmpty();
+        (await _sut.GetEventsForItemAsync("news", slug, TestContext.Current.CancellationToken)).Should().BeEmpty();
         var found = await _fixture.Connection.ExecuteScalarAsync<int>(
             "SELECT events_found FROM content_timeline_extractions WHERE item_slug = @Slug", new { Slug = slug });
         found.Should().Be(0);
@@ -121,12 +119,12 @@ public class TimelineEventRepositoryTests : IClassFixture<DatabaseFixture<Timeli
     {
         var first = await SeedItemAsync();
         var second = await SeedItemAsync();
-        await _sut.ReplaceEventsAsync("news", first, [Event()], "source", 1);
-        await _sut.ReplaceEventsAsync("news", second, [Event(kind: "preview")], "source", 1);
+        await _sut.ReplaceEventsAsync("news", first, [Event()], "source", 1, TestContext.Current.CancellationToken);
+        await _sut.ReplaceEventsAsync("news", second, [Event(kind: "preview")], "source", 1, TestContext.Current.CancellationToken);
 
-        await _sut.ReplaceEventsAsync("news", first, [], "source", 1);
+        await _sut.ReplaceEventsAsync("news", first, [], "source", 1, TestContext.Current.CancellationToken);
 
-        (await _sut.GetEventsForItemAsync("news", second)).Should().ContainSingle();
+        (await _sut.GetEventsForItemAsync("news", second, TestContext.Current.CancellationToken)).Should().ContainSingle();
     }
 
     [Fact]
@@ -181,18 +179,18 @@ public class TimelineEventRepositoryTests : IClassFixture<DatabaseFixture<Timeli
         var act = () => _sut.ReplaceEventsAsync("news", slug, [Event()], "source", 1);
 
         await act.Should().ThrowAsync<PostgresException>();
-        (await _sut.GetEventsForItemAsync("news", slug)).Should().BeEmpty();
+        (await _sut.GetEventsForItemAsync("news", slug, TestContext.Current.CancellationToken)).Should().BeEmpty();
     }
 
     [Fact]
     public async Task DeletingTheItem_DeletesItsEventsAndExtraction()
     {
         var slug = await SeedItemAsync();
-        await _sut.ReplaceEventsAsync("news", slug, [Event()], "source", 1);
+        await _sut.ReplaceEventsAsync("news", slug, [Event()], "source", 1, TestContext.Current.CancellationToken);
 
         await _fixture.Connection.ExecuteAsync("DELETE FROM content_items WHERE slug = @Slug", new { Slug = slug });
 
-        (await _sut.GetEventsForItemAsync("news", slug)).Should().BeEmpty();
+        (await _sut.GetEventsForItemAsync("news", slug, TestContext.Current.CancellationToken)).Should().BeEmpty();
         var extractions = await _fixture.Connection.ExecuteScalarAsync<int>(
             "SELECT COUNT(*) FROM content_timeline_extractions WHERE item_slug = @Slug", new { Slug = slug });
         extractions.Should().Be(0);

@@ -52,6 +52,7 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
         try
         {
             await UpsertAsync(item, transaction, ct);
+            await ProductLinkWriter.ReplaceItemLinksAsync(_connection, transaction, item.CollectionName, item.Slug, ct);
             await TimelineEventWriter.ReplaceAsync(
                 _connection,
                 transaction,
@@ -81,50 +82,14 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
     private async Task UpsertAsync(ProcessedContentItem item, IDbTransaction transaction, CancellationToken ct)
     {
         // Compute section booleans and bitmask from section names
-        var sectionSet = new HashSet<string>(item.Sections, StringComparer.OrdinalIgnoreCase);
-        var isAi = sectionSet.Contains("ai");
-        var isAzure = sectionSet.Contains("azure");
-        var isDotnet = sectionSet.Contains("dotnet");
-        var isDevops = sectionSet.Contains("devops");
-        var isGhc = sectionSet.Contains("github-copilot");
-        var isMl = sectionSet.Contains("ml");
-        var isSecurity = sectionSet.Contains("security");
-
-        var bitmask = 0;
-        if (isAi)
-        {
-            bitmask |= 1;
-        }
-
-        if (isAzure)
-        {
-            bitmask |= 2;
-        }
-
-        if (isDotnet)
-        {
-            bitmask |= 4;
-        }
-
-        if (isDevops)
-        {
-            bitmask |= 8;
-        }
-
-        if (isGhc)
-        {
-            bitmask |= 16;
-        }
-
-        if (isMl)
-        {
-            bitmask |= 32;
-        }
-
-        if (isSecurity)
-        {
-            bitmask |= 64;
-        }
+        var bitmask = SectionBitmasks.For(item.Sections);
+        var isAi = SectionBitmasks.Has(bitmask, SectionBitmasks.Ai);
+        var isAzure = SectionBitmasks.Has(bitmask, SectionBitmasks.Azure);
+        var isDotnet = SectionBitmasks.Has(bitmask, SectionBitmasks.Dotnet);
+        var isDevops = SectionBitmasks.Has(bitmask, SectionBitmasks.Devops);
+        var isGhc = SectionBitmasks.Has(bitmask, SectionBitmasks.GithubCopilot);
+        var isMl = SectionBitmasks.Has(bitmask, SectionBitmasks.Ml);
+        var isSecurity = SectionBitmasks.Has(bitmask, SectionBitmasks.Security);
 
         // Ensure the collection-name tag (e.g. "News", "Blogs") is always present.
         var tags = new List<string>(item.Tags);
@@ -242,14 +207,29 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
     /// <inheritdoc />
     public async Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, CancellationToken ct = default)
     {
-        await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction: null, ct);
+        using var transaction = BeginTransaction();
+        try
+        {
+            await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct);
+            transaction.Commit();
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
     }
 
     /// <inheritdoc />
-    public async Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement timeline, long expectedRevision, CancellationToken ct = default)
-    {
-        ArgumentNullException.ThrowIfNull(timeline);
+    public Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement? timeline, long expectedRevision, CancellationToken ct = default) =>
+        UpdateAiMetadataIfUnchangedCoreAsync(collectionName, slug, aiMetadataJson, timeline, expectedRevision, keepStoredProducts: false, ct);
 
+    /// <inheritdoc />
+    public Task<bool> UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, long expectedRevision, CancellationToken ct = default) =>
+        UpdateAiMetadataIfUnchangedCoreAsync(collectionName, slug, aiMetadataJson, null, expectedRevision, keepStoredProducts: true, ct);
+
+    private async Task<bool> UpdateAiMetadataIfUnchangedCoreAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement? timeline, long expectedRevision, bool keepStoredProducts, CancellationToken ct)
+    {
         using var transaction = BeginTransaction();
         try
         {
@@ -267,8 +247,12 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
                 return false;
             }
 
-            await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct);
-            await TimelineEventWriter.ReplaceAsync(_connection, transaction, collectionName, slug, timeline, ct);
+            await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct, keepStoredProducts);
+            if (timeline is not null)
+            {
+                await TimelineEventWriter.ReplaceAsync(_connection, transaction, collectionName, slug, timeline, ct);
+            }
+
             transaction.Commit();
             return true;
         }
@@ -279,20 +263,36 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
         }
     }
 
-    private async Task ExecuteUpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, IDbTransaction? transaction, CancellationToken ct)
+    private async Task ExecuteUpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, IDbTransaction transaction, CancellationToken ct, bool keepStoredProducts = false)
     {
-        const string Sql = @"
+        // The stored products are read in the same statement, so they come from the row this transaction has locked.
+        const string KeepProductsSql = @"
+UPDATE content_items
+   SET ai_metadata = @AiMetadata::jsonb || jsonb_build_object('products',
+           CASE WHEN jsonb_typeof(ai_metadata -> 'products') = 'array' THEN ai_metadata -> 'products' ELSE '[]'::jsonb END),
+       updated_at  = NOW()
+ WHERE collection_name = @CollectionName
+   AND slug           = @Slug";
+
+        const string ReplaceSql = @"
 UPDATE content_items
    SET ai_metadata = @AiMetadata::jsonb,
        updated_at  = NOW()
  WHERE collection_name = @CollectionName
    AND slug           = @Slug";
 
-        await _connection.ExecuteAsync(new CommandDefinition(
-            Sql,
+        var sql = keepStoredProducts ? KeepProductsSql : ReplaceSql;
+
+        var rows = await _connection.ExecuteAsync(new CommandDefinition(
+            sql,
             new { CollectionName = collectionName, Slug = slug, AiMetadata = aiMetadataJson },
             transaction,
             cancellationToken: ct));
+
+        if (rows > 0)
+        {
+            await ProductLinkWriter.ReplaceItemLinksAsync(_connection, transaction, collectionName, slug, ct);
+        }
     }
 
     /// <summary>

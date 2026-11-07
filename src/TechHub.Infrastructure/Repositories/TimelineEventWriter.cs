@@ -1,5 +1,7 @@
 using System.Data;
+using System.Text.Json;
 using Dapper;
+using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Repositories;
@@ -40,8 +42,12 @@ internal static class TimelineEventWriter
             transaction,
             cancellationToken: ct));
 
+        // After the row lock, never before it: a writer that holds the shared catalog lock while it waits for an article
+        // row can deadlock with a catalog change that waits for that writer and an article edit that holds the row.
+        await CatalogRelink.LockForLinkWriteAsync(connection, transaction, ct);
+
         await connection.ExecuteAsync(new CommandDefinition(
-            "DELETE FROM content_timeline_events WHERE collection_name = @CollectionName AND item_slug = @Slug",
+            $"DELETE FROM content_timeline_events WHERE collection_name = @CollectionName AND item_slug = @Slug AND extracted_from <> '{ITimelineEventRepository.ExtractedFromCatalog}'",
             new { CollectionName = collectionName, Slug = slug },
             transaction,
             cancellationToken: ct));
@@ -76,6 +82,17 @@ internal static class TimelineEventWriter
         }
 
         await connection.ExecuteAsync(new CommandDefinition(
+            "SELECT relink_timeline_events(@CollectionName, @Slug)",
+            new { CollectionName = collectionName, Slug = slug },
+            transaction,
+            cancellationToken: ct));
+
+        if (replacement.Products is not null)
+        {
+            await ReplaceProductsAsync(connection, transaction, collectionName, slug, replacement.Products, ct);
+        }
+
+        await connection.ExecuteAsync(new CommandDefinition(
             """
             INSERT INTO content_timeline_extractions
                 (collection_name, item_slug, prompt_version, events_found, extracted_from, extracted_at)
@@ -97,5 +114,38 @@ internal static class TimelineEventWriter
             },
             transaction,
             cancellationToken: ct));
+    }
+
+    /// <summary>
+    /// Stores the products in the <c>ai_metadata</c> of the article and relinks them to the catalog. An article without
+    /// metadata gets an object with only the products (unless there are none): it has no <c>schema_version</c> of the
+    /// current schema, so the roundup metadata backfill still classifies it and replaces the object. Dropping the products
+    /// instead would leave the article unlinked while the scan marker keeps later runs from naming them again.
+    /// <c>updated_at</c> stays as it is, because the revision of the article must keep describing its text.
+    /// </summary>
+    private static async Task ReplaceProductsAsync(
+        IDbConnection connection,
+        IDbTransaction transaction,
+        string collectionName,
+        string slug,
+        IReadOnlyList<string> products,
+        CancellationToken ct)
+    {
+        var rows = await connection.ExecuteAsync(new CommandDefinition(
+            """
+            UPDATE content_items
+               SET ai_metadata = COALESCE(ai_metadata, '{}'::jsonb) || jsonb_build_object('products', @Products::jsonb)
+             WHERE collection_name = @CollectionName
+               AND slug = @Slug
+               AND (ai_metadata IS NOT NULL OR jsonb_array_length(@Products::jsonb) > 0)
+            """,
+            new { CollectionName = collectionName, Slug = slug, Products = JsonSerializer.Serialize(products) },
+            transaction,
+            cancellationToken: ct));
+
+        if (rows > 0)
+        {
+            await ProductLinkWriter.ReplaceItemLinksAsync(connection, transaction, collectionName, slug, ct);
+        }
     }
 }

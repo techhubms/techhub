@@ -2,6 +2,7 @@ using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Core.Models.FeatureToggles;
 
 namespace TechHub.Web.Services;
 
@@ -438,20 +439,46 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get GitHub Copilot features with their linked content.
+    /// Get the timeline of a section.
+    /// GET /api/sections/{sectionName}/timeline
     /// </summary>
-    public virtual async Task<IEnumerable<GhcFeature>?> GetGhcFeaturesAsync(
+    public virtual async Task<IReadOnlyList<TimelineEntry>> GetSectionTimelineAsync(
+        string sectionName,
+        DateOnly? fromDate = null,
+        DateOnly? toDate = null,
+        IReadOnlyList<string>? kinds = null,
         CancellationToken cancellationToken = default)
     {
+        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+        sectionName = sectionName.Sanitize();
+
+        var queryParams = new List<string>();
+        if (fromDate.HasValue)
+        {
+            queryParams.Add($"from={fromDate.Value:yyyy-MM-dd}");
+        }
+
+        if (toDate.HasValue)
+        {
+            queryParams.Add($"to={toDate.Value:yyyy-MM-dd}");
+        }
+
+        if (kinds is { Count: > 0 })
+        {
+            queryParams.Add($"kinds={Uri.EscapeDataString(string.Join(",", kinds))}");
+        }
+
+        var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : string.Empty;
+        var url = $"/api/sections/{Uri.EscapeDataString(sectionName)}/timeline{queryString}";
+
         try
         {
-            return await _httpClient.GetFromJsonAsync<IEnumerable<GhcFeature>>(
-                "/api/ghc-features",
-                cancellationToken);
+            _logger.LogDebug("Fetching timeline for section {SectionName}", sectionName);
+            return await _httpClient.GetFromJsonAsync<IReadOnlyList<TimelineEntry>>(url, cancellationToken) ?? [];
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch ghc-features");
+            _logger.LogError(ex, "Failed to fetch the timeline of section {SectionName}", sectionName);
             throw;
         }
     }
@@ -584,7 +611,7 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get Features page data
+    /// Get the GitHub Copilot subscription tiers, shown next to its timeline.
     /// </summary>
     public virtual async Task<FeaturesPageData?> GetFeaturesDataAsync(CancellationToken cancellationToken = default)
     {
@@ -1403,6 +1430,484 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     // ================================================================
+    // Product catalog methods
+    // ================================================================
+
+    /// <summary>
+    /// Get the products with aliases and usage counts.
+    /// GET /api/admin/products
+    /// </summary>
+    public virtual async Task<IReadOnlyList<ProductSummary>> GetProductsAsync(
+        string? search = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var url = string.IsNullOrWhiteSpace(search)
+                ? "/api/admin/products"
+                : $"/api/admin/products?search={Uri.EscapeDataString(search.Trim())}";
+            return await _httpClient.GetFromJsonAsync<IReadOnlyList<ProductSummary>>(url, cancellationToken) ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch products");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get a product with its aliases, linked articles and linked dates.
+    /// GET /api/admin/products/{id}
+    /// </summary>
+    public virtual async Task<ProductDetail?> GetProductAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<ProductDetail>($"/api/admin/products/{id}", cancellationToken);
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return null;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch product {ProductId}", id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get the product names that are not in the catalog yet.
+    /// GET /api/admin/products/unmatched
+    /// </summary>
+    public virtual async Task<IReadOnlyList<UnmatchedProductName>> GetUnmatchedProductNamesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<IReadOnlyList<UnmatchedProductName>>(
+                "/api/admin/products/unmatched", cancellationToken) ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch unmatched product names");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get the names that are marked as not being a product.
+    /// GET /api/admin/products/ignored
+    /// </summary>
+    public virtual async Task<IReadOnlyList<string>> GetIgnoredProductNamesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<IReadOnlyList<string>>(
+                "/api/admin/products/ignored", cancellationToken) ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch ignored product names");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Add a product.
+    /// POST /api/admin/products
+    /// </summary>
+    public virtual async Task<ProductDetail> CreateProductAsync(
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync("/api/admin/products", new { name }, cancellationToken);
+        return await ReadProductDetailAsync(response, "create product", cancellationToken);
+    }
+
+    /// <summary>
+    /// Rename a product.
+    /// PUT /api/admin/products/{id}
+    /// </summary>
+    public virtual async Task<ProductDetail> RenameProductAsync(
+        long id,
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/products/{id}", new { name }, cancellationToken);
+        return await ReadProductDetailAsync(response, "rename product", cancellationToken);
+    }
+
+    /// <summary>
+    /// Delete a product.
+    /// DELETE /api/admin/products/{id}
+    /// </summary>
+    public virtual async Task DeleteProductAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/{id}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "delete product", cancellationToken);
+    }
+
+    /// <summary>
+    /// Add an alias to a product.
+    /// POST /api/admin/products/{id}/aliases
+    /// </summary>
+    public virtual async Task<ProductDetail> AddProductAliasAsync(
+        long id,
+        string aliasName,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{id}/aliases", new { alias = aliasName }, cancellationToken);
+        return await ReadProductDetailAsync(response, "add product alias", cancellationToken);
+    }
+
+    /// <summary>
+    /// Remove an alias from a product.
+    /// DELETE /api/admin/products/{id}/aliases/{aliasId}
+    /// </summary>
+    public virtual async Task RemoveProductAliasAsync(
+        long id,
+        long aliasId,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/{id}/aliases/{aliasId}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "remove product alias", cancellationToken);
+    }
+
+    /// <summary>
+    /// Make a product a child of another product, or top-level when the parent is null.
+    /// PUT /api/admin/products/{id}/parent
+    /// </summary>
+    public virtual async Task<ProductDetail> SetProductParentAsync(
+        long id,
+        long? parentId,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/products/{id}/parent", new { parentId }, cancellationToken);
+        return await ReadProductDetailAsync(response, "set product parent", cancellationToken);
+    }
+
+    /// <summary>
+    /// Merge a product into another product.
+    /// POST /api/admin/products/{id}/merge
+    /// </summary>
+    public virtual async Task<ProductDetail> MergeProductAsync(
+        long sourceId,
+        long targetId,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{sourceId}/merge", new { targetId }, cancellationToken);
+        return await ReadProductDetailAsync(response, "merge product", cancellationToken);
+    }
+
+    /// <summary>
+    /// Get a page of the articles of a product, newest first.
+    /// GET /api/admin/products/{id}/articles
+    /// </summary>
+    public virtual async Task<PagedResult<ProductArticleLink>> GetProductArticlesAsync(
+        long id,
+        bool includeChildren,
+        int page,
+        int pageSize,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<PagedResult<ProductArticleLink>>(
+                $"/api/admin/products/{id}/articles?includeChildren={includeChildren.ToString().ToLowerInvariant()}&page={page}&pageSize={pageSize}",
+                cancellationToken) ?? new PagedResult<ProductArticleLink> { Items = [], TotalCount = 0 };
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch articles of product {ProductId}", id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get a page of the dates of a product, newest first.
+    /// GET /api/admin/products/{id}/events
+    /// </summary>
+    public virtual async Task<PagedResult<ProductEventLink>> GetProductEventsAsync(
+        long id,
+        bool includeChildren,
+        int page,
+        int pageSize,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<PagedResult<ProductEventLink>>(
+                $"/api/admin/products/{id}/events?includeChildren={includeChildren.ToString().ToLowerInvariant()}&page={page}&pageSize={pageSize}",
+                cancellationToken) ?? new PagedResult<ProductEventLink> { Items = [], TotalCount = 0 };
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch dates of product {ProductId}", id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Turn a child product into a feature of its parent and return the parent.
+    /// POST /api/admin/products/{id}/convert-to-feature
+    /// </summary>
+    public virtual async Task<ProductDetail> ConvertProductToFeatureAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsync($"/api/admin/products/{id}/convert-to-feature", content: null, cancellationToken);
+        return await ReadProductDetailAsync(response, "convert product to feature", cancellationToken);
+    }
+
+    /// <summary>
+    /// Mark a name as not being a product.
+    /// POST /api/admin/products/ignored
+    /// </summary>
+    public virtual async Task IgnoreProductNameAsync(
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync("/api/admin/products/ignored", new { name }, cancellationToken);
+        await EnsureProductSuccessAsync(response, "ignore product name", cancellationToken);
+    }
+
+    /// <summary>
+    /// Put an ignored name back in the review queue.
+    /// DELETE /api/admin/products/ignored
+    /// </summary>
+    public virtual async Task UnignoreProductNameAsync(
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/ignored?name={Uri.EscapeDataString(name)}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "unignore product name", cancellationToken);
+    }
+
+    /// <summary>
+    /// Get the products that have dates with a feature name that matches no feature yet.
+    /// GET /api/admin/products/features/unmatched
+    /// </summary>
+    public virtual async Task<IReadOnlyList<ProductUnmatchedFeatures>> GetUnmatchedFeaturesSummaryAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<List<ProductUnmatchedFeatures>>(
+                "/api/admin/products/features/unmatched", cancellationToken) ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch the products with features to review");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get the curated features of a product and the feature names of its dates that are not curated yet.
+    /// GET /api/admin/products/{productId}/features
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> GetProductFeaturesAsync(
+        long productId,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<ProductFeatureOverview>(
+                $"/api/admin/products/{productId}/features", cancellationToken) ?? new ProductFeatureOverview();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch features of product {ProductId}", productId);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Add a feature to a product.
+    /// POST /api/admin/products/{productId}/features
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> CreateProductFeatureAsync(
+        long productId,
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{productId}/features", new { name }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "create feature", cancellationToken);
+    }
+
+    /// <summary>
+    /// Rename a feature.
+    /// PUT /api/admin/products/{productId}/features/{id}
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> RenameProductFeatureAsync(
+        long productId,
+        long id,
+        string name,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/products/{productId}/features/{id}", new { name }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "rename feature", cancellationToken);
+    }
+
+    /// <summary>
+    /// Delete a feature.
+    /// DELETE /api/admin/products/{productId}/features/{id}
+    /// </summary>
+    public virtual async Task DeleteProductFeatureAsync(
+        long productId,
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/{productId}/features/{id}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "delete feature", cancellationToken);
+    }
+
+    /// <summary>
+    /// Add an alias to a feature.
+    /// POST /api/admin/products/{productId}/features/{id}/aliases
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> AddProductFeatureAliasAsync(
+        long productId,
+        long id,
+        string aliasName,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{productId}/features/{id}/aliases", new { alias = aliasName }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "add feature alias", cancellationToken);
+    }
+
+    /// <summary>
+    /// Remove an alias from a feature.
+    /// DELETE /api/admin/products/{productId}/features/{id}/aliases/{aliasId}
+    /// </summary>
+    public virtual async Task RemoveProductFeatureAliasAsync(
+        long productId,
+        long id,
+        long aliasId,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync($"/api/admin/products/{productId}/features/{id}/aliases/{aliasId}", cancellationToken);
+        await EnsureProductSuccessAsync(response, "remove feature alias", cancellationToken);
+    }
+
+    /// <summary>
+    /// Set the description and the release date of a feature.
+    /// PUT /api/admin/products/{productId}/features/{id}/details
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> UpdateProductFeatureDetailsAsync(
+        long productId,
+        long id,
+        string description,
+        DateOnly? releaseDate,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsJsonAsync($"/api/admin/products/{productId}/features/{id}/details", new { description, releaseDate }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "update feature details", cancellationToken);
+    }
+
+    /// <summary>
+    /// Link a content item to a feature.
+    /// POST /api/admin/products/{productId}/features/{id}/content
+    /// </summary>
+    public virtual async Task<ProductFeatureOverview> AddProductFeatureContentAsync(
+        long productId,
+        long id,
+        string collectionName,
+        string itemSlug,
+        bool isThumbnail,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PostAsJsonAsync($"/api/admin/products/{productId}/features/{id}/content", new { collectionName, itemSlug, isThumbnail }, cancellationToken);
+        return await ReadFeatureOverviewAsync(response, "add feature content", cancellationToken);
+    }
+
+    /// <summary>
+    /// Remove the link between a feature and a content item.
+    /// DELETE /api/admin/products/{productId}/features/{id}/content
+    /// </summary>
+    public virtual async Task RemoveProductFeatureContentAsync(
+        long productId,
+        long id,
+        string collectionName,
+        string itemSlug,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.DeleteAsync(
+            $"/api/admin/products/{productId}/features/{id}/content?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
+            cancellationToken);
+        await EnsureProductSuccessAsync(response, "remove feature content", cancellationToken);
+    }
+
+    /// <summary>
+    /// Make a linked content item the thumbnail of a feature.
+    /// PUT /api/admin/products/{productId}/features/{id}/thumbnail
+    /// </summary>
+    public virtual async Task SetProductFeatureThumbnailAsync(
+        long productId,
+        long id,
+        string collectionName,
+        string itemSlug,
+        CancellationToken cancellationToken = default)
+    {
+        using var response = await _httpClient.PutAsync(
+            $"/api/admin/products/{productId}/features/{id}/thumbnail?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
+            null,
+            cancellationToken);
+        await EnsureProductSuccessAsync(response, "set feature thumbnail", cancellationToken);
+    }
+
+    private async Task<ProductFeatureOverview> ReadFeatureOverviewAsync(
+        HttpResponseMessage response,
+        string operation,
+        CancellationToken cancellationToken)
+    {
+        await EnsureProductSuccessAsync(response, operation, cancellationToken);
+        return await response.Content.ReadFromJsonAsync<ProductFeatureOverview>(cancellationToken)
+            ?? throw new InvalidOperationException($"API returned null for {operation}");
+    }
+
+    private async Task<ProductDetail> ReadProductDetailAsync(
+        HttpResponseMessage response,
+        string operation,
+        CancellationToken cancellationToken)
+    {
+        await EnsureProductSuccessAsync(response, operation, cancellationToken);
+        return await response.Content.ReadFromJsonAsync<ProductDetail>(cancellationToken)
+            ?? throw new InvalidOperationException($"API returned null for {operation}");
+    }
+
+    /// <summary>Throws an <see cref="HttpRequestException"/> that carries the message the API returned, so the admin sees why a change was refused.</summary>
+    private async Task EnsureProductSuccessAsync(
+        HttpResponseMessage response,
+        string operation,
+        CancellationToken cancellationToken)
+    {
+        if (response.IsSuccessStatusCode)
+        {
+            return;
+        }
+
+        string? message = null;
+        try
+        {
+            message = await response.Content.ReadFromJsonAsync<string>(cancellationToken);
+        }
+        catch (System.Text.Json.JsonException)
+        {
+            // The body is not a plain message (for example a problem details response); the status code is reported instead.
+        }
+
+        _logger.LogWarning("Failed to {Operation}: {StatusCode}", operation, (int)response.StatusCode);
+        throw new HttpRequestException(message ?? $"Request failed with status {(int)response.StatusCode}.", null, response.StatusCode);
+    }
+
+    // ================================================================
     // Database statistics methods
     // ================================================================
 
@@ -1840,6 +2345,57 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     // ================================================================
+    // Feature toggles
+    // ================================================================
+
+    /// <summary>
+    /// Get who can use each feature.
+    /// GET /api/feature-toggles
+    /// </summary>
+    public virtual async Task<IReadOnlyList<FeatureToggle>> GetFeatureTogglesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var toggles = await _httpClient.GetFromJsonAsync<IReadOnlyList<FeatureToggle>>(
+                "/api/feature-toggles",
+                cancellationToken);
+            return toggles ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch feature toggles");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Set who can use a feature.
+    /// PUT /api/admin/feature-toggles/{featureKey}
+    /// </summary>
+    public virtual async Task UpdateFeatureToggleAsync(
+        string featureKey,
+        FeatureToggleMode mode,
+        CancellationToken cancellationToken = default)
+    {
+        featureKey = featureKey.Sanitize();
+
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync(
+                $"/api/admin/feature-toggles/{Uri.EscapeDataString(featureKey)}",
+                new { Mode = mode },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update feature toggle {FeatureKey}", featureKey);
+            throw;
+        }
+    }
+
+    // ================================================================
     // Cache management methods
     // ================================================================
 
@@ -2060,125 +2616,6 @@ public class TechHubApiClient : ITechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to preview markdown");
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task<bool> UpsertGhcFeatureAsync(
-        GhcFeature feature,
-        CancellationToken cancellationToken = default)
-    {
-        ArgumentNullException.ThrowIfNull(feature);
-        var slug = feature.Slug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.PutAsJsonAsync(
-                $"/api/ghc-features/{Uri.EscapeDataString(slug)}",
-                feature,
-                cancellationToken);
-            response.EnsureSuccessStatusCode();
-            return response.IsSuccessStatusCode;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to upsert ghc-feature {Slug}", slug);
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task<bool> DeleteGhcFeatureAsync(
-        string slug,
-        CancellationToken cancellationToken = default)
-    {
-        slug = slug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.DeleteAsync(
-                $"/api/admin/ghc-features/{Uri.EscapeDataString(slug)}",
-                cancellationToken);
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                return false;
-            }
-
-            response.EnsureSuccessStatusCode();
-            return true;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to delete ghc-feature slug {Slug}", slug);
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task AddGhcFeatureContentLinkAsync(
-        string featureSlug,
-        string collectionName,
-        string itemSlug,
-        bool isThumbnail,
-        int sortOrder,
-        CancellationToken cancellationToken = default)
-    {
-        featureSlug = featureSlug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.PostAsJsonAsync(
-                $"/api/ghc-features/{Uri.EscapeDataString(featureSlug)}/content-links",
-                new { CollectionName = collectionName, ItemSlug = itemSlug, IsThumbnail = isThumbnail, SortOrder = sortOrder },
-                cancellationToken);
-            response.EnsureSuccessStatusCode();
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to add content link to ghc-feature {Slug}", featureSlug);
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task RemoveGhcFeatureContentLinkAsync(
-        string featureSlug,
-        string collectionName,
-        string itemSlug,
-        CancellationToken cancellationToken = default)
-    {
-        featureSlug = featureSlug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.DeleteAsync(
-                $"/api/ghc-features/{Uri.EscapeDataString(featureSlug)}/content-links?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
-                cancellationToken);
-            response.EnsureSuccessStatusCode();
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to remove content link from ghc-feature {Slug}", featureSlug);
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task SetGhcFeatureThumbnailAsync(
-        string featureSlug,
-        string collectionName,
-        string itemSlug,
-        CancellationToken cancellationToken = default)
-    {
-        featureSlug = featureSlug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.PutAsync(
-                $"/api/ghc-features/{Uri.EscapeDataString(featureSlug)}/thumbnail?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
-                null,
-                cancellationToken);
-            response.EnsureSuccessStatusCode();
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to set thumbnail for ghc-feature {Slug}", featureSlug);
             throw;
         }
     }

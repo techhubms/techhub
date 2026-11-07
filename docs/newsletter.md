@@ -111,7 +111,8 @@ Manual triggers run asynchronously on the background service. A manual daily tri
 | `/newsletter/confirm` | Confirmation result page |
 | `/newsletter/manage` | Request a management link, or edit preferences when opened with a valid link |
 | `/newsletter/unsubscribe` | Unsubscribe confirmation and result page |
-| `/admin/newsletter` | Admin page: subscriber list with search and confirmed filter, edit and delete, test sends, send log. See [admin.md](admin.md). |
+| `/admin/newsletter` | Admin page: subscriber list with search and confirmed filter, edit and delete, test sends. See [admin.md](admin.md). |
+| `/admin/newsletter/send-log` | Admin page: the send log. |
 
 The Web app calls the API through `ITechHubApiClient`. Routing rules for these pages are in [url-routing.md](url-routing.md).
 

@@ -1,3 +1,5 @@
+using TechHub.Core.Models.ContentProcessing;
+
 namespace TechHub.Core.Interfaces;
 
 /// <summary>
@@ -7,7 +9,7 @@ public interface IRssFeedClient
 {
     /// <summary>
     /// Downloads the feed XML at <paramref name="url"/>.
-    /// Returns <see langword="null"/> on HTTP failure or timeout.
+    /// Returns a failed result with the reason (HTTP status, timeout or connection failure) instead of throwing.
     /// </summary>
-    Task<string?> FetchFeedXmlAsync(string url, CancellationToken ct = default);
+    Task<FeedDownloadResult> FetchFeedXmlAsync(string url, CancellationToken ct = default);
 }

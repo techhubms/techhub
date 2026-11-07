@@ -1,0 +1,302 @@
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
+
+<section class="admin-review-section" id="review-overview">
+    <div class="admin-page-header">
+        <div>
+            <h2 class="admin-page-title">Needs review</h2>
+            <p class="admin-page-subtitle">Everything the AI returned that is not linked to the catalog yet, plus failed URLs and proposed content fixes</p>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @if (_data == null && _loading)
+    {
+        <div class="admin-loading">Loading the review queues…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_data != null)
+    {
+        <div class="review-cards">
+            @Card("/admin/reviews#review-product-names", "Product names", _data.UnmatchedProducts.Count, "not in the catalog yet")
+            @Card("/admin/reviews#review-features", "Features", FeatureNameCount, $"names in {_data.UnmatchedFeatures.Count} products")
+            @Card("/admin/reviews#review-content-fixes", "Content fixes", _data.PendingContentFixes, "proposals to approve or reject")
+            @Card("/admin/processed-urls?status=failed", "Failed URLs", _data.FailedUrls, "to retry or remove")
+        </div>
+
+        <section class="admin-review-section" id="review-product-names">
+            <h2 class="admin-section-title">Product names to review (@_data.UnmatchedProducts.Count)</h2>
+            <p class="admin-result-summary">Names the AI returned that are not a product or an alias yet. Add one as a product, add it as an alias of a product, or mark it as not a product.</p>
+
+            @if (_data.UnmatchedProducts.Count == 0)
+            {
+                <div class="admin-empty" id="review-product-names-empty">Nothing to review.</div>
+            }
+            else
+            {
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table" id="review-product-names-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Articles</th>
+                                <th>Dates</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var name in _data.UnmatchedProducts)
+                            {
+                                <tr>
+                                    <td>@name.Name</td>
+                                    <td class="admin-cell-mono">@name.ItemCount</td>
+                                    <td class="admin-cell-mono">@name.EventCount</td>
+                                    <td>
+                                        <div class="admin-inline-form">
+                                            <button class="admin-link-btn" disabled="@_busy" @onclick="() => AddAsProductAsync(name.Name)">Add as product</button>
+                                            <input class="admin-input" list="product-names" placeholder="Alias of…" aria-label="Alias of product for @name.Name"
+                                                   value="@GetAliasTarget(name.Name)" @onchange="e => SetAliasTarget(name.Name, e.Value?.ToString())" />
+                                            <button class="admin-link-btn" disabled="@(_busy || string.IsNullOrWhiteSpace(GetAliasTarget(name.Name)))" @onclick="() => AddAsAliasAsync(name.Name)">Add as alias</button>
+                                            <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => IgnoreAsync(name.Name)">Not a product</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+
+            <datalist id="product-names">
+                @foreach (var product in _data.Products)
+                {
+                    <option value="@product.Name"></option>
+                }
+            </datalist>
+
+            <details class="admin-details">
+                <summary>Names that are not products (@_data.IgnoredProducts.Count)</summary>
+                @if (_data.IgnoredProducts.Count == 0)
+                {
+                    <div class="admin-empty">No names are ignored.</div>
+                }
+                else
+                {
+                    <ul class="admin-entry-list">
+                        @foreach (var name in _data.IgnoredProducts)
+                        {
+                            <li>
+                                @name
+                                <button class="admin-link-btn" disabled="@_busy" @onclick="() => UnignoreAsync(name)">Restore</button>
+                            </li>
+                        }
+                    </ul>
+                }
+            </details>
+        </section>
+
+        <section class="admin-review-section" id="review-features">
+            <h2 class="admin-section-title">Features to review (@FeatureNameCount)</h2>
+            <p class="admin-result-summary">Feature names of timeline dates that match no feature of their product. Open the features of a product to add them as a feature or as an alias.</p>
+
+            @if (_data.UnmatchedFeatures.Count == 0)
+            {
+                <div class="admin-empty" id="review-features-empty">Nothing to review.</div>
+            }
+            else
+            {
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table" id="review-features-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Names</th>
+                                <th>Dates</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var product in _data.UnmatchedFeatures)
+                            {
+                                <tr>
+                                    <td>@product.ProductName</td>
+                                    <td class="admin-cell-mono">@product.NameCount</td>
+                                    <td class="admin-cell-mono">@product.EventCount</td>
+                                    <td><a class="admin-link-btn" href="/admin/products/@product.ProductId/features">Review features</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </section>
+    }
+</section>
+
+@code {
+    private bool _loading = true;
+    private bool _busy;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private ReviewOverviewData? _data;
+    private readonly Dictionary<string, string> _aliasTargets = new(StringComparer.OrdinalIgnoreCase);
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    private int FeatureNameCount => _data?.UnmatchedFeatures.Sum(f => f.NameCount) ?? 0;
+
+    private RenderFragment Card(string href, string label, int count, string hint) => builder =>
+    {
+        builder.OpenElement(0, "a");
+        builder.AddAttribute(1, "class", count == 0 ? "review-card review-card-clear" : "review-card");
+        builder.AddAttribute(2, "href", href);
+        builder.OpenElement(3, "span");
+        builder.AddAttribute(4, "class", "review-card-count");
+        builder.AddContent(5, count);
+        builder.CloseElement();
+        builder.OpenElement(6, "span");
+        builder.AddAttribute(7, "class", "review-card-label");
+        builder.AddContent(8, label);
+        builder.CloseElement();
+        builder.OpenElement(9, "span");
+        builder.AddAttribute(10, "class", "review-card-hint");
+        builder.AddContent(11, count == 0 ? "all clear" : hint);
+        builder.CloseElement();
+        builder.CloseElement();
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<ReviewOverviewData>("admin-review-overview", out var restored) && restored != null)
+        {
+            _data = restored;
+            _loading = false;
+            return;
+        }
+
+        await LoadAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (_data != null)
+        {
+            ApplicationState.PersistAsJson("admin-review-overview", _data);
+        }
+
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+    }
+
+    /// <summary>Reloads all review queues. Called by the page, so it renders itself afterwards.</summary>
+    public async Task RefreshAsync()
+    {
+        await LoadAsync();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task LoadAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            var data = new ReviewOverviewData
+            {
+                Products = await Api.GetProductsAsync(),
+                UnmatchedProducts = await Api.GetUnmatchedProductNamesAsync(),
+                IgnoredProducts = await Api.GetIgnoredProductNamesAsync(),
+                UnmatchedFeatures = await Api.GetUnmatchedFeaturesSummaryAsync(),
+                PendingContentFixes = (await Api.GetContentReviewSummaryAsync()).Pending,
+                FailedUrls = (await Api.GetProcessedUrlsAsync(1, 1, status: "failed")).TotalCount
+            };
+            _data = data;
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _data = null;
+            _error = $"Failed to load the review queues: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private string GetAliasTarget(string name) => _aliasTargets.TryGetValue(name, out var target) ? target : string.Empty;
+
+    private void SetAliasTarget(string name, string? target) => _aliasTargets[name] = target ?? string.Empty;
+
+    private Task AddAsProductAsync(string name) =>
+        RunAsync(() => Api.CreateProductAsync(name), $"Product '{name}' added.");
+
+    private Task AddAsAliasAsync(string name)
+    {
+        var targetName = GetAliasTarget(name).Trim();
+        var target = _data?.Products.FirstOrDefault(p => string.Equals(p.Name, targetName, StringComparison.OrdinalIgnoreCase));
+        if (target is null)
+        {
+            _message = $"'{targetName}' is not a product. Pick a product from the list.";
+            _messageIsError = true;
+            return Task.CompletedTask;
+        }
+
+        return RunAsync(() => Api.AddProductAliasAsync(target.Id, name), $"'{name}' is now an alias of '{target.Name}'.");
+    }
+
+    private Task IgnoreAsync(string name) =>
+        RunAsync(() => Api.IgnoreProductNameAsync(name), $"'{name}' is marked as not a product.");
+
+    private Task UnignoreAsync(string name) =>
+        RunAsync(() => Api.UnignoreProductNameAsync(name), $"'{name}' is back in the review queue when it is used.");
+
+    private async Task RunAsync(Func<Task> change, string successMessage)
+    {
+        _busy = true;
+        _message = null;
+
+        try
+        {
+            await change();
+            _message = successMessage;
+            _messageIsError = false;
+            await LoadAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = ex.Message;
+            _messageIsError = true;
+        }
+        finally
+        {
+            _busy = false;
+        }
+    }
+}

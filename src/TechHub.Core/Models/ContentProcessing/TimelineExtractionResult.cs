@@ -8,6 +8,12 @@ public sealed class TimelineExtractionResult
     /// <summary>The events found; empty when the article states none or when <see cref="IsFailure"/> is <c>true</c>.</summary>
     public IReadOnlyList<TimelineEvent> Events { get; init; } = [];
 
+    /// <summary>
+    /// The products the article is mainly about, most relevant first. <c>null</c> when the answer did not report products,
+    /// so the products stored for the article are left alone; an empty list means the article is about no product.
+    /// </summary>
+    public IReadOnlyList<string>? Products { get; init; }
+
     /// <summary>When <c>true</c> the extraction failed and the article must not be marked as scanned.</summary>
     public bool IsFailure { get; init; }
 

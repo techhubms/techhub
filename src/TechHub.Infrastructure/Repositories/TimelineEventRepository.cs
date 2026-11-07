@@ -1,6 +1,8 @@
 using System.Data;
+using System.Globalization;
 using Dapper;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Repositories;
@@ -69,6 +71,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         string extractedFrom,
         int promptVersion,
         long expectedRevision,
+        IReadOnlyList<string>? products = null,
         CancellationToken ct = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
@@ -104,7 +107,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                 transaction,
                 collectionName,
                 slug,
-                new TimelineEventReplacement(events, extractedFrom, promptVersion),
+                new TimelineEventReplacement(events, extractedFrom, promptVersion, products),
                 ct);
 
             transaction.Commit();
@@ -252,6 +255,147 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             Quote = r.Quote,
             ExtractedFrom = r.ExtractedFrom
         }).ToList();
+    }
+
+    /// <inheritdoc />
+    public async Task<IReadOnlyList<TimelineEntry>> GetTimelineAsync(TimelineRequest request, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+        ArgumentException.ThrowIfNullOrWhiteSpace(request.SectionName);
+
+        var sectionName = request.SectionName.ToLowerInvariant().Trim();
+        var sectionBits = sectionName == "all" ? SectionBitmasks.AllSections : SectionBitmasks.For(sectionName);
+        if (sectionBits == 0)
+        {
+            return [];
+        }
+
+        const string Sql = """
+            WITH eligible_events AS (
+                SELECT e.id,
+                       e.event_date,
+                       e.kind,
+                       COALESCE(e.product_id::text, lower(e.product)) AS product_key,
+                       COALESCE(f.id::text, lower(e.feature), '') AS feature_key,
+                       lower(COALESCE(p.name, e.product)) AS product_sort,
+                       lower(COALESCE(f.name, e.feature, '')) AS feature_sort
+                FROM content_timeline_events e
+                JOIN content_items ci ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
+                LEFT JOIN products p ON p.id = e.product_id
+                LEFT JOIN product_features f ON f.id = e.feature_id
+                WHERE ci.collection_name <> 'roundups'
+                  AND (ci.sections_bitmask & @SectionBits) > 0
+                  AND (@PrimarySection::text IS NULL OR ci.primary_section_name = @PrimarySection::text)
+                  AND (@From::date IS NULL OR e.event_date >= @From::date)
+                  AND (@To::date IS NULL OR e.event_date <= @To::date)
+                  AND (cardinality(@Kinds::text[]) = 0 OR e.kind = ANY(@Kinds::text[]))
+            ),
+            selected_groups AS (
+                SELECT event_date, kind, product_key, feature_key,
+                       MIN(product_sort) AS product_sort,
+                       MIN(feature_sort) AS feature_sort
+                FROM eligible_events
+                GROUP BY event_date, kind, product_key, feature_key
+                ORDER BY event_date DESC, product_sort, feature_sort, kind
+                LIMIT @Take
+            )
+            SELECT e.id              AS Id,
+                   e.kind            AS Kind,
+                   e.event_date      AS EventDate,
+                   e.date_precision  AS DatePrecision,
+                   e.description     AS Description,
+                   e.product_id      AS ProductId,
+                   COALESCE(p.name, e.product) AS Product,
+                   e.feature_id      AS FeatureId,
+                   COALESCE(f.name, e.feature) AS Feature,
+                   e.collection_name AS CollectionName,
+                   e.item_slug       AS ItemSlug,
+                   ci.title          AS ItemTitle,
+                   ci.external_url   AS ItemExternalUrl,
+                   ci.primary_section_name AS ItemPrimarySectionName,
+                   ci.date_epoch     AS ItemDateEpoch
+            FROM eligible_events eligible
+            JOIN selected_groups selected
+              USING (event_date, kind, product_key, feature_key)
+            JOIN content_timeline_events e ON e.id = eligible.id
+            JOIN content_items ci ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
+            LEFT JOIN products p ON p.id = e.product_id
+            LEFT JOIN product_features f ON f.id = e.feature_id
+            ORDER BY ci.date_epoch, e.id
+            """;
+
+        var rows = (await _connection.QueryAsync<TimelineRow>(new CommandDefinition(
+            Sql,
+            new
+            {
+                SectionBits = sectionBits,
+                // Only articles that are mainly about the section: an article that merely touches it states events about other products.
+                PrimarySection = sectionName == "all" ? null : sectionName,
+                From = request.From?.ToDateTime(TimeOnly.MinValue),
+                To = request.To?.ToDateTime(TimeOnly.MinValue),
+                Kinds = (request.Kinds ?? []).ToArray(),
+                Take = request.Take
+            },
+            cancellationToken: ct))).ToList();
+
+        if (rows.Count == 0)
+        {
+            return [];
+        }
+
+        // The same event stated by several articles is one entry. Rows are ordered by article date, so the first row of a
+        // group is the oldest article and supplies the description.
+        return rows
+            .GroupBy(r => (r.EventDate, r.Kind, Product: r.ProductId?.ToString(CultureInfo.InvariantCulture) ?? r.Product.ToLowerInvariant(), Feature: (r.FeatureId?.ToString(CultureInfo.InvariantCulture) ?? r.Feature?.ToLowerInvariant()) ?? string.Empty))
+            .Select(g =>
+            {
+                var first = g.First();
+                return new TimelineEntry
+                {
+                    Date = DateOnly.FromDateTime(first.EventDate),
+                    DatePrecision = first.DatePrecision,
+                    Kind = first.Kind,
+                    Product = first.Product,
+                    ProductId = first.ProductId,
+                    Feature = first.Feature,
+                    Description = first.Description,
+                    Sources = g
+                        .Select(r => new TimelineEntrySource
+                        {
+                            CollectionName = r.CollectionName,
+                            Slug = r.ItemSlug,
+                            Title = r.ItemTitle,
+                            ExternalUrl = r.ItemExternalUrl,
+                            PrimarySectionName = r.ItemPrimarySectionName
+                        })
+                        .DistinctBy(s => (s.CollectionName, s.Slug))
+                        .ToList()
+                };
+            })
+            .OrderByDescending(e => e.Date)
+            .ThenBy(e => e.Product, StringComparer.OrdinalIgnoreCase)
+            .ThenBy(e => e.Feature, StringComparer.OrdinalIgnoreCase)
+            .ThenBy(e => e.Kind, StringComparer.Ordinal)
+            .ToList();
+    }
+
+    private sealed class TimelineRow
+    {
+        public long Id { get; init; }
+        public string Kind { get; init; } = string.Empty;
+        public DateTime EventDate { get; init; }
+        public string DatePrecision { get; init; } = string.Empty;
+        public string Description { get; init; } = string.Empty;
+        public long? ProductId { get; init; }
+        public string Product { get; init; } = string.Empty;
+        public long? FeatureId { get; init; }
+        public string? Feature { get; init; }
+        public string CollectionName { get; init; } = string.Empty;
+        public string ItemSlug { get; init; } = string.Empty;
+        public string ItemTitle { get; init; } = string.Empty;
+        public string? ItemExternalUrl { get; init; }
+        public string? ItemPrimarySectionName { get; init; }
+        public long ItemDateEpoch { get; init; }
     }
 
     private sealed class StoredTimelineEventRow

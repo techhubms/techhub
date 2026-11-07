@@ -106,6 +106,7 @@ public class AiCompletionClientTests
             {
                 response.Headers.TryAddWithoutValidation(header, value);
             }
+
             return response;
         });
         using var httpClient = new HttpClient(handler);

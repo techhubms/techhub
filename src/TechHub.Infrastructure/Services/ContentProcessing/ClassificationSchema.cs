@@ -74,7 +74,7 @@ internal static class ClassificationSchema
     }
 
     /// <summary>
-    /// Builds the <c>response_format</c> of the timeline-only extraction used by the backfill job.
+    /// Builds the <c>response_format</c> of the extraction used by the backfill job: the products and the timeline events.
     /// </summary>
     public static JsonObject BuildTimelineResponseFormat()
     {
@@ -87,8 +87,9 @@ internal static class ClassificationSchema
                 "schema": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": ["timeline_events"],
+                  "required": ["products", "timeline_events"],
                   "properties": {
+                    "products": { "type": "array", "items": { "type": "string" } },
                     "timeline_events": {{TimelineEventsSchema()}}
                   }
                 }

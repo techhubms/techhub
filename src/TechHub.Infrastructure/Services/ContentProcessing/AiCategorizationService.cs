@@ -35,10 +35,9 @@ public sealed class AiCategorizationService : IAiCategorizationService
     private readonly IReadOnlyList<string> _sectionNames;
     private readonly HashSet<string> _validSections;
 
-    private static readonly string _classifySystemMessage = LoadClassifySystemMessage();
+    private static readonly string _classifySystemMessage = ComposePrompt("content-classify-system.md");
     private static readonly string _rewriteSystemMessage = LoadResource("content-rewrite-system.md");
-    private static readonly string _timelineSystemMessage = LoadResource("content-timeline-extract-system.md")
-        .Replace("{{TIMELINE_RULES}}", LoadResource("content-timeline-rules.md").TrimEnd(), StringComparison.Ordinal);
+    private static readonly string _timelineSystemMessage = ComposePrompt("content-timeline-extract-system.md");
 
     public AiCategorizationService(
         IAiCompletionClient completionClient,
@@ -79,7 +78,50 @@ public sealed class AiCategorizationService : IAiCategorizationService
             ClassificationSchema.BuildResponseFormat(_sectionNames));
 
         var call = await SendWithRetryAsync(json, item, "Classification", ct);
-        return call.Failure ?? ParseClassification(call.ResponseBody!, item);
+        var classification = call.Failure ?? ParseClassification(call.ResponseBody!, item);
+        return await AddMissedDeadlinesAsync(item, classification, ct);
+    }
+
+    /// <summary>
+    /// When the text names a future date next to a deadline phrase (retirement, end of support, ...) that no event of the
+    /// classification covers, asks the focused timeline extraction (the cheap step) and adds the events it finds.
+    /// A second extraction that returns an invalid answer is ignored; transport errors surface like in any other AI call.
+    /// </summary>
+    private async Task<CategorizationResult> AddMissedDeadlinesAsync(RawFeedItem source, CategorizationResult classification, CancellationToken ct)
+    {
+        if (classification.Item is not { } included || string.IsNullOrWhiteSpace(source.FullContent))
+        {
+            return classification;
+        }
+
+        var publicationDate = TimelineEventParser.GetBrusselsDate(source.PublishedAt);
+        if (!TimelineDeadlineGuard.MissesDeadline(source.FullContent, included.TimelineEvents, publicationDate))
+        {
+            return classification;
+        }
+
+        _logger.LogInformation("The text of {Url} names a deadline that the classification has no event for, running the focused timeline extraction", source.ExternalUrl.Sanitize());
+        var extraction = await ExtractTimelineEventsAsync(source, ct);
+        if (extraction.IsFailure)
+        {
+            return classification;
+        }
+
+        var known = included.TimelineEvents.Select(e => (e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date)).ToHashSet();
+        var added = extraction.Events
+            .Where(e => known.Add((e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date)))
+            .ToList();
+
+        if (added.Count == 0)
+        {
+            return classification;
+        }
+
+        return new CategorizationResult
+        {
+            Item = included.WithTimelineEvents([.. included.TimelineEvents, .. added]),
+            Explanation = classification.Explanation
+        };
     }
 
     /// <inheritdoc />
@@ -123,7 +165,10 @@ public sealed class AiCategorizationService : IAiCategorizationService
             }
 
             var events = TimelineEventParser.Parse(eventsProp, TimelineEventParser.GetBrusselsDate(item.PublishedAt), _logger, item.ExternalUrl);
-            return new TimelineExtractionResult { Events = events };
+            IReadOnlyList<string>? products = doc.RootElement.TryGetProperty("products", out var productsProp) && productsProp.ValueKind == JsonValueKind.Array
+                ? GetProducts(doc.RootElement)
+                : null;
+            return new TimelineExtractionResult { Events = events, Products = products };
         }
         catch (JsonException ex)
         {
@@ -515,11 +560,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
             return (null, rolesFailure);
         }
 
-        var products = GetStringArray(root, "products")
-            .Select(p => p.Trim())
-            .Distinct(StringComparer.OrdinalIgnoreCase)
-            .Take(MaxProducts)
-            .ToList();
+        var products = GetProducts(root);
 
         return (new RoundupMetadata
         {
@@ -613,7 +654,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
     internal static string BuildTimelineExtractionPrompt(RawFeedItem item)
     {
         var sb = new StringBuilder();
-        sb.AppendLine("Please extract the timeline events from the following article.");
+        sb.AppendLine("Please extract the products and the timeline events from the following article.");
         sb.AppendLine();
         sb.AppendLine(CultureInfo.InvariantCulture, $"FEED: {item.FeedName}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"COLLECTION: {item.CollectionName}");
@@ -742,6 +783,14 @@ public sealed class AiCategorizationService : IAiCategorizationService
         return null;
     }
 
+    private static List<string> GetProducts(JsonElement root) =>
+        GetStringArray(root, "products")
+            .Select(p => p.Trim())
+            .Where(p => p.Length > 0)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .Take(MaxProducts)
+            .ToList();
+
     private static List<string> GetStringArray(JsonElement root, string name)
     {
         if (!root.TryGetProperty(name, out var prop) || prop.ValueKind != JsonValueKind.Array)
@@ -769,9 +818,13 @@ public sealed class AiCategorizationService : IAiCategorizationService
         return Convert.ToHexStringLower(SHA256.HashData(bytes));
     }
 
-    private static string LoadClassifySystemMessage()
+    /// <summary>
+    /// Loads a prompt and fills in the shared rule blocks: the catalog naming rules and the timeline rules.
+    /// </summary>
+    private static string ComposePrompt(string fileName)
     {
-        return LoadResource("content-classify-system.md")
+        return LoadResource(fileName)
+            .Replace("{{CATALOG_RULES}}", LoadResource("content-catalog-rules.md").TrimEnd(), StringComparison.Ordinal)
             .Replace("{{TIMELINE_RULES}}", LoadResource("content-timeline-rules.md").TrimEnd(), StringComparison.Ordinal);
     }
 

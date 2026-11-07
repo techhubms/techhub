@@ -1,0 +1,19 @@
+.feature-description {
+    width: 100%;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.feature-content-search {
+    flex: 1;
+    min-width: 160px;
+}
+
+.feature-content-thumbnail {
+    text-align: center;
+    width: 3rem;
+}
+
+.feature-content-linked {
+    opacity: 0.6;
+}

@@ -45,6 +45,11 @@
     }
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
+  // In a dev container the managed identity probe (169.254.169.254) fails with a fatal error, so DefaultAzureCredential
+  // never reaches the Azure CLI credential. 'dev' limits it to the developer credentials (az login, VS Code, azd, ...).
+  "containerEnv": {
+    "AZURE_TOKEN_CREDENTIALS": "dev"
+  },
   "forwardPorts": [
     5001,
     5003,

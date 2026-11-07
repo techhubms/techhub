@@ -1,0 +1,316 @@
+@page "/admin/products"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
+@inherits PageComponentBase
+
+<PageTitle>Products — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Products</h1>
+            <p class="admin-page-subtitle">The curated products that articles and dates are grouped by. Names the AI returned that are not linked yet are on the <a href="/admin/reviews#review-product-names">Reviews</a> page. Articles and dates are counted including those of the child products.</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn" @onclick="ShowAddForm">+ Add Product</button>
+            <AdminSubbarAction><button class="btn-secondary" @onclick="LoadAsync">⟳ Refresh</button></AdminSubbarAction>
+        </div>
+    </div>
+
+    <CatalogGlossary />
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @if (_showAddForm)
+    {
+        <div class="admin-modal-backdrop" @onclick="CancelAddForm" @onkeydown="HandleKeyDown" role="dialog" aria-modal="true" aria-labelledby="product-editor-title" tabindex="-1">
+            <div class="admin-modal" @onclick:stopPropagation>
+                <div class="admin-modal-header">
+                    <h2 id="product-editor-title" class="admin-modal-title">Add Product</h2>
+                    <button class="admin-modal-close" @onclick="CancelAddForm" aria-label="Close editor">×</button>
+                </div>
+                <div class="admin-modal-body">
+                    <div class="admin-form-group">
+                        <label class="admin-label" for="productName">Name</label>
+                        <input id="productName" class="admin-input" @bind="_newProductName" placeholder="e.g. Microsoft Foundry" />
+                    </div>
+                </div>
+                <div class="admin-modal-footer">
+                    <button class="btn" @onclick="AddProductAsync" disabled="@_busy">Save</button>
+                    <button class="btn-secondary" @onclick="CancelAddForm">Cancel</button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading products…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else
+    {
+        <h2 class="admin-section-title">Products (@_products.Count)</h2>
+
+        <div class="admin-filters">
+            <div class="admin-filter-group">
+                <label class="admin-label" for="productSearch">Search name or alias</label>
+                <input id="productSearch" class="admin-input" @bind="_search" @bind:event="oninput" placeholder="Search products…" />
+            </div>
+        </div>
+
+        @if (Rows.Count == 0)
+        {
+            <div class="admin-empty" id="products-empty">No products found.</div>
+        }
+        else
+        {
+            <p class="admin-result-summary">@Rows.Count products@(IsSearching ? " (the parents of matches are shown dimmed)" : string.Empty). Child products are indented below their parent.</p>
+            <div class="admin-jobs-table-wrapper">
+                <table class="admin-table" id="products-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Aliases</th>
+                            <th>Child products</th>
+                            <th>Features</th>
+                            <th>Articles</th>
+                            <th>Dates</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var row in Rows)
+                        {
+                            var product = row.Product;
+                            <tr class="@(row.IsMatch ? null : "admin-row-context")">
+                                <td class="admin-tree-cell @(row.Depth > 0 ? "admin-tree-child" : null)" style="--tree-depth: @row.Depth">@product.Name</td>
+                                <td class="admin-aliases" title="@AllAliases(product)">@AliasSummary(product)</td>
+                                <td class="admin-cell-mono">@product.ChildCount</td>
+                                <td class="admin-cell-mono">@product.FeatureCount</td>
+                                <td class="admin-cell-mono">@product.ItemCount</td>
+                                <td class="admin-cell-mono">@product.EventCount</td>
+                                <td><a class="admin-link-btn" href="/admin/products/@product.Id">Open</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    private const int MaxVisibleAliases = 3;
+
+    private static string AllAliases(ProductSummary product) => string.Join(", ", product.Aliases.Select(a => a.Alias));
+
+    private static string AliasSummary(ProductSummary product)
+    {
+        var shown = string.Join(", ", product.Aliases.Take(MaxVisibleAliases).Select(a => a.Alias));
+        var hidden = product.Aliases.Count - MaxVisibleAliases;
+        return hidden > 0 ? $"{shown} and {hidden} more" : shown;
+    }
+
+    private bool _loading = true;
+    private bool _busy;
+    private bool _showAddForm;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private string _search = string.Empty;
+    private string _newProductName = string.Empty;
+    private IReadOnlyList<ProductSummary> _products = [];
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    private sealed record ProductRow(ProductSummary Product, int Depth, bool IsMatch);
+
+    private bool IsSearching => !string.IsNullOrWhiteSpace(_search);
+
+    private IReadOnlyList<ProductRow>? _rows;
+    private string? _rowsSearch;
+    private IReadOnlyList<ProductSummary>? _rowsProducts;
+
+    // The products as a tree: a parent is followed by its children, indented. A search keeps the parents of the matches so the nesting stays.
+    private IReadOnlyList<ProductRow> Rows
+    {
+        get
+        {
+            if (_rows is null || _rowsSearch != _search || !ReferenceEquals(_rowsProducts, _products))
+            {
+                _rows = BuildRows();
+                _rowsSearch = _search;
+                _rowsProducts = _products;
+            }
+
+            return _rows;
+        }
+    }
+
+    private List<ProductRow> BuildRows()
+    {
+        var byId = _products.ToDictionary(p => p.Id);
+        var search = _search.Trim();
+        var matches = IsSearching
+            ? _products.Where(p => p.Name.Contains(search, StringComparison.OrdinalIgnoreCase)
+                || p.Aliases.Any(a => a.Alias.Contains(search, StringComparison.OrdinalIgnoreCase))).Select(p => p.Id).ToHashSet()
+            : _products.Select(p => p.Id).ToHashSet();
+
+        var included = matches.ToHashSet();
+        foreach (var initialParentId in matches.Select(id => byId[id].ParentId))
+        {
+            var parentId = initialParentId;
+            while (parentId is { } parent && byId.TryGetValue(parent, out var parentProduct) && included.Add(parent))
+            {
+                parentId = parentProduct.ParentId;
+            }
+        }
+
+        var children = _products
+            .Where(p => included.Contains(p.Id))
+            .ToLookup(p => p.ParentId is { } parent && included.Contains(parent) ? parent : (long?)null);
+
+        var rows = new List<ProductRow>();
+        var visited = new HashSet<long>();
+
+        void Add(ProductSummary product, int depth)
+        {
+            if (!visited.Add(product.Id))
+            {
+                return;
+            }
+
+            rows.Add(new ProductRow(product, depth, matches.Contains(product.Id)));
+            foreach (var child in children[product.Id].OrderBy(c => c.Name, StringComparer.OrdinalIgnoreCase))
+            {
+                Add(child, depth + 1);
+            }
+        }
+
+        foreach (var root in children[null].OrderBy(p => p.Name, StringComparer.OrdinalIgnoreCase))
+        {
+            Add(root, 0);
+        }
+
+        return rows;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<ProductSummary>>("admin-products", out var products) && products != null)
+        {
+            _products = products;
+            _loading = false;
+            return;
+        }
+
+        await LoadAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (!_loading && _error == null)
+        {
+            ApplicationState.PersistAsJson("admin-products", _products);
+        }
+
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+    }
+
+    private async Task LoadAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            _products = await Api.GetProductsAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load products: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private void ShowAddForm()
+    {
+        _newProductName = string.Empty;
+        _showAddForm = true;
+        _message = null;
+    }
+
+    private void CancelAddForm() => _showAddForm = false;
+
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Escape")
+        {
+            CancelAddForm();
+        }
+    }
+
+    private async Task AddProductAsync()
+    {
+        if (await RunAsync(() => Api.CreateProductAsync(_newProductName), $"Product '{_newProductName.Trim()}' added."))
+        {
+            _showAddForm = false;
+        }
+    }
+
+    private async Task<bool> RunAsync(Func<Task> change, string successMessage)
+    {
+        _busy = true;
+        _message = null;
+
+        try
+        {
+            await change();
+            _message = successMessage;
+            _messageIsError = false;
+            await LoadAsync();
+            return true;
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = ex.Message;
+            _messageIsError = true;
+            return false;
+        }
+        finally
+        {
+            _busy = false;
+        }
+    }
+}

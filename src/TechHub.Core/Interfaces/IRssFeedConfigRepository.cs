@@ -23,6 +23,12 @@ public interface IRssFeedConfigRepository
     /// <summary>Updates an existing feed configuration. Returns true if found and updated.</summary>
     Task<bool> UpdateAsync(FeedConfig feed, CancellationToken ct = default);
 
+    /// <summary>
+    /// Records that the pipeline just downloaded the feed: sets the check time to now and stores
+    /// <paramref name="errorMessage"/> (null when the check succeeded). Returns true if the feed was found.
+    /// </summary>
+    Task<bool> RecordCheckAsync(long id, string? errorMessage, CancellationToken ct = default);
+
     /// <summary>Deletes a feed configuration by ID. Returns true if found and deleted.</summary>
     Task<bool> DeleteAsync(long id, CancellationToken ct = default);
 }
