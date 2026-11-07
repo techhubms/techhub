@@ -221,7 +221,14 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
     }
 
     /// <inheritdoc />
-    public async Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement? timeline, long expectedRevision, CancellationToken ct = default)
+    public Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement? timeline, long expectedRevision, CancellationToken ct = default) =>
+        UpdateAiMetadataIfUnchangedCoreAsync(collectionName, slug, aiMetadataJson, timeline, expectedRevision, keepStoredProducts: false, ct);
+
+    /// <inheritdoc />
+    public Task<bool> UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, long expectedRevision, CancellationToken ct = default) =>
+        UpdateAiMetadataIfUnchangedCoreAsync(collectionName, slug, aiMetadataJson, null, expectedRevision, keepStoredProducts: true, ct);
+
+    private async Task<bool> UpdateAiMetadataIfUnchangedCoreAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement? timeline, long expectedRevision, bool keepStoredProducts, CancellationToken ct)
     {
         using var transaction = BeginTransaction();
         try
@@ -240,7 +247,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
                 return false;
             }
 
-            await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct);
+            await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct, keepStoredProducts);
             if (timeline is not null)
             {
                 await TimelineEventWriter.ReplaceAsync(_connection, transaction, collectionName, slug, timeline, ct);
@@ -256,17 +263,28 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
         }
     }
 
-    private async Task ExecuteUpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, IDbTransaction transaction, CancellationToken ct)
+    private async Task ExecuteUpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, IDbTransaction transaction, CancellationToken ct, bool keepStoredProducts = false)
     {
-        const string Sql = @"
+        // The stored products are read in the same statement, so they come from the row this transaction has locked.
+        const string KeepProductsSql = @"
+UPDATE content_items
+   SET ai_metadata = @AiMetadata::jsonb || jsonb_build_object('products',
+           CASE WHEN jsonb_typeof(ai_metadata -> 'products') = 'array' THEN ai_metadata -> 'products' ELSE '[]'::jsonb END),
+       updated_at  = NOW()
+ WHERE collection_name = @CollectionName
+   AND slug           = @Slug";
+
+        const string ReplaceSql = @"
 UPDATE content_items
    SET ai_metadata = @AiMetadata::jsonb,
        updated_at  = NOW()
  WHERE collection_name = @CollectionName
    AND slug           = @Slug";
 
+        var sql = keepStoredProducts ? KeepProductsSql : ReplaceSql;
+
         var rows = await _connection.ExecuteAsync(new CommandDefinition(
-            Sql,
+            sql,
             new { CollectionName = collectionName, Slug = slug, AiMetadata = aiMetadataJson },
             transaction,
             cancellationToken: ct));

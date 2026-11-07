@@ -203,6 +203,29 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
     }
 
     [Fact]
+    public async Task UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync_KeepsProductsStoredAfterTheArticleWasRead()
+    {
+        var slug = await SeedAsync();
+        var revision = (await _timelineRepo.GetItemForExtractionAsync(Collection, slug, TestContext.Current.CancellationToken))!.Revision;
+
+        // A timeline backfill stores products without changing the revision while the roundup classifies the article.
+        var timelineStored = await _timelineRepo.ReplaceEventsIfUnchangedAsync(
+            Collection, slug, [], ITimelineEventRepository.ExtractedFromStoredContent, 1, revision, ["Azure Functions"], TestContext.Current.CancellationToken);
+        timelineStored.Should().BeTrue();
+
+        var stored = await _writeRepo.UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(
+            Collection, slug, """{"schema_version":2,"significance":"low","products":[]}""", revision, TestContext.Current.CancellationToken);
+
+        stored.Should().BeTrue();
+        var metadata = await _fixture.Connection.ExecuteScalarAsync<string?>(
+            "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug", new { Collection, Slug = slug });
+        metadata.Should().Contain("\"significance\": \"low\"").And.Contain("Azure Functions");
+        var links = await _fixture.Connection.QueryAsync<string>(
+            "SELECT product_name FROM content_item_products WHERE collection_name = @Collection AND item_slug = @Slug", new { Collection, Slug = slug });
+        links.Should().ContainSingle().Which.Should().Be("Azure Functions");
+    }
+
+    [Fact]
     public async Task UpdateEditDataAsync_WhenTheEventWriteFails_KeepsThePreviousTextAndEvents()
     {
         var slug = await SeedAsync();

@@ -37,4 +37,12 @@ public interface IContentItemWriteRepository
     /// after it was read, so metadata and events classified from outdated text are never stored.
     /// </summary>
     Task<bool> UpdateAiMetadataIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement? timeline, long expectedRevision, CancellationToken ct = default);
+
+    /// <summary>
+    /// Like <see cref="UpdateAiMetadataIfUnchangedAsync"/> without timeline events, but the <c>products</c> of
+    /// <paramref name="aiMetadataJson"/> are replaced by the products stored at that moment, read under the article's
+    /// write lock. A concurrent timeline backfill stores products without changing the revision, so a snapshot
+    /// read earlier could be stale and would delete the product links that backfill just wrote.
+    /// </summary>
+    Task<bool> UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(string collectionName, string slug, string aiMetadataJson, long expectedRevision, CancellationToken ct = default);
 }

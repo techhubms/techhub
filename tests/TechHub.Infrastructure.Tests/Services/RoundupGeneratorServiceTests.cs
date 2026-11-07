@@ -40,6 +40,9 @@ public class RoundupGeneratorServiceTests
         _writeRepo
             .Setup(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(true);
+        _writeRepo
+            .Setup(w => w.UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(true);
     }
 
     private static readonly DateOnly _weekStart = new(2025, 4, 7);    // Monday
@@ -708,36 +711,15 @@ public class RoundupGeneratorServiceTests
         var progressMessages = new List<string>();
         await CreateSut().GenerateAsync(_weekStart, _weekEnd, new SynchronousProgress<string>(progressMessages.Add), ct: TestContext.Current.CancellationToken);
 
-        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync(
+        _writeRepo.Verify(w => w.UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(
             "news",
             "article-10",
             It.Is<string>(j => j.Contains("\"schema_version\":2") && j.Contains("\"significance\":\"low\"")),
-            It.Is<TimelineEventReplacement?>(timeline => timeline == null),
             4242L,
             It.IsAny<CancellationToken>()), Times.Once);
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", "article-10", It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Never);
         _writeRepo.Verify(w => w.UpdateAiMetadataAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
         progressMessages.Should().Contain(m => m.Contains("Sales Pitches", StringComparison.Ordinal), "the exclusion reason is visible in the job log");
-    }
-
-    [Fact]
-    public async Task GenerateAsync_BackfillWhenClassifierExcludesTheStoredArticle_KeepsItsStoredProductNames()
-    {
-        var needing = Article("ai", 10, products: ["Azure Functions", "Azure Event Grid"]) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };
-        SetupArticles("ai", needing, Article("ai", 1));
-        _aiCategorizationService
-            .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new CategorizationResult { Explanation = "Sales Pitches. A promotional teaser.", Item = null });
-        SetupAi();
-
-        await CreateSut().GenerateAsync(_weekStart, _weekEnd, new SynchronousProgress<string>(_ => { }), ct: TestContext.Current.CancellationToken);
-
-        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync(
-            "news",
-            "article-10",
-            It.Is<string>(j => j.Contains("\"products\":[\"Azure Functions\",\"Azure Event Grid\"]")),
-            It.IsAny<TimelineEventReplacement?>(),
-            4242L,
-            It.IsAny<CancellationToken>()), Times.Once);
     }
 
     [Fact]
@@ -746,7 +728,7 @@ public class RoundupGeneratorServiceTests
         var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };
         SetupArticles("ai", needing, Article("ai", 1));
         _writeRepo
-            .Setup(w => w.UpdateAiMetadataIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
+            .Setup(w => w.UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<long>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(false);
         _aiCategorizationService
             .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
@@ -756,8 +738,8 @@ public class RoundupGeneratorServiceTests
         var progressMessages = new List<string>();
         await CreateSut().GenerateAsync(_weekStart, _weekEnd, new SynchronousProgress<string>(progressMessages.Add), ct: TestContext.Current.CancellationToken);
 
-        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync(
-            "news", "article-10", It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), 4242L, It.IsAny<CancellationToken>()), Times.Once);
+        _writeRepo.Verify(w => w.UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(
+            "news", "article-10", It.IsAny<string>(), 4242L, It.IsAny<CancellationToken>()), Times.Once);
         _writeRepo.Verify(w => w.UpdateAiMetadataAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
         progressMessages.Should().NotContain(m => m.Contains("would be excluded", StringComparison.Ordinal));
     }
