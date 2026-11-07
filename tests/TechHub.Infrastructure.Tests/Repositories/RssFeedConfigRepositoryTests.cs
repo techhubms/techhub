@@ -371,6 +371,16 @@ public class RssFeedConfigRepositoryTests
     }
 
     [Fact]
+    public async Task FeedNameLookups_HaveIndexes()
+    {
+        var indexes = (await _fixture.Connection.QueryAsync<string>(
+            "SELECT indexdef FROM pg_indexes WHERE tablename IN ('content_items', 'processed_urls')")).ToList();
+
+        indexes.Should().Contain(i => i.Contains("ON public.content_items", StringComparison.Ordinal) && i.Contains("(feed_name, created_at)", StringComparison.Ordinal));
+        indexes.Should().Contain(i => i.Contains("ON public.processed_urls", StringComparison.Ordinal) && i.Contains("(feed_name)", StringComparison.Ordinal));
+    }
+
+    [Fact]
     public async Task DeleteAsync_NonExistentId_ReturnsFalse()
     {
         // Act

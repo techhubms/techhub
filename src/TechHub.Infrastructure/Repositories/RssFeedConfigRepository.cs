@@ -47,11 +47,12 @@ ORDER BY name";
         const string Sql = @"
 SELECT f.id, f.name, f.url, f.output_dir AS OutputDir, f.enabled,
     f.polling_interval_minutes AS PollingIntervalMinutes,
-    (EXISTS (SELECT 1 FROM content_items c WHERE c.feed_name = f.name)
-     OR EXISTS (SELECT 1 FROM processed_urls p WHERE p.feed_name = f.name)) AS HasContent,
+    (c.feed_name IS NOT NULL OR p.feed_name IS NOT NULL) AS HasContent,
     f.last_checked_at AS LastCheckedAt, f.last_check_error AS LastCheckError,
-    (SELECT MAX(c.created_at) FROM content_items c WHERE c.feed_name = f.name) AS LastContentAt
+    c.last_content_at AS LastContentAt
 FROM rss_feed_configs f
+LEFT JOIN (SELECT feed_name, MAX(created_at) AS last_content_at FROM content_items GROUP BY feed_name) c ON c.feed_name = f.name
+LEFT JOIN (SELECT DISTINCT feed_name FROM processed_urls) p ON p.feed_name = f.name
 ORDER BY f.enabled DESC, f.name";
 
         var result = await _connection.QueryAsync<FeedConfig>(

@@ -129,6 +129,7 @@ There is no similarity scoring. A name that fits none of the tiers stays unmatch
 
 - **Links follow the AI output.** Whenever the `ai_metadata` of an article is written (processing, roundup metadata backfill, admin edit) its links are replaced, and event writes set `product_id` and `feature_id` the same way.
 - **Catalog changes relink everything.** Adding a product or alias, renaming, merging, converting and deleting re-evaluate all links in the same transaction, so nothing becomes unmatched by accident.
+- **Catalog changes and link writes never overlap.** A relink only sees committed links, so a catalog change holds an exclusive advisory lock (`pg_advisory_xact_lock`) for its whole transaction and every write of article links or timeline events holds the shared one (`CatalogRelink`). Writers wait for a running catalog change and then see its entries; a catalog change waits for the running writers and then relinks their links. A writer takes the shared lock only after it holds the row of its article.
 - **Readers.** The roundup uses the canonical names (grouping and ordering by product, "Dates to know") and falls back to the AI's text for unmatched names. The admin products page shows the articles and dates per product.
 
 ## Review Queue

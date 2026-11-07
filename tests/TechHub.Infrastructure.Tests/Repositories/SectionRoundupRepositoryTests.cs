@@ -153,6 +153,26 @@ public class SectionRoundupRepositoryTests
     }
 
     [Fact]
+    public async Task GetArticlesForSectionForWeekAsync_WithProductsOnlyAiMetadata_IncludesItemWithNeedsFlag()
+    {
+        // The timeline backfill stores only the products of an article that was never classified.
+        await _fixture.Connection.ExecuteAsync("""
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name, tags_csv,
+                 sections_bitmask, content_hash, is_ai, ai_metadata, created_at)
+            VALUES ('products-only-article', 'news', 'Products Only Article', '', '', 1711699200,
+                    'ai', 'https://example.com/products-only', 'Author', 'Feed', '', 1, 'hash-products-only',
+                    TRUE, '{"products": ["GitHub Actions"]}'::jsonb, '2025-03-25T10:00:00Z')
+            ON CONFLICT (collection_name, slug) DO NOTHING
+            """);
+
+        var result = await GetAllSectionsAsync();
+
+        result["ai"].Should().Contain(a => a.Slug == "products-only-article").Which.NeedsAiMetadata.Should().BeTrue();
+    }
+
+    [Fact]
     public async Task GetArticlesForSectionForWeekAsync_WithAllRelevanceLevels_ReturnsAll()
     {
         // Arrange

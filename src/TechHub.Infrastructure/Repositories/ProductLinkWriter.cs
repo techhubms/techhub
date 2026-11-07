@@ -25,6 +25,8 @@ internal static class ProductLinkWriter
 
         var parameters = new { CollectionName = collectionName, Slug = slug };
 
+        await CatalogRelink.LockForLinkWriteAsync(connection, transaction, ct);
+
         await connection.ExecuteAsync(new CommandDefinition(
             "DELETE FROM content_item_products WHERE collection_name = @CollectionName AND item_slug = @Slug",
             parameters,

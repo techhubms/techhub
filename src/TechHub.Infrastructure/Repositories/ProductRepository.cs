@@ -590,6 +590,7 @@ public sealed class ProductRepository : IProductRepository
         using var transaction = _connection.BeginTransaction();
         try
         {
+            await CatalogRelink.LockForCatalogChangeAsync(_connection, transaction, CancellationToken.None);
             var result = await operation(transaction);
             if (result.Succeeded)
             {

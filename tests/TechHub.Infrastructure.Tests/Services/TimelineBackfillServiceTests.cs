@@ -443,7 +443,7 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
     }
 
     [Fact]
-    public async Task RunAsync_Products_OfAnArticleWithoutMetadata_DoNotCreateMetadata()
+    public async Task RunAsync_Products_OfAnArticleWithoutMetadata_AreStoredWithoutTheCurrentSchemaVersionAndLinked()
     {
         await SeedAsync("a1");
         SetupAiProducts(["GitHub Actions"]);
@@ -451,7 +451,22 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
         var result = await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
 
         result.Scanned.Should().Be(1);
-        (await ReadMetadataAsync("a1")).Should().BeNull("metadata marks an article as classified, and a products-only object would hide that it still has to be");
+        var metadata = System.Text.Json.JsonDocument.Parse((await ReadMetadataAsync("a1"))!).RootElement;
+        metadata.EnumerateObject().Select(p => p.Name).Should().Equal(["products"], "without a schema version the roundup metadata backfill still classifies the article");
+        metadata.GetProperty("products").EnumerateArray().Select(e => e.GetString()).Should().Equal("GitHub Actions");
+        (await ReadLinksAsync("a1")).Should().ContainSingle().Which.Product.Should().Be("GitHub Actions");
+    }
+
+    [Fact]
+    public async Task RunAsync_Products_EmptyList_OfAnArticleWithoutMetadata_DoNotCreateMetadata()
+    {
+        await SeedAsync("a1");
+        SetupAiProducts([]);
+
+        var result = await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        result.Scanned.Should().Be(1);
+        (await ReadMetadataAsync("a1")).Should().BeNull();
         (await ReadLinksAsync("a1")).Should().BeEmpty();
     }
 }
