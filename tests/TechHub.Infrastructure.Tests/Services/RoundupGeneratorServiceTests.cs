@@ -720,6 +720,27 @@ public class RoundupGeneratorServiceTests
     }
 
     [Fact]
+    public async Task GenerateAsync_BackfillWhenClassifierExcludesTheStoredArticle_KeepsItsStoredProductNames()
+    {
+        var needing = Article("ai", 10, products: ["Azure Functions", "Azure Event Grid"]) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };
+        SetupArticles("ai", needing, Article("ai", 1));
+        _aiCategorizationService
+            .Setup(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Explanation = "Sales Pitches. A promotional teaser.", Item = null });
+        SetupAi();
+
+        await CreateSut().GenerateAsync(_weekStart, _weekEnd, new SynchronousProgress<string>(_ => { }), ct: TestContext.Current.CancellationToken);
+
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync(
+            "news",
+            "article-10",
+            It.Is<string>(j => j.Contains("\"products\":[\"Azure Functions\",\"Azure Event Grid\"]")),
+            It.IsAny<TimelineEventReplacement?>(),
+            4242L,
+            It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
     public async Task GenerateAsync_BackfillWhenExcludedArticleChangedDuringClassification_DoesNotStoreOrEnrichIt()
     {
         var needing = Article("ai", 10) with { NeedsAiMetadata = true, Content = "text", FeedName = "Feed", DateEpoch = 1_700_000_000, Revision = 4242 };

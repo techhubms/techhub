@@ -335,7 +335,14 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                     // The current classifier would exclude this stored article, so there is no roundup metadata to enrich.
                     // Store neutral metadata: otherwise it is classified again in every section and on every run.
                     // It has no section roles, so it stays a lead (never a missing story), ordered last as low significance.
-                    var neutral = new RoundupMetadata { SchemaVersion = RoundupMetadata.CurrentSchemaVersion, Significance = "low" };
+                    // The stored product names are kept: being excluded from classification is no evidence that the article
+                    // has no product, and dropping them would delete its catalog links.
+                    var neutral = new RoundupMetadata
+                    {
+                        SchemaVersion = RoundupMetadata.CurrentSchemaVersion,
+                        Significance = "low",
+                        Products = article.Products
+                    };
                     var stored = await _writeRepo.UpdateAiMetadataIfUnchangedAsync(
                         article.CollectionName,
                         article.Slug,

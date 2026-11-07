@@ -1740,6 +1740,10 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             transaction,
             cancellationToken: ct));
 
+        // Right after the row lock and before any event row is deleted: a catalog change that starts later then waits
+        // here instead of waiting for deleted event rows while this edit waits for the catalog lock.
+        await CatalogRelink.LockForLinkWriteAsync(Connection, transaction, ct);
+
         const string Changed = @"
 EXISTS (SELECT 1 FROM content_items ci
          WHERE ci.collection_name = @CollectionName AND ci.slug = @Slug

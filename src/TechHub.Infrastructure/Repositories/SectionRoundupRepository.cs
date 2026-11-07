@@ -133,6 +133,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             ImpactLevel = meta?.ImpactLevel ?? "medium",
             TimeSensitivity = meta?.TimeSensitivity ?? "this-week",
             NeedsAiMetadata = meta is null || meta.SchemaVersion < RoundupMetadata.CurrentSchemaVersion,
+            Products = row.ProductNames,
             Excerpt = row.Excerpt,
             Content = row.Content,
             FeedName = row.FeedName,
