@@ -223,9 +223,11 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
             "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug", new { Collection, Slug = slug });
         metadata.Should().Contain("\"significance\": \"low\"").And.Contain("Azure Functions");
         metadata.Should().Contain("Durable Functions", "neutral metadata updates preserve stored feature mentions too");
-        var links = await _fixture.Connection.QueryAsync<string>(
-            "SELECT product_name FROM content_item_products WHERE collection_name = @Collection AND item_slug = @Slug", new { Collection, Slug = slug });
-        links.Should().ContainSingle().Which.Should().Be("Azure Functions");
+        var links = await _fixture.Connection.QueryAsync<(string ProductName, string FeatureName)>(
+            "SELECT product_name AS ProductName, feature_name AS FeatureName FROM content_item_products WHERE collection_name = @Collection AND item_slug = @Slug ORDER BY feature_name",
+            new { Collection, Slug = slug });
+        links.Should().Equal([("Azure Functions", string.Empty), ("Azure Functions", "Durable Functions")],
+            "the stored product and the stored feature mention each keep their own link");
     }
 
     [Fact]

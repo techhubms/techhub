@@ -70,10 +70,12 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                 ci.content              AS Content,
                 ci.feed_name            AS FeedName,
                 ci.date_epoch           AS DateEpoch,
-                (SELECT COALESCE(array_agg(COALESCE(p.name, l.product_name) ORDER BY l.position), ARRAY[]::text[])
-                   FROM content_item_products l
-                   LEFT JOIN products p ON p.id = l.product_id
-                  WHERE l.collection_name = ci.collection_name AND l.item_slug = ci.slug) AS ProductNames,
+                (SELECT COALESCE(array_agg(n.name ORDER BY n.first_position), ARRAY[]::text[])
+                   FROM (SELECT COALESCE(p.name, l.product_name) AS name, MIN(l.position) AS first_position
+                           FROM content_item_products l
+                           LEFT JOIN products p ON p.id = l.product_id
+                          WHERE l.collection_name = ci.collection_name AND l.item_slug = ci.slug
+                          GROUP BY COALESCE(p.name, l.product_name)) n) AS ProductNames,
                 {TimelineEventWriter.RevisionExpression} AS Revision
             FROM content_items ci
             WHERE ci.created_at >= @WeekStart

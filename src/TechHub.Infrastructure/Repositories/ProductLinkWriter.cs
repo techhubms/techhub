@@ -5,7 +5,8 @@ namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
 /// Keeps <c>content_item_products</c> (the product names an article lists, links through features, or names in events)
-/// in sync with the article metadata and timeline events, inside a transaction owned by the caller.
+/// in sync with the article metadata and timeline events, inside a transaction owned by the caller. A name that came with
+/// a feature is stored with that feature, so the catalog resolves the pair like an event and a child product gets the article.
 /// </summary>
 internal static class ProductLinkWriter
 {
@@ -35,7 +36,7 @@ internal static class ProductLinkWriter
         await connection.ExecuteAsync(new CommandDefinition(
             """
             WITH src AS (
-                SELECT regexp_replace(btrim(n.name), '\s+', ' ', 'g') AS name, n.ordinal
+                SELECT regexp_replace(btrim(n.name), '\s+', ' ', 'g') AS name, ''::text AS feature, n.ordinal
                 FROM content_items ci
                 CROSS JOIN LATERAL jsonb_array_elements_text(
                     CASE WHEN jsonb_typeof(ci.ai_metadata -> 'products') = 'array'
@@ -43,7 +44,9 @@ internal static class ProductLinkWriter
                          ELSE '[]'::jsonb END) WITH ORDINALITY AS n (name, ordinal)
                 WHERE ci.collection_name = @CollectionName AND ci.slug = @Slug
                 UNION ALL
-                SELECT regexp_replace(btrim(n.value ->> 'product'), '\s+', ' ', 'g') AS name, 1000 + n.ordinal
+                SELECT regexp_replace(btrim(n.value ->> 'product'), '\s+', ' ', 'g') AS name,
+                       regexp_replace(btrim(COALESCE(n.value ->> 'feature', '')), '\s+', ' ', 'g') AS feature,
+                       1000 + n.ordinal
                 FROM content_items ci
                 CROSS JOIN LATERAL jsonb_array_elements(
                     CASE WHEN jsonb_typeof(ci.ai_metadata -> 'product_features') = 'array'
@@ -54,18 +57,19 @@ internal static class ProductLinkWriter
                   AND btrim(COALESCE(n.value ->> 'product', '')) <> ''
                 UNION ALL
                 SELECT regexp_replace(btrim(e.product), '\s+', ' ', 'g') AS name,
+                       regexp_replace(btrim(COALESCE(e.feature, '')), '\s+', ' ', 'g') AS feature,
                        100000 + ROW_NUMBER() OVER (ORDER BY e.event_date, e.product, e.feature)
                 FROM content_timeline_events e
                 WHERE e.collection_name = @CollectionName AND e.item_slug = @Slug
             ),
             firsts AS (
-                SELECT DISTINCT ON (lower(name)) name, ordinal
+                SELECT DISTINCT ON (lower(name), lower(feature)) name, feature, ordinal
                 FROM src
                 WHERE name <> ''
-                ORDER BY lower(name), ordinal
+                ORDER BY lower(name), lower(feature), ordinal
             )
-            INSERT INTO content_item_products (collection_name, item_slug, product_name, position)
-            SELECT @CollectionName, @Slug, name,
+            INSERT INTO content_item_products (collection_name, item_slug, product_name, feature_name, position)
+            SELECT @CollectionName, @Slug, name, feature,
                    (ROW_NUMBER() OVER (ORDER BY ordinal))::int - 1
             FROM firsts
             """,

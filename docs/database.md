@@ -59,7 +59,7 @@ The container also uses 32 MB of working memory for aggregation and an SSD-orien
 | `ignored_product_names` | Names the AI returns that are not products, kept out of the review queue |
 | `product_features` | Curated features of a product, with `product_feature_aliases` for other names. Timeline events link to one through `feature_id`, see [content-processing.md](product-catalog.md#features). A feature also has a `slug`, a `description` and a `release_date` |
 | `product_feature_content` | Manually curated feature-to-content links (many-to-many) with a thumbnail flag and sort order. AI-detected article links come from `ai_metadata` and timeline events; the timeline lists the items of an event as its sources |
-| `content_item_products` | The product names an article lists, linked to the catalog (`product_id` is empty for names that are not in the catalog), with a cascading foreign key to the article |
+| `content_item_products` | The product names an article lists, linked to the catalog (`product_id` is empty for names that are not in the catalog), with a cascading foreign key to the article. A name that came with a feature (a detected feature mention or a dated event) is stored with that feature in `feature_name` and resolves like an event, so a feature of a child product links the article to the child |
 | `content_reviews` | Review queue for content fixer changes (tags, markdown, author) awaiting approval |
 | `custom_page_data` | JSON data for custom pages (editable from admin UI) |
 | `background_job_settings` | Per-job enabled flag that gates scheduled runs (see [content-processing.md](content-processing.md#scheduling)) |

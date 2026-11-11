@@ -3,7 +3,9 @@
 @rendermode InteractiveServer
 @using TechHub.Core.Models.Admin
 @using TechHub.Web.Services
+@implements IDisposable
 @inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
 @inject ILogger<AdminNewsletterSendLog> Logger
 @inherits PageComponentBase
 
@@ -65,10 +67,33 @@
     private IReadOnlyList<NewsletterSendLogEntry> _sendLog = [];
     private bool _loading;
     private string? _error;
+    private PersistingComponentStateSubscription? _persistSubscription;
 
     protected override async Task OnInitializedAsync()
     {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<NewsletterSendLogEntry>>("admin-newsletter-send-log", out var restored) && restored != null)
+        {
+            _sendLog = restored;
+            return;
+        }
+
         await LoadAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (_error == null)
+        {
+            ApplicationState.PersistAsJson("admin-newsletter-send-log", _sendLog);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
     }
 
     private async Task LoadAsync()

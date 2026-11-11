@@ -1,4 +1,5 @@
 using Bunit;
+using Bunit.TestDoubles;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -12,10 +13,13 @@ namespace TechHub.Web.Tests.Components.Pages.Admin;
 /// </summary>
 public abstract class AdminPageTestBase : BunitContext
 {
+    /// <summary>The persistent state of the test context, to seed or inspect what a page persists across prerender and hydration.</summary>
+    protected BunitPersistentComponentState PersistentState { get; }
+
     protected AdminPageTestBase()
     {
         Services.AddSingleton(typeof(ILogger<>), typeof(NullLogger<>));
-        AddBunitPersistentComponentState();
+        PersistentState = AddBunitPersistentComponentState();
         JSInterop.SetupVoid("markScriptsReady");
     }
 }

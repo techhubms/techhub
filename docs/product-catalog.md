@@ -12,7 +12,7 @@ The AI returns product and feature names as free text. The catalog is a curated 
 | `product_feature_aliases` | Other names for a feature |
 | `product_feature_content` | Curated videos and posts that belong to a feature (one can be the thumbnail) |
 | `ignored_product_names` | Names the AI returns that are not products (an event, a program), so they stay out of the review queue |
-| `content_item_products` | The product names an article lists, including products named in detected feature mentions or dated events, with the product each one matches. `product_id` is empty while the name is not in the catalog |
+| `content_item_products` | The product names an article lists, including products named in detected feature mentions or dated events, with the product each one matches. A name from a feature mention or an event keeps its feature in `feature_name` and resolves to the child product or feature it names, the same way events do, also in catalog-wide relinks. `product_id` is empty while the name is not in the catalog |
 | `content_timeline_events.product_id` and `feature_id` | The product and feature of an event. The raw `product` and `feature` text stays on the event |
 
 An article is about several products or features, and a product feature can link to several articles. An event belongs to one article and one product (and optionally one feature), so both dates and detected feature mentions lead back to the article that states them.

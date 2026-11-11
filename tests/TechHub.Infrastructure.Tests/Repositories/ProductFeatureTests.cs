@@ -119,6 +119,52 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
     }
 
     [Fact]
+    public async Task ReplaceEvents_OfAParentProductWithAChildFeature_LinksTheArticleToTheChildProduct()
+    {
+        var parent = await CreateProductAsync();
+        var child = await CreateProductAsync();
+        (await _products.SetParentAsync(child.Id, parent.Id, Ct)).Succeeded.Should().BeTrue();
+        await CreateFeatureAsync(child.Id, "Plan mode");
+        var slug = await SeedItemAsync();
+
+        await _timelineRepository.ReplaceEventsAsync("news", slug, [Event(parent.Name, "plan mode", "ga")], "source", 3, Ct);
+
+        (await GetLinkedProductIdsAsync(slug)).Should().ContainSingle().Which.Should().Be(child.Id, "the event resolves to the child product, so the article belongs to it");
+    }
+
+    [Fact]
+    public async Task ProductFeatureMention_OfAParentProductWithAChildFeature_LinksTheArticleToTheChildProductAfterEveryRelink()
+    {
+        var parent = await CreateProductAsync();
+        var child = await CreateProductAsync();
+        (await _products.SetParentAsync(child.Id, parent.Id, Ct)).Succeeded.Should().BeTrue();
+        await CreateFeatureAsync(child.Id, "Plan mode");
+        var slug = await SeedItemAsync();
+        await _fixture.Connection.ExecuteAsync(
+            """
+            UPDATE content_items
+            SET ai_metadata = jsonb_build_object(
+                'products', jsonb_build_array(@Parent),
+                'product_features', jsonb_build_array(jsonb_build_object('product', @Parent, 'feature', 'Plan mode')))
+            WHERE collection_name = 'news' AND slug = @Slug
+            """,
+            new { Parent = parent.Name, Slug = slug });
+        using (var transaction = _fixture.Connection.BeginTransaction())
+        {
+            await ProductLinkWriter.ReplaceItemLinksAsync(_fixture.Connection, transaction, "news", slug, Ct);
+            transaction.Commit();
+        }
+
+        (await GetLinkedProductIdsAsync(slug)).Should().BeEquivalentTo([parent.Id, child.Id], "the plain product and the feature mention each keep their own link");
+
+        // A catalog-wide relink must keep the feature context instead of falling back to the raw name.
+        await _fixture.Connection.ExecuteAsync("UPDATE content_item_products SET product_id = NULL WHERE collection_name = 'news' AND item_slug = @Slug", new { Slug = slug });
+        await _fixture.Connection.ExecuteAsync("SELECT relink_item_products()");
+
+        (await GetLinkedProductIdsAsync(slug)).Should().BeEquivalentTo([parent.Id, child.Id]);
+    }
+
+    [Fact]
     public async Task GetOverview_IncludesArticleDetectedForAFeatureWithoutADate()
     {
         var product = await CreateProductAsync();
@@ -742,6 +788,11 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
         result.Succeeded.Should().BeTrue(result.Message);
         return result.ProductId!.Value;
     }
+
+    private async Task<List<long>> GetLinkedProductIdsAsync(string slug) =>
+        (await _fixture.Connection.QueryAsync<long>(
+            "SELECT product_id FROM content_item_products WHERE collection_name = 'news' AND item_slug = @Slug AND product_id IS NOT NULL ORDER BY product_id",
+            new { Slug = slug })).ToList();
 
     private async Task<List<(string Feature, long? FeatureId)>> GetEventFeaturesAsync(string slug) =>
         (await _fixture.Connection.QueryAsync<(string Feature, long? FeatureId)>(

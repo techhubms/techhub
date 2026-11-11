@@ -58,14 +58,17 @@ CREATE TABLE IF NOT EXISTS ignored_product_names (
 CREATE UNIQUE INDEX IF NOT EXISTS ux_ignored_product_names_name ON ignored_product_names (lower(name));
 
 -- The product names an article lists, in classifier order (0 is the main product), with the product they match. product_id is NULL
--- while the name is not in the catalog: that is the review queue.
+-- while the name is not in the catalog: that is the review queue. feature_name is the feature text that came with the name (a
+-- product-feature mention or a timeline event) and is empty for a plain product name. A name with a feature resolves like an
+-- event does, so a feature of a child product links the article to that child product and not only to the parent.
 CREATE TABLE IF NOT EXISTS content_item_products (
     collection_name TEXT NOT NULL,
     item_slug       TEXT NOT NULL,
     product_name    TEXT NOT NULL,
+    feature_name    TEXT NOT NULL DEFAULT '',
     position        INTEGER NOT NULL,
     product_id      BIGINT REFERENCES products (id) ON DELETE SET NULL,
-    PRIMARY KEY (collection_name, item_slug, product_name),
+    PRIMARY KEY (collection_name, item_slug, product_name, feature_name),
     FOREIGN KEY (collection_name, item_slug)
         REFERENCES content_items (collection_name, slug) ON DELETE CASCADE
 );
@@ -475,11 +478,24 @@ $$;
 
 CREATE OR REPLACE FUNCTION relink_item_products(p_collection TEXT DEFAULT NULL, p_slug TEXT DEFAULT NULL) RETURNS VOID
 LANGUAGE sql AS $$
+    WITH resolved AS (
+        SELECT l.collection_name, l.item_slug, l.product_name, l.feature_name,
+               CASE WHEN l.feature_name = ''
+                    THEN find_product_id(l.product_name)
+                    ELSE (SELECT r.out_product_id FROM resolve_event_catalog(l.product_name, l.feature_name) r)
+               END AS resolved_product_id
+        FROM content_item_products l
+        WHERE (p_collection IS NULL OR l.collection_name = p_collection)
+          AND (p_slug IS NULL OR l.item_slug = p_slug)
+    )
     UPDATE content_item_products l
-    SET product_id = find_product_id(l.product_name)
-    WHERE (p_collection IS NULL OR l.collection_name = p_collection)
-      AND (p_slug IS NULL OR l.item_slug = p_slug)
-      AND l.product_id IS DISTINCT FROM find_product_id(l.product_name);
+    SET product_id = r.resolved_product_id
+    FROM resolved r
+    WHERE l.collection_name = r.collection_name
+      AND l.item_slug = r.item_slug
+      AND l.product_name = r.product_name
+      AND l.feature_name = r.feature_name
+      AND l.product_id IS DISTINCT FROM r.resolved_product_id;
 $$;
 
 -- Links timeline events to the catalog: the product and its feature. Without arguments it covers all events.

@@ -98,6 +98,36 @@ public class AdminNewsletterSendLogTests : AdminPageTestBase
     }
 
     [Fact]
+    public void Render_WithPersistedLog_UsesItInsteadOfRequestingTheLogAgain()
+    {
+        // Arrange: the prerender pass persisted the log
+        PersistentState.Persist<IReadOnlyList<NewsletterSendLogEntry>>("admin-newsletter-send-log",
+            [new NewsletterSendLogEntry { Id = 1, SendKind = "daily", TargetKey = "2026-07-14", SentAt = DateTimeOffset.UtcNow, Status = "ok" }]);
+
+        // Act
+        var cut = Render<AdminNewsletterSendLog>();
+
+        // Assert
+        Rows(cut).Should().ContainSingle();
+        _api.Verify(x => x.GetNewsletterSendLogAsync(It.IsAny<int>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public void Render_PersistsTheLoadedLogForHydration()
+    {
+        // Arrange
+        SetupLog([new NewsletterSendLogEntry { Id = 1, SendKind = "daily", TargetKey = "2026-07-14", SentAt = DateTimeOffset.UtcNow, Status = "ok" }]);
+        Render<AdminNewsletterSendLog>();
+
+        // Act
+        PersistentState.TriggerOnPersisting();
+
+        // Assert
+        PersistentState.TryTake<IReadOnlyList<NewsletterSendLogEntry>>("admin-newsletter-send-log", out var persisted).Should().BeTrue();
+        persisted.Should().ContainSingle();
+    }
+
+    [Fact]
     public void Refresh_Click_ReloadsTheLogAndClearsEarlierError()
     {
         // Arrange
