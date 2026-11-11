@@ -17,7 +17,7 @@ internal static partial class TimelineDeadlineGuard
     private const string MonthNames = "January|February|March|April|May|June|July|August|September|October|November|December";
     private static readonly HashSet<string> _deadlineKinds = new(StringComparer.Ordinal)
     {
-        "deprecation", "retirement", "end-of-support", "breaking-change"
+        "deprecation", "retirement", "end-of-support", "breaking-change", "pricing-change"
     };
 
     /// <summary>
@@ -110,6 +110,6 @@ internal static partial class TimelineDeadlineGuard
     [GeneratedRegex(@"\b\d{4}-\d{2}-\d{2}\b", RegexOptions.CultureInvariant, matchTimeoutMilliseconds: 1000)]
     private static partial Regex IsoDate();
 
-    [GeneratedRegex(@"retir|deprecat|end[\s-]of[\s-](?:support|life)|sunset|no longer (?:be )?supported|support ends?|will be removed|breaking change|discontinu|shut(?:s|ting)? down", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant, matchTimeoutMilliseconds: 1000)]
+    [GeneratedRegex(@"retir|deprecat|end[\s-]of[\s-](?:support|life)|sunset|no longer (?:be )?supported|support ends?|will be removed|breaking change|discontinu|shut(?:s|ting)? down|pricing|price|cost|billing|licens(?:e|ing)", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant, matchTimeoutMilliseconds: 1000)]
     private static partial Regex DeadlinePhrase();
 }

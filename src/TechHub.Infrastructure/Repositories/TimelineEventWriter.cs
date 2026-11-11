@@ -87,10 +87,12 @@ internal static class TimelineEventWriter
             transaction,
             cancellationToken: ct));
 
-        if (replacement.Products is not null)
+        if (replacement.Products is not null || replacement.ProductFeatures is not null)
         {
-            await ReplaceProductsAsync(connection, transaction, collectionName, slug, replacement.Products, ct);
+            await ReplaceCatalogMentionsAsync(connection, transaction, collectionName, slug, replacement, ct);
         }
+
+        await ProductLinkWriter.ReplaceItemLinksAsync(connection, transaction, collectionName, slug, ct);
 
         await connection.ExecuteAsync(new CommandDefinition(
             """
@@ -117,35 +119,38 @@ internal static class TimelineEventWriter
     }
 
     /// <summary>
-    /// Stores the products in the <c>ai_metadata</c> of the article and relinks them to the catalog. An article without
-    /// metadata gets an object with only the products (unless there are none): it has no <c>schema_version</c> of the
+    /// Stores products and feature mentions in the <c>ai_metadata</c> of the article and relinks them to the catalog. An article without
+    /// metadata gets an object with only the extracted names (unless there are none): it has no <c>schema_version</c> of the
     /// current schema, so the roundup metadata backfill still classifies it and replaces the object. Dropping the products
     /// instead would leave the article unlinked while the scan marker keeps later runs from naming them again.
     /// <c>updated_at</c> stays as it is, because the revision of the article must keep describing its text.
     /// </summary>
-    private static async Task ReplaceProductsAsync(
+    private static async Task ReplaceCatalogMentionsAsync(
         IDbConnection connection,
         IDbTransaction transaction,
         string collectionName,
         string slug,
-        IReadOnlyList<string> products,
+        TimelineEventReplacement replacement,
         CancellationToken ct)
     {
-        var rows = await connection.ExecuteAsync(new CommandDefinition(
+        var productsJson = replacement.Products is null ? null : JsonSerializer.Serialize(replacement.Products);
+        var productFeaturesJson = replacement.ProductFeatures is null
+            ? null
+            : JsonSerializer.Serialize(replacement.ProductFeatures.Select(feature => new { product = feature.Product, feature = feature.Feature }));
+        await connection.ExecuteAsync(new CommandDefinition(
             """
             UPDATE content_items
-               SET ai_metadata = COALESCE(ai_metadata, '{}'::jsonb) || jsonb_build_object('products', @Products::jsonb)
+               SET ai_metadata = COALESCE(ai_metadata, '{}'::jsonb)
+                    || CASE WHEN @Products::jsonb IS NULL THEN '{}'::jsonb ELSE jsonb_build_object('products', @Products::jsonb) END
+                    || CASE WHEN @ProductFeatures::jsonb IS NULL THEN '{}'::jsonb ELSE jsonb_build_object('product_features', @ProductFeatures::jsonb) END
              WHERE collection_name = @CollectionName
                AND slug = @Slug
-               AND (ai_metadata IS NOT NULL OR jsonb_array_length(@Products::jsonb) > 0)
+               AND (ai_metadata IS NOT NULL
+                    OR COALESCE(jsonb_array_length(@Products::jsonb), 0) > 0
+                    OR COALESCE(jsonb_array_length(@ProductFeatures::jsonb), 0) > 0)
             """,
-            new { CollectionName = collectionName, Slug = slug, Products = JsonSerializer.Serialize(products) },
+            new { CollectionName = collectionName, Slug = slug, Products = productsJson, ProductFeatures = productFeaturesJson },
             transaction,
             cancellationToken: ct));
-
-        if (rows > 0)
-        {
-            await ProductLinkWriter.ReplaceItemLinksAsync(connection, transaction, collectionName, slug, ct);
-        }
     }
 }

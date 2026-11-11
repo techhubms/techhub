@@ -14,6 +14,12 @@ public sealed class TimelineExtractionResult
     /// </summary>
     public IReadOnlyList<string>? Products { get; init; }
 
+    /// <summary>
+    /// Product and feature names the article covers, independently of whether it states dated events.
+    /// <c>null</c> when absent, so previously stored mentions can be left alone.
+    /// </summary>
+    public IReadOnlyList<ProductFeatureMention>? ProductFeatures { get; init; }
+
     /// <summary>When <c>true</c> the extraction failed and the article must not be marked as scanned.</summary>
     public bool IsFailure { get; init; }
 

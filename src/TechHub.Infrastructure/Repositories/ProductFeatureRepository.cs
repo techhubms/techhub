@@ -9,8 +9,8 @@ using TechHub.Core.Models.Admin;
 namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
-/// PostgreSQL implementation of <see cref="IProductFeatureRepository"/>: the curated features of a product and the
-/// links between the feature text the AI returned for timeline events and those features.
+/// PostgreSQL implementation of <see cref="IProductFeatureRepository"/>: curated features and their links to both
+/// dated events and articles whose detected feature mentions match the catalog.
 /// </summary>
 public sealed class ProductFeatureRepository : IProductFeatureRepository
 {
@@ -33,15 +33,34 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
     public async Task<IReadOnlyList<ProductUnmatchedFeatures>> GetUnmatchedSummaryAsync(CancellationToken ct = default)
     {
         const string Sql = """
-            SELECT e.product_id AS ProductId,
+            WITH mentions AS (
+                SELECT e.product_id, e.feature, e.collection_name, e.item_slug, TRUE AS is_event
+                FROM content_timeline_events e
+                WHERE e.feature_id IS NULL
+                  AND e.product_id IS NOT NULL
+                  AND btrim(COALESCE(e.feature, '')) <> ''
+                UNION ALL
+                SELECT resolved.out_product_id, n.value ->> 'feature', ci.collection_name, ci.slug, FALSE
+                FROM content_items ci
+                CROSS JOIN LATERAL jsonb_array_elements(
+                    CASE WHEN jsonb_typeof(ci.ai_metadata -> 'product_features') = 'array'
+                         THEN ci.ai_metadata -> 'product_features'
+                         ELSE '[]'::jsonb END) AS n (value)
+                CROSS JOIN LATERAL resolve_event_catalog(n.value ->> 'product', n.value ->> 'feature') AS resolved
+                WHERE jsonb_typeof(n.value) = 'object'
+                  AND btrim(COALESCE(n.value ->> 'product', '')) <> ''
+                  AND btrim(COALESCE(n.value ->> 'feature', '')) <> ''
+                  AND resolved.out_product_id IS NOT NULL
+                  AND resolved.out_feature_id IS NULL
+            )
+            SELECT m.product_id AS ProductId,
                    p.name AS ProductName,
-                   COUNT(DISTINCT catalog_key(e.feature))::int AS NameCount,
-                   COUNT(*)::int AS EventCount
-            FROM content_timeline_events e
-            JOIN products p ON p.id = e.product_id
-            WHERE e.feature_id IS NULL
-              AND btrim(COALESCE(e.feature, '')) <> ''
-            GROUP BY e.product_id, p.name
+                   COUNT(DISTINCT catalog_key(m.feature))::int AS NameCount,
+                   COUNT(DISTINCT (m.collection_name, m.item_slug)) FILTER (WHERE NOT m.is_event)::int AS ContentCount,
+                   COUNT(*) FILTER (WHERE m.is_event)::int AS EventCount
+            FROM mentions m
+            JOIN products p ON p.id = m.product_id
+            GROUP BY m.product_id, p.name
             ORDER BY COUNT(*) DESC, p.name
             """;
 
@@ -93,13 +112,47 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
         var contentRows = await _connection.QueryAsync<ContentRow>(new CommandDefinition(
             """
-            SELECT l.feature_id AS FeatureId, l.collection_name AS CollectionName, l.item_slug AS ItemSlug,
-                   ci.title AS Title, l.is_thumbnail AS IsThumbnail, l.sort_order AS SortOrder
-            FROM product_feature_content l
-            JOIN product_features f ON f.id = l.feature_id
-            JOIN content_items ci ON ci.collection_name = l.collection_name AND ci.slug = l.item_slug
-            WHERE f.product_id = @ProductId
-            ORDER BY l.sort_order, l.item_slug
+            WITH detected AS (
+                SELECT DISTINCT e.feature_id, e.collection_name, e.item_slug
+                FROM content_timeline_events e
+                JOIN product_features f ON f.id = e.feature_id
+                WHERE f.product_id = @ProductId
+                UNION
+                SELECT DISTINCT resolved.out_feature_id, ci.collection_name, ci.slug
+                FROM content_items ci
+                CROSS JOIN LATERAL jsonb_array_elements(
+                    CASE WHEN jsonb_typeof(ci.ai_metadata -> 'product_features') = 'array'
+                         THEN ci.ai_metadata -> 'product_features'
+                         ELSE '[]'::jsonb END) AS n (value)
+                CROSS JOIN LATERAL resolve_event_catalog(n.value ->> 'product', n.value ->> 'feature') AS resolved
+                JOIN product_features f ON f.id = resolved.out_feature_id
+                WHERE f.product_id = @ProductId
+                  AND jsonb_typeof(n.value) = 'object'
+                  AND btrim(COALESCE(n.value ->> 'product', '')) <> ''
+                  AND btrim(COALESCE(n.value ->> 'feature', '')) <> ''
+            ),
+            links AS (
+                SELECT l.feature_id AS FeatureId, l.collection_name AS CollectionName, l.item_slug AS ItemSlug,
+                       ci.title AS Title, l.is_thumbnail AS IsThumbnail, l.sort_order AS SortOrder, FALSE AS IsDetected
+                FROM product_feature_content l
+                JOIN product_features f ON f.id = l.feature_id
+                JOIN content_items ci ON ci.collection_name = l.collection_name AND ci.slug = l.item_slug
+                WHERE f.product_id = @ProductId
+                UNION ALL
+                SELECT d.feature_id, d.collection_name, d.item_slug,
+                       ci.title, FALSE, 2147483647, TRUE
+                FROM detected d
+                JOIN content_items ci ON ci.collection_name = d.collection_name AND ci.slug = d.item_slug
+                WHERE NOT EXISTS (
+                    SELECT 1 FROM product_feature_content manual
+                    WHERE manual.feature_id = d.feature_id
+                      AND manual.collection_name = d.collection_name
+                      AND manual.item_slug = d.item_slug
+                )
+            )
+            SELECT FeatureId, CollectionName, ItemSlug, Title, IsThumbnail, SortOrder, IsDetected
+            FROM links
+            ORDER BY SortOrder, ItemSlug
             """,
             new { ProductId = productId },
             cancellationToken: ct));
@@ -113,7 +166,8 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
                     ItemSlug = c.ItemSlug,
                     Title = c.Title,
                     IsThumbnail = c.IsThumbnail,
-                    SortOrder = c.SortOrder
+                    SortOrder = c.SortOrder,
+                    IsDetected = c.IsDetected
                 }).ToList());
 
         foreach (var feature in features)
@@ -123,14 +177,32 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
         }
 
         const string UnmatchedSql = """
-            SELECT MIN(regexp_replace(btrim(e.feature), '\s+', ' ', 'g')) AS Name,
-                   COUNT(*)::int AS EventCount
-            FROM content_timeline_events e
-            WHERE e.product_id IN (SELECT product_tree_ids(@ProductId))
-              AND e.feature_id IS NULL
-              AND btrim(COALESCE(e.feature, '')) <> ''
-            GROUP BY catalog_key(e.feature)
-            ORDER BY COUNT(*) DESC, MIN(regexp_replace(btrim(e.feature), '\s+', ' ', 'g'))
+            WITH mentions AS (
+                SELECT e.product_id, e.feature, e.collection_name, e.item_slug, TRUE AS is_event
+                FROM content_timeline_events e
+                WHERE e.product_id IN (SELECT product_tree_ids(@ProductId))
+                  AND e.feature_id IS NULL
+                  AND btrim(COALESCE(e.feature, '')) <> ''
+                UNION ALL
+                SELECT resolved.out_product_id, n.value ->> 'feature', ci.collection_name, ci.slug, FALSE
+                FROM content_items ci
+                CROSS JOIN LATERAL jsonb_array_elements(
+                    CASE WHEN jsonb_typeof(ci.ai_metadata -> 'product_features') = 'array'
+                         THEN ci.ai_metadata -> 'product_features'
+                         ELSE '[]'::jsonb END) AS n (value)
+                CROSS JOIN LATERAL resolve_event_catalog(n.value ->> 'product', n.value ->> 'feature') AS resolved
+                WHERE jsonb_typeof(n.value) = 'object'
+                  AND btrim(COALESCE(n.value ->> 'product', '')) <> ''
+                  AND btrim(COALESCE(n.value ->> 'feature', '')) <> ''
+                  AND resolved.out_product_id IN (SELECT product_tree_ids(@ProductId))
+                  AND resolved.out_feature_id IS NULL
+            )
+            SELECT MIN(regexp_replace(btrim(m.feature), '\s+', ' ', 'g')) AS Name,
+                   COUNT(DISTINCT (m.collection_name, m.item_slug)) FILTER (WHERE NOT m.is_event)::int AS ContentCount,
+                   COUNT(*) FILTER (WHERE m.is_event)::int AS EventCount
+            FROM mentions m
+            GROUP BY catalog_key(m.feature)
+            ORDER BY COUNT(*) DESC, MIN(regexp_replace(btrim(m.feature), '\s+', ' ', 'g'))
             """;
 
         var unmatched = await _connection.QueryAsync<UnmatchedFeatureName>(
@@ -168,7 +240,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
             _logger.LogInformation("Created feature {FeatureId} of product {ProductId}: {FeatureName}", id, productId, normalized.Sanitize());
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> RenameAsync(long productId, long id, string name, CancellationToken ct = default) =>
@@ -220,7 +292,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
             _logger.LogInformation("Renamed feature {FeatureId} from {OldName} to {NewName}", id, current.Sanitize(), normalized.Sanitize());
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> DeleteAsync(long productId, long id, CancellationToken ct = default) =>
@@ -239,7 +311,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
             _logger.LogInformation("Deleted feature {FeatureId}", id);
             return ProductOperationResult.Success();
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> AddAliasAsync(long productId, long id, string aliasName, CancellationToken ct = default) =>
@@ -270,7 +342,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
             _logger.LogInformation("Added alias {Alias} to feature {FeatureId}", normalized.Sanitize(), id);
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> RemoveAliasAsync(long productId, long id, long aliasId, CancellationToken ct = default) =>
@@ -294,7 +366,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
             _logger.LogInformation("Removed alias {AliasId} from feature {FeatureId}", aliasId, id);
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> UpdateDetailsAsync(long productId, long id, string? description, DateOnly? releaseDate, CancellationToken ct = default) =>
@@ -322,7 +394,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
             _logger.LogInformation("Updated the details of feature {FeatureId}", id);
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> AddContentAsync(long productId, long id, string collectionName, string itemSlug, bool isThumbnail, CancellationToken ct = default) =>
@@ -366,7 +438,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
             _logger.LogInformation("Linked {Collection}/{Slug} to feature {FeatureId}", collectionName.Sanitize(), itemSlug.Sanitize(), id);
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> RemoveContentAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken ct = default) =>
@@ -389,7 +461,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
             _logger.LogInformation("Unlinked {Collection}/{Slug} from feature {FeatureId}", collectionName.Sanitize(), itemSlug.Sanitize(), id);
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> SetThumbnailAsync(long productId, long id, string collectionName, string itemSlug, CancellationToken ct = default) =>
@@ -413,7 +485,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
 
             // Returning a failure rolls back the cleared thumbnail.
             return rows == 0 ? ProductOperationResult.NotFound("Link not found.") : ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     private Task<int> ClearThumbnailAsync(long id, IDbTransaction transaction, CancellationToken ct) =>
         _connection.ExecuteAsync(new CommandDefinition(
@@ -465,7 +537,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
             transaction,
             cancellationToken: ct));
 
-    private async Task<ProductOperationResult> InTransactionAsync(Func<IDbTransaction, Task<ProductOperationResult>> operation)
+    private async Task<ProductOperationResult> InTransactionAsync(Func<IDbTransaction, Task<ProductOperationResult>> operation, CancellationToken ct)
     {
         if (_connection.State != ConnectionState.Open)
         {
@@ -475,7 +547,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
         using var transaction = _connection.BeginTransaction();
         try
         {
-            await CatalogRelink.LockForCatalogChangeAsync(_connection, transaction, CancellationToken.None);
+            await CatalogRelink.LockForCatalogChangeAsync(_connection, transaction, ct);
             var result = await operation(transaction);
             if (result.Succeeded)
             {
@@ -522,6 +594,7 @@ public sealed class ProductFeatureRepository : IProductFeatureRepository
         public string Title { get; init; } = string.Empty;
         public bool IsThumbnail { get; init; }
         public int SortOrder { get; init; }
+        public bool IsDetected { get; init; }
     }
 
     private sealed class AliasRow

@@ -59,6 +59,20 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
     }
 
     [Fact]
+    public async Task ReplaceEvents_LinksTheProductFromAnEventWithoutProductMetadata()
+    {
+        var product = await CreateProductAsync();
+        var slug = await SeedItemAsync();
+
+        await _timelineRepository.ReplaceEventsAsync("news", slug, [Event(product.Name, "Copilot Fusion", "ga")], "source", 3, Ct);
+
+        var linkedProducts = await _fixture.Connection.QueryAsync<string>(
+            "SELECT product_name FROM content_item_products WHERE collection_name = 'news' AND item_slug = @Slug",
+            new { Slug = slug });
+        linkedProducts.Should().ContainSingle().Which.Should().Be(product.Name);
+    }
+
+    [Fact]
     public async Task ReplaceEvents_OfAChildProduct_MatchesTheFeaturesOfItsParents()
     {
         var parent = await CreateProductAsync();
@@ -104,6 +118,66 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
         events.Should().Contain(e => e.Feature == "unrelated capability" && e.FeatureName == null);
     }
 
+    [Fact]
+    public async Task GetOverview_IncludesArticleDetectedForAFeatureWithoutADate()
+    {
+        var product = await CreateProductAsync();
+        await CreateFeatureAsync(product.Id, "Copilot Fusion");
+        var slug = await SeedItemAsync();
+        await _fixture.Connection.ExecuteAsync(
+            """
+            UPDATE content_items
+            SET ai_metadata = jsonb_build_object(
+                'product_features',
+                jsonb_build_array(jsonb_build_object('product', @Product, 'feature', 'Copilot Fusion')))
+            WHERE collection_name = 'news' AND slug = @Slug
+            """,
+            new { Product = product.Name, Slug = slug });
+
+        var featureContent = (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Content;
+
+        featureContent.Should().ContainSingle();
+        featureContent[0].ItemSlug.Should().Be(slug);
+        featureContent[0].Title.Should().Be("Feature test");
+        featureContent[0].IsDetected.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task GetOverview_PrefersCuratedLinkWhenArticleIsAlsoDetected()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Copilot Fusion");
+        var slug = await SeedItemAsync();
+        await _fixture.Connection.ExecuteAsync(
+            """
+            UPDATE content_items
+            SET ai_metadata = jsonb_build_object(
+                'product_features',
+                jsonb_build_array(jsonb_build_object('product', @Product, 'feature', 'Copilot Fusion')))
+            WHERE collection_name = 'news' AND slug = @Slug
+            """,
+            new { Product = product.Name, Slug = slug });
+        (await _sut.AddContentAsync(product.Id, feature, "news", slug, false, Ct)).Succeeded.Should().BeTrue();
+
+        var featureContent = (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Content;
+
+        featureContent.Should().ContainSingle().Which.IsDetected.Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task GetOverview_IncludesTimelineSourceArticlesAsDetectedFeatureContent()
+    {
+        var product = await CreateProductAsync();
+        await CreateFeatureAsync(product.Id, "Copilot Fusion");
+        var slug = await SeedItemAsync();
+        await _timelineRepository.ReplaceEventsAsync("news", slug, [Event(product.Name, "Copilot Fusion", "ga")], "source", 3, Ct);
+
+        var featureContent = (await _sut.GetOverviewAsync(product.Id, Ct)).Features.Single().Content;
+
+        featureContent.Should().ContainSingle().Which.ItemSlug.Should().Be(slug);
+        featureContent.Single().IsDetected.Should().BeTrue();
+    }
+
     // ── Catalog changes relink ────────────────────────────────────────────────
 
     [Fact]
@@ -139,6 +213,28 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
     }
 
     [Fact]
+    public async Task GetOverview_UnmatchedNamesIncludeUndatedFeatureMentions()
+    {
+        var product = await CreateProductAsync();
+        var slug = await SeedItemAsync();
+        await _fixture.Connection.ExecuteAsync(
+            """
+            UPDATE content_items
+            SET ai_metadata = jsonb_build_object(
+                'product_features',
+                jsonb_build_array(jsonb_build_object('product', @Product, 'feature', 'Uncatalogued capability')))
+            WHERE collection_name = 'news' AND slug = @Slug
+            """,
+            new { Product = product.Name, Slug = slug });
+
+        var unmatched = (await _sut.GetOverviewAsync(product.Id, Ct)).Unmatched.Should().ContainSingle().Subject;
+
+        unmatched.Name.Should().Be("Uncatalogued capability");
+        unmatched.EventCount.Should().Be(0);
+        unmatched.ContentCount.Should().Be(1);
+    }
+
+    [Fact]
     public async Task GetUnmatchedSummary_ListsTheProductsWithUnmatchedFeatureNames_MostEventsFirst()
     {
         var busy = await CreateProductAsync();
@@ -156,9 +252,34 @@ public class ProductFeatureTests : IClassFixture<DatabaseFixture<ProductFeatureT
         var summary = await _sut.GetUnmatchedSummaryAsync(Ct);
 
         var ours = summary.Where(s => s.ProductId == busy.Id || s.ProductId == quiet.Id || s.ProductId == done.Id).ToList();
-        ours.Select(s => (s.ProductId, s.ProductName, s.NameCount, s.EventCount)).Should().Equal(
-            (busy.Id, busy.Name, 2, 3),
-            (quiet.Id, quiet.Name, 1, 1));
+        ours.Select(s => (s.ProductId, s.ProductName, s.NameCount, s.EventCount, s.ContentCount)).Should().Equal(
+            (busy.Id, busy.Name, 2, 3, 0),
+            (quiet.Id, quiet.Name, 1, 1, 0));
+    }
+
+    [Fact]
+    public async Task GetUnmatchedSummary_IncludesProductsWithUndatedFeatureMentions()
+    {
+        var product = await CreateProductAsync();
+        var slug = await SeedItemAsync();
+        await _fixture.Connection.ExecuteAsync(
+            """
+            UPDATE content_items
+            SET ai_metadata = jsonb_build_object(
+                'product_features',
+                jsonb_build_array(jsonb_build_object('product', @Product, 'feature', 'Uncatalogued capability')))
+            WHERE collection_name = 'news' AND slug = @Slug
+            """,
+            new { Product = product.Name, Slug = slug });
+
+        var unmatched = (await _sut.GetUnmatchedSummaryAsync(Ct))
+            .Where(row => row.ProductId == product.Id)
+            .Should().ContainSingle().Subject;
+
+        unmatched.ProductId.Should().Be(product.Id);
+        unmatched.NameCount.Should().Be(1);
+        unmatched.EventCount.Should().Be(0);
+        unmatched.ContentCount.Should().Be(1);
     }
     [Fact]
     public async Task AddAlias_LinksTheEventsThatUseTheAlias_AndRemoveAliasUnlinksThem()

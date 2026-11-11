@@ -109,7 +109,7 @@ public sealed class ProductRepository : IProductRepository
             cancellationToken: ct))).ToList();
 
         product.ArticleCount = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
-            "SELECT COUNT(*)::int FROM content_item_products l WHERE l.product_id IN (SELECT product_tree_ids(@Id))",
+            "SELECT COUNT(DISTINCT (l.collection_name, l.item_slug, l.product_id))::int FROM content_item_products l WHERE l.product_id IN (SELECT product_tree_ids(@Id))",
             new { Id = id },
             cancellationToken: ct));
         product.EventCount = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
@@ -127,21 +127,32 @@ public sealed class ProductRepository : IProductRepository
         var (offset, limit) = PageBounds(page, pageSize);
 
         var total = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
-            $"SELECT COUNT(*)::int FROM content_item_products l WHERE {scope}", new { Id = id }, cancellationToken: ct));
+            $"SELECT COUNT(DISTINCT (l.collection_name, l.item_slug, l.product_id))::int FROM content_item_products l WHERE {scope}",
+            new { Id = id },
+            cancellationToken: ct));
 
         var items = await _connection.QueryAsync<ProductArticleLink>(new CommandDefinition(
             $"""
-            SELECT l.collection_name AS CollectionName,
-                   l.item_slug       AS Slug,
-                   ci.title          AS Title,
-                   ci.date_epoch     AS DateEpoch,
-                   l.product_name    AS ProductName,
-                   p.name            AS CatalogName
-            FROM content_item_products l
-            JOIN products p ON p.id = l.product_id
-            JOIN content_items ci ON ci.collection_name = l.collection_name AND ci.slug = l.item_slug
-            WHERE {scope}
-            ORDER BY ci.date_epoch DESC, ci.slug, l.position
+            WITH ranked AS (
+                SELECT l.collection_name AS CollectionName,
+                       l.item_slug       AS Slug,
+                       ci.title          AS Title,
+                       ci.date_epoch     AS DateEpoch,
+                       l.product_name    AS ProductName,
+                       p.name            AS CatalogName,
+                       ROW_NUMBER() OVER (
+                           PARTITION BY l.collection_name, l.item_slug, l.product_id
+                           ORDER BY l.position
+                       ) AS NameOrder
+                FROM content_item_products l
+                JOIN products p ON p.id = l.product_id
+                JOIN content_items ci ON ci.collection_name = l.collection_name AND ci.slug = l.item_slug
+                WHERE {scope}
+            )
+            SELECT CollectionName, Slug, Title, DateEpoch, ProductName, CatalogName
+            FROM ranked
+            WHERE NameOrder = 1
+            ORDER BY DateEpoch DESC, Slug, CatalogName
             OFFSET @Offset LIMIT @Limit
             """,
             new { Id = id, Offset = offset, Limit = limit },
@@ -206,10 +217,10 @@ public sealed class ProductRepository : IProductRepository
         }).ToList();
     }
 
-    private static (int Offset, int Limit) PageBounds(int page, int pageSize)
+    private static (long Offset, int Limit) PageBounds(int page, int pageSize)
     {
         var size = Math.Clamp(pageSize, 1, MaxPageSize);
-        return ((Math.Max(page, 1) - 1) * size, size);
+        return (((long)Math.Max(page, 1) - 1) * size, size);
     }
 
     /// <inheritdoc />
@@ -274,7 +285,7 @@ public sealed class ProductRepository : IProductRepository
 
             _logger.LogInformation("Created product {ProductId}: {ProductName}", id, normalized.Sanitize());
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> RenameAsync(long id, string name, CancellationToken ct = default) =>
@@ -329,7 +340,7 @@ public sealed class ProductRepository : IProductRepository
 
             _logger.LogInformation("Renamed product {ProductId} from {OldName} to {NewName}", id, current.Sanitize(), normalized.Sanitize());
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> AddAliasAsync(long id, string aliasName, CancellationToken ct = default) =>
@@ -361,7 +372,7 @@ public sealed class ProductRepository : IProductRepository
 
             _logger.LogInformation("Added alias {Alias} to product {ProductId}", normalized.Sanitize(), id);
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> SetParentAsync(long id, long? parentId, CancellationToken ct = default) =>
@@ -403,7 +414,7 @@ public sealed class ProductRepository : IProductRepository
 
             _logger.LogInformation("Set parent of product {ProductId} to {ParentId}", id, parentId);
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> RemoveAliasAsync(long id, long aliasId, CancellationToken ct = default) =>
@@ -423,7 +434,7 @@ public sealed class ProductRepository : IProductRepository
 
             _logger.LogInformation("Removed alias {AliasId} from product {ProductId}", aliasId, id);
             return ProductOperationResult.Success(id);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> MergeAsync(long sourceId, long targetId, CancellationToken ct = default) =>
@@ -497,7 +508,7 @@ public sealed class ProductRepository : IProductRepository
             _logger.LogInformation("Merged product {SourceId} ({SourceName}) into {TargetId} ({TargetName})",
                 sourceId, sourceName.Sanitize(), targetId, targetName.Sanitize());
             return ProductOperationResult.Success(targetId);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> ConvertToFeatureAsync(long id, CancellationToken ct = default) =>
@@ -521,7 +532,7 @@ public sealed class ProductRepository : IProductRepository
 
             _logger.LogInformation("Converted product {ProductId} ({ProductName}) into a feature of {ParentId}", id, name.Sanitize(), parent);
             return ProductOperationResult.Success(parent);
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> DeleteAsync(long id, CancellationToken ct = default) =>
@@ -540,7 +551,7 @@ public sealed class ProductRepository : IProductRepository
 
             _logger.LogInformation("Deleted product {ProductId}", id);
             return ProductOperationResult.Success();
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> IgnoreNameAsync(string name, CancellationToken ct = default) =>
@@ -564,7 +575,7 @@ public sealed class ProductRepository : IProductRepository
 
             _logger.LogInformation("Ignoring product name {ProductName}", normalized.Sanitize());
             return ProductOperationResult.Success();
-        });
+        }, ct);
 
     /// <inheritdoc />
     public Task<ProductOperationResult> UnignoreNameAsync(string name, CancellationToken ct = default) =>
@@ -578,9 +589,9 @@ public sealed class ProductRepository : IProductRepository
             return await UnignoreAsync(normalized, transaction, ct)
                 ? ProductOperationResult.Success()
                 : ProductOperationResult.NotFound("Name is not ignored.");
-        });
+        }, ct);
 
-    private async Task<ProductOperationResult> InTransactionAsync(Func<IDbTransaction, Task<ProductOperationResult>> operation)
+    private async Task<ProductOperationResult> InTransactionAsync(Func<IDbTransaction, Task<ProductOperationResult>> operation, CancellationToken ct)
     {
         if (_connection.State != ConnectionState.Open)
         {
@@ -590,7 +601,7 @@ public sealed class ProductRepository : IProductRepository
         using var transaction = _connection.BeginTransaction();
         try
         {
-            await CatalogRelink.LockForCatalogChangeAsync(_connection, transaction, CancellationToken.None);
+            await CatalogRelink.LockForCatalogChangeAsync(_connection, transaction, ct);
             var result = await operation(transaction);
             if (result.Succeeded)
             {

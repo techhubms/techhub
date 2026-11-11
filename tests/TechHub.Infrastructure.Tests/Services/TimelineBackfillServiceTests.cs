@@ -376,9 +376,9 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
             """,
             new { Collection = _collection, Slug = slug })).ToList();
 
-    private void SetupAiProducts(IReadOnlyList<string>? products) =>
+    private void SetupAiProducts(IReadOnlyList<string>? products, IReadOnlyList<ProductFeatureMention>? productFeatures = null) =>
         _ai.Setup(s => s.ExtractTimelineEventsAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new TimelineExtractionResult { Products = products });
+            .ReturnsAsync(new TimelineExtractionResult { Products = products, ProductFeatures = productFeatures });
 
     [Fact]
     public async Task RunAsync_Products_ReplaceTheStoredProductsKeepTheRestOfTheMetadataAndLinkTheCatalog()
@@ -399,6 +399,26 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
             ("Brand New Thing", null, 1));
         (await _timelineRepo.GetItemForExtractionAsync(_collection, "a1", TestContext.Current.CancellationToken))!.Revision
             .Should().Be(revisionBefore, "the products are not an edit of the text");
+    }
+
+    [Fact]
+    public async Task RunAsync_FeatureMentionsWithoutDates_AreStoredAndTheirProductIsLinked()
+    {
+        await SeedAsync("a1");
+        _ai.Setup(s => s.ExtractTimelineEventsAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new TimelineExtractionResult
+            {
+                Products = [],
+                ProductFeatures = [new ProductFeatureMention { Product = "GitHub Copilot", Feature = "Copilot Fusion" }]
+            });
+
+        await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        using var metadata = System.Text.Json.JsonDocument.Parse((await ReadMetadataAsync("a1"))!);
+        metadata.RootElement.GetProperty("product_features")[0].GetProperty("feature").GetString().Should().Be("Copilot Fusion");
+        (await ReadLinksAsync("a1")).Should().ContainSingle()
+            .Which.Should().Be(("GitHub Copilot", "GitHub Copilot", 0));
+        (await _timelineRepo.GetEventsForItemAsync(_collection, "a1", TestContext.Current.CancellationToken)).Should().BeEmpty();
     }
 
     [Fact]

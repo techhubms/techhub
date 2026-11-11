@@ -201,7 +201,7 @@ public class SectionRoundupRepositoryTests
     }
 
     [Fact]
-    public async Task GetArticlesForSectionForWeekAsync_WithSchemaVersion2Metadata_ParsesRolesAndDoesNotNeedBackfill()
+    public async Task GetArticlesForSectionForWeekAsync_WithCurrentSchemaMetadata_ParsesRolesAndDoesNotNeedBackfill()
     {
         // Arrange
         await SeedContentItemAsync("v2-article", "news", "V2 Article",
@@ -211,7 +211,7 @@ public class SectionRoundupRepositoryTests
 
         var metadata = ContentItemWriteRepository.SerializeAiMetadata(new TechHub.Core.Models.ContentProcessing.RoundupMetadata
         {
-            SchemaVersion = 2,
+            SchemaVersion = RoundupMetadata.CurrentSchemaVersion,
             KeyFacts = ["Fact one.", "Fact two."],
             Significance = "high",
             ContentKind = "announcement",

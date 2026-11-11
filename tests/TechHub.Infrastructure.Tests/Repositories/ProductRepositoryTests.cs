@@ -30,6 +30,15 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
 
     private static CancellationToken Ct => TestContext.Current.CancellationToken;
 
+    [Fact]
+    public async Task GetArticlesAsync_VeryLargePageNumber_DoesNotOverflowOffset()
+    {
+        var result = await _sut.GetArticlesAsync(long.MaxValue, includeChildren: true, page: int.MaxValue, pageSize: 100, Ct);
+
+        result.Items.Should().BeEmpty();
+        result.TotalCount.Should().Be(0);
+    }
+
     // ── Starting catalog ──────────────────────────────────────────────────────
 
     [Fact]
@@ -102,6 +111,10 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
         links[0].Should().Be(("Microsoft Foundry", 0, foundryId));
         links[1].Should().Be(("azure ai foundry", 1, foundryId));
         links[2].Should().Be((unknown, 2, (long?)null));
+
+        var articles = await _sut.GetArticlesAsync(foundryId!.Value, includeChildren: false, page: 1, pageSize: 100, Ct);
+        articles.TotalCount.Should().Be(1);
+        articles.Items.Should().ContainSingle().Which.ProductName.Should().Be("Microsoft Foundry");
     }
 
     [Fact]
@@ -576,7 +589,7 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
         _writeRepository.UpdateAiMetadataAsync(
             "news",
             slug,
-            ContentItemWriteRepository.SerializeAiMetadata(new RoundupMetadata { SchemaVersion = 2, Products = products }),
+            ContentItemWriteRepository.SerializeAiMetadata(new RoundupMetadata { SchemaVersion = RoundupMetadata.CurrentSchemaVersion, Products = products }),
             Ct);
 
     private async Task<ProductSummary> CreateProductAsync()

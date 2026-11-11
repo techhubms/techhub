@@ -269,7 +269,9 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
         const string KeepProductsSql = @"
 UPDATE content_items
    SET ai_metadata = @AiMetadata::jsonb || jsonb_build_object('products',
-           CASE WHEN jsonb_typeof(ai_metadata -> 'products') = 'array' THEN ai_metadata -> 'products' ELSE '[]'::jsonb END),
+           CASE WHEN jsonb_typeof(ai_metadata -> 'products') = 'array' THEN ai_metadata -> 'products' ELSE '[]'::jsonb END)
+       || jsonb_build_object('product_features',
+           CASE WHEN jsonb_typeof(ai_metadata -> 'product_features') = 'array' THEN ai_metadata -> 'product_features' ELSE '[]'::jsonb END),
        updated_at  = NOW()
  WHERE collection_name = @CollectionName
    AND slug           = @Slug";
@@ -296,8 +298,8 @@ UPDATE content_items
     }
 
     /// <summary>
-    /// Serializes roundup metadata to the <c>ai_metadata</c> JSON: schema version 2 stores the classification output
-    /// (key facts, significance, section roles, ...), version 1 the original summary-based fields.
+    /// Serializes roundup metadata to the <c>ai_metadata</c> JSON: schema version 3 stores the classification output
+    /// (key facts, significance, section roles, product features, ...), version 1 the original summary-based fields.
     /// </summary>
     public static string SerializeAiMetadata(RoundupMetadata metadata)
     {
@@ -313,6 +315,7 @@ UPDATE content_items
                 content_kind = metadata.ContentKind,
                 lifecycle = metadata.Lifecycle,
                 products = metadata.Products,
+                product_features = metadata.ProductFeatures,
                 section_roles = metadata.SectionRoles
             }, _jsonOptions);
         }

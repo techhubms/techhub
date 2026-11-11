@@ -145,6 +145,22 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
     }
 
     [Fact]
+    public async Task GetTimelineAsync_KeepsDifferentDatePrecisionsApart()
+    {
+        var product = NewProduct();
+        var monthItem = await SeedItemAsync(title: "Month precision source");
+        var dayItem = await SeedItemAsync(title: "Day precision source");
+        await StoreAsync("news", monthItem, Event(product, "Same event", date: "2026-04-01", precision: "month"));
+        await StoreAsync("news", dayItem, Event(product, "Same event", date: "2026-04-01", precision: "day"));
+
+        var entries = await TimelineAsync("ai", product);
+
+        entries.Should().HaveCount(2);
+        entries.Select(entry => entry.DatePrecision).Should().BeEquivalentTo("month", "day");
+        entries.SelectMany(entry => entry.Sources).Should().HaveCount(2);
+    }
+
+    [Fact]
     public async Task GetTimelineAsync_TakeLimitsDistinctGroupsAndKeepsAllSources()
     {
         var product = NewProduct();

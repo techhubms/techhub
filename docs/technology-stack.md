@@ -22,6 +22,7 @@
 ## API & Integration
 
 - **Swashbuckle** and `Microsoft.AspNetCore.OpenApi`: OpenAPI document and Swagger UI
+  - Swashbuckle stays on 10.x while using ASP.NET Core OpenAPI 10: Swashbuckle 11 requires OpenAPI.NET 3, which conflicts with ASP.NET Core OpenAPI 10's OpenAPI.NET 2 dependency.
 - **ModelContextProtocol.AspNetCore**: MCP server at `/mcp`
 - **Microsoft.Identity.Web**: Entra ID authentication for the admin area
 - **Azure.Communication.Email**: Newsletter email delivery

@@ -123,6 +123,41 @@ public class ProductPhraseMatchTests : IClassFixture<DatabaseFixture<ProductPhra
         (await MatchProductAsync("Pipeline")).Should().BeNull("the name fits two products and neither is the parent of the other");
     }
 
+    [Fact]
+    public async Task FindProductId_FeatureNameOfOneProduct_LinksToThatProduct()
+    {
+        var product = await AddProductAsync("Contoso Vault");
+        await AddFeatureAsync(product, "Zephyr key rotation", "Zephyr rotation");
+
+        (await MatchProductAsync("Zephyr key rotation")).Should().Be("Contoso Vault");
+        (await MatchProductAsync("Zephyr rotation")).Should().Be("Contoso Vault");
+    }
+
+    [Fact]
+    public async Task FindProductId_FeatureNameOfSeveralProducts_StaysUnmatched()
+    {
+        var first = await AddProductAsync("Contoso Sql Alpha");
+        var second = await AddProductAsync("Contoso Sql Beta");
+        await AddFeatureAsync(first, "Zephyr restore");
+        await AddFeatureAsync(second, "Zephyr restore");
+
+        (await MatchProductAsync("Zephyr restore")).Should().BeNull("the feature name belongs to two products");
+    }
+
+    [Fact]
+    public async Task ResolveEventCatalog_ProductTextThatIsAFeatureOfSeveralProducts_LinksNothing()
+    {
+        var first = await AddProductAsync("Contoso Shell Alpha");
+        var second = await AddProductAsync("Contoso Shell Beta");
+        await AddFeatureAsync(first, "Zephyr hotpatch");
+        await AddFeatureAsync(second, "Zephyr hotpatch");
+
+        var (product, feature) = await ResolveEventAsync("Zephyr hotpatch", null);
+
+        product.Should().BeNull();
+        feature.Should().BeNull("a feature without its product would point to an arbitrary product");
+    }
+
     // ── Products: release versions ────────────────────────────────────────────
 
     [Theory]

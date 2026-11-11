@@ -82,6 +82,8 @@ The script outputs the registration details and points to `Setup-UserSecrets.ps1
 ./scripts/Setup-UserSecrets.ps1
 ```
 
+After a dev container rebuild, the Azure app registration still exists, but local user secrets need restoring. Run `az login` if needed, then `./scripts/Setup-UserSecrets.ps1`. Do not rerun `Manage-EntraId.ps1` just because the container was rebuilt. After configuring secrets, restart the apps with `Stop-Servers`, then `Run -WithoutTests`.
+
 To set the AzureAd values by hand instead, store them with .NET User Secrets:
 
 ```powershell

@@ -147,6 +147,17 @@ public class TimelineEventParserTests
     }
 
     [Fact]
+    public void Parse_SameNormalizedDateWithDifferentPrecision_KeepsBothEvents()
+    {
+        var result = Parse(
+            Event(date: "2026-06-01", precision: "month", description: "Month precision"),
+            Event(date: "2026-06-01", precision: "day", description: "Day precision"));
+
+        result.Should().HaveCount(2);
+        result.Select(e => e.DatePrecision).Should().Equal("month", "day");
+    }
+
+    [Fact]
     public void Parse_MoreThanTenEvents_KeepsFirstTen()
     {
         var events = Enumerable.Range(1, 12).Select(i => Event(product: $"Product {i}")).ToArray();

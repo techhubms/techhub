@@ -26,6 +26,7 @@ public class TimelineDeadlineGuardTests
     [InlineData("Support for Java 11 ends on 1 September 2027, so plan your upgrade. This is the end of support for the runtime.")]
     [InlineData("The legacy API will be deprecated on 2027-01-15 and removed later.")]
     [InlineData("The old endpoint is shutting down on November 30th, 2026.")]
+    [InlineData("The new pricing will take effect on December 1, 2026.")]
     public void MissesDeadline_FutureDateNextToDeadlinePhraseWithoutEvent_ReturnsTrue(string text)
     {
         TimelineDeadlineGuard.MissesDeadline(text, [], _published).Should().BeTrue();
@@ -45,6 +46,14 @@ public class TimelineDeadlineGuardTests
         var text = "Microsoft Foundry is retiring workflows on December 1, 2026.";
 
         TimelineDeadlineGuard.MissesDeadline(text, [Event("2026-12-01", kind: "ga")], _published).Should().BeTrue();
+    }
+
+    [Fact]
+    public void MissesDeadline_PricingChangeEventHasTheDate_ReturnsFalse()
+    {
+        var text = "The new pricing will take effect on December 1, 2026.";
+
+        TimelineDeadlineGuard.MissesDeadline(text, [Event("2026-12-01", kind: "pricing-change")], _published).Should().BeFalse();
     }
 
     [Fact]

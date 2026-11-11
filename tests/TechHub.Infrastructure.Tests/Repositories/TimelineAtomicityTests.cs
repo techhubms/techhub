@@ -210,16 +210,19 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
 
         // A timeline backfill stores products without changing the revision while the roundup classifies the article.
         var timelineStored = await _timelineRepo.ReplaceEventsIfUnchangedAsync(
-            Collection, slug, [], ITimelineEventRepository.ExtractedFromStoredContent, 1, revision, ["Azure Functions"], TestContext.Current.CancellationToken);
+            Collection, slug, [], ITimelineEventRepository.ExtractedFromStoredContent, 1, revision, ["Azure Functions"],
+            [new ProductFeatureMention { Product = "Azure Functions", Feature = "Durable Functions" }],
+            TestContext.Current.CancellationToken);
         timelineStored.Should().BeTrue();
 
         var stored = await _writeRepo.UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(
-            Collection, slug, """{"schema_version":2,"significance":"low","products":[]}""", revision, TestContext.Current.CancellationToken);
+            Collection, slug, """{"schema_version":3,"significance":"low","products":[],"product_features":[]}""", revision, TestContext.Current.CancellationToken);
 
         stored.Should().BeTrue();
         var metadata = await _fixture.Connection.ExecuteScalarAsync<string?>(
             "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug", new { Collection, Slug = slug });
         metadata.Should().Contain("\"significance\": \"low\"").And.Contain("Azure Functions");
+        metadata.Should().Contain("Durable Functions", "neutral metadata updates preserve stored feature mentions too");
         var links = await _fixture.Connection.QueryAsync<string>(
             "SELECT product_name FROM content_item_products WHERE collection_name = @Collection AND item_slug = @Slug", new { Collection, Slug = slug });
         links.Should().ContainSingle().Which.Should().Be("Azure Functions");

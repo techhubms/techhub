@@ -25,6 +25,9 @@ public sealed class ProductFeatureContent
     /// <summary>Whether this link is the thumbnail of the feature (at most one link per feature is).</summary>
     public bool IsThumbnail { get; set; }
 
+    /// <summary>Whether the article was linked by detected feature mentions or timeline events.</summary>
+    public bool IsDetected { get; set; }
+
     /// <summary>Position among the links of the feature, lowest first.</summary>
     public int SortOrder { get; set; }
 }
@@ -57,20 +60,23 @@ public sealed class ProductFeature
     public IReadOnlyList<FeatureAlias> Aliases { get; set; } = [];
 }
 
-/// <summary>A feature name the AI returned for an event of a product that matches none of the features yet.</summary>
+/// <summary>A feature name returned by article or event extraction that matches none of the product's features yet.</summary>
 public sealed class UnmatchedFeatureName
 {
     /// <summary>The name as the AI returned it.</summary>
     public string Name { get; set; } = string.Empty;
 
+    /// <summary>Number of distinct content items mentioning the feature without a date.</summary>
+    public int ContentCount { get; set; }
+
     /// <summary>Number of timeline events with this name.</summary>
     public int EventCount { get; set; }
 }
 
-/// <summary>A product with dates whose feature name matches none of its features yet.</summary>
+/// <summary>A product with extracted feature names that match none of its features yet.</summary>
 public sealed class ProductUnmatchedFeatures
 {
-    /// <summary>The product the dates are linked to.</summary>
+    /// <summary>The product the extracted feature names are linked to.</summary>
     public long ProductId { get; set; }
 
     /// <summary>The name of the product.</summary>
@@ -79,16 +85,19 @@ public sealed class ProductUnmatchedFeatures
     /// <summary>Number of different feature names (ignoring case and extra whitespace) to review.</summary>
     public int NameCount { get; set; }
 
+    /// <summary>Number of distinct content items containing unmatched feature names.</summary>
+    public int ContentCount { get; set; }
+
     /// <summary>Number of timeline events with such a name.</summary>
     public int EventCount { get; set; }
 }
 
-/// <summary>The curated features of a product and the feature names of its dates that are not curated yet.</summary>
+/// <summary>The curated features of a product and extracted feature names that are not curated yet.</summary>
 public sealed class ProductFeatureOverview
 {
     /// <summary>The features of the product, by name.</summary>
     public IReadOnlyList<ProductFeature> Features { get; set; } = [];
 
-    /// <summary>Feature names of the dates of the product (and its child products) that match no feature, most used first.</summary>
+    /// <summary>Feature names from articles or dates of the product (and its child products) that match no feature, most used first.</summary>
     public IReadOnlyList<UnmatchedFeatureName> Unmatched { get; set; } = [];
 }

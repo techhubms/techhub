@@ -8,8 +8,8 @@ namespace TechHub.Core.Interfaces;
 /// </summary>
 public interface ITimelineEventRepository
 {
-    /// <summary>Version of the extraction prompt and rules (events and products). Bump it to let the backfill job re-extract older articles.</summary>
-    const int CurrentPromptVersion = 9;
+    /// <summary>Version of the extraction prompt and rules (products, features and events). Bump it to re-extract older articles.</summary>
+    const int CurrentPromptVersion = 10;
 
     /// <summary>Events were extracted while the article was processed (the source text was available).</summary>
     const string ExtractedFromSource = "source";
@@ -39,7 +39,7 @@ public interface ITimelineEventRepository
     /// Like <see cref="ReplaceEventsAsync"/>, but only when the article is still at <paramref name="expectedRevision"/>
     /// (<see cref="TimelineBackfillItem.Revision"/>), checked under the article's write lock. Returns <c>false</c> and
     /// changes nothing when the article was edited after it was read, so events from outdated text are never stored.
-    /// When <paramref name="products"/> is set, the products of the article are replaced in the same transaction.
+    /// When <paramref name="products"/> or <paramref name="productFeatures"/> is set, the article's detected catalog names are replaced in the same transaction.
     /// </summary>
     Task<bool> ReplaceEventsIfUnchangedAsync(
         string collectionName,
@@ -49,6 +49,7 @@ public interface ITimelineEventRepository
         int promptVersion,
         long expectedRevision,
         IReadOnlyList<string>? products = null,
+        IReadOnlyList<ProductFeatureMention>? productFeatures = null,
         CancellationToken ct = default);
 
     /// <summary>

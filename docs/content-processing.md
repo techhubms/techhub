@@ -183,11 +183,11 @@ container and `DefaultAzureCredential` never reaches the Azure CLI credential.
 
 | Step | Profile | Output | Model |
 |---|---|---|---|
-| 1. Classify | `Classification` | Strict JSON (JSON schema): include/exclude, explanation, title, author, sections, primary section, tags, excerpt, `section_roles`, `key_facts`, `significance`, `content_kind`, `lifecycle`, `products`, `timeline_events` | `gpt-6.1-sol` |
+| 1. Classify | `Classification` | Strict JSON (JSON schema): include/exclude, explanation, title, author, sections, primary section, tags, excerpt, `section_roles`, `key_facts`, `significance`, `content_kind`, `lifecycle`, `products`, `product_features`, `timeline_events` | `gpt-6.1-sol` |
 | 2. Rewrite | `Rewrite` | Markdown body, only for included items | `gpt-6.1-sol` |
 | Roundup writer | `RoundupNewsWriter` | Roundup topics | `gpt-6-astra` |
 | Roundup metadata | `RoundupMetadata` | Title, tags and introduction (strict JSON) | `gpt-6.1-sol` |
-| Timeline extraction | `TimelineExtraction` | Products and timeline events (strict JSON), from already stored articles: the timeline backfill job | `gpt-6-luna` |
+| Timeline extraction | `TimelineExtraction` | Products, product-feature mentions and dated timeline events (strict JSON), from already stored articles: the timeline backfill job | `gpt-6-luna` |
 
 `CategorizeAsync` runs step 1 and, when the item is included, step 2. A failing rewrite fails the
 whole item; nothing is stored. `ClassifyAsync` runs step 1 only and is used by the roundup
@@ -225,19 +225,20 @@ Behavior worth knowing:
 
 ### Roundup Metadata
 
-The classification step stores roundup metadata in the `ai_metadata` JSONB column with `schema_version = 2`:
+The classification step stores roundup metadata in the `ai_metadata` JSONB column with `schema_version = 3`:
 
 - `key_facts` — 2 to 5 concrete facts (versions, dates, numbers) the roundup writer uses as its only source of such details
 - `significance` — `high` / `medium` / `low`: impact on developers, used to order articles in a roundup
 - `content_kind` — `announcement`, `tutorial`, `analysis`, `case-study`, `reference` or `event`
 - `lifecycle` — `new`, `preview`, `ga`, `update`, `deprecation`, `retirement` or `none`
 - `products` — 1 to 3 official product names, most relevant first. Related articles are sorted next to each other by their first product
+- `product_features` — product and feature pairs the article covers, whether or not it states dated events
 - `section_roles` — per section `lead` (full write-up in that section's roundup) or `brief` (one-line mention). The primary section is always `lead`; another section is `lead` only when the article has a distinct angle for its readers; when in doubt it is `lead`
 
 Rows with the older summary-based metadata (no `schema_version`, `roundup_summary`, `key_topics`, ...)
 count as missing: the roundup generator re-classifies them on the fly (classification only) the first time
 they appear in a roundup. When the current classifier would exclude such a stored article (for example a promotional teaser from before the
-stricter rules), there is nothing to enrich: the generator stores neutral version 2 metadata (no key facts or roles, `low` significance) and
+stricter rules), there is nothing to enrich: the generator stores neutral version 3 metadata (no key facts or roles, `low` significance) and
 logs the exclusion reason in the job log, so the article is not classified again for every section and every run. It stays a lead article.
 A classification that fails (timeout, invalid answer) stores nothing and is retried.
 
@@ -384,7 +385,7 @@ except `all`. For each section:
    excluding roundups, with `created_at` inside the target week. An item that belongs to several
    sections is therefore loaded by each of them
 2. **Existing check** — Sections whose roundup for that week already exists are skipped
-3. **AI metadata backfill** — Articles without `schema_version` 2 metadata are classified on the fly
+3. **AI metadata backfill** — Articles without current (`schema_version` 3) metadata are classified on the fly
    (classification only, never a rewrite). Their `ai_metadata` is updated and the timeline events the classification found are stored
    in the same transaction, so the "Dates to know" block does not depend on the timeline backfill having run, and a failed event
    write leaves the article on its old metadata version so it is retried
@@ -460,9 +461,9 @@ Existing articles are scanned by `TimelineBackfillBackgroundService`, a manual-t
 the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/timeline-backfill/trigger` (see [admin.md](admin.md)). The same pass also
 names the products of the article again, so it is the way to refresh the product links of stored articles after the catalog rules change.
 
-- Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and product names and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`) and its naming rules (`content-catalog-rules.md`, see [How the AI Is Asked](product-catalog.md#how-the-ai-is-asked))
-- Stores the products in the `products` array of the article's `ai_metadata` (whatever the schema version of the metadata) and relinks them to the catalog, in the same transaction as the events. The rest of the metadata and the revision of the article stay as they are. An article without metadata gets an `ai_metadata` object with only the `products` (none when the list is empty): it has no current `schema_version`, so the roundup metadata backfill still classifies the article and replaces the object. An answer without a `products` property leaves the stored products alone
-- Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again (version 2 added the deadline and digest rules, version 3 plans and surfaces, version 4 the products and the shared naming rules, version 5 billing concepts as features, version 6 the rules as descriptions with examples instead of lists of names, version 7 that a billing model or a group of plans is no plan, version 8 dropped plans and surfaces, version 9 the "can you use it by itself?" rule for products and features, so articles scanned before it are scanned again by the next run)
+- Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it extracts product and feature mentions as well as dated facts, and does not decide whether an article belongs on the site) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event and naming rules with the classify prompt (`content-timeline-rules.md`, `content-catalog-rules.md`; see [How the AI Is Asked](product-catalog.md#how-the-ai-is-asked))
+- Stores `products` and `product_features` in the article's `ai_metadata` (whatever the metadata schema version) and relinks them to the catalog, in the same transaction as the events. Feature mentions do not require a date. The rest of the metadata and the revision of the article stay as they are. An article without metadata gets an object only when extracted names exist; it has no current `schema_version`, so the roundup metadata backfill still classifies the article and replaces the object. An answer without a products or product-features property leaves that stored field alone
+- Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again (version 2 added the deadline and digest rules, version 3 plans and surfaces, version 4 the products and the shared naming rules, version 5 billing concepts as features, version 6 the rules as descriptions with examples instead of lists of names, version 7 that a billing model or a group of plans is no plan, version 8 dropped plans and surfaces, version 9 the "can you use it by itself?" rule for products and features, and version 10 extracts article feature mentions independently of dates)
 - An admin edit that changes the title, excerpt, text or publication date (without extracting new events itself) removes the article's events and scan marker in the same transaction, so an ordinary run scans the edited article again
 - Options: `force`, `publishedAfter` (yyyy-MM-dd), `collection` and `limit`. Newest articles come first
 - Resumable: an article is marked as scanned only after its events are stored, so a cancelled or failed run can simply be started again. A failing article is logged and left for the next run
@@ -471,11 +472,11 @@ names the products of the article again, so it is the way to refresh the product
 
 ## Product Catalog
 
-The classification and the timeline extraction return product and feature names as free text (`ai_metadata.products` and the `product` and `feature` of an event). The names stay as the AI wrote them; a curated catalog links them to one product and feature, so "Azure AI Foundry" and "Microsoft Foundry" are the same product wherever they are used. The catalog is described in [product-catalog.md](product-catalog.md):
+The classification and the timeline extraction return product and feature names as free text (`ai_metadata.products`, `ai_metadata.product_features`, and the `product` and `feature` of an event). Feature mentions are independent of dated events. The names stay as the AI wrote them; a curated catalog links them to one product and feature, so "Azure AI Foundry" and "Microsoft Foundry" are the same product wherever they are used. The catalog is described in [product-catalog.md](product-catalog.md):
 
 - what a product, a child product and a feature are, and the question that tells them apart ("can you use it by itself?");
 - the naming rules that the prompts give the AI (`content-catalog-rules.md`, inserted into the classify and extraction prompts). The AI never receives the catalog;
-- how names are matched to the catalog (in the database, in tiers, never by an AI call), the links, the review queue and the starting catalog.
+- how names are matched to the catalog (in the database, in tiers, never by an AI call), the article-to-product and feature-to-article links, the review queue and the starting catalog.
 
 Plans, surfaces, editions, models, regions and versions are not catalogued: the model writes them in the description of an event.
 

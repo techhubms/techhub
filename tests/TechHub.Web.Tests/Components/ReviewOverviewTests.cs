@@ -44,7 +44,7 @@ public class ReviewOverviewTests : AdminPageTestBase
         var cards = cut.FindAll(".review-card");
         cards.Select(c => c.GetAttribute("href")).Should().Equal("/admin/reviews#review-product-names", "/admin/reviews#review-features", "/admin/reviews#review-content-fixes", "/admin/processed-urls?status=failed");
         cards.Select(c => c.QuerySelector(".review-card-count")!.TextContent).Should().Equal("2", "4", "7", "5");
-        cards.Select(c => c.QuerySelector(".review-card-label")!.TextContent).Should().Equal("Product names", "Features", "Content fixes", "Failed URLs");
+        cards.Select(c => c.QuerySelector(".review-card-label")!.TextContent).Should().Equal("Product names", "Feature names", "Content fixes", "Failed URLs");
         cards.Should().OnlyContain(c => !c.ClassList.Contains("review-card-clear"));
     }
 
@@ -220,16 +220,18 @@ public class ReviewOverviewTests : AdminPageTestBase
     public void Render_ListsTheProductsWithFeaturesToReviewWithALinkToTheirFeaturesTab()
     {
         // Arrange
-        Setup(features: [Features(88, "GitHub Copilot", names: 20, events: 21)]);
+        Setup(features: [Features(88, "GitHub Copilot", names: 20, events: 21, content: 3)]);
 
         // Act
         var cut = Render<ReviewOverview>();
 
         // Assert
         var row = cut.FindAll("#review-features-table tbody tr").Should().ContainSingle().Subject;
-        row.QuerySelectorAll("td").Select(c => c.TextContent).Take(3).Should().Equal("GitHub Copilot", "20", "21");
+        row.QuerySelectorAll("td").Select(c => c.TextContent).Take(4).Should().Equal("GitHub Copilot", "20", "3", "21");
         row.QuerySelector("a")!.GetAttribute("href").Should().Be("/admin/products/88/features");
-        cut.Find("#review-features h2").TextContent.Should().Be("Features to review (20)");
+        row.QuerySelector("a")!.TextContent.Should().Be("Review 20 names");
+        cut.Find("#review-features h2").TextContent.Should().Be("Feature names to review (20)");
+        cut.Find("#review-features p").TextContent.Should().Contain("grouped by product");
     }
 
     // ── Helpers ─────────────────────────────────────────────────────────────
@@ -239,8 +241,8 @@ public class ReviewOverviewTests : AdminPageTestBase
 
     private static UnmatchedProductName Unmatched(string name) => new() { Name = name, ItemCount = 1, EventCount = 0 };
 
-    private static ProductUnmatchedFeatures Features(long productId, string productName, int names, int events) =>
-        new() { ProductId = productId, ProductName = productName, NameCount = names, EventCount = events };
+    private static ProductUnmatchedFeatures Features(long productId, string productName, int names, int events, int content = 0) =>
+        new() { ProductId = productId, ProductName = productName, NameCount = names, EventCount = events, ContentCount = content };
 
     private static ProductSummary Product(long id, string name) => new() { Id = id, Name = name };
 

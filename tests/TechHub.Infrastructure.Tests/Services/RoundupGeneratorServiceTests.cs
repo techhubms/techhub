@@ -595,7 +595,7 @@ public class RoundupGeneratorServiceTests
 
         _aiCategorizationService.Verify(s => s.ClassifyAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
         _aiCategorizationService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Never);
-        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", It.IsAny<string>(), It.Is<string>(j => j.Contains("\"schema_version\":2")), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
+        _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", It.IsAny<string>(), It.Is<string>(j => j.Contains("\"schema_version\":3")), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Exactly(2));
     }
 
     [Fact]
@@ -628,7 +628,7 @@ public class RoundupGeneratorServiceTests
                     FeedName = "Feed",
                     PrimarySectionName = "ai",
                     ContentHash = "h",
-                    RoundupMetadata = new RoundupMetadata { SchemaVersion = 2, KeyFacts = ["A fact."], SectionRoles = new Dictionary<string, string> { ["ai"] = "lead" } },
+                    RoundupMetadata = new RoundupMetadata { SchemaVersion = RoundupMetadata.CurrentSchemaVersion, KeyFacts = ["A fact."], SectionRoles = new Dictionary<string, string> { ["ai"] = "lead" } },
                     TimelineEvents = [timelineEvent]
                 }
             });
@@ -687,7 +687,7 @@ public class RoundupGeneratorServiceTests
                     FeedName = "Feed",
                     PrimarySectionName = "ai",
                     ContentHash = "h",
-                    RoundupMetadata = new RoundupMetadata { SchemaVersion = 2, KeyFacts = ["A stale fact."], SectionRoles = new Dictionary<string, string> { ["ai"] = "lead" } }
+                    RoundupMetadata = new RoundupMetadata { SchemaVersion = RoundupMetadata.CurrentSchemaVersion, KeyFacts = ["A stale fact."], SectionRoles = new Dictionary<string, string> { ["ai"] = "lead" } }
                 }
             });
         SetupAi();
@@ -714,7 +714,7 @@ public class RoundupGeneratorServiceTests
         _writeRepo.Verify(w => w.UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(
             "news",
             "article-10",
-            It.Is<string>(j => j.Contains("\"schema_version\":2") && j.Contains("\"significance\":\"low\"")),
+            It.Is<string>(j => j.Contains("\"schema_version\":3") && j.Contains("\"significance\":\"low\"")),
             4242L,
             It.IsAny<CancellationToken>()), Times.Once);
         _writeRepo.Verify(w => w.UpdateAiMetadataIfUnchangedAsync("news", "article-10", It.IsAny<string>(), It.IsAny<TimelineEventReplacement?>(), It.IsAny<long>(), It.IsAny<CancellationToken>()), Times.Never);

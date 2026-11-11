@@ -31,7 +31,7 @@ internal static class TimelineEventParser
         }
 
         var events = new List<TimelineEvent>();
-        var seen = new HashSet<(string Kind, string Product, string Feature, DateOnly Date)>();
+        var seen = new HashSet<(string Kind, string Product, string Feature, DateOnly Date, string Precision)>();
 
         foreach (var element in eventsArray.EnumerateArray().Take(MaxEvents))
         {
@@ -45,7 +45,8 @@ internal static class TimelineEventParser
                 timelineEvent.Kind,
                 timelineEvent.Product.ToUpperInvariant(),
                 (timelineEvent.Feature ?? string.Empty).ToUpperInvariant(),
-                timelineEvent.Date);
+                timelineEvent.Date,
+                timelineEvent.DatePrecision);
             if (seen.Add(key))
             {
                 events.Add(timelineEvent);

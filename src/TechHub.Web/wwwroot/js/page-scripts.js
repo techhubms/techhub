@@ -423,6 +423,9 @@ window.markScriptsLoading = function() {
 };
 
 window.markScriptsReady = function() {
+    // scroll-manager.js registers this hook; it must run before the guards below.
+    if (typeof window.__onScriptsReadySignal === 'function') window.__onScriptsReadySignal();
+
     // Guard: only process once per navigation. Multiple components may call this
     // (page component + layout fallback) — the first call does the work.
     if (window.__scriptsReady === true) {

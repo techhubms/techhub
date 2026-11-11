@@ -3,7 +3,6 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
-using TechHub.Core.Interfaces;
 using TechHub.Core.Models.FeatureToggles;
 using TechHub.Web.Services;
 
@@ -34,7 +33,7 @@ public class FeatureToggleCacheRefreshServiceTests
             logger);
 
         await service.StartAsync(TestContext.Current.CancellationToken);
-        var exception = await logger.WarningLogged.WaitAsync(TimeSpan.FromSeconds(5));
+        var exception = await logger.WarningLogged.WaitAsync(TimeSpan.FromSeconds(5), TestContext.Current.CancellationToken);
 
         exception.Should().BeOfType<JsonException>();
         cache.GetMode("timeline").Should().Be(FeatureToggleMode.Everyone);

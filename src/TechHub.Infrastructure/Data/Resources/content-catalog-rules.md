@@ -18,8 +18,9 @@ Rules for product names:
 - When you cannot tell whether a named thing can be used by itself, treat it as a feature of the product it belongs to and name that product. The catalog decides afterwards.
 - List Microsoft and GitHub products and the open-source projects around them. List a third-party product only when the article is mainly about it.
 
-Rules for feature names (timeline events only):
+Rules for feature names:
 
 - One capability or concept in the words the vendor uses, as short as that name allows: a noun phrase of at most 5 words, without a version, a plan, an editor, a verb or a status ("generally available", "new", "preview"). Do not wrap descriptive words around the name: "Agent mode", not "Refreshed agent mode experience".
 - Use the same name for the same thing every time, with the capitalization of the vendor's own documentation.
-- `null` when the event is about the whole product, or when the thing is a model, region, version, a plain price change or a policy.
+- In `product_features`, name the features the article substantively covers, whether or not it gives dates or describes a lifecycle event. Include only features clearly presented as part of the named product; do not infer a relationship from mere co-occurrence.
+- In `timeline_events`, use `null` when the event is about the whole product, or when the thing is a model, region, version, a plain price change or a policy.

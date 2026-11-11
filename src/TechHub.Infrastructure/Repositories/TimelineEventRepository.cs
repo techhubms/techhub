@@ -72,6 +72,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         int promptVersion,
         long expectedRevision,
         IReadOnlyList<string>? products = null,
+        IReadOnlyList<ProductFeatureMention>? productFeatures = null,
         CancellationToken ct = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
@@ -107,7 +108,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                 transaction,
                 collectionName,
                 slug,
-                new TimelineEventReplacement(events, extractedFrom, promptVersion, products),
+                new TimelineEventReplacement(events, extractedFrom, promptVersion, products, productFeatures),
                 ct);
 
             transaction.Commit();
@@ -274,7 +275,8 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             WITH eligible_events AS (
                 SELECT e.id,
                        e.event_date,
-                       e.kind,
+                       e.date_precision,
+                e.kind,
                        COALESCE(e.product_id::text, lower(e.product)) AS product_key,
                        COALESCE(f.id::text, lower(e.feature), '') AS feature_key,
                        lower(COALESCE(p.name, e.product)) AS product_sort,
@@ -291,11 +293,11 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                   AND (cardinality(@Kinds::text[]) = 0 OR e.kind = ANY(@Kinds::text[]))
             ),
             selected_groups AS (
-                SELECT event_date, kind, product_key, feature_key,
+                SELECT event_date, date_precision, kind, product_key, feature_key,
                        MIN(product_sort) AS product_sort,
                        MIN(feature_sort) AS feature_sort
                 FROM eligible_events
-                GROUP BY event_date, kind, product_key, feature_key
+                GROUP BY event_date, date_precision, kind, product_key, feature_key
                 ORDER BY event_date DESC, product_sort, feature_sort, kind
                 LIMIT @Take
             )
@@ -316,7 +318,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                    ci.date_epoch     AS ItemDateEpoch
             FROM eligible_events eligible
             JOIN selected_groups selected
-              USING (event_date, kind, product_key, feature_key)
+              USING (event_date, date_precision, kind, product_key, feature_key)
             JOIN content_timeline_events e ON e.id = eligible.id
             JOIN content_items ci ON ci.collection_name = e.collection_name AND ci.slug = e.item_slug
             LEFT JOIN products p ON p.id = e.product_id
@@ -346,7 +348,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         // The same event stated by several articles is one entry. Rows are ordered by article date, so the first row of a
         // group is the oldest article and supplies the description.
         return rows
-            .GroupBy(r => (r.EventDate, r.Kind, Product: r.ProductId?.ToString(CultureInfo.InvariantCulture) ?? r.Product.ToLowerInvariant(), Feature: (r.FeatureId?.ToString(CultureInfo.InvariantCulture) ?? r.Feature?.ToLowerInvariant()) ?? string.Empty))
+        .GroupBy(r => (r.EventDate, r.DatePrecision, r.Kind, Product: r.ProductId?.ToString(CultureInfo.InvariantCulture) ?? r.Product.ToLowerInvariant(), Feature: (r.FeatureId?.ToString(CultureInfo.InvariantCulture) ?? r.Feature?.ToLowerInvariant()) ?? string.Empty))
             .Select(g =>
             {
                 var first = g.First();

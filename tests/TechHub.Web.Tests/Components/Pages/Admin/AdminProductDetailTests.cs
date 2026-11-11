@@ -459,6 +459,29 @@ public class AdminProductDetailTests : AdminPageTestBase
     }
 
     [Fact]
+    public void Render_ShowsDetectedFeatureContentWithoutManualLinkActions()
+    {
+        var overview = OverviewWithDetails();
+        overview.Features[0].Content =
+        [
+            new ProductFeatureContent
+            {
+                CollectionName = "news",
+                ItemSlug = "fusion-article",
+                Title = "Copilot Fusion",
+                IsDetected = true
+            }
+        ];
+        _api.Setup(x => x.GetProductFeaturesAsync(5, It.IsAny<CancellationToken>())).ReturnsAsync(overview);
+
+        var cut = RenderDetail("features");
+
+        var row = cut.Find("#feature-content-31 tbody tr");
+        row.TextContent.Should().Contain("AI detected");
+        row.QuerySelectorAll("button").Should().BeEmpty("detected associations are not manually removable or thumbnails");
+    }
+
+    [Fact]
     public void Render_WithoutFeatures_ShowsEmptyMessages()
     {
         // Act

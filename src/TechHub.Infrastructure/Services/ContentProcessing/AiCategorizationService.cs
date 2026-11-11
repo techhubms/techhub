@@ -107,9 +107,11 @@ public sealed class AiCategorizationService : IAiCategorizationService
             return classification;
         }
 
-        var known = included.TimelineEvents.Select(e => (e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date)).ToHashSet();
+        var known = included.TimelineEvents
+            .Select(e => (e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date, e.DatePrecision))
+            .ToHashSet();
         var added = extraction.Events
-            .Where(e => known.Add((e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date)))
+            .Where(e => known.Add((e.Kind, e.Product.ToUpperInvariant(), (e.Feature ?? string.Empty).ToUpperInvariant(), e.Date, e.DatePrecision)))
             .ToList();
 
         if (added.Count == 0)
@@ -168,7 +170,10 @@ public sealed class AiCategorizationService : IAiCategorizationService
             IReadOnlyList<string>? products = doc.RootElement.TryGetProperty("products", out var productsProp) && productsProp.ValueKind == JsonValueKind.Array
                 ? GetProducts(doc.RootElement)
                 : null;
-            return new TimelineExtractionResult { Events = events, Products = products };
+            IReadOnlyList<ProductFeatureMention>? productFeatures = doc.RootElement.TryGetProperty("product_features", out var featuresProp) && featuresProp.ValueKind == JsonValueKind.Array
+                ? GetProductFeatures(doc.RootElement)
+                : null;
+            return new TimelineExtractionResult { Events = events, Products = products, ProductFeatures = productFeatures };
         }
         catch (JsonException ex)
         {
@@ -561,6 +566,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
         }
 
         var products = GetProducts(root);
+        var productFeatures = GetProductFeatures(root);
 
         return (new RoundupMetadata
         {
@@ -570,6 +576,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
             ContentKind = contentKind,
             Lifecycle = lifecycle,
             Products = products,
+            ProductFeatures = productFeatures,
             SectionRoles = sectionRoles!
         }, null);
     }
@@ -790,6 +797,26 @@ public sealed class AiCategorizationService : IAiCategorizationService
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .Take(MaxProducts)
             .ToList();
+
+    private static List<ProductFeatureMention> GetProductFeatures(JsonElement root)
+    {
+        if (!root.TryGetProperty("product_features", out var features) || features.ValueKind != JsonValueKind.Array)
+        {
+            return [];
+        }
+
+        return features.EnumerateArray()
+            .Where(feature => feature.ValueKind == JsonValueKind.Object)
+            .Select(feature => new ProductFeatureMention
+            {
+                Product = GetString(feature, "product") ?? string.Empty,
+                Feature = GetString(feature, "feature") ?? string.Empty
+            })
+            .Where(feature => feature.Product.Length > 0 && feature.Feature.Length > 0)
+            .DistinctBy(feature => (feature.Product.ToUpperInvariant(), feature.Feature.ToUpperInvariant()))
+            .Take(20)
+            .ToList();
+    }
 
     private static List<string> GetStringArray(JsonElement root, string name)
     {

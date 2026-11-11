@@ -35,6 +35,12 @@ public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<Produc
     [InlineData("GitHub Enterprise Importer", "GitHub Enterprise Cloud")]
     [InlineData("NuGet MCP Server", "NuGet")]
     [InlineData("Microsoft Defender for Cloud", "Microsoft Defender")]
+    [InlineData("Azure HorizonDB", "Azure Database for PostgreSQL")]
+    [InlineData("Citus", "PostgreSQL")]
+    [InlineData("CodeQL CLI", "GitHub CodeQL")]
+    [InlineData("Docker Desktop", "Docker")]
+    [InlineData("Pgpool-II", "PostgreSQL")]
+    [InlineData("SharePoint Framework", "SharePoint")]
     public async Task Seed_ProductsAndTheirParents_AreInTheCatalog(string product, string parent)
     {
         (await ParentOfAsync(product)).Should().Be(parent);
@@ -136,6 +142,65 @@ public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<Produc
     }
 
     [Theory]
+    [InlineData("Azure Arc", "Azure Arc-enabled SQL Server")]
+    [InlineData("Azure AI Speech", "Voice Live API")]
+    [InlineData("Azure Container Registry", "Data transfer and transactions metrics")]
+    [InlineData("Azure Cosmos DB", "Rust SDK")]
+    [InlineData("Azure Migrate", "NAS share discovery and assessment")]
+    [InlineData("GitHub Advanced Security", "Package firewall")]
+    [InlineData("GitHub Copilot", "Copilot Automations")]
+    [InlineData("GitHub Dependabot", "Agent Package Manager support")]
+    [InlineData("Microsoft Fabric", "Warehouse Monitor")]
+    [InlineData("Microsoft Foundry", "Copilot harness")]
+    [InlineData("Microsoft Intune", "Endpoint Privilege Management")]
+    public async Task Seed_ReviewQueueCapabilities_AreFeaturesOfTheirProducts(string product, string feature)
+    {
+        var features = await _fixture.Connection.ExecuteScalarAsync<long>(
+            "SELECT count(*) FROM product_features f JOIN products p ON p.id = f.product_id WHERE p.name = @Product AND lower(f.name) = lower(@Feature)",
+            new { Product = product, Feature = feature });
+        features.Should().Be(1);
+
+        var asProduct = await _fixture.Connection.ExecuteScalarAsync<long>(
+            "SELECT count(*) FROM products WHERE lower(name) = lower(@Feature)", new { Feature = feature });
+        asProduct.Should().Be(0);
+    }
+
+    [Theory]
+    [InlineData("Azure Cosmos DB", "Rust SDK", "Rust client")]
+    [InlineData("GitHub Advanced Security", "Package firewall", "GitHub package firewall")]
+    [InlineData("Microsoft Fabric", "Admin connection APIs", "Admin Connections REST APIs")]
+    [InlineData("Microsoft Fabric", "Warehouse Monitor", "Monitor in warehouse")]
+    [InlineData("Microsoft Foundry", "Copilot harness", "Unified Copilot harness")]
+    public async Task Seed_ReviewQueueAlternateNames_AreFeatureAliases(string product, string feature, string alias)
+    {
+        var aliases = await _fixture.Connection.ExecuteScalarAsync<long>(
+            """
+            SELECT count(*)
+            FROM product_feature_aliases a
+            JOIN product_features f ON f.id = a.feature_id
+            JOIN products p ON p.id = f.product_id
+            WHERE lower(p.name) = lower(@Product)
+              AND lower(f.name) = lower(@Feature)
+              AND lower(a.alias) = lower(@Alias)
+            """,
+            new { Product = product, Feature = feature, Alias = alias });
+        aliases.Should().Be(1);
+    }
+
+    [Fact]
+    public async Task Seed_ReviewQueueNonProducts_AreIgnored()
+    {
+        var ignored = await _fixture.Connection.ExecuteScalarAsync<long>(
+            """
+            SELECT count(*) FROM ignored_product_names
+            WHERE name IN (
+                'Cohere Rerank',
+                'Microsoft-Decision-1')
+            """);
+        ignored.Should().Be(2);
+    }
+
+    [Theory]
     [InlineData("GitHub Hosted Runners", "GitHub Actions")]
     [InlineData("GitHub Secret Scanning", "GitHub Secret Protection")]
     [InlineData("GitHub Copilot Fusion", "GitHub Copilot")]
@@ -156,6 +221,11 @@ public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<Produc
     [InlineData("GitHub Copilot CLI")]
     [InlineData("Foundry Local")]
     [InlineData("Azure Functions Core Tools")]
+    [InlineData("Azure DNS Private Resolver")]
+    [InlineData("Azure Route Server")]
+    [InlineData("Dev Proxy")]
+    [InlineData("PHP")]
+    [InlineData("Traefik")]
     public async Task Seed_ThingsThatCanBeUsedByThemselves_AreProducts(string product)
     {
         (await MatchProductAsync(product)).Should().Be(product);
@@ -164,7 +234,8 @@ public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<Produc
     [Theory]
     [InlineData("GitHub Copilot app", "GitHub Copilot app")]
     [InlineData("Copilot app", "GitHub Copilot app")]
-    public async Task FindProductId_CopilotAppNames_MatchTheChildProduct(string name, string expected)
+    [InlineData("Microsoft Execution Containers", "Microsoft Execution Container")]
+    public async Task FindProductId_ProductAliases_MatchTheirCanonicalProduct(string name, string expected)
     {
         (await MatchProductAsync(name)).Should().Be(expected);
     }

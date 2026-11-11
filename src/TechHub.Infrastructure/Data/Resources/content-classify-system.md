@@ -655,7 +655,7 @@ Fill in every field described below.
 
 ### Excluded content (`included: false`)
 
-Set `explanation` to the exclusion explanation (template below), set `sections`, `tags`, `section_roles`, `key_facts`, `products` and `timeline_events` to empty arrays, and every other field to `null`.
+Set `explanation` to the exclusion explanation (template below), set `sections`, `tags`, `section_roles`, `key_facts`, `products`, `product_features` and `timeline_events` to empty arrays, and every other field to `null`.
 
 #### included (boolean)
 
@@ -791,5 +791,9 @@ Judge the impact on developers, not how long or well written the article is. Use
 The products the article is mainly about, most relevant first. Used to place related articles next to each other and to link the article to the product catalog. Only products: no features, plans, editors, models or versions. Follow the naming rules below.
 
 {{CATALOG_RULES}}
+
+#### product_features (array of objects, 0 to 20)
+
+List the product-feature pairs the article substantively covers, whether or not it states dated events. Do not include incidental mentions or infer a product-feature relationship from co-occurrence alone. Each object has `product` and `feature` names following the naming rules above. Return an empty array when no product features are covered.
 
 {{TIMELINE_RULES}}

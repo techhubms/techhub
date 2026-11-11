@@ -87,6 +87,7 @@ public class AiCategorizationServiceTests
         string? keyFactsJson = null,
         string significance = "medium",
         string? eventsJson = null,
+        string? productFeaturesJson = null,
         string title = "Azure OpenAI Basics",
         string? excerptJson = null)
     {
@@ -94,6 +95,7 @@ public class AiCategorizationServiceTests
         rolesJson ??= """[{"section":"ai","role":"lead"},{"section":"azure","role":"brief"}]""";
         keyFactsJson ??= """["Feature X is generally available.","It costs 5 dollars."]""";
         eventsJson ??= "[]";
+        productFeaturesJson ??= "[]";
         excerptJson ??= "\"Jane explains the basics.\"";
 
         return $$"""
@@ -112,6 +114,7 @@ public class AiCategorizationServiceTests
               "content_kind": "tutorial",
               "lifecycle": "ga",
               "products": ["Azure OpenAI Service"],
+              "product_features": {{productFeaturesJson}},
               "timeline_events": {{eventsJson}}
             }
             """;
@@ -120,7 +123,7 @@ public class AiCategorizationServiceTests
     private const string ExcludedJson = """
         {"included":false,"explanation":"Sales Pitches. Promotional content.","title":null,"author":null,"sections":[],
          "primary_section":null,"tags":[],"excerpt":null,"section_roles":[],"key_facts":[],"significance":null,
-         "content_kind":null,"lifecycle":null,"products":[],"timeline_events":[]}
+         "content_kind":null,"lifecycle":null,"products":[],"product_features":[],"timeline_events":[]}
         """;
 
     private void SetupResponses(params string[] responses)
@@ -476,9 +479,10 @@ public class AiCategorizationServiceTests
     }
 
     [Fact]
-    public async Task ClassifyAsync_StoresSchemaVersion2Metadata()
+    public async Task ClassifyAsync_StoresSchemaVersion3MetadataAndFeatureMentionsWithoutDates()
     {
-        SetupResponses(Wrap(ClassificationJson()));
+        const string ProductFeatures = """[{"product":"Azure OpenAI Service","feature":"Structured outputs"}]""";
+        SetupResponses(Wrap(ClassificationJson(productFeaturesJson: ProductFeatures)));
 
         var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
@@ -489,6 +493,9 @@ public class AiCategorizationServiceTests
         meta.ContentKind.Should().Be("tutorial");
         meta.Lifecycle.Should().Be("ga");
         meta.Products.Should().Equal("Azure OpenAI Service");
+        meta.ProductFeatures.Should().ContainSingle()
+            .Which.Should().BeEquivalentTo(new ProductFeatureMention { Product = "Azure OpenAI Service", Feature = "Structured outputs" });
+        result.Item!.TimelineEvents.Should().BeEmpty();
     }
 
     // ── Timeline events ───────────────────────────────────────────────────────
@@ -704,7 +711,7 @@ public class AiCategorizationServiceTests
         body.GetProperty("model").GetString().Should().Be(TimelineDeployment);
         var schema = body.GetProperty("response_format").GetProperty("json_schema");
         schema.GetProperty("strict").GetBoolean().Should().BeTrue();
-        schema.GetProperty("schema").GetProperty("required").EnumerateArray().Select(e => e.GetString()).Should().Equal("products", "timeline_events");
+        schema.GetProperty("schema").GetProperty("required").EnumerateArray().Select(e => e.GetString()).Should().Equal("products", "product_features", "timeline_events");
         var system = body.GetProperty("messages")[0].GetProperty("content").GetString();
         system.Should().Contain("timeline_events").And.Contain("Naming products and features")
             .And.NotContain("{{TIMELINE_RULES}}").And.NotContain("{{CATALOG_RULES}}");
@@ -719,6 +726,19 @@ public class AiCategorizationServiceTests
 
         result.IsFailure.Should().BeFalse();
         result.Products.Should().Equal("GitHub Copilot", "Visual Studio Code", "Azure Functions");
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_ReturnsFeatureMentionsWithoutEvents()
+    {
+        SetupResponses(Wrap("""{"products":["GitHub Copilot"],"product_features":[{"product":"GitHub Copilot","feature":"Copilot Fusion"}],"timeline_events":[]}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
+
+        result.IsFailure.Should().BeFalse();
+        result.Events.Should().BeEmpty();
+        result.ProductFeatures.Should().ContainSingle()
+            .Which.Should().BeEquivalentTo(new ProductFeatureMention { Product = "GitHub Copilot", Feature = "Copilot Fusion" });
     }
 
     [Fact]
@@ -913,6 +933,24 @@ public class AiCategorizationServiceTests
         var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
 
         result.Item!.TimelineEvents.Should().ContainSingle();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_FocusedExtractionFindsTheSameEventAndDateWithDifferentPrecision_KeepsBoth()
+    {
+        const string MonthPrecision = """
+            {"kind":"ga","product":"Microsoft Foundry","feature":"Workflows","description":"Workflows are GA",
+             "date_source":"explicit","date":"2026-12-01","date_precision":"month","quote":"q"}
+            """;
+        const string DayPrecision = """
+            {"kind":"ga","product":"Microsoft Foundry","feature":"Workflows","description":"Workflows are GA",
+             "date_source":"explicit","date":"2026-12-01","date_precision":"day","quote":"q"}
+            """;
+        SetupResponses(Wrap(ClassificationJson(eventsJson: $"[{MonthPrecision}]")), Wrap($$"""{"timeline_events":[{{DayPrecision}}]}"""));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
+
+        result.Item!.TimelineEvents.Select(e => e.DatePrecision).Should().Equal("month", "day");
     }
 
     // ── Prompts ───────────────────────────────────────────────────────────────

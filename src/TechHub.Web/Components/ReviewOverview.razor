@@ -31,7 +31,7 @@
     {
         <div class="review-cards">
             @Card("/admin/reviews#review-product-names", "Product names", _data.UnmatchedProducts.Count, "not in the catalog yet")
-            @Card("/admin/reviews#review-features", "Features", FeatureNameCount, $"names in {_data.UnmatchedFeatures.Count} products")
+            @Card("/admin/reviews#review-features", "Feature names", FeatureNameCount, $"to review across {_data.UnmatchedFeatures.Count} products")
             @Card("/admin/reviews#review-content-fixes", "Content fixes", _data.PendingContentFixes, "proposals to approve or reject")
             @Card("/admin/processed-urls?status=failed", "Failed URLs", _data.FailedUrls, "to retry or remove")
         </div>
@@ -51,7 +51,7 @@
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Articles</th>
+                                <th>Content items</th>
                                 <th>Dates</th>
                                 <th>Actions</th>
                             </tr>
@@ -108,8 +108,8 @@
         </section>
 
         <section class="admin-review-section" id="review-features">
-            <h2 class="admin-section-title">Features to review (@FeatureNameCount)</h2>
-            <p class="admin-result-summary">Feature names of timeline dates that match no feature of their product. Open the features of a product to add them as a feature or as an alias.</p>
+            <h2 class="admin-section-title">Feature names to review (@FeatureNameCount)</h2>
+            <p class="admin-result-summary">These are distinct feature names detected in articles or timeline dates that do not match the catalog, grouped by product. Open a product's Features tab to add each name as a feature or alias.</p>
 
             @if (_data.UnmatchedFeatures.Count == 0)
             {
@@ -123,6 +123,7 @@
                             <tr>
                                 <th>Product</th>
                                 <th>Names</th>
+                                <th>Articles</th>
                                 <th>Dates</th>
                                 <th>Actions</th>
                             </tr>
@@ -133,8 +134,9 @@
                                 <tr>
                                     <td>@product.ProductName</td>
                                     <td class="admin-cell-mono">@product.NameCount</td>
+                                    <td class="admin-cell-mono">@product.ContentCount</td>
                                     <td class="admin-cell-mono">@product.EventCount</td>
-                                    <td><a class="admin-link-btn" href="/admin/products/@product.ProductId/features">Review features</a></td>
+                                    <td><a class="admin-link-btn" href="/admin/products/@product.ProductId/features">Review @product.NameCount names</a></td>
                                 </tr>
                             }
                         </tbody>

@@ -90,6 +90,18 @@ describe('page-scripts.js', () => {
             expect(signals).toContain('scripts-loading');
             expect(signals).toContain('scripts-ready');
         });
+
+        it('should notify __onScriptsReadySignal on every call, even when already ready', async () => {
+            await import(MODULE_PATH);
+            const onSignal = vi.fn();
+            window.__onScriptsReadySignal = onSignal;
+
+            window.markScriptsReady();
+            window.markScriptsReady();
+
+            expect(onSignal).toHaveBeenCalledTimes(2);
+            delete window.__onScriptsReadySignal;
+        });
     });
 
     describe('initHighlighting', () => {

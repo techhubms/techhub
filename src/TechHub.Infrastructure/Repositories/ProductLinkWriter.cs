@@ -4,14 +4,13 @@ using Dapper;
 namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
-/// Keeps <c>content_item_products</c> (the product names an article lists, linked to the catalog) in sync with the
-/// <c>ai_metadata</c> of the article, inside a transaction owned by the caller.
+/// Keeps <c>content_item_products</c> (the product names an article lists, links through features, or names in events)
+/// in sync with the article metadata and timeline events, inside a transaction owned by the caller.
 /// </summary>
 internal static class ProductLinkWriter
 {
     /// <summary>
-    /// Replaces the product links of an article with the products in its stored <c>ai_metadata</c>. Metadata without a
-    /// <c>products</c> array (the original summary-based schema) leaves the article without product links.
+    /// Replaces the product links of an article with the products in its metadata, feature mentions and dated events.
     /// </summary>
     public static async Task ReplaceItemLinksAsync(
         IDbConnection connection,
@@ -43,6 +42,21 @@ internal static class ProductLinkWriter
                          THEN ci.ai_metadata -> 'products'
                          ELSE '[]'::jsonb END) WITH ORDINALITY AS n (name, ordinal)
                 WHERE ci.collection_name = @CollectionName AND ci.slug = @Slug
+                UNION ALL
+                SELECT regexp_replace(btrim(n.value ->> 'product'), '\s+', ' ', 'g') AS name, 1000 + n.ordinal
+                FROM content_items ci
+                CROSS JOIN LATERAL jsonb_array_elements(
+                    CASE WHEN jsonb_typeof(ci.ai_metadata -> 'product_features') = 'array'
+                         THEN ci.ai_metadata -> 'product_features'
+                         ELSE '[]'::jsonb END) WITH ORDINALITY AS n (value, ordinal)
+                WHERE ci.collection_name = @CollectionName AND ci.slug = @Slug
+                  AND jsonb_typeof(n.value) = 'object'
+                  AND btrim(COALESCE(n.value ->> 'product', '')) <> ''
+                UNION ALL
+                SELECT regexp_replace(btrim(e.product), '\s+', ' ', 'g') AS name,
+                       100000 + ROW_NUMBER() OVER (ORDER BY e.event_date, e.product, e.feature)
+                FROM content_timeline_events e
+                WHERE e.collection_name = @CollectionName AND e.item_slug = @Slug
             ),
             firsts AS (
                 SELECT DISTINCT ON (lower(name)) name, ordinal

@@ -35,13 +35,19 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 
 - See [running-and-testing.md](running-and-testing.md) for instructions on running with Docker.
 
+### Local query performance
+
+The local PostgreSQL container uses 512 MB of shared buffers so restored content, full-text vectors and tag data can stay warm between queries. The default 128 MB can evict search pages during tag aggregation, causing repeated disk reads even after a warmup. Local database performance tests retain their existing latency thresholds; increasing the cache does not bypass queries or enable application caching.
+
+The container also uses 32 MB of working memory for aggregation and an SSD-oriented random-page cost of 1.1. These settings apply only to local Docker PostgreSQL, not Azure PostgreSQL. After changing container settings, recreate only the database service with `docker compose up -d --no-deps postgres`; its existing bind-mounted data is retained. Application startup remains responsible for pending migrations.
+
 ## Database Schema
 
 ### Main Tables
 
 | Table | Purpose |
 |-------|--------|
-| `content_items` | All content with denormalized section flags and bitmask. Also holds the generated `search_vector` column used for full-text search and the optional `ai_metadata` JSON (roundup metadata, `schema_version` 2: key facts, significance, section roles, ...) |
+| `content_items` | All content with denormalized section flags and bitmask. Also holds the generated `search_vector` column used for full-text search and the optional `ai_metadata` JSON (roundup metadata, `schema_version` 3: key facts, significance, section roles, product-feature mentions, ...) |
 | `content_tags_expanded` | Word-level tag matching (denormalized for fast filtering) |
 | `rss_feed_configs` | RSS feed configuration (URL, name, collection, enabled flag, positive polling interval in minutes and last check result) |
 | `processed_urls` | Tracks processed/skipped/failed URLs for the content pipeline |
@@ -52,7 +58,7 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 | `product_aliases` | Other names for a product; a name the AI returns that matches an alias is linked to the product |
 | `ignored_product_names` | Names the AI returns that are not products, kept out of the review queue |
 | `product_features` | Curated features of a product, with `product_feature_aliases` for other names. Timeline events link to one through `feature_id`, see [content-processing.md](product-catalog.md#features). A feature also has a `slug`, a `description` and a `release_date` |
-| `product_feature_content` | Links features to content items (many-to-many) with a thumbnail flag and sort order. Edited in the admin; the timeline lists the items of an event as its sources |
+| `product_feature_content` | Manually curated feature-to-content links (many-to-many) with a thumbnail flag and sort order. AI-detected article links come from `ai_metadata` and timeline events; the timeline lists the items of an event as its sources |
 | `content_item_products` | The product names an article lists, linked to the catalog (`product_id` is empty for names that are not in the catalog), with a cascading foreign key to the article |
 | `content_reviews` | Review queue for content fixer changes (tags, markdown, author) awaiting approval |
 | `custom_page_data` | JSON data for custom pages (editable from admin UI) |
@@ -101,7 +107,8 @@ The schema is managed by numbered SQL scripts (`001_`, `002_`, ...) that are emb
 
 - **Runner**: `MigrationRunner` executes the scripts in ordinal filename order, independent of the current culture, and records each executed filename in the `_migrations` table, so every script runs once. Legacy rows containing full embedded resource names are also recognized and left unchanged; only new executions use filenames.
 - **When**: The API runs pending migrations on startup through `StartupBackgroundService`. Migrations are never applied by hand.
-- **Unreleased changes**: The product catalog is one script, `050_product_catalog.sql`, and stays one script until it is released: a change to the catalog before then is a change to that file, tested by applying it to a restored copy of the production database. After a release, changes are new scripts.
+- **Catalog seeds**: `050_product_catalog.sql` builds the catalog schema and starting data. Later reviewed backfills can add numbered, insert-only seed migrations, such as `056_backfill_catalog_seed.sql`. Existing catalog entries are preserved. Validate seeds in isolated test databases before restoring production data and letting the application apply pending migrations on startup.
+- **Catalog corrections**: `057_catalog_classification_corrections.sql` inserts reviewed products and aliases, removes their obsolete ignored-name entries and retires three mistakenly seeded features. It preserves existing product parents and feature metadata, copies legacy feature aliases to the promoted products, and fails explicitly if retiring a feature would discard a description, release date, curated content or catalog-authored event. It does not change extracted article text.
 - **Locking**: A process-wide lock prevents concurrent runs.
 - **Fail-fast**: A failing script is logged and the exception stops the application, so a half-migrated database never serves traffic. The API `/health` endpoint reports unhealthy until startup completes (see [health-checks.md](health-checks.md)).
 

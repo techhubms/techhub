@@ -11,8 +11,10 @@ namespace TechHub.Core.Models.ContentProcessing;
 /// metadata gets an object with only the products (when there are any), which the roundup metadata backfill still treats as unclassified.
 /// <c>null</c> leaves the stored products alone.
 /// </param>
+/// <param name="ProductFeatures">When set, replaces the article's detected product-feature mentions; <c>null</c> leaves them alone.</param>
 public sealed record TimelineEventReplacement(
     IReadOnlyList<TimelineEvent> Events,
     string ExtractedFrom,
     int PromptVersion,
-    IReadOnlyList<string>? Products = null);
+    IReadOnlyList<string>? Products = null,
+    IReadOnlyList<ProductFeatureMention>? ProductFeatures = null);

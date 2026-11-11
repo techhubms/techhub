@@ -119,6 +119,12 @@ describe('scroll-manager.js', () => {
 
         vi.resetModules();
         mod = await import(MODULE_PATH);
+
+        // Mirrors page-scripts.js: it notifies scroll-manager first, then runs the page implementation.
+        window.markScriptsReady = () => {
+            window.__onScriptsReadySignal?.();
+            pageMarkScriptsReady();
+        };
     });
 
     afterEach(() => {
@@ -538,6 +544,21 @@ describe('scroll-manager.js', () => {
             vi.advanceTimersByTime(1000);
 
             window.markScriptsReady();
+
+            expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(false);
+        });
+
+        it('markScriptsReady reference captured before scroll-manager could patch it still hides the spinner', async () => {
+            // Blazor JS interop caches the function it first resolves, so replacing
+            // window.markScriptsReady afterwards never reaches the cached reference.
+            vi.useFakeTimers();
+            await import('../../src/TechHub.Web/wwwroot/js/page-scripts.js');
+            const cachedByBlazor = window.markScriptsReady;
+            window.history.pushState(null, '', '/admin/processed-urls?jobId=1');
+            vi.advanceTimersByTime(1000);
+            expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(true);
+
+            cachedByBlazor();
 
             expect(document.getElementById('nav-spinner').classList.contains('active')).toBe(false);
         });

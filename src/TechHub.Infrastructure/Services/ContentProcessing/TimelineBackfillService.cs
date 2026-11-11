@@ -98,6 +98,7 @@ public sealed class TimelineBackfillService : ITimelineBackfillService
                     ITimelineEventRepository.CurrentPromptVersion,
                     item.Revision,
                     result.Products,
+                    result.ProductFeatures,
                     ct);
 
                 if (!stored)

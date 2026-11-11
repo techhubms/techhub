@@ -348,7 +348,7 @@ public class ProductHierarchyTests : IClassFixture<DatabaseFixture<ProductHierar
         _writeRepository.UpdateAiMetadataAsync(
             "news",
             slug,
-            ContentItemWriteRepository.SerializeAiMetadata(new RoundupMetadata { SchemaVersion = 2, Products = products }),
+            ContentItemWriteRepository.SerializeAiMetadata(new RoundupMetadata { SchemaVersion = RoundupMetadata.CurrentSchemaVersion, Products = products }),
             Ct);
 
     private async Task<ProductSummary> CreateProductAsync()
