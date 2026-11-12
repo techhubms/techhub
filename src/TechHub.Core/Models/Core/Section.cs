@@ -59,7 +59,7 @@ public record Section
             throw new ArgumentException("Section URL cannot be empty", nameof(url));
         }
 
-        if (!url.StartsWith('/'))
+        if (!url.StartsWith('/', StringComparison.Ordinal))
         {
             throw new ArgumentException("Section URL must start with '/'", nameof(url));
         }

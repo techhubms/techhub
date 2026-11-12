@@ -129,7 +129,7 @@ public partial class UrlNormalizationMiddleware
         // This also means a trailing-slash variant of an RSS feed URL (e.g. /feed.xml/)
         // will have the slash removed here before TryRedirectLegacyFeed is called,
         // so it is still matched and redirected correctly.
-        if (path.Length > 1 && path.EndsWith('/'))
+        if (path.Length > 1 && path.EndsWith('/', StringComparison.Ordinal))
         {
             path = path.TrimEnd('/');
         }
@@ -371,7 +371,7 @@ public partial class UrlNormalizationMiddleware
         var first = segments[0];
 
         // Framework internals (/_blazor, /_framework, /_content) — always valid.
-        if (first.StartsWith('_'))
+        if (first.StartsWith('_', StringComparison.Ordinal))
         {
             return true;
         }
@@ -456,7 +456,7 @@ public partial class UrlNormalizationMiddleware
         // structural properties of the segment itself.
 
         // Framework-internal paths (e.g. _blazor, _framework) are never content slugs.
-        if (segment.StartsWith('_'))
+        if (segment.StartsWith('_', StringComparison.Ordinal))
         {
             return false;
         }

@@ -901,7 +901,7 @@ public class ContentSyncService : IContentSyncService
         var pathParts = file.DirectoryName?.Split(Path.DirectorySeparatorChar) ?? [];
 
         // Find the collection directory (starts with _)
-        var collectionDir = pathParts.FirstOrDefault(p => p.StartsWith('_'))
+        var collectionDir = pathParts.FirstOrDefault(p => p.StartsWith('_', StringComparison.Ordinal))
             ?? throw new InvalidOperationException($"Cannot determine collection from path: {file.FullName}");
 
         // Always use the main collection name without underscore
@@ -916,7 +916,7 @@ public class ContentSyncService : IContentSyncService
         var pathParts = file.DirectoryName?.Split(Path.DirectorySeparatorChar) ?? [];
 
         // Find the index of the collection directory (starts with _)
-        var collectionIndex = Array.FindIndex(pathParts, p => p.StartsWith('_'));
+        var collectionIndex = Array.FindIndex(pathParts, p => p.StartsWith('_', StringComparison.Ordinal));
         if (collectionIndex < 0)
         {
             return null;

@@ -47,7 +47,7 @@ internal sealed class RoundupContentProvider
     private (string Section, string Slug) ParseUrl(string url)
     {
         string? path = null;
-        if (url.StartsWith('/'))
+        if (url.StartsWith('/', StringComparison.Ordinal))
         {
             path = url;
         }

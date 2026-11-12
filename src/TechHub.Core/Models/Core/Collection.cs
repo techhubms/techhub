@@ -54,7 +54,7 @@ public record Collection
             throw new ArgumentException("Collection URL cannot be empty", nameof(url));
         }
 
-        if (!url.StartsWith('/'))
+        if (!url.StartsWith('/', StringComparison.Ordinal))
         {
             throw new ArgumentException("Collection URL must start with '/'", nameof(url));
         }

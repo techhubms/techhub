@@ -48,7 +48,10 @@ sudo /opt/certbot/bin/pip install --upgrade pip --quiet
 #   certbot-dns-azure 2.5.0 (last version compatible with this stack)
 #   azure-mgmt-dns 8.2.0 (9.0.0 changed DnsManagementClient constructor, breaking certbot-dns-azure 2.x)
 sudo /opt/certbot/bin/pip install 'certbot==5.6.0' 'acme==5.6.0' 'josepy>=2.0.0' --quiet
-sudo /opt/certbot/bin/pip install 'certbot-dns-azure==2.5.0' 'azure-mgmt-dns==8.2.0' --quiet
+# --no-deps only on the plugin: it declares certbot<3.0 and would otherwise downgrade certbot/acme/josepy.
+# Its own dependencies are installed normally (azure-mgmt-dns brings azure-mgmt-core and azure-common).
+sudo /opt/certbot/bin/pip install 'azure-mgmt-dns==8.2.0' 'azure-core' 'azure-identity' 'setuptools' --quiet
+sudo /opt/certbot/bin/pip install --no-deps 'certbot-dns-azure==2.5.0' --quiet
 sudo ln -sf /opt/certbot/bin/certbot /usr/local/bin/certbot
 
 # ==================== .NET Dev Certificates ====================

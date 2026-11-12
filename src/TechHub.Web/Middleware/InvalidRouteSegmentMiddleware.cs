@@ -73,7 +73,7 @@ public partial class InvalidRouteSegmentMiddleware
             var firstSegment = slashIdx >= 0 ? span[..slashIdx].ToString() : span.ToString();
 
             // Allow Blazor/framework internal paths (/_blazor SignalR hub, /_framework JS, /_content)
-            if (firstSegment.StartsWith('_'))
+            if (firstSegment.StartsWith('_', StringComparison.Ordinal))
             {
                 await _next(context);
                 return;
@@ -108,7 +108,7 @@ public partial class InvalidRouteSegmentMiddleware
 
     private static bool PathHasFileExtension(string path)
     {
-        var lastSlash = path.LastIndexOf('/');
+        var lastSlash = path.LastIndexOf('/', StringComparison.Ordinal);
         return path.AsSpan()[(lastSlash + 1)..].Contains('.');
     }
 }

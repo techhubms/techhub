@@ -262,7 +262,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 **Features**:
 
 - Multi-stage build for optimization
-- .NET 10 runtime
+- .NET 11 runtime
 - Runs on port 8080
 - Non-root user for security
 - Includes curl for health checks
@@ -274,7 +274,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 **Features**:
 
 - Multi-stage build for optimization
-- .NET 10 runtime
+- .NET 11 runtime
 - Runs on port 8080
 - Non-root user for security
 - Includes curl for health checks

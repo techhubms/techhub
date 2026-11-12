@@ -1,12 +1,12 @@
 # Tech Hub
 
-Tech Hub is a **modern .NET 10 web application** built with Blazor that serves as a technical content hub — a fast, responsive, accessible platform for showcasing technical content across **AI**, **GitHub Copilot**, **Azure**, **.NET**, **DevOps**, **Security**, and **ML** topics.
+Tech Hub is a **modern .NET 11 web application** built with Blazor that serves as a technical content hub — a fast, responsive, accessible platform for showcasing technical content across **AI**, **GitHub Copilot**, **Azure**, **.NET**, **DevOps**, **Security**, and **ML** topics.
 
 ## Technology
 
 | Layer | Technology |
 |-------|-----------|
-| **Backend** | ASP.NET Core Minimal API, .NET 10, C# 14 |
+| **Backend** | ASP.NET Core Minimal API, .NET 11, C# 15 |
 | **Frontend** | Blazor InteractiveServer with prerendering |
 | **Orchestration** | .NET Aspire (service discovery, telemetry, health checks) |
 | **Database** | PostgreSQL (Dapper) |

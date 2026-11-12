@@ -66,6 +66,12 @@
     <!-- CA1861: Constant array arguments - suppressed because converting from collection expressions
          to explicit arrays creates many of these; arrays are small and allocations are negligible -->
     <NoWarn>$(NoWarn);CA1861</NoWarn>
+    <!-- BL0012: StateHasChanged unnecessary - the calls render a loading state before an await, which the analyzer cannot see -->
+    <NoWarn>$(NoWarn);BL0012</NoWarn>
+    <!-- BL0013: GetAuthenticationStateAsync without subscribing - FeatureGate asks for the state on every call, so it can't go stale -->
+    <NoWarn>$(NoWarn);BL0013</NoWarn>
+    <!-- BL0016: JS interop not guarded with try/catch - exceptions must surface, not be swallowed (see Error Handling Philosophy in src/AGENTS.md) -->
+    <NoWarn>$(NoWarn);BL0016</NoWarn>
   </PropertyGroup>
   
   <!-- REMAINING SUPPRESSIONS DISABLED FOR ANALYSIS -->

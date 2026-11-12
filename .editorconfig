@@ -268,6 +268,15 @@ dotnet_diagnostic.CA2234.severity = none
 # IDE0211: Top-level statements vs Program.Main - causes circular warnings, rely on style preference instead
 dotnet_diagnostic.IDE0211.severity = none
 
+# BL0012: StateHasChanged unnecessary - the calls render a loading state before an await, which the analyzer cannot see
+dotnet_diagnostic.BL0012.severity = none
+
+# BL0013: GetAuthenticationStateAsync without subscribing - FeatureGate asks for the state on every call, so it can't go stale
+dotnet_diagnostic.BL0013.severity = none
+
+# BL0016: JS interop not guarded with try/catch - exceptions must surface, not be swallowed (see Error Handling Philosophy in src/AGENTS.md)
+dotnet_diagnostic.BL0016.severity = none
+
 # CA1711: Rename Collection - established domain name for content collections
 dotnet_diagnostic.CA1711.severity = none
 
