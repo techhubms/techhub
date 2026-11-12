@@ -690,7 +690,7 @@ jobs:
       - name: Install Playwright dependencies
         run: |
           cd tests/TechHub.E2E.Tests
-          pwsh bin/Release/net10.0/playwright.ps1 install chrome --with-deps
+          pwsh bin/Release/net11.0/playwright.ps1 install chrome --with-deps
 
       - name: Run E2E tests against PR preview
         run: |
@@ -717,7 +717,7 @@ jobs:
         if: failure()
         with:
           name: playwright-traces-preview
-          path: tests/TechHub.E2E.Tests/bin/Release/net10.0/playwright-traces/
+          path: tests/TechHub.E2E.Tests/bin/Release/net11.0/playwright-traces/
           retention-days: 7
 
   # ════════════════════════════════════════════════════════════════════════════════

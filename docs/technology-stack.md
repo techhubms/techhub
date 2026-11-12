@@ -2,8 +2,8 @@
 
 ## Runtime & Core Frameworks
 
-- .NET 10 (SDK pinned in `global.json`)
-- C# (`LangVersion=latest`, so C# 14 with the .NET 10 SDK) with file-scoped namespaces and nullable reference types
+- .NET 11 (SDK pinned in `global.json`)
+- C# (`LangVersion=latest`, so C# 15 with the .NET 11 SDK) with file-scoped namespaces and nullable reference types
 - ASP.NET Core Minimal APIs with dependency injection
 - Blazor InteractiveServer with prerendering
 - .NET Aspire for orchestration and telemetry

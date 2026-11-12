@@ -719,7 +719,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
     {
         var cleaned = Regex.Replace(response, @"```(?:json)?\s*", string.Empty, RegexOptions.IgnoreCase).Trim();
         var start = cleaned.IndexOf('{', StringComparison.Ordinal);
-        var end = cleaned.LastIndexOf('}');
+        var end = cleaned.LastIndexOf('}', StringComparison.Ordinal);
         if (start < 0 || end < 0 || end <= start)
         {
             return string.Empty;

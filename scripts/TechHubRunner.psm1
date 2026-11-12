@@ -10,7 +10,7 @@
 
 .NOTES
     Author: Tech Hub Team
-    Requires: .NET 10 SDK, PowerShell 7+
+    Requires: .NET 11 SDK, PowerShell 7+
 #>
 
 # ============================================================================
@@ -599,7 +599,7 @@ function Run {
         param([string]$CsprojPath)
         $projectDir = Split-Path $CsprojPath -Parent
         $projectName = [System.IO.Path]::GetFileNameWithoutExtension($CsprojPath)
-        return Join-Path $projectDir "bin/$configuration/net10.0/$projectName"
+        return Join-Path $projectDir "bin/$configuration/net11.0/$projectName"
     }
 
     # Resolve a test project name to its full .csproj path
@@ -668,7 +668,7 @@ function Run {
             Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
             Write-Host ""
             Write-Host "  .NET SDK not found or not working properly" -ForegroundColor Yellow
-            Write-Host "  Please install .NET 10 SDK" -ForegroundColor Yellow
+            Write-Host "  Please install .NET 11 SDK" -ForegroundColor Yellow
             Write-Host ""
             return $false
         }
@@ -722,7 +722,7 @@ function Run {
         $srcProjects = @('Api', 'Web', 'Core', 'Infrastructure', 'ServiceDefaults')
         $timestampsBefore = @{}
         foreach ($project in $srcProjects) {
-            $dllPath = Join-Path $workspaceRoot "src/TechHub.$project/bin/$configuration/net10.0/TechHub.$project.dll"
+            $dllPath = Join-Path $workspaceRoot "src/TechHub.$project/bin/$configuration/net11.0/TechHub.$project.dll"
             if (Test-Path $dllPath) {
                 $timestampsBefore[$project] = (Get-Item $dllPath).LastWriteTime
             }
@@ -750,7 +750,7 @@ function Run {
         # Check which src projects were ACTUALLY rebuilt by comparing DLL timestamps
         $rebuiltProjects = @()
         foreach ($project in $srcProjects) {
-            $dllPath = Join-Path $workspaceRoot "src/TechHub.$project/bin/$configuration/net10.0/TechHub.$project.dll"
+            $dllPath = Join-Path $workspaceRoot "src/TechHub.$project/bin/$configuration/net11.0/TechHub.$project.dll"
             if (Test-Path $dllPath) {
                 $timestampAfter = (Get-Item $dllPath).LastWriteTime
                 $timestampBefore = $timestampsBefore[$project]
@@ -1396,7 +1396,7 @@ function Run {
         # Local runs use testconfig.localhost.json (2x CPU threads) via --config-file
         $e2eBinaryPath = Get-TestBinaryPath $e2eTestProjectPath
         $e2eProjectDir = Split-Path $e2eTestProjectPath -Parent
-        $localhostConfig = Join-Path $e2eProjectDir "bin/$configuration/net10.0/testconfig.localhost.json"
+        $localhostConfig = Join-Path $e2eProjectDir "bin/$configuration/net11.0/testconfig.localhost.json"
         $configArgs = @()
         if (Test-Path $localhostConfig) {
             $configArgs = @("--config-file", $localhostConfig)

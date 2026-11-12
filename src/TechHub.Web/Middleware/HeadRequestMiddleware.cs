@@ -75,7 +75,7 @@ public class HeadRequestMiddleware
         // Determine whether this is an extension-less path (Blazor page route) or a
         // file-extension path (static asset, RSS feed, etc.) by inspecting the last segment.
         var path = context.Request.Path.Value ?? "/";
-        var lastSlash = path.LastIndexOf('/');
+        var lastSlash = path.LastIndexOf('/', StringComparison.Ordinal);
         var lastSegment = path.AsSpan()[(lastSlash + 1)..];
         var isExtensionless = !lastSegment.Contains('.');
 

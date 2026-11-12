@@ -190,7 +190,7 @@ public sealed class ContentFixerService : IContentFixerService
         }
 
         var final = string.Join("\n", collapsed);
-        if (final.Length > 0 && !final.EndsWith('\n'))
+        if (final.Length > 0 && !final.EndsWith('\n', StringComparison.Ordinal))
         {
             final += "\n";
         }
@@ -544,7 +544,7 @@ ORDER BY date_epoch DESC";
         {
             var htmlContent = html.Lines.ToString().Trim();
             // Detect common broken patterns: unclosed tags that aren't intentional
-            if (htmlContent.StartsWith('<') && !htmlContent.Contains('>', StringComparison.Ordinal))
+            if (htmlContent.StartsWith('<', StringComparison.Ordinal) && !htmlContent.Contains('>', StringComparison.Ordinal))
             {
                 issues.Add($"Potentially broken HTML at line {html.Line + 1}: {Truncate(htmlContent, 60)}");
             }

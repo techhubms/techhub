@@ -273,5 +273,5 @@ internal static class RoundupBlocksBuilder
     }
 
     private static string EndWithPeriod(string text) =>
-        text.EndsWith('.') || text.EndsWith('!') || text.EndsWith('?') ? text : text + ".";
+        text.EndsWith('.', StringComparison.Ordinal) || text.EndsWith('!', StringComparison.Ordinal) || text.EndsWith('?', StringComparison.Ordinal) ? text : text + ".";
 }

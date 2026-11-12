@@ -196,13 +196,13 @@ public class MarkdownService : IMarkdownService
         }
 
         // Hash-only links are internal
-        if (url.StartsWith('#'))
+        if (url.StartsWith('#', StringComparison.Ordinal))
         {
             return false;
         }
 
         // Relative paths are internal
-        if (url.StartsWith('/'))
+        if (url.StartsWith('/', StringComparison.Ordinal))
         {
             return false;
         }

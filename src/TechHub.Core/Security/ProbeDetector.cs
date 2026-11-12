@@ -114,7 +114,7 @@ public static partial class ProbeDetector
 
         // Extract the extension from the final path segment for per-directory validation.
         // Stays as ReadOnlySpan<char> — no allocation.
-        var lastSlash = path.LastIndexOf('/');
+        var lastSlash = path.LastIndexOf('/', StringComparison.Ordinal);
         var lastSegment = path.AsSpan()[(lastSlash + 1)..];
         var dotIndex = lastSegment.LastIndexOf('.');
         var ext = dotIndex >= 0 ? lastSegment[dotIndex..] : ReadOnlySpan<char>.Empty;
@@ -157,7 +157,7 @@ public static partial class ProbeDetector
             return true;
         }
 
-        var lastSlash = path.LastIndexOf('/');
+        var lastSlash = path.LastIndexOf('/', StringComparison.Ordinal);
         var lastSegment = path.AsSpan()[(lastSlash + 1)..];
 
         // No dot in the last segment → no file extension → could be a Blazor route.

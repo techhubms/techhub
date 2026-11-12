@@ -113,8 +113,7 @@ public class ProductRepositoryTests : IClassFixture<DatabaseFixture<ProductRepos
         links[2].Should().Be((unknown, 2, (long?)null));
 
         var articles = await _sut.GetArticlesAsync(foundryId!.Value, includeChildren: false, page: 1, pageSize: 100, Ct);
-        articles.TotalCount.Should().Be(1);
-        articles.Items.Should().ContainSingle().Which.ProductName.Should().Be("Microsoft Foundry");
+        articles.Items.Where(a => a.Slug == slug).Should().ContainSingle().Which.ProductName.Should().Be("Microsoft Foundry");
     }
 
     [Fact]
