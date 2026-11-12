@@ -92,6 +92,10 @@ if (-not $AppServicePlanResourceGroup) {
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
+# Certificates whose renewal could not be bound to the web app; reported as a failure at the end
+# (later az calls reset $LASTEXITCODE, so the failure has to be remembered explicitly).
+$bindFailures = [System.Collections.Generic.List[string]]::new()
+
 # Domains to obtain wildcard certificates for
 $domains = @(
     @{ Wildcard = '*.hub.ms'; Bare = 'hub.ms'; CertName = 'wildcard-hub-ms'; AcmeAlias = 'hub-ms' }
@@ -431,6 +435,7 @@ if ($DryRun) {
                     --output none --only-show-errors
                 if ($LASTEXITCODE -ne 0) {
                     Write-Warning "Binding certificate '$($domain.CertName)' to '$WebAppName' failed. Redeploy the applications (./scripts/Deploy-Applications.ps1) to rebind it."
+                    $bindFailures.Add($domain.CertName)
                 } else {
                     Write-Ok "Bound '$($domain.CertName)' to '$WebAppName'"
                 }
@@ -462,6 +467,11 @@ if ($DryRun) {
 Remove-Item $azureIniPath -Force -ErrorAction SilentlyContinue
 Remove-Item $certbotBaseDir -Recurse -Force -ErrorAction SilentlyContinue
 Write-Ok "Cleaned up temporary config"
+
+if ($bindFailures.Count -gt 0) {
+    Write-Fail "Renewed certificate(s) not bound to '$WebAppName': $($bindFailures -join ', '). The site keeps serving the previous certificate until they are bound."
+    exit 1
+}
 
 # ============================================================================
 # SUMMARY

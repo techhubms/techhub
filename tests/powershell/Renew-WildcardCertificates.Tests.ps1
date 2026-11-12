@@ -220,13 +220,17 @@ Describe "Renew-WildcardCertificates" {
             }
         }
 
-        It "Only warns (exit 0) when binding a certificate fails" {
+        It "Exits 1 after cleanup when binding a certificate fails" {
             Add-CliRule $cli 'az' '^az webapp config ssl bind' '' -ExitCode 1 -First
 
             $result = Invoke-ScriptUnderTest $scriptPath @{ Email = 'a@b.c' }
 
-            $result.ExitCode | Should -Be 0
+            $result.ExitCode | Should -Be 1
             $result.Output | Should -Match "Binding certificate 'wildcard-hub-ms' to 'app-techhub-web-prod' failed"
+            $result.Output | Should -Match 'Renewed certificate\(s\) not bound to .app-techhub-web-prod.: wildcard-hub-ms'
+            @(Get-CliCalls $cli '^az webapp config ssl bind') | Should -HaveCount 2
+            @(Get-CliCalls $cli '^az keyvault network-rule remove') | Should -HaveCount 1
+            $result.Output | Should -Match 'Cleaned up temporary config'
         }
 
         It "Does not bind anything when the App Service certificate update fails" {

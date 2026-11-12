@@ -95,7 +95,7 @@ The script:
 4. Converts PEM certificates to PFX format
 5. Temporarily opens the Key Vault firewall for the machine's outbound IP
 6. Writes PFX as a secret into Key Vault (`kv-techhub-prod`)
-7. Redeploys `infra/modules/wildcardCert.bicep` per domain to import the renewed PFX into the App Service Plan, then rebinds the new certificate's thumbprint to the web app's custom domains (the bindings keep serving the previous certificate until they are rebound)
+7. Redeploys `infra/modules/wildcardCert.bicep` per domain to import the renewed PFX into the App Service Plan, then rebinds the new certificate's thumbprint to the web app's custom domains (the bindings keep serving the previous certificate until they are rebound; if binding fails the script exits 1 after cleanup so the scheduled run fails)
 8. Restores the Key Vault firewall and cleans up temporary files
 
 > **Note on App Service cert update**: `Microsoft.Web/certificates` reads the Key Vault secret only at deploy time — it does not auto-refresh when the KV secret is rotated. That's why the renewal script redeploys `wildcardCert.bicep` per domain after writing the new PFX to Key Vault, rather than relying on the certificate resource to pick up the change on its own.

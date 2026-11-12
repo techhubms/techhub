@@ -173,7 +173,7 @@ quality-gate checks re-run on push (preview deploy is manual-only, see above).
 - Scheduled at 06:00 UTC on the 1st of every month
 - Manual dispatch with optional `dry_run` flag
 
-Runs `Renew-WildcardCertificates.ps1` to renew the Let's Encrypt wildcard certificates for `*.hub.ms` and `*.xebia.ms` and rebind them to the web app. It deliberately has no GitHub environment: an environment job would record a production deployment, which the CD pipeline uses to decide whether infrastructure changed. See [wildcard-certificates.md](wildcard-certificates.md).
+Runs `Renew-WildcardCertificates.ps1` to renew the Let's Encrypt wildcard certificates for `*.hub.ms` and `*.xebia.ms` and rebind them to the web app. It deliberately has no GitHub environment: an environment job would record a production deployment, which the CD pipeline uses to decide whether infrastructure changed. It shares the `deploy-production` concurrency group with the CD deploy job, because both rewrite the web app's TLS bindings and App Service rejects overlapping writes. See [wildcard-certificates.md](wildcard-certificates.md).
 
 ### Main Branch Deployment Jobs
 

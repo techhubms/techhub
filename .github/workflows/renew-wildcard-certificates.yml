@@ -16,8 +16,10 @@ permissions:
   contents: read
   id-token: write
 
+# Same group as the CD deploy-production job: both rewrite the production web app's TLS bindings
+# and App Service rejects overlapping writes to a site with a Conflict.
 concurrency:
-  group: renew-wildcard-certificates
+  group: deploy-production
   cancel-in-progress: false
 
 jobs:
@@ -56,6 +58,5 @@ jobs:
           LETSENCRYPT_EMAIL: ${{ vars.LETSENCRYPT_EMAIL || 'whistler112@gmail.com' }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          $dryRunFlag = if ($env:DRY_RUN -eq 'true') { @('-DryRun') } else { @() }
-          ./scripts/Renew-WildcardCertificates.ps1 -Email $env:LETSENCRYPT_EMAIL @dryRunFlag
+          ./scripts/Renew-WildcardCertificates.ps1 -Email $env:LETSENCRYPT_EMAIL -DryRun:($env:DRY_RUN -eq 'true')
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
