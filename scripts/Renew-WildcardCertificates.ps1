@@ -92,9 +92,10 @@ if (-not $AppServicePlanResourceGroup) {
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
-# Certificates whose renewal could not be bound to the web app; reported as a failure at the end
+# Certificates that were renewed but could not be deployed to App Service or bound to the web app;
+# reported as a failure at the end
 # (later az calls reset $LASTEXITCODE, so the failure has to be remembered explicitly).
-$bindFailures = [System.Collections.Generic.List[string]]::new()
+$liveFailures = [System.Collections.Generic.List[string]]::new()
 
 # Domains to obtain wildcard certificates for
 $domains = @(
@@ -420,6 +421,7 @@ if ($DryRun) {
             if ($LASTEXITCODE -ne 0) {
                 Write-Warning "App Service certificate update failed for $($domain.CertName). Run manually:"
                 Write-Warning "  az deployment group create --resource-group $AppServicePlanResourceGroup --template-file infra/modules/wildcardCert.bicep --parameters location=$appServicePlanLocation appServicePlanId=$appServicePlanId certResourceName=$($domain.CertName) keyVaultResourceId=$keyVaultResourceId keyVaultSecretName=$($domain.CertName)"
+                $liveFailures.Add($domain.CertName)
             } else {
                 Write-Ok "Updated App Service certificate '$($domain.CertName)'"
 
@@ -435,7 +437,7 @@ if ($DryRun) {
                     --output none --only-show-errors
                 if ($LASTEXITCODE -ne 0) {
                     Write-Warning "Binding certificate '$($domain.CertName)' to '$WebAppName' failed. Redeploy the applications (./scripts/Deploy-Applications.ps1) to rebind it."
-                    $bindFailures.Add($domain.CertName)
+                    $liveFailures.Add($domain.CertName)
                 } else {
                     Write-Ok "Bound '$($domain.CertName)' to '$WebAppName'"
                 }
@@ -468,8 +470,8 @@ Remove-Item $azureIniPath -Force -ErrorAction SilentlyContinue
 Remove-Item $certbotBaseDir -Recurse -Force -ErrorAction SilentlyContinue
 Write-Ok "Cleaned up temporary config"
 
-if ($bindFailures.Count -gt 0) {
-    Write-Fail "Renewed certificate(s) not bound to '$WebAppName': $($bindFailures -join ', '). The site keeps serving the previous certificate until they are bound."
+if ($liveFailures.Count -gt 0) {
+    Write-Fail "Renewed certificate(s) not live on '$WebAppName': $($liveFailures -join ', '). The site keeps serving the previous certificate until they are deployed and bound."
     exit 1
 }
 
