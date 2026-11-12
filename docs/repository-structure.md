@@ -179,7 +179,7 @@ Azure infrastructure as code (Bicep templates) for Azure App Service deployment:
   - `prod-infrastructure.bicepparam` - Production infrastructure parameters
   - `prod-applications.bicepparam` - Production application deployment parameters
 - **`modules/`** - Reusable Bicep modules:
-  - `appServicePlan.bicep` - App Service Plan (Basic B1, shared by API + Web sites)
+  - `appServicePlan.bicep` - App Service Plan (Basic B2, shared by API + Web sites)
   - `api.bicep` - TechHub API App Service site (Web App for Containers, VNet-restricted, not publicly accessible)
   - `web.bicep` - TechHub Web App Service site (Web App for Containers)
   - `monitoring.bicep` - Application Insights + Log Analytics workspace (the Log Analytics workspace is defined here)
@@ -234,6 +234,7 @@ Temporary working directory for AI assistants and development tasks (gitignored)
   - `workflows/cd.yml` - CD pipeline: runs on pushes to `main` (CI + production deployment)
   - `workflows/dependency-review.yml` - Dependency review on pull requests
   - `workflows/pr-env-nightly-teardown.yml` - Nightly teardown of leftover PR preview environments
+  - `workflows/renew-wildcard-certificates.yml` - Monthly renewal of the Let's Encrypt wildcard certificates
   - `dependabot.yml` - Weekly dependency updates
   - `codeql/codeql-config.yml` - CodeQL code scanning configuration
   - `copilot-instructions.md`, `prompts/`, and `skills/` (`cleanup`, `pushall`) - AI assistant instructions, prompts, and skills

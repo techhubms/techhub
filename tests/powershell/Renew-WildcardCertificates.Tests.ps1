@@ -42,6 +42,7 @@ Describe "Renew-WildcardCertificates" {
         Add-CliRule $cli 'az' '^az appservice plan show .*--query id' '/subs/x/serverfarms/asp'
         Add-CliRule $cli 'az' '^az appservice plan show .*--query location' 'swedencentral'
         Add-CliRule $cli 'az' '^az keyvault show' '/subs/x/vaults/kv-techhub-prod'
+        Add-CliRule $cli 'az' '^az deployment group create' 'ABC123THUMB'
         Add-CliRule $cli 'az' '^az keyvault network-rule list' ''
         Add-CliRule $cli 'az' '^az keyvault secret list' ''
         Add-CliRule $cli 'certbot' '^certbot plugins' 'dns-azure: Obtain certificates using Azure DNS'
@@ -206,6 +207,40 @@ Describe "Renew-WildcardCertificates" {
             $deploys[1] | Should -Match 'certResourceName=wildcard-xebia-ms'
         }
 
+        It "Rebinds each renewed certificate to the web app using the thumbprint from the deployment" {
+            $result = Invoke-ScriptUnderTest $scriptPath @{ Email = 'a@b.c' }
+
+            $result.ExitCode | Should -Be 0
+            $deploys = @(Get-CliCalls $cli '^az deployment group create')
+            $deploys[0] | Should -Match '--query properties\.outputs\.thumbprint\.value --output tsv'
+            $binds = @(Get-CliCalls $cli '^az webapp config ssl bind')
+            $binds | Should -HaveCount 2
+            foreach ($bind in $binds) {
+                $bind | Should -Match '--name app-techhub-web-prod --resource-group rg-techhub-prod --certificate-thumbprint ABC123THUMB --ssl-type SNI'
+            }
+        }
+
+        It "Exits 1 after cleanup when binding a certificate fails" {
+            Add-CliRule $cli 'az' '^az webapp config ssl bind' '' -ExitCode 1 -First
+
+            $result = Invoke-ScriptUnderTest $scriptPath @{ Email = 'a@b.c' }
+
+            $result.ExitCode | Should -Be 1
+            $result.Output | Should -Match "Binding certificate 'wildcard-hub-ms' to 'app-techhub-web-prod' failed"
+            $result.Output | Should -Match 'not live on .app-techhub-web-prod.: wildcard-hub-ms'
+            @(Get-CliCalls $cli '^az webapp config ssl bind') | Should -HaveCount 2
+            @(Get-CliCalls $cli '^az keyvault network-rule remove') | Should -HaveCount 1
+            $result.Output | Should -Match 'Cleaned up temporary config'
+        }
+
+        It "Does not bind anything when the App Service certificate update fails" {
+            Add-CliRule $cli 'az' '^az deployment group create' '' -ExitCode 1 -First
+
+            Invoke-ScriptUnderTest $scriptPath @{ Email = 'a@b.c' } | Out-Null
+
+            @(Get-CliCalls $cli '^az webapp config ssl bind') | Should -BeNullOrEmpty
+        }
+
         It "Uses the App Service plan resource group when it differs from ResourceGroup" {
             Invoke-ScriptUnderTest $scriptPath @{ Email = 'a@b.c'; AppServicePlanResourceGroup = 'rg-other' } | Out-Null
 
@@ -258,13 +293,17 @@ Describe "Renew-WildcardCertificates" {
             @(Get-CliCalls $cli '^az keyvault network-rule remove') | Should -HaveCount 1
         }
 
-        It "Only warns (exit 0) when the App Service certificate update fails" {
+        It "Exits 1 after cleanup when the App Service certificate update fails" {
             Add-CliRule $cli 'az' '^az deployment group create' '' -ExitCode 1 -First
 
             $result = Invoke-ScriptUnderTest $scriptPath @{ Email = 'a@b.c' }
 
-            $result.ExitCode | Should -Be 0
+            $result.ExitCode | Should -Be 1
             $result.Output | Should -Match 'App Service certificate update failed for wildcard-hub-ms'
+            $result.Output | Should -Match 'not live on .app-techhub-web-prod.: wildcard-hub-ms'
+            @(Get-CliCalls $cli '^az keyvault secret set') | Should -HaveCount 2
+            @(Get-CliCalls $cli '^az keyvault network-rule remove') | Should -HaveCount 1
+            $result.Output | Should -Match 'Cleaned up temporary config'
         }
 
         It "Exits 1 when PFX conversion fails" {

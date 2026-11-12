@@ -77,10 +77,14 @@ Wildcard certificates from Key Vault are imported into the production App Servic
 
 ## Certificate Renewal
 
-### Automated renewal
+### Scheduled renewal
+
+The [Renew Wildcard Certificates](../.github/workflows/renew-wildcard-certificates.yml) GitHub Actions workflow runs `Renew-WildcardCertificates.ps1` at 06:00 UTC on the 1st of every month, so the 90-day certificates are always replaced well before they expire. It logs in to Azure with the same OIDC identity as the CD pipeline (the `techhub-ref-main` federated credential), installs certbot with the pinned versions from `.devcontainer/post-create.sh` and uses the `LETSENCRYPT_EMAIL` repository variable for the Let's Encrypt account (default `whistler112@gmail.com`). Run it on demand from the Actions tab (`workflow_dispatch`, optionally as a dry run). GitHub emails a failed scheduled run to the person who last edited the schedule.
+
+### Manual renewal
 
 ```powershell
-./scripts/Renew-WildcardCertificates.ps1 -Email admin@xebia.com
+./scripts/Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com
 ```
 
 The script:
@@ -91,7 +95,7 @@ The script:
 4. Converts PEM certificates to PFX format
 5. Temporarily opens the Key Vault firewall for the machine's outbound IP
 6. Writes PFX as a secret into Key Vault (`kv-techhub-prod`)
-7. Redeploys `infra/modules/wildcardCert.bicep` per domain to import the renewed PFX into the App Service Plan
+7. Redeploys `infra/modules/wildcardCert.bicep` per domain to import the renewed PFX into the App Service Plan, then rebinds the new certificate's thumbprint to the web app's custom domains (the bindings keep serving the previous certificate until they are rebound; if the import or the binding fails the script exits 1 after cleanup so the scheduled run fails)
 8. Restores the Key Vault firewall and cleans up temporary files
 
 > **Note on App Service cert update**: `Microsoft.Web/certificates` reads the Key Vault secret only at deploy time — it does not auto-refresh when the KV secret is rotated. That's why the renewal script redeploys `wildcardCert.bicep` per domain after writing the new PFX to Key Vault, rather than relying on the certificate resource to pick up the change on its own.
@@ -99,13 +103,13 @@ The script:
 ### Dry run (test without issuing certificates)
 
 ```powershell
-./scripts/Renew-WildcardCertificates.ps1 -Email admin@xebia.com -DryRun
+./scripts/Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com -DryRun
 ```
 
 ### Force renewal
 
 ```powershell
-./scripts/Renew-WildcardCertificates.ps1 -Email admin@xebia.com -Force
+./scripts/Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com -Force
 ```
 
 ### Network access
@@ -125,4 +129,4 @@ On the first production deploy, the PFX files are supplied through the `WILDCARD
 
 ## Renewal Schedule
 
-Let's Encrypt certificates expire after **90 days**. Renewal should run every **60 days** to allow a 30-day buffer. This can be scheduled via GitHub Actions or Azure Automation.
+Let's Encrypt certificates expire after **90 days**. The [scheduled workflow](#scheduled-renewal) renews every month, leaving a large buffer. The availability tests also warn when fewer than 7 days of certificate lifetime remain (see [telemetry.md](telemetry.md#availability-tests)), so keep them enabled as a safety net.

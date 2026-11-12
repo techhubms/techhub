@@ -89,6 +89,10 @@ Alerts notify the shared operational action group (`ag-techhub-ops`), which emai
 
 Tests are only created when `primaryHosts` is non-empty in the Bicep deployment. If no custom hostnames are provided, no availability tests or alerts are created.
 
+## App Service Plan Memory Alert
+
+The API and Web sites share one App Service Plan. When its memory runs out both sites freeze for several minutes and then restart, which shows up as a burst of HTTP 5xx (and the **Failed HTTP requests** alert). The **App Service Plan memory** alert (`alert-prod-appservice-memory` in `infra/modules/alerts.bicep`, severity 2) fires when the plan's `MemoryPercentage` averages above 85% over 15 minutes, so a saturated plan is reported before it causes errors. Like the other alerts it notifies `ag-techhub-ops`.
+
 ## Not-Found Failure Tracking
 
 All pages that render "not found" content inline (content-item pages, custom pages, and layout-level invalid-section errors) mark their OpenTelemetry span as failed with:

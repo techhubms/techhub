@@ -1,0 +1,62 @@
+name: Renew Wildcard Certificates
+
+on:
+  schedule:
+    # 06:00 UTC on the 1st of every month. Let's Encrypt certificates last 90 days, so a monthly
+    # renewal leaves two failed runs of margin before the web tests' 7-day expiry warning.
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run certbot in dry-run mode (no certificates issued or imported)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  id-token: write
+
+# Same group as the CD deploy-production job: both rewrite the production web app's TLS bindings
+# and App Service rejects overlapping writes to a site with a Conflict.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  renew:
+    name: Renew *.hub.ms and *.xebia.ms
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      # Same pinned versions and isolated venv as .devcontainer/post-create.sh — certbot-dns-azure
+      # only works with this combination of packages.
+      - name: Install certbot and certbot-dns-azure
+        run: |
+          sudo python3 -m venv /opt/certbot
+          sudo /opt/certbot/bin/pip install --upgrade pip --quiet
+          sudo /opt/certbot/bin/pip install 'certbot==5.6.0' 'acme==5.6.0' 'josepy>=2.0.0' --quiet
+          sudo /opt/certbot/bin/pip install 'azure-mgmt-dns==8.2.0' 'azure-core' 'azure-identity' 'setuptools' --quiet
+          sudo /opt/certbot/bin/pip install --no-deps 'certbot-dns-azure==2.5.0' --quiet
+          sudo ln -sf /opt/certbot/bin/certbot /usr/local/bin/certbot
+          certbot --version
+
+      - name: Azure Login
+        uses: azure/login@a641126d1b8aa4d1fa005f4f92df94a3a4c4c906 # v3.1.0
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Renew certificates
+        shell: pwsh
+        env:
+          # Let's Encrypt account / expiry notification address. Override with the repository
+          # variable LETSENCRYPT_EMAIL.
+          LETSENCRYPT_EMAIL: ${{ vars.LETSENCRYPT_EMAIL || 'whistler112@gmail.com' }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          ./scripts/Renew-WildcardCertificates.ps1 -Email $env:LETSENCRYPT_EMAIL -DryRun:($env:DRY_RUN -eq 'true')
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

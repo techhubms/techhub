@@ -30,6 +30,10 @@
 .PARAMETER AppServicePlanResourceGroup
     Resource group containing the App Service Plan. Defaults to the same as ResourceGroup.
 
+.PARAMETER WebAppName
+    Web app whose custom-domain hostname bindings are rebound to the renewed certificates.
+    Defaults to 'app-techhub-web-prod'.
+
 .PARAMETER AcmeDnsZone
     Azure DNS zone used for ACME challenges. Defaults to 'acme.hub.ms'.
 
@@ -43,11 +47,11 @@
     If set, forces renewal even if certificates are not yet due.
 
 .EXAMPLE
-    ./Renew-WildcardCertificates.ps1 -Email admin@xebia.com
+    ./Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com
     Renew certificates and import into Key Vault.
 
 .EXAMPLE
-    ./Renew-WildcardCertificates.ps1 -Email admin@xebia.com -DryRun
+    ./Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com -DryRun
     Test the entire flow without issuing real certificates.
 #>
 
@@ -71,6 +75,9 @@ param(
     [string]$AppServicePlanResourceGroup = '',
 
     [Parameter(Mandatory = $false)]
+    [string]$WebAppName = 'app-techhub-web-prod',
+
+    [Parameter(Mandatory = $false)]
     [switch]$DryRun,
 
     [Parameter(Mandatory = $false)]
@@ -84,6 +91,11 @@ if (-not $AppServicePlanResourceGroup) {
 
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
+
+# Certificates that were renewed but could not be deployed to App Service or bound to the web app;
+# reported as a failure at the end
+# (later az calls reset $LASTEXITCODE, so the failure has to be remembered explicitly).
+$liveFailures = [System.Collections.Generic.List[string]]::new()
 
 # Domains to obtain wildcard certificates for
 $domains = @(
@@ -396,7 +408,7 @@ if ($DryRun) {
             # modules/wildcardCert.bicep — App Service certificates read the PFX from Key Vault
             # only at deploy time, they do not auto-refresh when the underlying KV secret changes.
             Write-Detail "Updating App Service certificate '$($domain.CertName)'..."
-            az deployment group create `
+            $newThumbprint = (az deployment group create `
                 --resource-group $AppServicePlanResourceGroup `
                 --template-file (Join-Path $PSScriptRoot '../infra/modules/wildcardCert.bicep') `
                 --parameters `
@@ -405,12 +417,30 @@ if ($DryRun) {
                     certResourceName=$($domain.CertName) `
                     keyVaultResourceId=$keyVaultResourceId `
                     keyVaultSecretName=$($domain.CertName) `
-                --output none --only-show-errors
+                --query properties.outputs.thumbprint.value --output tsv --only-show-errors)
             if ($LASTEXITCODE -ne 0) {
                 Write-Warning "App Service certificate update failed for $($domain.CertName). Run manually:"
                 Write-Warning "  az deployment group create --resource-group $AppServicePlanResourceGroup --template-file infra/modules/wildcardCert.bicep --parameters location=$appServicePlanLocation appServicePlanId=$appServicePlanId certResourceName=$($domain.CertName) keyVaultResourceId=$keyVaultResourceId keyVaultSecretName=$($domain.CertName)"
+                $liveFailures.Add($domain.CertName)
             } else {
                 Write-Ok "Updated App Service certificate '$($domain.CertName)'"
+
+                # The hostname bindings keep pointing at the previous certificate's thumbprint until
+                # they are rebound, so the renewed certificate would otherwise not be served.
+                $thumbprint = "$newThumbprint".Trim()
+                Write-Detail "Binding the new certificate to '$WebAppName'..."
+                az webapp config ssl bind `
+                    --name $WebAppName `
+                    --resource-group $ResourceGroup `
+                    --certificate-thumbprint $thumbprint `
+                    --ssl-type SNI `
+                    --output none --only-show-errors
+                if ($LASTEXITCODE -ne 0) {
+                    Write-Warning "Binding certificate '$($domain.CertName)' to '$WebAppName' failed. Redeploy the applications (./scripts/Deploy-Applications.ps1) to rebind it."
+                    $liveFailures.Add($domain.CertName)
+                } else {
+                    Write-Ok "Bound '$($domain.CertName)' to '$WebAppName'"
+                }
             }
 
             # Clean up PFX
@@ -440,6 +470,11 @@ Remove-Item $azureIniPath -Force -ErrorAction SilentlyContinue
 Remove-Item $certbotBaseDir -Recurse -Force -ErrorAction SilentlyContinue
 Write-Ok "Cleaned up temporary config"
 
+if ($liveFailures.Count -gt 0) {
+    Write-Fail "Renewed certificate(s) not live on '$WebAppName': $($liveFailures -join ', '). The site keeps serving the previous certificate until they are deployed and bound."
+    exit 1
+}
+
 # ============================================================================
 # SUMMARY
 # ============================================================================
@@ -455,7 +490,7 @@ if (-not $DryRun) {
     }
     Write-Host ""
     Write-Host "  Let's Encrypt certs expire after 90 days." -ForegroundColor Yellow
-    Write-Host "  Schedule this script to run every 60 days." -ForegroundColor Yellow
+    Write-Host "  The 'Renew Wildcard Certificates' workflow runs this script monthly." -ForegroundColor Yellow
     Write-Host "  App Service Plan: $AppServicePlanName" -ForegroundColor Gray
 }
 Write-Host "===============================================================" -ForegroundColor DarkCyan

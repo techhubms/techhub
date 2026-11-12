@@ -16,7 +16,7 @@ The infrastructure is deployed in **two strictly separated phases**:
 - PostgreSQL Flexible Server
 - Azure AI Foundry (OpenAI)
 - Log Analytics + Application Insights
-- App Service Plan (Basic B1, no sites yet!)
+- App Service Plan (Basic B2, no sites yet!)
 - Azure Communication Services (ACS) for email delivery, using a customer-managed email domain (`mail.hub.ms`)
 - Monitoring (action groups, alerts, availability tests)
 - Governance (budgets, policies)
