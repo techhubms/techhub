@@ -9,7 +9,8 @@ using TechHub.Core.Models.ContentProcessing;
 namespace TechHub.Infrastructure.Services.ContentProcessing;
 
 /// <summary>
-/// Scans stored articles for dated lifecycle events (preview, GA, deprecation, ...) and stores them in the timeline table.
+/// Scans stored articles for the products they are about and for dated lifecycle events (preview, GA, deprecation, ...), and stores
+/// both: the events in the timeline table and the products in the article metadata, linked to the catalog.
 /// Only articles that were never scanned (or scanned with an older prompt version) are processed, so a run that is
 /// cancelled or fails can simply be started again. A failing article is logged and left unscanned; the run continues.
 /// </summary>
@@ -96,6 +97,8 @@ public sealed class TimelineBackfillService : ITimelineBackfillService
                     ITimelineEventRepository.ExtractedFromStoredContent,
                     ITimelineEventRepository.CurrentPromptVersion,
                     item.Revision,
+                    result.Products,
+                    result.ProductFeatures,
                     ct);
 
                 if (!stored)

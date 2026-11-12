@@ -15,50 +15,9 @@
     <div class="admin-page-header">
         <div>
             <h1 class="admin-page-title">Background Tasks</h1>
-            <p class="admin-page-subtitle">Unified overview of RSS content processing and weekly roundup generation</p>
+            <p class="admin-page-subtitle">Job history and live logs. Start processing and roundup generation from Settings, the content cleanup from Reviews.</p>
         </div>
         <div class="admin-actions">
-            <button class="btn" @onclick="TriggerProcessingAsync" disabled="@_triggeringProcessing">
-                @if (_triggeringProcessing)
-                {
-                    <span>Triggering…</span>
-                }
-                else
-                {
-                    <span>▶ Run Processing</span>
-                }
-            </button>
-            <button class="btn" @onclick="TriggerRoundupAsync" disabled="@_triggeringRoundup">
-                @if (_triggeringRoundup)
-                {
-                    <span>Triggering…</span>
-                }
-                else
-                {
-                    <span>▶ Run Roundup</span>
-                }
-            </button>
-            <button class="btn" @onclick="TriggerContentFixerAsync" disabled="@_triggeringContentFixer">
-                @if (_triggeringContentFixer)
-                {
-                    <span>Triggering…</span>
-                }
-                else
-                {
-                    <span>▶ Run Cleanup</span>
-                }
-            </button>
-            <button class="btn" @onclick="TriggerTimelineBackfillAsync" disabled="@_triggeringTimelineBackfill"
-                    title="Scan stored articles for dated lifecycle events (preview, GA, deprecation, ...). Resumable.">
-                @if (_triggeringTimelineBackfill)
-                {
-                    <span>Triggering…</span>
-                }
-                else
-                {
-                    <span>▶ Backfill Timeline</span>
-                }
-            </button>
             @if (HasRunningJob)
             {
                 <button class="btn-danger" @onclick="CancelRunningJobAsync" disabled="@_cancelling">
@@ -72,7 +31,7 @@
                     }
                 </button>
             }
-            <button class="btn-secondary" @onclick="LoadJobsAsync">⟳ Refresh</button>
+            <AdminSubbarAction><button class="btn-secondary" @onclick="LoadJobsAsync">⟳ Refresh</button></AdminSubbarAction>
         </div>
     </div>
 
@@ -198,10 +157,6 @@
 
 @code {
     private bool _loading = true;
-    private bool _triggeringProcessing;
-    private bool _triggeringRoundup;
-    private bool _triggeringContentFixer;
-    private bool _triggeringTimelineBackfill;
     private bool _cancelling;
     private string? _error;
     private string? _triggerMessage;
@@ -263,122 +218,6 @@
         }
 
         StartPollingIfRunning();
-    }
-
-    private async Task TriggerProcessingAsync()
-    {
-        _triggeringProcessing = true;
-        _triggerMessage = null;
-
-        try
-        {
-            await Api.TriggerContentProcessingAsync();
-            _triggerError = false;
-
-            await Task.Delay(500);
-            await LoadJobsAsync();
-            StartPollingIfRunning();
-        }
-        catch (OperationCanceledException)
-        {
-            throw;
-        }
-        catch (HttpRequestException ex)
-        {
-            _triggerMessage = $"Failed to trigger processing: {ex.Message}";
-            _triggerError = true;
-        }
-        finally
-        {
-            _triggeringProcessing = false;
-        }
-    }
-
-    private async Task TriggerRoundupAsync()
-    {
-        _triggeringRoundup = true;
-        _triggerMessage = null;
-
-        try
-        {
-            await Api.TriggerRoundupGenerationAsync();
-            _triggerError = false;
-
-            await Task.Delay(500);
-            await LoadJobsAsync();
-            StartPollingIfRunning();
-        }
-        catch (OperationCanceledException)
-        {
-            throw;
-        }
-        catch (HttpRequestException ex)
-        {
-            _triggerMessage = $"Failed to trigger roundup generation: {ex.Message}";
-            _triggerError = true;
-        }
-        finally
-        {
-            _triggeringRoundup = false;
-        }
-    }
-
-    private async Task TriggerContentFixerAsync()
-    {
-        _triggeringContentFixer = true;
-        _triggerMessage = null;
-
-        try
-        {
-            await Api.TriggerContentFixerAsync();
-            _triggerError = false;
-
-            await Task.Delay(500);
-            await LoadJobsAsync();
-            StartPollingIfRunning();
-        }
-        catch (OperationCanceledException)
-        {
-            throw;
-        }
-        catch (HttpRequestException ex)
-        {
-            _triggerMessage = $"Failed to trigger content fixer: {ex.Message}";
-            _triggerError = true;
-        }
-        finally
-        {
-            _triggeringContentFixer = false;
-        }
-    }
-
-    private async Task TriggerTimelineBackfillAsync()
-    {
-        _triggeringTimelineBackfill = true;
-        _triggerMessage = null;
-
-        try
-        {
-            await Api.TriggerTimelineBackfillAsync();
-            _triggerError = false;
-
-            await Task.Delay(500);
-            await LoadJobsAsync();
-            StartPollingIfRunning();
-        }
-        catch (OperationCanceledException)
-        {
-            throw;
-        }
-        catch (HttpRequestException ex)
-        {
-            _triggerMessage = $"Failed to trigger timeline backfill: {ex.Message}";
-            _triggerError = true;
-        }
-        finally
-        {
-            _triggeringTimelineBackfill = false;
-        }
     }
 
     private async Task CancelRunningJobAsync()

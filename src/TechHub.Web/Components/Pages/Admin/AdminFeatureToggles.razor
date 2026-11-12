@@ -1,0 +1,192 @@
+@page "/admin/feature-toggles"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models.FeatureToggles
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject FeatureToggleCache FeatureToggleCache
+@inject PersistentComponentState ApplicationState
+@inject ILogger<AdminFeatureToggles> Logger
+@inherits PageComponentBase
+
+<PageTitle>Feature toggles — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Feature Toggles</h1>
+            <p class="admin-page-subtitle">Switch a feature off, show it to admins only, or open it to everyone</p>
+        </div>
+        <div class="admin-actions">
+            <AdminSubbarAction><button class="btn-secondary" @onclick="LoadAsync">⟳ Refresh</button></AdminSubbarAction>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">@_message</div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading feature toggles…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_toggles == null || _toggles.Count == 0)
+    {
+        <div class="admin-empty">No feature toggles found.</div>
+    }
+    else
+    {
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Description</th>
+                        <th>Available to</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var toggle in _toggles)
+                    {
+                        <tr>
+                            <td class="admin-cell-mono">@toggle.Key</td>
+                            <td>@toggle.Description</td>
+                            <td>
+                                <select id="toggle-@toggle.Key" class="admin-input"
+                                        aria-label="Who can use @toggle.Key"
+                                        value="@toggle.Mode"
+                                        @onchange="e => SetModeAsync(toggle, e.Value?.ToString())"
+                                        disabled="@(_saving == toggle.Key)">
+                                    @foreach (var mode in Modes)
+                                    {
+                                        <option value="@mode.Mode">@mode.Label</option>
+                                    }
+                                </select>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <p class="admin-page-subtitle" style="margin-top: var(--spacing-3);">
+            Admins are the people who can sign in at <code>/admin</code>. A feature that is off or for admins only
+            has no buttons for other visitors, and its page answers with a 404. Changes reach the website within 30 seconds.
+        </p>
+    }
+</div>
+
+@code {
+    private static readonly IReadOnlyList<(FeatureToggleMode Mode, string Label)> Modes =
+    [
+        (FeatureToggleMode.Disabled, "Nobody"),
+        (FeatureToggleMode.Admins, "Admins only"),
+        (FeatureToggleMode.Everyone, "Everyone")
+    ];
+
+    private IReadOnlyList<FeatureToggle>? _toggles;
+    private bool _loading = true;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private string? _saving;
+    private PersistingComponentStateSubscription _persistingSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistToggles);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<FeatureToggle>>("admin-feature-toggles", out var restored))
+        {
+            _toggles = restored;
+            _loading = false;
+        }
+        else
+        {
+            await LoadAsync();
+        }
+    }
+
+    private Task PersistToggles()
+    {
+        ApplicationState.PersistAsJson("admin-feature-toggles", _toggles);
+        return Task.CompletedTask;
+    }
+
+    private async Task LoadAsync()
+    {
+        _loading = true;
+        _error = null;
+        _message = null;
+
+        try
+        {
+            _toggles = await Api.GetFeatureTogglesAsync();
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to load the feature toggles");
+            _error = "Failed to load the feature toggles.";
+        }
+        catch (InvalidOperationException ex)
+        {
+            Logger.LogError(ex, "Failed to load the feature toggles");
+            _error = "Failed to load the feature toggles.";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task SetModeAsync(FeatureToggle toggle, string? value)
+    {
+        if (!Enum.TryParse<FeatureToggleMode>(value, out var mode) || !Enum.IsDefined(mode) || mode == toggle.Mode)
+        {
+            return;
+        }
+
+        _saving = toggle.Key;
+        _message = null;
+
+        try
+        {
+            await Api.UpdateFeatureToggleAsync(toggle.Key, mode);
+
+            // The website picks the change up at once instead of at its next refresh
+            var toggles = await Api.GetFeatureTogglesAsync();
+            FeatureToggleCache.Initialize(toggles);
+            _toggles = toggles;
+
+            _message = $"{toggle.Key} is now available to {Modes.First(m => m.Mode == mode).Label.ToLowerInvariant()}.";
+            _messageIsError = false;
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to update feature toggle {FeatureKey}", toggle.Key);
+            _message = $"Failed to update {toggle.Key}.";
+            _messageIsError = true;
+        }
+        catch (InvalidOperationException ex)
+        {
+            Logger.LogError(ex, "Failed to update feature toggle {FeatureKey}", toggle.Key);
+            _message = $"Failed to update {toggle.Key}.";
+            _messageIsError = true;
+        }
+        finally
+        {
+            _saving = null;
+        }
+    }
+
+    public void Dispose()
+    {
+        _persistingSubscription.Dispose();
+    }
+}

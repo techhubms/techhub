@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.Infrastructure.Services;
 
@@ -37,7 +38,7 @@ public class ContentSyncService : IContentSyncService
         List<string> Tags,
         string ContentHash,
         // Identifies the dedicated lookup table target inferred from the file path.
-        // "ghc-features" → writes to ghc_features + ghc_feature_content.
+        // "ghc-features" → writes to product_features + product_feature_content.
         // "vscode-updates" → writes to vscode_update_items.
         // Not stored in content_items; used only to drive lookup table insertions.
         string? SubcollectionName = null);
@@ -649,16 +650,17 @@ public class ContentSyncService : IContentSyncService
             // Build tags_csv for in-memory parsing: ",AI,GitHub Copilot,DevOps,"
             var tagsCsv = parsed.Tags.Count > 0 ? $",{string.Join(",", parsed.Tags)}," : "";
 
-            // Build section boolean flags
+            // Build the sections bitmask and the section boolean flags from it
+            var sectionsBitmask = SectionBitmasks.For(parsed.Sections);
             var sectionBools = new
             {
-                IsAi = parsed.Sections.Contains("ai"),
-                IsAzure = parsed.Sections.Contains("azure"),
-                IsDotNet = parsed.Sections.Contains("dotnet"),
-                IsDevOps = parsed.Sections.Contains("devops"),
-                IsGitHubCopilot = parsed.Sections.Contains("github-copilot"),
-                IsMl = parsed.Sections.Contains("ml"),
-                IsSecurity = parsed.Sections.Contains("security")
+                IsAi = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Ai),
+                IsAzure = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Azure),
+                IsDotNet = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Dotnet),
+                IsDevOps = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Devops),
+                IsGitHubCopilot = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.GithubCopilot),
+                IsMl = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Ml),
+                IsSecurity = SectionBitmasks.Has(sectionsBitmask, SectionBitmasks.Security)
             };
 
             // Convert to integers for TagWord records
@@ -675,15 +677,6 @@ public class ContentSyncService : IContentSyncService
 
             // Upsert main content item with section booleans
             var insertContentStopwatch = Stopwatch.StartNew();
-
-            // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
-            var sectionsBitmask = (sectionInts.IsAi * 1) +
-                                  (sectionInts.IsAzure * 2) +
-                                  (sectionInts.IsDotNet * 4) +
-                                  (sectionInts.IsDevOps * 8) +
-                                  (sectionInts.IsGitHubCopilot * 16) +
-                                  (sectionInts.IsMl * 32) +
-                                  (sectionInts.IsSecurity * 64);
 
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
@@ -752,14 +745,12 @@ public class ContentSyncService : IContentSyncService
                     transaction);
             }
 
-            // Populate ghc_features and ghc_feature_content tables for ghc-features items.
+            // Populate the GitHub Copilot features (product_features + product_feature_content) for ghc-features items.
             // Each markdown file in _videos/ghc-features/ represents both a content item and a
             // GHC feature entity. The feature links back to its own content item as the thumbnail.
             if (string.Equals(parsed.SubcollectionName, "ghc-features", StringComparison.OrdinalIgnoreCase))
             {
                 var title = parsed.FrontMatter.GetValueOrDefault("title", "")?.ToString() ?? "";
-                var plans = GetPlansFromFrontMatter(parsed.FrontMatter);
-                var ghesSupport = GetBooleanFromFrontMatter(parsed.FrontMatter, "ghes_support");
 
                 if (string.IsNullOrWhiteSpace(title))
                 {
@@ -767,29 +758,15 @@ public class ContentSyncService : IContentSyncService
                         $"Missing required 'title' in frontmatter for ghc-features file: {parsed.Slug}.");
                 }
 
-                if (string.IsNullOrWhiteSpace(plans))
-                {
-                    throw new InvalidOperationException(
-                        $"Missing or empty required 'plans' in frontmatter for ghc-features file: {parsed.Slug}. " +
-                        "Specify at least one plan (e.g. 'plans: [Free, Pro]').");
-                }
-
-                if (!parsed.FrontMatter.ContainsKey("ghes_support"))
-                {
-                    throw new InvalidOperationException(
-                        $"Missing required 'ghes_support' in frontmatter for ghc-features file: {parsed.Slug}. " +
-                        "Specify 'ghes_support: true' or 'ghes_support: false'.");
-                }
-
                 await _connection.ExecuteAsync("""
-                    INSERT INTO ghc_features (slug, title, description, release_date, plans, ghes_support)
-                    VALUES (@Slug, @Title, @Description, @ReleaseDate, @Plans, @GhesSupport)
+                    INSERT INTO product_features (product_id, name, slug, description, release_date)
+                    SELECT p.id, @Title, @Slug, @Description, @ReleaseDate
+                    FROM products p
+                    WHERE lower(p.name) = 'github copilot'
                     ON CONFLICT (slug) DO UPDATE SET
-                        title = @Title,
+                        name = @Title,
                         description = @Description,
                         release_date = @ReleaseDate,
-                        plans = @Plans,
-                        ghes_support = @GhesSupport,
                         updated_at = NOW()
                     """,
                     new
@@ -797,15 +774,15 @@ public class ContentSyncService : IContentSyncService
                         Slug = parsed.Slug,
                         Title = title,
                         Description = parsed.Excerpt,
-                        ReleaseDate = parsed.DateEpoch,
-                        Plans = plans,
-                        GhesSupport = ghesSupport
+                        ReleaseDate = parsed.DateEpoch
                     },
                     transaction);
 
                 await _connection.ExecuteAsync("""
-                    INSERT INTO ghc_feature_content (feature_slug, collection_name, item_slug, is_thumbnail, sort_order)
-                    VALUES (@FeatureSlug, @CollectionName, @ItemSlug, TRUE, 0)
+                    INSERT INTO product_feature_content (feature_id, collection_name, item_slug, is_thumbnail, sort_order)
+                    SELECT f.id, @CollectionName, @ItemSlug, TRUE, 0
+                    FROM product_features f
+                    WHERE f.slug = @FeatureSlug
                     ON CONFLICT DO NOTHING
                     """,
                     new
@@ -836,15 +813,6 @@ public class ContentSyncService : IContentSyncService
             {
                 var tagTrimmed = tag.Trim();
 
-                // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
-                var bitmask = (sectionInts.IsAi * 1) +
-                              (sectionInts.IsAzure * 2) +
-                              (sectionInts.IsDotNet * 4) +
-                              (sectionInts.IsDevOps * 8) +
-                              (sectionInts.IsGitHubCopilot * 16) +
-                              (sectionInts.IsMl * 32) +
-                              (sectionInts.IsSecurity * 64);
-
                 // Add the full tag (lowercase in tag_word for querying, original case in tag_display for display)
                 tagWords.Add(new TagWord(
                     parsed.CollectionName,
@@ -860,7 +828,7 @@ public class ContentSyncService : IContentSyncService
                     sectionInts.IsGitHubCopilot,
                     sectionInts.IsMl,
                     sectionInts.IsSecurity,
-                    bitmask
+                    sectionsBitmask
                 ));
 
                 // Also expand tags into words for subset matching
@@ -889,7 +857,7 @@ public class ContentSyncService : IContentSyncService
                         sectionInts.IsGitHubCopilot,
                         sectionInts.IsMl,
                         sectionInts.IsSecurity,
-                        bitmask
+                        sectionsBitmask
                     ));
                 }
             }
@@ -998,34 +966,6 @@ public class ContentSyncService : IContentSyncService
         }
 
         return new List<string>();
-    }
-
-    private static string GetPlansFromFrontMatter(Dictionary<string, object?> frontMatter)
-    {
-        if (frontMatter.TryGetValue("plans", out var value) && value is IEnumerable<object> list)
-        {
-            return string.Join(",", list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)));
-        }
-
-        return string.Empty;
-    }
-
-    private static bool GetBooleanFromFrontMatter(Dictionary<string, object?> frontMatter, string key)
-    {
-        if (frontMatter.TryGetValue(key, out var value) && value != null)
-        {
-            if (value is bool b)
-            {
-                return b;
-            }
-
-            if (bool.TryParse(value.ToString(), out var parsed))
-            {
-                return parsed;
-            }
-        }
-
-        return false;
     }
 
     private static (string excerpt, string content) ExtractExcerptAndContent(string fileContent)

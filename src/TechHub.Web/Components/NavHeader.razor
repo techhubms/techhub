@@ -4,6 +4,7 @@
 @inject NavigationManager Navigation
 @inject IJSRuntime JSRuntime
 @inject BrandingService Branding
+@inject IFeatureGate FeatureGate
 @implements IDisposable
 
 <nav class="main-nav" aria-label="Primary navigation">
@@ -69,7 +70,7 @@
                             <a href="/@sectionItem.Name/@collection.Name" class="@(IsActivePage($"/{sectionItem.Name}/{collection.Name}") ? "active" : "")" @onclick="CloseMenu">@collection.Title</a>
                         }
                     }
-                    @foreach (var customPage in sectionItem.Collections.Where(c => c.IsCustom).OrderBy(c => c.Order).ThenBy(c => c.Title))
+                    @foreach (var customPage in sectionItem.Collections.Where(c => c.IsCustom && FeatureGate.IsEnabled(c.Feature, _isAdmin)).OrderBy(c => c.Order).ThenBy(c => c.Title))
                     {
                         <a href="@customPage.Url" class="mobile-menu-custom-page @(IsActivePage(customPage.Url) ? "active" : "")" @onclick="CloseMenu">@customPage.Title</a>
                     }
@@ -87,11 +88,17 @@
 
 @code {
     private bool menuOpen;
+    private bool _isAdmin;
     private readonly HashSet<string> expandedSections = new(StringComparer.OrdinalIgnoreCase);
 
     protected override void OnInitialized()
     {
         Navigation.LocationChanged += OnLocationChanged;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _isAdmin = await FeatureGate.IsAdminAsync();
     }
 
     private async void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)

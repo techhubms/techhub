@@ -45,6 +45,16 @@ public class AdminLoginContentTests : BunitContext
         // Assert
         cut.FindAll("button.admin-login-btn-link").Should().BeEmpty();
         cut.Find(".admin-alert-error").TextContent.Should().Contain("Azure AD is not configured");
+        var steps = cut.FindAll(".admin-alert-error li");
+        steps.Should().HaveCount(3);
+        steps[0].TextContent.Should().Contain("First-time setup only")
+            .And.Contain("./scripts/Manage-EntraId.ps1 -Environment localhost");
+        steps[1].TextContent.Should().Contain("After first-time setup or a container rebuild")
+            .And.Contain("./scripts/Setup-UserSecrets.ps1")
+            .And.Contain("az login");
+        steps[2].TextContent.Should().Contain("Restart")
+            .And.Contain("Stop-Servers")
+            .And.Contain("Run -WithoutTests");
     }
 
     [Fact]

@@ -127,7 +127,7 @@ Vanilla JS event listeners attached via `addEventListener` or `initXxx()` functi
 - **Browser-native features** with no C# equivalent (scroll events, resize, history API)
 - **Third-party widget initialization** (e.g., Highlight.js, Mermaid)
 
-**Coordination with existing JS init functions**: If an element is handled by Blazor `@onclick` but a JS init function would also try to attach a listener, add `data-initialized="blazor"` to the element. The existing `data-initialized` guard in `initExpandableBadges` and `initFeatureFilters` will skip it.
+**Coordination with existing JS init functions**: If an element is handled by Blazor `@onclick` but a JS init function would also try to attach a listener, add `data-initialized="blazor"` to the element. The existing `data-initialized` guard in `initExpandableBadges` will skip it.
 
 ### External CDN Libraries
 
@@ -179,7 +179,7 @@ CDN config is bridged from C# via an inline script in App.razor (`window.TechHub
 | `GitHubCopilotGettingStarted.razor` | `initHighlighting`, `initTocScrollSpy` | No |
 | `GitHubCopilotVSCodeUpdates.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | Yes |
 | `AISDLC.razor` | `initMermaid`, `initTocScrollSpy` | No |
-| `GitHubCopilotFeatures.razor` | *(none in `PageScripts`)* — filters use Blazor `@onclick`; it calls the `scrollTierCardIntoView` and `preventScrollOnExpand` globals from `page-scripts.js` through JS interop | No |
+| `GitHubCopilotFeatures.razor`, `SectionTimeline.razor` | *(none in `PageScripts`)* — cards are `TimelineView` cards that expand with Blazor `@onclick`; the component calls the `preventScrollOnExpand` global from `page-scripts.js` through JS interop | No |
 
 All other pages (`SectionCollection`, `Authors`, `About`, `McpInfo`, `Newsletter*`, `Admin*`, `Error`, `NotFound`, and the `GitHubCopilotDiscord` and `GitHubCopilotToolTips` pages) declare no scripts, so the base class only calls `markScriptsReady`.
 
@@ -286,19 +286,22 @@ Generated from the directory contents (`list_dir` on `Components/`). Re-check th
 | `McpInfo` | `/mcp` |
 | `Error`, `NotFound` | `/Error`, `/not-found` |
 | `GenAI` | `/ai/genai-basics`, `/ai/genai-applied`, `/ai/genai-advanced` |
+| `SectionTimeline` | `/{sectionName}/timeline` (the `timeline` custom collection of each section except `all`) |
 | `AISDLC` | `/ai/sdlc` |
 | `DXSpace` | `/devops/dx-space` |
-| `GitHubCopilotFeatures`, `GitHubCopilotVSCodeUpdates` (also `/{VideoSlug}`), `GitHubCopilotGettingStarted`, `GitHubCopilotLevels`, `GitHubCopilotHandbook`, `GitHubCopilotToolTips`, `GitHubCopilotDiscord` | `/github-copilot/features`, `/vscode-updates`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord` |
+| `GitHubCopilotVSCodeUpdates` (also `/{VideoSlug}`), `GitHubCopilotGettingStarted`, `GitHubCopilotLevels`, `GitHubCopilotHandbook`, `GitHubCopilotToolTips`, `GitHubCopilotDiscord` | `/vscode-updates`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord` |
 | `NewsletterSubscribe`, `NewsletterConfirm`, `NewsletterManage`, `NewsletterUnsubscribe` | `/newsletter/subscribe`, `/confirm`, `/manage`, `/unsubscribe` (see [docs/newsletter.md](../../docs/newsletter.md)) |
 | `Admin*` (`Components/Pages/Admin/`) | `/admin` and `/admin/*`, rendered with `AdminLayout` (see [docs/admin.md](../../docs/admin.md) and [docs/admin-authentication.md](../../docs/admin-authentication.md)) |
 
-Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `AdminCopilotFeatures`, `AdminCustomPages`, `AdminFeeds`, `AdminLogin` (+ `AdminLoginContent`), `AdminNewsletter`, `AdminProcessedUrls`, `AdminReviews`, `AdminSettings`, `AdminStatistics`, `AdminVscodeUpdates`. They declare `@rendermode InteractiveServer` explicitly.
+Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `AdminCustomPages`, `AdminFeeds`, `AdminLogin` (+ `AdminLoginContent`), `AdminNewsletter`, `AdminNewsletterSendLog`, `AdminProcessedUrls`, `AdminProductDetail` (tabs through the optional `Tab` route parameter: general, `features`, `plans`, `surfaces`, `dates`, `articles`), `AdminProducts` (a nested table: children are indented below their parent; with the shared `CatalogGlossary` explanation), `AdminReviews` (composes `ReviewOverview` and `ContentFixReviews`), `AdminSettings`, `AdminStatistics`, `AdminVscodeUpdates`. They declare `@rendermode InteractiveServer` explicitly. The admin menu (top-level groups and their sub menu pages) is defined in `Components/Layout/AdminNavigation.cs`: add a new admin page there as well. A page puts its Refresh button in `AdminSubbarAction` so it shows in the sub menu bar.
 
 **Sidebar**: `SidebarToggle`, `MobileSidebarToolbar`, `MobileSidebarPanel`, `SidebarSearch`, `SidebarTagCloud`, `SidebarToc`, `DateRangeSlider`
 
-**Content**: `SectionCard`, `SectionCardsGrid`, `ContentItemCard`, `ContentItemsGrid`, `ContentItemDetail`, `HeroBanner`, `SafeMarkup`, `ReviewDiff` (uses `Helpers/DiffHelper.cs`)
+**Content**: `SectionCard`, `SectionCardsGrid`, `ContentItemCard`, `ContentItemsGrid`, `ContentItemDetail`, `HeroBanner`, `SafeMarkup`, `ReviewDiff` (uses `Helpers/DiffHelper.cs`), `TimelineView` (year / month / card timeline: pass `TimelineViewEntry` values and an optional `Detail` fragment for extra card content; the section timeline uses it for the sources of an event)
 
 **Admin modals**: `AddContentModal`, `ContentItemEditorModal`, `JsonEditorModal`
+
+**Admin review components**: `ReviewOverview` (review cards, product-name queue and features to review; data in `ReviewOverviewData`) and `ContentFixReviews` (content fixer proposals with the Run Cleanup button)
 
 **Unused components** (exist, but no page or component renders them; keep or delete deliberately): `ResponsiveImage`, `MobileSidebarCollapse` (only tests render it), `SidebarRssLinks`
 

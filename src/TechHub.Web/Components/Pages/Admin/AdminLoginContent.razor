@@ -27,8 +27,15 @@
         else
         {
             <div class="admin-alert admin-alert-error" role="alert">
-                Azure AD is not configured. Run <code>./scripts/Manage-EntraId.ps1 -Environment localhost</code>
-                and configure the user secrets to enable admin sign-in.
+                Azure AD is not configured. For local development, run these commands from the repository root:
+                <ol>
+                    <li>First-time setup only (if the Azure app registration does not exist):
+                        <code>./scripts/Manage-EntraId.ps1 -Environment localhost</code>.</li>
+                    <li>After first-time setup or a container rebuild:
+                        run <code>az login</code> if needed, then <code>./scripts/Setup-UserSecrets.ps1</code>
+                        to populate the local user secrets. The Azure app registration survives container rebuilds.</li>
+                    <li>Restart the apps with <code>Stop-Servers</code>, then <code>Run -WithoutTests</code>.</li>
+                </ol>
             </div>
         }
     </div>

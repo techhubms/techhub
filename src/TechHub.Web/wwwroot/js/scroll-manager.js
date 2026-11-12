@@ -418,29 +418,14 @@ window.addEventListener('popstate', () => {
 // Blazor lifecycle hooks
 // ============================================================================
 
-function patchMarkScriptsReady() {
-    const original = window.markScriptsReady;
-    window.markScriptsReady = function () {
-        unclaimedReadyAt = Date.now();
-        hideNavSpinner();
-        if (typeof original === 'function') original();
-    };
-}
-
-function tryPatchMarkScriptsReady() {
-    if (typeof window.markScriptsReady === 'function') {
-        patchMarkScriptsReady();
-    } else {
-        const id = setInterval(() => {
-            if (typeof window.markScriptsReady === 'function') {
-                clearInterval(id);
-                patchMarkScriptsReady();
-            }
-        }, 50);
-        setTimeout(() => clearInterval(id), 5000);
-    }
-}
-tryPatchMarkScriptsReady();
+// page-scripts.js calls this hook at the start of every markScriptsReady call. The hook replaces
+// patching window.markScriptsReady: Blazor JS interop caches the function it first resolves, so
+// a patch applied after that first call (a ~50 ms race at page load) never reached Blazor and
+// left the spinner stuck until the 10 s safety timeout.
+window.__onScriptsReadySignal = function () {
+    unclaimedReadyAt = Date.now();
+    hideNavSpinner();
+};
 
 function setupBlazorListeners() {
     if (typeof Blazor !== 'undefined' && Blazor.addEventListener) {

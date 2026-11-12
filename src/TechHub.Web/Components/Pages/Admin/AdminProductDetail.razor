@@ -1,0 +1,1082 @@
+@page "/admin/products/{Id:long}"
+@page "/admin/products/{Id:long}/{Tab}"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using System.Globalization
+@using TechHub.Core.Models
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject NavigationManager Navigation
+@inject PersistentComponentState ApplicationState
+@inherits PageComponentBase
+
+<PageTitle>@(_product?.Name ?? "Product") — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">@(_product?.Name ?? "Product")</h1>
+            <p class="admin-page-subtitle">Names, features, linked dates and linked articles of this product</p>
+        </div>
+        <div class="admin-actions">
+            <a href="/admin/products" class="btn-secondary">← All products</a>
+        </div>
+    </div>
+
+    <CatalogGlossary />
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading product…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_product == null)
+    {
+        <div class="admin-empty" id="product-not-found">Product not found.</div>
+    }
+    else
+    {
+        <nav class="admin-tabs" aria-label="Sections of @_product.Name">
+            <a class="admin-tab @(ActiveTab == ProductTab.General ? "active" : "")" href="/admin/products/@Id" aria-current="@(ActiveTab == ProductTab.General ? "page" : null)">General</a>
+            <a class="admin-tab @(ActiveTab == ProductTab.Features ? "active" : "")" href="/admin/products/@Id/features" aria-current="@(ActiveTab == ProductTab.Features ? "page" : null)">Features (@_features.Features.Count)</a>
+            <a class="admin-tab @(ActiveTab == ProductTab.Dates ? "active" : "")" href="/admin/products/@Id/dates" aria-current="@(ActiveTab == ProductTab.Dates ? "page" : null)">Dates (@_product.EventCount)</a>
+            <a class="admin-tab @(ActiveTab == ProductTab.Articles ? "active" : "")" href="/admin/products/@Id/articles" aria-current="@(ActiveTab == ProductTab.Articles ? "page" : null)">Articles (@_product.ArticleCount)</a>
+        </nav>
+        @if (ActiveTab == ProductTab.General)
+        {
+            <h2 class="admin-section-title">Name and aliases</h2>
+
+            <div class="admin-inline-form">
+                <label class="admin-label" for="productName">Name</label>
+                <input id="productName" class="admin-input" @bind="_newName" />
+                <button class="btn-secondary" disabled="@_busy" @onclick="RenameAsync">Rename</button>
+            </div>
+            <p class="admin-result-summary">Renaming keeps the old name as an alias: the AI may still use it.</p>
+
+            @if (_product.Aliases.Count == 0)
+            {
+                <div class="admin-empty" id="aliases-empty">No aliases.</div>
+            }
+            else
+            {
+                <ul class="admin-entry-list" id="aliases-list">
+                    @foreach (var alias in _product.Aliases)
+                    {
+                        <li>
+                            <span>
+                                @alias.Alias
+                            </span>
+                            <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => RemoveAliasAsync(alias)">Remove</button>
+                        </li>
+                    }
+                </ul>
+            }
+
+            <div class="admin-inline-form">
+                <label class="admin-label" for="newAlias">Add alias</label>
+                <input id="newAlias" class="admin-input" @bind="_newAlias" placeholder="Another name for this product" />
+                <button class="btn-secondary" disabled="@_busy" @onclick="AddAliasAsync">Add alias</button>
+            </div>
+            <p class="admin-result-summary">An alias is another name the AI may use for this product. A name that includes a plan ('GitHub Copilot Business') can be an alias of the product too.</p>
+
+            <h2 class="admin-section-title">Parent and child products</h2>
+
+            <div class="admin-inline-form">
+                <label class="admin-label" for="parentName">Belongs to</label>
+                <input id="parentName" class="admin-input" list="merge-targets" @bind="_parentName" placeholder="No parent (top-level product)" />
+                <button class="btn-secondary" disabled="@_busy" @onclick="SetParentAsync">Set parent</button>
+            </div>
+            <p class="admin-result-summary">A product that belongs to another product (GitHub Copilot CLI to GitHub Copilot) shows up in the articles and dates of its parent. It also uses the features of its parent.</p>
+
+            @if (_product.Children.Count == 0)
+            {
+                <div class="admin-empty" id="children-empty">No child products.</div>
+            }
+            else
+            {
+                <ul class="admin-entry-list" id="children-list">
+                    @foreach (var child in _product.Children)
+                    {
+                        <li><a href="/admin/products/@child.Id">@child.Name</a></li>
+                    }
+                </ul>
+            }
+
+            <h2 class="admin-section-title">Convert, merge or delete</h2>
+
+            @if (_product.Parent != null)
+            {
+                <p class="admin-result-summary" id="convert-description">
+                    <strong>Convert to feature</strong> is for a child product that is really a capability of '@_product.Parent.Name' (like GitHub Copilot coding agent). It becomes a feature of '@_product.Parent.Name', and its name and aliases become aliases of that feature (not of the product). The names keep matching: a product name that is not a product is looked up as a feature name, so articles and dates that use it are linked to '@_product.Parent.Name' and the feature.
+                    Its child products and features move to '@_product.Parent.Name'.
+                </p>
+                <div class="admin-inline-form">
+                    <button class="btn-secondary" id="convert-button" disabled="@_busy" @onclick="() => _pendingAction = PendingAction.Convert">Convert to feature of '@_product.Parent.Name'…</button>
+                </div>
+                @if (_pendingAction == PendingAction.Convert)
+                {
+                    <div class="admin-alert admin-alert-error" id="confirm-convert" role="alert">
+                        Convert '@_product.Name' into a feature of '@_product.Parent.Name'? This product is removed.
+                        <button class="btn" disabled="@_busy" @onclick="ConvertAsync">Confirm convert</button>
+                        <button class="btn-secondary" @onclick="CancelPendingAction">Cancel</button>
+                    </div>
+                }
+            }
+
+            <p class="admin-result-summary" id="merge-description">
+                <strong>Merge into</strong> is for a product that was added twice under different names. Pick the product to keep: '@_product.Name' and its aliases become aliases of that product, so its articles and dates move there.
+                Its child products and features move too, except those the other product already has by name. '@_product.Name' is removed afterwards.
+                <strong>Delete</strong> removes '@_product.Name' with its aliases and features; its articles and dates stay but are no longer linked to a product.
+            </p>
+            <div class="admin-inline-form">
+                <label class="admin-label" for="mergeTarget">Merge into</label>
+                <input id="mergeTarget" class="admin-input" list="merge-targets" @bind="_mergeTarget" placeholder="Product to keep" />
+                <button class="btn-secondary" disabled="@(_busy || string.IsNullOrWhiteSpace(_mergeTarget))" @onclick="() => _pendingAction = PendingAction.Merge">Merge…</button>
+                <button class="btn-secondary" disabled="@_busy" @onclick="() => _pendingAction = PendingAction.Delete">Delete…</button>
+            </div>
+            <datalist id="merge-targets">
+                @foreach (var other in _otherProducts)
+                {
+                    <option value="@other.Name"></option>
+                }
+            </datalist>
+
+            @if (_pendingAction == PendingAction.Merge)
+            {
+                <div class="admin-alert admin-alert-error" id="confirm-merge" role="alert">
+                    Merge '@_product.Name' into '@_mergeTarget.Trim()'? The name and aliases of '@_product.Name' become aliases of '@_mergeTarget.Trim()' and this product is removed.
+                    <button class="btn" disabled="@_busy" @onclick="MergeAsync">Confirm merge</button>
+                    <button class="btn-secondary" @onclick="CancelPendingAction">Cancel</button>
+                </div>
+            }
+            else if (_pendingAction == PendingAction.Delete)
+            {
+                <div class="admin-alert admin-alert-error" id="confirm-delete" role="alert">
+                    Delete '@_product.Name'? Its aliases and features are deleted. Its article links (@_product.ArticleCount) and dates (@_product.EventCount) become unmatched again.
+                    <button class="btn" disabled="@_busy" @onclick="DeleteAsync">Confirm delete</button>
+                    <button class="btn-secondary" @onclick="CancelPendingAction">Cancel</button>
+                </div>
+            }
+        }
+
+        @if (ActiveTab == ProductTab.Features)
+        {
+            <h2 class="admin-section-title">Features (@_features.Features.Count)</h2>
+            <p class="admin-result-summary">The AI returns the feature of a date as free text. Curated features group those names, so the dates of one feature can be compared.</p>
+
+            <div class="admin-inline-form">
+                <label class="admin-label" for="newFeature">Add feature</label>
+                <input id="newFeature" class="admin-input" @bind="_newFeature" placeholder="e.g. Agent mode" />
+                <button class="btn-secondary" disabled="@_busy" @onclick="AddFeatureAsync">Add feature</button>
+            </div>
+
+            @if (_features.Features.Count == 0)
+            {
+                <div class="admin-empty" id="features-empty">No features yet.</div>
+            }
+            else
+            {
+                @foreach (var feature in _features.Features)
+                {
+                    <details class="admin-details" id="feature-@feature.Id">
+                        <summary>
+                            @feature.Name
+                            <span class="admin-cell-mono"> — @feature.EventCount dates</span>
+                            @if (feature.Aliases.Count > 0)
+                            {
+                                <span> (@string.Join(", ", feature.Aliases.Select(a => a.Alias)))</span>
+                            }
+                        </summary>
+
+                        <div class="admin-inline-form">
+                            <label class="admin-label" for="feature-name-@feature.Id">Name</label>
+                            <input id="feature-name-@feature.Id" class="admin-input" value="@GetFeatureRename(feature)" @onchange="e => SetFeatureRename(feature, e.Value?.ToString())" />
+                            <button class="btn-secondary" disabled="@_busy" @onclick="() => RenameFeatureAsync(feature)">Rename</button>
+                        </div>
+
+                        @if (feature.Aliases.Count > 0)
+                        {
+                            <ul class="admin-entry-list">
+                                @foreach (var alias in feature.Aliases)
+                                {
+                                    <li>
+                                        @alias.Alias
+                                        <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => RemoveFeatureAliasAsync(feature, alias)">Remove</button>
+                                    </li>
+                                }
+                            </ul>
+                        }
+
+                        <div class="admin-inline-form">
+                            <label class="admin-label" for="feature-alias-@feature.Id">Add alias</label>
+                            <input id="feature-alias-@feature.Id" class="admin-input" value="@GetFeatureAlias(feature)" @onchange="e => SetFeatureAlias(feature, e.Value?.ToString())" placeholder="Another name" />
+                            <button class="btn-secondary" disabled="@_busy" @onclick="() => AddFeatureAliasAsync(feature)">Add alias</button>
+                        </div>
+
+                        <div class="admin-inline-form">
+                            <label class="admin-label" for="feature-description-@feature.Id">Description</label>
+                            <textarea id="feature-description-@feature.Id" class="admin-input feature-description" rows="3"
+                                      placeholder="A short description of the feature"
+                                      value="@GetFeatureDescription(feature)" @onchange="e => SetFeatureDescription(feature, e.Value?.ToString())"></textarea>
+                        </div>
+
+                        <div class="admin-inline-form">
+                            <label class="admin-label" for="feature-release-@feature.Id">Release date</label>
+                            <input id="feature-release-@feature.Id" type="date" class="admin-input"
+                                   value="@GetFeatureReleaseDate(feature)" @onchange="e => SetFeatureReleaseDate(feature, e.Value?.ToString())" />
+                            <button class="btn-secondary" disabled="@_busy" @onclick="() => SaveFeatureDetailsAsync(feature)">Save details</button>
+                        </div>
+                        <p class="admin-result-summary">Leave the release date empty to use the first launch, preview, GA or release date of its dates.</p>
+
+                        <h3 class="admin-section-title">Content (@feature.Content.Count)</h3>
+                        <p class="admin-result-summary">AI-detected articles are linked from their extracted feature mentions or dates. They cannot be removed here; curated links can be managed below.</p>
+
+                        @if (feature.Content.Count == 0)
+                        {
+                            <div class="admin-empty" id="feature-content-empty-@feature.Id">No linked content.</div>
+                        }
+                        else
+                        {
+                            <div class="admin-jobs-table-wrapper">
+                                <table class="admin-table" id="feature-content-@feature.Id">
+                                    <thead>
+                                        <tr>
+                                            <th>Thumbnail</th>
+                                            <th>Title</th>
+                                            <th>Item</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var link in feature.Content)
+                                        {
+                                            <tr>
+                                                <td class="feature-content-thumbnail">
+                                                    @if (link.IsThumbnail)
+                                                    {
+                                                        <span class="badge-success" title="Thumbnail of the feature">★</span>
+                                                    }
+                                                    else if (link.IsDetected)
+                                                    {
+                                                        <span class="admin-cell-mono">AI detected</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <button class="admin-link-btn" title="Make this the thumbnail" aria-label="Make @link.Title the thumbnail" disabled="@_busy" @onclick="() => SetFeatureThumbnailAsync(feature, link)">☆</button>
+                                                    }
+                                                </td>
+                                                <td><a href="/admin/content-preview/@link.CollectionName/@link.ItemSlug">@link.Title</a></td>
+                                                <td class="admin-cell-mono">@link.CollectionName/@link.ItemSlug</td>
+                                                <td>
+                                                    @if (!link.IsDetected)
+                                                    {
+                                                        <button class="admin-link-btn admin-link-btn-danger" disabled="@_busy" @onclick="() => RemoveFeatureContentAsync(feature, link)">Remove</button>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+
+                        <div class="admin-inline-form">
+                            <label class="admin-label" for="feature-content-search-@feature.Id">Link content</label>
+                            <input id="feature-content-search-@feature.Id" class="admin-input feature-content-search" placeholder="Search by title or slug…"
+                                   value="@GetContentQuery(feature)" @onchange="e => SetContentQuery(feature, e.Value?.ToString())" />
+                            <select class="admin-input" aria-label="Collection to search" value="@GetContentCollection(feature)" @onchange="e => SetContentCollection(feature, e.Value?.ToString())">
+                                <option value="">All collections</option>
+                                <option value="videos">videos</option>
+                                <option value="blogs">blogs</option>
+                                <option value="news">news</option>
+                            </select>
+                            <button class="btn-secondary" disabled="@_busy" @onclick="() => SearchFeatureContentAsync(feature)">Search</button>
+                        </div>
+
+                        @if (_contentSearchFeatureId == feature.Id)
+                        {
+                            @if (_contentSearchError != null)
+                            {
+                                <div class="admin-alert admin-alert-error" role="alert">@_contentSearchError</div>
+                            }
+                            else if (_contentResults.Count == 0)
+                            {
+                                <div class="admin-empty" id="feature-content-results-empty-@feature.Id">No content found.</div>
+                            }
+                            else
+                            {
+                                <div class="admin-jobs-table-wrapper">
+                                    <table class="admin-table" id="feature-content-results-@feature.Id">
+                                        <thead>
+                                            <tr>
+                                                <th>Title</th>
+                                                <th>Item</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var result in _contentResults)
+                                            {
+                                                var linked = feature.Content.Any(l => l.CollectionName == result.CollectionName && l.ItemSlug == result.Slug);
+                                                <tr class="@(linked ? "feature-content-linked" : null)">
+                                                    <td>@result.Title</td>
+                                                    <td class="admin-cell-mono">@result.CollectionName/@result.Slug</td>
+                                                    <td>
+                                                        @if (linked)
+                                                        {
+                                                            <span class="admin-cell-mono">linked</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <button class="admin-link-btn" disabled="@_busy" @onclick="() => AddFeatureContentAsync(feature, result, false)">+ Link</button>
+                                                            <button class="admin-link-btn" disabled="@_busy" @onclick="() => AddFeatureContentAsync(feature, result, true)">★ Thumbnail</button>
+                                                        }
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+                        }
+
+                        <div class="admin-inline-form">
+                            @if (_pendingFeatureDelete == feature.Id)
+                            {
+                                <span class="admin-alert admin-alert-error" role="alert">
+                                    Delete '@feature.Name'? Its dates keep their text and become unmatched.
+                                    <button class="btn" disabled="@_busy" @onclick="() => DeleteFeatureAsync(feature)">Confirm delete</button>
+                                    <button class="btn-secondary" @onclick="() => _pendingFeatureDelete = null">Cancel</button>
+                                </span>
+                            }
+                            else
+                            {
+                                <button class="btn-secondary" disabled="@_busy" @onclick="() => _pendingFeatureDelete = feature.Id">Delete…</button>
+                            }
+                        </div>
+                    </details>
+                }
+            }
+
+            <h3 class="admin-section-title">Features to review (@_features.Unmatched.Count)</h3>
+
+            @if (_features.Unmatched.Count == 0)
+            {
+                <div class="admin-empty" id="features-unmatched-empty">Nothing to review.</div>
+            }
+            else
+            {
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table" id="features-unmatched-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Dates</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var name in _features.Unmatched)
+                            {
+                                <tr>
+                                    <td>@name.Name</td>
+                                    <td class="admin-cell-mono">@name.EventCount</td>
+                                    <td>
+                                        <div class="admin-inline-form">
+                                            <button class="admin-link-btn" disabled="@_busy" @onclick="() => AddUnmatchedAsFeatureAsync(name.Name)">Add as feature</button>
+                                            <input class="admin-input" list="feature-names" placeholder="Alias of…" aria-label="Alias of feature for @name.Name"
+                                                   value="@GetUnmatchedTarget(name.Name)" @onchange="e => SetUnmatchedTarget(name.Name, e.Value?.ToString())" />
+                                            <button class="admin-link-btn" disabled="@(_busy || string.IsNullOrWhiteSpace(GetUnmatchedTarget(name.Name)))" @onclick="() => AddUnmatchedAsAliasAsync(name.Name)">Add as alias</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <datalist id="feature-names">
+                    @foreach (var feature in _features.Features)
+                    {
+                        <option value="@feature.Name"></option>
+                    }
+                </datalist>
+            }
+        }
+
+        @if (ActiveTab == ProductTab.Dates)
+        {
+            <h2 class="admin-section-title">Dates (@_events.TotalCount)</h2>
+            <p class="admin-result-summary">Important dates the AI found in articles about this product@(ShowCatalogColumn ? " and its child products" : string.Empty), newest first.</p>
+            @ScopeFilter
+
+            @if (_events.Items.Count == 0)
+            {
+                <div class="admin-empty" id="events-empty">No dates are linked to this product.</div>
+            }
+            else
+            {
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table" id="events-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                @if (ShowCatalogColumn)
+                                {
+                                    <th>Product</th>
+                                }
+                                <th>Kind</th>
+                                <th>Feature</th>
+                                <th>What happens</th>
+                                <th>Article</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in _events.Items)
+                            {
+                                <tr>
+                                    <td class="admin-cell-mono">@FormatEventDate(item)</td>
+                                    @if (ShowCatalogColumn)
+                                    {
+                                        <td>@item.CatalogName</td>
+                                    }
+                                    <td>@item.Kind</td>
+                                    <td>@(item.FeatureName ?? item.Feature)</td>
+                                    <td>@item.Description</td>
+                                    <td><a href="/admin/content-preview/@item.CollectionName/@item.ItemSlug">@item.ItemTitle</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                @Pager(_events.TotalCount)
+            }
+        }
+
+        @if (ActiveTab == ProductTab.Articles)
+        {
+            <h2 class="admin-section-title">Articles (@_articles.TotalCount)</h2>
+            <p class="admin-result-summary">Articles whose product names match this product@(ShowCatalogColumn ? " or one of its child products" : string.Empty), newest first.</p>
+            @ScopeFilter
+
+            @if (_articles.Items.Count == 0)
+            {
+                <div class="admin-empty" id="articles-empty">No articles are linked to this product.</div>
+            }
+            else
+            {
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table" id="articles-table">
+                        <thead>
+                            <tr>
+                                <th>Published</th>
+                                <th>Article</th>
+                                @if (ShowCatalogColumn)
+                                {
+                                    <th>Product</th>
+                                }
+                                <th>Name used</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var article in _articles.Items)
+                            {
+                                <tr>
+                                    <td class="admin-cell-mono">@DateHelper.FormatDateIso(article.DateEpoch)</td>
+                                    <td><a href="/admin/content-preview/@article.CollectionName/@article.Slug">@article.Title</a></td>
+                                    @if (ShowCatalogColumn)
+                                    {
+                                        <td>@article.CatalogName</td>
+                                    }
+                                    <td>@article.ProductName</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                @Pager(_articles.TotalCount)
+            }
+        }
+    }
+</div>
+
+@code {
+    private enum PendingAction
+    {
+        None,
+        Merge,
+        Convert,
+        Delete
+    }
+
+    private enum ProductTab
+    {
+        General,
+        Features,
+        Dates,
+        Articles
+    }
+
+    [Parameter] public long Id { get; set; }
+
+    /// <summary>The tab from the URL: <c>features</c>, <c>dates</c> or <c>articles</c>; anything else shows the general tab.</summary>
+    [Parameter] public string? Tab { get; set; }
+
+    private ProductTab ActiveTab => Tab?.ToLowerInvariant() switch
+    {
+        "features" => ProductTab.Features,
+        "dates" => ProductTab.Dates,
+        "articles" => ProductTab.Articles,
+        _ => ProductTab.General
+    };
+
+    private bool _loading = true;
+    private bool _busy;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private ProductDetail? _product;
+    private IReadOnlyList<ProductSummary> _otherProducts = [];
+    private string _newName = string.Empty;
+    private string _newAlias = string.Empty;
+    private ProductFeatureOverview _features = new();
+    private string _newFeature = string.Empty;
+    private long? _pendingFeatureDelete;
+    private readonly Dictionary<long, string> _featureRenames = [];
+    private readonly Dictionary<long, string> _featureAliases = [];
+    private readonly Dictionary<long, string> _featureDescriptions = [];
+    private readonly Dictionary<long, string> _featureReleaseDates = [];
+    private readonly Dictionary<long, string> _contentQueries = [];
+    private readonly Dictionary<long, string> _contentCollections = [];
+    private long? _contentSearchFeatureId;
+    private string? _contentSearchError;
+    private IReadOnlyList<ContentItemListItem> _contentResults = [];
+    private readonly Dictionary<string, string> _unmatchedTargets = new(StringComparer.OrdinalIgnoreCase);
+    private string _parentName = string.Empty;
+    private string _mergeTarget = string.Empty;
+    private PendingAction _pendingAction;
+    private long _loadedId;
+    private ProductTab _loadedTab;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    private const int PageSize = 25;
+
+    private PagedResult<ProductEventLink> _events = new() { Items = [], TotalCount = 0 };
+    private PagedResult<ProductArticleLink> _articles = new() { Items = [], TotalCount = 0 };
+    private bool _includeChildren = true;
+    private int _page = 1;
+
+    // The product column shows which product a link of a child product is about.
+    private bool ShowCatalogColumn => _product != null && _includeChildren && _product.Children.Count > 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+        _loadedId = Id;
+
+        if (ApplicationState.TryTakeFromJson<ProductDetail>($"admin-product-{Id}", out var product) && product != null
+            && ApplicationState.TryTakeFromJson<IReadOnlyList<ProductSummary>>($"admin-product-{Id}-others", out var others) && others != null
+            && ApplicationState.TryTakeFromJson<ProductFeatureOverview>($"admin-product-{Id}-features", out var features) && features != null)
+        {
+            _product = product;
+            _otherProducts = others;
+            _features = features;
+            _newName = product.Name;
+            _parentName = product.Parent?.Name ?? string.Empty;
+            _loadedTab = ActiveTab;
+            RestoreTabData();
+            if (!HasTabData())
+            {
+                await LoadTabAsync();
+            }
+
+            _loading = false;
+            return;
+        }
+
+        await LoadAsync();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        // A merge navigates to the target product on the same component instance.
+        if (_loadedId != Id)
+        {
+            _loadedId = Id;
+            await LoadAsync();
+        }
+        else if (!_loading && _product != null && _loadedTab != ActiveTab)
+        {
+            _page = 1;
+            _loadedTab = ActiveTab;
+            await LoadTabAsync();
+        }
+    }
+
+    private Task PersistState()
+    {
+        if (_product != null)
+        {
+            ApplicationState.PersistAsJson($"admin-product-{Id}", _product);
+            ApplicationState.PersistAsJson($"admin-product-{Id}-others", _otherProducts);
+            ApplicationState.PersistAsJson($"admin-product-{Id}-features", _features);
+            switch (ActiveTab)
+            {
+                case ProductTab.Dates:
+                    ApplicationState.PersistAsJson($"admin-product-{Id}-events", _events);
+                    break;
+                case ProductTab.Articles:
+                    ApplicationState.PersistAsJson($"admin-product-{Id}-articles", _articles);
+                    break;
+            }
+        }
+
+        return Task.CompletedTask;
+    }
+
+    // The articles and dates are paged or large, so only the active tab loads and persists its data.
+    private void RestoreTabData()
+    {
+        switch (ActiveTab)
+        {
+            case ProductTab.Dates when ApplicationState.TryTakeFromJson<PagedResult<ProductEventLink>>($"admin-product-{Id}-events", out var events) && events != null:
+                _events = events;
+                break;
+            case ProductTab.Articles when ApplicationState.TryTakeFromJson<PagedResult<ProductArticleLink>>($"admin-product-{Id}-articles", out var articles) && articles != null:
+                _articles = articles;
+                break;
+        }
+    }
+
+    private bool HasTabData() => ActiveTab switch
+    {
+        ProductTab.Dates => _events.TotalCount > 0 || _events.Items.Count > 0,
+        ProductTab.Articles => _articles.TotalCount > 0 || _articles.Items.Count > 0,
+        _ => true
+    };
+
+    private async Task LoadTabAsync()
+    {
+        try
+        {
+            switch (ActiveTab)
+            {
+                case ProductTab.Dates:
+                    _events = await Api.GetProductEventsAsync(Id, _includeChildren, _page, PageSize);
+                    break;
+                case ProductTab.Articles:
+                    _articles = await Api.GetProductArticlesAsync(Id, _includeChildren, _page, PageSize);
+                    break;
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load product: {ex.Message}";
+        }
+    }
+
+    private async Task GoToPageAsync(int page)
+    {
+        _busy = true;
+        _page = page;
+        await LoadTabAsync();
+        _busy = false;
+    }
+
+    private async Task SetIncludeChildrenAsync(bool includeChildren)
+    {
+        _includeChildren = includeChildren;
+        await GoToPageAsync(1);
+    }
+
+    private int PageCount(int total) => Math.Max(1, (total + PageSize - 1) / PageSize);
+
+    private RenderFragment ScopeFilter => @<text>
+        @if (_product != null && _product.Children.Count > 0)
+        {
+            <div class="admin-filters">
+                <label class="admin-label" for="includeChildren">
+                    <input id="includeChildren" type="checkbox" checked="@_includeChildren" disabled="@_busy"
+                           @onchange="e => SetIncludeChildrenAsync(e.Value is true)" />
+                    Include child products
+                </label>
+            </div>
+        }
+    </text>;
+
+    private RenderFragment Pager(int total) => @<text>
+        @if (total > PageSize)
+        {
+            <div class="admin-pagination" id="product-pager">
+                <button class="btn-secondary" disabled="@(_busy || _page <= 1)" @onclick="() => GoToPageAsync(_page - 1)">← Previous</button>
+                <span class="admin-pagination-info">Page @_page of @PageCount(total) (@total items)</span>
+                <button class="btn-secondary" disabled="@(_busy || _page >= PageCount(total))" @onclick="() => GoToPageAsync(_page + 1)">Next →</button>
+            </div>
+        }
+    </text>;
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+    }
+
+    private async Task LoadAsync()
+    {
+        _loading = true;
+        _error = null;
+        _message = null;
+        _mergeTarget = string.Empty;
+        _pendingAction = PendingAction.None;
+
+        try
+        {
+            _product = await Api.GetProductAsync(Id);
+            if (_product != null)
+            {
+                _otherProducts = (await Api.GetProductsAsync()).Where(p => p.Id != Id).ToList();
+                _features = await Api.GetProductFeaturesAsync(Id);
+                _pendingFeatureDelete = null;
+                _newName = _product.Name;
+                _parentName = _product.Parent?.Name ?? string.Empty;
+                _loadedTab = ActiveTab;
+                _page = 1;
+                await LoadTabAsync();
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load product: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private void CancelPendingAction() => _pendingAction = PendingAction.None;
+
+    private Task RenameAsync() =>
+        RunAsync(async () =>
+        {
+            _product = await Api.RenameProductAsync(Id, _newName);
+            _newName = _product.Name;
+            return $"Renamed to '{_product.Name}'.";
+        });
+
+    private Task SetParentAsync()
+    {
+        var parentName = _parentName.Trim();
+        long? parentId = null;
+        if (parentName.Length > 0)
+        {
+            var parent = _otherProducts.FirstOrDefault(p => string.Equals(p.Name, parentName, StringComparison.OrdinalIgnoreCase));
+            if (parent is null)
+            {
+                _message = $"'{parentName}' is not a product. Pick a product from the list.";
+                _messageIsError = true;
+                return Task.CompletedTask;
+            }
+
+            parentId = parent.Id;
+        }
+
+        return RunAsync(async () =>
+        {
+            _product = await Api.SetProductParentAsync(Id, parentId);
+            _parentName = _product.Parent?.Name ?? string.Empty;
+            return _product.Parent is null ? "The product is a top-level product now." : $"The product belongs to '{_product.Parent.Name}' now.";
+        });
+    }
+
+    private Task AddAliasAsync() =>
+        RunAsync(async () =>
+        {
+            var alias = _newAlias.Trim();
+            _product = await Api.AddProductAliasAsync(Id, _newAlias);
+            _newAlias = string.Empty;
+            return $"Alias '{alias}' added.";
+        });
+
+    private Task RemoveAliasAsync(ProductAlias alias) =>
+        RunAsync(async () =>
+        {
+            await Api.RemoveProductAliasAsync(Id, alias.Id);
+            _product = await Api.GetProductAsync(Id);
+            return $"Alias '{alias.Alias}' removed. Articles and dates that used it are unmatched again.";
+        });
+
+    private string GetFeatureRename(ProductFeature feature) => _featureRenames.TryGetValue(feature.Id, out var name) ? name : feature.Name;
+
+    private void SetFeatureRename(ProductFeature feature, string? name) => _featureRenames[feature.Id] = name ?? string.Empty;
+
+    private string GetFeatureAlias(ProductFeature feature) => _featureAliases.TryGetValue(feature.Id, out var alias) ? alias : string.Empty;
+
+    private void SetFeatureAlias(ProductFeature feature, string? alias) => _featureAliases[feature.Id] = alias ?? string.Empty;
+
+    private string GetFeatureDescription(ProductFeature feature) => _featureDescriptions.TryGetValue(feature.Id, out var text) ? text : feature.Description;
+
+    private void SetFeatureDescription(ProductFeature feature, string? text) => _featureDescriptions[feature.Id] = text ?? string.Empty;
+
+    private string GetFeatureReleaseDate(ProductFeature feature) =>
+        _featureReleaseDates.TryGetValue(feature.Id, out var date) ? date : feature.ReleaseDate?.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) ?? string.Empty;
+
+    private void SetFeatureReleaseDate(ProductFeature feature, string? date) => _featureReleaseDates[feature.Id] = date ?? string.Empty;
+
+    private string GetContentQuery(ProductFeature feature) => _contentQueries.TryGetValue(feature.Id, out var query) ? query : string.Empty;
+
+    private void SetContentQuery(ProductFeature feature, string? query) => _contentQueries[feature.Id] = query ?? string.Empty;
+
+    private string GetContentCollection(ProductFeature feature) => _contentCollections.TryGetValue(feature.Id, out var collection) ? collection : string.Empty;
+
+    private void SetContentCollection(ProductFeature feature, string? collection) => _contentCollections[feature.Id] = collection ?? string.Empty;
+
+    private string GetUnmatchedTarget(string name) => _unmatchedTargets.TryGetValue(name, out var target) ? target : string.Empty;
+
+    private void SetUnmatchedTarget(string name, string? target) => _unmatchedTargets[name] = target ?? string.Empty;
+
+    // The dates show the curated feature, so the product is loaded again after every feature change.
+    private async Task ReloadAfterFeatureChangeAsync(ProductFeatureOverview? overview = null)
+    {
+        _featureRenames.Clear();
+        _pendingFeatureDelete = null;
+        _features = overview ?? await Api.GetProductFeaturesAsync(Id);
+        _product = await Api.GetProductAsync(Id) ?? _product;
+    }
+
+    private Task AddFeatureAsync() =>
+        RunAsync(async () =>
+        {
+            var name = _newFeature.Trim();
+            await ReloadAfterFeatureChangeAsync(await Api.CreateProductFeatureAsync(Id, _newFeature));
+            _newFeature = string.Empty;
+            return $"Feature '{name}' added.";
+        });
+
+    private Task RenameFeatureAsync(ProductFeature feature) =>
+        RunAsync(async () =>
+        {
+            var name = GetFeatureRename(feature).Trim();
+            await ReloadAfterFeatureChangeAsync(await Api.RenameProductFeatureAsync(Id, feature.Id, name));
+            return $"Renamed to '{name}'.";
+        });
+
+    private Task AddFeatureAliasAsync(ProductFeature feature) =>
+        RunAsync(async () =>
+        {
+            var alias = GetFeatureAlias(feature).Trim();
+            await ReloadAfterFeatureChangeAsync(await Api.AddProductFeatureAliasAsync(Id, feature.Id, alias));
+            _featureAliases.Remove(feature.Id);
+            return $"Alias '{alias}' added to '{feature.Name}'.";
+        });
+
+    private Task RemoveFeatureAliasAsync(ProductFeature feature, FeatureAlias alias) =>
+        RunAsync(async () =>
+        {
+            await Api.RemoveProductFeatureAliasAsync(Id, feature.Id, alias.Id);
+            await ReloadAfterFeatureChangeAsync();
+            return $"Alias '{alias.Alias}' removed from '{feature.Name}'.";
+        });
+
+    private Task DeleteFeatureAsync(ProductFeature feature) =>
+        RunAsync(async () =>
+        {
+            await Api.DeleteProductFeatureAsync(Id, feature.Id);
+            await ReloadAfterFeatureChangeAsync();
+            return $"'{feature.Name}' deleted.";
+        });
+
+    private Task SaveFeatureDetailsAsync(ProductFeature feature)
+    {
+        var dateText = GetFeatureReleaseDate(feature).Trim();
+        DateOnly? releaseDate = null;
+        if (dateText.Length > 0)
+        {
+            if (!DateOnly.TryParseExact(dateText, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed))
+            {
+                _message = $"'{dateText}' is not a date. Use yyyy-MM-dd.";
+                _messageIsError = true;
+                return Task.CompletedTask;
+            }
+
+            releaseDate = parsed;
+        }
+
+        var description = GetFeatureDescription(feature).Trim();
+        return RunAsync(async () =>
+        {
+            _features = await Api.UpdateProductFeatureDetailsAsync(Id, feature.Id, description, releaseDate);
+            _featureDescriptions.Remove(feature.Id);
+            _featureReleaseDates.Remove(feature.Id);
+            return $"Details of '{feature.Name}' saved.";
+        });
+    }
+
+    private async Task SearchFeatureContentAsync(ProductFeature feature)
+    {
+        var query = GetContentQuery(feature).Trim();
+        if (query.Length == 0)
+        {
+            return;
+        }
+
+        _contentSearchFeatureId = feature.Id;
+        _contentSearchError = null;
+        _contentResults = [];
+        _busy = true;
+
+        try
+        {
+            var collection = GetContentCollection(feature);
+            var page = await Api.GetContentItemsAsync(page: 1, pageSize: 20, search: query, collectionName: string.IsNullOrEmpty(collection) ? null : collection);
+            _contentResults = [.. page.Items ?? []];
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _contentSearchError = $"Search failed: {ex.Message}";
+        }
+        finally
+        {
+            _busy = false;
+        }
+    }
+
+    private Task AddFeatureContentAsync(ProductFeature feature, ContentItemListItem item, bool asThumbnail) =>
+        RunAsync(async () =>
+        {
+            _features = await Api.AddProductFeatureContentAsync(Id, feature.Id, item.CollectionName, item.Slug, asThumbnail);
+            return asThumbnail ? $"'{item.Title}' linked to '{feature.Name}' as its thumbnail." : $"'{item.Title}' linked to '{feature.Name}'.";
+        });
+
+    private Task RemoveFeatureContentAsync(ProductFeature feature, ProductFeatureContent link) =>
+        RunAsync(async () =>
+        {
+            await Api.RemoveProductFeatureContentAsync(Id, feature.Id, link.CollectionName, link.ItemSlug);
+            _features = await Api.GetProductFeaturesAsync(Id);
+            return $"'{link.Title}' is no longer linked to '{feature.Name}'.";
+        });
+
+    private Task SetFeatureThumbnailAsync(ProductFeature feature, ProductFeatureContent link) =>
+        RunAsync(async () =>
+        {
+            await Api.SetProductFeatureThumbnailAsync(Id, feature.Id, link.CollectionName, link.ItemSlug);
+            _features = await Api.GetProductFeaturesAsync(Id);
+            return $"'{link.Title}' is the thumbnail of '{feature.Name}' now.";
+        });
+
+    private Task AddUnmatchedAsFeatureAsync(string name) =>
+        RunAsync(async () =>
+        {
+            await ReloadAfterFeatureChangeAsync(await Api.CreateProductFeatureAsync(Id, name));
+            return $"Feature '{name}' added.";
+        });
+
+    private Task AddUnmatchedAsAliasAsync(string name)
+    {
+        var targetName = GetUnmatchedTarget(name).Trim();
+        var target = _features.Features.FirstOrDefault(f => string.Equals(f.Name, targetName, StringComparison.OrdinalIgnoreCase));
+        if (target is null)
+        {
+            _message = $"'{targetName}' is not a feature of this product. Pick a feature from the list.";
+            _messageIsError = true;
+            return Task.CompletedTask;
+        }
+
+        return RunAsync(async () =>
+        {
+            await ReloadAfterFeatureChangeAsync(await Api.AddProductFeatureAliasAsync(Id, target.Id, name));
+            return $"'{name}' is now an alias of '{target.Name}'.";
+        });
+    }
+
+    private Task MergeAsync()
+    {
+        var targetName = _mergeTarget.Trim();
+        var target = _otherProducts.FirstOrDefault(p => string.Equals(p.Name, targetName, StringComparison.OrdinalIgnoreCase));
+        if (target is null)
+        {
+            _pendingAction = PendingAction.None;
+            _message = $"'{targetName}' is not a product. Pick a product from the list.";
+            _messageIsError = true;
+            return Task.CompletedTask;
+        }
+
+        return RunAsync(async () =>
+        {
+            var merged = await Api.MergeProductAsync(Id, target.Id);
+            Navigation.NavigateTo($"/admin/products/{merged.Id}");
+            return $"Merged into '{merged.Name}'.";
+        });
+    }
+
+    private Task ConvertAsync() =>
+        RunAsync(async () =>
+        {
+            var parent = await Api.ConvertProductToFeatureAsync(Id);
+            Navigation.NavigateTo($"/admin/products/{parent.Id}/features");
+            return $"Converted into a feature of '{parent.Name}'.";
+        });
+
+    private Task DeleteAsync() =>
+        RunAsync(async () =>
+        {
+            await Api.DeleteProductAsync(Id);
+            Navigation.NavigateTo("/admin/products");
+            return "Product deleted.";
+        });
+
+    private async Task RunAsync(Func<Task<string>> change)
+    {
+        _busy = true;
+        _message = null;
+
+        try
+        {
+            _message = await change();
+            _messageIsError = false;
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = ex.Message;
+            _messageIsError = true;
+        }
+        finally
+        {
+            _busy = false;
+            _pendingAction = PendingAction.None;
+        }
+    }
+
+    private static string FormatEventDate(ProductEventLink item) => item.DatePrecision switch
+    {
+        "month" => item.EventDate.ToString("yyyy-MM", CultureInfo.InvariantCulture),
+        "quarter" => $"{item.EventDate.Year}-Q{(item.EventDate.Month - 1) / 3 + 1}",
+        _ => item.EventDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)
+    };
+}

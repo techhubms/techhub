@@ -167,7 +167,7 @@
     color: var(--color-amber);
 }
 
-/* Plan badge styles (duplicated from AdminCopilotFeatures for CSS isolation) */
+/* Plan badge styles */
 .features-plan-badge {
     display: inline-block;
     padding: 2px var(--spacing-1);

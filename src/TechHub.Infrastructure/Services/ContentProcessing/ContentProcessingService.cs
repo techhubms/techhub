@@ -84,7 +84,8 @@ public sealed class ContentProcessingService
     /// Runs a complete content processing pipeline run.
     /// All errors are caught and recorded in the job log — the method never throws.
     /// </summary>
-    public async Task RunAsync(string triggerType = "scheduled", CancellationToken ct = default)
+    /// <returns>Whether a job was started; false when a scheduled check found no due feeds.</returns>
+    public async Task<bool> RunAsync(string triggerType = "scheduled", CancellationToken ct = default)
     {
         long jobId = 0;
         var log = new StringBuilder();
@@ -116,11 +117,23 @@ public sealed class ContentProcessingService
 
         try
         {
+            IReadOnlyList<FeedConfig>? feeds = null;
+            if (triggerType == "scheduled")
+            {
+                feeds = await _feedRepo.GetEnabledAsync(ct);
+                feeds = feeds.Where(feed => feed.LastCheckedAt is not { } lastChecked
+                    || startedAt - lastChecked >= TimeSpan.FromMinutes(feed.PollingIntervalMinutes)).ToList();
+                if (feeds.Count == 0)
+                {
+                    return false;
+                }
+            }
+
             jobId = await _jobRepo.CreateAsync(triggerType, ct: ct);
 
             Log(string.Create(CultureInfo.InvariantCulture, $"Starting content processing run (trigger: {triggerType})"));
 
-            var feeds = await _feedRepo.GetEnabledAsync(ct);
+            feeds ??= await _feedRepo.GetEnabledAsync(ct);
             Log(string.Create(CultureInfo.InvariantCulture, $"Loaded {feeds.Count} feed(s) from database"));
             await FlushProgressAsync();
 
@@ -135,6 +148,7 @@ public sealed class ContentProcessingService
                 feedsProcessed++;
 
                 var ingestionResult = await _rssService.IngestAsync(feed, ct);
+                await _feedRepo.RecordCheckAsync(feed.Id, ingestionResult.Failed ? ingestionResult.ErrorMessage : null, ct);
 
                 if (ingestionResult.Failed)
                 {
@@ -311,8 +325,22 @@ public sealed class ContentProcessingService
         {
             Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message.Sanitize()}"));
             _logger.LogError(ex, "Content processing run {JobId} failed with unhandled exception", jobId);
+            if (jobId == 0)
+            {
+                try
+                {
+                    jobId = await _jobRepo.CreateAsync(triggerType, ct: ct);
+                }
+                catch (DbException recordError)
+                {
+                    _logger.LogError(recordError, "Failed to create the failed content processing job");
+                }
+            }
+
             await TryFailJobAsync(jobId, feedsProcessed, itemsAdded, itemsSkipped, errorCount, transcriptsSucceeded, transcriptsFailed, log.ToString(), ct);
         }
+
+        return jobId > 0;
     }
 
     /// <summary>

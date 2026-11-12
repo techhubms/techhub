@@ -1,3 +1,4 @@
+using Dapper;
 using FluentAssertions;
 using Microsoft.Extensions.Logging.Abstractions;
 using TechHub.Core.Models.Admin;
@@ -14,11 +15,13 @@ public class ContentProcessingJobRepositoryTests
     : IClassFixture<DatabaseFixture<ContentProcessingJobRepositoryTests>>
 {
     private readonly ContentProcessingJobRepository _repository;
+    private readonly DatabaseFixture<ContentProcessingJobRepositoryTests> _fixture;
 
     public ContentProcessingJobRepositoryTests(DatabaseFixture<ContentProcessingJobRepositoryTests> fixture)
     {
         ArgumentNullException.ThrowIfNull(fixture);
 
+        _fixture = fixture;
         _repository = new ContentProcessingJobRepository(
             fixture.Connection,
             new PostgresConnectionFactory(fixture.DataSource),
@@ -141,6 +144,24 @@ public class ContentProcessingJobRepositoryTests
         job.CompletedAt.Should().BeCloseTo(DateTimeOffset.UtcNow, TimeSpan.FromSeconds(10));
         job.DurationMs.Should().NotBeNull();
         job.DurationMs.Should().BeGreaterThanOrEqualTo(0);
+    }
+
+    [Fact]
+    public async Task CompleteAsync_JobRunningForHours_StoresFullDuration()
+    {
+        // Arrange: duration_ms must be the whole elapsed time, not only the seconds part of the interval
+        var jobId = await _repository.CreateAsync("scheduled", ct: CancellationToken.None);
+        await _fixture.Connection.ExecuteAsync(
+            "UPDATE content_processing_jobs SET started_at = NOW() - INTERVAL '2 hours 3 minutes' WHERE id = @JobId",
+            new { JobId = jobId });
+
+        // Act
+        await _repository.CompleteAsync(jobId, 1, 0, 0, 0, 0, 0, "done", ct: CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        job.Should().NotBeNull();
+        job!.DurationMs.Should().BeInRange(7_380_000, 7_400_000);
     }
 
     // ── FailAsync ──────────────────────────────────────────────────────────

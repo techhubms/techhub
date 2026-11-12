@@ -7,7 +7,7 @@ namespace TechHub.Core.Models.ContentProcessing;
 public sealed class RoundupMetadata
 {
     /// <summary>Schema version written by the classification step.</summary>
-    public const int CurrentSchemaVersion = 2;
+    public const int CurrentSchemaVersion = 3;
 
     /// <summary>Roundup role: the article gets a full write-up in the roundup of that section.</summary>
     public const string RoleLead = "lead";
@@ -34,7 +34,7 @@ public sealed class RoundupMetadata
     };
 
     /// <summary>
-    /// 1 for the original summary-based metadata, 2 for the classification output with key facts and section roles.
+    /// 1 for the original summary-based metadata, 2 for classification metadata, and 3 for product-feature mentions.
     /// </summary>
     public int SchemaVersion { get; init; } = 1;
 
@@ -52,6 +52,9 @@ public sealed class RoundupMetadata
 
     /// <summary>Official names of the 1–3 products the article is mainly about, most relevant first.</summary>
     public IReadOnlyList<string> Products { get; init; } = [];
+
+    /// <summary>Products and features the article covers, independently of whether it states dated events.</summary>
+    public IReadOnlyList<ProductFeatureMention> ProductFeatures { get; init; } = [];
 
     /// <summary>
     /// Roundup role per section slug: <see cref="RoleLead"/> or <see cref="RoleBrief"/>.

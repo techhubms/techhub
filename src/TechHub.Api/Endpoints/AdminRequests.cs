@@ -30,6 +30,48 @@ public sealed class FeedConfigRequest
     public string? Url { get; init; }
     public string? OutputDir { get; init; }
     public bool Enabled { get; init; } = true;
+
+    /// <summary>Minutes between scheduled feed checks; defaults to 60 on create, preserved when omitted on update.</summary>
+    public int? PollingIntervalMinutes { get; init; }
+}
+
+/// <summary>DTO for naming a product, or a product name (add, rename, ignore).</summary>
+public sealed class ProductNameRequest
+{
+    public string? Name { get; init; }
+}
+
+/// <summary>DTO for adding an alias to a product.</summary>
+public sealed class ProductAliasRequest
+{
+    public string? Alias { get; init; }
+}
+
+/// <summary>DTO for merging a product into another product.</summary>
+public sealed class ProductMergeRequest
+{
+    public long TargetId { get; init; }
+}
+
+/// <summary>DTO for setting the parent of a product; a null parent makes the product top-level.</summary>
+public sealed class ProductParentRequest
+{
+    public long? ParentId { get; init; }
+}
+
+/// <summary>DTO for setting the description and the release date of a feature; a null release date clears it.</summary>
+public sealed class FeatureDetailsRequest
+{
+    public string? Description { get; init; }
+    public DateOnly? ReleaseDate { get; init; }
+}
+
+/// <summary>DTO for linking a content item to a feature.</summary>
+public sealed class FeatureContentRequest
+{
+    public string? CollectionName { get; init; }
+    public string? ItemSlug { get; init; }
+    public bool IsThumbnail { get; init; }
 }
 
 /// <summary>DTO for updating custom page raw JSON.</summary>

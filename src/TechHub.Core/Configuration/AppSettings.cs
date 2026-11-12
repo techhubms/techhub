@@ -72,6 +72,12 @@ public class CollectionConfig
     public bool Custom { get; init; }
 
     /// <summary>
+    /// Key of the feature toggle that decides who sees this collection (see <c>FeatureKeys</c>).
+    /// A collection without a feature is always visible.
+    /// </summary>
+    public string? Feature { get; init; }
+
+    /// <summary>
     /// Display order for custom pages (lower values appear first).
     /// Only used when Custom=true. Defaults to 0.
     /// </summary>

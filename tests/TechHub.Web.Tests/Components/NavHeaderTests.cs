@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
+using TechHub.Web.Tests.TestSupport;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -51,6 +52,7 @@ public class NavHeaderTests : BunitContext
         ]);
 
         Services.AddSingleton(_sectionCache);
+        this.AddFeatureGate();
         RegisterDefaultBranding();
     }
 

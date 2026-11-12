@@ -128,9 +128,9 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     }
 
     /// <summary>
-    /// Test: SearchAsync for videos includes items from dedicated lookup tables (ghc_feature_content, vscode_update_items)
+    /// Test: SearchAsync for videos includes items from dedicated lookup tables (product_feature_content, vscode_update_items)
     /// Why: When querying "videos", should include root videos plus all items tracked in the
-    ///      ghc_feature_content and vscode_update_items tables — all stored with collection_name='videos'
+    ///      product_feature_content and vscode_update_items tables — all stored with collection_name='videos'
     /// </summary>
     [Fact]
     public async Task SearchAsync_VideosCollection_IncludesAllVideoItems()
@@ -144,7 +144,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Assert: all items have collection_name = 'videos' — dedicated lookup tables do not change the collection name
         results.Items.Should().HaveCount(VideosCount, $"Should return exactly {VideosCount} video items (root + ghc-features + vscode-updates)");
         results.Items.Should().OnlyContain(item => item.CollectionName == "videos",
-            "All video items (including those tracked in ghc_feature_content and vscode_update_items) have collection_name='videos'");
+            "All video items (including those tracked in product_feature_content and vscode_update_items) have collection_name='videos'");
     }
 
     /// <summary>
@@ -295,8 +295,8 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     }
 
     /// <summary>
-    /// Test: Items tracked in ghc_feature_content have correct collection_name in search results
-    /// Why: ghc-features items use collection_name='videos' — the dedicated ghc_features table does not change routing
+    /// Test: Items tracked in product_feature_content have correct collection_name in search results
+    /// Why: ghc-features items use collection_name='videos' — the dedicated product_features table does not change routing
     /// </summary>
     [Fact]
     public async Task GhcFeatureItems_HaveCorrectCollectionName()
@@ -307,10 +307,10 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Act
         var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "videos" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
-        // Assert: ghc-features items are tracked in ghc_features/ghc_feature_content but stored with collection_name='videos'
+        // Assert: ghc-features items are tracked in product_features/product_feature_content but stored with collection_name='videos'
         results.Items.Should().NotBeEmpty("TestCollections should contain video content");
         results.Items.Should().OnlyContain(item => item.CollectionName == "videos",
-            "All video items (including those in ghc_feature_content) should have collection_name='videos'");
+            "All video items (including those in product_feature_content) should have collection_name='videos'");
     }
 
     #endregion

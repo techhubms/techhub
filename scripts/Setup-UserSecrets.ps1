@@ -13,9 +13,13 @@
     development uses the correct redirect URIs and token audience. A new client
     secret is created on the app registration (appended — old secrets remain valid).
 
-    AI configuration (endpoint, deployment name) is fetched from the production App Service API site.
+    AI configuration (endpoint) is fetched from the production App Service API site. Model settings
+    (deployment, reasoning effort, service tier per AI step) are not copied: they are plain configuration
+    that lives in appsettings.json and is deployed from infra/applications.bicep. Copies stored by an
+    earlier version of this script are removed, because user secrets would override appsettings.json.
     AI auth uses DefaultAzureCredential (az login) — no API key needed or stored.
-    Newsletter ACS endpoint and unsubscribe secret are fetched from the App Service API site and Key Vault.
+    The newsletter unsubscribe secret is fetched from Key Vault. The ACS endpoint and sender address are deliberately
+    not set, so a local run can never send email (copies stored by an earlier version are removed).
 
     Requires:
         - Azure CLI (`az`) authenticated with access to rg-techhub-prod, kv-techhub-prod,
@@ -29,11 +33,6 @@
         AzureAd:TenantId                — Entra ID tenant (from current Azure CLI session)
         AzureAd:ClientId                — Localhost app registration client ID
         AiCategorization:Endpoint        — Azure OpenAI endpoint URL (production)
-        AiCategorization:Profiles:<Step>:DeploymentName / ReasoningEffort / ServiceTier
-                                         — model settings of each AI step (production), for the steps
-                                           Classification, Rewrite, RoundupNewsWriter, RoundupMetadata and TimelineExtraction
-        Newsletter:Endpoint              — ACS email endpoint URL (production)
-        Newsletter:SenderAddress         — ACS sender address (production)
         Newsletter:UnsubscribeSecret     — HMAC secret for unsubscribe URLs (from Key Vault)
         Newsletter:WebsiteBaseUrl        — https://localhost:5003
 
@@ -180,23 +179,7 @@ function Get-EnvVar($envVars, $name) {
 
 $aiEndpoint = Get-EnvVar $apiEnvVars 'AiCategorization__Endpoint'
 
-# Model settings per AI step: deployment name, reasoning effort and service tier.
-$aiProfileNames = @('Classification', 'Rewrite', 'RoundupNewsWriter', 'RoundupMetadata', 'TimelineExtraction')
-$aiProfileSettings = @('DeploymentName', 'ReasoningEffort', 'ServiceTier')
-$aiProfiles = foreach ($profileName in $aiProfileNames) {
-    foreach ($setting in $aiProfileSettings) {
-        [pscustomobject]@{
-            Key   = "AiCategorization:Profiles:${profileName}:${setting}"
-            Value = Get-EnvVar $apiEnvVars "AiCategorization__Profiles__${profileName}__${setting}"
-        }
-    }
-}
-
 Write-Host "  AI Endpoint:   $aiEndpoint" -ForegroundColor Gray
-foreach ($profileName in $aiProfileNames) {
-    $deployment = ($aiProfiles | Where-Object { $_.Key -eq "AiCategorization:Profiles:${profileName}:DeploymentName" }).Value
-    Write-Host "  AI ${profileName}: $deployment" -ForegroundColor Gray
-}
 
 # --- Fetch secrets from Key Vault ---
 Write-Host ""
@@ -242,12 +225,8 @@ function Get-KvSecret($name, $label) {
     }
 }
 
-$newsletterEndpoint         = $null
-$newsletterSenderAddress    = $null
 $newsletterUnsubscribeSecret = $null
 try {
-    $newsletterEndpoint          = Get-KvSecret 'techhub-prod-newsletter-acs-endpoint'        'Newsletter Endpoint:  '
-    $newsletterSenderAddress     = Get-KvSecret 'techhub-prod-acs-sender-address'             'Newsletter Sender:    '
     $newsletterUnsubscribeSecret = Get-KvSecret 'techhub-prod-newsletter-unsubscribe-secret'  'Newsletter Secret:    '
 }
 finally {
@@ -258,8 +237,8 @@ finally {
 }
 
 # --- Helper to set a secret ---
-function Set-Secret($project, $key, $value, [switch]$AllowEmpty) {
-    if ($null -eq $value -or (-not $AllowEmpty -and [string]::IsNullOrWhiteSpace($value))) {
+function Set-Secret($project, $key, $value) {
+    if ([string]::IsNullOrWhiteSpace($value)) {
         Write-Host "  [WARN] $key — value is empty, skipping" -ForegroundColor Yellow
         return
     }
@@ -288,15 +267,15 @@ Write-Host "Setting TechHub.Api user secrets..." -ForegroundColor Cyan
 Set-Secret $apiProject "AzureAd:TenantId" $tenantId
 Set-Secret $apiProject "AzureAd:ClientId" $clientId
 Set-Secret $apiProject "AiCategorization:Endpoint" $aiEndpoint
-# Settings the app does not define at all are left to appsettings.json. An explicitly empty value (for example
-# no reasoning effort) is stored as empty so local runs match production instead of falling back to appsettings.json.
-foreach ($aiProfile in $aiProfiles) {
-    if ($null -ne $aiProfile.Value) {
-        Set-Secret $apiProject $aiProfile.Key $aiProfile.Value -AllowEmpty
+
+# Earlier versions copied the AI model settings (they duplicate appsettings.json and override it) and the ACS endpoint and
+# sender address (a local run must never be able to send email) here. Remove them.
+foreach ($line in ((dotnet user-secrets list --project $apiProject 2>&1 | Out-String) -split '\r?\n')) {
+    if ($line -match '^(AiCategorization:Profiles:[^ ]+|Newsletter:Endpoint|Newsletter:SenderAddress) =') {
+        dotnet user-secrets remove $Matches[1] --project $apiProject | Out-Null
+        Write-Host "  [REMOVE] $($Matches[1]) — not set locally anymore" -ForegroundColor Yellow
     }
 }
-Set-Secret $apiProject "Newsletter:Endpoint" $newsletterEndpoint
-Set-Secret $apiProject "Newsletter:SenderAddress" $newsletterSenderAddress
 Set-Secret $apiProject "Newsletter:UnsubscribeSecret" $newsletterUnsubscribeSecret
 # Newsletter:WebsiteBaseUrl is already set in appsettings.Development.json
 
@@ -317,7 +296,7 @@ Write-Host ""
 Write-Host "Done. All secrets populated." -ForegroundColor Green
 Write-Host ""
 Write-Host "  AzureAd values use the localhost app registration ('$AppDisplayName')." -ForegroundColor Gray
-Write-Host "  AI endpoint/deployment and Newsletter values use production." -ForegroundColor Gray
+Write-Host "  AI endpoint and the newsletter unsubscribe secret come from production." -ForegroundColor Gray
 Write-Host "  AI auth uses DefaultAzureCredential (az login) — no API key stored." -ForegroundColor Gray
 if ($clientSecret) {
     Write-Host "  Client secret created on app registration (appended — old secrets remain valid)." -ForegroundColor Gray

@@ -173,9 +173,3 @@ As this part ended up being quite long, we’ll leave it there, and in the next 
 - [Part One](https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1)
 
 - Part Two – This post!
-
-Have you enjoyed this post and found it useful? If so, please consider supporting me:
-
-[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)Buy me a coffee](https://www.buymeacoffee.com/stevejgordon) [
-![Donate with PayPal](https://www.stevejgordon.co.uk/wp-content/uploads/2020/07/PaypalLogo.png)
-](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WV4JPPV9FS34L&source=url)

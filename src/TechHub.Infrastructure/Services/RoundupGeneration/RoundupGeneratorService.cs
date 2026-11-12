@@ -330,6 +330,38 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
                         _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
                     }
                 }
+                else if (result.Item is null && !result.IsFailure)
+                {
+                    // The current classifier would exclude this stored article, so there is no roundup metadata to enrich.
+                    // Store neutral metadata: otherwise it is classified again in every section and on every run.
+                    // It has no section roles, so it stays a lead (never a missing story), ordered last as low significance.
+                    // The products stored at write time are kept (the repository reads them under the article lock, so
+                    // products a concurrent timeline backfill stored meanwhile survive): being excluded from
+                    // classification is no evidence that the article has no product. The list below only serves the
+                    // in-memory article of this run.
+                    var neutral = new RoundupMetadata
+                    {
+                        SchemaVersion = RoundupMetadata.CurrentSchemaVersion,
+                        Significance = "low",
+                        Products = article.Products
+                    };
+                    var stored = await _writeRepo.UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(
+                        article.CollectionName,
+                        article.Slug,
+                        ContentItemWriteRepository.SerializeAiMetadata(neutral),
+                        article.Revision,
+                        ct);
+
+                    if (!stored)
+                    {
+                        _logger.LogInformation("Skipped AI metadata backfill for {Slug} in {Collection}: the article changed during classification", article.Slug, article.CollectionName);
+                    }
+                    else
+                    {
+                        enriched[article.ExternalUrl] = article.WithMetadata(neutral);
+                        lp.Report($"AI metadata backfill: {article.Slug} would be excluded by the classifier ({result.Explanation}); stored neutral metadata");
+                    }
+                }
                 else
                 {
                     _logger.LogDebug("AI categorization returned no metadata for {Slug} — using defaults", article.Slug);

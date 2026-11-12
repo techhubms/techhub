@@ -87,6 +87,7 @@ public class AiCategorizationServiceTests
         string? keyFactsJson = null,
         string significance = "medium",
         string? eventsJson = null,
+        string? productFeaturesJson = null,
         string title = "Azure OpenAI Basics",
         string? excerptJson = null)
     {
@@ -94,6 +95,7 @@ public class AiCategorizationServiceTests
         rolesJson ??= """[{"section":"ai","role":"lead"},{"section":"azure","role":"brief"}]""";
         keyFactsJson ??= """["Feature X is generally available.","It costs 5 dollars."]""";
         eventsJson ??= "[]";
+        productFeaturesJson ??= "[]";
         excerptJson ??= "\"Jane explains the basics.\"";
 
         return $$"""
@@ -112,6 +114,7 @@ public class AiCategorizationServiceTests
               "content_kind": "tutorial",
               "lifecycle": "ga",
               "products": ["Azure OpenAI Service"],
+              "product_features": {{productFeaturesJson}},
               "timeline_events": {{eventsJson}}
             }
             """;
@@ -120,7 +123,7 @@ public class AiCategorizationServiceTests
     private const string ExcludedJson = """
         {"included":false,"explanation":"Sales Pitches. Promotional content.","title":null,"author":null,"sections":[],
          "primary_section":null,"tags":[],"excerpt":null,"section_roles":[],"key_facts":[],"significance":null,
-         "content_kind":null,"lifecycle":null,"products":[],"timeline_events":[]}
+         "content_kind":null,"lifecycle":null,"products":[],"product_features":[],"timeline_events":[]}
         """;
 
     private void SetupResponses(params string[] responses)
@@ -146,7 +149,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ExcludedJson));
 
-        var result = await CreateSut().CategorizeAsync(CreateRawItem());
+        var result = await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.Item.Should().BeNull();
         result.IsFailure.Should().BeFalse();
@@ -160,7 +163,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()), Wrap("Rewritten body."));
 
-        var result = await CreateSut().CategorizeAsync(CreateRawItem());
+        var result = await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeFalse();
         _requests.Should().HaveCount(2);
@@ -178,7 +181,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.Item.Should().NotBeNull();
         result.Item!.Content.Should().BeEmpty();
@@ -190,7 +193,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()), Wrap("partial", finishReason: "length"));
 
-        var result = await CreateSut().CategorizeAsync(CreateRawItem());
+        var result = await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Item.Should().BeNull();
@@ -202,7 +205,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()), Wrap("   "));
 
-        var result = await CreateSut().CategorizeAsync(CreateRawItem());
+        var result = await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Item.Should().BeNull();
@@ -213,7 +216,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()), Wrap("```markdown\n## Heading\n\nText\n```"));
 
-        var result = await CreateSut().CategorizeAsync(CreateRawItem());
+        var result = await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.Item!.Content.Should().Be("## Heading\n\nText");
     }
@@ -222,11 +225,11 @@ public class AiCategorizationServiceTests
     public async Task CategorizeAsync_ContentHashIsComputedOverTheRewrittenContent()
     {
         SetupResponses(Wrap(ClassificationJson()), Wrap("Body one."));
-        var first = await CreateSut().CategorizeAsync(CreateRawItem());
+        var first = await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
         _requests.Clear();
         SetupResponses(Wrap(ClassificationJson()), Wrap("Body two."));
 
-        var second = await CreateSut().CategorizeAsync(CreateRawItem());
+        var second = await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         first.Item!.ContentHash.Should().NotBe(second.Item!.ContentHash);
     }
@@ -238,7 +241,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ExcludedJson));
 
-        await CreateSut().ClassifyAsync(CreateRawItem());
+        await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         var body = Parse(_requests[0]);
         body.GetProperty("service_tier").GetString().Should().Be("flex");
@@ -254,7 +257,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ExcludedJson));
 
-        await CreateSut().ClassifyAsync(CreateRawItem());
+        await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         var schema = Parse(_requests[0]).GetProperty("response_format").GetProperty("json_schema").GetProperty("schema");
         var properties = schema.GetProperty("properties").EnumerateObject().Select(p => p.Name).ToList();
@@ -268,7 +271,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ExcludedJson));
 
-        await CreateSut(sections: ["quantum", "ai"]).ClassifyAsync(CreateRawItem());
+        await CreateSut(sections: ["quantum", "ai"]).ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         var properties = Parse(_requests[0]).GetProperty("response_format").GetProperty("json_schema")
             .GetProperty("schema").GetProperty("properties");
@@ -285,7 +288,7 @@ public class AiCategorizationServiceTests
             primary: "quantum",
             rolesJson: """[{"section":"quantum","role":"lead"}]""")));
 
-        var result = await CreateSut(sections: ["ai", "quantum"]).ClassifyAsync(CreateRawItem());
+        var result = await CreateSut(sections: ["ai", "quantum"]).ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeFalse();
     }
@@ -295,7 +298,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()));
 
-        var result = await CreateSut(sections: ["ai"]).ClassifyAsync(CreateRawItem());
+        var result = await CreateSut(sections: ["ai"]).ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("invalid sections");
@@ -306,7 +309,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()), Wrap("Body."));
 
-        await CreateSut().CategorizeAsync(CreateRawItem());
+        await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         Parse(_requests[1]).TryGetProperty("response_format", out _).Should().BeFalse();
     }
@@ -316,7 +319,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()), Wrap("Body."));
 
-        await CreateSut().CategorizeAsync(CreateRawItem());
+        await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         var userMessage = Parse(_requests[1]).GetProperty("messages")[1].GetProperty("content").GetString();
         userMessage.Should().Contain("TITLE: Azure OpenAI Basics");
@@ -329,7 +332,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()), Wrap("Body."));
 
-        await CreateSut().CategorizeAsync(CreateRawItem(interactive: true));
+        await CreateSut().CategorizeAsync(CreateRawItem(interactive: true), TestContext.Current.CancellationToken);
 
         _requests.Should().HaveCount(2);
         _requests.Should().OnlyContain(r => !HasServiceTier(r));
@@ -340,7 +343,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson()), Wrap("Body."));
 
-        await CreateSut().CategorizeAsync(CreateRawItem());
+        await CreateSut().CategorizeAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         _requests.Should().OnlyContain(r => Parse(r).GetProperty("service_tier").GetString() == "flex");
     }
@@ -352,7 +355,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson(primary: "security")));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("not in sections");
@@ -363,7 +366,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson(sectionsJson: """["ai","cooking"]""")));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("invalid sections");
@@ -374,7 +377,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson(keyFactsJson: "[]")));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("key facts");
@@ -385,7 +388,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson(significance: "critical")));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("significance");
@@ -396,7 +399,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson(excerptJson: "null")));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
     }
@@ -406,7 +409,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap("""{"included":false,"explanation":""}"""));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
     }
@@ -416,7 +419,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap("""{"explanation":"x"}"""));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
     }
@@ -426,7 +429,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap("this is not json"));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
     }
@@ -438,7 +441,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson(rolesJson: """[{"section":"ai","role":"brief"},{"section":"azure","role":"brief"}]""")));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         var roles = result.Item!.RoundupMetadata!.SectionRoles;
         roles["ai"].Should().Be("lead");
@@ -450,7 +453,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson(rolesJson: """[{"section":"ai","role":"lead"}]""")));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.Item!.RoundupMetadata!.SectionRoles["azure"].Should().Be("lead");
     }
@@ -460,7 +463,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson(rolesJson: """[{"section":"security","role":"lead"}]""")));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
     }
@@ -470,17 +473,18 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ClassificationJson(rolesJson: """[{"section":"ai","role":"headline"}]""")));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
     }
 
     [Fact]
-    public async Task ClassifyAsync_StoresSchemaVersion2Metadata()
+    public async Task ClassifyAsync_StoresSchemaVersion3MetadataAndFeatureMentionsWithoutDates()
     {
-        SetupResponses(Wrap(ClassificationJson()));
+        const string ProductFeatures = """[{"product":"Azure OpenAI Service","feature":"Structured outputs"}]""";
+        SetupResponses(Wrap(ClassificationJson(productFeaturesJson: ProductFeatures)));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         var meta = result.Item!.RoundupMetadata!;
         meta.SchemaVersion.Should().Be(RoundupMetadata.CurrentSchemaVersion);
@@ -489,6 +493,9 @@ public class AiCategorizationServiceTests
         meta.ContentKind.Should().Be("tutorial");
         meta.Lifecycle.Should().Be("ga");
         meta.Products.Should().Equal("Azure OpenAI Service");
+        meta.ProductFeatures.Should().ContainSingle()
+            .Which.Should().BeEquivalentTo(new ProductFeatureMention { Product = "Azure OpenAI Service", Feature = "Structured outputs" });
+        result.Item!.TimelineEvents.Should().BeEmpty();
     }
 
     // ── Timeline events ───────────────────────────────────────────────────────
@@ -502,7 +509,7 @@ public class AiCategorizationServiceTests
             """;
         SetupResponses(Wrap(ClassificationJson(eventsJson: Events)));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         // Published 14 March 23:30 UTC, which is already 15 March in Brussels.
         var e = result.Item!.TimelineEvents.Should().ContainSingle().Subject;
@@ -544,7 +551,7 @@ public class AiCategorizationServiceTests
             """;
         SetupResponses(Wrap(ClassificationJson(eventsJson: Events)));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeFalse();
         result.Item!.TimelineEvents.Should().BeEmpty();
@@ -566,7 +573,7 @@ public class AiCategorizationServiceTests
             AuthorOverride = "Override Author"
         };
 
-        var result = await CreateSut().ClassifyAsync(raw);
+        var result = await CreateSut().ClassifyAsync(raw, TestContext.Current.CancellationToken);
 
         result.Item!.Author.Should().Be("Override Author");
     }
@@ -585,7 +592,7 @@ public class AiCategorizationServiceTests
             FeedLevelAuthor = "Feed Author"
         };
 
-        var result = await CreateSut().ClassifyAsync(raw);
+        var result = await CreateSut().ClassifyAsync(raw, TestContext.Current.CancellationToken);
 
         result.Item!.Author.Should().Be("Feed Author");
     }
@@ -597,7 +604,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap(ExcludedJson, finishReason: "length"));
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("incomplete");
@@ -608,7 +615,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses("""{"choices":[{"finish_reason":"stop","message":{"content":""}}]}""");
 
-        var result = await CreateSut().ClassifyAsync(CreateRawItem());
+        var result = await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("empty");
@@ -622,7 +629,7 @@ public class AiCategorizationServiceTests
             .ReturnsAsync(new AiCompletionResult(false, null, ContentFilterMessage: "blocked"));
 
         var result = await CreateSut(new AiCategorizationOptions { MaxRetries = 3, RateLimitDelaySeconds = 0, Profiles = _defaultOptions.Profiles })
-            .ClassifyAsync(CreateRawItem());
+            .ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Be("blocked");
@@ -640,7 +647,7 @@ public class AiCategorizationServiceTests
                 : new AiCompletionResult(false, Wrap(ExcludedJson)));
 
         var result = await CreateSut(new AiCategorizationOptions { MaxRetries = 3, RateLimitDelaySeconds = 0, Profiles = _defaultOptions.Profiles })
-            .ClassifyAsync(CreateRawItem());
+            .ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeFalse();
         calls.Should().Be(2);
@@ -654,7 +661,7 @@ public class AiCategorizationServiceTests
             .ReturnsAsync(new AiCompletionResult(true, null, RetryAfterSeconds: 0));
 
         var result = await CreateSut(new AiCategorizationOptions { MaxRetries = 2, RateLimitDelaySeconds = 0, Profiles = _defaultOptions.Profiles })
-            .ClassifyAsync(CreateRawItem());
+            .ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("failed after 2 attempts");
@@ -684,7 +691,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap($$"""{"timeline_events":[{{ExplicitEventJson}}]}"""));
 
-        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeFalse();
         var e = result.Events.Should().ContainSingle().Subject;
@@ -694,18 +701,79 @@ public class AiCategorizationServiceTests
     }
 
     [Fact]
-    public async Task ExtractTimelineEventsAsync_UsesTimelineExtractionProfileAndTimelineOnlySchema()
+    public async Task ExtractTimelineEventsAsync_UsesTimelineExtractionProfileAndTimelineAndProductsSchema()
     {
-        SetupResponses(Wrap("""{"timeline_events":[]}"""));
+        SetupResponses(Wrap("""{"products":[],"timeline_events":[]}"""));
 
-        await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+        await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         var body = Parse(_requests[0]);
         body.GetProperty("model").GetString().Should().Be(TimelineDeployment);
         var schema = body.GetProperty("response_format").GetProperty("json_schema");
         schema.GetProperty("strict").GetBoolean().Should().BeTrue();
-        schema.GetProperty("schema").GetProperty("required").EnumerateArray().Select(e => e.GetString()).Should().Equal("timeline_events");
-        body.GetProperty("messages")[0].GetProperty("content").GetString().Should().Contain("timeline_events").And.NotContain("{{TIMELINE_RULES}}");
+        schema.GetProperty("schema").GetProperty("required").EnumerateArray().Select(e => e.GetString()).Should().Equal("products", "product_features", "timeline_events");
+        var system = body.GetProperty("messages")[0].GetProperty("content").GetString();
+        system.Should().Contain("timeline_events").And.Contain("Naming products and features")
+            .And.NotContain("{{TIMELINE_RULES}}").And.NotContain("{{CATALOG_RULES}}");
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_ReturnsTheProductsTrimmedDistinctAndLimitedToThree()
+    {
+        SetupResponses(Wrap("""{"products":["  GitHub Copilot ","github copilot","Visual Studio Code","Azure Functions","Microsoft Fabric"],"timeline_events":[]}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
+
+        result.IsFailure.Should().BeFalse();
+        result.Products.Should().Equal("GitHub Copilot", "Visual Studio Code", "Azure Functions");
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_ReturnsFeatureMentionsWithoutEvents()
+    {
+        SetupResponses(Wrap("""{"products":["GitHub Copilot"],"product_features":[{"product":"GitHub Copilot","feature":"Copilot Fusion"}],"timeline_events":[]}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
+
+        result.IsFailure.Should().BeFalse();
+        result.Events.Should().BeEmpty();
+        result.ProductFeatures.Should().ContainSingle()
+            .Which.Should().BeEquivalentTo(new ProductFeatureMention { Product = "GitHub Copilot", Feature = "Copilot Fusion" });
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_WithoutAProductsProperty_ReturnsNullProducts()
+    {
+        SetupResponses(Wrap("""{"timeline_events":[]}"""));
+
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
+
+        result.IsFailure.Should().BeFalse();
+        result.Products.Should().BeNull("an answer that does not report products must not overwrite the stored ones");
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_SystemPromptHasTheSharedCatalogRulesAndNoPlaceholders()
+    {
+        SetupResponses(Wrap(ClassificationJson()));
+
+        await CreateSut().ClassifyAsync(CreateRawItem(), TestContext.Current.CancellationToken);
+
+        var system = Parse(_requests[0]).GetProperty("messages")[0].GetProperty("content").GetString();
+        system.Should().Contain("Naming products and features").And.Contain("by itself").And.NotContain("Rules for plans and surfaces")
+            .And.NotContain("{{TIMELINE_RULES}}").And.NotContain("{{CATALOG_RULES}}");
+    }
+
+    [Fact]
+    public async Task ExtractTimelineEventsAsync_SystemPromptDescribesTheRulesWithoutListingCatalogNames()
+    {
+        SetupResponses(Wrap("""{"products":[],"timeline_events":[]}"""));
+
+        await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
+
+        var system = Parse(_requests[0]).GetProperty("messages")[0].GetProperty("content").GetString();
+        system.Should().Contain("can you use, buy, install or deploy it by itself").And.Contain("billing concept").And.Contain("never guess a rename");
+        system.Should().NotContain("Token-based billing").And.NotContain("Azure AI Foundry", "the rules describe what to do instead of listing names of the catalog");
     }
 
     [Fact]
@@ -713,7 +781,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap("""{"timeline_events":[]}"""));
 
-        await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+        await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         var user = Parse(_requests[0]).GetProperty("messages")[1].GetProperty("content").GetString();
         user.Should().Contain("DATE: 2026-03-15").And.Contain("TITLE: Test Article").And.Contain("Full article text");
@@ -727,7 +795,7 @@ public class AiCategorizationServiceTests
             """;
         SetupResponses(Wrap($$"""{"timeline_events":[{{Event}}]}"""));
 
-        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.Events.Should().ContainSingle().Which.Date.Should().Be(new DateOnly(2026, 3, 15));
     }
@@ -737,7 +805,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap("""{"timeline_events":[]}"""));
 
-        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeFalse();
         result.Events.Should().BeEmpty();
@@ -748,7 +816,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap("""{"something":"else"}"""));
 
-        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
     }
@@ -758,7 +826,7 @@ public class AiCategorizationServiceTests
     {
         SetupResponses(Wrap("""{"timeline_events":[]}""", finishReason: "length"));
 
-        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("incomplete");
@@ -771,10 +839,118 @@ public class AiCategorizationServiceTests
             .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new AiCompletionResult(false, null, ContentFilterMessage: "blocked"));
 
-        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem());
+        var result = await CreateSut().ExtractTimelineEventsAsync(CreateRawItem(), TestContext.Current.CancellationToken);
 
         result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Be("blocked");
+    }
+
+    // ── Missed deadlines ──────────────────────────────────────────────────────
+
+    private static RawFeedItem ItemWithContent(string content) => new()
+    {
+        Title = "Test Article",
+        ExternalUrl = "https://example.com/article",
+        PublishedAt = new DateTimeOffset(2026, 10, 21, 10, 0, 0, TimeSpan.Zero),
+        FeedItemData = "A test description",
+        FeedName = "Test Feed",
+        CollectionName = "community",
+        FullContent = content
+    };
+
+    private const string DeadlineText = "Microsoft Foundry is retiring workflows on December 1, 2026. After that date the designer is not supported.";
+
+    private const string DecemberRetirementJson = """
+        {"kind":"retirement","product":"Microsoft Foundry","feature":"Workflows","description":"Workflows are retired",
+         "date_source":"explicit","date":"2026-12-01","date_precision":"day","quote":"retiring workflows on December 1, 2026"}
+        """;
+
+    [Fact]
+    public async Task ClassifyAsync_DeadlineInTheTextWithoutAnEvent_AddsTheEventsOfAFocusedExtraction()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap($$"""{"timeline_events":[{{DecemberRetirementJson}}]}"""));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
+
+        result.IsFailure.Should().BeFalse();
+        result.Item!.TimelineEvents.Should().ContainSingle().Which.Date.Should().Be(new DateOnly(2026, 12, 1));
+        _requests.Should().HaveCount(2);
+        Parse(_requests[1]).GetProperty("model").GetString().Should().Be(TimelineDeployment);
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_DeadlineAlreadyHasAnEvent_MakesNoSecondCall()
+    {
+        SetupResponses(Wrap(ClassificationJson(eventsJson: $"[{DecemberRetirementJson}]")));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
+
+        result.Item!.TimelineEvents.Should().ContainSingle();
+        _requests.Should().ContainSingle();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_DeadlineInAnExcludedItem_MakesNoSecondCall()
+    {
+        SetupResponses(Wrap(ExcludedJson));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
+
+        result.Item.Should().BeNull();
+        _requests.Should().ContainSingle();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_FocusedExtractionReturnsAnInvalidAnswer_KeepsTheClassification()
+    {
+        SetupResponses(Wrap(ClassificationJson()), Wrap("""{"timeline_events":[]}""", finishReason: "length"));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
+
+        result.IsFailure.Should().BeFalse();
+        result.Item!.TimelineEvents.Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_FocusedExtractionFindsTheSameEventOnADifferentDate_KeepsBothDates()
+    {
+        const string OtherDate = """
+            {"kind":"retirement","product":"Microsoft Foundry","feature":"Workflows","description":"Workflows are retired",
+             "date_source":"explicit","date":"2026-11-15","date_precision":"day","quote":"q"}
+            """;
+        SetupResponses(Wrap(ClassificationJson(eventsJson: $"[{OtherDate}]")), Wrap($$"""{"timeline_events":[{{DecemberRetirementJson}}]}"""));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
+
+        result.Item!.TimelineEvents.Select(e => e.Date).Should().Equal(new DateOnly(2026, 11, 15), new DateOnly(2026, 12, 1));
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_FocusedExtractionRepeatsTheSameEventOnTheSameDate_DoesNotDuplicateIt()
+    {
+        SetupResponses(Wrap(ClassificationJson(eventsJson: $"[{DecemberRetirementJson}]")), Wrap($$"""{"timeline_events":[{{DecemberRetirementJson}}]}"""));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
+
+        result.Item!.TimelineEvents.Should().ContainSingle();
+    }
+
+    [Fact]
+    public async Task ClassifyAsync_FocusedExtractionFindsTheSameEventAndDateWithDifferentPrecision_KeepsBoth()
+    {
+        const string MonthPrecision = """
+            {"kind":"ga","product":"Microsoft Foundry","feature":"Workflows","description":"Workflows are GA",
+             "date_source":"explicit","date":"2026-12-01","date_precision":"month","quote":"q"}
+            """;
+        const string DayPrecision = """
+            {"kind":"ga","product":"Microsoft Foundry","feature":"Workflows","description":"Workflows are GA",
+             "date_source":"explicit","date":"2026-12-01","date_precision":"day","quote":"q"}
+            """;
+        SetupResponses(Wrap(ClassificationJson(eventsJson: $"[{MonthPrecision}]")), Wrap($$"""{"timeline_events":[{{DayPrecision}}]}"""));
+
+        var result = await CreateSut().ClassifyAsync(ItemWithContent(DeadlineText), TestContext.Current.CancellationToken);
+
+        result.Item!.TimelineEvents.Select(e => e.DatePrecision).Should().Equal("month", "day");
     }
 
     // ── Prompts ───────────────────────────────────────────────────────────────

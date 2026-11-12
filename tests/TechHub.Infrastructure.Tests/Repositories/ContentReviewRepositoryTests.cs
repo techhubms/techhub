@@ -414,6 +414,51 @@ public class ContentReviewRepositoryTests
     }
 
     [Fact]
+    public async Task ApproveAsync_MarkdownReview_RemovesProductLinksThatOnlyTheDeletedEventsJustified()
+    {
+        // Arrange — the only link of the article comes from an extracted event
+        var slug = await SeedContentItemAsync(content: "Original body");
+        var timelineRepo = new TimelineEventRepository(_fixture.Connection);
+        await timelineRepo.ReplaceEventsAsync(Collection, slug, [CreateEvent("preview")], ITimelineEventRepository.ExtractedFromSource,
+            ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+        (await GetLinkedProductNamesAsync(slug)).Should().Equal("GitHub Copilot");
+        var id = await CreateReviewAsync(slug, ContentReviewChangeType.Markdown, "Original body", "Fixed **body**");
+
+        // Act
+        await _repository.ApproveAsync(id, TestContext.Current.CancellationToken);
+
+        // Assert
+        (await GetLinkedProductNamesAsync(slug)).Should().BeEmpty("the events are deleted, so their product links must not stay behind");
+    }
+
+    [Fact]
+    public async Task ApproveAllAsync_WithMarkdownReview_LocksEveryArticleOfTheBatchBeforeWaitingForTheCatalogLock()
+    {
+        // Arrange — a catalog change is running, so the batch has to wait for the shared catalog lock
+        var markdownSlug = await SeedContentItemAsync(content: "First original");
+        var authorSlug = await SeedContentItemAsync(author: "Second original");
+        await CreateReviewAsync(markdownSlug, ContentReviewChangeType.Markdown, "First original", "First fixed");
+        await CreateReviewAsync(authorSlug, ContentReviewChangeType.Author, "Second original", "Second fixed");
+
+        await using var catalogConnection = await _fixture.DataSource.OpenConnectionAsync(TestContext.Current.CancellationToken);
+        await using var catalogTransaction = await catalogConnection.BeginTransactionAsync(TestContext.Current.CancellationToken);
+        await CatalogRelink.LockForCatalogChangeAsync(catalogConnection, catalogTransaction, TestContext.Current.CancellationToken);
+
+        // Act
+        var approve = Task.Run(() => _repository.ApproveAllAsync(TestContext.Current.CancellationToken), TestContext.Current.CancellationToken);
+        var finished = await Task.WhenAny(approve, Task.Delay(TimeSpan.FromMilliseconds(750), TestContext.Current.CancellationToken));
+
+        // Assert — article rows are taken before the catalog lock (the lock order of CatalogRelink), for the whole batch
+        finished.Should().NotBe(approve, "the batch waits for the open catalog change");
+        (await IsArticleLockedAsync(markdownSlug)).Should().BeTrue();
+        (await IsArticleLockedAsync(authorSlug)).Should().BeTrue();
+
+        await catalogTransaction.CommitAsync(TestContext.Current.CancellationToken);
+        (await approve).Should().Be(2);
+        (await GetItemColumnAsync(markdownSlug, "content")).Should().Be("First fixed");
+    }
+
+    [Fact]
     public async Task ApproveAsync_MarkdownReviewWithUnchangedText_KeepsTheTimelineEvents()
     {
         var slug = await SeedContentItemAsync(content: "Same body");
@@ -829,6 +874,28 @@ public class ContentReviewRepositoryTests
 
     private async Task<long> CreateReviewAsync(string slug, string changeType, string original, string fixedValue) =>
         await _repository.CreateAsync(slug, Collection, changeType, original, fixedValue, ct: TestContext.Current.CancellationToken);
+
+    private async Task<IReadOnlyList<string>> GetLinkedProductNamesAsync(string slug) =>
+        (await _fixture.Connection.QueryAsync<string>(
+            "SELECT product_name FROM content_item_products WHERE collection_name = @Collection AND item_slug = @Slug ORDER BY position",
+            new { Collection, Slug = slug })).ToList();
+
+    private async Task<bool> IsArticleLockedAsync(string slug)
+    {
+        await using var connection = await _fixture.DataSource.OpenConnectionAsync(TestContext.Current.CancellationToken);
+        await using var transaction = await connection.BeginTransactionAsync(TestContext.Current.CancellationToken);
+        try
+        {
+            await connection.ExecuteScalarAsync<int?>(new CommandDefinition(
+                "SELECT 1 FROM content_items WHERE collection_name = @Collection AND slug = @Slug FOR NO KEY UPDATE NOWAIT",
+                new { Collection, Slug = slug }, transaction, cancellationToken: TestContext.Current.CancellationToken));
+            return false;
+        }
+        catch (PostgresException ex) when (ex.SqlState == PostgresErrorCodes.LockNotAvailable)
+        {
+            return true;
+        }
+    }
 
     private async Task SeedExpandedTagsAsync(string slug) =>
         await _fixture.Connection.ExecuteAsync("""

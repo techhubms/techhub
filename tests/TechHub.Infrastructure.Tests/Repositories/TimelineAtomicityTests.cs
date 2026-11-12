@@ -160,6 +160,27 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
     }
 
     [Fact]
+    public async Task UpdateAiMetadataIfUnchangedAsync_WithoutTimelineReplacement_LeavesExistingEventsUnchanged()
+    {
+        var slug = await SeedAsync();
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, 1, TestContext.Current.CancellationToken);
+        var revision = (await _timelineRepo.GetItemForExtractionAsync(Collection, slug, TestContext.Current.CancellationToken))!.Revision;
+
+        var stored = await _writeRepo.UpdateAiMetadataIfUnchangedAsync(
+            Collection, slug, """{"schema_version":2}""",
+            null,
+            revision,
+            TestContext.Current.CancellationToken);
+
+        stored.Should().BeTrue();
+        var metadata = await _fixture.Connection.ExecuteScalarAsync<string?>(
+            "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug", new { Collection, Slug = slug });
+        metadata.Should().Contain("schema_version");
+        (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken))
+            .Should().ContainSingle().Which.Kind.Should().Be("preview");
+    }
+
+    [Fact]
     public async Task UpdateAiMetadataIfUnchangedAsync_WhenTheArticleWasEditedMeanwhile_StoresNothing()
     {
         var slug = await SeedAsync();
@@ -179,6 +200,34 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
         metadata.Should().BeNull("metadata classified from outdated text must not be stored");
         (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken))
             .Should().BeEmpty("the edit removed the events of the previous text and the stale classification must not bring new ones");
+    }
+
+    [Fact]
+    public async Task UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync_KeepsProductsStoredAfterTheArticleWasRead()
+    {
+        var slug = await SeedAsync();
+        var revision = (await _timelineRepo.GetItemForExtractionAsync(Collection, slug, TestContext.Current.CancellationToken))!.Revision;
+
+        // A timeline backfill stores products without changing the revision while the roundup classifies the article.
+        var timelineStored = await _timelineRepo.ReplaceEventsIfUnchangedAsync(
+            Collection, slug, [], ITimelineEventRepository.ExtractedFromStoredContent, 1, revision, ["Azure Functions"],
+            [new ProductFeatureMention { Product = "Azure Functions", Feature = "Durable Functions" }],
+            TestContext.Current.CancellationToken);
+        timelineStored.Should().BeTrue();
+
+        var stored = await _writeRepo.UpdateAiMetadataKeepingStoredProductsIfUnchangedAsync(
+            Collection, slug, """{"schema_version":3,"significance":"low","products":[],"product_features":[]}""", revision, TestContext.Current.CancellationToken);
+
+        stored.Should().BeTrue();
+        var metadata = await _fixture.Connection.ExecuteScalarAsync<string?>(
+            "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug", new { Collection, Slug = slug });
+        metadata.Should().Contain("\"significance\": \"low\"").And.Contain("Azure Functions");
+        metadata.Should().Contain("Durable Functions", "neutral metadata updates preserve stored feature mentions too");
+        var links = await _fixture.Connection.QueryAsync<(string ProductName, string FeatureName)>(
+            "SELECT product_name AS ProductName, feature_name AS FeatureName FROM content_item_products WHERE collection_name = @Collection AND item_slug = @Slug ORDER BY feature_name",
+            new { Collection, Slug = slug });
+        links.Should().Equal([("Azure Functions", string.Empty), ("Azure Functions", "Durable Functions")],
+            "the stored product and the stored feature mention each keep their own link");
     }
 
     [Fact]
@@ -260,6 +309,50 @@ public class TimelineAtomicityTests : IClassFixture<DatabaseFixture<TimelineAtom
         (await _timelineRepo.GetBackfillCandidatesAsync(new TimelineBackfillRequest { Collection = Collection }, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken))
             .Should().NotContain(c => c.Slug == slug);
     }
+
+    [Fact]
+    public async Task ReplaceEventsAsync_KeepsTheEventsOfTheCatalogAndReplacesTheOthers()
+    {
+        var slug = await SeedAsync();
+        await InsertCatalogEventAsync(slug);
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("ga")], ITimelineEventRepository.ExtractedFromStoredContent, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+
+        var events = await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken);
+        events.Select(e => e.Kind).Should().BeEquivalentTo(["launch", "ga"], "the AI replaced its own preview event and left the curated one");
+    }
+
+    [Fact]
+    public async Task ReplaceEventsAsync_WithNoEvents_StillKeepsTheEventsOfTheCatalog()
+    {
+        var slug = await SeedAsync();
+        await InsertCatalogEventAsync(slug);
+
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [], ITimelineEventRepository.ExtractedFromStoredContent, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+
+        (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().ContainSingle().Which.Kind.Should().Be("launch");
+    }
+
+    [Fact]
+    public async Task UpdateEditDataAsync_WhenTheTextChanged_RemovesTheEventsOfTheTextButKeepsTheEventsOfTheCatalog()
+    {
+        var slug = await SeedAsync();
+        await InsertCatalogEventAsync(slug);
+        await _timelineRepo.ReplaceEventsAsync(Collection, slug, [Event("preview")], ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
+
+        await _contentRepo.UpdateEditDataAsync(Collection, slug, EditData(slug), TestContext.Current.CancellationToken);
+
+        (await _timelineRepo.GetEventsForItemAsync(Collection, slug, TestContext.Current.CancellationToken)).Should().ContainSingle().Which.Kind.Should().Be("launch");
+    }
+
+    private async Task InsertCatalogEventAsync(string slug) => await _fixture.Connection.ExecuteAsync(
+        """
+        INSERT INTO content_timeline_events
+            (collection_name, item_slug, kind, product, feature, description, event_date, date_precision, date_source, extracted_from)
+        VALUES (@Collection, @Slug, 'launch', 'GitHub Copilot', 'Agent mode', 'Curated', DATE '2025-04-15', 'day', 'explicit', @ExtractedFrom)
+        """,
+        new { Collection, Slug = slug, ExtractedFrom = ITimelineEventRepository.ExtractedFromCatalog });
 
     private static ContentItemEditData EditData(string slug) => new()
     {

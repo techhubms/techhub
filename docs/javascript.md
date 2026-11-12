@@ -117,13 +117,14 @@ Scripts expose a small set of globals for Blazor JS interop and tests.
 | Global | Defined in | Purpose |
 |--------|-----------|---------|
 | `initHighlighting`, `initMermaid`, `initTocScrollSpy`, `initCustomPages` | `page-scripts.js` | Page init functions invoked by `PageComponentBase` |
-| `markScriptsLoading`, `markScriptsReady` | `page-scripts.js` (`markScriptsReady` is wrapped by `scroll-manager.js`) | Script lifecycle signals |
-| `scrollTierCardIntoView`, `preventScrollOnExpand` | `page-scripts.js` | Used by the GitHub Copilot Features page to keep scroll stable when filtering and expanding cards |
+| `markScriptsLoading`, `markScriptsReady` | `page-scripts.js` | Script lifecycle signals (`markScriptsReady` first calls `__onScriptsReadySignal`) |
+| `preventScrollOnExpand` | `page-scripts.js` | Used by `TimelineView` (section timelines) to keep scroll stable when expanding cards |
 | `TechHub.sidebar` (`isCollapsed`, `toggle`) | `sidebar-toggle.js` | Desktop sidebar collapse, called by `SidebarToggle` |
 | `TechHub.heroBanner` (`setCollapsed`, `setHash`) | `hero-banner.js` | Cookie persistence for `HeroBanner` |
 | `TechHub.scrollToTopAndClearHash` | `scroll-manager.js` | Scroll to top and remove the URL hash |
 | `mobileNav` (`lockScroll`, `unlockScroll`, `registerEscapeHandler`) | `mobile-nav.js` | Mobile menu scroll lock, called by `NavHeader` |
 | `__restoreScrollPosition`, `__savedScrollPositions` | `scroll-manager.js` | Scroll restoration entry point and saved positions (exposed for tests) |
+| `__onScriptsReadySignal` | `scroll-manager.js` | Hook that `markScriptsReady` calls on every ready signal (records the signal, hides the navigation spinner) |
 | `__scriptsReady`, `__mermaidReady`, `__dateRangeSliderReady` | `page-scripts.js`, `date-range-slider.js` | Readiness flags checked by `markScriptsReady` |
 | `__blazorWebReady`, `__blazorServerReady`, `__isBlazorInteractiveReady()` | `TechHub.Web.lib.module.js` | Blazor readiness for tests |
 | `__e2e`, `__e2eSignal(label)` | Inline script in `App.razor` | E2E lifecycle counter (see [E2E lifecycle counter](#e2e-lifecycle-counter)) |
@@ -199,8 +200,7 @@ Besides its exports, the module installs side effects on load: the `pushState` a
 
 | Export | Purpose |
 |--------|---------|
-| `initCollapsibleCards()` | Click handlers for SDLC phase blocks, SDLC cards and DX Space cards (also calls `initFeatureFilters`) |
-| `initFeatureFilters()` | Toggle filters (GHES, videos) on the GitHub Copilot Features page |
+| `initCollapsibleCards()` | Click handlers for SDLC phase blocks, SDLC cards and DX Space cards |
 | `initExpandableBadges()` | "+X more" buttons on section cards that reveal hidden custom page badges |
 
 Every handler is guarded by a `data-initialized` attribute so it is attached only once. Elements whose click is handled by Blazor `@onclick` are marked `data-initialized="blazor"` so the JS skips them.

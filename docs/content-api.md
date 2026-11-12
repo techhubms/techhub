@@ -324,79 +324,50 @@ Get tag cloud with quantile-based sizing for visual representation.
 curl -k "https://localhost:5001/api/sections/all/collections/all/tags?maxTags=30"
 ```
 
-## GHC Features API
+## Timeline API
 
-Endpoints for GitHub Copilot feature metadata stored in the `ghc_features` table.
-See [content-schema.md](content-schema.md#github-copilot-features) for the schema.
+The dated events (preview, GA, deprecation, ...) that the articles of a section state. See [Section Timelines](content-processing.md#section-timelines) for how they are built.
 
-### GET /api/ghc-features
+### GET /api/sections/{sectionName}/timeline
 
-Returns all GHC features with their content links. Public endpoint (no authentication required).
+Returns the timeline of a section, newest first. Only articles whose primary section is the requested section are used (`all` uses every article). Articles that state the same event (same date, kind, product and feature) are merged into one entry. Roundups are not used. Public endpoint (no authentication required).
+
+**Query parameters** (all optional):
+
+| Parameter | Description |
+|---|---|
+| `from` / `to` | Only events on or after / before this date (`yyyy-MM-dd`). A reversed range is swapped |
+| `kinds` | Comma separated event kinds: `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`, `retirement`, `end-of-support`, `breaking-change`, `pricing-change`, `event` |
+| `take` | Maximum number of entries, 1-500 (default 200). The newest entries are kept |
 
 **Response**: `200 OK`
 
 ```json
 [
   {
-    "slug": "copilot-free-plan",
-    "title": "GitHub Copilot Free Plan",
-    "description": "Free tier for individual developers.",
-    "releaseDate": 1700000000,
-    "plans": ["Free", "Pro"],
-    "ghesSupport": false,
-    "contentLinks": [
+    "date": "2026-03-10",
+    "datePrecision": "day",
+    "kind": "ga",
+    "product": "GitHub Copilot",
+    "productId": 12,
+    "feature": "Agent mode",
+    "description": "Agent mode is generally available.",
+    "sources": [
       {
-        "featureSlug": "copilot-free-plan",
-        "collectionName": "videos",
-        "itemSlug": "intro-to-copilot-free",
-        "isThumbnail": true,
-        "sortOrder": 1,
-        "itemTitle": "Introduction to GitHub Copilot Free",
-        "itemExternalUrl": "https://youtube.com/watch?v=..."
+        "collectionName": "news",
+        "slug": "agent-mode-ga",
+        "title": "Agent mode is GA",
+        "externalUrl": "https://example.com/agent-mode",
+        "primarySectionName": "github-copilot"
       }
-    ],
-    "thumbnailLink": { ... }
+    ]
   }
 ]
 ```
 
-### PUT /api/ghc-features/{slug}
+`product` and `feature` are the catalog names, or the AI's text when they are not in the catalog (then `productId` is `null`). `sources` are the articles that state the event, oldest first.
 
-Create or update a GHC feature. **Requires AdminOnly authorization.**
-
-**Body**: `GhcFeature` JSON (same schema as GET response item). `slug` in the body must match the URL, `title` is required and `plans` must be an array (use `[]` when no plan applies).
-
-**Response**: `204 No Content` or `400 Bad Request` (slug mismatch, empty title or null plans)
-
-### DELETE /api/ghc-features/{slug}
-
-Delete a GHC feature and its content links. **Requires AdminOnly authorization.**
-
-**Response**: `204 No Content` or `404 Not Found`
-
-### POST /api/ghc-features/{slug}/content-links
-
-Link a content item (usually a video) to a feature. **Requires AdminOnly authorization.**
-
-**Body**: `{ "collectionName": "videos", "itemSlug": "intro-to-copilot-free", "isThumbnail": false, "sortOrder": 0 }`. `collectionName` and `itemSlug` are required. Linking an item again updates its `isThumbnail` and `sortOrder`, and setting `isThumbnail` clears the previous thumbnail.
-
-**Response**: `204 No Content`, `400 Bad Request` (missing fields), or `404 Not Found` (feature or content item does not exist)
-
-### DELETE /api/ghc-features/{slug}/content-links
-
-Remove a content link. **Requires AdminOnly authorization.**
-
-**Query Parameters**: `collection` and `itemSlug` (both required)
-
-**Response**: `204 No Content`, `400 Bad Request` (missing parameters), or `404 Not Found`
-
-### PUT /api/ghc-features/{slug}/thumbnail
-
-Mark one of the feature's existing content links as its thumbnail. A feature has at most one thumbnail. **Requires AdminOnly authorization.**
-
-**Query Parameters**: `collection` and `itemSlug` (both required)
-
-**Response**: `204 No Content`, `400 Bad Request` (missing parameters), or `404 Not Found` (the link does not exist)
+**Errors**: `400` for an invalid section name, date, kind or `take`. `404` for an unknown section.
 
 ## VS Code Updates API
 

@@ -383,7 +383,7 @@ public class AdminContentItemsEndpointsTests : IClassFixture<TechHubStubbedExter
         stored.Title.Should().Be(TechHubStubbedExternalServicesApiFactory.AiTitle);
         stored.Sections.Should().Contain("ai");
         using var metadata = JsonDocument.Parse(stored.AiMetadata!);
-        metadata.RootElement.GetProperty("schema_version").GetInt32().Should().Be(2);
+        metadata.RootElement.GetProperty("schema_version").GetInt32().Should().Be(3);
         metadata.RootElement.GetProperty("key_facts")[0].GetString().Should().Be("Stubbed fact.");
 
         using var scope = _factory.Services.CreateScope();

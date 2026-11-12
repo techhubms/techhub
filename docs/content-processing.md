@@ -18,7 +18,7 @@ and writes directly to the database.
 
 | Environment | Content Source |
 |-------------|---------------|
-| Production | `ContentProcessingBackgroundService` writes RSS content directly every 60 minutes (`ContentProcessor:IntervalMinutes`) |
+| Production | `ContentProcessingBackgroundService` checks for due feeds every minute; each feed defaults to a 60-minute polling interval |
 | Staging | Scheduled processing is disabled. Data comes from a production snapshot (`scripts/Restore-Database.ps1`) |
 | PR previews | Scheduled jobs are disabled through environment variables. Manual triggers still work |
 | Local development | Scheduled processing is disabled. Data comes from a production snapshot |
@@ -35,9 +35,17 @@ To populate a local environment with real data, or to save a snapshot to disk:
 
 # Dump production data to .tmp/ without restoring
 ./scripts/Restore-Database.ps1 -Target disk
+
+# Restore the newest saved dump without downloading from production
+./scripts/Restore-Database.ps1 -Target local -UseExistingDump
 ```
 
 The `-Target` parameter accepts only `local` and `disk`. Requires VPN access to the production environment and PostgreSQL client tools installed.
+
+`-UseExistingDump` selects the most recently modified `db-restore-*.dump` or `db-backup-*.dump`
+file directly in the workspace `.tmp/` directory and skips production access. It fails explicitly
+when no saved dump exists. To choose a specific file instead, use `-SkipDump -OutputPath <file>`;
+`-UseExistingDump` cannot be combined with `-OutputPath`. Restoring still replaces the local database.
 
 ## RSS Feed Processing
 
@@ -47,20 +55,21 @@ content current. The pipeline is implemented entirely in C# and runs inside `Tec
 ### Content Processing Pipeline
 
 `ContentProcessingBackgroundService` (`IHostedService`) runs on a configurable schedule
-(default: every 60 minutes, see [Scheduling](#scheduling)) and performs:
+(default: checks for due feeds every minute, see [Scheduling](#scheduling)) and performs:
 
 1. **Feed ingestion** — Downloads and parses RSS/Atom XML from all enabled feeds in the database
-2. **Content fetching** — Fetches the full article HTML for non-YouTube items. **YouTube video items
+2. **Deduplication** — Checks `content_items` and `processed_urls` by external URL before fetching articles
+   or making AI calls. Identical URLs appearing in multiple feeds are processed once, including excluded items
+3. **Content fetching** — Fetches the full article HTML for non-YouTube items. **YouTube video items
    are processed using available metadata only** (title, description, feed tags, YouTube API tags) —
    automatic transcript fetching is intentionally disabled to avoid blocking in cloud environments
-3. **AI classification** — Sends content to Azure AI Foundry (`AiCategorizationService`) with the
+4. **AI classification** — Sends content to Azure AI Foundry (`AiCategorizationService`) with the
    classify prompt `TechHub.Infrastructure/Data/Resources/content-classify-system.md`. The answer is
    strict JSON: include or exclude, sections, tags, excerpt, roundup metadata and timeline events
    (see [AI Categorization Service](#ai-categorization-service)). Items that are excluded stop here
    and cost one cheap call
-4. **AI rewrite** — Only for included items, a second model writes the cleaned-up markdown body
+5. **AI rewrite** — Only for included items, a second model writes the cleaned-up markdown body
    (`content-rewrite-system.md`) that continues from the excerpt
-5. **Deduplication** — Checks `processed_urls` table to skip already-attempted URLs
 6. **Database write** — Upserts into `content_items` + `content_tags_expanded` and replaces the
    article's rows in `content_timeline_events` in one transaction (a failed event write stores nothing, so the
    URL is retried on the next run), and records the run in `content_processing_jobs`
@@ -119,6 +128,12 @@ RSS feeds are stored in the `rss_feed_configs` database table and managed direct
 **Optional Fields**:
 
 - **enabled**: Boolean to enable/disable feed (default: true)
+- **pollingIntervalMinutes**: Positive number of minutes between scheduled checks (default: 60).
+  Existing Microsoft Tech Community category/community aggregate feeds use 15 minutes; individual
+  board feeds and DevBlogs feeds use 60. The DevBlogs root feed is not an aggregate of its other blogs.
+  Maintainers can change any feed's interval in the add/edit dialog at `/admin/feeds`
+
+**Check status** (set by the pipeline, not editable): `last_checked_at` and `last_check_error`. Each run records, per enabled feed, when the feed was downloaded and why that failed (HTTP status, timeout, connection failure or parse error), or no error on success. The admin feeds page shows this, so a feed that returns 404 stands out.
 
 ### Adding New Feeds
 
@@ -128,6 +143,12 @@ RSS feeds are stored in the `rss_feed_configs` database table and managed direct
 2. Click "Add Feed"
 3. Fill in name, URL, output directory
 4. Save — the feed is picked up on the next scheduled run
+
+### Microsoft DevBlogs Feeds
+
+Each blog on `devblogs.microsoft.com` has its own feed at `https://devblogs.microsoft.com/<blog>/feed/`. The root feed (`https://devblogs.microsoft.com/feed/`) is only the main "Microsoft Developer Blog" (`/blog/` posts), not a roll-up of the others, so it does not overlap with the specific feeds. Posts that appear in two feeds are ingested once, because ingestion skips any external URL already in `content_items` or `processed_urls`.
+
+Feeds are added and disabled in numbered migrations (see `052_devblogs_feed_review.sql`). A migration only adds a feed when no row has its URL or its name yet, because both are unique and feeds are renamed or re-pointed in the admin. A blog whose feed redirects to another blog (the Semantic Kernel blog now redirects to the Agent Framework blog) or whose source was deleted is disabled, not removed, so its existing content keeps its feed name.
 
 ### AI Content Analysis
 
@@ -156,15 +177,17 @@ The classification step analyzes content using `src/TechHub.Infrastructure/Data/
 `AiCategorizationService` processes each item in two AI steps through `AiCompletionClient`, which
 calls the Azure AI Foundry v1 chat completions API (`{Endpoint}/openai/v1/chat/completions`, the
 deployment goes in the request `model`). The client authenticates with Microsoft Entra ID (managed
-identity in Azure, `az login` locally), so no API key is configured.
+identity in Azure, `az login` locally), so no API key is configured. The dev container sets
+`AZURE_TOKEN_CREDENTIALS=dev` (`.devcontainer/devcontainer.json`): without it the managed identity probe fails fatally inside the
+container and `DefaultAzureCredential` never reaches the Azure CLI credential.
 
 | Step | Profile | Output | Model |
 |---|---|---|---|
-| 1. Classify | `Classification` | Strict JSON (JSON schema): include/exclude, explanation, title, author, sections, primary section, tags, excerpt, `section_roles`, `key_facts`, `significance`, `content_kind`, `lifecycle`, `products`, `timeline_events` | `gpt-6.1-sol` |
+| 1. Classify | `Classification` | Strict JSON (JSON schema): include/exclude, explanation, title, author, sections, primary section, tags, excerpt, `section_roles`, `key_facts`, `significance`, `content_kind`, `lifecycle`, `products`, `product_features`, `timeline_events` | `gpt-6.1-sol` |
 | 2. Rewrite | `Rewrite` | Markdown body, only for included items | `gpt-6.1-sol` |
 | Roundup writer | `RoundupNewsWriter` | Roundup topics | `gpt-6-astra` |
 | Roundup metadata | `RoundupMetadata` | Title, tags and introduction (strict JSON) | `gpt-6.1-sol` |
-| Timeline extraction | `TimelineExtraction` | Timeline events only (strict JSON), from already stored articles: the timeline backfill job | `gpt-6-luna` |
+| Timeline extraction | `TimelineExtraction` | Products, product-feature mentions and dated timeline events (strict JSON), from already stored articles: the timeline backfill job | `gpt-6-luna` |
 
 `CategorizeAsync` runs step 1 and, when the item is included, step 2. A failing rewrite fails the
 whole item; nothing is stored. `ClassifyAsync` runs step 1 only and is used by the roundup
@@ -184,7 +207,8 @@ Configured under `"AiCategorization"`:
 | `Profiles:<Step>:ServiceTier` | `flex` in `appsettings.json` | `default` (Standard) or `flex` (50% cheaper, may queue) |
 | `MaxRetries` | `3` | Attempts per item on rate limits and transient failures |
 | `RateLimitDelaySeconds` | `15` | Wait between attempts on a rate limit without a `Retry-After` header (multiplied by the attempt number) |
-| `FlexMaxWait` | `00:30:00` | How long a Flex request keeps retrying on Flex before it falls back |
+| `FlexMaxWait` | `00:05:00` | How long a Flex request keeps retrying on Flex before it falls back |
+| `FlexUnavailableCooldown` | `00:15:00` | After a Flex request gave up, later requests within this period try Flex once and fall back at the first `429` instead of waiting `FlexMaxWait` again. `00:00:00` disables this |
 | `FlexMinRetryDelay` / `FlexMaxRetryDelay` | `00:00:30` / `00:02:00` | Backoff bounds between Flex retries. `FlexMaxRetryDelay` caps only the calculated backoff; a server `Retry-After` is honored in full (and the request falls back when that wait would exceed `FlexMaxWait`) |
 | `FlexFallbackToDefaultTier` | `true` | After `FlexMaxWait`, send the request once on the Standard tier. When `false`, the request is reported as rate limited |
 | `TimelineBackfillDelaySeconds` | `2` | Wait between articles during the timeline backfill |
@@ -192,7 +216,7 @@ Configured under `"AiCategorization"`:
 Behavior worth knowing:
 
 - **Per-step models**: Models, reasoning effort and service tier are configuration only. Switching a step to another deployment, or back to `gpt-5.2` with `ServiceTier: default`, needs no code change. No `temperature` is sent.
-- **Flex**: A `429` on a Flex request means "no capacity right now". The client keeps retrying on Flex, then falls back to the Standard tier. Rate-limit responses do not count as circuit-breaker failures, so sustained capacity shortages cannot block retries or fallback; other transient failures still count. Interactive calls (ad-hoc URL add, apply transcript) always use the Standard tier so an admin never waits in a queue.
+- **Flex**: A `429` on a Flex request means "no capacity right now". The client keeps retrying on Flex for `FlexMaxWait`, then falls back to the Standard tier. A shared `AiFlexCapacityTracker` (singleton) remembers the fallback for `FlexUnavailableCooldown`, so during a Flex shortage the items that follow do not each wait out `FlexMaxWait` (an item takes two calls, classify and rewrite) but probe Flex once and fall back at once; a Flex call that succeeds clears the state. Rate-limit responses do not count as circuit-breaker failures, so sustained capacity shortages cannot block retries or fallback; other transient failures still count. Interactive calls (ad-hoc URL add, apply transcript) always use the Standard tier so an admin never waits in a queue.
 - **Usage logging**: Every successful call logs the model, requested and served tier, prompt and cached tokens, and completion and reasoning tokens, so the real cost can be checked.
 - **Retries**: A `429` on the Standard tier waits for the server's `Retry-After` value when present. Network errors and timeouts back off 5 seconds times the attempt number. The HTTP client itself does not retry; its timeout is 15 minutes because Flex can queue.
 - **Non-retryable responses**: Content filter blocks and context-length errors return immediately and are recorded as failures with the Azure message.
@@ -201,35 +225,39 @@ Behavior worth knowing:
 
 ### Roundup Metadata
 
-The classification step stores roundup metadata in the `ai_metadata` JSONB column with `schema_version = 2`:
+The classification step stores roundup metadata in the `ai_metadata` JSONB column with `schema_version = 3`:
 
 - `key_facts` — 2 to 5 concrete facts (versions, dates, numbers) the roundup writer uses as its only source of such details
 - `significance` — `high` / `medium` / `low`: impact on developers, used to order articles in a roundup
 - `content_kind` — `announcement`, `tutorial`, `analysis`, `case-study`, `reference` or `event`
 - `lifecycle` — `new`, `preview`, `ga`, `update`, `deprecation`, `retirement` or `none`
 - `products` — 1 to 3 official product names, most relevant first. Related articles are sorted next to each other by their first product
+- `product_features` — product and feature pairs the article covers, whether or not it states dated events
 - `section_roles` — per section `lead` (full write-up in that section's roundup) or `brief` (one-line mention). The primary section is always `lead`; another section is `lead` only when the article has a distinct angle for its readers; when in doubt it is `lead`
 
 Rows with the older summary-based metadata (no `schema_version`, `roundup_summary`, `key_topics`, ...)
 count as missing: the roundup generator re-classifies them on the fly (classification only) the first time
-they appear in a roundup.
+they appear in a roundup. When the current classifier would exclude such a stored article (for example a promotional teaser from before the
+stricter rules), there is nothing to enrich: the generator stores neutral version 3 metadata (no key facts or roles, `low` significance) and
+logs the exclusion reason in the job log, so the article is not classified again for every section and every run. It stays a lead article.
+A classification that fails (timeout, invalid answer) stores nothing and is retried.
 
 ### Admin Dashboard
 
 The admin area at `/admin` provides:
 
 - **Dashboard** — Recent processing job history with status, duration, log output
-- **Run Now** button — Triggers an immediate out-of-schedule run
-- **Backfill Timeline** button — Starts the timeline backfill (see [Timeline Events](#timeline-events))
 - **RSS Feeds** — Full CRUD management of feed configurations
 - **Processed URLs** — Browse all processed URLs with status/reason; remove entries to retry
-- **Reviews** — Content review queue for proposed fixer changes (approve/reject before applying)
+- **Reviews** — One page for everything that needs a decision: the product names and features to review (see [Product Catalog](#product-catalog)), failed URLs, and the content review queue for proposed fixer changes (approve/reject before applying). The **Run Cleanup** button that starts the content fixer is here
+- **Settings** — Scheduled job switches, the **Run Processing** and **Run Roundup** buttons (immediate out-of-schedule runs), cache invalidation and the **Backfill Timeline** button (see [Timeline Events](#timeline-events))
 
 See [admin-authentication.md](admin-authentication.md) for authentication setup.
 
 ### Error Handling
 
-- **Feed unavailability**: Individual feed failures do not stop the pipeline; other feeds continue
+- **Feed unavailability**: Individual feed failures do not stop the pipeline; other feeds continue. This includes a feed that is too slow (the resilience timeout and `HttpClient.Timeout` are treated like a failed download); only cancellation of the run itself stops it
+- **Job duration**: `duration_ms` of a job is the elapsed wall time (`EXTRACT(EPOCH ...)`), including the time spent waiting on AI calls
 - **Content fetch failures**: Non-fatal; pipeline falls back to RSS metadata only
 - **YouTube videos**: Processed using only available metadata (no automatic transcript fetch);
   transcripts can be provided manually via the admin UI or batch script
@@ -243,7 +271,7 @@ Configured under `"ContentProcessor"` in `appsettings.json`:
 | Setting | Default | Description |
 |---|---|---|
 | `Enabled` | `false` (`true` in Production) | Enables scheduled runs. Manual triggers ignore it |
-| `IntervalMinutes` | `60` | Time between scheduled runs |
+| `IntervalMinutes` | `1` | How often the scheduler checks for due feeds, not how often every feed is downloaded |
 | `ItemAgeLimitDays` | `365` | RSS items older than this are skipped at ingestion |
 | `RequestDelayMs` | `10000` | Delay between items within a run, to avoid AI and site rate limits |
 | `RequestTimeoutSeconds` | `30` | Declared in the options class, but the HTTP clients use fixed timeouts configured in the API startup |
@@ -305,7 +333,17 @@ Three hosted services in `TechHub.Api` run the background jobs. Each one waits f
 | `RoundupGeneratorBackgroundService` | Every Monday at `RunHourUtc` | `scheduled`, `manual` (including regenerate) |
 | `ContentFixerBackgroundService` | None | `manual` only |
 
-Every run is recorded in `content_processing_jobs` with one of these job types:
+Scheduled processing only downloads feeds whose `pollingIntervalMinutes` has elapsed since
+`lastCheckedAt`; never-checked feeds are due immediately. Failed downloads also advance the check
+timestamp, so retries respect the feed's interval. The schedule survives application restarts.
+An idle scheduler check creates no job. Manual runs check all enabled feeds regardless of interval,
+but still skip already-processed article URLs.
+
+Runs remain sequential: a long processing run can delay due feeds, so the interval is a target
+cadence, not an exact deadline. Shorter polling reduces the risk of missing items in limited RSS
+windows, but cannot guarantee complete coverage during outages or publishing bursts.
+
+Every actual run is recorded in `content_processing_jobs` with one of these job types:
 
 | Job type | Written by |
 |---|---|
@@ -347,7 +385,7 @@ except `all`. For each section:
    excluding roundups, with `created_at` inside the target week. An item that belongs to several
    sections is therefore loaded by each of them
 2. **Existing check** — Sections whose roundup for that week already exists are skipped
-3. **AI metadata backfill** — Articles without `schema_version` 2 metadata are classified on the fly
+3. **AI metadata backfill** — Articles without current (`schema_version` 3) metadata are classified on the fly
    (classification only, never a rewrite). Their `ai_metadata` is updated and the timeline events the classification found are stored
    in the same transaction, so the "Dates to know" block does not depend on the timeline backfill having run, and a failed event
    write leaves the article on its old metadata version so it is retried
@@ -369,8 +407,9 @@ source-article link without the "Full story" sentence. The consequence is that a
 
 **Dates to know** comes from `content_timeline_events` of the section's articles of the week, for dates after the roundup week:
 *Deadlines* are `deprecation`, `retirement`, `end-of-support`, `breaking-change` and `pricing-change`;
-*Coming up* are `preview`, `ga`, `launch` and `release`. Duplicates are merged and each group shows at most ten dates. The block is
-omitted when there is nothing to report.
+*Coming up* are `preview`, `ga`, `launch` and `release`. Duplicates are merged. Events of one article with the same date and kind become one line
+("**26 October 2026**: GA — Microsoft Copilot Studio: Agent lifecycle management, Connected agents, Evaluations, Topics"), a feature that already
+names its product is not prefixed with it, and each group shows at most ten lines. The block is omitted when there is nothing to report.
 
 Writing style guidelines (`docs/writing-style-guidelines.md`) are injected into the writer and metadata prompts
 to ensure consistent tone and style throughout the roundup.
@@ -396,28 +435,50 @@ is deprecated or retired. The classification step extracts them and the applicat
 
 | Table | Purpose |
 |---|---|
-| `content_timeline_events` | One row per event: `kind`, `product`, `feature`, `description`, `event_date`, `date_precision` (`day`/`month`/`quarter`), `date_source`, `quote`, `extracted_from`, with a cascading foreign key to the source article |
+| `content_timeline_events` | One row per event: `kind`, `product` (as the AI wrote it), `product_id` (the catalog product), `feature`, `description`, `event_date`, `date_precision` (`day`/`month`/`quarter`), `date_source`, `quote`, `extracted_from` (`source`, `stored-content`, or `catalog` for the dated features of the former features page, which the AI extraction and an edit of the article leave alone), with a cascading foreign key to the source article |
 | `content_timeline_extractions` | One row per scanned article with the `prompt_version` and the number of events found, so the backfill is resumable |
 
 Event kinds are `announced`, `preview`, `ga`, `launch`, `release`, `deprecation`, `retirement`, `end-of-support`, `breaking-change`, `pricing-change` and `event`.
 
 - **Dates come from code when they are "now".** When an article says a feature "is now generally available", the model reports `date_source: publication` and no date; code fills in the article's publication date (Europe/Brussels). Explicit dates are validated, and coarse dates are normalized to the first day of the month or quarter. Events with an unparseable date are skipped and logged.
+- **Deadlines are never optional.** The rules tell the model to always report a deprecation, retirement, end of support, breaking change or pricing change with a stated date, in any kind of article; the milestone test applies to everything else. A plan with a stated date uses the kind of the planned event (`ga` for "expected to be generally available on ..."), not `announced`, and a post that summarizes a period (weekly update, newsletter, video covering several announcements) never gets `publication` dates.
+- **Safety net for missed deadlines.** `TimelineDeadlineGuard` checks the text after the classification: when it names a future date (up to five years ahead) within 150 characters of a deadline phrase (retire, deprecate, end of support, sunset, no longer supported, ...) and no extracted event has that date, the article gets a second, focused extraction on the cheap `TimelineExtraction` profile, and the new events are added. It runs for processing and for the roundup metadata backfill; an invalid answer of the second call is ignored.
 - **No quote check.** The `quote` is stored for spot checks. If the model proves unreliable, add a check that the quote appears in the article.
 - **Reprocessing replaces events.** An article's events are replaced whenever it is processed again, or when a transcript is applied. This happens in the same transaction as the article write (processing, transcript edit, roundup metadata backfill), so a failing event write never leaves a saved article with stale events or a scanned marker that does not match them. Replacements of the same article are serialized with a row lock on the article, so concurrent runs cannot store two event sets.
-- **Write-only for now.** The only reader is the roundup "Dates to know" block. The table is the basis for making the GitHub Copilot features page dynamic later.
+- **Read by the roundup and the admin.** The roundup "Dates to know" block reads the events, the admin products page lists them per product (see [Product Catalog](#product-catalog)), and every section has a public timeline page (see [Section Timelines](#section-timelines)). The features of GitHub Copilot are events of that timeline too (see [Features](product-catalog.md#features)).
+
+### Section Timelines
+
+`/{section}/timeline` shows the events of the articles of a section, newest first, grouped by year and month in the shared `TimelineView` component (the sidebar of the GitHub Copilot timeline also shows the subscription tiers, see [custom-pages.md](custom-pages.md)). It is configured as a custom collection `timeline` in each section of `appsettings.json` (all sections except `all`), so it appears in the sub-navigation and on the section card. The collection has `"Feature": "timeline"`, so it is behind a feature toggle (see [feature-toggles.md](feature-toggles.md)): it starts as admins only, and for any other visitor the buttons are hidden and the page answers `404`.
+
+- **Source.** `GET /api/sections/{sectionName}/timeline` (see [content-api.md](content-api.md#timeline-api)) joins `content_timeline_events` with the articles whose **primary** section is the section (`primary_section_name`; `all` uses every article). An article that only touches a section (for example a Fabric announcement also tagged GitHub Copilot) states events about other products, so its events stay off that section's timeline. Roundups are left out: they only repeat what their articles state.
+- **One entry per event.** Articles that state the same event (same date, kind, product and feature) are merged. The description comes from the oldest article, and every article is listed as a source when the card is opened. Products and features show their catalog names; a card is titled `Product: Feature`, or just the feature when the product is the section itself (`Agent mode` instead of `GitHub Copilot: Agent mode` on the GitHub Copilot timeline). Plans and surfaces come from the catalog qualifiers of the event.
+- **Window and filters.** The page shows the last 12 months and everything after them (deprecations are often in the future); `?since=all` shows every date. `?kinds=` filters on kinds, with the groups Releases (`announced`, `preview`, `ga`, `launch`, `release`), Deprecations (`deprecation`, `retirement`, `end-of-support`, `breaking-change`) and Other (`pricing-change`, `event`). The API returns at most 200 entries, so the page says so when it shows exactly that many.
 
 ### Timeline Backfill
 
 Existing articles are scanned by `TimelineBackfillBackgroundService`, a manual-trigger-only job (job type `timeline-backfill`). Use
-the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/timeline-backfill/trigger` (see [admin.md](admin.md)).
+the **Backfill Timeline** button on the admin dashboard or `POST /api/admin/timeline-backfill/trigger` (see [admin.md](admin.md)). The same pass also
+names the products of the article again, so it is the way to refresh the product links of stored articles after the catalog rules change.
 
-- Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it only extracts dated facts and does not decide whether an article belongs on the site, so it does not need the strictness of the classification model) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event rules with the classify prompt (`content-timeline-rules.md`)
-- Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again
+- Reads the stored excerpt and article text (the text continues after the excerpt, so both are sent) and sends them to the `TimelineExtraction` profile (`gpt-6-luna`: it extracts product and feature mentions as well as dated facts, and does not decide whether an article belongs on the site) with a dedicated prompt (`content-timeline-extract-system.md`) that shares its event and naming rules with the classify prompt (`content-timeline-rules.md`, `content-catalog-rules.md`; see [How the AI Is Asked](product-catalog.md#how-the-ai-is-asked))
+- Stores `products` and `product_features` in the article's `ai_metadata` (whatever the metadata schema version) and relinks them to the catalog, in the same transaction as the events. Feature mentions do not require a date. The rest of the metadata and the revision of the article stay as they are. An article without metadata gets an object only when extracted names exist; it has no current `schema_version`, so the roundup metadata backfill still classifies the article and replaces the object. An answer without a products or product-features property leaves that stored field alone
+- Skips articles that were scanned with the current prompt version. `force` scans them again, and raising `ITimelineEventRepository.CurrentPromptVersion` makes every older scan eligible again (version 2 added the deadline and digest rules, version 3 plans and surfaces, version 4 the products and the shared naming rules, version 5 billing concepts as features, version 6 the rules as descriptions with examples instead of lists of names, version 7 that a billing model or a group of plans is no plan, version 8 dropped plans and surfaces, version 9 the "can you use it by itself?" rule for products and features, and version 10 extracts article feature mentions independently of dates)
 - An admin edit that changes the title, excerpt, text or publication date (without extracting new events itself) removes the article's events and scan marker in the same transaction, so an ordinary run scans the edited article again
 - Options: `force`, `publishedAfter` (yyyy-MM-dd), `collection` and `limit`. Newest articles come first
 - Resumable: an article is marked as scanned only after its events are stored, so a cancelled or failed run can simply be started again. A failing article is logged and left for the next run
 - Roundups are never scanned
 - The job log lists failures and progress every 25 articles. The job row shows events stored (Added), scanned articles without events (Skipped) and scanned articles (Fixed)
+
+## Product Catalog
+
+The classification and the timeline extraction return product and feature names as free text (`ai_metadata.products`, `ai_metadata.product_features`, and the `product` and `feature` of an event). Feature mentions are independent of dated events. The names stay as the AI wrote them; a curated catalog links them to one product and feature, so "Azure AI Foundry" and "Microsoft Foundry" are the same product wherever they are used. The catalog is described in [product-catalog.md](product-catalog.md):
+
+- what a product, a child product and a feature are, and the question that tells them apart ("can you use it by itself?");
+- the naming rules that the prompts give the AI (`content-catalog-rules.md`, inserted into the classify and extraction prompts). The AI never receives the catalog;
+- how names are matched to the catalog (in the database, in tiers, never by an AI call), the article-to-product and feature-to-article links, the review queue and the starting catalog.
+
+Plans, surfaces, editions, models, regions and versions are not catalogued: the model writes them in the description of an event.
 
 ## Evaluating Models
 

@@ -54,44 +54,6 @@ public class AdminContentLinkBehaviorTests
         href.Should().Be("/github-copilot/videos/vscode-update");
     }
 
-    [Fact]
-    public void GhcFeatureContentLink_GetHref_ForExternalCollection_UsesExternalUrl()
-    {
-        // Arrange
-        var link = new GhcFeatureContentLink
-        {
-            FeatureSlug = "feature",
-            CollectionName = "news",
-            ItemSlug = "news-item",
-            ItemExternalUrl = "https://example.com/news-item"
-        };
-
-        // Act
-        var href = link.GetHref();
-
-        // Assert
-        href.Should().Be("https://example.com/news-item");
-    }
-
-    [Fact]
-    public void GhcFeatureContentLink_GetHref_ForInternalCollection_UsesInternalPath()
-    {
-        // Arrange
-        var link = new GhcFeatureContentLink
-        {
-            FeatureSlug = "feature",
-            CollectionName = "videos",
-            ItemSlug = "video-item",
-            ItemPrimarySectionName = "github-copilot"
-        };
-
-        // Act
-        var href = link.GetHref();
-
-        // Assert
-        href.Should().Be("/github-copilot/videos/video-item");
-    }
-
     private static ContentItemListItem CreateAdminContentItem(string collectionName, string externalUrl)
     {
         return new ContentItemListItem

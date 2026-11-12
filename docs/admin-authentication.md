@@ -26,6 +26,10 @@ The Web app signs users in via OIDC, then uses `ITokenAcquisition` to obtain an 
 - **`AdminOnly` policy** — Authorization policy on the API (`src/TechHub.Api/Authorization/AdminAuthorization.cs`) that requires `RequireAuthenticatedUser()` + `RequireScope()`
 - **Enterprise App** — "Assignment required" is enabled so only explicitly assigned users can sign in
 
+### Admin Detection on Public Pages
+
+The authentication cookie has path `/`, so the browser sends it to public pages too, and the Web app can tell an admin from any other visitor there. The public pages use this only to decide what to show (see [feature-toggles.md](feature-toggles.md)) and never show a sign-in link or any other sign of it.
+
 ### Logout
 
 `POST /admin/logout` requires a valid antiforgery token. Missing or invalid tokens return `400` without signing out. Valid requests clear the local authentication cookie and sign out through Entra ID when OIDC is registered. Without OIDC, logout clears only the local cookie and redirects to `/`.
@@ -72,11 +76,13 @@ This creates (on first run):
 4. A service principal with "assignment required" enabled
 5. Assigns the current user to the enterprise app
 
-The script outputs the registration details and points to `Setup-UserSecrets.ps1`, which fills all local user secrets (AzureAd settings, plus the AI and newsletter settings from Azure):
+The script outputs the registration details and points to `Setup-UserSecrets.ps1`, which fills the local user secrets (AzureAd settings, the AI endpoint and the newsletter unsubscribe secret). It never sets the newsletter email endpoint or sender, so a local run cannot send email:
 
 ```powershell
 ./scripts/Setup-UserSecrets.ps1
 ```
+
+After a dev container rebuild, the Azure app registration still exists, but local user secrets need restoring. Run `az login` if needed, then `./scripts/Setup-UserSecrets.ps1`. Do not rerun `Manage-EntraId.ps1` just because the container was rebuilt. After configuring secrets, restart the apps with `Stop-Servers`, then `Run -WithoutTests`.
 
 To set the AzureAd values by hand instead, store them with .NET User Secrets:
 

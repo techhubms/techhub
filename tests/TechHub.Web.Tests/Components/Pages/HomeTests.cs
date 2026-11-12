@@ -10,6 +10,7 @@ using TechHub.Core.Models;
 using TechHub.Web.Components;
 using TechHub.Web.Components.Pages;
 using TechHub.Web.Services;
+using TechHub.Web.Tests.TestSupport;
 
 namespace TechHub.Web.Tests.Components.Pages;
 
@@ -37,6 +38,7 @@ public class HomeTests : BunitContext
 
         var httpContextAccessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
         Services.AddSingleton<IHttpContextAccessor>(httpContextAccessor);
+        this.AddFeatureGate();
 
         var config = new ConfigurationBuilder().Build();
         Services.AddScoped<BrandingService>(_ => new BrandingService(httpContextAccessor, config));

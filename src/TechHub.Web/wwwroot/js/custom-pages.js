@@ -76,54 +76,6 @@ export function initCollapsibleCards() {
             }
         });
     });
-
-    // Feature filters (GitHub Copilot Features page)
-    initFeatureFilters();
-}
-
-/**
- * Initialize feature card filters
- */
-export function initFeatureFilters() {
-    const sections = document.querySelectorAll('.features-video-section');
-    if (!sections.length) return;
-
-    sections.forEach(section => {
-        const buttons = section.querySelectorAll('.features-filter-btn');
-        const cards = section.querySelectorAll('.feature-card');
-
-        function applyFilters() {
-            const activeFilters = [];
-            buttons.forEach(b => {
-                if (b.classList.contains('active')) {
-                    activeFilters.push(b.dataset.filter);
-                }
-            });
-
-            cards.forEach(card => {
-                if (!activeFilters.length) {
-                    card.style.display = '';
-                    return;
-                }
-                const matchesAll = activeFilters.every(f => {
-                    if (f === 'ghes') return card.dataset.ghes === 'true';
-                    if (f === 'videos') return card.dataset.hasVideo === 'true';
-                    return true;
-                });
-                card.style.display = matchesAll ? '' : 'none';
-            });
-        }
-
-        buttons.forEach(btn => {
-            if (btn.dataset.initialized) return;
-            btn.dataset.initialized = 'true';
-
-            btn.addEventListener('click', function () {
-                this.classList.toggle('active');
-                applyFilters();
-            });
-        });
-    });
 }
 
 /**

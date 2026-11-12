@@ -24,7 +24,13 @@ public class AiCategorizationOptions
     public int MaxRetries { get; init; } = 3;
 
     /// <summary>How long a Flex request keeps retrying on Flex while capacity is unavailable (429).</summary>
-    public TimeSpan FlexMaxWait { get; init; } = TimeSpan.FromMinutes(30);
+    public TimeSpan FlexMaxWait { get; init; } = TimeSpan.FromMinutes(5);
+
+    /// <summary>
+    /// After a Flex request gave up, later requests within this period try Flex once and fall back at the first 429 instead of waiting
+    /// <see cref="FlexMaxWait"/> again. Zero disables this.
+    /// </summary>
+    public TimeSpan FlexUnavailableCooldown { get; init; } = TimeSpan.FromMinutes(15);
 
     /// <summary>Shortest wait between Flex retries; also the base of the exponential backoff when no Retry-After is given.</summary>
     public TimeSpan FlexMinRetryDelay { get; init; } = TimeSpan.FromSeconds(30);

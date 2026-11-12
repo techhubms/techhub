@@ -680,20 +680,21 @@ public class ModelEvaluationTests
             }
         }
 
-        // The restore script copies only the content tables, so ghc_features may not exist locally.
+        // The restore script copies only the content tables, so product_features may not exist locally.
         var features = new List<(string Title, long? ReleaseDate)>();
         try
         {
-            features.AddRange(await db.QueryAsync<(string Title, long? ReleaseDate)>("SELECT title, release_date FROM ghc_features WHERE release_date IS NOT NULL ORDER BY release_date DESC LIMIT 25"));
+            features.AddRange(await db.QueryAsync<(string Title, long? ReleaseDate)>("SELECT name AS Title, release_date AS ReleaseDate FROM product_features WHERE release_date IS NOT NULL ORDER BY release_date DESC LIMIT 25"));
         }
         catch (PostgresException ex) when (ex.SqlState == PostgresErrorCodes.UndefinedTable)
         {
             // Not restored: the comparison with the curated features is then skipped.
         }
+
         var header = new StringBuilder();
         header.AppendLine(CultureInfo.InvariantCulture, $"Scanned {items.Count} articles: {withEvents} with events, {total} events in total.");
         header.AppendLine();
-        header.AppendLine(features.Count == 0 ? "ghc_features was not restored locally, so there is no comparison with the curated features." : "Newest curated GitHub Copilot features (ghc_features), to compare with the events below:");
+        header.AppendLine(features.Count == 0 ? "product_features was not restored locally, so there is no comparison with the curated features." : "Newest curated GitHub Copilot features (product_features), to compare with the events below:");
         foreach (var (title, release) in features)
         {
             header.AppendLine(CultureInfo.InvariantCulture, $"- {DateTimeOffset.FromUnixTimeSeconds(release!.Value):yyyy-MM-dd} {title}");

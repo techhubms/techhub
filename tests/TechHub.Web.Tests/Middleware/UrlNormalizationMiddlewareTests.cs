@@ -957,6 +957,37 @@ public class UrlNormalizationMiddlewareTests
         nextCalled().Should().BeFalse();
     }
 
+    // ── Collection rename redirect ──────────────────────────────────────────
+
+    [Theory]
+    [InlineData("/github-copilot/features", "/github-copilot/timeline")]
+    [InlineData("/GitHub-Copilot/Features", "/GitHub-Copilot/timeline")]
+    [InlineData("/github-copilot/features/", "/github-copilot/timeline")]
+    public async Task RenamedCollection_Features_RedirectsToTheTimeline(string input, string expected)
+    {
+        // The features page of GitHub Copilot was replaced by its timeline.
+        var cache = A.SectionCache.WithSections("github-copilot").WithCollections("timeline").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: input, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be(expected);
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task RenamedCollection_FeaturesInAnotherSection_IsNotRedirected()
+    {
+        var cache = A.SectionCache.WithSections("ai", "github-copilot").WithCollections("timeline").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/ai/features", sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
+        nextCalled().Should().BeFalse();
+    }
+
     [Fact]
     public async Task RenamedSection_WithHtmlAndDatePrefix_SingleRedirect()
     {

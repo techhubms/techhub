@@ -6,7 +6,7 @@ This document defines the schema for `ContentItem` records stored in the Postgre
 
 The PostgreSQL database is the **single source of truth** for all content. There are no content files checked into the repository. Content enters the database through two paths:
 
-1. **RSS pipeline** — `ContentProcessingBackgroundService` fetches RSS feeds every 60 minutes (configurable), runs AI categorization via Azure OpenAI, and upserts into `content_items`. See [content-processing.md](content-processing.md).
+1. **RSS pipeline** — `ContentProcessingBackgroundService` fetches feeds when their individual polling interval is due (default 60 minutes), runs AI categorization via Azure OpenAI, and upserts into `content_items`. See [content-processing.md](content-processing.md).
 2. **Admin UI / ad-hoc processing** — Admins can submit individual URLs (including YouTube videos and GitHub Copilot Feature items) through the admin panel for immediate AI processing and insertion.
 
 > **Note**: `ContentSyncService` exists only for **integration tests**. It reads markdown fixture files under `tests/TechHub.TestUtilities/TestCollections/` and seeds the test database. It is never used in production or staging.
@@ -98,32 +98,34 @@ External-linking collections (`news`, `blogs`, `community`) use `external_url` f
 
 ## GitHub Copilot Features
 
-GitHub Copilot features are an independent entity, not content items. Each feature is a row in `ghc_features` and can link to any number of content items (typically videos) through `ghc_feature_content`. The features appear on the `/github-copilot/features` timeline page. Feature metadata is stored in dedicated tables:
+The features of GitHub Copilot are features of the GitHub Copilot product in the product catalog (see [Product Catalog](product-catalog.md)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. They have no page of their own: their dates are events on the timeline of the GitHub Copilot section (see [Timeline Events](content-processing.md#timeline-events)). The former `/github-copilot/features` page redirects to that timeline. The consolidated migration `050_product_catalog.sql` imports the legacy `ghc_features` and `ghc_feature_content` data into the catalog and timeline events, then drops the legacy tables.
 
-### `ghc_features` table
+### `product_features` table
 
-Stores metadata for each GHC feature release:
+The features of a product:
 
 | Column | Type | Description |
 |---|---|---|
-| `slug` | `text` PK | Unique feature identifier. Independent of `content_items.slug` |
-| `title` | `text` | Feature release title |
-| `description` | `text` | Short description (renamed from `excerpt` in migration 022) |
-| `release_date` | `bigint` | Unix epoch timestamp of the release (nullable) |
-| `plans` | `text` | Comma-separated list of every plan that includes the feature: `Free`, `Student`, `Pro`, `Business`, `Pro+`, `Enterprise` |
-| `ghes_support` | `boolean` | Whether GHES is supported |
+| `id` | `bigint` PK | Identifier |
+| `product_id` | `bigint` FK → `products.id` | The product the feature belongs to |
+| `name` | `text` | Feature name, unique per product ignoring case |
+| `slug` | `text` | Unique slug. Generated from the name when not given |
+| `description` | `text` | Short description of the feature |
+| `release_date` | `bigint` | Unix epoch timestamp of midnight UTC of the release date (nullable) |
 | `created_at` / `updated_at` | `timestamptz` | Audit timestamps |
 
-### `ghc_feature_content` table
+The subscription plans of a feature and whether GitHub Enterprise Server supports it are not stored.
 
-Links a GHC feature to one or more content items (videos, blogs):
+### `product_feature_content` table
+
+Links a feature to one or more content items (videos, blogs). The links are only edited in the admin; the timeline lists the items of an event as its sources instead:
 
 | Column | Type | Description |
 |---|---|---|
-| `feature_slug` | `text` FK → `ghc_features.slug` | The feature this link belongs to |
+| `feature_id` | `bigint` FK → `product_features.id` | The feature this link belongs to |
 | `collection_name` | `text` | Collection of the linked content item |
 | `item_slug` | `text` | Slug of the linked content item |
-| `is_thumbnail` | `boolean` | Whether this item is the feature's thumbnail |
+| `is_thumbnail` | `boolean` | Whether this item is the feature's thumbnail (at most one per feature) |
 | `sort_order` | `int` | Display order |
 
 ### `vscode_update_items` table
@@ -143,7 +145,7 @@ This table is populated automatically by:
 
 ### API
 
-The `GET /api/ghc-features` endpoint returns all GHC features with their content links. See [content-api.md](content-api.md#ghc-features-api) for details.
+The timeline of the section is read through `GET /api/sections/github-copilot/timeline` (see [content-api.md](content-api.md#timeline-api)). The features are edited through the admin API (see [admin.md](admin.md#product-catalog)).
 
 ## Test Fixture Format
 

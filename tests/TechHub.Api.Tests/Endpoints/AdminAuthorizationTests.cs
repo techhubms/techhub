@@ -33,22 +33,30 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
     public static TheoryData<string, string> AdminRoutes => new()
     {
         { "GET", "/api/admin/feeds" },
+        { "GET", "/api/admin/products" },
+        { "POST", "/api/admin/products/1/merge" },
+        { "PUT", "/api/admin/products/1/parent" },
+        { "GET", "/api/admin/products/1/articles" },
+        { "GET", "/api/admin/products/1/events" },
+        { "POST", "/api/admin/products/1/convert-to-feature" },
+        { "GET", "/api/admin/products/1/features" },
+        { "GET", "/api/admin/products/features/unmatched" },
         { "GET", "/api/admin/statistics" },
         { "POST", "/api/admin/cache/invalidate" },
         { "GET", "/api/admin/newsletter/subscribers" },
-        { "PUT", "/api/ghc-features/some-feature" },
-        { "DELETE", "/api/ghc-features/some-feature" },
-        { "POST", "/api/ghc-features/some-feature/content-links" },
-        { "DELETE", "/api/ghc-features/some-feature/content-links" },
-        { "PUT", "/api/ghc-features/some-feature/thumbnail" }
+        { "PUT", "/api/admin/products/1/features/2/details" },
+        { "POST", "/api/admin/products/1/features/2/content" },
+        { "DELETE", "/api/admin/products/1/features/2/content" },
+        { "PUT", "/api/admin/products/1/features/2/thumbnail" },
+        { "PUT", "/api/admin/feature-toggles/timeline" }
     };
 
     public static TheoryData<string> PublicRoutes => new()
     {
         "/api/sections",
-        "/api/ghc-features/",
         "/api/vscode-updates",
-        "/api/newsletter/sections"
+        "/api/newsletter/sections",
+        "/api/feature-toggles"
     };
 
     [Theory]
@@ -83,6 +91,7 @@ public class AdminAuthorizationTests : IClassFixture<AdminAuthorizationTests.Azu
 
     [Theory]
     [InlineData("/api/admin/feeds")]
+    [InlineData("/api/admin/products")]
     [InlineData("/api/admin/statistics")]
     [InlineData("/api/admin/newsletter/subscribers")]
     public async Task AdminRoute_WithAdminScope_ReturnsOk(string route)

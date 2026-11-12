@@ -36,7 +36,7 @@ internal static class ClassificationSchema
                 "schema": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": ["included", "explanation", "title", "author", "sections", "primary_section", "tags", "excerpt", "section_roles", "key_facts", "significance", "content_kind", "lifecycle", "products", "timeline_events"],
+                  "required": ["included", "explanation", "title", "author", "sections", "primary_section", "tags", "excerpt", "section_roles", "key_facts", "significance", "content_kind", "lifecycle", "products", "product_features", "timeline_events"],
                   "properties": {
                     "included": { "type": "boolean" },
                     "explanation": { "type": "string" },
@@ -63,6 +63,7 @@ internal static class ClassificationSchema
                     "content_kind": { "type": ["string", "null"], "enum": {{contentKinds}} },
                     "lifecycle": { "type": ["string", "null"], "enum": {{lifecycles}} },
                     "products": { "type": "array", "items": { "type": "string" } },
+                    "product_features": {{ProductFeaturesSchema()}},
                     "timeline_events": {{timelineEvents}}
                   }
                 }
@@ -74,7 +75,7 @@ internal static class ClassificationSchema
     }
 
     /// <summary>
-    /// Builds the <c>response_format</c> of the timeline-only extraction used by the backfill job.
+    /// Builds the <c>response_format</c> of the extraction used by the backfill job: the products and the timeline events.
     /// </summary>
     public static JsonObject BuildTimelineResponseFormat()
     {
@@ -87,8 +88,10 @@ internal static class ClassificationSchema
                 "schema": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": ["timeline_events"],
+                  "required": ["products", "product_features", "timeline_events"],
                   "properties": {
+                    "products": { "type": "array", "items": { "type": "string" } },
+                    "product_features": {{ProductFeaturesSchema()}},
                     "timeline_events": {{TimelineEventsSchema()}}
                   }
                 }
@@ -126,6 +129,21 @@ internal static class ClassificationSchema
             }
             """;
     }
+
+    private static string ProductFeaturesSchema() => """
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["product", "feature"],
+            "properties": {
+              "product": { "type": "string" },
+              "feature": { "type": "string" }
+            }
+          }
+        }
+        """;
 
     private static string StringEnum(IEnumerable<string> values, bool includeNull = false)
     {

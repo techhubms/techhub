@@ -179,22 +179,6 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     }
 
     [Fact]
-    public async Task GetGhcFeaturesVideos_ReturnsVideos()
-    {
-        // Act — use the dedicated GHC features endpoint instead of subcollection filter
-        var response = await _client.GetAsync(
-            "/api/ghc-features",
-            TestContext.Current.CancellationToken);
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-
-        var result = await response.Content.ReadFromJsonAsync<IReadOnlyList<TechHub.Core.Models.GhcFeature>>(TestContext.Current.CancellationToken);
-        result.Should().NotBeNull();
-        result.Should().NotBeEmpty("ghc-features endpoint should return feature items");
-    }
-
-    [Fact]
     public async Task GetHeroBannerData_ReturnsStructuredData()
     {
         // Act

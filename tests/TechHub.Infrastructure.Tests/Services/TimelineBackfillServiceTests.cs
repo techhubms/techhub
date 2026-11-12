@@ -8,7 +8,6 @@ using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services.ContentProcessing;
-using TechHub.Infrastructure.Tests.Repositories;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
@@ -216,7 +215,7 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
     public async Task RunAsync_ArticleExtractedWhileProcessing_IsNotScannedAgain()
     {
         await SeedAsync("a1");
-        await _timelineRepo.ReplaceEventsAsync(_collection, "a1", [Event()], ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion);
+        await _timelineRepo.ReplaceEventsAsync(_collection, "a1", [Event()], ITimelineEventRepository.ExtractedFromSource, ITimelineEventRepository.CurrentPromptVersion, TestContext.Current.CancellationToken);
         SetupAi(Event("retirement"));
 
         var result = await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
@@ -355,5 +354,139 @@ public class TimelineBackfillServiceTests : IClassFixture<DatabaseFixture<Timeli
         var resumed = await CreateSut().RunAsync(request, LogAsync, TestContext.Current.CancellationToken);
         resumed.Candidates.Should().Be(2);
         (await ExtractionCountAsync()).Should().Be(3);
+    }
+
+    // ── Products ──────────────────────────────────────────────────────────────
+
+    private async Task SeedMetadataAsync(string slug, string aiMetadataJson) => await _fixture.Connection.ExecuteAsync(
+        "UPDATE content_items SET ai_metadata = @Json::jsonb WHERE collection_name = @Collection AND slug = @Slug",
+        new { Json = aiMetadataJson, Collection = _collection, Slug = slug });
+
+    private async Task<string?> ReadMetadataAsync(string slug) => await _fixture.Connection.ExecuteScalarAsync<string?>(
+        "SELECT ai_metadata::text FROM content_items WHERE collection_name = @Collection AND slug = @Slug",
+        new { Collection = _collection, Slug = slug });
+
+    private async Task<IReadOnlyList<(string Name, string? Product, int Position)>> ReadLinksAsync(string slug) =>
+        (await _fixture.Connection.QueryAsync<(string Name, string? Product, int Position)>(
+            """
+            SELECT l.product_name AS Name, p.name AS Product, l.position AS Position
+            FROM content_item_products l LEFT JOIN products p ON p.id = l.product_id
+            WHERE l.collection_name = @Collection AND l.item_slug = @Slug
+            ORDER BY l.position
+            """,
+            new { Collection = _collection, Slug = slug })).ToList();
+
+    private void SetupAiProducts(IReadOnlyList<string>? products, IReadOnlyList<ProductFeatureMention>? productFeatures = null) =>
+        _ai.Setup(s => s.ExtractTimelineEventsAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new TimelineExtractionResult { Products = products, ProductFeatures = productFeatures });
+
+    [Fact]
+    public async Task RunAsync_Products_ReplaceTheStoredProductsKeepTheRestOfTheMetadataAndLinkTheCatalog()
+    {
+        await SeedAsync("a1");
+        await SeedMetadataAsync("a1", """{"schema_version":2,"key_facts":["A fact"],"products":["Old Name"],"significance":"high"}""");
+        var revisionBefore = (await _timelineRepo.GetItemForExtractionAsync(_collection, "a1", TestContext.Current.CancellationToken))!.Revision;
+        SetupAiProducts(["Microsoft Azure Functions", "Brand New Thing"]);
+
+        await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        var metadata = System.Text.Json.JsonDocument.Parse((await ReadMetadataAsync("a1"))!).RootElement;
+        metadata.GetProperty("products").EnumerateArray().Select(e => e.GetString()).Should().Equal("Microsoft Azure Functions", "Brand New Thing");
+        metadata.GetProperty("key_facts")[0].GetString().Should().Be("A fact");
+        metadata.GetProperty("significance").GetString().Should().Be("high");
+        (await ReadLinksAsync("a1")).Should().Equal(
+            ("Microsoft Azure Functions", "Azure Functions", 0),
+            ("Brand New Thing", null, 1));
+        (await _timelineRepo.GetItemForExtractionAsync(_collection, "a1", TestContext.Current.CancellationToken))!.Revision
+            .Should().Be(revisionBefore, "the products are not an edit of the text");
+    }
+
+    [Fact]
+    public async Task RunAsync_FeatureMentionsWithoutDates_AreStoredAndTheirProductIsLinked()
+    {
+        await SeedAsync("a1");
+        _ai.Setup(s => s.ExtractTimelineEventsAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new TimelineExtractionResult
+            {
+                Products = [],
+                ProductFeatures = [new ProductFeatureMention { Product = "GitHub Copilot", Feature = "Copilot Fusion" }]
+            });
+
+        await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        using var metadata = System.Text.Json.JsonDocument.Parse((await ReadMetadataAsync("a1"))!);
+        metadata.RootElement.GetProperty("product_features")[0].GetProperty("feature").GetString().Should().Be("Copilot Fusion");
+        (await ReadLinksAsync("a1")).Should().ContainSingle()
+            .Which.Should().Be(("GitHub Copilot", "GitHub Copilot", 0));
+        (await _timelineRepo.GetEventsForItemAsync(_collection, "a1", TestContext.Current.CancellationToken)).Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task RunAsync_Products_OfAnArticleWithTheOriginalMetadata_AreStoredAndLinked()
+    {
+        await SeedAsync("a1");
+        await SeedMetadataAsync("a1", """{"roundup_summary":"Summary","key_topics":["x"]}""");
+        SetupAiProducts(["GitHub Actions"]);
+
+        await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        (await ReadMetadataAsync("a1"))!.Should().Contain("\"roundup_summary\"").And.Contain("GitHub Actions");
+        (await ReadLinksAsync("a1")).Should().ContainSingle().Which.Product.Should().Be("GitHub Actions");
+    }
+
+    [Fact]
+    public async Task RunAsync_Products_EmptyList_RemovesTheLinks()
+    {
+        await SeedAsync("a1");
+        await SeedMetadataAsync("a1", """{"schema_version":2,"products":["GitHub Actions"]}""");
+        await _fixture.Connection.ExecuteAsync(
+            "INSERT INTO content_item_products (collection_name, item_slug, product_name, position) VALUES (@Collection, 'a1', 'GitHub Actions', 0)",
+            new { Collection = _collection });
+        SetupAiProducts([]);
+
+        await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        (await ReadLinksAsync("a1")).Should().BeEmpty();
+        (await ReadMetadataAsync("a1"))!.Should().Contain("\"products\": []");
+    }
+
+    [Fact]
+    public async Task RunAsync_Products_NotReportedByTheAi_LeaveTheStoredProductsAlone()
+    {
+        await SeedAsync("a1");
+        await SeedMetadataAsync("a1", """{"schema_version":2,"products":["GitHub Actions"]}""");
+        SetupAiProducts(null);
+
+        await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        (await ReadMetadataAsync("a1"))!.Should().Contain("GitHub Actions");
+    }
+
+    [Fact]
+    public async Task RunAsync_Products_OfAnArticleWithoutMetadata_AreStoredWithoutTheCurrentSchemaVersionAndLinked()
+    {
+        await SeedAsync("a1");
+        SetupAiProducts(["GitHub Actions"]);
+
+        var result = await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        result.Scanned.Should().Be(1);
+        var metadata = System.Text.Json.JsonDocument.Parse((await ReadMetadataAsync("a1"))!).RootElement;
+        metadata.EnumerateObject().Select(p => p.Name).Should().Equal(["products"], "without a schema version the roundup metadata backfill still classifies the article");
+        metadata.GetProperty("products").EnumerateArray().Select(e => e.GetString()).Should().Equal("GitHub Actions");
+        (await ReadLinksAsync("a1")).Should().ContainSingle().Which.Product.Should().Be("GitHub Actions");
+    }
+
+    [Fact]
+    public async Task RunAsync_Products_EmptyList_OfAnArticleWithoutMetadata_DoNotCreateMetadata()
+    {
+        await SeedAsync("a1");
+        SetupAiProducts([]);
+
+        var result = await CreateSut().RunAsync(new TimelineBackfillRequest { Collection = _collection }, LogAsync, TestContext.Current.CancellationToken);
+
+        result.Scanned.Should().Be(1);
+        (await ReadMetadataAsync("a1")).Should().BeNull();
+        (await ReadLinksAsync("a1")).Should().BeEmpty();
     }
 }

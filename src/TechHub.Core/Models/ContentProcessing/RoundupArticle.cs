@@ -66,27 +66,27 @@ public sealed record RoundupArticle
     /// </summary>
     public string TimeSensitivity { get; init; } = "this-week";
 
-    /// <summary>Whether this article is missing current (schema version 2) AI metadata and needs on-the-fly backfill.</summary>
+    /// <summary>Whether this article is missing current (schema version 3) AI metadata and needs on-the-fly backfill.</summary>
     public bool NeedsAiMetadata { get; init; }
 
-    /// <summary>Concrete facts (versions, dates, numbers, names) from the article. From <c>ai_metadata.key_facts</c> (schema version 2).</summary>
+    /// <summary>Concrete facts (versions, dates, numbers, names) from the article. From <c>ai_metadata.key_facts</c> (schema version 3).</summary>
     public IReadOnlyList<string> KeyFacts { get; init; } = [];
 
-    /// <summary>Impact on developers: "high", "medium" or "low". From <c>ai_metadata.significance</c> (schema version 2).</summary>
+    /// <summary>Impact on developers: "high", "medium" or "low". From <c>ai_metadata.significance</c> (schema version 3).</summary>
     public string Significance { get; init; } = "medium";
 
-    /// <summary>Kind of content. From <c>ai_metadata.content_kind</c> (schema version 2).</summary>
+    /// <summary>Kind of content. From <c>ai_metadata.content_kind</c> (schema version 3).</summary>
     public string ContentKind { get; init; } = "announcement";
 
-    /// <summary>Product lifecycle stage. From <c>ai_metadata.lifecycle</c> (schema version 2).</summary>
+    /// <summary>Product lifecycle stage. From <c>ai_metadata.lifecycle</c> (schema version 3).</summary>
     public string Lifecycle { get; init; } = "none";
 
-    /// <summary>Official names of the products the article is about. From <c>ai_metadata.products</c> (schema version 2).</summary>
+    /// <summary>Official names of the products the article is about. From <c>ai_metadata.products</c> (schema version 3).</summary>
     public IReadOnlyList<string> Products { get; init; } = [];
 
     /// <summary>
-    /// Roundup role per section slug ("lead" or "brief"). From <c>ai_metadata.section_roles</c> (schema version 2).
-    /// Empty for articles without version 2 metadata.
+    /// Roundup role per section slug ("lead" or "brief"). From <c>ai_metadata.section_roles</c> (schema version 3).
+    /// Empty for articles without version 3 metadata.
     /// </summary>
     public IReadOnlyDictionary<string, string> SectionRoles { get; init; } = new Dictionary<string, string>();
 

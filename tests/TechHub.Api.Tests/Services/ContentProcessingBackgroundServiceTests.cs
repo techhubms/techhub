@@ -14,6 +14,50 @@ namespace TechHub.Api.Tests.Services;
 public class ContentProcessingBackgroundServiceTests
 {
     [Fact]
+    public async Task ScheduledPolling_WhenNoFeedIsDue_DoesNotCreateJobOrInvalidateCache()
+    {
+        // Arrange
+        var startup = new StartupStateService();
+        startup.MarkStartupCompleted();
+        var feedRepo = new Mock<IRssFeedConfigRepository>();
+        var checkedFeeds = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>()))
+            .Returns(() =>
+            {
+                checkedFeeds.TrySetResult();
+                return Task.FromResult<IReadOnlyList<FeedConfig>>(
+                    [new FeedConfig { Name = "Not due", LastCheckedAt = DateTimeOffset.UtcNow }]);
+            });
+        var jobs = new Mock<IContentProcessingJobRepository>();
+        var content = new Mock<IContentRepository>();
+        var settings = new Mock<IBackgroundJobSettingRepository>();
+        settings.Setup(r => r.IsEnabledAsync(It.IsAny<string>(), It.IsAny<CancellationToken>())).ReturnsAsync(true);
+        var services = new ServiceCollection();
+        services.AddScoped(_ => new ContentProcessingService(
+            Mock.Of<IRssFeedIngestionService>(), Mock.Of<IArticleContentService>(), Mock.Of<IAiCategorizationService>(),
+            Mock.Of<IYouTubeTagService>(), Mock.Of<IContentItemWriteRepository>(), jobs.Object,
+            Mock.Of<IProcessedUrlRepository>(), feedRepo.Object, Mock.Of<IContentFixerService>(), TimeProvider.System,
+            Options.Create(new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0" }),
+            Mock.Of<ILogger<ContentProcessingService>>()));
+        services.AddScoped(_ => settings.Object);
+        services.AddScoped(_ => content.Object);
+        using var provider = services.BuildServiceProvider();
+        var options = new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", Enabled = true };
+        using var sut = new ContentProcessingBackgroundService(
+            provider, Options.Create(options), startup, Mock.Of<ILogger<ContentProcessingBackgroundService>>());
+
+        // Act
+        await sut.StartAsync(CancellationToken.None);
+        await checkedFeeds.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
+        await sut.StopAsync(CancellationToken.None);
+
+        // Assert
+        options.IntervalMinutes.Should().Be(1);
+        jobs.Verify(r => r.CreateAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
+        content.Verify(r => r.InvalidateCachedData(), Times.Never);
+    }
+
+    [Fact]
     public async Task TriggerImmediateRun_WhenDisabled_ExecutesManualRun()
     {
         // Arrange — disabled mode, so the service loops waiting for manual triggers
@@ -282,10 +326,13 @@ public class ContentProcessingBackgroundServiceTests
     {
         var feedRepo = new Mock<IRssFeedConfigRepository>();
         feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync([]);
+            .ReturnsAsync([new FeedConfig { Id = 1, Name = "Test feed" }]);
+        var rssService = new Mock<IRssFeedIngestionService>();
+        rssService.Setup(r => r.IngestAsync(It.IsAny<FeedConfig>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Success([]));
 
         return new ContentProcessingService(
-            Mock.Of<IRssFeedIngestionService>(),
+            rssService.Object,
             Mock.Of<IArticleContentService>(),
             Mock.Of<IAiCategorizationService>(),
             Mock.Of<IYouTubeTagService>(),

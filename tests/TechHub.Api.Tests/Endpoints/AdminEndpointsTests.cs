@@ -143,6 +143,69 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     // ── RSS Feed CRUD Endpoints ──────────────────────────────────────────────
 
     [Fact]
+    public async Task FeedPollingInterval_CreateUpdateAndRead_Persists()
+    {
+        // Arrange
+        var request = new FeedConfig
+        {
+            Name = $"Polling API {Guid.NewGuid():N}",
+            Url = $"https://example.com/polling-{Guid.NewGuid():N}",
+            OutputDir = "_community",
+            PollingIntervalMinutes = 15
+        };
+
+        // Act
+        var create = await _client.PostAsJsonAsync("/api/admin/feeds", request, CancellationToken.None);
+        create.StatusCode.Should().Be(HttpStatusCode.Created);
+        var feed = (await create.Content.ReadFromJsonAsync<FeedConfig>(CancellationToken.None))!;
+        feed.PollingIntervalMinutes.Should().Be(15);
+        var omittedInterval = new { feed.Name, feed.Url, feed.OutputDir, feed.Enabled };
+        var compatibleUpdate = await _client.PutAsJsonAsync($"/api/admin/feeds/{feed.Id}", omittedInterval, CancellationToken.None);
+        compatibleUpdate.StatusCode.Should().Be(HttpStatusCode.OK);
+        (await compatibleUpdate.Content.ReadFromJsonAsync<FeedConfig>(CancellationToken.None))!
+            .PollingIntervalMinutes.Should().Be(15, "older clients must not reset a feed's polling interval");
+        feed.PollingIntervalMinutes = 60;
+        var update = await _client.PutAsJsonAsync($"/api/admin/feeds/{feed.Id}", feed, CancellationToken.None);
+        var read = await _client.GetFromJsonAsync<FeedConfig>($"/api/admin/feeds/{feed.Id}", CancellationToken.None);
+        var all = await _client.GetFromJsonAsync<List<FeedConfig>>("/api/admin/feeds", CancellationToken.None);
+
+        // Assert
+        update.StatusCode.Should().Be(HttpStatusCode.OK);
+        read!.PollingIntervalMinutes.Should().Be(60);
+        all!.Single(f => f.Id == feed.Id).PollingIntervalMinutes.Should().Be(60);
+        await _client.DeleteAsync($"/api/admin/feeds/{feed.Id}", CancellationToken.None);
+    }
+
+    [Theory]
+    [InlineData(0)]
+    [InlineData(-1)]
+    public async Task FeedPollingInterval_InvalidValue_ReturnsBadRequestForCreateAndUpdate(int interval)
+    {
+        // Arrange
+        var feed = new FeedConfig
+        {
+            Name = $"Invalid polling {Guid.NewGuid():N}",
+            Url = $"https://example.com/invalid-polling-{Guid.NewGuid():N}",
+            OutputDir = "_blogs"
+        };
+        var create = await _client.PostAsJsonAsync("/api/admin/feeds", feed, CancellationToken.None);
+        create.StatusCode.Should().Be(HttpStatusCode.Created);
+        feed = (await create.Content.ReadFromJsonAsync<FeedConfig>(CancellationToken.None))!;
+        feed.PollingIntervalMinutes = interval;
+
+        // Act
+        var invalidCreate = await _client.PostAsJsonAsync("/api/admin/feeds", feed, CancellationToken.None);
+        var invalidUpdate = await _client.PutAsJsonAsync($"/api/admin/feeds/{feed.Id}", feed, CancellationToken.None);
+
+        // Assert
+        invalidCreate.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        invalidUpdate.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        (await _client.GetFromJsonAsync<FeedConfig>($"/api/admin/feeds/{feed.Id}", CancellationToken.None))!
+            .PollingIntervalMinutes.Should().Be(60);
+        await _client.DeleteAsync($"/api/admin/feeds/{feed.Id}", CancellationToken.None);
+    }
+
+    [Fact]
     public async Task CreateFeed_WithValidData_ReturnsCreated()
     {
         // Arrange
@@ -164,6 +227,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         feed.Url.Should().Be("https://example.com/api-test-feed.xml");
         feed.OutputDir.Should().Be("_blogs");
         feed.Enabled.Should().BeTrue();
+        feed.PollingIntervalMinutes.Should().Be(60);
     }
 
     [Fact]
@@ -220,6 +284,35 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
             TestContext.Current.CancellationToken);
         feeds.Should().NotBeNull();
         feeds!.Should().Contain(f => f.Name == "List Test Feed");
+    }
+
+    [Fact]
+    public async Task GetFeeds_AfterFailedCheck_ReturnsTheCheckStatus()
+    {
+        // Arrange — create a feed and record a failed check like the content pipeline does
+        var createResponse = await _client.PostAsJsonAsync(
+            "/api/admin/feeds",
+            new { Name = "Check Status Feed", Url = "https://example.com/check-status.xml", OutputDir = "_news", Enabled = true },
+            TestContext.Current.CancellationToken);
+        createResponse.EnsureSuccessStatusCode();
+        var created = await createResponse.Content.ReadFromJsonAsync<FeedConfig>(TestContext.Current.CancellationToken);
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var feedRepo = scope.ServiceProvider.GetRequiredService<IRssFeedConfigRepository>();
+            await feedRepo.RecordCheckAsync(created!.Id, "Failed to download feed: HTTP 404 (NotFound)", TestContext.Current.CancellationToken);
+        }
+
+        // Act
+        var response = await _client.GetAsync("/api/admin/feeds", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var feeds = await response.Content.ReadFromJsonAsync<List<FeedConfig>>(TestContext.Current.CancellationToken);
+        var feed = feeds!.Single(f => f.Name == "Check Status Feed");
+        feed.LastCheckedAt.Should().NotBeNull();
+        feed.LastCheckError.Should().Be("Failed to download feed: HTTP 404 (NotFound)");
+        feed.LastContentAt.Should().BeNull();
     }
 
     [Fact]
@@ -331,6 +424,49 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
             $"/api/admin/feeds/{created.Id}",
             TestContext.Current.CancellationToken);
         getResponse.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task DeleteFeed_WithContent_ReturnsConflictAndKeepsFeed()
+    {
+        // Arrange — a feed that still has a content item
+        const string FeedName = "Feed With Content";
+        var createResponse = await _client.PostAsJsonAsync(
+            "/api/admin/feeds",
+            new { Name = FeedName, Url = "https://example.com/with-content.xml", OutputDir = "_blogs", Enabled = true },
+            TestContext.Current.CancellationToken);
+        var created = await createResponse.Content.ReadFromJsonAsync<FeedConfig>(
+            TestContext.Current.CancellationToken);
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, sections_bitmask, content_hash)
+                  VALUES
+                    ('feed-with-content-item', 'blogs', 'Feed With Content', '# Test', 'Test excerpt',
+                     1700000000, 'ai', 'https://example.com/feed-with-content-item', 'Test Author', @FeedName,
+                     ',ai,', TRUE, 1, 'feedwithcontenthash')
+                  ON CONFLICT (external_url) DO NOTHING",
+                new { FeedName });
+        }
+
+        // Act
+        var response = await _client.DeleteAsync(
+            $"/api/admin/feeds/{created!.Id}",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.Conflict);
+        var getResponse = await _client.GetAsync(
+            $"/api/admin/feeds/{created.Id}",
+            TestContext.Current.CancellationToken);
+        var feed = await getResponse.Content.ReadFromJsonAsync<FeedConfig>(
+            TestContext.Current.CancellationToken);
+        feed!.HasContent.Should().BeTrue();
     }
 
     [Fact]

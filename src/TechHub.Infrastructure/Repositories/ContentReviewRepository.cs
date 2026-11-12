@@ -122,6 +122,7 @@ public sealed class ContentReviewRepository : IContentReviewRepository
         }
 
         // Apply the change depending on type
+        await LockArticlesAndLinksAsync(pending, transaction, ct);
         await ApplyChangeAsync(review, transaction, ct);
 
         // Mark as approved
@@ -176,6 +177,8 @@ public sealed class ContentReviewRepository : IContentReviewRepository
 
         using var transaction = _connection.BeginTransaction();
         var pending = await GetPendingForApprovalAsync(null, 10000, transaction, ct);
+
+        await LockArticlesAndLinksAsync(pending, transaction, ct);
 
         foreach (var review in pending)
         {
@@ -276,6 +279,35 @@ public sealed class ContentReviewRepository : IContentReviewRepository
                 transaction: transaction, cancellationToken: ct))).ToList();
     }
 
+    /// <summary>
+    /// Locks every article the batch changes, in one fixed order, and only then takes the shared catalog lock when a
+    /// markdown review needs its product links rebuilt. Article rows always come before the catalog lock (see
+    /// <see cref="CatalogRelink"/>), so a catalog change or another batch cannot wait for this transaction while this
+    /// transaction waits for an article that they hold. The fixed order keeps two batches from locking articles crosswise.
+    /// </summary>
+    private async Task LockArticlesAndLinksAsync(IReadOnlyList<ContentReview> reviews, IDbTransaction transaction, CancellationToken ct)
+    {
+        var changing = reviews.Where(r => r.ChangeType != ContentReviewChangeType.Validation).ToList();
+
+        foreach (var (collection, slug) in changing
+            .Select(r => (r.CollectionName, r.Slug))
+            .Distinct()
+            .OrderBy(a => a.CollectionName, StringComparer.Ordinal)
+            .ThenBy(a => a.Slug, StringComparer.Ordinal))
+        {
+            await _connection.ExecuteAsync(new CommandDefinition(
+                "SELECT 1 FROM content_items WHERE collection_name = @Collection AND slug = @Slug FOR NO KEY UPDATE",
+                new { Collection = collection, Slug = slug },
+                transaction: transaction,
+                cancellationToken: ct));
+        }
+
+        if (changing.Any(r => r.ChangeType == ContentReviewChangeType.Markdown))
+        {
+            await CatalogRelink.LockForLinkWriteAsync(_connection, transaction, ct);
+        }
+    }
+
     private async Task ApplyChangeAsync(ContentReview review, IDbTransaction transaction, CancellationToken ct)
     {
         // Validation reviews are informational — approving acknowledges the issue,
@@ -312,6 +344,12 @@ public sealed class ContentReviewRepository : IContentReviewRepository
                 Slug = review.Slug
             }, transaction: transaction, cancellationToken: ct));
 
+        if (review.ChangeType == ContentReviewChangeType.Markdown)
+        {
+            // The events were removed above, so the links that only the events (or the old text) justified go with them.
+            await ProductLinkWriter.ReplaceItemLinksAsync(_connection, transaction, review.CollectionName, review.Slug, ct);
+        }
+
         if (review.ChangeType == ContentReviewChangeType.Tags)
         {
             await RebuildExpandedTagsAsync(review, transaction, ct);
@@ -321,18 +359,12 @@ public sealed class ContentReviewRepository : IContentReviewRepository
     /// <summary>
     /// Approving a markdown review replaces the article text, so the timeline events extracted from the old text and
     /// the extraction marker are removed and an ordinary backfill run scans the article again. An approval that leaves
-    /// the text unchanged keeps them. The article row is locked first (like an admin edit) so a concurrent backfill
-    /// write has committed before the comparison.
+    /// the text unchanged keeps them. The article row and the shared catalog lock are already held for the whole batch
+    /// (<see cref="LockArticlesAndLinksAsync"/>), so a concurrent backfill write has committed before the comparison.
     /// </summary>
     private async Task InvalidateTimelineWhenContentChangesAsync(ContentReview review, IDbTransaction transaction, CancellationToken ct)
     {
         var parameters = new { Collection = review.CollectionName, Slug = review.Slug, Value = review.FixedValue };
-
-        await _connection.ExecuteAsync(new CommandDefinition(
-            "SELECT 1 FROM content_items WHERE collection_name = @Collection AND slug = @Slug FOR NO KEY UPDATE",
-            parameters,
-            transaction: transaction,
-            cancellationToken: ct));
 
         const string Changed = @"
 EXISTS (SELECT 1 FROM content_items ci
@@ -340,7 +372,7 @@ EXISTS (SELECT 1 FROM content_items ci
            AND ci.content IS DISTINCT FROM @Value)";
 
         await _connection.ExecuteAsync(new CommandDefinition(
-            $"DELETE FROM content_timeline_events WHERE collection_name = @Collection AND item_slug = @Slug AND {Changed}",
+            $"DELETE FROM content_timeline_events WHERE collection_name = @Collection AND item_slug = @Slug AND extracted_from <> '{TechHub.Core.Interfaces.ITimelineEventRepository.ExtractedFromCatalog}' AND {Changed}",
             parameters,
             transaction: transaction,
             cancellationToken: ct));

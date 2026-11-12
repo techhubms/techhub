@@ -109,6 +109,94 @@
     border-color: var(--color-purple-border-subtle);
 }
 
+/* ─── Sub menu bar (pages of the active group) ────────────────────────────── */
+
+.admin-subnav {
+    background: var(--color-bg-elevated, var(--color-bg-default));
+    border-bottom: 1px solid var(--color-border-default);
+}
+
+.admin-subnav-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-2);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+    gap: var(--spacing-2);
+    min-height: 2.5rem;
+}
+
+/* The pages are centred; the page's own actions (Refresh) sit at the right. */
+.admin-subnav-links {
+    grid-column: 2;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: var(--spacing-1);
+}
+
+.admin-subnav-actions {
+    grid-column: 3;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+}
+
+/* Buttons in the bar are compact, so the bar keeps its height. */
+.admin-subnav-actions .btn,
+.admin-subnav-actions .btn-secondary,
+.admin-subnav-actions .btn-danger {
+    min-height: 0;
+    padding: 0.25rem var(--spacing-3);
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+}
+
+.admin-actions:empty {
+    display: none;
+}
+
+.admin-subnav-link,
+.admin-tab {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--spacing-1) var(--spacing-3);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color var(--duration-fast) var(--easing-ease), border-color var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+    .admin-subnav-link:hover,
+    .admin-tab:hover {
+        color: var(--color-text-primary);
+        text-decoration: none;
+        border-bottom-color: var(--color-border-default);
+    }
+}
+
+.admin-subnav-link.active,
+.admin-tab.active {
+    color: var(--color-purple-bright);
+    border-bottom-color: var(--color-purple-bright);
+}
+
+/* ─── Tabs inside a page (for example the sections of a product) ──────────── */
+
+.admin-tabs {
+    display: flex;
+    gap: var(--spacing-1);
+    border-bottom: 1px solid var(--color-border-default);
+    margin-bottom: var(--spacing-4);
+}
+
 /* ─── Nav Actions (right side) ────────────────────────────────────────────── */
 
 .admin-nav-actions {
@@ -302,6 +390,10 @@ select.admin-input {
     color: var(--color-text-emphasis);
 }
 
+h2.admin-page-title {
+    font-size: var(--font-size-xl);
+}
+
 .admin-page-subtitle {
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
@@ -348,10 +440,14 @@ select.admin-input {
 .admin-table td {
     padding: var(--spacing-1) var(--spacing-2);
     border-bottom: 1px solid var(--color-border-default);
-    vertical-align: top;
+    vertical-align: middle;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.admin-table .admin-inline-form {
+    margin-bottom: 0;
 }
 
 .admin-table td:last-child {
@@ -370,6 +466,10 @@ select.admin-input {
 
 .admin-table tr:hover td {
     background: var(--color-bg-elevated);
+}
+
+.admin-aliases {
+    max-width: 24rem;
 }
 
 .admin-cell-mono {
@@ -593,6 +693,16 @@ select.admin-input {
     white-space: nowrap;
 }
 
+.admin-table td.feed-last-check {
+    max-width: 18rem;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+.feed-last-check .admin-status {
+    text-transform: none;
+}
+
 /* ─── Statistics Page ─────────────────────────────────────────────────────── */
 
 .admin-stats-grid {
@@ -625,6 +735,61 @@ select.admin-input {
     margin-top: var(--spacing-1);
 }
 
+/* ─── Review overview (cards that link to each review queue) ──────────────── */
+
+.review-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-6);
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    padding: var(--spacing-3) var(--spacing-4);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-orange);
+    border-left-width: 4px;
+    border-radius: var(--radius-lg);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: background var(--duration-fast) var(--easing-ease), border-color var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+    .review-card:hover {
+        background: var(--color-bg-hover-subtle);
+        text-decoration: none;
+    }
+}
+
+.review-card-clear {
+    border-color: var(--color-border-default);
+    border-left-color: var(--color-green);
+}
+
+.review-card-count {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+}
+
+.review-card-label {
+    font-weight: var(--font-weight-semibold);
+}
+
+.review-card-hint {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.admin-review-section {
+    margin-bottom: var(--spacing-8);
+    scroll-margin-top: calc(var(--main-nav-height) + var(--spacing-8));
+}
+
 .admin-section-title {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
@@ -647,9 +812,54 @@ select.admin-input {
     }
 }
 
+/* ─── Narrow desktop: the top-level groups move to their own scrollable row ── */
+
+@media (max-width: 1280px) {
+    .admin-nav-content {
+        flex-wrap: wrap;
+        min-height: auto;
+        padding-top: var(--spacing-2);
+        padding-bottom: var(--spacing-1);
+        gap: var(--spacing-1) var(--spacing-2);
+    }
+
+    .admin-nav-links {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: var(--spacing-1);
+        scrollbar-width: thin;
+        flex-wrap: nowrap;
+        gap: var(--spacing-1);
+    }
+}
+
 /* ─── Responsive Layout (mobile) ─────────────────────────────────────────── */
 
 @media (max-width: 768px) {
+    /* Sub menu: pages scroll, the page actions go below them */
+    .admin-subnav-content {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .admin-subnav-links,
+    .admin-tabs {
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .admin-subnav-links,
+    .admin-subnav-actions {
+        grid-column: 1;
+        justify-self: stretch;
+        justify-content: flex-start;
+    }
+
+    .admin-subnav-actions:empty {
+        display: none;
+    }
+
     /* Nav: brand + logout on first row, links wrap to scrollable second row */
     .admin-nav-content {
         flex-wrap: wrap;
@@ -759,6 +969,100 @@ select.admin-input {
 }
 
 /* ─── Result Summary & Pagination ─────────────────────────────────────────── */
+
+.admin-inline-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+}
+
+/* Fields in a form row or list item keep a sensible width instead of filling the row. */
+.admin-inline-form .admin-input,
+.admin-plain-list .admin-input {
+    width: auto;
+    flex: 0 1 20rem;
+    min-width: 10rem;
+    max-width: 100%;
+}
+
+.admin-inline-form select.admin-input,
+.admin-plain-list select.admin-input {
+    flex-basis: 16rem;
+}
+
+.admin-plain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-3);
+}
+
+.admin-plain-list li {
+    padding: var(--spacing-1) 0;
+}
+
+.admin-table td.admin-tree-cell {
+    padding-left: calc(var(--spacing-2) + var(--tree-depth, 0) * var(--spacing-4));
+}
+
+.admin-table td.admin-tree-child::before {
+    content: "↳ ";
+    color: var(--color-text-secondary);
+}
+
+.admin-row-context {
+    opacity: 0.6;
+}
+
+/* One entry per row: the text on the left, its actions on the right, a thin line between entries. */
+.admin-entry-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-3);
+}
+
+.admin-entry-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--spacing-2);
+    padding: var(--spacing-1) 0;
+    border-bottom: 1px solid var(--color-border-default);
+}
+
+.admin-entry-list li:last-child {
+    border-bottom: none;
+}
+
+.admin-entry-list .admin-link-btn {
+    margin-left: auto;
+}
+
+/* Compact list of collapsible entries: closed entries sit directly below each other, separated by a thin line. */
+.admin-details {
+    margin-top: var(--spacing-2);
+}
+
+.admin-details + .admin-details {
+    margin-top: 0;
+    border-top: 1px solid var(--color-border-default);
+}
+
+.admin-details summary {
+    cursor: pointer;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    padding: var(--spacing-1) 0;
+}
+
+.admin-details[open] > summary {
+    margin-bottom: var(--spacing-2);
+}
+
+.admin-details[open] {
+    padding-bottom: var(--spacing-2);
+}
 
 .admin-result-summary {
     font-size: var(--font-size-sm);
