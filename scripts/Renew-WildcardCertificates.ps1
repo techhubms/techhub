@@ -47,11 +47,11 @@
     If set, forces renewal even if certificates are not yet due.
 
 .EXAMPLE
-    ./Renew-WildcardCertificates.ps1 -Email admin@xebia.com
+    ./Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com
     Renew certificates and import into Key Vault.
 
 .EXAMPLE
-    ./Renew-WildcardCertificates.ps1 -Email admin@xebia.com -DryRun
+    ./Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com -DryRun
     Test the entire flow without issuing real certificates.
 #>
 

@@ -79,12 +79,12 @@ Wildcard certificates from Key Vault are imported into the production App Servic
 
 ### Scheduled renewal
 
-The [Renew Wildcard Certificates](../.github/workflows/renew-wildcard-certificates.yml) GitHub Actions workflow runs `Renew-WildcardCertificates.ps1` at 06:00 UTC on the 1st of every month, so the 90-day certificates are always replaced well before they expire. It logs in to Azure with the same OIDC identity as the CD pipeline (the `techhub-ref-main` federated credential), installs certbot with the pinned versions from `.devcontainer/post-create.sh` and uses the `LETSENCRYPT_EMAIL` repository variable for the Let's Encrypt account (default `admin@xebia.com`). Run it on demand from the Actions tab (`workflow_dispatch`, optionally as a dry run). GitHub emails a failed scheduled run to the person who last edited the schedule.
+The [Renew Wildcard Certificates](../.github/workflows/renew-wildcard-certificates.yml) GitHub Actions workflow runs `Renew-WildcardCertificates.ps1` at 06:00 UTC on the 1st of every month, so the 90-day certificates are always replaced well before they expire. It logs in to Azure with the same OIDC identity as the CD pipeline (the `techhub-ref-main` federated credential), installs certbot with the pinned versions from `.devcontainer/post-create.sh` and uses the `LETSENCRYPT_EMAIL` repository variable for the Let's Encrypt account (default `whistler112@gmail.com`). Run it on demand from the Actions tab (`workflow_dispatch`, optionally as a dry run). GitHub emails a failed scheduled run to the person who last edited the schedule.
 
 ### Manual renewal
 
 ```powershell
-./scripts/Renew-WildcardCertificates.ps1 -Email admin@xebia.com
+./scripts/Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com
 ```
 
 The script:
@@ -103,13 +103,13 @@ The script:
 ### Dry run (test without issuing certificates)
 
 ```powershell
-./scripts/Renew-WildcardCertificates.ps1 -Email admin@xebia.com -DryRun
+./scripts/Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com -DryRun
 ```
 
 ### Force renewal
 
 ```powershell
-./scripts/Renew-WildcardCertificates.ps1 -Email admin@xebia.com -Force
+./scripts/Renew-WildcardCertificates.ps1 -Email whistler112@gmail.com -Force
 ```
 
 ### Network access

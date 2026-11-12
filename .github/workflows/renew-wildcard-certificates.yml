@@ -53,7 +53,7 @@ jobs:
         env:
           # Let's Encrypt account / expiry notification address. Override with the repository
           # variable LETSENCRYPT_EMAIL.
-          LETSENCRYPT_EMAIL: ${{ vars.LETSENCRYPT_EMAIL || 'admin@xebia.com' }}
+          LETSENCRYPT_EMAIL: ${{ vars.LETSENCRYPT_EMAIL || 'whistler112@gmail.com' }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
           $dryRunFlag = if ($env:DRY_RUN -eq 'true') { @('-DryRun') } else { @() }
