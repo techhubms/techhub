@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tech Hub uses GitHub Actions for continuous integration (CI) and continuous deployment (CD) to a single Azure App Service Plan (Basic B1) hosting both the API and Web sites as separate Web Apps for Containers.
+Tech Hub uses GitHub Actions for continuous integration (CI) and continuous deployment (CD) to a single Azure App Service Plan (Basic B2) hosting both the API and Web sites as separate Web Apps for Containers.
 
 All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infrastructure.ps1` and `scripts/Deploy-Application.ps1`) that can be run both locally and from GitHub Actions workflows.
 
@@ -164,6 +164,17 @@ workflow (`workflow_dispatch`, providing the PR number) to rebuild images and re
 environment. Pushing a new commit does **not** redeploy the preview automatically — only the
 quality-gate checks re-run on push (preview deploy is manual-only, see above).
 
+### Wildcard Certificate Renewal
+
+**File**: [.github/workflows/renew-wildcard-certificates.yml](../.github/workflows/renew-wildcard-certificates.yml)
+
+**Triggers**:
+
+- Scheduled at 06:00 UTC on the 1st of every month
+- Manual dispatch with optional `dry_run` flag
+
+Runs `Renew-WildcardCertificates.ps1` to renew the Let's Encrypt wildcard certificates for `*.hub.ms` and `*.xebia.ms` and rebind them to the web app. It deliberately has no GitHub environment: an environment job would record a production deployment, which the CD pipeline uses to decide whether infrastructure changed. See [wildcard-certificates.md](wildcard-certificates.md).
+
 ### Main Branch Deployment Jobs
 
 Run only after the quality gate passes, and never on PRs.
@@ -230,7 +241,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 **Production**:
 
 - Resource Group: `rg-techhub-prod`
-- App Service Plan: `asp-techhub-prod` (Basic B1, shared by API + Web sites)
+- App Service Plan: `asp-techhub-prod` (Basic B2, shared by API + Web sites)
 - API app: `app-techhub-api-prod`
 - Web app: `app-techhub-web-prod`
 - PostgreSQL: `psql-techhub-prod`
@@ -296,7 +307,7 @@ Four federated credentials on `sp-techhubms` cover every job in the pipeline:
 |---|---|---|
 | `techhub-environment-staging` | `repo:...:environment:staging` | `pr-preview-deploy` |
 | `techhub-environment-production` | `repo:...:environment:production` | `deploy-production` |
-| `techhub-ref-main` | `repo:...:ref:refs/heads/main` | `teardown-all-pr-envs` (nightly scheduled job) |
+| `techhub-ref-main` | `repo:...:ref:refs/heads/main` | `teardown-all-pr-envs` (nightly scheduled job), `renew` (monthly certificate renewal) |
 | `techhub-pull-request` | `repo:...:pull_request` | `pr-preview-teardown` (also works for Dependabot PRs, which cannot read repository secrets but can use OIDC variables) |
 
 The `pull_request` credential is used by the `pr-preview-teardown` job, which runs when a PR closes. Preview deploys (`workflow_dispatch`) use the `staging` environment credential instead.

@@ -1,6 +1,7 @@
 // Operational alerts for an environment. Targets:
 // - App Insights: elevated exception rate + failed request count
 // - Postgres Flexible Server: CPU saturation + connection count
+// - App Service Plan: memory saturation
 // - AI Foundry (Cognitive Services account): client errors (429/5xx)
 //
 // All alerts notify the shared action group.
@@ -19,6 +20,9 @@ param appInsightsId string
 
 @description('PostgreSQL Flexible Server resource ID')
 param postgresServerId string
+
+@description('App Service Plan resource ID')
+param appServicePlanId string
 
 @description('AI Foundry (Cognitive Services) account resource ID')
 param openAiAccountId string
@@ -156,6 +160,42 @@ resource postgresConnAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
           metricName: 'active_connections'
           operator: 'GreaterThan'
           threshold: 40
+          timeAggregation: 'Average'
+          criterionType: 'StaticThresholdCriterion'
+        }
+      ]
+    }
+    actions: [
+      {
+        actionGroupId: actionGroupId
+      }
+    ]
+  }
+}
+
+// --- App Service Plan: memory saturation ---
+// The API and Web sites share one plan. When its memory is exhausted the sites freeze for several
+// minutes and then restart, which shows up as bursts of HTTP 5xx.
+resource appServicePlanMemoryAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
+  name: 'alert-${environmentName}-appservice-memory'
+  location: 'global'
+  tags: tags
+  properties: {
+    description: 'Fires when App Service Plan memory is sustained above 85% (the sites freeze and restart when it runs out).'
+    severity: severityMedium
+    enabled: true
+    scopes: [appServicePlanId]
+    evaluationFrequency: 'PT5M'
+    windowSize: 'PT15M'
+    criteria: {
+      'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
+      allOf: [
+        {
+          name: 'MemoryPercentage'
+          metricNamespace: 'Microsoft.Web/serverfarms'
+          metricName: 'MemoryPercentage'
+          operator: 'GreaterThan'
+          threshold: 85
           timeAggregation: 'Average'
           criterionType: 'StaticThresholdCriterion'
         }

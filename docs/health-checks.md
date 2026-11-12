@@ -61,7 +61,7 @@ Both API and Web App Service sites configure a single health-check path in their
 
 **Actual App Service behavior** (see [Monitor the health of App Service instances](https://learn.microsoft.com/azure/app-service/monitor-instances-health-check)) differs from Container Apps' restart-on-failure model and is more lenient:
 
-- Both `api` and `web` App Service Plans run **Basic B1 with a single instance**. Per Microsoft's own docs, a single-instance app is **never removed from the load balancer** while unhealthy — that would take down the entire site — so a failing `/health` never causes an outage by itself.
+- Both `api` and `web` App Service Plans run **Basic B2 with a single instance**. Per Microsoft's own docs, a single-instance app is **never removed from the load balancer** while unhealthy — that would take down the entire site — so a failing `/health` never causes an outage by itself.
 - After **one continuous hour** of unhealthy pings, App Service replaces the instance (a cold restart), capped at one replacement per hour and three per day per plan.
 - With 2+ instances, an unhealthy instance is pulled from rotation after `WEBSITE_HEALTHCHECK_MAXPINGFAILURES` consecutive failures (default 10, i.e. ~10 minutes), then replaced after the same one-hour threshold if it doesn't recover.
 
@@ -107,7 +107,7 @@ keep serving fine through a brief API/DB blip. `ApiHealthCheck` only fails when 
 cannot reach the API process at all.
 
 This is a low-risk addition given App Service's actual health-check semantics (see above): on a
-single-instance Basic B1 plan, `/health` failures never remove the instance from traffic and only
+single-instance Basic B2 plan, `/health` failures never remove the instance from traffic and only
 result in a replacement after a full continuous hour of failures — far longer than any routine API
 deploy or transient blip.
 

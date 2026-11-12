@@ -17,7 +17,7 @@ param appInsightsName string = 'appi-techhub-prod'
 @description('Key Vault name (existing resource)')
 param keyVaultName string = 'kv-techhub-prod'
 
-@description('App Service Plan name (existing resource, Basic B1, hosts both API and Web sites)')
+@description('App Service Plan name (existing resource, Basic B2, hosts both API and Web sites)')
 param appServicePlanName string = 'asp-techhub-prod'
 
 @description('API app name')

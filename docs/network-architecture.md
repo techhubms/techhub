@@ -16,7 +16,7 @@ Internet
     └── Admin IP (allowlisted for Key Vault, PostgreSQL, and AI Foundry)
 
 Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
-    ├── snet-app-service (10.2.0.0/23) — Regional VNet Integration for asp-techhub-prod (Basic B1)
+    ├── snet-app-service (10.2.0.0/23) — Regional VNet Integration for asp-techhub-prod (Basic B2)
     │    │
     │    ├── app-techhub-web-prod   — public HTTPS ingress, reachable from internet
     │    │
@@ -71,7 +71,7 @@ No hub-spoke peering.
 
 ## App Service Ingress
 
-Both API and Web sites run on the same **Basic B1 App Service Plan** (`asp-techhub-prod`), each
+Both API and Web sites run on the same **Basic B2 App Service Plan** (`asp-techhub-prod`), each
 as a separate Web App for Containers with its own VNet-integrated outbound traffic and its own
 inbound access rules.
 

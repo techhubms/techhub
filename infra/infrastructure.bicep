@@ -18,7 +18,7 @@ param appInsightsName string = 'appi-techhub-prod'
 @description('Key Vault name (stores wildcard certs, app secrets, and GitHub registry token)')
 param keyVaultName string = 'kv-techhub-prod'
 
-@description('App Service Plan name (Basic B1, hosts both API and Web sites)')
+@description('App Service Plan name (Basic B2, hosts both API and Web sites)')
 param appServicePlanName string = 'asp-techhub-prod'
 
 @description('VNet name')
@@ -201,7 +201,7 @@ module openai './modules/openai.bicep' = {
   }
 }
 
-// App Service Plan (Basic B1, Linux, Regional VNet Integration) — hosts both the API and Web
+// App Service Plan (Basic B2, Linux, Regional VNet Integration) — hosts both the API and Web
 // sites as separate Microsoft.Web/sites resources in applications.bicep (Phase 2).
 module appServicePlan './modules/appServicePlan.bicep' = {
   scope: resourceGroup
@@ -314,6 +314,7 @@ module alerts './modules/alerts.bicep' = {
     actionGroupId: actionGroup.outputs.actionGroupId
     appInsightsId: monitoring.outputs.appInsightsId
     postgresServerId: postgres.outputs.serverId
+    appServicePlanId: appServicePlan.outputs.id
     openAiAccountId: openai.outputs.openAiId
     tags: prodTags
   }
