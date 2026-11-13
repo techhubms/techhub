@@ -474,46 +474,42 @@ public static class BlazorHelpers
     /// </summary>
     public static async Task WaitForBlazorReadyAsync(this IPage page)
     {
-        try
-        {
-            // Single combined check for all readiness conditions INCLUDING Mermaid diagrams:
-            // 1. Blazor runtime exists
-            // 2. Interactive runtime is ready (Server/WASM circuit established)
-            // 3. Page scripts finished loading (mermaid, highlight.js, custom-pages, etc.)
-            // Previously these were 3 separate WaitForConditionAsync calls. Combining into one
-            // eliminates ~100-200ms overhead per navigation across 200+ navigations in the E2E suite.
-            // Mermaid readiness is covered by __scriptsReady: markScriptsReady() defers until
-            // __mermaidReady is true (set by initMermaid on all exit paths).
-            await page.WaitForConditionAsync(@"
-                () => {
-                    // Step 1: Blazor runtime must exist
-                    if (typeof window.Blazor === 'undefined') return false;
+        // Single combined check for all readiness conditions INCLUDING Mermaid diagrams:
+        // 1. Blazor runtime exists
+        // 2. Interactive runtime is ready (Server/WASM circuit established)
+        // 3. Page scripts finished loading (mermaid, highlight.js, custom-pages, etc.)
+        // Previously these were 3 separate WaitForConditionAsync calls. Combining into one
+        // eliminates ~100-200ms overhead per navigation across 200+ navigations in the E2E suite.
+        // Mermaid readiness is covered by __scriptsReady: markScriptsReady() defers until
+        // __mermaidReady is true (set by initMermaid on all exit paths).
+        //
+        // A timeout is NOT swallowed: continuing on a page that never became ready only moves the
+        // failure to a later step, which then burns its own timeout and reports the wrong cause.
+        await page.WaitForConditionAsync(@"
+            () => {
+                // Step 1: Blazor runtime must exist
+                if (typeof window.Blazor === 'undefined') return false;
 
-                    // Step 2: Interactive Server/WASM circuit must be established.
-                    // __blazorServerReady is set by afterServerStarted() — SignalR circuit ready, event handlers attached.
-                    // __blazorWasmReady  is set by afterWebAssemblyStarted() — WASM runtime ready.
-                    // NOTE: __blazorWebReady (afterWebStarted) fires too early — before the interactive circuit
-                    // is established — and must NOT be used here to avoid returning before @onclick handlers attach.
-                    if (window.__blazorServerReady !== true && window.__blazorWasmReady !== true) {
-                        return false;
-                    }
-
-                    // Step 3: Page scripts must be ready (or not applicable).
-                    // __scriptsReady is set false by navigation handlers when scripts start loading,
-                    // and set true by markScriptsReady() when ALL component flags are confirmed
-                    // (scroll listener, date-range slider, mermaid). Only block if explicitly
-                    // false (loading). If undefined (initial page load or page with no scripts),
-                    // proceed immediately.
-                    if (window.__scriptsReady === false) return false;
-
-                    return true;
+                // Step 2: Interactive Server/WASM circuit must be established.
+                // __blazorServerReady is set by afterServerStarted() — SignalR circuit ready, event handlers attached.
+                // __blazorWasmReady  is set by afterWebAssemblyStarted() — WASM runtime ready.
+                // NOTE: __blazorWebReady (afterWebStarted) fires too early — before the interactive circuit
+                // is established — and must NOT be used here to avoid returning before @onclick handlers attach.
+                if (window.__blazorServerReady !== true && window.__blazorWasmReady !== true) {
+                    return false;
                 }
-            ", new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
-        }
-        catch (TimeoutException)
-        {
-            // Static pages without Blazor - that's fine, continue
-        }
+
+                // Step 3: Page scripts must be ready (or not applicable).
+                // __scriptsReady is set false by navigation handlers when scripts start loading,
+                // and set true by markScriptsReady() when ALL component flags are confirmed
+                // (scroll listener, date-range slider, mermaid). Only block if explicitly
+                // false (loading). If undefined (initial page load or page with no scripts),
+                // proceed immediately.
+                if (window.__scriptsReady === false) return false;
+
+                return true;
+            }
+        ", onTimeout: "() => JSON.stringify({url: location.href, blazor: typeof window.Blazor !== 'undefined', serverReady: window.__blazorServerReady === true, wasmReady: window.__blazorWasmReady === true, scriptsReady: window.__scriptsReady})");
     }
 
     // ============================================================================
