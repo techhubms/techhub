@@ -43,6 +43,11 @@ public class ScrollRestorationTests : PlaywrightTestBase
         // Go back — triggers popstate → navigating='traverse' → restoreScrollPosition
         await Page.GoBackAsync();
         await Page.WaitForBlazorUrlContainsAsync("vscode-updates");
+
+        // The URL flips on popstate, before the server has rendered the destination page. On a slow
+        // server the old page is still in the DOM, so wait for the destination content explicitly;
+        // WaitForBlazorReadyAsync swallows its own timeout and cannot tell the pages apart.
+        await Assertions.Expect(Page.Locator(".article-body").First).ToBeVisibleAsync();
         await Page.WaitForBlazorReadyAsync();
 
         // Assert — scroll position should be restored to 500.
@@ -50,7 +55,7 @@ public class ScrollRestorationTests : PlaywrightTestBase
         await Page.WaitForConditionAsync(
             "(expected) => Math.abs(window.scrollY - expected) < 5",
             (object)500.0,
-            onTimeout: "() => JSON.stringify({scrollY: window.scrollY, maxScroll: document.documentElement.scrollHeight - window.innerHeight, savedPositions: window.__savedScrollPositions})");
+            onTimeout: "() => JSON.stringify({scrollY: window.scrollY, maxScroll: document.documentElement.scrollHeight - window.innerHeight, path: location.pathname, scriptsReady: window.__scriptsReady, hasArticle: document.querySelector('.article-body') !== null, cards: document.querySelectorAll('.card').length, savedPositions: window.__savedScrollPositions})");
     }
 
     [Fact]

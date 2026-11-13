@@ -258,6 +258,12 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         // Navigate back
         await Page.GoBackAsync();
         await Page.WaitForBlazorUrlContainsAsync("ai/blogs");
+
+        // The URL flips on popstate, before the server has rendered the destination page, so the
+        // /ai/all grid is still in the DOM. Only /ai/all shows the content-type filter, so its
+        // absence together with rendered cards proves the /ai/blogs grid has replaced it.
+        await Page.WaitForConditionAsync(
+            "() => document.querySelector('.content-type-filter') === null && document.querySelectorAll('.card').length > 0");
         await Page.WaitForBlazorReadyAsync();
 
         // Scroll position should be restored (allow ±100px tolerance).
@@ -266,7 +272,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         await Page.WaitForConditionAsync(
             "(expected) => Math.abs(window.scrollY - expected) < 100",
             (object)500.0,
-            onTimeout: "() => JSON.stringify({scrollY: window.scrollY, savedPositions: window.__savedScrollPositions})");
+            onTimeout: "() => JSON.stringify({scrollY: window.scrollY, maxScroll: document.documentElement.scrollHeight - window.innerHeight, path: location.pathname, scriptsReady: window.__scriptsReady, cards: document.querySelectorAll('.card').length, contentTypeFilter: document.querySelector('.content-type-filter') !== null, savedPositions: window.__savedScrollPositions})");
     }
 
     // ============================================================================

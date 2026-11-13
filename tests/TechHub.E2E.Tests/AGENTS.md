@@ -88,7 +88,7 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scal
 | `ScrollToPositionAsync(y)` | Scroll page to Y position (retries until page is tall enough) |
 | `FillBlazorInputAsync(query)` | Fill input + wait for URL query param update |
 | `WaitForConditionAsync(js, onTimeout?)` | Wait for JS condition (uses `E2ETimeout`; scales 10–60 s by network profile); optional `onTimeout` JS expression evaluated on timeout and appended to error message for diagnostics |
-| `WaitForBlazorReadyAsync()` | Wait for Blazor ready + `__scriptsReady` (which already includes Mermaid via `allComponentsReady()`) |
+| `WaitForBlazorReadyAsync()` | Wait for Blazor ready + `__scriptsReady` (which already includes Mermaid via `allComponentsReady()`). Throws a `TimeoutException` with the readiness state on timeout — it never continues on a page that is not ready. |
 
 ## Wait Pattern Best Practices
 
@@ -105,6 +105,7 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scal
 | Scroll finish | `WaitForConditionAsync` polling `window.scrollY` |
 | Expand/collapse | `Assertions.Expect(content).ToHaveClassAsync(new Regex("expanded"))` |
 | No navigation | `WaitForBlazorReadyAsync()` then assert URL unchanged |
+| Back/forward navigation | `WaitForBlazorUrlContainsAsync` → wait for content only the destination page has → `WaitForBlazorReadyAsync`. The URL changes on popstate, before the destination is rendered, so the old page is still in the DOM. |
 | Load more batch | `loadMoreBtn.ClickAndExpectAsync(async () => count.Should().BeGreaterThan(prev))` |
 | End of content | `Assertions.Expect(Page.Locator(".end-of-content")).ToBeVisibleAsync()` |
 | Focus after nav reset | `WaitForConditionAsync("() => document.activeElement && document.activeElement !== document.body")` |
