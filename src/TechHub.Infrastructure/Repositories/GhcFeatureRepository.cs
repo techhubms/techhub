@@ -6,7 +6,8 @@ using TechHub.Core.Models;
 namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
-/// PostgreSQL implementation of <see cref="IGhcFeatureRepository"/>: manages the <c>vscode_update_items</c> table.
+/// PostgreSQL implementation of <see cref="IGhcFeatureRepository"/>: manages the <c>vscode_update_items</c> table and reads the
+/// features of the catalog that have content.
 /// </summary>
 public sealed class GhcFeatureRepository : IGhcFeatureRepository
 {
@@ -15,6 +16,122 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
     public GhcFeatureRepository(IDbConnection connection)
     {
         _connection = connection;
+    }
+
+    /// <inheritdoc/>
+    public async Task<IReadOnlyList<SectionFeature>> GetFeaturesWithContentAsync(string productName, CancellationToken ct = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(productName);
+
+        // The three sources of content are merged per item: the thumbnail and the admin's order win over a detected link. Roundups
+        // state dates about everything, so they never count as content of a feature.
+        const string Sql = """
+            WITH tree AS (
+                SELECT product_tree_ids(find_product_id(@ProductName)) AS id
+            ),
+            features AS (
+                SELECT f.id, f.slug, f.name, f.description, f.release_date, p.name AS product_name
+                FROM product_features f
+                JOIN products p ON p.id = f.product_id
+                WHERE f.product_id IN (SELECT id FROM tree)
+            ),
+            links AS (
+                SELECT l.feature_id, l.collection_name, l.item_slug, l.is_thumbnail, l.sort_order, FALSE AS is_detected
+                FROM product_feature_content l
+                JOIN features f ON f.id = l.feature_id
+                UNION ALL
+                SELECT e.feature_id, e.collection_name, e.item_slug, FALSE, 2147483647, TRUE
+                FROM content_timeline_events e
+                JOIN features f ON f.id = e.feature_id
+                WHERE e.collection_name <> 'roundups'
+                UNION ALL
+                SELECT resolved.out_feature_id, ci.collection_name, ci.slug, FALSE, 2147483647, TRUE
+                FROM content_items ci
+                CROSS JOIN LATERAL jsonb_array_elements(
+                    CASE WHEN jsonb_typeof(ci.ai_metadata -> 'product_features') = 'array'
+                         THEN ci.ai_metadata -> 'product_features'
+                         ELSE '[]'::jsonb END) AS n (value)
+                CROSS JOIN LATERAL resolve_event_catalog(n.value ->> 'product', n.value ->> 'feature') AS resolved
+                JOIN features f ON f.id = resolved.out_feature_id
+                WHERE ci.collection_name <> 'roundups'
+                  AND jsonb_typeof(n.value) = 'object'
+                  AND btrim(COALESCE(n.value ->> 'product', '')) <> ''
+                  AND btrim(COALESCE(n.value ->> 'feature', '')) <> ''
+            ),
+            merged AS (
+                SELECT feature_id, collection_name, item_slug,
+                       bool_or(is_thumbnail) AS is_thumbnail,
+                       min(sort_order) AS sort_order,
+                       bool_and(is_detected) AS is_detected
+                FROM links
+                GROUP BY feature_id, collection_name, item_slug
+            )
+            SELECT f.slug AS Slug,
+                   f.name AS Name,
+                   f.product_name AS ProductName,
+                   f.description AS Description,
+                   f.release_date AS ReleaseDate,
+                   m.collection_name AS CollectionName,
+                   m.item_slug AS ItemSlug,
+                   ci.title AS ItemTitle,
+                   ci.external_url AS ItemExternalUrl,
+                   ci.primary_section_name AS ItemPrimarySectionName,
+                   m.is_thumbnail AS IsThumbnail,
+                   m.is_detected AS IsDetected
+            FROM merged m
+            JOIN features f ON f.id = m.feature_id
+            JOIN content_items ci ON ci.collection_name = m.collection_name AND ci.slug = m.item_slug
+            ORDER BY f.release_date DESC NULLS LAST, lower(f.name), f.slug,
+                     m.is_thumbnail DESC, m.sort_order, ci.date_epoch DESC, m.item_slug
+            """;
+
+        var rows = await _connection.QueryAsync<FeatureContentRow>(
+            new CommandDefinition(Sql, new { ProductName = productName }, cancellationToken: ct));
+
+        // The query returns the rows of one feature together and in display order, so a group keeps the order of the rows.
+        return rows
+            .GroupBy(r => r.Slug)
+            .Select(g =>
+            {
+                var first = g.First();
+                return new SectionFeature
+                {
+                    Slug = first.Slug,
+                    Name = first.Name,
+                    ProductName = first.ProductName,
+                    Description = first.Description ?? string.Empty,
+                    ReleaseDate = first.ReleaseDate is { } epoch
+                        ? DateOnly.FromDateTime(DateTimeOffset.FromUnixTimeSeconds(epoch).UtcDateTime)
+                        : null,
+                    Content = g.Select(r => new SectionFeatureContent
+                    {
+                        CollectionName = r.CollectionName,
+                        ItemSlug = r.ItemSlug,
+                        Title = r.ItemTitle,
+                        ExternalUrl = r.ItemExternalUrl ?? string.Empty,
+                        PrimarySectionName = r.ItemPrimarySectionName,
+                        IsThumbnail = r.IsThumbnail,
+                        IsDetected = r.IsDetected
+                    }).ToList()
+                };
+            })
+            .ToList();
+    }
+
+    private sealed class FeatureContentRow
+    {
+        public string Slug { get; init; } = string.Empty;
+        public string Name { get; init; } = string.Empty;
+        public string ProductName { get; init; } = string.Empty;
+        public string? Description { get; init; }
+        public long? ReleaseDate { get; init; }
+        public string CollectionName { get; init; } = string.Empty;
+        public string ItemSlug { get; init; } = string.Empty;
+        public string ItemTitle { get; init; } = string.Empty;
+        public string? ItemExternalUrl { get; init; }
+        public string ItemPrimarySectionName { get; init; } = string.Empty;
+        public bool IsThumbnail { get; init; }
+        public bool IsDetected { get; init; }
     }
 
     /// <inheritdoc/>

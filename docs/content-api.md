@@ -369,6 +369,39 @@ Returns the timeline of a section, newest first. Only articles whose primary sec
 
 **Errors**: `400` for an invalid section name, date, kind or `take`. `404` for an unknown section.
 
+## Features API
+
+### GET /api/sections/{sectionName}/features
+
+Returns the features of the catalog that have content, for the features page of a section. The features are those of the product whose name (or alias) is the tag of the section ("GitHub Copilot" for the `github-copilot` section) and of its child products. A feature has content when an admin linked a content item to it, when a dated event names it, or when an article lists it by name or alias (roundups never count). Features without content are not returned. Public endpoint (no authentication required).
+
+Newest release first; features without a release date last. Per feature, the content is ordered: the thumbnail, the items an admin linked (in the admin's order), then the detected ones.
+
+```json
+[
+  {
+    "slug": "agent-mode",
+    "name": "Agent mode",
+    "productName": "GitHub Copilot",
+    "description": "Let Copilot work on its own.",
+    "releaseDate": "2025-02-06",
+    "content": [
+      {
+        "collectionName": "videos",
+        "itemSlug": "agent-mode-explained",
+        "title": "Agent mode explained",
+        "externalUrl": "https://youtu.be/abc123",
+        "primarySectionName": "github-copilot",
+        "isThumbnail": true,
+        "isDetected": false
+      }
+    ]
+  }
+]
+```
+
+The list is empty when the tag of the section is not a product. **Errors**: `400` for an invalid section name, `404` for an unknown section.
+
 ## VS Code Updates API
 
 ### GET /api/vscode-updates
