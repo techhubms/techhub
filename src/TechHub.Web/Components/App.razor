@@ -57,7 +57,7 @@
                 if (!window.__e2e) return;
                 window.__e2e.counter++;
                 window.__e2e.label = label;
-                window.__e2e.history.push({ counter: window.__e2e.counter, label: label });
+                window.__e2e.history.push({ counter: window.__e2e.counter, label: label, t: Math.round(performance.now()) });
                 if (window.__e2e.history.length > 20) window.__e2e.history.shift();
             };
             window.addEventListener('scrollend', function() { window.__e2eSignal('scroll-end'); });

@@ -1,0 +1,282 @@
+/* ============================================================================
+   GitHub Copilot Features Page Styles
+
+   Page-specific layout only - cards inherit from global cards.css
+   ============================================================================ */
+
+/* Intro and billing notice */
+.custom-page-container {
+  max-width: 100%;
+}
+
+.custom-page-intro {
+  margin-bottom: var(--spacing-5);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.custom-page-intro p {
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-primary);
+}
+
+.custom-page-billing-notice {
+  background: var(--color-blue-bg);
+  border-left: 4px solid var(--color-blue);
+  padding: var(--spacing-2) var(--spacing-3);
+  margin: var(--spacing-3) 0 var(--spacing-5);
+  border-radius: var(--radius-sm);
+}
+
+.custom-page-billing-notice p {
+  margin-bottom: var(--spacing-2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.custom-page-billing-notice ul {
+  margin: 0;
+  padding-left: var(--spacing-4);
+}
+
+.custom-page-billing-notice li {
+  margin-bottom: var(--spacing-1);
+}
+
+/* ─── Subscription tiers (sidebar) ───────────────────────────────── */
+
+.features-tiers-sidebar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-4);
+}
+
+.features-tiers-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  position: sticky;
+  top: calc(var(--sticky-header-height) + var(--spacing-2));
+  max-height: calc(100vh - var(--sticky-header-height) - var(--spacing-6));
+  overflow-y: auto;
+  padding-right: var(--spacing-1);
+  min-height: 0;
+  scrollbar-width: thin;
+}
+
+.features-tiers-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.features-tiers-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.features-tiers-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-border-default);
+  border-radius: var(--radius-sm);
+}
+
+.features-tier-card {
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2);
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-align: left;
+  width: 100%;
+}
+
+.features-tier-card h3 {
+  font-size: var(--font-size-2xl);
+  margin: 0 0 var(--spacing-1) 0;
+  color: var(--color-purple-bright);
+}
+
+.features-tier-tagline {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-1);
+  line-height: var(--line-height-normal);
+}
+
+.features-tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.features-tier-features li {
+  padding: 0.2rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.features-tier-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-green-light);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+}
+
+/* ─── Filter ─────────────────────────────────────────────────────── */
+
+.features-filters {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
+.features-filter-btn {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-emphasis);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: border-color var(--duration-normal) var(--easing-ease-out),
+              color var(--duration-normal) var(--easing-ease-out);
+}
+
+@media (hover: hover) {
+  .features-filter-btn:hover {
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-emphasis);
+  }
+}
+
+html.keyboard-nav .features-filter-btn:focus-visible {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.features-filter-btn.active {
+  border-color: var(--color-purple-bright);
+  color: var(--color-purple-bright);
+  background: var(--color-purple-bg-subtle);
+}
+
+.features-empty {
+  color: var(--color-text-secondary);
+}
+
+/* ─── Feature cards ──────────────────────────────────────────────── */
+
+.features-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-3);
+}
+
+.feature-card {
+  min-height: auto;
+}
+
+.feature-card h3 {
+  margin-top: 0;
+}
+
+.feature-card a {
+  text-decoration: none;
+}
+
+.feature-card-thumbnail {
+  position: relative;
+  display: block;
+  overflow: clip;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-3);
+}
+
+.feature-card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+.feature-card-play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-overlay-banner-edge);
+  color: var(--color-text-on-emphasis);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--easing-ease-out);
+}
+
+@media (hover: hover) {
+  .feature-card:hover .feature-card-play-icon {
+    opacity: 1;
+  }
+}
+
+.feature-card-related {
+  list-style: none;
+  margin: 0 0 var(--spacing-2) 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+}
+
+.feature-card-related a {
+  color: var(--color-purple-bright);
+}
+
+@media (hover: hover) {
+  .feature-card-related a:hover {
+    text-decoration: underline;
+  }
+}
+
+.feature-card-related-more {
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1292px) {
+  .features-tiers-scroll {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .features-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .features-tier-card {
+    border-color: var(--color-print-border);
+    page-break-inside: avoid;
+  }
+
+  .feature-card-thumbnail {
+    display: none;
+  }
+}

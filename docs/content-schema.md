@@ -98,7 +98,7 @@ External-linking collections (`news`, `blogs`, `community`) use `external_url` f
 
 ## GitHub Copilot Features
 
-The features of GitHub Copilot are features of the GitHub Copilot product in the product catalog (see [Product Catalog](product-catalog.md)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. They have no page of their own: their dates are events on the timeline of the GitHub Copilot section (see [Timeline Events](content-processing.md#timeline-events)). The former `/github-copilot/features` page redirects to that timeline. The consolidated migration `050_product_catalog.sql` imports the legacy `ghc_features` and `ghc_feature_content` data into the catalog and timeline events, then drops the legacy tables.
+The features of GitHub Copilot are features of the GitHub Copilot product in the product catalog (see [Product Catalog](product-catalog.md)), not content items. A feature is a row in `product_features` and can link to any number of content items (typically videos) through `product_feature_content`. They are shown in two places: as cards on the features page `/github-copilot/features` (see [Features page](custom-pages.md#github-copilot-features-page)), when they have content, and through their dated events on the timeline of the GitHub Copilot section (see [Timeline Events](content-processing.md#timeline-events)). The consolidated migration `050_product_catalog.sql` imports the legacy `ghc_features` and `ghc_feature_content` data into the catalog and timeline events, then drops the legacy tables.
 
 ### `product_features` table
 
@@ -118,7 +118,7 @@ The subscription plans of a feature and whether GitHub Enterprise Server support
 
 ### `product_feature_content` table
 
-Links a feature to one or more content items (videos, blogs). The links are only edited in the admin; the timeline lists the items of an event as its sources instead:
+Links a feature to one or more content items (videos, blogs). The links are edited in the admin; the features page also counts the items of the feature's dated events and the articles that list it (see [Features page](custom-pages.md#github-copilot-features-page)), and the timeline lists the items of an event as its sources:
 
 | Column | Type | Description |
 |---|---|---|

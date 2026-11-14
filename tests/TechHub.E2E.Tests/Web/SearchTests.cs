@@ -122,7 +122,7 @@ public class SearchTests : PlaywrightTestBase
         // Arrange - use a data-rich collection page so both search and tag filters are
         // available under filter-mode navigation during E2E runs.
         await Page.GotoRelativeAsync(TagSearchTestPath);
-        await WaitForSelectableTagFilterOrSkipAsync();
+        await WaitForSelectableTagFilterAsync();
 
         // Act 1 - Select a tag
         var tagButton = Page.Locator(EnabledTagSelector).First;
@@ -145,13 +145,12 @@ public class SearchTests : PlaywrightTestBase
         queryParams.Get("tags").Should().NotBeNullOrEmpty();
     }
 
-    private async Task WaitForSelectableTagFilterOrSkipAsync()
+    private async Task WaitForSelectableTagFilterAsync()
     {
         await Page.WaitForBlazorReadyAsync();
 
         var enabledTags = await WaitForSelectableTagFilterOrReachTerminalStateAsync();
-        Assert.SkipWhen(enabledTags == 0,
-            "No enabled tag filters are available in the current data snapshot.");
+        enabledTags.Should().BeGreaterThan(0, "the tag cloud must offer at least one selectable tag");
     }
 
     private async Task<int> WaitForSelectableTagFilterOrReachTerminalStateAsync()

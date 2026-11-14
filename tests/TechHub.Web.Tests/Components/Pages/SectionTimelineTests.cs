@@ -90,51 +90,15 @@ public class SectionTimelineTests : BunitContext
         return cut;
     }
 
-    private static FeaturesPageData TiersData() => new()
-    {
-        Title = "GitHub Copilot Features",
-        Description = "Features",
-        Intro = "Intro",
-        Links = new FeaturesLinks { Pricing = "https://example.com/pricing", PlanDetails = "https://example.com/plans" },
-        SubscriptionTiers =
-        [
-            new SubscriptionTier { Id = "free", Name = "Free", Tagline = "Try it out", Features = ["Code completions"], VideoAnchor = "free" },
-            new SubscriptionTier { Id = "pro", Name = "Pro", Tagline = "For individuals", Features = ["Agent mode", "Code review"], VideoAnchor = "pro" }
-        ]
-    };
-
     [Fact]
-    public void Render_ForGitHubCopilot_ShowsTheSubscriptionTiersInTheSidebar()
+    public void Render_ForGitHubCopilot_DoesNotLoadOrShowTheSubscriptionTiers()
     {
-        _mockApiClient.Setup(x => x.GetFeaturesDataAsync(It.IsAny<CancellationToken>())).ReturnsAsync(TiersData());
-
-        var cut = RenderGitHubCopilotPage();
-
-        var sidebar = cut.Find("aside.sidebar");
-        sidebar.QuerySelector(".features-tiers-sidebar h2")!.TextContent.Should().Be("Subscriptions");
-        sidebar.QuerySelectorAll(".features-tier-card h3").Select(h => h.TextContent).Should().Equal("Free", "Pro");
-        sidebar.QuerySelectorAll("#tier-pro .features-tier-features li").Select(li => li.TextContent).Should().Equal("Agent mode", "Code review");
-        sidebar.QuerySelector(".timeline-filter").Should().NotBeNull("the kind filter stays next to the tiers");
-    }
-
-    [Fact]
-    public void Render_ForOtherSections_DoesNotLoadOrShowTheSubscriptionTiers()
-    {
-        var cut = RenderPage();
-
-        cut.FindAll(".features-tiers-sidebar").Should().BeEmpty();
-        _mockApiClient.Verify(x => x.GetFeaturesDataAsync(It.IsAny<CancellationToken>()), Times.Never);
-    }
-
-    [Fact]
-    public void Render_ForGitHubCopilotWithoutTierData_ShowsTheTimelineWithoutTiers()
-    {
-        _mockApiClient.Setup(x => x.GetFeaturesDataAsync(It.IsAny<CancellationToken>())).ReturnsAsync((FeaturesPageData?)null);
-
+        // The subscriptions belong to the features page, not to the timeline
         var cut = RenderGitHubCopilotPage();
 
         cut.FindAll(".features-tiers-sidebar").Should().BeEmpty();
         cut.FindAll(".timeline-entry").Should().NotBeEmpty();
+        _mockApiClient.Verify(x => x.GetFeaturesDataAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
     [Fact]

@@ -485,6 +485,7 @@ public static class BlazorHelpers
         //
         // A timeout is NOT swallowed: continuing on a page that never became ready only moves the
         // failure to a later step, which then burns its own timeout and reports the wrong cause.
+        var stopwatch = System.Diagnostics.Stopwatch.StartNew();
         await page.WaitForConditionAsync(@"
             () => {
                 // Step 1: Blazor runtime must exist
@@ -509,8 +510,43 @@ public static class BlazorHelpers
 
                 return true;
             }
-        ", onTimeout: "() => JSON.stringify({url: location.href, blazor: typeof window.Blazor !== 'undefined', serverReady: window.__blazorServerReady === true, wasmReady: window.__blazorWasmReady === true, scriptsReady: window.__scriptsReady})");
+        ", onTimeout: ReadyDiagnosticsScript);
+
+        // Most pages are ready in a few seconds. A wait that is slow but still succeeds is the early warning of a hang that
+        // only sometimes crosses the timeout, so it reports what the page was waiting on.
+        if (stopwatch.ElapsedMilliseconds > SlowReadyThresholdMs)
+        {
+            string diagnostics;
+#pragma warning disable CA1031 // Diagnostics must not fail the test
+            try
+            {
+                diagnostics = await page.EvaluateAsync<string>(ReadyDiagnosticsScript);
+            }
+            catch (Exception ex)
+            {
+                diagnostics = $"(diagnostics evaluation failed: {ex.Message})";
+            }
+#pragma warning restore CA1031
+
+            TestContext.Current.TestOutputHelper?.WriteLine(
+                $"SLOW-READY: Blazor took {stopwatch.ElapsedMilliseconds} ms to be ready. State: {diagnostics}");
+        }
     }
+
+    private const int SlowReadyThresholdMs = 10_000;
+
+    // The state of the ready handshake, with the lifecycle signals of the page in order (t = ms since navigation start).
+    // A scripts-ready before blazor-server-ready would mean afterServerStarted reset the flag after the server had already signalled.
+    private const string ReadyDiagnosticsScript = @"() => JSON.stringify({
+        url: location.href,
+        blazor: typeof window.Blazor !== 'undefined',
+        serverReady: window.__blazorServerReady === true,
+        wasmReady: window.__blazorWasmReady === true,
+        scriptsReady: window.__scriptsReady,
+        nowMs: Math.round(performance.now()),
+        reconnectModalOpen: !!document.getElementById('components-reconnect-modal')?.open,
+        signals: (window.__e2e?.history ?? []).map(h => h.label + '@' + h.t)
+    })";
 
     // ============================================================================
     // ELEMENT INTERACTION - Use Playwright's built-in auto-waiting

@@ -179,7 +179,8 @@ CDN config is bridged from C# via an inline script in App.razor (`window.TechHub
 | `GitHubCopilotGettingStarted.razor` | `initHighlighting`, `initTocScrollSpy` | No |
 | `GitHubCopilotVSCodeUpdates.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | Yes |
 | `AISDLC.razor` | `initMermaid`, `initTocScrollSpy` | No |
-| `GitHubCopilotFeatures.razor`, `SectionTimeline.razor` | *(none in `PageScripts`)* — cards are `TimelineView` cards that expand with Blazor `@onclick`; the component calls the `preventScrollOnExpand` global from `page-scripts.js` through JS interop | No |
+| `GitHubCopilotFeatures.razor` | *(none)*: a grid of cards with Blazor `@onclick` filters, no scripts | No |
+| `SectionTimeline.razor` | *(none in `PageScripts`)* — cards are `TimelineView` cards that expand with Blazor `@onclick`; the component calls the `preventScrollOnExpand` global from `page-scripts.js` through JS interop | No |
 
 All other pages (`SectionCollection`, `Authors`, `About`, `McpInfo`, `Newsletter*`, `Admin*`, `Error`, `NotFound`, and the `GitHubCopilotDiscord` and `GitHubCopilotToolTips` pages) declare no scripts, so the base class only calls `markScriptsReady`.
 
@@ -289,7 +290,7 @@ Generated from the directory contents (`list_dir` on `Components/`). Re-check th
 | `SectionTimeline` | `/{sectionName}/timeline` (the `timeline` custom collection of each section except `all`) |
 | `AISDLC` | `/ai/sdlc` |
 | `DXSpace` | `/devops/dx-space` |
-| `GitHubCopilotVSCodeUpdates` (also `/{VideoSlug}`), `GitHubCopilotGettingStarted`, `GitHubCopilotLevels`, `GitHubCopilotHandbook`, `GitHubCopilotToolTips`, `GitHubCopilotDiscord` | `/vscode-updates`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord` |
+| `GitHubCopilotVSCodeUpdates` (also `/{VideoSlug}`), `GitHubCopilotFeatures`, `GitHubCopilotGettingStarted`, `GitHubCopilotLevels`, `GitHubCopilotHandbook`, `GitHubCopilotToolTips`, `GitHubCopilotDiscord` | `/vscode-updates`, `/features`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord` |
 | `NewsletterSubscribe`, `NewsletterConfirm`, `NewsletterManage`, `NewsletterUnsubscribe` | `/newsletter/subscribe`, `/confirm`, `/manage`, `/unsubscribe` (see [docs/newsletter.md](../../docs/newsletter.md)) |
 | `Admin*` (`Components/Pages/Admin/`) | `/admin` and `/admin/*`, rendered with `AdminLayout` (see [docs/admin.md](../../docs/admin.md) and [docs/admin-authentication.md](../../docs/admin-authentication.md)) |
 
