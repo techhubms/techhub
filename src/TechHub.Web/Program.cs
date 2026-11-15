@@ -224,6 +224,21 @@ builder.Services.AddSignalR(options =>
     options.MaximumReceiveMessageSize = 256 * 1024; // 256KB
 });
 
+// Circuit counts, exported as metrics and included in memory snapshot logs (see MemoryDiagnosticsService).
+builder.Services.AddSingleton<CircuitCountHandler>();
+builder.Services.AddSingleton<Microsoft.AspNetCore.Components.Server.Circuits.CircuitHandler>(
+    sp => sp.GetRequiredService<CircuitCountHandler>());
+builder.Services.AddMemoryDiagnosticsProbe("circuits.open", sp =>
+{
+    var handler = sp.GetRequiredService<CircuitCountHandler>();
+    return () => handler.Open;
+});
+builder.Services.AddMemoryDiagnosticsProbe("circuits.connected", sp =>
+{
+    var handler = sp.GetRequiredService<CircuitCountHandler>();
+    return () => handler.Connected;
+});
+
 // Disconnected circuits (dropped connections: mobile app switches, bots, abandoned tabs) hold their
 // component tree in memory until they expire. Keep that window short and the count bounded: this is a
 // read-mostly site, and a client whose circuit is gone gets the "Reload page" / "Resume" prompt.

@@ -20,6 +20,17 @@ namespace TechHub.ServiceDefaults;
 public static class ServiceDefaultsExtensions
 {
     private static readonly string[] _liveHealthCheckTags = ["live"];
+
+    private static readonly HashSet<string> _memoryRuntimeMetrics = new(StringComparer.Ordinal)
+    {
+        "dotnet.gc.last_collection.heap.size",
+        "dotnet.gc.last_collection.heap.fragmentation.size",
+        "dotnet.gc.last_collection.memory.committed_size",
+        "dotnet.gc.heap.total_allocated",
+        "dotnet.gc.pause.time",
+        "dotnet.gc.collections",
+        "dotnet.process.memory.working_set"
+    };
     /// <summary>
     /// Adds service defaults for Aspire orchestration including:
     /// - OpenTelemetry (logging, metrics, tracing)
@@ -56,6 +67,7 @@ public static class ServiceDefaultsExtensions
 
         builder.AddDefaultHealthChecks();
 
+        builder.Services.AddMemoryDiagnostics();
         builder.Services.AddServiceDiscovery();
 
         builder.Services.ConfigureHttpClientDefaults(http =>
@@ -107,10 +119,19 @@ public static class ServiceDefaultsExtensions
             .WithMetrics(metrics =>
             {
                 metrics.AddAspNetCoreInstrumentation()
-                       .AddHttpClientInstrumentation();
-                // Runtime instrumentation (.AddRuntimeInstrumentation()) intentionally omitted:
-                // GC, thread pool, and assembly metrics generated ~8 GB/month in AppMetrics
-                // and AppPerformanceCounters with minimal operational value.
+                       .AddHttpClientInstrumentation()
+                       .AddRuntimeInstrumentation()
+                       .AddMeter(MemoryDiagnosticsService.MeterName);
+
+                // Runtime instrumentation emits GC, thread pool, JIT and assembly metrics that once generated
+                // ~8 GB/month in AppMetrics and AppPerformanceCounters. Keep only what explains memory usage:
+                // live heap per generation, fragmentation, committed memory, allocation volume, GC pauses and
+                // collection counts, and the working set. Everything else from the runtime meters is dropped.
+                metrics.AddView(instrument =>
+                    instrument.Meter.Name is "System.Runtime" or "OpenTelemetry.Instrumentation.Runtime"
+                    && !_memoryRuntimeMetrics.Contains(instrument.Name)
+                        ? MetricStreamConfiguration.Drop
+                        : null);
 
                 // Drop high-volume metrics with no operational value for this app.
                 // Only metrics generating >5k rows/day are targeted; everything else is left as-is
@@ -186,6 +207,9 @@ public static class ServiceDefaultsExtensions
 
         return builder;
     }
+
+    /// <summary>The runtime metrics that are kept; all other runtime metrics are dropped.</summary>
+    internal static IReadOnlyCollection<string> MemoryRuntimeMetrics => _memoryRuntimeMetrics;
 
     internal static bool IsHealthProbeRequest(PathString path)
     {
