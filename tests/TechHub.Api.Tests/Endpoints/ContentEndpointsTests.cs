@@ -135,14 +135,14 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         var collections = await response.Content.ReadFromJsonAsync<List<Collection>>(TestContext.Current.CancellationToken);
         collections.Should().NotBeNull();
-        collections!.Should().HaveCount(12);
+        collections!.Should().HaveCount(13);
         collections.Should().Contain(c => c.Name == "news");
         collections.Should().Contain(c => c.Name == "blogs");
         collections.Should().Contain(c => c.Name == "videos");
         collections.Should().Contain(c => c.Name == "community");
         collections.Should().Contain(c => c.Name == "roundups");
         collections.Should().Contain(c => c.Name == "timeline");
-        collections.Should().NotContain(c => c.Name == "features", "the features page was replaced by the timeline");
+        collections.Should().Contain(c => c.Name == "features" && c.IsCustom);
         collections.Should().Contain(c => c.Name == "vscode-updates");
         collections.Should().Contain(c => c.Name == "levels-of-enlightenment");
         collections.Should().Contain(c => c.Name == "handbook");

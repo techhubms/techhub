@@ -113,16 +113,17 @@ The `ContentItem` domain model provides helper methods for navigation and URL ge
 | `LinksExternally()` | Checks if item links to external source | `bool` |
 | `GetHref(sectionOverride?)` | Gets the navigation URL (external or internal) | `string` |
 | `GetCanonicalHref(sectionOverride?)` | Gets the internal Tech Hub URL, always `/section/collection/slug`, even for external items | `string` |
-| `GetTarget()` | Gets link target attribute | `"_blank"` or `null` |
-| `GetRel()` | Gets link rel attribute | `"noopener noreferrer"` or `null` |
-| `GetAriaLabel()` | Gets accessibility label for screen readers | `string` |
+| `GetTarget()` | Gets the link target a touch device keeps | `"_blank"` for an external collection with a safe URL, else `null` |
+| `GetRel()` | Gets the link rel attribute | `"noopener noreferrer"` or `null` |
+| `GetAriaLabel()` | Gets the accessibility label for screen readers | `"{Title} - opens in new tab"` for external items, else `"{Title}"` |
 
-`GetAriaLabel()` always returns a value: `"{Title} - opens in new tab"` for external items, or just `"{Title}"` for internal ones.
+**Where a content link opens depends on the device.** These methods give what a touch device (phone, tablet) keeps: the original article of a news, blog or community item opens in a new tab, a page of this site in the same tab. On a desktop (mouse or trackpad) `content-links.js` opens every link that has `data-content-link` in a new tab when it is clicked, so closing the tab brings the reader back to the list, the scroll position and the filters they came from. See [javascript.md](javascript.md#content-links). Navigation (menus, breadcrumbs, tag filters, "Load more") opens in the same tab on every device.
 
-**Usage in Blazor**:
+**Usage in Blazor** (every content link has `data-content-link`):
 
 ```razor
 <a href="@item.GetHref(SectionName)"
+   data-content-link
    target="@item.GetTarget()"
    rel="@item.GetRel()"
    aria-label="@item.GetAriaLabel()">
@@ -368,6 +369,39 @@ Returns the timeline of a section, newest first. Only articles whose primary sec
 `product` and `feature` are the catalog names, or the AI's text when they are not in the catalog (then `productId` is `null`). `sources` are the articles that state the event, oldest first.
 
 **Errors**: `400` for an invalid section name, date, kind or `take`. `404` for an unknown section.
+
+## Features API
+
+### GET /api/sections/{sectionName}/features
+
+Returns the features of the catalog that have content, for the features page of a section. The features are those of the product whose name (or alias) is the tag of the section ("GitHub Copilot" for the `github-copilot` section) and of its child products. A feature has content when an admin linked a content item to it, when a dated event names it, or when an article lists it by name or alias (roundups never count, not even when an admin linked one). Features without content are not returned. Public endpoint (no authentication required).
+
+Newest release first; features without a release date last. Per feature, the content is ordered: the thumbnail, the items an admin linked (in the admin's order), then the detected ones. `description` is the description of the feature, else that of its newest dated event, else the excerpt of its first item (empty only when none exists). `releaseDate` is the date an admin set, else the date of the feature's newest dated event. The articles that list a feature come from the precomputed `content_item_products` links, so the query stays fast (tens of milliseconds) instead of resolving every article's metadata again.
+
+```json
+[
+  {
+    "slug": "agent-mode",
+    "name": "Agent mode",
+    "productName": "GitHub Copilot",
+    "description": "Let Copilot work on its own.",
+    "releaseDate": "2025-02-06",
+    "content": [
+      {
+        "collectionName": "videos",
+        "itemSlug": "agent-mode-explained",
+        "title": "Agent mode explained",
+        "externalUrl": "https://youtu.be/abc123",
+        "primarySectionName": "github-copilot",
+        "isThumbnail": true,
+        "isDetected": false
+      }
+    ]
+  }
+]
+```
+
+The list is empty when the tag of the section is not a product. **Errors**: `400` for an invalid section name, `404` for an unknown section.
 
 ## VS Code Updates API
 

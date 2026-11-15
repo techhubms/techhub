@@ -53,7 +53,9 @@ public static class JsFiles
         "js/scroll-manager.js", // Navigation, scroll position, TOC scroll spy
         "js/mobile-nav.js",     // Mobile navigation scroll lock and keyboard handling
         "js/sidebar-toggle.js", // Desktop sidebar collapse/expand with cookie persistence
-        "js/hero-banner.js"     // Hero banner collapse/expand with cookie persistence
+        "js/hero-banner.js",    // Hero banner collapse/expand with cookie persistence
+        "js/content-links.js",  // Links to content open in a new tab on a desktop (mouse or trackpad)
+        "js/text-filter.js"     // Filter fields that hide the items that do not contain the typed text
     ];
 
     /// <summary>

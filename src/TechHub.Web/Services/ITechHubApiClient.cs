@@ -837,6 +837,12 @@ internal interface ITechHubApiClient
     Task<string> PreviewMarkdownAsync(string markdown, CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Get the features of a section that have content (the GitHub Copilot features page).
+    /// GET /api/sections/{sectionName}/features
+    /// </summary>
+    Task<IReadOnlyList<SectionFeature>> GetSectionFeaturesAsync(string sectionName, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Get VS Code Update items for the public VS Code Updates page.
     /// GET /api/vscode-updates
     /// </summary>

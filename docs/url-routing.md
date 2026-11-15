@@ -284,8 +284,6 @@ All host comparisons are case-insensitive. Redirect URLs always use lowercase. T
 
 This ensures `/coding/2025-01-01-slug.html` → `/dotnet/slug` in one redirect.
 
-Two-segment paths are also checked against `_renamedCollections`, for a collection that was replaced by another one: `/github-copilot/features` (the former features page) redirects to `/github-copilot/timeline`.
-
 **5. Multi-segment validation** - validates the normalized path against `SectionCache`:
 
 - Framework paths (`_blazor`, `_framework`, `_content`) always pass

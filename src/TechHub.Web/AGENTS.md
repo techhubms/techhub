@@ -100,6 +100,7 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 | `mobile-nav.js`       | Mobile navigation scroll lock and keyboard handling | Static (defer) |
 | `sidebar-toggle.js`   | Desktop sidebar collapse/expand with cookie persistence | Static (defer)   |
 | `hero-banner.js`      | Hero banner collapse/expand with cookie persistence | Static (defer) |
+| `content-links.js`    | Opens links to content (`data-content-link`) in a new tab on a desktop, same tab on touch devices | Static (defer) |
 | `page-scripts.js`     | CDN loading, page init functions (mermaid, highlight.js, TOC, custom pages), script lifecycle | Static ES module (listed under `DynamicLoad` in `JsFiles.cs`) |
 | `custom-pages.js`     | Collapsible sections for SDLC/DX pages, feature filters, expandable badges | Dynamic (imported by `initCustomPages`) |
 | `date-range-slider.js` | Date range slider client-side clamping           | Dynamic          |
@@ -179,7 +180,8 @@ CDN config is bridged from C# via an inline script in App.razor (`window.TechHub
 | `GitHubCopilotGettingStarted.razor` | `initHighlighting`, `initTocScrollSpy` | No |
 | `GitHubCopilotVSCodeUpdates.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` | Yes |
 | `AISDLC.razor` | `initMermaid`, `initTocScrollSpy` | No |
-| `GitHubCopilotFeatures.razor`, `SectionTimeline.razor` | *(none in `PageScripts`)* — cards are `TimelineView` cards that expand with Blazor `@onclick`; the component calls the `preventScrollOnExpand` global from `page-scripts.js` through JS interop | No |
+| `GitHubCopilotFeatures.razor` | *(none)*: a grid of cards with Blazor `@onclick` filters, no scripts | No |
+| `SectionTimeline.razor` | *(none in `PageScripts`)* — cards are `TimelineView` cards that expand with Blazor `@onclick`; the component calls the `preventScrollOnExpand` global from `page-scripts.js` through JS interop | No |
 
 All other pages (`SectionCollection`, `Authors`, `About`, `McpInfo`, `Newsletter*`, `Admin*`, `Error`, `NotFound`, and the `GitHubCopilotDiscord` and `GitHubCopilotToolTips` pages) declare no scripts, so the base class only calls `markScriptsReady`.
 
@@ -289,7 +291,7 @@ Generated from the directory contents (`list_dir` on `Components/`). Re-check th
 | `SectionTimeline` | `/{sectionName}/timeline` (the `timeline` custom collection of each section except `all`) |
 | `AISDLC` | `/ai/sdlc` |
 | `DXSpace` | `/devops/dx-space` |
-| `GitHubCopilotVSCodeUpdates` (also `/{VideoSlug}`), `GitHubCopilotGettingStarted`, `GitHubCopilotLevels`, `GitHubCopilotHandbook`, `GitHubCopilotToolTips`, `GitHubCopilotDiscord` | `/vscode-updates`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord` |
+| `GitHubCopilotVSCodeUpdates` (also `/{VideoSlug}`), `GitHubCopilotFeatures`, `GitHubCopilotGettingStarted`, `GitHubCopilotLevels`, `GitHubCopilotHandbook`, `GitHubCopilotToolTips`, `GitHubCopilotDiscord` | `/vscode-updates`, `/features`, `/getting-started`, `/levels-of-enlightenment`, `/handbook`, `/tool-tips`, `/discord` |
 | `NewsletterSubscribe`, `NewsletterConfirm`, `NewsletterManage`, `NewsletterUnsubscribe` | `/newsletter/subscribe`, `/confirm`, `/manage`, `/unsubscribe` (see [docs/newsletter.md](../../docs/newsletter.md)) |
 | `Admin*` (`Components/Pages/Admin/`) | `/admin` and `/admin/*`, rendered with `AdminLayout` (see [docs/admin.md](../../docs/admin.md) and [docs/admin-authentication.md](../../docs/admin-authentication.md)) |
 

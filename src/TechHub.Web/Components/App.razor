@@ -57,7 +57,7 @@
                 if (!window.__e2e) return;
                 window.__e2e.counter++;
                 window.__e2e.label = label;
-                window.__e2e.history.push({ counter: window.__e2e.counter, label: label });
+                window.__e2e.history.push({ counter: window.__e2e.counter, label: label, t: Math.round(performance.now()) });
                 if (window.__e2e.history.length > 20) window.__e2e.history.shift();
             };
             window.addEventListener('scrollend', function() { window.__e2eSignal('scroll-end'); });
@@ -201,6 +201,14 @@
     <!-- Hero Banner - Collapse/expand with cookie persistence -->
     <!-- Uses @Assets for fingerprinted URL (cache busting). See Configuration/JsFiles.cs -->
     <script src="@Assets["js/hero-banner.js"]" defer></script>
+
+    <!-- Content Links - Links to content open in a new tab on a desktop (mouse or trackpad) -->
+    <!-- Uses @Assets for fingerprinted URL (cache busting). See Configuration/JsFiles.cs -->
+    <script src="@Assets["js/content-links.js"]" defer></script>
+
+    <!-- Text Filter - Filter fields that hide the items that do not contain the typed text -->
+    <!-- Uses @Assets for fingerprinted URL (cache busting). See Configuration/JsFiles.cs -->
+    <script src="@Assets["js/text-filter.js"]" defer></script>
 
     <!-- CDN Configuration - bridges C# version management to JavaScript -->
     <!-- CDN versions configured in Configuration/CdnLibraries.cs -->

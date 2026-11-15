@@ -1,0 +1,281 @@
+@page "/github-copilot/features"
+@using System.Globalization
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+@inherits PageComponentBase
+
+@inject ITechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GitHubCopilotFeatures> Logger
+@inject PersistentComponentState ApplicationState
+@inject SectionCache SectionCache
+
+<PageTitle>@(pageData?.Title ?? "GitHub Copilot Features") - Tech Hub</PageTitle>
+
+@if (pageData != null)
+{
+    <SeoMetaTags
+        Title="@pageData.Title"
+        Description="@pageData.Description"
+        ContentType="SeoMetaTags.SeoContentType.Website" />
+
+    <main class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarToggle />
+            <MobileSidebarToolbar>
+                <MobileSidebarPanel Label="Subscriptions" Icon="filter">
+                    <nav class="sidebar-section features-tiers-sidebar" aria-label="Subscriptions">
+                        <h2 class="sidebar-h2">Subscriptions</h2>
+                        <div class="features-tiers">
+                            @foreach (var tier in pageData.SubscriptionTiers)
+                            {
+                                <div id="tier-@tier.Id" class="features-tier-card">
+                                    <h3><a href="@pageData.Links.Pricing" target="_blank" rel="noopener noreferrer" aria-label="@tier.Name plan on GitHub (opens in new tab)">@tier.Name</a></h3>
+                                    <p class="features-tier-tagline">@tier.Tagline</p>
+                                    <ul class="features-tier-features">
+                                        @foreach (var feature in tier.Features)
+                                        {
+                                            <li>@feature</li>
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                        </div>
+                    </nav>
+                </MobileSidebarPanel>
+            </MobileSidebarToolbar>
+        </aside>
+
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
+            </div>
+
+            <div class="custom-page-container">
+                <div class="custom-page-intro">
+                    <p>@pageData.Intro For the most current pricing, visit <a href="@pageData.Links.Pricing" target="_blank" rel="noopener">GitHub's official pricing page</a>. For the most recent plan details, view the <a href="@pageData.Links.PlanDetails" target="_blank" rel="noopener">official documentation</a>.</p>
+                </div>
+
+                @if (features.Count > 0)
+                {
+                    <div class="features-filters" role="group" aria-label="Filter features">
+                        <button type="button"
+                                class="features-filter-btn @(!onlyWithVideo ? "active" : "")"
+                                data-filter="all"
+                                aria-pressed="@((!onlyWithVideo).ToString().ToLowerInvariant())"
+                                @onclick="() => SetOnlyWithVideo(false)">All</button>
+                        <button type="button"
+                                class="features-filter-btn @(onlyWithVideo ? "active" : "")"
+                                data-filter="videos"
+                                aria-pressed="@onlyWithVideo.ToString().ToLowerInvariant()"
+                                @onclick="() => SetOnlyWithVideo(true)">With videos</button>
+                        <input type="search"
+                               class="features-filter-input"
+                               data-text-filter
+                               data-filter-items=".feature-card"
+                               data-filter-empty="#features-text-empty"
+                               placeholder="Filter features…"
+                               aria-label="Filter features by text"
+                               autocomplete="off" />
+                    </div>
+                    <p id="features-text-empty" class="features-empty" role="status" hidden>No features contain that text.</p>
+
+                    var shown = VisibleFeatures().ToList();
+                    @if (shown.Count == 0)
+                    {
+                        <p class="features-empty">No features match the selected filter.</p>
+                    }
+                    else
+                    {
+                        <div class="features-cards-grid" aria-label="GitHub Copilot features">
+                            @foreach (var feature in shown)
+                            {
+                                var video = VideoOf(feature);
+                                var primary = video ?? feature.Content.FirstOrDefault(c => c.IsThumbnail) ?? feature.Content[0];
+                                var videoId = video?.GetYouTubeVideoId();
+                                // The title is plain text, so every item is listed as a link, except the video that is shown as the thumbnail.
+                                var related = video != null
+                                    ? feature.Content.Where(c => c != primary).ToList()
+                                    : feature.Content.ToList();
+                                var isExpanded = _expandedRelated.Contains(feature.Slug);
+                                var shownRelated = isExpanded ? related : related.Take(MaxRelated).ToList();
+
+                                <article class="card feature-card" id="feature-@feature.Slug">
+                                    @if (!string.IsNullOrEmpty(videoId))
+                                    {
+                                        <a href="@primary.GetHref()" data-content-link target="@primary.GetTarget()" rel="@primary.GetRel()" class="feature-card-thumbnail" aria-label="@primary.GetAriaLabel(primary.Title)">
+                                            <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="" loading="lazy" />
+                                            <div class="feature-card-play-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+                                            </div>
+                                        </a>
+                                    }
+                                    <div class="card-header">
+                                        <h3 class="card-title">@feature.Name</h3>
+                                    </div>
+                                    @if (!string.IsNullOrWhiteSpace(feature.Description))
+                                    {
+                                        <p class="card-description feature-card-description">@feature.Description</p>
+                                    }
+                                    @if (related.Count > 0)
+                                    {
+                                        <ul class="feature-card-related" aria-label="Related content">
+                                            @foreach (var link in shownRelated)
+                                            {
+                                                <li><a href="@link.GetHref()" data-content-link target="@link.GetTarget()" rel="@link.GetRel()" aria-label="@link.GetAriaLabel(link.Title)">@link.Title</a></li>
+                                            }
+                                            @if (related.Count > MaxRelated)
+                                            {
+                                                <li>
+                                                    <button type="button"
+                                                            class="feature-card-more-btn"
+                                                            aria-expanded="@isExpanded.ToString().ToLowerInvariant()"
+                                                            @onclick="() => ToggleRelated(feature.Slug)">@(isExpanded ? "Show less" : $"+ {related.Count - MaxRelated} more")</button>
+                                                </li>
+                                            }
+                                        </ul>
+                                    }
+                                    <div class="card-badges">
+                                        @if (video != null)
+                                        {
+                                            <span class="feature-badge feature-badge-video">▶ Video</span>
+                                        }
+                                        @if (!feature.ProductName.Equals(SectionProductName, StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <span class="feature-badge">@feature.ProductName</span>
+                                        }
+                                        @if (feature.ReleaseDate is { } releaseDate)
+                                        {
+                                            <span class="feature-badge">@releaseDate.ToString("MMM yyyy", CultureInfo.InvariantCulture)</span>
+                                        }
+                                    </div>
+                                </article>
+                            }
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="features-empty">No features are available at this time.</p>
+                }
+            </div>
+        </article>
+    </main>
+}
+else if (_notFound)
+{
+    <NotFoundContent />
+}
+
+@code {
+    private const string SectionName = "github-copilot";
+
+    private const int MaxRelated = 3;
+
+    private FeaturesPageData? pageData;
+    private bool _notFound;
+    private bool _dataLoaded;
+    private IReadOnlyList<SectionFeature> features = [];
+    private bool onlyWithVideo;
+    private readonly HashSet<string> _expandedRelated = [];
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
+    protected override bool IsNotFound => _notFound;
+
+    // Set once the page data and the features are known (an empty list counts), so scripts and scroll restoration wait for the cards.
+    protected override bool IsPageDataReady => _dataLoaded;
+
+    // The features of child products carry their own product name; the ones of the product of the section do not.
+    private string SectionProductName => SectionCache.GetSectionByName(SectionName)?.Tag ?? string.Empty;
+
+    private void SetOnlyWithVideo(bool value) => onlyWithVideo = value;
+
+    private void ToggleRelated(string featureSlug)
+    {
+        if (!_expandedRelated.Add(featureSlug))
+        {
+            _expandedRelated.Remove(featureSlug);
+        }
+    }
+
+    private IEnumerable<SectionFeature> VisibleFeatures()
+    {
+        var withContent = features.Where(f => f.Content.Count > 0);
+        return onlyWithVideo ? withContent.Where(f => VideoOf(f) != null) : withContent;
+    }
+
+    /// <summary>The first content item of the feature that is a YouTube video; the content is already in display order.</summary>
+    private static SectionFeatureContent? VideoOf(SectionFeature feature) =>
+        feature.Content.FirstOrDefault(c => c.GetYouTubeVideoId() != null);
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<PersistedFeaturesData>("copilot-features-data", out var restored) && restored != null)
+        {
+            pageData = restored.PageData;
+            features = restored.Features ?? [];
+            _notFound = restored.NotFound;
+            _dataLoaded = true;
+            return;
+        }
+
+        try
+        {
+            pageData = await ApiClient.GetFeaturesDataAsync();
+
+            if (pageData == null)
+            {
+                _notFound = true;
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
+
+                return;
+            }
+
+            features = await ApiClient.GetSectionFeaturesAsync(SectionName);
+            _dataLoaded = true;
+        }
+        catch (HttpRequestException ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+        catch (InvalidOperationException ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("copilot-features-data", new PersistedFeaturesData
+        {
+            PageData = pageData,
+            Features = features,
+            NotFound = _notFound
+        });
+        return Task.CompletedTask;
+    }
+
+    private sealed class PersistedFeaturesData
+    {
+        public FeaturesPageData? PageData { get; set; }
+        public IReadOnlyList<SectionFeature>? Features { get; set; }
+        public bool NotFound { get; set; }
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}

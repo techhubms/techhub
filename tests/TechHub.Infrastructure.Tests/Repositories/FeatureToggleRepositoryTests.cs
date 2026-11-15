@@ -27,14 +27,14 @@ public class FeatureToggleRepositoryTests
     }
 
     [Fact]
-    public async Task GetAllAsync_SeededDatabase_ContainsTimelineForAdmins()
+    public async Task GetAllAsync_SeededDatabase_ContainsTimelineForEveryone()
     {
         // Act
         var toggles = await _repository.GetAllAsync(TestContext.Current.CancellationToken);
 
-        // Assert
+        // Assert (migration 058 opened the timeline to everyone)
         var timeline = toggles.Should().ContainSingle(t => t.Key == FeatureKeys.Timeline).Subject;
-        timeline.Mode.Should().Be(FeatureToggleMode.Admins);
+        timeline.Mode.Should().Be(FeatureToggleMode.Everyone);
         timeline.Description.Should().NotBeNullOrWhiteSpace();
     }
 
@@ -79,7 +79,7 @@ public class FeatureToggleRepositoryTests
         // Assert
         var toggles = await _repository.GetAllAsync(TestContext.Current.CancellationToken);
         toggles.Single(t => t.Key == second).Mode.Should().Be(FeatureToggleMode.Disabled);
-        toggles.Single(t => t.Key == FeatureKeys.Timeline).Mode.Should().Be(FeatureToggleMode.Admins);
+        toggles.Single(t => t.Key == FeatureKeys.Timeline).Mode.Should().Be(FeatureToggleMode.Everyone);
     }
 
     [Fact]

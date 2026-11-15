@@ -128,10 +128,10 @@ public class DatabasePerformanceTests : IDisposable
         GC.SuppressFinalize(this);
     }
 
-    private void SkipIfNoDatabase()
+    private void RequireDatabase()
     {
-        Assert.SkipWhen(!_databaseAvailable,
-            "PostgreSQL not available. Run 'Run' to start PostgreSQL and the application.");
+        _databaseAvailable.Should().BeTrue(
+            "PostgreSQL must be available. Run 'Run' to start PostgreSQL and the application.");
     }
 
     // ==================== Measurement Helpers ====================
@@ -213,7 +213,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TopTags_AllSections_AllCollections_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "all",
@@ -236,7 +236,7 @@ public class DatabasePerformanceTests : IDisposable
     public async Task TopTags_SpecificSection_AllCollections_PerformsWithinThreshold(
         string sectionName, string collectionName)
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: sectionName,
@@ -257,7 +257,7 @@ public class DatabasePerformanceTests : IDisposable
     public async Task TopTags_SectionAndCollection_PerformsWithinThreshold(
         string sectionName, string collectionName)
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: sectionName,
@@ -273,7 +273,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TopTags_MaxTags50_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "all",
@@ -289,7 +289,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TopTags_HighMinUses_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "all",
@@ -307,7 +307,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TagsToCount_WithSelectedTags_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "github-copilot",
@@ -324,7 +324,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TagsToCount_HomepageWithSelectedTag_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "all",
@@ -342,7 +342,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TagsToCount_WithMultipleTags_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "github-copilot",
@@ -359,7 +359,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TagsToCount_LargeTagSet_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "github-copilot",
@@ -382,7 +382,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TopTags_WithDateRange_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "github-copilot",
@@ -400,7 +400,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TagsToCount_WithDateRangeAndTags_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "all",
@@ -421,7 +421,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task TopTags_WithSearchQuery_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new TagCountsRequest(
             sectionName: "all",
@@ -446,7 +446,7 @@ public class DatabasePerformanceTests : IDisposable
     public async Task Search_SpecificSectionAndCollection_PerformsWithinThreshold(
         string sectionName, string collectionName)
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -463,7 +463,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task Search_AllInSection_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -482,7 +482,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task Search_WithSingleTag_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -499,7 +499,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task Search_WithMultipleTags_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -517,7 +517,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task Search_WithFtsQuery_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -535,7 +535,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task Search_WithFtsAndTagFilter_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -552,7 +552,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task Search_WithFtsAndDateAndTags_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -573,7 +573,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task Search_WithDateRange_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -593,7 +593,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task Search_GitHubCopilotVideos_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -614,7 +614,7 @@ public class DatabasePerformanceTests : IDisposable
     [InlineData(40)]
     public async Task Search_DifferentOffsets_MaintainsPerformance(int skip)
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         var request = new SearchRequest(
             take: 20,
@@ -633,7 +633,7 @@ public class DatabasePerformanceTests : IDisposable
     [Fact]
     public async Task GetBySlug_ValidItem_PerformsWithinThreshold()
     {
-        SkipIfNoDatabase();
+        RequireDatabase();
 
         // First find a valid slug to look up
         var searchResult = await _repository!.SearchAsync(

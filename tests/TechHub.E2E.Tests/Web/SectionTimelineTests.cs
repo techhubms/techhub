@@ -7,11 +7,18 @@ namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
 /// E2E tests for the section timeline page (/{section}/timeline): the dated events that the articles of a section state.
-/// The events come from the database of the environment, so the tests that need an event skip when there is none.
+/// The events come from the database of the environment. The timeline is behind a feature toggle: on a local environment
+/// <see cref="TimelineToggleFixture"/> opens it for these tests and restores it afterwards, so they never skip for it.
+/// Only against a remote deployment, where the toggle cannot be changed, the tests that need the open (or closed) state skip.
 /// </summary>
-public class SectionTimelineTests : PlaywrightTestBase
+public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineToggleFixture>
 {
-    public SectionTimelineTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
+    private readonly TimelineToggleFixture _toggle;
+
+    public SectionTimelineTests(PlaywrightCollectionFixture fixture, TimelineToggleFixture toggle) : base(fixture)
+    {
+        _toggle = toggle;
+    }
 
     private const string PageUrl = "/github-copilot/timeline";
 
@@ -49,40 +56,22 @@ public class SectionTimelineTests : PlaywrightTestBase
 
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/github-copilot/timeline\?kinds=deprecation"));
         await Assertions.Expect(Page.Locator(".timeline-filter-link.active")).ToHaveTextAsync("Deprecations");
-        // Whatever the page shows now is a deprecation, retirement, end-of-support or breaking change.
-        var badges = await Page.Locator(".timeline-entry .timeline-badges .badge-warning").CountAsync();
-        var entries = await Page.Locator(".timeline-entry").CountAsync();
-        badges.Should().Be(entries, "every entry of the Deprecations filter has a warning badge for its kind");
+        // Whatever the page shows now is a deprecation, retirement, end-of-support or breaking change. The active filter is marked
+        // before the filtered entries arrive, so this waits (retries) until no entry without a warning badge for its kind is left.
+        await Assertions.Expect(Page.Locator(".timeline-entry:not(:has(.timeline-badges .badge-warning))")).ToHaveCountAsync(0);
+        // An empty page would pass the check above, so the filter must also leave entries
+        await Assertions.Expect(Page.Locator(".timeline-entry").First).ToBeVisibleAsync();
     }
 
     [Fact]
-    public async Task SectionTimeline_ForGitHubCopilot_ShouldShowTheSubscriptionTiersInTheSidebar()
+    public async Task SectionTimeline_ForGitHubCopilot_ShouldNotShowTheSubscriptionTiers()
     {
         await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync(PageUrl);
 
-        var tiers = Page.Locator("aside.sidebar .features-tier-card");
-        Assert.SkipWhen(await tiers.CountAsync() == 0, "No subscription tiers on this environment");
-
-        await Assertions.Expect(Page.Locator("aside.sidebar .features-tiers-sidebar h2")).ToHaveTextAsync("Subscriptions");
-        (await tiers.CountAsync()).Should().BeGreaterThan(1, "the sidebar lists every subscription tier");
-    }
-
-    [Fact]
-    public async Task SectionTimeline_ForOtherSections_ShouldNotShowTheSubscriptionTiers()
-    {
-        await SkipUnlessTimelineIsOpenAsync();
-        await Page.GotoRelativeAsync("/ai/timeline");
-
+        // The subscriptions are on the features page. Wait for the timeline itself first: an absence check passes on a page that has not rendered yet.
+        await Assertions.Expect(Page.Locator(".timeline-entry").First).ToBeVisibleAsync();
         await Assertions.Expect(Page.Locator(".features-tier-card")).ToHaveCountAsync(0);
-    }
-
-    [Fact]
-    public async Task OldFeaturesPage_ShouldRedirectToTheTimeline()
-    {
-        await Page.GotoRelativeAsync("/github-copilot/features");
-
-        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/github-copilot/timeline$"));
     }
 
     [Fact]
@@ -93,7 +82,7 @@ public class SectionTimelineTests : PlaywrightTestBase
         await Page.WaitForBlazorReadyAsync();
 
         var entries = Page.Locator(".timeline-entry");
-        Assert.SkipWhen(await entries.CountAsync() == 0, "No timeline events found on this environment");
+        await Assertions.Expect(entries.First).ToBeVisibleAsync();
 
         var card = entries.First.Locator(".timeline-card");
         await card.Locator(".timeline-header").ClickAndExpectAsync(async () =>
@@ -138,7 +127,7 @@ public class SectionTimelineTests : PlaywrightTestBase
     }
 
     // The timeline is behind a feature toggle: when it is not open to everyone, this anonymous browser must get a 404 and no buttons.
-    // Both outcomes are valid for an environment, so the tests that need the page skip, and the two tests below hold either way.
+    // This test holds for either state; it checks that the page and the button agree with whatever the toggle is.
     [Fact]
     public async Task SectionTimeline_PageAndNavigationButton_ShouldAgreeWithTheFeatureToggle()
     {
@@ -161,14 +150,31 @@ public class SectionTimelineTests : PlaywrightTestBase
     [Fact]
     public async Task SectionTimeline_WhenNotOpenToEveryone_ShouldAnswerWithNotFoundAndShowNothingAboutLoggingIn()
     {
-        Assert.SkipWhen(await IsTimelineOpenAsync(), "The timeline is open to everyone on this environment");
+        if (_toggle.CanChangeToggle)
+        {
+            await _toggle.SetModeAsync("Admins");
+        }
+        else
+        {
+            Assert.SkipWhen(await IsTimelineOpenAsync(), "The timeline is open to everyone on this remote environment and its toggle cannot be changed");
+        }
 
-        var response = await Page.APIGetAsync($"{BlazorHelpers.BaseUrl}{PageUrl}");
-        response.Status.Should().Be(404);
+        try
+        {
+            var response = await Page.APIGetAsync($"{BlazorHelpers.BaseUrl}{PageUrl}");
+            response.Status.Should().Be(404);
 
-        await Page.GotoRelativeAsync(PageUrl);
-        await Assertions.Expect(Page.Locator("h1.page-h1")).ToHaveTextAsync("Page Not Found");
-        (await Page.ContentAsync()).Should().NotContainEquivalentOf("log in").And.NotContainEquivalentOf("sign in");
+            await Page.GotoRelativeAsync(PageUrl);
+            await Assertions.Expect(Page.Locator("h1.page-h1")).ToHaveTextAsync("Page Not Found");
+            (await Page.ContentAsync()).Should().NotContainEquivalentOf("log in").And.NotContainEquivalentOf("sign in");
+        }
+        finally
+        {
+            if (_toggle.CanChangeToggle)
+            {
+                await _toggle.SetModeAsync("Everyone");
+            }
+        }
     }
 
     private async Task<bool> IsTimelineOpenAsync()
@@ -177,6 +183,16 @@ public class SectionTimelineTests : PlaywrightTestBase
         return response.Status == 200;
     }
 
-    private async Task SkipUnlessTimelineIsOpenAsync() =>
-        Assert.SkipUnless(await IsTimelineOpenAsync(), "The timeline is not open to everyone on this environment (feature toggle)");
+    // On a local environment the fixture opened the toggle, so a closed page is a failure. Only a remote deployment can skip.
+    private async Task SkipUnlessTimelineIsOpenAsync()
+    {
+        var isOpen = await IsTimelineOpenAsync();
+        if (_toggle.CanChangeToggle)
+        {
+            isOpen.Should().BeTrue("the fixture opened the timeline toggle for everyone");
+            return;
+        }
+
+        Assert.SkipUnless(isOpen, "The timeline is not open to everyone on this remote environment and its toggle cannot be changed");
+    }
 }

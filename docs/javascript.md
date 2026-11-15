@@ -17,7 +17,7 @@ JavaScript is ONLY for:
 | Loading Type | Use When | Example | How |
 |--------------|----------|---------|-----|
 | **Static (module)** | Every page, needs ES module scope | `scroll-manager.js`, `page-scripts.js` | `<script type="module" src="@Assets[...]">` |
-| **Static (plain)** | Every page, no module features needed | `mobile-nav.js`, `sidebar-toggle.js`, `hero-banner.js` | `<script src="@Assets[...]" defer>` |
+| **Static (plain)** | Every page, no module features needed | `mobile-nav.js`, `sidebar-toggle.js`, `hero-banner.js`, `content-links.js` | `<script src="@Assets[...]" defer>` |
 | **Dynamic ES Module** | Only some pages need it | `custom-pages.js`, `date-range-slider.js` | `import('./js/file.js')` via ImportMap |
 | **Component module** | Script belongs to a single component | `ReconnectModal.razor.js` | `<script type="module" src="@Assets[...]">` inside the component |
 | **External CDN** | Third-party library | Highlight.js, Mermaid | Dynamic `loadScript()` with fallback URLs and retries |
@@ -70,6 +70,8 @@ Files in `wwwroot/js/`:
 | `sidebar-toggle.js` | Desktop sidebar collapse/expand with cookie persistence | Static (`defer`) | Script |
 | `mobile-nav.js` | Mobile menu scroll lock and Escape key handler | Static (`defer`) | Script |
 | `hero-banner.js` | Hero banner collapse/expand with cookie persistence | Static (`defer`) | IIFE |
+| `content-links.js` | Opens links to content in a new tab on a desktop (mouse or trackpad), see [Content Links](#content-links) | Static (`defer`) | IIFE |
+| `text-filter.js` | Filter fields that hide the items that do not contain the typed text, see [Text Filter](#text-filter) | Static (`defer`) | IIFE |
 | `custom-pages.js` | Collapsible sections for SDLC/DX pages, feature filters, expandable badges | Dynamic (loaded by `initCustomPages`) | ES Module |
 | `date-range-slider.js` | Client-side slider clamping (prevents handles crossing) | Dynamic (via Blazor JS interop) | ES Module |
 | `page-scripts.js` | Orchestrator for CDN loading (Highlight.js, Mermaid), page init functions, script lifecycle | Static (`type="module"`) | ES Module |
@@ -121,6 +123,8 @@ Scripts expose a small set of globals for Blazor JS interop and tests.
 | `preventScrollOnExpand` | `page-scripts.js` | Used by `TimelineView` (section timelines) to keep scroll stable when expanding cards |
 | `TechHub.sidebar` (`isCollapsed`, `toggle`) | `sidebar-toggle.js` | Desktop sidebar collapse, called by `SidebarToggle` |
 | `TechHub.heroBanner` (`setCollapsed`, `setHash`) | `hero-banner.js` | Cookie persistence for `HeroBanner` |
+| `TechHub.contentLinks` (`opensInNewTab`) | `content-links.js` | Whether content links open in a new tab on this device (a mouse or trackpad) |
+| `TechHub.textFilter` (`apply`) | `text-filter.js` | Applies the text of a filter field to its items again |
 | `TechHub.scrollToTopAndClearHash` | `scroll-manager.js` | Scroll to top and remove the URL hash |
 | `mobileNav` (`lockScroll`, `unlockScroll`, `registerEscapeHandler`) | `mobile-nav.js` | Mobile menu scroll lock, called by `NavHeader` |
 | `__restoreScrollPosition`, `__savedScrollPositions` | `scroll-manager.js` | Scroll restoration entry point and saved positions (exposed for tests) |
@@ -176,6 +180,32 @@ SRI hashes for Highlight.js are defined in `CdnLibraries.cs` and bridged to `win
 2. Generate new SRI hash from <https://www.srihash.org/>
 3. Update the integrity hash in `CdnLibraries.cs`
 4. Test locally to verify the library loads correctly
+
+## Content Links
+
+Every link to a content item has `data-content-link`: the cards of every list, the latest content of the home page, the cards of the features page and the sources of the timeline. The server renders what a touch device keeps: the original article of a news, blog or community item opens in a new tab, a page of this site (a video, a roundup) in the same tab.
+
+`content-links.js` changes that on a desktop. On a device with a mouse or trackpad (`(hover: hover) and (pointer: fine)`) a click on a content link sets `target="_blank"` and `rel="noopener noreferrer"` first, so the link opens in a new tab and closing it (Ctrl+W or a click) brings the reader straight back to the list, the scroll position and the filters they came from. Phones and tablets, which have a touch screen, keep the same-tab behaviour.
+
+- **Decided in the browser**: the server cannot know the pointer of the device, so the listener runs when the link is clicked. It is a capture-phase listener on `document`, which runs before Blazor's own link handling; Blazor leaves a link that has a `target` alone.
+- **Left to the browser**: cancelled clicks, other mouse buttons and Ctrl, Cmd, Shift or Alt clicks.
+- **Assistive technology**: when a reader points at or focuses a content link on a desktop, `aria-label` gets " - opens in new tab" (the text of the link is used when it has no label).
+- **Navigation is not a content link**: menus, breadcrumbs, tag filters and "Load more" open in the same tab on every device.
+- **A reader's choice**: `TechHub.contentLinks.opensInNewTab()` is the one place that decides. A stored preference (for example a cookie with `new-tab`, `same-tab` or nothing for automatic) would be read there, before the media query.
+
+## Text Filter
+
+`text-filter.js` makes a search field filter a list in the browser, without a round trip to the server. Mark the field and say what it filters:
+
+```html
+<input type="search" data-text-filter data-filter-items=".feature-card" data-filter-empty="#features-text-empty">
+```
+
+- **`data-filter-items`**: selector of the items, searched in the closest `.custom-page-container` (else the document).
+- **`data-filter-empty`**: optional selector of a message that is shown while the text matches no item.
+- **Matching**: every typed word must occur in the text of the item (case-insensitive, any order). Items that do not match get the `hidden` attribute, so the CSS of an item must not override it (a `display: flex` card needs `.card[hidden] { display: none; }`).
+- **Next to Blazor**: Blazor leaves the `hidden` attribute alone when it renders an item again, and a `MutationObserver` filters items that Blazor adds later (for example when the **All** or **With videos** button changes the list). The field keeps its text because Blazor does not render its value.
+- **Used by**: the GitHub Copilot features page (see [custom-pages.md](custom-pages.md#github-copilot-features-page)).
 
 ## Scroll Manager
 

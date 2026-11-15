@@ -64,7 +64,7 @@ Retrieves the structured data required to render the corresponding custom page.
 
 **Endpoint**: `GET /api/custom-pages/features`
 **Data Model**: `FeaturesPageData`
-**Description**: Subscription tier definitions, introductory text, and pricing links shown beside the GitHub Copilot timeline. Timeline events are provided by the [section timeline endpoint](content-api.md#timeline-api); this response does not contain per-feature release dates.
+**Description**: Subscription tier definitions, introductory text and pricing links shown on the GitHub Copilot features page. The features themselves come from the [features API](content-api.md#features-api); this response does not contain them.
 
 ### GenAI Basics
 
@@ -142,13 +142,17 @@ See [src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs](../src/TechHub.Api/Endpo
 
 Some custom pages are populated by specialized video content tracked in dedicated database tables.
 
-### GitHub Copilot Subscription Tiers
+### GitHub Copilot Features Page
 
-The former GitHub Copilot features page is gone: its features are events on the timeline of the section, and `/github-copilot/features` redirects to `/github-copilot/timeline`. See [Timeline Events](content-processing.md#timeline-events) and [content-schema.md](content-schema.md#github-copilot-features).
+The features page (`/github-copilot/features`, `GitHubCopilotFeatures.razor`) is a grid of cards, not a timeline. It shows:
 
-The tiers (Free, Pro, Pro+, Business, Enterprise) come from the custom page data `githubcopilot-features` (`GET /api/custom-pages/features`, edited in the admin like the other custom page data). The timeline of the GitHub Copilot section shows them as cards in its sidebar, below the filter by kind of date; no other section does. The cards describe the plans: they do not filter the timeline.
+- **The subscriptions** (Free, Student, Pro, Pro+, Max, Business, Enterprise) as cards in the sidebar, at full height (no scroll area of their own). The titles link to the official plans page (the `links.pricing` of the custom page data, <https://github.com/features/copilot/plans>). They come from the custom page data `githubcopilot-features` (`GET /api/custom-pages/features`, edited in the admin like the other custom page data) and were last refreshed from the official plans page and plan documentation by migration `060_github_copilot_plans_update.sql` (usage-based billing with GitHub AI Credits, and the Max plan). The cards describe the plans: they do not filter the features. The timeline of the section does not show them.
+- **The intro and the pricing links**, from the same custom page data. (The billing notice that migration 027 added was removed again by migration `059_remove_features_billing_notice.sql`.)
+- **The features of the catalog that have content**, from `GET /api/sections/github-copilot/features`. A feature without content is not shown. Content is a video or article that an admin linked to the feature, the source article of a dated event that names it, or an article that lists it (see [Features API](content-api.md#features-api)). Plans and GitHub Enterprise Server support are not catalogued, so the cards neither group by plan nor filter on it.
 
-New features are added on the GitHub Copilot product page of the admin (see [admin.md](admin.md)). A feature gets its place on the timeline through the dated events that name it; the test-only `ContentSyncService` can also seed features from fixture files, but production never does.
+The cards are in a grid of two columns (one on a phone). A card shows the thumbnail of the first YouTube video of the feature (linking to the video page), the name (plain text: a card can hold several articles, so a title linking to one of them would be confusing), the description (at most four lines), the content, and badges for the video, the product (only for a child product of GitHub Copilot, like GitHub Copilot CLI) and the release month (the date an admin set, else the date of the newest dated event). The content is every item of the feature except the video that is the thumbnail, so a feature with a single article lists that article instead of looking empty. Three items show at first; **+ N more** shows the rest and **Show less** hides them again. Links to videos and articles open in a new tab on a desktop (mouse or trackpad) and keep their normal behaviour on a phone or tablet (see [content-api.md](content-api.md#contentitem-navigation-methods) and [javascript.md](javascript.md#content-links)), so closing the tab brings the reader back to the features page. Only the links and buttons in a card have the hand cursor. A feature without a description of its own is described by its newest dated event, and failing that by the excerpt of its first item, so a card is never just a title. The **With videos** filter keeps the cards that have a YouTube video. Next to the buttons a text field (`text-filter.js`, see [javascript.md](javascript.md#text-filter)) hides the cards whose text (name, description, content, badges) does not contain every typed word; it works together with the buttons.
+
+A feature appears on the page as soon as it has content, so a new feature of the catalog needs no change here. New features are added on the GitHub Copilot product page of the admin (see [admin.md](admin.md)); their dated events also give them a place on the timeline. The test-only `ContentSyncService` can seed features from fixture files, but production never does.
 
 ### VS Code Updates
 

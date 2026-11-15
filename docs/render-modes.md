@@ -149,7 +149,7 @@ public void Dispose()
 | `HeroBanner` | `hero-banner-state` | Banner data, collapse state, card hash |
 | `Authors.razor` | `authors` | Author list |
 | `DXSpace.razor` | `dxspace-data` | Section + page data |
-| `GitHubCopilotFeatures.razor` | `copilot-features-data` | Page + video items |
+| `GitHubCopilotFeatures.razor` | `copilot-features-data` | Page data + features with content |
 | `GitHubCopilotGettingStarted.razor` | `copilot-getting-started-data` | Page data |
 | `GitHubCopilotHandbook.razor` | `copilot-handbook-data` | Page data |
 | `GitHubCopilotLevels.razor` | `copilot-levels-data` | Page data |

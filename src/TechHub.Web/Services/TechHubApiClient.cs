@@ -2621,6 +2621,27 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <inheritdoc/>
+    public virtual async Task<IReadOnlyList<SectionFeature>> GetSectionFeaturesAsync(
+        string sectionName,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(sectionName);
+        sectionName = sectionName.Sanitize();
+
+        try
+        {
+            var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<SectionFeature>>(
+                $"/api/sections/{Uri.EscapeDataString(sectionName)}/features", cancellationToken);
+            return result ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch the features of section {SectionName}", sectionName);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
     public virtual async Task<IReadOnlyList<VscodeUpdateListItem>> GetPublicVscodeUpdatesAsync(
         CancellationToken cancellationToken = default)
     {

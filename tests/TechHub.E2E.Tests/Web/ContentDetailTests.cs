@@ -110,7 +110,7 @@ public class ContentDetailTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task RoundupLinks_ShouldNavigate_ToRoundupDetailPage()
+    public async Task RoundupLinks_ShouldOpenRoundupDetailPage_InANewTab()
     {
         // Arrange - Start from homepage where latest roundup is featured
         await Page.GotoRelativeAsync("/");
@@ -119,12 +119,12 @@ public class ContentDetailTests : PlaywrightTestBase
         var roundupLinks = Page.Locator(".latest-roundups a.sidebar-content-button");
         await roundupLinks.First.AssertElementVisibleAsync();
 
-        await roundupLinks.First.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/roundups/.*")));
+        var newTab = await Page.RunAndWaitForPopupAsync(async () => await roundupLinks.First.ClickAsync());
+        await newTab.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
 
-        // Assert - Should navigate to roundup detail page
-        Page.Url.Should().Contain("/roundups/", "clicking roundup link should navigate to roundup detail page");
+        // Assert - The roundup opens in a new tab and the home page stays where it was
+        newTab.Url.Should().Contain("/roundups/", "clicking roundup link should open the roundup detail page");
+        Page.Url.Should().NotContain("/roundups/", "closing the new tab brings the reader back to the home page");
     }
 
     [Fact]

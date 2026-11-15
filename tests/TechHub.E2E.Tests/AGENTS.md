@@ -14,7 +14,8 @@ The target server is configured via the `E2E_BASE_URL` environment variable:
 
 - **Local development**: defaults to `https://localhost:5003` (start servers with `Run -WithoutTests`)
 - **CI (PR preview)**: set to the PR preview URL — runs after PR environment deployment
-- **Performance tests**: always run against local PostgreSQL, skipped if no database is available
+- **Performance tests**: always run against local PostgreSQL and fail when no database is available
+- **No skipping for missing data or settings**: a test that needs data (features, timeline events, tags) asserts it and fails without it, so run E2E tests against a restored production database (`scripts/Restore-Database.ps1`). A test that needs a feature toggle in a certain state sets it itself (see `TimelineToggleFixture`, which restores it afterwards). Only a remote deployment, where the toggle cannot be changed, may skip.
 
 ## Understanding Timeout Failures
 

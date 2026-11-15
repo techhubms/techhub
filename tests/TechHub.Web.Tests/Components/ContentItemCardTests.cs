@@ -240,6 +240,22 @@ public class ContentItemCardTests : BunitContext
     }
 
     [Fact]
+    public void ContentItemCard_Link_IsMarkedSoThatADesktopOpensItInANewTab()
+    {
+        // Arrange: one external and one internal item; content-links.js acts on the marker, the server renders the touch behaviour
+        var external = A.ContentItem.WithCollectionName("blogs").WithPrimarySectionName("ai").WithExternalUrl("https://example.com/post").Build();
+        var internalItem = A.ContentItem.WithSlug("a-video").WithCollectionName("videos").WithPrimarySectionName("ai").Build();
+
+        // Act
+        var externalLink = Render<ContentItemCard>(p => p.Add(x => x.Item, external)).Find(".card-link");
+        var internalLink = Render<ContentItemCard>(p => p.Add(x => x.Item, internalItem)).Find(".card-link");
+
+        // Assert
+        externalLink.HasAttribute("data-content-link").Should().BeTrue();
+        internalLink.HasAttribute("data-content-link").Should().BeTrue();
+    }
+
+    [Fact]
     public void ContentItemCard_FormatsDate_AsRelativeTime()
     {
         // Arrange - use Brussels time to ensure "2 days ago" is correct in Brussels timezone
