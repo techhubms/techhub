@@ -56,11 +56,13 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
                 UNION ALL
                 SELECT m.feature_id, cip.collection_name, cip.item_slug, FALSE, 2147483647, TRUE
                 FROM content_item_products cip
-                JOIN (SELECT pair.product_id, pair.feature_name, find_feature_id(pair.product_id, pair.feature_name) AS feature_id
-                      FROM (SELECT DISTINCT product_id, feature_name
+                JOIN (SELECT pair.product_name, pair.feature_name, r.out_feature_id AS feature_id
+                      FROM (SELECT DISTINCT product_name, feature_name
                             FROM content_item_products
-                            WHERE feature_name <> '' AND product_id IN (SELECT id FROM tree)) pair) m
-                  ON m.product_id = cip.product_id AND m.feature_name = cip.feature_name
+                            WHERE feature_name <> '' AND product_id IN (SELECT id FROM tree)) pair
+                      CROSS JOIN LATERAL resolve_event_catalog(pair.product_name, pair.feature_name) r
+                      WHERE r.out_feature_id IS NOT NULL) m
+                  ON m.product_name = cip.product_name AND m.feature_name = cip.feature_name
                 JOIN features f ON f.id = m.feature_id
                 WHERE cip.collection_name <> 'roundups'
             ),

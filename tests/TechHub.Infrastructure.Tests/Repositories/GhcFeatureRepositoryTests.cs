@@ -139,6 +139,31 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
     }
 
     [Fact]
+    public async Task GetFeaturesWithContentAsync_ArticleNamingAFeatureWithWordsAround_HasThatArticleAsContent()
+    {
+        var product = await CreateProductAsync();
+        await CreateFeatureAsync(product.Id, "Smart Chat");
+        var slug = await SeedItemAsync("news", "Smart chat in practice", "https://example.com/smart-chat");
+        await _fixture.Connection.ExecuteAsync(
+            """
+            UPDATE content_items
+            SET ai_metadata = jsonb_build_object(
+                'product_features', jsonb_build_array(jsonb_build_object('product', @Product, 'feature', 'Smart Chat experience')))
+            WHERE collection_name = 'news' AND slug = @Slug
+            """,
+            new { Product = product.Name, Slug = slug });
+        using (var transaction = _fixture.Connection.BeginTransaction())
+        {
+            await ProductLinkWriter.ReplaceItemLinksAsync(_fixture.Connection, transaction, "news", slug, Ct);
+            transaction.Commit();
+        }
+
+        var result = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+
+        result.Should().ContainSingle().Which.Content.Should().ContainSingle().Which.ItemSlug.Should().Be(slug);
+    }
+
+    [Fact]
     public async Task GetFeaturesWithContentAsync_FeatureWithoutReleaseDate_UsesTheDateOfItsNewestEvent()
     {
         var product = await CreateProductAsync();

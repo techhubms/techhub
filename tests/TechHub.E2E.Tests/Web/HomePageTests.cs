@@ -170,10 +170,16 @@ public class HomePageTests : PlaywrightTestBase
             }
             else
             {
-                // Internal links should navigate within the current page
-                await firstLink.ClickAndExpectAsync(async () =>
-                    await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                        new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$")));
+                // Internal links open in a new tab on desktop (content-links.js) and leave the home page where it was
+                var newTab = await Page.RunAndWaitForPopupAsync(async () => await firstLink.ClickAsync());
+                await newTab.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
+
+                newTab.Url.Should().NotMatchRegex(
+                    $"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$",
+                    "the latest item should open its own page in the new tab");
+                Page.Url.Should().MatchRegex(
+                    $"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$",
+                    "closing the new tab brings the reader back to the home page");
             }
         }
     }
