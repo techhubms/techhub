@@ -517,16 +517,14 @@ public static class BlazorHelpers
         if (stopwatch.ElapsedMilliseconds > SlowReadyThresholdMs)
         {
             string diagnostics;
-#pragma warning disable CA1031 // Diagnostics must not fail the test
             try
             {
                 diagnostics = await page.EvaluateAsync<string>(ReadyDiagnosticsScript);
             }
-            catch (Exception ex)
+            catch (PlaywrightException ex)
             {
                 diagnostics = $"(diagnostics evaluation failed: {ex.Message})";
             }
-#pragma warning restore CA1031
 
             TestContext.Current.TestOutputHelper?.WriteLine(
                 $"SLOW-READY: Blazor took {stopwatch.ElapsedMilliseconds} ms to be ready. State: {diagnostics}");

@@ -1,4 +1,5 @@
 using Bunit;
+using Bunit.TestDoubles;
 using FluentAssertions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
@@ -18,6 +19,7 @@ namespace TechHub.Web.Tests.Components.Pages;
 public class GitHubCopilotFeaturesTests : BunitContext
 {
     private readonly Mock<ITechHubApiClient> _mockApiClient = new();
+    private readonly BunitPersistentComponentState _persistentState;
 
     public GitHubCopilotFeaturesTests()
     {
@@ -43,7 +45,7 @@ public class GitHubCopilotFeaturesTests : BunitContext
             .ReturnsAsync([VideoFeature(), ArticleFeature(), ChildProductFeature()]);
         Services.AddSingleton(_mockApiClient.Object);
 
-        AddBunitPersistentComponentState();
+        _persistentState = AddBunitPersistentComponentState();
         SetRendererInfo(new RendererInfo("Server", true));
 
         JSInterop.SetupVoid("markScriptsReady").SetVoidResult();
@@ -323,5 +325,37 @@ public class GitHubCopilotFeaturesTests : BunitContext
 
         cut.FindAll(".feature-card").Should().BeEmpty();
         cut.FindAll(".features-tier-card").Should().BeEmpty();
+        cut.Find(".page-h1").TextContent.Should().Be("Page Not Found");
+    }
+
+    [Fact]
+    public void Render_RestoredStateOfANotFoundPage_StillShowsNotFound()
+    {
+        _mockApiClient.Setup(x => x.GetFeaturesDataAsync(It.IsAny<CancellationToken>())).ReturnsAsync((FeaturesPageData?)null);
+        Render<GitHubCopilotFeatures>();
+        _persistentState.TriggerOnPersisting();
+
+        // The interactive render restores what the prerender persisted; the API now would answer, but must not be asked.
+        _mockApiClient.Setup(x => x.GetFeaturesDataAsync(It.IsAny<CancellationToken>())).ReturnsAsync(PageData());
+        var restored = Render<GitHubCopilotFeatures>();
+
+        restored.Find(".page-h1").TextContent.Should().Be("Page Not Found", "a restored not-found page must not turn into an empty page");
+    }
+
+    [Fact]
+    public void Render_WhileTheFeaturesLoad_DoesNotSignalTheScriptsReadyUntilTheyArrive()
+    {
+        var features = new TaskCompletionSource<IReadOnlyList<SectionFeature>>();
+        _mockApiClient
+            .Setup(x => x.GetSectionFeaturesAsync("github-copilot", It.IsAny<CancellationToken>()))
+            .Returns(features.Task);
+
+        var cut = Render<GitHubCopilotFeatures>();
+
+        JSInterop.VerifyNotInvoke("markScriptsReady");
+
+        features.SetResult([VideoFeature()]);
+        cut.WaitForState(() => cut.FindAll(".feature-card").Count == 1);
+        cut.WaitForAssertion(() => JSInterop.VerifyInvoke("markScriptsReady"));
     }
 }

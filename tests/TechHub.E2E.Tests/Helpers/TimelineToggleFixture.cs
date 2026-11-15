@@ -56,16 +56,12 @@ public sealed class TimelineToggleFixture : IAsyncLifetime
             return;
         }
 
-        try
+        using (_http)
         {
             if (CanChangeToggle && _originalMode is not null)
             {
                 await SendModeAsync(_originalMode);
             }
-        }
-        finally
-        {
-            _http.Dispose();
         }
     }
 

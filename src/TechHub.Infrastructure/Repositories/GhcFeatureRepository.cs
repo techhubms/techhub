@@ -24,7 +24,8 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
         ArgumentException.ThrowIfNullOrWhiteSpace(productName);
 
         // The three sources of content are merged per item: the thumbnail and the admin's order win over a detected link. Roundups
-        // state dates about everything, so they never count as content of a feature.
+        // state dates about everything, so they never count as content of a feature, not even when an admin linked one. The names an
+        // article lists are resolved once per distinct (product, feature name) pair of the product tree, not once per article.
         const string Sql = """
             WITH tree AS (
                 SELECT product_tree_ids(find_product_id(@ProductName)) AS id
@@ -46,20 +47,22 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
                 SELECT l.feature_id, l.collection_name, l.item_slug, l.is_thumbnail, l.sort_order, FALSE AS is_detected
                 FROM product_feature_content l
                 JOIN features f ON f.id = l.feature_id
+                WHERE l.collection_name <> 'roundups'
                 UNION ALL
                 SELECT e.feature_id, e.collection_name, e.item_slug, FALSE, 2147483647, TRUE
                 FROM content_timeline_events e
                 JOIN features f ON f.id = e.feature_id
                 WHERE e.collection_name <> 'roundups'
                 UNION ALL
-                SELECT m.feature_id, m.collection_name, m.item_slug, FALSE, 2147483647, TRUE
-                FROM (SELECT cip.collection_name, cip.item_slug,
-                             find_feature_id(cip.product_id, cip.feature_name) AS feature_id
-                      FROM content_item_products cip
-                      WHERE cip.feature_name <> ''
-                        AND cip.collection_name <> 'roundups'
-                        AND cip.product_id IN (SELECT id FROM tree)) m
+                SELECT m.feature_id, cip.collection_name, cip.item_slug, FALSE, 2147483647, TRUE
+                FROM content_item_products cip
+                JOIN (SELECT pair.product_id, pair.feature_name, find_feature_id(pair.product_id, pair.feature_name) AS feature_id
+                      FROM (SELECT DISTINCT product_id, feature_name
+                            FROM content_item_products
+                            WHERE feature_name <> '' AND product_id IN (SELECT id FROM tree)) pair) m
+                  ON m.product_id = cip.product_id AND m.feature_name = cip.feature_name
                 JOIN features f ON f.id = m.feature_id
+                WHERE cip.collection_name <> 'roundups'
             ),
             merged AS (
                 SELECT feature_id, collection_name, item_slug,

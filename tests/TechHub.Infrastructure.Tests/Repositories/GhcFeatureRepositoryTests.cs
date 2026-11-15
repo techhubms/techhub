@@ -231,6 +231,46 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
     }
 
     [Fact]
+    public async Task GetFeaturesWithContentAsync_RoundupLinkedByAnAdmin_DoesNotCountAsContent()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Agent mode");
+        var slug = await SeedItemAsync("roundups", "Weekly roundup", "https://example.com/admin-linked-roundup");
+        (await _features.AddContentAsync(product.Id, feature, "roundups", slug, false, Ct)).Succeeded.Should().BeTrue();
+
+        var result = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+
+        result.Should().BeEmpty("a feature with only a roundup has no video or article to show");
+    }
+
+    [Fact]
+    public async Task GetFeaturesWithContentAsync_ArticlesListingTheSameFeatureNameTwice_ListsEachArticleOnce()
+    {
+        var product = await CreateProductAsync();
+        await CreateFeatureAsync(product.Id, "Agent mode");
+        var first = await SeedItemAsync("news", "First article", "https://example.com/first");
+        var second = await SeedItemAsync("news", "Second article", "https://example.com/second");
+        foreach (var slug in new[] { first, second })
+        {
+            await _fixture.Connection.ExecuteAsync(
+                """
+                UPDATE content_items
+                SET ai_metadata = jsonb_build_object(
+                    'product_features', jsonb_build_array(jsonb_build_object('product', @Product, 'feature', 'Agent mode')))
+                WHERE collection_name = 'news' AND slug = @Slug
+                """,
+                new { Product = product.Name, Slug = slug });
+            using var transaction = _fixture.Connection.BeginTransaction();
+            await ProductLinkWriter.ReplaceItemLinksAsync(_fixture.Connection, transaction, "news", slug, Ct);
+            transaction.Commit();
+        }
+
+        var result = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+
+        result.Should().ContainSingle().Which.Content.Select(c => c.ItemSlug).Should().BeEquivalentTo([first, second]);
+    }
+
+    [Fact]
     public async Task GetFeaturesWithContentAsync_IncludesChildProductsAndNotUnrelatedOnes()
     {
         var parent = await CreateProductAsync();

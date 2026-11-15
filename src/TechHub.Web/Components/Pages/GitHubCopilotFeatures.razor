@@ -176,6 +176,7 @@ else if (_notFound)
 
     private FeaturesPageData? pageData;
     private bool _notFound;
+    private bool _dataLoaded;
     private IReadOnlyList<SectionFeature> features = [];
     private bool onlyWithVideo;
     private readonly HashSet<string> _expandedRelated = [];
@@ -185,6 +186,9 @@ else if (_notFound)
     public HttpContext? HttpContext { get; set; }
 
     protected override bool IsNotFound => _notFound;
+
+    // Set once the page data and the features are known (an empty list counts), so scripts and scroll restoration wait for the cards.
+    protected override bool IsPageDataReady => _dataLoaded;
 
     // The features of child products carry their own product name; the ones of the product of the section do not.
     private string SectionProductName => SectionCache.GetSectionByName(SectionName)?.Tag ?? string.Empty;
@@ -217,6 +221,8 @@ else if (_notFound)
         {
             pageData = restored.PageData;
             features = restored.Features ?? [];
+            _notFound = restored.NotFound;
+            _dataLoaded = true;
             return;
         }
 
@@ -237,6 +243,7 @@ else if (_notFound)
             }
 
             features = await ApiClient.GetSectionFeaturesAsync(SectionName);
+            _dataLoaded = true;
         }
         catch (HttpRequestException ex)
         {
@@ -253,7 +260,8 @@ else if (_notFound)
         ApplicationState.PersistAsJson("copilot-features-data", new PersistedFeaturesData
         {
             PageData = pageData,
-            Features = features
+            Features = features,
+            NotFound = _notFound
         });
         return Task.CompletedTask;
     }
@@ -262,6 +270,7 @@ else if (_notFound)
     {
         public FeaturesPageData? PageData { get; set; }
         public IReadOnlyList<SectionFeature>? Features { get; set; }
+        public bool NotFound { get; set; }
     }
 
     public void Dispose()
