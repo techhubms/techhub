@@ -68,6 +68,12 @@ param aspNetCoreEnvironment string = 'Production'
 @description('Tags applied to the API app')
 param tags object = {}
 
+@description('Log Analytics workspace resource ID that receives the site\'s App Service platform logs (container start/stop with exit codes). Leave empty to skip.')
+param logAnalyticsWorkspaceId string = ''
+
+@description('Heap hard limit for the .NET GC (DOTNET_GCHeapHardLimit), in hexadecimal bytes. 25800000 is 600 MB. The runtime fails the allocation in this process instead of growing until the plan runs out of memory and every container on it is killed. Empty leaves the heap uncapped.')
+param gcHeapHardLimitHex string = '25800000'
+
 var imageReference = 'ghcr.io/${githubRegistryUsername}/techhub-api:${imageTag}'
 var hasAcsEndpoint = !empty(acsEndpointSecretName)
 var hasAcsSenderAddress = !empty(acsSenderAddressSecretName)
@@ -111,6 +117,11 @@ var staticEnvVars = [
   {
     name: 'ASPNETCORE_ENVIRONMENT'
     value: aspNetCoreEnvironment
+  }
+  {
+    // 1-9: higher makes the GC compact more often and keep the heap smaller, at the cost of CPU.
+    name: 'DOTNET_GCConserveMemory'
+    value: '5'
   }
   {
     name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
@@ -201,6 +212,15 @@ var staticEnvVars = [
   }
 ]
 
+var gcHeapLimitEnvVars = empty(gcHeapHardLimitHex)
+  ? []
+  : [
+      {
+        name: 'DOTNET_GCHeapHardLimit'
+        value: gcHeapHardLimitHex
+      }
+    ]
+
 // One set of AiCategorization__Profiles__<Profile>__<Setting> app settings per AI pipeline step.
 var aiProfileEnvVars = flatten(map(items(aiProfiles), profile => [
   {
@@ -253,7 +273,7 @@ resource api 'Microsoft.Web/sites@2023-12-01' = {
         allowedOrigins: corsOrigins
         supportCredentials: false
       }
-      appSettings: concat(staticEnvVars, aiProfileEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars)
+      appSettings: concat(staticEnvVars, gcHeapLimitEnvVars, aiProfileEnvVars, newsletterAcsEnvVars, newsletterSenderEnvVars, newsletterSecretEnvVars, corsEnvVars)
       // Deny all public inbound traffic except from the Web app's VNet integration subnet —
       // keeps the API reachable only from the Web app's subnet, never from the public internet.
       ipSecurityRestrictions: [
@@ -299,6 +319,22 @@ resource ftpPublishingPolicy 'Microsoft.Web/sites/basicPublishingCredentialsPoli
   dependsOn: [
     scmPublishingPolicy
   ]
+}
+
+// Container lifecycle events (start, stop, exit code 137 = out of memory) are otherwise only reachable
+// through Kudu, which is locked down for this site.
+resource platformLogs 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = if (!empty(logAnalyticsWorkspaceId)) {
+  name: 'platform-logs'
+  scope: api
+  properties: {
+    workspaceId: logAnalyticsWorkspaceId
+    logs: [
+      {
+        category: 'AppServicePlatformLogs'
+        enabled: true
+      }
+    ]
+  }
 }
 
 output fqdn string = api.properties.defaultHostName

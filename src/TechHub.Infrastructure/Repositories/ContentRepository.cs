@@ -233,11 +233,11 @@ public sealed class ContentRepository : IContentRepository
     /// </summary>
     public async Task<IReadOnlyList<SitemapItem>> GetSitemapItemsAsync(CancellationToken ct = default)
     {
-        return await Cache.GetOrCreateAsync("sitemap:items", async entry =>
+        return await Cache.GetOrCreateSingleFlightAsync("sitemap:items", async entry =>
         {
             entry.SetAbsoluteExpiration(_sitemapCacheTtl);
             return await GetSitemapItemsInternalAsync(ct);
-        }) ?? [];
+        }, ct);
     }
 
     private async Task<IReadOnlyList<SitemapItem>> GetSitemapItemsInternalAsync(CancellationToken ct)
@@ -265,11 +265,11 @@ public sealed class ContentRepository : IContentRepository
     /// </summary>
     public async Task<IReadOnlyList<AuthorSummary>> GetAuthorsAsync(CancellationToken ct = default)
     {
-        return await Cache.GetOrCreateAsync("authors:all", async entry =>
+        return await Cache.GetOrCreateSingleFlightAsync("authors:all", async entry =>
         {
             entry.SetAbsoluteExpiration(_authorCacheTtl);
             return await GetAuthorsInternalAsync(ct);
-        }) ?? [];
+        }, ct);
     }
 
     private async Task<IReadOnlyList<AuthorSummary>> GetAuthorsInternalAsync(CancellationToken ct)
@@ -354,7 +354,7 @@ public sealed class ContentRepository : IContentRepository
         slug = slug.ToLowerInvariant();
 
         var cacheKey = $"slug:{collectionName}:{slug}:rendered:{includeRenderedHtml}";
-        return await Cache.GetOrCreateAsync(cacheKey, async entry =>
+        return await Cache.GetOrCreateSingleFlightAsync(cacheKey, async entry =>
         {
             entry.SetAbsoluteExpiration(_slugCacheTtl);
             var item = await GetBySlugInternalAsync(collectionName, slug, ct);
@@ -364,7 +364,7 @@ public sealed class ContentRepository : IContentRepository
             }
 
             return includeRenderedHtml ? RenderHtmlIfNeeded(item) : item;
-        });
+        }, ct);
     }
 
     /// <summary>
@@ -376,16 +376,11 @@ public sealed class ContentRepository : IContentRepository
         ArgumentNullException.ThrowIfNull(request);
 
         var cacheKey = request.GetCacheKey();
-        return await Cache.GetOrCreateAsync(cacheKey, async entry =>
+        return await Cache.GetOrCreateSingleFlightAsync(cacheKey, async entry =>
         {
             entry.SetAbsoluteExpiration(_searchCacheTtl);
             return await SearchInternalAsync(request, ct);
-        }) ?? new SearchResults<ContentItem>
-        {
-            Items = Array.Empty<ContentItem>(),
-            TotalCount = 0,
-            Facets = new FacetResults { Facets = new Dictionary<string, IReadOnlyList<FacetValue>>(), TotalCount = 0 }
-        };
+        }, ct);
     }
 
     /// <summary>
@@ -397,11 +392,11 @@ public sealed class ContentRepository : IContentRepository
         ArgumentNullException.ThrowIfNull(request);
 
         var cacheKey = request.GetCacheKey();
-        return await Cache.GetOrCreateAsync(cacheKey, async entry =>
+        return await Cache.GetOrCreateSingleFlightAsync(cacheKey, async entry =>
         {
             entry.SetAbsoluteExpiration(_searchCacheTtl);
             return await GetFacetsInternalAsync(request, ct);
-        }) ?? new FacetResults { Facets = new Dictionary<string, IReadOnlyList<FacetValue>>(), TotalCount = 0 };
+        }, ct);
     }
 
     /// <summary>
@@ -416,11 +411,11 @@ public sealed class ContentRepository : IContentRepository
         ArgumentNullException.ThrowIfNull(request);
 
         var cacheKey = request.GetCacheKey();
-        return await Cache.GetOrCreateAsync(cacheKey, async entry =>
+        return await Cache.GetOrCreateSingleFlightAsync(cacheKey, async entry =>
         {
             entry.SetAbsoluteExpiration(_tagCacheTtl);
             return await GetTagCountsInternalAsync(request, ct);
-        }) ?? [];
+        }, ct);
     }
 
     // ==================== Protected Helper Methods ====================
@@ -433,11 +428,11 @@ public sealed class ContentRepository : IContentRepository
     /// </summary>
     private async Task<HashSet<string>> GetExcludeTagsSetAsync()
     {
-        return await Cache.GetOrCreateAsync("excludetags:set", async entry =>
+        return await Cache.GetOrCreateSingleFlightAsync("excludetags:set", async entry =>
         {
             entry.SetAbsoluteExpiration(_configCacheTtl);
             return await BuildExcludeTagsSetAsync();
-        }) ?? [];
+        });
     }
 
     /// <summary>

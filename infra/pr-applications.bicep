@@ -87,7 +87,7 @@ var webExpectedFqdn = '${webAppName}.azurewebsites.net'
 // The username is the managed identity display name — registered as Entra admin
 // on the PR server by Deploy-PrPreview.ps1 before calling this template.
 var prPostgresServerName = 'psql-techhub-pr-${prNumber}'
-var dbConnectionString = 'Host=${prPostgresServerName}.postgres.database.azure.com;Database=techhub;Username=${prIdentityName};SSL Mode=Require'
+var dbConnectionString = 'Host=${prPostgresServerName}.postgres.database.azure.com;Database=techhub;Username=${prIdentityName};SSL Mode=Require;Maximum Pool Size=30'
 
 // ============================================================================
 // App Service sites

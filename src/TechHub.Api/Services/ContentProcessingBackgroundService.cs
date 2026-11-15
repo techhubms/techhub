@@ -162,10 +162,11 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
         {
             await using var scope = _serviceProvider.CreateAsyncScope();
             var service = scope.ServiceProvider.GetRequiredService<ContentProcessingService>();
-            var jobStarted = await service.RunAsync(triggerType, _runCts.Token);
+            var result = await service.RunAsync(triggerType, _runCts.Token);
 
-            // Invalidate content cache so new/updated items are served immediately
-            if (jobStarted)
+            // Invalidate the content cache only when the run added items. Clearing it after
+            // every no-op run forces all pages to rebuild their entries from the database.
+            if (result.ContentChanged)
             {
                 var contentRepo = scope.ServiceProvider.GetRequiredService<IContentRepository>();
                 contentRepo.InvalidateCachedData();

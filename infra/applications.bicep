@@ -17,6 +17,9 @@ param appInsightsName string = 'appi-techhub-prod'
 @description('Key Vault name (existing resource)')
 param keyVaultName string = 'kv-techhub-prod'
 
+@description('Log Analytics workspace name (existing resource) that receives the sites\' App Service platform logs')
+param logAnalyticsWorkspaceName string = 'law-techhub-prod'
+
 @description('App Service Plan name (existing resource, Basic B2, hosts both API and Web sites)')
 param appServicePlanName string = 'asp-techhub-prod'
 
@@ -134,6 +137,11 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' existing = {
   name: appInsightsName
 }
 
+resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' existing = {
+  scope: resourceGroup
+  name: logAnalyticsWorkspaceName
+}
+
 resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' existing = {
   scope: resourceGroup
   name: postgresServerName
@@ -155,7 +163,9 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' existin
 
 var keyVaultUri = 'https://${keyVaultName}${environment().suffixes.keyvaultDns}/'
 var aadClientSecretSecretName = 'techhub-prod-aad-client-secret'
-var dbConnectionString = 'Host=${postgresServer.properties.fullyQualifiedDomainName};Database=${postgresDatabase.name};Username=${prodIdentityName};SSL Mode=Require'
+// Only the API connects to PostgreSQL. Maximum Pool Size caps its connections per process (the Npgsql default is
+// 100), so the old and new process overlapping during a restart stay well below the server's connection limits.
+var dbConnectionString = 'Host=${postgresServer.properties.fullyQualifiedDomainName};Database=${postgresDatabase.name};Username=${prodIdentityName};SSL Mode=Require;Maximum Pool Size=30'
 var allCustomDomains = [for entry in items(wildcardCertNames): '*.${entry.key}']
 // Resolve App Insights connection string: use override when provided, otherwise read from existing resource.
 // Pass '@existing' (default) to use the Azure resource value; pass '' to disable telemetry for PR environments.
@@ -204,6 +214,7 @@ module apiApp './modules/api.bicep' = {
     acsEndpointSecretName: acsEndpointSecretName
     acsSenderAddressSecretName: 'techhub-prod-acs-sender-address'
     newsletterUnsubscribeSecretName: 'techhub-prod-newsletter-unsubscribe-secret'
+    logAnalyticsWorkspaceId: logAnalyticsWorkspace.id
     tags: prodTags
   }
 }
@@ -231,6 +242,7 @@ module webApp './modules/web.bicep' = {
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
     googleAnalyticsMeasurementId: googleAnalyticsMeasurementId
+    logAnalyticsWorkspaceId: logAnalyticsWorkspace.id
     tags: prodTags
   }
 }

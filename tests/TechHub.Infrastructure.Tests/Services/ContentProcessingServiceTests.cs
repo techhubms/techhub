@@ -159,10 +159,11 @@ public class ContentProcessingServiceTests
         var before = await _jobRepo.GetRecentAsync(500, CancellationToken.None);
 
         // Act
-        var jobStarted = await CreateService(timeProvider: new FrozenTimeProvider(now)).RunAsync("scheduled", CancellationToken.None);
+        var result = await CreateService(timeProvider: new FrozenTimeProvider(now)).RunAsync("scheduled", CancellationToken.None);
 
         // Assert
-        jobStarted.Should().Be(expectedCheck);
+        result.JobStarted.Should().Be(expectedCheck);
+        result.ContentChanged.Should().BeFalse();
         _rssService.Verify(r => r.IngestAsync(feed, It.IsAny<CancellationToken>()),
             expectedCheck ? Times.Once() : Times.Never());
         _feedRepo.Verify(r => r.RecordCheckAsync(feed.Id, null, It.IsAny<CancellationToken>()),
@@ -284,6 +285,47 @@ public class ContentProcessingServiceTests
         // URL should now be recorded in processed_urls
         var exists = await _processedUrlRepo.ExistsAsync(Url, CancellationToken.None);
         exists.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task RunAsync_NewItemAdded_ReportsContentChanged()
+    {
+        // Arrange
+        const string Url = "https://example.com/content-changed-item";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(Url);
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = CreateProcessedItem(Url, "content-changed-item"), Explanation = "relevant content" });
+
+        // Act
+        var result = await CreateService().RunAsync("scheduled", CancellationToken.None);
+
+        // Assert
+        result.JobStarted.Should().BeTrue();
+        result.ContentChanged.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task RunAsync_NothingAdded_ReportsJobStartedWithoutContentChange()
+    {
+        // Arrange — the AI skips the only new item, so no content item is written
+        const string Url = "https://example.com/content-unchanged-item";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([CreateRawItem(Url)]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = null, Explanation = "not relevant" });
+
+        // Act
+        var result = await CreateService().RunAsync("scheduled", CancellationToken.None);
+
+        // Assert
+        result.JobStarted.Should().BeTrue();
+        result.ContentChanged.Should().BeFalse();
     }
 
     [Fact]

@@ -41,6 +41,12 @@ The infrastructure is deployed in **two strictly separated phases**:
 
 **No infrastructure resources.** Phase 2 reads from Key Vault secrets created in Phase 1.
 
+**Runtime limits set by Phase 2** (both sites share one plan, so a runaway process takes the other down too):
+
+- `DOTNET_GCHeapHardLimit` (hex bytes, module parameter `gcHeapHardLimitHex`: API 600 MB, Web 800 MB) and `DOTNET_GCConserveMemory=5` cap and compact each .NET heap. When a site hits the cap it fails in that process instead of growing until the plan runs out of memory and its containers are killed (exit code 137/139). Raise the limits before moving to a smaller plan only if the logs show the cap being hit
+- The API connection string carries `Maximum Pool Size=30` (the Npgsql default is 100). Only the API connects to PostgreSQL
+- Each site's `AppServicePlatformLogs` go to the Log Analytics workspace through the `logAnalyticsWorkspaceId` module parameter (production only), because SCM/Kudu is locked down
+
 ### PR previews (`pr-applications.bicep`)
 
 `pr-applications.bicep` deploys the per-PR API + Web sites onto the shared, **ephemeral** PR-preview App Service Plan (`asp-techhub-pr`). Phase 1 deliberately does not create that Plan: `Deploy-PrPreview.ps1` creates it on the first PR preview deploy and deletes it after the last teardown. Phase 1 only creates the PR subnet and the PR managed identity (`id-techhub-pr`). See [docs/ci-cd-pipeline.md](../docs/ci-cd-pipeline.md#pr-preview-environments).

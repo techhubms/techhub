@@ -72,10 +72,10 @@ public class ContentProcessingBackgroundServiceTests
         mockJobSettingRepo.Setup(r => r.IsEnabledAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(false);
 
-        // Signalled by the last step of a run (cache invalidation), so the test waits for the run itself
+        // Signalled when the job completes, so the test waits for the run itself
         var runCompleted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        SignalOnJobCompleted(mockJobRepo, () => runCompleted.TrySetResult());
         var mockContentRepo = new Mock<IContentRepository>();
-        mockContentRepo.Setup(r => r.InvalidateCachedData()).Callback(() => runCompleted.TrySetResult());
 
         var services = new ServiceCollection();
         services.AddScoped(_ => CreateMockProcessingService(mockJobRepo.Object));
@@ -121,12 +121,11 @@ public class ContentProcessingBackgroundServiceTests
         mockJobSettingRepo.Setup(r => r.IsEnabledAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(true);
 
-        // Signalled by the last step of each run (cache invalidation): first the scheduled run, then the manual run
+        // Signalled when a job completes: first the scheduled run, then the manual run
         var scheduledRunCompleted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
         var manualRunCompleted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
         var completedRuns = 0;
-        var mockContentRepo = new Mock<IContentRepository>();
-        mockContentRepo.Setup(r => r.InvalidateCachedData()).Callback(() =>
+        SignalOnJobCompleted(mockJobRepo, () =>
         {
             if (Interlocked.Increment(ref completedRuns) == 1)
             {
@@ -137,6 +136,7 @@ public class ContentProcessingBackgroundServiceTests
                 manualRunCompleted.TrySetResult();
             }
         });
+        var mockContentRepo = new Mock<IContentRepository>();
 
         var services = new ServiceCollection();
         services.AddScoped(_ => CreateMockProcessingService(mockJobRepo.Object));
@@ -272,7 +272,7 @@ public class ContentProcessingBackgroundServiceTests
     }
 
     [Fact]
-    public async Task RunOnceAsync_InvalidatesContentCache_AfterSuccessfulRun()
+    public async Task RunOnceAsync_WhenRunAddedItems_InvalidatesContentCache()
     {
         // Arrange
         var startupState = new StartupStateService();
@@ -292,14 +292,14 @@ public class ContentProcessingBackgroundServiceTests
         mockContentRepo.Setup(r => r.InvalidateCachedData()).Callback(() => runCompleted.TrySetResult());
 
         var services = new ServiceCollection();
-        services.AddScoped(_ => CreateMockProcessingService(mockJobRepo.Object));
+        services.AddScoped(_ => CreateMockProcessingService(mockJobRepo.Object, addsItem: true));
         services.AddScoped(_ => mockJobSettingRepo.Object);
         services.AddScoped(_ => mockContentRepo.Object);
 
-        var serviceProvider = services.BuildServiceProvider();
+        using var serviceProvider = services.BuildServiceProvider();
         var options = new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", IntervalMinutes = 60 };
 
-        var sut = new ContentProcessingBackgroundService(
+        using var sut = new ContentProcessingBackgroundService(
             serviceProvider,
             Options.Create(options),
             startupState,
@@ -313,28 +313,121 @@ public class ContentProcessingBackgroundServiceTests
         await runCompleted.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
         await sut.StopAsync(CancellationToken.None);
 
-        // Assert — cache should have been invalidated after the run
+        // Assert — new content makes the cached pages stale
         mockContentRepo.Verify(r => r.InvalidateCachedData(), Times.Once);
+    }
+
+    [Fact]
+    public async Task RunOnceAsync_WhenRunAddedNothing_KeepsContentCache()
+    {
+        // Arrange
+        var startupState = new StartupStateService();
+        startupState.MarkStartupCompleted();
+
+        var mockJobRepo = new Mock<IContentProcessingJobRepository>();
+        mockJobRepo.Setup(r => r.CreateAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(1L);
+
+        var mockJobSettingRepo = new Mock<IBackgroundJobSettingRepository>();
+        mockJobSettingRepo.Setup(r => r.IsEnabledAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(false);
+
+        var runCompleted = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        SignalOnJobCompleted(mockJobRepo, () => runCompleted.TrySetResult());
+        var mockContentRepo = new Mock<IContentRepository>();
+
+        var services = new ServiceCollection();
+        services.AddScoped(_ => CreateMockProcessingService(mockJobRepo.Object));
+        services.AddScoped(_ => mockJobSettingRepo.Object);
+        services.AddScoped(_ => mockContentRepo.Object);
+
+        using var serviceProvider = services.BuildServiceProvider();
+        var options = new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", IntervalMinutes = 60 };
+
+        using var sut = new ContentProcessingBackgroundService(
+            serviceProvider,
+            Options.Create(options),
+            startupState,
+            Mock.Of<ILogger<ContentProcessingBackgroundService>>());
+
+        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
+
+        // Act — trigger a manual run, wait for the job to complete, then stop (which waits for the run to finish)
+        await sut.StartAsync(cts.Token);
+        sut.TriggerImmediateRun();
+        await runCompleted.Task.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
+        await sut.StopAsync(CancellationToken.None);
+
+        // Assert — a run that found nothing new must not throw away the whole cache
+        mockContentRepo.Verify(r => r.InvalidateCachedData(), Times.Never);
+    }
+
+    private static void SignalOnJobCompleted(Mock<IContentProcessingJobRepository> jobRepo, Action signal)
+    {
+        jobRepo.Setup(r => r.CompleteAsync(
+                It.IsAny<long>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(),
+                It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<int>(), It.IsAny<CancellationToken>()))
+            .Returns(() =>
+            {
+                signal();
+                return Task.CompletedTask;
+            });
     }
 
     /// <summary>
     /// Creates a <see cref="ContentProcessingService"/> with all dependencies mocked,
-    /// using the provided job repository mock to verify calls.
+    /// using the provided job repository mock to verify calls. When <paramref name="addsItem"/> is set, the
+    /// feed contains one new article that passes the whole pipeline.
     /// </summary>
     private static ContentProcessingService CreateMockProcessingService(
-        IContentProcessingJobRepository jobRepo)
+        IContentProcessingJobRepository jobRepo,
+        bool addsItem = false)
     {
         var feedRepo = new Mock<IRssFeedConfigRepository>();
         feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync([new FeedConfig { Id = 1, Name = "Test feed" }]);
+
+        var rawItem = new RawFeedItem
+        {
+            Title = "New article",
+            ExternalUrl = "https://example.com/new-article",
+            PublishedAt = DateTimeOffset.UtcNow.AddHours(-1),
+            FeedName = "Test feed",
+            CollectionName = "blogs"
+        };
         var rssService = new Mock<IRssFeedIngestionService>();
         rssService.Setup(r => r.IngestAsync(It.IsAny<FeedConfig>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(FeedIngestionResult.Success([]));
+            .ReturnsAsync(FeedIngestionResult.Success(addsItem ? [rawItem] : []));
+
+        var articleService = new Mock<IArticleContentService>();
+        articleService.Setup(s => s.EnrichWithContentAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync((RawFeedItem item, CancellationToken _) => item);
+
+        var aiService = new Mock<IAiCategorizationService>();
+        aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult
+            {
+                Item = new ProcessedContentItem
+                {
+                    Slug = "new-article",
+                    Title = "New article",
+                    Excerpt = "An excerpt",
+                    DateEpoch = DateTimeOffset.UtcNow.AddHours(-1).ToUnixTimeSeconds(),
+                    CollectionName = "blogs",
+                    ExternalUrl = rawItem.ExternalUrl,
+                    FeedName = "Test feed",
+                    ContentHash = "hash",
+                    Sections = ["ai"],
+                    PrimarySectionName = "ai",
+                    Tags = ["ai"]
+                },
+                Explanation = "relevant"
+            });
 
         return new ContentProcessingService(
             rssService.Object,
-            Mock.Of<IArticleContentService>(),
-            Mock.Of<IAiCategorizationService>(),
+            articleService.Object,
+            aiService.Object,
             Mock.Of<IYouTubeTagService>(),
             Mock.Of<IContentItemWriteRepository>(),
             jobRepo,
