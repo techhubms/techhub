@@ -56,10 +56,9 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
 
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/github-copilot/timeline\?kinds=deprecation"));
         await Assertions.Expect(Page.Locator(".timeline-filter-link.active")).ToHaveTextAsync("Deprecations");
-        // Whatever the page shows now is a deprecation, retirement, end-of-support or breaking change.
-        var badges = await Page.Locator(".timeline-entry .timeline-badges .badge-warning").CountAsync();
-        var entries = await Page.Locator(".timeline-entry").CountAsync();
-        badges.Should().Be(entries, "every entry of the Deprecations filter has a warning badge for its kind");
+        // Whatever the page shows now is a deprecation, retirement, end-of-support or breaking change. The active filter is marked
+        // before the filtered entries arrive, so this waits (retries) until no entry without a warning badge for its kind is left.
+        await Assertions.Expect(Page.Locator(".timeline-entry:not(:has(.timeline-badges .badge-warning))")).ToHaveCountAsync(0);
     }
 
     [Fact]

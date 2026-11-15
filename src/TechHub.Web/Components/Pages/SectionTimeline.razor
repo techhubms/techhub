@@ -65,6 +65,7 @@
                             var isExternal = href.StartsWith("http", StringComparison.OrdinalIgnoreCase);
                             <li>
                                 <a href="@href"
+                                   data-content-link
                                    target="@(isExternal ? "_blank" : null)"
                                    rel="@(isExternal ? "noopener noreferrer" : null)"
                                    @onclick:stopPropagation="true">@source.Title</a>

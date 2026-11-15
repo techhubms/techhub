@@ -14,10 +14,10 @@ public sealed record SectionFeature
     /// <summary>The product the feature belongs to; a child product of the section's product shows its own name.</summary>
     public required string ProductName { get; init; }
 
-    /// <summary>Short description of the feature, empty when none is written.</summary>
+    /// <summary>Short description of the feature: its own, else that of its newest dated event, else the excerpt of its first item. Empty when none exists.</summary>
     public string Description { get; init; } = string.Empty;
 
-    /// <summary>The day the feature was released, when an admin set it.</summary>
+    /// <summary>The day the feature was released: the date an admin set, else the date of its newest dated event.</summary>
     public DateOnly? ReleaseDate { get; init; }
 
     /// <summary>The content that belongs to the feature: the thumbnail first, then the curated links, then the articles the catalog detected.</summary>
@@ -47,6 +47,16 @@ public sealed record SectionFeatureContent
 
     /// <summary>The address of the item: its own page, or the original for news, blogs and community items.</summary>
     public string GetHref() => ContentItem.BuildHref(CollectionName, ItemSlug, ExternalUrl, PrimarySectionName);
+
+    private bool LinksToAnotherSite() => GetHref().StartsWith("http", StringComparison.OrdinalIgnoreCase);
+
+    /// <summary>The target a link to the item starts with: another site opens in a new tab, a page of this site in the same tab (see <see cref="ContentItem.GetTarget"/>).</summary>
+    public string? GetTarget() => LinksToAnotherSite() ? "_blank" : null;
+
+    public string? GetRel() => LinksToAnotherSite() ? "noopener noreferrer" : null;
+
+    /// <summary>The accessible name of a link to the item: the label, with a note when the link opens in a new tab.</summary>
+    public string GetAriaLabel(string label) => LinksToAnotherSite() ? $"{label} - opens in new tab" : label;
 
     /// <summary>The YouTube video id of <see cref="ExternalUrl"/> (youtu.be and youtube.com addresses), or null when the item is no YouTube video.</summary>
     public string? GetYouTubeVideoId()

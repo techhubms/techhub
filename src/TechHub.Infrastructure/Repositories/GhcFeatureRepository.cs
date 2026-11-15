@@ -30,7 +30,14 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
                 SELECT product_tree_ids(find_product_id(@ProductName)) AS id
             ),
             features AS (
-                SELECT f.id, f.slug, f.name, f.description, f.release_date, p.name AS product_name
+                SELECT f.id, f.slug, f.name, f.description, p.name AS product_name,
+                       (SELECT e.description FROM content_timeline_events e
+                        WHERE e.feature_id = f.id AND btrim(e.description) <> ''
+                        ORDER BY e.event_date DESC, e.id LIMIT 1) AS event_description,
+                       COALESCE(f.release_date,
+                                (SELECT EXTRACT(EPOCH FROM e.event_date)::bigint FROM content_timeline_events e
+                                 WHERE e.feature_id = f.id
+                                 ORDER BY e.event_date DESC, e.id LIMIT 1)) AS release_date
                 FROM product_features f
                 JOIN products p ON p.id = f.product_id
                 WHERE f.product_id IN (SELECT id FROM tree)
@@ -45,18 +52,14 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
                 JOIN features f ON f.id = e.feature_id
                 WHERE e.collection_name <> 'roundups'
                 UNION ALL
-                SELECT resolved.out_feature_id, ci.collection_name, ci.slug, FALSE, 2147483647, TRUE
-                FROM content_items ci
-                CROSS JOIN LATERAL jsonb_array_elements(
-                    CASE WHEN jsonb_typeof(ci.ai_metadata -> 'product_features') = 'array'
-                         THEN ci.ai_metadata -> 'product_features'
-                         ELSE '[]'::jsonb END) AS n (value)
-                CROSS JOIN LATERAL resolve_event_catalog(n.value ->> 'product', n.value ->> 'feature') AS resolved
-                JOIN features f ON f.id = resolved.out_feature_id
-                WHERE ci.collection_name <> 'roundups'
-                  AND jsonb_typeof(n.value) = 'object'
-                  AND btrim(COALESCE(n.value ->> 'product', '')) <> ''
-                  AND btrim(COALESCE(n.value ->> 'feature', '')) <> ''
+                SELECT m.feature_id, m.collection_name, m.item_slug, FALSE, 2147483647, TRUE
+                FROM (SELECT cip.collection_name, cip.item_slug,
+                             find_feature_id(cip.product_id, cip.feature_name) AS feature_id
+                      FROM content_item_products cip
+                      WHERE cip.feature_name <> ''
+                        AND cip.collection_name <> 'roundups'
+                        AND cip.product_id IN (SELECT id FROM tree)) m
+                JOIN features f ON f.id = m.feature_id
             ),
             merged AS (
                 SELECT feature_id, collection_name, item_slug,
@@ -70,10 +73,12 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
                    f.name AS Name,
                    f.product_name AS ProductName,
                    f.description AS Description,
+                   f.event_description AS EventDescription,
                    f.release_date AS ReleaseDate,
                    m.collection_name AS CollectionName,
                    m.item_slug AS ItemSlug,
                    ci.title AS ItemTitle,
+                   ci.excerpt AS ItemExcerpt,
                    ci.external_url AS ItemExternalUrl,
                    ci.primary_section_name AS ItemPrimarySectionName,
                    m.is_thumbnail AS IsThumbnail,
@@ -99,7 +104,7 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
                     Slug = first.Slug,
                     Name = first.Name,
                     ProductName = first.ProductName,
-                    Description = first.Description ?? string.Empty,
+                    Description = DescriptionOf(g),
                     ReleaseDate = first.ReleaseDate is { } epoch
                         ? DateOnly.FromDateTime(DateTimeOffset.FromUnixTimeSeconds(epoch).UtcDateTime)
                         : null,
@@ -118,12 +123,29 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
             .ToList();
     }
 
+    // A feature without a description of its own is described by its newest dated event, and failing that by the excerpt of its first item.
+    private static string DescriptionOf(IEnumerable<FeatureContentRow> rows)
+    {
+        var first = rows.First();
+        foreach (var candidate in new[] { first.Description, first.EventDescription, first.ItemExcerpt })
+        {
+            if (!string.IsNullOrWhiteSpace(candidate))
+            {
+                return candidate.Trim();
+            }
+        }
+
+        return string.Empty;
+    }
+
     private sealed class FeatureContentRow
     {
         public string Slug { get; init; } = string.Empty;
         public string Name { get; init; } = string.Empty;
         public string ProductName { get; init; } = string.Empty;
         public string? Description { get; init; }
+        public string? EventDescription { get; init; }
+        public string? ItemExcerpt { get; init; }
         public long? ReleaseDate { get; init; }
         public string CollectionName { get; init; } = string.Empty;
         public string ItemSlug { get; init; } = string.Empty;

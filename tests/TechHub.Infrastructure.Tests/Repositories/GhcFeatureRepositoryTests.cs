@@ -127,10 +127,80 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
             WHERE collection_name = 'news' AND slug = @Slug
             """,
             new { Product = product.Name, Slug = slug });
+        using (var transaction = _fixture.Connection.BeginTransaction())
+        {
+            await ProductLinkWriter.ReplaceItemLinksAsync(_fixture.Connection, transaction, "news", slug, Ct);
+            transaction.Commit();
+        }
 
         var result = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
 
         result.Should().ContainSingle().Which.Content.Should().ContainSingle().Which.ItemSlug.Should().Be(slug);
+    }
+
+    [Fact]
+    public async Task GetFeaturesWithContentAsync_FeatureWithoutReleaseDate_UsesTheDateOfItsNewestEvent()
+    {
+        var product = await CreateProductAsync();
+        await CreateFeatureAsync(product.Id, "Agent mode");
+        var slug = await SeedItemAsync("news", "Agent mode is GA", "https://example.com/ga");
+        await _timeline.ReplaceEventsAsync("news", slug, [Event(product.Name, "Agent mode", "ga")], "source", 3, Ct);
+
+        var result = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+
+        result.Should().ContainSingle().Which.ReleaseDate.Should().Be(new DateOnly(2026, 3, 10));
+    }
+
+    [Fact]
+    public async Task GetFeaturesWithContentAsync_FeatureWithAReleaseDate_KeepsItOverTheEventDate()
+    {
+        var product = await CreateProductAsync();
+        await CreateFeatureAsync(product.Id, "Agent mode", releaseDate: new DateOnly(2025, 2, 6));
+        var slug = await SeedItemAsync("news", "Agent mode is GA", "https://example.com/ga");
+        await _timeline.ReplaceEventsAsync("news", slug, [Event(product.Name, "Agent mode", "ga")], "source", 3, Ct);
+
+        var result = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+
+        result.Should().ContainSingle().Which.ReleaseDate.Should().Be(new DateOnly(2025, 2, 6));
+    }
+
+    [Fact]
+    public async Task GetFeaturesWithContentAsync_FeatureWithoutDescription_UsesTheDescriptionOfItsNewestEvent()
+    {
+        var product = await CreateProductAsync();
+        await CreateFeatureAsync(product.Id, "Agent mode");
+        var slug = await SeedItemAsync("news", "Agent mode is GA", "https://example.com/ga", excerpt: "Excerpt of the article.");
+        await _timeline.ReplaceEventsAsync("news", slug, [Event(product.Name, "Agent mode", "ga")], "source", 3, Ct);
+
+        var result = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+
+        result.Should().ContainSingle().Which.Description.Should().Be("ga of Agent mode");
+    }
+
+    [Fact]
+    public async Task GetFeaturesWithContentAsync_FeatureWithoutDescriptionOrEvent_UsesTheExcerptOfItsFirstItem()
+    {
+        var product = await CreateProductAsync();
+        var feature = await CreateFeatureAsync(product.Id, "Agent mode");
+        var slug = await SeedItemAsync("news", "Agent mode article", "https://example.com/agent", excerpt: "Excerpt of the article.");
+        (await _features.AddContentAsync(product.Id, feature, "news", slug, false, Ct)).Succeeded.Should().BeTrue();
+
+        var result = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+
+        result.Should().ContainSingle().Which.Description.Should().Be("Excerpt of the article.");
+    }
+
+    [Fact]
+    public async Task GetFeaturesWithContentAsync_FeatureWithADescription_KeepsItOverTheFallbacks()
+    {
+        var product = await CreateProductAsync();
+        await CreateFeatureAsync(product.Id, "Agent mode", "Works on its own.");
+        var slug = await SeedItemAsync("news", "Agent mode is GA", "https://example.com/ga", excerpt: "Excerpt of the article.");
+        await _timeline.ReplaceEventsAsync("news", slug, [Event(product.Name, "Agent mode", "ga")], "source", 3, Ct);
+
+        var result = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+
+        result.Should().ContainSingle().Which.Description.Should().Be("Works on its own.");
     }
 
     [Fact]
@@ -231,15 +301,15 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
     }
 
     // The external url is unique per item, so every seeded item gets its own query string.
-    private async Task<string> SeedItemAsync(string collection, string title, string url)
+    private async Task<string> SeedItemAsync(string collection, string title, string url, string excerpt = "")
     {
         var slug = $"ghc-item-{Guid.NewGuid():N}";
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO content_items (slug, collection_name, title, excerpt, content, date_epoch,
                 primary_section_name, external_url, author, feed_name, tags_csv, content_hash)
-            VALUES (@Slug, @Collection, @Title, '', '', 1743278400, 'github-copilot', @Url, '', 'Test Feed', '', @Hash)
+            VALUES (@Slug, @Collection, @Title, @Excerpt, '', 1743278400, 'github-copilot', @Url, '', 'Test Feed', '', @Hash)
             """,
-            new { Slug = slug, Collection = collection, Title = title, Url = $"{url}?u={slug}", Hash = Guid.NewGuid().ToString() });
+            new { Slug = slug, Collection = collection, Title = title, Excerpt = excerpt, Url = $"{url}?u={slug}", Hash = Guid.NewGuid().ToString() });
         return slug;
     }
 

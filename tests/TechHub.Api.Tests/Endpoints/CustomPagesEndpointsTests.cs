@@ -139,9 +139,6 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         data.Should().NotBeNull();
         data!.Title.Should().Be("GitHub Copilot Features");
         data.Description.Should().NotBeNullOrWhiteSpace();
-        data.BillingNotice.Should().NotBeNull();
-        data.BillingNotice!.Text.Should().NotBeNullOrWhiteSpace();
-        data.BillingNotice.Links.Should().HaveCount(4);
         data.SubscriptionTiers.Should().HaveCount(6);
         data.SubscriptionTiers[0].Name.Should().Be("Free");
         data.SubscriptionTiers[0].Price.Should().BeNull();

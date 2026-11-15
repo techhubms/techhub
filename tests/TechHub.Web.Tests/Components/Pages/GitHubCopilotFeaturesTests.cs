@@ -55,11 +55,6 @@ public class GitHubCopilotFeaturesTests : BunitContext
         Description = "Features",
         Intro = "Intro of the page.",
         Links = new FeaturesLinks { Pricing = "https://example.com/pricing", PlanDetails = "https://example.com/plans" },
-        BillingNotice = new BillingNotice
-        {
-            Text = "Billing changes.",
-            Links = [new BillingNoticeLink { Label = "Billing docs", Url = "https://example.com/billing" }]
-        },
         SubscriptionTiers =
         [
             new SubscriptionTier { Id = "free", Name = "Free", Tagline = "Try it out", Features = ["Code completions"], VideoAnchor = "free" },
@@ -130,13 +125,54 @@ public class GitHubCopilotFeaturesTests : BunitContext
     }
 
     [Fact]
-    public void Render_ShowsTheIntroAndTheBillingNotice()
+    public void Render_TierTitles_LinkToThePricingPage()
+    {
+        var cut = RenderPage();
+
+        var links = cut.FindAll(".features-tier-card h3 a");
+
+        links.Select(a => a.TextContent).Should().Equal("Free", "Pro");
+        links.Should().OnlyContain(a => a.GetAttribute("href") == "https://example.com/pricing"
+            && a.GetAttribute("target") == "_blank" && a.GetAttribute("rel") == "noopener noreferrer");
+    }
+
+    [Fact]
+    public void Render_ShowsATextFilterFieldNextToTheButtons_ForTheTextFilterScript()
+    {
+        var cut = RenderPage();
+
+        var input = cut.Find(".features-filters input[type=search]");
+        input.HasAttribute("data-text-filter").Should().BeTrue("text-filter.js acts on the marker");
+        input.GetAttribute("data-filter-items").Should().Be(".feature-card");
+        input.GetAttribute("aria-label").Should().NotBeNullOrWhiteSpace();
+        cut.Find(input.GetAttribute("data-filter-empty")!).HasAttribute("hidden").Should().BeTrue("the message only shows when no card matches");
+    }
+
+    [Fact]
+    public void Render_FeatureTitles_AreNotLinks()
+    {
+        var cut = RenderPage();
+
+        cut.FindAll(".feature-card h3").Should().NotBeEmpty().And.OnlyContain(h => h.QuerySelector("a") == null,
+            "a card can hold several articles, so a title that links to one of them is confusing");
+    }
+
+    [Fact]
+    public void Render_ShowsTheIntroWithoutABillingNotice()
     {
         var cut = RenderPage();
 
         cut.Find(".custom-page-intro").TextContent.Should().Contain("Intro of the page.");
-        cut.Find(".custom-page-billing-notice p").TextContent.Should().Be("Billing changes.");
-        cut.Find(".custom-page-billing-notice a").GetAttribute("href").Should().Be("https://example.com/billing");
+        cut.FindAll(".custom-page-billing-notice").Should().BeEmpty();
+    }
+
+    [Fact]
+    public void Render_ShowsTheSubscriptionsAtFullHeightWithoutAScrollArea()
+    {
+        var cut = RenderPage();
+
+        cut.FindAll(".features-tiers .features-tier-card").Should().HaveCount(2);
+        cut.FindAll(".features-tiers-scroll").Should().BeEmpty();
     }
 
     [Fact]
@@ -157,20 +193,48 @@ public class GitHubCopilotFeaturesTests : BunitContext
         var card = cut.Find("#feature-agent-mode");
         card.QuerySelector(".feature-card-thumbnail img")!.GetAttribute("src").Should().Be("https://img.youtube.com/vi/abc123test1/mqdefault.jpg");
         card.QuerySelector(".feature-card-thumbnail")!.GetAttribute("href").Should().Be("/github-copilot/videos/agent-mode-video");
-        card.QuerySelector("h3 a")!.GetAttribute("href").Should().Be("/github-copilot/videos/agent-mode-video");
-        card.QuerySelector(".badge-info")!.TextContent.Should().Contain("Video");
+        card.QuerySelector(".feature-badge-video")!.TextContent.Should().Contain("Video");
         card.QuerySelector(".card-description")!.TextContent.Should().Be("Let Copilot work on its own.");
     }
 
     [Fact]
-    public void Render_FeatureWithOnlyAnArticle_ShowsNoVideoAndLinksToTheArticle()
+    public void Render_FeatureWithOnlyAnArticle_ShowsNoVideoAndListsTheArticleAsContent()
     {
         var cut = RenderPage();
 
         var card = cut.Find("#feature-premium-requests");
         card.QuerySelector(".feature-card-thumbnail").Should().BeNull();
-        card.QuerySelector(".badge-info").Should().BeNull();
-        card.QuerySelector("h3 a")!.GetAttribute("href").Should().Be("https://example.com/premium", "news items open the original article");
+        card.QuerySelector(".feature-badge-video").Should().BeNull();
+        card.QuerySelectorAll(".feature-card-related li a").Select(a => a.TextContent)
+            .Should().ContainSingle("a feature with one article is not an empty card: its content is listed")
+            .Which.Should().Be("Premium requests explained");
+        card.QuerySelector(".feature-card-related li a")!.GetAttribute("href").Should().Be("https://example.com/premium", "news items open the original article");
+    }
+
+    [Fact]
+    public void Render_ContentLinks_AreMarkedAndKeepTheTargetOfATouchDevice()
+    {
+        var cut = RenderPage();
+
+        var links = cut.FindAll(".feature-card-thumbnail, .feature-card-related li a");
+
+        links.Should().NotBeEmpty();
+        links.Should().OnlyContain(l => l.HasAttribute("data-content-link"), "content-links.js opens them in a new tab on a desktop");
+
+        // The server renders what a touch device keeps: an article on another site in a new tab, a page of this site in the same tab.
+        cut.Find("#feature-premium-requests .feature-card-related li a").GetAttribute("target").Should().Be("_blank");
+        cut.Find("#feature-premium-requests .feature-card-related li a").GetAttribute("rel").Should().Be("noopener noreferrer");
+        cut.Find("#feature-agent-mode .feature-card-thumbnail").HasAttribute("target").Should().BeFalse();
+    }
+
+    [Fact]
+    public void Render_FeatureWithAVideo_DoesNotListTheVideoAgainInTheLinks()
+    {
+        var cut = RenderPage();
+
+        var related = cut.Find("#feature-cli-plan").QuerySelectorAll(".feature-card-related li a");
+
+        related.Should().BeEmpty("the only item is the video, which is shown as the thumbnail");
     }
 
     [Fact]
@@ -183,12 +247,42 @@ public class GitHubCopilotFeaturesTests : BunitContext
     }
 
     [Fact]
+    public void MoreButton_ShowsTheRestOfTheLinks_AndShowLessCollapsesThemAgain()
+    {
+        var cut = RenderPage();
+
+        cut.Find("#feature-agent-mode .feature-card-more-btn").Click();
+
+        var expanded = cut.Find("#feature-agent-mode");
+        expanded.QuerySelectorAll(".feature-card-related li a").Select(a => a.TextContent)
+            .Should().Equal("Agent mode in practice", "News 1", "News 2", "News 3");
+        expanded.QuerySelector(".feature-card-more-btn")!.TextContent.Should().Be("Show less");
+        expanded.QuerySelector(".feature-card-more-btn")!.GetAttribute("aria-expanded").Should().Be("true");
+
+        cut.Find("#feature-agent-mode .feature-card-more-btn").Click();
+
+        cut.Find("#feature-agent-mode").QuerySelectorAll(".feature-card-related li a").Should().HaveCount(3);
+        cut.Find("#feature-agent-mode .feature-card-more-btn").TextContent.Should().Be("+ 1 more");
+    }
+
+    [Fact]
+    public void MoreButton_OnlyExpandsTheCardItBelongsTo()
+    {
+        var cut = RenderPage();
+
+        cut.Find("#feature-agent-mode .feature-card-more-btn").Click();
+
+        cut.Find("#feature-premium-requests").QuerySelectorAll(".feature-card-more-btn").Should().BeEmpty();
+        cut.FindAll(".feature-card-more-btn").Should().ContainSingle();
+    }
+
+    [Fact]
     public void Render_ShowsTheProductOnlyForFeaturesOfAChildProduct()
     {
         var cut = RenderPage();
 
-        cut.Find("#feature-cli-plan .badge-muted").TextContent.Should().Be("GitHub Copilot CLI");
-        cut.FindAll("#feature-agent-mode .badge-muted").Select(b => b.TextContent).Should().Equal("Feb 2025");
+        cut.Find("#feature-cli-plan .feature-badge:not(.feature-badge-video)").TextContent.Should().Be("GitHub Copilot CLI");
+        cut.FindAll("#feature-agent-mode .feature-badge:not(.feature-badge-video)").Select(b => b.TextContent).Should().Equal("Feb 2025");
     }
 
     [Fact]

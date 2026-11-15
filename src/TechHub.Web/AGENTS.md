@@ -100,6 +100,7 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 | `mobile-nav.js`       | Mobile navigation scroll lock and keyboard handling | Static (defer) |
 | `sidebar-toggle.js`   | Desktop sidebar collapse/expand with cookie persistence | Static (defer)   |
 | `hero-banner.js`      | Hero banner collapse/expand with cookie persistence | Static (defer) |
+| `content-links.js`    | Opens links to content (`data-content-link`) in a new tab on a desktop, same tab on touch devices | Static (defer) |
 | `page-scripts.js`     | CDN loading, page init functions (mermaid, highlight.js, TOC, custom pages), script lifecycle | Static ES module (listed under `DynamicLoad` in `JsFiles.cs`) |
 | `custom-pages.js`     | Collapsible sections for SDLC/DX pages, feature filters, expandable badges | Dynamic (imported by `initCustomPages`) |
 | `date-range-slider.js` | Date range slider client-side clamping           | Dynamic          |

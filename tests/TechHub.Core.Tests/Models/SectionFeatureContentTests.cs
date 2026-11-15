@@ -49,4 +49,33 @@ public class SectionFeatureContentTests
     {
         Content("https://example.com/article", collection: "news").GetHref().Should().Be("https://example.com/article");
     }
+
+    [Fact]
+    public void LinkAttributes_ArticleOnAnotherSite_OpensInANewTabAndSaysSo()
+    {
+        var content = Content("https://example.com/article", collection: "news");
+
+        content.GetTarget().Should().Be("_blank");
+        content.GetRel().Should().Be("noopener noreferrer");
+        content.GetAriaLabel("Agent mode").Should().Be("Agent mode - opens in new tab");
+    }
+
+    [Fact]
+    public void LinkAttributes_PageOfThisSite_StaysInTheSameTab()
+    {
+        var content = Content("https://youtu.be/dQw4w9WgXcQ");
+
+        content.GetTarget().Should().BeNull();
+        content.GetRel().Should().BeNull();
+        content.GetAriaLabel("Agent mode").Should().Be("Agent mode");
+    }
+
+    [Fact]
+    public void LinkAttributes_UnsafeExternalAddress_StaysInTheSameTab()
+    {
+        var content = Content("javascript:alert('xss')", collection: "news");
+
+        content.GetHref().Should().StartWith("/", "an unsafe address is never used as the link");
+        content.GetTarget().Should().BeNull();
+    }
 }

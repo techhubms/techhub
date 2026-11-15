@@ -1,8 +1,8 @@
 namespace TechHub.Core.Models;
 
 /// <summary>
-/// Data structure of the GitHub Copilot subscriptions: the tiers shown in the sidebar of the GitHub Copilot timeline, with the
-/// intro and pricing links that go with them.
+/// Data structure of the GitHub Copilot features page: the subscription tiers shown in its sidebar, with the intro and pricing links
+/// that go with them. The features themselves come from the catalog (see <see cref="SectionFeature"/>).
 /// </summary>
 public record FeaturesPageData
 {
@@ -10,7 +10,6 @@ public record FeaturesPageData
     public required string Description { get; init; }
     public required string Intro { get; init; }
     public required FeaturesLinks Links { get; init; }
-    public BillingNotice? BillingNotice { get; init; }
     public required List<SubscriptionTier> SubscriptionTiers { get; init; }
 }
 
@@ -18,18 +17,6 @@ public record FeaturesLinks
 {
     public required string Pricing { get; init; }
     public required string PlanDetails { get; init; }
-}
-
-public record BillingNotice
-{
-    public required string Text { get; init; }
-    public required IReadOnlyList<BillingNoticeLink> Links { get; init; }
-}
-
-public record BillingNoticeLink
-{
-    public required string Label { get; init; }
-    public required string Url { get; init; }
 }
 
 public record SubscriptionTier

@@ -251,6 +251,11 @@ public record ContentItem
 
     private bool HasSafeExternalHref() => LinksExternally() && IsSafeExternalUrl(ExternalUrl);
 
+    /// <summary>
+    /// The target a content link starts with: the original article of an external collection opens in a new tab, a page of this site
+    /// in the same tab. That is what a touch device keeps. On a desktop (mouse or trackpad) <c>content-links.js</c> opens every link
+    /// that has <c>data-content-link</c> in a new tab on click, so closing the tab brings the reader back to the list they came from.
+    /// </summary>
     public string? GetTarget() => HasSafeExternalHref() ? "_blank" : null;
 
     public string? GetRel() => HasSafeExternalHref() ? "noopener noreferrer" : null;

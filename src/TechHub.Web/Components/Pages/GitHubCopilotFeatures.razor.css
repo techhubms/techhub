@@ -4,7 +4,7 @@
    Page-specific layout only - cards inherit from global cards.css
    ============================================================================ */
 
-/* Intro and billing notice */
+/* Intro */
 .custom-page-container {
   max-width: 100%;
 }
@@ -20,28 +20,6 @@
   color: var(--color-text-primary);
 }
 
-.custom-page-billing-notice {
-  background: var(--color-blue-bg);
-  border-left: 4px solid var(--color-blue);
-  padding: var(--spacing-2) var(--spacing-3);
-  margin: var(--spacing-3) 0 var(--spacing-5);
-  border-radius: var(--radius-sm);
-}
-
-.custom-page-billing-notice p {
-  margin-bottom: var(--spacing-2);
-  font-weight: var(--font-weight-semibold);
-}
-
-.custom-page-billing-notice ul {
-  margin: 0;
-  padding-left: var(--spacing-4);
-}
-
-.custom-page-billing-notice li {
-  margin-bottom: var(--spacing-1);
-}
-
 /* ─── Subscription tiers (sidebar) ───────────────────────────────── */
 
 .features-tiers-sidebar {
@@ -50,30 +28,11 @@
   margin-bottom: var(--spacing-4);
 }
 
-.features-tiers-scroll {
+/* Full height: the cards flow with the sidebar, there is no scroll area of their own */
+.features-tiers {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);
-  position: sticky;
-  top: calc(var(--sticky-header-height) + var(--spacing-2));
-  max-height: calc(100vh - var(--sticky-header-height) - var(--spacing-6));
-  overflow-y: auto;
-  padding-right: var(--spacing-1);
-  min-height: 0;
-  scrollbar-width: thin;
-}
-
-.features-tiers-scroll::-webkit-scrollbar {
-  width: 4px;
-}
-
-.features-tiers-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.features-tiers-scroll::-webkit-scrollbar-thumb {
-  background: var(--color-border-default);
-  border-radius: var(--radius-sm);
 }
 
 .features-tier-card {
@@ -92,6 +51,15 @@
   font-size: var(--font-size-2xl);
   margin: 0 0 var(--spacing-1) 0;
   color: var(--color-purple-bright);
+}
+
+.features-tier-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.features-tier-card h3 a:hover {
+  text-decoration: underline;
 }
 
 .features-tier-tagline {
@@ -166,6 +134,28 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   background: var(--color-purple-bg-subtle);
 }
 
+.features-filter-input {
+  flex: 1 1 12rem;
+  max-width: 20rem;
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+}
+
+.features-filter-input:focus-visible {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
+  border-color: var(--color-purple-bright);
+}
+
+/* The grid card is a flex container, which would otherwise win over the hidden attribute the text filter sets. */
+.feature-card[hidden] {
+  display: none;
+}
+
 .features-empty {
   color: var(--color-text-secondary);
 }
@@ -174,12 +164,21 @@ html.keyboard-nav .features-filter-btn:focus-visible {
 
 .features-cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-3);
 }
 
+/* The card itself is not clickable, only the links and buttons in it are */
 .feature-card {
   min-height: auto;
+  cursor: default;
+}
+
+@media (hover: hover) {
+  .feature-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-border-default);
+  }
 }
 
 .feature-card h3 {
@@ -188,6 +187,18 @@ html.keyboard-nav .features-filter-btn:focus-visible {
 
 .feature-card a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+/* Long descriptions (the excerpt of an article) stay a few lines. They do not grow (cards.css gives a description flex: 1), so the links
+   follow the text directly and the badges (margin-top: auto) are the part that sits at the bottom of the card. */
+.feature-card-description {
+  flex: none;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
 }
 
 .feature-card-thumbnail {
@@ -245,23 +256,46 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   }
 }
 
-.feature-card-related-more {
+.feature-card-more-btn {
+  padding: 0;
+  background: none;
+  border: none;
+  font: inherit;
   color: var(--color-text-secondary);
+  cursor: pointer;
 }
 
-@media (max-width: 1292px) {
-  .features-tiers-scroll {
-    position: static;
-    max-height: none;
-    overflow-y: visible;
-    padding-right: 0;
+@media (hover: hover) {
+  .feature-card-more-btn:hover {
+    color: var(--color-purple-bright);
+    text-decoration: underline;
   }
 }
 
-@media (max-width: 1200px) {
-  .features-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+html.keyboard-nav .feature-card-more-btn:focus-visible {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Badges of a card: pills with room left and right */
+.feature-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-emphasis);
+  border: 1px solid var(--color-border-default);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  cursor: default;
+}
+
+.feature-badge-video {
+  background: var(--color-purple-medium);
+  border-color: var(--color-purple-medium);
+  color: var(--color-text-on-emphasis);
 }
 
 @media (max-width: 768px) {

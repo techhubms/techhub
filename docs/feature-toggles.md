@@ -27,7 +27,7 @@ An admin is any signed-in user (see [admin-authentication.md](admin-authenticati
 ## Defining a Feature
 
 1. Add a constant to `FeatureKeys` ([FeatureKeys.cs](../src/TechHub.Core/Models/FeatureToggles/FeatureKeys.cs)).
-2. Add a row to `feature_toggles` in a migration, with the mode it starts in and a description for the admin page. Currently `timeline` (migration `051_feature_toggles.sql`), which starts as `admins`.
+2. Add a row to `feature_toggles` in a migration, with the mode it starts in and a description for the admin page. Currently `timeline` (migration `051_feature_toggles.sql`), which started as `admins` and was opened to `everyone` by migration `058_timeline_open_to_everyone.sql`.
 3. Gate the feature:
    - For navigation buttons: set `"Feature": "<key>"` on the collection in `appsettings.json`. `NavHeader`, `SubNav` and `SectionCard` already filter on it.
    - For a page: inject `IFeatureGate` and render `NotFoundContent` when `await FeatureGate.IsEnabledAsync(key)` is false, as `SectionTimeline.razor` does.

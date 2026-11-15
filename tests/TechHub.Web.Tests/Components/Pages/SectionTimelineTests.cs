@@ -184,6 +184,7 @@ public class SectionTimelineTests : BunitContext
         links[0].GetAttribute("rel").Should().Be("noopener noreferrer");
         links[1].GetAttribute("href").Should().Be("/ai/videos/agent-mode-video");
         links[1].GetAttribute("target").Should().BeNull();
+        links.Should().OnlyContain(l => l.HasAttribute("data-content-link"), "content-links.js opens them in a new tab on a desktop");
     }
 
     [Fact]
