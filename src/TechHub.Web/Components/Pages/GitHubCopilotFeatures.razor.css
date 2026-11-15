@@ -179,6 +179,11 @@ html.keyboard-nav .features-filter-btn:focus-visible {
     box-shadow: var(--shadow-md);
     border-color: var(--color-border-default);
   }
+
+  /* The title is plain text, so it brightens to white instead of the purple that signals a link */
+  .feature-card:hover .card-title {
+    color: var(--color-text-emphasis);
+  }
 }
 
 .feature-card h3 {

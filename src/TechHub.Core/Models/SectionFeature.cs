@@ -58,7 +58,7 @@ public sealed record SectionFeatureContent
     /// <summary>The accessible name of a link to the item: the label, with a note when the link opens in a new tab.</summary>
     public string GetAriaLabel(string label) => LinksToAnotherSite() ? $"{label} - opens in new tab" : label;
 
-    /// <summary>The YouTube video id of <see cref="ExternalUrl"/> (youtu.be and youtube.com addresses), or null when the item is no YouTube video.</summary>
+    /// <summary>The YouTube video id of <see cref="ExternalUrl"/> (youtu.be, youtube.com/watch, /shorts/, /embed/ and /live/ addresses), or null when the item is no YouTube video.</summary>
     public string? GetYouTubeVideoId()
     {
         if (!Uri.TryCreate(ExternalUrl, UriKind.Absolute, out var uri)
@@ -75,12 +75,15 @@ public sealed record SectionFeatureContent
         else if (uri.Host.Equals("youtube.com", StringComparison.OrdinalIgnoreCase)
                  || uri.Host.EndsWith(".youtube.com", StringComparison.OrdinalIgnoreCase))
         {
-            id = uri.Query.TrimStart('?')
-                .Split('&', StringSplitOptions.RemoveEmptyEntries)
-                .Select(pair => pair.Split('=', 2))
-                .Where(parts => parts.Length == 2 && parts[0] == "v")
-                .Select(parts => parts[1])
-                .FirstOrDefault();
+            var segments = uri.AbsolutePath.Split('/', StringSplitOptions.RemoveEmptyEntries);
+            id = segments.Length == 2 && segments[0] is "shorts" or "embed" or "live"
+                ? segments[1]
+                : uri.Query.TrimStart('?')
+                    .Split('&', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(pair => pair.Split('=', 2))
+                    .Where(parts => parts.Length == 2 && parts[0] == "v")
+                    .Select(parts => parts[1])
+                    .FirstOrDefault();
         }
 
         // The id ends up in an image address: only the characters of a real id are accepted.

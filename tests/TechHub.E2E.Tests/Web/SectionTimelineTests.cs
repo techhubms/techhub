@@ -59,6 +59,8 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         // Whatever the page shows now is a deprecation, retirement, end-of-support or breaking change. The active filter is marked
         // before the filtered entries arrive, so this waits (retries) until no entry without a warning badge for its kind is left.
         await Assertions.Expect(Page.Locator(".timeline-entry:not(:has(.timeline-badges .badge-warning))")).ToHaveCountAsync(0);
+        // An empty page would pass the check above, so the filter must also leave entries
+        await Assertions.Expect(Page.Locator(".timeline-entry").First).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -67,7 +69,8 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync(PageUrl);
 
-        // The subscriptions are on the features page
+        // The subscriptions are on the features page. Wait for the timeline itself first: an absence check passes on a page that has not rendered yet.
+        await Assertions.Expect(Page.Locator(".timeline-entry").First).ToBeVisibleAsync();
         await Assertions.Expect(Page.Locator(".features-tier-card")).ToHaveCountAsync(0);
     }
 

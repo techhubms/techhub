@@ -19,6 +19,11 @@ public class SectionFeatureContentTests
     [InlineData("https://youtu.be/dQw4w9WgXcQ?t=10", "dQw4w9WgXcQ")]
     [InlineData("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "dQw4w9WgXcQ")]
     [InlineData("https://youtube.com/watch?feature=share&v=abc_123-XYZ", "abc_123-XYZ")]
+    [InlineData("https://www.youtube.com/shorts/dQw4w9WgXcQ", "dQw4w9WgXcQ")]
+    [InlineData("https://www.youtube.com/shorts/dQw4w9WgXcQ?feature=share", "dQw4w9WgXcQ")]
+    [InlineData("https://www.youtube.com/embed/dQw4w9WgXcQ", "dQw4w9WgXcQ")]
+    [InlineData("https://www.youtube.com/live/dQw4w9WgXcQ", "dQw4w9WgXcQ")]
+    [InlineData("https://m.youtube.com/watch?v=dQw4w9WgXcQ", "dQw4w9WgXcQ")]
     public void GetYouTubeVideoId_YouTubeAddress_ReturnsTheId(string url, string expected)
     {
         Content(url).GetYouTubeVideoId().Should().Be(expected);
@@ -30,6 +35,9 @@ public class SectionFeatureContentTests
     [InlineData("https://example.com/watch?v=dQw4w9WgXcQ")]
     [InlineData("https://notyoutube.com/watch?v=dQw4w9WgXcQ")]
     [InlineData("https://www.youtube.com/watch")]
+    [InlineData("https://www.youtube.com/shorts/")]
+    [InlineData("https://www.youtube.com/playlist?list=PL123")]
+    [InlineData("https://www.youtube.com/shorts/id%22onerror%3D%22x")]
     [InlineData("https://youtu.be/")]
     [InlineData("ftp://youtu.be/dQw4w9WgXcQ")]
     [InlineData("https://youtu.be/id%22onerror%3D%22x")]

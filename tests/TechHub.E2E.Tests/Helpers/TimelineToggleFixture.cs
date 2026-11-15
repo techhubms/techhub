@@ -92,6 +92,14 @@ public sealed class TimelineToggleFixture : IAsyncLifetime
     private async Task SendModeAsync(string mode)
     {
         using var response = await _http!.PutAsJsonAsync($"{_apiBaseUrl}/api/admin/feature-toggles/{ToggleKey}", new { mode });
+        if (response.StatusCode is HttpStatusCode.Unauthorized or HttpStatusCode.Forbidden)
+        {
+            throw new InvalidOperationException(
+                $"The admin API at {_apiBaseUrl} answered {(int)response.StatusCode} when setting the '{ToggleKey}' toggle. " +
+                "The fixture needs an API without Azure AD configured (the AdminOnly policy then allows every request); " +
+                "remove the Azure AD user secrets of the API or point E2E_API_URL at such an API.");
+        }
+
         response.EnsureSuccessStatusCode();
     }
 
