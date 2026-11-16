@@ -134,6 +134,7 @@ The production Key Vault (`kv-techhub-prod`) stores:
 - Newsletter ACS endpoint URL (`techhub-prod-newsletter-acs-endpoint`) — written automatically by `Sync-KeyVaultSecrets.ps1` from infra deployment outputs
 - Newsletter ACS sender address (`techhub-prod-acs-sender-address`) — written directly by Bicep from the ACS domain output
 - Newsletter unsubscribe HMAC key (`techhub-prod-newsletter-unsubscribe-secret`) for signing unsubscribe/confirm links
+- E2E rate-limit bypass token (`techhub-prod-e2e-bypass-token`), read by the Web app (production and PR previews) so the E2E suite is not throttled by the per-IP rate limiter
 
 Security:
 

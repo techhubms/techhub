@@ -703,6 +703,7 @@ jobs:
             -- --filter-not-trait "Category=Performance"
         env:
           E2E_BASE_URL: https://app-techhub-web-pr-${{ inputs.pr_number }}.azurewebsites.net
+          E2E_BYPASS_TOKEN: ${{ secrets.E2E_BYPASS_TOKEN }}
 
       - name: Upload test results
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

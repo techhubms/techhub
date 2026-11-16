@@ -100,7 +100,16 @@ export function afterServerStarted(blazor) {
     // attached by the render diff, but marking __scriptsReady = false here forces
     // WaitForBlazorReadyAsync to block until markScriptsReady() fires, which is
     // the earliest safe moment to guarantee the full render cycle is complete.
-    window.__scriptsReady = false;
+    //
+    // The server starts rendering the circuit before the StartCircuit completion that triggers this callback is sent,
+    // so when the first render is fast the page's markScriptsReady can arrive first. Resetting the flag then would
+    // strand it at false, because no further markScriptsReady follows.
+    if (window.__scriptsReadyCount > 0) {
+        console.warn('[TechHub] markScriptsReady arrived before the Blazor Server circuit reported ready - keeping scriptsReady');
+        if (typeof window.__e2eSignal === 'function') window.__e2eSignal('ready-before-server-started');
+    } else {
+        window.__scriptsReady = false;
+    }
 
     // Mark that Blazor Server circuit is fully established.
     window.__blazorServerReady = true;

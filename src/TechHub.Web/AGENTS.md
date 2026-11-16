@@ -309,4 +309,4 @@ Admin pages: `AdminDashboard`, `AdminContentItems`, `AdminContentPreview`, `Admi
 
 **Services** (`Services/`): `TechHubApiClient` / `ITechHubApiClient`, `AdminTokenDelegatingHandler`, `BrandingService`, `FaviconService`, `ErrorService`, `DateHelper`, `SectionHelper`, `ContentGridStateCache`, `HomepageStatsState`, `SectionCacheRefreshService`, `SectionCacheHealthCheck` (the `SectionCache` itself lives in `TechHub.Core.Models`), `HeroBannerCache` (+ `HeroBannerCacheRefreshService`), `ApiHealthCheck`
 
-**Other directories**: `Configuration/` (`CdnLibraries`, `CssFiles`, `JsFiles`), `Middleware/`, `Endpoints/` (RSS proxy), `MCP/`, `Telemetry/`, `Helpers/` (`DiffHelper` only)
+**Other directories**: `Configuration/` (`CdnLibraries`, `CssFiles`, `JsFiles`), `Middleware/`, `Endpoints/` (RSS proxy), `MCP/`, `RateLimiting/` (`RateLimitingOptions`, `E2ERateLimitBypass`: the E2E token exemption from the per-IP limiter, see [url-routing.md](../../docs/url-routing.md#rate-limiting)), `Telemetry/`, `Helpers/` (`DiffHelper` only)

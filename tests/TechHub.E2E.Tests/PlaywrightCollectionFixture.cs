@@ -72,12 +72,15 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
             throw new InvalidOperationException("Browser not initialized");
         }
 
-        return await Browser.NewContextAsync(new BrowserNewContextOptions
+        var context = await Browser.NewContextAsync(new BrowserNewContextOptions
         {
             ViewportSize = new ViewportSize { Width = 1920, Height = 1080 },
             Locale = "en-US",
             TimezoneId = "Europe/Brussels",
             IgnoreHTTPSErrors = true, // Ignore HTTPS errors in test environment
         });
+
+        await RateLimitGuard.ApplyAsync(context);
+        return context;
     }
 }

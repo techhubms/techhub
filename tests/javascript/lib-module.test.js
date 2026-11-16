@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
 const MODULE_PATH = '../../src/TechHub.Web/wwwroot/TechHub.Web.lib.module.js';
-const FLAGS = ['__blazorWebReady', '__blazorWebReadyAt', '__blazorServerReady', '__blazorWasmReady', '__scriptsReady', '__e2eSignal'];
+const FLAGS = ['__blazorWebReady', '__blazorWebReadyAt', '__blazorServerReady', '__blazorWasmReady', '__scriptsReady', '__scriptsReadyCount', '__e2eSignal'];
 
 function createBlazor() {
     const target = new EventTarget();
@@ -169,6 +169,20 @@ describe('TechHub.Web.lib.module.js', () => {
     });
 
     describe('afterServerStarted', () => {
+        it('keeps scriptsReady true when markScriptsReady already ran before the circuit reported ready', () => {
+            window.__scriptsReady = true;
+            window.__scriptsReadyCount = 1;
+            window.__e2eSignal = vi.fn();
+            const warn = vi.spyOn(console, 'warn').mockImplementation(() => { });
+
+            mod.afterServerStarted(createBlazor());
+
+            expect(window.__scriptsReady).toBe(true);
+            expect(window.__blazorServerReady).toBe(true);
+            expect(window.__e2eSignal).toHaveBeenCalledWith('ready-before-server-started');
+            expect(warn).toHaveBeenCalledWith(expect.stringContaining('markScriptsReady arrived before'));
+        });
+
         it('gates readiness on markScriptsReady and flags the circuit as ready', () => {
             window.__scriptsReady = true;
 

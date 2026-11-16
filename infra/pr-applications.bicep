@@ -139,6 +139,7 @@ module webApp './modules/web.bicep' = {
     googleAnalyticsMeasurementId: '' // disabled — PR traffic must not appear in GA reports
     keyVaultUri: keyVaultUri
     // aadClientSecretSecretName uses its default — value is irrelevant since AAD is disabled
+    e2eBypassTokenSecretName: 'techhub-prod-e2e-bypass-token' // shared KV: the PR-preview E2E run uses the same token as production
     azureAdTenantId: '' // AAD admin dashboard not needed for PR environments
     azureAdClientId: ''
     // No custom domains / wildcard certs / primary hosts for PR (uses azurewebsites.net default)

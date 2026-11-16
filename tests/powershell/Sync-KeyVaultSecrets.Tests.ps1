@@ -156,6 +156,12 @@ Describe "Sync-KeyVaultSecrets" {
             $content | Should -Match "GHCR_PAT"
         }
 
+        It "Should write the E2E rate-limit bypass token" {
+            $content = Get-Content $scriptPath -Raw
+            $content | Should -Match "techhub-prod-e2e-bypass-token"
+            $content | Should -Match "E2E_BYPASS_TOKEN"
+        }
+
         It "Should write the wildcard-hub-ms TLS certificate" {
             $content = Get-Content $scriptPath -Raw
             $content | Should -Match "wildcard-hub-ms"

@@ -438,13 +438,17 @@ Rate limiting protects the public web surface against excessive requests and bot
 
 | Policy | Limit | Queue | Applied to |
 |---|---|---|---|
-| `web-general` | 60 requests/min per IP | 5 | All Blazor routes (`MapRazorComponents`) |
+| `web-general` | 90 requests/min per IP | 5 | All Blazor routes (`MapRazorComponents`), including the SignalR hub (`/_blazor`) that the same call maps |
 | `web-rss` | 20 requests/min per IP | none | RSS proxy endpoints (`/all/feed.xml`, `/{section}/feed.xml`, `/{section}/roundups/feed.xml`) |
 | `web-mcp` | 60 requests/min per IP | none | `/mcp` |
 
+A page load costs several permits of `web-general`: the document request plus, for the interactive circuit, the SignalR negotiate request and the WebSocket upgrade. A request over the limit waits in the queue until the next window (up to a minute), and one that does not fit in the queue gets **429**.
+
 Requests from loopback addresses are exempt **in Development only**. In other environments a spoofed `X-Forwarded-For: 127.0.0.1` header must not bypass the limits, because forwarded headers are processed before the rate limiter.
 
-Not covered by a policy: the Blazor SignalR hub (`/_blazor`), because it goes through hub middleware instead of endpoint routing. Its load is bounded by SignalR settings and the single-instance capacity of the App Service plan. The sitemap, `/version` and health endpoints are not rate limited either.
+**E2E bypass**: the E2E suite runs every browser from one IP, so a request that carries the secret from `RateLimiting:E2EBypassToken` is exempt from all three policies. The token is accepted as the `X-E2E-Token` header or the `e2e-token` cookie (browsers use the cookie, because it reaches the negotiate and WebSocket requests and is never sent to third-party CDNs). It is compared in constant time. The bypass is off while the setting is empty, and an unresolved Key Vault reference (`@Microsoft.KeyVault(...)` passed through as text) never counts as a token. See [E2E Rate-Limit Bypass](ci-cd-pipeline.md#e2e-rate-limit-bypass) for how the token reaches the site and the tests.
+
+Not covered by a policy: the sitemap, `/version` and health endpoints.
 
 ## Phase 8 - Endpoint Routing
 

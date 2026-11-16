@@ -428,6 +428,8 @@ public static class BlazorHelpers
             await page.GotoAsync(url, gotoOptions);
         }
 
+        RateLimitGuard.ThrowIfRateLimited(page.Context);
+
         // Wait for Blazor to be fully interactive (circuit established, scripts loaded).
         // WaitForBlazorReadyAsync correctly waits for __blazorServerReady/__blazorWasmReady
         // instead of the weaker __blazorWebReady which fires before the interactive circuit.
@@ -486,7 +488,9 @@ public static class BlazorHelpers
         // A timeout is NOT swallowed: continuing on a page that never became ready only moves the
         // failure to a later step, which then burns its own timeout and reports the wrong cause.
         var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-        await page.WaitForConditionAsync(@"
+        try
+        {
+            await page.WaitForConditionAsync(@"
             () => {
                 // Step 1: Blazor runtime must exist
                 if (typeof window.Blazor === 'undefined') return false;
@@ -511,6 +515,13 @@ public static class BlazorHelpers
                 return true;
             }
         ", onTimeout: ReadyDiagnosticsScript);
+        }
+        catch (TimeoutException)
+        {
+            // A rate-limited site is the likeliest reason for a page that never becomes ready; say so instead of a generic timeout.
+            RateLimitGuard.ThrowIfRateLimited(page.Context);
+            throw;
+        }
 
         // Most pages are ready in a few seconds. A wait that is slow but still succeeds is the early warning of a hang that
         // only sometimes crosses the timeout, so it reports what the page was waiting on.
