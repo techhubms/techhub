@@ -114,6 +114,13 @@ public sealed class TimelineBackfillBackgroundService : BackgroundService
                 var result = await backfill.RunAsync(request, line => jobRepo.AppendLogAsync(jobId, line, runToken), runToken);
 
                 _logger.LogInformation("Timeline backfill completed — {Scanned} scanned, {Events} events (job {JobId})", result.Scanned, result.EventsStored, jobId);
+
+                // The features page and the timelines show the stored events and the links of the scanned articles
+                if (result.Scanned > 0)
+                {
+                    scope.ServiceProvider.GetRequiredService<IContentRepository>().InvalidateCachedData();
+                }
+
                 await jobRepo.CompleteAsync(jobId,
                     feedsProcessed: 0, itemsAdded: result.EventsStored, itemsSkipped: result.Scanned - result.WithEvents,
                     errorCount: result.Failed, transcriptsSucceeded: 0, transcriptsFailed: 0,

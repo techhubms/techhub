@@ -25,7 +25,8 @@ public static partial class AdminEndpoints
     {
         var group = app.MapGroup("/api/admin")
             .WithTags("Admin")
-            .RequireAuthorization("AdminOnly");
+            .RequireAuthorization("AdminOnly")
+            .AddEndpointFilter(InvalidateContentCacheAfterWriteAsync);
 
         // ── Processing jobs ──────────────────────────────────────────────────
 
@@ -222,6 +223,23 @@ public static partial class AdminEndpoints
         group.MapGet("/urls/title", FetchUrlTitleAsync)
             .WithName("FetchUrlTitle")
             .WithSummary("Fetch the page title for a given URL");
+    }
+
+    // Admin writes change what the public pages show (the features page, for one, is cached). Clearing the cache after every
+    // write, also a failed one that may have stored part of it, means no admin endpoint has to remember to do it.
+    private static async ValueTask<object?> InvalidateContentCacheAfterWriteAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
+    {
+        try
+        {
+            return await next(context);
+        }
+        finally
+        {
+            if (!HttpMethods.IsGet(context.HttpContext.Request.Method))
+            {
+                context.HttpContext.RequestServices.GetRequiredService<IContentRepository>().InvalidateCachedData();
+            }
+        }
     }
 
     // ── Processing handlers ──────────────────────────────────────────────────
