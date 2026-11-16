@@ -59,6 +59,19 @@ public class SearchTests : PlaywrightTestBase
     }
 
     [Fact]
+    public async Task SearchBox_WithATypo_ShowsTheResultsOfTheClosestWordAndSaysSo()
+    {
+        // Act: "cpoilot" is nobody's word, "copilot" is on every page of this section
+        await Page.GotoRelativeAsync("/github-copilot?search=cpoilot");
+
+        // Assert
+        var message = Page.Locator(".search-correction");
+        await Assertions.Expect(message).ToContainTextAsync("cpoilot");
+        await Assertions.Expect(message).ToContainTextAsync("copilot.");
+        await Assertions.Expect(Page.Locator(".content-grid .card").First).ToBeVisibleAsync();
+    }
+
+    [Fact]
     public async Task SearchBox_WithUrlParameter_ShowsSearchQuery()
     {
         // Arrange & Act - Navigate with search parameter

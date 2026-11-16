@@ -40,6 +40,16 @@
   margin-top: var(--spacing-3);
 }
 
+/* Shown when a typo in the search was corrected */
+.collection-content .search-correction {
+  margin-bottom: var(--spacing-3);
+  color: var(--color-text-secondary);
+}
+
+.collection-content .search-correction strong {
+  color: var(--color-text-primary);
+}
+
 /* No content state */
 .collection-content .no-content {
   padding: var(--spacing-6);

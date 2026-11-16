@@ -1149,6 +1149,33 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
+    public async Task GetCollectionItems_WithATypoInTheSearch_ReturnsTheResultsOfTheClosestWordAndSaysSo()
+    {
+        // Act: "copilott" is nobody's word, "copilot" is in the test content
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items?q=copilott&lastDays=0", TestContext.Current.CancellationToken);
+        var expected = await _client.GetFromJsonAsync<CollectionItemsResponse>("/api/sections/all/collections/all/items?q=copilot&lastDays=0", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result!.CorrectedQuery.Should().Be("copilot");
+        result.TotalCount.Should().Be(expected!.TotalCount).And.BeGreaterThan(0);
+        expected.CorrectedQuery.Should().BeNull("a query that finds something is used as typed");
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithATypoInTheSearch_CountsTheTagsOfTheClosestWord()
+    {
+        // Act
+        var typo = await _client.GetFromJsonAsync<List<TagCloudItem>>("/api/sections/all/collections/all/tags?q=copilott&lastDays=0", TestContext.Current.CancellationToken);
+        var correct = await _client.GetFromJsonAsync<List<TagCloudItem>>("/api/sections/all/collections/all/tags?q=copilot&lastDays=0", TestContext.Current.CancellationToken);
+
+        // Assert
+        typo.Should().NotBeNullOrEmpty();
+        typo!.Select(t => (t.Tag, t.Count)).Should().BeEquivalentTo(correct!.Select(t => (t.Tag, t.Count)));
+    }
+
+    [Fact]
     public async Task GetCollectionItems_WithSearch_OrderedByRelevanceThenDate()
     {
         // Arrange - Search for a common term that matches multiple items

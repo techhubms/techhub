@@ -255,6 +255,7 @@ public static class ContentEndpoints
         IOptions<ApiOptions> apiOptions,
         IOptions<TagCloudOptions> tagCloudOptions,
         IContentRepository contentRepository,
+        ISearchQueryCorrector searchQueryCorrector,
         [FromQuery] int? take = null,
         [FromQuery] int skip = 0,
         [FromQuery] string? q = null,
@@ -388,12 +389,18 @@ public static class ContentEndpoints
             collectionsArray = new[] { collectionName };
         }
 
+        // A word that no article contains is replaced by the closest word that articles do contain (a typo finds nothing otherwise).
+        // The response says so, so the page can tell the visitor what was searched for. The exact title match is left alone.
+        var correctedQuery = !exactMode && !string.IsNullOrWhiteSpace(q)
+            ? await searchQueryCorrector.CorrectAsync(q, cancellationToken)
+            : null;
+
         // Build search request - repository will handle "all" as no filter.
         // When exact=true, skip date and tag filters (exact match is purely title-based).
         var request = new SearchRequest(
             take: limit,
             skip: offset,
-            query: q,
+            query: correctedQuery ?? q,
             sections: new[] { section.Name },
             collections: collectionsArray,
             tags: exactMode ? Array.Empty<string>() : (parsedTags ?? Array.Empty<string>()),
@@ -403,7 +410,7 @@ public static class ContentEndpoints
         );
 
         var content = await contentRepository.SearchAsync(request, cancellationToken);
-        return TypedResults.Ok(new CollectionItemsResponse(content.Items, content.TotalCount));
+        return TypedResults.Ok(new CollectionItemsResponse(content.Items, content.TotalCount, correctedQuery));
     }
 
     /// <summary>
@@ -425,6 +432,7 @@ public static class ContentEndpoints
         [FromQuery] string? types = null,
         IContentRepository contentRepository = default!,
         IOptions<TagCloudOptions> tagCloudOptions = default!,
+        ISearchQueryCorrector searchQueryCorrector = default!,
         CancellationToken cancellationToken = default)
     {
         sectionName = sectionName.Sanitize();
@@ -551,6 +559,13 @@ public static class ContentEndpoints
             }
         }
 
+        // A mistyped word finds nothing, so the tag cloud uses the same corrected query as the items
+        var tagSearchQuery = string.IsNullOrWhiteSpace(q) ? null : q.Trim();
+        if (tagSearchQuery is not null)
+        {
+            tagSearchQuery = await searchQueryCorrector.CorrectAsync(tagSearchQuery, cancellationToken) ?? tagSearchQuery;
+        }
+
         // Get top N tag counts from repository - repository will handle "all" as no filter
         var tagCounts = await contentRepository.GetTagCountsAsync(
             new TagCountsRequest(
@@ -562,7 +577,7 @@ public static class ContentEndpoints
                 dateTo: dateTo,
                 tags: selectedTags,
                 tagsToCount: parsedTagsToCount,
-                searchQuery: string.IsNullOrWhiteSpace(q) ? null : q.Trim(),
+                searchQuery: tagSearchQuery,
                 collections: collectionsFilter
             ),
             cancellationToken);

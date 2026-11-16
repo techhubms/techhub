@@ -13,6 +13,11 @@
 <section class="collection-content @(isLoading ? "loading" : "")" aria-label="@(Title ?? GetCollectionTitle()) content">
     <h1 id="skiptohere" class="page-h1">@(Title ?? GetPageTitle()) <span class="content-count">(@totalCount)</span></h1>
 
+    @if (!string.IsNullOrEmpty(correctedQuery) && !string.IsNullOrWhiteSpace(SearchQuery))
+    {
+        <p class="search-correction" role="status">No results for <strong>@SearchQuery</strong>. Showing results for <strong>@correctedQuery</strong>.</p>
+    }
+
     @if (isLoading && !contentItems.Any())
     {
         <div class="content-grid" role="feed" aria-busy="true" aria-label="Loading content">
@@ -138,6 +143,7 @@
     // Content state
     private List<ContentItem> contentItems = [];
     private long totalCount;
+    private string? correctedQuery;
     private bool isLoading = true;
     private bool isLoadingMore;
     private bool hasMoreContent = true;
@@ -194,6 +200,7 @@
             currentBatch = cached.CurrentBatch;
             hasMoreContent = cached.HasMoreContent;
             totalCount = cached.TotalCount;
+            correctedQuery = cached.CorrectedQuery;
             isLoading = false;
             Logger.LogDebug("Restored {Count} items from circuit cache for {Key}", contentItems.Count, stateKey);
         }
@@ -205,6 +212,7 @@
             currentBatch = restored.CurrentBatch;
             hasMoreContent = restored.HasMoreContent;
             totalCount = restored.TotalCount;
+            correctedQuery = restored.CorrectedQuery;
             isLoading = false;
             Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
         }
@@ -244,7 +252,8 @@
             Items = contentItems,
             CurrentBatch = currentBatch,
             HasMoreContent = hasMoreContent,
-            TotalCount = totalCount
+            TotalCount = totalCount,
+            CorrectedQuery = correctedQuery
         });
         return Task.CompletedTask;
     }
@@ -255,6 +264,7 @@
         public int CurrentBatch { get; set; }
         public bool HasMoreContent { get; set; }
         public long TotalCount { get; set; }
+        public string? CorrectedQuery { get; set; }
     }
 
     protected override async Task OnParametersSetAsync()
@@ -343,6 +353,7 @@
 
         // Update total count from API response (always reflects current filters)
         totalCount = result?.TotalCount ?? 0;
+        correctedQuery = result?.CorrectedQuery;
 
         contentItems.AddRange(newItems);
         currentBatch = batch;
@@ -353,7 +364,7 @@
         }
 
         // Update circuit-scoped cache so back-navigation can restore all loaded items
-        GridStateCache.Set(GetStateKey(), contentItems, currentBatch, hasMoreContent, totalCount);
+        GridStateCache.Set(GetStateKey(), contentItems, currentBatch, hasMoreContent, totalCount, correctedQuery);
     }
 
     private async Task LoadNextBatch()

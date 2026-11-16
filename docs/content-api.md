@@ -188,7 +188,7 @@ Get items in a specific collection within a section. Use `all` as collectionName
 
 **Response**: `200 OK`, `404 Not Found` (section or collection not found), or `400 Bad Request` (invalid name format, `q` over 200 characters, more than 20 tags, a tag over 100 characters, `lastDays` outside 0-3650, or an unparseable `from`/`to`)
 
-**Response Body**: `{ "items": [ContentItem, ...], "totalCount": 123 }`. `totalCount` is the number of matches before `take`/`skip` is applied.
+**Response Body**: `{ "items": [ContentItem, ...], "totalCount": 123, "correctedQuery": null }`. `totalCount` is the number of matches before `take`/`skip` is applied. `correctedQuery` is the search that was run instead of `q` when a typo in `q` was corrected (see [filtering.md](filtering.md#typo-correction)), otherwise `null`.
 
 ```bash
 curl -k https://localhost:5001/api/sections/ml/collections/videos/items

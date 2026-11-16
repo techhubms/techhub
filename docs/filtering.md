@@ -47,7 +47,18 @@ This enables auto-complete-style search behavior where users don't need to type 
 - Uses **OR logic** between search terms for better recall (matching any term surfaces results)
 - Automatically appends wildcards for prefix matching (`copilot` → `copilot:*` for PostgreSQL)
 - **Compound word expansion**: known compounds like "vscode" expand to also match "code" (terms shorter than 3 characters are dropped from expansions)
+- **Typo correction**: see [Typo Correction](#typo-correction)
 - Results are ordered by **relevance first** (ts_rank), then by date (newest first)
+
+### Typo Correction
+
+The search matches whole words and word beginnings, so a mistyped word (`harnass` for `harness`) finds nothing. `SearchQueryCorrector` ([ISearchQueryCorrector](../src/TechHub.Core/Interfaces/ISearchQueryCorrector.cs)) fixes that before the search runs, in the items and the tags endpoints:
+
+- A word is **unknown** when no article has a word that starts with it. That is the same test the search uses (a prefix lookup in the full-text index, over the whole text of all articles), so a word that only occurs in the body of an article is known, and a query that finds something is never changed.
+- Only unknown words of 4 or more letters are corrected. They are replaced by the closest word of the **vocabulary**: the words (4 to 30 letters or digits) that at least two articles use in their title, excerpt or tags, built once an hour from `ts_stat` and cleared with the other API caches. Closest means the fewest edits (an insertion, deletion, substitution or swap of two neighbouring letters is one edit; up to one edit for words of 4 to 7 letters, two for longer words), and the most frequent word wins a tie.
+- It needs no database extension, and the check costs one index lookup for words that were not seen before (words that were found are remembered for 30 minutes). The first correction after a cache clear builds the vocabulary (~0.5 s locally).
+- The exact title match is not corrected.
+- The items response has `correctedQuery` with the search that was run (`null` when nothing was corrected), and the grid shows "No results for *harnass*. Showing results for *harness*." The tag cloud of the page uses the corrected search as well.
 
 ### Search + Filter Combination
 

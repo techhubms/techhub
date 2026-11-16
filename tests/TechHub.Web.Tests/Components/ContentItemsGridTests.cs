@@ -305,4 +305,77 @@ public class ContentItemsGridTests : BunitContext
             cut.Find(".end-of-content").TextContent.Should().Contain("End of content");
         });
     }
+
+    private void ReturnsForSearch(CollectionItemsResponse response) =>
+        _mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                "github-copilot", "news",
+                It.IsAny<int?>(), It.IsAny<int?>(),
+                "harnass", It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(response);
+
+    [Fact]
+    public void ContentItemsGrid_SearchWasCorrected_TellsWhatWasSearchedFor()
+    {
+        // Arrange
+        var item = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        ReturnsForSearch(new CollectionItemsResponse([item], 1, "harness"));
+
+        // Act
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+
+        // Assert
+        cut.WaitForAssertion(() =>
+        {
+            var message = cut.Find(".search-correction");
+            message.GetAttribute("role").Should().Be("status");
+            message.TextContent.Should().Contain("harnass").And.Contain("harness");
+        });
+    }
+
+    [Fact]
+    public void ContentItemsGrid_SearchWasNotCorrected_ShowsNoCorrectionMessage()
+    {
+        // Arrange
+        var item = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        ReturnsForSearch(new CollectionItemsResponse([item], 1));
+
+        // Act
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+
+        // Assert
+        cut.WaitForAssertion(() => cut.FindAll(".content-grid").Should().NotBeEmpty());
+        cut.FindAll(".search-correction").Should().BeEmpty();
+    }
+
+    [Fact]
+    public void ContentItemsGrid_SearchWasCorrected_KeepsTheMessageWhenTheStateIsRestored()
+    {
+        // Arrange: the first grid loads and fills the circuit cache that a back navigation restores from
+        var item = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        ReturnsForSearch(new CollectionItemsResponse([item], 1, "harness"));
+        var first = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+        first.WaitForAssertion(() => first.Find(".search-correction"));
+
+        // Act
+        var restored = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+
+        // Assert
+        restored.Find(".search-correction").TextContent.Should().Contain("harness");
+    }
 }
