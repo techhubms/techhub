@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Http.Resilience;
+using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 using ModelContextProtocol.Protocol;
@@ -20,6 +21,7 @@ using TechHub.Web.Components;
 using TechHub.Web.Endpoints;
 using TechHub.Web.MCP;
 using TechHub.Web.Middleware;
+using TechHub.Web.RateLimiting;
 using TechHub.Web.Services;
 using TechHub.Web.Telemetry;
 
@@ -369,6 +371,8 @@ builder.Services.AddHttpClient<ApiHealthCheck>(client =>
 // Loopback exemptions are scoped to Development so that a spoofed X-Forwarded-For: 127.0.0.1
 // cannot bypass rate limiting in production (UseForwardedHeaders runs before UseRateLimiter).
 var isLoopbackExempt = builder.Environment.IsDevelopment();
+builder.Services.AddOptions<RateLimitingOptions>()
+    .BindConfiguration(RateLimitingOptions.ConfigurationKey);
 builder.Services.AddRateLimiter(options =>
 {
     // Per-IP fixed-window policy. Loopback exemption is restricted to Development: UseForwardedHeaders
@@ -382,6 +386,13 @@ builder.Services.AddRateLimiter(options =>
             if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
             {
                 return RateLimitPartition.GetNoLimiter("loopback");
+            }
+
+            // The E2E suite runs from a single runner IP; its secret token (never the IP) is what exempts it.
+            var bypassToken = context.RequestServices.GetRequiredService<IOptionsMonitor<RateLimitingOptions>>().CurrentValue.E2EBypassToken;
+            if (E2ERateLimitBypass.Matches(context, bypassToken))
+            {
+                return RateLimitPartition.GetNoLimiter("e2e-bypass");
             }
 
             return RateLimitPartition.GetFixedWindowLimiter(
@@ -409,8 +420,9 @@ builder.Services.AddRateLimiter(options =>
         await context.HttpContext.Response.WriteAsync("Rate limit exceeded. Please retry later.", token);
     };
 
-    // General page requests: 60/min per IP (covers Blazor Server HTML and enhanced navigation).
-    AddPerIpPolicy("web-general", permitLimit: 60, queueLimit: 5);
+    // General page requests: 90/min per IP (covers Blazor Server HTML, enhanced navigation and the SignalR
+    // negotiate/WebSocket requests of every circuit, so one page load costs several permits).
+    AddPerIpPolicy("web-general", permitLimit: 90, queueLimit: 5);
 
     // RSS feed endpoints: stricter limit — bot-targeted content syndication.
     AddPerIpPolicy("web-rss", permitLimit: 20, queueLimit: 0);

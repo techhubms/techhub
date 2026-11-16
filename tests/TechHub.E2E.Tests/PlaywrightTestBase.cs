@@ -144,5 +144,11 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
 
         // Re-throw the first unexpected exception (if any) after all cleanup has completed.
         firstUnexpected?.Throw();
+
+        // A 429 anywhere during the test means the bypass token is missing or wrong; fail with that cause even when the assertions passed.
+        if (_context != null)
+        {
+            RateLimitGuard.ThrowIfRateLimited(_context);
+        }
     }
 }

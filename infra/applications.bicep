@@ -241,6 +241,7 @@ module webApp './modules/web.bicep' = {
     wildcardCertNames: wildcardCertNames
     keyVaultUri: keyVaultUri
     aadClientSecretSecretName: aadClientSecretSecretName
+    e2eBypassTokenSecretName: 'techhub-prod-e2e-bypass-token'
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
     googleAnalyticsMeasurementId: googleAnalyticsMeasurementId

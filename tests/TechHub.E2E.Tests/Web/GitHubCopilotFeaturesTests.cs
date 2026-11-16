@@ -222,6 +222,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
             Locale = "en-US",
             TimezoneId = "Europe/Brussels"
         });
+        await RateLimitGuard.ApplyAsync(phone);
 
         try
         {

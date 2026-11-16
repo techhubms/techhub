@@ -14,6 +14,7 @@ The target server is configured via the `E2E_BASE_URL` environment variable:
 
 - **Local development**: defaults to `https://localhost:5003` (start servers with `Run -WithoutTests`)
 - **CI (PR preview)**: set to the PR preview URL — runs after PR environment deployment
+- **Rate limiting**: deployed sites throttle every IP, and all E2E browsers share one. Set `E2E_BYPASS_TOKEN` (the CD/CI jobs pass the `E2E_BYPASS_TOKEN` secret) and `RateLimitGuard` sends it as the `e2e-token` cookie on every browser context, including contexts a test creates itself (call `RateLimitGuard.ApplyAsync`). Locally nothing is needed: loopback is exempt in Development. A 429 fails the test with a message about the token — see [Rate-limit bypass](../../docs/ci-cd-pipeline.md#e2e-rate-limit-bypass)
 - **Performance tests**: always run against local PostgreSQL and fail when no database is available
 - **No skipping for missing data or settings**: a test that needs data (features, timeline events, tags) asserts it and fails without it, so run E2E tests against a restored production database (`scripts/Restore-Database.ps1`). A test that needs a feature toggle in a certain state sets it itself (see `TimelineToggleFixture`, which restores it afterwards). Only a remote deployment, where the toggle cannot be changed, may skip. A behavior that needs a state a deployed environment never has (a closed toggle) is not an E2E test that skips: test it in the in-memory Web host (`FeatureGatedPageEndpointTests`).
 
@@ -21,7 +22,7 @@ The target server is configured via the `E2E_BASE_URL` environment variable:
 
 Timeouts are **NOT** performance issues. They mean Playwright couldn't find the expected element within the timeout period.
 
-**Root causes**: Test bugs (wrong selector), broken pages, changed DOM structure, navigation to error pages, missing test data.
+**Root causes**: Test bugs (wrong selector), broken pages, changed DOM structure, navigation to error pages, missing test data, and a rate-limited site (the page is slow because requests queue behind the per-IP limiter; check that `E2E_BYPASS_TOKEN` reaches the tests and the site).
 
 **Debug**: Start servers with `Run -WithoutTests`, then use Playwright MCP tools to navigate, snapshot, and compare actual DOM with expectations.
 
@@ -73,7 +74,7 @@ $env:E2E_NETWORK_THROTTLE = "wan"; Run -TestProject E2E
 
 A monotonic lifecycle counter replaces independent `window.__*` flags. Every JS lifecycle hook calls `__e2eSignal(label)` which increments the counter. Test helpers capture counter before actions and wait for it to change.
 
-**Signal sources**: `blazor-web-ready`, `blazor-server-ready`, `enhanced-nav` (from `TechHub.Web.lib.module.js`; the module also emits `blazor-wasm-ready`, which is unused because the app has no WebAssembly runtime), `scripts-loading`/`scripts-ready`/`mermaid-rendered`/`toc-initialized` (from `page-scripts.js`), `toc-initialized`/`toc-active-updated` (from `scroll-manager.js`), `scroll-end` (browser `scrollend` event listener in `App.razor`).
+**Signal sources**: `blazor-web-ready`, `blazor-server-ready`, `ready-before-server-started` (emitted instead of resetting `__scriptsReady` when the page's first `markScriptsReady` beat the circuit-ready callback; it also logs a console warning), `enhanced-nav` (from `TechHub.Web.lib.module.js`; the module also emits `blazor-wasm-ready`, which is unused because the app has no WebAssembly runtime), `scripts-loading`/`scripts-ready`/`mermaid-rendered`/`toc-initialized` (from `page-scripts.js`), `toc-initialized`/`toc-active-updated` (from `scroll-manager.js`), `scroll-end` (browser `scrollend` event listener in `App.razor`).
 
 Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scales by network profile: 10s local, 30s regular4g/wan/ci, 45s fast3g, 60s slow3g; 60s in CI without a profile), `E2EPollingInterval` (100ms) — centralized in `BlazorHelpers.cs`.
 

@@ -484,6 +484,7 @@ window.markScriptsReady = function() {
     }
 
     window.__scriptsReady = true;
+    window.__scriptsReadyCount = (window.__scriptsReadyCount ?? 0) + 1;
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scripts-ready');
 
     // Restore scroll position on back/forward navigation.

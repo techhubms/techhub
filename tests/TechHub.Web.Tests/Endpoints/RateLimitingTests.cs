@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace TechHub.Web.Tests.Endpoints;
 
 /// <summary>
-/// Tests for the per-IP rate limiting configured in Program.cs: web-general (60/min), web-rss (20/min) and
+/// Tests for the per-IP rate limiting configured in Program.cs: web-general (90/min), web-rss (20/min) and
 /// web-mcp (60/min). Loopback clients are exempt in Development only, so a spoofed
 /// <c>X-Forwarded-For: 127.0.0.1</c> cannot bypass the limit in Production.
 /// Each test uses its own client IP (via <c>X-Forwarded-For</c>) so limiter partitions never overlap.
@@ -199,6 +199,17 @@ public class RateLimitingTests(DevelopmentWebFixture development, ProductionWebF
         // Assert
         policies.Should().NotBeEmpty();
         policies.Should().OnlyContain(p => p == "web-general");
+    }
+
+    [Fact]
+    public void Endpoints_BlazorHub_UsesWebGeneralPolicy()
+    {
+        // Act
+        var policies = PoliciesFor("/_blazor");
+
+        // Assert
+        policies.Should().NotBeEmpty("the interactive server hub is mapped by MapRazorComponents");
+        policies.Should().OnlyContain(p => p == "web-general", "every circuit costs a negotiate request and a WebSocket upgrade");
     }
 
     [Fact]

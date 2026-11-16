@@ -12,6 +12,7 @@ describe('page-scripts.js', () => {
         delete window.markScriptsLoading;
         delete window.markScriptsReady;
         delete window.__scriptsReady;
+        delete window.__scriptsReadyCount;
         delete window.__e2eSignal;
 
         // Provide CDN config that page-scripts.js expects
@@ -76,6 +77,15 @@ describe('page-scripts.js', () => {
             window.markScriptsReady();
 
             expect(window.__scriptsReady).toBe(true);
+        });
+
+        it('should count completed ready signals so the circuit start can tell a ready page apart', async () => {
+            await import(MODULE_PATH);
+
+            window.markScriptsLoading();
+            window.markScriptsReady();
+
+            expect(window.__scriptsReadyCount).toBe(1);
         });
 
         it('should fire e2eSignal events', async () => {

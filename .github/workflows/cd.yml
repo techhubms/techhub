@@ -520,22 +520,28 @@ jobs:
           ./scripts/Build-Images.ps1 `
             -Tag "${{ steps.tag.outputs.image-tag }}"
 
-      - name: Clean up old production images (keep last 2)
+      - name: Clean up old production images (keep the newest 5 and anything from the last 24 hours)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ORG="techhubms"
 
-          for PKG in techhub-api techhub-web; do
-            echo "Cleaning up old production images for ${PKG} (keeping last 2)..."
+          # A deploy can start long after its image was built: deploys are serialized and each one is followed by
+          # ~30 minutes of E2E, so several newer builds (and their cleanups) run in between. Keeping only the last
+          # two images deleted the image an older run was about to deploy, which then failed to pull (ImagePullUnauthorizedFailure).
+          # Retention is therefore by age as well as by count.
+          CUTOFF=$(date -u -d '24 hours ago' +'%Y-%m-%dT%H:%M:%SZ')
 
-            # List production versions: tagged, no pr- prefix, sorted newest-first, skip first 2
-            OLD_IDS=$(gh api "/orgs/${ORG}/packages/container/${PKG}/versions?per_page=100" \
-              --jq '[.[] | select(
+          for PKG in techhub-api techhub-web; do
+            echo "Cleaning up old production images for ${PKG} (keeping the newest 5 and anything created after ${CUTOFF})..."
+
+            # List production versions: tagged, no pr- prefix, sorted newest-first, skip the first 5, only older than the cutoff
+            OLD_IDS=$(gh api "/orgs/${ORG}/packages/container/${PKG}/versions?per_page=100" 2>/dev/null \
+              | jq -r --arg cutoff "$CUTOFF" '[.[] | select(
                   (.metadata.container.tags | length) > 0 and
                   (any(.metadata.container.tags[]; startswith("pr-")) | not)
-                )] | sort_by(.created_at) | reverse | .[2:] | .[].id' \
-              2>/dev/null || true)
+                )] | sort_by(.created_at) | reverse | .[5:] | .[] | select(.created_at < $cutoff) | .id' \
+              || true)
 
             if [ -z "$OLD_IDS" ]; then
               echo "  Nothing to clean up for ${PKG}"
@@ -569,6 +575,26 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+
+      - name: Verify the images to deploy exist in ghcr.io
+        env:
+          IMAGE_TAG: ${{ needs.build-and-push.outputs.image-tag }}
+        run: |
+          # An image that is missing (or no longer pullable) makes App Service fail with ImagePullUnauthorizedFailure,
+          # which only shows up ten minutes later as 503s. Checking here reports it immediately and by name.
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io --username "${{ github.actor }}" --password-stdin
+          missing=false
+          for pkg in techhub-api techhub-web; do
+            if docker manifest inspect "ghcr.io/techhubms/${pkg}:${IMAGE_TAG}" > /dev/null 2>&1; then
+              echo "Found ghcr.io/techhubms/${pkg}:${IMAGE_TAG}"
+            else
+              echo "::error::ghcr.io/techhubms/${pkg}:${IMAGE_TAG} does not exist or cannot be pulled"
+              missing=true
+            fi
+          done
+          if [ "$missing" = true ]; then
+            exit 1
+          fi
 
       - name: Check for infrastructure changes
         id: changes
@@ -634,6 +660,7 @@ jobs:
           AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
           NEWSLETTER_UNSUBSCRIBE_SECRET: ${{ secrets.NEWSLETTER_UNSUBSCRIBE_SECRET }}
+          E2E_BYPASS_TOKEN: ${{ secrets.E2E_BYPASS_TOKEN }}
           WILDCARD_CERT_HUB_MS: ${{ secrets.WILDCARD_CERT_HUB_MS }}
           WILDCARD_CERT_XEBIA_MS: ${{ secrets.WILDCARD_CERT_XEBIA_MS }}
         run: |
@@ -714,10 +741,14 @@ jobs:
 
       - name: Wait for deployment to stabilize
         timeout-minutes: 12
+        env:
+          E2E_BYPASS_TOKEN: ${{ secrets.E2E_BYPASS_TOKEN }}
         run: |
           # A fixed sleep is not enough: right after a deploy the site can serve the generic
           # error page for a while. Poll representative pages until all return 200 without it,
           # giving up after a fixed deadline so a failed deployment is reported in bounded time.
+          # The SignalR negotiate request is checked as well: every Blazor page needs it, and it
+          # is the request that stalls when the site is overloaded or throttled.
           paths="/ /github-copilot/all /github-copilot/handbook /ai/genai-applied /ai/genai-basics"
           deadline=$((SECONDS + 600))
           attempt=0
@@ -726,13 +757,20 @@ jobs:
             all_ok=true
             for path in $paths; do
               body=$(mktemp)
-              status=$(curl -sS -L --max-time 10 -o "$body" -w '%{http_code}' "https://tech.hub.ms$path" || echo "000")
+              status=$(curl -sS -L --max-time 10 -H "X-E2E-Token: ${E2E_BYPASS_TOKEN}" -o "$body" -w '%{http_code}' "https://tech.hub.ms$path" || echo "000")
               if [ "$status" != "200" ] || grep -q "Something went wrong" "$body"; then
                 echo "Attempt $attempt: $path not ready (status $status)"
                 all_ok=false
               fi
               rm -f "$body"
             done
+            negotiate=$(curl -sS -X POST --max-time 10 -H "X-E2E-Token: ${E2E_BYPASS_TOKEN}" -o /dev/null -w '%{http_code} %{time_total}' "https://tech.hub.ms/_blazor/negotiate?negotiateVersion=1" || echo "000 0")
+            negotiate_status=${negotiate% *}
+            negotiate_seconds=${negotiate#* }
+            if [ "$negotiate_status" != "200" ] || awk -v t="$negotiate_seconds" 'BEGIN { exit !(t > 5) }'; then
+              echo "Attempt $attempt: /_blazor/negotiate not ready (status $negotiate_status, ${negotiate_seconds}s)"
+              all_ok=false
+            fi
             if [ "$all_ok" = true ]; then
               echo "All pages healthy after $attempt attempt(s)"
               exit 0
@@ -753,6 +791,7 @@ jobs:
             -- --filter-not-trait "Category=Performance" --filter-not-trait "Category=DevEnvironment"
         env:
           E2E_BASE_URL: https://tech.hub.ms
+          E2E_BYPASS_TOKEN: ${{ secrets.E2E_BYPASS_TOKEN }}
 
       - name: Upload test results
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

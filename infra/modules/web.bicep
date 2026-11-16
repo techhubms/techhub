@@ -33,6 +33,9 @@ param keyVaultUri string
 @description('Key Vault secret name holding the Azure AD client secret')
 param aadClientSecretSecretName string = 'techhub-prod-aad-client-secret'
 
+@description('Key Vault secret name holding the E2E rate-limit bypass token. Leave empty to disable the bypass (the app then ignores any token).')
+param e2eBypassTokenSecretName string = ''
+
 @description('Azure AD tenant ID (not a secret — public Entra identifier)')
 param azureAdTenantId string = ''
 
@@ -130,6 +133,14 @@ var aadSecretEnvVars = empty(azureAdClientId)
         value: kvRef(keyVaultUri, aadClientSecretSecretName)
       }
     ]
+var e2eBypassEnvVars = empty(e2eBypassTokenSecretName)
+  ? []
+  : [
+      {
+        name: 'RateLimiting__E2EBypassToken'
+        value: kvRef(keyVaultUri, e2eBypassTokenSecretName)
+      }
+    ]
 var primaryHostEnvVars = [for (host, i) in primaryHosts: {
   name: 'PrimaryHosts__${i}'
   value: host
@@ -142,7 +153,7 @@ var gcHeapLimitEnvVars = empty(gcHeapHardLimitHex)
         value: gcHeapHardLimitHex
       }
     ]
-var allEnvVars = concat(staticEnvVars, gcHeapLimitEnvVars, aadSecretEnvVars, primaryHostEnvVars, [
+var allEnvVars = concat(staticEnvVars, gcHeapLimitEnvVars, aadSecretEnvVars, e2eBypassEnvVars, primaryHostEnvVars, [
   {
     name: 'WEBSITES_PORT'
     value: '8080'

@@ -15,6 +15,7 @@
         techhub-github-registry-token            — GHCR PAT for pulling container images
         techhub-prod-newsletter-acs-endpoint     — ACS email endpoint URL
         techhub-prod-newsletter-unsubscribe-secret — HMAC secret for newsletter unsubscribe/confirm URLs
+        techhub-prod-e2e-bypass-token            — Token that lets the E2E suite skip the Web app's per-IP rate limits
         techhub-prod-postgres-admin-password     — PostgreSQL admin password (for re-deploys without re-specifying)
         wildcard-hub-ms                          — Wildcard TLS certificate for *.hub.ms
         wildcard-xebia-ms                        — Wildcard TLS certificate for *.xebia.ms
@@ -36,7 +37,7 @@
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
         2. Set env vars: AZURE_AD_CLIENT_SECRET, GHCR_PAT, NEWSLETTER_ACS_ENDPOINT, NEWSLETTER_UNSUBSCRIBE_SECRET,
-           POSTGRES_ADMIN_PASSWORD, WILDCARD_CERT_HUB_MS, WILDCARD_CERT_XEBIA_MS
+           E2E_BYPASS_TOKEN, POSTGRES_ADMIN_PASSWORD, WILDCARD_CERT_HUB_MS, WILDCARD_CERT_XEBIA_MS
         3. ./scripts/Sync-KeyVaultSecrets.ps1
 
     Fail-fast behaviour: if a secret value is empty AND the secret does not yet
@@ -129,6 +130,7 @@ $aadClientSecret              = $env:AZURE_AD_CLIENT_SECRET
 $ghcrToken                    = $env:GHCR_PAT
 $newsletterAcsEndpoint        = $env:NEWSLETTER_ACS_ENDPOINT
 $newsletterUnsubscribeSecret  = $env:NEWSLETTER_UNSUBSCRIBE_SECRET
+$e2eBypassToken               = $env:E2E_BYPASS_TOKEN
 $postgresAdminPassword        = $env:POSTGRES_ADMIN_PASSWORD
 $wildcardHubMs                = $env:WILDCARD_CERT_HUB_MS
 $wildcardXebiaMs              = $env:WILDCARD_CERT_XEBIA_MS
@@ -225,6 +227,7 @@ try {
     Set-KvSecret -Name "techhub-github-registry-token"               -Value $ghcrToken                   -Description 'GitHub Container Registry PAT'
     Set-KvSecret -Name "techhub-prod-newsletter-acs-endpoint"        -Value $newsletterAcsEndpoint       -Description 'ACS email endpoint URL'
     Set-KvSecret -Name "techhub-prod-newsletter-unsubscribe-secret"  -Value $newsletterUnsubscribeSecret -Description 'HMAC secret for newsletter unsubscribe/confirm URLs'
+    Set-KvSecret -Name "techhub-prod-e2e-bypass-token"               -Value $e2eBypassToken              -Description 'E2E rate-limit bypass token'
     Set-KvSecret -Name "techhub-prod-postgres-admin-password"        -Value $postgresAdminPassword       -Description 'PostgreSQL admin password'
     Set-KvSecret -Name "wildcard-hub-ms"                             -Value $wildcardHubMs               -Description 'Wildcard TLS certificate (*.hub.ms)'   -ContentType 'application/x-pkcs12'
     Set-KvSecret -Name "wildcard-xebia-ms"                           -Value $wildcardXebiaMs             -Description 'Wildcard TLS certificate (*.xebia.ms)' -ContentType 'application/x-pkcs12'

@@ -79,6 +79,17 @@ public sealed class ProductionWebFixture : TechHubWebFixtureBase
     }
 }
 
+/// <summary>Production Web host with the E2E rate-limit bypass token configured (as the deployed sites have it).</summary>
+public sealed class ProductionE2EBypassWebFixture : TechHubWebFixtureBase
+{
+    public const string Token = "e2e-bypass-test-token";
+
+    public ProductionE2EBypassWebFixture() : base("Production")
+    {
+        SetConfig("RateLimiting:E2EBypassToken", Token);
+    }
+}
+
 public abstract class TechHubWebFixtureBase : IAsyncDisposable
 {
     private readonly TechHubWebFactory _factory;

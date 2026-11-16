@@ -182,16 +182,17 @@ Run only after the quality gate passes, and never on PRs.
 1. **Build & Push** - Calls `Build-Images.ps1` to build Docker images and push to `ghcr.io`
    - Tags images with a timestamp (`yyyyMMddHHmmss` format)
    - Images are built fresh on `main` (PR preview images are separate `pr-{number}-{timestamp}` builds and are not promoted)
-   - Prunes old production versions in `ghcr.io`, keeping the last 2 tagged versions per package (see [Container Image Retention](#container-image-retention))
+   - Prunes old production versions in `ghcr.io` (the newest 5 and anything from the last 24 hours are kept; see [Container Image Retention](#container-image-retention))
 
 2. **Deploy & E2E Tests (Production)** - Infrastructure + application deployment, followed by E2E tests in the same job
    - Uses GitHub environment protection (at least 1 required reviewer)
+   - First verifies that both images for the tag exist in `ghcr.io` (`docker manifest inspect`), so a missing image fails in seconds with the image name instead of as ten minutes of 503s
    - Automatically detects whether `infra/` or `scripts/` files have changed since the last successful deploy:
      - **Full deploy** (infrastructure changed): installs the `Az.PostgreSql` PowerShell module (with retries, since PowerShell Gallery downloads fail intermittently), runs `Deploy-Infrastructure.ps1` (Phase 1: Bicep infra), then `Deploy-Applications.ps1` (Phase 2: API + Web App Service Bicep)
      - **Fast update** (no infrastructure changes): runs `Deploy-Application.ps1` - updates the App Service sites' container image tags only (`az webapp config set`), no Bicep evaluation
    - `Deploy-Application.ps1` also sets the `DEPLOY_IMAGE_TAG` app setting and runs the [post-deploy gate](#post-deploy-gate)
    - Creates an Application Insights release annotation (see [Release Annotations](#release-annotations))
-   - Waits 60 seconds for the deployment to stabilize, then runs E2E tests against production (excluding `Category=Performance` and `Category=DevEnvironment`)
+   - Polls representative pages and the SignalR `/_blazor/negotiate` request until they answer 200 (negotiate within 5 seconds), for at most 10 minutes, then runs E2E tests against production (excluding `Category=Performance` and `Category=DevEnvironment`). The E2E run and the poll send the [E2E rate-limit bypass token](#e2e-rate-limit-bypass)
 
 #### Post-Deploy Gate
 
@@ -203,8 +204,21 @@ After each production deploy, `scripts/Add-AppInsightsAnnotation.ps1` creates an
 
 #### Container Image Retention
 
-- **Production images**: after each build, `cd.yml` deletes old production versions from `ghcr.io` and keeps the last 2 (PR images are excluded from this pruning)
+- **Production images**: after each build, `cd.yml` deletes old production versions from `ghcr.io`, but keeps the newest 5 per package and anything created in the last 24 hours (PR images are excluded from this pruning). Retention is by age as well as by count because a deploy can start long after its image was built: deploys are serialized and each is followed by roughly 30 minutes of E2E, so several newer builds (each with its own cleanup) run in between. Keeping only the last 2 once deleted the image an older run was about to deploy, and both App Service sites then failed to start with `ImagePullUnauthorizedFailure`
 - **PR images**: removed from `ghcr.io` when the PR is closed (see [PR Preview Environments](#pr-preview-environments))
+
+#### E2E Rate-Limit Bypass
+
+All E2E browsers run from one IP, which the Web app's per-IP rate limiter (see [url-routing.md](url-routing.md#rate-limiting)) would otherwise throttle: every page load needs a document request plus the SignalR negotiate and WebSocket requests, and each queued request waits for the next one-minute window. Pages then take up to a minute to become interactive and E2E tests time out.
+
+The suite therefore carries a shared secret that exempts it from the limiter:
+
+1. The repository secret `E2E_BYPASS_TOKEN` is the source of truth.
+2. `Deploy-Infrastructure.ps1` passes it to `Sync-KeyVaultSecrets.ps1`, which stores it in Key Vault as `techhub-prod-e2e-bypass-token`.
+3. The Web app (production and PR previews) reads it through the Key Vault reference app setting `RateLimiting__E2EBypassToken`.
+4. The E2E jobs pass the same secret as `E2E_BYPASS_TOKEN`; the tests send it as the `e2e-token` cookie (scoped to the site) and the post-deploy poll sends it as the `X-E2E-Token` header.
+
+The bypass is off when no token is configured, and a Key Vault reference that App Service could not resolve never counts as a token. A 429 during an E2E run fails the test with a message that names the missing token, instead of a generic timeout.
 
 ### Dependency Automation and Git Hooks
 
@@ -333,11 +347,12 @@ Configure these in GitHub repository settings → Secrets and variables → Acti
 
 ### Repository Secrets
 
-One repository-level secret is required (accessible to all environments and jobs):
+One repository-level secret is required for the container registry, and one for the E2E suite (both accessible to all environments and jobs):
 
 | Secret | Notes |
 |--------|-------|
 | `GHCR_PAT` | GitHub PAT with `write:packages` scope. Synced to Key Vault as `techhub-github-registry-token` by `Sync-KeyVaultSecrets.ps1` so App Service sites can pull images from `ghcr.io`. Also used locally to push images with `Build-Images.ps1`. |
+| `E2E_BYPASS_TOKEN` | Random string (for example `openssl rand -hex 32`) that exempts the E2E suite from the Web app's rate limiter. Synced to Key Vault as `techhub-prod-e2e-bypass-token`; see [E2E Rate-Limit Bypass](#e2e-rate-limit-bypass). Rotate by changing the secret and running a full deploy. |
 
 ### Environment Secrets
 
@@ -388,6 +403,7 @@ Both deployment scripts can be run locally, making it easy to test without trigg
 #   $env:AZURE_AD_CLIENT_SECRET = '...'
 #   $env:GHCR_PAT = '...'
 #   $env:NEWSLETTER_UNSUBSCRIBE_SECRET = '...'
+#   $env:E2E_BYPASS_TOKEN = '...'
 #   $env:WILDCARD_CERT_HUB_MS = '...'
 #   $env:WILDCARD_CERT_XEBIA_MS = '...'
 # On re-deploys these are skipped automatically if already present in Key Vault.
