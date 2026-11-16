@@ -45,6 +45,12 @@ param googleAnalyticsMeasurementId string = ''
 @description('Tags applied to the Web app')
 param tags object = {}
 
+@description('Log Analytics workspace resource ID that receives the site\'s App Service platform logs (container start/stop with exit codes). Leave empty to skip.')
+param logAnalyticsWorkspaceId string = ''
+
+@description('Heap hard limit for the .NET GC (DOTNET_GCHeapHardLimit), in hexadecimal bytes. 32000000 is 800 MB. The runtime fails the allocation in this process instead of growing until the plan runs out of memory and every container on it is killed. Empty leaves the heap uncapped.')
+param gcHeapHardLimitHex string = '32000000'
+
 @description('ASPNETCORE_ENVIRONMENT value. Use "Staging" for PR preview environments.')
 param aspNetCoreEnvironment string = 'Production'
 
@@ -78,6 +84,11 @@ var staticEnvVars = [
   {
     name: 'OTEL_SERVICE_NAME'
     value: 'techhub-web'
+  }
+  {
+    // 1-9: higher makes the GC compact more often and keep the heap smaller, at the cost of CPU.
+    name: 'DOTNET_GCConserveMemory'
+    value: '5'
   }
   {
     name: 'ApiBaseUrl'
@@ -123,7 +134,15 @@ var primaryHostEnvVars = [for (host, i) in primaryHosts: {
   name: 'PrimaryHosts__${i}'
   value: host
 }]
-var allEnvVars = concat(staticEnvVars, aadSecretEnvVars, primaryHostEnvVars, [
+var gcHeapLimitEnvVars = empty(gcHeapHardLimitHex)
+  ? []
+  : [
+      {
+        name: 'DOTNET_GCHeapHardLimit'
+        value: gcHeapHardLimitHex
+      }
+    ]
+var allEnvVars = concat(staticEnvVars, gcHeapLimitEnvVars, aadSecretEnvVars, primaryHostEnvVars, [
   {
     name: 'WEBSITES_PORT'
     value: '8080'
@@ -240,6 +259,22 @@ resource hostNameBindings 'Microsoft.Web/sites/hostNameBindings@2023-12-01' = [f
     ftpPublishingPolicy
   ]
 }]
+
+// Container lifecycle events (start, stop, exit code 137 = out of memory) are otherwise only reachable
+// through Kudu, which is locked down for this site.
+resource platformLogs 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = if (!empty(logAnalyticsWorkspaceId)) {
+  name: 'platform-logs'
+  scope: web
+  properties: {
+    workspaceId: logAnalyticsWorkspaceId
+    logs: [
+      {
+        category: 'AppServicePlatformLogs'
+        enabled: true
+      }
+    ]
+  }
+}
 
 output fqdn string = web.properties.defaultHostName
 output id string = web.id

@@ -128,9 +128,11 @@ Server-side caches are in-process `IMemoryCache` instances. They are not shared 
 
 TTLs are a safety net. Freshness comes from invalidation: `InvalidateCachedData()` clears the whole API memory cache. It runs:
 
-- After a content processing run, a successful roundup generation and a content fixer run that changed items
+- After a content processing run that stored items (runs that store nothing leave the cache alone, but a write that committed counts even when the run later fails or is cancelled), a successful roundup generation and a content fixer run that changed items
 - After admin writes that change content: editing or deleting a content item, applying a transcript, editing AI metadata, adding a URL, approving reviews, removing a processed URL, regenerating a roundup, and deleting a GitHub Copilot feature
 - On demand through `POST /api/admin/cache/invalidate` (AdminOnly), which the **Invalidate caches** button on `/admin/settings` calls
+
+Cache misses are single-flight: when many requests miss the same entry at once (after a restart or an invalidation), one request queries the database and the others wait for its result, so a burst cannot open one database connection per request. If the request that runs the query fails or is cancelled, nothing is cached and a waiting request takes over. Invalidation starts a new generation: a lookup that began before the invalidation is not joined by later requests and does not write its result to the cache, so a read that started before a write can never serve stale data afterwards. The scoped database connection is created closed: it only takes a pooled connection while a statement or transaction runs (Dapper opens it with the request's cancellation token), so cache hits and waiting requests hold no connection and a cancelled request stops waiting on a full pool. Code that needs one physical connection across statements (transactions) must open it explicitly. The API also caps its PostgreSQL connection pool (`Maximum Pool Size=15` in the connection string set by the Bicep templates). Two processes overlapping during a restart then use at most 30 connections. The server accepts many more (`max_connections` is 859), but each one costs memory on the small production server, and daily peaks reached 209 active connections with the default pool of 100.
 
 ### Web Caches
 

@@ -20,7 +20,7 @@ Both the API and Web services export OpenTelemetry data to Application Insights 
 The shared `AddServiceDefaults()` method configures:
 
 - **Logging**: Structured logs with formatted messages and scopes
-- **Metrics**: ASP.NET Core request metrics, HTTP client metrics (runtime metrics intentionally excluded to reduce ingestion volume)
+- **Metrics**: ASP.NET Core request metrics, HTTP client metrics, a small allowlist of .NET runtime memory metrics and the memory probes (see [Memory Diagnostics](#memory-diagnostics)). All other runtime metrics are dropped to keep ingestion volume low
 - **Tracing**: ASP.NET Core request traces (health probe endpoints excluded), HTTP client dependency traces
 
 When `APPLICATIONINSIGHTS_CONNECTION_STRING` is set, `UseAzureMonitor()` exports all three signals to Application Insights. When `OTEL_EXPORTER_OTLP_ENDPOINT` is set (local dev), `UseOtlpExporter()` sends the same signals to the Aspire Dashboard. Both exporters can run simultaneously.
@@ -92,6 +92,27 @@ Tests are only created when `primaryHosts` is non-empty in the Bicep deployment.
 ## App Service Plan Memory Alert
 
 The API and Web sites share one App Service Plan. When its memory runs out both sites freeze for several minutes and then restart, which shows up as a burst of HTTP 5xx (and the **Failed HTTP requests** alert). The **App Service Plan memory** alert (`alert-prod-appservice-memory` in `infra/modules/alerts.bicep`, severity 2) fires when the plan's `MemoryPercentage` averages above 85% over 15 minutes, so a saturated plan is reported before it causes errors. Like the other alerts it notifies `ag-techhub-ops`.
+
+## Memory Diagnostics
+
+Both sites report what their memory is made of, so a spike in the plan's memory can be traced to an app and a cause.
+
+| Metric | Meaning |
+|--------|---------|
+| `dotnet.gc.last_collection.heap.size` | Live managed heap after the last GC, per generation (`gen0`, `gen1`, `gen2`, `loh`, `poh`) |
+| `dotnet.gc.last_collection.heap.fragmentation.size` | Unusable space in each generation |
+| `dotnet.gc.last_collection.memory.committed_size` | Memory the GC has committed from the OS |
+| `dotnet.gc.heap.total_allocated` | Total bytes allocated, whose growth shows the allocation rate (compare with request counts per route) |
+| `dotnet.gc.pause.time`, `dotnet.gc.collections` | Time spent paused in GC and number of collections per generation |
+| `dotnet.process.memory.working_set` | Process working set |
+| `techhub.cache.entries` | Entries in the in-memory cache (API and Web) |
+| `techhub.circuits.open`, `techhub.circuits.connected` | Blazor circuits on the server and how many have a client attached (Web). The difference is the retained disconnected circuits |
+
+Only these runtime metrics are exported. The runtime meters emit many more series, which once generated about 8 GB a month, so everything else is dropped in `ConfigureOpenTelemetry`.
+
+When `DOTNET_GCHeapHardLimit` is set (production), `MemoryDiagnosticsService` also logs one warning, at most every 5 minutes, once the live heap after the last full (gen2) GC reaches 80% of that limit. Live means the generation sizes without their free space, and a given GC is only reported once, so an unchanged snapshot is never repeated. The warning contains the live size per generation, committed memory, fragmentation, pinned objects, GC counts, threads and queued work items, plus every probe value (circuits, cache entries). Find it in the `traces` table by searching for `Live managed heap after full GC`. The probes are registered with `AddMemoryDiagnosticsProbe`, so adding another number only needs one registration.
+
+These metrics show whether the managed heap, large objects or something outside the heap (the process working set minus the heap) is growing, and what the app held at that moment. They cannot name the objects. For that, take a memory dump or `dotnet-gcdump` while the problem is happening, which requires a deliberate, temporary SCM access rule (see [network-architecture.md](network-architecture.md#app-service-publishing-and-diagnostics)).
 
 ## Not-Found Failure Tracking
 
@@ -197,6 +218,8 @@ The MCP server at `/mcp` emits two kinds of signals, both exported through the r
 ## Implementation Reference
 
 - [Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) - OpenTelemetry configuration and exporter setup
+- [MemoryDiagnostics.cs](../src/TechHub.ServiceDefaults/MemoryDiagnostics.cs) - Memory probes, metrics and the high-heap snapshot warning
+- [CircuitCountHandler.cs](../src/TechHub.Web/Services/CircuitCountHandler.cs) - Open and connected Blazor circuit counts
 - [Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) (`ConfigureOpenTelemetry`) - Inline `options.Filter` excludes health probes and scanner probes via `ProbeDetector.IsProbeRequest()` before any span is created
 - [WebTelemetryFilters.cs](../src/TechHub.Web/Telemetry/WebTelemetryFilters.cs) - Web-specific trace filters: suppresses `/_blazor/disconnect` 499s, bot requests, and clears `ActivityTraceFlags.Recorded` for 404/405 responses via `SuppressIfClientError`
 - [McpTelemetry.cs](../src/TechHub.Web/MCP/McpTelemetry.cs) - MCP content metrics and activity source

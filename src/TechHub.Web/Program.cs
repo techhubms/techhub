@@ -224,11 +224,32 @@ builder.Services.AddSignalR(options =>
     options.MaximumReceiveMessageSize = 256 * 1024; // 256KB
 });
 
-// Increase disconnected circuit retention so mobile users switching apps can reconnect
+// Circuit counts, exported as metrics and included in memory snapshot logs (see MemoryDiagnosticsService).
+builder.Services.AddSingleton<CircuitCountHandler>();
+builder.Services.AddSingleton<Microsoft.AspNetCore.Components.Server.Circuits.CircuitHandler>(
+    sp => sp.GetRequiredService<CircuitCountHandler>());
+builder.Services.AddMemoryDiagnosticsProbe("circuits.open", sp =>
+{
+    var handler = sp.GetRequiredService<CircuitCountHandler>();
+    return () => handler.Open;
+});
+builder.Services.AddMemoryDiagnosticsProbe("circuits.connected", sp =>
+{
+    var handler = sp.GetRequiredService<CircuitCountHandler>();
+    return () => handler.Connected;
+});
+
+// Disconnected circuits (dropped connections: mobile app switches, bots, abandoned tabs) hold their
+// component tree in memory until they expire. Keep that window short and the count bounded: this is a
+// read-mostly site, and a client whose circuit is gone gets the "Reload page" / "Resume" prompt.
+// Evicted circuits also persist their state in memory for resume, so cap that store as well.
 builder.Services.AddOptions<Microsoft.AspNetCore.Components.Server.CircuitOptions>()
     .Configure(options =>
     {
-        options.DisconnectedCircuitRetentionPeriod = TimeSpan.FromMinutes(5);
+        options.DisconnectedCircuitRetentionPeriod = TimeSpan.FromMinutes(1);
+        options.DisconnectedCircuitMaxRetained = 50;
+        options.PersistedCircuitInMemoryRetentionPeriod = TimeSpan.FromMinutes(15);
+        options.PersistedCircuitInMemoryMaxRetained = 100;
         // Surface detailed errors in Development so unhandled circuit exceptions are visible
         if (builder.Environment.IsDevelopment())
         {

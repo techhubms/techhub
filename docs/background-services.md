@@ -28,7 +28,7 @@ The other API background services wait for `StartupStateService` before doing an
 
 ## Content Processing
 
-Fetches due enabled RSS feeds, categorizes new items with AI and writes them to `content_items`. It checks right after startup when scheduled runs are enabled, then every `IntervalMinutes` (default 1) using a periodic timer. Each feed has its own polling interval (default 60 minutes), measured from its persisted last check, including failed downloads. Idle checks create no job. Manual triggers check all enabled feeds immediately. After each run it clears the content cache, trims job history to `PurgeJobKeepCount` (500) and purges failed URL records older than `FailedUrlRetentionDays` (7) so they are retried. The pipeline itself is described in [content-processing.md](content-processing.md).
+Fetches due enabled RSS feeds, categorizes new items with AI and writes them to `content_items`. It checks right after startup when scheduled runs are enabled, then every `IntervalMinutes` (default 1) using a periodic timer. Each feed has its own polling interval (default 60 minutes), measured from its persisted last check, including failed downloads. Idle checks create no job. Manual triggers check all enabled feeds immediately. After each run it trims job history to `PurgeJobKeepCount` (500) and purges failed URL records older than `FailedUrlRetentionDays` (7) so they are retried. It clears the content cache only when the run added items, because clearing it after a run that found nothing new would force every page to rebuild its cached data from the database. The pipeline itself is described in [content-processing.md](content-processing.md).
 
 ## Roundup Generator
 

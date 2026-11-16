@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Data;
 
 namespace TechHub.Infrastructure.Repositories;
 
@@ -379,10 +380,7 @@ WHERE status = 'failed'
 
             // Batch updates using a temporary table for efficiency
             // (avoids 7000+ individual UPDATE round-trips)
-            if (_connection.State != ConnectionState.Open)
-            {
-                _connection.Open();
-            }
+            await _connection.EnsureOpenAsync(ct);
 
             using var tx = _connection.BeginTransaction();
             try

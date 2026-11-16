@@ -117,7 +117,10 @@ Kudu console, App Service SSH, and SCM-based log streaming are unavailable, incl
 admin IPs. PR deployment failures report site state and recent management activity instead
 of container log streams. Management activity does not include container stdout or startup
 logs. Production application telemetry remains available through Application Insights and
-Log Analytics. Diagnostic access requiring SCM needs a deliberate, temporary access-rule
+Log Analytics, and the production sites send their App Service platform logs
+(`AppServicePlatformLogs`: container start, stop and exit codes such as 137 for out of memory)
+to the Log Analytics workspace, so container restarts can be investigated without SCM access.
+Other diagnostic access requiring SCM needs a deliberate, temporary access-rule
 change that is removed afterwards.
 
 ## Key Vault

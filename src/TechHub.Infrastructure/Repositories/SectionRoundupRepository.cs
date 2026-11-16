@@ -7,6 +7,7 @@ using Dapper;
 using Microsoft.Extensions.Logging;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Data;
 
 namespace TechHub.Infrastructure.Repositories;
 
@@ -362,10 +363,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         var computedHash = Convert.ToHexString(
             SHA256.HashData(Encoding.UTF8.GetBytes(content)));
 
-        if (_connection.State != ConnectionState.Open)
-        {
-            _connection.Open();
-        }
+        await _connection.EnsureOpenAsync(ct);
 
         using var transaction = _connection.BeginTransaction();
 

@@ -4,6 +4,7 @@ using Dapper;
 using Microsoft.Extensions.Logging;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Data;
 
 namespace TechHub.Infrastructure.Repositories;
 
@@ -48,7 +49,7 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
     {
         ArgumentNullException.ThrowIfNull(item);
 
-        using var transaction = BeginTransaction();
+        using var transaction = await BeginTransactionAsync(ct);
         try
         {
             await UpsertAsync(item, transaction, ct);
@@ -69,13 +70,9 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
         }
     }
 
-    private IDbTransaction BeginTransaction()
+    private async Task<IDbTransaction> BeginTransactionAsync(CancellationToken ct)
     {
-        if (_connection.State != ConnectionState.Open)
-        {
-            _connection.Open();
-        }
-
+        await _connection.EnsureOpenAsync(ct);
         return _connection.BeginTransaction();
     }
 
@@ -207,7 +204,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
     /// <inheritdoc />
     public async Task UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadataJson, CancellationToken ct = default)
     {
-        using var transaction = BeginTransaction();
+        using var transaction = await BeginTransactionAsync(ct);
         try
         {
             await ExecuteUpdateAiMetadataAsync(collectionName, slug, aiMetadataJson, transaction, ct);
@@ -230,7 +227,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
 
     private async Task<bool> UpdateAiMetadataIfUnchangedCoreAsync(string collectionName, string slug, string aiMetadataJson, TimelineEventReplacement? timeline, long expectedRevision, bool keepStoredProducts, CancellationToken ct)
     {
-        using var transaction = BeginTransaction();
+        using var transaction = await BeginTransactionAsync(ct);
         try
         {
             // Lock the article first, then compare: an edit that committed meanwhile is visible and an edit that is

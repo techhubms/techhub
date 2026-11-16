@@ -30,6 +30,10 @@ TechHub uses **global InteractiveServer** render mode with prerendering enabled.
 | **SEO preserved** | Prerendering ensures search engines see complete HTML |
 | **No mixed-mode complexity** | Eliminates SSR boundary issues, parameter serialization problems |
 
+## Circuit Retention
+
+Every page view opens a circuit, and a circuit that drops without a clean close (a phone switching apps, a bot, an abandoned tab) stays in server memory until it expires. `Program.cs` keeps this bounded: disconnected circuits are retained for 1 minute (at most 50), and the in-memory store of persisted circuit state used by the **Resume** button keeps at most 100 circuits for 15 minutes. A client whose circuit is gone sees the reconnect modal (see [page-structure.md](page-structure.md#reconnect-modal)) and reloads or resumes, so the cost of a short window is one click, not lost content.
+
 ## Component Lifecycle: `OnInitializedAsync` vs `OnParametersSetAsync`
 
 Blazor components have two key lifecycle methods for loading data:

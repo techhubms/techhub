@@ -3,6 +3,7 @@ using Dapper;
 using Microsoft.Extensions.Logging;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.Admin;
+using TechHub.Infrastructure.Data;
 
 namespace TechHub.Infrastructure.Repositories;
 
@@ -108,10 +109,7 @@ public sealed class ContentReviewRepository : IContentReviewRepository
     /// <inheritdoc/>
     public async Task<bool> ApproveAsync(long id, CancellationToken ct = default)
     {
-        if (_connection.State != ConnectionState.Open)
-        {
-            _connection.Open();
-        }
+        await _connection.EnsureOpenAsync(ct);
 
         using var transaction = _connection.BeginTransaction();
         var pending = await GetPendingForApprovalAsync(id, 1, transaction, ct);
@@ -170,10 +168,7 @@ public sealed class ContentReviewRepository : IContentReviewRepository
     /// <inheritdoc/>
     public async Task<int> ApproveAllAsync(CancellationToken ct = default)
     {
-        if (_connection.State != ConnectionState.Open)
-        {
-            _connection.Open();
-        }
+        await _connection.EnsureOpenAsync(ct);
 
         using var transaction = _connection.BeginTransaction();
         var pending = await GetPendingForApprovalAsync(null, 10000, transaction, ct);
