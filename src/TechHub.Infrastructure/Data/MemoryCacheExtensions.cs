@@ -128,28 +128,22 @@ public static class MemoryCacheExtensions
         }
 
         // An entry is committed to the cache on Dispose, and only when its value was set.
-        var entry = cache.CreateEntry(key);
-        try
+        using var entry = cache.CreateEntry(key);
+        var value = await factory(entry);
+
+        // Publishing and invalidating share a gate, so a result computed before an invalidation can't land after it.
+        // Disposing inside the gate commits the entry; the disposal at scope end is then a no-op (Dispose is idempotent).
+        lock (state.Gate)
         {
-            var value = await factory(entry);
-
-            // Publishing and invalidating share a gate, so a result computed before an invalidation can't land after it.
-            lock (state.Gate)
+            if (ReferenceEquals(state.Current, generation))
             {
-                if (ReferenceEquals(state.Current, generation))
-                {
-                    entry.Value = value;
-                }
-
-                entry.Dispose();
+                entry.Value = value;
             }
 
-            return value;
-        }
-        finally
-        {
             entry.Dispose();
         }
+
+        return value;
     }
 
     private sealed class FlightState

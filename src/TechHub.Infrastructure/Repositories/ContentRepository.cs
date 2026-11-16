@@ -1643,6 +1643,11 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             Slug = slug
         };
 
+        if (Connection.State != ConnectionState.Open)
+        {
+            Connection.Open();
+        }
+
         using var transaction = Connection.BeginTransaction();
         try
         {

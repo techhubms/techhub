@@ -124,6 +124,16 @@ public class ContentSyncService : IContentSyncService
         return await IncrementalSyncAsync(ct);
     }
 
+    private IDbTransaction BeginTransaction()
+    {
+        if (_connection.State != ConnectionState.Open)
+        {
+            _connection.Open();
+        }
+
+        return _connection.BeginTransaction();
+    }
+
     public async Task<bool> HasContentAsync(CancellationToken ct = default)
     {
         var count = await _connection.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM content_items");
@@ -141,7 +151,7 @@ public class ContentSyncService : IContentSyncService
             await DisableIndexesAndTriggersAsync();
 
             // Start transaction
-            var transaction = _connection.BeginTransaction();
+            var transaction = BeginTransaction();
 
             try
             {
@@ -175,7 +185,7 @@ public class ContentSyncService : IContentSyncService
             var (added, updated, deleted, unchanged, _) = await SyncContentAsync(ct, bulkModeAlreadyEnabled: true);
 
             // Update sync metadata in separate transaction
-            var metaTrans = _connection.BeginTransaction();
+            var metaTrans = BeginTransaction();
             try
             {
                 await UpdateSyncMetadataAsync(added, metaTrans);
@@ -234,7 +244,7 @@ public class ContentSyncService : IContentSyncService
             var (added, updated, deleted, unchanged, usedBulkMode) = await SyncContentAsync(ct);
 
             // Update sync metadata in separate transaction
-            var transaction = _connection.BeginTransaction();
+            var transaction = BeginTransaction();
             try
             {
                 // Total items = new items + updated items + unchanged items
@@ -323,7 +333,7 @@ public class ContentSyncService : IContentSyncService
             for (int i = 0; i < deletedFiles.Count; i += BatchSize)
             {
                 var batch = deletedFiles.Skip(i).Take(BatchSize);
-                var transaction = _connection.BeginTransaction();
+                var transaction = BeginTransaction();
                 try
                 {
                     foreach (var compositeId in batch)
@@ -364,7 +374,7 @@ public class ContentSyncService : IContentSyncService
         {
             var batchStopwatch = Stopwatch.StartNew();
             var batch = parsedFiles.Skip(i).Take(WriteBatchSize).ToList();
-            var transaction = _connection.BeginTransaction();
+            var transaction = BeginTransaction();
             var itemStopwatch = Stopwatch.StartNew();
             var totalDeleteMs = 0L;
             var totalInsertContentMs = 0L;

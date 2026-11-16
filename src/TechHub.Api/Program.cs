@@ -109,10 +109,11 @@ builder.Services.AddSingleton(_ => NpgsqlDataSourceFactory.Create(connectionStri
 builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
 builder.Services.AddSingleton<IDbConnectionFactory>(sp =>
     new PostgresConnectionFactory(sp.GetRequiredService<NpgsqlDataSource>()));
-// The scoped connection takes a pooled connection on first use, not at resolution, so cache hits
-// and single-flight waiters never hold one.
+// The scoped connection is created closed. Dapper opens it for a statement (with the request's cancellation
+// token) and returns it to the pool afterwards; transactions open it explicitly. Cache hits and single-flight
+// waiters therefore never hold a pooled connection, and a cancelled request stops waiting on a full pool.
 builder.Services.AddScoped<IDbConnection>(sp =>
-    new LazyDbConnection(sp.GetRequiredService<NpgsqlDataSource>()));
+    sp.GetRequiredService<NpgsqlDataSource>().CreateConnection());
 builder.Services.AddTransient<IContentRepository, ContentRepository>();
 builder.Services.AddTransient<IGhcFeatureRepository, GhcFeatureRepository>();
 builder.Services.AddSingleton(TimeProvider.System);
