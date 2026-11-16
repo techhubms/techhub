@@ -235,7 +235,9 @@ public static partial class AdminEndpoints
         }
         finally
         {
-            if (!HttpMethods.IsGet(context.HttpContext.Request.Method))
+            if (!HttpMethods.IsGet(context.HttpContext.Request.Method)
+                && context.HttpContext.GetEndpoint()?.Metadata
+                    .GetMetadata<Microsoft.AspNetCore.Routing.IEndpointNameMetadata>()?.EndpointName != "PreviewMarkdown")
             {
                 context.HttpContext.RequestServices.GetRequiredService<IContentRepository>().InvalidateCachedData();
             }
