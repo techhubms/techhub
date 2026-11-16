@@ -164,8 +164,9 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' existin
 var keyVaultUri = 'https://${keyVaultName}${environment().suffixes.keyvaultDns}/'
 var aadClientSecretSecretName = 'techhub-prod-aad-client-secret'
 // Only the API connects to PostgreSQL. Maximum Pool Size caps its connections per process (the Npgsql default is
-// 100). The Standard_B1ms server allows about 50 connections and the connection alert fires at 40, so two
-// processes overlapping during a restart (2 x 15 = 30) stay below both, leaving room for admin and migration sessions.
+// 100). The server's max_connections is high (859) but every connection is a backend process on a 2 GiB B1ms, and
+// the daily peak of active connections reached 209 with the default pool, so the cap keeps restart overlap
+// (2 x 15 = 30) and bursts from eating the server's memory.
 var dbConnectionString = 'Host=${postgresServer.properties.fullyQualifiedDomainName};Database=${postgresDatabase.name};Username=${prodIdentityName};SSL Mode=Require;Maximum Pool Size=15'
 var allCustomDomains = [for entry in items(wildcardCertNames): '*.${entry.key}']
 // Resolve App Insights connection string: use override when provided, otherwise read from existing resource.
