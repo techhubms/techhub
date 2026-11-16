@@ -212,7 +212,7 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   overflow: clip;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
-  margin-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-2);
 }
 
 .feature-card-thumbnail img {
