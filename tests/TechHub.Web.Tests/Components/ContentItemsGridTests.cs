@@ -390,6 +390,45 @@ public class ContentItemsGridTests : BunitContext
     }
 
     [Fact]
+    public void ContentItemsGrid_OlderSearchCompletesAfterANewerOne_IgnoresTheOlderResponse()
+    {
+        // Arrange: the responses of the two searches are completed in reverse order
+        var older = new TaskCompletionSource<CollectionItemsResponse?>();
+        var newer = new TaskCompletionSource<CollectionItemsResponse?>();
+        SetupSearch("harnass", older.Task);
+        SetupSearch("kubernetes", newer.Task);
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+        cut.Render(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "kubernetes"));
+        var kubernetesItem = new ContentItemBuilder().WithSlug("kubernetes-item").WithTitle("Kubernetes news").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        var harnessItem = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+
+        // Act
+        newer.SetResult(new CollectionItemsResponse([kubernetesItem], 1));
+        cut.WaitForAssertion(() => cut.Markup.Should().Contain("Kubernetes news"));
+        older.SetResult(new CollectionItemsResponse([harnessItem], 1, "harness"));
+
+        // Assert
+        cut.FindAll(".search-correction").Should().BeEmpty();
+        cut.Markup.Should().Contain("Kubernetes news").And.NotContain("The harness");
+    }
+
+    private void SetupSearch(string query, Task<CollectionItemsResponse?> response) =>
+        _mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                "github-copilot", "news",
+                It.IsAny<int?>(), It.IsAny<int?>(),
+                query, It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .Returns(response);
+    [Fact]
     public void ContentItemsGrid_SearchWasCorrected_KeepsTheMessageWhenTheStateIsRestored()
     {
         // Arrange: the first grid loads and fills the circuit cache that a back navigation restores from

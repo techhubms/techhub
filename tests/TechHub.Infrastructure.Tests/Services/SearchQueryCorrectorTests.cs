@@ -22,7 +22,7 @@ public class SearchQueryCorrectorTests : IClassFixture<DatabaseFixture<SearchQue
 
     private static CancellationToken Ct => TestContext.Current.CancellationToken;
 
-    private SearchQueryCorrector CreateCorrector() => new(_fixture.Connection, _cache);
+    private SearchQueryCorrector CreateCorrector() => new(_fixture.Connection, _cache, new PostgresDialect());
 
     private async Task SeedAsync(string title, string excerpt = "", string content = "", string tags = "")
     {
@@ -156,5 +156,20 @@ public class SearchQueryCorrectorTests : IClassFixture<DatabaseFixture<SearchQue
 
         // Assert
         corrected.Should().Be("zumbline");
+    }
+
+    [Fact]
+    public async Task CorrectAsync_WordThatOnlyItsCompoundExpansionMatches_IsLeftAlone()
+    {
+        // Arrange: no word starts with "openai", but the search expands it to "open", which the third article has
+        await SeedAsync("Openapi specification");
+        await SeedAsync("Openapi tooling");
+        await SeedAsync("Open source in practice");
+
+        // Act
+        var corrected = await CreateCorrector().CorrectAsync("openai", Ct);
+
+        // Assert
+        corrected.Should().BeNull("the search finds results for this query, so it is not a typo");
     }
 }

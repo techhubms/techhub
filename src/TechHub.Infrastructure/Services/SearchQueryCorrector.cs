@@ -9,7 +9,7 @@ namespace TechHub.Infrastructure.Services;
 
 /// <summary>
 /// PostgreSQL implementation of <see cref="ISearchQueryCorrector"/>. A word is unknown when the full-text index has no word that
-/// starts with it (the same test as the search itself, which matches word beginnings). The replacement comes from the words of
+/// starts with it (the same test as the search itself, which matches word beginnings and expands compound words). The replacement comes from the words of
 /// the titles, excerpts and tags, which is where people look for names, as long as the same prefix test finds it. It needs no database extension.
 /// </summary>
 public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
@@ -23,14 +23,17 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
 
     private readonly IDbConnection _connection;
     private readonly IMemoryCache _cache;
+    private readonly ISqlDialect _dialect;
 
-    public SearchQueryCorrector(IDbConnection connection, IMemoryCache cache)
+    public SearchQueryCorrector(IDbConnection connection, IMemoryCache cache, ISqlDialect dialect)
     {
         ArgumentNullException.ThrowIfNull(connection);
         ArgumentNullException.ThrowIfNull(cache);
+        ArgumentNullException.ThrowIfNull(dialect);
 
         _connection = connection;
         _cache = cache;
+        _dialect = dialect;
     }
 
     [GeneratedRegex("[a-zA-Z0-9]+")]
@@ -104,16 +107,19 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
             return known;
         }
 
-        // Terms contain letters and digits only, so they cannot change the tsquery
+        // The same query transformation as the search itself (prefix match plus the expansion of compound words such as
+        // "openai" to "open"), so a term the search finds results for is never called unknown
         const string Sql = """
             SELECT t.term
-            FROM unnest(@Terms) AS t(term)
-            WHERE EXISTS (SELECT 1 FROM content_items c WHERE c.search_vector @@ to_tsquery('simple', t.term || ':*'))
+            FROM unnest(@Terms, @Queries) AS t(term, query)
+            WHERE EXISTS (SELECT 1 FROM content_items c WHERE c.search_vector @@ to_tsquery('simple', t.query))
             """;
+        var checkTerms = toCheck.ToArray();
+        var queries = checkTerms.Select(_dialect.TransformFullTextQuery).ToArray();
         // A result is only cached when no invalidation happened during the lookup, or it could bring back a word whose articles were just removed
         var generation = _cache.GetGeneration();
         var found = await _connection.QueryAsync<string>(
-            new CommandDefinition(Sql, new { Terms = toCheck.ToArray() }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { Terms = checkTerms, Queries = queries }, cancellationToken: ct));
         foreach (var term in found)
         {
             known.Add(term);

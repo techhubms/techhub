@@ -144,6 +144,7 @@
     private List<ContentItem> contentItems = [];
     private long totalCount;
     private string? correctedQuery;
+    private int loadGeneration;
     private bool isLoading = true;
     private bool isLoadingMore;
     private bool hasMoreContent = true;
@@ -299,6 +300,7 @@
 
     private async Task LoadInitialBatch()
     {
+        var generation = ++loadGeneration;
         contentItems.Clear();
         currentBatch = 1;
         hasMoreContent = true;
@@ -311,20 +313,31 @@
         {
             await LoadBatch(1);
         }
-        catch (Exception ex)
+        catch (Exception ex) when (generation == loadGeneration)
         {
             Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName.Sanitize(), CollectionName.Sanitize());
             errorMessage = "Unable to load content";
         }
+        catch (Exception ex)
+        {
+            Logger.LogDebug(ex, "Ignoring the failure of a load that a newer search replaced");
+        }
         finally
         {
-            isLoading = false;
-            StateHasChanged();
+            // A newer search owns the loading state
+            if (generation == loadGeneration)
+            {
+                isLoading = false;
+                StateHasChanged();
+            }
         }
     }
 
     private async Task LoadBatch(int batch)
     {
+        // The response of a search that a newer search replaced must neither change the grid nor fill the cache under the new key
+        var generation = loadGeneration;
+        var stateKey = GetStateKey();
         var skip = (batch - 1) * BatchSize;
 
         // Build tags parameter for API (comma-separated list)
@@ -350,6 +363,11 @@
                 types: ContentTypes,
                 exact: ExactMatch);
 
+        if (generation != loadGeneration)
+        {
+            return;
+        }
+
         var newItems = result?.Items.ToList() ?? [];
 
         // Update total count from API response (always reflects current filters)
@@ -365,7 +383,7 @@
         }
 
         // Update circuit-scoped cache so back-navigation can restore all loaded items
-        GridStateCache.Set(GetStateKey(), contentItems, currentBatch, hasMoreContent, totalCount, correctedQuery);
+        GridStateCache.Set(stateKey, contentItems, currentBatch, hasMoreContent, totalCount, correctedQuery);
     }
 
     private async Task LoadNextBatch()
