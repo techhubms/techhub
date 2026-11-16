@@ -242,6 +242,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         finally
         {
             await phone.CloseAsync();
+            RateLimitGuard.ThrowIfRateLimited(phone);
         }
     }
 
