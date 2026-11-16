@@ -57,10 +57,10 @@ internal static class TimelineEventWriter
             await connection.ExecuteAsync(new CommandDefinition(
                 """
                 INSERT INTO content_timeline_events
-                    (collection_name, item_slug, kind, product, feature, description,
+                    (collection_name, item_slug, kind, product, feature, title, description,
                      event_date, date_precision, date_source, quote, extracted_from)
                 VALUES
-                    (@CollectionName, @Slug, @Kind, @Product, @Feature, @Description,
+                    (@CollectionName, @Slug, @Kind, @Product, @Feature, @Title, @Description,
                      @EventDate, @DatePrecision, @DateSource, @Quote, @ExtractedFrom)
                 """,
                 new
@@ -70,6 +70,7 @@ internal static class TimelineEventWriter
                     timelineEvent.Kind,
                     timelineEvent.Product,
                     timelineEvent.Feature,
+                    timelineEvent.Title,
                     timelineEvent.Description,
                     EventDate = timelineEvent.Date.ToDateTime(TimeOnly.MinValue),
                     timelineEvent.DatePrecision,

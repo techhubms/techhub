@@ -26,6 +26,9 @@ public sealed record StoredTimelineEvent
     /// <summary>One line describing what happens.</summary>
     public required string Description { get; init; }
 
+    /// <summary>Short headline of the event, or <c>null</c> when it has none.</summary>
+    public string? Title { get; init; }
+
     /// <summary>Date of the event (first day of the month or quarter for coarse precision).</summary>
     public required DateOnly EventDate { get; init; }
 

@@ -9,7 +9,7 @@ namespace TechHub.Core.Interfaces;
 public interface ITimelineEventRepository
 {
     /// <summary>Version of the extraction prompt and rules (products, features and events). Bump it to re-extract older articles.</summary>
-    const int CurrentPromptVersion = 10;
+    const int CurrentPromptVersion = 11;
 
     /// <summary>Events were extracted while the article was processed (the source text was available).</summary>
     const string ExtractedFromSource = "source";

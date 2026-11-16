@@ -59,13 +59,14 @@ public class SectionTimelineTests : BunitContext
         JSInterop.SetupVoid("preventScrollOnExpand").SetVoidResult();
     }
 
-    private static TimelineEntry GaEntry(string product = "GitHub Copilot", string? feature = "Agent mode", string kind = "ga", string precision = "day", DateOnly? date = null) => new()
+    private static TimelineEntry GaEntry(string product = "GitHub Copilot", string? feature = "Agent mode", string kind = "ga", string precision = "day", DateOnly? date = null, string? title = null) => new()
     {
         Date = date ?? new DateOnly(2026, 3, 10),
         DatePrecision = precision,
         Kind = kind,
         Product = product,
         Feature = feature,
+        Title = title,
         Description = $"{kind} of {feature ?? product}",
         Sources =
         [
@@ -134,6 +135,34 @@ public class SectionTimelineTests : BunitContext
         var cut = RenderPage();
 
         cut.Find(".timeline-entry-date").TextContent.Should().Be(expected);
+    }
+
+    [Theory]
+    [InlineData("Azure App Service", null, "Java 8, 11 and 17 support ends", "Azure App Service: Java 8, 11 and 17 support ends")]
+    [InlineData("Azure App Service", "Runtimes", "Java 8, 11 and 17 support ends", "Azure App Service: Java 8, 11 and 17 support ends")]
+    [InlineData("Artificial Intelligence", null, "GPT-4.1 deprecated", "GPT-4.1 deprecated")]
+    [InlineData("Azure App Service", null, "Azure App Service drops Java 8", "Azure App Service drops Java 8")]
+    public void Render_EventWithATitle_UsesItAsTheCardTitle(string product, string? feature, string title, string expected)
+    {
+        _mockApiClient
+            .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync([GaEntry(product, feature, kind: "end-of-support", title: title)]);
+
+        var cut = RenderPage();
+
+        cut.Find(".timeline-name").TextContent.Should().Be(expected);
+    }
+
+    [Fact]
+    public void Render_EventWithoutATitle_FallsBackToTheProductAndFeature()
+    {
+        _mockApiClient
+            .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync([GaEntry("Azure App Service", "Runtimes", title: "  ")]);
+
+        var cut = RenderPage();
+
+        cut.Find(".timeline-name").TextContent.Should().Be("Azure App Service: Runtimes");
     }
 
     [Fact]

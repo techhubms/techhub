@@ -22,6 +22,7 @@ Each event has these fields:
   - `event`: a conference or other dated event
 - `product`: the product, named by the rules above: no plan, edition, editor or version in the name
 - `feature`: the feature within the product, named by the rules above, or `null` when the event is about the whole product
+- `title`: a headline of at most 80 characters that says **what exactly** happens, so a reader of a timeline understands the card without opening it. Name the specific thing that is affected and the change, not the product alone: a card that only says "Azure App Service: End of support" does not tell which part ends. Do not repeat the product name when the headline reads naturally without it, and do not put the date or the kind in the title (the card shows both). Examples: "Java 8, 11 and 17 support ends" (an event about runtimes inside a product, not about the product), "GPT-4.1 and o3 models deprecated", "Agent mode generally available in JetBrains", "Premium request multipliers change". Use a plain sentence fragment, no quotes and no trailing period
 - `description`: one line saying what happens
 - `date_source`: `explicit` when the article states the date, or `publication` when the article says it happens now (for example "is now generally available" or "starting today")
 - `date`: ISO date (`yyyy-MM-dd`) for `explicit`; `null` for `publication`. For a month use the first day of the month; for a quarter use the first day of the quarter.
