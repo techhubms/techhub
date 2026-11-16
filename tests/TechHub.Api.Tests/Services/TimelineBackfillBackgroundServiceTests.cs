@@ -133,6 +133,66 @@ public class TimelineBackfillBackgroundServiceTests
         cancelFailure.Should().BeNull();
     }
 
+    [Fact]
+    public async Task Run_WhenBackfillSucceeds_InvalidatesTheContentCache()
+    {
+        // Arrange
+        var completed = NewSignal();
+        var jobRepo = CreateJobRepo();
+        jobRepo.Setup(r => r.CompleteAsync(It.IsAny<long>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<int>(), It.IsAny<CancellationToken>()))
+            .Returns(() =>
+            {
+                completed.TrySetResult();
+                return Task.CompletedTask;
+            });
+
+        var backfill = new Mock<ITimelineBackfillService>();
+        backfill.Setup(b => b.RunAsync(It.IsAny<TimelineBackfillRequest>(), It.IsAny<Func<string, Task>>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new TimelineBackfillResult());
+
+        var contentRepo = new Mock<IContentRepository>();
+        var sut = CreateSut(jobRepo.Object, backfill.Object, contentRepo.Object);
+
+        // Act
+        await sut.StartAsync(TestContext.Current.CancellationToken);
+        sut.TriggerImmediateRun(new TimelineBackfillRequest());
+        await WaitAsync(completed);
+        await sut.StopAsync(CancellationToken.None);
+
+        // Assert
+        contentRepo.Verify(r => r.InvalidateCachedData(), Times.Once);
+    }
+
+    [Fact]
+    public async Task Run_WhenBackfillFails_StillInvalidatesTheContentCache()
+    {
+        // Arrange: a failed run may already have committed articles
+        var failed = NewSignal();
+        var jobRepo = CreateJobRepo();
+        jobRepo.Setup(r => r.FailAsync(It.IsAny<long>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<int>(), It.IsAny<CancellationToken>()))
+            .Returns(() =>
+            {
+                failed.TrySetResult();
+                return Task.CompletedTask;
+            });
+
+        var backfill = new Mock<ITimelineBackfillService>();
+        backfill.Setup(b => b.RunAsync(It.IsAny<TimelineBackfillRequest>(), It.IsAny<Func<string, Task>>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new InvalidOperationException("boom"));
+
+        var contentRepo = new Mock<IContentRepository>();
+        var sut = CreateSut(jobRepo.Object, backfill.Object, contentRepo.Object);
+
+        // Act
+        await sut.StartAsync(TestContext.Current.CancellationToken);
+        sut.TriggerImmediateRun(new TimelineBackfillRequest());
+        await WaitAsync(failed);
+        await sut.StopAsync(CancellationToken.None);
+
+        // Assert
+        contentRepo.Verify(r => r.InvalidateCachedData(), Times.Once);
+    }
+
     private static void TriggerWhenAccepted(TimelineBackfillBackgroundService sut)
     {
         var deadline = DateTime.UtcNow.AddSeconds(10);
@@ -156,7 +216,7 @@ public class TimelineBackfillBackgroundServiceTests
         return jobRepo;
     }
 
-    private static TimelineBackfillBackgroundService CreateSut(IContentProcessingJobRepository jobRepo, ITimelineBackfillService backfill)
+    private static TimelineBackfillBackgroundService CreateSut(IContentProcessingJobRepository jobRepo, ITimelineBackfillService backfill, IContentRepository? contentRepo = null)
     {
         var startupState = new StartupStateService();
         startupState.MarkStartupCompleted();
@@ -164,6 +224,7 @@ public class TimelineBackfillBackgroundServiceTests
         var services = new ServiceCollection();
         services.AddScoped(_ => jobRepo);
         services.AddScoped(_ => backfill);
+        services.AddScoped(_ => contentRepo ?? Mock.Of<IContentRepository>());
 
         return new TimelineBackfillBackgroundService(
             services.BuildServiceProvider(),

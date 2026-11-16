@@ -1,8 +1,10 @@
 using System.Globalization;
 using Dapper;
 using FluentAssertions;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging.Abstractions;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
@@ -15,6 +17,7 @@ namespace TechHub.Infrastructure.Tests.Repositories;
 public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatureRepositoryTests>>
 {
     private readonly DatabaseFixture<GhcFeatureRepositoryTests> _fixture;
+    private readonly MemoryCache _cache = new(new MemoryCacheOptions());
     private readonly GhcFeatureRepository _repository;
     private readonly ProductRepository _products;
     private readonly ProductFeatureRepository _features;
@@ -23,7 +26,7 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
     public GhcFeatureRepositoryTests(DatabaseFixture<GhcFeatureRepositoryTests> fixture)
     {
         _fixture = fixture;
-        _repository = new GhcFeatureRepository(fixture.Connection);
+        _repository = new GhcFeatureRepository(fixture.Connection, _cache);
         _products = new ProductRepository(fixture.Connection, NullLogger<ProductRepository>.Instance);
         _features = new ProductFeatureRepository(fixture.Connection, NullLogger<ProductFeatureRepository>.Instance);
         _timeline = new TimelineEventRepository(fixture.Connection);
@@ -336,6 +339,46 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         var result = await _repository.GetFeaturesWithContentAsync($"No product {Guid.NewGuid():N}", Ct);
 
         result.Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task GetFeaturesWithContentAsync_CalledAgain_ServesTheCachedResultUntilTheCacheIsInvalidated()
+    {
+        // Arrange
+        var product = await CreateProductAsync();
+        var featureId = await CreateFeatureAsync(product.Id, "Agent mode");
+        var first = await SeedItemAsync("news", "Agent mode article", "https://example.com/agent-mode");
+        (await _features.AddContentAsync(product.Id, featureId, "news", first, false, Ct)).Succeeded.Should().BeTrue();
+        var before = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+        var second = await SeedItemAsync("news", "Another agent mode article", "https://example.com/agent-mode-2");
+        (await _features.AddContentAsync(product.Id, featureId, "news", second, false, Ct)).Succeeded.Should().BeTrue();
+
+        // Act
+        var cached = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+        _cache.ClearSingleFlight();
+        var reloaded = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+
+        // Assert
+        before.Single().Content.Should().HaveCount(1);
+        cached.Should().BeSameAs(before, "the query is not run again while the result is cached");
+        reloaded.Single().Content.Should().HaveCount(2, "invalidating the cache makes the next call read the database again");
+    }
+
+    [Fact]
+    public async Task GetFeaturesWithContentAsync_ProductNameInADifferentCase_SharesTheCachedResult()
+    {
+        // Arrange
+        var product = await CreateProductAsync();
+        var featureId = await CreateFeatureAsync(product.Id, "Agent mode");
+        var item = await SeedItemAsync("news", "Agent mode article", "https://example.com/agent-mode");
+        (await _features.AddContentAsync(product.Id, featureId, "news", item, false, Ct)).Succeeded.Should().BeTrue();
+
+        // Act
+        var first = await _repository.GetFeaturesWithContentAsync(product.Name, Ct);
+        var second = await _repository.GetFeaturesWithContentAsync(product.Name.ToUpperInvariant(), Ct);
+
+        // Assert
+        second.Should().BeSameAs(first);
     }
 
     private async Task<(long Id, string Name)> CreateProductAsync(long? parentId = null)

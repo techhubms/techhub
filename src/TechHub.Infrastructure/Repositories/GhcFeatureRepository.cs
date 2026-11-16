@@ -1,7 +1,9 @@
 using System.Data;
 using Dapper;
+using Microsoft.Extensions.Caching.Memory;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
+using TechHub.Infrastructure.Data;
 
 namespace TechHub.Infrastructure.Repositories;
 
@@ -11,11 +13,17 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public sealed class GhcFeatureRepository : IGhcFeatureRepository
 {
-    private readonly IDbConnection _connection;
+    // The query resolves every feature name an article lists, so it takes ~200 ms. Freshness comes from invalidation
+    // (IContentRepository.InvalidateCachedData clears the shared cache); the TTL is a safety net.
+    private static readonly TimeSpan _featuresCacheTtl = TimeSpan.FromMinutes(30);
 
-    public GhcFeatureRepository(IDbConnection connection)
+    private readonly IDbConnection _connection;
+    private readonly IMemoryCache _cache;
+
+    public GhcFeatureRepository(IDbConnection connection, IMemoryCache cache)
     {
         _connection = connection;
+        _cache = cache;
     }
 
     /// <inheritdoc/>
@@ -23,6 +31,15 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(productName);
 
+        return await _cache.GetOrCreateSingleFlightAsync($"ghc-features:{productName.Trim().ToLowerInvariant()}", async entry =>
+        {
+            entry.SetAbsoluteExpiration(_featuresCacheTtl);
+            return await QueryFeaturesWithContentAsync(productName, ct);
+        }, ct);
+    }
+
+    private async Task<IReadOnlyList<SectionFeature>> QueryFeaturesWithContentAsync(string productName, CancellationToken ct)
+    {
         // The three sources of content are merged per item: the thumbnail and the admin's order win over a detected link. Roundups
         // state dates about everything, so they never count as content of a feature, not even when an admin linked one. The names an
         // article lists are resolved once per distinct (product, feature name) pair of the product tree, not once per article.

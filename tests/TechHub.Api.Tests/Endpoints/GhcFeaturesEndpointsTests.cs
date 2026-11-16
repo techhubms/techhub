@@ -3,6 +3,7 @@ using System.Net.Http.Json;
 using FluentAssertions;
 using TechHub.Api.Tests.TestSupport;
 using TechHub.Core.Models;
+using TechHub.Core.Models.Admin;
 
 namespace TechHub.Api.Tests.Endpoints;
 
@@ -38,6 +39,31 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         feature.Content[0].IsThumbnail.Should().BeTrue();
         feature.Content[0].ExternalUrl.Should().Be("https://youtu.be/abc123test1");
         feature.Content[0].GetYouTubeVideoId().Should().Be("abc123test1");
+    }
+
+    [Fact]
+    public async Task GetSectionFeatures_AfterAnAdminLinksContentToANewFeature_ShowsTheFeatureWithoutWaiting()
+    {
+        // Arrange: the first call fills the cache of the features page
+        var ct = TestContext.Current.CancellationToken;
+        var before = await _client.GetFromJsonAsync<List<SectionFeature>>("/api/sections/github-copilot/features", ct);
+        var existing = before!.First().Content[0];
+        var products = await _client.GetFromJsonAsync<List<ProductSummary>>("/api/admin/products", ct);
+        var productId = products!.Single(p => p.Name == "GitHub Copilot").Id;
+        var name = $"Cache test feature {Guid.NewGuid():N}";
+        var created = await _client.PostAsJsonAsync($"/api/admin/products/{productId}/features", new { name }, ct);
+        created.StatusCode.Should().Be(HttpStatusCode.Created);
+        var featureId = (await created.Content.ReadFromJsonAsync<ProductFeatureOverview>(ct))!.Features.Single(f => f.Name == name).Id;
+
+        // Act
+        var link = await _client.PostAsJsonAsync(
+            $"/api/admin/products/{productId}/features/{featureId}/content",
+            new { collectionName = existing.CollectionName, itemSlug = existing.ItemSlug, isThumbnail = false }, ct);
+        var after = await _client.GetFromJsonAsync<List<SectionFeature>>("/api/sections/github-copilot/features", ct);
+
+        // Assert
+        link.StatusCode.Should().Be(HttpStatusCode.OK);
+        after!.Should().Contain(f => f.Name == name, "an admin write clears the cache of the features page");
     }
 
     [Fact]
