@@ -78,8 +78,12 @@ public class MemoryDiagnosticsTests
     [Fact]
     public void ReadHeap_DescribesEveryGeneration()
     {
-        // Arrange
-        GC.Collect();
+        // Arrange — allocate until the runtime has completed a GC, so there is a heap snapshot to read
+        var collectionsAtStart = GC.CollectionCount(0);
+        while (GC.CollectionCount(0) == collectionsAtStart)
+        {
+            GC.KeepAlive(new byte[64 * 1024]);
+        }
 
         // Act
         var snapshot = MemoryDiagnosticsService.ReadHeap();

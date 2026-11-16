@@ -45,7 +45,7 @@ public class ContentProcessingServiceTests
         _timelineRepo = new TimelineEventRepository(fixture.Connection);
     }
 
-    private ContentProcessingService CreateService(ContentProcessorOptions? options = null, TimeProvider? timeProvider = null)
+    private ContentProcessingService CreateService(ContentProcessorOptions? options = null, TimeProvider? timeProvider = null, IProcessedUrlRepository? processedUrlRepo = null)
     {
         var opts = options ?? new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0" };
 
@@ -66,7 +66,7 @@ public class ContentProcessingServiceTests
             _youtubeTagService.Object,
             _writeRepo,
             _jobRepo,
-            _processedUrlRepo,
+            processedUrlRepo ?? _processedUrlRepo,
             _feedRepo.Object,
             _contentFixer.Object,
             timeProvider ?? TimeProvider.System,
@@ -305,6 +305,57 @@ public class ContentProcessingServiceTests
 
         // Assert
         result.JobStarted.Should().BeTrue();
+        result.ContentChanged.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task RunAsync_BookkeepingFailsAfterWriteCommitted_StillReportsContentChanged()
+    {
+        // Arrange — the article is stored, then recording it as processed fails
+        const string Url = "https://example.com/bookkeeping-failure-item";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var processedUrls = new Mock<IProcessedUrlRepository>();
+        processedUrls
+            .Setup(r => r.RecordSuccessAsync(It.IsAny<string>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<bool?>(), It.IsAny<long?>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new InvalidOperationException("bookkeeping failed"));
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([CreateRawItem(Url)]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = CreateProcessedItem(Url, "bookkeeping-failure-item"), Explanation = "relevant content" });
+
+        // Act
+        var result = await CreateService(processedUrlRepo: processedUrls.Object).RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — the committed write must still invalidate the content caches
+        result.ContentChanged.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task RunAsync_CancelledAfterWriteCommitted_StillReportsContentChanged()
+    {
+        // Arrange — the run is cancelled while the committed article is being recorded as processed
+        const string Url = "https://example.com/cancelled-after-commit-item";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        using var cts = new CancellationTokenSource();
+        var processedUrls = new Mock<IProcessedUrlRepository>();
+        processedUrls
+            .Setup(r => r.RecordSuccessAsync(It.IsAny<string>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<bool?>(), It.IsAny<long?>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .Returns(() =>
+            {
+                cts.Cancel();
+                throw new OperationCanceledException(cts.Token);
+            });
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([CreateRawItem(Url)]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = CreateProcessedItem(Url, "cancelled-after-commit-item"), Explanation = "relevant content" });
+
+        // Act
+        var result = await CreateService(processedUrlRepo: processedUrls.Object).RunAsync("scheduled", cts.Token);
+
+        // Assert
         result.ContentChanged.Should().BeTrue();
     }
 

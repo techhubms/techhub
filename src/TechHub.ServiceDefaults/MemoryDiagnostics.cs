@@ -150,7 +150,7 @@ public sealed class MemoryDiagnosticsService : BackgroundService
                 return $"{probe.Name}={probe.Read().ToString(CultureInfo.InvariantCulture)}";
             }
 #pragma warning disable CA1031 // A failing probe must not stop the snapshot that explains a memory problem
-            catch (Exception)
+            catch (Exception ex) when (ex is not (OutOfMemoryException or StackOverflowException or AccessViolationException))
 #pragma warning restore CA1031
             {
                 return $"{probe.Name}=n/a";

@@ -1892,7 +1892,7 @@ LIMIT @Limit OFFSET @Offset";
     {
         if (Cache is MemoryCache memoryCache)
         {
-            memoryCache.Clear();
+            memoryCache.ClearSingleFlight();
             _logger?.LogInformation("Content cache invalidated");
         }
     }

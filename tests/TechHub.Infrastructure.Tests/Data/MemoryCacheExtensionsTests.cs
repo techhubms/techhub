@@ -192,4 +192,68 @@ public class MemoryCacheExtensionsTests
         // Assert
         calls.Should().Be(2);
     }
+
+    [Fact]
+    public async Task ClearSingleFlight_LookupStartedBeforeInvalidation_IsNeitherJoinedNorPublished()
+    {
+        // Arrange — a lookup that began before the data changed is still running when the cache is invalidated
+        using var cache = new MemoryCache(new MemoryCacheOptions());
+        var release = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var started = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var calls = 0;
+
+        async Task<string> Factory(ICacheEntry entry)
+        {
+            var call = Interlocked.Increment(ref calls);
+            if (call == 1)
+            {
+                started.SetResult();
+                await release.Task;
+                return "stale";
+            }
+
+            return "fresh";
+        }
+
+        var old = cache.GetOrCreateSingleFlightAsync("key", Factory, CancellationToken.None);
+        await started.Task;
+
+        // Act
+        cache.ClearSingleFlight();
+        var afterInvalidation = await cache.GetOrCreateSingleFlightAsync("key", Factory, CancellationToken.None);
+        release.SetResult();
+        await old;
+
+        // Assert — the later caller did not join the old lookup, and the old result did not overwrite the cache
+        afterInvalidation.Should().Be("fresh");
+        cache.TryGetValue("key", out string? cached).Should().BeTrue();
+        cached.Should().Be("fresh");
+    }
+
+    [Fact]
+    public async Task ClearSingleFlight_LookupStartedBeforeInvalidation_DoesNotRepopulateEmptyCache()
+    {
+        // Arrange
+        using var cache = new MemoryCache(new MemoryCacheOptions());
+        var release = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var started = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+
+        async Task<string> Factory(ICacheEntry entry)
+        {
+            started.SetResult();
+            await release.Task;
+            return "stale";
+        }
+
+        var old = cache.GetOrCreateSingleFlightAsync("key", Factory, CancellationToken.None);
+        await started.Task;
+
+        // Act
+        cache.ClearSingleFlight();
+        release.SetResult();
+        await old;
+
+        // Assert
+        cache.TryGetValue("key", out _).Should().BeFalse();
+    }
 }

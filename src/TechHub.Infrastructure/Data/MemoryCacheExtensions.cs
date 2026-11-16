@@ -10,11 +10,13 @@ namespace TechHub.Infrastructure.Data;
 /// run the factory itself, so a burst of requests after a restart or a cache clear runs the same
 /// database query many times at once. These helpers let one caller run the factory while the
 /// others wait for its result.
+/// Invalidate through <see cref="ClearSingleFlight"/>: it starts a new generation, so lookups that were
+/// already running when the data changed can neither be joined by later callers nor publish their result.
 /// </summary>
 public static class MemoryCacheExtensions
 {
-    // In-flight factory calls per cache instance, so separate caches (for example in tests) never share work.
-    private static readonly ConditionalWeakTable<IMemoryCache, ConcurrentDictionary<object, Task>> _inFlight = new();
+    // Flight state per cache instance, so separate caches (for example in tests) never share work.
+    private static readonly ConditionalWeakTable<IMemoryCache, FlightState> _states = new();
 
     /// <summary>
     /// Returns the cached value for <paramref name="key"/>. On a miss, exactly one concurrent caller runs
@@ -37,18 +39,20 @@ public static class MemoryCacheExtensions
             return cached!;
         }
 
-        var flights = _inFlight.GetOrCreateValue(cache);
+        var state = _states.GetValue(cache, static _ => new FlightState());
 
         while (true)
         {
             ct.ThrowIfCancellationRequested();
 
+            // Re-read every attempt: an invalidation moves new callers to a fresh generation.
+            var generation = state.Current;
             var completion = new TaskCompletionSource<TItem>(TaskCreationOptions.RunContinuationsAsynchronously);
-            var running = flights.GetOrAdd(key, completion.Task);
+            var running = generation.Flights.GetOrAdd(key, completion.Task);
 
             if (ReferenceEquals(running, completion.Task))
             {
-                return await RunFactoryAsync(cache, key, factory, flights, completion);
+                return await RunFactoryAsync(cache, key, factory, state, generation, completion);
             }
 
             try
@@ -62,17 +66,34 @@ public static class MemoryCacheExtensions
         }
     }
 
+    /// <summary>
+    /// Clears <paramref name="cache"/> and starts a new single-flight generation. Lookups that started before
+    /// this call are not joined by later callers and do not publish their result, so a read that began
+    /// before a write can never repopulate the cache with stale data.
+    /// </summary>
+    public static void ClearSingleFlight(this MemoryCache cache)
+    {
+        ArgumentNullException.ThrowIfNull(cache);
+
+        var state = _states.GetValue(cache, static _ => new FlightState());
+        lock (state.Gate)
+        {
+            state.Current = new Generation();
+            cache.Clear();
+        }
+    }
+
     private static async Task<TItem> RunFactoryAsync<TItem>(
         IMemoryCache cache,
         object key,
         Func<ICacheEntry, Task<TItem>> factory,
-        ConcurrentDictionary<object, Task> flights,
+        FlightState state,
+        Generation generation,
         TaskCompletionSource<TItem> completion)
     {
         try
         {
-            // GetOrCreateAsync checks the cache again, so a value stored between our miss and now is reused.
-            var value = (await cache.GetOrCreateAsync(key, factory))!;
+            var value = await CreateAndPublishAsync(cache, key, factory, state, generation);
             completion.SetResult(value);
             return value;
         }
@@ -89,7 +110,57 @@ public static class MemoryCacheExtensions
         finally
         {
             // Remove only our own entry so a newer flight for the same key is left alone.
-            ((ICollection<KeyValuePair<object, Task>>)flights).Remove(new KeyValuePair<object, Task>(key, completion.Task));
+            ((ICollection<KeyValuePair<object, Task>>)generation.Flights).Remove(new KeyValuePair<object, Task>(key, completion.Task));
         }
+    }
+
+    private static async Task<TItem> CreateAndPublishAsync<TItem>(
+        IMemoryCache cache,
+        object key,
+        Func<ICacheEntry, Task<TItem>> factory,
+        FlightState state,
+        Generation generation)
+    {
+        // A value stored between our miss and now is reused.
+        if (cache.TryGetValue(key, out TItem? existing))
+        {
+            return existing!;
+        }
+
+        // An entry is committed to the cache on Dispose, and only when its value was set.
+        var entry = cache.CreateEntry(key);
+        try
+        {
+            var value = await factory(entry);
+
+            // Publishing and invalidating share a gate, so a result computed before an invalidation can't land after it.
+            lock (state.Gate)
+            {
+                if (ReferenceEquals(state.Current, generation))
+                {
+                    entry.Value = value;
+                }
+
+                entry.Dispose();
+            }
+
+            return value;
+        }
+        finally
+        {
+            entry.Dispose();
+        }
+    }
+
+    private sealed class FlightState
+    {
+        public object Gate { get; } = new();
+
+        public Generation Current { get; set; } = new();
+    }
+
+    private sealed class Generation
+    {
+        public ConcurrentDictionary<object, Task> Flights { get; } = new();
     }
 }

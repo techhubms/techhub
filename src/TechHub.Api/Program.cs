@@ -109,8 +109,10 @@ builder.Services.AddSingleton(_ => NpgsqlDataSourceFactory.Create(connectionStri
 builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
 builder.Services.AddSingleton<IDbConnectionFactory>(sp =>
     new PostgresConnectionFactory(sp.GetRequiredService<NpgsqlDataSource>()));
+// The scoped connection takes a pooled connection on first use, not at resolution, so cache hits
+// and single-flight waiters never hold one.
 builder.Services.AddScoped<IDbConnection>(sp =>
-    sp.GetRequiredService<NpgsqlDataSource>().OpenConnection());
+    new LazyDbConnection(sp.GetRequiredService<NpgsqlDataSource>()));
 builder.Services.AddTransient<IContentRepository, ContentRepository>();
 builder.Services.AddTransient<IGhcFeatureRepository, GhcFeatureRepository>();
 builder.Services.AddSingleton(TimeProvider.System);

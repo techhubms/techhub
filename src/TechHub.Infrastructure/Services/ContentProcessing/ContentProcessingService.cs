@@ -39,6 +39,10 @@ public sealed class ContentProcessingService
     private readonly ContentProcessorOptions _options;
     private readonly ILogger<ContentProcessingService> _logger;
 
+    // Counts items whose database write committed, independent of the outcome the pipeline reports:
+    // bookkeeping after the write can still fail or be cancelled, but the stored content did change.
+    private int _committedWrites;
+
     public ContentProcessingService(
         IRssFeedIngestionService rssService,
         IArticleContentService articleService,
@@ -96,6 +100,7 @@ public sealed class ContentProcessingService
         var errorCount = 0;
         var transcriptsSucceeded = 0;
         var transcriptsFailed = 0;
+        var committedWritesAtStart = Volatile.Read(ref _committedWrites);
 
         void Log(string msg)
         {
@@ -340,7 +345,9 @@ public sealed class ContentProcessingService
             await TryFailJobAsync(jobId, feedsProcessed, itemsAdded, itemsSkipped, errorCount, transcriptsSucceeded, transcriptsFailed, log.ToString(), ct);
         }
 
-        return new ContentProcessingRunResult(JobStarted: jobId > 0, ContentChanged: itemsAdded > 0);
+        return new ContentProcessingRunResult(
+            JobStarted: jobId > 0,
+            ContentChanged: itemsAdded > 0 || Volatile.Read(ref _committedWrites) != committedWritesAtStart);
     }
 
     /// <summary>
@@ -735,6 +742,7 @@ public sealed class ContentProcessingService
         try
         {
             await _writeRepo.UpsertProcessedItemAsync(processed, ct);
+            Interlocked.Increment(ref _committedWrites);
         }
         catch (DbException ex)
         {

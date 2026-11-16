@@ -128,11 +128,11 @@ Server-side caches are in-process `IMemoryCache` instances. They are not shared 
 
 TTLs are a safety net. Freshness comes from invalidation: `InvalidateCachedData()` clears the whole API memory cache. It runs:
 
-- After a content processing run that added items (runs that add nothing leave the cache alone), a successful roundup generation and a content fixer run that changed items
+- After a content processing run that stored items (runs that store nothing leave the cache alone, but a write that committed counts even when the run later fails or is cancelled), a successful roundup generation and a content fixer run that changed items
 - After admin writes that change content: editing or deleting a content item, applying a transcript, editing AI metadata, adding a URL, approving reviews, removing a processed URL, regenerating a roundup, and deleting a GitHub Copilot feature
 - On demand through `POST /api/admin/cache/invalidate` (AdminOnly), which the **Invalidate caches** button on `/admin/settings` calls
 
-Cache misses are single-flight: when many requests miss the same entry at once (after a restart or an invalidation), one request queries the database and the others wait for its result, so a burst cannot open one database connection per request. If the request that runs the query fails or is cancelled, nothing is cached and a waiting request takes over. The API also caps its PostgreSQL connection pool (`Maximum Pool Size=30` in the connection string set by the Bicep templates), which bounds the connections while the old and new process overlap during a restart.
+Cache misses are single-flight: when many requests miss the same entry at once (after a restart or an invalidation), one request queries the database and the others wait for its result, so a burst cannot open one database connection per request. If the request that runs the query fails or is cancelled, nothing is cached and a waiting request takes over. Invalidation starts a new generation: a lookup that began before the invalidation is not joined by later requests and does not write its result to the cache, so a read that started before a write can never serve stale data afterwards. The scoped database connection is taken from the pool on first use, so cache hits and waiting requests hold no connection. The API also caps its PostgreSQL connection pool (`Maximum Pool Size=30` in the connection string set by the Bicep templates), which bounds the connections while the old and new process overlap during a restart.
 
 ### Web Caches
 
