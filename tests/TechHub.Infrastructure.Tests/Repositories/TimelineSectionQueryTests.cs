@@ -48,11 +48,13 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
         string kind = "ga",
         string date = "2026-03-10",
         string precision = "day",
-        string? description = null) => new()
+        string? description = null,
+        string? title = null) => new()
         {
             Kind = kind,
             Product = product,
             Feature = feature,
+            Title = title,
             Description = description ?? $"{kind} of {feature ?? product}",
             Date = DateOnly.Parse(date, CultureInfo.InvariantCulture),
             DatePrecision = precision,
@@ -107,6 +109,35 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
         var entries = await TimelineAsync("ai", product);
 
         entries.Should().BeEmpty("a roundup only repeats what its articles state");
+    }
+
+    [Fact]
+    public async Task GetTimelineAsync_ReturnsTheTitleOfTheEvent()
+    {
+        var product = NewProduct();
+        var item = await SeedItemAsync(AiBit);
+        await StoreAsync("news", item, Event(product, feature: null, kind: "end-of-support", title: "Java 8, 11 and 17 support ends"), Event(product, "Plain", date: "2026-02-01"));
+
+        var entries = await TimelineAsync("ai", product);
+
+        entries.Single(e => e.Kind == "end-of-support").Title.Should().Be("Java 8, 11 and 17 support ends");
+        entries.Single(e => e.Feature == "Plain").Title.Should().BeNull("an event without a title falls back to its product and feature");
+    }
+
+    [Fact]
+    public async Task GetTimelineAsync_MergedEvent_UsesTheTitleOfTheOldestArticleThatHasOne()
+    {
+        var product = NewProduct();
+        var first = await SeedItemAsync(AiBit, dateEpoch: 1743278400);
+        var second = await SeedItemAsync(AiBit, dateEpoch: 1745000000);
+        var third = await SeedItemAsync(AiBit, dateEpoch: 1746000000);
+        await StoreAsync("news", first, Event(product));
+        await StoreAsync("news", second, Event(product, title: "Second wording"));
+        await StoreAsync("news", third, Event(product, title: "Third wording"));
+
+        var entries = await TimelineAsync("ai", product);
+
+        entries.Should().ContainSingle().Which.Title.Should().Be("Second wording");
     }
 
     [Fact]

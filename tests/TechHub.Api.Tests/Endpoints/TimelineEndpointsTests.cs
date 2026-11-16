@@ -71,6 +71,17 @@ public class TimelineEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     }
 
     [Fact]
+    public async Task GetTimeline_ReturnsTheTitleOfAnEvent()
+    {
+        var product = NewProduct();
+        await SeedAsync(product, Event(product, "Runtimes", "end-of-support") with { Title = "Java 8, 11 and 17 support ends" });
+
+        var entries = await GetEntriesAsync(product);
+
+        entries.Should().ContainSingle().Which.Title.Should().Be("Java 8, 11 and 17 support ends");
+    }
+
+    [Fact]
     public async Task GetTimeline_FiltersByDateRangeAndKinds()
     {
         var product = NewProduct();

@@ -114,11 +114,12 @@ internal static class ClassificationSchema
               "items": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": ["kind", "product", "feature", "description", "date_source", "date", "date_precision", "quote"],
+                "required": ["kind", "product", "feature", "title", "description", "date_source", "date", "date_precision", "quote"],
                 "properties": {
                   "kind": { "type": "string", "enum": {{eventKinds}} },
                   "product": { "type": "string" },
                   "feature": { "type": ["string", "null"] },
+                  "title": { "type": "string" },
                   "description": { "type": "string" },
                   "date_source": { "type": "string", "enum": {{dateSources}} },
                   "date": { "type": ["string", "null"] },

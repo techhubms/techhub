@@ -112,11 +112,18 @@ internal static class TimelineEventParser
             return null;
         }
 
+        var title = GetString(element, "title");
+        if (title is { Length: > TimelineEvent.MaxTitleLength })
+        {
+            title = null;
+        }
+
         return new TimelineEvent
         {
             Kind = kind,
             Product = product,
             Feature = GetString(element, "feature"),
+            Title = title,
             Description = description,
             Date = date,
             DatePrecision = precision,

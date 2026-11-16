@@ -22,11 +22,13 @@ public class TimelineEventParserTests
         string dateSource = "explicit",
         string? date = "2026-03-10",
         string? precision = "day",
-        string? quote = "It is now GA.")
+        string? quote = "It is now GA.",
+        string? title = null)
     {
         static string Q(string? value) => value is null ? "null" : JsonSerializer.Serialize(value);
+        var titleProperty = title is null ? string.Empty : "\"title\":" + Q(title) + ",";
         return $$"""
-            {"kind":{{Q(kind)}},"product":{{Q(product)}},"feature":{{Q(feature)}},"description":{{Q(description)}},
+            {"kind":{{Q(kind)}},"product":{{Q(product)}},"feature":{{Q(feature)}},{{titleProperty}}"description":{{Q(description)}},
              "date_source":{{Q(dateSource)}},"date":{{Q(date)}},"date_precision":{{Q(precision)}},"quote":{{Q(quote)}}}
             """;
     }
@@ -59,6 +61,32 @@ public class TimelineEventParserTests
         e.DatePrecision.Should().Be("day");
         e.DateSource.Should().Be("explicit");
         e.Quote.Should().Be("It is now GA.");
+    }
+
+    [Fact]
+    public void Parse_Title_IsTrimmedAndKept()
+    {
+        var result = Parse(Event(title: "  Java 8, 11 and 17 support ends  "));
+
+        result.Should().ContainSingle().Which.Title.Should().Be("Java 8, 11 and 17 support ends");
+    }
+
+    [Theory]
+    [InlineData(null)]
+    [InlineData("   ")]
+    public void Parse_NoUsableTitle_LeavesItEmpty(string? title)
+    {
+        var result = Parse(Event(title: title));
+
+        result.Should().ContainSingle().Which.Title.Should().BeNull("the card then falls back to the product and feature");
+    }
+
+    [Fact]
+    public void Parse_TitleThatIsNoHeadline_IsDropped()
+    {
+        var result = Parse(Event(title: new string('x', 121)));
+
+        result.Should().ContainSingle().Which.Title.Should().BeNull();
     }
 
     [Fact]

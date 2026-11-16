@@ -222,6 +222,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                    kind            AS Kind,
                    product         AS Product,
                    feature         AS Feature,
+                   title           AS Title,
                    description     AS Description,
                    event_date      AS EventDate,
                    date_precision  AS DatePrecision,
@@ -244,6 +245,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
             Kind = r.Kind,
             Product = r.Product,
             Feature = r.Feature,
+            Title = r.Title,
             Description = r.Description,
             EventDate = DateOnly.FromDateTime(r.EventDate),
             DatePrecision = r.DatePrecision,
@@ -301,6 +303,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                    e.event_date      AS EventDate,
                    e.date_precision  AS DatePrecision,
                    e.description     AS Description,
+                   e.title           AS Title,
                    e.product_id      AS ProductId,
                    COALESCE(p.name, e.product) AS Product,
                    e.feature_id      AS FeatureId,
@@ -356,6 +359,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
                     ProductId = first.ProductId,
                     Feature = first.Feature,
                     Description = first.Description,
+                    Title = g.Select(r => r.Title).FirstOrDefault(t => !string.IsNullOrWhiteSpace(t)),
                     Sources = g
                         .Select(r => new TimelineEntrySource
                         {
@@ -383,6 +387,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         public DateTime EventDate { get; init; }
         public string DatePrecision { get; init; } = string.Empty;
         public string Description { get; init; } = string.Empty;
+        public string? Title { get; init; }
         public long? ProductId { get; init; }
         public string Product { get; init; } = string.Empty;
         public long? FeatureId { get; init; }
@@ -403,6 +408,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         public string Kind { get; init; } = string.Empty;
         public string Product { get; init; } = string.Empty;
         public string? Feature { get; init; }
+        public string? Title { get; init; }
         public string Description { get; init; } = string.Empty;
         public DateTime EventDate { get; init; }
         public string DatePrecision { get; init; } = string.Empty;

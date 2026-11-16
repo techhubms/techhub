@@ -43,11 +43,13 @@ public class TimelineEventRepositoryTests : IClassFixture<DatabaseFixture<Timeli
         string date = "2026-03-10",
         string precision = "day",
         string source = "explicit",
-        string? quote = "It is now GA.") => new()
+        string? quote = "It is now GA.",
+        string? title = "Coding agent is generally available") => new()
         {
             Kind = kind,
             Product = product,
             Feature = feature,
+            Title = title,
             Description = $"{kind} of {feature ?? product}",
             Date = DateOnly.Parse(date, System.Globalization.CultureInfo.InvariantCulture),
             DatePrecision = precision,
@@ -72,6 +74,7 @@ public class TimelineEventRepositoryTests : IClassFixture<DatabaseFixture<Timeli
         ga.DatePrecision.Should().Be("day");
         ga.DateSource.Should().Be("explicit");
         ga.Quote.Should().Be("It is now GA.");
+        ga.Title.Should().Be("Coding agent is generally available");
         ga.ExtractedFrom.Should().Be("source");
         stored[1].Feature.Should().BeNull();
         stored[1].Quote.Should().BeNull();

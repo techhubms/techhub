@@ -352,6 +352,7 @@ Returns the timeline of a section, newest first. Only articles whose primary sec
     "product": "GitHub Copilot",
     "productId": 12,
     "feature": "Agent mode",
+    "title": "Agent mode generally available",
     "description": "Agent mode is generally available.",
     "sources": [
       {
@@ -366,7 +367,7 @@ Returns the timeline of a section, newest first. Only articles whose primary sec
 ]
 ```
 
-`product` and `feature` are the catalog names, or the AI's text when they are not in the catalog (then `productId` is `null`). `sources` are the articles that state the event, oldest first.
+`product` and `feature` are the catalog names, or the AI's text when they are not in the catalog (then `productId` is `null`). `title` is a short headline that says what the event is (for example "Java 8, 11 and 17 support ends"), from the oldest article that has one, and `null` for events that were stored before titles existed. `sources` are the articles that state the event, oldest first.
 
 **Errors**: `400` for an invalid section name, date, kind or `take`. `404` for an unknown section.
 

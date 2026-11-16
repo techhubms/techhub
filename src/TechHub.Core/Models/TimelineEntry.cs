@@ -27,6 +27,9 @@ public sealed record TimelineEntry
     /// <summary>One line describing what happens, from the oldest article that states the event.</summary>
     public required string Description { get; init; }
 
+    /// <summary>Short headline saying what the event is, from the oldest article that has one. <c>null</c> when none of them has.</summary>
+    public string? Title { get; init; }
+
     /// <summary>The articles that state the event, oldest first.</summary>
     public required IReadOnlyList<TimelineEntrySource> Sources { get; init; }
 }
