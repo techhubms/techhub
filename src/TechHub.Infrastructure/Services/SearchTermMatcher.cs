@@ -56,6 +56,40 @@ public static class SearchTermMatcher
     }
 
     /// <summary>
+    /// Returns the words of the vocabulary within reach of <paramref name="term"/>, closest first and, at the same distance, in
+    /// vocabulary order (most frequent first), at most <paramref name="count"/> of them.
+    /// </summary>
+    public static IReadOnlyList<string> FindClosest(string term, IReadOnlyList<SearchVocabularyWord> vocabulary, int count)
+    {
+        ArgumentNullException.ThrowIfNull(term);
+        ArgumentNullException.ThrowIfNull(vocabulary);
+
+        var max = MaxDistance(term.Length);
+        if (max == 0 || count <= 0)
+        {
+            return [];
+        }
+
+        var candidates = new List<(string Word, int Distance)>();
+        foreach (var candidate in vocabulary)
+        {
+            if (Math.Abs(candidate.Word.Length - term.Length) > max)
+            {
+                continue;
+            }
+
+            var distance = Distance(term, candidate.Word, max);
+            if (distance <= max)
+            {
+                candidates.Add((candidate.Word, distance));
+            }
+        }
+
+        // OrderBy is stable, so the vocabulary order (frequency) breaks ties
+        return candidates.OrderBy(c => c.Distance).Take(count).Select(c => c.Word).ToList();
+    }
+
+    /// <summary>
     /// The optimal string alignment distance of two words. Gives up once it is certain to exceed <paramref name="maxDistance"/>
     /// and then returns <c>maxDistance + 1</c>.
     /// </summary>

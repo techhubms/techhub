@@ -67,6 +67,40 @@ public static class MemoryCacheExtensions
     }
 
     /// <summary>
+    /// Returns a token for the current single-flight generation. Pass it to <see cref="SetIfCurrent{TItem}"/> after a read
+    /// that has to be published outside <see cref="GetOrCreateSingleFlightAsync{TItem}"/>.
+    /// </summary>
+    public static object GetGeneration(this IMemoryCache cache)
+    {
+        ArgumentNullException.ThrowIfNull(cache);
+
+        return _states.GetValue(cache, static _ => new FlightState()).Current;
+    }
+
+    /// <summary>
+    /// Stores <paramref name="value"/> unless the cache was invalidated after <paramref name="generation"/> was taken,
+    /// so a read that began before a write can never repopulate the cache with stale data.
+    /// </summary>
+    public static bool SetIfCurrent<TItem>(this IMemoryCache cache, object generation, object key, TItem value, TimeSpan ttl)
+    {
+        ArgumentNullException.ThrowIfNull(cache);
+        ArgumentNullException.ThrowIfNull(generation);
+        ArgumentNullException.ThrowIfNull(key);
+
+        var state = _states.GetValue(cache, static _ => new FlightState());
+        lock (state.Gate)
+        {
+            if (!ReferenceEquals(state.Current, generation))
+            {
+                return false;
+            }
+
+            cache.Set(key, value, ttl);
+            return true;
+        }
+    }
+
+    /// <summary>
     /// Clears <paramref name="cache"/> and starts a new single-flight generation. Lookups that started before
     /// this call are not joined by later callers and do not publish their result, so a read that began
     /// before a write can never repopulate the cache with stale data.

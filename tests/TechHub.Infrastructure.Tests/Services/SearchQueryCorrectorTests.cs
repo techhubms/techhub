@@ -24,15 +24,15 @@ public class SearchQueryCorrectorTests : IClassFixture<DatabaseFixture<SearchQue
 
     private SearchQueryCorrector CreateCorrector() => new(_fixture.Connection, _cache);
 
-    private async Task SeedAsync(string title, string excerpt = "", string content = "")
+    private async Task SeedAsync(string title, string excerpt = "", string content = "", string tags = "")
     {
         var slug = $"corrector-{Guid.NewGuid():N}";
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO content_items (slug, collection_name, title, excerpt, content, date_epoch,
                 primary_section_name, external_url, author, feed_name, tags_csv, content_hash)
-            VALUES (@Slug, 'news', @Title, @Excerpt, @Content, 1743278400, 'ai', @Url, '', 'Test Feed', '', @Hash)
+            VALUES (@Slug, 'news', @Title, @Excerpt, @Content, 1743278400, 'ai', @Url, '', 'Test Feed', @Tags, @Hash)
             """,
-            new { Slug = slug, Title = title, Excerpt = excerpt, Content = content, Url = $"https://example.com/{slug}", Hash = Guid.NewGuid().ToString() });
+            new { Slug = slug, Title = title, Excerpt = excerpt, Content = content, Tags = tags, Url = $"https://example.com/{slug}", Hash = Guid.NewGuid().ToString() });
     }
 
     [Fact]
@@ -110,5 +110,51 @@ public class SearchQueryCorrectorTests : IClassFixture<DatabaseFixture<SearchQue
         var corrected = await CreateCorrector().CorrectAsync("wqzxvbnmplk", Ct);
 
         corrected.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task CorrectAsync_ClosestWordIsOnlyATag_IsNotUsedBecauseTheSearchCannotMatchIt()
+    {
+        // Arrange: tags are not part of the search index
+        await SeedAsync("Something about plumbing", tags: "Wobbleflux");
+        await SeedAsync("Something else about plumbing", tags: "Wobbleflux");
+
+        // Act
+        var corrected = await CreateCorrector().CorrectAsync("wobbleflix", Ct);
+
+        // Assert
+        corrected.Should().BeNull("a correction that still finds nothing is no help");
+    }
+
+    [Fact]
+    public async Task CorrectAsync_UnsearchableWordTypedCorrectly_IsNotReturnedAsItsOwnCorrection()
+    {
+        // Arrange
+        await SeedAsync("Something about plumbing", tags: "Snorkelwump");
+        await SeedAsync("Something else about plumbing", tags: "Snorkelwump");
+
+        // Act
+        var corrected = await CreateCorrector().CorrectAsync("snorkelwump", Ct);
+
+        // Assert
+        corrected.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task CorrectAsync_MoreFrequentWordOfTheExcerptIsStemmedInTheIndex_FallsBackToASearchableWord()
+    {
+        // Arrange: the index holds the English stem "zumbl" of the excerpt word "zumbling", which a search for "zumbling" cannot match.
+        // "zumbline" is in two titles, which the index holds as written.
+        await SeedAsync("Plain plumbing", excerpt: "Zumbling pipes");
+        await SeedAsync("More plumbing", excerpt: "Zumbling taps");
+        await SeedAsync("Even more plumbing", excerpt: "Zumbling valves");
+        await SeedAsync("Zumbline guide");
+        await SeedAsync("Zumbline tips");
+
+        // Act
+        var corrected = await CreateCorrector().CorrectAsync("zumblinx", Ct);
+
+        // Assert
+        corrected.Should().Be("zumbline");
     }
 }

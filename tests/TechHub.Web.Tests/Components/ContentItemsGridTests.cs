@@ -358,6 +358,38 @@ public class ContentItemsGridTests : BunitContext
     }
 
     [Fact]
+    public void ContentItemsGrid_SearchChangesAndTheReloadFails_DoesNotKeepThePreviousCorrection()
+    {
+        // Arrange
+        var item = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        ReturnsForSearch(new CollectionItemsResponse([item], 1, "harness"));
+        _mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                "github-copilot", "news",
+                It.IsAny<int?>(), It.IsAny<int?>(),
+                "kubernetes", It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("boom"));
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+        cut.WaitForAssertion(() => cut.Find(".search-correction"));
+
+        // Act
+        cut.Render(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "kubernetes"));
+
+        // Assert
+        cut.WaitForAssertion(() => cut.Find(".error[role=alert]"));
+        cut.FindAll(".search-correction").Should().BeEmpty();
+    }
+
+    [Fact]
     public void ContentItemsGrid_SearchWasCorrected_KeepsTheMessageWhenTheStateIsRestored()
     {
         // Arrange: the first grid loads and fills the circuit cache that a back navigation restores from

@@ -66,8 +66,8 @@ public class SearchTests : PlaywrightTestBase
 
         // Assert
         var message = Page.Locator(".search-correction");
+        await Assertions.Expect(message).ToContainTextAsync("copilot");
         await Assertions.Expect(message).ToContainTextAsync("cpoilot");
-        await Assertions.Expect(message).ToContainTextAsync("copilot.");
         await Assertions.Expect(Page.Locator(".content-grid .card").First).ToBeVisibleAsync();
     }
 

@@ -13,9 +13,9 @@
 <section class="collection-content @(isLoading ? "loading" : "")" aria-label="@(Title ?? GetCollectionTitle()) content">
     <h1 id="skiptohere" class="page-h1">@(Title ?? GetPageTitle()) <span class="content-count">(@totalCount)</span></h1>
 
-    @if (!string.IsNullOrEmpty(correctedQuery) && !string.IsNullOrWhiteSpace(SearchQuery))
+    @if (!isLoading && errorMessage == null && !string.IsNullOrEmpty(correctedQuery) && !string.IsNullOrWhiteSpace(SearchQuery))
     {
-        <p class="search-correction" role="status">No results for <strong>@SearchQuery</strong>. Showing results for <strong>@correctedQuery</strong>.</p>
+        <p class="search-correction" role="status">Showing results for <strong>@correctedQuery</strong> instead of <strong>@SearchQuery</strong>.</p>
     }
 
     @if (isLoading && !contentItems.Any())
@@ -304,6 +304,7 @@
         hasMoreContent = true;
         isLoading = true;
         errorMessage = null;
+        correctedQuery = null;
         StateHasChanged();
 
         try

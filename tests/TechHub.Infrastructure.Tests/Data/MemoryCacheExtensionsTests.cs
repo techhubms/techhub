@@ -256,4 +256,30 @@ public class MemoryCacheExtensionsTests
         // Assert
         cache.TryGetValue("key", out _).Should().BeFalse();
     }
+
+    [Fact]
+    public void SetIfCurrent_NoInvalidationSinceTheGeneration_StoresTheValue()
+    {
+        using var cache = new MemoryCache(new MemoryCacheOptions());
+        var generation = cache.GetGeneration();
+
+        var stored = cache.SetIfCurrent(generation, "key", "value", TimeSpan.FromMinutes(1));
+
+        stored.Should().BeTrue();
+        cache.TryGetValue("key", out string? cached).Should().BeTrue();
+        cached.Should().Be("value");
+    }
+
+    [Fact]
+    public void SetIfCurrent_InvalidationSinceTheGeneration_DoesNotStoreTheValue()
+    {
+        using var cache = new MemoryCache(new MemoryCacheOptions());
+        var generation = cache.GetGeneration();
+
+        cache.ClearSingleFlight();
+        var stored = cache.SetIfCurrent(generation, "key", "stale", TimeSpan.FromMinutes(1));
+
+        stored.Should().BeFalse();
+        cache.TryGetValue("key", out _).Should().BeFalse();
+    }
 }

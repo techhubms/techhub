@@ -10,11 +10,12 @@ namespace TechHub.Infrastructure.Services;
 /// <summary>
 /// PostgreSQL implementation of <see cref="ISearchQueryCorrector"/>. A word is unknown when the full-text index has no word that
 /// starts with it (the same test as the search itself, which matches word beginnings). The replacement comes from the words of
-/// the titles, excerpts and tags, which is where people look for names. It needs no database extension.
+/// the titles, excerpts and tags, which is where people look for names, as long as the same prefix test finds it. It needs no database extension.
 /// </summary>
 public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
 {
     private const int MaxTermsChecked = 10;
+    private const int MaxCandidatesPerTerm = 8;
     private const string VocabularyKey = "search:vocabulary";
 
     private static readonly TimeSpan _vocabularyTtl = TimeSpan.FromHours(1);
@@ -62,14 +63,15 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
         }
 
         var vocabulary = await GetVocabularyAsync(ct);
-        var replacements = new Dictionary<string, string>(StringComparer.Ordinal);
-        foreach (var term in unknown)
-        {
-            if (SearchTermMatcher.FindClosest(term, vocabulary) is { } closest)
-            {
-                replacements[term] = closest;
-            }
-        }
+
+        // The vocabulary also holds words that the search cannot match (tags are not indexed and excerpts are indexed stemmed),
+        // so a candidate is only used when the same prefix test as for the typed terms finds it.
+        var candidates = unknown.ToDictionary(t => t, t => SearchTermMatcher.FindClosest(t, vocabulary, MaxCandidatesPerTerm), StringComparer.Ordinal);
+        var searchable = await FindKnownTermsAsync(candidates.Values.SelectMany(c => c).Distinct(StringComparer.Ordinal).ToList(), ct);
+        var replacements = candidates
+            .Select(c => (Term: c.Key, Closest: c.Value.FirstOrDefault(searchable.Contains)))
+            .Where(r => r.Closest is not null)
+            .ToDictionary(r => r.Term, r => r.Closest!, StringComparer.Ordinal);
 
         if (replacements.Count == 0)
         {
@@ -108,12 +110,14 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
             FROM unnest(@Terms) AS t(term)
             WHERE EXISTS (SELECT 1 FROM content_items c WHERE c.search_vector @@ to_tsquery('simple', t.term || ':*'))
             """;
+        // A result is only cached when no invalidation happened during the lookup, or it could bring back a word whose articles were just removed
+        var generation = _cache.GetGeneration();
         var found = await _connection.QueryAsync<string>(
             new CommandDefinition(Sql, new { Terms = toCheck.ToArray() }, cancellationToken: ct));
         foreach (var term in found)
         {
             known.Add(term);
-            _cache.Set(KnownTermKey(term), true, _knownTermTtl);
+            _cache.SetIfCurrent(generation, KnownTermKey(term), true, _knownTermTtl);
         }
 
         return known;
