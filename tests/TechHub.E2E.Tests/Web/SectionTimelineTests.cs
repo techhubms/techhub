@@ -9,7 +9,8 @@ namespace TechHub.E2E.Tests.Web;
 /// E2E tests for the section timeline page (/{section}/timeline): the dated events that the articles of a section state.
 /// The events come from the database of the environment. The timeline is behind a feature toggle: on a local environment
 /// <see cref="TimelineToggleFixture"/> opens it for these tests and restores it afterwards, so they never skip for it.
-/// Only against a remote deployment, where the toggle cannot be changed, the tests that need the open (or closed) state skip.
+/// Only against a remote deployment, where the toggle cannot be changed, the tests that need the open state skip when it is closed.
+/// The closed state (HTTP 404, no mention of logging in) is covered in the Web tests (<c>FeatureGatedPageEndpointTests</c>), which can set any toggle.
 /// </summary>
 public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineToggleFixture>
 {
@@ -144,36 +145,6 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         else
         {
             (await link.CountAsync()).Should().Be(0, "the feature is not open to everyone, so a visitor sees no button");
-        }
-    }
-
-    [Fact]
-    public async Task SectionTimeline_WhenNotOpenToEveryone_ShouldAnswerWithNotFoundAndShowNothingAboutLoggingIn()
-    {
-        if (_toggle.CanChangeToggle)
-        {
-            await _toggle.SetModeAsync("Admins");
-        }
-        else
-        {
-            Assert.SkipWhen(await IsTimelineOpenAsync(), "The timeline is open to everyone on this remote environment and its toggle cannot be changed");
-        }
-
-        try
-        {
-            var response = await Page.APIGetAsync($"{BlazorHelpers.BaseUrl}{PageUrl}");
-            response.Status.Should().Be(404);
-
-            await Page.GotoRelativeAsync(PageUrl);
-            await Assertions.Expect(Page.Locator("h1.page-h1")).ToHaveTextAsync("Page Not Found");
-            (await Page.ContentAsync()).Should().NotContainEquivalentOf("log in").And.NotContainEquivalentOf("sign in");
-        }
-        finally
-        {
-            if (_toggle.CanChangeToggle)
-            {
-                await _toggle.SetModeAsync("Everyone");
-            }
         }
     }
 
