@@ -116,6 +116,7 @@ builder.Services.AddScoped<IDbConnection>(sp =>
     sp.GetRequiredService<NpgsqlDataSource>().CreateConnection());
 builder.Services.AddTransient<IContentRepository, ContentRepository>();
 builder.Services.AddTransient<IGhcFeatureRepository, GhcFeatureRepository>();
+builder.Services.AddScoped<ISearchQueryCorrector, SearchQueryCorrector>();
 builder.Services.AddSingleton(TimeProvider.System);
 
 // Register singleton services - none currently

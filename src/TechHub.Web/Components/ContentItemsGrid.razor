@@ -13,6 +13,11 @@
 <section class="collection-content @(isLoading ? "loading" : "")" aria-label="@(Title ?? GetCollectionTitle()) content">
     <h1 id="skiptohere" class="page-h1">@(Title ?? GetPageTitle()) <span class="content-count">(@totalCount)</span></h1>
 
+    @if (!isLoading && errorMessage == null && !string.IsNullOrEmpty(correctedQuery) && !string.IsNullOrWhiteSpace(SearchQuery))
+    {
+        <p class="search-correction" role="status">Showing results for <strong>@correctedQuery</strong> instead of <strong>@SearchQuery</strong>.</p>
+    }
+
     @if (isLoading && !contentItems.Any())
     {
         <div class="content-grid" role="feed" aria-busy="true" aria-label="Loading content">
@@ -138,6 +143,8 @@
     // Content state
     private List<ContentItem> contentItems = [];
     private long totalCount;
+    private string? correctedQuery;
+    private int loadGeneration;
     private bool isLoading = true;
     private bool isLoadingMore;
     private bool hasMoreContent = true;
@@ -194,6 +201,7 @@
             currentBatch = cached.CurrentBatch;
             hasMoreContent = cached.HasMoreContent;
             totalCount = cached.TotalCount;
+            correctedQuery = cached.CorrectedQuery;
             isLoading = false;
             Logger.LogDebug("Restored {Count} items from circuit cache for {Key}", contentItems.Count, stateKey);
         }
@@ -205,6 +213,7 @@
             currentBatch = restored.CurrentBatch;
             hasMoreContent = restored.HasMoreContent;
             totalCount = restored.TotalCount;
+            correctedQuery = restored.CorrectedQuery;
             isLoading = false;
             Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
         }
@@ -244,7 +253,8 @@
             Items = contentItems,
             CurrentBatch = currentBatch,
             HasMoreContent = hasMoreContent,
-            TotalCount = totalCount
+            TotalCount = totalCount,
+            CorrectedQuery = correctedQuery
         });
         return Task.CompletedTask;
     }
@@ -255,6 +265,7 @@
         public int CurrentBatch { get; set; }
         public bool HasMoreContent { get; set; }
         public long TotalCount { get; set; }
+        public string? CorrectedQuery { get; set; }
     }
 
     protected override async Task OnParametersSetAsync()
@@ -289,11 +300,13 @@
 
     private async Task LoadInitialBatch()
     {
+        var generation = ++loadGeneration;
         contentItems.Clear();
         currentBatch = 1;
         hasMoreContent = true;
         isLoading = true;
         errorMessage = null;
+        correctedQuery = null;
         StateHasChanged();
 
         try
@@ -302,18 +315,34 @@
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName.Sanitize(), CollectionName.Sanitize());
-            errorMessage = "Unable to load content";
+            if (generation == loadGeneration)
+            {
+                Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName.Sanitize(), CollectionName.Sanitize());
+                errorMessage = "Unable to load content";
+            }
+            else
+            {
+                Logger.LogDebug(ex, "Ignoring the failure of a load that a newer search replaced");
+            }
         }
         finally
         {
-            isLoading = false;
-            StateHasChanged();
+            // A newer search owns the loading state
+            if (generation == loadGeneration)
+            {
+                isLoading = false;
+                StateHasChanged();
+            }
         }
     }
 
-    private async Task LoadBatch(int batch)
+    // Returns false when the effective search (the typed one or its typo correction) differs from the one of the loaded batches:
+    // the batch then does not belong to the loaded items and the caller has to start over
+    private async Task<bool> LoadBatch(int batch)
     {
+        // The response of a search that a newer search replaced must neither change the grid nor fill the cache under the new key
+        var generation = loadGeneration;
+        var stateKey = GetStateKey();
         var skip = (batch - 1) * BatchSize;
 
         // Build tags parameter for API (comma-separated list)
@@ -339,10 +368,21 @@
                 types: ContentTypes,
                 exact: ExactMatch);
 
+        if (generation != loadGeneration)
+        {
+            return true;
+        }
+
+        if (batch > 1 && result?.CorrectedQuery != correctedQuery)
+        {
+            return false;
+        }
+
         var newItems = result?.Items.ToList() ?? [];
 
         // Update total count from API response (always reflects current filters)
         totalCount = result?.TotalCount ?? 0;
+        correctedQuery = result?.CorrectedQuery;
 
         contentItems.AddRange(newItems);
         currentBatch = batch;
@@ -353,7 +393,8 @@
         }
 
         // Update circuit-scoped cache so back-navigation can restore all loaded items
-        GridStateCache.Set(GetStateKey(), contentItems, currentBatch, hasMoreContent, totalCount);
+        GridStateCache.Set(stateKey, contentItems, currentBatch, hasMoreContent, totalCount, correctedQuery);
+        return true;
     }
 
     private async Task LoadNextBatch()
@@ -366,9 +407,10 @@
         isLoadingMore = true;
         StateHasChanged();
 
+        var startOver = false;
         try
         {
-            await LoadBatch(currentBatch + 1);
+            startOver = !await LoadBatch(currentBatch + 1);
         }
         catch (Exception ex)
         {
@@ -378,6 +420,11 @@
         {
             isLoadingMore = false;
             StateHasChanged();
+        }
+
+        if (startOver)
+        {
+            await LoadInitialBatch();
         }
     }
 

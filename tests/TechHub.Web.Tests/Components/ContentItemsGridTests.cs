@@ -305,4 +305,190 @@ public class ContentItemsGridTests : BunitContext
             cut.Find(".end-of-content").TextContent.Should().Contain("End of content");
         });
     }
+
+    private void ReturnsForSearch(CollectionItemsResponse response) =>
+        _mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                "github-copilot", "news",
+                It.IsAny<int?>(), It.IsAny<int?>(),
+                "harnass", It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(response);
+
+    [Fact]
+    public void ContentItemsGrid_SearchWasCorrected_TellsWhatWasSearchedFor()
+    {
+        // Arrange
+        var item = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        ReturnsForSearch(new CollectionItemsResponse([item], 1, "harness"));
+
+        // Act
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+
+        // Assert
+        cut.WaitForAssertion(() =>
+        {
+            var message = cut.Find(".search-correction");
+            message.GetAttribute("role").Should().Be("status");
+            message.TextContent.Should().Contain("harnass").And.Contain("harness");
+        });
+    }
+
+    [Fact]
+    public void ContentItemsGrid_SearchWasNotCorrected_ShowsNoCorrectionMessage()
+    {
+        // Arrange
+        var item = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        ReturnsForSearch(new CollectionItemsResponse([item], 1));
+
+        // Act
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+
+        // Assert
+        cut.WaitForAssertion(() => cut.FindAll(".content-grid").Should().NotBeEmpty());
+        cut.FindAll(".search-correction").Should().BeEmpty();
+    }
+
+    [Fact]
+    public void ContentItemsGrid_SearchChangesAndTheReloadFails_DoesNotKeepThePreviousCorrection()
+    {
+        // Arrange
+        var item = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        ReturnsForSearch(new CollectionItemsResponse([item], 1, "harness"));
+        _mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                "github-copilot", "news",
+                It.IsAny<int?>(), It.IsAny<int?>(),
+                "kubernetes", It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("boom"));
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+        cut.WaitForAssertion(() => cut.Find(".search-correction"));
+
+        // Act
+        cut.Render(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "kubernetes"));
+
+        // Assert
+        cut.WaitForAssertion(() => cut.Find(".error[role=alert]"));
+        cut.FindAll(".search-correction").Should().BeEmpty();
+    }
+
+    [Fact]
+    public void ContentItemsGrid_OlderSearchCompletesAfterANewerOne_IgnoresTheOlderResponse()
+    {
+        // Arrange: the responses of the two searches are completed in reverse order
+        var older = new TaskCompletionSource<CollectionItemsResponse?>();
+        var newer = new TaskCompletionSource<CollectionItemsResponse?>();
+        SetupSearch("harnass", older.Task);
+        SetupSearch("kubernetes", newer.Task);
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+        cut.Render(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "kubernetes"));
+        var kubernetesItem = new ContentItemBuilder().WithSlug("kubernetes-item").WithTitle("Kubernetes news").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        var harnessItem = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+
+        // Act
+        newer.SetResult(new CollectionItemsResponse([kubernetesItem], 1));
+        cut.WaitForAssertion(() => cut.Markup.Should().Contain("Kubernetes news"));
+        older.SetResult(new CollectionItemsResponse([harnessItem], 1, "harness"));
+
+        // Assert
+        cut.FindAll(".search-correction").Should().BeEmpty();
+        cut.Markup.Should().Contain("Kubernetes news").And.NotContain("The harness");
+    }
+
+    [Fact]
+    public void ContentItemsGrid_CorrectionChangesBetweenBatches_StartsOverInsteadOfMixingResults()
+    {
+        // Arrange: the first batch was searched as "harness", the second one would be searched as something else
+        List<ContentItem> Items(string prefix) => Enumerable.Range(0, 40)
+            .Select(i => new ContentItemBuilder().WithSlug($"{prefix}-{i}").WithTitle($"{prefix} {i}").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build())
+            .ToList();
+        var secondBatchCalls = 0;
+        _mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                "github-copilot", "news",
+                It.IsAny<int?>(), It.IsAny<int?>(),
+                "harnass", It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .Returns((string _, string _, int? _, int? skip, string? _, string? _, int? _, string? _, string? _, string? _, bool _, CancellationToken _) =>
+            {
+                if (skip == 40 && Interlocked.Increment(ref secondBatchCalls) == 1)
+                {
+                    return Task.FromResult<CollectionItemsResponse?>(new CollectionItemsResponse(Items("other"), 100, "harnes"));
+                }
+
+                return Task.FromResult<CollectionItemsResponse?>(new CollectionItemsResponse(Items("harness"), 100, "harness"));
+            });
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+        cut.WaitForAssertion(() => cut.Find(".load-more-btn"));
+
+        // Act
+        cut.Find(".load-more-btn").Click();
+
+        // Assert: the grid was reloaded from the first batch and holds none of the items of the other search
+        cut.WaitForAssertion(() =>
+        {
+            cut.Markup.Should().NotContain("other 0");
+            cut.FindAll(".search-correction strong").Last().TextContent.Should().Be("harnass");
+            cut.FindAll(".content-grid > *").Should().HaveCount(40);
+        });
+    }
+    private void SetupSearch(string query, Task<CollectionItemsResponse?> response) =>
+        _mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                "github-copilot", "news",
+                It.IsAny<int?>(), It.IsAny<int?>(),
+                query, It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .Returns(response);
+    [Fact]
+    public void ContentItemsGrid_SearchWasCorrected_KeepsTheMessageWhenTheStateIsRestored()
+    {
+        // Arrange: the first grid loads and fills the circuit cache that a back navigation restores from
+        var item = new ContentItemBuilder().WithSlug("harness-item").WithTitle("The harness").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build();
+        ReturnsForSearch(new CollectionItemsResponse([item], 1, "harness"));
+        var first = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+        first.WaitForAssertion(() => first.Find(".search-correction"));
+
+        // Act
+        var restored = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+
+        // Assert
+        restored.Find(".search-correction").TextContent.Should().Contain("harness");
+    }
 }

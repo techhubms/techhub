@@ -11,6 +11,9 @@ public sealed class CachedGridState
     public required int CurrentBatch { get; init; }
     public required bool HasMoreContent { get; init; }
     public required long TotalCount { get; init; }
+
+    /// <summary>The search that was run instead of the typed one, when a typo was corrected.</summary>
+    public string? CorrectedQuery { get; init; }
 }
 
 /// <summary>
@@ -48,7 +51,8 @@ public sealed class ContentGridStateCache
             Items = new List<ContentItem>(state.Items),
             CurrentBatch = state.CurrentBatch,
             HasMoreContent = state.HasMoreContent,
-            TotalCount = state.TotalCount
+            TotalCount = state.TotalCount,
+            CorrectedQuery = state.CorrectedQuery
         };
     }
 
@@ -57,7 +61,7 @@ public sealed class ContentGridStateCache
     /// Takes a snapshot of the items list to avoid shared mutable state.
     /// Evicts the oldest entry when the cache is full.
     /// </summary>
-    public void Set(string key, List<ContentItem> items, int currentBatch, bool hasMoreContent, long totalCount)
+    public void Set(string key, List<ContentItem> items, int currentBatch, bool hasMoreContent, long totalCount, string? correctedQuery = null)
     {
         if (!_cache.ContainsKey(key))
         {
@@ -76,7 +80,8 @@ public sealed class ContentGridStateCache
             Items = new List<ContentItem>(items),
             CurrentBatch = currentBatch,
             HasMoreContent = hasMoreContent,
-            TotalCount = totalCount
+            TotalCount = totalCount,
+            CorrectedQuery = correctedQuery
         };
     }
 }
