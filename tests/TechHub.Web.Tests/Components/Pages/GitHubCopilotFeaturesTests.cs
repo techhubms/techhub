@@ -200,6 +200,17 @@ public class GitHubCopilotFeaturesTests : BunitContext
     }
 
     [Fact]
+    public void Render_FeatureWithVideo_ShowsTheTitleAboveTheThumbnail()
+    {
+        var cut = RenderPage();
+
+        var card = cut.Find("#feature-agent-mode");
+        var children = card.Children.Select(c => c.ClassList.Contains("feature-card-thumbnail") ? "thumbnail" : c.ClassList.Contains("card-header") ? "title" : null)
+            .Where(c => c is not null).ToList();
+        children.Should().Equal("title", "thumbnail");
+    }
+
+    [Fact]
     public void Render_FeatureWithOnlyAnArticle_ShowsNoVideoAndListsTheArticleAsContent()
     {
         var cut = RenderPage();

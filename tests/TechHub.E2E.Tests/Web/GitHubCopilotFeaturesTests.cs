@@ -178,6 +178,21 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
+    public async Task Features_CardWithAVideo_ShouldShowTheTitleAboveThePreview()
+    {
+        await Page.GotoRelativeAsync(PageUrl);
+        await Assertions.Expect(Page.Locator(".feature-card-thumbnail").First).ToBeVisibleAsync();
+
+        var card = Page.Locator(".feature-card:has(.feature-card-thumbnail)").First;
+        var title = await card.Locator(".card-title").BoundingBoxAsync();
+        var preview = await card.Locator(".feature-card-thumbnail").BoundingBoxAsync();
+
+        title.Should().NotBeNull();
+        preview.Should().NotBeNull();
+        title!.Y.Should().BeLessThan(preview!.Y, "the title of a card is always at the top, above the video preview");
+    }
+
+    [Fact]
     public async Task Features_ContentLinks_OnADesktop_ShouldOpenInANewTab()
     {
         await Page.GotoRelativeAsync(PageUrl);
