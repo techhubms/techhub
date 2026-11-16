@@ -139,13 +139,13 @@ resource postgresCpuAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
   }
 }
 
-// --- PostgreSQL: connection saturation (B1ms ~50 max connections) ---
+// --- PostgreSQL: connection saturation (steady state is ~11 active connections, p99 ~21; the server accepts 859) ---
 resource postgresConnAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
   name: 'alert-${environmentName}-postgres-connections'
   location: 'global'
   tags: tags
   properties: {
-    description: 'Fires when active PostgreSQL connections exceed 40 (B1ms has ~50 max).'
+    description: 'Fires when the 15-minute average of active PostgreSQL connections exceeds 40, well above the normal ~11 and a sign of a connection spike that costs memory on the small B1ms server.'
     severity: severityMedium
     enabled: true
     scopes: [postgresServerId]
