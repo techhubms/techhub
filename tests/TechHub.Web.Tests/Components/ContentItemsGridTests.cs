@@ -418,6 +418,48 @@ public class ContentItemsGridTests : BunitContext
         cut.Markup.Should().Contain("Kubernetes news").And.NotContain("The harness");
     }
 
+    [Fact]
+    public void ContentItemsGrid_CorrectionChangesBetweenBatches_StartsOverInsteadOfMixingResults()
+    {
+        // Arrange: the first batch was searched as "harness", the second one would be searched as something else
+        List<ContentItem> Items(string prefix) => Enumerable.Range(0, 40)
+            .Select(i => new ContentItemBuilder().WithSlug($"{prefix}-{i}").WithTitle($"{prefix} {i}").WithPrimarySectionName("github-copilot").WithCollectionName("news").Build())
+            .ToList();
+        var secondBatchCalls = 0;
+        _mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                "github-copilot", "news",
+                It.IsAny<int?>(), It.IsAny<int?>(),
+                "harnass", It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<string?>(), It.IsAny<bool>(), It.IsAny<CancellationToken>()))
+            .Returns((string _, string _, int? _, int? skip, string? _, string? _, int? _, string? _, string? _, string? _, bool _, CancellationToken _) =>
+            {
+                if (skip == 40 && Interlocked.Increment(ref secondBatchCalls) == 1)
+                {
+                    return Task.FromResult<CollectionItemsResponse?>(new CollectionItemsResponse(Items("other"), 100, "harnes"));
+                }
+
+                return Task.FromResult<CollectionItemsResponse?>(new CollectionItemsResponse(Items("harness"), 100, "harness"));
+            });
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news")
+            .Add(p => p.SearchQuery, "harnass"));
+        cut.WaitForAssertion(() => cut.Find(".load-more-btn"));
+
+        // Act
+        cut.Find(".load-more-btn").Click();
+
+        // Assert: the grid was reloaded from the first batch and holds none of the items of the other search
+        cut.WaitForAssertion(() =>
+        {
+            cut.Markup.Should().NotContain("other 0");
+            cut.FindAll(".search-correction strong").Last().TextContent.Should().Be("harnass");
+            cut.FindAll(".content-grid > *").Should().HaveCount(40);
+        });
+    }
     private void SetupSearch(string query, Task<CollectionItemsResponse?> response) =>
         _mockApiClient
             .Setup(x => x.GetCollectionItemsAsync(

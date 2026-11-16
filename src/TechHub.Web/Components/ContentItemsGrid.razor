@@ -313,14 +313,17 @@
         {
             await LoadBatch(1);
         }
-        catch (Exception ex) when (generation == loadGeneration)
-        {
-            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName.Sanitize(), CollectionName.Sanitize());
-            errorMessage = "Unable to load content";
-        }
         catch (Exception ex)
         {
-            Logger.LogDebug(ex, "Ignoring the failure of a load that a newer search replaced");
+            if (generation == loadGeneration)
+            {
+                Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName.Sanitize(), CollectionName.Sanitize());
+                errorMessage = "Unable to load content";
+            }
+            else
+            {
+                Logger.LogDebug(ex, "Ignoring the failure of a load that a newer search replaced");
+            }
         }
         finally
         {
@@ -333,7 +336,9 @@
         }
     }
 
-    private async Task LoadBatch(int batch)
+    // Returns false when the effective search (the typed one or its typo correction) differs from the one of the loaded batches:
+    // the batch then does not belong to the loaded items and the caller has to start over
+    private async Task<bool> LoadBatch(int batch)
     {
         // The response of a search that a newer search replaced must neither change the grid nor fill the cache under the new key
         var generation = loadGeneration;
@@ -365,7 +370,12 @@
 
         if (generation != loadGeneration)
         {
-            return;
+            return true;
+        }
+
+        if (batch > 1 && result?.CorrectedQuery != correctedQuery)
+        {
+            return false;
         }
 
         var newItems = result?.Items.ToList() ?? [];
@@ -384,6 +394,7 @@
 
         // Update circuit-scoped cache so back-navigation can restore all loaded items
         GridStateCache.Set(stateKey, contentItems, currentBatch, hasMoreContent, totalCount, correctedQuery);
+        return true;
     }
 
     private async Task LoadNextBatch()
@@ -396,9 +407,10 @@
         isLoadingMore = true;
         StateHasChanged();
 
+        var startOver = false;
         try
         {
-            await LoadBatch(currentBatch + 1);
+            startOver = !await LoadBatch(currentBatch + 1);
         }
         catch (Exception ex)
         {
@@ -408,6 +420,11 @@
         {
             isLoadingMore = false;
             StateHasChanged();
+        }
+
+        if (startOver)
+        {
+            await LoadInitialBatch();
         }
     }
 
