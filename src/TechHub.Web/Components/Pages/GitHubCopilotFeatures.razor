@@ -103,6 +103,9 @@
                                 var shownRelated = isExpanded ? related : related.Take(MaxRelated).ToList();
 
                                 <article class="card feature-card" id="feature-@feature.Slug">
+                                    <div class="card-header">
+                                        <h3 class="card-title">@feature.Name</h3>
+                                    </div>
                                     @if (!string.IsNullOrEmpty(videoId))
                                     {
                                         <a href="@primary.GetHref()" data-content-link target="@primary.GetTarget()" rel="@primary.GetRel()" class="feature-card-thumbnail" aria-label="@primary.GetAriaLabel(primary.Title)">
@@ -112,9 +115,6 @@
                                             </div>
                                         </a>
                                     }
-                                    <div class="card-header">
-                                        <h3 class="card-title">@feature.Name</h3>
-                                    </div>
                                     @if (!string.IsNullOrWhiteSpace(feature.Description))
                                     {
                                         <p class="card-description feature-card-description">@feature.Description</p>

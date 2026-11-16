@@ -132,6 +132,7 @@ public sealed class StubApiHandler : HttpMessageHandler
         return Task.FromResult(request.RequestUri?.AbsolutePath switch
         {
             "/api/sections" => Ok("[]", "application/json"),
+            "/api/sections/github-copilot/timeline" => Ok("[]", "application/json"),
             "/api/rss/all" => Ok("<rss version=\"2.0\"><channel><title>Tech Hub</title></channel></rss>", "application/rss+xml"),
             _ => NotFound()
         });
