@@ -19,7 +19,7 @@ public sealed record MemoryDiagnosticsProbe(string Name, Func<long> Read);
 /// <summary>
 /// Explains where memory goes. It exports the registered probes as metrics and, when a GC heap hard limit
 /// is configured, logs one warning with a detailed snapshot (generation sizes, fragmentation, pinned objects,
-/// threads and every probe) once the live heap after the last GC reaches 80% of the limit.
+/// threads and every probe) once the live heap after the last full GC reaches 80% of the limit.
 /// </summary>
 public sealed class MemoryDiagnosticsService : BackgroundService
 {
@@ -66,15 +66,19 @@ public sealed class MemoryDiagnosticsService : BackgroundService
 
         using var timer = new PeriodicTimer(_sampleInterval, _timeProvider);
         DateTimeOffset? lastLoggedAt = null;
+        long lastLoggedGcIndex = 0;
 
         while (await timer.WaitForNextTickAsync(stoppingToken))
         {
             var now = _timeProvider.GetUtcNow();
-            var snapshot = ReadHeap();
 
-            if (ShouldLog(snapshot.RetainedBytes, limit.Value, lastLoggedAt, now))
+            // The snapshot only changes after a full GC, so the same one is never logged twice.
+            if (ReadHeap() is { } snapshot
+                && snapshot.GcIndex != lastLoggedGcIndex
+                && ShouldLog(snapshot.RetainedBytes, limit.Value, lastLoggedAt, now))
             {
                 lastLoggedAt = now;
+                lastLoggedGcIndex = snapshot.GcIndex;
                 LogSnapshot(snapshot, limit.Value);
             }
         }
@@ -113,26 +117,41 @@ public sealed class MemoryDiagnosticsService : BackgroundService
             && (lastLoggedAt is null || now - lastLoggedAt.Value >= _minimumLogInterval);
     }
 
-    internal static HeapSnapshot ReadHeap()
+    /// <summary>
+    /// Reads the heap as of the most recent full (gen2) GC. An ephemeral GC leaves the old generations untouched, so
+    /// their sizes would still include garbage that only a full GC removes and would overstate what the app retains.
+    /// Returns <see langword="null"/> until a full GC has happened.
+    /// </summary>
+    internal static HeapSnapshot? ReadHeap()
     {
-        var info = GC.GetGCMemoryInfo(GCKind.Any);
+        var blocking = GC.GetGCMemoryInfo(GCKind.FullBlocking);
+        var background = GC.GetGCMemoryInfo(GCKind.Background);
+        var info = background.Index > blocking.Index ? background : blocking;
+        if (info.Index == 0)
+        {
+            return null;
+        }
+
         var generations = info.GenerationInfo;
 
+        // A generation's size includes its free space, which is reported separately as fragmentation.
         long retained = 0;
         var text = new StringBuilder();
         for (var i = 0; i < generations.Length; i++)
         {
-            retained += generations[i].SizeAfterBytes;
+            var live = Math.Max(0, generations[i].SizeAfterBytes - generations[i].FragmentationAfterBytes);
+            retained += live;
             if (i > 0)
             {
                 text.Append(", ");
             }
 
             var name = i < _generationNames.Length ? _generationNames[i] : $"gen{i}";
-            text.Append(CultureInfo.InvariantCulture, $"{name}={ToMb(generations[i].SizeAfterBytes)} MB");
+            text.Append(CultureInfo.InvariantCulture, $"{name}={ToMb(live)} MB");
         }
 
         return new HeapSnapshot(
+            info.Index,
             retained,
             info.TotalCommittedBytes,
             info.FragmentedBytes,
@@ -163,10 +182,11 @@ public sealed class MemoryDiagnosticsService : BackgroundService
     private void LogSnapshot(HeapSnapshot snapshot, long limitBytes)
     {
         _logger.LogWarning(
-            "Managed heap after the last GC is {RetainedMb} MB, {PercentOfLimit}% of the {LimitMb} MB limit. " +
-            "Generations: {Generations}. Committed {CommittedMb} MB, fragmentation {FragmentationMb} MB, " +
+            "Live managed heap after full GC #{GcIndex} is {RetainedMb} MB, {PercentOfLimit}% of the {LimitMb} MB limit. " +
+            "Live per generation: {Generations}. Committed {CommittedMb} MB, fragmentation {FragmentationMb} MB, " +
             "pinned objects {PinnedObjects}, working set {WorkingSetMb} MB, GCs gen0/gen1/gen2 {Gen0Collections}/{Gen1Collections}/{Gen2Collections}, " +
             "threads {ThreadCount}, queued work items {PendingWorkItems}. App state: {Probes}",
+            snapshot.GcIndex,
             ToMb(snapshot.RetainedBytes),
             snapshot.RetainedBytes * 100 / limitBytes,
             ToMb(limitBytes),
@@ -184,6 +204,7 @@ public sealed class MemoryDiagnosticsService : BackgroundService
     }
 
     internal readonly record struct HeapSnapshot(
+        long GcIndex,
         long RetainedBytes,
         long CommittedBytes,
         long FragmentationBytes,

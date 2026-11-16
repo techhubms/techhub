@@ -1643,10 +1643,7 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             Slug = slug
         };
 
-        if (Connection.State != ConnectionState.Open)
-        {
-            Connection.Open();
-        }
+        await Connection.EnsureOpenAsync(ct);
 
         using var transaction = Connection.BeginTransaction();
         try

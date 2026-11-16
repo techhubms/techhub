@@ -4,6 +4,7 @@ using Dapper;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Data;
 
 namespace TechHub.Infrastructure.Repositories;
 
@@ -37,10 +38,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         ArgumentNullException.ThrowIfNull(events);
         ArgumentException.ThrowIfNullOrWhiteSpace(extractedFrom);
 
-        if (_connection.State != ConnectionState.Open)
-        {
-            _connection.Open();
-        }
+        await _connection.EnsureOpenAsync(ct);
 
         using var transaction = _connection.BeginTransaction();
 
@@ -80,10 +78,7 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         ArgumentNullException.ThrowIfNull(events);
         ArgumentException.ThrowIfNullOrWhiteSpace(extractedFrom);
 
-        if (_connection.State != ConnectionState.Open)
-        {
-            _connection.Open();
-        }
+        await _connection.EnsureOpenAsync(ct);
 
         using var transaction = _connection.BeginTransaction();
 

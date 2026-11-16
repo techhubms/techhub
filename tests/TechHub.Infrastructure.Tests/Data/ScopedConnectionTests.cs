@@ -2,6 +2,7 @@ using System.Data;
 using Dapper;
 using FluentAssertions;
 using Npgsql;
+using TechHub.Infrastructure.Data;
 
 namespace TechHub.Infrastructure.Tests.Data;
 
@@ -71,6 +72,32 @@ public class ScopedConnectionTests : IClassFixture<DatabaseFixture<ScopedConnect
         var act = async () => await query.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
 
         // Assert — the wait ends because of the cancellation, not the 30 second pool timeout
+        stillWaiting.Should().BeTrue();
+        await act.Should().ThrowAsync<OperationCanceledException>();
+    }
+
+    [Fact]
+    public async Task EnsureOpenAsync_WhenPoolIsExhausted_StopsWaitingOnCancellation()
+    {
+        // Arrange — a one-connection pool that is fully in use, as when a transaction needs a connection
+        var connectionString = new NpgsqlConnectionStringBuilder(_fixture.ConnectionString)
+        {
+            MaxPoolSize = 1,
+            Timeout = 30
+        }.ConnectionString;
+        await using var dataSource = NpgsqlDataSource.Create(connectionString);
+        await using var held = await dataSource.OpenConnectionAsync(TestContext.Current.CancellationToken);
+        using var connection = dataSource.CreateConnection();
+        using var cts = new CancellationTokenSource();
+
+        // Act
+        var open = connection.EnsureOpenAsync(cts.Token);
+        await Task.Delay(200, TestContext.Current.CancellationToken);
+        var stillWaiting = !open.IsCompleted;
+        await cts.CancelAsync();
+        var act = async () => await open.WaitAsync(TimeSpan.FromSeconds(10), TestContext.Current.CancellationToken);
+
+        // Assert
         stillWaiting.Should().BeTrue();
         await act.Should().ThrowAsync<OperationCanceledException>();
     }

@@ -7,6 +7,7 @@ using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
+using TechHub.Infrastructure.Data;
 
 namespace TechHub.Infrastructure.Repositories;
 
@@ -593,10 +594,7 @@ public sealed class ProductRepository : IProductRepository
 
     private async Task<ProductOperationResult> InTransactionAsync(Func<IDbTransaction, Task<ProductOperationResult>> operation, CancellationToken ct)
     {
-        if (_connection.State != ConnectionState.Open)
-        {
-            _connection.Open();
-        }
+        await _connection.EnsureOpenAsync(ct);
 
         using var transaction = _connection.BeginTransaction();
         try

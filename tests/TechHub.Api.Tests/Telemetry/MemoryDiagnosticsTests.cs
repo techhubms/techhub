@@ -76,21 +76,23 @@ public class MemoryDiagnosticsTests
     }
 
     [Fact]
-    public void ReadHeap_DescribesEveryGeneration()
+    public void ReadHeap_DescribesEveryGenerationAsOfTheLastFullGc()
     {
-        // Arrange — allocate until the runtime has completed a GC, so there is a heap snapshot to read
-        var collectionsAtStart = GC.CollectionCount(0);
-        while (GC.CollectionCount(0) == collectionsAtStart)
+        // Arrange — large allocations make the runtime run a full GC on its own, so there is a snapshot to read
+        var fullCollectionsAtStart = GC.CollectionCount(2);
+        for (var i = 0; i < 4000 && GC.CollectionCount(2) == fullCollectionsAtStart; i++)
         {
-            GC.KeepAlive(new byte[64 * 1024]);
+            GC.KeepAlive(new byte[1024 * 1024]);
         }
 
         // Act
         var snapshot = MemoryDiagnosticsService.ReadHeap();
 
         // Assert
-        snapshot.RetainedBytes.Should().BeGreaterThan(0);
-        snapshot.Generations.Should().Contain("gen0=").And.Contain("gen2=").And.Contain("loh=").And.Contain("poh=");
+        snapshot.Should().NotBeNull();
+        snapshot!.Value.GcIndex.Should().BeGreaterThan(0);
+        snapshot.Value.RetainedBytes.Should().BeGreaterThan(0);
+        snapshot.Value.Generations.Should().Contain("gen0=").And.Contain("gen2=").And.Contain("loh=").And.Contain("poh=");
     }
 
     [Fact]

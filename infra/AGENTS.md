@@ -44,7 +44,7 @@ The infrastructure is deployed in **two strictly separated phases**:
 **Runtime limits set by Phase 2** (both sites share one plan, so a runaway process takes the other down too):
 
 - `DOTNET_GCHeapHardLimit` (hex bytes, module parameter `gcHeapHardLimitHex`: API 600 MB, Web 800 MB) and `DOTNET_GCConserveMemory=5` cap and compact each .NET heap. When a site hits the cap it fails in that process instead of growing until the plan runs out of memory and its containers are killed (exit code 137/139). Raise the limits before moving to a smaller plan only if the logs show the cap being hit
-- The API connection string carries `Maximum Pool Size=30` (the Npgsql default is 100). Only the API connects to PostgreSQL
+- The API connection string carries `Maximum Pool Size=15` (the Npgsql default is 100). The production `Standard_B1ms` server allows about 50 connections and the connection alert fires at 40, so two API processes overlapping during a restart (2 x 15) stay below both. Raise the cap only together with a larger server SKU. Only the API connects to PostgreSQL
 - Each site's `AppServicePlatformLogs` go to the Log Analytics workspace through the `logAnalyticsWorkspaceId` module parameter (production only), because SCM/Kudu is locked down
 
 ### PR previews (`pr-applications.bicep`)
