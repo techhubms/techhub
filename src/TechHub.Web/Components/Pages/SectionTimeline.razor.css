@@ -51,6 +51,13 @@ html.keyboard-nav .timeline-filter-link:focus-visible {
   color: var(--color-text-on-emphasis);
 }
 
+.timeline-filter-help {
+  margin: var(--spacing-1) 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
 .timeline-sources {
   list-style: none;
   margin: var(--spacing-2) 0 0 0;
