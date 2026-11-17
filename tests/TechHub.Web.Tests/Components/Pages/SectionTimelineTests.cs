@@ -59,7 +59,7 @@ public class SectionTimelineTests : BunitContext
         JSInterop.SetupVoid("preventScrollOnExpand").SetVoidResult();
     }
 
-    private static TimelineEntry GaEntry(string product = "GitHub Copilot", string? feature = "Agent mode", string kind = "ga", string precision = "day", DateOnly? date = null, string? title = null) => new()
+    private static TimelineEntry GaEntry(string product = "GitHub Copilot", string? feature = "Agent mode", string kind = "ga", string precision = "day", DateOnly? date = null, string? title = "Agent mode generally available") => new()
     {
         Date = date ?? new DateOnly(2026, 3, 10),
         DatePrecision = precision,
@@ -116,7 +116,7 @@ public class SectionTimelineTests : BunitContext
     {
         var cut = RenderPage();
 
-        cut.Find(".timeline-name").TextContent.Should().Be("GitHub Copilot: Agent mode");
+        cut.Find(".timeline-name").TextContent.Should().Be("Agent mode generally available");
         cut.Find(".timeline-entry-date").TextContent.Should().Be("10 Mar 2026");
         cut.Find(".timeline-badges .badge-success").TextContent.Should().Be("GA");
         cut.Find(".timeline-description").TextContent.Should().Be("ga of Agent mode");
@@ -137,65 +137,65 @@ public class SectionTimelineTests : BunitContext
         cut.Find(".timeline-entry-date").TextContent.Should().Be(expected);
     }
 
+    [Fact]
+    public void Render_EventWithATitle_UsesItAsTheCardTitleAndShowsTheProductAsABadge()
+    {
+        _mockApiClient
+            .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync([GaEntry("Azure App Service", "Runtimes", kind: "end-of-support", title: "Java 8, 11 and 17 support ends")]);
+
+        var cut = RenderPage();
+
+        cut.Find(".timeline-name").TextContent.Should().Be("Java 8, 11 and 17 support ends");
+        cut.Find(".timeline-badges .badge-tag").TextContent.Should().Be("Azure App Service");
+        cut.Find(".timeline-badges .badge-warning").TextContent.Should().Be("End of support");
+    }
+
     [Theory]
-    [InlineData("Azure App Service", null, "Java 8, 11 and 17 support ends", "Azure App Service: Java 8, 11 and 17 support ends")]
-    [InlineData("Azure App Service", "Runtimes", "Java 8, 11 and 17 support ends", "Azure App Service: Java 8, 11 and 17 support ends")]
-    [InlineData("Artificial Intelligence", null, "GPT-4.1 deprecated", "GPT-4.1 deprecated")]
-    [InlineData("Azure App Service", null, "Azure App Service drops Java 8", "Azure App Service drops Java 8")]
-    public void Render_EventWithATitle_UsesItAsTheCardTitle(string product, string? feature, string title, string expected)
+    [InlineData(null)]
+    [InlineData("  ")]
+    public void Render_EventWithoutATitle_ShowsNoTitleButStillTheProductBadge(string? title)
     {
         _mockApiClient
             .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync([GaEntry(product, feature, kind: "end-of-support", title: title)]);
+            .ReturnsAsync([GaEntry("Azure App Service", "Runtimes", title: title)]);
 
         var cut = RenderPage();
 
-        cut.Find(".timeline-name").TextContent.Should().Be(expected);
+        cut.Find(".timeline-name").TextContent.Trim().Should().BeEmpty();
+        cut.Find(".timeline-badges .badge-tag").TextContent.Should().Be("Azure App Service");
     }
 
     [Fact]
-    public void Render_EventWithoutATitle_FallsBackToTheProductAndFeature()
+    public void Render_Title_IsShownAsReturned()
     {
+        var title = "Azure App Service: " + new string('x', 200);
         _mockApiClient
             .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync([GaEntry("Azure App Service", "Runtimes", title: "  ")]);
+            .ReturnsAsync([GaEntry("Azure App Service", "Runtimes", title: title)]);
 
         var cut = RenderPage();
 
-        cut.Find(".timeline-name").TextContent.Should().Be("Azure App Service: Runtimes");
+        cut.Find(".timeline-name").TextContent.Should().Be(title);
     }
 
     [Fact]
-    public void Render_ForAProductWithoutAFeature_UsesTheProductAsTheTitle()
-    {
-        _mockApiClient
-            .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync([GaEntry(product: "Azure Kubernetes Service", feature: null, kind: "retirement")]);
-
-        var cut = RenderPage();
-
-        cut.Find(".timeline-name").TextContent.Should().Be("Azure Kubernetes Service");
-        cut.Find(".timeline-badges .badge-warning").TextContent.Should().Be("Retirement");
-    }
-
-    [Fact]
-    public void Render_ForTheProductOfTheSection_LeavesTheProductOutOfTheTitle()
+    public void Render_ForTheProductOfTheSection_ShowsNoProductBadge()
     {
         _mockApiClient
             .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(
             [
-                GaEntry(product: "Artificial Intelligence", feature: "Agent mode", date: new DateOnly(2026, 3, 10)),
-                GaEntry(product: "Artificial Intelligence", feature: null, date: new DateOnly(2026, 3, 9)),
-                GaEntry(product: "Microsoft Foundry", feature: "Agent Service", date: new DateOnly(2026, 3, 8))
+                GaEntry(product: "Artificial Intelligence", feature: "Agent mode", title: "Agent mode generally available", date: new DateOnly(2026, 3, 10)),
+                GaEntry(product: "Microsoft Foundry", feature: "Agent Service", title: "Agent Service generally available", date: new DateOnly(2026, 3, 8))
             ]);
 
         var cut = RenderPage();
 
         cut.FindAll(".timeline-name").Select(n => n.TextContent).Should().Equal(
-            "Agent mode",
-            "Artificial Intelligence",
-            "Microsoft Foundry: Agent Service");
+            "Agent mode generally available",
+            "Agent Service generally available");
+        cut.FindAll(".timeline-badges .badge-tag").Select(n => n.TextContent).Should().Equal("Microsoft Foundry");
     }
 
     [Fact]

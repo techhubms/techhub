@@ -78,15 +78,17 @@ public class TimelineEventParserTests
     {
         var result = Parse(Event(title: title));
 
-        result.Should().ContainSingle().Which.Title.Should().BeNull("the card then falls back to the product and feature");
+        result.Should().ContainSingle().Which.Title.Should().BeNull();
     }
 
     [Fact]
-    public void Parse_TitleThatIsNoHeadline_IsDropped()
+    public void Parse_LongTitle_IsKeptAsTheAiWroteIt()
     {
-        var result = Parse(Event(title: new string('x', 121)));
+        var title = new string('x', 300);
 
-        result.Should().ContainSingle().Which.Title.Should().BeNull();
+        var result = Parse(Event(title: title));
+
+        result.Should().ContainSingle().Which.Title.Should().Be(title);
     }
 
     [Fact]

@@ -113,10 +113,6 @@ internal static class TimelineEventParser
         }
 
         var title = GetString(element, "title");
-        if (title is { Length: > TimelineEvent.MaxTitleLength })
-        {
-            title = null;
-        }
 
         return new TimelineEvent
         {
