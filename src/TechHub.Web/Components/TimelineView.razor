@@ -1,13 +1,22 @@
 @using System.Globalization
 @inject IJSRuntime JS
 
-@if (Entries.Count == 0)
+@if (Entries.Count == 0 && Notice is null)
 {
     <p class="timeline-empty">@EmptyText</p>
 }
 else
 {
     <div class="timeline" aria-label="@AriaLabel">
+        @if (Notice is not null)
+        {
+            <div class="timeline-year-group timeline-notice-group">
+                <h2 class="timeline-year-label">@Notice.Label</h2>
+                <div class="timeline-year-entries">
+                    <p class="timeline-notice"><a href="@Notice.Href">@Notice.LinkText</a></p>
+                </div>
+            </div>
+        }
         @foreach (var yearGroup in _years)
         {
             <div class="timeline-year-group">
@@ -95,6 +104,10 @@ else
 
     [Parameter]
     public string EmptyText { get; set; } = "Nothing to show.";
+
+    /// <summary>A heading with a link above the first year, for entries that are left out (for example hidden future events).</summary>
+    [Parameter]
+    public TimelineViewNotice? Notice { get; set; }
 
     /// <summary>Extra content shown in the expanded card, below the description. Rendered after the card was opened once.</summary>
     [Parameter]

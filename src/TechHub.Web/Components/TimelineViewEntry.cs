@@ -24,3 +24,9 @@ public sealed record TimelineViewEntry
 /// <param name="Text">The label.</param>
 /// <param name="CssClass">One of the design system badge classes, for example <c>badge-info</c> or <c>badge-success</c>.</param>
 public sealed record TimelineViewBadge(string Text, string CssClass = "badge-info");
+
+/// <summary>A heading with a single link, shown above the first year of a <see cref="TimelineView"/>, for example "Future events" that are hidden.</summary>
+/// <param name="Label">The heading, shown where a year is.</param>
+/// <param name="LinkText">The text of the link, shown below the heading.</param>
+/// <param name="Href">Where the link goes.</param>
+public sealed record TimelineViewNotice(string Label, string LinkText, string Href);
