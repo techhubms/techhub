@@ -227,13 +227,18 @@ else
     private TimelineViewEntry ToViewEntry(string id, TimelineEntry entry)
     {
         var badges = new List<TimelineViewBadge>();
+        if (!IsSectionProduct(entry))
+        {
+            badges.Add(new TimelineViewBadge(entry.Product, "badge-tag"));
+        }
+
         var kind = KindBadges.TryGetValue(entry.Kind, out var known) ? known : (Label: entry.Kind, CssClass: "badge-muted");
         badges.Add(new TimelineViewBadge(kind.Label, kind.CssClass));
 
         return new TimelineViewEntry
         {
             Id = id,
-            Title = TitleOf(entry),
+            Title = entry.Title ?? string.Empty,
             Date = entry.Date,
             DateLabel = FormatDate(entry),
             Description = entry.Description,
@@ -241,25 +246,9 @@ else
         };
     }
 
-    /// <summary>
-    /// "Product: title", where the title is the headline of the event that says what happens. The product is left out when it is the
-    /// section itself (the page already says it) or when the title starts with it. An event without a title is shown as
-    /// "Product: Feature", with the same exceptions ("Agent mode" instead of "GitHub Copilot: Agent mode").
-    /// </summary>
-    private string TitleOf(TimelineEntry entry)
-    {
-        var isSectionProduct = entry.Product.Equals(sectionData?.Title, StringComparison.OrdinalIgnoreCase);
-        var title = string.IsNullOrWhiteSpace(entry.Title) ? entry.Feature : entry.Title.Trim();
-
-        if (string.IsNullOrWhiteSpace(title))
-        {
-            return entry.Product;
-        }
-
-        return isSectionProduct || title.StartsWith(entry.Product, StringComparison.OrdinalIgnoreCase)
-            ? title
-            : $"{entry.Product}: {title}";
-    }
+    /// <summary>The product is the section itself: the page already says it, so it gets no badge.</summary>
+    private bool IsSectionProduct(TimelineEntry entry) =>
+        entry.Product.Equals(sectionData?.Title, StringComparison.OrdinalIgnoreCase);
 
     /// <summary>The date as precisely as the article states it: a day, a month or a quarter.</summary>
     private static string FormatDate(TimelineEntry entry) => entry.DatePrecision switch

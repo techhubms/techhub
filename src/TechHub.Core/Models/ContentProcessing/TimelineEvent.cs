@@ -38,12 +38,9 @@ public sealed record TimelineEvent
 
     /// <summary>
     /// A short headline that says what the event is (for example "Java 8, 11 and 17 support ends"), so a card on a timeline is
-    /// understood at a glance. <c>null</c> for events stored before titles existed: they are shown as product and feature.
+    /// understood at a glance. Stored as the AI wrote it. <c>null</c> when the AI returned none, and for events stored before titles existed.
     /// </summary>
     public string? Title { get; init; }
-
-    /// <summary>The longest title that is accepted; a longer one is not a headline and is dropped.</summary>
-    public const int MaxTitleLength = 120;
 
     /// <summary>The date of the event (first day of the month or quarter for coarse precision).</summary>
     public required DateOnly Date { get; init; }

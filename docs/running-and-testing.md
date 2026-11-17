@@ -52,6 +52,8 @@ There are many parameters you can give to tweak the behavior. You can combine al
 
 When `E2E_BASE_URL` is set to a non-localhost URL, `Run` skips starting the local servers and runs the E2E tests against that URL. The production pipeline uses this, and E2E tests tagged `Category=Performance` or `Category=DevEnvironment` are excluded there (see [ci-cd-pipeline.md](ci-cd-pipeline.md)).
 
+The timeline headline and product-badge comparison tests are tagged `Category=DevEnvironment` because they read expected values from the real API, which is private in deployed environments. Locally they use `E2E_API_URL` (default `https://localhost:5001`) and require a restored database with titled GitHub Copilot events for both GitHub Copilot itself and other products.
+
 ## Validating All Tests
 
 **CRITICAL**: To validate that all functionality works correctly after making changes:
