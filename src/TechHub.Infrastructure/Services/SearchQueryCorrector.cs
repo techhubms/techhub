@@ -1,9 +1,12 @@
 using System.Data;
+using System.Text;
 using System.Text.RegularExpressions;
 using Dapper;
 using Microsoft.Extensions.Caching.Memory;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models;
 using TechHub.Infrastructure.Data;
+using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.Infrastructure.Services;
 
@@ -40,7 +43,7 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
     private static partial Regex WordPattern();
 
     /// <inheritdoc/>
-    public async Task<string?> CorrectAsync(string query, CancellationToken ct = default)
+    public async Task<string?> CorrectAsync(string query, SearchScope? scope = null, CancellationToken ct = default)
     {
         if (string.IsNullOrWhiteSpace(query))
         {
@@ -58,7 +61,8 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
             return null;
         }
 
-        var known = await FindKnownTermsAsync(terms, ct);
+        var filter = ScopeFilter.From(scope);
+        var known = await FindKnownTermsAsync(terms, filter, ct);
         var unknown = terms.Where(t => !known.Contains(t)).ToList();
         if (unknown.Count == 0)
         {
@@ -67,10 +71,11 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
 
         var vocabulary = await GetVocabularyAsync(ct);
 
-        // The vocabulary also holds words that the search cannot match (tags are not indexed and excerpts are indexed stemmed),
-        // so a candidate is only used when the same prefix test as for the typed terms finds it.
+        // The vocabulary also holds words that the search cannot match (tags are not indexed, excerpts are indexed stemmed and
+        // the vocabulary spans all articles, not only those of the scope), so a candidate is only used when the same test as for
+        // the typed terms finds it within the scope of the search.
         var candidates = unknown.ToDictionary(t => t, t => SearchTermMatcher.FindClosest(t, vocabulary, MaxCandidatesPerTerm), StringComparer.Ordinal);
-        var searchable = await FindKnownTermsAsync(candidates.Values.SelectMany(c => c).Distinct(StringComparer.Ordinal).ToList(), ct);
+        var searchable = await FindKnownTermsAsync(candidates.Values.SelectMany(c => c).Distinct(StringComparer.Ordinal).ToList(), filter, ct);
         var replacements = candidates
             .Select(c => (Term: c.Key, Closest: c.Value.FirstOrDefault(searchable.Contains)))
             .Where(r => r.Closest is not null)
@@ -86,13 +91,13 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
     }
 
     // Only terms that were found are cached: the cache can then not grow with every nonsense word a visitor types
-    private async Task<HashSet<string>> FindKnownTermsAsync(IReadOnlyList<string> terms, CancellationToken ct)
+    private async Task<HashSet<string>> FindKnownTermsAsync(IReadOnlyList<string> terms, ScopeFilter filter, CancellationToken ct)
     {
         var known = new HashSet<string>(StringComparer.Ordinal);
         var toCheck = new List<string>();
         foreach (var term in terms)
         {
-            if (_cache.TryGetValue(KnownTermKey(term), out _))
+            if (_cache.TryGetValue(KnownTermKey(filter, term), out _))
             {
                 known.Add(term);
             }
@@ -107,23 +112,26 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
             return known;
         }
 
-        // The same query transformation as the search itself (prefix match plus the expansion of compound words such as
-        // "openai" to "open"), so a term the search finds results for is never called unknown
-        const string Sql = """
+        // The same query transformation and the same filters as the search itself (prefix match plus the expansion of compound
+        // words such as "openai" to "open", within the sections, collections and dates of the request), so a term the search
+        // finds results for is never called unknown and a term it finds nothing for never known
+        var sql = $"""
             SELECT t.term
             FROM unnest(@Terms, @Queries) AS t(term, query)
-            WHERE EXISTS (SELECT 1 FROM content_items c WHERE c.search_vector @@ to_tsquery('simple', t.query))
+            WHERE EXISTS (SELECT 1 FROM content_items c WHERE c.search_vector @@ to_tsquery('simple', t.query){filter.Conditions})
             """;
         var checkTerms = toCheck.ToArray();
         var queries = checkTerms.Select(_dialect.TransformFullTextQuery).ToArray();
+        var parameters = filter.CreateParameters();
+        parameters.Add("Terms", checkTerms);
+        parameters.Add("Queries", queries);
         // A result is only cached when no invalidation happened during the lookup, or it could bring back a word whose articles were just removed
         var generation = _cache.GetGeneration();
-        var found = await _connection.QueryAsync<string>(
-            new CommandDefinition(Sql, new { Terms = checkTerms, Queries = queries }, cancellationToken: ct));
+        var found = await _connection.QueryAsync<string>(new CommandDefinition(sql, parameters, cancellationToken: ct));
         foreach (var term in found)
         {
             known.Add(term);
-            _cache.SetIfCurrent(generation, KnownTermKey(term), true, _knownTermTtl);
+            _cache.SetIfCurrent(generation, KnownTermKey(filter, term), true, _knownTermTtl);
         }
 
         return known;
@@ -147,5 +155,96 @@ public sealed partial class SearchQueryCorrector : ISearchQueryCorrector
         }, ct);
     }
 
-    private static string KnownTermKey(string term) => $"search:known:{term}";
+    private static string KnownTermKey(ScopeFilter filter, string term) => $"search:known:{filter.CacheKey}:{term}";
+
+    /// <summary>
+    /// The filters of a <see cref="SearchScope"/> as the search applies them (see <c>ContentRepository</c>): the sections by
+    /// bitmask, without the cross-section articles, the collections by name and the dates in unix seconds. The dates are
+    /// rounded down to five minutes, because a window like "the last 90 days" moves with every request and would otherwise
+    /// never share a cache entry.
+    /// </summary>
+    private sealed record ScopeFilter(int SectionMask, string[]? Collections, long? FromEpoch, long? ToEpoch)
+    {
+        private const long BucketSeconds = 300;
+
+        /// <summary>Extra <c>AND</c> conditions on <c>content_items c</c>; they contain no user input, only parameter names.</summary>
+        public string Conditions
+        {
+            get
+            {
+                var sql = new StringBuilder();
+                if (SectionMask > 0)
+                {
+                    sql.Append(" AND (c.sections_bitmask & @SectionMask) > 0 AND c.primary_section_name != 'all'");
+                }
+
+                if (Collections is not null)
+                {
+                    sql.Append(" AND c.collection_name = ANY(@Collections)");
+                }
+
+                if (FromEpoch.HasValue)
+                {
+                    sql.Append(" AND c.date_epoch >= @FromEpoch");
+                }
+
+                if (ToEpoch.HasValue)
+                {
+                    sql.Append(" AND c.date_epoch <= @ToEpoch");
+                }
+
+                return sql.ToString();
+            }
+        }
+
+        public string CacheKey =>
+            $"s{SectionMask}|c{(Collections is null ? string.Empty : string.Join(',', Collections))}|f{FromEpoch}|t{ToEpoch}";
+
+        public DynamicParameters CreateParameters()
+        {
+            var parameters = new DynamicParameters();
+            if (SectionMask > 0)
+            {
+                parameters.Add("SectionMask", SectionMask);
+            }
+
+            if (Collections is not null)
+            {
+                parameters.Add("Collections", Collections);
+            }
+
+            if (FromEpoch.HasValue)
+            {
+                parameters.Add("FromEpoch", FromEpoch.Value);
+            }
+
+            if (ToEpoch.HasValue)
+            {
+                parameters.Add("ToEpoch", ToEpoch.Value);
+            }
+
+            return parameters;
+        }
+
+        public static ScopeFilter From(SearchScope? scope)
+        {
+            if (scope is null)
+            {
+                return new ScopeFilter(0, null, null, null);
+            }
+
+            // "all" is no filter, as for the search itself
+            var sectionMask = scope.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase))
+                ? 0
+                : SectionBitmasks.For(scope.Sections);
+            var collections = scope.Collections.Count == 0 || scope.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase))
+                ? null
+                : scope.Collections.Select(c => c.ToLowerInvariant().Trim()).Order(StringComparer.Ordinal).ToArray();
+
+            return new ScopeFilter(sectionMask, collections, Bucket(scope.DateFrom), Bucket(scope.DateTo));
+        }
+
+        private static long? Bucket(DateTimeOffset? value) =>
+            value.HasValue ? value.Value.ToUnixTimeSeconds() / BucketSeconds * BucketSeconds : null;
+    }
 }

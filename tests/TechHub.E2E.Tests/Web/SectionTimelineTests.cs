@@ -26,6 +26,9 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
 
     private const string PageUrl = "/github-copilot/timeline";
 
+    private const string KindFilterLinks = "nav[aria-label='Kinds of dates'] .timeline-filter-link";
+    private const string FutureFilterLinks = "nav[aria-label='Future events'] .timeline-filter-link";
+
     [Fact]
     public async Task SectionTimeline_ShouldLoad_WithTitleAndSidebarLayout()
     {
@@ -38,16 +41,74 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
     }
 
     [Fact]
-    public async Task SectionTimeline_ShouldOffer_KindFiltersAndTheEarlierWindow()
+    public async Task SectionTimeline_ShouldOffer_KindFiltersFutureFilterAndTheEarlierWindow()
     {
         await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync(PageUrl);
 
-        var filters = Page.Locator(".timeline-filter-link");
+        var filters = Page.Locator(KindFilterLinks);
         await Assertions.Expect(filters).ToHaveCountAsync(4);
         await Assertions.Expect(filters.Nth(0)).ToHaveClassAsync(new Regex("active"));
         await Assertions.Expect(filters.Nth(2)).ToHaveTextAsync("Deprecations");
+        // Future events are hidden until asked for
+        var future = Page.Locator(FutureFilterLinks);
+        await Assertions.Expect(future).ToHaveCountAsync(2);
+        await Assertions.Expect(future.Nth(0)).ToHaveTextAsync("Hide");
+        await Assertions.Expect(future.Nth(0)).ToHaveClassAsync(new Regex("active"));
+        await Assertions.Expect(future.Nth(1)).ToHaveTextAsync("Show");
         await Assertions.Expect(Page.Locator(".timeline-page-window a")).ToHaveTextAsync("Show earlier dates");
+    }
+
+    [Fact]
+    public async Task SectionTimeline_FutureFilter_ShouldSwitchBetweenHidingAndShowingFutureEvents()
+    {
+        await SkipUnlessTimelineIsOpenAsync();
+        await Page.GotoRelativeAsync(PageUrl);
+
+        await Page.Locator(FutureFilterLinks, new() { HasText = "Show" }).ClickAsync();
+
+        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/github-copilot/timeline\?future=show"));
+        await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("Show");
+        await Assertions.Expect(Page.Locator(".timeline-notice")).ToHaveCountAsync(0);
+
+        await Page.Locator(FutureFilterLinks, new() { HasText = "Hide" }).ClickAsync();
+
+        await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("future=show"));
+        await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("Hide");
+    }
+
+    // The API is private in deployed environments; locally it supplies the number of events after today from the real database.
+    [Fact]
+    [Trait("Category", "DevEnvironment")]
+    public async Task SectionTimeline_FutureEvents_ShouldBeHiddenByDefaultBehindALinkThatShowsThem()
+    {
+        // Arrange
+        await SkipUnlessTimelineIsOpenAsync();
+        var tomorrow = DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels")).DateTime).AddDays(1);
+        var apiBaseUrl = (Environment.GetEnvironmentVariable("E2E_API_URL") ?? "https://localhost:5001").TrimEnd('/');
+        var response = await Page.APIGetAsync($"{apiBaseUrl}/api/sections/azure/timeline?from={tomorrow:yyyy-MM-dd}");
+        response.Ok.Should().BeTrue("the real timeline API supplies the number of future events");
+        var futureCount = JsonSerializer.Deserialize<TimelineEntry[]>(await response.TextAsync(), JsonSerializerOptions.Web)!.Length;
+        futureCount.Should().BeGreaterThan(0, "the restored database must contain azure events after today");
+        var expectedLink = $"Hiding {(futureCount >= 200 ? "200+" : futureCount.ToString(CultureInfo.InvariantCulture))} future {(futureCount == 1 ? "event" : "events")}, click here to show";
+
+        // Act
+        await Page.GotoRelativeAsync("/azure/timeline");
+
+        // Assert: the heading and the link stand where the first year would be, and no entry of the future is shown
+        await Assertions.Expect(Page.Locator(".timeline-year-label").First).ToHaveTextAsync("Future events");
+        var link = Page.Locator(".timeline-notice a");
+        await Assertions.Expect(link).ToHaveTextAsync(expectedLink);
+        await Assertions.Expect(Page.Locator(".timeline-year-group").First.Locator(".timeline-entry")).ToHaveCountAsync(0);
+
+        // Act: show them
+        await link.ClickAsync();
+
+        // Assert: the timeline is the one it was before, with the future years
+        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/azure/timeline\?future=show"));
+        await Assertions.Expect(Page.Locator(".timeline-notice")).ToHaveCountAsync(0);
+        await Assertions.Expect(Page.Locator(".timeline-year-label").First).Not.ToHaveTextAsync("Future events");
+        await Assertions.Expect(Page.Locator(".timeline-entry").First).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -56,10 +117,10 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync(PageUrl);
 
-        await Page.Locator(".timeline-filter-link", new() { HasText = "Deprecations" }).ClickAsync();
+        await Page.Locator(KindFilterLinks, new() { HasText = "Deprecations" }).ClickAsync();
 
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/github-copilot/timeline\?kinds=deprecation"));
-        await Assertions.Expect(Page.Locator(".timeline-filter-link.active")).ToHaveTextAsync("Deprecations");
+        await Assertions.Expect(Page.Locator($"{KindFilterLinks}.active")).ToHaveTextAsync("Deprecations");
         // Whatever the page shows now is a deprecation, retirement, end-of-support or breaking change. The active filter is marked
         // before the filtered entries arrive, so this waits (retries) until no entry without a warning badge for its kind is left.
         await Assertions.Expect(Page.Locator(".timeline-entry:not(:has(.timeline-badges .badge-warning))")).ToHaveCountAsync(0);
@@ -83,7 +144,7 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
     [InlineData(true)]
     [InlineData(false)]
     [Trait("Category", "DevEnvironment")]
-    public async Task SectionTimeline_Event_ShouldShowTheApiHeadlineAndOnlyOtherProductBadges(bool isSectionProduct)
+    public async Task SectionTimeline_Event_ShouldShowTheApiHeadlineAndItsProductBadge(bool isSectionProduct)
     {
         // Arrange
         await SkipUnlessTimelineIsOpenAsync();
@@ -102,21 +163,15 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         var expected = entries![index];
 
         // Act
-        await Page.GotoRelativeAsync($"{PageUrl}?since=all");
+        // The API list has the events after today as well, so they are shown to make the position in the list the id of the card
+        await Page.GotoRelativeAsync($"{PageUrl}?since=all&future=show");
         var card = Page.Locator($"#timeline-entry-{index.ToString(CultureInfo.InvariantCulture)}");
 
         // Assert
         await Assertions.Expect(card).ToBeVisibleAsync();
         await Assertions.Expect(card.Locator(".timeline-name")).ToHaveTextAsync(expected.Title!);
-        var productBadge = card.Locator(".timeline-badges .badge-tag");
-        if (isSectionProduct)
-        {
-            await Assertions.Expect(productBadge).ToHaveCountAsync(0);
-        }
-        else
-        {
-            await Assertions.Expect(productBadge).ToHaveTextAsync(expected.Product);
-        }
+        // The product is a badge for every event, also on the timeline of that product itself
+        await Assertions.Expect(card.Locator(".timeline-badges .badge-tag")).ToHaveTextAsync(expected.Product);
     }
 
     [Fact]

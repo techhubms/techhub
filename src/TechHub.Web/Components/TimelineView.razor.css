@@ -1,4 +1,11 @@
 /* Shared timeline: years, months and expandable cards. Page-specific detail content is styled by the page that renders it. */
+/* Heading and link for entries that are left out, such as hidden future events */
+.timeline-notice {
+  margin: 0 0 var(--spacing-4) 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
 /* ─── Timeline Layout ────────────────────────────────────────────── */
 
 .timeline {

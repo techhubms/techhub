@@ -28,17 +28,28 @@
         <aside class="sidebar">
             <SidebarToggle />
             <MobileSidebarToolbar>
-                <MobileSidebarPanel Label="Show" Icon="filter" HasActiveFilter="@(_activeKinds is not null)">
+                <MobileSidebarPanel Label="Show" Icon="filter" HasActiveFilter="@(_activeKinds is not null || _showFuture)">
                     <nav class="sidebar-section" aria-label="Kinds of dates">
                         <h2 class="sidebar-h2">Show</h2>
                         <div class="timeline-filter">
                             @foreach (var filter in Filters)
                             {
                                 var isActive = filter.Value == _activeKinds;
-                                <a href="@BuildHref(filter.Value, _showAll)"
+                                <a href="@BuildHref(filter.Value, _showAll, _showFuture)"
                                    class="timeline-filter-link @(isActive ? "active" : "")"
                                    aria-current="@(isActive ? "true" : null)">@filter.Label</a>
                             }
+                        </div>
+                    </nav>
+                    <nav class="sidebar-section" aria-label="Future events">
+                        <h2 class="sidebar-h2">Future events</h2>
+                        <div class="timeline-filter">
+                            <a href="@BuildHref(_activeKinds, _showAll, false)"
+                               class="timeline-filter-link @(!_showFuture ? "active" : "")"
+                               aria-current="@(!_showFuture ? "true" : null)">Hide</a>
+                            <a href="@BuildHref(_activeKinds, _showAll, true)"
+                               class="timeline-filter-link @(_showFuture ? "active" : "")"
+                               aria-current="@(_showFuture ? "true" : null)">Show</a>
                         </div>
                     </nav>
                 </MobileSidebarPanel>
@@ -55,6 +66,7 @@
             </div>
 
             <TimelineView Entries="_viewEntries"
+                          Notice="FutureNotice"
                           AriaLabel="@($"{sectionData.Title} timeline")"
                           EmptyText="No dates found for this selection.">
                 <Detail Context="entry">
@@ -82,11 +94,11 @@
                 }
                 @if (_showAll)
                 {
-                    <a href="@BuildHref(_activeKinds, false)">Show only the last 12 months</a>
+                    <a href="@BuildHref(_activeKinds, false, _showFuture)">Show only the last 12 months</a>
                 }
                 else
                 {
-                    <a href="@BuildHref(_activeKinds, true)">Show earlier dates</a>
+                    <a href="@BuildHref(_activeKinds, true, _showFuture)">Show earlier dates</a>
                 }
             </p>
         </article>
@@ -133,6 +145,8 @@ else
     private Dictionary<string, TimelineEntry> _entriesById = new(StringComparer.Ordinal);
     private string? _activeKinds;
     private bool _showAll;
+    private bool _showFuture;
+    private int _hiddenFutureCount;
     private string? _loadedKey;
     private bool _notFound;
     private PersistingComponentStateSubscription? _persistSubscription;
@@ -147,6 +161,10 @@ else
     /// <summary><c>all</c> shows every date; otherwise the last 12 months and everything after them.</summary>
     [SupplyParameterFromQuery(Name = "since")]
     public string? SinceParam { get; set; }
+
+    /// <summary><c>show</c> shows the events after today; otherwise they are hidden.</summary>
+    [SupplyParameterFromQuery(Name = "future")]
+    public string? FutureParam { get; set; }
 
     protected override bool IsNotFound => _notFound;
 
@@ -181,8 +199,9 @@ else
         _notFound = false;
         _activeKinds = NormalizeKinds(KindsParam);
         _showAll = string.Equals(SinceParam, "all", StringComparison.OrdinalIgnoreCase);
+        _showFuture = string.Equals(FutureParam, "show", StringComparison.OrdinalIgnoreCase);
 
-        var key = $"{sectionData.Name}|{_activeKinds}|{_showAll}";
+        var key = $"{sectionData.Name}|{_activeKinds}|{_showAll}|{_showFuture}";
         if (key == _loadedKey)
         {
             return;
@@ -194,7 +213,7 @@ else
             && restored is not null
             && restored.Key == key)
         {
-            SetEntries(restored.Entries);
+            SetEntries(restored.Entries, restored.HiddenFutureCount);
             return;
         }
 
@@ -202,7 +221,20 @@ else
         {
             var from = _showAll ? (DateOnly?)null : Today().AddMonths(-12);
             var kinds = _activeKinds?.Split(',');
-            SetEntries(await ApiClient.GetSectionTimelineAsync(sectionData.Name, from, null, kinds));
+            if (_showFuture)
+            {
+                SetEntries(await ApiClient.GetSectionTimelineAsync(sectionData.Name, from, null, kinds), 0);
+            }
+            else
+            {
+                // The API returns the newest entries first and at most MaxEntries, so the events after today are asked for apart:
+                // left in the one result they would take the places of the events that are shown.
+                var today = Today();
+                var past = ApiClient.GetSectionTimelineAsync(sectionData.Name, from, today, kinds);
+                var future = ApiClient.GetSectionTimelineAsync(sectionData.Name, today.AddDays(1), null, kinds);
+                await Task.WhenAll(past, future);
+                SetEntries(await past, (await future).Count);
+            }
         }
         catch (HttpRequestException ex)
         {
@@ -214,9 +246,10 @@ else
         }
     }
 
-    private void SetEntries(IReadOnlyList<TimelineEntry> entries)
+    private void SetEntries(IReadOnlyList<TimelineEntry> entries, int hiddenFutureCount)
     {
         _entries = entries;
+        _hiddenFutureCount = hiddenFutureCount;
         var indexed = entries
             .Select((entry, index) => (Id: index.ToString(CultureInfo.InvariantCulture), Entry: entry))
             .ToList();
@@ -226,12 +259,7 @@ else
 
     private TimelineViewEntry ToViewEntry(string id, TimelineEntry entry)
     {
-        var badges = new List<TimelineViewBadge>();
-        if (!IsSectionProduct(entry))
-        {
-            badges.Add(new TimelineViewBadge(entry.Product, "badge-tag"));
-        }
-
+        var badges = new List<TimelineViewBadge> { new(entry.Product, "badge-tag") };
         var kind = KindBadges.TryGetValue(entry.Kind, out var known) ? known : (Label: entry.Kind, CssClass: "badge-muted");
         badges.Add(new TimelineViewBadge(kind.Label, kind.CssClass));
 
@@ -245,10 +273,6 @@ else
             Badges = badges
         };
     }
-
-    /// <summary>The product is the section itself: the page already says it, so it gets no badge.</summary>
-    private bool IsSectionProduct(TimelineEntry entry) =>
-        entry.Product.Equals(sectionData?.Title, StringComparison.OrdinalIgnoreCase);
 
     /// <summary>The date as precisely as the article states it: a day, a month or a quarter.</summary>
     private static string FormatDate(TimelineEntry entry) => entry.DatePrecision switch
@@ -271,7 +295,24 @@ else
 
     private static DateOnly Today() => DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTz).DateTime);
 
-    private string BuildHref(string? kinds, bool showAll)
+    /// <summary>The heading and the link that stand where the hidden future events would be, or <c>null</c> when none are hidden.</summary>
+    private TimelineViewNotice? FutureNotice
+    {
+        get
+        {
+            if (_hiddenFutureCount == 0)
+            {
+                return null;
+            }
+
+            // The API returns at most MaxEntries, so that many means there may be more
+            var count = _hiddenFutureCount >= MaxEntries ? $"{MaxEntries}+" : _hiddenFutureCount.ToString(CultureInfo.InvariantCulture);
+            var noun = _hiddenFutureCount == 1 ? "event" : "events";
+            return new TimelineViewNotice("Future events", $"Hiding {count} future {noun}, click here to show", BuildHref(_activeKinds, _showAll, true));
+        }
+    }
+
+    private string BuildHref(string? kinds, bool showAll, bool showFuture)
     {
         var query = new List<string>();
         if (kinds is not null)
@@ -284,12 +325,17 @@ else
             query.Add("since=all");
         }
 
+        if (showFuture)
+        {
+            query.Add("future=show");
+        }
+
         return $"/{SectionName}/timeline" + (query.Count > 0 ? "?" + string.Join('&', query) : string.Empty);
     }
 
     private Task PersistState()
     {
-        ApplicationState.PersistAsJson("section-timeline", new PersistedTimeline { Key = _loadedKey ?? string.Empty, Entries = _entries });
+        ApplicationState.PersistAsJson("section-timeline", new PersistedTimeline { Key = _loadedKey ?? string.Empty, Entries = _entries, HiddenFutureCount = _hiddenFutureCount });
         return Task.CompletedTask;
     }
 
@@ -305,5 +351,6 @@ else
     {
         public string Key { get; set; } = string.Empty;
         public IReadOnlyList<TimelineEntry> Entries { get; set; } = [];
+        public int HiddenFutureCount { get; set; }
     }
 }

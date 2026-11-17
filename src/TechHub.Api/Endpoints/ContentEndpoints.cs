@@ -389,10 +389,11 @@ public static class ContentEndpoints
             collectionsArray = new[] { collectionName };
         }
 
-        // A word that no article contains is replaced by the closest word that articles do contain (a typo finds nothing otherwise).
+        // A word that no article of the search contains is replaced by the closest word that articles do contain (a typo finds nothing otherwise).
+        // The scope is the one of the search itself, so a word that only occurs in an article outside the date window is a typo too.
         // The response says so, so the page can tell the visitor what was searched for. The exact title match is left alone.
         var correctedQuery = !exactMode && !string.IsNullOrWhiteSpace(q)
-            ? await searchQueryCorrector.CorrectAsync(q, cancellationToken)
+            ? await searchQueryCorrector.CorrectAsync(q, new SearchScope([section.Name], collectionsArray, dateFrom, dateTo), cancellationToken)
             : null;
 
         // Build search request - repository will handle "all" as no filter.
@@ -559,11 +560,12 @@ public static class ContentEndpoints
             }
         }
 
-        // A mistyped word finds nothing, so the tag cloud uses the same corrected query as the items
+        // A mistyped word finds nothing, so the tag cloud uses the same corrected query as the items, judged by the same scope
         var tagSearchQuery = string.IsNullOrWhiteSpace(q) ? null : q.Trim();
         if (tagSearchQuery is not null)
         {
-            tagSearchQuery = await searchQueryCorrector.CorrectAsync(tagSearchQuery, cancellationToken) ?? tagSearchQuery;
+            var scope = new SearchScope([sectionName], collectionsFilter ?? [collectionName], dateFrom, dateTo);
+            tagSearchQuery = await searchQueryCorrector.CorrectAsync(tagSearchQuery, scope, cancellationToken) ?? tagSearchQuery;
         }
 
         // Get top N tag counts from repository - repository will handle "all" as no filter
