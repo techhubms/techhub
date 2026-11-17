@@ -14,6 +14,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 - **Always use `Run` function** for all build/test/run operations — see [docs/running-and-testing.md](docs/running-and-testing.md)
 - **Always use managed identities for Azure service authentication** — never use connection strings or API keys when managed identity is available. See [infra/AGENTS.md](infra/AGENTS.md#authentication-pattern-always-use-managed-identities) for details.
 - **Prefer `scripts/Invoke-Sql.ps1` for local database queries** — extend it for specific use cases as needed; configure credentials via parameters or environment variables to match your local setup
+- **Classify catalog entries by independence** — a product can be used, bought or deployed by itself; something available only through a product is its feature. See [docs/product-catalog.md](docs/product-catalog.md#the-question).
 - **Always check for errors after editing files** (`get_errors` tool)
 - **Always fix all linter issues**
 - **Always store temp files, scripts, output, etc in `.tmp/`**

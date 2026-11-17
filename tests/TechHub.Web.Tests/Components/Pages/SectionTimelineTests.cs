@@ -47,7 +47,7 @@ public class SectionTimelineTests : BunitContext
         Services.AddSingleton(sectionCache);
         _features = this.AddFeatureGate(isAdmin: false, (FeatureKeys.Timeline, FeatureToggleMode.Everyone));
 
-        // The events after today are asked for apart from the ones that are shown (see the page), so the default answer has none of them
+        // Hidden events are requested separately from the visible window.
         _mockApiClient
             .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync((string _, DateOnly? from, DateOnly? to, IReadOnlyList<string>? _, CancellationToken _) =>
@@ -77,21 +77,23 @@ public class SectionTimelineTests : BunitContext
         ]
     };
 
-    // The page asks for the events after today with no end date, and for the others up to and including today
     private static bool IsFutureCall(DateOnly? from, DateOnly? to) =>
-        to is null && from.HasValue && from.Value > DateOnly.FromDateTime(DateTime.UtcNow);
+        to is null && from.HasValue && from.Value > Today();
 
-    private static bool IsPastCall(DateOnly? to) =>
-        to.HasValue && Math.Abs(to.Value.DayNumber - DateOnly.FromDateTime(DateTime.UtcNow).DayNumber) <= 1;
+    private static DateOnly Today() =>
+        DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels")).DateTime);
 
     private static TimelineEntry FutureEntry(int index) =>
-        GaEntry(feature: $"Future {index}", date: DateOnly.FromDateTime(DateTime.UtcNow).AddDays(30 + index));
+        GaEntry(feature: $"Future {index}", date: Today().AddDays(30 + index));
 
     private void SetupFutureEntries(int count) =>
         _mockApiClient
             .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync((string _, DateOnly? from, DateOnly? to, IReadOnlyList<string>? _, CancellationToken _) =>
-                IsFutureCall(from, to) ? Enumerable.Range(0, count).Select(FutureEntry).ToList() : [GaEntry()]);
+                new[] { GaEntry() }.Concat(Enumerable.Range(0, count).Select(FutureEntry))
+                    .Where(e => (!from.HasValue || e.Date >= from.Value) && (!to.HasValue || e.Date <= to.Value))
+                    .OrderByDescending(e => e.Date)
+                    .ToList());
 
     private IRenderedComponent<SectionTimeline> RenderPage(string query = "")
     {
@@ -225,56 +227,56 @@ public class SectionTimelineTests : BunitContext
     }
 
     [Fact]
-    public void Render_ByDefault_AsksForTheLastTwelveMonthsUpToTodayAndForTheFutureApart()
+    public void Render_ByDefault_AsksForTheLastTwelveMonthsAndNextSixMonthsWithLaterEventsApart()
     {
         RenderPage();
 
         _mockApiClient.Verify(x => x.GetSectionTimelineAsync(
             "ai",
-            It.Is<DateOnly?>(d => d.HasValue && Math.Abs(d.Value.DayNumber - DateOnly.FromDateTime(DateTime.UtcNow.AddMonths(-12)).DayNumber) <= 1),
-            It.Is<DateOnly?>(d => IsPastCall(d)),
+            It.Is<DateOnly?>(d => d == Today().AddMonths(-12)),
+            It.Is<DateOnly?>(d => d == Today().AddMonths(6)),
             null,
             It.IsAny<CancellationToken>()), Times.Once);
         _mockApiClient.Verify(x => x.GetSectionTimelineAsync(
             "ai",
-            It.Is<DateOnly?>(d => d.HasValue && d.Value > DateOnly.FromDateTime(DateTime.UtcNow)),
+            It.Is<DateOnly?>(d => d == Today().AddMonths(6).AddDays(1)),
             null,
             null,
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
     [Fact]
-    public void Render_WithSinceAll_AsksForEveryDateUpToTodayAndOffersTheShorterWindow()
+    public void Render_WithSinceAll_AsksForEarlierDatesWithoutChangingTheUpcomingWindow()
     {
         var cut = RenderPage("?since=all");
 
-        _mockApiClient.Verify(x => x.GetSectionTimelineAsync("ai", null, It.Is<DateOnly?>(d => IsPastCall(d)), null, It.IsAny<CancellationToken>()), Times.Once);
+        _mockApiClient.Verify(x => x.GetSectionTimelineAsync("ai", null, It.Is<DateOnly?>(d => d == Today().AddMonths(6)), null, It.IsAny<CancellationToken>()), Times.Once);
         cut.Find(".timeline-page-window a").TextContent.Should().Be("Show only the last 12 months");
         cut.Find(".timeline-page-window a").GetAttribute("href").Should().Be("/ai/timeline");
     }
 
     [Fact]
-    public void Render_ByDefault_HidesFutureEventsAndSaysHowManyInPlaceOfTheirYear()
+    public void Render_WithFutureHidden_HidesFutureEventsAndOffersToShowThem()
     {
         SetupFutureEntries(3);
 
-        var cut = RenderPage();
+        var cut = RenderPage("?future=hide");
 
         cut.FindAll(".timeline-year-label").Select(l => l.TextContent).Should().Equal("Future events", "2026");
         var link = cut.Find(".timeline-notice a");
-        link.TextContent.Should().Be("Hiding 3 future events, click here to show");
+        link.TextContent.Should().Be("Show all future events (3 hidden)");
         link.GetAttribute("href").Should().Be("/ai/timeline?future=show");
         cut.FindAll(".timeline-entry").Should().ContainSingle("only the event of the past is shown");
     }
 
     [Fact]
-    public void Render_WithOneHiddenFutureEvent_SaysEventInTheSingular()
+    public void Render_WithOneHiddenFutureEvent_ShowsItsCount()
     {
         SetupFutureEntries(1);
 
-        var cut = RenderPage();
+        var cut = RenderPage("?future=hide");
 
-        cut.Find(".timeline-notice a").TextContent.Should().Be("Hiding 1 future event, click here to show");
+        cut.Find(".timeline-notice a").TextContent.Should().Be("Show all future events (1 hidden)");
     }
 
     [Fact]
@@ -294,11 +296,11 @@ public class SectionTimelineTests : BunitContext
             .ReturnsAsync((string _, DateOnly? from, DateOnly? to, IReadOnlyList<string>? _, CancellationToken _) =>
                 IsFutureCall(from, to) ? [FutureEntry(0), FutureEntry(1)] : []);
 
-        Services.GetRequiredService<NavigationManager>().NavigateTo("/ai/timeline");
+        Services.GetRequiredService<NavigationManager>().NavigateTo("/ai/timeline?future=hide");
         var cut = Render<SectionTimeline>(p => p.Add(x => x.SectionName, "ai"));
         cut.WaitForState(() => cut.FindAll(".timeline-notice").Count > 0);
 
-        cut.Find(".timeline-notice a").TextContent.Should().Be("Hiding 2 future events, click here to show");
+        cut.Find(".timeline-notice a").TextContent.Should().Be("Show all future events (2 hidden)");
         cut.FindAll(".timeline-empty").Should().BeEmpty();
         cut.FindAll(".timeline-entry").Should().BeEmpty();
     }
@@ -319,14 +321,16 @@ public class SectionTimelineTests : BunitContext
     }
 
     [Fact]
-    public void Render_FutureFilter_OffersHideAndShowAndKeepsTheOtherFilters()
+    public void Render_FutureFilter_OffersUpcomingHideAndAllWhenLaterEventsExistAndKeepsOtherFilters()
     {
+        SetupFutureEntries(200);
         var cut = RenderPage("?kinds=pricing-change,event&since=all");
 
         var links = cut.FindAll("nav[aria-label='Future events'] .timeline-filter-link");
         links.Select(a => (a.TextContent, a.GetAttribute("href"))).Should().Equal(
-            ("Hide", "/ai/timeline?kinds=pricing-change,event&since=all"),
-            ("Show", "/ai/timeline?kinds=pricing-change,event&since=all&future=show"));
+            ("Next 6 months", "/ai/timeline?kinds=pricing-change,event&since=all"),
+            ("All future events", "/ai/timeline?kinds=pricing-change,event&since=all&future=show"),
+            ("Hide future events", "/ai/timeline?kinds=pricing-change,event&since=all&future=hide"));
         links[0].ClassList.Should().Contain("active");
         links[1].ClassList.Should().NotContain("active");
     }
@@ -336,7 +340,7 @@ public class SectionTimelineTests : BunitContext
     {
         var cut = RenderPage("?future=show");
 
-        cut.Find("nav[aria-label='Future events'] .timeline-filter-link.active").TextContent.Should().Be("Show");
+        cut.Find("nav[aria-label='Future events'] .timeline-filter-link.active").TextContent.Should().Be("All future events");
         cut.Find(".timeline-page-window a").GetAttribute("href").Should().Be("/ai/timeline?since=all&future=show");
         cut.FindAll("nav[aria-label='Kinds of dates'] .timeline-filter-link").Select(a => a.GetAttribute("href")).Should().Equal(
             "/ai/timeline?future=show",
@@ -352,6 +356,79 @@ public class SectionTimelineTests : BunitContext
 
         cut.Find(".timeline-page-window a").TextContent.Should().Be("Show earlier dates");
         cut.Find(".timeline-page-window a").GetAttribute("href").Should().Be("/ai/timeline?since=all");
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("?future=upcoming")]
+    [InlineData("?future=invalid")]
+    public void Render_DefaultWindow_ShowsUpcomingThroughSixMonthsButNotTheDayAfter(string query)
+    {
+        // Arrange
+        var cutoff = Today().AddMonths(6);
+        var entries = new[]
+        {
+            GaEntry(date: cutoff.AddDays(1), title: "Later retirement"),
+            GaEntry(date: cutoff, title: "Upcoming retirement"),
+            GaEntry(date: Today().AddDays(1), title: "Tomorrow"),
+            GaEntry(date: Today(), title: "Today"),
+            GaEntry()
+        };
+        _mockApiClient
+            .Setup(x => x.GetSectionTimelineAsync(It.IsAny<string>(), It.IsAny<DateOnly?>(), It.IsAny<DateOnly?>(), It.IsAny<IReadOnlyList<string>?>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync((string _, DateOnly? from, DateOnly? to, IReadOnlyList<string>? _, CancellationToken _) =>
+                entries.Where(e => (!from.HasValue || e.Date >= from.Value) && (!to.HasValue || e.Date <= to.Value)).ToList());
+
+        // Act
+        var cut = RenderPage(query);
+
+        // Assert
+        cut.FindAll(".timeline-name").Select(e => e.TextContent).Should().Equal("Upcoming retirement", "Tomorrow", "Today", "Agent mode generally available");
+        cut.FindAll(".timeline-badges .badge-info").Count(e => e.TextContent == "Upcoming").Should().Be(2);
+        cut.Find(".timeline-notice a").TextContent.Should().Be("Show all future events (1 beyond the next 6 months)");
+        cut.Find("nav[aria-label='Future events'] .active").TextContent.Should().Be("Next 6 months");
+    }
+
+    [Fact]
+    public void Render_WithoutLaterEvents_DoesNotOfferAnUnnecessaryAllFutureOption()
+    {
+        // Arrange
+        SetupFutureEntries(2);
+
+        // Act
+        var cut = RenderPage();
+
+        // Assert
+        cut.FindAll(".timeline-entry").Should().HaveCount(3);
+        cut.FindAll(".timeline-notice").Should().BeEmpty();
+        cut.FindAll("nav[aria-label='Future events'] a").Select(a => a.TextContent)
+            .Should().Equal("Next 6 months", "Hide future events");
+    }
+
+    [Fact]
+    public void Render_WithFutureHidden_KeepsItHiddenWhenChangingOtherFilters()
+    {
+        // Act
+        var cut = RenderPage("?future=hide");
+
+        // Assert
+        _mockApiClient.Verify(x => x.GetSectionTimelineAsync("ai", It.IsAny<DateOnly?>(), It.Is<DateOnly?>(d => d == Today()), null, It.IsAny<CancellationToken>()), Times.Once);
+        cut.Find("nav[aria-label='Future events'] .active").TextContent.Should().Be("Hide future events");
+        cut.Find(".timeline-page-window a").GetAttribute("href").Should().Be("/ai/timeline?since=all&future=hide");
+        cut.FindAll("nav[aria-label='Kinds of dates'] a").Should().OnlyContain(a => a.GetAttribute("href")!.Contains("future=hide"));
+    }
+
+    [Fact]
+    public void Render_WithMaximumHiddenEvents_IndicatesTheCountIsALowerBound()
+    {
+        // Arrange
+        SetupFutureEntries(200);
+
+        // Act
+        var cut = RenderPage("?future=hide");
+
+        // Assert
+        cut.Find(".timeline-notice a").TextContent.Should().Be("Show all future events (200+ hidden)");
     }
 
     [Fact]

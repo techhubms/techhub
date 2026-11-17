@@ -50,64 +50,77 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         await Assertions.Expect(filters).ToHaveCountAsync(4);
         await Assertions.Expect(filters.Nth(0)).ToHaveClassAsync(new Regex("active"));
         await Assertions.Expect(filters.Nth(2)).ToHaveTextAsync("Deprecations");
-        // Future events are hidden until asked for
         var future = Page.Locator(FutureFilterLinks);
-        await Assertions.Expect(future).ToHaveCountAsync(2);
-        await Assertions.Expect(future.Nth(0)).ToHaveTextAsync("Hide");
+        await Assertions.Expect(future.Nth(0)).ToHaveTextAsync("Next 6 months");
         await Assertions.Expect(future.Nth(0)).ToHaveClassAsync(new Regex("active"));
-        await Assertions.Expect(future.Nth(1)).ToHaveTextAsync("Show");
+        await Assertions.Expect(future.Last).ToHaveTextAsync("Hide future events");
         await Assertions.Expect(Page.Locator(".timeline-page-window a")).ToHaveTextAsync("Show earlier dates");
     }
 
     [Fact]
-    public async Task SectionTimeline_FutureFilter_ShouldSwitchBetweenHidingAndShowingFutureEvents()
+    public async Task SectionTimeline_FutureFilter_ShouldSwitchBetweenUpcomingHiddenAndAll()
     {
         await SkipUnlessTimelineIsOpenAsync();
-        await Page.GotoRelativeAsync(PageUrl);
+        await Page.GotoRelativeAsync("/azure/timeline");
 
-        await Page.Locator(FutureFilterLinks, new() { HasText = "Show" }).ClickAsync();
+        await Page.Locator(FutureFilterLinks, new() { HasText = "Hide future events" }).ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("Hide future events"));
 
-        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/github-copilot/timeline\?future=show"));
-        await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("Show");
+        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/azure/timeline\?future=hide"));
+
+        await Page.Locator(FutureFilterLinks, new() { HasText = "All future events" }).ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("All future events"));
+
+        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/azure/timeline\?future=show"));
         await Assertions.Expect(Page.Locator(".timeline-notice")).ToHaveCountAsync(0);
 
-        await Page.Locator(FutureFilterLinks, new() { HasText = "Hide" }).ClickAsync();
+        await Page.Locator(FutureFilterLinks, new() { HasText = "Next 6 months" }).ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("Next 6 months"));
 
-        await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("future=show"));
-        await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("Hide");
+        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/azure/timeline$"));
     }
 
     // The API is private in deployed environments; locally it supplies the number of events after today from the real database.
     [Fact]
     [Trait("Category", "DevEnvironment")]
-    public async Task SectionTimeline_FutureEvents_ShouldBeHiddenByDefaultBehindALinkThatShowsThem()
+    public async Task SectionTimeline_DefaultWindow_ShouldMatchUpcomingApiDatesAndOfferLaterEvents()
     {
         // Arrange
         await SkipUnlessTimelineIsOpenAsync();
-        var tomorrow = DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels")).DateTime).AddDays(1);
+        var today = DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels")).DateTime);
+        var cutoff = today.AddMonths(6);
         var apiBaseUrl = (Environment.GetEnvironmentVariable("E2E_API_URL") ?? "https://localhost:5001").TrimEnd('/');
-        var response = await Page.APIGetAsync($"{apiBaseUrl}/api/sections/azure/timeline?from={tomorrow:yyyy-MM-dd}");
-        response.Ok.Should().BeTrue("the real timeline API supplies the number of future events");
-        var futureCount = JsonSerializer.Deserialize<TimelineEntry[]>(await response.TextAsync(), JsonSerializerOptions.Web)!.Length;
-        futureCount.Should().BeGreaterThan(0, "the restored database must contain azure events after today");
-        var expectedLink = $"Hiding {(futureCount >= 200 ? "200+" : futureCount.ToString(CultureInfo.InvariantCulture))} future {(futureCount == 1 ? "event" : "events")}, click here to show";
+        var response = await Page.APIGetAsync($"{apiBaseUrl}/api/sections/azure/timeline?from={today.AddMonths(-12):yyyy-MM-dd}&to={cutoff:yyyy-MM-dd}");
+        response.Ok.Should().BeTrue();
+        var expected = JsonSerializer.Deserialize<TimelineEntry[]>(await response.TextAsync(), JsonSerializerOptions.Web)!;
+        var upcomingCount = expected.Count(e => e.Date > today);
+        upcomingCount.Should().BeGreaterThan(0, "the restored database must contain upcoming Azure events");
+        var laterResponse = await Page.APIGetAsync($"{apiBaseUrl}/api/sections/azure/timeline?from={cutoff.AddDays(1):yyyy-MM-dd}");
+        laterResponse.Ok.Should().BeTrue();
+        var laterCount = JsonSerializer.Deserialize<TimelineEntry[]>(await laterResponse.TextAsync(), JsonSerializerOptions.Web)!.Length;
 
         // Act
         await Page.GotoRelativeAsync("/azure/timeline");
 
-        // Assert: the heading and the link stand where the first year would be, and no entry of the future is shown
-        await Assertions.Expect(Page.Locator(".timeline-year-label").First).ToHaveTextAsync("Future events");
+        // Assert
+        await Assertions.Expect(Page.Locator(".timeline-entry")).ToHaveCountAsync(expected.Length);
+        await Assertions.Expect(Page.Locator(".timeline-badges .badge-info", new() { HasText = "Upcoming" })).ToHaveCountAsync(upcomingCount);
+        (await Page.Locator(".timeline-name").AllTextContentsAsync()).Should().Equal(expected.Select(e => e.Title ?? string.Empty));
+
         var link = Page.Locator(".timeline-notice a");
-        await Assertions.Expect(link).ToHaveTextAsync(expectedLink);
-        await Assertions.Expect(Page.Locator(".timeline-year-group").First.Locator(".timeline-entry")).ToHaveCountAsync(0);
+        if (laterCount == 0)
+        {
+            await Assertions.Expect(link).ToHaveCountAsync(0);
+            await Assertions.Expect(Page.Locator(FutureFilterLinks, new() { HasText = "All future events" })).ToHaveCountAsync(0);
+            return;
+        }
 
-        // Act: show them
-        await link.ClickAsync();
+        await Assertions.Expect(link).ToHaveTextAsync($"Show all future events ({(laterCount >= 200 ? "200+" : laterCount.ToString(CultureInfo.InvariantCulture))} beyond the next 6 months)");
+        await link.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("All future events"));
 
-        // Assert: the timeline is the one it was before, with the future years
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/azure/timeline\?future=show"));
         await Assertions.Expect(Page.Locator(".timeline-notice")).ToHaveCountAsync(0);
-        await Assertions.Expect(Page.Locator(".timeline-year-label").First).Not.ToHaveTextAsync("Future events");
         await Assertions.Expect(Page.Locator(".timeline-entry").First).ToBeVisibleAsync();
     }
 

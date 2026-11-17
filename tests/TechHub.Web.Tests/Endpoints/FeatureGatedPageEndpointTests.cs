@@ -1,4 +1,5 @@
 using System.Net;
+using AngleSharp.Html.Parser;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
@@ -49,6 +50,30 @@ public class FeatureGatedPageEndpointTests(DevelopmentWebFixture fixture) : ICla
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         html.Should().NotContain("Page Not Found");
+    }
+
+    [Theory]
+    [InlineData("", "Next 6 months")]
+    [InlineData("&future=hide", "Hide future events")]
+    [InlineData("&future=show", "All future events")]
+    public async Task Get_TimelineFutureWindow_RendersSelectedFilterAndPreservesItInHistoryLink(string futureQuery, string selectedLabel)
+    {
+        // Arrange
+        SetUp(FeatureToggleMode.Everyone);
+        using var client = fixture.CreateClient("10.20.30.3");
+
+        // Act
+        using var response = await client.GetAsync($"{PageUrl}?kinds=retirement&since=all{futureQuery}", TestContext.Current.CancellationToken);
+        var html = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+        using var document = new HtmlParser().ParseDocument(html);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var active = document.QuerySelector("nav[aria-label='Future events'] a[aria-current='true']");
+        active.Should().NotBeNull();
+        active!.TextContent.Should().Be(selectedLabel);
+        document.QuerySelector(".timeline-page-window a")!.GetAttribute("href")
+            .Should().Be($"{PageUrl}?kinds=retirement{futureQuery}");
     }
 
     // The section must exist, so a 404 can only come from the toggle and not from an unknown section.

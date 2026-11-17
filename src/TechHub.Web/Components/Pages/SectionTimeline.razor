@@ -28,14 +28,14 @@
         <aside class="sidebar">
             <SidebarToggle />
             <MobileSidebarToolbar>
-                <MobileSidebarPanel Label="Show" Icon="filter" HasActiveFilter="@(_activeKinds is not null || _showFuture)">
+                <MobileSidebarPanel Label="Show" Icon="filter" HasActiveFilter="@(_activeKinds is not null || _futureWindow != FutureWindow.Upcoming)">
                     <nav class="sidebar-section" aria-label="Kinds of dates">
                         <h2 class="sidebar-h2">Show</h2>
                         <div class="timeline-filter">
                             @foreach (var filter in Filters)
                             {
                                 var isActive = filter.Value == _activeKinds;
-                                <a href="@BuildHref(filter.Value, _showAll, _showFuture)"
+                                <a href="@BuildHref(filter.Value, _showAll, _futureWindow)"
                                    class="timeline-filter-link @(isActive ? "active" : "")"
                                    aria-current="@(isActive ? "true" : null)">@filter.Label</a>
                             }
@@ -44,13 +44,20 @@
                     <nav class="sidebar-section" aria-label="Future events">
                         <h2 class="sidebar-h2">Future events</h2>
                         <div class="timeline-filter">
-                            <a href="@BuildHref(_activeKinds, _showAll, false)"
-                               class="timeline-filter-link @(!_showFuture ? "active" : "")"
-                               aria-current="@(!_showFuture ? "true" : null)">Hide</a>
-                            <a href="@BuildHref(_activeKinds, _showAll, true)"
-                               class="timeline-filter-link @(_showFuture ? "active" : "")"
-                               aria-current="@(_showFuture ? "true" : null)">Show</a>
+                            <a href="@BuildHref(_activeKinds, _showAll, FutureWindow.Upcoming)"
+                               class="timeline-filter-link @(_futureWindow == FutureWindow.Upcoming ? "active" : "")"
+                               aria-current="@(_futureWindow == FutureWindow.Upcoming ? "true" : null)">Next 6 months</a>
+                            @if (_hiddenFutureCount > 0 || _futureWindow == FutureWindow.All)
+                            {
+                                <a href="@BuildHref(_activeKinds, _showAll, FutureWindow.All)"
+                                   class="timeline-filter-link @(_futureWindow == FutureWindow.All ? "active" : "")"
+                                   aria-current="@(_futureWindow == FutureWindow.All ? "true" : null)">All future events</a>
+                            }
+                            <a href="@BuildHref(_activeKinds, _showAll, FutureWindow.Hidden)"
+                               class="timeline-filter-link @(_futureWindow == FutureWindow.Hidden ? "active" : "")"
+                               aria-current="@(_futureWindow == FutureWindow.Hidden ? "true" : null)">Hide future events</a>
                         </div>
+                        <p class="timeline-filter-help">Upcoming dates are shown through @Today().AddMonths(6).ToString("d MMM yyyy", CultureInfo.InvariantCulture) by default.</p>
                     </nav>
                 </MobileSidebarPanel>
             </MobileSidebarToolbar>
@@ -94,11 +101,11 @@
                 }
                 @if (_showAll)
                 {
-                    <a href="@BuildHref(_activeKinds, false, _showFuture)">Show only the last 12 months</a>
+                    <a href="@BuildHref(_activeKinds, false, _futureWindow)">Show only the last 12 months</a>
                 }
                 else
                 {
-                    <a href="@BuildHref(_activeKinds, true, _showFuture)">Show earlier dates</a>
+                    <a href="@BuildHref(_activeKinds, true, _futureWindow)">Show earlier dates</a>
                 }
             </p>
         </article>
@@ -145,7 +152,7 @@ else
     private Dictionary<string, TimelineEntry> _entriesById = new(StringComparer.Ordinal);
     private string? _activeKinds;
     private bool _showAll;
-    private bool _showFuture;
+    private FutureWindow _futureWindow;
     private int _hiddenFutureCount;
     private string? _loadedKey;
     private bool _notFound;
@@ -158,11 +165,11 @@ else
     [SupplyParameterFromQuery(Name = "kinds")]
     public string? KindsParam { get; set; }
 
-    /// <summary><c>all</c> shows every date; otherwise the last 12 months and everything after them.</summary>
+    /// <summary><c>all</c> includes earlier history; otherwise dates start twelve months ago. The future setting is independent.</summary>
     [SupplyParameterFromQuery(Name = "since")]
     public string? SinceParam { get; set; }
 
-    /// <summary><c>show</c> shows the events after today; otherwise they are hidden.</summary>
+    /// <summary><c>show</c> includes all future events, <c>hide</c> excludes them; otherwise the next six months are included.</summary>
     [SupplyParameterFromQuery(Name = "future")]
     public string? FutureParam { get; set; }
 
@@ -199,9 +206,14 @@ else
         _notFound = false;
         _activeKinds = NormalizeKinds(KindsParam);
         _showAll = string.Equals(SinceParam, "all", StringComparison.OrdinalIgnoreCase);
-        _showFuture = string.Equals(FutureParam, "show", StringComparison.OrdinalIgnoreCase);
+        _futureWindow = FutureParam?.ToLowerInvariant() switch
+        {
+            "show" => FutureWindow.All,
+            "hide" => FutureWindow.Hidden,
+            _ => FutureWindow.Upcoming
+        };
 
-        var key = $"{sectionData.Name}|{_activeKinds}|{_showAll}|{_showFuture}";
+        var key = $"{sectionData.Name}|{_activeKinds}|{_showAll}|{_futureWindow}";
         if (key == _loadedKey)
         {
             return;
@@ -219,21 +231,21 @@ else
 
         try
         {
-            var from = _showAll ? (DateOnly?)null : Today().AddMonths(-12);
+            var today = Today();
+            var from = _showAll ? (DateOnly?)null : today.AddMonths(-12);
             var kinds = _activeKinds?.Split(',');
-            if (_showFuture)
+            if (_futureWindow == FutureWindow.All)
             {
                 SetEntries(await ApiClient.GetSectionTimelineAsync(sectionData.Name, from, null, kinds), 0);
             }
             else
             {
-                // The API returns the newest entries first and at most MaxEntries, so the events after today are asked for apart:
-                // left in the one result they would take the places of the events that are shown.
-                var today = Today();
-                var past = ApiClient.GetSectionTimelineAsync(sectionData.Name, from, today, kinds);
-                var future = ApiClient.GetSectionTimelineAsync(sectionData.Name, today.AddDays(1), null, kinds);
-                await Task.WhenAll(past, future);
-                SetEntries(await past, (await future).Count);
+                // Query hidden events separately so they cannot consume the API's limit for visible entries.
+                var through = _futureWindow == FutureWindow.Hidden ? today : today.AddMonths(6);
+                var visible = ApiClient.GetSectionTimelineAsync(sectionData.Name, from, through, kinds);
+                var hidden = ApiClient.GetSectionTimelineAsync(sectionData.Name, through.AddDays(1), null, kinds);
+                await Task.WhenAll(visible, hidden);
+                SetEntries(await visible, (await hidden).Count);
             }
         }
         catch (HttpRequestException ex)
@@ -262,6 +274,10 @@ else
         var badges = new List<TimelineViewBadge> { new(entry.Product, "badge-tag") };
         var kind = KindBadges.TryGetValue(entry.Kind, out var known) ? known : (Label: entry.Kind, CssClass: "badge-muted");
         badges.Add(new TimelineViewBadge(kind.Label, kind.CssClass));
+        if (entry.Date > Today())
+        {
+            badges.Add(new TimelineViewBadge("Upcoming", "badge-info"));
+        }
 
         return new TimelineViewEntry
         {
@@ -307,12 +323,12 @@ else
 
             // The API returns at most MaxEntries, so that many means there may be more
             var count = _hiddenFutureCount >= MaxEntries ? $"{MaxEntries}+" : _hiddenFutureCount.ToString(CultureInfo.InvariantCulture);
-            var noun = _hiddenFutureCount == 1 ? "event" : "events";
-            return new TimelineViewNotice("Future events", $"Hiding {count} future {noun}, click here to show", BuildHref(_activeKinds, _showAll, true));
+            var scope = _futureWindow == FutureWindow.Hidden ? "hidden" : "beyond the next 6 months";
+            return new TimelineViewNotice("Future events", $"Show all future events ({count} {scope})", BuildHref(_activeKinds, _showAll, FutureWindow.All));
         }
     }
 
-    private string BuildHref(string? kinds, bool showAll, bool showFuture)
+    private string BuildHref(string? kinds, bool showAll, FutureWindow futureWindow)
     {
         var query = new List<string>();
         if (kinds is not null)
@@ -325,9 +341,13 @@ else
             query.Add("since=all");
         }
 
-        if (showFuture)
+        if (futureWindow == FutureWindow.All)
         {
             query.Add("future=show");
+        }
+        else if (futureWindow == FutureWindow.Hidden)
+        {
+            query.Add("future=hide");
         }
 
         return $"/{SectionName}/timeline" + (query.Count > 0 ? "?" + string.Join('&', query) : string.Empty);
@@ -346,6 +366,13 @@ else
     }
 
     private sealed record KindFilter(string Label, string? Value);
+
+    private enum FutureWindow
+    {
+        Upcoming,
+        All,
+        Hidden
+    }
 
     private sealed class PersistedTimeline
     {
