@@ -1,6 +1,9 @@
+using System.Globalization;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
+using TechHub.Core.Models;
 using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
@@ -73,6 +76,47 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         // The subscriptions are on the features page. Wait for the timeline itself first: an absence check passes on a page that has not rendered yet.
         await Assertions.Expect(Page.Locator(".timeline-entry").First).ToBeVisibleAsync();
         await Assertions.Expect(Page.Locator(".features-tier-card")).ToHaveCountAsync(0);
+    }
+
+    // The API is private in deployed environments; locally it supplies the expected values from the real database.
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    [Trait("Category", "DevEnvironment")]
+    public async Task SectionTimeline_Event_ShouldShowTheApiHeadlineAndOnlyOtherProductBadges(bool isSectionProduct)
+    {
+        // Arrange
+        await SkipUnlessTimelineIsOpenAsync();
+        var apiBaseUrl = (Environment.GetEnvironmentVariable("E2E_API_URL") ?? "https://localhost:5001").TrimEnd('/');
+        var response = await Page.APIGetAsync($"{apiBaseUrl}/api/sections/github-copilot/timeline");
+        response.Ok.Should().BeTrue("the real timeline API supplies the expected headlines and products");
+        var entries = JsonSerializer.Deserialize<TimelineEntry[]>(await response.TextAsync(), JsonSerializerOptions.Web);
+        entries.Should().NotBeNullOrEmpty("the restored database must contain timeline events");
+
+        var index = Array.FindIndex(entries!, entry =>
+            !string.IsNullOrWhiteSpace(entry.Title)
+            && entry.Product.Equals("GitHub Copilot", StringComparison.OrdinalIgnoreCase) == isSectionProduct);
+        index.Should().BeGreaterThanOrEqualTo(0,
+            "the restored database must contain a titled event for {0}",
+            isSectionProduct ? "GitHub Copilot itself" : "another product in the GitHub Copilot section");
+        var expected = entries![index];
+
+        // Act
+        await Page.GotoRelativeAsync($"{PageUrl}?since=all");
+        var card = Page.Locator($"#timeline-entry-{index.ToString(CultureInfo.InvariantCulture)}");
+
+        // Assert
+        await Assertions.Expect(card).ToBeVisibleAsync();
+        await Assertions.Expect(card.Locator(".timeline-name")).ToHaveTextAsync(expected.Title!);
+        var productBadge = card.Locator(".timeline-badges .badge-tag");
+        if (isSectionProduct)
+        {
+            await Assertions.Expect(productBadge).ToHaveCountAsync(0);
+        }
+        else
+        {
+            await Assertions.Expect(productBadge).ToHaveTextAsync(expected.Product);
+        }
     }
 
     [Fact]
