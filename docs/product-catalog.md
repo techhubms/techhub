@@ -17,6 +17,8 @@ The AI returns product and feature names as free text. The catalog is a curated 
 
 An article is about several products or features, and a product feature can link to several articles. An event belongs to one article and one product (and optionally one feature), so both dates and detected feature mentions lead back to the article that states them.
 
+Use the current official name for an active product and retain its former names as aliases (for example, **Aspire** and `.NET Aspire`). A retired product can keep its own entry for historical references when it is distinct from its successor (for example, Azure AD Graph API and Microsoft Graph). Source text stays unchanged in both cases.
+
 ## Products, Child Products and Features
 
 ### The question

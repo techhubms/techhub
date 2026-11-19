@@ -83,6 +83,9 @@ Positions are saved in exactly two places:
 2. **`popstate` handler** (back/forward): saves `lastSettledScrollY` under the
    page we're LEAVING (`lastPathname + lastSearch`).
 
+The timeline opts out of the scroll-to-top reset and page-level spinner for interactive filter changes
+on the same path. It still saves scroll positions for browser back and forward.
+
 ### The `markScriptsReady` Bridge
 
 Blazor pages call `markScriptsReady()` at the end of `OnAfterRenderAsync` (via `PageComponentBase`, see

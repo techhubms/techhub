@@ -356,7 +356,9 @@ history.pushState = function (...args) {
         // beforeenhancedload fires before this for Blazor links and already handles
         // the early scroll + navigating setup. This branch is the fallback for
         // non-Blazor pushState callers or for the rare case the event didn't fire.
-        if (navigating !== 'forward') {
+        const isInPlaceQuery = newUrl?.pathname === oldPathname &&
+            document.querySelector('[data-in-place-query]') !== null;
+        if (navigating !== 'forward' && !isInPlaceQuery) {
             document.documentElement.classList.remove('is-scrolling');
             window.scrollTo({ top: 0, behavior: 'instant' });
             lastSettledScrollY = 0;
