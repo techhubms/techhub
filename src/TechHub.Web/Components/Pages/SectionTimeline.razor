@@ -1,5 +1,7 @@
 @page "/{SectionName}/timeline"
 @using System.Globalization
+@using System.Security.Cryptography
+@using System.Text.Json
 @using TechHub.Core.Models
 @using TechHub.Core.Models.ContentProcessing
 @using TechHub.Core.Models.FeatureToggles
@@ -24,7 +26,7 @@
         Description="@SeoDescription"
         ContentType="SeoMetaTags.SeoContentType.Website" />
 
-    <main class="page-with-sidebar">
+    <main class="page-with-sidebar" data-in-place-query>
         <aside class="sidebar">
             <SidebarToggle />
             <MobileSidebarToolbar>
@@ -47,12 +49,9 @@
                             <a href="@BuildHref(_activeKinds, _showAll, FutureWindow.Upcoming)"
                                class="timeline-filter-link @(_futureWindow == FutureWindow.Upcoming ? "active" : "")"
                                aria-current="@(_futureWindow == FutureWindow.Upcoming ? "true" : null)">Next 6 months</a>
-                            @if (_hiddenFutureCount > 0 || _futureWindow == FutureWindow.All)
-                            {
-                                <a href="@BuildHref(_activeKinds, _showAll, FutureWindow.All)"
-                                   class="timeline-filter-link @(_futureWindow == FutureWindow.All ? "active" : "")"
-                                   aria-current="@(_futureWindow == FutureWindow.All ? "true" : null)">All future events</a>
-                            }
+                            <a href="@BuildHref(_activeKinds, _showAll, FutureWindow.All)"
+                               class="timeline-filter-link @(_futureWindow == FutureWindow.All ? "active" : "")"
+                               aria-current="@(_futureWindow == FutureWindow.All ? "true" : null)">All future events</a>
                             <a href="@BuildHref(_activeKinds, _showAll, FutureWindow.Hidden)"
                                class="timeline-filter-link @(_futureWindow == FutureWindow.Hidden ? "active" : "")"
                                aria-current="@(_futureWindow == FutureWindow.Hidden ? "true" : null)">Hide future events</a>
@@ -63,7 +62,7 @@
             </MobileSidebarToolbar>
         </aside>
 
-        <article class="article-body">
+        <article class="article-body" aria-busy="@(!IsPageDataReady ? "true" : "false")">
             <div class="content-detail-header">
                 <h1 id="skiptohere" class="page-h1">Timeline</h1>
             </div>
@@ -72,8 +71,9 @@
                 <p>@SeoDescription</p>
             </div>
 
-            <TimelineView Entries="_viewEntries"
-                          Notice="FutureNotice"
+            <TimelineView @key="sectionData.Name"
+                          Entries="_viewEntries"
+                          Notice="_notice"
                           AriaLabel="@($"{sectionData.Title} timeline")"
                           EmptyText="No dates found for this selection.">
                 <Detail Context="entry">
@@ -154,7 +154,10 @@ else
     private bool _showAll;
     private FutureWindow _futureWindow;
     private int _hiddenFutureCount;
+    private TimelineViewNotice? _notice;
+    private string? _requestedKey;
     private string? _loadedKey;
+    private long _loadVersion;
     private bool _notFound;
     private PersistingComponentStateSubscription? _persistSubscription;
 
@@ -175,6 +178,8 @@ else
 
     protected override bool IsNotFound => _notFound;
 
+    protected override bool IsPageDataReady => _loadedKey == _requestedKey;
+
     private string PageTitleText => $"Timeline - {sectionData?.Title ?? SectionName} - Tech Hub";
 
     private string SeoDescription =>
@@ -189,14 +194,18 @@ else
     protected override async Task OnParametersSetAsync()
     {
         // A feature that is off, or only on for admins, does not exist for this visitor
-        if (!await FeatureGate.IsEnabledAsync(FeatureKeys.Timeline))
+        var nextSection = await FeatureGate.IsEnabledAsync(FeatureKeys.Timeline)
+            ? SectionCache.GetSectionByName(SectionName)
+            : null;
+        if (sectionData?.Name != nextSection?.Name)
         {
-            sectionData = null;
-            _notFound = true;
-            return;
+            _requestedKey = null;
+            _loadedKey = null;
+            _loadVersion++;
+            SetEntries([], 0);
         }
 
-        sectionData = SectionCache.GetSectionByName(SectionName);
+        sectionData = nextSection;
         if (sectionData is null)
         {
             _notFound = true;
@@ -214,18 +223,24 @@ else
         };
 
         var key = $"{sectionData.Name}|{_activeKinds}|{_showAll}|{_futureWindow}";
-        if (key == _loadedKey)
+        if (key == _requestedKey)
         {
             return;
         }
 
-        _loadedKey = key;
+        _requestedKey = key;
+        var loadVersion = ++_loadVersion;
+        if (key == _loadedKey)
+        {
+            return;
+        }
 
         if (ApplicationState.TryTakeFromJson<PersistedTimeline>("section-timeline", out var restored)
             && restored is not null
             && restored.Key == key)
         {
             SetEntries(restored.Entries, restored.HiddenFutureCount);
+            _loadedKey = key;
             return;
         }
 
@@ -234,9 +249,11 @@ else
             var today = Today();
             var from = _showAll ? (DateOnly?)null : today.AddMonths(-12);
             var kinds = _activeKinds?.Split(',');
+            IReadOnlyList<TimelineEntry> entries;
+            var hiddenCount = 0;
             if (_futureWindow == FutureWindow.All)
             {
-                SetEntries(await ApiClient.GetSectionTimelineAsync(sectionData.Name, from, null, kinds), 0);
+                entries = await ApiClient.GetSectionTimelineAsync(sectionData.Name, from, null, kinds);
             }
             else
             {
@@ -245,16 +262,26 @@ else
                 var visible = ApiClient.GetSectionTimelineAsync(sectionData.Name, from, through, kinds);
                 var hidden = ApiClient.GetSectionTimelineAsync(sectionData.Name, through.AddDays(1), null, kinds);
                 await Task.WhenAll(visible, hidden);
-                SetEntries(await visible, (await hidden).Count);
+                entries = await visible;
+                hiddenCount = (await hidden).Count;
+            }
+
+            if (loadVersion == _loadVersion)
+            {
+                SetEntries(entries, hiddenCount);
+                _loadedKey = key;
             }
         }
-        catch (HttpRequestException ex)
+        catch (Exception ex) when (ex is HttpRequestException or InvalidOperationException)
         {
-            ErrorService.HandleError(ex, Navigation, Logger);
-        }
-        catch (InvalidOperationException ex)
-        {
-            ErrorService.HandleError(ex, Navigation, Logger);
+            if (loadVersion == _loadVersion)
+            {
+                ErrorService.HandleError(ex, Navigation, Logger);
+            }
+            else
+            {
+                Logger.LogWarning(ex, "A superseded timeline request failed.");
+            }
         }
     }
 
@@ -262,11 +289,23 @@ else
     {
         _entries = entries;
         _hiddenFutureCount = hiddenFutureCount;
-        var indexed = entries
-            .Select((entry, index) => (Id: index.ToString(CultureInfo.InvariantCulture), Entry: entry))
-            .ToList();
-        _entriesById = indexed.ToDictionary(x => x.Id, x => x.Entry, StringComparer.Ordinal);
-        _viewEntries = indexed.Select(x => ToViewEntry(x.Id, x.Entry)).ToList();
+        _notice = BuildFutureNotice();
+        _entriesById = new(StringComparer.Ordinal);
+        var viewEntries = new List<TimelineViewEntry>(entries.Count);
+        foreach (var entry in entries)
+        {
+            var (date, datePrecision, kind, productKey, featureKey) = TimelineEntry.GetGroupKey(
+                entry.Date, entry.DatePrecision, entry.Kind, entry.ProductId, entry.Product, entry.FeatureId, entry.Feature);
+            var fingerprint = Convert.ToHexString(SHA256.HashData(
+                JsonSerializer.SerializeToUtf8Bytes(new { date, datePrecision, kind, productKey, featureKey })));
+            var id = fingerprint;
+            for (var duplicate = 1; !_entriesById.TryAdd(id, entry); duplicate++)
+            {
+                id = $"{fingerprint}-{duplicate.ToString(CultureInfo.InvariantCulture)}";
+            }
+            viewEntries.Add(ToViewEntry(id, entry));
+        }
+        _viewEntries = viewEntries;
     }
 
     private TimelineViewEntry ToViewEntry(string id, TimelineEntry entry)
@@ -312,20 +351,17 @@ else
     private static DateOnly Today() => DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTz).DateTime);
 
     /// <summary>The heading and the link that stand where the hidden future events would be, or <c>null</c> when none are hidden.</summary>
-    private TimelineViewNotice? FutureNotice
+    private TimelineViewNotice? BuildFutureNotice()
     {
-        get
+        if (_hiddenFutureCount == 0)
         {
-            if (_hiddenFutureCount == 0)
-            {
-                return null;
-            }
-
-            // The API returns at most MaxEntries, so that many means there may be more
-            var count = _hiddenFutureCount >= MaxEntries ? $"{MaxEntries}+" : _hiddenFutureCount.ToString(CultureInfo.InvariantCulture);
-            var scope = _futureWindow == FutureWindow.Hidden ? "hidden" : "beyond the next 6 months";
-            return new TimelineViewNotice("Future events", $"Show all future events ({count} {scope})", BuildHref(_activeKinds, _showAll, FutureWindow.All));
+            return null;
         }
+
+        // The API returns at most MaxEntries, so that many means there may be more
+        var count = _hiddenFutureCount >= MaxEntries ? $"{MaxEntries}+" : _hiddenFutureCount.ToString(CultureInfo.InvariantCulture);
+        var scope = _futureWindow == FutureWindow.Hidden ? "hidden" : "beyond the next 6 months";
+        return new TimelineViewNotice("Future events", $"Show all future events ({count} {scope})", BuildHref(_activeKinds, _showAll, FutureWindow.All));
     }
 
     private string BuildHref(string? kinds, bool showAll, FutureWindow futureWindow)
@@ -361,6 +397,7 @@ else
 
     public void Dispose()
     {
+        _loadVersion++;
         _persistSubscription?.Dispose();
         GC.SuppressFinalize(this);
     }

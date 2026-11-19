@@ -321,7 +321,7 @@ public class SectionTimelineTests : BunitContext
     }
 
     [Fact]
-    public void Render_FutureFilter_OffersUpcomingHideAndAllWhenLaterEventsExistAndKeepsOtherFilters()
+    public void Render_FutureFilter_OffersAllThreeOptionsAndKeepsOtherFilters()
     {
         SetupFutureEntries(200);
         var cut = RenderPage("?kinds=pricing-change,event&since=all");
@@ -390,7 +390,7 @@ public class SectionTimelineTests : BunitContext
     }
 
     [Fact]
-    public void Render_WithoutLaterEvents_DoesNotOfferAnUnnecessaryAllFutureOption()
+    public void Render_WithoutLaterEvents_KeepsAllThreeOptionsVisible()
     {
         // Arrange
         SetupFutureEntries(2);
@@ -402,7 +402,65 @@ public class SectionTimelineTests : BunitContext
         cut.FindAll(".timeline-entry").Should().HaveCount(3);
         cut.FindAll(".timeline-notice").Should().BeEmpty();
         cut.FindAll("nav[aria-label='Future events'] a").Select(a => a.TextContent)
-            .Should().Equal("Next 6 months", "Hide future events");
+            .Should().Equal("Next 6 months", "All future events", "Hide future events");
+    }
+
+    [Fact]
+    public async Task Render_WhileSwitchingFromHiddenToAll_KeepsResultsAndIgnoresASupersededResponse()
+    {
+        // Arrange
+        SetupFutureEntries(2);
+        var all = new TaskCompletionSource<IReadOnlyList<TimelineEntry>>(TaskCreationOptions.RunContinuationsAsynchronously);
+        _mockApiClient.Setup(x => x.GetSectionTimelineAsync("ai",
+            It.Is<DateOnly?>(date => date == Today().AddMonths(-12)), null, null, It.IsAny<CancellationToken>()))
+            .Returns(all.Task);
+        var cut = RenderPage("?future=hide");
+        cut.Find(".timeline-card").Click();
+        cut.WaitForAssertion(() => cut.FindAll(".timeline-sources a").Should().HaveCount(2));
+        var navigation = Services.GetRequiredService<NavigationManager>();
+
+        // Act
+        await cut.InvokeAsync(() => navigation.NavigateTo("/ai/timeline?future=show"));
+
+        // Assert
+        cut.WaitForAssertion(() =>
+        {
+            cut.Find("[aria-busy='true']");
+            cut.Find(".timeline-notice a").TextContent.Should().Be("Show all future events (2 hidden)");
+            cut.FindAll(".timeline-entry").Should().ContainSingle();
+            cut.FindAll("nav[aria-label='Future events'] a").Should().HaveCount(3);
+        });
+
+        await cut.InvokeAsync(() => navigation.NavigateTo("/ai/timeline"));
+        cut.WaitForAssertion(() => cut.FindAll(".timeline-entry").Should().HaveCount(3));
+        cut.Find(".timeline-entry.expanded .timeline-name").TextContent.Should().Be("Agent mode generally available");
+
+        var renderCount = cut.RenderCount;
+        all.SetResult([GaEntry(title: "Outdated response")]);
+        cut.WaitForState(() => cut.RenderCount > renderCount);
+        cut.FindAll(".timeline-entry").Should().HaveCount(3);
+        cut.FindAll(".timeline-notice").Should().BeEmpty();
+        cut.FindAll("[aria-busy='true']").Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task Render_WhenOnlySourcesChange_KeepsTheCardExpanded()
+    {
+        var entry = GaEntry();
+        const string UpdatedUrl = "https://example.com/updated-agent-mode";
+        _mockApiClient.Setup(x => x.GetSectionTimelineAsync("ai", It.IsAny<DateOnly?>(), null, null, It.IsAny<CancellationToken>()))
+            .ReturnsAsync((string _, DateOnly? from, DateOnly? to, IReadOnlyList<string>? _, CancellationToken _) =>
+                IsFutureCall(from, to) ? [] : [entry with { Sources = [entry.Sources[0] with { ExternalUrl = UpdatedUrl }] }]);
+        var cut = RenderPage("?future=hide");
+        cut.Find(".timeline-card").Click();
+        cut.FindAll(".timeline-entry.expanded .timeline-sources a").Should().HaveCount(2);
+        var navigation = Services.GetRequiredService<NavigationManager>();
+
+        await cut.InvokeAsync(() => navigation.NavigateTo("/ai/timeline?future=show"));
+
+        cut.WaitForAssertion(() =>
+            cut.FindAll(".timeline-entry.expanded .timeline-sources a").Should().ContainSingle()
+                .Which.GetAttribute("href").Should().Be(UpdatedUrl));
     }
 
     [Fact]

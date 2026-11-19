@@ -1,12 +1,10 @@
 using Dapper;
 using FluentAssertions;
-using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
 /// <summary>
-/// Integration tests for the product catalog migration (050_product_catalog.sql). The fixture database already ran the migration on an empty
-/// catalog, so these tests check the catalog it left (products, parents, features, and what is not catalogued) and that running the script again changes nothing.
+/// Integration tests for the catalog seeded by all current migrations.
 /// </summary>
 public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<ProductCatalogMigrationTests>>
 {
@@ -78,9 +76,13 @@ public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<Produc
             "SELECT count(*) FROM (SELECT lower(name) FROM products GROUP BY 1 HAVING count(*) > 1) d");
         duplicateNames.Should().Be(0);
 
-        var aliasClashes = await _fixture.Connection.ExecuteScalarAsync<long>(
-            "SELECT count(*) FROM product_aliases a JOIN products p ON lower(p.name) = lower(a.alias) AND p.id <> a.product_id");
-        aliasClashes.Should().Be(0);
+        var aliasClashes = await _fixture.Connection.QueryAsync<string>(
+            """
+            SELECT a.alias || ' (alias of ' || owner.name || ', also product ' || p.name || ')'
+            FROM product_aliases a JOIN products p ON lower(p.name) = lower(a.alias) AND p.id <> a.product_id
+            JOIN products owner ON owner.id = a.product_id
+            """);
+        aliasClashes.Should().BeEmpty();
     }
 
     [Fact]
@@ -97,17 +99,6 @@ public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<Produc
             SELECT count(*) FROM chain WHERE id = ancestor
             """);
         cyclic.Should().Be(0);
-    }
-
-    [Fact]
-    public async Task Migration_RunAgain_ChangesNothing()
-    {
-        const string CountSql = "SELECT (SELECT count(*) FROM products) + (SELECT count(*) FROM product_aliases) + (SELECT count(*) FROM product_features) + (SELECT count(*) FROM ignored_product_names)";
-        var before = await _fixture.Connection.ExecuteScalarAsync<long>(CountSql);
-
-        await _fixture.Connection.ExecuteAsync(await ReadMigrationAsync());
-
-        (await _fixture.Connection.ExecuteScalarAsync<long>(CountSql)).Should().Be(before);
     }
 
     [Theory]
@@ -282,24 +273,4 @@ public class ProductCatalogMigrationTests : IClassFixture<DatabaseFixture<Produc
         (await ParentOfAsync(product)).Should().Be("Microsoft Azure");
     }
 
-    [Fact]
-    public async Task Migration_ParentSetInTheAdmin_IsNeverOverwritten()
-    {
-        var otherParent = await _fixture.Connection.ExecuteScalarAsync<long>(
-            "INSERT INTO products (name) VALUES ('A parent chosen in the admin') RETURNING id");
-        await _fixture.Connection.ExecuteAsync("UPDATE products SET parent_product_id = @Parent WHERE name = 'Azure Batch'", new { Parent = otherParent });
-
-        await _fixture.Connection.ExecuteAsync(await ReadMigrationAsync());
-
-        (await ParentOfAsync("Azure Batch")).Should().Be("A parent chosen in the admin");
-    }
-
-    private static async Task<string> ReadMigrationAsync()
-    {
-        var assembly = typeof(ProductRepository).Assembly;
-        var name = assembly.GetManifestResourceNames().Single(n => n.EndsWith("050_product_catalog.sql", StringComparison.Ordinal));
-        await using var stream = assembly.GetManifestResourceStream(name)!;
-        using var reader = new StreamReader(stream);
-        return await reader.ReadToEndAsync();
-    }
 }

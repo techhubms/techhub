@@ -41,6 +41,43 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
     }
 
     [Fact]
+    public async Task SectionTimeline_LongBadgesOnMobile_ShouldWrapInsideTheCard()
+    {
+        // Arrange
+        await SkipUnlessTimelineIsOpenAsync();
+        await Page.SetViewportSizeAsync(320, 740);
+        await Page.GotoRelativeAsync(PageUrl);
+        var header = Page.Locator(".timeline-header-content").First;
+        var product = header.Locator(".badge-tag");
+        await Assertions.Expect(product).ToBeVisibleAsync();
+
+        // Act: exercise a label wider than the card without relying on the live catalog.
+        await product.EvaluateAsync("badge => { badge.textContent = 'LongProductName'.repeat(12); }");
+
+        // Assert
+        var badgesFit = await header.EvaluateAsync<bool>("""
+            header => {
+                const bounds = header.getBoundingClientRect();
+                return [...header.querySelectorAll('.timeline-badges span')].every(badge => {
+                    const rect = badge.getBoundingClientRect();
+                    return rect.left >= bounds.left - 1 && rect.right <= bounds.right + 1
+                        && rect.right <= document.documentElement.clientWidth;
+                });
+            }
+            """);
+        badgesFit.Should().BeTrue("the badge row should wrap before running into the chevron or off the screen");
+
+        var textLines = await product.EvaluateAsync<int>("""
+            badge => {
+                const text = document.createRange();
+                text.selectNodeContents(badge);
+                return text.getClientRects().length;
+            }
+            """);
+        textLines.Should().BeGreaterThan(1, "an oversized product name should wrap rather than be clipped");
+    }
+
+    [Fact]
     public async Task SectionTimeline_ShouldOffer_KindFiltersFutureFilterAndTheEarlierWindow()
     {
         await SkipUnlessTimelineIsOpenAsync();
@@ -51,9 +88,8 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         await Assertions.Expect(filters.Nth(0)).ToHaveClassAsync(new Regex("active"));
         await Assertions.Expect(filters.Nth(2)).ToHaveTextAsync("Deprecations");
         var future = Page.Locator(FutureFilterLinks);
-        await Assertions.Expect(future.Nth(0)).ToHaveTextAsync("Next 6 months");
+        await Assertions.Expect(future).ToHaveTextAsync(["Next 6 months", "All future events", "Hide future events"]);
         await Assertions.Expect(future.Nth(0)).ToHaveClassAsync(new Regex("active"));
-        await Assertions.Expect(future.Last).ToHaveTextAsync("Hide future events");
         await Assertions.Expect(Page.Locator(".timeline-page-window a")).ToHaveTextAsync("Show earlier dates");
     }
 
@@ -63,21 +99,32 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         await SkipUnlessTimelineIsOpenAsync();
         await Page.GotoRelativeAsync("/azure/timeline");
 
+        var article = Page.Locator("article.article-body");
+        await article.EvaluateAsync("element => element.dataset.testTimeline = 'mounted'");
         await Page.Locator(FutureFilterLinks, new() { HasText = "Hide future events" }).ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("Hide future events"));
 
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/azure/timeline\?future=hide"));
+        await Assertions.Expect(Page.Locator(FutureFilterLinks)).ToHaveCountAsync(3);
 
         await Page.Locator(FutureFilterLinks, new() { HasText = "All future events" }).ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("All future events"));
+        {
+            await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("All future events");
+            await Assertions.Expect(article).ToHaveAttributeAsync("aria-busy", "false");
+        });
 
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/azure/timeline\?future=show"));
         await Assertions.Expect(Page.Locator(".timeline-notice")).ToHaveCountAsync(0);
+        await Assertions.Expect(article).ToHaveAttributeAsync("data-test-timeline", "mounted");
 
         await Page.Locator(FutureFilterLinks, new() { HasText = "Next 6 months" }).ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("Next 6 months"));
 
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@"/azure/timeline$"));
+
+        await Page.GoBackAsync();
+        await Assertions.Expect(Page.Locator($"{FutureFilterLinks}.active")).ToHaveTextAsync("All future events");
+        await Assertions.Expect(article).ToHaveAttributeAsync("data-test-timeline", "mounted");
     }
 
     // The API is private in deployed environments; locally it supplies the number of events after today from the real database.
@@ -111,7 +158,7 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         if (laterCount == 0)
         {
             await Assertions.Expect(link).ToHaveCountAsync(0);
-            await Assertions.Expect(Page.Locator(FutureFilterLinks, new() { HasText = "All future events" })).ToHaveCountAsync(0);
+            await Assertions.Expect(Page.Locator(FutureFilterLinks, new() { HasText = "All future events" })).ToBeVisibleAsync();
             return;
         }
 
@@ -176,9 +223,9 @@ public class SectionTimelineTests : PlaywrightTestBase, IClassFixture<TimelineTo
         var expected = entries![index];
 
         // Act
-        // The API list has the events after today as well, so they are shown to make the position in the list the id of the card
+        // Match the API's unbounded date window so both lists have the same ordering.
         await Page.GotoRelativeAsync($"{PageUrl}?since=all&future=show");
-        var card = Page.Locator($"#timeline-entry-{index.ToString(CultureInfo.InvariantCulture)}");
+        var card = Page.Locator(".timeline-entry").Nth(index);
 
         // Assert
         await Assertions.Expect(card).ToBeVisibleAsync();

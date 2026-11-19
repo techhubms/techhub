@@ -19,12 +19,12 @@ else
         }
         @foreach (var yearGroup in _years)
         {
-            <div class="timeline-year-group">
+            <div @key="yearGroup.Label" class="timeline-year-group">
                 <h2 class="timeline-year-label" aria-label="@(yearGroup.IsUndated ? "Date to be announced" : $"Year {yearGroup.Label}")">@(yearGroup.IsUndated ? "Date TBA" : yearGroup.Label)</h2>
                 <div class="timeline-year-entries">
                     @foreach (var monthGroup in yearGroup.Months)
                     {
-                        <div class="timeline-month-row">
+                        <div @key="monthGroup.Month" class="timeline-month-row">
                             <div class="timeline-node">
                                 <div class="timeline-dot" aria-hidden="true"></div>
                                 @if (monthGroup.Month is { } month)
@@ -37,7 +37,7 @@ else
                                 {
                                     var isExpanded = _expandedIds.Contains(entry.Id);
 
-                                    <div class="timeline-entry @(isExpanded ? "expanded" : "")" id="timeline-entry-@entry.Id">
+                                    <div @key="entry.Id" class="timeline-entry @(isExpanded ? "expanded" : "")" id="timeline-entry-@entry.Id">
                                         <div class="timeline-card card"
                                              role="button"
                                              tabindex="0"

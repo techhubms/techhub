@@ -236,8 +236,8 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
         var product = NewProduct();
         await _fixture.Connection.ExecuteAsync("INSERT INTO products (name) VALUES (@Name)", new { Name = product });
         var productId = await _fixture.Connection.ExecuteScalarAsync<long>("SELECT id FROM products WHERE name = @Name", new { Name = product });
-        await _fixture.Connection.ExecuteAsync(
-            "INSERT INTO product_features (product_id, name) VALUES (@ProductId, 'Agent mode')", new { ProductId = productId });
+        var featureId = await _fixture.Connection.ExecuteScalarAsync<long>(
+            "INSERT INTO product_features (product_id, name) VALUES (@ProductId, 'Agent mode') RETURNING id", new { ProductId = productId });
         var item = await SeedItemAsync();
         await StoreAsync("news", item, Event(product.ToUpperInvariant(), "agent MODE"));
 
@@ -246,6 +246,7 @@ public class TimelineSectionQueryTests : IClassFixture<DatabaseFixture<TimelineS
         entry.Product.Should().Be(product, "the catalog spelling replaces the AI's text");
         entry.ProductId.Should().Be(productId);
         entry.Feature.Should().Be("Agent mode");
+        entry.FeatureId.Should().Be(featureId);
     }
 
     [Fact]
