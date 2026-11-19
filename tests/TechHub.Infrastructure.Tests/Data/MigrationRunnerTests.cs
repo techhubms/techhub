@@ -202,12 +202,13 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
     {
         // Arrange
         const string ReviewScript = "063_reviewed_catalog_entries.sql";
+        const string ExclusionScript = "065_catalog_fuzzy_match_exclusions.sql";
         var ct = TestContext.Current.CancellationToken;
         await using var connection = await OpenFreshDatabaseAsync(ct);
         await connection.ExecuteAsync("""
             CREATE TABLE _migrations (script_name TEXT PRIMARY KEY, executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW());
-            INSERT INTO _migrations (script_name) VALUES (@Name);
-            """, new { Name = ReviewScript });
+            INSERT INTO _migrations (script_name) VALUES (@Name), (@Exclusion);
+            """, new { Name = ReviewScript, Exclusion = ExclusionScript });
         var runner = CreateRunner(connection);
         await runner.RunMigrationsAsync(ct);
         await connection.ExecuteAsync("""
@@ -222,11 +223,18 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
                    'https://example.com/reviewed-entry', 'Author', name, '', 'hash'
             FROM rss_feed_configs ORDER BY name LIMIT 1;
             INSERT INTO content_item_products (collection_name, item_slug, product_name, position)
-            VALUES ('news', 'reviewed-entry', 'Azure DocumentDB', 0);
+            VALUES ('news', 'reviewed-entry', 'Azure DocumentDB', 0), ('news', 'reviewed-entry', 'DocumentDB', 1);
             INSERT INTO content_timeline_events
                 (collection_name, item_slug, kind, product, description, event_date, date_precision, date_source,
                  extracted_from, product_id)
             SELECT 'news', 'reviewed-entry', 'release', 'Azure DocumentDB', 'Existing event',
+                   DATE '2026-11-18', 'day', 'explicit', src, CASE WHEN src = 'catalog' THEN p.id END
+            FROM products p CROSS JOIN (VALUES ('catalog'), ('source')) AS s(src)
+            WHERE p.name = 'Microsoft Azure';
+            INSERT INTO content_timeline_events
+                (collection_name, item_slug, kind, product, description, event_date, date_precision, date_source,
+                 extracted_from, product_id)
+            SELECT 'news', 'reviewed-entry', 'release', 'DocumentDB', 'Ambiguous event',
                    DATE '2026-11-18', 'day', 'explicit', src, CASE WHEN src = 'catalog' THEN p.id END
             FROM products p CROSS JOIN (VALUES ('catalog'), ('source')) AS s(src)
             WHERE p.name = 'Microsoft Azure';
@@ -235,6 +243,9 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
         (await connection.ExecuteScalarAsync<long?>("SELECT find_product_id('Azure DocumentDB')")).Should().BeNull();
 
         // Act
+        await runner.RunMigrationsAsync(ct);
+        (await connection.ExecuteScalarAsync<long?>("SELECT find_product_id('DocumentDB')")).Should().NotBeNull();
+        await connection.ExecuteAsync("DELETE FROM _migrations WHERE script_name = @Name", new { Name = ExclusionScript });
         await runner.RunMigrationsAsync(ct);
 
         // Assert
@@ -261,8 +272,18 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
             JOIN products p ON p.id = r.out_product_id
             JOIN product_features f ON f.id = r.out_feature_id
             """)).Should().Be("Microsoft Fabric / SQL database");
+        (await connection.ExecuteScalarAsync<long?>("SELECT find_product_id('DocumentDB')")).Should().BeNull();
+        (await connection.QuerySingleAsync<long?>("""
+            SELECT product_id FROM content_item_products
+            WHERE item_slug = 'reviewed-entry' AND product_name = 'DocumentDB'
+            """)).Should().BeNull();
+        (await connection.QueryAsync<string?>("""
+            SELECT p.name FROM content_timeline_events e LEFT JOIN products p ON p.id = e.product_id
+            WHERE e.item_slug = 'reviewed-entry' AND e.product = 'DocumentDB'
+            ORDER BY e.extracted_from
+            """)).Should().Equal("Microsoft Azure", null);
         (await connection.ExecuteScalarAsync<bool>("""
-            SELECT EXISTS (SELECT 1 FROM product_aliases WHERE lower(alias) = 'documentdb')
+            SELECT EXISTS (SELECT 1 FROM ignored_product_names WHERE lower(name) = 'documentdb')
             """)).Should().BeFalse();
     }
 

@@ -128,6 +128,8 @@ Matching is a text match in the database, in tiers, and never uses AI. No name o
 
 There is no similarity scoring. A name that fits none of the tiers stays unmatched and goes to the review queue, where one click makes it an alias or a product and the matcher never needs to guess it again.
 
+Known ambiguous names can be excluded from the normalized and phrase tiers without removing them from review. For example, bare `DocumentDB` does not match `Azure DocumentDB` by suffix. An exact catalog entry or alias still takes precedence.
+
 ## Links
 
 - **Product links follow extracted names.** Article product links include classifier products, the products of detected feature pairs and timeline events. Product/feature resolution is still deterministic SQL.
