@@ -444,6 +444,26 @@ public class SectionTimelineTests : BunitContext
     }
 
     [Fact]
+    public async Task Render_WhenOnlySourcesChange_KeepsTheCardExpanded()
+    {
+        var entry = GaEntry();
+        const string UpdatedUrl = "https://example.com/updated-agent-mode";
+        _mockApiClient.Setup(x => x.GetSectionTimelineAsync("ai", It.IsAny<DateOnly?>(), null, null, It.IsAny<CancellationToken>()))
+            .ReturnsAsync((string _, DateOnly? from, DateOnly? to, IReadOnlyList<string>? _, CancellationToken _) =>
+                IsFutureCall(from, to) ? [] : [entry with { Sources = [entry.Sources[0] with { ExternalUrl = UpdatedUrl }] }]);
+        var cut = RenderPage("?future=hide");
+        cut.Find(".timeline-card").Click();
+        cut.FindAll(".timeline-entry.expanded .timeline-sources a").Should().HaveCount(2);
+        var navigation = Services.GetRequiredService<NavigationManager>();
+
+        await cut.InvokeAsync(() => navigation.NavigateTo("/ai/timeline?future=show"));
+
+        cut.WaitForAssertion(() =>
+            cut.FindAll(".timeline-entry.expanded .timeline-sources a").Should().ContainSingle()
+                .Which.GetAttribute("href").Should().Be(UpdatedUrl));
+    }
+
+    [Fact]
     public void Render_WithFutureHidden_KeepsItHiddenWhenChangingOtherFilters()
     {
         // Act

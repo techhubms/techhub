@@ -294,8 +294,10 @@ else
         var viewEntries = new List<TimelineViewEntry>(entries.Count);
         foreach (var entry in entries)
         {
-            // A card keeps its identity when a filter adds or removes dates above it.
-            var fingerprint = Convert.ToHexString(SHA256.HashData(JsonSerializer.SerializeToUtf8Bytes(entry)));
+            var (date, datePrecision, kind, productKey, featureKey) = TimelineEntry.GetGroupKey(
+                entry.Date, entry.DatePrecision, entry.Kind, entry.ProductId, entry.Product, entry.FeatureId, entry.Feature);
+            var fingerprint = Convert.ToHexString(SHA256.HashData(
+                JsonSerializer.SerializeToUtf8Bytes(new { date, datePrecision, kind, productKey, featureKey })));
             var id = fingerprint;
             for (var duplicate = 1; !_entriesById.TryAdd(id, entry); duplicate++)
             {

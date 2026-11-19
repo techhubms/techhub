@@ -352,6 +352,7 @@ Returns the timeline of a section, newest first. Only articles whose primary sec
     "product": "GitHub Copilot",
     "productId": 12,
     "feature": "Agent mode",
+    "featureId": 34,
     "title": "Agent mode generally available",
     "description": "Agent mode is generally available.",
     "sources": [
