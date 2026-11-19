@@ -163,6 +163,7 @@ html.keyboard-nav .timeline-card:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   flex-shrink: 0;
+  max-width: 100%;
 }
 
 /* Chevron aligned with badge row */
@@ -182,6 +183,7 @@ html.keyboard-nav .timeline-card:focus-visible {
 .timeline-badges span {
   display: inline-flex;
   align-items: center;
+  overflow-wrap: anywhere;
   padding: 0.25rem var(--spacing-1);
   text-transform: none;
   letter-spacing: 0;

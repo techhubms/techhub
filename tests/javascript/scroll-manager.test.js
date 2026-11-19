@@ -481,6 +481,16 @@ describe('scroll-manager.js', () => {
             expect(window.scrollTo).not.toHaveBeenCalledWith(0, 0);
         });
 
+        it('keeps in-place query changes from resetting scroll or showing a navigation spinner', () => {
+            document.body.innerHTML = '<main data-in-place-query></main>';
+            window.scrollTo = vi.fn();
+            window.history.pushState(null, '', '/all?future=show');
+
+            expect(window.scrollTo).not.toHaveBeenCalled();
+            expect(document.getElementById('nav-spinner')).toBeNull();
+            expect(mod.isNavigating()).toBe(false);
+        });
+
         it('pushState right after markScriptsReady does not leave the spinner active or navigation locked', () => {
             vi.useFakeTimers();
             window.markScriptsReady();

@@ -1,8 +1,10 @@
+using System.Globalization;
+
 namespace TechHub.Core.Models;
 
 /// <summary>
 /// A dated lifecycle event (preview, GA, deprecation, ...) of a section timeline. Articles that state the same event
-/// (same date, kind, product and feature) are merged into one entry with all of them as <see cref="Sources"/>.
+/// (same date, date precision, kind, product and feature) are merged into one entry with all of them as <see cref="Sources"/>.
 /// </summary>
 public sealed record TimelineEntry
 {
@@ -24,6 +26,9 @@ public sealed record TimelineEntry
     /// <summary>The catalog name of the feature, or the name as the AI wrote it. <c>null</c> when the event is about the whole product.</summary>
     public string? Feature { get; init; }
 
+    /// <summary>The catalog feature, or <c>null</c> when not linked to one.</summary>
+    public long? FeatureId { get; init; }
+
     /// <summary>One line describing what happens, from the oldest article that states the event.</summary>
     public required string Description { get; init; }
 
@@ -32,6 +37,16 @@ public sealed record TimelineEntry
 
     /// <summary>The articles that state the event, oldest first.</summary>
     public required IReadOnlyList<TimelineEntrySource> Sources { get; init; }
+
+    /// <summary>The event's identity, independent of its display text and sources.</summary>
+    public static (DateOnly Date, string DatePrecision, string Kind, string ProductKey, string FeatureKey) GetGroupKey(
+        DateOnly date, string datePrecision, string kind, long? productId, string product, long? featureId, string? feature)
+    {
+        ArgumentNullException.ThrowIfNull(product);
+        return (date, datePrecision, kind,
+            productId?.ToString(CultureInfo.InvariantCulture) ?? product.ToLowerInvariant(),
+            featureId?.ToString(CultureInfo.InvariantCulture) ?? feature?.ToLowerInvariant() ?? string.Empty);
+    }
 }
 
 /// <summary>An article that states a <see cref="TimelineEntry"/>.</summary>

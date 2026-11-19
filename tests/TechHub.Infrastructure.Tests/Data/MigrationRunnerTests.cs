@@ -165,6 +165,234 @@ public class MigrationRunnerTests : IClassFixture<MigrationDatabaseFixture>
     // ── Repeat runs ────────────────────────────────────────────────────────
 
     [Fact]
+    public async Task RunMigrationsAsync_ReplayingOriginalCatalogSeed_PreservesCatalogAndCuratedParent()
+    {
+        const string SeedScript = "050_product_catalog.sql";
+        const string CountSql = """
+            SELECT (SELECT count(*) FROM products) + (SELECT count(*) FROM product_aliases)
+                 + (SELECT count(*) FROM product_features) + (SELECT count(*) FROM ignored_product_names)
+            """;
+        var ct = TestContext.Current.CancellationToken;
+        await using var connection = await OpenFreshDatabaseAsync(ct);
+
+        // Replay the seed before later migrations rename and reclassify its entries.
+        await connection.ExecuteAsync(
+            "CREATE TABLE _migrations (script_name TEXT PRIMARY KEY, executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW())");
+        var laterScripts = GetEmbeddedMigrationFileNames()
+            .Where(name => string.CompareOrdinal(name, SeedScript) > 0)
+            .ToArray();
+        await connection.ExecuteAsync("INSERT INTO _migrations (script_name) SELECT unnest(@Names)", new { Names = laterScripts });
+        var runner = CreateRunner(connection);
+        await runner.RunMigrationsAsync(ct);
+        var parentId = await connection.ExecuteScalarAsync<long>(
+            "INSERT INTO products (name) VALUES ('A parent chosen in the admin') RETURNING id");
+        await connection.ExecuteAsync("UPDATE products SET parent_product_id = @Id WHERE name = 'Azure Batch'", new { Id = parentId });
+        var before = await connection.ExecuteScalarAsync<long>(CountSql);
+
+        await connection.ExecuteAsync("DELETE FROM _migrations WHERE script_name = @Name", new { Name = SeedScript });
+        await runner.RunMigrationsAsync(ct);
+
+        (await connection.ExecuteScalarAsync<long>(CountSql)).Should().Be(before);
+        (await connection.ExecuteScalarAsync<long?>("SELECT parent_product_id FROM products WHERE name = 'Azure Batch'"))
+            .Should().Be(parentId);
+    }
+
+    [Fact]
+    public async Task RunMigrationsAsync_ReviewedCatalog_ResolvesNamesWithoutOverwritingCuration()
+    {
+        // Arrange
+        const string ReviewScript = "063_reviewed_catalog_entries.sql";
+        const string ExclusionScript = "065_catalog_fuzzy_match_exclusions.sql";
+        var ct = TestContext.Current.CancellationToken;
+        await using var connection = await OpenFreshDatabaseAsync(ct);
+        await connection.ExecuteAsync("""
+            CREATE TABLE _migrations (script_name TEXT PRIMARY KEY, executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW());
+            INSERT INTO _migrations (script_name) VALUES (@Name), (@Exclusion);
+            """, new { Name = ReviewScript, Exclusion = ExclusionScript });
+        var runner = CreateRunner(connection);
+        await runner.RunMigrationsAsync(ct);
+        await connection.ExecuteAsync("""
+            INSERT INTO product_aliases (product_id, alias)
+            SELECT id, 'Azure Speech' FROM products WHERE name = 'Azure AI Speech';
+            INSERT INTO product_features (product_id, name, description)
+            SELECT id, 'Native AOT', 'Curated publishing notes' FROM products WHERE name = '.NET';
+            INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch, primary_section_name,
+                 external_url, author, feed_name, tags_csv, content_hash)
+            SELECT 'reviewed-entry', 'news', 'Title', 'Text', '', 1750000000, 'azure',
+                   'https://example.com/reviewed-entry', 'Author', name, '', 'hash'
+            FROM rss_feed_configs ORDER BY name LIMIT 1;
+            INSERT INTO content_item_products (collection_name, item_slug, product_name, position)
+            VALUES ('news', 'reviewed-entry', 'Azure DocumentDB', 0), ('news', 'reviewed-entry', 'DocumentDB', 1);
+            INSERT INTO content_timeline_events
+                (collection_name, item_slug, kind, product, description, event_date, date_precision, date_source,
+                 extracted_from, product_id)
+            SELECT 'news', 'reviewed-entry', 'release', 'Azure DocumentDB', 'Existing event',
+                   DATE '2026-11-18', 'day', 'explicit', src, CASE WHEN src = 'catalog' THEN p.id END
+            FROM products p CROSS JOIN (VALUES ('catalog'), ('source')) AS s(src)
+            WHERE p.name = 'Microsoft Azure';
+            INSERT INTO content_timeline_events
+                (collection_name, item_slug, kind, product, description, event_date, date_precision, date_source,
+                 extracted_from, product_id)
+            SELECT 'news', 'reviewed-entry', 'release', 'DocumentDB', 'Ambiguous event',
+                   DATE '2026-11-18', 'day', 'explicit', src, CASE WHEN src = 'catalog' THEN p.id END
+            FROM products p CROSS JOIN (VALUES ('catalog'), ('source')) AS s(src)
+            WHERE p.name = 'Microsoft Azure';
+            DELETE FROM _migrations WHERE script_name = @Name;
+            """, new { Name = ReviewScript });
+        (await connection.ExecuteScalarAsync<long?>("SELECT find_product_id('Azure DocumentDB')")).Should().BeNull();
+
+        // Act
+        await runner.RunMigrationsAsync(ct);
+        (await connection.ExecuteScalarAsync<long?>("SELECT find_product_id('DocumentDB')")).Should().NotBeNull();
+        await connection.ExecuteAsync("DELETE FROM _migrations WHERE script_name = @Name", new { Name = ExclusionScript });
+        await runner.RunMigrationsAsync(ct);
+
+        // Assert
+        var linkedProduct = await connection.ExecuteScalarAsync<string>("""
+            SELECT p.name FROM content_item_products l JOIN products p ON p.id = l.product_id
+            WHERE l.item_slug = 'reviewed-entry' AND l.product_name = 'Azure DocumentDB'
+            """);
+        linkedProduct.Should().Be("Azure DocumentDB");
+        (await connection.QueryAsync<string>("""
+            SELECT p.name FROM content_timeline_events e JOIN products p ON p.id = e.product_id
+            WHERE e.item_slug = 'reviewed-entry' AND e.product = 'Azure DocumentDB'
+            ORDER BY e.extracted_from
+            """)).Should().Equal("Microsoft Azure", "Azure DocumentDB");
+        (await connection.ExecuteScalarAsync<string>("""
+            SELECT p.name FROM products p WHERE p.id = find_product_id('Azure Speech')
+            """)).Should().Be("Azure AI Speech");
+        (await connection.ExecuteScalarAsync<string>("""
+            SELECT f.description FROM resolve_event_catalog('.NET', 'NativeAOT') r
+            JOIN product_features f ON f.id = r.out_feature_id
+            """)).Should().Be("Curated publishing notes");
+        (await connection.ExecuteScalarAsync<string>("""
+            SELECT p.name || ' / ' || f.name
+            FROM resolve_event_catalog('SQL database in Microsoft Fabric', NULL) r
+            JOIN products p ON p.id = r.out_product_id
+            JOIN product_features f ON f.id = r.out_feature_id
+            """)).Should().Be("Microsoft Fabric / SQL database");
+        (await connection.ExecuteScalarAsync<long?>("SELECT find_product_id('DocumentDB')")).Should().BeNull();
+        (await connection.QuerySingleAsync<long?>("""
+            SELECT product_id FROM content_item_products
+            WHERE item_slug = 'reviewed-entry' AND product_name = 'DocumentDB'
+            """)).Should().BeNull();
+        (await connection.QueryAsync<string?>("""
+            SELECT p.name FROM content_timeline_events e LEFT JOIN products p ON p.id = e.product_id
+            WHERE e.item_slug = 'reviewed-entry' AND e.product = 'DocumentDB'
+            ORDER BY e.extracted_from
+            """)).Should().Equal("Microsoft Azure", null);
+        (await connection.ExecuteScalarAsync<bool>("""
+            SELECT EXISTS (SELECT 1 FROM ignored_product_names WHERE lower(name) = 'documentdb')
+            """)).Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task RunMigrationsAsync_CatalogFollowUp_PreservesAspireIdentityAndResolvesReviewedNames()
+    {
+        const string FollowUpScript = "064_catalog_review_follow_up.sql";
+        var ct = TestContext.Current.CancellationToken;
+        await using var connection = await OpenFreshDatabaseAsync(ct);
+        await connection.ExecuteAsync("""
+            CREATE TABLE _migrations (script_name TEXT PRIMARY KEY, executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW());
+            INSERT INTO _migrations (script_name) VALUES (@Name);
+            """, new { Name = FollowUpScript });
+        var runner = CreateRunner(connection);
+        await runner.RunMigrationsAsync(ct);
+        var aspireId = await connection.QuerySingleAsync<long>("SELECT id FROM products WHERE name = '.NET Aspire'");
+        await connection.ExecuteAsync("DELETE FROM _migrations WHERE script_name = @Name", new { Name = FollowUpScript });
+
+        await runner.RunMigrationsAsync(ct);
+
+        (await connection.QuerySingleAsync<long>("SELECT id FROM products WHERE name = 'Aspire'")).Should().Be(aspireId);
+        (await connection.ExecuteScalarAsync<long?>("SELECT find_product_id('.NET Aspire')")).Should().Be(aspireId);
+        (await connection.QuerySingleAsync<long?>("SELECT parent_product_id FROM products WHERE name = 'Aspire CLI'"))
+            .Should().Be(aspireId);
+        (await connection.QueryAsync<string>("""
+            SELECT p.name
+            FROM (VALUES (1, 'Azure AD Graph API'), (2, 'Microsoft Graph'), (3, 'Model Router Auto Evaluation')) v (position, name)
+            JOIN products p ON p.id = find_product_id(v.name)
+            ORDER BY v.position
+            """)).Should().Equal("Azure AD Graph API", "Microsoft Graph", "Model Router Auto Evaluation toolkit");
+        (await connection.QueryAsync<string>("""
+            SELECT p.name || ' / ' || f.name
+            FROM (VALUES
+                (1, 'Azure Functions', 'Durable Functions'),
+                (2, 'GitHub Copilot', 'Usage-based billing'),
+                (3, 'Microsoft Fabric', 'Database Agents'),
+                (4, 'Fabric HorizonDB', NULL),
+                (5, 'Microsoft Foundry', 'Insights in Foundry'),
+                (6, 'Microsoft Foundry', 'Foundry Toolboxes'),
+                (7, '.NET Aspire', 'Aspire Dashboard')
+            ) v (position, product, feature)
+            CROSS JOIN LATERAL resolve_event_catalog(v.product, v.feature) r
+            JOIN products p ON p.id = r.out_product_id
+            JOIN product_features f ON f.id = r.out_feature_id
+            ORDER BY v.position
+            """)).Should().Equal("Azure Functions / Durable Functions", "GitHub Copilot / Token-based billing",
+                "Microsoft Fabric / Database Agents", "Microsoft Fabric / Fabric HorizonDB", "Microsoft Foundry / Insights in Foundry",
+                "Microsoft Foundry / Foundry Toolbox", "Aspire / Aspire Dashboard");
+        (await connection.ExecuteScalarAsync<long?>("SELECT find_feature_id_by_name('Insights')")).Should().BeNull();
+    }
+
+    [Fact]
+    public async Task RunMigrationsAsync_CatalogMatchingOptimization_PreservesResolutionAndCatalogData()
+    {
+        // Arrange
+        const string OptimizationScript = "062_catalog_matching_evaluation.sql";
+        const string ResolutionSql = """
+            WITH pairs AS (
+                SELECT p.name AS product, f.name AS feature
+                FROM products p
+                LEFT JOIN product_features f ON f.product_id = p.id
+                UNION
+                SELECT p.name, 'unmatched capability' FROM products p
+                UNION
+                SELECT p.name, f.name || ' experience'
+                FROM products p JOIN product_features f ON f.product_id = p.id
+                UNION
+                SELECT a.alias, NULL FROM product_aliases a
+                UNION
+                SELECT 'Microsoft ' || p.name || ' (Preview)', NULL FROM products p
+                UNION
+                SELECT p.name || ' 2026', NULL FROM products p
+                UNION
+                SELECT 'Unknown product', 'Unknown feature'
+            )
+            SELECT COALESCE(jsonb_agg(to_jsonb(r) ORDER BY r.product, r.feature), '[]'::jsonb)::text
+            FROM (
+                SELECT p.*, c.out_product_id, c.out_feature_id
+                FROM pairs p CROSS JOIN LATERAL resolve_event_catalog(p.product, p.feature) c
+            ) r
+            """;
+        const string CatalogSql = """
+            SELECT jsonb_build_array(
+                (SELECT jsonb_agg(to_jsonb(p) - 'match_key' ORDER BY id) FROM products p),
+                (SELECT jsonb_agg(to_jsonb(a) - 'match_key' ORDER BY id) FROM product_aliases a),
+                (SELECT jsonb_agg(to_jsonb(f) - 'match_key' ORDER BY id) FROM product_features f),
+                (SELECT jsonb_agg(to_jsonb(a) - 'match_key' ORDER BY id) FROM product_feature_aliases a))::text
+            """;
+        var ct = TestContext.Current.CancellationToken;
+        await using var connection = await OpenFreshDatabaseAsync(ct);
+        await connection.ExecuteAsync(
+            "CREATE TABLE _migrations (script_name TEXT PRIMARY KEY, executed_at TIMESTAMPTZ NOT NULL DEFAULT NOW())");
+        await connection.ExecuteAsync(
+            "INSERT INTO _migrations (script_name) VALUES (@Name)", new { Name = OptimizationScript });
+        await CreateRunner(connection).RunMigrationsAsync(ct);
+        var resolutionBefore = await connection.ExecuteScalarAsync<string>(ResolutionSql);
+        var catalogBefore = await connection.ExecuteScalarAsync<string>(CatalogSql);
+        await connection.ExecuteAsync(
+            "DELETE FROM _migrations WHERE script_name = @Name", new { Name = OptimizationScript });
+
+        // Act
+        await CreateRunner(connection).RunMigrationsAsync(ct);
+
+        // Assert
+        (await connection.ExecuteScalarAsync<string>(ResolutionSql)).Should().Be(resolutionBefore);
+        (await connection.ExecuteScalarAsync<string>(CatalogSql)).Should().Be(catalogBefore);
+    }
+
+    [Fact]
     public async Task RunMigrationsAsync_SecondRun_ExecutesNothing()
     {
         // Arrange

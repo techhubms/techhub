@@ -17,6 +17,8 @@ The AI returns product and feature names as free text. The catalog is a curated 
 
 An article is about several products or features, and a product feature can link to several articles. An event belongs to one article and one product (and optionally one feature), so both dates and detected feature mentions lead back to the article that states them.
 
+Use the current official name for an active product and retain its former names as aliases (for example, **Aspire** and `.NET Aspire`). A retired product can keep its own entry for historical references when it is distinct from its successor (for example, Azure AD Graph API and Microsoft Graph). Source text stays unchanged in both cases.
+
 ## Products, Child Products and Features
 
 ### The question
@@ -125,6 +127,8 @@ Matching is a text match in the database, in tiers, and never uses AI. No name o
 5. **Article features**: each extracted product-feature pair goes through the same SQL event resolver. A feature page includes the article when the resolver finds a catalog feature; unmatched names appear in review with separate content-item and date counts.
 
 There is no similarity scoring. A name that fits none of the tiers stays unmatched and goes to the review queue, where one click makes it an alias or a product and the matcher never needs to guess it again.
+
+Known ambiguous names can be excluded from the normalized and phrase tiers without removing them from review. For example, bare `DocumentDB` does not match `Azure DocumentDB` by suffix. An exact catalog entry or alias still takes precedence.
 
 ## Links
 

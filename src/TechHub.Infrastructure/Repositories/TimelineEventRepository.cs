@@ -1,5 +1,4 @@
 using System.Data;
-using System.Globalization;
 using Dapper;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
@@ -346,18 +345,20 @@ public sealed class TimelineEventRepository : ITimelineEventRepository
         // The same event stated by several articles is one entry. Rows are ordered by article date, so the first row of a
         // group is the oldest article and supplies the description.
         return rows
-        .GroupBy(r => (r.EventDate, r.DatePrecision, r.Kind, Product: r.ProductId?.ToString(CultureInfo.InvariantCulture) ?? r.Product.ToLowerInvariant(), Feature: (r.FeatureId?.ToString(CultureInfo.InvariantCulture) ?? r.Feature?.ToLowerInvariant()) ?? string.Empty))
+            .GroupBy(r => TimelineEntry.GetGroupKey(
+                DateOnly.FromDateTime(r.EventDate), r.DatePrecision, r.Kind, r.ProductId, r.Product, r.FeatureId, r.Feature))
             .Select(g =>
             {
                 var first = g.First();
                 return new TimelineEntry
                 {
-                    Date = DateOnly.FromDateTime(first.EventDate),
+                    Date = g.Key.Date,
                     DatePrecision = first.DatePrecision,
                     Kind = first.Kind,
                     Product = first.Product,
                     ProductId = first.ProductId,
                     Feature = first.Feature,
+                    FeatureId = first.FeatureId,
                     Description = first.Description,
                     Title = g.Select(r => r.Title).FirstOrDefault(t => !string.IsNullOrWhiteSpace(t)),
                     Sources = g
