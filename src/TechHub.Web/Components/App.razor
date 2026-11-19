@@ -90,7 +90,8 @@
         crossOrigin: "anonymous",
         cfg: {
             connectionString: "@appInsightsConnectionString",
-            enableAutoRouteTracking: false  // We'll handle Blazor navigation manually
+            enableAutoRouteTracking: false, // We'll handle Blazor navigation manually
+            disablePageUnloadEvents: ['unload']
         },
         onInit: function(sdk) {
             // Suppress dependency failure noise from ad-blocker-blocked Google Analytics requests.

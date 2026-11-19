@@ -303,8 +303,7 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
                     !text.Contains("WebSocket failed to connect") &&
                     !text.Contains("Failed to start the transport") &&
                     !text.Contains("ERR_CONNECTION_REFUSED") &&
-                    !text.Contains("wss://") &&
-                    !text.Contains("Permissions policy violation: unload is not allowed in this document"))
+                    !text.Contains("wss://"))
                 {
                     consoleErrors.Add(text);
                 }
