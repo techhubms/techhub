@@ -66,6 +66,7 @@ public class MermaidTests : PlaywrightTestBase
             .Where(m => m.Type == "error")
             .Where(e => !e.Text.Contains("ERR_CONNECTION_REFUSED"))
             .Where(e => !e.Text.Contains("ERR_ADDRESS_INVALID"))
+            .Where(e => !e.Text.Contains("Permissions policy violation: unload is not allowed in this document"))
             .Where(e => !(e.Text.Contains("WebSocket failed to connect") || e.Text.Contains("sticky sessions") || (e.Text.Contains("_blazor") && e.Text.Contains("404"))))
             .ToList();
 

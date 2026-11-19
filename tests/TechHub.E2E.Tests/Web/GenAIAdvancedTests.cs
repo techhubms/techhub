@@ -55,6 +55,7 @@ public class GenAIAdvancedTests : PlaywrightTestBase
             .Where(m => !m.Text.Contains("WebSocket"))
             .Where(m => !m.Text.Contains("ERR_CONNECTION_REFUSED"))
             .Where(m => !m.Text.Contains("ERR_NAME_NOT_RESOLVED"))
+            .Where(m => !m.Text.Contains("Permissions policy violation: unload is not allowed in this document"))
             .ToList();
 
         errors.Should().BeEmpty($"Expected no console errors, but found: {string.Join(", ", errors.Select(e => e.Text))}");

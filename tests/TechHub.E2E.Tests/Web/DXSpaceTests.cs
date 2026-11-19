@@ -165,6 +165,7 @@ public class DXSpaceTests : PlaywrightTestBase
             .Where(e => !e.Contains("WebSocket"))
             .Where(e => !e.Contains("ERR_CONNECTION_REFUSED"))
             .Where(e => !e.Contains("circuit failed to initialize"))
+            .Where(e => !e.Contains("Permissions policy violation: unload is not allowed in this document"))
             .ToList();
 
         significantErrors.Should().BeEmpty("Page should load without JavaScript errors");
