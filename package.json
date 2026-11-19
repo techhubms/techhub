@@ -1,8 +1,8 @@
 {
   "devDependencies": {
-    "@playwright/test": "^1.65.0",
+    "@playwright/test": "^1.65.1",
     "husky": "^9.1.7",
-    "jsdom": "^31.0.0",
+    "jsdom": "^31.0.1",
     "markdownlint-cli2": "^0.24.1",
     "vitest": "^5.1.0"
   },
