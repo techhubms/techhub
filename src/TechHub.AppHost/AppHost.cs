@@ -19,13 +19,13 @@ public sealed class Program
 
         // API service - serves REST endpoints for content
         // Port 5001 defined in launchSettings.json
-        var api = builder.AddProject<Projects.TechHub_Api>("api")
+        var api = builder.AddDotnetProject("api", "../TechHub.Api/TechHub.Api.csproj")
             .WithEnvironment("ASPNETCORE_ENVIRONMENT", environment)
             .WithEnvironment("DOTNET_ENVIRONMENT", environment);
 
         // Web frontend - Blazor SSR app that consumes the API
         // Port 5003 defined in launchSettings.json
-        builder.AddProject<Projects.TechHub_Web>("web")
+        builder.AddDotnetProject("web", "../TechHub.Web/TechHub.Web.csproj")
             .WithReference(api)
             .WaitFor(api)
             .WithEnvironment("ASPNETCORE_ENVIRONMENT", environment)
