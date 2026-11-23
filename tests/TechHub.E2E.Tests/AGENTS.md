@@ -24,6 +24,8 @@ Timeouts are **NOT** performance issues. They mean Playwright couldn't find the 
 
 **Root causes**: Test bugs (wrong selector), broken pages, changed DOM structure, navigation to error pages, missing test data, and a rate-limited site (the page is slow because requests queue behind the per-IP limiter; check that `E2E_BYPASS_TOKEN` reaches the tests and the site).
 
+`GotoRelativeAsync()` and `GotoAndWaitForBlazorAsync()` retry a navigation once when the document or Blazor circuit hits a timeout or transient network error. A persistent failure still fails the test with the final error.
+
 **Debug**: Start servers with `Run -WithoutTests`, then use Playwright MCP tools to navigate, snapshot, and compare actual DOM with expectations.
 
 ## Test Architecture
