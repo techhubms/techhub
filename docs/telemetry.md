@@ -45,6 +45,8 @@ The Application Insights JavaScript SDK loads in the Web frontend in every envir
 
 Blazor enhanced navigation page views are tracked manually via `Blazor.addEventListener('enhancedload', ...)` since the SDK's automatic route tracking does not work with Blazor's client-side navigation.
 
+The browser SDK excludes Chrome's deprecated `unload` event. This avoids its permissions-policy warning and keeps unload handlers from preventing back/forward cache eligibility, while supported page lifecycle events remain available for telemetry flushing.
+
 ### Environment Behavior
 
 | Environment | Server Telemetry | Browser SDK |
