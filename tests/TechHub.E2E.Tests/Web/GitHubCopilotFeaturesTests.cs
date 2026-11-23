@@ -89,10 +89,12 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await Assertions.Expect(cards.First).ToBeVisibleAsync();
         var total = await cards.CountAsync();
         var firstName = (await cards.First.Locator("h3").TextContentAsync())!.Trim();
+        var searchTerm = firstName.Split(' ', StringSplitOptions.RemoveEmptyEntries)[0];
         var input = Page.Locator(".features-filter-input");
 
-        await input.FillAsync(firstName);
-        var matching = await cards.Filter(new LocatorFilterOptions { HasText = firstName }).CountAsync();
+        // A single word keeps the expected count aligned with the filter's all-words, any-order matching.
+        await input.FillAsync(searchTerm);
+        var matching = await cards.Filter(new LocatorFilterOptions { HasText = searchTerm }).CountAsync();
         await Assertions.Expect(Page.Locator(".feature-card:visible")).ToHaveCountAsync(matching);
         matching.Should().BeLessThanOrEqualTo(total).And.BeGreaterThan(0);
 
@@ -101,7 +103,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await withVideos.ClickAndExpectAsync(async () =>
             await Assertions.Expect(withVideos).ToHaveAttributeAsync("aria-pressed", "true"));
         (await Page.Locator(".feature-card:visible").AllTextContentsAsync())
-            .Should().OnlyContain(t => t.Contains(firstName, StringComparison.OrdinalIgnoreCase));
+            .Should().OnlyContain(t => t.Contains(searchTerm, StringComparison.OrdinalIgnoreCase));
 
         await input.FillAsync("zzzqqq-no-such-feature");
         await Assertions.Expect(Page.Locator(".feature-card:visible")).ToHaveCountAsync(0);

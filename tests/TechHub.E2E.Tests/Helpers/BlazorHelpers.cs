@@ -411,29 +411,27 @@ public static class BlazorHelpers
         gotoOptions.WaitUntil ??= WaitUntilState.DOMContentLoaded;
         gotoOptions.Timeout ??= E2ETimeout;
 
-        // Navigate with a single retry on timeout or transient network error — handles cold-start
-        // scenarios in CI and freshly-deployed PR-preview environments (Azure App Service is
-        // always-on, but the very first request after a deploy still pays for container
-        // pull/startup) where the first request warms up the site and subsequent requests
-        // succeed within the timeout. Connection resets/closed happen when the remote proxy
-        // drops a connection mid-request and are not reproducible on an immediate retry.
-        try
+        // Retry the whole navigation once when the document or Blazor circuit fails to become
+        // ready. A transient SignalR connection failure can leave the prerendered page visible
+        // while the circuit never starts; reloading lets the browser establish a fresh circuit.
+        for (var attempt = 0; ; attempt++)
         {
-            await page.GotoAsync(url, gotoOptions);
-        }
-        catch (Exception ex) when (ex is TimeoutException || IsTransientNetworkError(ex))
-        {
-            // Retry once. If the server is unavailable (not just slow to start), the
-            // second attempt will also throw and the exception propagates as normal.
-            await page.GotoAsync(url, gotoOptions);
-        }
+            try
+            {
+                await page.GotoAsync(url, gotoOptions);
+                RateLimitGuard.ThrowIfRateLimited(page.Context);
 
-        RateLimitGuard.ThrowIfRateLimited(page.Context);
-
-        // Wait for Blazor to be fully interactive (circuit established, scripts loaded).
-        // WaitForBlazorReadyAsync correctly waits for __blazorServerReady/__blazorWasmReady
-        // instead of the weaker __blazorWebReady which fires before the interactive circuit.
-        await page.WaitForBlazorReadyAsync();
+                // Wait for Blazor to be fully interactive (circuit established, scripts loaded).
+                // This checks __blazorServerReady/__blazorWasmReady rather than the earlier __blazorWebReady.
+                await page.WaitForBlazorReadyAsync();
+                return;
+            }
+            catch (Exception ex) when (attempt == 0 && (ex is TimeoutException || IsTransientNetworkError(ex)))
+            {
+                TestContext.Current.TestOutputHelper?.WriteLine(
+                    $"Navigation to {url} did not become ready; retrying once after a transient failure: {ex.Message}");
+            }
+        }
     }
 
     private static bool IsTransientNetworkError(Exception ex) =>
