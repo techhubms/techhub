@@ -221,9 +221,9 @@ builder.Services.AddSignalR(options =>
     options.ClientTimeoutInterval = TimeSpan.FromSeconds(120);
     options.HandshakeTimeout = TimeSpan.FromSeconds(30);
     options.KeepAliveInterval = TimeSpan.FromSeconds(15);
-    // Increase max message size to handle large prerendered content during hydration
-    // Default is 32KB, but with many content items the state can exceed this
-    options.MaximumReceiveMessageSize = 256 * 1024; // 256KB
+    // The browser sends prerendered component state back with its initial circuit handshake.
+    // Large content pages can exceed 256KB, so allow up to 1MB while keeping the payload bounded.
+    options.MaximumReceiveMessageSize = 1024 * 1024; // 1MB
 });
 
 // Circuit counts, exported as metrics and included in memory snapshot logs (see MemoryDiagnosticsService).
