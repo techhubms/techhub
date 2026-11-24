@@ -438,7 +438,8 @@ Rate limiting protects the public web surface against excessive requests and bot
 
 | Policy | Limit | Queue | Applied to |
 |---|---|---|---|
-| `web-general` | 90 requests/min per IP | 5 | All Blazor routes (`MapRazorComponents`), including the SignalR hub (`/_blazor`) that the same call maps |
+| `web-general` | 90 requests/min per IP | 5 | Blazor routes except author detail pages, including the SignalR hub (`/_blazor`) |
+| `web-authors` | 20 requests/min per IP | none | Author detail pages (`/all/authors/{authorName}`) instead of `web-general` |
 | `web-rss` | 20 requests/min per IP | none | RSS proxy endpoints (`/all/feed.xml`, `/{section}/feed.xml`, `/{section}/roundups/feed.xml`) |
 | `web-mcp` | 60 requests/min per IP | none | `/mcp` |
 
@@ -446,7 +447,7 @@ A page load costs several permits of `web-general`: the document request plus, f
 
 Requests from loopback addresses are exempt **in Development only**. In other environments a spoofed `X-Forwarded-For: 127.0.0.1` header must not bypass the limits, because forwarded headers are processed before the rate limiter.
 
-**E2E bypass**: the E2E suite runs every browser from one IP, so a request that carries the secret from `RateLimiting:E2EBypassToken` is exempt from all three policies. The token is accepted as the `X-E2E-Token` header or the `e2e-token` cookie (browsers use the cookie, because it reaches the negotiate and WebSocket requests and is never sent to third-party CDNs). It is compared in constant time. The bypass is off while the setting is empty, and an unresolved Key Vault reference (`@Microsoft.KeyVault(...)` passed through as text) never counts as a token. See [E2E Rate-Limit Bypass](ci-cd-pipeline.md#e2e-rate-limit-bypass) for how the token reaches the site and the tests.
+**E2E bypass**: the E2E suite runs every browser from one IP, so a request that carries the secret from `RateLimiting:E2EBypassToken` is exempt from all policies. The token is accepted as the `X-E2E-Token` header or the `e2e-token` cookie (browsers use the cookie, because it reaches the negotiate and WebSocket requests and is never sent to third-party CDNs). It is compared in constant time. The bypass is off while the setting is empty, and an unresolved Key Vault reference (`@Microsoft.KeyVault(...)` passed through as text) never counts as a token. See [E2E Rate-Limit Bypass](ci-cd-pipeline.md#e2e-rate-limit-bypass) for how the token reaches the site and the tests.
 
 Not covered by a policy: the sitemap, `/version` and health endpoints.
 

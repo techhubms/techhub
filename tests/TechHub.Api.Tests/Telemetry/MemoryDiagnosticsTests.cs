@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Moq;
+using OpenTelemetry;
+using OpenTelemetry.Metrics;
 using TechHub.ServiceDefaults;
 
 namespace TechHub.Api.Tests.Telemetry;
@@ -163,5 +165,51 @@ public class MemoryDiagnosticsTests
         // Assert
         probe.Read().Should().Be(2);
         provider.GetServices<IHostedService>().Should().ContainSingle(s => s is MemoryDiagnosticsService);
+    }
+
+    [Fact]
+    public void OpenTelemetry_ExportsUsefulMetricsButDropsHighVolumeNoise()
+    {
+        using var meter = new Meter("TechHub.MetricFilterTest");
+        var noise = meter.CreateCounter<long>("aspnetcore.routing.match_attempts");
+        var dns = meter.CreateCounter<long>("dns.lookup.duration");
+        var pool = meter.CreateCounter<long>("aspnetcore.memory_pool.pooled");
+        var requests = meter.CreateCounter<long>("http.server.request.duration");
+        var circuits = meter.CreateCounter<long>("techhub.circuits.open");
+        var exporter = new RecordingMetricExporter();
+        using var reader = new PeriodicExportingMetricReader(exporter);
+        var builder = Host.CreateApplicationBuilder();
+        builder.ConfigureOpenTelemetry();
+        builder.Services.AddOpenTelemetry().WithMetrics(metrics =>
+            metrics.AddMeter(meter.Name).AddReader(reader));
+        using var host = builder.Build();
+        _ = host.Services.GetRequiredService<MeterProvider>();
+
+        noise.Add(1);
+        dns.Add(1);
+        pool.Add(1);
+        requests.Add(1);
+        circuits.Add(1);
+        reader.Collect().Should().BeTrue();
+
+        exporter.Names.Should().Contain("http.server.request.duration").And.Contain("techhub.circuits.open");
+        exporter.Names.Should().NotContain("aspnetcore.routing.match_attempts")
+            .And.NotContain("dns.lookup.duration")
+            .And.NotContain("aspnetcore.memory_pool.pooled");
+    }
+
+    private sealed class RecordingMetricExporter : BaseExporter<Metric>
+    {
+        public HashSet<string> Names { get; } = new(StringComparer.Ordinal);
+
+        public override ExportResult Export(in Batch<Metric> batch)
+        {
+            foreach (var metric in batch)
+            {
+                Names.Add(metric.Name);
+            }
+
+            return ExportResult.Success;
+        }
     }
 }

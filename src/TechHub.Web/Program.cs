@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Http.Resilience;
 using Microsoft.Extensions.Options;
@@ -424,6 +425,10 @@ builder.Services.AddRateLimiter(options =>
     // negotiate/WebSocket requests of every circuit, so one page load costs several permits).
     AddPerIpPolicy("web-general", permitLimit: 90, queueLimit: 5);
 
+    // Author detail pages render a large author sidebar; bound repeated crawls without
+    // consuming the quota needed for the visitor's SignalR connection.
+    AddPerIpPolicy("web-authors", permitLimit: 20, queueLimit: 0);
+
     // RSS feed endpoints: stricter limit — bot-targeted content syndication.
     AddPerIpPolicy("web-rss", permitLimit: 20, queueLimit: 0);
 
@@ -621,7 +626,15 @@ app.MapMcp("/mcp")
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
-    .RequireRateLimiting("web-general");
+    .RequireRateLimiting("web-general")
+    .Add(endpoint =>
+    {
+        if (endpoint is RouteEndpointBuilder route &&
+            string.Equals(route.RoutePattern.RawText, "/all/authors/{authorName}", StringComparison.OrdinalIgnoreCase))
+        {
+            endpoint.Metadata.Add(new EnableRateLimitingAttribute("web-authors"));
+        }
+    });
 
 // RSS feed proxy endpoints - serve feeds from same domain as website
 app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>

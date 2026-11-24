@@ -18,6 +18,9 @@ param actionGroupId string
 @description('Application Insights resource ID')
 param appInsightsId string
 
+@description('Log Analytics workspace receiving the App Service platform logs')
+param logAnalyticsWorkspaceId string
+
 @description('PostgreSQL Flexible Server resource ID')
 param postgresServerId string
 
@@ -58,6 +61,41 @@ resource failedRequestsAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-
           timeAggregation: 'Count'
           operator: 'GreaterThan'
           threshold: 10
+          failingPeriods: {
+            numberOfEvaluationPeriods: 1
+            minFailingPeriodsToAlert: 1
+          }
+        }
+      ]
+    }
+    actions: {
+      actionGroups: [actionGroupId]
+    }
+  }
+}
+
+// Site names are deterministic; the alert lives in phase 1 before the sites exist.
+resource appServiceCrashAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-15-preview' = {
+  name: 'alert-${environmentName}-appservice-crash'
+  location: location
+  tags: tags
+  properties: {
+    displayName: 'App Service container crash (${environmentName})'
+    description: 'Fires when the API or Web container exits with code 137 or 139.'
+    severity: severityHigh
+    enabled: true
+    evaluationFrequency: 'PT5M'
+    windowSize: 'PT15M'
+    scopes: [logAnalyticsWorkspaceId]
+    // On a fresh deployment the table is created only after phase 2 enables platform logs.
+    skipQueryValidation: true
+    criteria: {
+      allOf: [
+        {
+          query: 'AppServicePlatformLogs\n| where _ResourceId in~ (\'${resourceId('Microsoft.Web/sites', 'app-techhub-api-${environmentName}')}\', \'${resourceId('Microsoft.Web/sites', 'app-techhub-web-${environmentName}')}\')\n| where Message contains \'exit code: 137.\' or Message contains \'exit code: 139.\''
+          timeAggregation: 'Count'
+          operator: 'GreaterThan'
+          threshold: 0
           failingPeriods: {
             numberOfEvaluationPeriods: 1
             minFailingPeriodsToAlert: 1
@@ -245,6 +283,7 @@ resource openAiErrorsAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
 
 output alertIds string[] = [
   failedRequestsAlert.id
+  appServiceCrashAlert.id
   exceptionsAlert.id
   postgresCpuAlert.id
   postgresConnAlert.id

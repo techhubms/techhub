@@ -20,6 +20,7 @@ public class RateLimitingTests(DevelopmentWebFixture development, ProductionWebF
     private const string McpPath = "/mcp";
     private const int RssLimit = 20;
     private const int McpLimit = 60;
+    private const int AuthorLimit = 20;
 
     // ── web-rss ─────────────────────────────────────────────────────────────
 
@@ -188,6 +189,33 @@ public class RateLimitingTests(DevelopmentWebFixture development, ProductionWebF
         response.StatusCode.Should().Be(HttpStatusCode.OK, "each policy keeps its own per-IP counter");
     }
 
+    [Fact]
+    public async Task AuthorPages_OverLimit_AreRejectedWithoutAffectingOtherPages()
+    {
+        using var client = production.CreateClient("203.0.113.51");
+
+        var statuses = await GetRepeatedlyAsync(client, "/all/authors/Test", AuthorLimit);
+        using var rejected = await client.GetAsync("/ALL/AUTHORS/Another", TestContext.Current.CancellationToken);
+        using var otherPage = await client.GetAsync("/about", TestContext.Current.CancellationToken);
+
+        statuses.Should().NotContain(HttpStatusCode.TooManyRequests);
+        rejected.StatusCode.Should().Be(HttpStatusCode.TooManyRequests);
+        rejected.Headers.RetryAfter.Should().NotBeNull();
+        otherPage.StatusCode.Should().NotBe(HttpStatusCode.TooManyRequests);
+    }
+
+    [Fact]
+    public async Task AuthorPages_ExhaustedLimit_DoesNotAffectAnotherIp()
+    {
+        using var heavyClient = production.CreateClient("203.0.113.52");
+        using var otherClient = production.CreateClient("203.0.113.53");
+        await GetRepeatedlyAsync(heavyClient, "/all/authors/Test", AuthorLimit + 1);
+
+        using var response = await otherClient.GetAsync("/all/authors/Test", TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().NotBe(HttpStatusCode.TooManyRequests);
+    }
+
     // ── Policy wiring ───────────────────────────────────────────────────────
 
     [Fact]
@@ -199,6 +227,13 @@ public class RateLimitingTests(DevelopmentWebFixture development, ProductionWebF
         // Assert
         policies.Should().NotBeEmpty();
         policies.Should().OnlyContain(p => p == "web-general");
+    }
+
+    [Fact]
+    public void Endpoints_AuthorDetail_UsesAuthorPolicy()
+    {
+        PoliciesFor("/all/authors/{authorName}").Should().Equal("web-authors");
+        PoliciesFor("/all/authors").Should().Equal("web-general");
     }
 
     [Fact]
