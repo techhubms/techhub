@@ -223,12 +223,12 @@ public async ValueTask DisposeAsync()
 
 ## SignalR Message Size
 
-Large prerendered content can exceed SignalR's default 32KB message limit. The limit is configured in `Program.cs`:
+Blazor sends prerendered component state back to the server when it starts an interactive circuit. Large pages can exceed SignalR's default 32KB receive limit, which prevents the circuit from starting. The Web app allows up to 1MB for this message; keep persisted page state bounded and reduce it rather than continually raising the limit:
 
 ```csharp
 builder.Services.AddSignalR(options =>
 {
-    options.MaximumReceiveMessageSize = 256 * 1024; // 256KB
+    options.MaximumReceiveMessageSize = 1024 * 1024; // 1MB
 });
 ```
 
