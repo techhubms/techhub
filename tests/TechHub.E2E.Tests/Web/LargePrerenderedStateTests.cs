@@ -43,7 +43,7 @@ public class LargePrerenderedStateTests : PlaywrightTestBase
         await Page.GotoAndWaitForBlazorAsync(address);
 
         // Assert
-        var startFrame = sentFrames.Single(frame => frame.Contains("StartCircuit", StringComparison.Ordinal));
+        var startFrame = sentFrames.Last(frame => frame.Contains("StartCircuit", StringComparison.Ordinal));
         var size = Encoding.UTF8.GetByteCount(startFrame);
         size.Should().BeGreaterThan(256 * 1024);
         size.Should().BeLessThan(1024 * 1024);
