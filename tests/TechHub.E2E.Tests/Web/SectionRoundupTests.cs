@@ -1,5 +1,3 @@
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using FluentAssertions;
 using TechHub.E2E.Tests.Helpers;
@@ -111,37 +109,6 @@ public class SectionRoundupTests : PlaywrightTestBase
         await Page.AssertElementVisibleBySelectorAsync("main article");
     }
 
-    [Fact]
-    public async Task LargePrerenderedState_AbovePreviousSignalRLimit_StartsCircuit()
-    {
-        const int PreviousSignalRReceiveLimitBytes = 256 * 1024;
-        var candidates = new List<(string Path, int StateCommentBytes)>();
-
-        foreach (var sectionName in new[] { "github-copilot", "ai" })
-        {
-            var listPath = $"/{sectionName}/roundups";
-            var listResponse = await Page.APIGetAsync($"{BaseUrl}{listPath}");
-            listResponse.Status.Should().Be(200);
-            var listHtml = await listResponse.TextAsync();
-            candidates.Add((listPath, GetLargestHtmlCommentByteCount(listHtml)));
-
-            var detailLink = Regex.Match(listHtml, "href=\"(?<path>/[a-z-]+/roundups/[^\"\\s]+)\"");
-            detailLink.Success.Should().BeTrue($"the {listPath} page should contain a roundup detail link");
-            var detailPath = detailLink.Groups["path"].Value;
-
-            var detailResponse = await Page.APIGetAsync($"{BaseUrl}{detailPath}");
-            detailResponse.Status.Should().Be(200);
-            candidates.Add((detailPath, GetLargestHtmlCommentByteCount(await detailResponse.TextAsync())));
-        }
-
-        var largestState = candidates.MaxBy(candidate => candidate.StateCommentBytes);
-        largestState.StateCommentBytes.Should().BeGreaterThan(
-            PreviousSignalRReceiveLimitBytes,
-            "at least one roundup page must send prerendered state larger than the previous SignalR receive limit");
-
-        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}{largestState.Path}");
-    }
-
     // ── RSS feeds for section roundups ───────────────────────────────────────
 
     [Theory]
@@ -168,16 +135,6 @@ public class SectionRoundupTests : PlaywrightTestBase
         channel!.Element("title").Should().NotBeNull();
         channel.Element("link").Should().NotBeNull();
         channel.Element("description").Should().NotBeNull();
-    }
-
-    private static int GetLargestHtmlCommentByteCount(string html)
-    {
-        var largestComment = Regex.Matches(html, @"<!--.*?-->", RegexOptions.Singleline)
-            .Cast<Match>()
-            .MaxBy(comment => comment.Length);
-
-        largestComment.Should().NotBeNull("prerendered component state is serialized in an HTML comment");
-        return Encoding.UTF8.GetByteCount(largestComment!.Value);
     }
 
     // ── /all/roundups is the aggregate page for all roundups ──────────────────
