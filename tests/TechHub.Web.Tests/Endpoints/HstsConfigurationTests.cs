@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
@@ -17,5 +18,15 @@ public class HstsConfigurationTests(ProductionWebFixture production) : IClassFix
         options.MaxAge.Should().Be(TimeSpan.FromDays(365));
         options.IncludeSubDomains.Should().BeTrue();
         options.Preload.Should().BeTrue();
+    }
+
+    [Fact]
+    public void SignalROptions_ProductionConfiguration_AllowsOneMiBMessage()
+    {
+        // Arrange
+        var options = production.Services.GetRequiredService<IOptions<HubOptions>>().Value;
+
+        // Assert
+        options.MaximumReceiveMessageSize.Should().Be(1024 * 1024);
     }
 }
