@@ -1161,6 +1161,15 @@ public class TechHubApiClient : ITechHubApiClient
         ContentProcessingJobFilter? filter = null,
         CancellationToken cancellationToken = default)
     {
+        filter = filter is null
+            ? null
+            : filter with
+            {
+                Status = filter.Status?.Sanitize(),
+                JobType = filter.JobType?.Sanitize(),
+                TriggerType = filter.TriggerType?.Sanitize()
+            };
+
         try
         {
             _logger.LogDebug("Fetching processing jobs (count: {Count}, filter: {Filter})", count, filter);

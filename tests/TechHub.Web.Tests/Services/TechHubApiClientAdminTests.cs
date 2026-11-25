@@ -1371,6 +1371,20 @@ public class TechHubApiClientAdminTests
         fixture.Handler.PathAndQuery.Should().Be("/api/admin/processing/jobs?count=100&status=failed&jobType=timeline-backfill&triggerType=manual");
     }
 
+    [Fact]
+    public async Task GetProcessingJobsAsync_FilterWithLineBreaks_SanitizesFilterValues()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: "[]");
+        var filter = new ContentProcessingJobFilter("fail\r\ned", "timeline-\nbackfill", "man\rual");
+
+        // Act
+        await fixture.Client.GetProcessingJobsAsync(100, filter, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/processing/jobs?count=100&status=failed&jobType=timeline-backfill&triggerType=manual");
+    }
+
     [Theory]
     [InlineData("/api/admin/processing/trigger")]
     [InlineData("/api/admin/roundup/trigger")]
