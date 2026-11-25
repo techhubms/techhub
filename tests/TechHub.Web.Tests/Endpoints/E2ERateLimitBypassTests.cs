@@ -41,6 +41,19 @@ public class E2ERateLimitBypassTests(ProductionE2EBypassWebFixture bypassEnabled
         statuses.Should().OnlyContain(s => s == HttpStatusCode.OK);
     }
 
+    [Fact]
+    public async Task AuthorPages_WithTokenHeader_AreExemptFromRateLimit()
+    {
+        using var client = bypassEnabled.CreateClient("203.0.113.47");
+        client.DefaultRequestHeaders.Add("X-E2E-Token", ProductionE2EBypassWebFixture.Token);
+
+        for (var i = 0; i < 21; i++)
+        {
+            using var response = await client.GetAsync("/all/authors/Test", TestContext.Current.CancellationToken);
+            response.StatusCode.Should().NotBe(HttpStatusCode.TooManyRequests);
+        }
+    }
+
     [Theory]
     [InlineData("wrong-token")]
     [InlineData("")]

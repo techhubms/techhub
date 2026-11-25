@@ -21,7 +21,7 @@ WORKDIR /src/src/TechHub.Web
 RUN dotnet publish -c Release -o /app/publish
 
 # Runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:11.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:11.0.0 AS runtime
 WORKDIR /app
 
 # Install curl for healthcheck

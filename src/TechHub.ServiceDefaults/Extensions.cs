@@ -146,6 +146,17 @@ public static class ServiceDefaultsExtensions
                 // Pure render profiling data; no production health or alerting value.
                 metrics.AddView("aspnetcore.components.update_parameters.duration", MetricStreamConfiguration.Drop);
 
+                // High-volume framework diagnostics that duplicate request/dependency traces or
+                // describe internal rendering and memory-pool activity, rather than service health.
+                metrics.AddView("aspnetcore.routing.match_attempts", MetricStreamConfiguration.Drop);
+                metrics.AddView("aspnetcore.components.navigate", MetricStreamConfiguration.Drop);
+                metrics.AddView("aspnetcore.components.render_diff.duration", MetricStreamConfiguration.Drop);
+                metrics.AddView("aspnetcore.components.render_diff.size", MetricStreamConfiguration.Drop);
+                metrics.AddView("aspnetcore.authentication.authenticate.duration", MetricStreamConfiguration.Drop);
+                metrics.AddView("dns.lookup.duration", MetricStreamConfiguration.Drop);
+                metrics.AddView("aspnetcore.memory_pool.*", MetricStreamConfiguration.Drop);
+                metrics.AddView("kestrel.connection.duration", MetricStreamConfiguration.Drop);
+
                 // The content pipeline fetches RSS feeds and articles from hundreds of distinct
                 // external blog/vendor hosts (see RssFeedClient/ArticleFetchClient). Without this
                 // view, http.client.* metrics are tagged with server.address/server.port, creating

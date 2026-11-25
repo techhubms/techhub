@@ -23,6 +23,8 @@ The shared `AddServiceDefaults()` method configures:
 - **Metrics**: ASP.NET Core request metrics, HTTP client metrics, a small allowlist of .NET runtime memory metrics and the memory probes (see [Memory Diagnostics](#memory-diagnostics)). All other runtime metrics are dropped to keep ingestion volume low
 - **Tracing**: ASP.NET Core request traces (health probe endpoints excluded), HTTP client dependency traces
 
+High-volume routing matches, Blazor navigation and render-diff, authentication timing, DNS lookups, ASP.NET memory-pool and Kestrel connection-duration metrics are dropped. Request duration, HTTP dependencies, rate limits, connection counts, memory diagnostics and MCP metrics remain available. Trace filtering and metric filtering are independent.
+
 When `APPLICATIONINSIGHTS_CONNECTION_STRING` is set, `UseAzureMonitor()` exports all three signals to Application Insights. When `OTEL_EXPORTER_OTLP_ENDPOINT` is set (local dev), `UseOtlpExporter()` sends the same signals to the Aspire Dashboard. Both exporters can run simultaneously.
 
 ### Cloud Role Names
@@ -115,6 +117,14 @@ Only these runtime metrics are exported. The runtime meters emit many more serie
 When `DOTNET_GCHeapHardLimit` is set (production), `MemoryDiagnosticsService` also logs one warning, at most every 5 minutes, once the live heap after the last full (gen2) GC reaches 80% of that limit. Live means the generation sizes without their free space, and a given GC is only reported once, so an unchanged snapshot is never repeated. The warning contains the live size per generation, committed memory, fragmentation, pinned objects, GC counts, threads and queued work items, plus every probe value (circuits, cache entries). Find it in the `traces` table by searching for `Live managed heap after full GC`. The probes are registered with `AddMemoryDiagnosticsProbe`, so adding another number only needs one registration.
 
 These metrics show whether the managed heap, large objects or something outside the heap (the process working set minus the heap) is growing, and what the app held at that moment. They cannot name the objects. For that, take a memory dump or `dotnet-gcdump` while the problem is happening, which requires a deliberate, temporary SCM access rule (see [network-architecture.md](network-architecture.md#app-service-publishing-and-diagnostics)).
+
+## Container Crash Diagnostics
+
+The production API and Web send App Service platform and container stdout/stderr logs to the Log Analytics workspace, in `AppServicePlatformLogs` and `AppServiceConsoleLogs` respectively. Query `ResultDescription` in the console table around a crash to find runtime output that may not reach Application Insights. Console logging duplicates some application logs and may include sensitive data; workspace access, retention and ingestion costs apply. It does not guarantee a managed stack trace or dump for a native crash.
+
+The `alert-prod-appservice-crash` log alert checks both sites every five minutes and notifies the operations action group on exit code 137 or 139 in a 15-minute window. It does not exclude deployment-related exits; correlate alerts with deployments and other logs. An exit code alone does not establish the root cause.
+
+The Web container uses the stable .NET 11.0.0 runtime image, pinned to a patch version; Dependabot checks for image updates. Pinning the current stable runtime does not by itself diagnose or fix the crashes. The API continues to use the servicing `11.0` tag.
 
 ## Not-Found Failure Tracking
 

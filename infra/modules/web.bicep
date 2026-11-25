@@ -278,9 +278,14 @@ resource platformLogs 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview'
   scope: web
   properties: {
     workspaceId: logAnalyticsWorkspaceId
+    logAnalyticsDestinationType: 'Dedicated'
     logs: [
       {
         category: 'AppServicePlatformLogs'
+        enabled: true
+      }
+      {
+        category: 'AppServiceConsoleLogs'
         enabled: true
       }
     ]
