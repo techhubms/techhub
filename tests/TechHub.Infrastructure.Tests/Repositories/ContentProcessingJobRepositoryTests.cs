@@ -216,7 +216,7 @@ public class ContentProcessingJobRepositoryTests
         var id2 = await _repository.CreateAsync("manual", ct: CancellationToken.None);
 
         // Act
-        var jobs = await _repository.GetRecentAsync(50, CancellationToken.None);
+        var jobs = await _repository.GetRecentAsync(50, null, CancellationToken.None);
 
         // Assert
         jobs.Should().HaveCountGreaterThanOrEqualTo(2);
@@ -234,7 +234,7 @@ public class ContentProcessingJobRepositoryTests
         await _repository.CompleteAsync(jobId, 3, 7, 2, 1, 0, 0, "log content", ct: CancellationToken.None);
 
         // Act
-        var jobs = await _repository.GetRecentAsync(50, CancellationToken.None);
+        var jobs = await _repository.GetRecentAsync(50, null, CancellationToken.None);
         var job = jobs.FirstOrDefault(j => j.Id == jobId);
 
         // Assert — verify ALL fields are mapped (not defaulted)
@@ -249,6 +249,36 @@ public class ContentProcessingJobRepositoryTests
         job.ItemsAdded.Should().Be(7, "items_added must be mapped from DB");
         job.ItemsSkipped.Should().Be(2, "items_skipped must be mapped from DB");
         job.ErrorCount.Should().Be(1, "error_count must be mapped from DB");
+    }
+
+    [Fact]
+    public async Task GetRecentAsync_WithFilter_ReturnsOnlyMatchingJobs()
+    {
+        // Arrange — the fixture database is shared, so assert on these jobs only
+        var failedTimeline = await _repository.CreateAsync("manual", ContentProcessingJobType.TimelineBackfill, CancellationToken.None);
+        await _repository.FailAsync(failedTimeline, 0, 0, 0, 1, 0, 0, "boom", ct: CancellationToken.None);
+        var completedTimeline = await _repository.CreateAsync("scheduled", ContentProcessingJobType.TimelineBackfill, CancellationToken.None);
+        await _repository.CompleteAsync(completedTimeline, 0, 0, 0, 0, 0, 0, null, ct: CancellationToken.None);
+        var failedProcessing = await _repository.CreateAsync("scheduled", ContentProcessingJobType.ContentProcessing, CancellationToken.None);
+        await _repository.FailAsync(failedProcessing, 0, 0, 0, 1, 0, 0, "boom", ct: CancellationToken.None);
+
+        // Act
+        var failed = await _repository.GetRecentAsync(100, new ContentProcessingJobFilter(Status: ContentProcessingJobStatus.Failed), CancellationToken.None);
+        var timeline = await _repository.GetRecentAsync(100, new ContentProcessingJobFilter(JobType: ContentProcessingJobType.TimelineBackfill), CancellationToken.None);
+        var manual = await _repository.GetRecentAsync(100, new ContentProcessingJobFilter(TriggerType: ContentProcessingJobTrigger.Manual), CancellationToken.None);
+        var failedTimelineOnly = await _repository.GetRecentAsync(
+            100,
+            new ContentProcessingJobFilter(ContentProcessingJobStatus.Failed, ContentProcessingJobType.TimelineBackfill),
+            CancellationToken.None);
+
+        // Assert
+        failed.Should().OnlyContain(j => j.Status == ContentProcessingJobStatus.Failed);
+        failed.Select(j => j.Id).Should().Contain([failedTimeline, failedProcessing]).And.NotContain(completedTimeline);
+        timeline.Should().OnlyContain(j => j.JobType == ContentProcessingJobType.TimelineBackfill);
+        timeline.Select(j => j.Id).Should().Contain([failedTimeline, completedTimeline]).And.NotContain(failedProcessing);
+        manual.Should().OnlyContain(j => j.TriggerType == ContentProcessingJobTrigger.Manual);
+        manual.Select(j => j.Id).Should().Contain(failedTimeline).And.NotContain([completedTimeline, failedProcessing]);
+        failedTimelineOnly.Select(j => j.Id).Should().Contain(failedTimeline).And.NotContain([completedTimeline, failedProcessing]);
     }
 
     // ── GetByIdAsync ───────────────────────────────────────────────────────
@@ -433,7 +463,7 @@ public class ContentProcessingJobRepositoryTests
         await _repository.CompleteAsync(jobId, feedsProcessed: 1, itemsAdded: 1, itemsSkipped: 0, errorCount: 0, transcriptsSucceeded: 5, transcriptsFailed: 2, logOutput: "done", ct: CancellationToken.None);
 
         // Act
-        var jobs = await _repository.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _repository.GetRecentAsync(1, null, CancellationToken.None);
 
         // Assert
         jobs.Should().NotBeEmpty();

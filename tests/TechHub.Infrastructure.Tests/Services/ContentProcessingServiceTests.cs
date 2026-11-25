@@ -128,7 +128,7 @@ public class ContentProcessingServiceTests
         await sut.RunAsync("scheduled", CancellationToken.None);
 
         // Assert — check the DB for a completed job
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
         var job = jobs[0];
         job.Status.Should().Be("completed");
@@ -156,7 +156,7 @@ public class ContentProcessingServiceTests
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
         _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>()))
             .ReturnsAsync(FeedIngestionResult.Success([]));
-        var before = await _jobRepo.GetRecentAsync(500, CancellationToken.None);
+        var before = await _jobRepo.GetRecentAsync(500, null, CancellationToken.None);
 
         // Act
         var result = await CreateService(timeProvider: new FrozenTimeProvider(now)).RunAsync("scheduled", CancellationToken.None);
@@ -168,7 +168,7 @@ public class ContentProcessingServiceTests
             expectedCheck ? Times.Once() : Times.Never());
         _feedRepo.Verify(r => r.RecordCheckAsync(feed.Id, null, It.IsAny<CancellationToken>()),
             expectedCheck ? Times.Once() : Times.Never());
-        var after = await _jobRepo.GetRecentAsync(500, CancellationToken.None);
+        var after = await _jobRepo.GetRecentAsync(500, null, CancellationToken.None);
         if (!expectedCheck)
         {
             after.Select(j => j.Id).Should().Equal(before.Select(j => j.Id), "idle scheduler ticks should not create jobs");
@@ -535,7 +535,7 @@ public class ContentProcessingServiceTests
         await sut.RunAsync("scheduled", CancellationToken.None);
 
         // Assert — job should be marked as failed
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
         jobs[0].Status.Should().Be("failed");
     }
@@ -556,7 +556,7 @@ public class ContentProcessingServiceTests
         await sut.RunAsync("scheduled", CancellationToken.None);
 
         // Assert — job should complete with errorCount >= 1
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
         jobs[0].Status.Should().Be("completed");
         jobs[0].ErrorCount.Should().BeGreaterThanOrEqualTo(1);
@@ -590,7 +590,7 @@ public class ContentProcessingServiceTests
         await sut.RunAsync("scheduled", CancellationToken.None);
 
         // Assert — job completed, error counted for broken feed, good item still processed
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
         jobs[0].Status.Should().Be("completed");
         jobs[0].ErrorCount.Should().BeGreaterThanOrEqualTo(1);
@@ -689,7 +689,7 @@ public class ContentProcessingServiceTests
         await sut.RunAsync("scheduled", CancellationToken.None);
 
         // Assert — job should have log content
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
         var jobDetail = await _jobRepo.GetByIdAsync(jobs[0].Id, CancellationToken.None);
         jobDetail!.LogOutput.Should().NotBeNullOrWhiteSpace();
@@ -998,7 +998,7 @@ public class ContentProcessingServiceTests
         await sut.RunAsync("scheduled", CancellationToken.None);
 
         // Assert — log should mention "previously skipped", not "previously processed"
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
         var jobDetail = await _jobRepo.GetByIdAsync(jobs[0].Id, CancellationToken.None);
         jobDetail!.LogOutput.Should().Contain("previously skipped");
@@ -1028,7 +1028,7 @@ public class ContentProcessingServiceTests
         await sut.RunAsync("scheduled", CancellationToken.None);
 
         // Assert — completed job should have non-zero counters
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
         jobs[0].FeedsProcessed.Should().BeGreaterThanOrEqualTo(1);
         jobs[0].ItemsAdded.Should().BeGreaterThanOrEqualTo(1);
@@ -1077,7 +1077,7 @@ public class ContentProcessingServiceTests
         result.Items[0].HasTranscript.Should().BeFalse();
 
         // Assert — job should track transcript failures
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs[0].TranscriptsFailed.Should().BeGreaterThanOrEqualTo(1);
     }
 
@@ -1564,7 +1564,7 @@ public class ContentProcessingServiceTests
         result.Should().NotBeNull();
         result!.Outcome.Should().Be(AdHocUrlProcessOutcome.Added);
 
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
         var job = jobs[0];
         job.Status.Should().Be(ContentProcessingJobStatus.Completed);
@@ -1602,7 +1602,7 @@ public class ContentProcessingServiceTests
         result.Should().NotBeNull();
         result!.Outcome.Should().Be(AdHocUrlProcessOutcome.Skipped);
 
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
         var job = jobs[0];
         job.Status.Should().Be(ContentProcessingJobStatus.Completed);
@@ -1632,7 +1632,7 @@ public class ContentProcessingServiceTests
         await sut.ProcessSingleAsync(Url, "blogs", "TechHub", ct: CancellationToken.None);
 
         // Get job count after first call
-        var jobsAfterFirst = await _jobRepo.GetRecentAsync(100, CancellationToken.None);
+        var jobsAfterFirst = await _jobRepo.GetRecentAsync(100, null, CancellationToken.None);
         var countAfterFirst = jobsAfterFirst.Count;
 
         // Act — second call should be a duplicate
@@ -1641,7 +1641,7 @@ public class ContentProcessingServiceTests
         // Assert
         result.Should().BeNull("duplicate URL should return null");
 
-        var jobsAfterSecond = await _jobRepo.GetRecentAsync(100, CancellationToken.None);
+        var jobsAfterSecond = await _jobRepo.GetRecentAsync(100, null, CancellationToken.None);
         jobsAfterSecond.Count.Should().Be(countAfterFirst, "no job should be created for duplicates");
     }
 
@@ -1661,7 +1661,7 @@ public class ContentProcessingServiceTests
         await sut.ProcessSingleAsync(Url, "blogs", "TechHub", ct: CancellationToken.None);
 
         // Assert
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        var jobs = await _jobRepo.GetRecentAsync(1, null, CancellationToken.None);
         jobs.Should().NotBeEmpty();
 
         var fullJob = await _jobRepo.GetByIdAsync(jobs[0].Id, CancellationToken.None);

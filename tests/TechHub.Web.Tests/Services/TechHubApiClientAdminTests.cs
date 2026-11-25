@@ -1350,11 +1350,25 @@ public class TechHubApiClientAdminTests
         using var fixture = Fixture.Create(body: "null");
 
         // Act
-        var jobs = await fixture.Client.GetProcessingJobsAsync(5, TestContext.Current.CancellationToken);
+        var jobs = await fixture.Client.GetProcessingJobsAsync(5, null, TestContext.Current.CancellationToken);
 
         // Assert
         fixture.Handler.PathAndQuery.Should().Be("/api/admin/processing/jobs?count=5");
         jobs.Should().BeEmpty();
+    }
+
+    [Fact]
+    public async Task GetProcessingJobsAsync_WithFilter_AddsEscapedFilterParameters()
+    {
+        // Arrange
+        using var fixture = Fixture.Create(body: "[]");
+        var filter = new ContentProcessingJobFilter("failed", ContentProcessingJobType.TimelineBackfill, "manual");
+
+        // Act
+        await fixture.Client.GetProcessingJobsAsync(100, filter, TestContext.Current.CancellationToken);
+
+        // Assert
+        fixture.Handler.PathAndQuery.Should().Be("/api/admin/processing/jobs?count=100&status=failed&jobType=timeline-backfill&triggerType=manual");
     }
 
     [Theory]

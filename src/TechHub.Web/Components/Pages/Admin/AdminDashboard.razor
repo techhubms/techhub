@@ -7,6 +7,7 @@
 @inject ITechHubApiClient Api
 @inject PersistentComponentState ApplicationState
 @inject ILogger<AdminDashboard> Logger
+@inject NavigationManager Navigation
 @inherits PageComponentBase
 
 <PageTitle>Admin Dashboard — TechHub</PageTitle>
@@ -42,6 +43,43 @@
         </div>
     }
 
+    <div class="admin-filters">
+        <div class="admin-filter-group">
+            <label class="admin-label" for="jobStatusFilter">Status</label>
+            <select id="jobStatusFilter" class="admin-input" @bind="_statusFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All</option>
+                <option value="@ContentProcessingJobStatus.Running">Running</option>
+                <option value="@ContentProcessingJobStatus.Completed">Completed</option>
+                <option value="@ContentProcessingJobStatus.Failed">Failed</option>
+                <option value="@ContentProcessingJobStatus.Aborted">Aborted</option>
+            </select>
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="jobTypeFilter">Type</label>
+            <select id="jobTypeFilter" class="admin-input" @bind="_jobTypeFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All</option>
+                @foreach (var jobType in JobTypes)
+                {
+                    <option value="@jobType">@JobTypeLabel(jobType)</option>
+                }
+            </select>
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="jobTriggerFilter">Trigger</label>
+            <select id="jobTriggerFilter" class="admin-input" @bind="_triggerFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All</option>
+                <option value="@ContentProcessingJobTrigger.Scheduled">Scheduled</option>
+                <option value="@ContentProcessingJobTrigger.Manual">Manual</option>
+            </select>
+        </div>
+        @if (CurrentFilter.IsActive)
+        {
+            <div class="admin-filter-group admin-filter-actions">
+                <button class="btn-secondary" @onclick="ClearFiltersAsync">Clear filters</button>
+            </div>
+        }
+    </div>
+
     @if (_loading)
     {
         <div class="admin-loading">Loading job history…</div>
@@ -52,7 +90,14 @@
     }
     else if (_jobs == null || _jobs.Count == 0)
     {
-        <div class="admin-empty">No processing jobs yet. Click <strong>Run Now</strong> to start the first run.</div>
+        @if (CurrentFilter.IsActive)
+        {
+            <div class="admin-empty">No jobs match the current filters.</div>
+        }
+        else
+        {
+            <div class="admin-empty">No processing jobs yet. Click <strong>Run Now</strong> to start the first run.</div>
+        }
     }
     else
     {
@@ -162,19 +207,50 @@
     private string? _triggerMessage;
     private bool _triggerError;
     private IReadOnlyList<ContentProcessingJob>? _jobs;
+    private bool _hasRunningJob;
+    private string _statusFilter = string.Empty;
+    private string _jobTypeFilter = string.Empty;
+    private string _triggerFilter = string.Empty;
     private long? _expandedJobId;
     private string? _expandedLogOutput;
     private PersistingComponentStateSubscription? _persistSubscription;
     private CancellationTokenSource? _pollCts;
 
+    private const int DefaultJobCount = 20;
+    private const int FilteredJobCount = 100;
+
+    private static readonly string[] JobTypes =
+    [
+        ContentProcessingJobType.ContentProcessing,
+        ContentProcessingJobType.RoundupGeneration,
+        ContentProcessingJobType.ContentCleanup,
+        ContentProcessingJobType.AdHocProcessing,
+        ContentProcessingJobType.TimelineBackfill
+    ];
+
+    private ContentProcessingJobFilter CurrentFilter => new(
+        string.IsNullOrEmpty(_statusFilter) ? null : _statusFilter,
+        string.IsNullOrEmpty(_jobTypeFilter) ? null : _jobTypeFilter,
+        string.IsNullOrEmpty(_triggerFilter) ? null : _triggerFilter);
+
     protected override async Task OnInitializedAsync()
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        var qs = System.Web.HttpUtility.ParseQueryString(new Uri(Navigation.Uri).Query);
+        _statusFilter = qs["status"] ?? string.Empty;
+        _jobTypeFilter = qs["type"] ?? string.Empty;
+        _triggerFilter = qs["trigger"] ?? string.Empty;
 
         if (ApplicationState.TryTakeFromJson<IReadOnlyList<ContentProcessingJob>>("admin-dashboard-jobs", out var restored) && restored != null)
         {
             _jobs = restored;
             _loading = false;
+            _hasRunningJob = !CurrentFilter.IsActive && HasRunningJobIn(restored);
+            if (CurrentFilter.IsActive)
+            {
+                await RefreshRunningFlagAsync(CancellationToken.None);
+            }
         }
         else
         {
@@ -206,7 +282,7 @@
 
         try
         {
-            _jobs = await Api.GetProcessingJobsAsync();
+            await FetchJobsAsync(CancellationToken.None);
         }
         catch (HttpRequestException ex)
         {
@@ -218,6 +294,53 @@
         }
 
         StartPollingIfRunning();
+    }
+
+    /// <summary>
+    /// Loads the jobs matching the current filters. The running flag is tracked separately because
+    /// a filter can hide the running job, while Cancel and live polling must keep working.
+    /// </summary>
+    private async Task FetchJobsAsync(CancellationToken ct)
+    {
+        var filter = CurrentFilter;
+        var jobs = await Api.GetProcessingJobsAsync(filter.IsActive ? FilteredJobCount : DefaultJobCount, filter, ct);
+        _jobs = jobs;
+        if (filter.IsActive)
+        {
+            await RefreshRunningFlagAsync(ct);
+        }
+        else
+        {
+            _hasRunningJob = HasRunningJobIn(jobs);
+        }
+    }
+
+    private async Task RefreshRunningFlagAsync(CancellationToken ct)
+    {
+        var running = await Api.GetProcessingJobsAsync(1, new ContentProcessingJobFilter(Status: ContentProcessingJobStatus.Running), ct);
+        _hasRunningJob = running.Count > 0;
+    }
+
+    private async Task ApplyFiltersAsync()
+    {
+        var uri = Navigation.GetUriWithQueryParameters(new Dictionary<string, object?>
+        {
+            ["status"] = string.IsNullOrEmpty(_statusFilter) ? null : _statusFilter,
+            ["type"] = string.IsNullOrEmpty(_jobTypeFilter) ? null : _jobTypeFilter,
+            ["trigger"] = string.IsNullOrEmpty(_triggerFilter) ? null : _triggerFilter
+        });
+        Navigation.NavigateTo(uri, forceLoad: false, replace: true);
+
+        CollapseLog();
+        await LoadJobsAsync();
+    }
+
+    private async Task ClearFiltersAsync()
+    {
+        _statusFilter = string.Empty;
+        _jobTypeFilter = string.Empty;
+        _triggerFilter = string.Empty;
+        await ApplyFiltersAsync();
     }
 
     private async Task CancelRunningJobAsync()
@@ -324,8 +447,10 @@
         _ => "unknown"
     };
 
-    private bool HasRunningJob =>
-        _jobs?.Any(j => j.Status == ContentProcessingJobStatus.Running) == true;
+    private bool HasRunningJob => _hasRunningJob;
+
+    private static bool HasRunningJobIn(IReadOnlyList<ContentProcessingJob>? jobs) =>
+        jobs?.Any(j => j.Status == ContentProcessingJobStatus.Running) == true;
 
     private void StartPollingIfRunning()
     {
@@ -355,7 +480,7 @@
             {
                 try
                 {
-                    _jobs = await Api.GetProcessingJobsAsync(cancellationToken: ct);
+                    await FetchJobsAsync(ct);
 
                     // Auto-refresh the expanded log if viewing a running job
                     if (_expandedJobId != null)

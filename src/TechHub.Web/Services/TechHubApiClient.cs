@@ -1,3 +1,4 @@
+using System.Text;
 using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
@@ -1157,13 +1158,30 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<IReadOnlyList<ContentProcessingJob>> GetProcessingJobsAsync(
         int count = 20,
+        ContentProcessingJobFilter? filter = null,
         CancellationToken cancellationToken = default)
     {
         try
         {
-            _logger.LogDebug("Fetching processing jobs (count: {Count})", count);
+            _logger.LogDebug("Fetching processing jobs (count: {Count}, filter: {Filter})", count, filter);
+            var query = new StringBuilder($"count={count}");
+            if (!string.IsNullOrEmpty(filter?.Status))
+            {
+                query.Append("&status=").Append(Uri.EscapeDataString(filter.Status));
+            }
+
+            if (!string.IsNullOrEmpty(filter?.JobType))
+            {
+                query.Append("&jobType=").Append(Uri.EscapeDataString(filter.JobType));
+            }
+
+            if (!string.IsNullOrEmpty(filter?.TriggerType))
+            {
+                query.Append("&triggerType=").Append(Uri.EscapeDataString(filter.TriggerType));
+            }
+
             var jobs = await _httpClient.GetFromJsonAsync<IReadOnlyList<ContentProcessingJob>>(
-                $"/api/admin/processing/jobs?count={count}",
+                $"/api/admin/processing/jobs?{query}",
                 cancellationToken);
             return jobs ?? [];
         }

@@ -389,6 +389,7 @@ internal interface ITechHubApiClient
     /// </summary>
     Task<IReadOnlyList<ContentProcessingJob>> GetProcessingJobsAsync(
         int count = 20,
+        ContentProcessingJobFilter? filter = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>

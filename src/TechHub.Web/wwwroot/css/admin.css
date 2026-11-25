@@ -942,6 +942,11 @@ h2.admin-page-title {
     flex: 1;
 }
 
+.admin-filter-actions {
+    flex: 0 0 auto;
+    justify-content: flex-end;
+}
+
 .admin-checkbox-label {
     display: flex;
     align-items: center;
