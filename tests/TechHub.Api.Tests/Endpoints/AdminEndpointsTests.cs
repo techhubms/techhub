@@ -64,6 +64,22 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     }
 
     [Fact]
+    public async Task GetProcessingJobs_WithFilters_PassesThemToTheRepository()
+    {
+        // Act
+        var unknownType = await _client.GetFromJsonAsync<List<ContentProcessingJob>>(
+            "/api/admin/processing/jobs?jobType=does-not-exist",
+            TestContext.Current.CancellationToken);
+        var failed = await _client.GetFromJsonAsync<List<ContentProcessingJob>>(
+            "/api/admin/processing/jobs?status=failed&triggerType=manual",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        unknownType.Should().BeEmpty();
+        failed.Should().OnlyContain(j => j.Status == ContentProcessingJobStatus.Failed && j.TriggerType == "manual");
+    }
+
+    [Fact]
     public async Task GetProcessingJobById_WithNonExistentId_ReturnsNotFound()
     {
         // Act

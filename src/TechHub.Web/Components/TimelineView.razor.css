@@ -179,16 +179,23 @@ html.keyboard-nav .timeline-card:focus-visible {
   transform: rotate(180deg);
 }
 
-/* Normalize Video badge size in the collapsed header */
+/* Every badge in the header (product, kind, upcoming) gets the same pill shape and size; only the colors differ */
 .timeline-badges span {
   display: inline-flex;
   align-items: center;
   overflow-wrap: anywhere;
-  padding: 0.25rem var(--spacing-1);
+  padding: 0.25rem var(--spacing-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
   text-transform: none;
   letter-spacing: 0;
   font-weight: var(--font-weight-medium);
   line-height: 1;
+}
+
+.timeline-badges span.badge-muted {
+  border-color: var(--color-border-default);
 }
 
 /* ─── Expandable Feature Detail ──────────────────────────────────── */

@@ -170,6 +170,11 @@ function Start-PostgresContainer {
         'docker compose up -d postgres' and polls the container health status until it is
         healthy. Safe to call when the container is already running.
 
+        When the dev container stops, its Docker-in-Docker daemon is killed without stopping
+        PostgreSQL. After that, Docker can fail to start the old container with
+        "RWLayer of container ... is unexpectedly nil". When starting fails, the container is
+        removed and recreated once. This is safe because the data lives in the bind mount.
+
     .PARAMETER TimeoutSeconds
         Maximum number of seconds to wait for the container to become healthy (default 30).
 
@@ -190,18 +195,35 @@ function Start-PostgresContainer {
     }
 
     Write-Host "  Ensuring PostgreSQL container is running..." -ForegroundColor Gray
-    docker compose up -d postgres 2>&1 | Out-Null
+    $composeOutput = docker compose up -d postgres 2>&1
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "  Could not start the existing PostgreSQL container, recreating it (data is kept):" -ForegroundColor Yellow
+        $composeOutput | ForEach-Object { Write-Host "    $_" -ForegroundColor Gray }
+        docker compose rm --force --stop postgres 2>&1 | ForEach-Object { Write-Host "    $_" -ForegroundColor Gray }
+        $composeOutput = docker compose up -d postgres 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "✗ Failed to start the PostgreSQL container:" -ForegroundColor Red
+            $composeOutput | ForEach-Object { Write-Host "    $_" -ForegroundColor Red }
+            return $false
+        }
+    }
 
     for ($attempt = 1; $attempt -le $TimeoutSeconds; $attempt++) {
-        $health = docker inspect --format='{{.State.Health.Status}}' techhub-postgres 2>$null
-        if ($health -eq "healthy") {
+        $state = docker inspect --format='{{.State.Status}} {{.State.Health.Status}}' techhub-postgres 2>$null
+        if ($state -eq "running healthy") {
             Write-Host "  PostgreSQL is ready" -ForegroundColor Gray
             return $true
+        }
+        if ($state -match '^(exited|dead) ') {
+            Write-Host "✗ PostgreSQL container stopped while starting ($state). Last log lines:" -ForegroundColor Red
+            docker logs --tail 20 techhub-postgres 2>&1 | ForEach-Object { Write-Host "    $_" -ForegroundColor Gray }
+            return $false
         }
         Start-Sleep -Seconds 1
     }
 
-    Write-Host "✗ PostgreSQL container failed to become healthy within ${TimeoutSeconds}s" -ForegroundColor Red
+    Write-Host "✗ PostgreSQL container failed to become healthy within ${TimeoutSeconds}s. Last log lines:" -ForegroundColor Red
+    docker logs --tail 20 techhub-postgres 2>&1 | ForEach-Object { Write-Host "    $_" -ForegroundColor Gray }
     return $false
 }
 # Stop all orphaned test-related processes (browsers, test runners)
@@ -1199,6 +1221,11 @@ function Run {
             # Log docker compose output to file
             $dockerLogFile = Join-Path $logDir "docker-compose-startup.log"
             Write-Info "Logging docker compose output to: $dockerLogFile"
+            
+            # Start postgres first so a container broken by a killed Docker daemon is recreated
+            if (-not (Start-PostgresContainer)) {
+                return $false
+            }
             
             # Start containers in detached mode, capture output
             # Only rebuild images if source was actually recompiled (optimization for validation runs)

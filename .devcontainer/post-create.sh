@@ -111,7 +111,9 @@ if ! command -v aspire &> /dev/null; then
     curl -fsSL https://aspire.dev/install.sh | bash
     export PATH="$HOME/.aspire/bin:$PATH"
 else
-    echo "Aspire CLI already installed"
+    # dotnet watch hands the AppHost to this CLI; one older than the Aspire.Hosting packages hangs at startup
+    echo "Aspire CLI already installed, updating..."
+    aspire update --self --yes --non-interactive --channel stable
 fi
 
 # ==================== Playwright ====================

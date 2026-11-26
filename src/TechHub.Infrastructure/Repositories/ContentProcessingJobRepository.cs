@@ -181,9 +181,32 @@ WHERE id = @JobId";
     }
 
     /// <inheritdoc/>
-    public async Task<IReadOnlyList<ContentProcessingJob>> GetRecentAsync(int count = 20, CancellationToken ct = default)
+    public async Task<IReadOnlyList<ContentProcessingJob>> GetRecentAsync(int count = 20, ContentProcessingJobFilter? filter = null, CancellationToken ct = default)
     {
-        const string Sql = @"
+        var parameters = new DynamicParameters();
+        parameters.Add("Count", count);
+        var conditions = new List<string>();
+        if (!string.IsNullOrEmpty(filter?.Status))
+        {
+            conditions.Add("status = @Status");
+            parameters.Add("Status", filter.Status);
+        }
+
+        if (!string.IsNullOrEmpty(filter?.JobType))
+        {
+            conditions.Add("job_type = @JobType");
+            parameters.Add("JobType", filter.JobType);
+        }
+
+        if (!string.IsNullOrEmpty(filter?.TriggerType))
+        {
+            conditions.Add("trigger_type = @TriggerType");
+            parameters.Add("TriggerType", filter.TriggerType);
+        }
+
+        var where = conditions.Count > 0 ? $"WHERE {string.Join(" AND ", conditions)}" : string.Empty;
+
+        var sql = $@"
 SELECT id, started_at AS StartedAt, completed_at AS CompletedAt,
        duration_ms AS DurationMs, status, trigger_type AS TriggerType,
        job_type AS JobType, feeds_processed AS FeedsProcessed,
@@ -193,11 +216,12 @@ SELECT id, started_at AS StartedAt, completed_at AS CompletedAt,
        transcripts_failed AS TranscriptsFailed,
        items_fixed AS ItemsFixed
 FROM content_processing_jobs
+{where}
 ORDER BY started_at DESC, id DESC
 LIMIT @Count";
 
         var result = await _connection.QueryAsync<ContentProcessingJob>(
-            new CommandDefinition(Sql, new { Count = count }, cancellationToken: ct));
+            new CommandDefinition(sql, parameters, cancellationToken: ct));
 
         return result.ToList();
     }

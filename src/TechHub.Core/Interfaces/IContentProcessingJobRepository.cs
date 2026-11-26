@@ -34,8 +34,8 @@ public interface IContentProcessingJobRepository
     /// <summary>Marks all jobs with status 'running' as 'aborted' (called on startup to clean up stale jobs from prior crashes).</summary>
     Task<int> AbortRunningJobsAsync(CancellationToken ct = default);
 
-    /// <summary>Gets the most recent <paramref name="count"/> jobs, newest first.</summary>
-    Task<IReadOnlyList<ContentProcessingJob>> GetRecentAsync(int count = 20, CancellationToken ct = default);
+    /// <summary>Gets the most recent <paramref name="count"/> jobs matching <paramref name="filter"/> (all jobs when null), newest first.</summary>
+    Task<IReadOnlyList<ContentProcessingJob>> GetRecentAsync(int count = 20, ContentProcessingJobFilter? filter = null, CancellationToken ct = default);
 
     /// <summary>
     /// Deletes all jobs except the most recent <paramref name="keepCount"/> records.

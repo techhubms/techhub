@@ -369,9 +369,15 @@ public static partial class AdminEndpoints
     private static async Task<IResult> GetJobsAsync(
         IContentProcessingJobRepository jobRepo,
         CancellationToken ct,
-        int count = 20)
+        int count = 20,
+        string? status = null,
+        string? jobType = null,
+        string? triggerType = null)
     {
-        var jobs = await jobRepo.GetRecentAsync(Math.Clamp(count, 1, 100), ct);
+        var jobs = await jobRepo.GetRecentAsync(
+            Math.Clamp(count, 1, 100),
+            new ContentProcessingJobFilter(status, jobType, triggerType),
+            ct);
         return Results.Ok(jobs);
     }
 

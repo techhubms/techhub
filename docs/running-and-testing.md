@@ -46,7 +46,7 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | `Stop-Servers` (without Run in front!) | Stops the servers directly. |
 | `Stop-OrphanedTestProcesses` | Stops leftover test host processes from earlier runs. `Run` calls it automatically. |
 | `Start-McpInspector` | Starts the MCP Inspector (`npx @modelcontextprotocol/inspector@2.10.1`, pinned version) for testing the local MCP server at `https://localhost:5003/mcp`. Accepts the local dev certificate and doesn't open a browser automatically. |
-| `Start-PostgresContainer` | Starts the local docker-compose PostgreSQL container and waits until it is healthy. Used by `Run` in Development mode and in Production/Staging mode (unless `Database__ConnectionString` is already set); call it directly when you only need the database. |
+| `Start-PostgresContainer` | Starts the local docker-compose PostgreSQL container and waits until it is healthy. Used by `Run` in every mode (in Production/Staging only when `Database__ConnectionString` is not set); call it directly when you only need the database. When the dev container stops, its Docker-in-Docker daemon is killed. After that, Docker can fail to start the old container (`RWLayer of container ... is unexpectedly nil`). The function then removes the container and creates a new one. The data is kept because it lives in `.databases/postgres`. |
 
 ### Testing a Remote Deployment
 
